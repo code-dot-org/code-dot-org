@@ -19,16 +19,16 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 04 Jun 2019 16:25:37 GMT
+      - Tue, 04 Jun 2019 21:07:40 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>9C3212BE8C214518</RequestId><HostId>JjnozdGcu02BfEhnX64W5ci7nhtb2ht2tytTISjfwj1MuTS1AeAQdJswEk6S0faThp5Fq3FgKQg=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>C9105214C5C7B228</RequestId><HostId>crITRtZWTTHx8DRr5HkUQVZKBEmX0HCtqP5Dk5/+ytTmeIj4hLlPrAoWHMWEHdzMuO9LwNuXVkc=</HostId></Error>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:38 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:40 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
@@ -44,7 +44,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:39 GMT
+      - Tue, 04 Jun 2019 21:07:41 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -57,7 +57,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:38 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:40 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old_fileac0a7f8c2faac49775a6.html&versions
@@ -73,78 +73,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:39 GMT
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Server:
-      - AmazonS3
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><DeleteMarker><Key>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Key><VersionId>oWKsjuSOYr3rlZlIcuWBkgggNFbaKwh1</VersionId><IsLatest>true</IsLatest><LastModified>2018-09-14T00:26:20.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker></ListVersionsResult>
-    http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:38 GMT
-- request:
-    method: post
-    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
-    body:
-      encoding: UTF-8
-      string: |
-        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-          <Object>
-            <Key>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Key>
-            <VersionId>oWKsjuSOYr3rlZlIcuWBkgggNFbaKwh1</VersionId>
-          </Object>
-          <Quiet>true</Quiet>
-        </Delete>
-    headers:
-      Expect:
-      - 100-continue
-      Content-Md5:
-      - qoA0qNDAxEyY6IibAZasZg==
-      Content-Length:
-      - '236'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 04 Jun 2019 16:25:40 GMT
-      Connection:
-      - close
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Server:
-      - AmazonS3
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?>
-        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
-    http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:39 GMT
-- request:
-    method: get
-    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old_fileac0a7f8c2faac49775a6.html&versions
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Content-Length:
-      - '0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 04 Jun 2019 16:25:40 GMT
+      - Tue, 04 Jun 2019 21:07:41 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -157,7 +86,36 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:39 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:41 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old_fileac0a7f8c2faac49775a6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 21:07:42 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 21:07:41 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new_filec0cc21d843b34e9afb52.html&versions
@@ -173,7 +131,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:40 GMT
+      - Tue, 04 Jun 2019 21:07:42 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -186,7 +144,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new_filec0cc21d843b34e9afb52.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:39 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:42 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new_filec0cc21d843b34e9afb52.html&versions
@@ -202,7 +160,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:41 GMT
+      - Tue, 04 Jun 2019 21:07:43 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -215,7 +173,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new_filec0cc21d843b34e9afb52.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:40 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:42 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
@@ -235,16 +193,16 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 04 Jun 2019 16:25:40 GMT
+      - Tue, 04 Jun 2019 21:07:42 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>87F2D15178E42877</RequestId><HostId>LMz8V+Be85kUaimel+f1GHRT0ai4yKD4o+BABOok7Jkro2JXSTy44jrf1CJzEfqpSMeQ12/yVp4=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>49A73E731E49ECCF</RequestId><HostId>apr8RZp+wlp9019Rxo95MTVGXsm6jGnppMzsnyA8tGJDKPn9CdtS5GjyMXhtKRrHD9uFPm+7MLs=</HostId></Error>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:40 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:42 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
@@ -260,7 +218,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:41 GMT
+      - Tue, 04 Jun 2019 21:07:43 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -273,9 +231,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/.metadata/thumbnail.png</Key><LastModified>2019-05-02T23:55:13.000Z</LastModified><ETag>&quot;5fb089d69bcfbf5add2f64b98a1a3775&quot;</ETag><Size>29719</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:40 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:43 GMT
 - request:
     method: put
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/old_fileac0a7f8c2faac49775a6.html
@@ -297,9 +255,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:42 GMT
+      - Tue, 04 Jun 2019 21:07:44 GMT
       X-Amz-Version-Id:
-      - AdkaLE3vu1ZWuMnfnReh1pg.66puP.1d
+      - mJzNQPXhLgdZ75Ytez86JIYmN6MKSyPH
       Etag:
       - '"458b68094909507177f21dc1c238829d"'
       Content-Length:
@@ -310,34 +268,33 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:41 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:43 GMT
 - request:
     method: put
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
     body:
       encoding: UTF-8
-      string: '[{"filename":"old_fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"AdkaLE3vu1ZWuMnfnReh1pg.66puP.1d","timestamp":"2019-06-04
-        09:25:41 -0700"}]'
+      string: '[{"filename":"old_fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"mJzNQPXhLgdZ75Ytez86JIYmN6MKSyPH","timestamp":"2019-06-04T14:07:43.464-07:00"}]'
     headers:
       X-Amz-Meta-Abuse-Score:
       - '0'
       Expect:
       - 100-continue
       Content-Md5:
-      - "+m+YyWD/dKQ/PIGu4HYw/g=="
+      - ULLzTnS47xRiRwBxB9gfWw==
       Content-Length:
-      - '165'
+      - '169'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:42 GMT
+      - Tue, 04 Jun 2019 21:07:44 GMT
       X-Amz-Version-Id:
-      - JnK2g56is02mhuGZtQJo5h5B1wjp2tQ5
+      - JkFXxOUJkxKzhXKDgINQYWWzPTuEeTeN
       Etag:
-      - '"fa6f98c960ff74a43f3c81aee07630fe"'
+      - '"50b2f34e74b8ef146247007107d81f5b"'
       Content-Length:
       - '0'
       Server:
@@ -346,7 +303,44 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:41 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:43 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/old_fileac0a7f8c2faac49775a6.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 21:07:45 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 21:07:44 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - mJzNQPXhLgdZ75Ytez86JIYmN6MKSyPH
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 21:07:44 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
@@ -362,29 +356,28 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:42 GMT
+      - Tue, 04 Jun 2019 21:07:45 GMT
       Last-Modified:
-      - Tue, 04 Jun 2019 16:25:42 GMT
+      - Tue, 04 Jun 2019 21:07:44 GMT
       Etag:
-      - '"fa6f98c960ff74a43f3c81aee07630fe"'
+      - '"50b2f34e74b8ef146247007107d81f5b"'
       X-Amz-Meta-Abuse-Score:
       - '0'
       X-Amz-Version-Id:
-      - JnK2g56is02mhuGZtQJo5h5B1wjp2tQ5
+      - JkFXxOUJkxKzhXKDgINQYWWzPTuEeTeN
       Accept-Ranges:
       - bytes
       Content-Type:
       - ''
       Content-Length:
-      - '165'
+      - '169'
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: '[{"filename":"old_fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"AdkaLE3vu1ZWuMnfnReh1pg.66puP.1d","timestamp":"2019-06-04
-        09:25:41 -0700"}]'
+      string: '[{"filename":"old_fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"mJzNQPXhLgdZ75Ytez86JIYmN6MKSyPH","timestamp":"2019-06-04T14:07:43.464-07:00"}]'
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:41 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:44 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
@@ -400,7 +393,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:43 GMT
+      - Tue, 04 Jun 2019 21:07:45 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -413,9 +406,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/.metadata/thumbnail.png</Key><LastModified>2019-05-02T23:55:13.000Z</LastModified><ETag>&quot;5fb089d69bcfbf5add2f64b98a1a3775&quot;</ETag><Size>29719</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T16:25:42.000Z</LastModified><ETag>&quot;fa6f98c960ff74a43f3c81aee07630fe&quot;</ETag><Size>165</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Key><LastModified>2019-06-04T16:25:42.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T21:07:44.000Z</LastModified><ETag>&quot;50b2f34e74b8ef146247007107d81f5b&quot;</ETag><Size>169</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Key><LastModified>2019-06-04T21:07:44.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:42 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:44 GMT
 - request:
     method: put
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/new_filec0cc21d843b34e9afb52.html
@@ -433,11 +426,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:43 GMT
+      - Tue, 04 Jun 2019 21:07:46 GMT
       X-Amz-Copy-Source-Version-Id:
-      - AdkaLE3vu1ZWuMnfnReh1pg.66puP.1d
+      - mJzNQPXhLgdZ75Ytez86JIYmN6MKSyPH
       X-Amz-Version-Id:
-      - H5C2GWkRZnIF4SCpS39tMcfEeeNXfJpe
+      - DW5H6bSQse6Q_k.rxR0gJcxWZ3bZkcKh
       Content-Type:
       - application/xml
       Content-Length:
@@ -448,36 +441,35 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-04T16:25:43.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag></CopyObjectResult>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-04T21:07:46.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag></CopyObjectResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:42 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:45 GMT
 - request:
     method: put
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
     body:
       encoding: UTF-8
-      string: '[{"filename":"old_fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"AdkaLE3vu1ZWuMnfnReh1pg.66puP.1d","timestamp":"2019-06-04
-        09:25:41 -0700"},{"filename":"new_filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"H5C2GWkRZnIF4SCpS39tMcfEeeNXfJpe"}]'
+      string: '[{"filename":"old_fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"mJzNQPXhLgdZ75Ytez86JIYmN6MKSyPH","timestamp":"2019-06-04T14:07:43.464-07:00"},{"filename":"new_filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"DW5H6bSQse6Q_k.rxR0gJcxWZ3bZkcKh"}]'
     headers:
       X-Amz-Meta-Abuse-Score:
       - '0'
       Expect:
       - 100-continue
       Content-Md5:
-      - sJpXFA/5sj7T9IF7h8SIPw==
+      - E3FZQ/6mk+hQ6OlaUxKkqA==
       Content-Length:
-      - '289'
+      - '293'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:43 GMT
+      - Tue, 04 Jun 2019 21:07:46 GMT
       X-Amz-Version-Id:
-      - L3HluHGw3e1TEXEH0sDebxXS2gSIEiLy
+      - 01ovn0nHNaw7OkPKVLF.PArGDAhRmVPP
       Etag:
-      - '"b09a57140ff9b23ed3f4817b87c4883f"'
+      - '"13715943fea693e850e8e95a5312a4a8"'
       Content-Length:
       - '0'
       Server:
@@ -486,7 +478,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:43 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:45 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/new_filec0cc21d843b34e9afb52.html
@@ -502,15 +494,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:44 GMT
+      - Tue, 04 Jun 2019 21:07:46 GMT
       Last-Modified:
-      - Tue, 04 Jun 2019 16:25:43 GMT
+      - Tue, 04 Jun 2019 21:07:46 GMT
       Etag:
       - '"458b68094909507177f21dc1c238829d"'
       X-Amz-Meta-Abuse-Score:
       - '0'
       X-Amz-Version-Id:
-      - H5C2GWkRZnIF4SCpS39tMcfEeeNXfJpe
+      - DW5H6bSQse6Q_k.rxR0gJcxWZ3bZkcKh
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -523,7 +515,7 @@ http_interactions:
       encoding: UTF-8
       string: fake-file-data
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:43 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:45 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/old_fileac0a7f8c2faac49775a6.html
@@ -539,15 +531,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:44 GMT
+      - Tue, 04 Jun 2019 21:07:47 GMT
       Last-Modified:
-      - Tue, 04 Jun 2019 16:25:42 GMT
+      - Tue, 04 Jun 2019 21:07:44 GMT
       Etag:
       - '"458b68094909507177f21dc1c238829d"'
       X-Amz-Meta-Abuse-Score:
       - '0'
       X-Amz-Version-Id:
-      - AdkaLE3vu1ZWuMnfnReh1pg.66puP.1d
+      - mJzNQPXhLgdZ75Ytez86JIYmN6MKSyPH
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -560,7 +552,7 @@ http_interactions:
       encoding: UTF-8
       string: fake-file-data
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:43 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:46 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old_fileac0a7f8c2faac49775a6.html&versions
@@ -576,7 +568,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:44 GMT
+      - Tue, 04 Jun 2019 21:07:47 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -587,9 +579,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Key><VersionId>AdkaLE3vu1ZWuMnfnReh1pg.66puP.1d</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T16:25:42.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Key><VersionId>mJzNQPXhLgdZ75Ytez86JIYmN6MKSyPH</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T21:07:44.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:43 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:46 GMT
 - request:
     method: post
     uri: https://cdo-v3-files.s3.amazonaws.com/?delete
@@ -599,7 +591,7 @@ http_interactions:
         <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
           <Object>
             <Key>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Key>
-            <VersionId>AdkaLE3vu1ZWuMnfnReh1pg.66puP.1d</VersionId>
+            <VersionId>mJzNQPXhLgdZ75Ytez86JIYmN6MKSyPH</VersionId>
           </Object>
           <Quiet>true</Quiet>
         </Delete>
@@ -607,7 +599,7 @@ http_interactions:
       Expect:
       - 100-continue
       Content-Md5:
-      - IgflbbWEKF+ifx1rrsTW5w==
+      - 9RJj5iOsLKRyGubQDsGFJw==
       Content-Length:
       - '236'
   response:
@@ -616,7 +608,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:45 GMT
+      - Tue, 04 Jun 2019 21:07:47 GMT
       Connection:
       - close
       Content-Type:
@@ -631,7 +623,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:44 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:46 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old_fileac0a7f8c2faac49775a6.html&versions
@@ -647,7 +639,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:45 GMT
+      - Tue, 04 Jun 2019 21:07:48 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -660,7 +652,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old_fileac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:44 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:47 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new_filec0cc21d843b34e9afb52.html&versions
@@ -676,7 +668,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:46 GMT
+      - Tue, 04 Jun 2019 21:07:48 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -687,9 +679,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new_filec0cc21d843b34e9afb52.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/new_filec0cc21d843b34e9afb52.html</Key><VersionId>H5C2GWkRZnIF4SCpS39tMcfEeeNXfJpe</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T16:25:43.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new_filec0cc21d843b34e9afb52.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/new_filec0cc21d843b34e9afb52.html</Key><VersionId>DW5H6bSQse6Q_k.rxR0gJcxWZ3bZkcKh</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T21:07:46.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:45 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:47 GMT
 - request:
     method: post
     uri: https://cdo-v3-files.s3.amazonaws.com/?delete
@@ -699,7 +691,7 @@ http_interactions:
         <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
           <Object>
             <Key>files_test/1/1/new_filec0cc21d843b34e9afb52.html</Key>
-            <VersionId>H5C2GWkRZnIF4SCpS39tMcfEeeNXfJpe</VersionId>
+            <VersionId>DW5H6bSQse6Q_k.rxR0gJcxWZ3bZkcKh</VersionId>
           </Object>
           <Quiet>true</Quiet>
         </Delete>
@@ -707,7 +699,7 @@ http_interactions:
       Expect:
       - 100-continue
       Content-Md5:
-      - DU3h0lpYUGclxjct+Gur6Q==
+      - "+/8PfzWt4Fn8fl6/W5d3iQ=="
       Content-Length:
       - '236'
   response:
@@ -716,11 +708,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:46 GMT
-      Connection:
-      - close
-      Content-Type:
-      - application/xml
+      - Tue, 04 Jun 2019 21:07:48 GMT
       Transfer-Encoding:
       - chunked
       Server:
@@ -731,7 +719,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:45 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:47 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new_filec0cc21d843b34e9afb52.html&versions
@@ -747,7 +735,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:46 GMT
+      - Tue, 04 Jun 2019 21:07:49 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -760,7 +748,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new_filec0cc21d843b34e9afb52.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:45 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:48 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
@@ -776,7 +764,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:46 GMT
+      - Tue, 04 Jun 2019 21:07:49 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -787,9 +775,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/manifest.json</Key><VersionId>L3HluHGw3e1TEXEH0sDebxXS2gSIEiLy</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T16:25:43.000Z</LastModified><ETag>&quot;b09a57140ff9b23ed3f4817b87c4883f&quot;</ETag><Size>289</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>JnK2g56is02mhuGZtQJo5h5B1wjp2tQ5</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T16:25:42.000Z</LastModified><ETag>&quot;fa6f98c960ff74a43f3c81aee07630fe&quot;</ETag><Size>165</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/manifest.json</Key><VersionId>01ovn0nHNaw7OkPKVLF.PArGDAhRmVPP</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T21:07:46.000Z</LastModified><ETag>&quot;13715943fea693e850e8e95a5312a4a8&quot;</ETag><Size>293</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>JkFXxOUJkxKzhXKDgINQYWWzPTuEeTeN</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T21:07:44.000Z</LastModified><ETag>&quot;50b2f34e74b8ef146247007107d81f5b&quot;</ETag><Size>169</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:45 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:48 GMT
 - request:
     method: post
     uri: https://cdo-v3-files.s3.amazonaws.com/?delete
@@ -799,11 +787,11 @@ http_interactions:
         <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
           <Object>
             <Key>files_test/1/1/manifest.json</Key>
-            <VersionId>L3HluHGw3e1TEXEH0sDebxXS2gSIEiLy</VersionId>
+            <VersionId>01ovn0nHNaw7OkPKVLF.PArGDAhRmVPP</VersionId>
           </Object>
           <Object>
             <Key>files_test/1/1/manifest.json</Key>
-            <VersionId>JnK2g56is02mhuGZtQJo5h5B1wjp2tQ5</VersionId>
+            <VersionId>JkFXxOUJkxKzhXKDgINQYWWzPTuEeTeN</VersionId>
           </Object>
           <Quiet>true</Quiet>
         </Delete>
@@ -811,7 +799,7 @@ http_interactions:
       Expect:
       - 100-continue
       Content-Md5:
-      - V688s9L9Kza4pKusHyzoMQ==
+      - 3ktIaehHgEgk9WG17+Xitg==
       Content-Length:
       - '343'
   response:
@@ -820,7 +808,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2019 16:25:47 GMT
+      - Tue, 04 Jun 2019 21:07:49 GMT
       Connection:
       - close
       Content-Type:
@@ -835,7 +823,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:46 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:49 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
@@ -855,14 +843,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 04 Jun 2019 16:25:46 GMT
+      - Tue, 04 Jun 2019 21:07:48 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>8FF8A6C02C1EBF73</RequestId><HostId>hohlW/YkmyeYJPej3hh5Zy+k+AV+a4a3b0pmfiMjdGSeA5dt9fTSDMsvhp/sZ9cx6YX1EohNQbo=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>86F871307B6FF671</RequestId><HostId>05IwAP5gIqFj/6CL8ODHKjakOsoZeWG2ucJV+yVCeSz9of8LaJ4e0R+QQPb6X49/wdfJw9XqYIY=</HostId></Error>
     http_version: 
-  recorded_at: Tue, 04 Jun 2019 16:25:46 GMT
+  recorded_at: Tue, 04 Jun 2019 21:07:49 GMT
 recorded_with: VCR 3.0.3

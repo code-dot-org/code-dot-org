@@ -142,6 +142,7 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(animations|assets|sources|librarypilot|files)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    filename = CGI.unescape(filename) if endpoint == 'files'
     get_file(endpoint, encrypted_channel_id, filename)
   end
 
@@ -593,8 +594,7 @@ class FilesApi < Sinatra::Base
   # result, we normalize s3 filenames to be downcased. That said, we maintain a case-sensitive
   # manifest.
   #
-  def files_put_file(encrypted_channel_id, filename, body)
-    unescaped_filename = CGI.unescape(filename)
+  def files_put_file(encrypted_channel_id, unescaped_filename, body)
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
@@ -603,8 +603,8 @@ class FilesApi < Sinatra::Base
     manifest = get_manifest(bucket, encrypted_channel_id)
     manifest_is_unchanged = true
 
-    unescaped_src_filename_downcased = params['src'] ? CGI.unescape(params['src']).downcase : nil
-    unescaped_delete_filename_downcased = params['delete'] ? CGI.unescape(params['delete']).downcase : nil
+    unescaped_src_filename_downcased = params['src'] ? params['src'].downcase : nil
+    unescaped_delete_filename_downcased = params['delete'] ? params['delete'].downcase : nil
     case_only_rename = unescaped_filename_downcased == unescaped_src_filename_downcased
 
     # store the new file
@@ -617,12 +617,12 @@ class FilesApi < Sinatra::Base
         new_entry_json = copy_file(
           'files',
           encrypted_channel_id,
-          URI.encode(unescaped_filename_downcased),
-          URI.encode(unescaped_src_filename_downcased)
+          unescaped_filename_downcased,
+          unescaped_src_filename_downcased
         )
       end
     else
-      new_entry_json = put_file('files', encrypted_channel_id, URI.encode(unescaped_filename_downcased), body)
+      new_entry_json = put_file('files', encrypted_channel_id, unescaped_filename_downcased, body)
     end
     new_entry_hash = JSON.parse new_entry_json
     # Replace downcased filename with original filename (to preserve case in the manifest)
@@ -658,7 +658,7 @@ class FilesApi < Sinatra::Base
 
     # delete a file if requested (same as src file in a rename operation)
     if deleting_separate_file
-      bucket.delete(encrypted_channel_id, URI.encode(unescaped_delete_filename_downcased))
+      bucket.delete(encrypted_channel_id, unescaped_delete_filename_downcased)
     end
 
     # return the new entry info
@@ -703,7 +703,8 @@ class FilesApi < Sinatra::Base
       body = request.body.read
     end
 
-    files_put_file(encrypted_channel_id, filename, body)
+    unescaped_filename = CGI.unescape(filename)
+    files_put_file(encrypted_channel_id, unescaped_filename, body)
   end
 
   #

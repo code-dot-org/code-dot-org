@@ -1,0 +1,3720 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 04 Jun 2019 20:51:41 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>CED01A0435ABEE4A</RequestId><HostId>3SUcDKL+yTvhT+DSuiKXXP6xusSnNqUp9x+DbQ3KaewrIWGDmJhhBIwzBe9m+b6j2v6VdjefRXA=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:42 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:43 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:42 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old%25fileac0a7f8c2faac49775a6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:43 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old%25fileac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:42 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old%2525fileac0a7f8c2faac49775a6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:44 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old%2525fileac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:44 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new%25filec0cc21d843b34e9afb52.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:45 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new%25filec0cc21d843b34e9afb52.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:44 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new%2525filec0cc21d843b34e9afb52.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:45 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new%2525filec0cc21d843b34e9afb52.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:44 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 04 Jun 2019 20:51:44 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>568E2419D38E90E5</RequestId><HostId>w7Ai7NpWLaoShMw3o9PxFUZJoGvlP0VCT6y43LiYzaEguvAuSFNhglJHLbHPeCXIuZ6heI7pAMg=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:45 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:46 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html</Key><LastModified>2019-06-04T20:49:18.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:45 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/old%25fileac0a7f8c2faac49775a6.html
+    body:
+      encoding: ASCII-8BIT
+      string: fake-file-data
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - RYtoCUkJUHF38h3BwjiCnQ==
+      Content-Length:
+      - '14'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:46 GMT
+      X-Amz-Version-Id:
+      - 2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:45 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - xQj2LoI/SHx2DNbAwj1fQg==
+      Content-Length:
+      - '165'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:46 GMT
+      X-Amz-Version-Id:
+      - EcJd1odrxpJMl08Mux70fLKgjD2v48h8
+      Etag:
+      - '"c508f62e823f487c760cd6c0c23d5f42"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:46 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/old%25fileac0a7f8c2faac49775a6.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:47 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:51:46 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - 2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:46 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:47 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:51:46 GMT
+      Etag:
+      - '"c508f62e823f487c760cd6c0c23d5f42"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - EcJd1odrxpJMl08Mux70fLKgjD2v48h8
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '165'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"}]'
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:46 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:47 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T20:51:46.000Z</LastModified><ETag>&quot;c508f62e823f487c760cd6c0c23d5f42&quot;</ETag><Size>165</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/old%25fileac0a7f8c2faac49775a6.html</Key><LastModified>2019-06-04T20:51:46.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html</Key><LastModified>2019-06-04T20:49:18.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:47 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/new%25filec0cc21d843b34e9afb52.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Amz-Copy-Source:
+      - cdo-v3-files%2Ffiles_test%2F1%2F1%2Fold%25fileac0a7f8c2faac49775a6.html
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:48 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - 2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw
+      X-Amz-Version-Id:
+      - QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '234'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-04T20:51:48.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag></CopyObjectResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:47 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - gk48DIH35LwRw7cyYALrDA==
+      Content-Length:
+      - '289'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:48 GMT
+      X-Amz-Version-Id:
+      - ".9HvvNRzTlHyI3vMsT.3yLmOaGlz9LAv"
+      Etag:
+      - '"824e3c0c81f7e4bc11c3b7326002eb0c"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:47 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/new%25filec0cc21d843b34e9afb52.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:49 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:51:48 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:48 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/old%25fileac0a7f8c2faac49775a6.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:49 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:51:46 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - 2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:48 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old%25fileac0a7f8c2faac49775a6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:49 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old%25fileac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/old%25fileac0a7f8c2faac49775a6.html</Key><VersionId>2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T20:51:46.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:48 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/old%fileac0a7f8c2faac49775a6.html</Key>
+            <VersionId>2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - IPjYFmcBOwNmKckGP2Pffw==
+      Content-Length:
+      - '236'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:50 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:49 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old%2525fileac0a7f8c2faac49775a6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:50 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old%2525fileac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:49 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new%25filec0cc21d843b34e9afb52.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:50 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new%25filec0cc21d843b34e9afb52.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/new%25filec0cc21d843b34e9afb52.html</Key><VersionId>QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T20:51:48.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:49 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/new%filec0cc21d843b34e9afb52.html</Key>
+            <VersionId>QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - SIx14IyXwYCRd5xJqmjaIA==
+      Content-Length:
+      - '236'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:51 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:50 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new%2525filec0cc21d843b34e9afb52.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:51 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new%2525filec0cc21d843b34e9afb52.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:50 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old%25factsc3767d8b677de5d809a4.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:51 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old%25factsc3767d8b677de5d809a4.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:50 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old%2525factsc3767d8b677de5d809a4.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:52 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old%2525factsc3767d8b677de5d809a4.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:51 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new%25factsd3dea19f155159a5f2d6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:52 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new%25factsd3dea19f155159a5f2d6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:51 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new%2525factsd3dea19f155159a5f2d6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:52 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new%2525factsd3dea19f155159a5f2d6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:51 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:52 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:51:48 GMT
+      Etag:
+      - '"824e3c0c81f7e4bc11c3b7326002eb0c"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - ".9HvvNRzTlHyI3vMsT.3yLmOaGlz9LAv"
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '289'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"}]'
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:52 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:53 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T20:51:48.000Z</LastModified><ETag>&quot;824e3c0c81f7e4bc11c3b7326002eb0c&quot;</ETag><Size>289</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html</Key><LastModified>2019-06-04T20:49:18.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:52 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/old%25factsc3767d8b677de5d809a4.html
+    body:
+      encoding: ASCII-8BIT
+      string: fake-file-data
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - RYtoCUkJUHF38h3BwjiCnQ==
+      Content-Length:
+      - '14'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:53 GMT
+      X-Amz-Version-Id:
+      - vgSzqnVWL33QlN6FHtTj05J6kExu.wA4
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:52 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - VAoEwuevCh+EI41GNzjAUA==
+      Content-Length:
+      - '454'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:53 GMT
+      X-Amz-Version-Id:
+      - UsadEb0a7SZpKOwd9_VrLbXOe7q7YDcL
+      Etag:
+      - '"540a04c2e7af0a1f84238d463738c050"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:53 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/old%25factsc3767d8b677de5d809a4.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:54 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:51:53 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - vgSzqnVWL33QlN6FHtTj05J6kExu.wA4
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:53 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:54 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:51:53 GMT
+      Etag:
+      - '"540a04c2e7af0a1f84238d463738c050"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - UsadEb0a7SZpKOwd9_VrLbXOe7q7YDcL
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '454'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"}]'
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:53 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:55 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T20:51:53.000Z</LastModified><ETag>&quot;540a04c2e7af0a1f84238d463738c050&quot;</ETag><Size>454</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/old%25factsc3767d8b677de5d809a4.html</Key><LastModified>2019-06-04T20:51:53.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html</Key><LastModified>2019-06-04T20:49:18.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:54 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/new%25factsd3dea19f155159a5f2d6.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Amz-Copy-Source:
+      - cdo-v3-files%2Ffiles_test%2F1%2F1%2Fold%25factsc3767d8b677de5d809a4.html
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:55 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - vgSzqnVWL33QlN6FHtTj05J6kExu.wA4
+      X-Amz-Version-Id:
+      - VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '234'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-04T20:51:55.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag></CopyObjectResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:54 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - T8b2/6U+w/wtxKmDOMxfSQ==
+      Content-Length:
+      - '579'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:55 GMT
+      X-Amz-Version-Id:
+      - 9vK9szyy3MictpA5jt1E5_PKUMpwF82C
+      Etag:
+      - '"4fc6f6ffa53ec3fc2dc4a98338cc5f49"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:54 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/new%25factsd3dea19f155159a5f2d6.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:56 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:51:55 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:55 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/old%25factsc3767d8b677de5d809a4.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:56 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:51:53 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - vgSzqnVWL33QlN6FHtTj05J6kExu.wA4
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:55 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old%25factsc3767d8b677de5d809a4.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:56 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old%25factsc3767d8b677de5d809a4.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/old%25factsc3767d8b677de5d809a4.html</Key><VersionId>vgSzqnVWL33QlN6FHtTj05J6kExu.wA4</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T20:51:53.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:55 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/old%factsc3767d8b677de5d809a4.html</Key>
+            <VersionId>vgSzqnVWL33QlN6FHtTj05J6kExu.wA4</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - mJ0OE6tSPZgNJgv51UR+4w==
+      Content-Length:
+      - '237'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:56 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:56 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/old%2525factsc3767d8b677de5d809a4.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:57 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/old%2525factsc3767d8b677de5d809a4.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:56 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new%25factsd3dea19f155159a5f2d6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:57 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new%25factsd3dea19f155159a5f2d6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/new%25factsd3dea19f155159a5f2d6.html</Key><VersionId>VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T20:51:55.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:56 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/new%factsd3dea19f155159a5f2d6.html</Key>
+            <VersionId>VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 7UlBLhKvCjsrd70iWWHrag==
+      Content-Length:
+      - '237'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:57 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:56 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/new%2525factsd3dea19f155159a5f2d6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:58 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/new%2525factsd3dea19f155159a5f2d6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:57 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/tilde%257E-filename24b70570573a2b4c463c.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:58 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/tilde%257E-filename24b70570573a2b4c463c.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:57 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/tilde%25257E-filename24b70570573a2b4c463c.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:58 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/tilde%25257E-filename24b70570573a2b4c463c.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:57 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/backtick%2580-filenamed8bd840e589ab2f68ccd.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:59 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/backtick%2580-filenamed8bd840e589ab2f68ccd.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:58 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/backtick%252580-filenamed8bd840e589ab2f68ccd.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:59 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/backtick%252580-filenamed8bd840e589ab2f68ccd.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:58 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:51:59 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:51:55 GMT
+      Etag:
+      - '"4fc6f6ffa53ec3fc2dc4a98338cc5f49"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - 9vK9szyy3MictpA5jt1E5_PKUMpwF82C
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '579'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"}]'
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:58 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:00 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T20:51:55.000Z</LastModified><ETag>&quot;4fc6f6ffa53ec3fc2dc4a98338cc5f49&quot;</ETag><Size>579</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html</Key><LastModified>2019-06-04T20:49:18.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:59 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html
+    body:
+      encoding: ASCII-8BIT
+      string: fake-file-data
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - RYtoCUkJUHF38h3BwjiCnQ==
+      Content-Length:
+      - '14'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:00 GMT
+      X-Amz-Version-Id:
+      - ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:51:59 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - EEikDvrYMxFBEuOAPf5HoA==
+      Content-Length:
+      - '752'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:00 GMT
+      X-Amz-Version-Id:
+      - nK0.KAEHReck5IlgB8G1BBrEQBHyyE6D
+      Etag:
+      - '"1048a40efad833114112e3803dfe47a0"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:00 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:01 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:00 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:00 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:01 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:00 GMT
+      Etag:
+      - '"1048a40efad833114112e3803dfe47a0"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - nK0.KAEHReck5IlgB8G1BBrEQBHyyE6D
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '752'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"}]'
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:00 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:01 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T20:52:00.000Z</LastModified><ETag>&quot;1048a40efad833114112e3803dfe47a0&quot;</ETag><Size>752</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html</Key><LastModified>2019-06-04T20:52:00.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:01 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/backtick%2580-filenamed8bd840e589ab2f68ccd.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Amz-Copy-Source:
+      - cdo-v3-files%2Ffiles_test%2F1%2F1%2Ftilde%257e-filename24b70570573a2b4c463c.html
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:02 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I
+      X-Amz-Version-Id:
+      - rnChGEiT9jmc_az973NjAaQl6OlRWhw1
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '234'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-04T20:52:02.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag></CopyObjectResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:01 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"},{"filename":"backtick%80-filenamed8bd840e589ab2f68ccd.html","category":"text","size":14,"versionId":"rnChGEiT9jmc_az973NjAaQl6OlRWhw1"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - HUhak5P4d4GQBuKKapbzaQ==
+      Content-Length:
+      - '888'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:02 GMT
+      X-Amz-Version-Id:
+      - FbXZ8.OfPy_DhsCediBUIGw5Nn8vUWQb
+      Etag:
+      - '"1d485a9393f877819006e28a6a96f369"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:01 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/backtick%2580-filenamed8bd840e589ab2f68ccd.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:03 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:02 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - rnChGEiT9jmc_az973NjAaQl6OlRWhw1
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:02 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:03 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:00 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:02 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/tilde%257E-filename24b70570573a2b4c463c.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:03 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/tilde%257E-filename24b70570573a2b4c463c.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:02 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/tilde%25257E-filename24b70570573a2b4c463c.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:04 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/tilde%25257E-filename24b70570573a2b4c463c.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:03 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/backtick%2580-filenamed8bd840e589ab2f68ccd.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:04 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/backtick%2580-filenamed8bd840e589ab2f68ccd.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/backtick%2580-filenamed8bd840e589ab2f68ccd.html</Key><VersionId>rnChGEiT9jmc_az973NjAaQl6OlRWhw1</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T20:52:02.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:03 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/backtick%80-filenamed8bd840e589ab2f68ccd.html</Key>
+            <VersionId>rnChGEiT9jmc_az973NjAaQl6OlRWhw1</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - Kk8xzHQ5HETFAoF+HZXUrg==
+      Content-Length:
+      - '248'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:04 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:03 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/backtick%252580-filenamed8bd840e589ab2f68ccd.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:04 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/backtick%252580-filenamed8bd840e589ab2f68ccd.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:04 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/plus%2Bone3a392962c142487ae67d.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:05 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/plus%2Bone3a392962c142487ae67d.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:04 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/plus%2Bone3a392962c142487ae67d.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:05 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/plus%252Bone3a392962c142487ae67d.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:04 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/plus%2Btwo274aeacf57a86587aec8.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:05 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/plus%2Btwo274aeacf57a86587aec8.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:05 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/plus%2Btwo274aeacf57a86587aec8.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:06 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/plus%252Btwo274aeacf57a86587aec8.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:05 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:06 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:02 GMT
+      Etag:
+      - '"1d485a9393f877819006e28a6a96f369"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - FbXZ8.OfPy_DhsCediBUIGw5Nn8vUWQb
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '888'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"},{"filename":"backtick%80-filenamed8bd840e589ab2f68ccd.html","category":"text","size":14,"versionId":"rnChGEiT9jmc_az973NjAaQl6OlRWhw1"}]'
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:05 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:07 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T20:52:02.000Z</LastModified><ETag>&quot;1d485a9393f877819006e28a6a96f369&quot;</ETag><Size>888</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html</Key><LastModified>2019-06-04T20:52:00.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:06 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/plus+one3a392962c142487ae67d.html
+    body:
+      encoding: ASCII-8BIT
+      string: fake-file-data
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - RYtoCUkJUHF38h3BwjiCnQ==
+      Content-Length:
+      - '14'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:07 GMT
+      X-Amz-Version-Id:
+      - h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:06 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"},{"filename":"backtick%80-filenamed8bd840e589ab2f68ccd.html","category":"text","size":14,"versionId":"rnChGEiT9jmc_az973NjAaQl6OlRWhw1"},{"filename":"plus+one3a392962c142487ae67d.html","category":"text","size":14,"versionId":"h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi","timestamp":"2019-06-04
+        13:52:06 -0700"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - WAynhvSHGqhecDpyDMjdUA==
+      Content-Length:
+      - '1052'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:07 GMT
+      X-Amz-Version-Id:
+      - Vel_PgNA_JXc.eVdEGVLOeC77na2zsDv
+      Etag:
+      - '"580ca786f4871aa85e703a720cc8dd50"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:06 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/plus+one3a392962c142487ae67d.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:08 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:07 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:07 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:08 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:07 GMT
+      Etag:
+      - '"580ca786f4871aa85e703a720cc8dd50"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - Vel_PgNA_JXc.eVdEGVLOeC77na2zsDv
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '1052'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"},{"filename":"backtick%80-filenamed8bd840e589ab2f68ccd.html","category":"text","size":14,"versionId":"rnChGEiT9jmc_az973NjAaQl6OlRWhw1"},{"filename":"plus+one3a392962c142487ae67d.html","category":"text","size":14,"versionId":"h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi","timestamp":"2019-06-04
+        13:52:06 -0700"}]'
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:07 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:08 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T20:52:07.000Z</LastModified><ETag>&quot;580ca786f4871aa85e703a720cc8dd50&quot;</ETag><Size>1052</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/plus%2Bone3a392962c142487ae67d.html</Key><LastModified>2019-06-04T20:52:07.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html</Key><LastModified>2019-06-04T20:52:00.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:07 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/plus+two274aeacf57a86587aec8.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Amz-Copy-Source:
+      - cdo-v3-files%2Ffiles_test%2F1%2F1%2Fplus%2Bone3a392962c142487ae67d.html
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:08 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi
+      X-Amz-Version-Id:
+      - sc2C2MptNlIOOdtCEsjQFn2Tm_f5yD26
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '234'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-04T20:52:08.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag></CopyObjectResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:08 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"},{"filename":"backtick%80-filenamed8bd840e589ab2f68ccd.html","category":"text","size":14,"versionId":"rnChGEiT9jmc_az973NjAaQl6OlRWhw1"},{"filename":"plus+one3a392962c142487ae67d.html","category":"text","size":14,"versionId":"h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi","timestamp":"2019-06-04
+        13:52:06 -0700"},{"filename":"plus+two274aeacf57a86587aec8.html","category":"text","size":14,"versionId":"sc2C2MptNlIOOdtCEsjQFn2Tm_f5yD26"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - E0u/vAHtYdFyBoAz2Mf/Dw==
+      Content-Length:
+      - '1176'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:09 GMT
+      X-Amz-Version-Id:
+      - EZC9qH3wpxpw8SoilTBuiTs4rHQHmZMi
+      Etag:
+      - '"134bbfbc01ed61d172068033d8c7ff0f"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:08 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/plus+two274aeacf57a86587aec8.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:09 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:08 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - sc2C2MptNlIOOdtCEsjQFn2Tm_f5yD26
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:08 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/plus+one3a392962c142487ae67d.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:09 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:07 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:08 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/plus%2Bone3a392962c142487ae67d.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:10 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/plus%2Bone3a392962c142487ae67d.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/plus%2Bone3a392962c142487ae67d.html</Key><VersionId>h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T20:52:07.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:09 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/plus+one3a392962c142487ae67d.html</Key>
+            <VersionId>h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 04c6Y2LB4y4spSsZ6+/PDw==
+      Content-Length:
+      - '236'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:10 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:09 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/plus%2Bone3a392962c142487ae67d.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:10 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/plus%252Bone3a392962c142487ae67d.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:09 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/plus%2Btwo274aeacf57a86587aec8.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:11 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/plus%2Btwo274aeacf57a86587aec8.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/plus%2Btwo274aeacf57a86587aec8.html</Key><VersionId>sc2C2MptNlIOOdtCEsjQFn2Tm_f5yD26</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T20:52:08.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:10 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/plus+two274aeacf57a86587aec8.html</Key>
+            <VersionId>sc2C2MptNlIOOdtCEsjQFn2Tm_f5yD26</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - BVCyXVeeKqj3Vfn1MtrilQ==
+      Content-Length:
+      - '236'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:11 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:10 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/plus%2Btwo274aeacf57a86587aec8.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:11 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/plus%252Btwo274aeacf57a86587aec8.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:10 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/space%20one585e6b91518b8d64a5e6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:12 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/space+one585e6b91518b8d64a5e6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:11 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/space%2Bone585e6b91518b8d64a5e6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:12 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/space%2Bone585e6b91518b8d64a5e6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:11 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/space%20two194209d64d6b2f124898.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:12 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/space+two194209d64d6b2f124898.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:11 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/space%2Btwo194209d64d6b2f124898.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:13 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/space%2Btwo194209d64d6b2f124898.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:12 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:13 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:09 GMT
+      Etag:
+      - '"134bbfbc01ed61d172068033d8c7ff0f"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - EZC9qH3wpxpw8SoilTBuiTs4rHQHmZMi
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '1176'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"},{"filename":"backtick%80-filenamed8bd840e589ab2f68ccd.html","category":"text","size":14,"versionId":"rnChGEiT9jmc_az973NjAaQl6OlRWhw1"},{"filename":"plus+one3a392962c142487ae67d.html","category":"text","size":14,"versionId":"h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi","timestamp":"2019-06-04
+        13:52:06 -0700"},{"filename":"plus+two274aeacf57a86587aec8.html","category":"text","size":14,"versionId":"sc2C2MptNlIOOdtCEsjQFn2Tm_f5yD26"}]'
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:12 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:13 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T20:52:09.000Z</LastModified><ETag>&quot;134bbfbc01ed61d172068033d8c7ff0f&quot;</ETag><Size>1176</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html</Key><LastModified>2019-06-04T20:52:00.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:13 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/space%20one585e6b91518b8d64a5e6.html
+    body:
+      encoding: ASCII-8BIT
+      string: fake-file-data
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - RYtoCUkJUHF38h3BwjiCnQ==
+      Content-Length:
+      - '14'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:14 GMT
+      X-Amz-Version-Id:
+      - oXDLiUbZpQfFb.LR.8PqoJTuQqFJs2ha
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:13 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"},{"filename":"backtick%80-filenamed8bd840e589ab2f68ccd.html","category":"text","size":14,"versionId":"rnChGEiT9jmc_az973NjAaQl6OlRWhw1"},{"filename":"plus+one3a392962c142487ae67d.html","category":"text","size":14,"versionId":"h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi","timestamp":"2019-06-04
+        13:52:06 -0700"},{"filename":"plus+two274aeacf57a86587aec8.html","category":"text","size":14,"versionId":"sc2C2MptNlIOOdtCEsjQFn2Tm_f5yD26"},{"filename":"space
+        one585e6b91518b8d64a5e6.html","category":"text","size":14,"versionId":"oXDLiUbZpQfFb.LR.8PqoJTuQqFJs2ha","timestamp":"2019-06-04
+        13:52:13 -0700"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - gpxsTwtQkQ2g1GEnF5rMWQ==
+      Content-Length:
+      - '1341'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:14 GMT
+      X-Amz-Version-Id:
+      - G2b6mOCyOuow9lgii1g4xpvKapQjBrVF
+      Etag:
+      - '"829c6c4f0b50910da0d46127179acc59"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:13 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/space%20one585e6b91518b8d64a5e6.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:15 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:14 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - oXDLiUbZpQfFb.LR.8PqoJTuQqFJs2ha
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:14 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:15 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:14 GMT
+      Etag:
+      - '"829c6c4f0b50910da0d46127179acc59"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - G2b6mOCyOuow9lgii1g4xpvKapQjBrVF
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '1341'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"},{"filename":"backtick%80-filenamed8bd840e589ab2f68ccd.html","category":"text","size":14,"versionId":"rnChGEiT9jmc_az973NjAaQl6OlRWhw1"},{"filename":"plus+one3a392962c142487ae67d.html","category":"text","size":14,"versionId":"h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi","timestamp":"2019-06-04
+        13:52:06 -0700"},{"filename":"plus+two274aeacf57a86587aec8.html","category":"text","size":14,"versionId":"sc2C2MptNlIOOdtCEsjQFn2Tm_f5yD26"},{"filename":"space
+        one585e6b91518b8d64a5e6.html","category":"text","size":14,"versionId":"oXDLiUbZpQfFb.LR.8PqoJTuQqFJs2ha","timestamp":"2019-06-04
+        13:52:13 -0700"}]'
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:14 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:15 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2019-06-04T20:52:14.000Z</LastModified><ETag>&quot;829c6c4f0b50910da0d46127179acc59&quot;</ETag><Size>1341</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/space+one585e6b91518b8d64a5e6.html</Key><LastModified>2019-06-04T20:52:14.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/tilde%257e-filename24b70570573a2b4c463c.html</Key><LastModified>2019-06-04T20:52:00.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:14 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/space%20two194209d64d6b2f124898.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Amz-Copy-Source:
+      - cdo-v3-files%2Ffiles_test%2F1%2F1%2Fspace+one585e6b91518b8d64a5e6.html
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:16 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - oXDLiUbZpQfFb.LR.8PqoJTuQqFJs2ha
+      X-Amz-Version-Id:
+      - dWCVw05APBzOwNyNvuvybIaIJGUXSo2R
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '234'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-04T20:52:16.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag></CopyObjectResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:15 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"old%fileac0a7f8c2faac49775a6.html","category":"text","size":14,"versionId":"2FJwXWUR0FzZkYI9G6hdUAPYRYNB02Sw","timestamp":"2019-06-04
+        13:51:45 -0700"},{"filename":"new%filec0cc21d843b34e9afb52.html","category":"text","size":14,"versionId":"QBBI24QJUVOf2lU1_yhxW4Kergu9YVOv"},{"filename":"old%factsc3767d8b677de5d809a4.html","category":"text","size":14,"versionId":"vgSzqnVWL33QlN6FHtTj05J6kExu.wA4","timestamp":"2019-06-04
+        13:51:52 -0700"},{"filename":"new%factsd3dea19f155159a5f2d6.html","category":"text","size":14,"versionId":"VoQEmPhsMS.lyCTXbBHVjYp0BECkyINM"},{"filename":"tilde%7E-filename24b70570573a2b4c463c.html","category":"text","size":14,"versionId":"ibFj8DCRoji4P9WU9gvy8DKLJ7bTPn2I","timestamp":"2019-06-04
+        13:51:59 -0700"},{"filename":"backtick%80-filenamed8bd840e589ab2f68ccd.html","category":"text","size":14,"versionId":"rnChGEiT9jmc_az973NjAaQl6OlRWhw1"},{"filename":"plus+one3a392962c142487ae67d.html","category":"text","size":14,"versionId":"h31b9PqMyAD65sIuf9ZBHXHL9qNct1gi","timestamp":"2019-06-04
+        13:52:06 -0700"},{"filename":"plus+two274aeacf57a86587aec8.html","category":"text","size":14,"versionId":"sc2C2MptNlIOOdtCEsjQFn2Tm_f5yD26"},{"filename":"space
+        one585e6b91518b8d64a5e6.html","category":"text","size":14,"versionId":"oXDLiUbZpQfFb.LR.8PqoJTuQqFJs2ha","timestamp":"2019-06-04
+        13:52:13 -0700"},{"filename":"space two194209d64d6b2f124898.html","category":"text","size":14,"versionId":"dWCVw05APBzOwNyNvuvybIaIJGUXSo2R"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - Ok4VPMO6oVqViY1X9JXAbg==
+      Content-Length:
+      - '1466'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:16 GMT
+      X-Amz-Version-Id:
+      - xnDaIj.EfCXYC.DFGxy3.OvC5K.6zmAl
+      Etag:
+      - '"3a4e153cc3baa15a95898d57f495c06e"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:15 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/space%20two194209d64d6b2f124898.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:16 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:16 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - dWCVw05APBzOwNyNvuvybIaIJGUXSo2R
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:15 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/space%20one585e6b91518b8d64a5e6.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:17 GMT
+      Last-Modified:
+      - Tue, 04 Jun 2019 20:52:14 GMT
+      Etag:
+      - '"458b68094909507177f21dc1c238829d"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - oXDLiUbZpQfFb.LR.8PqoJTuQqFJs2ha
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '14'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: fake-file-data
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:16 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/space%20one585e6b91518b8d64a5e6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:17 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/space+one585e6b91518b8d64a5e6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/space+one585e6b91518b8d64a5e6.html</Key><VersionId>oXDLiUbZpQfFb.LR.8PqoJTuQqFJs2ha</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T20:52:14.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:16 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/space one585e6b91518b8d64a5e6.html</Key>
+            <VersionId>oXDLiUbZpQfFb.LR.8PqoJTuQqFJs2ha</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 7USxpkM1xiZrWCbkzbbwqQ==
+      Content-Length:
+      - '237'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:17 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:16 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/space%2Bone585e6b91518b8d64a5e6.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:18 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/space%2Bone585e6b91518b8d64a5e6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:17 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/space%20two194209d64d6b2f124898.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:18 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/space+two194209d64d6b2f124898.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/space+two194209d64d6b2f124898.html</Key><VersionId>dWCVw05APBzOwNyNvuvybIaIJGUXSo2R</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T20:52:16.000Z</LastModified><ETag>&quot;458b68094909507177f21dc1c238829d&quot;</ETag><Size>14</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:17 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/space two194209d64d6b2f124898.html</Key>
+            <VersionId>dWCVw05APBzOwNyNvuvybIaIJGUXSo2R</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - CF1d9NhxWXSoHpLCuO1S2g==
+      Content-Length:
+      - '237'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:18 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:17 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/space%2Btwo194209d64d6b2f124898.html&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:19 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/space%2Btwo194209d64d6b2f124898.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:18 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:19 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/manifest.json</Key><VersionId>xnDaIj.EfCXYC.DFGxy3.OvC5K.6zmAl</VersionId><IsLatest>true</IsLatest><LastModified>2019-06-04T20:52:16.000Z</LastModified><ETag>&quot;3a4e153cc3baa15a95898d57f495c06e&quot;</ETag><Size>1466</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>G2b6mOCyOuow9lgii1g4xpvKapQjBrVF</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T20:52:14.000Z</LastModified><ETag>&quot;829c6c4f0b50910da0d46127179acc59&quot;</ETag><Size>1341</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>EZC9qH3wpxpw8SoilTBuiTs4rHQHmZMi</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T20:52:09.000Z</LastModified><ETag>&quot;134bbfbc01ed61d172068033d8c7ff0f&quot;</ETag><Size>1176</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>Vel_PgNA_JXc.eVdEGVLOeC77na2zsDv</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T20:52:07.000Z</LastModified><ETag>&quot;580ca786f4871aa85e703a720cc8dd50&quot;</ETag><Size>1052</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>FbXZ8.OfPy_DhsCediBUIGw5Nn8vUWQb</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T20:52:02.000Z</LastModified><ETag>&quot;1d485a9393f877819006e28a6a96f369&quot;</ETag><Size>888</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>nK0.KAEHReck5IlgB8G1BBrEQBHyyE6D</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T20:52:00.000Z</LastModified><ETag>&quot;1048a40efad833114112e3803dfe47a0&quot;</ETag><Size>752</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>9vK9szyy3MictpA5jt1E5_PKUMpwF82C</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T20:51:55.000Z</LastModified><ETag>&quot;4fc6f6ffa53ec3fc2dc4a98338cc5f49&quot;</ETag><Size>579</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>UsadEb0a7SZpKOwd9_VrLbXOe7q7YDcL</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T20:51:53.000Z</LastModified><ETag>&quot;540a04c2e7af0a1f84238d463738c050&quot;</ETag><Size>454</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>.9HvvNRzTlHyI3vMsT.3yLmOaGlz9LAv</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T20:51:48.000Z</LastModified><ETag>&quot;824e3c0c81f7e4bc11c3b7326002eb0c&quot;</ETag><Size>289</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>EcJd1odrxpJMl08Mux70fLKgjD2v48h8</VersionId><IsLatest>false</IsLatest><LastModified>2019-06-04T20:51:46.000Z</LastModified><ETag>&quot;c508f62e823f487c760cd6c0c23d5f42&quot;</ETag><Size>165</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:18 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>xnDaIj.EfCXYC.DFGxy3.OvC5K.6zmAl</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>G2b6mOCyOuow9lgii1g4xpvKapQjBrVF</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>EZC9qH3wpxpw8SoilTBuiTs4rHQHmZMi</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>Vel_PgNA_JXc.eVdEGVLOeC77na2zsDv</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>FbXZ8.OfPy_DhsCediBUIGw5Nn8vUWQb</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>nK0.KAEHReck5IlgB8G1BBrEQBHyyE6D</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>9vK9szyy3MictpA5jt1E5_PKUMpwF82C</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>UsadEb0a7SZpKOwd9_VrLbXOe7q7YDcL</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>.9HvvNRzTlHyI3vMsT.3yLmOaGlz9LAv</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>EcJd1odrxpJMl08Mux70fLKgjD2v48h8</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - RLoiJOlexl9LQw1Elty5gQ==
+      Content-Length:
+      - '1359'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 20:52:19 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:19 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 04 Jun 2019 20:52:18 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>53DFF76965A99F68</RequestId><HostId>udkVjo13qNat4rGtiOBqvMji2bVwp/eC9Hn9sIJw/OMWHut4lg7HL6QPHQQyj7RT6ceQ8Chbzes=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 20:52:19 GMT
+recorded_with: VCR 3.0.3
