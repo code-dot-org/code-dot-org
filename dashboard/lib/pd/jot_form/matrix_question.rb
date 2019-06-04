@@ -74,7 +74,7 @@ module Pd
         # However, in the case that we weren't able to find the sub-question,
         # matching by text, in the corresponding Pd::SurveyQuestion (likely
         # because its text was changed in JotForm since this answer was
-        # submitted, then we end up with a nil key like this:
+        # submitted), then we end up with a nil key like this:
         #   {0=>"1", nil=>"3", 2=>"6", 3=>"1", 4=>"3"}
         #
         # It appears to be harmless, but to keep things tidy we will filter it
