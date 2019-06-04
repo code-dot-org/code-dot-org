@@ -598,6 +598,19 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       }
     }
 
+    # day 5 shows the hidden questions
+    day_5_expected_results = {
+      response_count: 0,
+      general: {
+        'sampleDailyScale' => {}
+      },
+      facilitator: {
+        'sampleFacilitatorText' => {},
+        'sampleFacilitatorScale' => {},
+        'facilitatorId' => {}
+      }
+    }
+
     all_expected_results = {
       'Pre Workshop' => {
         response_count: 3,
@@ -638,7 +651,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       'Day 2' => daily_expected_results,
       'Day 3' => daily_expected_results,
       'Day 4' => daily_expected_results,
-      'Day 5' => daily_expected_results
+      'Day 5' => day_5_expected_results
     }
 
     assert_equal(all_expected_results, generate_workshops_survey_summary([@workshop], @expected_questions))
