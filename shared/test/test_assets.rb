@@ -221,22 +221,8 @@ class AssetsTest < FilesApiTestBase
       assert successful?
     end
 
-    # set abuse to lower than threshold
+    # set abuse
     @api.patch_abuse(10)
-
-    # owner can view
-    @api.get_object(asset_name)
-    assert successful?
-
-    # non-owner can view
-    with_session(:non_owner) do
-      non_owner_api = FilesApiTestHelper.new(current_session, 'assets', @channel_id)
-      non_owner_api.get_object(asset_name)
-      assert successful?
-    end
-
-    # set abuse to threshold
-    @api.patch_abuse(15)
 
     # owner can view
     @api.get_object(asset_name)
