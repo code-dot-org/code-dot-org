@@ -19,7 +19,7 @@ module MultipleExtnameFileUtils
 
   # Returns true if and only if all of the extensions used by the given file
   # are in the given list of extension names
-  def self.file_has_all_extnames(filename, extnames)
+  def self.file_has_only_extnames(filename, extnames)
     file_extnames = all_extnames(filename).uniq
     (extnames & file_extnames).length == file_extnames.length
   end
@@ -33,7 +33,7 @@ module MultipleExtnameFileUtils
   def self.find_with_extnames(dir, name, extnames)
     target_name = File.join(dir, name)
     Dir.glob(target_name + ".*").select do |filename|
-      file_has_all_extnames(filename.sub(target_name, 'name'), extnames)
+      file_has_only_extnames(filename.sub(target_name, 'name'), extnames)
     end
   end
 end
