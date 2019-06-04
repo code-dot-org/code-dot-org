@@ -1,8 +1,8 @@
-require 'pd/survey_pipeline/daily_survey_retriever.rb'
-require 'pd/survey_pipeline/daily_survey_parser.rb'
-require 'pd/survey_pipeline/daily_survey_joiner.rb'
+# require 'pd/survey_pipeline/daily_survey_retriever.rb'
+# require 'pd/survey_pipeline/daily_survey_parser.rb'
+# require 'pd/survey_pipeline/daily_survey_joiner.rb'
 require 'pd/survey_pipeline/mapper.rb'
-require 'pd/survey_pipeline/daily_survey_decorator.rb'
+# require 'pd/survey_pipeline/daily_survey_decorator.rb'
 require 'honeybadger/ruby'
 
 module Api::V1::Pd
@@ -113,7 +113,7 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/generic_survey_report
     def generic_survey_report
-      return local_workshop_daily_survey_report if @workshop.local_summer? || @workshop.teachercon? ||
+      return local_workshop_daily_survey_report if @workshop.summer? ||
         ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) &&
         @workshop.workshop_starting_date > Date.new(2018, 8, 1))
 
@@ -129,7 +129,8 @@ module Api::V1::Pd
       )
 
       render status: :bad_request, json: {
-        error: "Do not know how to process survey results for this workshop #{@workshop.course} #{@workshop.subject}"
+        error: "Do not know how to process survey results for this workshop "\
+          "#{@workshop.course} #{@workshop.subject}"
       }
     end
 
