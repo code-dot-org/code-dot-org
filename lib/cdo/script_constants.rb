@@ -243,7 +243,7 @@ module ScriptConstants
   end
 
   def self.position_in_category(script, category)
-    CATEGORIES[category.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : nil
+    CATEGORIES[category&.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : nil
   end
 
   def self.category_priority(category, full_course: false)
