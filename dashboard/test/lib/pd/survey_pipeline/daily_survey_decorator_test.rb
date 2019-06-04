@@ -6,8 +6,8 @@ module Pd::SurveyPipeline
     include Pd::WorkshopConstants
 
     test 'decorate survey summary for one form for one workshop' do
-      form_id = 1
-      form_name = '1'
+      form_id = 90_066_184_161_150
+      form_name = 'Pre-workshop'
       workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201
 
       parsed_data = {}
@@ -31,16 +31,16 @@ module Pd::SurveyPipeline
       }
 
       summary_data = [
-        {workshop_id: workshop.id, form_id: 1, name: 'importance',
+        {workshop_id: workshop.id, form_id: form_id, name: 'importance',
           reducer: 'histogram', reducer_result: {'Agree': 2, 'Neutral': 1, 'Disagree': 1}},
-        {workshop_id: workshop.id, form_id: 1, name: 'feedback',
+        {workshop_id: workshop.id, form_id: form_id, name: 'feedback',
           reducer: 'no_op', reducer_result: ['Feedback 1', 'Feedback 2', 'Feedback 3']}
       ]
 
       expected_result = {
         course_name: COURSE_CSF,
         questions: {
-          form_id => {
+          form_name => {
             general: {
               'importance' => parsed_data[:questions][form_id]['1'].except(:name),
               'feedback' => parsed_data[:questions][form_id]['2'].except(:name),
