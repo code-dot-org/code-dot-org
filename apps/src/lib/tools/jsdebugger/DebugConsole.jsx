@@ -239,10 +239,8 @@ export default connect(
     displayOutputToConsole() {
       if (this.props.logOutput.size > 0) {
         return this.props.logOutput.map((rowValue, i) => {
-          try {
+          if ('function' === typeof rowValue.toJS) {
             rowValue = rowValue.toJS();
-          } catch (error) {
-            return <Inspector key={i} data={rowValue} />;
           }
           if (rowValue.input) {
             return <div key={i}>&gt; {rowValue.input}</div>;
