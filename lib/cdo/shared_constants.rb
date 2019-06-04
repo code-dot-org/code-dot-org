@@ -3,7 +3,7 @@ require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
-# outputs JS. It is run via `grunt exec:generateSharedConstants` from the app
+# outputs JS. It is run via `grunt exec:generateSharedConstants` from the apps
 # directory.
 #
 # Many of these constants exist in other files. Changes to this file often should
@@ -76,6 +76,11 @@ module SharedConstants
       successful_runs_and_final_level_only: 'successful_runs_and_final_level_only',
       final_level_only: 'final_level_only',
     }
+  )
+
+  # Projects with an abuse score over this threshold will be blocked.
+  ABUSE_CONSTANTS = OpenStruct.new(
+    {ABUSE_THRESHOLD: 15}
   )
 
   # This list of project types can be shared by anyone regardless of their age or sharing setting.

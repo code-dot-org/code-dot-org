@@ -57,7 +57,7 @@ end
 def parse_raw(raw)
   if raw.is_a?(OpenStruct)
     raw.marshal_dump
-  elsif raw.is_a?(Hash) || raw.is_a?(Array)
+  elsif raw.is_a?(Hash) || raw.is_a?(Array) || raw.is_a?(Integer)
     raw
   elsif raw.is_a?(String)
     JSON.parse(raw)
@@ -78,6 +78,7 @@ def main
     ALL_PUBLISHABLE_PROJECT_TYPES
     CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
     ALLOWED_WEB_REQUEST_HEADERS
+    ABUSE_CONSTANTS
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
