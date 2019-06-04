@@ -5,13 +5,12 @@ import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 
-// ABUSE_THRESHOLD here should match abuse_threshold in files_api.rb to keep
-// our abuse score threshold consistent for projects and their assets.
-var ABUSE_THRESHOLD = 15;
+var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 var hasProjectChanged = false;
 
