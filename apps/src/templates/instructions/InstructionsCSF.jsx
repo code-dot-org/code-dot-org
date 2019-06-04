@@ -91,9 +91,6 @@ const styles = {
     right: 0,
     marginRight: 0
   },
-  embedView: {
-    display: 'none'
-  },
   collapserButton: {
     position: 'absolute',
     right: 0,
@@ -144,7 +141,6 @@ class InstructionsCSF extends React.Component {
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     noVisualization: PropTypes.bool,
     hideOverlay: PropTypes.func.isRequired,
-    isEmbedView: PropTypes.bool,
     aniGifURL: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
 
@@ -185,7 +181,6 @@ class InstructionsCSF extends React.Component {
   };
 
   static defaultProps = {
-    isEmbedView: false,
     noVisualization: false
   };
 
@@ -518,7 +513,6 @@ class InstructionsCSF extends React.Component {
       {
         height: this.props.height
       },
-      this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
       this.props.overlayVisible && styles.withOverlay
     ];
@@ -695,7 +689,6 @@ module.exports = connect(
     return {
       overlayVisible: state.instructions.overlayVisible,
       skinId: state.pageConstants.skinId,
-      isEmbedView: state.pageConstants.isEmbedView,
       isMinecraft: !!state.pageConstants.isMinecraft,
       aniGifURL: state.pageConstants.aniGifURL,
       inputOutputTable: state.pageConstants.inputOutputTable,
