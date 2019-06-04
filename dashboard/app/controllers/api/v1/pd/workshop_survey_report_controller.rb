@@ -3,6 +3,7 @@ require 'pd/survey_pipeline/daily_survey_parser.rb'
 require 'pd/survey_pipeline/daily_survey_joiner.rb'
 require 'pd/survey_pipeline/mapper.rb'
 require 'pd/survey_pipeline/daily_survey_decorator.rb'
+require 'honeybadger/ruby'
 
 module Api::V1::Pd
   class WorkshopSurveyReportController < ReportControllerBase
@@ -110,25 +111,6 @@ module Api::V1::Pd
       end
     end
 
-    # TODO: this action is to be deprecated
-    # GET /api/v1/pd/workshops/:id/local_workshop_daily_survey_report
-    def local_workshop_daily_survey_report
-      unless @workshop.local_summer? || @workshop.teachercon? ||
-        ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) && @workshop.workshop_starting_date > Date.new(2018, 8, 1))
-        return render status: :bad_request, json: {
-          error: 'Only call this route for new academic year workshops, 5 day summer workshops, local or TeacherCon'
-        }
-      end
-
-      survey_report = generate_workshop_daily_session_summary(@workshop)
-
-      respond_to do |format|
-        format.json do
-          render json: survey_report
-        end
-      end
-    end
-
     # GET /api/v1/pd/workshops/:id/generic_survey_report
     def generic_survey_report
       return local_workshop_daily_survey_report if @workshop.local_summer? || @workshop.teachercon? ||
@@ -137,12 +119,31 @@ module Api::V1::Pd
 
       return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
 
+      Honeybadger.notify(
+        error_message: 'Action generic_survey_report should not be used for this workshop',
+        context: {
+          workshop_id: @workshop.id,
+          course: @workshop.course,
+          subject: @workshop.subject
+        }
+      )
+
       render status: :bad_request, json: {
         error: "Do not know how to process survey results for this workshop #{@workshop.course} #{@workshop.subject}"
       }
     end
 
     private
+
+    def local_workshop_daily_survey_report
+      survey_report = generate_workshop_daily_session_summary(@workshop)
+
+      respond_to do |format|
+        format.json do
+          render json: survey_report
+        end
+      end
+    end
 
     def create_csf_survey_report
       # Retriever
