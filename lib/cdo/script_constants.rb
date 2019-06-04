@@ -18,7 +18,6 @@ module ScriptConstants
   # the category it belongs to in course dropdowns. The order of scripts within
   # a category will be the order in which they appear in the dropdown, and the
   # order of the categories will be their order in the dropdown.
-  # Note: This is only for scripts. Courses that have a family_name will always come first.
   # See ScriptConstants#category_priority for more details on prioritization.
   CATEGORIES = {
     csf: [
