@@ -1,8 +1,6 @@
 require_relative '../test_helper'
 require 'cron/aurora_backup'
 require 'aws-sdk-rds'
-require 'pry'
-require 'timecop'
 
 class AuroraBackupTest < Minitest::Test
   def test_find_latest_snapshot
