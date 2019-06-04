@@ -398,7 +398,7 @@ Dashboard::Application.routes.draw do
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
-        get :local_workshop_daily_survey_report, action: :local_workshop_daily_survey_report, controller: 'workshop_survey_report'
+        get :generic_survey_report, action: :generic_survey_report, controller: 'workshop_survey_report'
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
@@ -472,6 +472,10 @@ Dashboard::Application.routes.draw do
     post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
+
+    get 'misc_survey/thanks', to: 'misc_survey#thanks'
+    get 'misc_survey/:form_tag', to: 'misc_survey#new'
+    post 'misc_survey/submit', to: 'misc_survey#submit'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
