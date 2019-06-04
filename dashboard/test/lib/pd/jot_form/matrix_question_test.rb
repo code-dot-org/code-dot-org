@@ -48,17 +48,31 @@ module Pd
         )
       end
 
+      test 'get_value missing subquestion' do
+        question = MatrixQuestion.new(
+          id: 1,
+          options: %w(Agree Neutral Disagree),
+          sub_questions: ['Question 1', 'Question 2', 'Question 3']
+        )
+
+        answer = {
+          'Question 1' => 'Neutral',
+          'Question 2 X' => 'Disagree', # Unknown sub-question should be ignored
+          'Question 3' => 'Agree'
+        }
+
+        assert_equal(
+          {0 => 'Neutral', 2 => 'Agree'},
+          question.get_value(answer)
+        )
+      end
+
       test 'get_value errors' do
         question = MatrixQuestion.new(
           id: 1,
           options: %w(Agree Neutral Disagree),
           sub_questions: ['Question 1']
         )
-
-        e = assert_raises do
-          question.get_value({'Nonexistent Question' => 'Agree'})
-        end
-        assert_equal "Unable to find sub-question 'Nonexistent Question' in matrix question 1", e.message
 
         e = assert_raises do
           question.get_value('Question 1' => 'Nonexistent Answer')
