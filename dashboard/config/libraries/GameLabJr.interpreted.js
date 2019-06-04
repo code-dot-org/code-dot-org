@@ -44,6 +44,19 @@ function initialize(setupHandler) {
   setupHandler();
 }
 
+// Temporary wrappers for sprite methods, to facilitate transition to native.
+function destroy(sprite) {
+  sprite.destroy();
+}
+
+function setTint(sprite, color) {
+  sprite.setTint(color);
+}
+
+function removeTint(sprite) {
+  sprite.removeTint();
+}
+
 // Behaviors
 function addBehavior(sprite, behavior) {
   if (sprite && behavior) {
