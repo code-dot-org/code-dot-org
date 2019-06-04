@@ -258,7 +258,7 @@ en:
         4-5_Artist_5_a: |-
           Trial and error is a great method, but you can also solve the problem by dividing the 90 degree angle into thirds.
 
-          **90 / 3 = _____**
+          **90 / 3 = \_\_\_\_\_**
       4-5 Artist 7_authored_hint:
         4-5_Artist_7_a: 'Which angle is the smallest?  At which angle is the artist standing? '
       4-5 Artist 8_authored_hint:
@@ -11761,7 +11761,7 @@ en:
         courseD_bounce_events10s_a: |-
           You should have both of these events in your code:
 
-          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block></xml>
       courseD_bounce_events10s_2019_authored_hint:
         courseD_bounce_events10s_a: |-
           You should have both of these events in your code:
