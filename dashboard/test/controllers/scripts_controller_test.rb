@@ -355,54 +355,33 @@ class ScriptsControllerTest < ActionController::TestCase
     refute Script.find_by_name(script.name).hidden
   end
 
-  test 'updates project_sharing' do
+  test 'update: can update general_params' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
     File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
 
-    assert_nil Script.find_by_name(script.name).project_sharing
+    assert_nil script.project_sharing
+    assert_nil script.curriculum_umbrella
+    assert_nil script.family_name
+    assert_nil script.version_year
 
     post :update, params: {
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      project_sharing: "on"
+      project_sharing: 'on',
+      curriculum_umbrella: 'CSF',
+      family_name: 'my-fam',
+      version_year: '2017'
     }
-    assert Script.find_by_name(script.name).project_sharing
+    script.reload
 
-    post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: ''
-    }
-    refute Script.find_by_name(script.name).project_sharing
-  end
-
-  test 'updates curriculum_umbrella' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
-
-    assert_nil Script.find_by_name(script.name).curriculum_umbrella
-    post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
-      curriculum_umbrella: 'CSF'
-    }
-    assert_equal Script.find_by_name(script.name).curriculum_umbrella, 'CSF'
-
-    post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
-      curriculum_umbrella: ''
-    }
-    refute Script.find_by_name(script.name).curriculum_umbrella
+    assert script.project_sharing
+    assert_equal 'CSF', script.curriculum_umbrella
+    assert_equal 'my-fam', script.family_name
+    assert_equal '2017', script.version_year
   end
 
   no_access_msg = "You don&#39;t have access to this unit."
