@@ -9967,7 +9967,7 @@ en:
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
             Digital Sharing:
               name: Digital Sharing
-              description_student: ''
+              description_student: 'In this lesson, you''ll learn about the challenges and benefits of ownership and copyright. '
               description_teacher: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
             Running Simulations:
               name: Running Simulations
@@ -9991,7 +9991,7 @@ en:
           stages:
             'Algorithms: Graph Paper Programming':
               name: Graph Paper Programming
-              description_student: In this lesson, you will program your friend to draw pictures!
+              description_student: In this lesson, you will program your classmate to draw pictures!
               description_teacher: 'By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. The class will start by having students use symbols to instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.  '
             Introduction to Online Puzzles:
               name: Introduction to Online Puzzles
@@ -10011,15 +10011,15 @@ en:
               description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
             Loops in Ice Age:
               name: Loops in Ice Age
-              description_student: ''
+              description_student: In this lesson you'll use the repeat block to help Scrat reach the acorn as efficiently as possible.
               description_teacher: As a quick update (or introduction) to using loops, this stage will have students using the `repeat` block to get Scrat to the acorn more efficiently.
             Loops in Artist:
               name: Drawing Shapes with Loops
-              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+              description_student: In this lesson, loops make it easy to make cool images with the Artist!
               description_teacher: This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity doubles as a debugging exercise for extra problem-solving practice.
             Nested Loops in Bee:
               name: Nested Loops in Maze
-              description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
+              description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
               name: Nested Loops in Artist
@@ -10059,11 +10059,11 @@ en:
               description_teacher: ''
             'Unplugged: Binary':
               name: Binary Images
-              description_student: 'Learn how computers store pictures using simple ideas like on and off. '
+              description_student: Learn how computers store pictures using a language with only two options.
               description_teacher: Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
             Artist Binary:
               name: Artist Binary
-              description_student: In this lesson, you will learn how to make images using on and off.
+              description_student: In this lesson, you will learn how to make images using only 0s and 1s.
               description_teacher: This series of online lessons will have students learning to make images using on and off.
             Build a Star Wars Game:
               name: Build a Star Wars Game
@@ -10071,7 +10071,7 @@ en:
               description_teacher: In this lesson, students will practice using events to build a game that they can share online. Featuring R2-D2 and other Star Wars characters, students will be guided through events, then given space to create their own game.
             Dance Party:
               name: Dance Party
-              description_student: In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
+              description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
               description_teacher: In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
         coursee-2019:
           title: Course E (2019)
@@ -10593,7 +10593,7 @@ en:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             Looking Ahead:
               name: Looking Ahead with Minecraft
-              description_student: Avoid the lava! Here you will learn about conditionals in the world of Minecraft.
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
               description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
             Binary Bracelets:
               name: Binary Bracelets
@@ -10607,11 +10607,11 @@ en:
               description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! '
             'Programming: My Robotic Friends':
               name: My Robotic Friends Jr.
-              description_student: ''
+              description_student: In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.
               description_teacher: Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.
             'Loops: My Loopy Robotic Friends':
               name: My Loopy Robotic Friends Jr.
-              description_student: ''
+              description_student: In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.
               description_teacher: Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.
             Graphing Data:
               name: Graphing Data
@@ -10657,7 +10657,7 @@ en:
               description_teacher: ''
             'Programming: Happy Maps':
               name: Happy Maps
-              description_student: ''
+              description_student: Write instructions to get the Flurb to the fruit.
               description_teacher: 'This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.'
             Programming in Maze:
               name: Programming in Maze
@@ -10669,15 +10669,15 @@ en:
               description_teacher: ''
             Going Places Safely:
               name: Going Places Safely
-              description_student: ''
-              description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
+              description_student: Learn the rules to safely visit places online.
+              description_teacher: In collaboration with Common Sense Media, this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
               name: Happy Loops
-              description_student: ''
+              description_student: Help the Flurb solve bigger problems using loops.
               description_teacher: This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.
             Loops in Collector:
               name: Loops with Laurel
-              description_student: ''
+              description_student: Help Laurel the adventurer collect the treasure underground.
               description_teacher: In this lesson, students continue learning the concept of loops. In the previous lesson, students were introduced to loops by moving through a maze and picking corn. Here, loops are used to collect treasure in open cave spaces.
             Loops in Artist:
               name: Loops in Artist
@@ -10685,35 +10685,35 @@ en:
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
               name: The Big Event Jr.
-              description_student: ''
+              description_student: Move and shout when your teachers presses buttons on a giant remote.
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
               name: On the Move with Events
-              description_student: ''
+              description_student: Create your own game or story.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
-              description_student: ''
+              description_student: Use loops and patterns to finish the images.
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
-              description_student: ''
+              description_student: Click and drag to finish the puzzles.
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             Loops in Ice Age:
               name: Loops with Scrat
-              description_student: ''
+              description_student: Help Scrat cover more ground using loops.
               description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to get to the acorn more efficiently on Code.org.
             Programming in Ice Age:
               name: Programming with Scrat
-              description_student: ''
+              description_student: Write programs to help Scrat reach the acorn.
               description_teacher: Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-              description_student: ''
+              description_student: Help BB-8 collect the scrap metal.
               description_teacher: In this lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.
             Sequencing with Scrat:
               name: Sequencing with Scrat
-              description_student: ''
+              description_student: Program Scrat to reach the acorn.
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
         courseb-2019:
           title: Course B (2019)
@@ -10723,7 +10723,7 @@ en:
           stages:
             Move It, Move It:
               name: Move It, Move It
-              description_student: ''
+              description_student: Program your classmates to step carefully from place to place.
               description_teacher: This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course.  In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.
             Sequencing with Scrat:
               name: Sequencing with Scrat
@@ -10731,7 +10731,7 @@ en:
               description_teacher: ''
             Your Digital Footprint:
               name: Your Digital Footprint
-              description_student: ''
+              description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
               description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn about the similarities of staying safe in the real world and when visiting websites. Students will also learn that the information they put online leaves a digital footprint or “trail.” This trail can be big or small, helpful or hurtful, depending on how they manage it.
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
@@ -10759,19 +10759,19 @@ en:
               description_teacher: ''
             Loops in Collector:
               name: Loops with Laurel
-              description_student: ''
+              description_student: Program Laurel the adventurer to collect treasure in an open cave.
               description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
             Loops in Artist:
               name: Drawing Gardnes with Loops
-              description_student: ''
+              description_student: Use patterns and loops to finish the images.
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
               name: The Big Event Jr.
-              description_student: ''
+              description_student: Move or shout when your teacher presses buttons on a giant remote.
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
               name: A Royal Battle with Events
-              description_student: ''
+              description_student: Use events to create a story or make an interactive game.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             'Loops: Getting Loopy':
               name: Getting Loopy
@@ -10779,23 +10779,23 @@ en:
               description_teacher: As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.
             The Right App:
               name: The Right App
-              description_student: 'This lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user. '
+              description_student: Sketch your own smartphone app.
               description_teacher: 'This lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user. '
             Loops in Harvester:
               name: Loops with Harvester
-              description_student: ''
+              description_student: Help the Harvester collect even more, using loops!
               description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to pick corn more efficiently on Code.org.
             Programming in Maze:
               name: Programming with Angry Birds
-              description_student: ''
+              description_student: Create programs to help the Angry Bird move through the maze.
               description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
             Programming in Harvester:
               name: Programming with Harvester
-              description_student: ''
+              description_student: Help the Harvester collect vegetables along a path.
               description_teacher: 'Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. '
             Sequencing in Maze:
               name: Sequencing with Angry Birds
-              description_student: ''
+              description_student: Help Red the Angry Bird follow the path to the naughty pig.
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
         pre-express-2019:
           title: Pre-reader Express (2019)

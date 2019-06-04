@@ -107,6 +107,14 @@ module Pd
 
         form_ids.each do |form_id|
           questions = get_questions(form_id, force_sync: true)
+          questions_details = use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
+          if questions_details
+            # Make sure that there is a unique, non-nil name for each question.
+            if questions_details.pluck("name").compact.uniq.size != questions_details.size
+              raise "Not all questions for form #{form_id} have unique names."
+            end
+          end
+
           last_known_submission_id = questions.last_submission_id
 
           offset = 0
@@ -126,7 +134,7 @@ module Pd
             response[:submissions].each do |submission|
               submission_id = submission[:submission_id]
               begin
-                success = process_submission(submission)
+                success = process_submission(submission, questions_details)
                 imported += 1 if success
               rescue => e
                 # Store message and first line of backtrace for context
@@ -169,10 +177,17 @@ module Pd
         imported
       end
 
-      def process_submission(submission)
+      # Process a submission and saves the model.
+      # @param [submission] The submission received from JotForm.
+      # @param [questions_details] (optional) Details of the questions.  If provided, we can
+      #   attempt to use the name field from each question rather than its numerical ID when
+      #   storing answers.
+      def process_submission(submission, questions_details=nil)
         # There should be no duplicates, but just in case handle them gracefully as an upsert.
         find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
-          model.answers = submission[:answers].to_json
+          dest_answers = model.process_answers_from_submission(submission[:answers], questions_details)
+
+          model.answers = dest_answers.to_json
           form_id = submission[:form_id]
           submission_id = submission[:submission_id]
 
@@ -211,6 +226,12 @@ module Pd
         # Only keep this environment. Skip others.
         return true if environment != Rails.env
 
+        false
+      end
+
+      # Override in included class to enable use of name instead of id for question identifier.
+      # @return [Boolean] true if name should be used when possible for question identifier.
+      def use_names_for_question_ids?
         false
       end
 
@@ -310,13 +331,39 @@ module Pd
       new_record? && self.class.exists?(slice(*self.class.unique_attributes_with_form_id))
     end
 
+    # Given answers and questions, returns the correct form of answers.
+    # In the case of a submission where we have the questions, and the survey
+    # model returns true for use_names_for_question_ids?, then the answers have
+    # keys as question names rather than question ID integers where possible.
+    # @param source_answers [Hash] The submitted answers with keys as ID integers.
+    # @param questions [Hash] (optional) The questions for this survey.
+    def process_answers_from_submission(source_answers, questions = nil)
+      dest_answers = {}
+
+      source_answers.each do |key, value|
+        # We have an answer ID, but can we get a name instead of the ID?
+        question_detail = questions&.find {|q| q["id"] == key}
+
+        # If we want to use names instead of IDs, and we got a name, then use it.
+        if self.class.use_names_for_question_ids? && question_detail && question_name = question_detail["name"]
+          dest_answers[question_name] = value
+        else
+          dest_answers[key] = value
+        end
+      end
+
+      dest_answers
+    end
+
     # Update answers for this submission from the JotForm API
     # Useful for filling in placeholder response entries (submission id but no answers)
     def sync_from_jotform
       raise 'Missing submission id' unless submission_id.present?
 
       submission = JotForm::Translation.new(form_id).get_submission(submission_id)
-      update!(answers: submission[:answers].to_json)
+      questions_details = self.class.use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
+      dest_answers = process_answers_from_submission(submission[:answers], questions_details)
+      update!(answers: dest_answers.to_json)
     end
 
     # Supplies values for important model attributes from the JotForm-downloaded form answers.
