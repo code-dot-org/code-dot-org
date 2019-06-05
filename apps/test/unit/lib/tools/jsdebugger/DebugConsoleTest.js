@@ -261,8 +261,8 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
 
   const debugOutput = () => root.find('#debug-output');
 
-  describe('when input is coming from code workspace returns', () => {
-    it('an array input outputs an array without an arrow', () => {
+  describe('when input originates from code workspace console.log', () => {
+    it('a logged array prints an array with an expander icon', () => {
       getStore().dispatch(
         actions.appendLog({
           output: ['test'],
@@ -272,7 +272,7 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       expect(debugOutput().text()).to.equal('▶["test"]');
     });
 
-    it('a string input outputs a string without an arrow', () => {
+    it('a logged string prints a string without an arrow', () => {
       getStore().dispatch(
         actions.appendLog({
           output: 'hello world',
@@ -282,7 +282,7 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       expect(debugOutput().text()).to.equal('"hello world"');
     });
 
-    it('an integer or mathematical operation input outputs an integer without an arrow', () => {
+    it('a logged integer or mathematical operation prints an integer without an arrow', () => {
       getStore().dispatch(
         actions.appendLog({
           output: 1 + 1,
@@ -292,7 +292,7 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       expect(debugOutput().text()).to.equal('2');
     });
 
-    it('an object input outputs an object without an arrow', () => {
+    it('a logged object prints an object with an expandable arrow', () => {
       getStore().dispatch(
         actions.appendLog({
           output: {foo: 'bar'},
@@ -303,8 +303,8 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
     });
   });
 
-  describe('when input is coming from input form tag of debug console in app lab and game lab returns', () => {
-    it('an array input outputs an array with an arrow', () => {
+  describe('when input originates from the command prompt in the debug console', () => {
+    it('the original array is prepended with >, and the interpreted array with an expander icon is prepended with < ', () => {
       getStore().dispatch(
         actions.appendLog({
           input: '["test"]'
@@ -312,31 +312,28 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       );
       getStore().dispatch(
         actions.appendLog({
-          output: ['test'],
-          fromConsoleLog: false,
-          undefinedInput: false
+          output: ['test']
         })
       );
       expect(debugOutput().text()).to.equal('> ["test"]< ▶["test"]');
     });
 
-    it('a string input outputs a string with an arrow', () => {
+    it('the original string is prepended with >, and the interpreted string is prepended with <', () => {
+      var input = 'hello world';
       getStore().dispatch(
         actions.appendLog({
-          input: 'hello world'
+          input: `${input}`
         })
       );
       getStore().dispatch(
         actions.appendLog({
-          output: 'hello world',
-          fromConsoleLog: false,
-          undefinedInput: false
+          output: `${input}`
         })
       );
       expect(debugOutput().text()).to.equal('> hello world< "hello world"');
     });
 
-    it('an integer or mathematical operation input outputs an integer with an arrow', () => {
+    it('the original integer or mathematical operation is prepended with >, and the interpreted integer or mathematical operation is prepended with <', () => {
       getStore().dispatch(
         actions.appendLog({
           input: '1 + 1'
@@ -344,15 +341,13 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       );
       getStore().dispatch(
         actions.appendLog({
-          output: 1 + 1,
-          fromConsoleLog: false,
-          undefinedInput: false
+          output: 1 + 1
         })
       );
       expect(debugOutput().text()).to.equal('> 1 + 1< 2');
     });
 
-    it('an object input outputs an object with an arrow', () => {
+    it('the original object is prepended with >, and the interpreted object with an expander icon is prepended with <', () => {
       getStore().dispatch(
         actions.appendLog({
           input: "{foo: 'bar'}"
@@ -360,9 +355,7 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       );
       getStore().dispatch(
         actions.appendLog({
-          output: {foo: 'bar'},
-          fromConsoleLog: false,
-          undefinedInput: false
+          output: {foo: 'bar'}
         })
       );
       expect(debugOutput().text()).to.equal(
