@@ -392,11 +392,6 @@ Applab.init = function(config) {
       start_html: Applab.getHtml(),
       start_libraries: Applab.getLibraries()
     }));
-  } else if (!config.channel) {
-    throw new Error(
-      'Cannot initialize App Lab without a channel id. ' +
-        'You may need to sign in to your code studio account first.'
-    );
   }
   Applab.channelId = config.channel;
   Applab.storage = initFirebaseStorage({
