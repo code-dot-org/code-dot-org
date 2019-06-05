@@ -106,6 +106,23 @@ var Spritelab = function() {
     commands.removeBehavior(spriteId, behavior);
   };
 
+  // Location commands
+  this.commands.locationAt = function(x, y) {
+    return commands.locationAt(x, y);
+  };
+
+  this.commands.locationMouse = function() {
+    return commands.locationMouse.apply(this);
+  };
+
+  this.commands.locationOf = function(spriteId) {
+    return commands.locationOf(spriteId);
+  };
+
+  this.commands.randomLocation = function() {
+    return commands.randomLocation();
+  };
+
   // Sprite commands
   this.commands.countByAnimation = function(animation) {
     return commands.countByAnimation(animation);
