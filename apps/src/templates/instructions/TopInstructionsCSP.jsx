@@ -75,7 +75,7 @@ const styles = {
     bottom: 0,
     left: 0,
     right: 0,
-    overflow: 'scroll'
+    overflowY: 'scroll'
   },
   csfBody: {
     backgroundColor: '#ddd',
@@ -337,7 +337,7 @@ class TopInstructionsCSP extends Component {
     this.props.toggleInstructionsCollapsed();
 
     // adjust rendered height based on next collapsed state
-    if (collapsed) {
+    if (collapsed && this.props.noInstructionsWhenCollapsed) {
       this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
@@ -353,28 +353,36 @@ class TopInstructionsCSP extends Component {
   };
 
   handleHelpTabClick = () => {
-    this.setState({tabSelected: TabType.RESOURCES});
+    this.scrollToTopOfTab();
+    this.setState({tabSelected: TabType.RESOURCES}, this.scrollToTopOfTab);
   };
 
   handleInstructionTabClick = () => {
-    this.setState({tabSelected: TabType.INSTRUCTIONS});
+    this.scrollToTopOfTab();
+    this.setState({tabSelected: TabType.INSTRUCTIONS}, this.scrollToTopOfTab);
   };
 
   handleCommentTabClick = () => {
+    this.scrollToTopOfTab();
     // Only increment visit count if user is switching from another tab to the
     // comments tab.
     if (this.state.tabSelected !== TabType.COMMENTS) {
       this.incrementFeedbackVisitCount();
     }
 
-    this.setState(
-      {tabSelected: TabType.COMMENTS},
-      this.forceTabResizeToMaxHeight
-    );
+    this.setState({tabSelected: TabType.COMMENTS}, () => {
+      this.forceTabResizeToMaxHeight();
+      this.scrollToTopOfTab();
+    });
   };
 
   handleTeacherOnlyTabClick = () => {
-    this.setState({tabSelected: TabType.TEACHER_ONLY});
+    this.setState({tabSelected: TabType.TEACHER_ONLY}, this.scrollToTopOfTab);
+  };
+
+  scrollToTopOfTab = () => {
+    var myDiv = document.getElementById('scroll-container');
+    myDiv.scrollTo(0, 0);
   };
 
   /**
@@ -565,6 +573,7 @@ class TopInstructionsCSP extends Component {
                 : styles.body,
               this.props.isMinecraft && craftStyles.instructionsBody
             ]}
+            id="scroll-container"
           >
             <div ref="instructions">
               {this.props.hasContainedLevels && (

@@ -208,6 +208,8 @@ class InstructionsCSF extends React.Component {
         }
       }.bind(this)
     );
+
+    this.updateRightColumnWidth();
   }
 
   /**
@@ -243,29 +245,7 @@ class InstructionsCSF extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (
-      this.shouldDisplayCollapserButton() &&
-      this.getRightColWidth() === undefined
-    ) {
-      // Update right col width now that we know how much space it needs, and
-      // rerender if it has changed. One thing to note is that if we end up
-      // resizing our column significantly, it can result in our maxNeededHeight
-      // being inaccurate. This isn't that big a deal except that it means when we
-      // adjust maxNeededHeight below, it might not be as large as we want.
-      const width = $(ReactDOM.findDOMNode(this.collapser)).outerWidth(true);
-
-      // setting state in componentDidUpdate will trigger another
-      // re-render and is discouraged; unfortunately in this case we
-      // can't do it earlier in the lifecycle as we need to examine the
-      // actual DOM to determine the desired value. We are careful to
-      // only actually update the state when it has changed, which will
-      // prevent the possibility of an infinite loop and should serve to
-      // minimize excess rerenders.
-      let rightColWidth = Object.assign({}, this.state.rightColWidth);
-      rightColWidth[this.getCurrentRightColWidthProperty()] = width;
-      // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({rightColWidth});
-    }
+    this.updateRightColumnWidth();
 
     const contentContainer = this.instructions.parentElement;
     const canScroll =
@@ -292,24 +272,48 @@ class InstructionsCSF extends React.Component {
       this.scrollInstructionsToBottom();
     }
 
-    if (!this.props.collapsed && !prevProps.collapsed) {
-      const minHeight = this.getMinHeight();
-      const maxHeight = this.getMaxHeight();
-      const heightOutOfBounds =
-        this.props.height < minHeight || this.props.height > maxHeight;
+    const minHeight = this.getMinHeight();
+    const maxHeight = this.getMaxHeight();
+    const heightOutOfBounds =
+      this.props.height < minHeight || this.props.height > maxHeight;
 
-      if (heightOutOfBounds) {
-        const newHeight = Math.max(
-          Math.min(this.props.height, maxHeight),
-          minHeight
-        );
-        this.props.setInstructionsRenderedHeight(newHeight);
-        this.props.setInstructionsMaxHeightNeeded(maxHeight);
-      }
+    if (heightOutOfBounds) {
+      const newHeight = Math.max(
+        Math.min(this.props.height, maxHeight),
+        minHeight
+      );
+      this.props.setInstructionsRenderedHeight(newHeight);
+      this.props.setInstructionsMaxHeightNeeded(maxHeight);
     }
 
     this.props.adjustMaxNeededHeight();
   }
+
+  updateRightColumnWidth = () => {
+    if (
+      this.shouldDisplayCollapserButton() &&
+      this.getRightColWidth() === undefined
+    ) {
+      // Update right col width now that we know how much space it needs, and
+      // rerender if it has changed. One thing to note is that if we end up
+      // resizing our column significantly, it can result in our maxNeededHeight
+      // being inaccurate. This isn't that big a deal except that it means when we
+      // adjust maxNeededHeight below, it might not be as large as we want.
+      const width = $(ReactDOM.findDOMNode(this.collapser)).outerWidth(true);
+
+      // setting state in componentDidUpdate will trigger another
+      // re-render and is discouraged; unfortunately in this case we
+      // can't do it earlier in the lifecycle as we need to examine the
+      // actual DOM to determine the desired value. We are careful to
+      // only actually update the state when it has changed, which will
+      // prevent the possibility of an infinite loop and should serve to
+      // minimize excess rerenders.
+      let rightColWidth = Object.assign({}, this.state.rightColWidth);
+      rightColWidth[this.getCurrentRightColWidthProperty()] = width;
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({rightColWidth});
+    }
+  };
 
   /**
    * @param {boolean} collapsed whether or not the height should be
@@ -326,9 +330,11 @@ class InstructionsCSF extends React.Component {
         : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
+    const instructionsHeight = getOuterHeight(this.instructions, true);
+    //If not collapsed we want to show either the whole instructions or at least 200 of it
     const minInstructionsHeight = this.props.collapsed
-      ? getOuterHeight(this.instructions, true)
-      : 0;
+      ? instructionsHeight
+      : Math.min(200, instructionsHeight);
 
     const domNode = $(ReactDOM.findDOMNode(this));
     const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
@@ -507,6 +513,12 @@ class InstructionsCSF extends React.Component {
     return this.state.rightColWidth[this.getCurrentRightColWidthProperty()];
   }
 
+  legacyButtonClicked = () => {
+    this.props.hideOverlay();
+    this.props.setInstructionsRenderedHeight(this.getMinHeight());
+    this.props.adjustMaxNeededHeight();
+  };
+
   render() {
     const mainStyle = [
       this.props.isRtl ? styles.mainRtl : styles.main,
@@ -605,7 +617,10 @@ class InstructionsCSF extends React.Component {
               {this.props.overlayVisible && (
                 <div>
                   <hr />
-                  <LegacyButton type="primary" onClick={this.props.hideOverlay}>
+                  <LegacyButton
+                    type="primary"
+                    onClick={this.legacyButtonClicked}
+                  >
                     {i18n.dialogOK()}
                   </LegacyButton>
                 </div>
