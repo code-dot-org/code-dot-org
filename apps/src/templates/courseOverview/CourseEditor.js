@@ -18,6 +18,9 @@ const styles = {
   },
   checkbox: {
     margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
   }
 };
 
@@ -33,7 +36,8 @@ export default class CourseEditor extends Component {
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
-    hasVerifiedResources: PropTypes.bool.isRequired
+    hasVerifiedResources: PropTypes.bool.isRequired,
+    courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   render() {
@@ -47,7 +51,8 @@ export default class CourseEditor extends Component {
       descriptionTeacher,
       scriptsInCourse,
       scriptNames,
-      teacherResources
+      teacherResources,
+      courseFamilies
     } = this.props;
     return (
       <div>
@@ -63,12 +68,18 @@ export default class CourseEditor extends Component {
         </label>
         <label>
           Family Name
-          <input
-            type="text"
+          <select
             name="family_name"
             defaultValue={familyName}
-            style={styles.input}
-          />
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {courseFamilies.map(familyOption => (
+              <option key={familyOption} value={familyOption}>
+                {familyOption}
+              </option>
+            ))}
+          </select>
         </label>
         <label>
           Version Year

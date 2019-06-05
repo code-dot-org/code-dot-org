@@ -25,6 +25,11 @@ class Course < ApplicationRecord
 
   scope :with_associated_models, -> {includes([:plc_course, :default_course_scripts])}
 
+  FAMILY_NAMES = [
+    CSD = 'csd'.freeze,
+    CSP = 'csp'.freeze
+  ].freeze
+
   def skip_name_format_validation
     !!plc_course
   end
