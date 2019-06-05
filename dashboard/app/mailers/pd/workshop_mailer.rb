@@ -1,3 +1,5 @@
+require 'pd/certificate_renderer'
+
 class Pd::WorkshopMailer < ActionMailer::Base
   include Rails.application.routes.url_helpers
 
@@ -225,14 +227,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   def generate_csf_certificate
-    image = create_certificate_image2(
-      dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
-      @enrollment.full_name,
-      y: 444,
-      height: 100,
-    )
+    image = Pd::CertificateRenderer.render_workshop_certificate @enrollment
     image.format = 'jpg'
     image.to_blob
+  ensure
+    image.try :destroy!
   end
 
   def email_address(display_name, email)
