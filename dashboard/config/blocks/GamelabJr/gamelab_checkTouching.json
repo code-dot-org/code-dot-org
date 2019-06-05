@@ -8,6 +8,9 @@
     ],
     "func": "checkTouching",
     "blockText": "{CONDITION} {SPRITE1} touches {SPRITE2}",
+    "callbackParams": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "CONDITION",
@@ -24,13 +27,11 @@
       },
       {
         "name": "SPRITE1",
-        "type": "Sprite",
-        "defer": true
+        "type": "Sprite"
       },
       {
         "name": "SPRITE2",
-        "type": "Sprite",
-        "defer": true
+        "type": "Sprite"
       }
     ],
     "eventBlock": true

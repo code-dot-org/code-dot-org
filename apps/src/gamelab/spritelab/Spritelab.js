@@ -1,3 +1,4 @@
+var commands = require('./commands');
 import * as spriteUtils from './spriteUtils';
 
 var Spritelab = function() {
@@ -33,6 +34,39 @@ var Spritelab = function() {
     spriteUtils.runEvents(this);
     this.drawSprites();
     updateTitle.apply(this);
+  };
+
+  // Sprite commands
+  this.commands.countByAnimation = function(animation) {
+    return commands.countByAnimation(animation);
+  };
+
+  this.commands.createNewSprite = function(name, animation, location) {
+    return commands.makeSprite.apply(this, [animation, location]);
+  };
+
+  this.commands.destroy = function(spriteId) {
+    commands.destroy(spriteId);
+  };
+
+  this.commands.displace = function(spriteId, targetSpriteIndex) {
+    commands.displace(spriteId, targetSpriteIndex);
+  };
+
+  this.commands.getProp = function(spriteId, prop) {
+    return commands.getProp(spriteId, prop);
+  };
+
+  this.commands.getThisSprite = function(which, extraArgs) {
+    return commands.getThisSprite(which, extraArgs);
+  };
+
+  this.commands.makeNewSpriteAnon = function(animation, location) {
+    commands.makeSprite.apply(this, [animation, location]);
+  };
+
+  this.commands.setAnimation = function(spriteId, animation) {
+    commands.setAnimation(spriteId, animation);
   };
 };
 
