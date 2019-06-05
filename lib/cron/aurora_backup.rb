@@ -122,11 +122,11 @@ module AuroraBackup
   # @param rds_client [Aws::RDS::Client] RDS Client for primary account
   # @param rds_client_backup [Aws::RDS::Client] RDS client for backup account
   # @param backup_account_id [String] account ID for backup account
-  def self.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id)
+  # @param db_cluster_id [String] Cluster ID to back up snapshots from
+  def self.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id, db_cluster_id)
     rds_resource = Aws::RDS::Resource.new(client: rds_client)
     temp_snapshot_name = "#{TEMP_SNAPSHOT_PREFIX}-#{Time.now.to_i}"
-
-    latest_snapshot = find_latest_snapshot(rds_resource, 'production-aurora-cluster')
+    latest_snapshot = find_latest_snapshot(rds_resource, db_cluster_id)
     copied_snapshot = share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, temp_snapshot_name)
     shared_snapshot_backup = find_shared_snapshot_on_backup(rds_client_backup, temp_snapshot_name)
     copy_shared_snapshot(shared_snapshot_backup, latest_snapshot.db_cluster_snapshot_identifier.sub('rds:', ''))
