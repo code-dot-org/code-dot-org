@@ -12558,7 +12558,7 @@ en:
               name: What is a Computer?
             Problem Solving Process:
               name: Problem Solving Process
-          title: Testing Widgets that save state
+          title: Sample of online activities
           description_audience: ''
           description_short: ''
           description: ''
@@ -12580,3 +12580,13 @@ en:
           description_audience: 6 - 12 Apprentice Facilitators in Training
           description_short: 'Apprentice reflection materials for 2019 facilitators in training '
           description: This is the set of apprentice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. These questions will be the foundation of work we do at the Facilitator Training Workshop
+        csd-sample-online:
+          stages:
+            What is a Computer? - sample progression:
+              name: What is a Computer? - sample progression
+            Problem Solving Process - sample activities:
+              name: Problem Solving Process - sample activities
+          title: Sample of online activities for CS Discoveries
+          description_audience: ''
+          description_short: ''
+          description: ''

@@ -187,6 +187,36 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       }
     }
 
+    # day 5 includes hidden questions
+    expected_day_5_questions = {
+      general: {
+        'sampleDailyScale' => {
+          text: 'How was your day?',
+          answer_type: ANSWER_SCALE,
+          min_value: 1,
+          max_value: 5,
+          options: ['1 - Poor', '2', '3', '4', '5 - Excellent']
+        },
+      },
+      facilitator: {
+        'sampleFacilitatorText' => {
+          text: 'How was the facilitator?',
+          answer_type: ANSWER_TEXT
+        },
+        'sampleFacilitatorScale' => {
+          text: 'How do you rate the facilitators skills?',
+          answer_type: ANSWER_SCALE,
+          min_value: 1,
+          max_value: 5,
+          options: ['1 - Weak', '2', '3', '4', '5 - Amazing']
+        },
+        'facilitatorId' => {
+          text: 'facilitatorId',
+          answer_type: 'text'
+        }
+      }
+    }
+
     @expected_questions = {
       'Pre Workshop' => {
         general: {
@@ -221,7 +251,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       'Day 2' => expected_daily_questions,
       'Day 3' => expected_daily_questions,
       'Day 4' => expected_daily_questions,
-      'Day 5' => expected_daily_questions
+      'Day 5' => expected_day_5_questions
     }
 
     @expected_academic_year_questions = {
@@ -568,6 +598,19 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       }
     }
 
+    # day 5 shows the hidden questions
+    day_5_expected_results = {
+      response_count: 0,
+      general: {
+        'sampleDailyScale' => {}
+      },
+      facilitator: {
+        'sampleFacilitatorText' => {},
+        'sampleFacilitatorScale' => {},
+        'facilitatorId' => {}
+      }
+    }
+
     all_expected_results = {
       'Pre Workshop' => {
         response_count: 3,
@@ -608,7 +651,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       'Day 2' => daily_expected_results,
       'Day 3' => daily_expected_results,
       'Day 4' => daily_expected_results,
-      'Day 5' => daily_expected_results
+      'Day 5' => day_5_expected_results
     }
 
     assert_equal(all_expected_results, generate_workshops_survey_summary([@workshop], @expected_questions))
@@ -686,61 +729,61 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal(
       {
         'Facilitator Person 1' => {
-          'overallHow' => {
-            this_workshop: 4.64,
-            all_my_workshops: 3.47
+          'facilitator_effectiveness_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0
           },
-          'howOften56' => {
-            this_workshop: 4.75,
-            all_my_workshops: 4.21
+          'teacher_engagement_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0
           },
-          'iFeel133' => {
-            this_workshop: 4.63,
-            all_my_workshops: 4.56,
+          'overall_success_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0,
           },
           facilitator_effectiveness: {
-            this_workshop: 1.34,
-            all_my_workshops: 1.1
+            this_workshop: 0.67,
+            all_my_workshops: 0.67
           },
           teacher_engagement: {
-            this_workshop: 0,
-            all_my_workshops: 0,
+            this_workshop: 1.0,
+            all_my_workshops: 1.0,
           },
           overall_success: {
-            this_workshop: 0.93,
-            all_my_workshops: 0.91
+            this_workshop: 0.8,
+            all_my_workshops: 0.8
           }
         },
         'Facilitator Person 2' => {
-          'overallHow' => {
-            this_workshop: 4.64,
-            all_my_workshops: 3.47
+          'facilitator_effectiveness_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0
           },
-          'howOften56' => {
-            this_workshop: 2.07,
-            all_my_workshops: 1.99
+          'teacher_engagement_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0
           },
-          'iFeel133' => {
-            this_workshop: 4.63,
-            all_my_workshops: 4.56,
+          'overall_success_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0,
           },
           facilitator_effectiveness: {
-            this_workshop: 0.96,
-            all_my_workshops: 0.78
+            this_workshop: 0.67,
+            all_my_workshops: 0.67
           },
           teacher_engagement: {
-            this_workshop: 0,
-            all_my_workshops: 0,
+            this_workshop: 1.0,
+            all_my_workshops: 1.0,
           },
           overall_success: {
-            this_workshop: 0.93,
-            all_my_workshops: 0.91
+            this_workshop: 0.8,
+            all_my_workshops: 0.8
           }
         },
         questions: {
-          'overallHow' => "Overall how much did you learn from this course?",
-          'howOften56' => "How often did your facilitator help you?",
-          'iFeel133' => "Overall, how do you feel about computer science?"
+          "facilitator_effectiveness_0" => "During my workshop, {facilitatorName} did the following: Demonstrated knowledge of the curriculum.",
+          "teacher_engagement_0" => "How much do you agree or disagree with the following statements about your level of engagement in the workshop? I found the activities we did in this workshop interesting and engaging.",
+          "overall_success_0" => "How much do you agree or disagree with the following statements about the workshop overall? I feel more prepared to teach the material covered in this workshop than before I came."
         }
       },
 
@@ -759,61 +802,63 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
     expected_averages = {
       'Facilitator Person 1' => {
-        'overallHow' => {
-          this_workshop: 4.64,
+        'facilitator_effectiveness_0' => {
+          this_workshop: 4.0,
           all_my_workshops: nil
         },
-        'howOften56' => {
-          this_workshop: 4.75,
+        'teacher_engagement_0' => {
+          this_workshop: 4.0,
           all_my_workshops: nil
         },
-        'iFeel133' => {
-          this_workshop: 4.63,
+        'overall_success_0' => {
+          this_workshop: 4.0,
           all_my_workshops: nil
         },
+        # these values come from the average response to all questions in the category
+        # so, 4 / (category size)
         facilitator_effectiveness: {
-          this_workshop: 1.34,
+          this_workshop: 0.67,
           all_my_workshops: 0.0
         },
         teacher_engagement: {
-          this_workshop: 0.0,
+          this_workshop: 1.0,
           all_my_workshops: 0.0
         },
         overall_success: {
-          this_workshop: 0.93,
+          this_workshop: 0.8,
           all_my_workshops: 0.0
         }
       },
       'Facilitator Person 2' => {
-        'overallHow' => {
-          this_workshop: 4.64,
+        'facilitator_effectiveness_0' => {
+          this_workshop: 4.0,
           all_my_workshops: nil
         },
-        'howOften56' => {
-          this_workshop: 2.07,
+        'teacher_engagement_0' => {
+          this_workshop: 4.0,
           all_my_workshops: nil
         },
-        'iFeel133' => {
-          this_workshop: 4.63,
+        'overall_success_0' => {
+          this_workshop: 4.0,
           all_my_workshops: nil
         },
         facilitator_effectiveness: {
-          this_workshop: 0.96,
+          this_workshop: 0.67,
           all_my_workshops: 0.0
         },
         teacher_engagement: {
-          this_workshop: 0.0,
+          this_workshop: 1.0,
           all_my_workshops: 0.0
         },
         overall_success: {
-          this_workshop: 0.93,
+          this_workshop: 0.8,
           all_my_workshops: 0.0
         }
       },
       questions: {
-        'overallHow' => 'Overall how much did you learn from this course?',
-        'howOften56' => 'How often did your facilitator help you?',
-        'iFeel133' => 'Overall, how do you feel about computer science?'
+        "facilitator_effectiveness_0" => "During my workshop, {facilitatorName} did the following: Demonstrated knowledge of the curriculum.",
+        "teacher_engagement_0" => "How much do you agree or disagree with the following statements about your level of engagement in the workshop? I found the activities we did in this workshop interesting and engaging.",
+        "overall_success_0" => "How much do you agree or disagree with the following statements about the workshop overall? I feel more prepared to teach the material covered in this workshop than before I came."
       }
     }
 
@@ -826,105 +871,71 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     {
       this_workshop: {
         'Day 1' => {
-          general: {
-            'overallHow' => {
-              'A tremendous amount' => 5,
-              'Quite a bit' => 3,
-              'Some' => 1
-            }
-          },
-          facilitator: {
-            'howOften56' => {
-              'Facilitator Person 1' => {
-                'All the time' => 5,
-                'Often' => 1
-              },
-              'Facilitator Person 2' => {
-                'Sometimes' => 5,
-                'Almost never' => 2
-              }
-            }
-          }
+          general: {},
+          facilitator: {}
         },
         'Day 2' => {
           general: {
-            'iFeel133' => {
-              'Fantastic' => 5,
-              'Pretty good' => 3,
-              'num_respondents' => 2  # This should get filtered out.
+            'teacher_engagement_0' => {
+              'Strongly Agree' => 1,
+              'Strongly Disagree' => 1,
+              'Neutral' => 1,
+              'num_respondents' => 3 # This should get filtered out.
             },
-            'overallHow' => {
-              'A tremendous amount' => 5
+            'overall_success_0' => {
+              'Strongly Agree' => 1,
+              'Strongly Disagree' => 1,
+              'Neutral' => 1,
+              'num_respondents' => 3
             }
           },
           facilitator: {
-            'howOften56' => {
+            'facilitator_effectiveness_0' => {
               'Facilitator Person 1' => {
-                'All the time' => 4,
-                'Often' => 2
+                'Strongly Agree' => 1,
+                'Strongly Disagree' => 1,
+                'Neutral' => 1
               },
               'Facilitator Person 2' => {
-                'Sometimes' => 3,
-                'Almost never' => 5
+                'Strongly Agree' => 1,
+                'Strongly Disagree' => 1,
+                'Neutral' => 1
               }
             }
           }
-        },
+        }
       },
       all_my_workshops: {
         'Day 1' => {
-          general: {
-            'overallHow' => {
-              'A tremendous amount' => 10,
-              'Quite a bit' => 9,
-              'Some' => 8,
-              'A little bit' => 7,
-              'Almost nothing' => 1,
-              'num_respondents' => 2  # This should get filtered out.
-            }
-          },
-          facilitator: {
-            'howOften56' => {
-              'Facilitator Person 1' => {
-                'All the time' => 5,
-                'Often' => 4,
-                'Sometimes' => 3
-              },
-              'Facilitator Person 2' => {
-                'Sometimes' => 10,
-                'Once in a while' => 9,
-                'Almost never' => 8
-              }
-            }
-          }
+          general: {},
+          facilitator: {}
         },
         'Day 2' => {
           general: {
-            'overallHow' => {
-              'A tremendous amount' => 5,
-              'Quite a bit' => 6,
-              'Some' => 9,
-              'A little bit' => 2,
-              'Almost nothing' => 3
+            'teacher_engagement_0' => {
+              'Strongly Agree' => 1,
+              'Strongly Disagree' => 1,
+              'Neutral' => 1,
+              'num_respondents' => 3
             },
-            'iFeel133' => {
-              'Fantastic' => 10,
-              'Pretty good' => 5,
-              'So-so' => 1
-            }
+            'overall_success_0' => {
+              'Strongly Agree' => 1,
+              'Strongly Disagree' => 1,
+              'Neutral' => 1,
+              'num_respondents' => 3
+            },
           },
           facilitator: {
-            'howOften56' => {
+            'facilitator_effectiveness_0' => {
               'Facilitator Person 1' => {
-                'All the time' => 10,
-                'Often' => 6,
-                'Sometimes' => 5
+                'Strongly Agree' => 1,
+                'Strongly Disagree' => 1,
+                'Neutral' => 1
               },
               'Facilitator Person 2' => {
-                'Often' => 1,
-                'Sometimes' => 10,
-                'Once in a while' => 20,
-                'Almost never' => 15
+                'Strongly Agree' => 1,
+                'Strongly Disagree' => 1,
+                'Neutral' => 1
               }
             }
           }
@@ -932,66 +943,49 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       },
       questions: {
         'Day 1' => {
-          general: {
-            'overallHow' => {
-              text: 'Overall how much did you learn from this course?',
-              answer_type: 'singleSelect',
-              options: [
-                'Almost nothing',
-                'A little bit',
-                'Some',
-                'Quite a bit',
-                'A tremendous amount'
-              ]
-            }
-          },
-          facilitator: {
-            'howOften56' => {
-              text: 'How often did your facilitator help you?',
-              options: [
-                'Almost never',
-                'Once in a while',
-                'Sometimes',
-                'Often',
-                'All the time'
-              ]
-            }
-          }
+          general: {},
+          facilitator: {}
         },
         'Day 2' => {
           general: {
-            'overallHow' => {
-              text: 'Overall how much did you learn from this course?',
+            'teacher_engagement_0' => {
+              text: 'How much do you agree or disagree with the following statements about your level of engagement in the workshop? I found the activities we did in this workshop interesting and engaging.',
               answer_type: 'singleSelect',
               options: [
-                'Almost nothing',
-                'A little bit',
-                'Some',
-                'Quite a bit',
-                'A tremendous amount'
+                'Strongly Disagree',
+                'Disagree',
+                'Slightly Disagree',
+                'Neutral',
+                'Slightly Agree',
+                'Agree',
+                'Strongly Agree'
               ]
             },
-            'iFeel133' => {
-              text: 'Overall, how do you feel about computer science?',
+            'overall_success_0' => {
+              text: 'How much do you agree or disagree with the following statements about the workshop overall? I feel more prepared to teach the material covered in this workshop than before I came.',
               answer_type: 'singleSelect',
               options: [
-                'Awful',
-                'Not great',
-                'So-so',
-                'Pretty good',
-                'Fantastic'
+                'Strongly Disagree',
+                'Disagree',
+                'Slightly Disagree',
+                'Neutral',
+                'Slightly Agree',
+                'Agree',
+                'Strongly Agree'
               ]
             }
           },
           facilitator: {
-            'howOften56' => {
-              text: 'How often did your facilitator help you?',
+            'facilitator_effectiveness_0' => {
+              text: 'During my workshop, {facilitatorName} did the following: Demonstrated knowledge of the curriculum.',
               options: [
-                'Almost never',
-                'Once in a while',
-                'Sometimes',
-                'Often',
-                'All the time'
+                'Strongly Disagree',
+                'Disagree',
+                'Slightly Disagree',
+                'Neutral',
+                'Slightly Agree',
+                'Agree',
+                'Strongly Agree'
               ]
             }
           }
