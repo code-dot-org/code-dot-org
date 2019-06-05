@@ -633,8 +633,8 @@ class FilesTest < FilesApiTestBase
     assert_equal sound_body, last_response.body
 
     # abuse score didn't carry over
-    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(image_filename.downcase))
-    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(sound_filename.downcase))
+    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, CGI.escape(image_filename.downcase))
+    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, CGI.escape(sound_filename.downcase))
 
     assert_newrelic_metrics %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
