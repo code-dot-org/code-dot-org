@@ -37,7 +37,8 @@ export default class CourseEditor extends Component {
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired
+    courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   render() {
@@ -52,7 +53,8 @@ export default class CourseEditor extends Component {
       scriptsInCourse,
       scriptNames,
       teacherResources,
-      courseFamilies
+      courseFamilies,
+      versionYearOptions
     } = this.props;
     return (
       <div>
@@ -83,12 +85,18 @@ export default class CourseEditor extends Component {
         </label>
         <label>
           Version Year
-          <input
-            type="text"
+          <select
             name="version_year"
             defaultValue={versionYear}
-            style={styles.input}
-          />
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {versionYearOptions.map(year => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
         </label>
         <label>
           Short Description (used in course cards on homepage)
