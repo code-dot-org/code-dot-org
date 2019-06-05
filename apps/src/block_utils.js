@@ -858,6 +858,8 @@ exports.createJsWrapperBlockCreator = function(
    *   looks like a loop block but without previous or next statement connectors
    * @param {boolean} opts.inline Render inputs inline, defaults to false
    * @param {boolean} opts.simpleValue Just return the field value of the block.
+   * @param {string[]} opts.extraArgs Additional arguments to pass into the generated function.
+   * @param {string[]} opts.callbackParams Parameters to add to the generated callback function.
    * @param {?string} helperCode The block's helper code, to verify the func.
    *
    * @returns {string} the name of the generated block
@@ -879,7 +881,9 @@ exports.createJsWrapperBlockCreator = function(
       eventBlock,
       eventLoopBlock,
       inline,
-      simpleValue
+      simpleValue,
+      extraArgs,
+      callbackParams
     },
     helperCode,
     pool
@@ -1032,6 +1036,10 @@ exports.createJsWrapperBlockCreator = function(
         })
         .filter(value => value !== null);
 
+      if (extraArgs) {
+        values.push(...extraArgs);
+      }
+
       if (simpleValue) {
         const code = prefix + values[args.findIndex(arg => !arg.assignment)];
         if (returnType !== undefined) {
@@ -1056,7 +1064,12 @@ exports.createJsWrapperBlockCreator = function(
           this.nextConnection && this.nextConnection.targetBlock();
         let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
         handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
-        values.push(`function () {\n${handlerCode}}`);
+        if (callbackParams) {
+          let params = callbackParams.join(',');
+          values.push(`function (${params}) {\n${handlerCode}}`);
+        } else {
+          values.push(`function () {\n${handlerCode}}`);
+        }
       }
 
       if (expression) {

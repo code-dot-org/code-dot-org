@@ -11,8 +11,7 @@
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite",
-        "defer": true
+        "type": "Sprite"
       }
     ],
     "eventBlock": true
