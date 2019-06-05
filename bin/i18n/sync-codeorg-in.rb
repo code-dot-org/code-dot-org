@@ -198,9 +198,7 @@ end
 def redact_level_content
   Dir.glob("i18n/locales/source/course_content/**/*.json").each do |source|
     backup = source.sub("source", "original")
-    FileUtils.mkdir_p(File.dirname(backup))
-    FileUtils.cp(source, backup)
-    redact(source, source)
+    redact_course_content(source, source, backup)
   end
 end
 
