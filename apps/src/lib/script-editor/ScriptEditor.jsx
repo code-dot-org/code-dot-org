@@ -32,7 +32,7 @@ const styles = {
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
-const CURRICULUM_UMBRELLAS = ['', 'CSF', 'CSD', 'CSP'];
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP'];
 
 /**
  * Component for editing course scripts.
@@ -154,10 +154,11 @@ export default class ScriptEditor extends React.Component {
           Is this script part of one of the core courses?
           <select
             name="curriculum_umbrella"
-            style={{marginLeft: 20}}
+            style={styles.dropdown}
             defaultValue={this.props.curriculumUmbrella}
             ref={select => (this.curriculumUmbrellaSelect = select)}
           >
+            <option value="">(None)</option>
             {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
               <option key={curriculumUmbrella} value={curriculumUmbrella}>
                 {curriculumUmbrella}
