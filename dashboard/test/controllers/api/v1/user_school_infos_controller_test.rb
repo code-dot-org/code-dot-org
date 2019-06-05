@@ -170,7 +170,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     @teacher.update school_info: school_info
     sign_in @teacher
 
-    puts "teacher --> #{@teacher.school_info.inspect}"
     Timecop.travel 1.hour
     submit_blank_school_info
 
