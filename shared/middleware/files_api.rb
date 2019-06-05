@@ -38,6 +38,12 @@ class FilesApi < Sinatra::Base
 
   def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
     return true if has_permission?('project_validator') || new_score.nil?
+    puts "new_score in can_update_abuse_score?"
+    puts new_score
+    puts
+    puts "current get_abuse_score in can_update_abuse_score?"
+    puts get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename)
+    puts
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
@@ -226,7 +232,16 @@ class FilesApi < Sinatra::Base
     last_modified result[:last_modified]
 
     metadata = result[:metadata]
+    puts "abuse_score from metadata: "
+    puts metadata['abuse_score']
+    puts
+    puts "abuse-score from metadata: "
+    puts metadata['abuse-score']
+    puts
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+    puts "abuse score in get_file in files_api: "
+    puts abuse_score
+    puts
     not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
@@ -496,6 +511,10 @@ class FilesApi < Sinatra::Base
     dont_cache
 
     abuse_score = request.GET['abuse_score']
+    puts "patch v3 abuse score: "
+    puts abuse_score
+    puts
+
     not_modified if abuse_score.nil?
 
     buckets = get_bucket_impl(endpoint).new
