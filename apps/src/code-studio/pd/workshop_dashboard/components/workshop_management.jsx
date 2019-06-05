@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '../../components/confirmation_dialog';
-import {PermissionPropType, Organizer, ProgramManager} from '../permission';
+import {PermissionPropType} from '../permission';
 
 export class WorkshopManagement extends React.Component {
   static contextTypes = {
@@ -35,18 +35,18 @@ export class WorkshopManagement extends React.Component {
     super(props);
 
     if (props.showSurveyUrl) {
-      let surveyBaseUrl;
+      let surveyBaseUrl = null;
       if (this.use_daily_survey_route()) {
         surveyBaseUrl = 'daily_survey_results';
       } else if (props.subject === WorkshopTypes.local_summer) {
         surveyBaseUrl = 'local_summer_workshop_survey_results';
-      } else {
-        surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager)
-          ? 'organizer_survey_results'
-          : 'survey_results';
       }
 
-      this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
+      if (surveyBaseUrl) {
+        this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
+      } else {
+        this.surveyUrl = null;
+      }
     }
   }
 
@@ -59,11 +59,14 @@ export class WorkshopManagement extends React.Component {
         this.props.subject
       );
 
+    // 2018-08-01 is when we started using JotForm.  Don't change this date here.
     let new_facilitator_weekend =
       workshop_date >= new Date('2018-08-01') &&
       ['CS Discoveries', 'CS Principles'].includes(this.props.course) &&
       this.props.subject !== 'Code.org Facilitator Weekend';
 
+    // 2019-05-20 is when we started using a JotForm survey for Deep Dive workshops.
+    // Don't change this date here.
     let new_csf_201 =
       workshop_date >= new Date('2019-05-20') &&
       this.props.subject === 'Deep Dive';
@@ -134,7 +137,7 @@ export class WorkshopManagement extends React.Component {
   }
 
   renderSurveyButton() {
-    if (!this.props.showSurveyUrl) {
+    if (!this.props.showSurveyUrl || !this.surveyUrl) {
       return null;
     }
 
