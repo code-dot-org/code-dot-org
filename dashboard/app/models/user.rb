@@ -305,9 +305,7 @@ class User < ActiveRecord::Base
     UserSchoolInfo.create(
       user: self,
       school_info: school_info,
-      user_id: id,
       start_date: last_school ? current_time : created_at,
-      school_info_id: school_info_id,
       last_confirmation_date: current_time
     )
   end
