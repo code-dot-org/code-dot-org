@@ -36,7 +36,7 @@ class FilesApiTestHelper
   end
 
   def get_object(filename, body = '', headers = {})
-    get "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
+    get "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}", body, headers
     last_response.body
   end
 

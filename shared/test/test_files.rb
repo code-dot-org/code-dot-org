@@ -58,16 +58,16 @@ class FilesTest < FilesApiTestBase
     )
     post_file_data @api, old_filename, file_data, 'text/html'
 
-    @api.get_object(CGI.escape(old_filename))
+    @api.get_object(old_filename)
     assert successful?
 
     @api.copy_object old_filename, new_filename
 
     assert successful?
-    @api.get_object(CGI.escape(new_filename))
+    @api.get_object(new_filename)
     assert successful?
     assert_equal file_data, last_response.body
-    @api.get_object(CGI.escape(old_filename))
+    @api.get_object(old_filename)
     assert successful?
     assert_equal file_data, last_response.body
 
@@ -260,7 +260,7 @@ class FilesTest < FilesApiTestBase
     post_file_data(@api, filename, 'stub-contents', 'test/html')
     assert successful?
 
-    @api.get_object(escaped_filename)
+    @api.get_object(filename)
     assert successful?
 
     @api.delete_object(filename)
@@ -269,7 +269,7 @@ class FilesTest < FilesApiTestBase
     post_file_data(@api, filename2, 'stub-contents-2', 'test/html')
     assert successful?
 
-    @api.get_object(escaped_filename2)
+    @api.get_object(filename2)
     assert successful?
 
     @api.delete_object(filename2)
@@ -510,7 +510,6 @@ class FilesTest < FilesApiTestBase
 
   def test_rename_mixed_case
     filename = @api.randomize_filename('Mixed Case With Spaces.html')
-    escaped_filename = CGI.escape(filename)
     filename2 = @api.randomize_filename('Another Mixed Case Spaces Name.html')
     escaped_filename2 = CGI.escape(filename2)
     delete_all_file_versions(filename, filename2)
@@ -519,24 +518,24 @@ class FilesTest < FilesApiTestBase
     post_file_data(@api, filename, 'stub-contents', 'test/html')
     assert successful?
 
-    @api.get_object(escaped_filename)
+    @api.get_object(filename)
     assert successful?
     assert_equal 'stub-contents', last_response.body
 
     @api.rename_object(filename, escaped_filename2)
     assert successful?
 
-    @api.get_object(escaped_filename2)
+    @api.get_object(filename2)
     assert successful?
     assert_equal 'stub-contents', last_response.body
 
-    @api.get_object(escaped_filename)
+    @api.get_object(filename)
     assert not_found?
 
     @api.delete_object(filename2)
     assert successful?
 
-    @api.get_object(escaped_filename2)
+    @api.get_object(filename2)
     assert not_found?
 
     assert_newrelic_metrics %w(
@@ -549,7 +548,6 @@ class FilesTest < FilesApiTestBase
 
   def test_rename_case_only
     filename = @api.randomize_filename('Mixed Case With Spaces.png')
-    escaped_filename = URI.escape(filename)
     filename2 = filename.sub 'Mixed Case', 'mixeD casE'
     escaped_filename2 = URI.escape(filename2)
     delete_all_file_versions filename, filename2
@@ -560,11 +558,11 @@ class FilesTest < FilesApiTestBase
     post_file_data(@api, filename, image_body, 'image/png')
     assert successful?
 
-    @api.get_object(escaped_filename)
+    @api.get_object(filename)
     assert successful?
     assert_equal image_body, last_response.body
 
-    @api.get_object(escaped_filename2)
+    @api.get_object(filename2)
     assert successful?
     assert_equal image_body, last_response.body
 
@@ -579,11 +577,11 @@ class FilesTest < FilesApiTestBase
     @api.rename_object(filename, escaped_filename2)
     assert successful?
 
-    @api.get_object(escaped_filename)
+    @api.get_object(filename)
     assert successful?
     assert_equal image_body, last_response.body
 
-    @api.get_object(escaped_filename2)
+    @api.get_object(filename2)
     assert successful?
     assert_equal image_body, last_response.body
 
@@ -637,11 +635,11 @@ class FilesTest < FilesApiTestBase
     assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
     assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
 
-    dest_api.get_object(URI.escape(image_filename))
+    dest_api.get_object(image_filename)
     assert successful?
     assert_equal image_body, last_response.body
 
-    dest_api.get_object(URI.escape(sound_filename))
+    dest_api.get_object(sound_filename)
     assert successful?
     assert_equal sound_body, last_response.body
 
