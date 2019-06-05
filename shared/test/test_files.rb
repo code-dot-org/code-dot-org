@@ -52,10 +52,7 @@ class FilesTest < FilesApiTestBase
     file_data = 'fake-file-data'
     old_filename = @api.randomize_filename src
     new_filename = @api.randomize_filename dest
-    delete_all_file_versions(
-      old_filename, CGI.escape(old_filename),
-      new_filename, CGI.escape(new_filename)
-    )
+    delete_all_file_versions(old_filename, new_filename)
     post_file_data @api, old_filename, file_data, 'text/html'
 
     @api.get_object(old_filename)
@@ -71,18 +68,14 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_equal file_data, last_response.body
 
-    delete_all_file_versions(
-      old_filename, CGI.escape(old_filename),
-      new_filename, CGI.escape(new_filename)
-    )
+    delete_all_file_versions(old_filename, new_filename)
   end
 
   def test_rename_object
     file_data = 'fake-file-data'
     old_filename = @api.randomize_filename 'old_file.html'
     new_filename = @api.randomize_filename 'new_file.html'
-    delete_all_file_versions old_filename, URI.escape(old_filename),
-      new_filename, URI.escape(new_filename)
+    delete_all_file_versions old_filename, new_filename
     delete_all_manifest_versions
     post_file_data @api, old_filename, file_data, 'test/html'
 
@@ -109,7 +102,7 @@ class FilesTest < FilesApiTestBase
     file_data = 'fake-file-data'
     old_filename = @api.randomize_filename 'old_file.html'
     new_filename = "long_filename#{'_' * 512}.html"
-    delete_all_file_versions old_filename, URI.escape(old_filename)
+    delete_all_file_versions old_filename
     delete_all_manifest_versions
     post_file_data @api, old_filename, file_data, 'test/html'
 
@@ -251,10 +244,8 @@ class FilesTest < FilesApiTestBase
 
   def test_escaping_insensitivity
     filename = @api.randomize_filename('has space.html')
-    escaped_filename = CGI.escape(filename)
     filename2 = @api.randomize_filename('another has spaces.html')
-    escaped_filename2 = CGI.escape(filename2)
-    delete_all_file_versions(filename, escaped_filename, filename2, escaped_filename2)
+    delete_all_file_versions(filename, filename2)
     delete_all_manifest_versions
 
     post_file_data(@api, filename, 'stub-contents', 'test/html')
@@ -729,7 +720,7 @@ class FilesTest < FilesApiTestBase
 
   def delete_all_file_versions(*filenames)
     filenames.each do |filename|
-      delete_all_versions(CDO.files_s3_bucket, "files_test/1/1/#{filename}")
+      delete_all_versions(CDO.files_s3_bucket, "files_test/1/1/#{CGI.escape(filename)}")
     end
   end
 
