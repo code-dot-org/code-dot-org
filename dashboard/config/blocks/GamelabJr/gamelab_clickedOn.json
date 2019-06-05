@@ -8,6 +8,9 @@
     ],
     "func": "clickedOn",
     "blockText": "when {SPRITE} clicked",
+    "callbackParams": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "SPRITE",
