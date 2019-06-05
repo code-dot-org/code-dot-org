@@ -142,7 +142,7 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(animations|assets|sources|librarypilot|files)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
-    filename = CGI.unescape(filename) if endpoint == 'files'
+    filename = CGI.unescape(filename)
     get_file(endpoint, encrypted_channel_id, filename)
   end
 
@@ -525,7 +525,7 @@ class FilesApi < Sinatra::Base
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    get_bucket_impl(endpoint).new.delete(encrypted_channel_id, filename)
+    get_bucket_impl(endpoint).new.delete(encrypted_channel_id, CGI.unescape(filename))
     no_content
   end
 
