@@ -83,7 +83,7 @@ class FilesApiTestHelper
   end
 
   def delete_object(filename)
-    delete "/v3/#{@endpoint}/#{@channel_id}/#{filename}"
+    delete "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}"
   end
 
   def list_object_versions(filename)

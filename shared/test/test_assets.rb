@@ -294,9 +294,9 @@ class AssetsTest < FilesApiTestBase
       Custom/ListRequests/AssetBucket/BucketHelper.list
     )
 
-    src_api.delete_object(CGI.escape(image_filename))
+    src_api.delete_object(image_filename)
     src_api.delete_object(sound_filename)
-    dest_api.delete_object(CGI.escape(image_filename))
+    dest_api.delete_object(image_filename)
     dest_api.delete_object(sound_filename)
     delete_channel(dest_channel_id)
   end
@@ -341,9 +341,9 @@ class AssetsTest < FilesApiTestBase
       Custom/ListRequests/AssetBucket/BucketHelper.list
     )
 
-    src_api.delete_object(CGI.escape(image_filename))
+    src_api.delete_object(image_filename)
     src_api.delete_object(sound_filename)
-    dest_api.delete_object(CGI.escape(image_filename))
+    dest_api.delete_object(image_filename)
     dest_api.delete_object(sound_filename)
     delete_channel(dest_channel_id)
   end

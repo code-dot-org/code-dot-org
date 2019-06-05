@@ -263,7 +263,7 @@ class FilesTest < FilesApiTestBase
     @api.get_object(escaped_filename)
     assert successful?
 
-    @api.delete_object(escaped_filename)
+    @api.delete_object(filename)
     assert successful?
 
     post_file_data(@api, filename2, 'stub-contents-2', 'test/html')
@@ -272,7 +272,7 @@ class FilesTest < FilesApiTestBase
     @api.get_object(escaped_filename2)
     assert successful?
 
-    @api.delete_object(escaped_filename2)
+    @api.delete_object(filename2)
     assert successful?
 
     assert_newrelic_metrics %w(
@@ -533,7 +533,7 @@ class FilesTest < FilesApiTestBase
     @api.get_object(escaped_filename)
     assert not_found?
 
-    @api.delete_object(escaped_filename2)
+    @api.delete_object(filename2)
     assert successful?
 
     @api.get_object(escaped_filename2)
@@ -603,7 +603,7 @@ class FilesTest < FilesApiTestBase
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
-    @api.delete_object(escaped_filename2)
+    @api.delete_object(filename2)
     assert successful?
 
     delete_all_manifest_versions
@@ -656,11 +656,11 @@ class FilesTest < FilesApiTestBase
       Custom/ListRequests/FileBucket/BucketHelper.copy_files
     )
 
-    src_api.delete_object(URI.escape(image_filename))
-    src_api.delete_object(URI.escape(sound_filename))
+    src_api.delete_object(image_filename)
+    src_api.delete_object(sound_filename)
     delete_all_manifest_versions
-    dest_api.delete_object(URI.escape(image_filename))
-    dest_api.delete_object(URI.escape(sound_filename))
+    dest_api.delete_object(image_filename)
+    dest_api.delete_object(sound_filename)
     delete_channel(dest_channel_id)
   end
 
