@@ -18,9 +18,6 @@ if [ "$branch" != "staging" ]; then
   exit
 fi
 
-# Do a pull to make sure we're up to date
-git pull
-
 ### Dashboard
 
 orig_dir=dashboard/config/locales
