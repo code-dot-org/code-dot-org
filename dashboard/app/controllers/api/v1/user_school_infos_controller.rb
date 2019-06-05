@@ -25,7 +25,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
       new_school_info = if existing_school_info && !existing_school_info.complete?
                           SchoolInfo.find_or_create_by!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
                         else
-                          SchoolInfo.create!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
+                          SchoolInfo.find_or_create!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
                         end
 
       existing_school_info&.assign_attributes(school_info_params)
