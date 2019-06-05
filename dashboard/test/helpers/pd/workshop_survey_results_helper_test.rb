@@ -729,7 +729,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal(
       {
         'Facilitator Person 1' => {
-          'facilitator_qualities_0' => {
+          'facilitator_effectiveness_0' => {
             this_workshop: 4.0,
             all_my_workshops: 4.0
           },
@@ -755,7 +755,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           }
         },
         'Facilitator Person 2' => {
-          'facilitator_qualities_0' => {
+          'facilitator_effectiveness_0' => {
             this_workshop: 4.0,
             all_my_workshops: 4.0
           },
@@ -781,7 +781,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           }
         },
         questions: {
-          "facilitator_qualities_0" => "During my workshop, {facilitatorName} did the following: Demonstrated knowledge of the curriculum.",
+          "facilitator_effectiveness_0" => "During my workshop, {facilitatorName} did the following: Demonstrated knowledge of the curriculum.",
           "teacher_engagement_0" => "How much do you agree or disagree with the following statements about your level of engagement in the workshop? I found the activities we did in this workshop interesting and engaging.",
           "overall_success_0" => "How much do you agree or disagree with the following statements about the workshop overall? I feel more prepared to teach the material covered in this workshop than before I came."
         }
@@ -802,7 +802,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
     expected_averages = {
       'Facilitator Person 1' => {
-        'facilitator_qualities_0' => {
+        'facilitator_effectiveness_0' => {
           this_workshop: 4.0,
           all_my_workshops: nil
         },
@@ -830,7 +830,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         }
       },
       'Facilitator Person 2' => {
-        'facilitator_qualities_0' => {
+        'facilitator_effectiveness_0' => {
           this_workshop: 4.0,
           all_my_workshops: nil
         },
@@ -856,7 +856,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         }
       },
       questions: {
-        "facilitator_qualities_0" => "During my workshop, {facilitatorName} did the following: Demonstrated knowledge of the curriculum.",
+        "facilitator_effectiveness_0" => "During my workshop, {facilitatorName} did the following: Demonstrated knowledge of the curriculum.",
         "teacher_engagement_0" => "How much do you agree or disagree with the following statements about your level of engagement in the workshop? I found the activities we did in this workshop interesting and engaging.",
         "overall_success_0" => "How much do you agree or disagree with the following statements about the workshop overall? I feel more prepared to teach the material covered in this workshop than before I came."
       }
@@ -890,7 +890,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
             }
           },
           facilitator: {
-            'facilitator_qualities_0' => {
+            'facilitator_effectiveness_0' => {
               'Facilitator Person 1' => {
                 'Strongly Agree' => 1,
                 'Strongly Disagree' => 1,
@@ -926,7 +926,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
             },
           },
           facilitator: {
-            'facilitator_qualities_0' => {
+            'facilitator_effectiveness_0' => {
               'Facilitator Person 1' => {
                 'Strongly Agree' => 1,
                 'Strongly Disagree' => 1,
@@ -976,7 +976,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
             }
           },
           facilitator: {
-            'facilitator_qualities_0' => {
+            'facilitator_effectiveness_0' => {
               text: 'During my workshop, {facilitatorName} did the following: Demonstrated knowledge of the curriculum.',
               options: [
                 'Strongly Disagree',
