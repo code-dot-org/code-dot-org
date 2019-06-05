@@ -51,7 +51,11 @@ def restore_redacted_files
       if original_path == 'i18n/locales/original/dashboard/blocks.yml'
         plugin = 'blockfield'
       end
-      restore(original_path, translated_path, translated_path, plugin)
+      if original_path.include? "course_content"
+        restore_course_content(original_path, translated_path, translated_path, plugin)
+      else
+        restore(original_path, translated_path, translated_path, plugin)
+      end
     end
   end
 end
@@ -128,6 +132,7 @@ def distribute_course_content(locale)
     file.close
     next unless translated_data
     translated_data.each do |type, type_data|
+      next if type_data.blank?
       type_data.each do |level_url, level_data|
         level = get_level_from_url(level_url)
         translated_strings[type][level.name] = level_data
@@ -136,6 +141,7 @@ def distribute_course_content(locale)
   end
 
   translated_strings.each do |type, translations|
+    translations = translations.sort.to_h
     type_data = {}
     type_data[locale] = Hash.new
     type_data[locale]["data"] = Hash.new

@@ -12,6 +12,7 @@ import WorkshopManagement from './workshop_management';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
+import {CSF, CSD, CSP} from '../../application/ApplicationConstants';
 
 const styles = {
   container: {
@@ -292,8 +293,9 @@ export default class WorkshopTable extends React.Component {
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
         showSurveyUrl={
           state === 'Ended' ||
-          (['CS Discoveries', 'CS Principles'].includes(course) &&
-            subject !== 'Code.org Facilitator Weekend')
+          ([CSD, CSP].includes(course) &&
+            subject !== 'Code.org Facilitator Weekend') ||
+          (course === CSF && subject === 'Deep Dive')
         }
       />
     );
