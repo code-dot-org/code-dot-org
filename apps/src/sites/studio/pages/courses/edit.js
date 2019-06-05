@@ -30,6 +30,7 @@ function showCourseEditor() {
       hasVerifiedResources={
         courseEditorData.course_summary.has_verified_resources
       }
+      courseFamilies={courseEditorData.course_families}
     />,
     document.getElementById('course_editor')
   );
