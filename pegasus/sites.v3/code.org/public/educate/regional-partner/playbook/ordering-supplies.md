@@ -9,7 +9,7 @@ noindex: true
 
 ## Quick Links
 
-- **[2018-19 Supplies Plan](#plan)**<br/>
+- **[2019-20 Supplies Plan](#plan)**<br/>
 - **[Mimeo Marketplaces](#mimeo)**<br/>
 - **[Ordering '18-19 Academic Year Supplies](#academic)**<br/>
 - **[Ordering Adafruit Circuit Boards](#adafruit)**<br/>
@@ -19,7 +19,7 @@ noindex: true
 <a id="plan"></a>
 ## K-12 Supplies Plan
 
-Code.org will be covering the cost of all initial supplies needed for all K-12 programs. We will do this by shipping materials directly, providing a lump sum for partners to purchase supplies, or by covering the cost of items ordered through the Mimeo Marketplace. The [2018-19 K-12 Supplies Plan](https://docs.google.com/document/d/1L5EdftQmtZls57P5OtwmNGl6wPKrb8VbFE6xP0vdWZY/edit#heading=h.80sk5rtogqp6) outlines the details, including key differences in how supplies will be handled in the K-5 program and the 6-12 program.
+Code.org will be covering the cost of all initial supplies needed for all K-12 programs. We will do this by shipping materials directly, providing a lump sum for partners to purchase supplies, or by covering the cost of items ordered through the Mimeo Marketplace. The [2019-20 K-12 Supplies Plan](https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit) outlines the details, including key differences in how supplies will be handled in the K-5 program and the 6-12 program.
 
 <a id="mimeo"></a>
 ## Accessing Mimeo
@@ -50,9 +50,10 @@ The [Adafruit Circuit Playground](https://www.adafruit.com/product/3399) is the 
 	<summary>Regional Partner Subsidy</summary>
 	<p>
 
-* <b>Group 1 and 2 Partners</b> that received one Adafruit classroom kit last year will be eligible to order a second kit at no cost if they have two Code.org-funded CS Discoveries cohorts for the 2018-19 academic year
-* <b>Group 3 and 4 Partners</b> will be eligible to receive up to two kits if they have two Code.org-funded CS Discoveries cohorts for the 2018-19 academic year
-* Partners will receive a unique discount code to apply at checkout on the [Adafruit website](https://www.adafruit.com/product/3399) worth the value of the number of kits they're eligible to receive in email in November 2018
+* <b>Group 1 and 2 Partners</b> that received one Adafruit classroom kit last year were eligible to order a second kit at no cost if they have two Code.org-funded CS Discoveries cohorts for the 2018-19 academic year
+* <b>Group 3 and 4 Partners</b> were eligible to receive up to two kits if they have two Code.org-funded CS Discoveries cohorts for the 2018-19 academic year
+* Partners recieved a unique discount code to apply at checkout on the [Adafruit website](https://www.adafruit.com/product/3399) worth the value of the number of kits they're eligible to receive in email in November 2018
+* Details about the 2019-20 subsidy program will be shared in fall 2019
 </p>
 </details>
 
@@ -60,7 +61,7 @@ The [Adafruit Circuit Playground](https://www.adafruit.com/product/3399) is the 
 	<summary>CS Discoveries Teacher Subsidy</summary>
 	<p>
 
-* Review the details of the CS Discoveries teacher subsidy, eligibility requirements, and timeline in [this email](https://docs.google.com/document/d/1aQdQEOyO0EcJ21LnfeOVZG-BTudE_ZRhB5I9ShgdgsQ/edit) we shared in December 2017.
+* Review the details of the CS Discoveries teacher subsidy, eligibility requirements, and timeline for the 2019-20 school year at [code.org/circuitplayground#classroom](https://code.org/circuitplayground#classroom).
 </p>
 </details>
 

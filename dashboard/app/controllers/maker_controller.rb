@@ -27,7 +27,7 @@ class MakerController < ApplicationController
     elsif any_csd_2017?(for_user)
       Script.get_from_cache(Script::CSD6_NAME)
     else
-      Script.get_from_cache(Script::CSD6_2018_NAME)
+      Script.get_from_cache(Script::CSD6_2019_NAME)
     end
   end
 

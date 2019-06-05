@@ -475,6 +475,15 @@ const sourceHandler = {
   getLibrary() {
     return getAppOptions().getLibrary();
   },
+  codeContainsError() {
+    return getAppOptions().codeContainsError();
+  },
+  setInitialLevelLibraries(libraries) {
+    getAppOptions().level.libraries = libraries;
+  },
+  getLevelLibraries() {
+    return window.Applab && Applab.getLibraries();
+  },
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },

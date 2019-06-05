@@ -986,11 +986,11 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
-        // For mini-toolbox prototype
-        // 'Clicked sprite' boxes that are children of the 'gamelab_spriteClickedSet'
-        // should be set to duplicate when dragged
-        if (blockText === 'clicked sprite') {
+        // For mini-toolbox, indicate which blocks should receive the duplicate on drag
+        // behavior and indicates the sibling block to shadow the value from
+        if (blockText === 'clicked {SPRITE}') {
           this.setParentForCopyOnDrag('gamelab_spriteClickedSet');
+          this.setBlockToShadow('gamelab_allSpritesWithAnimation');
         }
         if (blockText === 'subject sprite') {
           this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
