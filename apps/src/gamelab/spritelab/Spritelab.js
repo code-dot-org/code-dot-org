@@ -36,6 +36,27 @@ var Spritelab = function() {
     updateTitle.apply(this);
   };
 
+  // Behavior commands
+  this.commands.addBehaviorSimple = function(spriteId, behavior) {
+    commands.addBehavior(spriteId, behavior);
+  };
+
+  this.commands.Behavior = function(callback) {
+    return commands.Behavior(callback);
+  };
+
+  this.commands.draggableFunc = function(spriteId) {
+    return commands.draggableFunc(this);
+  };
+
+  this.commands.removeAllBehaviors = function(spriteId) {
+    commands.removeAllBehaviors(spriteId);
+  };
+
+  this.commands.removeBehaviorSimple = function(spriteId, behavior) {
+    commands.removeBehavior(spriteId, behavior);
+  };
+
   // Sprite commands
   this.commands.countByAnimation = function(animation) {
     return commands.countByAnimation(animation);
