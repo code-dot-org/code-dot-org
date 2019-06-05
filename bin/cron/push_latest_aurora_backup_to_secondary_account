@@ -22,7 +22,7 @@ def main
   credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
   rds_client_backup = Aws::RDS::Client.new(credentials: credentials_backup)
   backup_account_id = Aws::STS::Client.new(credentials: credentials_backup).get_caller_identity.account
-  copied_snapshot_on_backup = AuroraBackup.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id)
+  copied_snapshot_on_backup = AuroraBackup.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id, CDO.db_cluster_id)
 
   ChatClient.message'cron-daily', "Completed cross account RDS backup: #{copied_snapshot_on_backup.snapshot_id}"
 rescue => e
