@@ -1,7 +1,6 @@
 class Api::V1::UserSchoolInfosController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource only: :update_last_confirmation_date
-  skip_before_action :verify_authenticity_token
 
   # PATCH /api/v1/users_school_infos/<id>/update_last_confirmation_date
   def update_last_confirmation_date
@@ -25,7 +24,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
       new_school_info = if existing_school_info && !existing_school_info.complete?
                           SchoolInfo.find_or_create_by!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
                         else
-                          SchoolInfo.find_or_create!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
+                          SchoolInfo.find_or_create_by!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
                         end
 
       existing_school_info&.assign_attributes(school_info_params)
