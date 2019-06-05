@@ -406,7 +406,6 @@ Dashboard::Application.routes.draw do
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
       resources :workshop_organizers, only: :index
-      get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
 
