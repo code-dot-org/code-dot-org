@@ -1,0 +1,3 @@
+function draw() {
+  executeDrawLoopAndCallbacks();
+}
