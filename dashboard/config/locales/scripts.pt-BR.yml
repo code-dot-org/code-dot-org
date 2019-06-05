@@ -394,6 +394,8 @@ pt-BR:
               name: Aulas offline
             Writing computer programs:
               name: Escrevendo programas de computador
+            new stage:
+              name: nova fase
         netsim:
           title: Simulador de internet
           description: Aprenda como a Internet funciona
@@ -1118,6 +1120,8 @@ pt-BR:
               name: DP on-line
             Pixelation:
               name: Pixelização
+            PlayLab:
+              name: PlayLab
             Public Key Cryptography:
               name: Criptografia de chave pública
             Rich long assessment:
@@ -1150,6 +1154,10 @@ pt-BR:
               name: Tapete de Dança
             Mini Rubric:
               name: Mini Rubrica
+            Pluralsight Test:
+              name: Teste Pluralsight
+            Externals Optionally Displayed as Unplugged:
+              name: Externos Opcionalmente Exibidos como Desconectados
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -1946,6 +1954,7 @@ pt-BR:
             Sharing Student Work:
               name: Compartilhando o trabalho do estudante
         csp1-2017:
+          title: CSP Unidade 1 - A Internet ('17 -'18)
           stages:
             Binary Numbers:
               name: Números binários
@@ -1977,9 +1986,12 @@ pt-BR:
               name: Unidade 1 Capítulo 2 Avaliação
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp2-2017:
+          title: CSP Unidade 2 - Informação Digital ('17 -'18)
           stages:
             Bytes and File Sizes:
               name: Bytes e Tamanhos de Arquivos
@@ -2013,6 +2025,8 @@ pt-BR:
               name: Unidade 2 Capítulo 2 Avaliação
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp3-2017:
@@ -2043,11 +2057,16 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Creating Functions with Parameters:
               name: Criação de funções com parâmetros
+            CSP End-of-Semester Mid-course survey:
+              name: CSP pesquisa de final de semestre
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp4-2017:
+          title: CSP Unidade 4 do - Big Data e Privacidade ('17 -'18)
           description: "O mundo rico em dados em que vivemos introduz muitas questões
             complexas relacionadas a políticas públicas, leis, ética e impacto social.
             Os objetivos desta unidade são desenvolver uma visão equilibrada e balanceada
@@ -2076,11 +2095,14 @@ pt-BR:
               name: Unidade 4 Capítulo 1 Avaliação
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Post-Course Survey:
               name: Pesquisa Pós-Curso
             Student Post-Course Survey:
               name: Pesquisa pós-curso do estudante
         csp5-2017:
+          title: CSP Unidade 5 - Construindo aplicações ('17 -'18)
           description_short: Continue aprendendo conceitos fundamentais de programação
             de computadores em JavaScript, fazendo aplicativos ricos e interativos.
           stages:
@@ -2136,6 +2158,8 @@ pt-BR:
               name: Unidade 5 Avaliação 1
             Unit 5 Assessment 2:
               name: Unidade 5 Avaliação 2
+            "'If' Statements Unplugged":
+              name: Laços 'If' desplugados
             Getting started with If Statements:
               name: Começando a usar declarações If
             Unit 3 Chapter 1 Assessment 3:
@@ -2166,18 +2190,40 @@ pt-BR:
               name: 'Construindo um aplicativo: Rolagem de Imagem'
             'Building an App: Canvas Painter':
               name: 'Construindo um aplicativo: Pintor de Tela'
+            Unit 5 Assessment 5 - Practice AP questions:
+              name: Unidade 5 Avaliação 5 - Questões Práticas de AP
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Multi-Screen Apps:
               name: Aplicativos Multiplas Telas
+            '"if" Statements Unplugged':
+              name: Laços 'If' desplugados
             Boolean Expressions and "if" Statements:
               name: Expressões Booleanas e Declarações "if"
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp6:
           stages:
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
         CSDU3-Draft:
           description_short: Programação
           stages:
@@ -2199,14 +2245,20 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
             'Project: Interactive Card':
               name: 'Projeto: Cartão Interativo'
+            Sprite Movement Methods:
+              name: Métodos de Movimento Sprite
             Sprites and Images:
               name: Sprites e Imagens
             Sprites and Properties:
               name: Sprites e Propriedades
+            Variables Unplugged:
+              name: Variáveis Desconectadas
             Variables and Animation:
               name: Variáveis e Animação
             Functions:
               name: funções
+            Platform Jumper:
+              name: Jumper plataforma
             Defender:
               name: Defensor
             'Project: Build a Game':
@@ -2265,6 +2317,12 @@ pt-BR:
               name: Currículo do ECS
             Welcome to Phase 1!:
               name: Bem-vindo a Fase 1!
+            Wrap Up:
+              name: Resumo
+            Classroom and workshop style:
+              name: Estilo de sala de aula e oficina
+            'Classroom and workshop style ':
+              name: 'Estilo de sala de aula e oficina '
         algebraFacilitator:
           description: Ensine álgebra com programação funcional
           description_short: Ensine álgebra com programação funcional
@@ -2344,6 +2402,8 @@ pt-BR:
               name: Estratégias para Redação de Alunos
             Supporting Peer Learning:
               name: Apoiando o Aprendizado entre Pares
+            'Tool Talk: Intro to Netsim':
+              name: 'Ferramenta de conversa: Introdução ao Netsim'
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -2352,6 +2412,8 @@ pt-BR:
               name: teste Módulo de conteúdo da unidade 1 Bravo
             test Unit 1 content module Charlie:
               name: teste módulo de conteúdo da Unidade 1 Charlie
+            test Unit 1 practice module Delta:
+              name: teste unidade 1prática do módulo Delta
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2510,6 +2572,18 @@ pt-BR:
               name: 'Lição 1.10: Roteadores e Redundância'
             Lesson 1,11:
               name: 'Lição 1.11: Pacotes e Criando uma Internet Confiável'
+            Lesson 1,4:
+              name: 'Lições 1.4: Sistemas Numéricos (Círculo Triângulo Quadrado)'
+            Lesson 1,6:
+              name: 'Lição 1.6: Enviando Números'
+            Lesson 1,9:
+              name: 'Lição 1.9: Endereçamento de Internet (Navio de Guerra)'
+            Lesson 2,10:
+              name: 'Lição 2.10: Visualizações de Dados Boas e Ruins'
+            Lesson 2,2:
+              name: 'Lição 2.2: Compressão de Texto'
+            Lesson 2,3:
+              name: 'Lição 2.3: Pixelização Preta e Branca'
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
         kinderTest:
@@ -2606,6 +2680,8 @@ pt-BR:
               name: 'Projeto Final - Dia de Trabalho: Construa o Projeto Online'
             'Play Lab: Variables':
               name: 'Laboratório: variáveis'
+            Try programming with Khan Academy:
+              name: Experimente programar com a Khan Academy
             'Unplugged: Envelope Variables':
               name: 'Offline: variáveis do envelope'
             'Unplugged: For Loop Fun':
@@ -2720,8 +2796,18 @@ pt-BR:
               name: Depuração da abelha
             Bounce:
               name: Pingue-pongue
+            Build a Game:
+              name: Crie um jogo
             'Farmer: While Loops':
               name: 'Fazendeira: Laços Enquanto'
+            'Maze: Conditionals with Loops':
+              name: 'Labirinto: Condicionais com laços de repetição'
+            'Maze: Nested Loops':
+              name: 'Labirinto da Abelha: Laços Aninhados'
+            Robot Running the Farm:
+              name: Robô Comandando a Fazenda
+            Unplugged Conditionals with Loops:
+              name: 'Desconectado: Condicionais com Laços de Repetição'
         alltheplcthings:
           stages:
             Group Work and Peer Learning:
@@ -2744,7 +2830,10 @@ pt-BR:
               name: Lição 2,2
             Lesson 2,3:
               name: Lição 2,3
+            Test stage with bubbles:
+              name: Fase de Teste com Bolhas
         csd3-2017:
+          title: CSD Unidade 3 - Animações e Jogos ('17-'18)
           description_short: Programação
           stages:
             Booleans and Conditionals:
@@ -2763,6 +2852,8 @@ pt-BR:
               name: Sprites e Imagens
             Sprites and Properties:
               name: Sprites e Propriedades
+            Variables Unplugged:
+              name: Variáveis Desconectadas
             Variables and Animation:
               name: Variáveis e Animação
             Velocity:
@@ -2781,6 +2872,14 @@ pt-BR:
               name: Usando o processo de design de jogos
             'Project: Build a Game':
               name: 'Projeto: Construir um Jogo'
+            Shapes and Randomness:
+              description_student: Esta aula estende as habilidades de desenho para
+                incluir largura e altura e introduz o conceito de geração de números
+                aleatórios. A turma aprende a desenhar com versões de elipse() e ret()
+                que incluem parâmetros de largura e altura e a usar o bloco fundo()
+                para preencher a tela com alguma cor. No final, a turma é introduzida
+                ao bloco numeroAleatorio() e usa os novos blocos para desenhar uma
+                cobra arco-íris aleatória.
             Variables:
               name: variáveis
             Sprites:
@@ -2885,20 +2984,64 @@ pt-BR:
           stages:
             Unit 1 Overview:
               name: Unidade 1 Visão Geral
+            'Lessons 2-3: Binary Messages':
+              name: 'Lições 2-3: Mensagens Binárias'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
+            'Lessons 4-6: Encoding and Sending Numbers':
+              name: 'Lições 4-6: Codificando e Enviando Números'
+            'Lesson 7: Encoding and Sending Text':
+              name: 'Lição 7: Codificando e Enviando Texto'
+            'lessons 9: Internet Addressing':
+              name: 'lições 9: Endereçamento de Internet'
+            'lessons 10: Routers and Redundancy':
+              name: 'lições 10: Roteadores e Redundância'
+            'lessons 11-12: Protocols and Abstraction':
+              name: 'lições 11-12: Protocolos e Abstração'
+            'Lessons 2 - 3: Binary Messages':
+              name: 'Lições 2 - 3: Mensagens Binárias'
+            'Lessons 4 - 6: Encoding and Sending Numbers':
+              name: 'Lições 4 - 6: Codificando e Enviando Números'
+            'Lesson 9: Internet Addressing':
+              name: 'Lição 9: Endereçamento de Internet'
+            'Lessons 10 - 11: Redundancy and Packets':
+              name: 'Lições 10 - 11: Redundância e Pacotes'
+            'Lessons 12 - 13: Abstraction on the Internet':
+              name: 'Lições 12 - 13: Abstração na internet'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets':
+              name: 'Lições 10 - 11: Roteadores, Redundância e Pacotes'
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'Lições 1 - 2: Bytes, Tamanho de Arquivos, e Compreensão de Texto'
+            'Lessons 3 - 4 : Encoding Images':
+              name: 'Lições 3 - 4: Codificando Imagens'
+            'Lessons 7 - 10: Interpreting Visual Data':
+              name: 'Lições 7 - 10: Interpretando Dados Visuais'
             Unit 2 Overview:
               name: Visão geral da unidade 2
             Unit 3 Overview:
               name: Visão geral da unidade 3
+            'Lessons 1 - 3: Algorithms':
+              name: 'Lições 1 - 3: Algoritmos'
             Unit 5 Overview:
               name: Visão geral da unidade 5
         csp1-support:
           stages:
             Unit 1 Overview:
               name: Unidade 1 Visão Geral
+            'Lessons 2 - 3: Binary Messages':
+              name: 'Lições 2 - 3: Mensagens Binárias'
+            'Lessons 4 - 6: Encoding and Sending Numbers':
+              name: 'Lições 4 - 6: Codificando e Enviando Números'
+            'Lesson 7: Encoding and Sending Text':
+              name: 'Lição 7: Codificando e Enviando Texto'
+            'Lesson 9: Internet Addressing':
+              name: 'Lição 9: Endereçamento de Internet'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets':
+              name: 'Lições 10 - 11: Roteadores, Redundância e Pacotes'
+            'Lessons 12 - 13: Abstraction on the Internet':
+              name: 'Lições 12 - 13: Abstração na internet'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Measuring Student Learning:
@@ -2929,6 +3072,8 @@ pt-BR:
               name: Laboratório
         csd2-2017:
           stages:
+            new stage:
+              name: nova fase
             Quality Websites:
               name: Websites de Qualidade
             Website Design:
@@ -2971,6 +3116,12 @@ pt-BR:
           stages:
             Unit 2 Overview:
               name: Visão geral da unidade 2
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'Lições 1 - 2: Bytes, Tamanho de Arquivos, e Compreensão de Texto'
+            'Lessons 3 - 4 : Encoding Images':
+              name: 'Lições 3 - 4: Codificando Imagens'
+            'Lessons 7 - 10: Interpreting Visual Data':
+              name: 'Lições 7 - 10: Interpretando Dados Visuais'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Measuring Student Learning:
@@ -3071,6 +3222,8 @@ pt-BR:
               name: Programação no labirinto
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da vida real: aviões de papel'
+            Loops in Maze:
+              name: Laços no Labirinto
             Online Internet Safety:
               name: Segurança na Internet Online
             Binary Bracelets:
@@ -3081,6 +3234,8 @@ pt-BR:
               name: Criando uma base
         coursed-draft:
           stages:
+            Nested Loops in Maze:
+              name: Laços Aninhados no Labirinto
             Conditionals with Cards:
               name: Condicionais com cartas
             Digital Citizenship:
@@ -3097,6 +3252,10 @@ pt-BR:
           stages:
             Digital Citizenship:
               name: Cidadania digital
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
+            Private and Personal Information:
+              name: Informações Privadas e Pessoais
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3111,8 +3270,14 @@ pt-BR:
               name: Cidadania digital
             Envelope Variables:
               name: Variáveis do envelope
+            Variables in Play Lab:
+              name: Variáveis no Laboratório
             For Loop Fun:
               name: Diversão com laços for
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
+            Try programming with Khan Academy:
+              name: Experimente programar com a Khan Academy
             Songwriting with Parameters:
               name: Composição de música com parâmetros
             Introduction:
@@ -3180,18 +3345,28 @@ pt-BR:
           stages:
             Unit 3 Overview:
               name: Visão geral da unidade 3
+            'Lessons 1 - 3: Algorithms':
+              name: 'Lições 1 - 3: Algoritmos'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
         csdgraveyard:
           stages:
+            new stage:
+              name: nova fase
             Introduction to Styling with CSS:
               name: Introdução a estilização com CSS
         csp4-support:
           stages:
             Unit 3 Overview:
               name: Visão geral da unidade 3
+            'Lessons 1 - 2: Data in the Real World':
+              name: 'Lições 1 - 2: Dados no Mundo Real'
+            'Lessons 1 - 4: Data in the Real World':
+              name: 'Lições 1 - 4: Dados no Mundo Real'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption':
+              name: 'Lições 5 - 7: Segurança, Codificação Assimétrica e Simétrica'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Measuring Student Learning:
@@ -3274,6 +3449,8 @@ pt-BR:
               name: Listas
             For Loops:
               name: Laços para
+            Arrays:
+              name: Vetores
             Making Music:
               name: Fazendo Música
             Accelerometer:
@@ -3290,6 +3467,36 @@ pt-BR:
               name: Entrada
             'Project: Interactive Card':
               name: 'Projeto: Cartão Interativo'
+        csd5-draft:
+          stages:
+            new stage:
+              name: nova fase
+            Data in the Real World:
+              name: Dados no Mundo Real
+            Combining Representations:
+              name: Combinando Representações
+            Representing Images:
+              name: Representando Imagens
+            Representation Matters:
+              name: Representação Importa
+            Patterns and Representation:
+              name: Padrões e Representações
+            ASCII and Binary Representation:
+              name: ASCII e Representações Binárias
+            Representing Numbers Part 1:
+              name: Representando Números Parte 1
+            Representing Numbers Part 2:
+              name: Representando Números Parte 2
+            Project - Create a Representation:
+              name: Projeto - Criando uma Representação
+            Problem Solving and Data:
+              name: Resolução de Problemas e Dados
+            Making Decisions with Data:
+              name: Tomando Decisões com Dados
+        applab-2hour:
+          stages:
+            new stage:
+              name: nova fase
         coursed-ramp:
           stages:
             Introduction:
@@ -3308,6 +3515,8 @@ pt-BR:
               name: Listas
             For Loops:
               name: Laços para
+            Arrays:
+              name: Vetores
             Making Music:
               name: Fazendo Música
             Accelerometer:
@@ -3350,12 +3559,36 @@ pt-BR:
               name: O processo de design de jogos
             Using the Game Design Process:
               name: Usando o processo de design de jogos
+        csd5-2017:
+          stages:
+            Representation Matters:
+              name: Representação Importa
+            Patterns and Representation:
+              name: Padrões e Representações
+            ASCII and Binary Representation:
+              name: ASCII e Representações Binárias
+            Representing Images:
+              name: Representando Imagens
+            Representing Numbers Part 1:
+              name: Representando Números Parte 1
+            Representing Numbers Part 2:
+              name: Representando Números Parte 2
+            Combining Representations:
+              name: Combinando Representações
+            Project - Create a Representation:
+              name: Projeto - Criando uma Representação
+            Problem Solving and Data:
+              name: Resolução de Problemas e Dados
+            Making Decisions with Data:
+              name: Tomando Decisões com Dados
         csd3-old:
           stages:
             Drawing in Game Lab:
               name: Desenhando no Laboratório de Jogos
             Draw Loop and Randomization:
               name: Laço de Desenho e Randomização
+            Variables Unplugged:
+              name: Variáveis Desconectadas
             Variables and Animation:
               name: Variáveis e Animação
             Sprites and Properties:
@@ -3458,10 +3691,15 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
         csppostsurvey:
           stages:
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+          title: Pesquisa pós-curso do estudante
         csp-post-survey:
           stages:
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
         csd2-old:
@@ -3621,6 +3859,8 @@ pt-BR:
               name: Programação no labirinto
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da vida real: aviões de papel'
+            Loops in Maze:
+              name: Laços no Labirinto
           title: Curso C
           assignment_family_title: Curso C
         coursed-2017:
@@ -3641,11 +3881,14 @@ pt-BR:
               name: Laboratório da Era do Gelo
             Envelope Variables:
               name: Variáveis do envelope
+            Variables in Play Lab:
+              name: Variáveis no Laboratório
             For Loop Fun:
               name: Diversão com laços for
             Songwriting with Parameters:
               name: Composição de música com parâmetros
             Explore Project Ideas:
+              name: Explore Ideias de Projetos
               description_student: Aqui estão vários jogos e desenhos. Brinque com
                 cada um deles para obter ideias para seus próprios projetos!
             The Design Process:
@@ -3724,6 +3967,10 @@ pt-BR:
           stages:
             Ice Age Play Lab:
               name: Eventos na Era do Gelo
+            Variables in Play Lab:
+              name: Variáveis no Laboratório
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
             The Design Process:
               description_student: Projetos tão grandes levam tempo e muito planejamento.
                 Aqui, você aprenderá sobre o processo de design que você usará para
@@ -3750,8 +3997,44 @@ pt-BR:
               name: Bem-vindo
             Congrats:
               name: Parabéns
+            Wrap Up:
+              name: Resumo
+        csp-explore-task:
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
+        csp-create-task:
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
+        csp-ap-tech-setup:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
         csp-ap:
           stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
         cspnovice:
@@ -3764,6 +4047,8 @@ pt-BR:
               name: Quarta-feira
             Thursday:
               name: Quinta-feira
+            Wrap Up:
+              name: Resumo
         express-2017:
           stages:
             Introduction:
@@ -3778,10 +4063,14 @@ pt-BR:
               name: Condicionais com cartas
             Envelope Variables:
               name: Variáveis do envelope
+            Variables in Play Lab:
+              name: Variáveis no Laboratório
             For Loop Fun:
               name: Diversão com laços for
             Songwriting with Parameters:
               name: Composição de música com parâmetros
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
             Building a Foundation:
               name: Criando uma base
             Nested Loops:
@@ -3820,8 +4109,14 @@ pt-BR:
           stages:
             Thanks:
               name: Obrigado
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: nova fase
         csp3-research-mxghyt:
           stages:
+            new stage:
+              name: nova fase
             The Need For Programming Languages:
               name: A necessidade de linguagens de programação
             Using Simple Commands:
@@ -3876,6 +4171,10 @@ pt-BR:
               name: Laços aninhados
             Conditionals:
               name: Condições
+            Private and Personal Information:
+              name: Informações Privadas e Pessoais
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3898,6 +4197,10 @@ pt-BR:
               name: Criando uma base
             Loops in Ice Age:
               name: Repetições na Era do gelo
+        csp3-a:
+          stages:
+            new stage:
+              name: nova fase
         new-express:
           stages:
             Introduction:
@@ -3906,6 +4209,10 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             'How it Works: The Internet':
               name: 'Como Isto Funciona: A Internet'
+            Variables in Play Lab:
+              name: Variáveis no Laboratório
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
             Building a Foundation:
               name: Criando uma base
             Nested Loops:
@@ -3920,6 +4227,10 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Conditionals:
               name: Condições
+            Private and Personal Information:
+              name: Informações Privadas e Pessoais
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3936,10 +4247,36 @@ pt-BR:
               name: Laboratório da Era do Gelo
             Envelope Variables:
               name: Variáveis do envelope
+            Variables in Play Lab:
+              name: Variáveis no Laboratório
             For Loop Fun:
               name: Diversão com laços for
             Songwriting with Parameters:
               name: Composição de música com parâmetros
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
+        csd5-old:
+          stages:
+            Representation Matters:
+              name: Representação Importa
+            Patterns and Representation:
+              name: Padrões e Representações
+            ASCII and Binary Representation:
+              name: ASCII e Representações Binárias
+            Representing Images:
+              name: Representando Imagens
+            Combining Representations:
+              name: Combinando Representações
+            Project - Create a Representation:
+              name: Projeto - Criando uma Representação
+            Problem Solving and Data:
+              name: Resolução de Problemas e Dados
+            Making Decisions with Data:
+              name: Tomando Decisões com Dados
+        hocali:
+          stages:
+            new stage:
+              name: nova fase
         csd4-old:
           stages:
             Analysis of Design:
@@ -3978,6 +4315,8 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
         pwc:
           stages:
+            new stage:
+              name: nova fase
             Personal Innovations:
               name: Inovações Pessoais
             Simple Encryption:
@@ -3995,12 +4334,38 @@ pt-BR:
             atividade! Viaje através de Minecraft com código.
         csp-explore-2017:
           stages:
+            new stage:
+              name: nova fase
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp-create-2017:
           stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
             Post-Course Survey:
               name: Pesquisa Pós-Curso
+        aws-demo:
+          stages:
+            new stage:
+              name: nova fase
+        colehoc17:
+          stages:
+            new stage:
+              name: nova fase
         course-e-2018:
           stages:
             courseB_unplugged_MRF_2018:
@@ -4017,6 +4382,10 @@ pt-BR:
               name: Introdução
             Conditionals:
               name: Condições
+            Private and Personal Information:
+              name: Informações Privadas e Pessoais
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
             Internet:
               name: Internet
             Crowdsourcing:
@@ -4035,10 +4404,14 @@ pt-BR:
               name: Laboratório da Era do Gelo
             Envelope Variables:
               name: Variáveis do envelope
+            Variables in Play Lab:
+              name: Variáveis no Laboratório
             For Loop Fun:
               name: Diversão com laços for
             Songwriting with Parameters:
               name: Composição de música com parâmetros
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
         csd6-old:
           stages:
             Lists:
@@ -4082,6 +4455,10 @@ pt-BR:
             Project - Design a Game:
               name: Projeto - Projetar um Jogo
           description_short: Programação
+        textbook:
+          stages:
+            new stage:
+              name: nova fase
         glj-behavior-test:
           stages:
             Cats and Dogs:
@@ -4252,6 +4629,10 @@ pt-BR:
               name: 'Como Isto Funciona: A Internet'
             'Events: The Big Event':
               name: O grande evento
+            Variables in Play Lab:
+              name: Variáveis no Laboratório
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
             Programming in Maze:
               name: Programando com Angry Birds
             'Loops: Getting Loopy':
@@ -4334,6 +4715,8 @@ pt-BR:
               name: Introdução
             Building a Foundation:
               name: Criando uma base
+            Nested Loops in Bee:
+              name: Laços Aninhados no Labirinto
             Conditionals with Cards:
               name: Condicionais com cartas
             Digital Citizenship:
@@ -4348,6 +4731,8 @@ pt-BR:
               name: Programação em papel quadriculado
             Relay Programming:
               name: Programação por revezamento
+            Nested Loops in Maze:
+              name: Laços Aninhados no Labirinto
         csp-exam:
           stages:
             Unit 1 - Assessment 1:
@@ -4401,6 +4786,8 @@ pt-BR:
               name: Meus amigos robóticos
             Building a Foundation:
               name: Criando uma base
+            Nested Loops:
+              name: Laços Aninhados no Labirinto
             'Algorithms: Dice Race':
               description_student: Aprenda a descrever um jogo, do ponto de vista
                 do computador, nesta lição sobre algoritmos.
@@ -4418,6 +4805,7 @@ pt-BR:
               description_student: Você vai conseguir dizer ao computador o que fazer
                 sob certas condições nesta série divertida e desafiadora.
             Private and Personal Information:
+              name: Informações Privadas e Pessoais
               description_student: A internet é divertida mas é importante estar seguro
                 também. Esta lição ensina a diferença entre informações seguras para
                 compartilhar e informações particulares.
@@ -4466,6 +4854,7 @@ pt-BR:
               description_student: Pratique desenvolvimento de jogos para compartilhar
                 com seus amigos e familiares.
             Explore Project Ideas:
+              name: Explore Ideias de Projetos
               description_student: Aqui estão vários jogos e desenhos. Brinque com
                 cada um deles para obter ideias para seus próprios projetos!
             The Design Process:
@@ -4492,16 +4881,22 @@ pt-BR:
               name: Meus amigos robóticos
             Building a Foundation:
               name: Criando uma base
+            Nested Loops in Bee/Zombie:
+              name: Laços Aninhados no Labirinto
             Introduction:
               name: Introdução
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
             Envelope Variables:
               name: Variáveis do envelope
+            Variables in Play Lab:
+              name: Variáveis no Laboratório
             For Loop Fun:
               name: Diversão com laços for
             Songwriting with Parameters:
               name: Composição de música com parâmetros
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
             The Design Process:
               description_student: Projetos tão grandes levam tempo e muito planejamento.
                 Aqui, você aprenderá sobre o processo de design que você usará para
@@ -4564,6 +4959,24 @@ pt-BR:
               name: Protótipo de Teste
             Improving and Iterating:
               name: Improvizando e Interagindo
+        csd5-2018:
+          stages:
+            Representation Matters:
+              name: Representação Importa
+            Patterns and Representation:
+              name: Padrões e Representações
+            ASCII and Binary Representation:
+              name: ASCII e Representações Binárias
+            Representing Images:
+              name: Representando Imagens
+            Combining Representations:
+              name: Combinando Representações
+            Project - Create a Representation:
+              name: Projeto - Criando uma Representação
+            Problem Solving and Data:
+              name: Resolução de Problemas e Dados
+            Making Decisions with Data:
+              name: Tomando Decisões com Dados
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -4624,6 +5037,22 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
             Creating Functions with Parameters:
               name: Criação de funções com parâmetros
+        csp-explore-2018:
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
+        csp-create-2018:
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
         csp4-2018:
           stages:
             What is Big Data?:
@@ -4752,6 +5181,8 @@ pt-BR:
               name: Quarta-feira
             Thursday:
               name: Quinta-feira
+            Wrap Up:
+              name: Resumo
             Friday:
               name: Sexta-Feira
             Monday:
@@ -4772,6 +5203,8 @@ pt-BR:
               name: Quarta-feira
             Thursday:
               name: Quinta-feira
+            Wrap Up:
+              name: Resumo
             Day 1:
               name: Dia 1
             Day 2:
@@ -4788,6 +5221,8 @@ pt-BR:
               name: Quarta-feira
             Thursday:
               name: Quinta-feira
+            Wrap Up:
+              name: Resumo
             Monday:
               name: Segunda-Feira
             Day 1:
@@ -4806,6 +5241,8 @@ pt-BR:
               name: Quarta-feira
             Thursday:
               name: Quinta-feira
+            Wrap Up:
+              name: Resumo
             Day 1:
               name: Dia 1
             Day 2:
@@ -4891,6 +5328,8 @@ pt-BR:
               name: Artista
         dance:
           stages:
+            new stage:
+              name: nova fase
             Dance Party:
               name: Festa dançante
           title: Festa dançante
@@ -4971,12 +5410,16 @@ pt-BR:
               name: Variáveis do envelope
             For Loop Fun:
               name: Diversão com laços for
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
             The Design Process:
               description_student: Projetos tão grandes levam tempo e muito planejamento.
                 Aqui, você aprenderá sobre o processo de design que você usará para
                 desenvolver seu próprio projeto.
             The Artist:
               name: O Artista
+            Nested Loops in the Maze:
+              name: Laços Aninhados no Labirinto
             Sequencing in the Maze:
               name: Sequenciamento no labirinto
             Loops with the Artist:
@@ -5005,6 +5448,8 @@ pt-BR:
               name: Programação por revezamento
             Loops in Ice Age:
               name: Repetições na Era do gelo
+            Nested Loops in Bee:
+              name: Laços Aninhados no Labirinto
             Conditionals with Cards:
               name: Condicionais com cartas
             Digital Citizenship:
@@ -5034,6 +5479,7 @@ pt-BR:
               description_student: Você vai conseguir dizer ao computador o que fazer
                 sob certas condições nesta série divertida e desafiadora.
             Private and Personal Information:
+              name: Informações Privadas e Pessoais
               description_student: A internet é divertida mas é importante estar seguro
                 também. Esta lição ensina a diferença entre informações seguras para
                 compartilhar e informações particulares.
@@ -5074,6 +5520,7 @@ pt-BR:
                 rever algoritmos básicos, depuração, laços `repeat`, condicionais,
                 laços ` while` e funções.
             Explore Project Ideas:
+              name: Explore Ideias de Projetos
               description_student: Aqui estão vários jogos e desenhos. Brinque com
                 cada um deles para obter ideias para seus próprios projetos!
             The Design Process:
@@ -5084,6 +5531,8 @@ pt-BR:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Nested Loops in Bee:
+              name: Laços Aninhados no Labirinto
             Sequencing in the Maze:
               name: Sequenciamento no labirinto
             Programming and Loops with the Artist:
@@ -5116,6 +5565,8 @@ pt-BR:
               name: Copyright e Direitos Autorais
             'Concept Practice with Minecraft ':
               name: Prática conceitual com Minecraft
+            Nested Loops in Bee:
+              name: Laços Aninhados no Labirinto
             Conditionals with Cards:
               name: Condicionais com cartas
             Functions in Artist:
@@ -5124,6 +5575,8 @@ pt-BR:
               name: Variáveis do envelope
             For Loop Fun:
               name: Diversão com laços for
+            Explore Project Ideas:
+              name: Explore Ideias de Projetos
             Binary Bracelets:
               name: Pulseiras binárias
             'Unplugged: Binary':
@@ -5155,6 +5608,8 @@ pt-BR:
               name: Teste pós-projeto
         andrea-test:
           stages:
+            new stage:
+              name: nova fase
             module1:
               name: módulo 1
             module2:
@@ -5369,6 +5824,10 @@ pt-BR:
               name: 'Depuração: Bugs não encontrados'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
+        dani-test-script:
+          stages:
+            new stage:
+              name: nova fase
         csd2-2019:
           stages:
             Intro to HTML:
@@ -5436,6 +5895,26 @@ pt-BR:
               name: Protótipo de Teste
             Improving and Iterating:
               name: Improvizando e Interagindo
+        csd5-2019:
+          stages:
+            Representation Matters:
+              name: Representação Importa
+            Patterns and Representation:
+              name: Padrões e Representações
+            ASCII and Binary Representation:
+              name: ASCII e Representações Binárias
+            Representing Images:
+              name: Representando Imagens
+            Combining Representations:
+              name: Combinando Representações
+            Project - Create a Representation:
+              name: Projeto - Criando uma Representação
+            Problem Solving and Data:
+              name: Resolução de Problemas e Dados
+            Making Decisions with Data:
+              name: Tomando Decisões com Dados
+            Post-Project Test:
+              name: Teste pós-projeto
         csd6-2019:
           stages:
             Making Music:
@@ -5444,6 +5923,8 @@ pt-BR:
               name: Acelerômetro
             Functions with Parameters:
               name: Funções com Parâmetros
+            Post-Project Test:
+              name: Teste pós-projeto
         csp4-pilot:
           stages:
             Variables Explore:
@@ -5600,6 +6081,22 @@ pt-BR:
               name: 'Construindo um aplicativo: Pintor de Tela'
             Unit 5 Assessment 4:
               name: Unidade 5 Avaliação 4
+        csp-explore-2019:
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
+        csp-create-2019:
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
         csppostap-2019:
           description: |-
             No primeiro capítulo desta unidade, os alunos desenvolvem habilidades para interpretar dados visuais e usar ferramentas de planilha e visualização para criar seus próprios artefatos digitais. Por meio de um projeto em andamento - o "rastreador de dados de classe" - os alunos aprendem como coletar e limpar dados e a usar algumas ferramentas comuns para computar agregações e criar visualizações. \ r
@@ -5638,6 +6135,14 @@ pt-BR:
               name: Apps de exemplo
             Final Project:
               name: Projeto final
+        csp1-pilot:
+          stages:
+            new stage:
+              name: nova fase
+        csd-videos:
+          stages:
+            new stage:
+              name: nova fase
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -5808,6 +6313,8 @@ pt-BR:
               name: Unidade 4 Avaliação
         csp7-pilot-staging:
           stages:
+            new stage:
+              name: nova fase
             Variables Explore:
               name: Explorar Variáveis
             Variables Investigate:
@@ -5918,3 +6425,31 @@ pt-BR:
               name: Programação em papel quadriculado
             Programming in Maze:
               name: Programação no labirinto
+        csp5-pilot:
+          stages:
+            new stage:
+              name: nova fase
+        fit2019-novice:
+          stages:
+            Day 1:
+              name: Dia 1
+            Day 2:
+              name: Dia 2
+            Day 3:
+              name: Dia 3
+            Day 4:
+              name: Dia 4
+            Wrap Up:
+              name: Resumo
+        fit2019-apprentice:
+          stages:
+            Day 1:
+              name: Dia 1
+            Day 2:
+              name: Dia 2
+            Day 3:
+              name: Dia 3
+            Day 4:
+              name: Dia 4
+            Wrap Up:
+              name: Resumo

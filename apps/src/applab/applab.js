@@ -39,6 +39,7 @@ import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {actions, reducers} from './redux/applab';
 import {add as addWatcher} from '../redux/watchedExpressions';
+import {setApplabLibraries} from '../code-studio/components/applabLibraryRedux';
 import {changeScreen} from './redux/screens';
 import * as applabConstants from './constants';
 const {ApplabInterfaceMode} = applabConstants;
@@ -74,7 +75,6 @@ import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
 import {generateExpoApk} from '../util/exporter';
-import sampleApplabLibrary from '../code-studio/sampleApplabLibrary.json';
 
 /**
  * Create a namespace for the application.
@@ -305,6 +305,11 @@ Applab.getHtml = function() {
   return Applab.levelHtml;
 };
 
+Applab.getLibraries = function() {
+  var libraries = getStore().getState().applabLibrary.libraries;
+  return libraries.length ? libraries : undefined;
+};
+
 /**
  * Sets Applab.levelHtml as well as #designModeViz contents.
  * designModeViz is the source of truth for the app's HTML.
@@ -384,6 +389,7 @@ Applab.init = function(config) {
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
   config.getLibrary = getLibrary;
+  config.codeContainsError = codeContainsError;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -394,7 +400,8 @@ Applab.init = function(config) {
   if (config.level.editBlocks) {
     header.showLevelBuilderSaveButton(() => ({
       start_blocks: Applab.getCode(),
-      start_html: Applab.getHtml()
+      start_html: Applab.getHtml(),
+      start_libraries: Applab.getLibraries()
     }));
   } else if (!config.channel) {
     throw new Error(
@@ -526,6 +533,7 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
+    getStore().dispatch(setApplabLibraries(config.level.startLibraries));
     Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
     Applab.storage.populateKeyValue(
       level.dataProperties,
@@ -684,8 +692,29 @@ Applab.init = function(config) {
     });
   }
 
-  if (experiments.isEnabled('student-libraries')) {
-    let importedConfigs = sampleApplabLibrary.libraries
+  var librariesExist = level.libraries && level.libraries.length > 0;
+
+  if (
+    !librariesExist &&
+    level.startLibraries &&
+    level.startLibraries.length > 0
+  ) {
+    level.libraries = level.startLibraries;
+    librariesExist = true;
+  }
+
+  // Libraries should be added to redux whether the experiment is enabled or
+  // not. This prevents work from being lost if a levelbuilder toggles the
+  // experiment flag.
+  if (librariesExist) {
+    getStore().dispatch(setApplabLibraries(level.libraries));
+  }
+
+  if (experiments.isEnabled('student-libraries') && librariesExist) {
+    level.libraries.forEach(library => {
+      config.dropletConfig.additionalPredefValues.push(library.name);
+    });
+    let importedConfigs = level.libraries
       .map(library => library.dropletConfig)
       .reduce((a, b) => a.concat(b));
     if (importedConfigs) {
@@ -1124,6 +1153,17 @@ function getLibrary() {
 }
 
 /**
+ * Returns true if a lint error (red gutter warning) exists in the code
+ */
+function codeContainsError() {
+  var errors = annotationList.getJSLintAnnotations().filter(annotation => {
+    return annotation.type === 'error';
+  });
+
+  return errors.length > 0;
+}
+
+/**
  * Execute the app
  */
 Applab.execute = function() {
@@ -1167,22 +1207,24 @@ Applab.execute = function() {
 
     // Set up student-created libraries
     if (experiments.isEnabled('student-libraries')) {
-      sampleApplabLibrary.libraries.map(library => {
-        var functionNames = library.functionNames
-          .map(name => {
-            return name + ': ' + name;
-          })
-          .join(',');
-        var libraryClosure =
-          'var ' +
-          library.name +
-          ' = (function() {\n' +
-          library.source +
-          '\nreturn {' +
-          functionNames +
-          '};})();';
-        codeWhenRun = libraryClosure + codeWhenRun;
-      });
+      getStore()
+        .getState()
+        .applabLibrary.libraries.map(library => {
+          var functionNames = library.functionNames
+            .map(name => {
+              return name + ': ' + name;
+            })
+            .join(',');
+          var libraryClosure =
+            'var ' +
+            library.name +
+            ' = (function() {\n' +
+            library.source +
+            '\nreturn {' +
+            functionNames +
+            '};})();';
+          codeWhenRun = libraryClosure + codeWhenRun;
+        });
     }
 
     // Initialize the interpreter and parse the student code

@@ -9,7 +9,9 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit5/{LESSON}'
 family_name 'csp5'
 version_year '2019'
+is_stable true
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'CSP U5L01 SFLP_2019', named: true
@@ -351,6 +353,6 @@ level 'CSP Unit 5 Cumulative Assessment 4 MC_2018_2019', assessment: true
 stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true, flex_category: 'csp5_2'
 level 'CSP Cumulative Assess A_2018_2019', assessment: true
 
-stage 'Mid-Year Survey', flex_category: 'cspSurvey'
-level 'csp-mid-survey-2018-markdown-with-link-to-survey_2019', progression: 'Click here! Complete the CS Principles Mid-year survey'
-level 'Click Here!_2018_2019', progression: 'Participate in a longitudinal study - Click Here!', named: true
+stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
+level 'csp-post-survey-intro-2019'
+level 'csp-post-survey-levelgroup-2019.2', assessment: true

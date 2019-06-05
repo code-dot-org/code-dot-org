@@ -4,11 +4,24 @@ import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import Button from '../../templates/Button';
 import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 
 export const styles = {
   button: {
     marginTop: 30,
     marginLeft: 290
+  },
+  updateButton: {
+    marginLeft: 5
+  },
+  intro: {
+    fontSize: 18,
+    fontFamily: "'Gotham 5r', sans-serif",
+    color: color.charcoal
+  },
+  schoolName: {
+    color: color.purple,
+    fontStyle: 'italic'
   }
 };
 
@@ -40,6 +53,10 @@ class SchoolInfoConfirmationDialog extends Component {
       isOpen: props.isOpen || true
     };
   }
+
+  closeModal = () => {
+    this.setState({isOpen: false});
+  };
 
   handleClickYes = () => {
     const {authTokenName, authTokenValue} = this.props.scriptData;
@@ -83,7 +100,12 @@ class SchoolInfoConfirmationDialog extends Component {
     return (
       <Body>
         <div>
-          <p>{i18n.schoolInfoDialogDescription({schoolName})}</p>
+          <p style={styles.intro}>
+            {i18n.schoolInfoDialogDescription()}
+            <span style={styles.schoolName}>
+              {i18n.schoolInfoDialogDescriptionSchoolName({schoolName})}
+            </span>
+          </p>
         </div>
         <Button
           text={i18n.schoolInfoDialogUpdate()}
@@ -119,7 +141,7 @@ class SchoolInfoConfirmationDialog extends Component {
   render() {
     const {showSchoolInterstitial, isOpen} = this.state;
     return (
-      <Dialog isOpen={isOpen}>
+      <Dialog isOpen={isOpen} handleClose={this.closeModal}>
         {!showSchoolInterstitial
           ? this.renderInitialContent()
           : this.renderSchoolInformationForm()}

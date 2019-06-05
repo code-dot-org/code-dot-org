@@ -5,6 +5,7 @@ import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -120,7 +121,8 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
-    selectedSong: data.selectedSong
+    selectedSong: data.selectedSong,
+    libraries: data.libraries
   };
 }
 
@@ -447,7 +449,9 @@ var projects = (module.exports = {
 
   showProjectHeader() {
     if (this.shouldUpdateHeaders()) {
-      header.showProjectHeader();
+      header.showProjectHeader({
+        showExport: this.shouldShowExport()
+      });
     }
   },
 
@@ -467,10 +471,23 @@ var projects = (module.exports = {
     );
   },
 
+  // Currently, only applab when the experiment is enabled. Hide if
+  // hideShareAndRemix is set on the level.
+  shouldShowExport() {
+    const {level = {}, app} = appOptions;
+    const {hideShareAndRemix} = level;
+    return (
+      !hideShareAndRemix &&
+      app === 'applab' &&
+      experiments.isEnabled('exportExpo')
+    );
+  },
+
   showHeaderForProjectBacked() {
     if (this.shouldUpdateHeaders()) {
       header.showHeaderForProjectBacked({
-        showShareAndRemix: !this.shouldHideShareAndRemix()
+        showShareAndRemix: !this.shouldHideShareAndRemix(),
+        showExport: this.shouldShowExport()
       });
     }
   },
@@ -527,6 +544,10 @@ var projects = (module.exports = {
 
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
+      }
+
+      if (currentSources.libraries) {
+        sourceHandler.setInitialLevelLibraries(currentSources.libraries);
       }
 
       if (isEditing) {
@@ -1025,6 +1046,13 @@ var projects = (module.exports = {
   },
 
   /**
+   * Asks the sourceHandler whether the code contains an error (red gutter warning)
+   */
+  containsError() {
+    return this.sourceHandler.codeContainsError();
+  },
+
+  /**
    * Ask the configured sourceHandler for the latest project save data and
    * pass it to the provided callback.
    * @param {function} callback
@@ -1037,7 +1065,20 @@ var projects = (module.exports = {
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
-        callback({source, html, animations, makerAPIsEnabled, selectedSong});
+        const libraries =
+          this.sourceHandler.getLevelLibraries &&
+          this.sourceHandler.getLevelLibraries();
+        var sourceAndHtml = {
+          source,
+          html,
+          animations,
+          makerAPIsEnabled,
+          selectedSong
+        };
+        if (libraries) {
+          sourceAndHtml['libraries'] = libraries;
+        }
+        callback(sourceAndHtml);
       })
     );
   },
@@ -1058,6 +1099,23 @@ var projects = (module.exports = {
           {
             ...sourceAndHtml,
             makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled
+          },
+          () => {
+            resolve();
+            utils.reload();
+          }
+        );
+      });
+    });
+  },
+
+  addLibrary(data) {
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        this.saveSourceAndHtml_(
+          {
+            ...sourceAndHtml,
+            libraries: [data]
           },
           () => {
             resolve();

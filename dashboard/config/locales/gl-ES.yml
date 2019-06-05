@@ -80,7 +80,6 @@ gl:
   of: de
   more: MÁIS
   less: MENOS
-  beta: beta
   try_hoc: 'Experimenta a Hora de Código, clica aquí >> '
   try_k8intro: Experimenta o noso curso de Introdución á Informática para o Ensino
     Básico (15-25 horas)
@@ -755,11 +754,8 @@ gl:
     create: Crear proxecto
     create_a_project: 'Crea un proxecto novo:'
     new: Crear novo
-    rename: Renomear
-    save: Salvar
     exit: Voltar ao curso
     project_gallery: Proxectos
-    share: Compartir
     share_title: Comparte o teu proxecto
     share_copy_link: 'Copia a ligazón:'
     name: Nome
@@ -773,8 +769,6 @@ gl:
     saved: Gardado na Galería!
     not_saved: Non gardado
     view_all: Ver os meus proxectos
-    remix: Remix
-    click_to_remix: Clique em "Remix" para facer a súa propia versión!
     edit_project: Editar proxecto
     abuse:
       tos: Este proxecto foi reportado por violar os <a href='http://code.org/tos'>Termos

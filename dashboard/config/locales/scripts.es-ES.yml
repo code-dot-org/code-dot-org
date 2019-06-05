@@ -3716,10 +3716,10 @@ es:
               name: Internet
             Crowdsourcing:
               name: Colaboración Abierta
-            Concept Practice with Minecraft:
-              name: Observando hacia el futuro
             Dance Party:
               name: Fiesta para bailar
+            Concept Practice with Minecraft:
+              name: Observando hacia el futuro
         csd1-2019:
           description_short: "  Aprenda cómo los humanos trabajan con computadoras
             para resolver problemas."

@@ -535,7 +535,7 @@ es:
         \*\* La Idea del proyecto \*\*: hacer un juego protector
         en Play Lab!
       AllTheThings Applab - Turtle move with button: "# Por favor, regístrese para probar niveles applab (diseño, los niveles applab sólo funcionan si se está registrado. Normalmente, pedimos que la gente se registre, pero esto sólo es exigible para un guión entero y sería molesto para el script de todas las cosas).\n\n# Tu primera aplicación interactiva!\n\n<img src='https://images.code.org/3fad83213ae72073251c4d5abc1f048a-image-1444060521578.png' style='float: right; width: 250px'> Se ha añadido un. nuevo grupo de comandos a la caja de herramientas llamado **controles UI** (controles de interfaz de usuario) que son comandos que le permiten interactuar con y responden al usuario de su aplicación. Para simplificarlo, empezamos con sólo dos comandos: \n\n-   'onEvent' que permite ejecutar una función en respuesta a eventos que ocurren (como un clic de botón)\n-   'botón', que pone un botón en la pantalla\n\n# Haga esto\n\nReplicará la pequeña aplicación, que se muestra a continuación, que hace que la tortuga se mueva con un clic de botón. Hará tres cosas:\n\n-   Añadir un 'botón'\n-   Agregar un bloque de 'onEvent'\n-   Añadir 'moveForward' dentro del bloque de función de onEvent\n\nAquí está lo que debe hacer - usted puede volver a ver esto tantas veces como usted necesita para hacer las cosas bien.\n<img src=\"https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif\" style=\"border: solid 1px black; width: 500px; margin: auto\">"
-      AllTheThings Applab DesignModeDefault: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n\n## Pruébelo -- corrector de contraseña de texto\n\n\\*\\* Idea clave\\*\\*: puede utilizar '==' para comparar tanto cadenas como números.  \n\n-   Usemos una instrucción if en un controlador de eventos para comparar texto que un usuario introduce en un elemento de interfaz de usuario.\n\n**La configuración:**\n\n-   Tenga en cuenta la configuración en modo de diseño\n-   Hay dos imágenes: un bloqueo rojo y un \"desbloqueo\" verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta** \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\" verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En caso contrario no hacer nada.  Pueden probar otra vez."
+      AllTheThings Applab DesignModeDefault: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n\n## Pruébelo -- corrector de contraseña de texto\n\n\\*\\* Idea clave\\*\\*: puede utilizar '==' para comparar tanto cadenas como números.  \n\n-   Usemos una instrucción if en un controlador de eventos para comparar texto que un usuario introduce en un elemento de interfaz de usuario.\n\n**La configuración:**\n\n-   Tenga en cuenta la configuración en modo de diseño\n-   Hay dos imágenes: un bloqueo rojo y un \"desbloqueo\" verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta** \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\" verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En caso contrario no hacer nada.  Pueden probar otra vez."
       'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color': "# \n\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n-   Comenzamos con la imagen de 4x2\n    Maddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n-   Terminar\n    la imagen al descubrir qué dos colores faltan y codificarlos."
       AppLab Intro 1 - Build Your Adventure: |-
         # Build Your Adventure\\r
@@ -584,9 +584,9 @@ es:
         necesitas hacer una simple selección elige tu propia aplicación de aventura, pero puedes agregarla y
         ¡mucho más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\r
         \\r
-        1\.
+        1.
         En otra pestaña de tu navegador, ve en línea y encuentra una imagen que quieras usar.\\r
-        2\.
+        2.
         Haga clic con el botón derecho en la imagen y guarde su URL (generalmente "Copiar la dirección del enlace" o "Copiar"
         imagen URL ") \\r
 
@@ -1528,7 +1528,7 @@ es:
       CourseD_Dance_Party_01: |-
         _¡Hagamos una fiesta para bailar!_
 
-        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
+        Arrastra el bloque `crea un nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
 
         -   _También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra._
       CourseD_Dance_Party_02: |-
@@ -1612,13 +1612,13 @@ es:
       Dance_Party_01: |-
         _¡Hagamos una fiesta para bailar!_
 
-        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
+        Arrastra el bloque `crea un nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
 
         -   _También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra._
       Dance_Party_01_low: |-
         _¡Hagamos una fiesta para bailar!_
 
-        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
+        Arrastra el bloque `crea un nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
 
         -   _También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra._
       Dance_Party_02: |-
@@ -2009,9 +2009,9 @@ es:
         1.  ¿Qué es una _Expresión Booleana?_
         2.  ¿Por qué se llama  "Booleano"?
         3.  ¿Es esta una expresión legal: `10 > 25`?
-      U5 Check Password if statement lock image: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n\n## Pruébelo -- corrector de contraseña de texto\n\n\\*\\* Idea clave\\*\\*: puede utilizar '==' para comparar tanto cadenas como números.  \n\n-   Usemos una instrucción if en un controlador de eventos para comparar texto que un usuario introduce en un elemento de interfaz de usuario.\n\n**La configuración:**\n\n-   Tenga en cuenta la configuración en modo de diseño\n-   Hay dos imágenes: un bloqueo rojo y un \"desbloqueo\" verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta** \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\" verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En caso contrario no hacer nada.  Pueden probar otra vez."
-      U5 Check Password if statement lock image_2018: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n\n## Pruébelo -- corrector de contraseña de texto\n\n\\*\\* Idea clave\\*\\*: puede utilizar '==' para comparar tanto cadenas como números.  \n\n-   Usemos una instrucción if en un controlador de eventos para comparar texto que un usuario introduce en un elemento de interfaz de usuario.\n\n**La configuración:**\n\n-   Tenga en cuenta la configuración en modo de diseño\n-   Hay dos imágenes: un bloqueo rojo y un \"desbloqueo\" verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta** \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\" verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En caso contrario no hacer nada.  Pueden probar otra vez."
-      U5 Check Password if statement lock image_2019: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n\n## Pruébelo -- corrector de contraseña de texto\n\n\\*\\* Idea clave\\*\\*: puede utilizar '==' para comparar tanto cadenas como números.  \n\n-   Usemos una instrucción if en un controlador de eventos para comparar texto que un usuario introduce en un elemento de interfaz de usuario.\n\n**La configuración:**\n\n-   Tenga en cuenta la configuración en modo de diseño\n-   Hay dos imágenes: un bloqueo rojo y un \"desbloqueo\" verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta** \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\" verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En caso contrario no hacer nada.  Pueden probar otra vez."
+      U5 Check Password if statement lock image: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n\n## Pruébelo -- corrector de contraseña de texto\n\n\\*\\* Idea clave\\*\\*: puede utilizar '==' para comparar tanto cadenas como números.  \n\n-   Usemos una instrucción if en un controlador de eventos para comparar texto que un usuario introduce en un elemento de interfaz de usuario.\n\n**La configuración:**\n\n-   Tenga en cuenta la configuración en modo de diseño\n-   Hay dos imágenes: un bloqueo rojo y un \"desbloqueo\" verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta** \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\" verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En caso contrario no hacer nada.  Pueden probar otra vez."
+      U5 Check Password if statement lock image_2018: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n\n## Pruébelo -- corrector de contraseña de texto\n\n\\*\\* Idea clave\\*\\*: puede utilizar '==' para comparar tanto cadenas como números.  \n\n-   Usemos una instrucción if en un controlador de eventos para comparar texto que un usuario introduce en un elemento de interfaz de usuario.\n\n**La configuración:**\n\n-   Tenga en cuenta la configuración en modo de diseño\n-   Hay dos imágenes: un bloqueo rojo y un \"desbloqueo\" verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta** \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\" verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En caso contrario no hacer nada.  Pueden probar otra vez."
+      U5 Check Password if statement lock image_2019: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n\n## Pruébelo -- corrector de contraseña de texto\n\n\\*\\* Idea clave\\*\\*: puede utilizar '==' para comparar tanto cadenas como números.  \n\n-   Usemos una instrucción if en un controlador de eventos para comparar texto que un usuario introduce en un elemento de interfaz de usuario.\n\n**La configuración:**\n\n-   Tenga en cuenta la configuración en modo de diseño\n-   Hay dos imágenes: un bloqueo rojo y un \"desbloqueo\" verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta** \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\" verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En caso contrario no hacer nada.  Pueden probar otra vez."
       U5 video Booleans: |-
         ### Puntos a tener en cuenta:
 
@@ -2035,6 +2035,9 @@ es:
       courseA_collector_preLoops3: |-
         Para recoger el tesoro, intenta colocar, al final del programa, dos bloques (<https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png>)
         y luego un bloque (<https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png>). ¡Finalmente, ejecuta el programa presionando en "Run"!
+      courseB_iceage_loops11: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseB_iceage_loops11_2019: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseB_iceage_loops11_forVideo: "¡Ayuda a Scrat a conseguir la bellota!"
       courseC_artist_loops1a: |-
         **Juego libre**  ¡Construye algo más grande,usando un paso cada vez! Puedes hacer cualquier cosa que quieras pero te vamos a enseñar cómo hacer algo como esto!
 
@@ -2151,6 +2154,8 @@ es:
         _"¡Cacemos el tesoro- usando bucles!_
 
         Ayuda al coleccionista a alcanzar al menos dos pilas de tesoro usando únicamente los bloques de la caja de herramientas. Es posible recoger los 4.
+      courseD_iceage_loops11: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseD_iceage_loops11_2019: "¡Ayuda a Scrat a conseguir la bellota!"
       courseD_maze_nestedLoops4: "¡Llévame al girasol!"
       courseD_maze_nestedLoops4_2018: "¡Llévame al girasol!"
       courseD_maze_nestedLoops4_2019: "¡Llévame al girasol!"
@@ -2166,6 +2171,56 @@ es:
         _"¡Debes comerte el girasol!"_
 
         Haz que el zombi vaya al girasol usando sólo los bloques disponibles.
+      courseD_maze_ramp1: En este puzle, coloca todos los bloques juntos y pulsa "Ejecutar"!
+      courseD_maze_ramp1_2018: En este puzle, coloca todos los bloques juntos y pulsa "Ejecutar"!
+      courseD_maze_ramp1_2019: En este puzle, coloca todos los bloques juntos y pulsa "Ejecutar"!
+      courseD_maze_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas, después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_maze_ramp2_2018: Arrastra otro bloque `avanzar` de la caja de herramientas, después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_maze_ramp2_2019: Arrastra otro bloque `avanzar` de la caja de herramientas, después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp1: En este puzle, coloca todos los bloques juntos y pulsa "Ejecutar"!
+      courseD_scrat_ramp1_2018: En este puzle, coloca todos los bloques juntos y pulsa "Ejecutar"!
+      courseD_scrat_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas, después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp2_2018: Arrastra otro bloque `avanzar` de la caja de herramientas, después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp3: |-
+        Hay un bloque de más que está haciendo que Scrat se estrelle.
+        Quítalo desconectándolo de los otros bloques y arrastrándolo de vuelta a la caja de herramientas.
+      courseD_scrat_ramp3_2018: |-
+        Hay un bloque de más que está haciendo que Scrat se estrelle.
+        Quítalo desconectándolo de los otros bloques y arrastrándolo de vuelta a la caja de herramientas.
+      courseD_scrat_ramp4: "¡Evita el hielo agrietado para mantener a Scrat a salvo!"
+      courseD_scrat_ramp4_2018: "¡Evita el hielo agrietado para mantener a Scrat a salvo!"
+      courseD_scrat_ramp5: "¡Evita el hielo agrietado!"
+      courseD_scrat_ramp5_2018: "¡Evita el hielo agrietado!"
+      courseD_scrat_ramp6: "¡Ayuda a Scrat a conseguir la bellota usando un bucle!"
+      courseD_scrat_ramp6_2018: "¡Ayuda a Scrat a conseguir la bellota usando un bucle!"
+      courseD_scrat_ramp7: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseD_scrat_ramp7_2018: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseD_scrat_ramp8: "**Desafío:**¡ Usa lo que has aprendido para llevar a Scrat hasta la bellota!"
+      courseD_scrat_ramp8_2018: "**Desafío:**¡ Usa lo que has aprendido para llevar a Scrat hasta la bellota!"
+      courseE_artist_ramp9: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
+      courseE_artist_ramp9_2: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
+      courseE_artist_ramp9_2018: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
+      courseE_artist_ramp9_2_2018: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
       courseE_bee_functions2: |-
         Las funciones son bloques de código que realizan una tarea. \\r
         \\r
@@ -2177,6 +2232,32 @@ es:
       courseE_bee_functions3: "Las funciones son bloques de código que realizan\nuna tarea. Utilice la función \"get 5\" para obtener 5 néctares a cada momento. Asegúrese de \nutilizar un bucle para obtener un recuento ideal de bloque, también."
       courseE_bee_functions3_2018: "Las funciones son bloques de código que realizan\nuna tarea. Utilice la función \"get 5\" para obtener 5 néctares a cada momento. Asegúrese de \nutilizar un bucle para obtener un recuento ideal de bloque, también."
       courseE_farmer_concept4: Ahora vamos a un nivel más profundo. Hemos anidado todo el bloque de código en otro bucle, pero tienes que poner al artista en su lugar para dibujar la línea siguiente. ¿Cuál de estos bloques de código puede usted colocar al final del bucle exterior para dibujar la red entera?
+      courseE_maze_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas, después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseE_maze_ramp2_2018: Arrastra otro bloque `avanzar` de la caja de herramientas, después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseF_artist_ramp8: |-
+        ¡Genial! ¡Ahora hagamos un cuadrado usando al Artista! Los bloques del artista son un poco diferentes a los de otros puzles, pero la idea es la misma.
+
+        * * *
+
+        Cada lado del cuadrado tiene una longitud de 200 pixeles y tienes que girar 90 grados para hacer cada ángulo.
+      courseF_artist_ramp8_2018: |-
+        ¡Genial! ¡Ahora hagamos un cuadrado usando al Artista! Los bloques del artista son un poco diferentes a los de otros puzles, pero la idea es la misma.
+
+        * * *
+
+        Cada lado del cuadrado tiene una longitud de 200 pixeles y tienes que girar 90 grados para hacer cada ángulo.
+      courseF_artist_ramp9: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
+      courseF_artist_ramp9_2018: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
       courseF_bee_for_challenge2: Resuelve este rompecabezas con el menor número de bloques posible.
       courseF_bee_for_challenge2_2018: Resuelve este rompecabezas con el menor número de bloques posible.
       courseF_bee_for_challenge2_2019: Resuelve este rompecabezas con el menor número de bloques posible.
