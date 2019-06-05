@@ -41,12 +41,12 @@ module Pd::WorkshopSurveyResultsHelper
 
   QUESTIONS_FOR_FACILITATOR_AVERAGES = {
     FACILITATOR_EFFECTIVENESS: [
-      {primary_id: 'facilitator_qualities_0'},
-      {primary_id: 'facilitator_qualities_1'},
-      {primary_id: 'facilitator_qualities_2'},
-      {primary_id: 'facilitator_qualities_3'},
-      {primary_id: 'facilitator_qualities_4'},
-      {primary_id: 'facilitator_qualities_5'},
+      {primary_id: 'facilitator_effectiveness_0'},
+      {primary_id: 'facilitator_effectiveness_1'},
+      {primary_id: 'facilitator_effectiveness_2'},
+      {primary_id: 'facilitator_effectiveness_3'},
+      {primary_id: 'facilitator_effectiveness_4'},
+      {primary_id: 'facilitator_effectiveness_5'},
     ],
     TEACHER_ENGAGEMENT: [
       {primary_id: 'teacher_engagement_0'},
