@@ -73,7 +73,7 @@ class FilesApiTestHelper
   end
 
   def rename_object(old_filename, new_filename)
-    put "/v3/#{@endpoint}/#{@channel_id}/#{new_filename}?delete=#{CGI.escape(old_filename)}&src=#{CGI.escape(old_filename)}"
+    put "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(new_filename)}?delete=#{CGI.escape(old_filename)}&src=#{CGI.escape(old_filename)}"
     last_response.body
   end
 

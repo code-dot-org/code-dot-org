@@ -511,7 +511,6 @@ class FilesTest < FilesApiTestBase
   def test_rename_mixed_case
     filename = @api.randomize_filename('Mixed Case With Spaces.html')
     filename2 = @api.randomize_filename('Another Mixed Case Spaces Name.html')
-    escaped_filename2 = CGI.escape(filename2)
     delete_all_file_versions(filename, filename2)
     delete_all_manifest_versions
 
@@ -522,7 +521,7 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_equal 'stub-contents', last_response.body
 
-    @api.rename_object(filename, escaped_filename2)
+    @api.rename_object(filename, filename2)
     assert successful?
 
     @api.get_object(filename2)
@@ -549,7 +548,6 @@ class FilesTest < FilesApiTestBase
   def test_rename_case_only
     filename = @api.randomize_filename('Mixed Case With Spaces.png')
     filename2 = filename.sub 'Mixed Case', 'mixeD casE'
-    escaped_filename2 = URI.escape(filename2)
     delete_all_file_versions filename, filename2
     delete_all_manifest_versions
 
@@ -574,7 +572,7 @@ class FilesTest < FilesApiTestBase
     assert_equal(1, file_infos.length)
     assert_fileinfo_equal(expected_image_info, file_infos[0])
 
-    @api.rename_object(filename, escaped_filename2)
+    @api.rename_object(filename, filename2)
     assert successful?
 
     @api.get_object(filename)
