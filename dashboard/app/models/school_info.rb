@@ -48,6 +48,7 @@ class SchoolInfo < ActiveRecord::Base
   has_and_belongs_to_many :census_submissions, class_name: 'Census::CensusSubmission'
 
   has_many :user_school_infos
+  # has_many :users
 
   # Remap what the form has (e.g. school_zip) to what we write to (e.g. zip)
   def school_zip=(input)
@@ -295,7 +296,7 @@ class SchoolInfo < ActiveRecord::Base
   # teacher for additional information every week.  Different from complete
   # record validation.
   def complete?
-    return true unless school_id.nil?
+    return true if school_id
     return false if country.nil?
     return true unless usa?
     return true if [
