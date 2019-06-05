@@ -7,7 +7,7 @@ module Pd::SurveyPipeline
 
     test 'decorate survey summary for one form for one workshop' do
       form_id = 90_066_184_161_150
-      form_name = 'Pre-workshop'
+      form_name = 'Pre Workshop'
       workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201
 
       parsed_data = {}
