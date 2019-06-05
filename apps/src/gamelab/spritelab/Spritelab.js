@@ -155,6 +155,29 @@ var Spritelab = function() {
   this.commands.setAnimation = function(spriteId, animation) {
     commands.setAnimation(spriteId, animation);
   };
+
+  // World commands
+  this.commands.comment = function(text) {
+    commands.comment(text);
+  };
+
+  this.commands.hideTitleScreen = function() {
+    commands.hideTitleScreen();
+  };
+
+  this.commands.printText = function(text) {
+    commands.printText(text);
+  };
+
+  this.commands.setBackground = function(color) {
+    commands.setBackground(color);
+  };
+  this.commands.setBackgroundImage = function(img) {
+    commands.setBackgroundImage.apply(this, [img]);
+  };
+  this.commands.showTitleScreen = function(title, subtitle) {
+    commands.showTitleScreen(title, subtitle);
+  };
 };
 
 module.exports = Spritelab;
