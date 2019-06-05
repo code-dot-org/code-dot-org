@@ -16,7 +16,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     assert_nil school_info.school_id
     refute_nil school_info.school_name
     refute_nil school_info.full_address
-    assert SchoolInfoInterstitialHelper.complete? school_info
+    assert school_info.complete?
   end
 
   test 'complete if all school info but location is provided' do
@@ -29,7 +29,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     refute_nil school_info.school_name
     assert_nil school_info.full_address
 
-    assert SchoolInfoInterstitialHelper.complete? school_info
+    assert school_info.complete?
   end
 
   test 'complete if school is found by NCES id' do
@@ -37,7 +37,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     school_info.school_id = 1
 
     refute_nil school_info.school_id
-    assert SchoolInfoInterstitialHelper.complete? school_info
+    assert school_info.complete?
   end
 
   test 'complete if school type is homeschool/after school/organization/other' do
@@ -45,48 +45,48 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     school_info.country = 'United States'
 
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
-    assert SchoolInfoInterstitialHelper.complete? school_info
+    assert school_info.complete?
 
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
-    assert SchoolInfoInterstitialHelper.complete? school_info
+    assert school_info.complete?
 
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_ORGANIZATION
-    assert SchoolInfoInterstitialHelper.complete? school_info
+    assert school_info.complete?
 
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_OTHER
-    assert SchoolInfoInterstitialHelper.complete? school_info
+    assert school_info.complete?
   end
 
   test 'complete if country is not US' do
     school_info = SchoolInfo.new
     school_info.country = 'Canada'
-    assert SchoolInfoInterstitialHelper.complete? school_info
+    assert school_info.complete?
   end
 
   test 'not complete without country' do
     school_info = SchoolInfo.new
     assert_nil school_info.country
-    refute SchoolInfoInterstitialHelper.complete? school_info
+    refute school_info.complete?
   end
 
   test 'not complete if country is US but no school type is set' do
     school_info = SchoolInfo.new
     school_info.country = 'United States'
     assert_nil school_info.school_type
-    refute SchoolInfoInterstitialHelper.complete? school_info
+    refute school_info.complete?
   end
 
   test 'not complete if country is US and school type is public/private/charter but other information is missing' do
     school_info = SchoolInfo.new
     school_info.country = 'United States'
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
-    refute SchoolInfoInterstitialHelper.complete? school_info
+    refute school_info.complete?
 
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_PRIVATE
-    refute SchoolInfoInterstitialHelper.complete? school_info
+    refute school_info.complete?
 
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_CHARTER
-    refute SchoolInfoInterstitialHelper.complete? school_info
+    refute school_info.complete?
   end
 
   test 'school info confirmation dialog is shown when all information is provided' do
