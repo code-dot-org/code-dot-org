@@ -1644,4 +1644,8 @@ class Script < ActiveRecord::Base
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|script| script.has_pilot_experiment?(user)}
   end
+
+  def self.get_version_year_options
+    Course.get_version_year_options
+  end
 end

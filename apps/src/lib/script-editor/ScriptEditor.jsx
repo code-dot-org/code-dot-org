@@ -24,6 +24,9 @@ const styles = {
   },
   checkbox: {
     margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
   }
 };
 
@@ -61,7 +64,9 @@ export default class ScriptEditor extends React.Component {
     projectSharing: PropTypes.bool,
     curriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
     familyName: PropTypes.string,
-    versionYear: PropTypes.string
+    versionYear: PropTypes.string,
+    scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   handleClearProjectWidgetSelectClick = () => {
@@ -166,19 +171,33 @@ export default class ScriptEditor extends React.Component {
         </label>
         <label>
           Family Name
-          <input
+          <select
             name="family_name"
             defaultValue={this.props.familyName}
-            style={styles.input}
-          />
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {this.props.scriptFamilies.map(familyOption => (
+              <option key={familyOption} value={familyOption}>
+                {familyOption}
+              </option>
+            ))}
+          </select>
         </label>
         <label>
           Version Year
-          <input
+          <select
             name="version_year"
             defaultValue={this.props.versionYear}
-            style={styles.input}
-          />
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {this.props.versionYearOptions.map(year => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
         </label>
         <label>
           Visible in Teacher Dashboard
