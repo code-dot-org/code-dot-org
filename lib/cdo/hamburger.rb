@@ -3,6 +3,8 @@
 # As part of this content, it also provides CSS classes which determine
 # responsive visibility for the header itself and the items inside it.
 
+require_relative 'help_header'
+
 class Hamburger
   # These are the CSS classes applied to items in the hamburger,
   # and to the hamburger itself.
