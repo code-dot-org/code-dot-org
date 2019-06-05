@@ -21,11 +21,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
       end
     # partial school info entered, so update it
     elsif school_info_params[:country].present?
-      new_school_info = if existing_school_info && !existing_school_info.complete?
-                          SchoolInfo.find_or_create_by!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
-                        else
-                          SchoolInfo.find_or_create_by!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
-                        end
+      new_school_info = SchoolInfo.find_or_create_by!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
 
       existing_school_info&.assign_attributes(school_info_params)
       if existing_school_info.nil? || existing_school_info.changed?
