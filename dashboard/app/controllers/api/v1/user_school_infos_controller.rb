@@ -14,12 +14,13 @@ class Api::V1::UserSchoolInfosController < ApplicationController
     return unless school_info_params[:school_id].present? || school_info_params[:country].present?
 
     existing_school_info = current_user.school_info
-    new_school_info = SchoolInfo.find_or_create_by!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
+    new_school_info = SchoolInfo.where(school_info_params).first_or_create(validation_type: SchoolInfo::VALIDATION_NONE)
     if school_info_params[:school_id].present?
-      if existing_school_info == new_school_info && existing_school_info.complete?
-        current_user.user_school_infos.where(school_info: new_school_info).update(last_confirmation_date: DateTime.now)
-      else
+      existing_school_info&.assign_attributes(school_info_params)
+      if existing_school_info.nil? || existing_school_info.changed?
         current_user.update!(school_info_id: new_school_info.id)
+      else
+        current_user.user_school_infos.where(school_info: new_school_info).update(last_confirmation_date: DateTime.now)
       end
     # partial school info entered, so update it
     elsif school_info_params[:country].present?
