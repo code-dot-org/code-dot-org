@@ -315,6 +315,15 @@ class User < ActiveRecord::Base
     true # update if/when A/B test is done and accepted
   end
 
+  # Most recently created user_school_info referring to a complete school_info entry
+  def last_complete_school_info
+    user_school_infos.
+        select {|tenure| tenure.school_info.complete?}.
+        sort_by(&:created_at).
+        last&.
+        school_info
+  end
+
   belongs_to :invited_by, polymorphic: true
 
   validate :admins_must_be_teachers_without_followeds
