@@ -4,6 +4,7 @@ import {commands as eventCommands} from './eventCommands';
 import {commands as locationCommands} from './locationCommands';
 import {commands as spriteCommands} from './spriteCommands';
 import {commands as worldCommands} from './worldCommands';
+import {commands as validationCommands} from './validationCommands';
 
 let commands = module.exports;
 
@@ -13,3 +14,4 @@ Object.assign(commands, eventCommands);
 Object.assign(commands, locationCommands);
 Object.assign(commands, spriteCommands);
 Object.assign(commands, worldCommands);
+Object.assign(commands, validationCommands);
