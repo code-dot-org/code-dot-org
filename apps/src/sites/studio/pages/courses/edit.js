@@ -31,6 +31,7 @@ function showCourseEditor() {
         courseEditorData.course_summary.has_verified_resources
       }
       courseFamilies={courseEditorData.course_families}
+      versionYearOptions={courseEditorData.version_year_options}
     />,
     document.getElementById('course_editor')
   );
