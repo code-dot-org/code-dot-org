@@ -11,7 +11,9 @@ module AWS
     ALLOWED_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH).freeze
     CACHED_METHODS = %w(HEAD GET OPTIONS).freeze
     # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
-    ERROR_CODES = [400, 403, 404, 405, 414, 500, 501, 502, 503, 504].freeze
+    CLIENT_ERROR_CODES = [400, 403, 404, 405, 414].freeze
+    SERVER_ERROR_CODES = [500, 501, 502, 503, 504].freeze
+    ERROR_CACHE_TTL = 60
     # Configure CloudFront to forward these headers for S3 origins.
     S3_FORWARD_HEADERS = %w(
       Access-Control-Request-Headers
@@ -136,12 +138,21 @@ module AWS
         Aliases: aliases,
         CacheBehaviors: behaviors,
         Comment: '',
-        CustomErrorResponses: ERROR_CODES.map do |error|
-          {
-            ErrorCachingMinTTL: 0,
-            ErrorCode: error,
-          }
-        end,
+        CustomErrorResponses:
+          CLIENT_ERROR_CODES.map do |error|
+            {
+              ErrorCachingMinTTL: 0,
+              ErrorCode: error,
+            }
+          end +
+          SERVER_ERROR_CODES.map do |error|
+            {
+              ErrorCachingMinTTL: ERROR_CACHE_TTL,
+              ErrorCode: error,
+              ResponseCode: error,
+              ResponsePagePath: '/assets/error-pages/site-down.html'
+            }
+          end,
         DefaultCacheBehavior: cache_behavior(config[:default]),
         DefaultRootObject: '',
         Enabled: true,

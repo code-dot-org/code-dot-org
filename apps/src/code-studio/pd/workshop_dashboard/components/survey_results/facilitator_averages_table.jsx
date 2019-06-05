@@ -13,21 +13,25 @@ import {
 
 const questionOrder = {
   facilitator_effectiveness: [
-    'overallHow',
-    'duringYour',
-    'forThis54',
-    'howInteresting55',
-    'howOften56',
-    'howComfortable',
-    'howOften'
+    'facilitator_effectiveness_0',
+    'facilitator_effectiveness_1',
+    'facilitator_effectiveness_2',
+    'facilitator_effectiveness_3',
+    'facilitator_effectiveness_4',
+    'facilitator_effectiveness_5'
   ],
-  teacher_engagement: ['pleaseRate120_0', 'pleaseRate120_1', 'pleaseRate120_2'],
+  teacher_engagement: [
+    'teacher_engagement_0',
+    'teacher_engagement_1',
+    'teacher_engagement_2',
+    'teacher_engagement_3'
+  ],
   overall_success: [
-    'iFeel133',
-    'regardingThe_2',
-    'pleaseRate_2',
-    'iWould',
-    'pleaseRate_3'
+    'overall_success_0',
+    'overall_success_1',
+    'overall_success_2',
+    'overall_success_3',
+    'overall_success_4'
   ]
 };
 
@@ -46,9 +50,9 @@ export class FacilitatorAveragesTable extends React.Component {
     super(props);
 
     this.questionDenominator = {
-      facilitator_effectiveness: 5,
-      teacher_engagement: props.courseName === COURSE_CSF ? 5 : 6,
-      overall_success: 6
+      facilitator_effectiveness: 7,
+      teacher_engagement: props.courseName === COURSE_CSF ? 5 : 7,
+      overall_success: 7
     };
   }
 
@@ -138,7 +142,11 @@ export class FacilitatorAveragesTable extends React.Component {
               questionOrder[category].map((question, i) => (
                 <tr key={i}>
                   <td style={{paddingLeft: '30px'}}>
-                    {this.props.questions[question]}
+                    {this.props.questions[question] &&
+                      this.props.questions[question].replace(
+                        '{facilitatorName}',
+                        this.props.facilitatorName
+                      )}
                   </td>
                   <td>
                     {this.renderAverage(
