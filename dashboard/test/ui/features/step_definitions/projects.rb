@@ -41,6 +41,25 @@ Then(/^I scroll the Play Lab gallery section into view$/) do
   @browser.execute_script('$(".ui-playlab")[0].scrollIntoView(true)')
 end
 
+Then(/^I make a "([^"]*)" project named "([^"]*)"$/) do |project_type, name|
+  steps %Q{
+    Then I am on "http://studio.code.org/projects/#{project_type}/new"
+    And I get redirected to "/projects/#{project_type}/([^\/]*?)/edit" via "dashboard"
+    And I wait for the page to fully load
+    And element "#runButton" is visible
+    And element ".project_updated_at" eventually contains text "Saved"
+    And I click selector ".project_edit"
+    And I type "#{name}" into "input.project_name"
+    And I click selector ".project_save"
+    And I wait until element ".project_edit" is visible
+<Erin - you left off here! You need to make this more generic and then use it.>
+    Then I should see title "#{name} - Play Lab"
+    And I press "#runButton" using jQuery
+    And I wait until element ".project_updated_at" contains text "Saved"
+    And I wait until initial thumbnail capture is complete
+  }
+end
+
 Then(/^I make a playlab project named "([^"]*)"$/) do |name|
   steps %Q{
     Then I am on "http://studio.code.org/projects/playlab/new"
