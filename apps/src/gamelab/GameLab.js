@@ -746,7 +746,7 @@ GameLab.prototype.rerunSetupCode = function() {
   }
   Sounds.getSingleton().muteURLs();
   this.gameLabP5.p5.allSprites.removeSprites();
-  delete this.gameLabP5.p5.World.background_color;
+  this.gameLabP5.spritelab.reset();
   this.JSInterpreter.deinitialize();
   this.initInterpreter(false /* attachDebugger */);
   this.onP5Setup();
@@ -939,6 +939,15 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
         prop,
         propList[prop][0],
         propList[prop][1]
+      );
+    }
+
+    const spritelabCommands = this.gameLabP5.spritelab.commands;
+    for (const command in spritelabCommands) {
+      this.JSInterpreter.createGlobalProperty(
+        command,
+        spritelabCommands[command].bind(this.gameLabP5.p5),
+        null
       );
     }
 
