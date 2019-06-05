@@ -196,6 +196,23 @@ var Spritelab = function() {
   this.commands.showTitleScreen = function(title, subtitle) {
     commands.showTitleScreen(title, subtitle);
   };
+
+  // Validation commands
+  this.commands.getAnimationsInUse = function() {
+    return commands.getAnimationsInUse();
+  };
+
+  this.commands.getBackground = function() {
+    return commands.getBackground();
+  };
+
+  this.commands.getBehaviorsForAnimation = function(animation) {
+    return commands.getBehaviorsForAnimation(animation);
+  };
+
+  this.commands.getSpriteIdsInUse = function() {
+    return commands.getSpriteIdsInUse();
+  };
 };
 
 module.exports = Spritelab;
