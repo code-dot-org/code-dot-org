@@ -112,7 +112,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_empty @teacher.user_school_infos
   end
 
-  test 'initial, no previoius, partial, manual' do
+  test 'initial, no previous, partial, manual' do
     sign_in @teacher
 
     Timecop.travel 1.hour
@@ -170,19 +170,16 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     @teacher.update school_info: school_info
     sign_in @teacher
 
-    refute @teacher.school_info.country.nil?
-
+    puts "teacher --> #{@teacher.school_info.inspect}"
     Timecop.travel 1.hour
     submit_blank_school_info
 
     @teacher.reload
 
     assert_response :success, response.body
-
     assert_equal @teacher.school_info.id, school_info.id
     assert_equal @teacher.school_info, school_info
-    # assert_first_tenure(@teacher)
-    # assert_nil @teacher.school_info.country #Ask Bryan about desired behavior
+    refute_nil @teacher.school_info.country
   end
 
   test 'initial, partial previous, unchanged, manual' do
