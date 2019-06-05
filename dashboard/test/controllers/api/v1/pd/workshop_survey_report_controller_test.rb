@@ -285,6 +285,7 @@ module Api::V1::Pd
 
       WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
       WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report).never
+      Honeybadger.expects(:notify)
 
       sign_in @admin
       get :generic_survey_report, params: {workshop_id: csf_101_ws.id}
@@ -305,7 +306,8 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: academic-year workshop uses old pipeline' do
-      new_academic_ws = create :pd_workshop, course: COURSE_CSP, num_sessions: 1, started_at: Date.new(2019, 8, 1)
+      new_academic_ws = create :pd_workshop, course: COURSE_CSP, num_sessions: 1,
+        started_at: Date.new(2019, 8, 1)
 
       WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
       WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report)
