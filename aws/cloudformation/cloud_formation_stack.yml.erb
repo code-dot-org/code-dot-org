@@ -612,7 +612,10 @@ Resources:
           PolicyDocument:
             Statement:
               - Effect: Allow
-                Action: rds:DescribeDBInstances
+                Action:
+                  - rds:DescribeDBInstances
+                  - rds:DescribeDBClusters
+                  - rds:DescribeDBClusterSnapshots
                 Resource: '*'
               - Effect: Allow
                 Action: rds:DescribeDBSnapshots
@@ -620,6 +623,12 @@ Resources:
               - Effect: Allow
                 Action: rds:CopyDBSnapshot
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:production-*"
+              - Effect: Allow
+                Action: rds:CopyDBClusterSnapshot
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:<%=CDO.db_cluster_id%>*"
+              - Effect: Allow
+                Action: rds:ModifyDBClusterSnapshotAttribute
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:temp-snapshot*"
               - Effect: Allow
                 Action:
                   - rds:CopyDBSnapshot
