@@ -12,39 +12,27 @@ class Api::V1::UserSchoolInfosController < ApplicationController
 
   # PATCH /api/v1/users_school_infos/<id>/school_info
   def update
+    existing_school_info = current_user.school_info
     if school_info_params[:school_id].present?
-      existing_school_info = current_user.school_info
-      new_school = SchoolInfo.find_or_create_by(school_info_params)
-      if existing_school_info && !existing_school_info.complete?
-        current_user.update!(school_info_id: new_school.id)
+      new_school = SchoolInfo.find_or_create_by!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
+      if existing_school_info == new_school && existing_school_info.complete?
+        current_user.user_school_infos.where(school_info: new_school).update(last_confirmation_date: DateTime.now)
       else
-        if existing_school_info == new_school
-          current_user.user_school_infos.where(school_info: new_school).update(last_confirmation_date: DateTime.now)
-        else
-          current_user.update!(school_info_id: new_school.id)
-        end
+        current_user.update!(school_info_id: new_school.id)
       end
+    # partial school info entered, so update it
     elsif school_info_params[:country].present?
-      existing_school_info = current_user.school_info
-      if existing_school_info && !existing_school_info.complete?
-        new_school = SchoolInfo.find_or_create_by!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
-        current_user.update!(school_info_id: new_school.id)
-        if existing_school_info.id == new_school.id
-          current_user.user_school_infos.where(school_info: existing_school_info).update(last_confirmation_date: DateTime.now)
-        end
+      new_school_info = if existing_school_info && !existing_school_info.complete?
+                          SchoolInfo.find_or_create_by!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
+                        else
+                          SchoolInfo.create!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
+                        end
+
+      existing_school_info&.assign_attributes(school_info_params)
+      if existing_school_info.nil? || existing_school_info.changed?
+        current_user.update!(school_info_id: new_school_info.id)
       else
-        if existing_school_info
-          existing_school_info.assign_attributes(school_info_params)
-          if existing_school_info.changed?
-            new_school_info = SchoolInfo.create!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
-            current_user.update!(school_info_id: new_school_info.id)
-          else
-            current_user.user_school_infos.where(school_info: existing_school_info).update(last_confirmation_date: DateTime.now)
-          end
-        else
-          new_school_info = SchoolInfo.create!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
-          current_user.update!(school_info_id: new_school_info.id)
-        end
+        current_user.user_school_infos.where(school_info: existing_school_info).update(last_confirmation_date: DateTime.now)
       end
     end
   end
