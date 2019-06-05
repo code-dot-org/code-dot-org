@@ -36,6 +36,55 @@ var Spritelab = function() {
     updateTitle.apply(this);
   };
 
+  // Action commands
+  this.commands.changePropBy = function(spriteId, prop, val) {
+    commands.changePropBy(spriteId, prop, val);
+  };
+
+  this.commands.edgesDisplace = function(spriteId) {
+    commands.edgesDisplace.apply(this, [spriteId]);
+  };
+
+  this.commands.isTouchingEdges = function(spriteId) {
+    return commands.isTouchingEdges.apply(this, [spriteId]);
+  };
+
+  this.commands.jumpTo = function(spriteId, location) {
+    commands.jumpTo(spriteId, location);
+  };
+
+  this.commands.mirrorSprite = function(spriteId, direction) {
+    commands.mirrorSprite(spriteId, direction);
+  };
+
+  this.commands.moveInDirection = function(spriteId, distance, direction) {
+    commands.moveInDirection(spriteId, distance, direction);
+  };
+
+  this.commands.moveForward = function(spriteId, distance) {
+    commands.moveForward(spriteId, distance);
+  };
+
+  this.commands.moveToward = function(spriteId, distance, target) {
+    commands.moveToward(spriteId, distance, target);
+  };
+
+  this.commands.removeTint = function(spriteId) {
+    commands.setProp(spriteId, 'tint', null);
+  };
+
+  this.commands.setProp = function(spriteId, prop, val) {
+    commands.setProp.apply(this, [spriteId, prop, val]);
+  };
+
+  this.commands.setTint = function(spriteId, color) {
+    commands.setProp(spriteId, 'tint', color);
+  };
+
+  this.commands.turn = function(spriteId, n, direction) {
+    commands.turn(spriteId, n, direction);
+  };
+
   // Behavior commands
   this.commands.addBehaviorSimple = function(spriteId, behavior) {
     commands.addBehavior(spriteId, behavior);
