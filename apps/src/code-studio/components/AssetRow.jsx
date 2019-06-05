@@ -117,7 +117,7 @@ export default class AssetRow extends React.Component {
     }
 
     let usage = $('#visualization').find(
-      `[src*=\'${encodeURIComponent(this.props.name)}']`
+      `[src*=\'${encodeURIComponent(this.props.name).replace("'", "\\'")}']`
     ).length;
 
     switch (this.state.action) {
