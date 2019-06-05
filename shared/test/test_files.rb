@@ -45,6 +45,17 @@ class FilesTest < FilesApiTestBase
     assert_copy_object('plus+one.html', 'plus+two.html')
     assert_copy_object('space one.html', 'space two.html')
     assert_copy_object('question?mark.html', 'question mark?.html')
+
+    # "characters to avoid" from the list at
+    # https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-key-guidelines-avoid-characters
+    assert_copy_object('left{curly.html', 'right{curly.html')
+    assert_copy_object('left<angle.html', 'right<angle.html')
+    assert_copy_object('left[square.html', 'right]square.html')
+
+    # "characters to avoid" which do not pass this assertion
+    # assert_copy_object('back\slash.html', 'backslash\.html')
+    # assert_copy_object('forward/slash.html', 'forwardslash/.html')
+
     delete_all_manifest_versions
   end
 
