@@ -64,6 +64,9 @@ class FilesApiTestHelper
 
   def patch_abuse(abuse_score)
     patch "/v3/#{@endpoint}/#{@channel_id}/?abuse_score=#{abuse_score}"
+    puts "last_response.body in patch_abuse: "
+    puts
+    puts last_response.body
     last_response.body
   end
 
