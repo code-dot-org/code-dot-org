@@ -318,16 +318,6 @@ module Api::V1::Pd
 
     private
 
-    def assert_workshop_survey_report_facilitator_query(user:, expected_facilitator_name_filter:)
-      @controller.expects(:generate_summary_report).with do |params|
-        params[:facilitator_name] == expected_facilitator_name_filter
-      end
-
-      sign_in user
-      get :workshop_survey_report, params: {workshop_id: @workshop.id}
-      assert_response :success
-    end
-
     def build_sample_data
       facilitator_1 = create(:facilitator, name: 'Cersei')
       facilitator_2 = create(:facilitator, name: 'Jaime')
