@@ -1,0 +1,18 @@
+:ruby
+  require 'cdo/help_header'
+
+  options = { level: level, script_level: script_level, language: language, user_type: user_type, loc_prefix: loc_prefix, request: request }
+
+  help_items = HelpHeader.get_help_contents(options)
+
+#help-button{class: "hide-mobile"}
+  #help-contents{style: 'display: none'}
+    - help_items.each do |entry|
+      %a.linktag{id: entry[:id], href: entry[:url]}=entry[:title]
+
+  %i#help-icon.clicktag{class: "fa fa-question-circle hide-mobile"}
+    %span{style: "pointer-events: none"}
+
+
+
+

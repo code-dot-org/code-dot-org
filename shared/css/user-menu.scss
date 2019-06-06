@@ -98,7 +98,7 @@
     display: none;
   }
   display: inline-block;
-  float: right;
+  float: left;
   z-index: 99;
   position: relative;
 
@@ -111,7 +111,6 @@
     height: 20px;
     vertical-align: middle;
     text-decoration: none;
- 
   }
 
   #help-contents {
@@ -119,15 +118,7 @@
     text-align: left;
     white-space: nowrap;
     padding: 0;
-
-    .display_name {
-      font-family: $gotham-bold;
-      background-color: $charcoal;
-      color: $white;
-      padding: 10px;
-      text-align: center;
-      cursor: default;
-    }
+    right: 0px;
 
     a {
       display: block;
@@ -140,8 +131,6 @@
     }
   }
 }
-
-
 
 .create_menu {
   .create_options {
