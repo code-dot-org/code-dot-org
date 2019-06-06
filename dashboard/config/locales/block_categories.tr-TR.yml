@@ -1,59 +1,2406 @@
 ---
-tr:
+tr-TR:
   data:
     block_categories:
-      Actions: İşlemler
-      Loops: Döngüler
-      Functions: Fonksiyonlar
-      Color: Renk
-      Brushes: Fırçalar
-      Math: Matematik
-      Logic: Mantık
-      Variables: Değişkenler
-      Number: Sayı
-      String: Dize
-      Image: Resim
-      Boolean: Boole komutlari
-      Conditionals: Koşullar
-      Events: Olaylar
-      Games/Score: Oyunlar/skor
-      Comments: Yorumlar
-      Category: Kategori
-      Prebuilt: Önceden bitirilmis
-      Text: yazı
-      Picker: Seçici
-      Comment: Yorum
-      World: Dünya
-      Sprites: Hareketli Nesneler
-      Behaviors: Davranışlar
-      'Variables ': Değişkenler
-      Default: Varsayılan
-      Locations: Konumlar
-      everythingelse: diğerherşey
-      Location: Konum
-      numbers: sayılar
-      Numbers: Sayılar
-      Input: Girdi
-      Dancers: Dansçılar
-      Groups: Gruplar
-      Advanced: İleri seviye
-      Start: Başlayın
-      Dancing: Dans
-      Sprite: Hareketli nesne
-      Brush: Fırça
-      Make Sprite: Hareketli Nesne Oluştur
-      Movement: Hareket
-      Booleans: Boolean Değerleri
-      Functional: İşlevsel
-      While Events: While olgulari
-      Sprite Properties: Nesne özellikleri
-      Predefined: Önceden Tanımlanmış
-      test: dene
-      test2: Test2
-      Use These Blocks: Bu Bloklari Kullan
-      Do Not Use: Kullanma!
-      Name: İsim
-      NEW BLOCKS: YENİ BLOKLAR
-      'Functions ': Fonksiyonlar
-      Game/Score: Oyun/Skor
-      Function: Fonksiyon
+      4-5 Artist Patterns Free Play:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      Alien Defender:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Games/Score: Oyunlar/skor
+        Comments: Yorumlar
+      Choose Your Own Adventure:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Games/Score: Oyunlar/skor
+        Comments: Yorumlar
+      Course 4 Artist For Loops 11:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+      Course 4 Artist For Loops 11a:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+      Course 4 Artist For Loops 14:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+      Course 4 Artist For Loops 15:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Variables ': Değişkenler
+      Course 4 Artist For Loops 4:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+      Course 4 Artist For Loops 6a:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+      Course 4 Artist For Loops 8:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+      Course 4 Artist For Loops Challenge:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+      Course 4 Artist For Loops inspire:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+      Course 4 Artist Functions Inspiration:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+      Course 4 Artist Functions challenge:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+      Course 4 Bee Params 1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      Course 4 Bee Params 2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      Course 4 Bee Params 3:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        'Variables ': Değişkenler
+      Course 4 Bee Params 4:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        'Variables ': Değişkenler
+        Math: Matematik
+      Course 4 Bee Params 5:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      Course 4 Bee Params 6:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      Course 4 Bee Params 7:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        Functions: Fonksiyonlar
+        'Variables ': Değişkenler
+      Course 4 Bee Params 8:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        Functions: Fonksiyonlar
+        'Variables ': Değişkenler
+      Course 4 EC 1a:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        Functions: Fonksiyonlar
+      Course 4 EC 1b:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        Functions: Fonksiyonlar
+      Course 4 EC 2a:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      Course 4 EC 2b:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+      Course 4 EC 2c:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+      Course 4 Play Lab Params 10:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      Course 4 Play Lab Params 7:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+      Course 4 Play Lab Params 8:
+        Events: Olaylar
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+      Course 4 Play Lab Params 9:
+        Actions: İşlemler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      Course 4 Play Lab Vars 9:
+        Events: Olaylar
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        'Variables ': Değişkenler
+      Course 4 Playlab For Loop Freeplay:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Variables: Değişkenler
+      Course 4 SCF 1:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+        Functions: Fonksiyonlar
+      Course 4 SCF 1a:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        Functions: Fonksiyonlar
+        'Variables ': Değişkenler
+      Course 4 SCF 1b:
+        Actions: İşlemler
+        Loops: Döngüler
+        Logic: Mantık
+        Math: Matematik
+        Functions: Fonksiyonlar
+      Course 4 SCF 2:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+        Functions: Fonksiyonlar
+      Course 4 SCF 3:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+        Functions: Fonksiyonlar
+      Course 4 SCFL 1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+      Course 4 SCFL 1a:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+      Course 4 SCFL 1b:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+      Course 4 SCFL 2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+      Course 4 SCFL 3:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      Course 4 SCFL 4:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      Course 4 SCFL 6:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      Course 4 SCFL 7:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      Course 4 SCV 6:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      'Course E: Play Lab Project':
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Games/Score: Oyunlar/skor
+        Comments: Yorumlar
+      'Course F: Artist Project':
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      'Course F: Artist Project - Revise':
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      'Course F: Artist Project - Revise_2018':
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      'Course F: Artist Project_2018':
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      'Course F: Artist Project_2019':
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      CourseD_Dance_Party_11_5:
+        World: Dünya
+        Dancers: Dansçılar
+        Groups: Gruplar
+        Events: Olaylar
+      CourseD_Dance_Party_12:
+        World: Dünya
+        Dancers: Dansçılar
+        Groups: Gruplar
+        Events: Olaylar
+        Numbers: Sayılar
+        Logic: Mantık
+      CourseE_Project_SpriteLab:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Logic: Mantık
+        Text: yazı
+        Advanced: İleri seviye
+        Comments: Yorumlar
+      CourseE_Project_SpriteLab_2019:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+      CourseE_hoops:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+        Functions: Fonksiyonlar
+      CourseF_Project_Revise_SpriteLab:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+        Functions: Fonksiyonlar
+      CourseF_Project_SpriteLab:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+        Functions: Fonksiyonlar
+      CourseF_Project_SpriteLab_2019:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Locations: Konumlar
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Text: yazı
+        Comments: Yorumlar
+      Dance Party 2:
+        Sprites: Hareketli Nesneler
+        Behaviors: Davranışlar
+        Events: Olaylar
+        Comments: Yorumlar
+      Dance Party 6:
+        Sprites: Hareketli Nesneler
+        Behaviors: Davranışlar
+        Events: Olaylar
+        Comments: Yorumlar
+      Dance Party Freeplay:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+        Comments: Yorumlar
+      Dance_Party_11_5:
+        World: Dünya
+        Dancers: Dansçılar
+        Groups: Gruplar
+        Events: Olaylar
+      Dance_Party_12:
+        World: Dünya
+        Dancers: Dansçılar
+        Groups: Gruplar
+        Events: Olaylar
+        Numbers: Sayılar
+        Logic: Mantık
+      Dance_Party_extras_battle:
+        World: Dünya
+        Dancers: Dansçılar
+        Groups: Gruplar
+        Events: Olaylar
+        Numbers: Sayılar
+        Logic: Mantık
+      Dance_Party_extras_every_beat:
+        World: Dünya
+        Dancers: Dansçılar
+        Groups: Gruplar
+        Events: Olaylar
+        Numbers: Sayılar
+        Logic: Mantık
+      Dance_Party_extras_layout:
+        World: Dünya
+        Dancers: Dansçılar
+        Groups: Gruplar
+        Events: Olaylar
+        Numbers: Sayılar
+        Logic: Mantık
+      Dance_Party_extras_on_beat:
+        World: Dünya
+        Dancers: Dansçılar
+        Groups: Gruplar
+        Events: Olaylar
+        Numbers: Sayılar
+        Logic: Mantık
+      Dance_Party_extras_speed:
+        World: Dünya
+        Dancers: Dansçılar
+        Groups: Gruplar
+        Events: Olaylar
+        Numbers: Sayılar
+        Logic: Mantık
+      Dance_Party_extras_visible:
+        World: Dünya
+        Dancers: Dansçılar
+        Groups: Gruplar
+        Events: Olaylar
+        Numbers: Sayılar
+        Logic: Mantık
+      Find the Wizard:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Games/Score: Oyunlar/skor
+        Comments: Yorumlar
+      Fish Tank 5-validated:
+        Sprites: Hareketli Nesneler
+        World: Dünya
+        Behaviors: Davranışlar
+        Comments: Yorumlar
+      Fish Tank 5-validated_2019:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Behaviors: Davranışlar
+        Comments: Yorumlar
+      Fish Tank 6-validated:
+        Sprites: Hareketli Nesneler
+        World: Dünya
+        Behaviors: Davranışlar
+        Comments: Yorumlar
+      Fish Tank 6-validated_2019:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Behaviors: Davranışlar
+        Comments: Yorumlar
+      Fish Tank 7-validated:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Behaviors: Davranışlar
+        Events: Olaylar
+        Comments: Yorumlar
+      Fish Tank 7-validated_2019:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Behaviors: Davranışlar
+        Events: Olaylar
+        Comments: Yorumlar
+      FoodFight:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Games/Score: Oyunlar/skor
+        Comments: Yorumlar
+      Geometric Sun:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Comments: Yorumlar
+      Geometric Sun_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Comments: Yorumlar
+      Guess The Number:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Games/Score: Oyunlar/skor
+        Comments: Yorumlar
+      InspirationalArtwork:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Comments: Yorumlar
+      InspirationalArtwork_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Comments: Yorumlar
+      NEW Course 4 Artist Functions 14:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+      NEW Course 4 Artist Params 1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      NEW Course 4 Artist Params 10:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+      NEW Course 4 Artist Params 11:
+        Actions: İşlemler
+        Functions: Fonksiyonlar
+        Loops: Döngüler
+        Math: Matematik
+      NEW Course 4 Artist Params 12:
+        Actions: İşlemler
+        Math: Matematik
+        Functions: Fonksiyonlar
+      NEW Course 4 Artist Params 12a:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+      NEW Course 4 Artist Params 13:
+        Actions: İşlemler
+        Functions: Fonksiyonlar
+        Loops: Döngüler
+        Math: Matematik
+      NEW Course 4 Artist Params 14:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+        Loops: Döngüler
+        Math: Matematik
+      NEW Course 4 Artist Params 15:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+        Functions: Fonksiyonlar
+      NEW Course 4 Artist Params 2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+      NEW Course 4 Artist Params 3:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+      NEW Course 4 Artist Params 6:
+        Actions: İşlemler
+        Functions: Fonksiyonlar
+        Loops: Döngüler
+        Math: Matematik
+      NEW Course 4 Artist Params 7:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+      NEW Course 4 Artist Params 8:
+        Actions: İşlemler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Loops: Döngüler
+      NEW Course 4 Artist Params 9:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+      NEW Course 4 Artist Params inspire:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      NEW Course 4 Play Lab Params 11:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Games/Score: Oyunlar/skor
+      Robot Doodle:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Comments: Yorumlar
+      Robot Doodle_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Comments: Yorumlar
+      Virtual Pet 2:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+        Comments: Yorumlar
+      Virtual Pet 3:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+      Virtual Pet 4:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+      Virtual Pet 5:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+      Virtual Pet 6:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+      Virtual Pet Freeplay:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+      behaviors 3a:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Behaviors: Davranışlar
+        Actions: İşlemler
+      behaviors 5:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Behaviors: Davranışlar
+        Actions: İşlemler
+      behaviors 6:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Math: Matematik
+        Logic: Mantık
+      behaviors 7:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Math: Matematik
+        Logic: Mantık
+      behaviors free play:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Behaviors: Davranışlar
+        Actions: İşlemler
+        Events: Olaylar
+      course3_bee_functions_challenge1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      course3_bee_functions_challenge2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      course3_bee_functions_challenge3:
+        Default: Varsayılan
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      course3_bee_functions_challenge4:
+        Default: Varsayılan
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      course3_playLab_challenge1:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      course4_artist_fwp_challenge1:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+        Functions: Fonksiyonlar
+      course4_bee_for_challenge1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Math: Matematik
+      course4_bee_fwp_challenge1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      course4_bee_fwp_challenge2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      course4_playlab_variables_challenge1:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      courseD_artist_project1:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project1a:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project1a_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project1a_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project2:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project2_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project2_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project2a:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project2a_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project2a_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project3:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project3_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project3_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project3a:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project3a_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project3a_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project4:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project4_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project4_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project4a:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project4a_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project4a_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project5:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project5_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_artist_project5_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+      courseD_playLab_condFP:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Games/Score: Oyunlar/skor
+      courseD_playLab_condFP_2018:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Games/Score: Oyunlar/skor
+        Comment: Yorum
+      courseE_Dogger_2:
+        World: Dünya
+        Sprites: Hareketli Nesneler
+        Actions: İşlemler
+        Events: Olaylar
+        Behaviors: Davranışlar
+        Variables: Değişkenler
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Text: yazı
+        Functions: Fonksiyonlar
+      courseE_artist_concept1_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_concept4:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+      courseE_artist_concept4_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions10:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      courseE_artist_functions10_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions10_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions2_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Functions ': Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions2_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Functions ': Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions3_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseE_artist_functions3_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseE_artist_functions5_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Functions ': Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions5_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Functions ': Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions7_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Functions ': Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions7_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Functions ': Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions8:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      courseE_artist_functions8_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions8_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions8a_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions8a_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions8b_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions8b_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions8c_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions8c_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions9:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      courseE_artist_functions9_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions9_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functionsProj_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functionsProj_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_artist_functions_predict2:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      courseE_artist_functions_predict2_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      courseE_artist_functions_predict2_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      courseE_bee_concept1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_bee_concept2_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_bee_concept3_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_bee_concept4_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_bee_concept5_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_bee_functions6:
+        Actions: İşlemler
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      courseE_bee_functions7:
+        Actions: İşlemler
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      courseE_bee_functions_challenge1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_bee_functions_challenge2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+      courseE_farmer_concept1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_concept2_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_concept3_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions10a1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions10a1_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions10b:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions11_predict:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions11_predict_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions11_predict_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions13_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions13_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions1_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions1a:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions1a_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions1a_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions2b:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions2b_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions2b_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions2ba:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions2ba_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions2ba_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions3c:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions3c1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions3c1_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions3c_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions3c_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions4b:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions5c:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions6c:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions7a1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions7a1_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions7b:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions8a1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions8a1_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions8b:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_farmer_functions9a1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions9a1_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseE_farmer_functions9b:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_playLab_challenge1:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_playLab_scaffold5:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseE_playLab_scaffold6:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+      courseF_artist_for1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Color: Renk
+      courseF_artist_for10:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Variables ': Değişkenler
+      courseF_artist_for10_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Variables ': Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_for10_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Variables ': Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_for10_predict1:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Variables ': Değişkenler
+      courseF_artist_for10_predict1_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Variables ': Değişkenler
+      courseF_artist_for10_predict1_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Brushes: Fırçalar
+        'Variables ': Değişkenler
+      courseF_artist_for1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseF_artist_for1_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseF_artist_for2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Color: Renk
+      courseF_artist_for2_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseF_artist_for2_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseF_artist_for3:
+        Actions: İşlemler
+        Loops: Döngüler
+        Color: Renk
+      courseF_artist_for3_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseF_artist_for3_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseF_artist_for4:
+        Actions: İşlemler
+        Loops: Döngüler
+        Color: Renk
+      courseF_artist_for4_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseF_artist_for4_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseF_artist_for5:
+        Actions: İşlemler
+        Loops: Döngüler
+        Color: Renk
+      courseF_artist_for5_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseF_artist_for5_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Comments: Yorumlar
+      courseF_artist_for6:
+        Actions: İşlemler
+        Loops: Döngüler
+        Color: Renk
+      courseF_artist_for6_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Color: Renk
+      courseF_artist_for6_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Color: Renk
+      courseF_artist_for7:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+      courseF_artist_for7_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+      courseF_artist_for7_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+      courseF_artist_for8:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+      courseF_artist_for8_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+      courseF_artist_for8_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+      courseF_artist_for9:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+      courseF_artist_for9_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_for9_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_for_challenge1:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      courseF_artist_for_challenge1_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      courseF_artist_for_challenge1_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      courseF_artist_for_challenge2:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      courseF_artist_for_challenge2_2018:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      courseF_artist_for_challenge2_2019:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      courseF_artist_fwp2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+      courseF_artist_fwp2_predict1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+      courseF_artist_fwp3:
+        Functions: Fonksiyonlar
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+      courseF_artist_fwp4:
+        Actions: İşlemler
+        Math: Matematik
+        Functions: Fonksiyonlar
+      courseF_artist_fwp5:
+        Actions: İşlemler
+        Functions: Fonksiyonlar
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+      courseF_artist_fwp6:
+        Actions: İşlemler
+        Functions: Fonksiyonlar
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+      courseF_artist_fwp7:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+        Loops: Döngüler
+        Math: Matematik
+      courseF_artist_fwp8:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Functions: Fonksiyonlar
+        Loops: Döngüler
+        Math: Matematik
+      courseF_artist_fwp9:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+        Functions: Fonksiyonlar
+      courseF_artist_fwp_challenge1:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+        Functions: Fonksiyonlar
+      courseF_artist_fwp_challenge2:
+        Actions: İşlemler
+        Brushes: Fırçalar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+        Functions: Fonksiyonlar
+      courseF_artist_variables10_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_variables10_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_variables7_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_variables7_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_variables8_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_variables8_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_variables9_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_variables9_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_variablesFP_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_artist_variablesFP_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Brushes: Fırçalar
+        Variables: Değişkenler
+        Functions: Fonksiyonlar
+        Comments: Yorumlar
+      courseF_bee_conditionals10:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_conditionals2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_conditionals3:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_conditionals4:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_conditionals5:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_conditionals8:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_for10:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for10_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for10_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for11:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for11_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for11_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for1_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for1_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for2_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for2_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for3_predict1:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for3_predict1_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for3_predict1_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for4:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for4_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for4_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for5:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for5_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for5_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for6:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for6_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for6_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for7:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for7_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for7_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for8:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for8_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for8_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for9:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        Variables: Değişkenler
+      courseF_bee_for9_2018:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for9_2019:
+        Actions: İşlemler
+        Math: Matematik
+        Loops: Döngüler
+        'Variables ': Değişkenler
+        Comments: Yorumlar
+      courseF_bee_for_challenge1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_for_challenge1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_for_challenge1_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_for_challenge2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+      courseF_bee_for_challenge2_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+      courseF_bee_for_challenge2_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+      courseF_bee_functions2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_functions3:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_functions3a:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_functions4:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_functions5a:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_functions6:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_functions7:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_functions8a:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_functionsPre7:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_functions_challenge1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_functions_challenge2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_fwp1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Math: Matematik
+        Conditionals: Koşullar
+      courseF_bee_fwp2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_fwp3:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_fwp4:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_fwp5:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_fwp6:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_fwp7:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_fwp8:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_fwp9_predict1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_fwp_challenge1:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_fwp_challenge2:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Math: Matematik
+      courseF_bee_variables_1_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_1_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_2_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_2_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_3_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_3_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_4_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_4_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_5_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_5_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_6_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_6_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_7_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_7_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+        Comments: Yorumlar
+      courseF_bee_variables_8_2018:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+      courseF_bee_variables_8_2019:
+        Actions: İşlemler
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Math: Matematik
+      courseF_playlab_variables1a:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Variables: Değişkenler
+      courseF_playlab_variables2b:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        'Variables ': Değişkenler
+      courseF_playlab_variables3b_josh:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Variables: Değişkenler
+      courseF_playlab_variables4b:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Variables: Değişkenler
+      courseF_playlab_variables4c_predictive1:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      courseF_playlab_variables5c:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Logic: Mantık
+        Variables: Değişkenler
+        Text: yazı
+      courseF_playlab_variables6c:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Variables: Değişkenler
+      courseF_playlab_variables7b:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Conditionals: Koşullar
+        Math: Matematik
+        Text: yazı
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+        Input: Girdi
+        Game/Score: Oyun/Skor
+      courseF_playlab_variables7c:
+        Default: Varsayılan
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Input: Girdi
+        Variables: Değişkenler
+      courseF_playlab_variables8c:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
+      courseF_playlab_variables_challenge1:
+        Actions: İşlemler
+        Events: Olaylar
+        Loops: Döngüler
+        Math: Matematik
+        Functions: Fonksiyonlar
+        Variables: Değişkenler
