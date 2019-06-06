@@ -8,15 +8,165 @@ zh-CN:
       Begin planning your project_2018:
         Begin planning your project: 开始计划项目
         description here: 描述
+      Begin planning your project_2018_2019:
+        Begin planning your project: 开始计划项目
+        description here: 描述
+      CSD U2 Design Project:
+        description here: 描述
+        title: 标题
+      CSD U2 Design Project_2018:
+        description here: 描述
+        title: 标题
+      CSD U2 Design Project_2018_2019:
+        description here: 描述
+        title: 标题
+      CSD U2 L1 Overview:
+        description here: 描述
+        title: 标题
+      CSD U2 L2 Overview:
+        description here: 描述
+        title: 标题
+      CSD U2 L3 Overview:
+        description here: 描述
+        title: 标题
+      CSD U2 L4 Overview:
+        description here: 描述
+        title: 标题
+      CSD U2 L5 Overview:
+        description here: 描述
+        title: 标题
+      CSD U2 L6 Overview:
+        description here: 描述
+        title: 标题
+      CSD U2 Lesson 6 Overview:
+        description here: 描述
+      CSD U2 expand project:
+        description here: 描述
+        title: 标题
+      CSD U2 expand project_2018:
+        description here: 描述
+        title: 标题
+      CSD U2 expand project_2018_2019:
+        description here: 描述
+        title: 标题
+      CSD U2 project guide:
+        description here: 描述
+      CSD U2 project guide_2018:
+        description here: 描述
+      CSD U2 project guide_2018_2019:
+        description here: 描述
+      CSD U3 Card Examples_2018:
+        description here: 描述
+      CSD U3 Card Examples_2018_2019:
+        description here: 描述
+      CSD U3 combining rep:
+        description here: 描述
+        title: 标题
+      CSD U3 combining rep_2018:
+        description here: 描述
+        title: 标题
+      CSD U3 combining rep_2018_2019:
+        description here: 描述
+        title: 标题
+      CSD U3 game intro:
+        description here: 描述
+      CSD U3 game intro_2018:
+        description here: 描述
+      CSD U3 game intro_2018_2019:
+        description here: 描述
+      CSD U3 platform intro:
+        description here: 描述
+      CSD U3 platform intro_2018:
+        description here: 描述
+      CSD U3 platform intro_2018_2019:
+        description here: 描述
+      CSD U5 Encryption 1:
+        description here: 描述
+        title: 标题
+      CSD U5 Encryption 1_2018:
+        description here: 描述
+        title: 标题
+      CSD U5 Encryption 1_2018_2019:
+        description here: 描述
+        title: 标题
+      CSD U5 Encryption 2:
+        description here: 描述
+      CSD U5 Encryption 2_2018:
+        description here: 描述
+      CSD U5 Encryption 2_2018_2019:
+        description here: 描述
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: 描述
+        title: 标题
+      CSD U5 crosstab warmup:
+        description here: 描述
+      CSD U5 crosstab warmup_2018:
+        description here: 描述
+      CSD U5 crosstab warmup_2018_2019:
+        description here: 描述
+      CSD U5 data visualization:
+        description here: 描述
+        title: 标题
+      CSD U5 data visualization_2018:
+        description here: 描述
+        title: 标题
+      CSD U5 data visualization_2018_2019:
+        description here: 描述
+        title: 标题
+      CSD U5 student record:
+        description here: 描述
+        title: 标题
+      CSD U5 student record_2018:
+        description here: 描述
+        title: 标题
+      CSD U5 student record_2018_2019:
+        description here: 描述
+        title: 标题
+      CSD U6 LED create intro:
+        description here: 描述
+      CSD U6 LED create intro_2018:
+        description here: 描述
+      CSD U6 LED create intro_2018_2019:
+        description here: 描述
+      CSD U6 final intro:
+        description here: 描述
+      CSD U6 final intro_2018:
+        description here: 描述
+      CSD U6 final intro_2018_2019:
+        description here: 描述
+      Internet Simulator Setup:
+        description here: 描述
+      Internet Simulator Setup 2:
+        description here: 描述
+        title: 标题
+      Internet Simulator Setup 3:
+        description here: 描述
+      Multi-Screen Apps:
+        description here: 描述
+        title: 标题
+      New Challenge Introduction:
+        description here: 描述
+        title: 标题
+      OPD-K5 Stage3aGo:
+        description here: 描述
+        title: 标题
       Prepare for your presentation:
         description here: 描述
         title: 标题
       Prepare for your presentation_2018:
         Prepare for yur presentation: 准备演示
+      'Technique: Frequency Analysis':
+        description here: 描述
+      Terminology Recap:
+        description here: 描述
       courseD_external_binary1:
         Binary Drawing: 二进制绘图
       courseD_external_binary1_2018:
         Binary Drawing: 二进制绘图
+      courseD_external_binary1_2018_2019:
+        Binary Drawing: 二进制绘图
+      courseE_project_exemplars_2019:
+        Test Markdown Textbook Page: 测试Markdown文本页面
       courseF_markdown_algorithms_end:
         Test Markdown Textbook Page: 测试Markdown文本页面
       courseF_markdown_algorithms_intro:
@@ -31,7 +181,11 @@ zh-CN:
         Test Markdown Textbook Page: 测试Markdown文本页面
       courseF_markdown_forloops_end:
         Test Markdown Textbook Page: 测试Markdown文本页面
+      courseF_markdown_forloops_end_2019:
+        Test Markdown Textbook Page: 测试Markdown文本页面
       courseF_markdown_forloops_intro:
+        Test Markdown Textbook Page: 测试Markdown文本页面
+      courseF_markdown_forloops_intro_2019:
         Test Markdown Textbook Page: 测试Markdown文本页面
       courseF_markdown_loops_end:
         Test Markdown Textbook Page: 测试Markdown文本页面
@@ -43,7 +197,13 @@ zh-CN:
         Test Markdown Textbook Page: 测试Markdown文本页面
       courseF_markdown_variables_end:
         Test Markdown Textbook Page: 测试Markdown文本页面
+      courseF_markdown_variables_end_2019:
+        Test Markdown Textbook Page: 测试Markdown文本页面
       courseF_markdown_variables_intro:
+        Test Markdown Textbook Page: 测试Markdown文本页面
+      courseF_markdown_variables_intro_2019:
+        Test Markdown Textbook Page: 测试Markdown文本页面
+      courseF_project_exemplars_2019:
         Test Markdown Textbook Page: 测试Markdown文本页面
       gradek1_activity_beNice:
         The computer is your friend: 计算机是你的朋友
@@ -269,6 +429,12 @@ zh-CN:
       4-5 maze multi 1:
         Maze Multiple Choice: 迷宫的选择题
         Which blocks solve the puzzle?: 哪些模块解决了这一问题？
+      CSD U3 Boolean MC:
+        title: 标题
+      CSD U3 Boolean MC_2018:
+        title: 标题
+      CSD U3 Boolean MC_2018_2019:
+        title: 标题
       K-1 Artist 1 Multi 1:
         Multiple Choice: 选择题
         Which blocks solve this puzzle?: 哪些模块解决了这一问题？
@@ -324,6 +490,12 @@ zh-CN:
         SOUTH: SOUTH
         SQUARE: SQUARE
         Which word is spelled?: 哪个单词被拼出来了？
+      behaviors 1 predict:
+        Incorrect: 错误
+        Incorrect.: 错误。
+      behaviors 4 predict:
+        Incorrect: 错误
+        Incorrect.: 错误。
       courseC_multi_artist_prog6_predict1:
         I don't know.: 我不知道.
         Look carefully at the code below.  What will happen when you click "Run"?: 仔细阅读下面的代码。
@@ -331,6 +503,13 @@ zh-CN:
         The artist will draw a single line.: 艺术家将会画一条线。
         The artist will draw a triangle with three equal sides.: 艺术家将会画一个等边三角形。
       courseC_multi_artist_prog6_predict1_2018:
+        I don't know.: 我不知道.
+        Look carefully at the code below.  What will happen when you click "Run"?: 仔细阅读下面的代码。
+          当您单击 "运行" 时, 会发生什么情况？
+        The artist will draw a single line.: 艺术家将会画一条线。
+        The artist will draw a square.: 艺术家将会画一个正方形。
+        The artist will draw a triangle with three equal sides.: 艺术家将会画一个等边三角形。
+      courseC_multi_artist_prog6_predict1_2018_2019:
         I don't know.: 我不知道.
         Look carefully at the code below.  What will happen when you click "Run"?: 仔细阅读下面的代码。
           当您单击 "运行" 时, 会发生什么情况？
@@ -359,6 +538,17 @@ zh-CN:
           "运行" 后, 农民会收集多少南瓜？
         The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: 在每个循环中农民收集4个南瓜,
           执行了3个循环。 4乘以3等于 12!
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        I don't know.: 我不知道.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: 错误。在每个循环中农民收集4个南瓜,
+          执行了3个循环。 4乘以3等于 12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: 仔细查看下面的代码。你点击
+          "运行" 后, 农民会收集多少南瓜？
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: 在每个循环中农民收集4个南瓜,
+          执行了3个循环。 4乘以3等于 12!
       courseC_multi_maze_debugging8_predict1:
         I don't know.: 我不知道.
         'Look closely at the code below.  What is the first bug that will make this program fail? ': '仔细查看下面的代码。
@@ -367,6 +557,13 @@ zh-CN:
         Scrat will go the wrong way after his final turn.: 松鼠在转最后一个弯的时候, 它会走错路。
         The program won't fail. Scrat will get to the acorn.: 这个程序不会失败。松鼠会到达橡子的位置。
       courseC_multi_maze_debugging8_predict1_2018:
+        I don't know.: 我不知道.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': '仔细查看下面的代码。
+          第一个将使此程序失败的bug是什么？ '
+        Scrat takes one too few steps and ends up short of the acorn.: 松鼠走的路太少, 最终不会到达橡子的位置。
+        Scrat will go the wrong way after his final turn.: 松鼠在转最后一个弯的时候, 它会走错路。
+        The program won't fail. Scrat will get to the acorn.: 这个程序不会失败。松鼠会到达橡子的位置。
+      courseC_multi_maze_debugging8_predict1_2018_2019:
         I don't know.: 我不知道.
         'Look closely at the code below.  What is the first bug that will make this program fail? ': '仔细查看下面的代码。
           第一个将使此程序失败的bug是什么？ '
@@ -391,6 +588,15 @@ zh-CN:
         The bird will make it to the pig.: 小鸟会到达猪的位置。
         The bird will run into the TNT.: 这只鸟将撞上TNT炸药。
         This code gets the bird perfectly to the pig.: 这段代码会把小鸟完美地移动到猪的位置。
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        I don't know.: 我不知道.
+        Incorrect. This code gets the bird perfectly to the pig.: 错误。这段代码会把小鸟完美移动到猪的位置。
+        Read through the code below very carefully.  What will happen when you click "Run"?: 仔细阅读下面的代码。
+          当您单击 "运行" 时, 会发生什么情况？
+        The bird will end up one step short of the pig.: 这只鸟最终会比猪少走一步。
+        The bird will make it to the pig.: 小鸟会到达猪的位置。
+        The bird will run into the TNT.: 这只鸟将撞上TNT炸药。
+        This code gets the bird perfectly to the pig.: 这段代码会把小鸟完美地移动到猪的位置。
       courseC_multi_starWars_predict1:
         BB-8 will move 5 times and get all of the scrap metal: BB-8 将移动 5次, 并得到所有的废金属
         BB-8 will move only one space: BB-8 将只移动一格.
@@ -399,6 +605,13 @@ zh-CN:
         The repeat block will make the BB-8 move forward 5 times.: 循环模块将使 BB-8 向前移动5次。
         What do you think will happen when you click "Run"?: 当您单击 "运行" 时, 会发生什么情况？
       courseC_multi_starWars_predict1_2018:
+        BB-8 will move 5 times and get all of the scrap metal: BB-8 将移动 5次, 并得到所有的废金属
+        BB-8 will move only one space: BB-8 将只移动一格.
+        BB-8 will not move.: BB-8 将不会移动。
+        I don't know: 我不了解
+        The repeat block will make the BB-8 move forward 5 times.: 循环模块将使 BB-8 向前移动5次。
+        What do you think will happen when you click "Run"?: 当您单击 "运行" 时, 会发生什么情况？
+      courseC_multi_starWars_predict1_2018_2019:
         BB-8 will move 5 times and get all of the scrap metal: BB-8 将移动 5次, 并得到所有的废金属
         BB-8 will move only one space: BB-8 将只移动一格.
         BB-8 will not move.: BB-8 将不会移动。
@@ -425,6 +638,16 @@ zh-CN:
           当您单击 "运行" 时, 会发生什么情况？
         The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: 第一个循环只能让
           BB-8 向前移动2格, 当它需要向前移动3格的时候。
+      courseC_multi_starWars_predict2_2018_2019:
+        BB-8 will collect all of the scrap metal with no problems.: BB-8将会毫无困难地收集所有的废金属。
+        BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8在第一个循环中走得不够远,
+          无法获得所有的废金属。
+        BB-8 will travel too far in the first loop.: BB-8将在第一个循环中走得太远。
+        I don't know.: 我不知道.
+        Look closely at the code below.  What will happen when you click "Run"?: 仔细阅读下面的代码。
+          当您单击 "运行" 时, 会发生什么情况？
+        The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: 第一个循环只能让
+          BB-8 向前移动2格, 当它需要向前移动3格的时候。
       courseD_multi_artist_binary8_predict1:
         A: A
         B: B
@@ -434,6 +657,14 @@ zh-CN:
         Take a close look at the code below.  Which image will it create after you click "Run"?: 仔细查看下面的代码。当您点击
           "运行" 后，这个程序将会生成哪个图形？
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+        Incorrect.: 错误。
+        Take a close look at the code below.  Which image will it create after you click "Run"?: 仔细查看下面的代码。当您点击
+          "运行" 后，这个程序将会生成哪个图形？
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -453,6 +684,17 @@ zh-CN:
         The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: 错误。
           内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+        I don't know.: 我不知道.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: 错误。
+          内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: 仔细查看下面的代码。当你点击
+          "运行" 后, 这个程序将会生成哪个图形？
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: 错误。
+          内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -483,11 +725,20 @@ zh-CN:
         'The bee will move to the cloud and try to get nectar, no matter what. ': '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
         0: 云挡住了视线。在这朵云下可能会有花朵。如果有一朵花，蜜蜂将需要收集一次花粉。如果没有花，蜜蜂就什么也不做。请仔细查看下面的代码，您认为点击“运行”后将会发生什么？
         1: 云挡住了视线。在这朵云下可能会有花朵。如果有一朵花，蜜蜂将需要收集一次花粉。如果没有花，蜜蜂就什么也不做。请仔细查看下面的代码，您认为点击“运行”后将会发生什么？
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        I don't know.: 我不知道.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂会采花粉。
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: 蜜蜂会移动到云中，只有在下面有花朵的情况下，才会尝试采花粉。
+        'The bee will move to the cloud and then do nothing, no matter what. ': 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
+        'The bee will move to the cloud and try to get nectar, no matter what. ': '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
+        0: 云挡住了视线。在这朵云下可能会有花朵。如果有一朵花，蜜蜂将需要收集一次花粉。如果没有花，蜜蜂就什么也不做。请仔细查看下面的代码，您认为点击“运行”后将会发生什么？
+        1: 云挡住了视线。在这朵云下可能会有花朵。如果有一朵花，蜜蜂将需要收集一次花粉。如果没有花，蜜蜂就什么也不做。请仔细查看下面的代码，您认为点击“运行”后将会发生什么？
       courseD_multi_bee_conditionals7_predict2:
         I don't know.: 我不知道.
         Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        0: 仔细查看下面的代码，您点击“运行”后会发生什么？记住：每朵云后面只会有一个蜂窝或者一个花朵。
         The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         The bee will get nectar at each flower and honey at each honeycomb.: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         The bee will try to get honey from both flowers and honeycomb.: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
@@ -496,7 +747,14 @@ zh-CN:
         I don't know.: 我不知道.
         Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        0: 仔细查看下面的代码，您点击“运行”后会发生什么？记住：每朵云后面只会有一个蜂窝或者一个花朵
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        The bee will get nectar at each flower and honey at each honeycomb.: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        The bee will try to get honey from both flowers and honeycomb.: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
+        The bee will try to get nectar from both flowers and honeycomb.: 蜜蜂会从花朵和蜂窝中获取花粉。
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        I don't know.: 我不知道.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         The bee will get nectar at each flower and honey at each honeycomb.: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         The bee will try to get honey from both flowers and honeycomb.: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
@@ -512,6 +770,16 @@ zh-CN:
         The bee will get only 2 units of nectar.: 蜜蜂只能得到2个花蜜。
         The bee will move forward and get nectar only one time.: 蜜蜂会向前移动, 只能得到1个花蜜。
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        I don't know.: 我不知道.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: 不正确。
+          蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
+        Look closely at the nested loops below.  What will happen when you click "Run"?: 请仔细查看下面的代码。
+          当您单击 "运行" 时, 会发生什么情况？
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
+        The bee will get all of the nectar.: 蜜蜂将会得到所有的花蜜。
+        The bee will get only 2 units of nectar.: 蜜蜂只能得到2个花蜜。
+        The bee will move forward and get nectar only one time.: 蜜蜂会向前移动, 只能得到1个花蜜。
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         I don't know.: 我不知道.
         Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: 不正确。
           蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
@@ -543,13 +811,24 @@ zh-CN:
           "运行" 后, 蜜蜂会采集多少蜂蜜？
         15: 蜜蜂在向前移动的循环中采集2个花蜜，接着在另外一个循环中收集2个花蜜。 这2个循环在最外面循环的内部并被运行了2次。 4乘以2等于8！
         16: 蜜蜂在向前移动的循环中采集2个花蜜，接着在另外一个循环中收集2个花蜜。 这2个循环在最外面循环的内部并被运行了2次。 4乘以2等于8！
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        I don't know.: 我不知道.
+        13: 错误。蜜蜂在向前移动的循环中采集2个花蜜，接着在另外一个循环中收集2个花蜜。 这2个循环在最外面循环的内部并被运行了2次。 4乘以2等于8！
+        14: 错误。蜜蜂在向前移动的循环中采集2个花蜜，接着在另外一个循环中收集2个花蜜。 这2个循环在最外面循环的内部并被运行了2次。 4乘以2等于8！
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: 仔细查看下面的代码。当你点击
+          "运行" 后, 蜜蜂会采集多少蜂蜜？
+        15: 蜜蜂在向前移动的循环中采集2个花蜜，接着在另外一个循环中收集2个花蜜。 这2个循环在最外面循环的内部并被运行了2次。 4乘以2等于8！
+        16: 蜜蜂在向前移动的循环中采集2个花蜜，接着在另外一个循环中收集2个花蜜。 这2个循环在最外面循环的内部并被运行了2次。 4乘以2等于8！
       courseD_multi_collector_debugging10_predict1:
         I don't know.: 我不知道.
         Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure.: 错误。这个答案部分正确,
           循环没有运行足够多次数来获得所有的宝贝。
-        0: 'Look closely at the code below.  Why won''t Laurel collect all of the
-          treasure when you click "Run"? Warning: This is a tricky question, make
-          sure you read all of the options before answering!'
+        0: ': ''Look closely at the code below.  Why won''''t Laurel collect all of
+          the treasure when you click "Run"? Warning: This is a tricky question, make
+          sure you read all of the options before answering!'''
       courseD_multi_farmer_condLoops9_predict1:
         I don't know.: 我不知道.
         0: 错误。这段代码将使收割者将会反复沿着台阶状路径移动，同时收割经过的所有玉米和莴苣，但是她不会收割南瓜。
@@ -563,6 +842,18 @@ zh-CN:
         The harvester will collect all of the crops.: 收割者将收获所有的农作物。
         The harvester will not collect any of the crops with the path she is taking.: 收割者将不会收割她路过的农作物。
       courseD_multi_farmer_condLoops9_predict1_2018:
+        I don't know.: 我不知道.
+        0: 错误。这段代码将使收割者将会反复沿着台阶状路径移动，同时收割经过的所有玉米和莴苣，但是她不会收割南瓜。
+        1: 错误。这段代码将使收割者将会反复沿着台阶状路径移动，同时收割经过的所有玉米和莴苣，但是她不会收割南瓜。
+        Incorrect. There is no code here for picking the pumpkin.: 错误。没有收割南瓜的代码。
+        Take a close look at the code below.  What will happen after you click "Run"?: 仔细阅读下面的代码。
+          当您单击 "运行" 时, 会发生什么情况？
+        2: 这段代码将使收割者将会反复沿着台阶状路径移动，同时收割经过的所有玉米和莴苣，但是她不会收割南瓜。
+        3: 这段代码将使收割者将会反复沿着台阶状路径移动，同时收割经过的所有玉米和莴苣，但是她不会收割南瓜。
+        The harvester will collect all of the crops.: 收割者将收获所有的农作物。
+        The harvester will not pick any of the crops with the path she is taking.: 收割者将不会收割她路过的农作物。
+        The harvester will pick all of the crops, except the pumpkin.: 收割者将收获到除了南瓜以外的所有农作物。
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
         I don't know.: 我不知道.
         0: 错误。这段代码将使收割者将会反复沿着台阶状路径移动，同时收割经过的所有玉米和莴苣，但是她不会收割南瓜。
         1: 错误。这段代码将使收割者将会反复沿着台阶状路径移动，同时收割经过的所有玉米和莴苣，但是她不会收割南瓜。
@@ -604,6 +895,17 @@ zh-CN:
           循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。"
         This code will leave the holes completely untouched.: 代码将对地上的坑不产生任何影响。
         This code will leave the pile completely untouched.: 代码将对土堆不产生任何影响。
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        I don't know.: 我不知道.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: 错误。’当‘
+          循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。
+        Incorrect. There is no code to remove dirt from the pile.: 错误。没有任何代码用来清除土堆。
+        Nothing.  This code will leave only level ground.: 土堆和坑都消失了, 土地变成了平地。
+        Take a good look at the code below. What will be left at the end of this puzzle?: 请仔细查看下面的代码。这段代码的运行结果是什么？
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: "’当‘
+          循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。"
+        This code will leave the holes completely untouched.: 代码将对地上的坑不产生任何影响。
+        This code will leave the pile completely untouched.: 代码将对土堆不产生任何影响。
       courseD_multi_farmer_while4_predict1:
         I don't know.: 我不知道.
         Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: 不正确。农民一见到土堆就会去清除直到所有土堆被清除完毕。
@@ -611,6 +913,12 @@ zh-CN:
         The farmer will never stop removing dirt.: 农夫永远不停止地清除土堆。
         The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: 农民一见到土堆就会去清除直到所有土堆被清除完毕。
       courseD_multi_farmer_while4_predict1_2018:
+        I don't know.: 我不知道.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: 不正确。农民一见到土堆就会去清除直到所有土堆被清除完毕。
+        Nothing will happen.: 什么都不会发生。
+        The farmer will never stop removing dirt.: 农夫永远不停止地清除土堆。
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: 农民一见到土堆就会去清除直到所有土堆被清除完毕。
+      courseD_multi_farmer_while4_predict1_2018_2019:
         I don't know.: 我不知道.
         Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: 不正确。农民一见到土堆就会去清除直到所有土堆被清除完毕。
         Nothing will happen.: 什么都不会发生。
@@ -639,6 +947,17 @@ zh-CN:
         The zombie will pass the correct path and end up going back and forth forever.: 僵尸会通过正确的路径,
           最终会永远的来回走动。
         The zombie will turn right on the first path and go around in circles forever.: 僵尸将在第一个路口右转，然后永远的绕着圈走。
+      courseD_multi_maze_until10_predict2_2018_2019:
+        I don't know.: 我不知道.
+        In this code, the zombie will pass the correct path and end up going back and forth forever.: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
+        Incorrect. The zombie will pass the correct path and end up going back and forth forever.: 错误。僵尸会通过正确的路径,
+          最终会永远的来回走动。
+        Look carefully at the code below.  What will happen after you click "Run"?: 仔细阅读下面的代码。
+          当您单击 "运行" 时, 会发生什么情况？
+        The zombie will make it to the sunflower.: 僵尸会到达向日葵。
+        The zombie will pass the correct path and end up going back and forth forever.: 僵尸会通过正确的路径,
+          最终会永远的来回走动。
+        The zombie will turn right on the first path and go around in circles forever.: 僵尸将在第一个路口右转，然后永远的绕着圈走。
       courseD_multi_maze_until2_predict1:
         I don't know.: 我不知道.
         0: 错误。代码会指示小鸟做如下动作：当前面有路时，小鸟会向前移动，否则左转，反复如此，直到达到猪的位置！
@@ -652,6 +971,18 @@ zh-CN:
         The bird will not move at all.: 小鸟不会移动。
         The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
       courseD_multi_maze_until2_predict1_2018:
+        I don't know.: 我不知道.
+        0: 错误。代码会指示小鸟做如下动作：当前面有路时，小鸟会向前移动，否则左转，反复如此，直到达到猪的位置！
+        1: 错误。代码会指示小鸟做如下动作：当前面有路时，小鸟会向前移动，否则左转，反复如此，直到达到猪的位置！
+        2: 错误。代码会指示小鸟做如下动作：当前面有安全路径时，小鸟会向前移动，否则左转，反复如此，直到达到猪的位置！
+        3: 错误。代码会指示小鸟做如下动作：当前面有安全路径时，小鸟会向前移动，否则左转，反复如此，直到达到猪的位置！
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: 仔细阅读下面的代码。
+          当您单击 "运行" 时, 会发生什么情况？
+        The bird will make it to the pig.: 小鸟会到达猪的位置。
+        The bird will move forward and run into the TNT.: 小鸟会撞上TNT炸药。
+        The bird will not move at all.: 小鸟不会移动。
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
+      courseD_multi_maze_until2_predict1_2018_2019:
         I don't know.: 我不知道.
         0: 错误。代码会指示小鸟做如下动作：当前面有路时，小鸟会向前移动，否则左转，反复如此，直到达到猪的位置！
         1: 错误。代码会指示小鸟做如下动作：当前面有路时，小鸟会向前移动，否则左转，反复如此，直到达到猪的位置！
@@ -749,7 +1080,27 @@ zh-CN:
         The artist will draw two squares that overlap.: 艺术家将绘制两个部分重叠的正方形。
         The artist will draw two squares with a small gap in between.: 艺术家将绘制两个正方形，中间有空隙隔开。
         What will happen when you press "Run"?: 当您单击“运行”时，会发生什么情况？
+      courseE_prediction_artistFunction1_2018_2019:
+        Correct! The function is called two times in the program, with a jump in between.: 正确的！该函数在程序中被调用两次，其间有一个跳转。
+        Incorrect. The function is actually called two times in the program.: 不正确！这个函数实际上在程序中被调用了两次。
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: 不正确！正方形的每条边的长度只有100像素，但是艺术家在不同的函数之间跳跃了175像素。
+        Nothing. The function is not called in the program.: 什么都没有发生，函数没有被调用。
+        The artist will draw a single square.: 艺术家只会绘制一个正方形。
+        The artist will draw two squares that overlap.: 艺术家将绘制两个部分重叠的正方形。
+        The artist will draw two squares with a small gap in between.: 艺术家将绘制两个正方形，中间有空隙隔开。
+        What will happen when you press "Run"?: 当您单击“运行”时，会发生什么情况？
       courseF_bee_variables_8a_2018:
+        Bee Variables Multi: 小蜜蜂——多变量的应用
+        I don't know.: 我不知道.
+        Incorrect.  The variable gets set back to 0 before the last two function calls.: 错误。在最后两个函数调用之前，变量被设置回0。
+        Incorrect.  Your variable's name does not affect its value.: 错误。变量的名称不会影响它的值。
+        Look at the code below.  How many units of nectar will the bee collect at the end?: 仔细查看下面的代码。蜜蜂最后会收集多少个花蜜？
+        The bee will collect all of the nectar.: 蜜蜂将会得到所有的花蜜。
+        The bee will only collect 2 nectar.: 蜜蜂只会收集到2个花蜜。
+        The bee won't collect any nectar because the variable isn't called "gather".: 蜜蜂不会收集任何花蜜，因为变量名称不是“收集”。
+        0: 在最后两个函数调用之前，变量被设置为0，而在函数内每次都会加1。所以最后蜜蜂会收集2个花蜜。
+        1: 在最后两个函数调用之前，变量被设置为0，而在函数内每次都会加1。所以最后蜜蜂会收集2个花蜜。
+      courseF_bee_variables_8a_2018_2019:
         Bee Variables Multi: 小蜜蜂——多变量的应用
         I don't know.: 我不知道.
         Incorrect.  The variable gets set back to 0 before the last two function calls.: 错误。在最后两个函数调用之前，变量被设置回0。
@@ -769,6 +1120,14 @@ zh-CN:
         The artist will draw a straight line that increases in thickness from one side of the play space to the other.: 艺术家将绘制一条直线，从画布的一侧到另一侧，同时线逐渐变粗。
         What will happen when you click "Run"?: 当您单击“运行”时，会发生什么情况？
       courseF_multi_artist_for10_predict1_2018:
+        I don't know.: 我不知道.
+        Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: 错误。每次通过“for”循环，艺术家绘制的线会变得更长和更粗。
+        Incorrect. The artist turns between iterations of the `for` loop.: 错误。艺术家在“for”循环的迭代之间往返。
+        The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.: 艺术家将绘制一个螺旋图形，每次通过“for”循环，线会变得更长和更粗。
+        'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 艺术家将绘制一个螺旋图形，每次通过“for”循环，线会变得更长和更细。
+        The artist will draw a straight line that increases in thickness from one side of the play space to the other.: 艺术家将绘制一条直线，从画布的一侧到另一侧，同时线逐渐变粗。
+        What will happen when you click "Run"?: 当您单击“运行”时，会发生什么情况？
+      courseF_multi_artist_for10_predict1_2018_2019:
         I don't know.: 我不知道.
         Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: 错误。每次通过“for”循环，艺术家绘制的线会变得更长和更粗。
         Incorrect. The artist turns between iterations of the `for` loop.: 错误。艺术家在“for”循环的迭代之间往返。
@@ -818,6 +1177,18 @@ zh-CN:
         The artist will draw a triangle with 50 pixel sides.: 艺术家将会绘制一个边长为50像素的三角形。
         The artist will draw three open sides with 50 degree turns.: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
         We have set the variable "length" to 50.  What will happen when you click "Run"?: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        I don't know.: 我不知道.
+        Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.: 错误。
+          变量“长度”需要在“转x度”积木块中使用，才能实现。
+        Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: 错误。
+          变量“长度”需要在“重复”循环中使用，才能实现。
+        0: "“长度”变量设置为50，并在“向前移动”积木中使用，因此艺术家将绘制一个边长为50个像素的三角形。"
+        1: "“长度”变量设置为50，并在“向前移动”积木中使用，因此艺术家将绘制一个边长为50个像素的三角形。"
+        The artist will draw a 50-sided polygon with 3 pixel sides.: 艺术家将绘制一个有50条边的多边形，其中每条边长为3个像素。
+        The artist will draw a triangle with 50 pixel sides.: 艺术家将会绘制一个边长为50像素的三角形。
+        The artist will draw three open sides with 50 degree turns.: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
+        We have set the variable "length" to 50.  What will happen when you click "Run"?: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
       courseF_multi_bee_conditionals1_predict1:
         I don't know.: 我不知道.
         0: '? If there is not a flower the bee should do nothing. Take a good look
@@ -855,6 +1226,14 @@ zh-CN:
         The bee will move forward and collect all of the nectar from every flower, except for one.: 蜜蜂将向前移动，并收集花朵中所有的花蜜，但是会有一朵花收集不到。
         'The bee will move forward and collect all of the nectar from every flower. ': 蜜蜂将向前移动，并收集所有花朵中的所有花蜜。
         'The bee will move forward and collect one nectar from each flower. ': 蜜蜂将向前移动，并在每朵花中收集一个花蜜。
+      courseF_multi_bee_for3_predict1_2018_2019:
+        'I don''t know. ': 我不知道。
+        Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: 错误。“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。
+        Read the code below.  What will happen when you click "Run"?: 仔细阅读下面的代码。当您单击“运行”时，会发生什么情况？
+        The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: "“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。"
+        The bee will move forward and collect all of the nectar from every flower, except for one.: 蜜蜂将向前移动，并收集花朵中所有的花蜜，但是会有一朵花收集不到。
+        'The bee will move forward and collect all of the nectar from every flower. ': 蜜蜂将向前移动，并收集所有花朵中的所有花蜜。
+        'The bee will move forward and collect one nectar from each flower. ': 蜜蜂将向前移动，并在每朵花中收集一个花蜜。
       courseF_multi_bee_fwp9_predict1:
         0: "? Clicking to look inside of the function shows that it is set to collect
           as many nectar or honey as is passed through a parameter."
@@ -884,6 +1263,16 @@ zh-CN:
         The artist will solve the puzzle correctly.: 艺术家将正确解决谜题。
         What will happen when you press the "Run" button?: What will happen when you
           press the "Run" button?
+      coursee_prediction_artistfunction2_2018_2019:
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: 不正确。在调用“画多边形”之间，循环转动了90度。
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: 不正确。循环使用了“画多边形”，而不是“多一列多边形”。
+        Incorrect. The program does not call "draw line of polygons".: 不正确。该程序不调用“画一列多边形”。
+        The artist will draw four squares in a window pattern.: 这位艺术家将在窗户形状内画四个正方形。
+        The artist will draw four squares on top of one another.: 这位艺术家将画四个互相重叠的正方形。
+        The artist will draw only one line of squares.: 艺术家只画正方形的一条边。
+        The artist will solve the puzzle correctly.: 艺术家将正确解决谜题。
+        What will happen when you press the "Run" button?: What will happen when you
+          press the "Run" button?
       grade2_multi_collector_A_predict1:
         I don't know.: 我不知道.
         Laurel will collect 4 pieces of treasure using this code.: 用这段代码让罗瑞尔收集4个宝贝
@@ -892,5 +1281,8 @@ zh-CN:
         1: ": Look closely at the code below.  If the code were to run to the end
           (ignoring any errors) how many pieces of treasure would Laurel collect?"
       grade2_multi_collector_A_predict1_2018:
+        I don't know.: 我不知道.
+        Laurel will collect 4 pieces of treasure using this code.: 用这段代码让罗瑞尔收集4个宝贝
+      grade2_multi_collector_A_predict1_2018_2019:
         I don't know.: 我不知道.
         Laurel will collect 4 pieces of treasure using this code.: 用这段代码让罗瑞尔收集4个宝贝
