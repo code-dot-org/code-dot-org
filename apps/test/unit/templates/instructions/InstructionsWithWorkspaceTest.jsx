@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
 describe('InstructionsWithWorkspace', () => {
@@ -13,8 +13,9 @@ describe('InstructionsWithWorkspace', () => {
         setInstructionsMaxHeightAvailable={() => {}}
       />
     );
-    expect(wrapper).to.have.descendants('Connect(TopInstructions)');
-    expect(wrapper).to.have.descendants('Connect(CodeWorkspaceContainer)');
+
+    expect(wrapper.find('Connect(TopInstructionsCSP)')).to.have.lengthOf(1);
+    expect(wrapper.find('Connect(CodeWorkspaceContainer)')).to.have.lengthOf(1);
   });
 
   it('initially does not know window width or height', () => {
