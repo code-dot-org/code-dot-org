@@ -1,19 +1,1935 @@
 ---
-si:
+si-LK:
   data:
     block_categories:
-      Actions: ක්‍රියාවන්
-      Loops: ලූපයන්
-      Functions: ශ්‍රිතයන්
-      Color: පාට
-      Math: ගණිත
-      Logic: තර්කය
-      Variables: විචල්‍යන්
-      Conditionals: කන්ඩිෂනලස්
-      Events: වැඩසටහන්
-      Text: පෙළ
-      Location: ස්ථානය
-      Start: ආරම්භ කරන්න
-      test: පරික්ෂාව
-      Name: නම
-      Function: ශ්‍රිතය
+      4-5 Artist Patterns Free Play:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Alien Defender:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Choose Your Own Adventure:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Course 4 Artist For Loops 11:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      Course 4 Artist For Loops 11a:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      Course 4 Artist For Loops 14:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      Course 4 Artist For Loops 15:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      Course 4 Artist For Loops 4:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      Course 4 Artist For Loops 6a:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      Course 4 Artist For Loops 8:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      Course 4 Artist For Loops Challenge:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      Course 4 Artist For Loops inspire:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      Course 4 Artist Functions Inspiration:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      Course 4 Artist Functions challenge:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      Course 4 Bee Params 1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      Course 4 Bee Params 2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      Course 4 Bee Params 3:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+      Course 4 Bee Params 4:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      Course 4 Bee Params 5:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Course 4 Bee Params 6:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Course 4 Bee Params 7:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 Bee Params 8:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 EC 1a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 EC 1b:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 EC 2a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Course 4 EC 2b:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      Course 4 EC 2c:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      Course 4 Play Lab Params 10:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Course 4 Play Lab Params 7:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 Play Lab Params 8:
+        Events: වැඩසටහන්
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 Play Lab Params 9:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Course 4 Play Lab Vars 9:
+        Events: වැඩසටහන්
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+      Course 4 Playlab For Loop Freeplay:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+      Course 4 SCF 1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 SCF 1a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 SCF 1b:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Logic: තර්කය
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 SCF 2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 SCF 3:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      Course 4 SCFL 1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      Course 4 SCFL 1a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      Course 4 SCFL 1b:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      Course 4 SCFL 2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+      Course 4 SCFL 3:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      Course 4 SCFL 4:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      Course 4 SCFL 6:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      Course 4 SCFL 7:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      Course 4 SCV 6:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      'Course E: Play Lab Project':
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      'Course F: Artist Project':
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      'Course F: Artist Project - Revise':
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      'Course F: Artist Project - Revise_2018':
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      'Course F: Artist Project_2018':
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      'Course F: Artist Project_2019':
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      CourseD_Dance_Party_11_5:
+        Events: වැඩසටහන්
+      CourseD_Dance_Party_12:
+        Events: වැඩසටහන්
+        Logic: තර්කය
+      CourseE_Project_SpriteLab:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+        Logic: තර්කය
+        Text: පෙළ
+      CourseE_Project_SpriteLab_2019:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+      CourseE_hoops:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+        Functions: ශ්‍රිතයන්
+      CourseF_Project_Revise_SpriteLab:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+        Functions: ශ්‍රිතයන්
+      CourseF_Project_SpriteLab:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+        Functions: ශ්‍රිතයන්
+      CourseF_Project_SpriteLab_2019:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Text: පෙළ
+      Dance Party 2:
+        Events: වැඩසටහන්
+      Dance Party 6:
+        Events: වැඩසටහන්
+      Dance Party Freeplay:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+      Dance_Party_11_5:
+        Events: වැඩසටහන්
+      Dance_Party_12:
+        Events: වැඩසටහන්
+        Logic: තර්කය
+      Dance_Party_extras_battle:
+        Events: වැඩසටහන්
+        Logic: තර්කය
+      Dance_Party_extras_every_beat:
+        Events: වැඩසටහන්
+        Logic: තර්කය
+      Dance_Party_extras_layout:
+        Events: වැඩසටහන්
+        Logic: තර්කය
+      Dance_Party_extras_on_beat:
+        Events: වැඩසටහන්
+        Logic: තර්කය
+      Dance_Party_extras_speed:
+        Events: වැඩසටහන්
+        Logic: තර්කය
+      Dance_Party_extras_visible:
+        Events: වැඩසටහන්
+        Logic: තර්කය
+      Find the Wizard:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Fish Tank 7-validated:
+        Events: වැඩසටහන්
+      Fish Tank 7-validated_2019:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+      FoodFight:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Geometric Sun:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Geometric Sun_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Guess The Number:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      InspirationalArtwork:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      InspirationalArtwork_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      NEW Course 4 Artist Functions 14:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      NEW Course 4 Artist Params 1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      NEW Course 4 Artist Params 10:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      NEW Course 4 Artist Params 11:
+        Actions: ක්‍රියාවන්
+        Functions: ශ්‍රිතයන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      NEW Course 4 Artist Params 12:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      NEW Course 4 Artist Params 12a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      NEW Course 4 Artist Params 13:
+        Actions: ක්‍රියාවන්
+        Functions: ශ්‍රිතයන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      NEW Course 4 Artist Params 14:
+        Actions: ක්‍රියාවන්
+        Functions: ශ්‍රිතයන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      NEW Course 4 Artist Params 15:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      NEW Course 4 Artist Params 2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      NEW Course 4 Artist Params 3:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      NEW Course 4 Artist Params 6:
+        Actions: ක්‍රියාවන්
+        Functions: ශ්‍රිතයන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      NEW Course 4 Artist Params 7:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      NEW Course 4 Artist Params 8:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+        Loops: ලූපයන්
+      NEW Course 4 Artist Params 9:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      NEW Course 4 Artist Params inspire:
+        Actions: ක්‍රියාවන්
+        Functions: ශ්‍රිතයන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      NEW Course 4 Play Lab Params 11:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Robot Doodle:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Robot Doodle_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      Virtual Pet 2:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+      Virtual Pet 3:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+      Virtual Pet 4:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+      Virtual Pet 5:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+      Virtual Pet 6:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+      Virtual Pet Freeplay:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+      behaviors 3a:
+        Actions: ක්‍රියාවන්
+      behaviors 5:
+        Actions: ක්‍රියාවන්
+      behaviors 6:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+        Logic: තර්කය
+      behaviors 7:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+        Logic: තර්කය
+      behaviors free play:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+      course3_bee_functions_challenge1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      course3_bee_functions_challenge2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      course3_bee_functions_challenge3:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      course3_bee_functions_challenge4:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      course3_playLab_challenge1:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      course4_artist_fwp_challenge1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      course4_bee_for_challenge1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      course4_bee_fwp_challenge1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      course4_bee_fwp_challenge2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      course4_playlab_variables_challenge1:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      courseD_artist_project1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project1a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project1a_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project1a_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project2_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project2_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project2a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project2a_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project2a_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project3:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project3_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project3_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project3a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project3a_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project3a_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project4:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project4_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project4_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project4a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project4a_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project4a_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project5:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project5_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_artist_project5_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseD_playLab_condFP:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+      courseD_playLab_condFP_2018:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+      courseE_Dogger_2:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Variables: විචල්‍යන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Text: පෙළ
+        Functions: ශ්‍රිතයන්
+      courseE_artist_concept1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      courseE_artist_concept4:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_concept4_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions10:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions10_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions10_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions2_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseE_artist_functions2_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseE_artist_functions3_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseE_artist_functions3_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseE_artist_functions5_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseE_artist_functions5_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseE_artist_functions7_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseE_artist_functions7_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseE_artist_functions8:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions8_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions8_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions8a_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions8a_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions8b_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions8b_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions8c_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions8c_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions9:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions9_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions9_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functionsProj_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functionsProj_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions_predict2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions_predict2_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_artist_functions_predict2_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_bee_concept1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_bee_concept2_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_bee_concept3_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_bee_concept4_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_bee_concept5_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_bee_functions6:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_bee_functions7:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_bee_functions_challenge1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_bee_functions_challenge2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_concept1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_concept2_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_concept3_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions10a1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions10a1_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions10b:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions11_predict:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions11_predict_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions11_predict_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions13_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions13_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions1_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions1a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions1a_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions1a_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions2b:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions2b_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions2b_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions2ba:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions2ba_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions2ba_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions3c:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions3c1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions3c1_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions3c_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions3c_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions4b:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions5c:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions6c:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions7a1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions7a1_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions7b:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions8a1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions8a1_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions8b:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions9a1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions9a1_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_farmer_functions9b:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_playLab_challenge1:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_playLab_scaffold5:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseE_playLab_scaffold6:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_for1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Color: පාට
+      courseF_artist_for10:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_artist_for10_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_for10_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_for10_predict1:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_artist_for10_predict1_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_artist_for10_predict1_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_artist_for1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for1_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Color: පාට
+      courseF_artist_for2_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for2_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for3:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Color: පාට
+      courseF_artist_for3_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for3_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for4:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Color: පාට
+      courseF_artist_for4_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for4_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for5:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Color: පාට
+      courseF_artist_for5_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for5_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for6:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Color: පාට
+      courseF_artist_for6_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Color: පාට
+      courseF_artist_for6_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Color: පාට
+      courseF_artist_for7:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for7_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for7_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for8:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for8_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for8_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for9:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+      courseF_artist_for9_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_for9_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_for_challenge1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_for_challenge1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_for_challenge1_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_for_challenge2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_for_challenge2_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_for_challenge2_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_fwp2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      courseF_artist_fwp2_predict1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      courseF_artist_fwp3:
+        Functions: ශ්‍රිතයන්
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_fwp4:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      courseF_artist_fwp5:
+        Actions: ක්‍රියාවන්
+        Functions: ශ්‍රිතයන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_fwp6:
+        Actions: ක්‍රියාවන්
+        Functions: ශ්‍රිතයන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_fwp7:
+        Actions: ක්‍රියාවන්
+        Functions: ශ්‍රිතයන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_fwp8:
+        Actions: ක්‍රියාවන්
+        Functions: ශ්‍රිතයන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_artist_fwp9:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      courseF_artist_fwp_challenge1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      courseF_artist_fwp_challenge2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+      courseF_artist_variables10_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_variables10_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_variables7_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_variables7_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_variables8_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_variables8_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_variables9_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_variables9_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_variablesFP_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      courseF_artist_variablesFP_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+        Functions: ශ්‍රිතයන්
+      courseF_bee_conditionals10:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_conditionals2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_conditionals3:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_conditionals4:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_conditionals5:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_conditionals8:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_for10:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for10_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for10_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for11:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for11_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for11_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for1_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for1_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for2_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for2_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for3_predict1:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for3_predict1_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for3_predict1_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for4:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for4_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for4_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for5:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for5_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for5_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for6:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for6_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for6_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for7:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for7_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for7_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for8:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for8_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for8_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for9:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+        Variables: විචල්‍යන්
+      courseF_bee_for9_2018:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for9_2019:
+        Actions: ක්‍රියාවන්
+        Math: ගණිත
+        Loops: ලූපයන්
+      courseF_bee_for_challenge1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_for_challenge1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_for_challenge1_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_for_challenge2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_bee_for_challenge2_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_bee_for_challenge2_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_bee_functions2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_functions3:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_functions3a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_functions4:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_functions5a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_functions6:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_functions7:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_functions8a:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_functionsPre7:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_functions_challenge1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_functions_challenge2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_fwp1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Conditionals: කන්ඩිෂනලස්
+      courseF_bee_fwp2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_fwp3:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_fwp4:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_fwp5:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_fwp6:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_fwp7:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_fwp8:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_fwp9_predict1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_fwp_challenge1:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_fwp_challenge2:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Math: ගණිත
+      courseF_bee_variables_1_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_1_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_2_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_2_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_3_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_3_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_4_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_4_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_5_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_5_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_6_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_6_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_7_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_7_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_8_2018:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_bee_variables_8_2019:
+        Actions: ක්‍රියාවන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+        Math: ගණිත
+      courseF_playlab_variables1a:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+      courseF_playlab_variables2b:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+      courseF_playlab_variables3b_josh:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+      courseF_playlab_variables4b:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+      courseF_playlab_variables4c_predictive1:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      courseF_playlab_variables5c:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Logic: තර්කය
+        Variables: විචල්‍යන්
+        Text: පෙළ
+      courseF_playlab_variables6c:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+      courseF_playlab_variables7b:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Conditionals: කන්ඩිෂනලස්
+        Math: ගණිත
+        Text: පෙළ
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      courseF_playlab_variables7c:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Variables: විචල්‍යන්
+      courseF_playlab_variables8c:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්
+      courseF_playlab_variables_challenge1:
+        Actions: ක්‍රියාවන්
+        Events: වැඩසටහන්
+        Loops: ලූපයන්
+        Math: ගණිත
+        Functions: ශ්‍රිතයන්
+        Variables: විචල්‍යන්

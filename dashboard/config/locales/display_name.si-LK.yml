@@ -1,5 +1,5 @@
 ---
-si:
+si-LK:
   data:
     display_name:
       CSD U2 Pair Programming Video: යුගල වශයෙන් ක්‍රමලේඛනය
@@ -50,7 +50,6 @@ si:
       CSD U3 Variables Map: විචල්‍යන්
       CSD U3 Variables Map_2018: විචල්‍යන්
       CSD U3 Variables Map_2019: විචල්‍යන්
-      CSD U3 functions map: ශ්‍රිතයන්
       CSD U6 for loop map: ලූපයන් සඳහා
       CSD U6 for loop map_2018: ලූපයන් සඳහා
       CSD U6 for loop map_2019: ලූපයන් සඳහා
@@ -58,6 +57,3 @@ si:
       CSD U6 functions paramters video_2018: පරාමිතියන් සහිත ශ්‍රිත
       CSD U6 functions paramters video_2019: පරාමිතියන් සහිත ශ්‍රිත
       'CSD: For Loop_2018': ලූපයන් සඳහා
-      'CSD: For Loop_2019': ලූපයන් සඳහා
-      MC_HOC_2017_FP10x10: නොමිලේ ක්‍රීඩා කිරීම
-      MC_HOC_2017_FP10x10_RE: නොමිලේ ක්‍රීඩා කිරීම
