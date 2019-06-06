@@ -253,7 +253,7 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
-  def test_escaping_insensitivity
+  def test_escaping_spaces
     filename = @api.randomize_filename('has space.html')
     filename2 = @api.randomize_filename('another has spaces.html')
     delete_all_file_versions(filename, filename2)
