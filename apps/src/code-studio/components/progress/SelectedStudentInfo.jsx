@@ -87,7 +87,11 @@ export class SelectedStudentInfo extends React.Component {
     const currentStudentIndex = this.props.students.findIndex(
       student => student.id === currentUserId
     );
-    this.props.onSelectUser(this.props.students[currentStudentIndex + 1].id);
+    if (currentStudentIndex === this.props.students.length - 1) {
+      this.props.onSelectUser(null);
+    } else {
+      this.props.onSelectUser(this.props.students[currentStudentIndex + 1].id);
+    }
   };
 
   previousStudent = () => {
@@ -95,7 +99,15 @@ export class SelectedStudentInfo extends React.Component {
     const currentStudentIndex = this.props.students.findIndex(
       student => student.id === currentUserId
     );
-    this.props.onSelectUser(this.props.students[currentStudentIndex - 1].id);
+    if (currentStudentIndex === 0) {
+      this.props.onSelectUser(null);
+    } else if (currentStudentIndex === -1) {
+      this.props.onSelectUser(
+        this.props.students[this.props.students.length - 1].id
+      );
+    } else {
+      this.props.onSelectUser(this.props.students[currentStudentIndex - 1].id);
+    }
   };
 
   render() {

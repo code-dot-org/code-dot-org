@@ -95,10 +95,18 @@ class ScriptTeacherPanel extends React.Component {
           student => this.props.getSelectedUserId() === student.id
         );
       }
-      if (currentSectionScriptLevels && currentStudent) {
-        currentStudentScriptLevel = currentSectionScriptLevels.find(
-          level => this.props.getSelectedUserId() === level.user_id
-        );
+      if (currentStudent) {
+        if (currentSectionScriptLevels) {
+          currentStudentScriptLevel = currentSectionScriptLevels.find(
+            level => this.props.getSelectedUserId() === level.user_id
+          );
+        }
+      } else {
+        currentStudent = {
+          id: null,
+          name: 'Me'
+        };
+        currentStudentScriptLevel = currentSectionScriptLevels[0];
       }
     }
 
