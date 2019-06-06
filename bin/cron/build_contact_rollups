@@ -6,11 +6,16 @@ require 'cdo/contact_rollups_validation'
 require 'cdo/pardot'
 require 'cdo/chat_client'
 require 'cdo/only_one'
+require 'aws-sdk-rds'
 
 CHAT_CHANNEL = "cron-daily".freeze
 
 def main
   time_start = Time.now
+
+  # Delete clone database cluster if it was left behind by the last execution of Contact Rollups.
+  ContactRollups.delete_database_clone
+  ContactRollups.create_database_clone
 
   # Build new daily table of contact rollups
   ContactRollups.build_contact_rollups
@@ -40,6 +45,8 @@ def main
 
   # Any other failures along the way will be unrescued exceptions that
   # go to HoneyBadger
+ensure
+  ContactRollups.delete_database_clone
 end
 
 main if only_one_running?(__FILE__)
