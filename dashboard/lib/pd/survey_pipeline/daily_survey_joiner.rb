@@ -52,7 +52,7 @@ module Pd::SurveyPipeline
                 # Its id and name are generated based on the parent's id and name.
                 new_qid = compute_descendant_key(qid, sub_ans[:text])
                 new_name = compute_descendant_key(question[:name], sub_ans[:text])
-                new_text = "#{question[:text]}->#{sub_ans[:text]}"
+                new_text = "#{question[:text]} -> #{sub_ans[:text]}"
 
                 new_question = question.except(:sub_questions).merge(
                   name: new_name, text: new_text, type: TYPE_RADIO,
