@@ -1,19 +1,1935 @@
 ---
-km:
+km-KH:
   data:
     block_categories:
-      Actions: សកម្មភាព
-      Loops: រង្វិល​ជុំ
-      Functions: អនុ​គមន៍
-      Color: ពណ៌
-      Math: គណិត​វិទ្យា
-      Logic: តក្ក
-      Variables: អ​ថេរ
-      Conditionals: លក្ខខណ្ឌ
-      Events: ព្រឹត្តិការណ៍
-      Text: អត្ថ​​បទ
-      Location: ទីតាំង
-      Start: ចាប់​ផ្ដើម
-      test: សាក​ល្បង
-      Name: ឈ្មោះ
-      Function: អនុគមន៍
+      4-5 Artist Patterns Free Play:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Alien Defender:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Choose Your Own Adventure:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Course 4 Artist For Loops 11:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      Course 4 Artist For Loops 11a:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      Course 4 Artist For Loops 14:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      Course 4 Artist For Loops 15:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      Course 4 Artist For Loops 4:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      Course 4 Artist For Loops 6a:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      Course 4 Artist For Loops 8:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      Course 4 Artist For Loops Challenge:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      Course 4 Artist For Loops inspire:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      Course 4 Artist Functions Inspiration:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      Course 4 Artist Functions challenge:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      Course 4 Bee Params 1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      Course 4 Bee Params 2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      Course 4 Bee Params 3:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+      Course 4 Bee Params 4:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      Course 4 Bee Params 5:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Course 4 Bee Params 6:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Course 4 Bee Params 7:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 Bee Params 8:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 EC 1a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 EC 1b:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 EC 2a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Course 4 EC 2b:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      Course 4 EC 2c:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      Course 4 Play Lab Params 10:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Course 4 Play Lab Params 7:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 Play Lab Params 8:
+        Events: ព្រឹត្តិការណ៍
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 Play Lab Params 9:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Course 4 Play Lab Vars 9:
+        Events: ព្រឹត្តិការណ៍
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+      Course 4 Playlab For Loop Freeplay:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+      Course 4 SCF 1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 SCF 1a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 SCF 1b:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Logic: តក្ក
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 SCF 2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 SCF 3:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      Course 4 SCFL 1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      Course 4 SCFL 1a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      Course 4 SCFL 1b:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      Course 4 SCFL 2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+      Course 4 SCFL 3:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      Course 4 SCFL 4:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      Course 4 SCFL 6:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      Course 4 SCFL 7:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      Course 4 SCV 6:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      'Course E: Play Lab Project':
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      'Course F: Artist Project':
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      'Course F: Artist Project - Revise':
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      'Course F: Artist Project - Revise_2018':
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      'Course F: Artist Project_2018':
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      'Course F: Artist Project_2019':
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      CourseD_Dance_Party_11_5:
+        Events: ព្រឹត្តិការណ៍
+      CourseD_Dance_Party_12:
+        Events: ព្រឹត្តិការណ៍
+        Logic: តក្ក
+      CourseE_Project_SpriteLab:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+      CourseE_Project_SpriteLab_2019:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+      CourseE_hoops:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+        Functions: អនុ​គមន៍
+      CourseF_Project_Revise_SpriteLab:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+        Functions: អនុ​គមន៍
+      CourseF_Project_SpriteLab:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+        Functions: អនុ​គមន៍
+      CourseF_Project_SpriteLab_2019:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Text: អត្ថ​​បទ
+      Dance Party 2:
+        Events: ព្រឹត្តិការណ៍
+      Dance Party 6:
+        Events: ព្រឹត្តិការណ៍
+      Dance Party Freeplay:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+      Dance_Party_11_5:
+        Events: ព្រឹត្តិការណ៍
+      Dance_Party_12:
+        Events: ព្រឹត្តិការណ៍
+        Logic: តក្ក
+      Dance_Party_extras_battle:
+        Events: ព្រឹត្តិការណ៍
+        Logic: តក្ក
+      Dance_Party_extras_every_beat:
+        Events: ព្រឹត្តិការណ៍
+        Logic: តក្ក
+      Dance_Party_extras_layout:
+        Events: ព្រឹត្តិការណ៍
+        Logic: តក្ក
+      Dance_Party_extras_on_beat:
+        Events: ព្រឹត្តិការណ៍
+        Logic: តក្ក
+      Dance_Party_extras_speed:
+        Events: ព្រឹត្តិការណ៍
+        Logic: តក្ក
+      Dance_Party_extras_visible:
+        Events: ព្រឹត្តិការណ៍
+        Logic: តក្ក
+      Find the Wizard:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Fish Tank 7-validated:
+        Events: ព្រឹត្តិការណ៍
+      Fish Tank 7-validated_2019:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+      FoodFight:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Geometric Sun:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Geometric Sun_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Guess The Number:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      InspirationalArtwork:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      InspirationalArtwork_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      NEW Course 4 Artist Functions 14:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      NEW Course 4 Artist Params 1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      NEW Course 4 Artist Params 10:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      NEW Course 4 Artist Params 11:
+        Actions: សកម្មភាព
+        Functions: អនុ​គមន៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      NEW Course 4 Artist Params 12:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      NEW Course 4 Artist Params 12a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      NEW Course 4 Artist Params 13:
+        Actions: សកម្មភាព
+        Functions: អនុ​គមន៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      NEW Course 4 Artist Params 14:
+        Actions: សកម្មភាព
+        Functions: អនុ​គមន៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      NEW Course 4 Artist Params 15:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      NEW Course 4 Artist Params 2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      NEW Course 4 Artist Params 3:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      NEW Course 4 Artist Params 6:
+        Actions: សកម្មភាព
+        Functions: អនុ​គមន៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      NEW Course 4 Artist Params 7:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      NEW Course 4 Artist Params 8:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+        Loops: រង្វិល​ជុំ
+      NEW Course 4 Artist Params 9:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      NEW Course 4 Artist Params inspire:
+        Actions: សកម្មភាព
+        Functions: អនុ​គមន៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      NEW Course 4 Play Lab Params 11:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Robot Doodle:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Robot Doodle_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      Virtual Pet 2:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+      Virtual Pet 3:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+      Virtual Pet 4:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+      Virtual Pet 5:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+      Virtual Pet 6:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+      Virtual Pet Freeplay:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+      behaviors 3a:
+        Actions: សកម្មភាព
+      behaviors 5:
+        Actions: សកម្មភាព
+      behaviors 6:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+      behaviors 7:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+      behaviors free play:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+      course3_bee_functions_challenge1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      course3_bee_functions_challenge2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      course3_bee_functions_challenge3:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      course3_bee_functions_challenge4:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      course3_playLab_challenge1:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      course4_artist_fwp_challenge1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      course4_bee_for_challenge1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      course4_bee_fwp_challenge1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      course4_bee_fwp_challenge2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      course4_playlab_variables_challenge1:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      courseD_artist_project1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project1a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project1a_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project1a_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project2_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project2_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project2a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project2a_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project2a_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project3:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project3_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project3_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project3a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project3a_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project3a_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project4:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project4_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project4_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project4a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project4a_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project4a_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project5:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project5_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_artist_project5_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseD_playLab_condFP:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+      courseD_playLab_condFP_2018:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+      courseE_Dogger_2:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Variables: អ​ថេរ
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Text: អត្ថ​​បទ
+        Functions: អនុ​គមន៍
+      courseE_artist_concept1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      courseE_artist_concept4:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_concept4_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      courseE_artist_functions10:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions10_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions10_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions2_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseE_artist_functions2_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseE_artist_functions3_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseE_artist_functions3_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseE_artist_functions5_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseE_artist_functions5_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseE_artist_functions7_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseE_artist_functions7_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseE_artist_functions8:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions8_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions8_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions8a_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions8a_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions8b_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions8b_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions8c_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions8c_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions9:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions9_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions9_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functionsProj_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      courseE_artist_functionsProj_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      courseE_artist_functions_predict2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions_predict2_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_artist_functions_predict2_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_bee_concept1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_bee_concept2_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_bee_concept3_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_bee_concept4_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_bee_concept5_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_bee_functions6:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_bee_functions7:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_bee_functions_challenge1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_bee_functions_challenge2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseE_farmer_concept1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_concept2_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_concept3_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions10a1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions10a1_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions10b:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions11_predict:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions11_predict_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions11_predict_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions13_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions13_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions1_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions1a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions1a_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions1a_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions2b:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions2b_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions2b_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions2ba:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions2ba_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions2ba_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions3c:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions3c1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions3c1_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions3c_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions3c_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions4b:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions5c:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions6c:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions7a1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions7a1_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions7b:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions8a1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions8a1_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions8b:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions9a1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions9a1_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_farmer_functions9b:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_playLab_challenge1:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_playLab_scaffold5:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseE_playLab_scaffold6:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+      courseF_artist_for1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Color: ពណ៌
+      courseF_artist_for10:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for10_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseF_artist_for10_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseF_artist_for10_predict1:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for10_predict1_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for10_predict1_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for1_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Color: ពណ៌
+      courseF_artist_for2_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for2_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for3:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Color: ពណ៌
+      courseF_artist_for3_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for3_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for4:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Color: ពណ៌
+      courseF_artist_for4_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for4_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for5:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Color: ពណ៌
+      courseF_artist_for5_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for5_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for6:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Color: ពណ៌
+      courseF_artist_for6_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Color: ពណ៌
+      courseF_artist_for6_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Color: ពណ៌
+      courseF_artist_for7:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for7_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for7_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for8:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for8_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for8_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for9:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+      courseF_artist_for9_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseF_artist_for9_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+      courseF_artist_for_challenge1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_for_challenge1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_for_challenge1_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_for_challenge2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_for_challenge2_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_for_challenge2_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_fwp2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      courseF_artist_fwp2_predict1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      courseF_artist_fwp3:
+        Functions: អនុ​គមន៍
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_fwp4:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      courseF_artist_fwp5:
+        Actions: សកម្មភាព
+        Functions: អនុ​គមន៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_fwp6:
+        Actions: សកម្មភាព
+        Functions: អនុ​គមន៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_fwp7:
+        Actions: សកម្មភាព
+        Functions: អនុ​គមន៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_fwp8:
+        Actions: សកម្មភាព
+        Functions: អនុ​គមន៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_artist_fwp9:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      courseF_artist_fwp_challenge1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      courseF_artist_fwp_challenge2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+      courseF_artist_variables10_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      courseF_artist_variables10_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      courseF_artist_variables7_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      courseF_artist_variables7_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      courseF_artist_variables8_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      courseF_artist_variables8_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      courseF_artist_variables9_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      courseF_artist_variables9_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      courseF_artist_variablesFP_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      courseF_artist_variablesFP_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+        Functions: អនុ​គមន៍
+      courseF_bee_conditionals10:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_conditionals2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_conditionals3:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_conditionals4:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_conditionals5:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_conditionals8:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_for10:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for10_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for10_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for11:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for11_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for11_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for1_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for1_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for2_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for2_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for3_predict1:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for3_predict1_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for3_predict1_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for4:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for4_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for4_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for5:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for5_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for5_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for6:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for6_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for6_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for7:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for7_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for7_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for8:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for8_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for8_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for9:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+        Variables: អ​ថេរ
+      courseF_bee_for9_2018:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for9_2019:
+        Actions: សកម្មភាព
+        Math: គណិត​វិទ្យា
+        Loops: រង្វិល​ជុំ
+      courseF_bee_for_challenge1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_for_challenge1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_for_challenge1_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_for_challenge2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_bee_for_challenge2_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_bee_for_challenge2_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_bee_functions2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_functions3:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_functions3a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_functions4:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_functions5a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_functions6:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_functions7:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_functions8a:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_functionsPre7:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_functions_challenge1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_functions_challenge2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_fwp1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Conditionals: លក្ខខណ្ឌ
+      courseF_bee_fwp2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_fwp3:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_fwp4:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_fwp5:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_fwp6:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_fwp7:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_fwp8:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_fwp9_predict1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_fwp_challenge1:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_fwp_challenge2:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_1_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_1_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_2_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_2_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_3_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_3_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_4_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_4_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_5_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_5_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_6_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_6_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_7_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_7_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_8_2018:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_bee_variables_8_2019:
+        Actions: សកម្មភាព
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+        Math: គណិត​វិទ្យា
+      courseF_playlab_variables1a:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+      courseF_playlab_variables2b:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+      courseF_playlab_variables3b_josh:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+      courseF_playlab_variables4b:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+      courseF_playlab_variables4c_predictive1:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      courseF_playlab_variables5c:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Logic: តក្ក
+        Variables: អ​ថេរ
+        Text: អត្ថ​​បទ
+      courseF_playlab_variables6c:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+      courseF_playlab_variables7b:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Conditionals: លក្ខខណ្ឌ
+        Math: គណិត​វិទ្យា
+        Text: អត្ថ​​បទ
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      courseF_playlab_variables7c:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Variables: អ​ថេរ
+      courseF_playlab_variables8c:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
+      courseF_playlab_variables_challenge1:
+        Actions: សកម្មភាព
+        Events: ព្រឹត្តិការណ៍
+        Loops: រង្វិល​ជុំ
+        Math: គណិត​វិទ្យា
+        Functions: អនុ​គមន៍
+        Variables: អ​ថេរ
