@@ -147,5 +147,24 @@ describe('details plugin', () => {
     assert.equal(rendered, expected);
   });
 
-  it('can restore', () => {});
+  it('can restore', () => {
+    const original =
+      '::: details [summary-content]\n' +
+      'contents, which are sometimes further block elements\n' +
+      ':::';
+    const translated =
+      '[contenu sommaire][0]\n' +
+      '\n' +
+      'contenu, qui sont parfois des éléments de bloc supplémentaires\n' +
+      '\n' +
+      '[/][0]\n';
+    const expected =
+      '::: details [contenu sommaire]\n' +
+      '\n' +
+      'contenu, qui sont parfois des éléments de bloc supplémentaires\n' +
+      '\n' +
+      ':::\n';
+    const restored = parser.sourceAndRedactedToMarkdown(original, translated);
+    assert.equal(restored, expected);
+  });
 });
