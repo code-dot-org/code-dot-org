@@ -1,20 +1,1935 @@
 ---
-hy:
+hy-AM:
   data:
     block_categories:
-      Actions: գործողություններ
-      Loops: loops
-      Functions: գործառույթները
-      Color: Գույնը
-      Math: Մաթեմատիկա
-      Logic: տրամաբանություն
-      Variables: փոփոխականների
-      Conditionals: conditionals
-      Events: Իրադարձություններ
-      Text: տեքստ
-      Location: Location
-      Start: Սկսել
-      Booleans: Booleans
-      test: փորձ
-      Name: Անուն
-      Function: Ֆունկցիա
+      4-5 Artist Patterns Free Play:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Alien Defender:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Choose Your Own Adventure:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Course 4 Artist For Loops 11:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      Course 4 Artist For Loops 11a:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      Course 4 Artist For Loops 14:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      Course 4 Artist For Loops 15:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      Course 4 Artist For Loops 4:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      Course 4 Artist For Loops 6a:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      Course 4 Artist For Loops 8:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      Course 4 Artist For Loops Challenge:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      Course 4 Artist For Loops inspire:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      Course 4 Artist Functions Inspiration:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      Course 4 Artist Functions challenge:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      Course 4 Bee Params 1:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      Course 4 Bee Params 2:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      Course 4 Bee Params 3:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+      Course 4 Bee Params 4:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      Course 4 Bee Params 5:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Course 4 Bee Params 6:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Course 4 Bee Params 7:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 Bee Params 8:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 EC 1a:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 EC 1b:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 EC 2a:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Course 4 EC 2b:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      Course 4 EC 2c:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      Course 4 Play Lab Params 10:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Course 4 Play Lab Params 7:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 Play Lab Params 8:
+        Events: Իրադարձություններ
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 Play Lab Params 9:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Course 4 Play Lab Vars 9:
+        Events: Իրադարձություններ
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+      Course 4 Playlab For Loop Freeplay:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+      Course 4 SCF 1:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 SCF 1a:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 SCF 1b:
+        Actions: գործողություններ
+        Loops: loops
+        Logic: տրամաբանություն
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 SCF 2:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 SCF 3:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      Course 4 SCFL 1:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      Course 4 SCFL 1a:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      Course 4 SCFL 1b:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      Course 4 SCFL 2:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+      Course 4 SCFL 3:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      Course 4 SCFL 4:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      Course 4 SCFL 6:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      Course 4 SCFL 7:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      Course 4 SCV 6:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      'Course E: Play Lab Project':
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      'Course F: Artist Project':
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      'Course F: Artist Project - Revise':
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      'Course F: Artist Project - Revise_2018':
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      'Course F: Artist Project_2018':
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      'Course F: Artist Project_2019':
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      CourseD_Dance_Party_11_5:
+        Events: Իրադարձություններ
+      CourseD_Dance_Party_12:
+        Events: Իրադարձություններ
+        Logic: տրամաբանություն
+      CourseE_Project_SpriteLab:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+        Logic: տրամաբանություն
+        Text: տեքստ
+      CourseE_Project_SpriteLab_2019:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+      CourseE_hoops:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+        Functions: գործառույթները
+      CourseF_Project_Revise_SpriteLab:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+        Functions: գործառույթները
+      CourseF_Project_SpriteLab:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+        Functions: գործառույթները
+      CourseF_Project_SpriteLab_2019:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Text: տեքստ
+      Dance Party 2:
+        Events: Իրադարձություններ
+      Dance Party 6:
+        Events: Իրադարձություններ
+      Dance Party Freeplay:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+      Dance_Party_11_5:
+        Events: Իրադարձություններ
+      Dance_Party_12:
+        Events: Իրադարձություններ
+        Logic: տրամաբանություն
+      Dance_Party_extras_battle:
+        Events: Իրադարձություններ
+        Logic: տրամաբանություն
+      Dance_Party_extras_every_beat:
+        Events: Իրադարձություններ
+        Logic: տրամաբանություն
+      Dance_Party_extras_layout:
+        Events: Իրադարձություններ
+        Logic: տրամաբանություն
+      Dance_Party_extras_on_beat:
+        Events: Իրադարձություններ
+        Logic: տրամաբանություն
+      Dance_Party_extras_speed:
+        Events: Իրադարձություններ
+        Logic: տրամաբանություն
+      Dance_Party_extras_visible:
+        Events: Իրադարձություններ
+        Logic: տրամաբանություն
+      Find the Wizard:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Fish Tank 7-validated:
+        Events: Իրադարձություններ
+      Fish Tank 7-validated_2019:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+      FoodFight:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Geometric Sun:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Geometric Sun_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Guess The Number:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      InspirationalArtwork:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      InspirationalArtwork_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      NEW Course 4 Artist Functions 14:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      NEW Course 4 Artist Params 1:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      NEW Course 4 Artist Params 10:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      NEW Course 4 Artist Params 11:
+        Actions: գործողություններ
+        Functions: գործառույթները
+        Loops: loops
+        Math: Մաթեմատիկա
+      NEW Course 4 Artist Params 12:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      NEW Course 4 Artist Params 12a:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      NEW Course 4 Artist Params 13:
+        Actions: գործողություններ
+        Functions: գործառույթները
+        Loops: loops
+        Math: Մաթեմատիկա
+      NEW Course 4 Artist Params 14:
+        Actions: գործողություններ
+        Functions: գործառույթները
+        Loops: loops
+        Math: Մաթեմատիկա
+      NEW Course 4 Artist Params 15:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      NEW Course 4 Artist Params 2:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      NEW Course 4 Artist Params 3:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      NEW Course 4 Artist Params 6:
+        Actions: գործողություններ
+        Functions: գործառույթները
+        Loops: loops
+        Math: Մաթեմատիկա
+      NEW Course 4 Artist Params 7:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      NEW Course 4 Artist Params 8:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+        Loops: loops
+      NEW Course 4 Artist Params 9:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      NEW Course 4 Artist Params inspire:
+        Actions: գործողություններ
+        Functions: գործառույթները
+        Loops: loops
+        Math: Մաթեմատիկա
+      NEW Course 4 Play Lab Params 11:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Robot Doodle:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Robot Doodle_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      Virtual Pet 2:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+      Virtual Pet 3:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+      Virtual Pet 4:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+      Virtual Pet 5:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+      Virtual Pet 6:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+      Virtual Pet Freeplay:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+      behaviors 3a:
+        Actions: գործողություններ
+      behaviors 5:
+        Actions: գործողություններ
+      behaviors 6:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+      behaviors 7:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+      behaviors free play:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+      course3_bee_functions_challenge1:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      course3_bee_functions_challenge2:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      course3_bee_functions_challenge3:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      course3_bee_functions_challenge4:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      course3_playLab_challenge1:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      course4_artist_fwp_challenge1:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      course4_bee_for_challenge1:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      course4_bee_fwp_challenge1:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      course4_bee_fwp_challenge2:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      course4_playlab_variables_challenge1:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      courseD_artist_project1:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project1a:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project1a_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project1a_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project2:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project2_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project2_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project2a:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project2a_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project2a_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project3:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project3_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project3_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project3a:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project3a_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project3a_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project4:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project4_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project4_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project4a:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project4a_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project4a_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project5:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project5_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_artist_project5_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseD_playLab_condFP:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+      courseD_playLab_condFP_2018:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+      courseE_Dogger_2:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Variables: փոփոխականների
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Text: տեքստ
+        Functions: գործառույթները
+      courseE_artist_concept1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      courseE_artist_concept4:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_concept4_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      courseE_artist_functions10:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions10_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions10_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions2_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseE_artist_functions2_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseE_artist_functions3_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseE_artist_functions3_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseE_artist_functions5_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseE_artist_functions5_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseE_artist_functions7_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseE_artist_functions7_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseE_artist_functions8:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions8_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions8_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions8a_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions8a_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions8b_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions8b_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions8c_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions8c_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions9:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions9_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions9_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functionsProj_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      courseE_artist_functionsProj_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      courseE_artist_functions_predict2:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions_predict2_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_artist_functions_predict2_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_bee_concept1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_bee_concept2_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_bee_concept3_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_bee_concept4_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_bee_concept5_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_bee_functions6:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_bee_functions7:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_bee_functions_challenge1:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_bee_functions_challenge2:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseE_farmer_concept1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_concept2_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_concept3_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions1:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions10a1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions10a1_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions10b:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions11_predict:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions11_predict_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions11_predict_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions13_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions13_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions1_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions1a:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions1a_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions1a_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions2b:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions2b_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions2b_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions2ba:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions2ba_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions2ba_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions3c:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions3c1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions3c1_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions3c_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions3c_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions4b:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions5c:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions6c:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions7a1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions7a1_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions7b:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions8a1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions8a1_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions8b:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions9a1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions9a1_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_farmer_functions9b:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_playLab_challenge1:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_playLab_scaffold5:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseE_playLab_scaffold6:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+      courseF_artist_for1:
+        Actions: գործողություններ
+        Loops: loops
+        Color: Գույնը
+      courseF_artist_for10:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_artist_for10_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Functions: գործառույթները
+      courseF_artist_for10_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Functions: գործառույթները
+      courseF_artist_for10_predict1:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_artist_for10_predict1_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_artist_for10_predict1_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_artist_for1_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for1_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for2:
+        Actions: գործողություններ
+        Loops: loops
+        Color: Գույնը
+      courseF_artist_for2_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for2_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for3:
+        Actions: գործողություններ
+        Loops: loops
+        Color: Գույնը
+      courseF_artist_for3_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for3_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for4:
+        Actions: գործողություններ
+        Loops: loops
+        Color: Գույնը
+      courseF_artist_for4_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for4_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for5:
+        Actions: գործողություններ
+        Loops: loops
+        Color: Գույնը
+      courseF_artist_for5_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for5_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for6:
+        Actions: գործողություններ
+        Loops: loops
+        Color: Գույնը
+      courseF_artist_for6_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Color: Գույնը
+      courseF_artist_for6_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Color: Գույնը
+      courseF_artist_for7:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for7_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for7_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for8:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for8_2018:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for8_2019:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for9:
+        Actions: գործողություններ
+        Loops: loops
+      courseF_artist_for9_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseF_artist_for9_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+      courseF_artist_for_challenge1:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_for_challenge1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_for_challenge1_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_for_challenge2:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_for_challenge2_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_for_challenge2_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_fwp2:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      courseF_artist_fwp2_predict1:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      courseF_artist_fwp3:
+        Functions: գործառույթները
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_fwp4:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      courseF_artist_fwp5:
+        Actions: գործողություններ
+        Functions: գործառույթները
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_fwp6:
+        Actions: գործողություններ
+        Functions: գործառույթները
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_fwp7:
+        Actions: գործողություններ
+        Functions: գործառույթները
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_fwp8:
+        Actions: գործողություններ
+        Functions: գործառույթները
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_artist_fwp9:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      courseF_artist_fwp_challenge1:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      courseF_artist_fwp_challenge2:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+      courseF_artist_variables10_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      courseF_artist_variables10_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      courseF_artist_variables7_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      courseF_artist_variables7_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      courseF_artist_variables8_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      courseF_artist_variables8_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      courseF_artist_variables9_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      courseF_artist_variables9_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      courseF_artist_variablesFP_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      courseF_artist_variablesFP_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+        Functions: գործառույթները
+      courseF_bee_conditionals10:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_conditionals2:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_conditionals3:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_conditionals4:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_conditionals5:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_conditionals8:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_for10:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for10_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for10_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for11:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for11_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for11_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for1_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for1_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for2_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for2_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for3_predict1:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for3_predict1_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for3_predict1_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for4:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for4_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for4_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for5:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for5_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for5_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for6:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for6_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for6_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for7:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for7_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for7_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for8:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for8_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for8_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for9:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+        Variables: փոփոխականների
+      courseF_bee_for9_2018:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for9_2019:
+        Actions: գործողություններ
+        Math: Մաթեմատիկա
+        Loops: loops
+      courseF_bee_for_challenge1:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_for_challenge1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_for_challenge1_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_for_challenge2:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_bee_for_challenge2_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_bee_for_challenge2_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_bee_functions2:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_functions3:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_functions3a:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_functions4:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_functions5a:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_functions6:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_functions7:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_functions8a:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_functionsPre7:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_functions_challenge1:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_functions_challenge2:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_fwp1:
+        Actions: գործողություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Conditionals: conditionals
+      courseF_bee_fwp2:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_fwp3:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_fwp4:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_fwp5:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_fwp6:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_fwp7:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_fwp8:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_fwp9_predict1:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_fwp_challenge1:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_fwp_challenge2:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Math: Մաթեմատիկա
+      courseF_bee_variables_1_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_1_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_2_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_2_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_3_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_3_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_4_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_4_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_5_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_5_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_6_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_6_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_7_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_7_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_8_2018:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_bee_variables_8_2019:
+        Actions: գործողություններ
+        Loops: loops
+        Conditionals: conditionals
+        Functions: գործառույթները
+        Variables: փոփոխականների
+        Math: Մաթեմատիկա
+      courseF_playlab_variables1a:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+      courseF_playlab_variables2b:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+      courseF_playlab_variables3b_josh:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+      courseF_playlab_variables4b:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+      courseF_playlab_variables4c_predictive1:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      courseF_playlab_variables5c:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Logic: տրամաբանություն
+        Variables: փոփոխականների
+        Text: տեքստ
+      courseF_playlab_variables6c:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+      courseF_playlab_variables7b:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Conditionals: conditionals
+        Math: Մաթեմատիկա
+        Text: տեքստ
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      courseF_playlab_variables7c:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Variables: փոփոխականների
+      courseF_playlab_variables8c:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+        Variables: փոփոխականների
+      courseF_playlab_variables_challenge1:
+        Actions: գործողություններ
+        Events: Իրադարձություններ
+        Loops: loops
+        Math: Մաթեմատիկա
+        Functions: գործառույթները
+        Variables: փոփոխականների
