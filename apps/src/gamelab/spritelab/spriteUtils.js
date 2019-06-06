@@ -130,12 +130,12 @@ function checkEvent(inputEvent, p5Inst) {
           }
         });
       });
-      if (overlap && !inputEvent.firedOnce) {
+      if (overlap && !inputEvent.firedOnceForCollision) {
         shouldEventFire = true;
-        inputEvent.firedOnce = true;
+        inputEvent.firedOnceForCollision = true;
       }
       if (!overlap) {
-        inputEvent.firedOnce = false;
+        inputEvent.firedOnceForCollision = false;
       }
       return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
     }
