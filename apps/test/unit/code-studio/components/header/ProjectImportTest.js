@@ -19,9 +19,6 @@ describe('ProjectImport', () => {
     replaceOnWindow('dashboard', {
       project: {
         getSourceForChannel: () => {}
-      },
-      i18n: {
-        t: () => {}
       }
     });
 

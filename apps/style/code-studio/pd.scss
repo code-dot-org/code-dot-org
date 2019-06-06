@@ -147,3 +147,34 @@ form .form-required-field {
     cursor: pointer;
   }
 }
+
+.workshop-attendance-recorded {
+  font-size: 14px;
+  width: 70%;
+  line-height: 1.5;
+
+  .left {
+    float: left;
+    width: 28%;
+  }
+
+  .right {
+    float: left;
+    width: 72%;
+    padding-top: 20px;
+  }
+
+  .checkmark {
+    font-size: 160px;
+    color: $purple;
+  }
+
+  .paragraph {
+    margin-bottom: 15px;
+  }
+
+  button {
+    margin-left: 0px;
+    padding: 10px 20px 10px 20px;
+  }
+}

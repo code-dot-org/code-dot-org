@@ -3,6 +3,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 
 import {refreshProjectName} from '../../headerRedux';
 
@@ -46,7 +47,7 @@ class ProjectRemix extends React.Component {
     }
     return (
       <div className={className} onClick={this.remixProject}>
-        {dashboard.i18n.t('project.remix')}
+        {i18n.remix()}
       </div>
     );
   }

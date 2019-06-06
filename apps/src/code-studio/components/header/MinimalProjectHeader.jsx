@@ -1,8 +1,7 @@
-/* globals dashboard */
-
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 
 import ProjectRemix from './ProjectRemix';
 
@@ -20,7 +19,7 @@ class MinimalProjectHeader extends React.Component {
             {this.props.projectName}
           </div>
           <div className="project_updated_at header_text">
-            {dashboard.i18n.t('project.click_to_remix')}
+            {i18n.clickToRemix()}
           </div>
         </div>
         <ProjectRemix />
