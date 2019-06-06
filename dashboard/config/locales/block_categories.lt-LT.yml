@@ -1,20 +1,1935 @@
 ---
-lt:
+lt-LT:
   data:
     block_categories:
-      Actions: Komandos
-      Loops: Kartojimas
-      Functions: Komandų kūrimas
-      Color: Spalva
-      Math: Matematika
-      Logic: Logika
-      Variables: Kintamieji
-      Conditionals: Sąlyginiai sakiniai
-      Events: Įvykiai
-      Text: Tekstas
-      Location: Vieta
-      Start: Pradėti
-      Booleans: Loginės reikšmės
-      test: sąlyga
-      Name: Vardas
-      Function: Komanda
+      4-5 Artist Patterns Free Play:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Alien Defender:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Choose Your Own Adventure:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Course 4 Artist For Loops 11:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      Course 4 Artist For Loops 11a:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      Course 4 Artist For Loops 14:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      Course 4 Artist For Loops 15:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      Course 4 Artist For Loops 4:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      Course 4 Artist For Loops 6a:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      Course 4 Artist For Loops 8:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      Course 4 Artist For Loops Challenge:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      Course 4 Artist For Loops inspire:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      Course 4 Artist Functions Inspiration:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      Course 4 Artist Functions challenge:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      Course 4 Bee Params 1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      Course 4 Bee Params 2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      Course 4 Bee Params 3:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Functions: Komandų kūrimas
+      Course 4 Bee Params 4:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Math: Matematika
+      Course 4 Bee Params 5:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Course 4 Bee Params 6:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Course 4 Bee Params 7:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 Bee Params 8:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 EC 1a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 EC 1b:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 EC 2a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Course 4 EC 2b:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      Course 4 EC 2c:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      Course 4 Play Lab Params 10:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Course 4 Play Lab Params 7:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 Play Lab Params 8:
+        Events: Įvykiai
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 Play Lab Params 9:
+        Actions: Komandos
+        Math: Matematika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Course 4 Play Lab Vars 9:
+        Events: Įvykiai
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+      Course 4 SCF 1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 SCF 1a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 SCF 1b:
+        Actions: Komandos
+        Loops: Kartojimas
+        Logic: Logika
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 SCF 2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 SCF 3:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      Course 4 SCFL 1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      Course 4 SCFL 1a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      Course 4 SCFL 1b:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      Course 4 SCFL 2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+      Course 4 SCFL 3:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      Course 4 SCFL 4:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      Course 4 SCFL 6:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      Course 4 SCFL 7:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      Course 4 SCV 6:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      'Course E: Play Lab Project':
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      'Course F: Artist Project':
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      'Course F: Artist Project - Revise':
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      'Course F: Artist Project - Revise_2018':
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      'Course F: Artist Project_2018':
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      'Course F: Artist Project_2019':
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      CourseD_Dance_Party_11_5:
+        Events: Įvykiai
+      CourseD_Dance_Party_12:
+        Events: Įvykiai
+        Logic: Logika
+      CourseE_Project_SpriteLab:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+        Logic: Logika
+        Text: Tekstas
+      CourseE_Project_SpriteLab_2019:
+        Actions: Komandos
+        Events: Įvykiai
+      CourseE_hoops:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+        Functions: Komandų kūrimas
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+        Functions: Komandų kūrimas
+      CourseF_Project_SpriteLab:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+        Functions: Komandų kūrimas
+      CourseF_Project_SpriteLab_2019:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Text: Tekstas
+      Dance Party 2:
+        Events: Įvykiai
+      Dance Party 6:
+        Events: Įvykiai
+      Dance Party Freeplay:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+      Dance_Party_11_5:
+        Events: Įvykiai
+      Dance_Party_12:
+        Events: Įvykiai
+        Logic: Logika
+      Dance_Party_extras_battle:
+        Events: Įvykiai
+        Logic: Logika
+      Dance_Party_extras_every_beat:
+        Events: Įvykiai
+        Logic: Logika
+      Dance_Party_extras_layout:
+        Events: Įvykiai
+        Logic: Logika
+      Dance_Party_extras_on_beat:
+        Events: Įvykiai
+        Logic: Logika
+      Dance_Party_extras_speed:
+        Events: Įvykiai
+        Logic: Logika
+      Dance_Party_extras_visible:
+        Events: Įvykiai
+        Logic: Logika
+      Find the Wizard:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Fish Tank 7-validated:
+        Events: Įvykiai
+      Fish Tank 7-validated_2019:
+        Actions: Komandos
+        Events: Įvykiai
+      FoodFight:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Geometric Sun:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Geometric Sun_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Guess The Number:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      InspirationalArtwork:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      InspirationalArtwork_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      NEW Course 4 Artist Functions 14:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      NEW Course 4 Artist Params 1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      NEW Course 4 Artist Params 10:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      NEW Course 4 Artist Params 11:
+        Actions: Komandos
+        Functions: Komandų kūrimas
+        Loops: Kartojimas
+        Math: Matematika
+      NEW Course 4 Artist Params 12:
+        Actions: Komandos
+        Math: Matematika
+        Functions: Komandų kūrimas
+      NEW Course 4 Artist Params 12a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      NEW Course 4 Artist Params 13:
+        Actions: Komandos
+        Functions: Komandų kūrimas
+        Loops: Kartojimas
+        Math: Matematika
+      NEW Course 4 Artist Params 14:
+        Actions: Komandos
+        Functions: Komandų kūrimas
+        Loops: Kartojimas
+        Math: Matematika
+      NEW Course 4 Artist Params 15:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      NEW Course 4 Artist Params 2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      NEW Course 4 Artist Params 3:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      NEW Course 4 Artist Params 6:
+        Actions: Komandos
+        Functions: Komandų kūrimas
+        Loops: Kartojimas
+        Math: Matematika
+      NEW Course 4 Artist Params 7:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      NEW Course 4 Artist Params 8:
+        Actions: Komandos
+        Math: Matematika
+        Functions: Komandų kūrimas
+        Loops: Kartojimas
+      NEW Course 4 Artist Params 9:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      NEW Course 4 Artist Params inspire:
+        Actions: Komandos
+        Functions: Komandų kūrimas
+        Loops: Kartojimas
+        Math: Matematika
+      NEW Course 4 Play Lab Params 11:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Robot Doodle:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Robot Doodle_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      Virtual Pet 2:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+      Virtual Pet 3:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+      Virtual Pet 4:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+      Virtual Pet 5:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+      Virtual Pet 6:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+      Virtual Pet Freeplay:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+      behaviors 3a:
+        Actions: Komandos
+      behaviors 5:
+        Actions: Komandos
+      behaviors 6:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Math: Matematika
+        Logic: Logika
+      behaviors 7:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Math: Matematika
+        Logic: Logika
+      behaviors free play:
+        Actions: Komandos
+        Events: Įvykiai
+      course3_bee_functions_challenge1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      course3_bee_functions_challenge2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      course3_bee_functions_challenge3:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      course3_bee_functions_challenge4:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      course3_playLab_challenge1:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      course4_artist_fwp_challenge1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      course4_bee_for_challenge1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+        Math: Matematika
+      course4_bee_fwp_challenge1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      course4_bee_fwp_challenge2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      course4_playlab_variables_challenge1:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      courseD_artist_project1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project1a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project1a_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project1a_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project2_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project2_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project2a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project2a_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project2a_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project3:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project3_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project3_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project3a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project3a_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project3a_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project4:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project4_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project4_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project4a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project4a_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project4a_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project5:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project5_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_artist_project5_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseD_playLab_condFP:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+      courseD_playLab_condFP_2018:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+      courseE_Dogger_2:
+        Actions: Komandos
+        Events: Įvykiai
+        Variables: Kintamieji
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Text: Tekstas
+        Functions: Komandų kūrimas
+      courseE_artist_concept1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      courseE_artist_concept4:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_concept4_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      courseE_artist_functions10:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions10_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions10_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions2_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseE_artist_functions2_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseE_artist_functions3_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseE_artist_functions3_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseE_artist_functions5_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseE_artist_functions5_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseE_artist_functions7_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseE_artist_functions7_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseE_artist_functions8:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions8_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions8_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions8a_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions8a_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions8b_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions8b_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions8c_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions8c_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions9:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions9_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions9_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functionsProj_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      courseE_artist_functionsProj_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      courseE_artist_functions_predict2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions_predict2_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_artist_functions_predict2_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_bee_concept1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_bee_concept2_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_bee_concept3_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_bee_concept4_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_bee_concept5_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_bee_functions6:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_bee_functions7:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_bee_functions_challenge1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_bee_functions_challenge2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseE_farmer_concept1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_concept2_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_concept3_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions10a1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions10a1_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions10b:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions11_predict:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions11_predict_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions11_predict_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions13_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions13_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions1_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions1a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions1a_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions1a_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions2b:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions2b_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions2b_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions2ba:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions2ba_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions2ba_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions3c:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions3c1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions3c1_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions3c_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions3c_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions4b:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions5c:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions6c:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions7a1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions7a1_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions7b:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions8a1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions8a1_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions8b:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions9a1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions9a1_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_farmer_functions9b:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_playLab_challenge1:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_playLab_scaffold5:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseE_playLab_scaffold6:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+      courseF_artist_for1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Color: Spalva
+      courseF_artist_for10:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_artist_for10_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseF_artist_for10_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseF_artist_for10_predict1:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_artist_for10_predict1_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_artist_for10_predict1_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_artist_for1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for1_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Color: Spalva
+      courseF_artist_for2_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for2_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for3:
+        Actions: Komandos
+        Loops: Kartojimas
+        Color: Spalva
+      courseF_artist_for3_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for3_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for4:
+        Actions: Komandos
+        Loops: Kartojimas
+        Color: Spalva
+      courseF_artist_for4_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for4_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for5:
+        Actions: Komandos
+        Loops: Kartojimas
+        Color: Spalva
+      courseF_artist_for5_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for5_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for6:
+        Actions: Komandos
+        Loops: Kartojimas
+        Color: Spalva
+      courseF_artist_for6_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Color: Spalva
+      courseF_artist_for6_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Color: Spalva
+      courseF_artist_for7:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for7_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for7_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for8:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for8_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for8_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for9:
+        Actions: Komandos
+        Loops: Kartojimas
+      courseF_artist_for9_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseF_artist_for9_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+      courseF_artist_for_challenge1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_for_challenge1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_for_challenge1_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_for_challenge2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_for_challenge2_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_for_challenge2_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_fwp2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      courseF_artist_fwp2_predict1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      courseF_artist_fwp3:
+        Functions: Komandų kūrimas
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_fwp4:
+        Actions: Komandos
+        Math: Matematika
+        Functions: Komandų kūrimas
+      courseF_artist_fwp5:
+        Actions: Komandos
+        Functions: Komandų kūrimas
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_fwp6:
+        Actions: Komandos
+        Functions: Komandų kūrimas
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_fwp7:
+        Actions: Komandos
+        Functions: Komandų kūrimas
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_fwp8:
+        Actions: Komandos
+        Functions: Komandų kūrimas
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_artist_fwp9:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      courseF_artist_fwp_challenge1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      courseF_artist_fwp_challenge2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+      courseF_artist_variables10_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      courseF_artist_variables10_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      courseF_artist_variables7_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      courseF_artist_variables7_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      courseF_artist_variables8_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      courseF_artist_variables8_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      courseF_artist_variables9_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      courseF_artist_variables9_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      courseF_artist_variablesFP_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      courseF_artist_variablesFP_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+        Functions: Komandų kūrimas
+      courseF_bee_conditionals10:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_conditionals2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_conditionals3:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_conditionals4:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_conditionals5:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_conditionals8:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_for10:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for10_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for10_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for11:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for11_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for11_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for1_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for1_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for2_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for2_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for3_predict1:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for3_predict1_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for3_predict1_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for4:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for4_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for4_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for5:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for5_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for5_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for6:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for6_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for6_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for7:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for7_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for7_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for8:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for8_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for8_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for9:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+        Variables: Kintamieji
+      courseF_bee_for9_2018:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for9_2019:
+        Actions: Komandos
+        Math: Matematika
+        Loops: Kartojimas
+      courseF_bee_for_challenge1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_for_challenge1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_for_challenge1_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_for_challenge2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_bee_for_challenge2_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_bee_for_challenge2_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_bee_functions2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_functions3:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_functions3a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_functions4:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_functions5a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_functions6:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_functions7:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_functions8a:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_functionsPre7:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_functions_challenge1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_functions_challenge2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_fwp1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Math: Matematika
+        Conditionals: Sąlyginiai sakiniai
+      courseF_bee_fwp2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_fwp3:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_fwp4:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_fwp5:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_fwp6:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_fwp7:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_fwp8:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_fwp9_predict1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_fwp_challenge1:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_fwp_challenge2:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Math: Matematika
+      courseF_bee_variables_1_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_1_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_2_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_2_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_3_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_3_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_4_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_4_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_5_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_5_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_6_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_6_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_7_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_7_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_8_2018:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_bee_variables_8_2019:
+        Actions: Komandos
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+        Math: Matematika
+      courseF_playlab_variables1a:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+      courseF_playlab_variables2b:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+      courseF_playlab_variables3b_josh:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+      courseF_playlab_variables4b:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+      courseF_playlab_variables4c_predictive1:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      courseF_playlab_variables5c:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Logic: Logika
+        Variables: Kintamieji
+        Text: Tekstas
+      courseF_playlab_variables6c:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+      courseF_playlab_variables7b:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Conditionals: Sąlyginiai sakiniai
+        Math: Matematika
+        Text: Tekstas
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      courseF_playlab_variables7c:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Variables: Kintamieji
+      courseF_playlab_variables8c:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
+      courseF_playlab_variables_challenge1:
+        Actions: Komandos
+        Events: Įvykiai
+        Loops: Kartojimas
+        Math: Matematika
+        Functions: Komandų kūrimas
+        Variables: Kintamieji
