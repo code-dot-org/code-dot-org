@@ -22,9 +22,10 @@ module Pd::SurveyPipeline
     # @param summary_data [Array<Hash>] an array of summary results.
     # @param parsed_data [Hash{:questions, :submissions => Hash}}] parsed questions and
     #   submissions we got from the previous step DailySurveyParser.
+    # @current_user [User] user making survey report request.
     #
     # @return [Hash] data returned to client to render.
-    def self.decorate(summary_data:, parsed_data:)
+    def self.decorate(summary_data:, parsed_data:, current_user:)
       return unless summary_data && parsed_data
 
       result = {
@@ -43,10 +44,13 @@ module Pd::SurveyPipeline
       summary_data.each do |summary|
         # Only process summarization for specific workshops and forms.
         form_id = summary[:form_id]
-        next unless summary[:workshop_id] && form_id
+        workshop_id = summary[:workshop_id]
+        next unless workshop_id && form_id
+
+        # Check if the current user can see specific data
+        next unless data_visible_to_user?(current_user, summary)
 
         form_name = get_form_short_name(form_id)
-        workshop_id = summary[:workshop_id]
         q_name = summary[:name]
 
         # Create top structures if not already created
@@ -91,6 +95,20 @@ module Pd::SurveyPipeline
       end
 
       result
+    end
+
+    def self.data_visible_to_user?(user, data)
+      return false unless user
+
+      # Can user see this facilitator-specific data?
+      if data[:facilitator_id]
+        return false unless user.program_manager? ||
+          user.workshop_organizer? ||
+          user.workshop_admin? ||
+          user.id == data[:facilitator_id]
+      end
+
+      true
     end
 
     def self.get_form_short_name(form_id)

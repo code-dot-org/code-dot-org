@@ -197,7 +197,11 @@ module Api::V1::Pd
         summary_data += mapper.map_reduce joined_data
       end
 
-      render json: decorator.decorate(summary_data: summary_data, parsed_data: parsed_data)
+      render json: decorator.decorate(
+        summary_data: summary_data,
+        parsed_data: parsed_data,
+        current_user: current_user
+      )
     end
 
     # We want to filter facilitator-specific responses if the user is a facilitator and
