@@ -1,20 +1,1935 @@
 ---
-bs:
+bs-BA:
   data:
     block_categories:
-      Actions: Akcije
-      Loops: Petlje
-      Functions: Funkcije
-      Color: Boja
-      Math: Matematika
-      Logic: Logika
-      Variables: Varijable
-      Conditionals: Uvjeti
-      Events: Događaji
-      Text: Tekst
-      Location: Mjesto
-      Start: Počni
-      Booleans: Logika
-      test: uslov
-      Name: Ime
-      Function: Funkcija
+      4-5 Artist Patterns Free Play:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Alien Defender:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Choose Your Own Adventure:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Course 4 Artist For Loops 11:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      Course 4 Artist For Loops 11a:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      Course 4 Artist For Loops 14:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      Course 4 Artist For Loops 15:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      Course 4 Artist For Loops 4:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      Course 4 Artist For Loops 6a:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      Course 4 Artist For Loops 8:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      Course 4 Artist For Loops Challenge:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      Course 4 Artist For Loops inspire:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      Course 4 Artist Functions Inspiration:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      Course 4 Artist Functions challenge:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      Course 4 Bee Params 1:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      Course 4 Bee Params 2:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      Course 4 Bee Params 3:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Functions: Funkcije
+      Course 4 Bee Params 4:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Functions: Funkcije
+        Math: Matematika
+      Course 4 Bee Params 5:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Course 4 Bee Params 6:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Course 4 Bee Params 7:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 Bee Params 8:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 EC 1a:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 EC 1b:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 EC 2a:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Varijable
+      Course 4 EC 2b:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      Course 4 EC 2c:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      Course 4 Play Lab Params 10:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Varijable
+      Course 4 Play Lab Params 7:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 Play Lab Params 8:
+        Events: Događaji
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 Play Lab Params 9:
+        Actions: Akcije
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Varijable
+      Course 4 Play Lab Vars 9:
+        Events: Događaji
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+      Course 4 SCF 1:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 SCF 1a:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 SCF 1b:
+        Actions: Akcije
+        Loops: Petlje
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 SCF 2:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 SCF 3:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 SCFL 1:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      Course 4 SCFL 1a:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      Course 4 SCFL 1b:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      Course 4 SCFL 2:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+      Course 4 SCFL 3:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      Course 4 SCFL 4:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      Course 4 SCFL 6:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      Course 4 SCFL 7:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      Course 4 SCV 6:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      'Course E: Play Lab Project':
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      'Course F: Artist Project':
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      'Course F: Artist Project - Revise':
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      'Course F: Artist Project - Revise_2018':
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      'Course F: Artist Project_2018':
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      'Course F: Artist Project_2019':
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      CourseD_Dance_Party_11_5:
+        Events: Događaji
+      CourseD_Dance_Party_12:
+        Events: Događaji
+        Logic: Logika
+      CourseE_Project_SpriteLab:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+        Logic: Logika
+        Text: Tekst
+      CourseE_Project_SpriteLab_2019:
+        Actions: Akcije
+        Events: Događaji
+      CourseE_hoops:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+        Functions: Funkcije
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+        Functions: Funkcije
+      CourseF_Project_SpriteLab:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+        Functions: Funkcije
+      CourseF_Project_SpriteLab_2019:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Text: Tekst
+      Dance Party 2:
+        Events: Događaji
+      Dance Party 6:
+        Events: Događaji
+      Dance Party Freeplay:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+      Dance_Party_11_5:
+        Events: Događaji
+      Dance_Party_12:
+        Events: Događaji
+        Logic: Logika
+      Dance_Party_extras_battle:
+        Events: Događaji
+        Logic: Logika
+      Dance_Party_extras_every_beat:
+        Events: Događaji
+        Logic: Logika
+      Dance_Party_extras_layout:
+        Events: Događaji
+        Logic: Logika
+      Dance_Party_extras_on_beat:
+        Events: Događaji
+        Logic: Logika
+      Dance_Party_extras_speed:
+        Events: Događaji
+        Logic: Logika
+      Dance_Party_extras_visible:
+        Events: Događaji
+        Logic: Logika
+      Find the Wizard:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Fish Tank 7-validated:
+        Events: Događaji
+      Fish Tank 7-validated_2019:
+        Actions: Akcije
+        Events: Događaji
+      FoodFight:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Geometric Sun:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Geometric Sun_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Guess The Number:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      InspirationalArtwork:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      InspirationalArtwork_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      NEW Course 4 Artist Functions 14:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      NEW Course 4 Artist Params 1:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Varijable
+      NEW Course 4 Artist Params 10:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 11:
+        Actions: Akcije
+        Functions: Funkcije
+        Loops: Petlje
+        Math: Matematika
+      NEW Course 4 Artist Params 12:
+        Actions: Akcije
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 12a:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 13:
+        Actions: Akcije
+        Functions: Funkcije
+        Loops: Petlje
+        Math: Matematika
+      NEW Course 4 Artist Params 14:
+        Actions: Akcije
+        Functions: Funkcije
+        Loops: Petlje
+        Math: Matematika
+      NEW Course 4 Artist Params 15:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 2:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 3:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 6:
+        Actions: Akcije
+        Functions: Funkcije
+        Loops: Petlje
+        Math: Matematika
+      NEW Course 4 Artist Params 7:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 8:
+        Actions: Akcije
+        Math: Matematika
+        Functions: Funkcije
+        Loops: Petlje
+      NEW Course 4 Artist Params 9:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params inspire:
+        Actions: Akcije
+        Functions: Funkcije
+        Loops: Petlje
+        Math: Matematika
+      NEW Course 4 Play Lab Params 11:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Robot Doodle:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Robot Doodle_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Varijable
+      Virtual Pet 2:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+      Virtual Pet 3:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+      Virtual Pet 4:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+      Virtual Pet 5:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+      Virtual Pet 6:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+      Virtual Pet Freeplay:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+      behaviors 3a:
+        Actions: Akcije
+      behaviors 5:
+        Actions: Akcije
+      behaviors 6:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Math: Matematika
+        Logic: Logika
+      behaviors 7:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Math: Matematika
+        Logic: Logika
+      behaviors free play:
+        Actions: Akcije
+        Events: Događaji
+      course3_bee_functions_challenge1:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      course3_bee_functions_challenge2:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      course3_bee_functions_challenge3:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      course3_bee_functions_challenge4:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      course3_playLab_challenge1:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      course4_artist_fwp_challenge1:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      course4_bee_for_challenge1:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+        Math: Matematika
+      course4_bee_fwp_challenge1:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      course4_bee_fwp_challenge2:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      course4_playlab_variables_challenge1:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Varijable
+      courseD_artist_project1:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project1a:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project1a_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project1a_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project2:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project2_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project2_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project2a:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project2a_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project2a_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project3:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project3_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project3_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project3a:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project3a_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project3a_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project4:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project4_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project4_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project4a:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project4a_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project4a_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project5:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project5_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_artist_project5_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseD_playLab_condFP:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+      courseD_playLab_condFP_2018:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+      courseE_Dogger_2:
+        Actions: Akcije
+        Events: Događaji
+        Variables: Varijable
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Text: Tekst
+        Functions: Funkcije
+      courseE_artist_concept1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      courseE_artist_concept4:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_concept4_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      courseE_artist_functions10:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions10_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions10_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions2_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseE_artist_functions2_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseE_artist_functions3_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseE_artist_functions3_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseE_artist_functions5_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseE_artist_functions5_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseE_artist_functions7_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseE_artist_functions7_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseE_artist_functions8:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions8_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions8_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions8a_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions8a_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions8b_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions8b_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions8c_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions8c_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions9:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions9_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions9_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functionsProj_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      courseE_artist_functionsProj_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      courseE_artist_functions_predict2:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions_predict2_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_artist_functions_predict2_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_bee_concept1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_bee_concept2_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_bee_concept3_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_bee_concept4_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_bee_concept5_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_bee_functions6:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_bee_functions7:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_bee_functions_challenge1:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_bee_functions_challenge2:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseE_farmer_concept1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_concept2_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_concept3_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions1:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions10a1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions10a1_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions10b:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions11_predict:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions11_predict_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions11_predict_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions13_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions13_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions1_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions1a:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions1a_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions1a_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions2b:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions2b_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions2b_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions2ba:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions2ba_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions2ba_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions3c:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions3c1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions3c1_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions3c_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions3c_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions4b:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions5c:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions6c:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions7a1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions7a1_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions7b:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions8a1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions8a1_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions8b:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions9a1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions9a1_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_farmer_functions9b:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_playLab_challenge1:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_playLab_scaffold5:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseE_playLab_scaffold6:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+      courseF_artist_for1:
+        Actions: Akcije
+        Loops: Petlje
+        Color: Boja
+      courseF_artist_for10:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_artist_for10_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Functions: Funkcije
+      courseF_artist_for10_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Functions: Funkcije
+      courseF_artist_for10_predict1:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_artist_for10_predict1_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_artist_for10_predict1_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_artist_for1_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for1_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for2:
+        Actions: Akcije
+        Loops: Petlje
+        Color: Boja
+      courseF_artist_for2_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for2_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for3:
+        Actions: Akcije
+        Loops: Petlje
+        Color: Boja
+      courseF_artist_for3_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for3_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for4:
+        Actions: Akcije
+        Loops: Petlje
+        Color: Boja
+      courseF_artist_for4_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for4_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for5:
+        Actions: Akcije
+        Loops: Petlje
+        Color: Boja
+      courseF_artist_for5_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for5_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for6:
+        Actions: Akcije
+        Loops: Petlje
+        Color: Boja
+      courseF_artist_for6_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Color: Boja
+      courseF_artist_for6_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Color: Boja
+      courseF_artist_for7:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for7_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for7_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for8:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for8_2018:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for8_2019:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for9:
+        Actions: Akcije
+        Loops: Petlje
+      courseF_artist_for9_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseF_artist_for9_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+      courseF_artist_for_challenge1:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_for_challenge1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_for_challenge1_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_for_challenge2:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_for_challenge2_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_for_challenge2_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_fwp2:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_fwp2_predict1:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_fwp3:
+        Functions: Funkcije
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_fwp4:
+        Actions: Akcije
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_fwp5:
+        Actions: Akcije
+        Functions: Funkcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_fwp6:
+        Actions: Akcije
+        Functions: Funkcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_fwp7:
+        Actions: Akcije
+        Functions: Funkcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_fwp8:
+        Actions: Akcije
+        Functions: Funkcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_artist_fwp9:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_fwp_challenge1:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_fwp_challenge2:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_variables10_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      courseF_artist_variables10_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      courseF_artist_variables7_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      courseF_artist_variables7_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      courseF_artist_variables8_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      courseF_artist_variables8_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      courseF_artist_variables9_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      courseF_artist_variables9_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      courseF_artist_variablesFP_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      courseF_artist_variablesFP_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+        Functions: Funkcije
+      courseF_bee_conditionals10:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_conditionals2:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_conditionals3:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_conditionals4:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_conditionals5:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_conditionals8:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_for10:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for10_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for10_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for11:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for11_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for11_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for1_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for1_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for2_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for2_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for3_predict1:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for3_predict1_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for3_predict1_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for4:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for4_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for4_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for5:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for5_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for5_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for6:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for6_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for6_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for7:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for7_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for7_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for8:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for8_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for8_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for9:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+        Variables: Varijable
+      courseF_bee_for9_2018:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for9_2019:
+        Actions: Akcije
+        Math: Matematika
+        Loops: Petlje
+      courseF_bee_for_challenge1:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_for_challenge1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_for_challenge1_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_for_challenge2:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_bee_for_challenge2_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_bee_for_challenge2_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+      courseF_bee_functions2:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions3:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions3a:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions4:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions5a:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions6:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions7:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions8a:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functionsPre7:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions_challenge1:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions_challenge2:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp1:
+        Actions: Akcije
+        Loops: Petlje
+        Math: Matematika
+        Conditionals: Uvjeti
+      courseF_bee_fwp2:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp3:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp4:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp5:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp6:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp7:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp8:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp9_predict1:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp_challenge1:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp_challenge2:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_variables_1_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_1_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_2_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_2_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_3_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_3_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_4_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_4_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_5_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_5_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_6_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_6_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_7_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_7_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_8_2018:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_bee_variables_8_2019:
+        Actions: Akcije
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Functions: Funkcije
+        Variables: Varijable
+        Math: Matematika
+      courseF_playlab_variables1a:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+      courseF_playlab_variables2b:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+      courseF_playlab_variables3b_josh:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+      courseF_playlab_variables4b:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+      courseF_playlab_variables4c_predictive1:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Varijable
+      courseF_playlab_variables5c:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Logic: Logika
+        Variables: Varijable
+        Text: Tekst
+      courseF_playlab_variables6c:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+      courseF_playlab_variables7b:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Conditionals: Uvjeti
+        Math: Matematika
+        Text: Tekst
+        Functions: Funkcije
+        Variables: Varijable
+      courseF_playlab_variables7c:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Variables: Varijable
+      courseF_playlab_variables8c:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Varijable
+      courseF_playlab_variables_challenge1:
+        Actions: Akcije
+        Events: Događaji
+        Loops: Petlje
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Varijable
