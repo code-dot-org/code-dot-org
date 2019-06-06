@@ -3,8 +3,8 @@
 # Table name: paired_user_levels
 #
 #  id                      :integer          not null, primary key
-#  driver_user_level_id    :integer
-#  navigator_user_level_id :integer
+#  driver_user_level_id    :integer          unsigned
+#  navigator_user_level_id :integer          unsigned
 #  created_at              :datetime         not null
 #  updated_at              :datetime         not null
 #

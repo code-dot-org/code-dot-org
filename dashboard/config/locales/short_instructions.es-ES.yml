@@ -2773,6 +2773,13 @@ es:
         puedas! ¿Puedes obtener 3 en una fila?
       courseA_maze_seq2: Cambie el código para traerme al cerdo!
       courseA_maze_seq2_2018: Cambie el código para traerme al cerdo!
+      courseB_Scrat_ramp1_2018: En este puzle, coloca todos los bloques juntos y pulsa
+        "▶ Ejecutar"!
+      courseB_Scrat_ramp1_2019: En este puzle, coloca todos los bloques juntos y pulsa
+        "▶ Ejecutar"!
+      courseB_iceage_loops11: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseB_iceage_loops11_2019: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseB_iceage_loops11_forVideo: "¡Ayuda a Scrat a conseguir la bellota!"
       courseB_starWars_prog1: '"Ve a tomar el pedazo de metal, BB-8"'
       courseB_starWars_prog1_2018: '"Ve a tomar el pedazo de metal, BB-8"'
       courseB_starWars_prog1_2019: '"Ve a tomar el pedazo de metal, BB-8"'
@@ -2935,6 +2942,8 @@ es:
         Ayúdame a cosechar este maíz usando sólo los bloques de tu caja de herramientas!"'
       courseD_harvester_nested_loops_challenge1_2019: '"¡Necesito ayuda en la granja
         Ayúdame a cosechar este maíz usando sólo los bloques de tu caja de herramientas!"'
+      courseD_iceage_loops11: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseD_iceage_loops11_2019: "¡Ayuda a Scrat a conseguir la bellota!"
       courseD_maze_nestedLoops4: "¡Llévame al girasol!"
       courseD_maze_nestedLoops4_2018: "¡Llévame al girasol!"
       courseD_maze_nestedLoops4_2019: "¡Llévame al girasol!"
@@ -2947,6 +2956,32 @@ es:
       courseD_maze_nestedLoops6: "¡Llévame al girasol!"
       courseD_maze_nestedLoops6_2018: "¡Llévame al girasol!"
       courseD_maze_nestedLoops6_2019: "¡Llévame al girasol!"
+      courseD_maze_ramp1: En este puzle, coloca todos los bloques juntos y pulsa "Ejecutar"!
+      courseD_maze_ramp1_2018: En este puzle, coloca todos los bloques juntos y pulsa
+        "Ejecutar"!
+      courseD_maze_ramp1_2019: En este puzle, coloca todos los bloques juntos y pulsa
+        "Ejecutar"!
+      courseD_maze_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_maze_ramp2_2018: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_maze_ramp2_2019: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp1: En este puzle, coloca todos los bloques juntos y pulsa
+        "Ejecutar"!
+      courseD_scrat_ramp1_2018: En este puzle, coloca todos los bloques juntos y pulsa
+        "Ejecutar"!
+      courseD_scrat_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp2_2018: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp4: "¡Evita el hielo agrietado para mantener a Scrat a salvo!"
+      courseD_scrat_ramp4_2018: "¡Evita el hielo agrietado para mantener a Scrat a
+        salvo!"
+      courseD_scrat_ramp6: "¡Ayuda a Scrat a conseguir la bellota usando un bucle!"
+      courseD_scrat_ramp6_2018: "¡Ayuda a Scrat a conseguir la bellota usando un bucle!"
+      courseD_scrat_ramp7: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseD_scrat_ramp7_2018: "¡Ayuda a Scrat a conseguir la bellota!"
       courseE_artist_functions1: |-
         Hola. Yo artista zombie. Yo amo dibujar!
         Ayúdame a dibujar las gafas cuadradas.  Sugerencia: el puente entre las gafas es 25 píxeles más corto que la longitud cuadrada.
@@ -2979,6 +3014,10 @@ es:
         todo el bloque de código en otro bucle, pero tienes que poner al artista en
         su lugar para dibujar la línea siguiente. ¿Cuál de estos bloques de código
         puede usted colocar al final del bucle exterior para dibujar la red entera?
+      courseE_maze_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseE_maze_ramp2_2018: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
       courseE_playlab_challenge2: "¿Puedes averiguar cómo funciona esta aplicación
         \"Fortune Teller\"? \nHaz clic en `MÁS` para ver sus desafíos."
       courseE_playlab_variables_challenge2: "¿Puedes averiguar cómo funciona esta
@@ -3074,6 +3113,10 @@ es:
         ¿Cómo restarás puntos cuando se  toquen el Gato y el Pingüino?"
       courseF_playlab_variables_challenge3: "¿Puedes averiguar cómo funciona esta
         aplicación \"Fortune Teller\"? \nHaz clic en `MÁS` para ver sus desafíos."
+      coursea_maze_ramp1_2018: En este puzle, coloca todos los bloques juntos y pulsa
+        "▶ Ejecutar"!
+      coursea_maze_ramp1_2019: En este puzle, coloca todos los bloques juntos y pulsa
+        "▶ Ejecutar"!
       flappy_1: |-
         Adjunta un bloque al bloque "Cuanto Clica", luego presione
         "Ejecutar". Haz clic o toca la pantalla para mover Flappy al objetivo.

@@ -30,15 +30,15 @@ hi:
           _स्तर 11 संगीत प्रविधियों के बाद समाप्त होता है।_"
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
-          "**मैं यह स्तर कैसे पास करूं?**
+          **मैं यह स्तर कैसे पास करूं?**
 
           -   कभी-कभार आपको गाने की सातवीं संगीत प्रविधि से पहले पृष्ठभूमि प्रभाव बदलने की आवश्यकता होती है।
 
-          _यह स्तर 9 संगीत प्रविधियों के बाद समाप्त होता है।_"
+          _यह स्तर 9 संगीत प्रविधियों के बाद समाप्त होता है।_
         challenges: |-
-          "**वैकल्पिक चुनौती**
+          **वैकल्पिक चुनौती**
 
-          <xml>\<block type=""Dancelab\_atTimestamp"">\<title name=""TIMESTAMP"">???</title>\<title name=""UNIT"">""measures""</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।"
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।
       CourseD_Dance_Party_06_authored_hint:
         validation: |-
           "**मैं यह स्तर कैसे पास करूं?**
@@ -72,14 +72,14 @@ hi:
           करें। _यह स्तर 7 संगीत प्रविधियों के बाद समाप्त होता है।_"
       Dance short test 2_authored_hint:
         challenges: |-
-          "**वैकल्पिक चुनौती**
+          **वैकल्पिक चुनौती**
 
-          <xml>\<block type=""Dancelab\_atTimestamp"">\<title name=""TIMESTAMP"">???</title>\<title name=""UNIT"">""measures""</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।"
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।
       Dance short test_authored_hint:
         challenges: |-
-          "**वैकल्पिक चुनौती**
+          **वैकल्पिक चुनौती**
 
-          <xml>\<block type=""Dancelab\_atTimestamp"">\<title name=""TIMESTAMP"">???</title>\<title name=""UNIT"">""measures""</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।"
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।
       Dance_Party_01_authored_hint:
         validation: |-
           "**मैं यह स्तर कैसे पास करूं?**
@@ -115,15 +115,15 @@ hi:
           _स्तर 11 संगीत प्रविधियों के बाद समाप्त होता है।_"
       Dance_Party_04_authored_hint:
         validation: |-
-          "**मैं यह स्तर कैसे पास करूं?**
+          **मैं यह स्तर कैसे पास करूं?**
 
           -   कभी-कभार आपको गाने की सातवीं संगीत प्रविधि से पहले पृष्ठभूमि प्रभाव बदलने की आवश्यकता होती है।
 
-          _यह स्तर 9 संगीत प्रविधियों के बाद समाप्त होता है।_"
+          _यह स्तर 9 संगीत प्रविधियों के बाद समाप्त होता है।_
         challenges: |-
-          "**वैकल्पिक चुनौती**
+          **वैकल्पिक चुनौती**
 
-          <xml>\<block type=""Dancelab\_atTimestamp"">\<title name=""TIMESTAMP"">???</title>\<title name=""UNIT"">""measures""</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।"
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।
       Dance_Party_06_authored_hint:
         validation: |-
           "**मैं यह स्तर कैसे पास करूं?**
@@ -178,9 +178,9 @@ hi:
           _यह स्तर 4 संगीत प्रविधियों के बाद समाप्त होता है।_"
       Dance_Party_4_authored_hint:
         challenges: |-
-          "**वैकल्पिक चुनौती**
+          **वैकल्पिक चुनौती**
 
-          <xml>\<block type=""Dancelab\_atTimestamp"">\<title name=""TIMESTAMP"">???</title>\<title name=""UNIT"">""measures""</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।"
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।
       Dance_Party_5_authored_hint:
         validation: "**मैं यह स्तर कैसे पास करूं?** \n\n-   आपका डांस गाने की पूरी
           पहली 12 संगीत प्रविधियों के दौरान अलग-अलग परफॉर्म होना आवश्यक है। \n    _यह
@@ -224,9 +224,9 @@ hi:
           _यह स्तर 4 संगीत प्रविधियों के बाद समाप्त होता है।_"
       HOC Dance 3_draft_authored_hint:
         challenges: |-
-          "**वैकल्पिक चुनौती**
+          **वैकल्पिक चुनौती**
 
-          <xml>\<block type=""Dancelab\_atTimestamp"">\<title name=""TIMESTAMP"">???</title>\<title name=""UNIT"">""measures""</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।"
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।
       HOC Dance 4_draft_authored_hint:
         validation: "**मैं यह स्तर कैसे पास करूं?** \n\n-   आपका डांस गाने की पूरी
           पहली 12 संगीत प्रविधियों के दौरान अलग-अलग परफॉर्म होना आवश्यक है। \n    _यह

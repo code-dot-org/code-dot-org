@@ -41,7 +41,6 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 [![image](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; 
 [![image](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp; 
 
-
 <a id="logo"></a>
 ## Use the Hour of Code logo to spread the word
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)

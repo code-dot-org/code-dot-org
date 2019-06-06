@@ -107,6 +107,12 @@ ka:
       CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: აქ კოდია
         CSD_U3_rect_c2: გადმოათრიეთ ბლოკი კოდირების გარემოში.
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: დაამატეთ თქვენი კოდი აქ
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: დაამატეთ თქვენი კოდი აქ
+      CSD U6 colorLeds intensity_2019_callout:
+        CSDU6L10_rainbow: დაამატეთ თქვენი კოდი აქ
       Counting_callout:
         New Play Lab Project_callout1: დააწკაპუნეთ კატეგორიებს, რათა ნახოთ ბლოკები
           თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა

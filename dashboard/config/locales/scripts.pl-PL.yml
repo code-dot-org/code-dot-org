@@ -4383,10 +4383,10 @@ pl:
               name: Internet
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
-            Concept Practice with Minecraft:
-              name: Patrząc w przyszłość
             Dance Party:
               name: Potańcówka
+            Concept Practice with Minecraft:
+              name: Patrząc w przyszłość
         csd1-2019:
           stages:
             Intro to Problem Solving:
@@ -4754,3 +4754,7 @@ pl:
           stages:
             new stage:
               name: nowy etap
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: Czym jest komputer?

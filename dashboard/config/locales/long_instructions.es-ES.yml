@@ -520,9 +520,9 @@ es:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -561,9 +561,9 @@ es:
         aventura."
       AppLab Intro 2 - add images: "Ahora lo sabes todo\nnecesitas hacer una simple
         selección elige tu propia aplicación de aventura, pero puedes agregarla y\n¡mucho
-        más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\\r\n\\\r\n1\\.\nEn
+        más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\\r\n\\\r\n1.\nEn
         otra pestaña de tu navegador, ve en línea y encuentra una imagen que quieras
-        usar.\\\r\n2\\.\nHaga clic con el botón derecho en la imagen y guarde su URL
+        usar.\\\r\n2.\nHaga clic con el botón derecho en la imagen y guarde su URL
         (generalmente \"Copiar la dirección del enlace\" o \"Copiar\"\nimagen URL
         \") \\\r\n\n3.  De vuelta en App Lab, vaya a Modo de diseño \\\r\n4.  Arrastra
         una \"imagen\"\n    o elemento a su pantalla \\\r\n5.  Pegue la URL que copió
@@ -1182,7 +1182,7 @@ es:
       CourseD_Dance_Party_01: |-
         _¡Hagamos una fiesta para bailar!_
 
-        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
+        Arrastra el bloque `crea un nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
 
         -   _También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra._
       CourseD_Dance_Party_02: |-
@@ -1286,13 +1286,13 @@ es:
       Dance_Party_01: |-
         _¡Hagamos una fiesta para bailar!_
 
-        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
+        Arrastra el bloque `crea un nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
 
         -   _También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra._
       Dance_Party_01_low: |-
         _¡Hagamos una fiesta para bailar!_
 
-        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
+        Arrastra el bloque `crea un nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
 
         -   _También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra._
       Dance_Party_02: |-
@@ -1800,9 +1800,9 @@ es:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -1817,9 +1817,9 @@ es:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -1834,9 +1834,9 @@ es:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -1866,6 +1866,9 @@ es:
       courseA_collector_preLoops3: |-
         Para recoger el tesoro, intenta colocar, al final del programa, dos bloques (<https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png>)
         y luego un bloque (<https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png>). ¡Finalmente, ejecuta el programa presionando en "Run"!
+      courseB_iceage_loops11: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseB_iceage_loops11_2019: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseB_iceage_loops11_forVideo: "¡Ayuda a Scrat a conseguir la bellota!"
       courseC_artist_loops1a: |-
         **Juego libre**  ¡Construye algo más grande,usando un paso cada vez! Puedes hacer cualquier cosa que quieras pero te vamos a enseñar cómo hacer algo como esto!
 
@@ -1995,6 +1998,8 @@ es:
         _"¡Cacemos el tesoro- usando bucles!_
 
         Ayuda al coleccionista a alcanzar al menos dos pilas de tesoro usando únicamente los bloques de la caja de herramientas. Es posible recoger los 4.
+      courseD_iceage_loops11: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseD_iceage_loops11_2019: "¡Ayuda a Scrat a conseguir la bellota!"
       courseD_maze_nestedLoops4: "¡Llévame al girasol!"
       courseD_maze_nestedLoops4_2018: "¡Llévame al girasol!"
       courseD_maze_nestedLoops4_2019: "¡Llévame al girasol!"
@@ -2010,6 +2015,68 @@ es:
         _"¡Debes comerte el girasol!"_
 
         Haz que el zombi vaya al girasol usando sólo los bloques disponibles.
+      courseD_maze_ramp1: En este puzle, coloca todos los bloques juntos y pulsa "Ejecutar"!
+      courseD_maze_ramp1_2018: En este puzle, coloca todos los bloques juntos y pulsa
+        "Ejecutar"!
+      courseD_maze_ramp1_2019: En este puzle, coloca todos los bloques juntos y pulsa
+        "Ejecutar"!
+      courseD_maze_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_maze_ramp2_2018: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_maze_ramp2_2019: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp1: En este puzle, coloca todos los bloques juntos y pulsa
+        "Ejecutar"!
+      courseD_scrat_ramp1_2018: En este puzle, coloca todos los bloques juntos y pulsa
+        "Ejecutar"!
+      courseD_scrat_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp2_2018: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp3: |-
+        Hay un bloque de más que está haciendo que Scrat se estrelle.
+        Quítalo desconectándolo de los otros bloques y arrastrándolo de vuelta a la caja de herramientas.
+      courseD_scrat_ramp3_2018: |-
+        Hay un bloque de más que está haciendo que Scrat se estrelle.
+        Quítalo desconectándolo de los otros bloques y arrastrándolo de vuelta a la caja de herramientas.
+      courseD_scrat_ramp4: "¡Evita el hielo agrietado para mantener a Scrat a salvo!"
+      courseD_scrat_ramp4_2018: "¡Evita el hielo agrietado para mantener a Scrat a
+        salvo!"
+      courseD_scrat_ramp5: "¡Evita el hielo agrietado!"
+      courseD_scrat_ramp5_2018: "¡Evita el hielo agrietado!"
+      courseD_scrat_ramp6: "¡Ayuda a Scrat a conseguir la bellota usando un bucle!"
+      courseD_scrat_ramp6_2018: "¡Ayuda a Scrat a conseguir la bellota usando un bucle!"
+      courseD_scrat_ramp7: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseD_scrat_ramp7_2018: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseD_scrat_ramp8: "**Desafío:**¡ Usa lo que has aprendido para llevar a Scrat
+        hasta la bellota!"
+      courseD_scrat_ramp8_2018: "**Desafío:**¡ Usa lo que has aprendido para llevar
+        a Scrat hasta la bellota!"
+      courseE_artist_ramp9: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
+      courseE_artist_ramp9_2: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
+      courseE_artist_ramp9_2018: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
+      courseE_artist_ramp9_2_2018: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
       courseE_bee_functions2: "Las funciones son bloques de código que realizan una
         tarea. \\\r\n\\\r\nUsa la función `obtener 2 néctar` para recolectar el néctar
         de cada flor."
@@ -2028,6 +2095,34 @@ es:
         todo el bloque de código en otro bucle, pero tienes que poner al artista en
         su lugar para dibujar la línea siguiente. ¿Cuál de estos bloques de código
         puede usted colocar al final del bucle exterior para dibujar la red entera?
+      courseE_maze_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseE_maze_ramp2_2018: Arrastra otro bloque `avanzar` de la caja de herramientas,
+        después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseF_artist_ramp8: |-
+        ¡Genial! ¡Ahora hagamos un cuadrado usando al Artista! Los bloques del artista son un poco diferentes a los de otros puzles, pero la idea es la misma.
+
+        * * *
+
+        Cada lado del cuadrado tiene una longitud de 200 pixeles y tienes que girar 90 grados para hacer cada ángulo.
+      courseF_artist_ramp8_2018: |-
+        ¡Genial! ¡Ahora hagamos un cuadrado usando al Artista! Los bloques del artista son un poco diferentes a los de otros puzles, pero la idea es la misma.
+
+        * * *
+
+        Cada lado del cuadrado tiene una longitud de 200 pixeles y tienes que girar 90 grados para hacer cada ángulo.
+      courseF_artist_ramp9: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
+      courseF_artist_ramp9_2018: |-
+        Usa lo que has aprendido para dibujar este triángulo.
+
+        * * *
+
+        ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
       courseF_bee_for_challenge2: Resuelve este rompecabezas con el menor número de
         bloques posible.
       courseF_bee_for_challenge2_2018: Resuelve este rompecabezas con el menor número

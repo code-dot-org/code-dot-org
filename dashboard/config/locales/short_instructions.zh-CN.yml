@@ -1640,27 +1640,21 @@ zh-CN:
       Virtual Pet 2 - Validated (Ram): 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
       Virtual Pet 2 - Validated: 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
       Virtual Pet 2: 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
-      Virtual Pet 2_2019: 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
       Virtual Pet 2_simple: 创建 **事件** 使杰拉尔丁接触到土尘时, 她的颜色变成褐色。
       Virtual Pet 2_simple_clone: 创建 **事件** 使杰拉尔丁接触到土尘时, 她的颜色变成褐色。
       Virtual Pet 3: 在屏幕上添加一个肥皂。 是否能实现当长颈鹿和肥皂接触时，长颈鹿变回原有的颜色？
-      Virtual Pet 3_2019: 在屏幕上添加一个肥皂。 是否能实现当长颈鹿和肥皂接触时，长颈鹿变回原有的颜色？
       Virtual Pet 3_simple: 在屏幕上添加一个肥皂。 是否能实现当长颈鹿和肥皂接触时，长颈鹿变回原有的颜色？
       Virtual Pet 4: 为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。
-      Virtual Pet 4_2019: 为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。
       Virtual Pet 4_simple: 为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。
       Virtual Pet 5 - Validated: 向每个事件添加动作, 使长颈鹿与每个精灵碰撞时, 它的尺寸会收缩5。
       Virtual Pet 5: 向每个事件添加动作, 使长颈鹿与每个精灵碰撞时, 它的尺寸会收缩5。
-      Virtual Pet 5_2019: 向每个事件添加动作, 使长颈鹿与每个精灵碰撞时, 它的尺寸会收缩5。
       Virtual Pet 5_simple: 向每个事件添加动作, 使长颈鹿与每个精灵碰撞时, 它的尺寸会收缩5。
       Virtual Pet 6: 添加一个苹果，这个苹果可以在与长颈鹿相碰时使长颈鹿回到原来的尺寸。
-      Virtual Pet 6_2019: 添加一个苹果，这个苹果可以在与长颈鹿相碰时使长颈鹿回到原来的尺寸。
       Virtual Pet 6_simple: 添加一个苹果，这个苹果可以在与长颈鹿相碰时使长颈鹿回到原来的尺寸。
       Virtual Pet 8_2019: '自由发挥：你的长颈鹿还能做些什么呢？ '
       Virtual Pet Freeplay: '自由发挥：你的长颈鹿还能做些什么呢？ '
       Virtual Pet Freeplay_2019: '自由发挥：你的长颈鹿还能做些什么呢？ '
       Virtual Pet Freeplay_simple: '自由发挥：你的长颈鹿还能做些什么呢？ '
-      Virtual Pet Template_2019: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
       aE3alternate: 交替
       aE3alternateB: 交替
       aE4: 交替

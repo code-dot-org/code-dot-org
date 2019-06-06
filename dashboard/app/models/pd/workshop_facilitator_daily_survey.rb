@@ -72,6 +72,7 @@ module Pd
       ACADEMIC_YEAR_4_CATEGORY => [1].freeze,
       ACADEMIC_YEAR_1_2_CATEGORY => [1, 2].freeze,
       ACADEMIC_YEAR_3_4_CATEGORY => [1, 2].freeze,
+      CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
     }
 
     validate :day_for_subject

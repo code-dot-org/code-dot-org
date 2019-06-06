@@ -1,18 +1,57 @@
 @import 'color';
 @import 'font';
+.user_menu, .create_menu {
+  user-select: none;
+  height: 38px;
+
+  .create_button, .display_name, .pairing_name {
+    max-width: 120px;
+    display: inline-block;
+    float: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .user_menu_arrow_down,
+  .user_menu_arrow_up,
+  .create_menu_arrow_down,
+  .create_menu_arrow_up, {
+    font-size: 25px;
+    margin-top: -3px;
+  }
+
+  .user_options, .create_options {
+    position: absolute;
+    top: 55px;
+    right: 55px;
+    background-color: $white;
+    border: 1px solid $charcoal;
+
+    a {
+      color: $charcoal !important;
+
+      $transition: background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
+      transition: $transition;
+      -moz-transition: $transition;
+      -webkit-transition: $transition;
+      -o-transition: $transition;
+    }
+
+    a:hover {
+      background-color: $lightest_gray;
+      text-decoration: none;
+    }
+  }
+}
 
 .user_menu {
   padding: 7px 14px;
 
   .user_options {
-    background-color: white;
-    border: 1px solid $charcoal;
     z-index: 100001;
     text-align: left;
     white-space: nowrap;
-    position: absolute;
-    right: -14px;
-    top: 7px;
     padding: 0;
 
     .display_name {
@@ -28,23 +67,43 @@
       display: block;
       padding: 10px;
       font-family: $gotham-bold;
-      color: $charcoal !important;
-
-      $transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out;
-      transition: $transition;
-      -moz-transition: $transition;
-      -webkit-transition: $transition;
-      -o-transition: $transition;
-    }
-
-    a:hover {
-      background-color: $lightest_gray;
-      color: $charcoal;
-      text-decoration: none;
     }
 
     a + a {
       border-top: 1px solid $charcoal;
+    }
+  }
+}
+
+.create_menu {
+  .create_options {
+    width: max-content;
+    z-index: 10000;
+    border-bottom: 0;
+    a {
+      font-family: 'Gotham 5r', sans-serif;
+      min-width: 240px;
+      font-size: 14px;
+      border-bottom: 1px solid $charcoal;
+      box-sizing: content-box;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    img {
+      height: 70px;
+      width: 70px;
+    }
+    .project_link_box {
+      display: block;
+    }
+    .project_link {
+      display: inline-block;
+      padding: 0 10px 0 4px;
+      line-height: 67px;
+    }
+    #view_all_projects {
+      height: 70px;
+      padding-left: 10px;
     }
   }
 }

@@ -65,7 +65,6 @@ fi:
   of: "/"
   more: "LISÄÄ"
   less: "VÄHEMMÄN"
-  beta: "beta"
   try_hoc: "Kokeile Koodaustuntia, napsauta tästä >> "
   try_k8intro: "Kokeile ala-asteen johdantoa tietojenkäsittelytieteeseen (15-25 tuntia)"
   k8intro: "Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)"
@@ -688,18 +687,10 @@ fi:
     create: "Luo projekti"
     create_a_project: 'Luo uusi projekti:'
     new: "Luo uusi"
-    rename: "Nimeä uudelleen"
-    save: "Tallenna"
-    import: "Tuo"
-    share_link_import_bad_link_header: "Jakolinkkiä ei tunnistettu"
-    share_link_import_bad_link_body: "Emme voineet tuoda tuota jakolinkkiä. Varmista, että käytät Minecraft: Agent -tehtävän linkkiä ja että olet kopioinut koko linkin."
-    share_link_import_error_header: "Jokin meni pieleen."
-    share_link_import_error_body: "Jakolinkin tuomisessa tapahtui virhe. Yritä uudelleen."
     exit: "Takaisin kurssiin"
     project_gallery: "Projektit"
     publish: "Julkaise"
     unpublish: "Peru julkaiseminen"
-    share: "Jaa"
     share_title: Jaa projektisi
     share_copy_link: "Kopioi linkki:"
     embed: "Upota"
@@ -713,8 +704,6 @@ fi:
     saved: "Tallennettu"
     not_saved: "Ei tallenneta"
     view_all: 'Katso omia projektejasi'
-    remix: 'Remix'
-    click_to_remix: "Klikkaa \"Remix\" ja tee oma versiosi!"
     edit_project: 'Muokkaa projektia'
     abuse:
       tos: "Tämän projektin on raportoitu rikkovan Code.org:in <a href='http://code.org/tos'> Käyttöehtoja</a>, minkä vuoksi sitä ei voi jakaa muiden kanssa."

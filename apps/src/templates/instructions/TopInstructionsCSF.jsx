@@ -630,7 +630,9 @@ class TopInstructions extends React.Component {
       ? this.props.ttsShortInstructionsUrl
       : this.props.ttsLongInstructionsUrl;
 
-    const showAudioControls = this.props.textToSpeechEnabled && ttsUrl;
+    // We use ttsLongInstructionsUrl for contained level so we should recompute whether to show audio controls.
+    const showAudioControls =
+      this.props.textToSpeechEnabled && this.props.ttsLongInstructionsUrl;
 
     if (this.props.hasContainedLevels) {
       return (

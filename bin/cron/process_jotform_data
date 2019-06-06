@@ -5,64 +5,21 @@ require 'cdo/only_one'
 
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
+JOTFORM_SURVEY_RESPONSE_CLASSES = [
+  Pd::WorkshopDailySurvey,
+  Pd::WorkshopFacilitatorDailySurvey,
+  Pd::PostCourseSurvey
+]
+
 # @param unsanitized [String, nil] the unsanitized string
 # @returns [String, nil] the sanitized version of the string, with newlines stripped and double
 #   quotations escaped. Returns nil on nil input.
 def sanitize_string_for_db(unsanitized)
   return nil if unsanitized.nil?
-  unsanitized.gsub(/[\r\n]+/, '').gsub(/"/, '\"')
+  unsanitized.gsub(/[\r\n\\]+/, '').gsub(/"/, '\"')
 end
 
-def main
-  # Get list of hashes containing survey questions themselves.
-  # One hash per question.
-  survey_questions = []
-  Pd::SurveyQuestion.find_each do |survey|
-    survey.summarize.each do |key, value|
-      row = {
-        form_id: survey.form_id,
-        question_id: key.to_s,
-        preamble: (value.key?(:parent) ? sanitize_string_for_db(survey[value[:parent]].text) : nil),
-        question_text: sanitize_string_for_db(value[:text]),
-        answer_type: value[:answer_type],
-        answer_options: sanitize_string_for_db(value[:options].to_s),
-        min_value: value[:min_value].to_i,
-        max_value: value[:max_value].to_i
-      }
-      survey_questions << row
-    end
-  end
-
-  # Get list of hashes containing responses to survey questions.
-  # One row per question answered.
-  survey_answers = []
-  Pd::WorkshopDailySurvey.find_each do |submission|
-    answers = submission.form_data_hash
-    answers.each do |question_key, answer_value|
-      survey_answers << {
-        user_id: submission.user_id,
-        form_id: submission.form_id,
-        submission_id: submission.submission_id,
-        question_id: question_key,
-        answer_value:  sanitize_string_for_db(answer_value.to_s)
-      }
-    end
-  end
-
-  raise "processed_answers too big: #{survey_answers.size} rows exceeds limit of 100,000,000" if survey_answers.size > 100_000_000
-  raise "processed_surveys too big: #{survey_questions.size} rows exceeds limit of 10,000" if survey_questions.size > 10_000
-
-  # Truncate the existing tables.
-  %w(
-    survey_answers
-    survey_questions
-  ).each do |table_name|
-    ActiveRecord::Base.connection.execute(
-      "TRUNCATE #{table_name}"
-    )
-  end
-
-  # Write the data to the DB tables.
+def insert_survey_answers(survey_answers)
   ActiveRecord::Base.transaction do
     survey_answers.each do |survey_answer_row|
       ActiveRecord::Base.connection.execute(
@@ -89,7 +46,9 @@ SQL
       )
     end
   end
+end
 
+def insert_survey_questions(survey_questions)
   ActiveRecord::Base.transaction do
     survey_questions.each do |survey_question_row|
       ActiveRecord::Base.connection.execute(
@@ -120,6 +79,65 @@ SQL
           )
 SQL
       )
+    end
+  end
+end
+
+def main
+  # Truncate the existing tables.
+  %w(
+    survey_questions
+    survey_answers
+  ).each do |table_name|
+    ActiveRecord::Base.connection.execute(
+      "TRUNCATE #{table_name}"
+    )
+  end
+
+  # Get list of hashes containing survey questions themselves.
+  # One hash per question.
+  survey_questions = []
+  Pd::SurveyQuestion.find_each do |survey|
+    survey.summarize.each do |key, value|
+      row = {
+        form_id: survey.form_id,
+        question_id: key.to_s,
+        preamble: (value.key?(:parent) ? sanitize_string_for_db(survey[value[:parent]].text) : nil),
+        question_text: sanitize_string_for_db(value[:text]),
+        answer_type: value[:answer_type],
+        answer_options: sanitize_string_for_db(value[:options].to_s),
+        min_value: value[:min_value].to_i,
+        max_value: value[:max_value].to_i
+      }
+      survey_questions << row
+    end
+  end
+  insert_survey_questions(survey_questions)
+
+  JOTFORM_SURVEY_RESPONSE_CLASSES.each do |jotform_survey_response_class|
+    # using find_in_batches as it allows to do writes after each batch,
+    # whereas find_each does not
+    jotform_survey_response_class.find_in_batches(batch_size: 1000) do |submissions|
+      # get list of hashes containing survey answers
+      # one row per question answered
+      survey_answers = []
+      submissions.each do |submission|
+        # skipping blank submissions
+        if submission.answers == "{}"
+          next
+        end
+        answers = submission.form_data_hash
+        answers.each do |question_key, answer_value|
+          survey_answers << {
+            user_id: submission.user_id,
+            form_id: submission.form_id,
+            submission_id: submission.submission_id,
+            question_id: question_key,
+            answer_value:  sanitize_string_for_db(answer_value.to_s)
+          }
+        end
+      end
+      insert_survey_answers(survey_answers)
     end
   end
 end

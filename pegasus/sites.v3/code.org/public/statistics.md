@@ -274,7 +274,7 @@ Young women wanted to make apps about the weather and the young men wanted to ma
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/more-likely-to-share.png"></a>
+<a href="https://twitter.com/codeorg/status/1130883455930327047" target="_blank"><img src="/images/statistics/fit-250/more-likely-to-share.png"></a>
 
 <br>
 

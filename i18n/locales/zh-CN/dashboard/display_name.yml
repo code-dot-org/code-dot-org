@@ -118,6 +118,7 @@ zh-CN:
       CSD Polling Events Map: 轮询事件
       CSD Polling Events Map_2018: 轮询事件
       CSD Polling Events Map_2019: 轮询事件
+      CSD Problem Solving Process Video: '视频: 问题解决过程'
       CSD Set Scale Map: 改变传感器的级别
       CSD Set Scale Map_2018: 改变传感器的级别
       CSD Set Scale Map_2019: 改变传感器的级别
@@ -402,6 +403,15 @@ zh-CN:
       CSD U3 platform challenge: 改善您的游戏
       CSD U3 platform challenge_2018: 改善您的游戏
       CSD U3 platform challenge_2019: 改善您的游戏
+      CSD U3 platform sample1: 平台跳线游戏示例
+      CSD U3 platform sample1_2018: 平台跳线游戏示例
+      CSD U3 platform sample1_2019: 平台跳线游戏示例
+      CSD U3 platform sample2: 飞机跳线
+      CSD U3 platform sample2_2018: 飞机跳线
+      CSD U3 platform sample2_2019: 飞机跳线
+      CSD U3 platform sample3: 兔子跳线
+      CSD U3 platform sample3_2018: 兔子跳线
+      CSD U3 platform sample3_2019: 兔子跳线
       CSD U3 plotting shapes map: 在游戏实验室中绘制形状
       CSD U3 plotting shapes map_2018: 在游戏实验室中绘制形状
       CSD U3 plotting shapes map_2019: 在游戏实验室中绘制形状
@@ -585,6 +595,9 @@ zh-CN:
       CSD U6 Event Types: 事件类型
       CSD U6 Event Types_2018: 事件类型
       CSD U6 Event Types_2019: 事件类型
+      CSD U6 analog challenge: '挑战：理解传感器'
+      CSD U6 analog challenge_2018: '挑战：理解传感器'
+      CSD U6 analog challenge_2019: '挑战：理解传感器'
       CSD U6 arrays intro: 数组的简介
       CSD U6 arrays intro_2018: 数组的简介
       CSD U6 arrays intro_2019: 数组
@@ -749,6 +762,7 @@ zh-CN:
       CSDU6 - sensor love tester demo: 爱情测试演示
       CSDU6 - sensor theremin demo: 灯光特技演示
       CSDU6 - sensor vu meter demo: 声音测量仪表演示
+      CSDU6 - sensors challenge: '挑战：理解传感器'
       CSDU6 - timed loop challenge: '挑战: 变得疯癫'
       CSDU6 buzzer 2d arrays: 二维数组
       CSDU6 buzzer 2d arrays_2018: 二维数组
@@ -1083,7 +1097,10 @@ zh-CN:
       U5 Lists Investigate Choresly App: 恒温器应用程序 v.5
       U5 Lists Investigate Choresly Code: 恒温器应用程序 v.5
       U5 Lists Investigate Outfitly Code: 恒温器应用程序 v.5
+      U5 Param Return Investigate Thermostat: 恒温器应用程序 v.6
       U7 L01 More with Functions: '条件: 布尔表达式'
+      U7 L04 Exit Ticket: 检查您的理解
+      U7 L04 Libraries Intro: '条件: 布尔表达式'
       U7 L05 Exit Ticket: 检查您的理解
       'Video: Intro to CSS Part 2_2018': '视频: CSS 简介第2部分'
       'Video: Intro to CSS Part 2_2019': '视频: CSS 简介第2部分'
