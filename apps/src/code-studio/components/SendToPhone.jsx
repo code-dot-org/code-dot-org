@@ -42,6 +42,7 @@ export default class SendToPhone extends React.Component {
   static propTypes = {
     isLegacyShare: PropTypes.bool.isRequired,
     channelId: PropTypes.string,
+    downloadUrl: PropTypes.string,
     appType: PropTypes.string.isRequired,
     styles: PropTypes.shape({
       label: PropTypes.object,
@@ -73,25 +74,30 @@ export default class SendToPhone extends React.Component {
   }
 
   handleSubmit = () => {
+    const {appType, channelId, isLegacyShare, downloadUrl} = this.props;
     // Do nothing if we aren't in a state where we can send.
     if (this.state.sendState !== SendState.canSubmit) {
       return;
     }
-    const phone = this.refs.phone;
+    const {phone} = this.refs;
 
     this.setState({sendState: SendState.sending});
 
     const params = {
-      type: this.props.appType,
+      type: appType,
       phone: $(phone).val()
     };
-    if (this.props.isLegacyShare) {
+    if (isLegacyShare) {
       params.level_source = +location.pathname.split('/')[2];
+    } else if (downloadUrl) {
+      params.url = downloadUrl;
     } else {
-      params.channel_id = this.props.channelId;
+      params.channel_id = channelId;
     }
 
-    $.post('/sms/send', $.param(params))
+    const apiUrl = downloadUrl ? '/sms/send_download' : '/sms/send';
+
+    $.post(apiUrl, $.param(params))
       .done(
         function() {
           this.setState({sendState: SendState.sent});

@@ -20,33 +20,31 @@ class MakerController < ApplicationController
   end
 
   def self.maker_script(for_user)
-    if any_csd_2019?(for_user)
-      Script.get_from_cache(Script::CSD6_2019_NAME)
-    elsif any_csd_2018?(for_user)
-      Script.get_from_cache(Script::CSD6_2018_NAME)
-    elsif any_csd_2017?(for_user)
-      Script.get_from_cache(Script::CSD6_NAME)
-    else
-      Script.get_from_cache(Script::CSD6_2018_NAME)
+    csd6_17 = Script.get_from_cache(Script::CSD6_NAME)
+    csd6_18 = Script.get_from_cache(Script::CSD6_2018_NAME)
+    csd6_19 = Script.get_from_cache(Script::CSD6_2019_NAME)
+
+    # Assigned course or script should take precedence.
+    assigned = for_user.section_courses + for_user.section_scripts
+    if assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2019)) || assigned.include?(csd6_19)
+      return csd6_19
+    elsif assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2018)) || assigned.include?(csd6_18)
+      return csd6_18
+    elsif assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2017)) || assigned.include?(csd6_17)
+      return csd6_17
     end
-  end
 
-  def self.any_csd_2017?(for_user)
-    !for_user.user_scripts.joins(:script).
-      where(scripts: {name: ScriptConstants::CATEGORIES[:csd]}).empty? ||
-      for_user.section_courses.include?(Course.get_from_cache(ScriptConstants::CSD_2017))
-  end
-
-  def self.any_csd_2018?(for_user)
-    !for_user.user_scripts.joins(:script).
-      where(scripts: {name: ScriptConstants::CATEGORIES[:csd_2018]}).empty? ||
-      for_user.section_courses.include?(Course.get_from_cache(ScriptConstants::CSD_2018))
-  end
-
-  def self.any_csd_2019?(for_user)
-    !for_user.user_scripts.joins(:script).
-      where(scripts: {name: ScriptConstants::CATEGORIES[:csd_2019]}).empty? ||
-      for_user.section_courses.include?(Course.get_from_cache(ScriptConstants::CSD_2019))
+    # Otherwise, show the version with progress (defaulting to most recent).
+    progress = UserScript.lookup_hash(for_user, [Script::CSD6_NAME, Script::CSD6_2018_NAME, Script::CSD6_2019_NAME])
+    if progress[Script::CSD6_2019_NAME]
+      csd6_19
+    elsif progress[Script::CSD6_2018_NAME]
+      csd6_18
+    elsif progress[Script::CSD6_NAME]
+      csd6_17
+    else
+      csd6_19
+    end
   end
 
   def setup

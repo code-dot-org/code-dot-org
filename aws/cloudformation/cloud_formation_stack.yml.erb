@@ -24,7 +24,7 @@ commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
 ami = commit[0..4]
 
 frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
-database = @database = rack_env?(:test) || ENV['DATABASE']
+database = @database = [:staging, :test].include?(rack_env) || ENV['DATABASE']
 load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
 
 unless dry_run
@@ -528,6 +528,33 @@ Resources:
         - PolicyName: Daemon
           PolicyDocument:
             Statement:
+<% if CDO.db_cluster_id -%>
+              # Create, Describe, Delete Database Clusters for Contact Rollups
+              - Effect: Allow
+                Action:
+                  - 'rds:DescribeDBClusters'
+                  - 'rds:RestoreDBClusterToPointInTime'
+                  - 'rds:DescribeDBClusterEndpoints'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>*"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:subgrp:*"
+              - Effect: Allow
+                Action:
+                  - 'rds:DeleteDBCluster'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>-temporary-clone"
+              - Effect: Allow
+                Action:
+                  - 'rds:CreateDBInstance'
+                  - 'rds:DeleteDBInstance'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:<%=CDO.db_cluster_id%>-temporary-clone-instance"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>-temporary-clone"
+              - Effect: Allow
+                Action:
+                  - 'rds:DescribeDBInstances'
+                Resource: '*'
+<% end -%>
               # SQS queues for Asynchronous batch processing by the `process_queues` service.
               - Effect: Allow
                 Action:
@@ -585,7 +612,10 @@ Resources:
           PolicyDocument:
             Statement:
               - Effect: Allow
-                Action: rds:DescribeDBInstances
+                Action:
+                  - rds:DescribeDBInstances
+                  - rds:DescribeDBClusters
+                  - rds:DescribeDBClusterSnapshots
                 Resource: '*'
               - Effect: Allow
                 Action: rds:DescribeDBSnapshots
@@ -593,6 +623,12 @@ Resources:
               - Effect: Allow
                 Action: rds:CopyDBSnapshot
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:production-*"
+              - Effect: Allow
+                Action: rds:CopyDBClusterSnapshot
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:<%=CDO.db_cluster_id%>*"
+              - Effect: Allow
+                Action: rds:ModifyDBClusterSnapshotAttribute
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:temp-snapshot*"
               - Effect: Allow
                 Action:
                   - rds:CopyDBSnapshot

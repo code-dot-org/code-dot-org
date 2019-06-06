@@ -80,4 +80,8 @@ class UserScriptTest < ActiveSupport::TestCase
       last_progress_at: Time.now
     ).empty?
   end
+
+  test "lookup hash" do
+    assert_equal ({'foo' => false, @script.name => true}), UserScript.lookup_hash(@user, ['foo', @script.name])
+  end
 end
