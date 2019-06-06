@@ -1,53 +1,2377 @@
 ---
-ja:
+ja-JP:
   data:
     block_categories:
-      Actions: 操作
-      Loops: くりかえし
-      Functions: 関数(かんすう)
-      Color: 色
-      Brushes: ブラシ
-      Math: 計算(けいさん)
-      Logic: ロジック（論理）
-      Variables: 変数
-      Number: 数（かず）
-      String: 文字列（もじれつ）
-      Image: 画像（がぞう）
-      Boolean: 真偽値（しんぎち）
-      Conditionals: 条件
-      Events: イベント
-      Games/Score: ゲーム/スコア
-      Comments: コメント
-      Category: カテゴリー
-      Prebuilt: あらかじめつくられた
-      Text: テキスト
-      Picker: ピッカー
-      Comment: コメント
-      World: 世界
-      Behaviors: 行動
-      'Variables ': '変数(へんすう) '
-      Default: デフォルト
-      Locations: 場所
-      everythingelse: ほかのすべて
-      Location: ロケーション
-      numbers: 数（かず）
-      Numbers: 数（かず）
-      Dancers: ダンサー
-      Groups: グループ
-      Advanced: 詳細設定
-      Start: はじめる
-      Dancing: ダンスする
-      Sprite: スプライト
-      Brush: ブラシ
-      Make Sprite: スプライトを つくる
-      Movement: 動作
-      Functional: 関数(かんすう)の
-      While Events: イベントの間
-      Predefined: あらかじめ定義（ていぎ）された
-      test: テスト
-      test2: テスト2
-      Name: 名前
-      NEW BLOCKS: あたらしい ブロック
-      'Functions ': '関数(かんすう) '
-      Game/Score: ゲーム/スコア
-      Function: 関数（かんすう）
+      4-5 Artist Patterns Free Play:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      Alien Defender:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Games/Score: ゲーム/スコア
+        Comments: コメント
+      Choose Your Own Adventure:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Games/Score: ゲーム/スコア
+        Comments: コメント
+      Course 4 Artist For Loops 11:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+      Course 4 Artist For Loops 11a:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+      Course 4 Artist For Loops 14:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+      Course 4 Artist For Loops 15:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Variables ': '変数(へんすう) '
+      Course 4 Artist For Loops 4:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+      Course 4 Artist For Loops 6a:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+      Course 4 Artist For Loops 8:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+      Course 4 Artist For Loops Challenge:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+      Course 4 Artist For Loops inspire:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+      Course 4 Artist Functions Inspiration:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+      Course 4 Artist Functions challenge:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+      Course 4 Bee Params 1:
+        Actions: 操作
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      Course 4 Bee Params 2:
+        Actions: 操作
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      Course 4 Bee Params 3:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        'Variables ': '変数(へんすう) '
+      Course 4 Bee Params 4:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        'Variables ': '変数(へんすう) '
+        Math: 計算(けいさん)
+      Course 4 Bee Params 5:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      Course 4 Bee Params 6:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      Course 4 Bee Params 7:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        'Variables ': '変数(へんすう) '
+      Course 4 Bee Params 8:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        'Variables ': '変数(へんすう) '
+      Course 4 EC 1a:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      Course 4 EC 1b:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      Course 4 EC 2a:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      Course 4 EC 2b:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        Variables: 変数
+        Functions: '関数(かんすう) '
+      Course 4 EC 2c:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        Variables: 変数
+        Functions: '関数(かんすう) '
+      Course 4 Play Lab Params 10:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      Course 4 Play Lab Params 7:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      Course 4 Play Lab Params 8:
+        Events: イベント
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      Course 4 Play Lab Params 9:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      Course 4 Play Lab Vars 9:
+        Events: イベント
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Variables: 変数
+      Course 4 SCF 1:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+        Functions: '関数(かんすう) '
+      Course 4 SCF 1a:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        'Variables ': '変数(へんすう) '
+      Course 4 SCF 1b:
+        Actions: 操作
+        Loops: くりかえし
+        Logic: ロジック（論理）
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      Course 4 SCF 2:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+        Functions: '関数(かんすう) '
+      Course 4 SCF 3:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+        Functions: '関数(かんすう) '
+      Course 4 SCFL 1:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      Course 4 SCFL 1a:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      Course 4 SCFL 1b:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      Course 4 SCFL 2:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+      Course 4 SCFL 3:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      Course 4 SCFL 4:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      Course 4 SCFL 6:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      Course 4 SCFL 7:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      Course 4 SCV 6:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      'Course E: Play Lab Project':
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Games/Score: ゲーム/スコア
+        Comments: コメント
+      'Course F: Artist Project':
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      'Course F: Artist Project - Revise':
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      'Course F: Artist Project - Revise_2018':
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      'Course F: Artist Project_2018':
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      'Course F: Artist Project_2019':
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      CourseD_Dance_Party_11_5:
+        World: 世界
+        Dancers: ダンサー
+        Groups: グループ
+        Events: イベント
+      CourseD_Dance_Party_12:
+        World: 世界
+        Dancers: ダンサー
+        Groups: グループ
+        Events: イベント
+        Numbers: 数（かず）
+        Logic: ロジック（論理）
+      CourseE_Project_SpriteLab:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Logic: ロジック（論理）
+        Text: テキスト
+        Advanced: 詳細設定
+        Comments: コメント
+      CourseE_Project_SpriteLab_2019:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+      CourseE_hoops:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+        Functions: '関数(かんすう) '
+      CourseF_Project_Revise_SpriteLab:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+        Functions: '関数(かんすう) '
+      CourseF_Project_SpriteLab:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+        Functions: '関数(かんすう) '
+      CourseF_Project_SpriteLab_2019:
+        World: 世界
+        Locations: 場所
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Text: テキスト
+        Comments: コメント
+      Dance Party 2:
+        Behaviors: 行動
+        Events: イベント
+        Comments: コメント
+      Dance Party 6:
+        Behaviors: 行動
+        Events: イベント
+        Comments: コメント
+      Dance Party Freeplay:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+        Comments: コメント
+      Dance_Party_11_5:
+        World: 世界
+        Dancers: ダンサー
+        Groups: グループ
+        Events: イベント
+      Dance_Party_12:
+        World: 世界
+        Dancers: ダンサー
+        Groups: グループ
+        Events: イベント
+        Numbers: 数（かず）
+        Logic: ロジック（論理）
+      Dance_Party_extras_battle:
+        World: 世界
+        Dancers: ダンサー
+        Groups: グループ
+        Events: イベント
+        Numbers: 数（かず）
+        Logic: ロジック（論理）
+      Dance_Party_extras_every_beat:
+        World: 世界
+        Dancers: ダンサー
+        Groups: グループ
+        Events: イベント
+        Numbers: 数（かず）
+        Logic: ロジック（論理）
+      Dance_Party_extras_layout:
+        World: 世界
+        Dancers: ダンサー
+        Groups: グループ
+        Events: イベント
+        Numbers: 数（かず）
+        Logic: ロジック（論理）
+      Dance_Party_extras_on_beat:
+        World: 世界
+        Dancers: ダンサー
+        Groups: グループ
+        Events: イベント
+        Numbers: 数（かず）
+        Logic: ロジック（論理）
+      Dance_Party_extras_speed:
+        World: 世界
+        Dancers: ダンサー
+        Groups: グループ
+        Events: イベント
+        Numbers: 数（かず）
+        Logic: ロジック（論理）
+      Dance_Party_extras_visible:
+        World: 世界
+        Dancers: ダンサー
+        Groups: グループ
+        Events: イベント
+        Numbers: 数（かず）
+        Logic: ロジック（論理）
+      Find the Wizard:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Games/Score: ゲーム/スコア
+        Comments: コメント
+      Fish Tank 5-validated:
+        World: 世界
+        Behaviors: 行動
+        Comments: コメント
+      Fish Tank 5-validated_2019:
+        World: 世界
+        Behaviors: 行動
+        Comments: コメント
+      Fish Tank 6-validated:
+        World: 世界
+        Behaviors: 行動
+        Comments: コメント
+      Fish Tank 6-validated_2019:
+        World: 世界
+        Behaviors: 行動
+        Comments: コメント
+      Fish Tank 7-validated:
+        World: 世界
+        Behaviors: 行動
+        Events: イベント
+        Comments: コメント
+      Fish Tank 7-validated_2019:
+        World: 世界
+        Actions: 操作
+        Behaviors: 行動
+        Events: イベント
+        Comments: コメント
+      FoodFight:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Games/Score: ゲーム/スコア
+        Comments: コメント
+      Geometric Sun:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Comments: コメント
+      Geometric Sun_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Comments: コメント
+      Guess The Number:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Games/Score: ゲーム/スコア
+        Comments: コメント
+      InspirationalArtwork:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Comments: コメント
+      InspirationalArtwork_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Comments: コメント
+      NEW Course 4 Artist Functions 14:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+      NEW Course 4 Artist Params 1:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      NEW Course 4 Artist Params 10:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      NEW Course 4 Artist Params 11:
+        Actions: 操作
+        Functions: '関数(かんすう) '
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      NEW Course 4 Artist Params 12:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      NEW Course 4 Artist Params 12a:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      NEW Course 4 Artist Params 13:
+        Actions: 操作
+        Functions: '関数(かんすう) '
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      NEW Course 4 Artist Params 14:
+        Actions: 操作
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      NEW Course 4 Artist Params 15:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+        Functions: '関数(かんすう) '
+      NEW Course 4 Artist Params 2:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      NEW Course 4 Artist Params 3:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      NEW Course 4 Artist Params 6:
+        Actions: 操作
+        Functions: '関数(かんすう) '
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      NEW Course 4 Artist Params 7:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+      NEW Course 4 Artist Params 8:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Loops: くりかえし
+      NEW Course 4 Artist Params 9:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      NEW Course 4 Artist Params inspire:
+        Actions: 操作
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      NEW Course 4 Play Lab Params 11:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Games/Score: ゲーム/スコア
+      Robot Doodle:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Comments: コメント
+      Robot Doodle_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Comments: コメント
+      Virtual Pet 2:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+        Comments: コメント
+      Virtual Pet 3:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+      Virtual Pet 4:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+      Virtual Pet 5:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+      Virtual Pet 6:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+      Virtual Pet Freeplay:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+      behaviors 3a:
+        World: 世界
+        Behaviors: 行動
+        Actions: 操作
+      behaviors 5:
+        World: 世界
+        Behaviors: 行動
+        Actions: 操作
+      behaviors 6:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+      behaviors 7:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+      behaviors free play:
+        World: 世界
+        Behaviors: 行動
+        Actions: 操作
+        Events: イベント
+      course3_bee_functions_challenge1:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      course3_bee_functions_challenge2:
+        Actions: 操作
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      course3_bee_functions_challenge3:
+        Default: デフォルト
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      course3_bee_functions_challenge4:
+        Default: デフォルト
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      course3_playLab_challenge1:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      course4_artist_fwp_challenge1:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+        Functions: '関数(かんすう) '
+      course4_bee_for_challenge1:
+        Actions: 操作
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      course4_bee_fwp_challenge1:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      course4_bee_fwp_challenge2:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      course4_playlab_variables_challenge1:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      courseD_artist_project1:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project1a:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project1a_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project1a_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project2:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project2_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project2_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project2a:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project2a_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project2a_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project3:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project3_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project3_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project3a:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project3a_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project3a_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project4:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project4_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project4_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project4a:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project4a_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project4a_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project5:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project5_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_artist_project5_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseD_playLab_condFP:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Games/Score: ゲーム/スコア
+      courseD_playLab_condFP_2018:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Games/Score: ゲーム/スコア
+        Comment: コメント
+      courseE_Dogger_2:
+        World: 世界
+        Actions: 操作
+        Events: イベント
+        Behaviors: 行動
+        Variables: 変数
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Text: テキスト
+        Functions: '関数(かんすう) '
+      courseE_artist_concept1_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_concept4:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+      courseE_artist_concept4_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions10:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      courseE_artist_functions10_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions10_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions2_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Functions ': '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions2_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Functions ': '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions3_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseE_artist_functions3_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseE_artist_functions5_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Functions ': '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions5_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Functions ': '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions7_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Functions ': '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions7_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Functions ': '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions8:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      courseE_artist_functions8_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions8_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions8a_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions8a_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions8b_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions8b_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions8c_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions8c_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions9:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      courseE_artist_functions9_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions9_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functionsProj_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functionsProj_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_artist_functions_predict2:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      courseE_artist_functions_predict2_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      courseE_artist_functions_predict2_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      courseE_bee_concept1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_bee_concept2_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_bee_concept3_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_bee_concept4_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_bee_concept5_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_bee_functions6:
+        Actions: 操作
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      courseE_bee_functions7:
+        Actions: 操作
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      courseE_bee_functions_challenge1:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_bee_functions_challenge2:
+        Actions: 操作
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+      courseE_farmer_concept1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_concept2_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_concept3_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions1:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions10a1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions10a1_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions10b:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions11_predict:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions11_predict_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions11_predict_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions13_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions13_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions1_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions1a:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions1a_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions1a_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions2b:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions2b_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions2b_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions2ba:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions2ba_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions2ba_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions3c:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions3c1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions3c1_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions3c_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions3c_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions4b:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions5c:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions6c:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions7a1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions7a1_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions7b:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions8a1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions8a1_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions8b:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_farmer_functions9a1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions9a1_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseE_farmer_functions9b:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_playLab_challenge1:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_playLab_scaffold5:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseE_playLab_scaffold6:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+      courseF_artist_for1:
+        Actions: 操作
+        Loops: くりかえし
+        Color: 色
+      courseF_artist_for10:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Variables ': '変数(へんすう) '
+      courseF_artist_for10_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Variables ': '変数(へんすう) '
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_for10_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Variables ': '変数(へんすう) '
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_for10_predict1:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Variables ': '変数(へんすう) '
+      courseF_artist_for10_predict1_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Variables ': '変数(へんすう) '
+      courseF_artist_for10_predict1_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Brushes: ブラシ
+        'Variables ': '変数(へんすう) '
+      courseF_artist_for1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseF_artist_for1_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseF_artist_for2:
+        Actions: 操作
+        Loops: くりかえし
+        Color: 色
+      courseF_artist_for2_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseF_artist_for2_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseF_artist_for3:
+        Actions: 操作
+        Loops: くりかえし
+        Color: 色
+      courseF_artist_for3_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseF_artist_for3_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseF_artist_for4:
+        Actions: 操作
+        Loops: くりかえし
+        Color: 色
+      courseF_artist_for4_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseF_artist_for4_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseF_artist_for5:
+        Actions: 操作
+        Loops: くりかえし
+        Color: 色
+      courseF_artist_for5_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseF_artist_for5_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Comments: コメント
+      courseF_artist_for6:
+        Actions: 操作
+        Loops: くりかえし
+        Color: 色
+      courseF_artist_for6_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Color: 色
+      courseF_artist_for6_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Color: 色
+      courseF_artist_for7:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+      courseF_artist_for7_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+      courseF_artist_for7_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+      courseF_artist_for8:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+      courseF_artist_for8_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+      courseF_artist_for8_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+      courseF_artist_for9:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+      courseF_artist_for9_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_for9_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_for_challenge1:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      courseF_artist_for_challenge1_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      courseF_artist_for_challenge1_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      courseF_artist_for_challenge2:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      courseF_artist_for_challenge2_2018:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      courseF_artist_for_challenge2_2019:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      courseF_artist_fwp2:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+      courseF_artist_fwp2_predict1:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+      courseF_artist_fwp3:
+        Functions: '関数(かんすう) '
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseF_artist_fwp4:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+      courseF_artist_fwp5:
+        Actions: 操作
+        Functions: '関数(かんすう) '
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+      courseF_artist_fwp6:
+        Actions: 操作
+        Functions: '関数(かんすう) '
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+      courseF_artist_fwp7:
+        Actions: 操作
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseF_artist_fwp8:
+        Actions: 操作
+        Brushes: ブラシ
+        Functions: '関数(かんすう) '
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseF_artist_fwp9:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+        Functions: '関数(かんすう) '
+      courseF_artist_fwp_challenge1:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+        Functions: '関数(かんすう) '
+      courseF_artist_fwp_challenge2:
+        Actions: 操作
+        Brushes: ブラシ
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+        Functions: '関数(かんすう) '
+      courseF_artist_variables10_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Variables: 変数
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_variables10_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Variables: 変数
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_variables7_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Variables: 変数
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_variables7_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Variables: 変数
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_variables8_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Variables: 変数
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_variables8_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Variables: 変数
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_variables9_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Variables: 変数
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_variables9_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Variables: 変数
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_variablesFP_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Variables: 変数
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_artist_variablesFP_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Brushes: ブラシ
+        Variables: 変数
+        Functions: '関数(かんすう) '
+        Comments: コメント
+      courseF_bee_conditionals10:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_conditionals2:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_conditionals3:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_conditionals4:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_conditionals5:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_conditionals8:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_for10:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for10_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for10_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for11:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for11_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for11_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for1_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+        Comments: コメント
+      courseF_bee_for1_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+        Comments: コメント
+      courseF_bee_for2_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+        Comments: コメント
+      courseF_bee_for2_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+        Comments: コメント
+      courseF_bee_for3_predict1:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for3_predict1_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for3_predict1_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for4:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for4_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+        Comments: コメント
+      courseF_bee_for4_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+        Comments: コメント
+      courseF_bee_for5:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for5_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for5_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for6:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for6_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for6_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for7:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for7_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+        Comments: コメント
+      courseF_bee_for7_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+        Comments: コメント
+      courseF_bee_for8:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for8_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for8_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for9:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        Variables: 変数
+      courseF_bee_for9_2018:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for9_2019:
+        Actions: 操作
+        Math: 計算(けいさん)
+        Loops: くりかえし
+        'Variables ': '変数(へんすう) '
+        Comments: コメント
+      courseF_bee_for_challenge1:
+        Actions: 操作
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_for_challenge1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_for_challenge1_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_for_challenge2:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseF_bee_for_challenge2_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseF_bee_for_challenge2_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+      courseF_bee_functions2:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_functions3:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_functions3a:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_functions4:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_functions5a:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_functions6:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_functions7:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_functions8a:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_functionsPre7:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_functions_challenge1:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_functions_challenge2:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_fwp1:
+        Actions: 操作
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Conditionals: 条件
+      courseF_bee_fwp2:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_fwp3:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_fwp4:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_fwp5:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_fwp6:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_fwp7:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_fwp8:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_fwp9_predict1:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_fwp_challenge1:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_fwp_challenge2:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Math: 計算(けいさん)
+      courseF_bee_variables_1_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_1_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_2_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_2_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_3_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_3_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_4_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_4_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_5_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_5_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_6_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_6_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_7_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_7_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+        Comments: コメント
+      courseF_bee_variables_8_2018:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+      courseF_bee_variables_8_2019:
+        Actions: 操作
+        Loops: くりかえし
+        Conditionals: 条件
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Math: 計算(けいさん)
+      courseF_playlab_variables1a:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Variables: 変数
+      courseF_playlab_variables2b:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        'Variables ': '変数(へんすう) '
+      courseF_playlab_variables3b_josh:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Variables: 変数
+      courseF_playlab_variables4b:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Variables: 変数
+      courseF_playlab_variables4c_predictive1:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      courseF_playlab_variables5c:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Logic: ロジック（論理）
+        Variables: 変数
+        Text: テキスト
+      courseF_playlab_variables6c:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Variables: 変数
+      courseF_playlab_variables7b:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Conditionals: 条件
+        Math: 計算(けいさん)
+        Text: テキスト
+        Functions: '関数(かんすう) '
+        Variables: 変数
+        Game/Score: ゲーム/スコア
+      courseF_playlab_variables7c:
+        Default: デフォルト
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Variables: 変数
+      courseF_playlab_variables8c:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Variables: 変数
+      courseF_playlab_variables_challenge1:
+        Actions: 操作
+        Events: イベント
+        Loops: くりかえし
+        Math: 計算(けいさん)
+        Functions: '関数(かんすう) '
+        Variables: 変数

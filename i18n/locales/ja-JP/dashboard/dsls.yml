@@ -3,6 +3,64 @@ ja:
     external:
       Begin planning your project:
         title: タイトル
+      CSD U2 Design Project:
+        title: タイトル
+      CSD U2 Design Project_2018:
+        title: タイトル
+      CSD U2 Design Project_2018_2019:
+        title: タイトル
+      CSD U2 L1 Overview:
+        title: タイトル
+      CSD U2 L2 Overview:
+        title: タイトル
+      CSD U2 L3 Overview:
+        title: タイトル
+      CSD U2 L4 Overview:
+        title: タイトル
+      CSD U2 L5 Overview:
+        title: タイトル
+      CSD U2 L6 Overview:
+        title: タイトル
+      CSD U2 expand project:
+        title: タイトル
+      CSD U2 expand project_2018:
+        title: タイトル
+      CSD U2 expand project_2018_2019:
+        title: タイトル
+      CSD U3 combining rep:
+        title: タイトル
+      CSD U3 combining rep_2018:
+        title: タイトル
+      CSD U3 combining rep_2018_2019:
+        title: タイトル
+      CSD U5 Encryption 1:
+        title: タイトル
+      CSD U5 Encryption 1_2018:
+        title: タイトル
+      CSD U5 Encryption 1_2018_2019:
+        title: タイトル
+      CSD U5 L13 SFLP Interpreting Data:
+        title: タイトル
+      CSD U5 data visualization:
+        title: タイトル
+      CSD U5 data visualization_2018:
+        title: タイトル
+      CSD U5 data visualization_2018_2019:
+        title: タイトル
+      CSD U5 student record:
+        title: タイトル
+      CSD U5 student record_2018:
+        title: タイトル
+      CSD U5 student record_2018_2019:
+        title: タイトル
+      Internet Simulator Setup 2:
+        title: タイトル
+      Multi-Screen Apps:
+        title: タイトル
+      New Challenge Introduction:
+        title: タイトル
+      OPD-K5 Stage3aGo:
+        title: タイトル
       Prepare for your presentation:
         title: タイトル
     match:
@@ -193,6 +251,12 @@ ja:
       4-5 maze multi 1:
         Maze Multiple Choice: めいろ選択問題（せんたくもんだい）
         Which blocks solve the puzzle?: どのコードが正（ただ）しいですか？
+      CSD U3 Boolean MC:
+        title: タイトル
+      CSD U3 Boolean MC_2018:
+        title: タイトル
+      CSD U3 Boolean MC_2018_2019:
+        title: タイトル
       K-1 Artist 1 Multi 1:
         Multiple Choice: 複数の選択肢
         Which blocks solve this puzzle?: どのブロックが正（ただ）しいくみあわせですか？
@@ -245,6 +309,10 @@ ja:
         Multiple Choice: 複数の選択肢
         SOUTH: 南
         Which word is spelled?: このつづりはどの単語でしょう？
+      behaviors 1 predict:
+        Incorrect: 不正解
+      behaviors 4 predict:
+        Incorrect: 不正解
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -253,9 +321,15 @@ ja:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: わかりません
       courseC_multi_starWars_predict1_2018:
+        I don't know: わかりません
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: わかりません
       courseD_multi_artist_binary8_predict1:
         A: A
@@ -263,6 +337,11 @@ ja:
         C: C
         D: D
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -275,6 +354,10 @@ ja:
         A: A
         B: B
         C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -284,6 +367,14 @@ ja:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'
