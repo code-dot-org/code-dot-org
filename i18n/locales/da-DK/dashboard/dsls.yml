@@ -6,9 +6,154 @@ da:
         title: titel
       Begin planning your project_2018:
         description here: Beskrivelse her
+      Begin planning your project_2018_2019:
+        description here: Beskrivelse her
+      CSD U2 Design Project:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 Design Project_2018:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 Design Project_2018_2019:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 L1 Overview:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 L2 Overview:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 L3 Overview:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 L4 Overview:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 L5 Overview:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 L6 Overview:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 Lesson 6 Overview:
+        description here: Beskrivelse her
+      CSD U2 expand project:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 expand project_2018:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 expand project_2018_2019:
+        description here: Beskrivelse her
+        title: titel
+      CSD U2 project guide:
+        description here: Beskrivelse her
+      CSD U2 project guide_2018:
+        description here: Beskrivelse her
+      CSD U2 project guide_2018_2019:
+        description here: Beskrivelse her
+      CSD U3 Card Examples_2018:
+        description here: Beskrivelse her
+      CSD U3 Card Examples_2018_2019:
+        description here: Beskrivelse her
+      CSD U3 combining rep:
+        description here: Beskrivelse her
+        title: titel
+      CSD U3 combining rep_2018:
+        description here: Beskrivelse her
+        title: titel
+      CSD U3 combining rep_2018_2019:
+        description here: Beskrivelse her
+        title: titel
+      CSD U3 game intro:
+        description here: Beskrivelse her
+      CSD U3 game intro_2018:
+        description here: Beskrivelse her
+      CSD U3 game intro_2018_2019:
+        description here: Beskrivelse her
+      CSD U3 platform intro:
+        description here: Beskrivelse her
+      CSD U3 platform intro_2018:
+        description here: Beskrivelse her
+      CSD U3 platform intro_2018_2019:
+        description here: Beskrivelse her
+      CSD U5 Encryption 1:
+        description here: Beskrivelse her
+        title: titel
+      CSD U5 Encryption 1_2018:
+        description here: Beskrivelse her
+        title: titel
+      CSD U5 Encryption 1_2018_2019:
+        description here: Beskrivelse her
+        title: titel
+      CSD U5 Encryption 2:
+        description here: Beskrivelse her
+      CSD U5 Encryption 2_2018:
+        description here: Beskrivelse her
+      CSD U5 Encryption 2_2018_2019:
+        description here: Beskrivelse her
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: Beskrivelse her
+        title: titel
+      CSD U5 crosstab warmup:
+        description here: Beskrivelse her
+      CSD U5 crosstab warmup_2018:
+        description here: Beskrivelse her
+      CSD U5 crosstab warmup_2018_2019:
+        description here: Beskrivelse her
+      CSD U5 data visualization:
+        description here: Beskrivelse her
+        title: titel
+      CSD U5 data visualization_2018:
+        description here: Beskrivelse her
+        title: titel
+      CSD U5 data visualization_2018_2019:
+        description here: Beskrivelse her
+        title: titel
+      CSD U5 student record:
+        description here: Beskrivelse her
+        title: titel
+      CSD U5 student record_2018:
+        description here: Beskrivelse her
+        title: titel
+      CSD U5 student record_2018_2019:
+        description here: Beskrivelse her
+        title: titel
+      CSD U6 LED create intro:
+        description here: Beskrivelse her
+      CSD U6 LED create intro_2018:
+        description here: Beskrivelse her
+      CSD U6 LED create intro_2018_2019:
+        description here: Beskrivelse her
+      CSD U6 final intro:
+        description here: Beskrivelse her
+      CSD U6 final intro_2018:
+        description here: Beskrivelse her
+      CSD U6 final intro_2018_2019:
+        description here: Beskrivelse her
+      Internet Simulator Setup:
+        description here: Beskrivelse her
+      Internet Simulator Setup 2:
+        description here: Beskrivelse her
+        title: titel
+      Internet Simulator Setup 3:
+        description here: Beskrivelse her
+      Multi-Screen Apps:
+        description here: Beskrivelse her
+        title: titel
+      New Challenge Introduction:
+        description here: Beskrivelse her
+        title: titel
+      OPD-K5 Stage3aGo:
+        description here: Beskrivelse her
+        title: titel
       Prepare for your presentation:
         description here: Beskrivelse her
         title: titel
+      'Technique: Frequency Analysis':
+        description here: Beskrivelse her
+      Terminology Recap:
+        description here: Beskrivelse her
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Match knapkombinationen til dansebevægelserne.
@@ -203,6 +348,12 @@ da:
       4-5 maze multi 1:
         Maze Multiple Choice: Labyrint - Vælg et svar
         Which blocks solve the puzzle?: Hvilke blokke løser opgaven?
+      CSD U3 Boolean MC:
+        title: titel
+      CSD U3 Boolean MC_2018:
+        title: titel
+      CSD U3 Boolean MC_2018_2019:
+        title: titel
       K-1 Artist 1 Multi 1:
         Multiple Choice: Vælg et svar
         Which blocks solve this puzzle?: Hvilke blokke løser opgaven?
@@ -257,11 +408,19 @@ da:
         SOUTH: SOUTH
         SQUARE: SQUARE
         Which word is spelled?: Hvilket ord er stavet?
+      behaviors 1 predict:
+        Incorrect: Ukorrekt
+      behaviors 4 predict:
+        Incorrect: Ukorrekt
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
         '4': '4'
       courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
         '12': '12'
         '15': '15'
         '4': '4'
@@ -275,11 +434,20 @@ da:
         B: B
         C: C
         D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
+        D: D
       courseD_multi_artist_nestedLoops9_predict1:
         A: A
         B: B
         C: C
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -292,6 +460,14 @@ da:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'
