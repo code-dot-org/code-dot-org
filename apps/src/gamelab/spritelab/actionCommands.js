@@ -6,7 +6,7 @@ export const commands = {
     if (val === undefined || prop === undefined) {
       return;
     }
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     let specialCases = {
       direction: sprite => (sprite.direction = (sprite.direction + val) % 360),
       scale: sprite => {
@@ -26,11 +26,11 @@ export const commands = {
     });
   },
   edgesDisplace(spriteId) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => this.edges.displace(sprite));
   },
   isTouchingEdges(spriteId) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     let touching = false;
     sprites.forEach(sprite => {
       if (sprite.isTouching(this.edges)) {
@@ -43,14 +43,14 @@ export const commands = {
     if (!location) {
       return;
     }
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => {
       sprite.x = location.x;
       sprite.y = location.y;
     });
   },
   mirrorSprite(spriteId, direction) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => {
       if (direction === 'right') {
         sprite.mirrorX(1);
@@ -60,7 +60,7 @@ export const commands = {
     });
   },
   moveForward(spriteId, distance) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => {
       if (!sprite.direction) {
         sprite.direction = 0;
@@ -71,7 +71,7 @@ export const commands = {
     });
   },
   moveInDirection(spriteId, distance, direction) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     let dirs = {
       North: sprite => (sprite.y -= distance),
       East: sprite => (sprite.x += distance),
@@ -87,7 +87,7 @@ export const commands = {
     });
   },
   moveToward(spriteId, distance, target) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => {
       if (sprite && target) {
         let angle = Math.atan2(target.y - sprite.y, target.x - sprite.x);
@@ -104,7 +104,7 @@ export const commands = {
     if (val === undefined) {
       return;
     }
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     let specialCases = {
       direction: sprite => (sprite.direction = val % 360),
       draggable: sprite => {
@@ -139,7 +139,7 @@ export const commands = {
     if (!n) {
       return;
     }
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => {
       if (direction === 'right') {
         sprite.rotation += n;

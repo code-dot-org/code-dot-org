@@ -2,11 +2,11 @@ import * as spriteUtils from './spriteUtils';
 
 export const commands = {
   countByAnimation(animation) {
-    let sprites = spriteUtils.singleOrGroup(animation);
+    let sprites = spriteUtils.getSpriteArray(animation);
     return sprites.length;
   },
   destroy(spriteId) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => {
       sprite.destroy();
       spriteUtils.removeAllBehaviors(sprite);
@@ -15,15 +15,15 @@ export const commands = {
   },
 
   displace(spriteId, targetSpriteIndex) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
-    let targetSprites = spriteUtils.singleOrGroup(targetSpriteIndex);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
+    let targetSprites = spriteUtils.getSpriteArray(targetSpriteIndex);
     sprites.forEach(sprite => {
       targetSprites.forEach(target => sprite.displace(target));
     });
   },
 
   getProp(spriteId, prop) {
-    let sprite = spriteUtils.singleOrGroup(spriteId)[0];
+    let sprite = spriteUtils.getSpriteArray(spriteId)[0];
     if (sprite !== undefined) {
       if (prop === 'scale') {
         return sprite.getScale() * 100;
@@ -81,7 +81,7 @@ export const commands = {
   },
 
   setAnimation(spriteId, animation) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => {
       sprite.setAnimation(animation);
       sprite.scale /= sprite.baseScale;

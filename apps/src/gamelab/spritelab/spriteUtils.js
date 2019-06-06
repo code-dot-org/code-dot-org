@@ -40,7 +40,7 @@ function allSpritesWithAnimation(animation) {
  * @return {[Sprite]} List of sprites that match the parameter. Either a list containing the one sprite
  * the specified id, or a list containing all sprites with the specified animation.
  */
-export function singleOrGroup(spriteOrGroup) {
+export function getSpriteArray(spriteOrGroup) {
   if (typeof spriteOrGroup === 'number') {
     const sprite = nativeSpriteMap[spriteOrGroup];
     if (sprite) {
@@ -118,8 +118,8 @@ function checkEvent(inputEvent, p5Inst) {
       shouldEventFire = p5Inst.keyDown(inputEvent.args.key);
       return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
     case 'whentouch': {
-      let sprites = singleOrGroup(inputEvent.args.sprite1);
-      let targets = singleOrGroup(inputEvent.args.sprite2);
+      let sprites = getSpriteArray(inputEvent.args.sprite1);
+      let targets = getSpriteArray(inputEvent.args.sprite2);
       let overlap = false;
       sprites.forEach(sprite => {
         targets.forEach(target => {
@@ -140,8 +140,8 @@ function checkEvent(inputEvent, p5Inst) {
       return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
     }
     case 'whiletouch': {
-      let sprites = singleOrGroup(inputEvent.args.sprite1);
-      let targets = singleOrGroup(inputEvent.args.sprite2);
+      let sprites = getSpriteArray(inputEvent.args.sprite1);
+      let targets = getSpriteArray(inputEvent.args.sprite2);
       sprites.forEach(sprite => {
         targets.forEach(target => {
           if (sprite.overlap(target)) {
@@ -155,7 +155,7 @@ function checkEvent(inputEvent, p5Inst) {
     }
     case 'whenclick': {
       if (p5Inst.mouseWentDown('leftButton')) {
-        let sprites = singleOrGroup(inputEvent.args.sprite);
+        let sprites = getSpriteArray(inputEvent.args.sprite);
         sprites.forEach(sprite => {
           if (p5Inst.mouseIsOver(sprite)) {
             extraArgs.sprite = sprite.id;
@@ -166,7 +166,7 @@ function checkEvent(inputEvent, p5Inst) {
       return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
     }
     case 'whileclick': {
-      let sprites = singleOrGroup(inputEvent.args.sprite);
+      let sprites = getSpriteArray(inputEvent.args.sprite);
       sprites.forEach(sprite => {
         if (p5Inst.mousePressedOver(sprite)) {
           extraArgs.sprite = sprite.id;

@@ -2,7 +2,7 @@ import * as spriteUtils from './spriteUtils';
 
 export const commands = {
   addBehavior(spriteId, behavior) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => spriteUtils.addBehavior(sprite, behavior));
   },
 
@@ -12,7 +12,7 @@ export const commands = {
 
   draggableFunc(p5Inst) {
     return spriteId => {
-      let sprite = spriteUtils.singleOrGroup(spriteId)[0];
+      let sprite = spriteUtils.getSpriteArray(spriteId)[0];
       if (p5Inst.mousePressedOver(sprite) && !sprite.dragging) {
         sprite.dragging = true;
         sprite.xOffset = sprite.x - p5Inst.World.mouseX;
@@ -29,12 +29,12 @@ export const commands = {
   },
 
   removeAllBehaviors(spriteId) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => spriteUtils.removeAllBehaviors(sprite));
   },
 
   removeBehavior(spriteId, behavior) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => spriteUtils.removeBehavior(sprite, behavior));
   }
 };
