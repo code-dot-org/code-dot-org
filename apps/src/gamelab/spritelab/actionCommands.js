@@ -3,7 +3,7 @@ import {commands as behaviorCommands} from './behaviorCommands';
 
 export const commands = {
   changePropBy(spriteId, prop, val) {
-    if (!val) {
+    if (val === undefined || prop === undefined) {
       return;
     }
     let sprites = spriteUtils.singleOrGroup(spriteId);
@@ -90,7 +90,7 @@ export const commands = {
     sprites.forEach(sprite => {
       if (sprite && target) {
         let angle = Math.atan2(target.y - sprite.y, target.x - sprite.x);
-        if (angle) {
+        if (!isNaN(angle)) {
           let dy = Math.sin(angle) * distance;
           let dx = Math.cos(angle) * distance;
           sprite.x += dx;
