@@ -1,45 +1,2342 @@
 ---
-ru:
+ru-RU:
   data:
     block_categories:
-      Actions: Действия
-      Loops: Циклы
-      Functions: функции
-      Color: Цвет
-      Brushes: Кисти
-      Math: Математика
-      Logic: Логика
-      Variables: переменные
-      Number: Число
-      String: Строка
-      Image: Изображение
-      Boolean: Логическое значение
-      Conditionals: Условные команды
-      Events: События
-      Comments: Комментарии
-      Category: Категория
-      Text: Текст
-      Comment: Комментарий
-      World: Мир
-      'Variables ': 'Переменные '
-      Default: По умолчанию
-      Locations: Места
-      Location: Место
-      numbers: числа
-      Numbers: Числа
-      Input: Ввод
-      Dancers: Танцоры
-      Groups: Группы
-      Advanced: Расширенный
-      Start: Начать
-      Music: Музыка
-      Dancing: Танцы
-      Brush: Кисть
-      Movement: Движение
-      Booleans: Логические выражения
-      test: тест
-      Do Not Use: Не используйте
-      Name: Имя
-      NEW BLOCKS: НОВЫЕ БЛОКИ
-      'Functions ': 'Функции '
-      Function: Функция
+      4-5 Artist Patterns Free Play:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+      Alien Defender:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      Choose Your Own Adventure:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      Course 4 Artist For Loops 11:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+      Course 4 Artist For Loops 11a:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+      Course 4 Artist For Loops 14:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+      Course 4 Artist For Loops 15:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+        'Variables ': 'Переменные '
+      Course 4 Artist For Loops 4:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+      Course 4 Artist For Loops 6a:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+      Course 4 Artist For Loops 8:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+      Course 4 Artist For Loops Challenge:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+      Course 4 Artist For Loops inspire:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+      Course 4 Artist Functions Inspiration:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Functions: функции
+      Course 4 Artist Functions challenge:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Functions: функции
+      Course 4 Bee Params 1:
+        Actions: Действия
+        Loops: Циклы
+        Functions: функции
+      Course 4 Bee Params 2:
+        Actions: Действия
+        Loops: Циклы
+        Functions: функции
+      Course 4 Bee Params 3:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Functions: функции
+        'Variables ': 'Переменные '
+      Course 4 Bee Params 4:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Functions: функции
+        'Variables ': 'Переменные '
+        Math: Математика
+      Course 4 Bee Params 5:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+      Course 4 Bee Params 6:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+      Course 4 Bee Params 7:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        Functions: функции
+        'Variables ': 'Переменные '
+      Course 4 Bee Params 8:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        Functions: функции
+        'Variables ': 'Переменные '
+      Course 4 EC 1a:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        Functions: функции
+      Course 4 EC 1b:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        Functions: функции
+      Course 4 EC 2a:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        Functions: функции
+        Variables: переменные
+      Course 4 EC 2b:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        Variables: переменные
+        Functions: функции
+      Course 4 EC 2c:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        Variables: переменные
+        Functions: функции
+      Course 4 Play Lab Params 10:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        Functions: функции
+        Variables: переменные
+      Course 4 Play Lab Params 7:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+      Course 4 Play Lab Params 8:
+        Events: События
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+      Course 4 Play Lab Params 9:
+        Actions: Действия
+        Math: Математика
+        Functions: функции
+        Variables: переменные
+      Course 4 Play Lab Vars 9:
+        Events: События
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        'Variables ': 'Переменные '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Variables: переменные
+      Course 4 SCF 1:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+        Functions: функции
+      Course 4 SCF 1a:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        Functions: функции
+        'Variables ': 'Переменные '
+      Course 4 SCF 1b:
+        Actions: Действия
+        Loops: Циклы
+        Logic: Логика
+        Math: Математика
+        Functions: функции
+      Course 4 SCF 2:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+        Functions: функции
+      Course 4 SCF 3:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+        Functions: функции
+      Course 4 SCFL 1:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+      Course 4 SCFL 1a:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+      Course 4 SCFL 1b:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+      Course 4 SCFL 2:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+      Course 4 SCFL 3:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      Course 4 SCFL 4:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      Course 4 SCFL 6:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      Course 4 SCFL 7:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      Course 4 SCV 6:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      'Course E: Play Lab Project':
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      'Course F: Artist Project':
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+      'Course F: Artist Project - Revise':
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+      'Course F: Artist Project - Revise_2018':
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+      'Course F: Artist Project_2018':
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+      'Course F: Artist Project_2019':
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+      CourseD_Dance_Party_11_5:
+        World: Мир
+        Dancers: Танцоры
+        Groups: Группы
+        Events: События
+      CourseD_Dance_Party_12:
+        World: Мир
+        Dancers: Танцоры
+        Groups: Группы
+        Events: События
+        Numbers: Числа
+        Logic: Логика
+      CourseE_Project_SpriteLab:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+        Logic: Логика
+        Text: Текст
+        Advanced: Расширенный
+        Comments: Комментарии
+      CourseE_Project_SpriteLab_2019:
+        World: Мир
+        Actions: Действия
+        Events: События
+      CourseE_hoops:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+        Functions: функции
+      CourseF_Project_Revise_SpriteLab:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+        Functions: функции
+      CourseF_Project_SpriteLab:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+        Functions: функции
+      CourseF_Project_SpriteLab_2019:
+        World: Мир
+        Locations: Места
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Text: Текст
+        Comments: Комментарии
+      Dance Party 2:
+        Events: События
+        Comments: Комментарии
+      Dance Party 6:
+        Events: События
+        Comments: Комментарии
+      Dance Party Freeplay:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+        Comments: Комментарии
+      Dance_Party_11_5:
+        World: Мир
+        Dancers: Танцоры
+        Groups: Группы
+        Events: События
+      Dance_Party_12:
+        World: Мир
+        Dancers: Танцоры
+        Groups: Группы
+        Events: События
+        Numbers: Числа
+        Logic: Логика
+      Dance_Party_extras_battle:
+        World: Мир
+        Dancers: Танцоры
+        Groups: Группы
+        Events: События
+        Numbers: Числа
+        Logic: Логика
+      Dance_Party_extras_every_beat:
+        World: Мир
+        Dancers: Танцоры
+        Groups: Группы
+        Events: События
+        Numbers: Числа
+        Logic: Логика
+      Dance_Party_extras_layout:
+        World: Мир
+        Dancers: Танцоры
+        Groups: Группы
+        Events: События
+        Numbers: Числа
+        Logic: Логика
+      Dance_Party_extras_on_beat:
+        World: Мир
+        Dancers: Танцоры
+        Groups: Группы
+        Events: События
+        Numbers: Числа
+        Logic: Логика
+      Dance_Party_extras_speed:
+        World: Мир
+        Dancers: Танцоры
+        Groups: Группы
+        Events: События
+        Numbers: Числа
+        Logic: Логика
+      Dance_Party_extras_visible:
+        World: Мир
+        Dancers: Танцоры
+        Groups: Группы
+        Events: События
+        Numbers: Числа
+        Logic: Логика
+      Find the Wizard:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      Fish Tank 5-validated:
+        World: Мир
+        Comments: Комментарии
+      Fish Tank 5-validated_2019:
+        World: Мир
+        Comments: Комментарии
+      Fish Tank 6-validated:
+        World: Мир
+        Comments: Комментарии
+      Fish Tank 6-validated_2019:
+        World: Мир
+        Comments: Комментарии
+      Fish Tank 7-validated:
+        World: Мир
+        Events: События
+        Comments: Комментарии
+      Fish Tank 7-validated_2019:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Comments: Комментарии
+      FoodFight:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      Geometric Sun:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      Geometric Sun_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      Guess The Number:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      InspirationalArtwork:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      InspirationalArtwork_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      NEW Course 4 Artist Functions 14:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Functions: функции
+      NEW Course 4 Artist Params 1:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+        Variables: переменные
+      NEW Course 4 Artist Params 10:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+      NEW Course 4 Artist Params 11:
+        Actions: Действия
+        Functions: функции
+        Loops: Циклы
+        Math: Математика
+      NEW Course 4 Artist Params 12:
+        Actions: Действия
+        Math: Математика
+        Functions: функции
+      NEW Course 4 Artist Params 12a:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+      NEW Course 4 Artist Params 13:
+        Actions: Действия
+        Functions: функции
+        Loops: Циклы
+        Math: Математика
+      NEW Course 4 Artist Params 14:
+        Actions: Действия
+        Brushes: Кисти
+        Functions: функции
+        Loops: Циклы
+        Math: Математика
+      NEW Course 4 Artist Params 15:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+        Functions: функции
+      NEW Course 4 Artist Params 2:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+      NEW Course 4 Artist Params 3:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+      NEW Course 4 Artist Params 6:
+        Actions: Действия
+        Functions: функции
+        Loops: Циклы
+        Math: Математика
+      NEW Course 4 Artist Params 7:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Functions: функции
+      NEW Course 4 Artist Params 8:
+        Actions: Действия
+        Math: Математика
+        Functions: функции
+        Loops: Циклы
+      NEW Course 4 Artist Params 9:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+      NEW Course 4 Artist Params inspire:
+        Actions: Действия
+        Brushes: Кисти
+        Functions: функции
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      NEW Course 4 Play Lab Params 11:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+      Robot Doodle:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      Robot Doodle_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Functions: функции
+        Variables: переменные
+        Comments: Комментарии
+      Virtual Pet 2:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+        Comments: Комментарии
+      Virtual Pet 3:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+      Virtual Pet 4:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+      Virtual Pet 5:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+      Virtual Pet 6:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+      Virtual Pet Freeplay:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+      behaviors 3a:
+        World: Мир
+        Actions: Действия
+      behaviors 5:
+        World: Мир
+        Actions: Действия
+      behaviors 6:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Math: Математика
+        Logic: Логика
+      behaviors 7:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Math: Математика
+        Logic: Логика
+      behaviors free play:
+        World: Мир
+        Actions: Действия
+        Events: События
+      course3_bee_functions_challenge1:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      course3_bee_functions_challenge2:
+        Actions: Действия
+        Loops: Циклы
+        Functions: функции
+      course3_bee_functions_challenge3:
+        Default: По умолчанию
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      course3_bee_functions_challenge4:
+        Default: По умолчанию
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      course3_playLab_challenge1:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      course4_artist_fwp_challenge1:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+        Functions: функции
+      course4_bee_for_challenge1:
+        Actions: Действия
+        Loops: Циклы
+        Functions: функции
+        Math: Математика
+      course4_bee_fwp_challenge1:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      course4_bee_fwp_challenge2:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      course4_playlab_variables_challenge1:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+        Variables: переменные
+      courseD_artist_project1:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project1a:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project1a_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project1a_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project2:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project2_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project2_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project2a:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project2a_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project2a_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project3:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project3_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project3_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project3a:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project3a_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project3a_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project4:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project4_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project4_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project4a:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project4a_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project4a_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project5:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project5_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_artist_project5_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+      courseD_playLab_condFP:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+      courseD_playLab_condFP_2018:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Comment: Комментарий
+      courseE_Dogger_2:
+        World: Мир
+        Actions: Действия
+        Events: События
+        Variables: переменные
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Text: Текст
+        Functions: функции
+      courseE_artist_concept1_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_concept4:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Functions: функции
+      courseE_artist_concept4_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions10:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+      courseE_artist_functions10_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions10_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions2_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        'Functions ': 'Функции '
+        Comments: Комментарии
+      courseE_artist_functions2_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        'Functions ': 'Функции '
+        Comments: Комментарии
+      courseE_artist_functions3_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseE_artist_functions3_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseE_artist_functions5_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        'Functions ': 'Функции '
+        Comments: Комментарии
+      courseE_artist_functions5_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        'Functions ': 'Функции '
+        Comments: Комментарии
+      courseE_artist_functions7_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        'Functions ': 'Функции '
+        Comments: Комментарии
+      courseE_artist_functions7_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        'Functions ': 'Функции '
+        Comments: Комментарии
+      courseE_artist_functions8:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+      courseE_artist_functions8_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions8_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions8a_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions8a_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions8b_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions8b_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions8c_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions8c_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions9:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+      courseE_artist_functions9_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions9_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functionsProj_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functionsProj_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+        Comments: Комментарии
+      courseE_artist_functions_predict2:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+      courseE_artist_functions_predict2_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+      courseE_artist_functions_predict2_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Functions: функции
+      courseE_bee_concept1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_bee_concept2_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_bee_concept3_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_bee_concept4_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_bee_concept5_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_bee_functions6:
+        Actions: Действия
+        Loops: Циклы
+        Functions: функции
+      courseE_bee_functions7:
+        Actions: Действия
+        Loops: Циклы
+        Functions: функции
+      courseE_bee_functions_challenge1:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_bee_functions_challenge2:
+        Actions: Действия
+        Loops: Циклы
+        Functions: функции
+      courseE_farmer_concept1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_concept2_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_concept3_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions1:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions10a1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions10a1_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions10b:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions11_predict:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions11_predict_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions11_predict_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions13_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions13_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions1_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions1a:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions1a_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions1a_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions2b:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions2b_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions2b_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions2ba:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions2ba_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions2ba_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions3c:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions3c1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions3c1_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions3c_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions3c_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions4b:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions5c:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions6c:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions7a1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions7a1_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions7b:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions8a1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions8a1_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions8b:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_farmer_functions9a1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions9a1_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Comments: Комментарии
+      courseE_farmer_functions9b:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_playLab_challenge1:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_playLab_scaffold5:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseE_playLab_scaffold6:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+      courseF_artist_for1:
+        Actions: Действия
+        Loops: Циклы
+        Color: Цвет
+      courseF_artist_for10:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+        'Variables ': 'Переменные '
+      courseF_artist_for10_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+        'Variables ': 'Переменные '
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_for10_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+        'Variables ': 'Переменные '
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_for10_predict1:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+        'Variables ': 'Переменные '
+      courseF_artist_for10_predict1_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+        'Variables ': 'Переменные '
+      courseF_artist_for10_predict1_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Brushes: Кисти
+        'Variables ': 'Переменные '
+      courseF_artist_for1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseF_artist_for1_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseF_artist_for2:
+        Actions: Действия
+        Loops: Циклы
+        Color: Цвет
+      courseF_artist_for2_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseF_artist_for2_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseF_artist_for3:
+        Actions: Действия
+        Loops: Циклы
+        Color: Цвет
+      courseF_artist_for3_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseF_artist_for3_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseF_artist_for4:
+        Actions: Действия
+        Loops: Циклы
+        Color: Цвет
+      courseF_artist_for4_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseF_artist_for4_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseF_artist_for5:
+        Actions: Действия
+        Loops: Циклы
+        Color: Цвет
+      courseF_artist_for5_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseF_artist_for5_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Comments: Комментарии
+      courseF_artist_for6:
+        Actions: Действия
+        Loops: Циклы
+        Color: Цвет
+      courseF_artist_for6_2018:
+        Actions: Действия
+        Loops: Циклы
+        Color: Цвет
+      courseF_artist_for6_2019:
+        Actions: Действия
+        Loops: Циклы
+        Color: Цвет
+      courseF_artist_for7:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+      courseF_artist_for7_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+      courseF_artist_for7_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+      courseF_artist_for8:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+      courseF_artist_for8_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+      courseF_artist_for8_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+      courseF_artist_for9:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+      courseF_artist_for9_2018:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_for9_2019:
+        Actions: Действия
+        Loops: Циклы
+        Brushes: Кисти
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_for_challenge1:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      courseF_artist_for_challenge1_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      courseF_artist_for_challenge1_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      courseF_artist_for_challenge2:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      courseF_artist_for_challenge2_2018:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      courseF_artist_for_challenge2_2019:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      courseF_artist_fwp2:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Functions: функции
+      courseF_artist_fwp2_predict1:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Functions: функции
+      courseF_artist_fwp3:
+        Functions: функции
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+      courseF_artist_fwp4:
+        Actions: Действия
+        Math: Математика
+        Functions: функции
+      courseF_artist_fwp5:
+        Actions: Действия
+        Functions: функции
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+      courseF_artist_fwp6:
+        Actions: Действия
+        Functions: функции
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+      courseF_artist_fwp7:
+        Actions: Действия
+        Brushes: Кисти
+        Functions: функции
+        Loops: Циклы
+        Math: Математика
+      courseF_artist_fwp8:
+        Actions: Действия
+        Brushes: Кисти
+        Functions: функции
+        Loops: Циклы
+        Math: Математика
+      courseF_artist_fwp9:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+        Functions: функции
+      courseF_artist_fwp_challenge1:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+        Functions: функции
+      courseF_artist_fwp_challenge2:
+        Actions: Действия
+        Brushes: Кисти
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+        Functions: функции
+      courseF_artist_variables10_2018:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Variables: переменные
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_variables10_2019:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Variables: переменные
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_variables7_2018:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Variables: переменные
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_variables7_2019:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Variables: переменные
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_variables8_2018:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Variables: переменные
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_variables8_2019:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Variables: переменные
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_variables9_2018:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Variables: переменные
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_variables9_2019:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Variables: переменные
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_variablesFP_2018:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Variables: переменные
+        Functions: функции
+        Comments: Комментарии
+      courseF_artist_variablesFP_2019:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Brushes: Кисти
+        Variables: переменные
+        Functions: функции
+        Comments: Комментарии
+      courseF_bee_conditionals10:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_conditionals2:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_conditionals3:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_conditionals4:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_conditionals5:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_conditionals8:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_for10:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for10_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for10_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for11:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for11_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for11_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for1_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+        Comments: Комментарии
+      courseF_bee_for1_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+        Comments: Комментарии
+      courseF_bee_for2_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+        Comments: Комментарии
+      courseF_bee_for2_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+        Comments: Комментарии
+      courseF_bee_for3_predict1:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for3_predict1_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for3_predict1_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for4:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for4_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+        Comments: Комментарии
+      courseF_bee_for4_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+        Comments: Комментарии
+      courseF_bee_for5:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for5_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for5_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for6:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for6_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for6_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for7:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for7_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+        Comments: Комментарии
+      courseF_bee_for7_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+        Comments: Комментарии
+      courseF_bee_for8:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for8_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for8_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for9:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        Variables: переменные
+      courseF_bee_for9_2018:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for9_2019:
+        Actions: Действия
+        Math: Математика
+        Loops: Циклы
+        'Variables ': 'Переменные '
+        Comments: Комментарии
+      courseF_bee_for_challenge1:
+        Actions: Действия
+        Loops: Циклы
+        Functions: функции
+        Math: Математика
+      courseF_bee_for_challenge1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Functions: функции
+        Math: Математика
+      courseF_bee_for_challenge1_2019:
+        Actions: Действия
+        Loops: Циклы
+        Functions: функции
+        Math: Математика
+      courseF_bee_for_challenge2:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+      courseF_bee_for_challenge2_2018:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+      courseF_bee_for_challenge2_2019:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+      courseF_bee_functions2:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_functions3:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_functions3a:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_functions4:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_functions5a:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_functions6:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_functions7:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_functions8a:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_functionsPre7:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_functions_challenge1:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_functions_challenge2:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_fwp1:
+        Actions: Действия
+        Loops: Циклы
+        Math: Математика
+        Conditionals: Условные команды
+      courseF_bee_fwp2:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_fwp3:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_fwp4:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_fwp5:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_fwp6:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_fwp7:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_fwp8:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_fwp9_predict1:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_fwp_challenge1:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_fwp_challenge2:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Math: Математика
+      courseF_bee_variables_1_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_1_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_2_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_2_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_3_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_3_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_4_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_4_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_5_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_5_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_6_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_6_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_7_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_7_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+        Comments: Комментарии
+      courseF_bee_variables_8_2018:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+      courseF_bee_variables_8_2019:
+        Actions: Действия
+        Loops: Циклы
+        Conditionals: Условные команды
+        Functions: функции
+        Variables: переменные
+        Math: Математика
+      courseF_playlab_variables1a:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Variables: переменные
+      courseF_playlab_variables2b:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        'Variables ': 'Переменные '
+      courseF_playlab_variables3b_josh:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Variables: переменные
+      courseF_playlab_variables4b:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Variables: переменные
+      courseF_playlab_variables4c_predictive1:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+        Variables: переменные
+      courseF_playlab_variables5c:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Logic: Логика
+        Variables: переменные
+        Text: Текст
+      courseF_playlab_variables6c:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Variables: переменные
+      courseF_playlab_variables7b:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Conditionals: Условные команды
+        Math: Математика
+        Text: Текст
+        Functions: функции
+        Variables: переменные
+        Input: Ввод
+      courseF_playlab_variables7c:
+        Default: По умолчанию
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Input: Ввод
+        Variables: переменные
+      courseF_playlab_variables8c:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+        Variables: переменные
+      courseF_playlab_variables_challenge1:
+        Actions: Действия
+        Events: События
+        Loops: Циклы
+        Math: Математика
+        Functions: функции
+        Variables: переменные

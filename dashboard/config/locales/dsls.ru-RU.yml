@@ -7,9 +7,154 @@ ru:
         title: название
       Begin planning your project_2018:
         description here: Описание здесь
+      Begin planning your project_2018_2019:
+        description here: Описание здесь
+      CSD U2 Design Project:
+        description here: Описание здесь
+        title: название
+      CSD U2 Design Project_2018:
+        description here: Описание здесь
+        title: название
+      CSD U2 Design Project_2018_2019:
+        description here: Описание здесь
+        title: название
+      CSD U2 L1 Overview:
+        description here: Описание здесь
+        title: название
+      CSD U2 L2 Overview:
+        description here: Описание здесь
+        title: название
+      CSD U2 L3 Overview:
+        description here: Описание здесь
+        title: название
+      CSD U2 L4 Overview:
+        description here: Описание здесь
+        title: название
+      CSD U2 L5 Overview:
+        description here: Описание здесь
+        title: название
+      CSD U2 L6 Overview:
+        description here: Описание здесь
+        title: название
+      CSD U2 Lesson 6 Overview:
+        description here: Описание здесь
+      CSD U2 expand project:
+        description here: Описание здесь
+        title: название
+      CSD U2 expand project_2018:
+        description here: Описание здесь
+        title: название
+      CSD U2 expand project_2018_2019:
+        description here: Описание здесь
+        title: название
+      CSD U2 project guide:
+        description here: Описание здесь
+      CSD U2 project guide_2018:
+        description here: Описание здесь
+      CSD U2 project guide_2018_2019:
+        description here: Описание здесь
+      CSD U3 Card Examples_2018:
+        description here: Описание здесь
+      CSD U3 Card Examples_2018_2019:
+        description here: Описание здесь
+      CSD U3 combining rep:
+        description here: Описание здесь
+        title: название
+      CSD U3 combining rep_2018:
+        description here: Описание здесь
+        title: название
+      CSD U3 combining rep_2018_2019:
+        description here: Описание здесь
+        title: название
+      CSD U3 game intro:
+        description here: Описание здесь
+      CSD U3 game intro_2018:
+        description here: Описание здесь
+      CSD U3 game intro_2018_2019:
+        description here: Описание здесь
+      CSD U3 platform intro:
+        description here: Описание здесь
+      CSD U3 platform intro_2018:
+        description here: Описание здесь
+      CSD U3 platform intro_2018_2019:
+        description here: Описание здесь
+      CSD U5 Encryption 1:
+        description here: Описание здесь
+        title: название
+      CSD U5 Encryption 1_2018:
+        description here: Описание здесь
+        title: название
+      CSD U5 Encryption 1_2018_2019:
+        description here: Описание здесь
+        title: название
+      CSD U5 Encryption 2:
+        description here: Описание здесь
+      CSD U5 Encryption 2_2018:
+        description here: Описание здесь
+      CSD U5 Encryption 2_2018_2019:
+        description here: Описание здесь
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: Описание здесь
+        title: название
+      CSD U5 crosstab warmup:
+        description here: Описание здесь
+      CSD U5 crosstab warmup_2018:
+        description here: Описание здесь
+      CSD U5 crosstab warmup_2018_2019:
+        description here: Описание здесь
+      CSD U5 data visualization:
+        description here: Описание здесь
+        title: название
+      CSD U5 data visualization_2018:
+        description here: Описание здесь
+        title: название
+      CSD U5 data visualization_2018_2019:
+        description here: Описание здесь
+        title: название
+      CSD U5 student record:
+        description here: Описание здесь
+        title: название
+      CSD U5 student record_2018:
+        description here: Описание здесь
+        title: название
+      CSD U5 student record_2018_2019:
+        description here: Описание здесь
+        title: название
+      CSD U6 LED create intro:
+        description here: Описание здесь
+      CSD U6 LED create intro_2018:
+        description here: Описание здесь
+      CSD U6 LED create intro_2018_2019:
+        description here: Описание здесь
+      CSD U6 final intro:
+        description here: Описание здесь
+      CSD U6 final intro_2018:
+        description here: Описание здесь
+      CSD U6 final intro_2018_2019:
+        description here: Описание здесь
+      Internet Simulator Setup:
+        description here: Описание здесь
+      Internet Simulator Setup 2:
+        description here: Описание здесь
+        title: название
+      Internet Simulator Setup 3:
+        description here: Описание здесь
+      Multi-Screen Apps:
+        description here: Описание здесь
+        title: название
+      New Challenge Introduction:
+        description here: Описание здесь
+        title: название
+      OPD-K5 Stage3aGo:
+        description here: Описание здесь
+        title: название
       Prepare for your presentation:
         description here: Описание здесь
         title: название
+      'Technique: Frequency Analysis':
+        description here: Описание здесь
+      Terminology Recap:
+        description here: Описание здесь
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Сопоставить комбинацию кнопок
@@ -172,7 +317,7 @@ ru:
         Which one of these items is hardest to describe an algorithm for?: Алгоритм
           для какого из этих элементов труднее всего описать?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Тында - это _____ город.
+        Eugene is a _____ city.: Тында – это _____ город.
         0: "? Ниже приведены три предложения. Какой из шаблонов подходит ко всем трем
           предложениям?"
         1: ': "Ниже приведены три предложения. Какой из шаблонов ниже является правильным
@@ -181,10 +326,10 @@ ru:
         Multiple Choice: Вопрос с несколькими вариантами ответа
         Seattle _____ a _____ _____.: Москва — _____ _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Москва
-          — это большой город. <br/>Самара — это город средней величины.<br/> Тында
-          — это маленький город.
-        _____ is _____ a _____.: _____ — это _____ _____.
-        _____ is a _____ city.: _____ — это город _____ величины.
+          — это большой город.<br/>Самара — это средний город.<br/>Тында — это маленький
+          город.
+        _____ is _____ a _____.: _____ — _____ это _____.
+        _____ is a _____ city.: _____ — это _____ город.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Вопрос с несколькими вариантами ответа
         Which of these pictures best represents crowdsourcing?: Какая из этих картинок
@@ -275,6 +420,12 @@ ru:
       4-5 maze multi 1:
         Maze Multiple Choice: Лабиринт. Вопрос с несколькими вариантами ответа
         Which blocks solve the puzzle?: Какие блоки решают головоломку?
+      CSD U3 Boolean MC:
+        title: название
+      CSD U3 Boolean MC_2018:
+        title: название
+      CSD U3 Boolean MC_2018_2019:
+        title: название
       K-1 Artist 1 Multi 1:
         Multiple Choice: Вопрос с несколькими вариантами ответа
         Which blocks solve this puzzle?: Какие блоки решают эту головоломку?
@@ -337,6 +488,10 @@ ru:
         SET: SET (УСТАНОВИТЬ)
         SOUTH: ЮГ
         Which word is spelled?: Какое слово записано?
+      behaviors 1 predict:
+        Incorrect: Неправильно
+      behaviors 4 predict:
+        Incorrect: Неправильно
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -345,9 +500,15 @@ ru:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: Я не знаю
       courseC_multi_starWars_predict1_2018:
+        I don't know: Я не знаю
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: Я не знаю
       courseD_multi_artist_binary8_predict1:
         A: А
@@ -359,11 +520,20 @@ ru:
         B: Б
         C: В
         D: Г
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        A: А
+        B: Б
+        C: В
+        D: Г
       courseD_multi_artist_nestedLoops9_predict1:
         A: А
         B: Б
         C: В
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: А
+        B: Б
+        C: В
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: А
         B: Б
         C: В
@@ -384,6 +554,22 @@ ru:
           a loop down.  This is all inside of another loop that happens twice. 4 times
           2 is 8!"
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'
