@@ -11,26 +11,27 @@ function draggable() {
   return {func: draggableFunc(), name: 'draggable'};
 }
 
-function pointInDirection(spriteId,direction) {
-  if (direction== "North") {
+function pointInDirection(spriteId, direction) {
+  if (direction == 'North') {
     setProp(spriteId, 'rotation', 360);
-  }
-  else if (direction== "East") {
+  } else if (direction == 'East') {
     setProp(spriteId, 'rotation', 90);
-  }
-  else if (direction=="South") {
+  } else if (direction == 'South') {
     setProp(spriteId, 'rotation', 180);
-  }
-  else if (direction=="West") {
+  } else if (direction == 'West') {
     setProp(spriteId, 'rotation', 270);
-  }
-  else {
-    console.error("pointInDirection: invalid direction provided");
+  } else {
+    console.error('pointInDirection: invalid direction provided');
+    return;
   }
 }
 
 function randColor() {
-  return color(randomNumber(0, 255), randomNumber(0, 255), randomNumber(0, 255)).toString();
+  return color(
+    randomNumber(0, 255),
+    randomNumber(0, 255),
+    randomNumber(0, 255)
+  ).toString();
 }
 
 function randomColor() {
@@ -41,7 +42,7 @@ function mouseLocation() {
   return locationMouse();
 }
 
-function setSizes(spriteId,property,val) {
+function setSizes(spriteId, property, val) {
   setProp(spriteId, property, val);
 }
 
@@ -103,15 +104,15 @@ function yLocationOf(spriteId) {
 
 // Setup sim
 function setupSim(
-s1number,
- s1costume,
- s1speed,
- s2number,
- s2costume,
- s2speed,
- s3number,
- s3costume,
- s3speed
+  s1number,
+  s1costume,
+  s1speed,
+  s2number,
+  s2costume,
+  s2speed,
+  s3number,
+  s3costume,
+  s3speed
 ) {
   World.sprite1score = 0;
   World.sprite2score = 0;
