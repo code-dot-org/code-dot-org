@@ -6,9 +6,154 @@ ro:
         title: titlu
       Begin planning your project_2018:
         description here: descrierea aici
+      Begin planning your project_2018_2019:
+        description here: descrierea aici
+      CSD U2 Design Project:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 Design Project_2018:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 Design Project_2018_2019:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 L1 Overview:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 L2 Overview:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 L3 Overview:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 L4 Overview:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 L5 Overview:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 L6 Overview:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 Lesson 6 Overview:
+        description here: descrierea aici
+      CSD U2 expand project:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 expand project_2018:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 expand project_2018_2019:
+        description here: descrierea aici
+        title: titlu
+      CSD U2 project guide:
+        description here: descrierea aici
+      CSD U2 project guide_2018:
+        description here: descrierea aici
+      CSD U2 project guide_2018_2019:
+        description here: descrierea aici
+      CSD U3 Card Examples_2018:
+        description here: descrierea aici
+      CSD U3 Card Examples_2018_2019:
+        description here: descrierea aici
+      CSD U3 combining rep:
+        description here: descrierea aici
+        title: titlu
+      CSD U3 combining rep_2018:
+        description here: descrierea aici
+        title: titlu
+      CSD U3 combining rep_2018_2019:
+        description here: descrierea aici
+        title: titlu
+      CSD U3 game intro:
+        description here: descrierea aici
+      CSD U3 game intro_2018:
+        description here: descrierea aici
+      CSD U3 game intro_2018_2019:
+        description here: descrierea aici
+      CSD U3 platform intro:
+        description here: descrierea aici
+      CSD U3 platform intro_2018:
+        description here: descrierea aici
+      CSD U3 platform intro_2018_2019:
+        description here: descrierea aici
+      CSD U5 Encryption 1:
+        description here: descrierea aici
+        title: titlu
+      CSD U5 Encryption 1_2018:
+        description here: descrierea aici
+        title: titlu
+      CSD U5 Encryption 1_2018_2019:
+        description here: descrierea aici
+        title: titlu
+      CSD U5 Encryption 2:
+        description here: descrierea aici
+      CSD U5 Encryption 2_2018:
+        description here: descrierea aici
+      CSD U5 Encryption 2_2018_2019:
+        description here: descrierea aici
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: descrierea aici
+        title: titlu
+      CSD U5 crosstab warmup:
+        description here: descrierea aici
+      CSD U5 crosstab warmup_2018:
+        description here: descrierea aici
+      CSD U5 crosstab warmup_2018_2019:
+        description here: descrierea aici
+      CSD U5 data visualization:
+        description here: descrierea aici
+        title: titlu
+      CSD U5 data visualization_2018:
+        description here: descrierea aici
+        title: titlu
+      CSD U5 data visualization_2018_2019:
+        description here: descrierea aici
+        title: titlu
+      CSD U5 student record:
+        description here: descrierea aici
+        title: titlu
+      CSD U5 student record_2018:
+        description here: descrierea aici
+        title: titlu
+      CSD U5 student record_2018_2019:
+        description here: descrierea aici
+        title: titlu
+      CSD U6 LED create intro:
+        description here: descrierea aici
+      CSD U6 LED create intro_2018:
+        description here: descrierea aici
+      CSD U6 LED create intro_2018_2019:
+        description here: descrierea aici
+      CSD U6 final intro:
+        description here: descrierea aici
+      CSD U6 final intro_2018:
+        description here: descrierea aici
+      CSD U6 final intro_2018_2019:
+        description here: descrierea aici
+      Internet Simulator Setup:
+        description here: descrierea aici
+      Internet Simulator Setup 2:
+        description here: descrierea aici
+        title: titlu
+      Internet Simulator Setup 3:
+        description here: descrierea aici
+      Multi-Screen Apps:
+        description here: descrierea aici
+        title: titlu
+      New Challenge Introduction:
+        description here: descrierea aici
+        title: titlu
+      OPD-K5 Stage3aGo:
+        description here: descrierea aici
+        title: titlu
       Prepare for your presentation:
         description here: descrierea aici
         title: titlu
+      'Technique: Frequency Analysis':
+        description here: descrierea aici
+      Terminology Recap:
+        description here: descrierea aici
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Potrivește combinația de butoane cu mișcările de dans.
@@ -203,6 +348,12 @@ ro:
       4-5 maze multi 1:
         Maze Multiple Choice: Labirint cu opțiuni multiple
         Which blocks solve the puzzle?: Care blocuri rezolvă puzzle-ul?
+      CSD U3 Boolean MC:
+        title: titlu
+      CSD U3 Boolean MC_2018:
+        title: titlu
+      CSD U3 Boolean MC_2018_2019:
+        title: titlu
       K-1 Artist 1 Multi 1:
         Multiple Choice: Alegere multiplă
         Which blocks solve this puzzle?: Care blocuri rezolvă acest puzzle?
@@ -257,6 +408,10 @@ ro:
         SOUTH: SUD
         SQUARE: PĂTRAT
         Which word is spelled?: Care cuvânt este scris pe litere?
+      behaviors 1 predict:
+        Incorrect: Incorect
+      behaviors 4 predict:
+        Incorrect: Incorect
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -265,9 +420,15 @@ ro:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: Nu știu
       courseC_multi_starWars_predict1_2018:
+        I don't know: Nu știu
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: Nu știu
       courseD_multi_artist_binary8_predict1:
         A: A
@@ -275,6 +436,11 @@ ro:
         C: C
         D: D
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -287,6 +453,10 @@ ro:
         A: A
         B: B
         C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -296,6 +466,14 @@ ro:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

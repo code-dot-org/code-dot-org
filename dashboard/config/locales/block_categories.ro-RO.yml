@@ -1,62 +1,2377 @@
 ---
-ro:
+ro-RO:
   data:
     block_categories:
-      Actions: Acţiuni
-      Loops: Bucle
-      Functions: Funcţii
-      Color: Culoare
-      Brushes: Pensule
-      Math: Matematică
-      Logic: Logică
-      Variables: Variabile
-      Number: Număr
-      String: Șir de carcatere
-      Image: Imagine
-      Boolean: Boolean
-      Conditionals: Condiţionale
-      Events: Evenimente
-      Games/Score: Jocuri/Scor
-      Comments: Comentarii
-      Category: Categorie
-      Prebuilt: Precompilate
-      Text: Text
-      Picker: Selector
-      Comment: Comentariu
-      World: Lume
-      Sprites: Spiriduși
-      Behaviors: Comportamente
-      'Variables ': 'Variabile '
-      Default: Predefinit
-      Locations: Locaţii
-      Bunny Game: Joc cu iepuraș
-      everythingelse: toate celelalte
-      Location: Locatie
-      numbers: numere
-      Numbers: Numere
-      Input: Intrare
-      Dancers: Dansatori
-      Groups: Grupuri
-      Advanced: Avansat
-      Start: Începe
-      Music: Muzică
-      Dancing: Dans
-      Sprite: Spiriduș
-      Brush: Periază
-      Make Sprite: Fă un spiriduș
-      Movement: Mișcare
-      Booleans: Booleene
-      Functional: Funcţionale
-      While Events: Evenimente `atâta timp` (while)
-      Sprite Properties: Proprietăți spiriduș
-      Predefined: Predefinite
-      test: test
-      test2: test2
-      Use These Blocks: Utilizează aceste blocuri
-      Do Not Use: Nu utilizaţi
-      Foo: Foo
-      Name: Nume
-      NEW BLOCKS: BLOCURI NOI
-      'Functions ': 'Funcţii '
-      Game/Score: Joc/Scor
-      Function: Funcţie
+      4-5 Artist Patterns Free Play:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+      Alien Defender:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Games/Score: Jocuri/Scor
+        Comments: Comentarii
+      Choose Your Own Adventure:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Games/Score: Jocuri/Scor
+        Comments: Comentarii
+      Course 4 Artist For Loops 11:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+      Course 4 Artist For Loops 11a:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+      Course 4 Artist For Loops 14:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+      Course 4 Artist For Loops 15:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+        'Variables ': 'Variabile '
+      Course 4 Artist For Loops 4:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+      Course 4 Artist For Loops 6a:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+      Course 4 Artist For Loops 8:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+      Course 4 Artist For Loops Challenge:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+      Course 4 Artist For Loops inspire:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+      Course 4 Artist Functions Inspiration:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Functions: Funcţii
+      Course 4 Artist Functions challenge:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Functions: Funcţii
+      Course 4 Bee Params 1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Functions: Funcţii
+      Course 4 Bee Params 2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Functions: Funcţii
+      Course 4 Bee Params 3:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Functions: Funcţii
+        'Variables ': 'Variabile '
+      Course 4 Bee Params 4:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Functions: Funcţii
+        'Variables ': 'Variabile '
+        Math: Matematică
+      Course 4 Bee Params 5:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+      Course 4 Bee Params 6:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+      Course 4 Bee Params 7:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        Functions: Funcţii
+        'Variables ': 'Variabile '
+      Course 4 Bee Params 8:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        Functions: Funcţii
+        'Variables ': 'Variabile '
+      Course 4 EC 1a:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        Functions: Funcţii
+      Course 4 EC 1b:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        Functions: Funcţii
+      Course 4 EC 2a:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        Functions: Funcţii
+        Variables: Variabile
+      Course 4 EC 2b:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        Variables: Variabile
+        Functions: Funcţii
+      Course 4 EC 2c:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        Variables: Variabile
+        Functions: Funcţii
+      Course 4 Play Lab Params 10:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        Functions: Funcţii
+        Variables: Variabile
+      Course 4 Play Lab Params 7:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+      Course 4 Play Lab Params 8:
+        Events: Evenimente
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+      Course 4 Play Lab Params 9:
+        Actions: Acţiuni
+        Math: Matematică
+        Functions: Funcţii
+        Variables: Variabile
+      Course 4 Play Lab Vars 9:
+        Events: Evenimente
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        'Variables ': 'Variabile '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Variables: Variabile
+      Course 4 SCF 1:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+        Functions: Funcţii
+      Course 4 SCF 1a:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        Functions: Funcţii
+        'Variables ': 'Variabile '
+      Course 4 SCF 1b:
+        Actions: Acţiuni
+        Loops: Bucle
+        Logic: Logică
+        Math: Matematică
+        Functions: Funcţii
+      Course 4 SCF 2:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+        Functions: Funcţii
+      Course 4 SCF 3:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+        Functions: Funcţii
+      Course 4 SCFL 1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+      Course 4 SCFL 1a:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+      Course 4 SCFL 1b:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+      Course 4 SCFL 2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+      Course 4 SCFL 3:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      Course 4 SCFL 4:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      Course 4 SCFL 6:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      Course 4 SCFL 7:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      Course 4 SCV 6:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      'Course E: Play Lab Project':
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Games/Score: Jocuri/Scor
+        Comments: Comentarii
+      'Course F: Artist Project':
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+      'Course F: Artist Project - Revise':
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+      'Course F: Artist Project - Revise_2018':
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+      'Course F: Artist Project_2018':
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+      'Course F: Artist Project_2019':
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+      CourseD_Dance_Party_11_5:
+        World: Lume
+        Dancers: Dansatori
+        Groups: Grupuri
+        Events: Evenimente
+      CourseD_Dance_Party_12:
+        World: Lume
+        Dancers: Dansatori
+        Groups: Grupuri
+        Events: Evenimente
+        Numbers: Numere
+        Logic: Logică
+      CourseE_Project_SpriteLab:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+        Logic: Logică
+        Text: Text
+        Advanced: Avansat
+        Comments: Comentarii
+      CourseE_Project_SpriteLab_2019:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+      CourseE_hoops:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+        Functions: Funcţii
+      CourseF_Project_Revise_SpriteLab:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+        Functions: Funcţii
+      CourseF_Project_SpriteLab:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+        Functions: Funcţii
+      CourseF_Project_SpriteLab_2019:
+        World: Lume
+        Locations: Locaţii
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Text: Text
+        Comments: Comentarii
+      Dance Party 2:
+        Behaviors: Comportamente
+        Events: Evenimente
+        Comments: Comentarii
+      Dance Party 6:
+        Behaviors: Comportamente
+        Events: Evenimente
+        Comments: Comentarii
+      Dance Party Freeplay:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+        Comments: Comentarii
+      Dance_Party_11_5:
+        World: Lume
+        Dancers: Dansatori
+        Groups: Grupuri
+        Events: Evenimente
+      Dance_Party_12:
+        World: Lume
+        Dancers: Dansatori
+        Groups: Grupuri
+        Events: Evenimente
+        Numbers: Numere
+        Logic: Logică
+      Dance_Party_extras_battle:
+        World: Lume
+        Dancers: Dansatori
+        Groups: Grupuri
+        Events: Evenimente
+        Numbers: Numere
+        Logic: Logică
+      Dance_Party_extras_every_beat:
+        World: Lume
+        Dancers: Dansatori
+        Groups: Grupuri
+        Events: Evenimente
+        Numbers: Numere
+        Logic: Logică
+      Dance_Party_extras_layout:
+        World: Lume
+        Dancers: Dansatori
+        Groups: Grupuri
+        Events: Evenimente
+        Numbers: Numere
+        Logic: Logică
+      Dance_Party_extras_on_beat:
+        World: Lume
+        Dancers: Dansatori
+        Groups: Grupuri
+        Events: Evenimente
+        Numbers: Numere
+        Logic: Logică
+      Dance_Party_extras_speed:
+        World: Lume
+        Dancers: Dansatori
+        Groups: Grupuri
+        Events: Evenimente
+        Numbers: Numere
+        Logic: Logică
+      Dance_Party_extras_visible:
+        World: Lume
+        Dancers: Dansatori
+        Groups: Grupuri
+        Events: Evenimente
+        Numbers: Numere
+        Logic: Logică
+      Find the Wizard:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Games/Score: Jocuri/Scor
+        Comments: Comentarii
+      Fish Tank 5-validated:
+        World: Lume
+        Behaviors: Comportamente
+        Comments: Comentarii
+      Fish Tank 5-validated_2019:
+        World: Lume
+        Behaviors: Comportamente
+        Comments: Comentarii
+      Fish Tank 6-validated:
+        World: Lume
+        Behaviors: Comportamente
+        Comments: Comentarii
+      Fish Tank 6-validated_2019:
+        World: Lume
+        Behaviors: Comportamente
+        Comments: Comentarii
+      Fish Tank 7-validated:
+        World: Lume
+        Behaviors: Comportamente
+        Events: Evenimente
+        Comments: Comentarii
+      Fish Tank 7-validated_2019:
+        World: Lume
+        Actions: Acţiuni
+        Behaviors: Comportamente
+        Events: Evenimente
+        Comments: Comentarii
+      FoodFight:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Games/Score: Jocuri/Scor
+        Comments: Comentarii
+      Geometric Sun:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Comments: Comentarii
+      Geometric Sun_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Comments: Comentarii
+      Guess The Number:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Games/Score: Jocuri/Scor
+        Comments: Comentarii
+      InspirationalArtwork:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Comments: Comentarii
+      InspirationalArtwork_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Comments: Comentarii
+      NEW Course 4 Artist Functions 14:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Functions: Funcţii
+      NEW Course 4 Artist Params 1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+        Variables: Variabile
+      NEW Course 4 Artist Params 10:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+      NEW Course 4 Artist Params 11:
+        Actions: Acţiuni
+        Functions: Funcţii
+        Loops: Bucle
+        Math: Matematică
+      NEW Course 4 Artist Params 12:
+        Actions: Acţiuni
+        Math: Matematică
+        Functions: Funcţii
+      NEW Course 4 Artist Params 12a:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+      NEW Course 4 Artist Params 13:
+        Actions: Acţiuni
+        Functions: Funcţii
+        Loops: Bucle
+        Math: Matematică
+      NEW Course 4 Artist Params 14:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Functions: Funcţii
+        Loops: Bucle
+        Math: Matematică
+      NEW Course 4 Artist Params 15:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+        Functions: Funcţii
+      NEW Course 4 Artist Params 2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+      NEW Course 4 Artist Params 3:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+      NEW Course 4 Artist Params 6:
+        Actions: Acţiuni
+        Functions: Funcţii
+        Loops: Bucle
+        Math: Matematică
+      NEW Course 4 Artist Params 7:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Functions: Funcţii
+      NEW Course 4 Artist Params 8:
+        Actions: Acţiuni
+        Math: Matematică
+        Functions: Funcţii
+        Loops: Bucle
+      NEW Course 4 Artist Params 9:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+      NEW Course 4 Artist Params inspire:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Functions: Funcţii
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      NEW Course 4 Play Lab Params 11:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Games/Score: Jocuri/Scor
+      Robot Doodle:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Comments: Comentarii
+      Robot Doodle_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Functions: Funcţii
+        Variables: Variabile
+        Comments: Comentarii
+      Virtual Pet 2:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+        Comments: Comentarii
+      Virtual Pet 3:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+      Virtual Pet 4:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+      Virtual Pet 5:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+      Virtual Pet 6:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+      Virtual Pet Freeplay:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+      behaviors 3a:
+        World: Lume
+        Behaviors: Comportamente
+        Actions: Acţiuni
+      behaviors 5:
+        World: Lume
+        Behaviors: Comportamente
+        Actions: Acţiuni
+      behaviors 6:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Math: Matematică
+        Logic: Logică
+      behaviors 7:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Math: Matematică
+        Logic: Logică
+      behaviors free play:
+        World: Lume
+        Behaviors: Comportamente
+        Actions: Acţiuni
+        Events: Evenimente
+      course3_bee_functions_challenge1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      course3_bee_functions_challenge2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Functions: Funcţii
+      course3_bee_functions_challenge3:
+        Default: Predefinit
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      course3_bee_functions_challenge4:
+        Default: Predefinit
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      course3_playLab_challenge1:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      course4_artist_fwp_challenge1:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+        Functions: Funcţii
+      course4_bee_for_challenge1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Functions: Funcţii
+        Math: Matematică
+      course4_bee_fwp_challenge1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      course4_bee_fwp_challenge2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      course4_playlab_variables_challenge1:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+        Variables: Variabile
+      courseD_artist_project1:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project1a:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project1a_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project1a_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project2:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project2_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project2_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project2a:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project2a_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project2a_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project3:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project3_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project3_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project3a:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project3a_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project3a_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project4:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project4_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project4_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project4a:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project4a_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project4a_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project5:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project5_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_artist_project5_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+      courseD_playLab_condFP:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Games/Score: Jocuri/Scor
+      courseD_playLab_condFP_2018:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Games/Score: Jocuri/Scor
+        Comment: Comentariu
+      courseE_Dogger_2:
+        World: Lume
+        Actions: Acţiuni
+        Events: Evenimente
+        Behaviors: Comportamente
+        Variables: Variabile
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Text: Text
+        Functions: Funcţii
+      courseE_artist_concept1_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_concept4:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Functions: Funcţii
+      courseE_artist_concept4_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions10:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+      courseE_artist_functions10_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions10_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions2_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        'Functions ': 'Funcţii '
+        Comments: Comentarii
+      courseE_artist_functions2_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        'Functions ': 'Funcţii '
+        Comments: Comentarii
+      courseE_artist_functions3_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseE_artist_functions3_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseE_artist_functions5_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        'Functions ': 'Funcţii '
+        Comments: Comentarii
+      courseE_artist_functions5_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        'Functions ': 'Funcţii '
+        Comments: Comentarii
+      courseE_artist_functions7_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        'Functions ': 'Funcţii '
+        Comments: Comentarii
+      courseE_artist_functions7_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        'Functions ': 'Funcţii '
+        Comments: Comentarii
+      courseE_artist_functions8:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+      courseE_artist_functions8_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions8_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions8a_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions8a_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions8b_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions8b_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions8c_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions8c_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions9:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+      courseE_artist_functions9_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions9_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functionsProj_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functionsProj_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_artist_functions_predict2:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+      courseE_artist_functions_predict2_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+      courseE_artist_functions_predict2_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Functions: Funcţii
+      courseE_bee_concept1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_bee_concept2_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_bee_concept3_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_bee_concept4_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_bee_concept5_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_bee_functions6:
+        Actions: Acţiuni
+        Loops: Bucle
+        Functions: Funcţii
+      courseE_bee_functions7:
+        Actions: Acţiuni
+        Loops: Bucle
+        Functions: Funcţii
+      courseE_bee_functions_challenge1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_bee_functions_challenge2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Functions: Funcţii
+      courseE_farmer_concept1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_concept2_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_concept3_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions10a1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions10a1_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions10b:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions11_predict:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions11_predict_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions11_predict_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions13_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions13_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions1_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions1a:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions1a_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions1a_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions2b:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions2b_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions2b_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions2ba:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions2ba_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions2ba_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions3c:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions3c1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions3c1_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions3c_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions3c_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions4b:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions5c:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions6c:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions7a1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions7a1_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions7b:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions8a1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions8a1_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions8b:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_farmer_functions9a1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions9a1_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Comments: Comentarii
+      courseE_farmer_functions9b:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_playLab_challenge1:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_playLab_scaffold5:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseE_playLab_scaffold6:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+      courseF_artist_for1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Color: Culoare
+      courseF_artist_for10:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+        'Variables ': 'Variabile '
+      courseF_artist_for10_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+        'Variables ': 'Variabile '
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_for10_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+        'Variables ': 'Variabile '
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_for10_predict1:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+        'Variables ': 'Variabile '
+      courseF_artist_for10_predict1_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+        'Variables ': 'Variabile '
+      courseF_artist_for10_predict1_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Brushes: Pensule
+        'Variables ': 'Variabile '
+      courseF_artist_for1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseF_artist_for1_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseF_artist_for2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Color: Culoare
+      courseF_artist_for2_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseF_artist_for2_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseF_artist_for3:
+        Actions: Acţiuni
+        Loops: Bucle
+        Color: Culoare
+      courseF_artist_for3_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseF_artist_for3_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseF_artist_for4:
+        Actions: Acţiuni
+        Loops: Bucle
+        Color: Culoare
+      courseF_artist_for4_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseF_artist_for4_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseF_artist_for5:
+        Actions: Acţiuni
+        Loops: Bucle
+        Color: Culoare
+      courseF_artist_for5_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseF_artist_for5_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Comments: Comentarii
+      courseF_artist_for6:
+        Actions: Acţiuni
+        Loops: Bucle
+        Color: Culoare
+      courseF_artist_for6_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Color: Culoare
+      courseF_artist_for6_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Color: Culoare
+      courseF_artist_for7:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+      courseF_artist_for7_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+      courseF_artist_for7_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+      courseF_artist_for8:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+      courseF_artist_for8_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+      courseF_artist_for8_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+      courseF_artist_for9:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+      courseF_artist_for9_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_for9_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Brushes: Pensule
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_for_challenge1:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      courseF_artist_for_challenge1_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      courseF_artist_for_challenge1_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      courseF_artist_for_challenge2:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      courseF_artist_for_challenge2_2018:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      courseF_artist_for_challenge2_2019:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      courseF_artist_fwp2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Functions: Funcţii
+      courseF_artist_fwp2_predict1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Functions: Funcţii
+      courseF_artist_fwp3:
+        Functions: Funcţii
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+      courseF_artist_fwp4:
+        Actions: Acţiuni
+        Math: Matematică
+        Functions: Funcţii
+      courseF_artist_fwp5:
+        Actions: Acţiuni
+        Functions: Funcţii
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+      courseF_artist_fwp6:
+        Actions: Acţiuni
+        Functions: Funcţii
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+      courseF_artist_fwp7:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Functions: Funcţii
+        Loops: Bucle
+        Math: Matematică
+      courseF_artist_fwp8:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Functions: Funcţii
+        Loops: Bucle
+        Math: Matematică
+      courseF_artist_fwp9:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+        Functions: Funcţii
+      courseF_artist_fwp_challenge1:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+        Functions: Funcţii
+      courseF_artist_fwp_challenge2:
+        Actions: Acţiuni
+        Brushes: Pensule
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+        Functions: Funcţii
+      courseF_artist_variables10_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Variables: Variabile
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_variables10_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Variables: Variabile
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_variables7_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Variables: Variabile
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_variables7_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Variables: Variabile
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_variables8_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Variables: Variabile
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_variables8_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Variables: Variabile
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_variables9_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Variables: Variabile
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_variables9_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Variables: Variabile
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_variablesFP_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Variables: Variabile
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_artist_variablesFP_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Brushes: Pensule
+        Variables: Variabile
+        Functions: Funcţii
+        Comments: Comentarii
+      courseF_bee_conditionals10:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_conditionals2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_conditionals3:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_conditionals4:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_conditionals5:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_conditionals8:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_for10:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for10_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for10_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for11:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for11_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for11_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for1_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+        Comments: Comentarii
+      courseF_bee_for1_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+        Comments: Comentarii
+      courseF_bee_for2_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+        Comments: Comentarii
+      courseF_bee_for2_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+        Comments: Comentarii
+      courseF_bee_for3_predict1:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for3_predict1_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for3_predict1_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for4:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for4_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+        Comments: Comentarii
+      courseF_bee_for4_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+        Comments: Comentarii
+      courseF_bee_for5:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for5_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for5_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for6:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for6_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for6_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for7:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for7_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+        Comments: Comentarii
+      courseF_bee_for7_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+        Comments: Comentarii
+      courseF_bee_for8:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for8_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for8_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for9:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        Variables: Variabile
+      courseF_bee_for9_2018:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for9_2019:
+        Actions: Acţiuni
+        Math: Matematică
+        Loops: Bucle
+        'Variables ': 'Variabile '
+        Comments: Comentarii
+      courseF_bee_for_challenge1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_for_challenge1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_for_challenge1_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_for_challenge2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+      courseF_bee_for_challenge2_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+      courseF_bee_for_challenge2_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+      courseF_bee_functions2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_functions3:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_functions3a:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_functions4:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_functions5a:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_functions6:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_functions7:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_functions8a:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_functionsPre7:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_functions_challenge1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_functions_challenge2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_fwp1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Math: Matematică
+        Conditionals: Condiţionale
+      courseF_bee_fwp2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_fwp3:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_fwp4:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_fwp5:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_fwp6:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_fwp7:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_fwp8:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_fwp9_predict1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_fwp_challenge1:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_fwp_challenge2:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Math: Matematică
+      courseF_bee_variables_1_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_1_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_2_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_2_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_3_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_3_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_4_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_4_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_5_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_5_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_6_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_6_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_7_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_7_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+        Comments: Comentarii
+      courseF_bee_variables_8_2018:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+      courseF_bee_variables_8_2019:
+        Actions: Acţiuni
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Functions: Funcţii
+        Variables: Variabile
+        Math: Matematică
+      courseF_playlab_variables1a:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Variables: Variabile
+      courseF_playlab_variables2b:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        'Variables ': 'Variabile '
+      courseF_playlab_variables3b_josh:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Variables: Variabile
+      courseF_playlab_variables4b:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Variables: Variabile
+      courseF_playlab_variables4c_predictive1:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+        Variables: Variabile
+      courseF_playlab_variables5c:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Logic: Logică
+        Variables: Variabile
+        Text: Text
+      courseF_playlab_variables6c:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Variables: Variabile
+      courseF_playlab_variables7b:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Conditionals: Condiţionale
+        Math: Matematică
+        Text: Text
+        Functions: Funcţii
+        Variables: Variabile
+        Game/Score: Joc/Scor
+      courseF_playlab_variables7c:
+        Default: Predefinit
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Variables: Variabile
+      courseF_playlab_variables8c:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+        Variables: Variabile
+      courseF_playlab_variables_challenge1:
+        Actions: Acţiuni
+        Events: Evenimente
+        Loops: Bucle
+        Math: Matematică
+        Functions: Funcţii
+        Variables: Variabile
