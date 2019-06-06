@@ -3,6 +3,64 @@ az:
     external:
       Begin planning your project:
         title: başlıq
+      CSD U2 Design Project:
+        title: başlıq
+      CSD U2 Design Project_2018:
+        title: başlıq
+      CSD U2 Design Project_2018_2019:
+        title: başlıq
+      CSD U2 L1 Overview:
+        title: başlıq
+      CSD U2 L2 Overview:
+        title: başlıq
+      CSD U2 L3 Overview:
+        title: başlıq
+      CSD U2 L4 Overview:
+        title: başlıq
+      CSD U2 L5 Overview:
+        title: başlıq
+      CSD U2 L6 Overview:
+        title: başlıq
+      CSD U2 expand project:
+        title: başlıq
+      CSD U2 expand project_2018:
+        title: başlıq
+      CSD U2 expand project_2018_2019:
+        title: başlıq
+      CSD U3 combining rep:
+        title: başlıq
+      CSD U3 combining rep_2018:
+        title: başlıq
+      CSD U3 combining rep_2018_2019:
+        title: başlıq
+      CSD U5 Encryption 1:
+        title: başlıq
+      CSD U5 Encryption 1_2018:
+        title: başlıq
+      CSD U5 Encryption 1_2018_2019:
+        title: başlıq
+      CSD U5 L13 SFLP Interpreting Data:
+        title: başlıq
+      CSD U5 data visualization:
+        title: başlıq
+      CSD U5 data visualization_2018:
+        title: başlıq
+      CSD U5 data visualization_2018_2019:
+        title: başlıq
+      CSD U5 student record:
+        title: başlıq
+      CSD U5 student record_2018:
+        title: başlıq
+      CSD U5 student record_2018_2019:
+        title: başlıq
+      Internet Simulator Setup 2:
+        title: başlıq
+      Multi-Screen Apps:
+        title: başlıq
+      New Challenge Introduction:
+        title: başlıq
+      OPD-K5 Stage3aGo:
+        title: başlıq
       Prepare for your presentation:
         title: başlıq
     match:
@@ -54,6 +112,12 @@ az:
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Bakı böyük şəhərdir.<br/>Sumqayıt orta şəhərdir.<br/>Horadiz kiçik şəhərdir.
       4-5 artist multi 2:
         Which drawing is symmetric?: Hansı rəsm simmetrikdir?
+      CSD U3 Boolean MC:
+        title: başlıq
+      CSD U3 Boolean MC_2018:
+        title: başlıq
+      CSD U3 Boolean MC_2018_2019:
+        title: başlıq
       K-1 Maze Multiple Choice 2:
         Maze: Labirint
       courseC_multi_harvester_loops11_predict1:
@@ -61,6 +125,10 @@ az:
         '15': '15'
         '4': '4'
       courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
         '12': '12'
         '15': '15'
         '4': '4'
@@ -74,11 +142,20 @@ az:
         B: B
         C: C
         D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
+        D: D
       courseD_multi_artist_nestedLoops9_predict1:
         A: A
         B: B
         C: C
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -91,6 +168,14 @@ az:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'
