@@ -133,10 +133,16 @@ function whenTouchEvent(inputEvent) {
       }
     });
   });
+  // Sprites are overlapping, and we haven't fired yet for this collision,
+  // so we should fire the callback
   if (overlap && !inputEvent.firedOnceForCollision) {
     shouldEventFire = true;
     inputEvent.firedOnceForCollision = true;
   }
+  // Sprites are not overlapping (anymore), so we should make sure firedOnceForCollision is
+  // set to false, so that if the sprites overlap again, we will fire the callback.
+  // This is required to handle the case where sprites start touching, stop touching, and start
+  // touching again- we want the callback to fire two times.
   if (!overlap) {
     inputEvent.firedOnceForCollision = false;
   }
