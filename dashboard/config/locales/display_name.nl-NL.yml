@@ -1,5 +1,5 @@
 ---
-nl:
+nl-NL:
   data:
     display_name:
       CSD U2 Pair Programming Video: Programmeren in Tweetallen
@@ -53,7 +53,6 @@ nl:
       CSD U3 Variables Map: Variabelen
       CSD U3 Variables Map_2018: Variabelen
       CSD U3 Variables Map_2019: Variabelen
-      CSD U3 functions map: Functies
       CSD U6 arrays intro: Inleiding tot Arrays
       CSD U6 arrays intro_2018: Inleiding tot Arrays
       CSD U6 for loop map: For-lussen
@@ -63,19 +62,13 @@ nl:
       CSD U6 functions paramters video_2018: Functies met Parameters
       CSD U6 functions paramters video_2019: Functies met Parameters
       'CSD: For Loop_2018': For-lussen
-      'CSD: For Loop_2019': For-lussen
       Dance_Party_extras_battle: Dancecrews
       Dance_Party_extras_every_beat: Kwartnoten
       Dance_Party_extras_layout: Ga in positie staan
       Dance_Party_extras_on_beat: Bass, mid en treble
       Dance_Party_extras_speed: Versnellen, vertragen
       Dance_Party_extras_visible: Waar zijn ze heen?
-      MC_HOC_2017_FP10x10: Gratis spelen
-      MC_HOC_2017_FP10x10_RE: Gratis spelen
-      SG U3L07 More Subgoals: Documentatie
       courseA_video_Stevie: Stevie en het Grote Project
       courseA_video_Stevie_2018: Stevie en het Grote Project
-      courseA_video_Stevie_2019: Stevie en het Grote Project
       courseB_video_Unspotted: Onbekende bugs
       courseB_video_Unspotted_2018: Onbekende bugs
-      courseB_video_Unspotted_2019: Onbekende bugs
