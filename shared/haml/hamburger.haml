@@ -28,13 +28,3 @@
 
   #hamburger-icon.clicktag{class: contents[:visibility]}
     %span{style: "pointer-events: none"}
-
-#help-button{class: "hide-mobile"}
-  #help-contents
-    - help_items.each do |entry|
-      %a.linktag{id: entry[:id], href: entry[:url], class: "hide-mobile"}=entry[:title]
-
-  %i#help-icon.clicktag{class: "fa fa-question-circle hide-mobile"}
-    %span{style: "pointer-events: none"}
-
-
