@@ -213,12 +213,15 @@
     .hide-mobile {
       display: none;
     }
-    #hamburger-contents, #help-contents {
+    #hamburger-contents {
       font-size: 18px;
     }
     #hamburger {
       padding-left: 0;
     }
+    #help-button {
+      display: none;
+    } 
   }
 }
 
@@ -289,11 +292,3 @@
     height: 25px;
   }
 }
-
-@media(max-width: 970px) {
-    #help-button {
-      display: none;
-    }
-  }
-
-
