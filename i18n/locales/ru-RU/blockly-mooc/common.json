@@ -603,6 +603,7 @@
   "explainLessonExtrasLearnMore": "Узнайте больше о дополнительных материалах уроков.",
   "explainPairProgramming": "Когда парное программирование включено, учащиеся могут выбрать работу с одноклассником за одним компьютером. Включите этот параметр, если вы хотите, чтобы учащиеся могли работать вместе, делясь успехами.",
   "explainPairProgrammingLearnMore": " Узнать больше о парном программировании.",
+  "export": "",
   "extrasStageNChallenges": "Задачи {stageNumber} урока",
   "extrasStageNumberCompleted": "Вы выполнили Урок {number}!",
   "extrasTryAChallenge": "Попробуйте испытание",
