@@ -1,55 +1,2377 @@
 ---
-eu:
+eu-ES:
   data:
     block_categories:
-      Actions: Ekintzak
-      Loops: Itzuliak
-      Functions: Funtzioak
-      Color: Kolorea
-      Brushes: Pintzelak
-      Math: Matematika
-      Logic: Logika
-      Variables: Aldagaiak
-      Number: Zenbakia
-      String: Testua
-      Image: Irudia
-      Boolean: Boolearra
-      Conditionals: Baldintzak
-      Events: Gertaerak
-      Games/Score: Jokoak/Puntuak
-      Comments: Iruzkinak
-      Category: Kategoria
-      Prebuilt: Aurrekonpilatua
-      Text: Testua
-      Picker: Hautatzailea
-      Comment: Iruzkina
-      World: Mundua
-      Behaviors: Jokabideak
-      'Variables ': 'Aldagaiak '
-      Default: Lehenetsia
-      Locations: Kokalekuak
-      everythingelse: besteguztia
-      Location: Kokalekua
-      numbers: zenbakiak
-      Numbers: Zenbakiak
-      Dancers: Dantzariak
-      Groups: Taldeak
-      Advanced: Aurreratua
-      Start: Hasiera
-      Dancing: Dantzan
-      Sprite: Sprite
-      Brush: Pintzela
-      Make Sprite: Pribatu egin
-      Movement: Mugimentua
-      Booleans: Boolearrak
-      Functional: Funtzioak
-      While Events: While ebentuak
-      Sprite Properties: Sprite-n Propietateak
-      Predefined: Aurredefinitua
-      test: proba
-      test2: test2
-      Name: Izena
-      NEW BLOCKS: BLOKE BERRIAK
-      'Functions ': 'Funtzioak '
-      Game/Score: Jokoa/Puntuak
-      Function: Funtzioa
+      4-5 Artist Patterns Free Play:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      Alien Defender:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Games/Score: Jokoak/Puntuak
+        Comments: Iruzkinak
+      Choose Your Own Adventure:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Games/Score: Jokoak/Puntuak
+        Comments: Iruzkinak
+      Course 4 Artist For Loops 11:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      Course 4 Artist For Loops 11a:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      Course 4 Artist For Loops 14:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      Course 4 Artist For Loops 15:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Variables ': 'Aldagaiak '
+      Course 4 Artist For Loops 4:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      Course 4 Artist For Loops 6a:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      Course 4 Artist For Loops 8:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      Course 4 Artist For Loops Challenge:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      Course 4 Artist For Loops inspire:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      Course 4 Artist Functions Inspiration:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Functions: Funtzioak
+      Course 4 Artist Functions challenge:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Functions: Funtzioak
+      Course 4 Bee Params 1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      Course 4 Bee Params 2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      Course 4 Bee Params 3:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Functions: Funtzioak
+        'Variables ': 'Aldagaiak '
+      Course 4 Bee Params 4:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Functions: Funtzioak
+        'Variables ': 'Aldagaiak '
+        Math: Matematika
+      Course 4 Bee Params 5:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      Course 4 Bee Params 6:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      Course 4 Bee Params 7:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        Functions: Funtzioak
+        'Variables ': 'Aldagaiak '
+      Course 4 Bee Params 8:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        Functions: Funtzioak
+        'Variables ': 'Aldagaiak '
+      Course 4 EC 1a:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        Functions: Funtzioak
+      Course 4 EC 1b:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        Functions: Funtzioak
+      Course 4 EC 2a:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      Course 4 EC 2b:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        Variables: Aldagaiak
+        Functions: Funtzioak
+      Course 4 EC 2c:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        Variables: Aldagaiak
+        Functions: Funtzioak
+      Course 4 Play Lab Params 10:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      Course 4 Play Lab Params 7:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+      Course 4 Play Lab Params 8:
+        Events: Gertaerak
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+      Course 4 Play Lab Params 9:
+        Actions: Ekintzak
+        Math: Matematika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      Course 4 Play Lab Vars 9:
+        Events: Gertaerak
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Variables: Aldagaiak
+      Course 4 SCF 1:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+        Functions: Funtzioak
+      Course 4 SCF 1a:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        Functions: Funtzioak
+        'Variables ': 'Aldagaiak '
+      Course 4 SCF 1b:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Logic: Logika
+        Math: Matematika
+        Functions: Funtzioak
+      Course 4 SCF 2:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+        Functions: Funtzioak
+      Course 4 SCF 3:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+        Functions: Funtzioak
+      Course 4 SCFL 1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+      Course 4 SCFL 1a:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+      Course 4 SCFL 1b:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+      Course 4 SCFL 2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+      Course 4 SCFL 3:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      Course 4 SCFL 4:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      Course 4 SCFL 6:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      Course 4 SCFL 7:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      Course 4 SCV 6:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      'Course E: Play Lab Project':
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Games/Score: Jokoak/Puntuak
+        Comments: Iruzkinak
+      'Course F: Artist Project':
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      'Course F: Artist Project - Revise':
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      'Course F: Artist Project - Revise_2018':
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      'Course F: Artist Project_2018':
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      'Course F: Artist Project_2019':
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      CourseD_Dance_Party_11_5:
+        World: Mundua
+        Dancers: Dantzariak
+        Groups: Taldeak
+        Events: Gertaerak
+      CourseD_Dance_Party_12:
+        World: Mundua
+        Dancers: Dantzariak
+        Groups: Taldeak
+        Events: Gertaerak
+        Numbers: Zenbakiak
+        Logic: Logika
+      CourseE_Project_SpriteLab:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+        Logic: Logika
+        Text: Testua
+        Advanced: Aurreratua
+        Comments: Iruzkinak
+      CourseE_Project_SpriteLab_2019:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+      CourseE_hoops:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+        Functions: Funtzioak
+      CourseF_Project_Revise_SpriteLab:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+        Functions: Funtzioak
+      CourseF_Project_SpriteLab:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+        Functions: Funtzioak
+      CourseF_Project_SpriteLab_2019:
+        World: Mundua
+        Locations: Kokalekuak
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Text: Testua
+        Comments: Iruzkinak
+      Dance Party 2:
+        Behaviors: Jokabideak
+        Events: Gertaerak
+        Comments: Iruzkinak
+      Dance Party 6:
+        Behaviors: Jokabideak
+        Events: Gertaerak
+        Comments: Iruzkinak
+      Dance Party Freeplay:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+        Comments: Iruzkinak
+      Dance_Party_11_5:
+        World: Mundua
+        Dancers: Dantzariak
+        Groups: Taldeak
+        Events: Gertaerak
+      Dance_Party_12:
+        World: Mundua
+        Dancers: Dantzariak
+        Groups: Taldeak
+        Events: Gertaerak
+        Numbers: Zenbakiak
+        Logic: Logika
+      Dance_Party_extras_battle:
+        World: Mundua
+        Dancers: Dantzariak
+        Groups: Taldeak
+        Events: Gertaerak
+        Numbers: Zenbakiak
+        Logic: Logika
+      Dance_Party_extras_every_beat:
+        World: Mundua
+        Dancers: Dantzariak
+        Groups: Taldeak
+        Events: Gertaerak
+        Numbers: Zenbakiak
+        Logic: Logika
+      Dance_Party_extras_layout:
+        World: Mundua
+        Dancers: Dantzariak
+        Groups: Taldeak
+        Events: Gertaerak
+        Numbers: Zenbakiak
+        Logic: Logika
+      Dance_Party_extras_on_beat:
+        World: Mundua
+        Dancers: Dantzariak
+        Groups: Taldeak
+        Events: Gertaerak
+        Numbers: Zenbakiak
+        Logic: Logika
+      Dance_Party_extras_speed:
+        World: Mundua
+        Dancers: Dantzariak
+        Groups: Taldeak
+        Events: Gertaerak
+        Numbers: Zenbakiak
+        Logic: Logika
+      Dance_Party_extras_visible:
+        World: Mundua
+        Dancers: Dantzariak
+        Groups: Taldeak
+        Events: Gertaerak
+        Numbers: Zenbakiak
+        Logic: Logika
+      Find the Wizard:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Games/Score: Jokoak/Puntuak
+        Comments: Iruzkinak
+      Fish Tank 5-validated:
+        World: Mundua
+        Behaviors: Jokabideak
+        Comments: Iruzkinak
+      Fish Tank 5-validated_2019:
+        World: Mundua
+        Behaviors: Jokabideak
+        Comments: Iruzkinak
+      Fish Tank 6-validated:
+        World: Mundua
+        Behaviors: Jokabideak
+        Comments: Iruzkinak
+      Fish Tank 6-validated_2019:
+        World: Mundua
+        Behaviors: Jokabideak
+        Comments: Iruzkinak
+      Fish Tank 7-validated:
+        World: Mundua
+        Behaviors: Jokabideak
+        Events: Gertaerak
+        Comments: Iruzkinak
+      Fish Tank 7-validated_2019:
+        World: Mundua
+        Actions: Ekintzak
+        Behaviors: Jokabideak
+        Events: Gertaerak
+        Comments: Iruzkinak
+      FoodFight:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Games/Score: Jokoak/Puntuak
+        Comments: Iruzkinak
+      Geometric Sun:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      Geometric Sun_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      Guess The Number:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Games/Score: Jokoak/Puntuak
+        Comments: Iruzkinak
+      InspirationalArtwork:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      InspirationalArtwork_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      NEW Course 4 Artist Functions 14:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Functions: Funtzioak
+      NEW Course 4 Artist Params 1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      NEW Course 4 Artist Params 10:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+      NEW Course 4 Artist Params 11:
+        Actions: Ekintzak
+        Functions: Funtzioak
+        Loops: Itzuliak
+        Math: Matematika
+      NEW Course 4 Artist Params 12:
+        Actions: Ekintzak
+        Math: Matematika
+        Functions: Funtzioak
+      NEW Course 4 Artist Params 12a:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+      NEW Course 4 Artist Params 13:
+        Actions: Ekintzak
+        Functions: Funtzioak
+        Loops: Itzuliak
+        Math: Matematika
+      NEW Course 4 Artist Params 14:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Functions: Funtzioak
+        Loops: Itzuliak
+        Math: Matematika
+      NEW Course 4 Artist Params 15:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+        Functions: Funtzioak
+      NEW Course 4 Artist Params 2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+      NEW Course 4 Artist Params 3:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+      NEW Course 4 Artist Params 6:
+        Actions: Ekintzak
+        Functions: Funtzioak
+        Loops: Itzuliak
+        Math: Matematika
+      NEW Course 4 Artist Params 7:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Functions: Funtzioak
+      NEW Course 4 Artist Params 8:
+        Actions: Ekintzak
+        Math: Matematika
+        Functions: Funtzioak
+        Loops: Itzuliak
+      NEW Course 4 Artist Params 9:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+      NEW Course 4 Artist Params inspire:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Functions: Funtzioak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      NEW Course 4 Play Lab Params 11:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Games/Score: Jokoak/Puntuak
+      Robot Doodle:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      Robot Doodle_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      Virtual Pet 2:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+        Comments: Iruzkinak
+      Virtual Pet 3:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+      Virtual Pet 4:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+      Virtual Pet 5:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+      Virtual Pet 6:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+      Virtual Pet Freeplay:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+      behaviors 3a:
+        World: Mundua
+        Behaviors: Jokabideak
+        Actions: Ekintzak
+      behaviors 5:
+        World: Mundua
+        Behaviors: Jokabideak
+        Actions: Ekintzak
+      behaviors 6:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Math: Matematika
+        Logic: Logika
+      behaviors 7:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Math: Matematika
+        Logic: Logika
+      behaviors free play:
+        World: Mundua
+        Behaviors: Jokabideak
+        Actions: Ekintzak
+        Events: Gertaerak
+      course3_bee_functions_challenge1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      course3_bee_functions_challenge2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      course3_bee_functions_challenge3:
+        Default: Lehenetsia
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      course3_bee_functions_challenge4:
+        Default: Lehenetsia
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      course3_playLab_challenge1:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      course4_artist_fwp_challenge1:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+        Functions: Funtzioak
+      course4_bee_for_challenge1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Math: Matematika
+      course4_bee_fwp_challenge1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      course4_bee_fwp_challenge2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      course4_playlab_variables_challenge1:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      courseD_artist_project1:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project1a:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project1a_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project1a_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project2:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project2_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project2_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project2a:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project2a_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project2a_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project3:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project3_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project3_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project3a:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project3a_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project3a_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project4:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project4_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project4_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project4a:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project4a_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project4a_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project5:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project5_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_artist_project5_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+      courseD_playLab_condFP:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Games/Score: Jokoak/Puntuak
+      courseD_playLab_condFP_2018:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Games/Score: Jokoak/Puntuak
+        Comment: Iruzkina
+      courseE_Dogger_2:
+        World: Mundua
+        Actions: Ekintzak
+        Events: Gertaerak
+        Behaviors: Jokabideak
+        Variables: Aldagaiak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Text: Testua
+        Functions: Funtzioak
+      courseE_artist_concept1_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_concept4:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Functions: Funtzioak
+      courseE_artist_concept4_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions10:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      courseE_artist_functions10_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions10_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions2_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Functions ': 'Funtzioak '
+        Comments: Iruzkinak
+      courseE_artist_functions2_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Functions ': 'Funtzioak '
+        Comments: Iruzkinak
+      courseE_artist_functions3_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseE_artist_functions3_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseE_artist_functions5_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Functions ': 'Funtzioak '
+        Comments: Iruzkinak
+      courseE_artist_functions5_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Functions ': 'Funtzioak '
+        Comments: Iruzkinak
+      courseE_artist_functions7_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Functions ': 'Funtzioak '
+        Comments: Iruzkinak
+      courseE_artist_functions7_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Functions ': 'Funtzioak '
+        Comments: Iruzkinak
+      courseE_artist_functions8:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      courseE_artist_functions8_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions8_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions8a_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions8a_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions8b_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions8b_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions8c_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions8c_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions9:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      courseE_artist_functions9_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions9_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functionsProj_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functionsProj_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_artist_functions_predict2:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      courseE_artist_functions_predict2_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      courseE_artist_functions_predict2_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      courseE_bee_concept1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_bee_concept2_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_bee_concept3_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_bee_concept4_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_bee_concept5_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_bee_functions6:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      courseE_bee_functions7:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      courseE_bee_functions_challenge1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_bee_functions_challenge2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Functions: Funtzioak
+      courseE_farmer_concept1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_concept2_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_concept3_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions10a1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions10a1_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions10b:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions11_predict:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions11_predict_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions11_predict_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions13_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions13_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions1_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions1a:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions1a_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions1a_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions2b:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions2b_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions2b_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions2ba:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions2ba_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions2ba_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions3c:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions3c1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions3c1_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions3c_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions3c_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions4b:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions5c:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions6c:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions7a1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions7a1_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions7b:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions8a1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions8a1_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions8b:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_farmer_functions9a1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions9a1_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseE_farmer_functions9b:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_playLab_challenge1:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_playLab_scaffold5:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseE_playLab_scaffold6:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+      courseF_artist_for1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Color: Kolorea
+      courseF_artist_for10:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Variables ': 'Aldagaiak '
+      courseF_artist_for10_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Variables ': 'Aldagaiak '
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_for10_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Variables ': 'Aldagaiak '
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_for10_predict1:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Variables ': 'Aldagaiak '
+      courseF_artist_for10_predict1_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Variables ': 'Aldagaiak '
+      courseF_artist_for10_predict1_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        'Variables ': 'Aldagaiak '
+      courseF_artist_for1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseF_artist_for1_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseF_artist_for2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Color: Kolorea
+      courseF_artist_for2_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseF_artist_for2_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseF_artist_for3:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Color: Kolorea
+      courseF_artist_for3_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseF_artist_for3_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseF_artist_for4:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Color: Kolorea
+      courseF_artist_for4_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseF_artist_for4_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseF_artist_for5:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Color: Kolorea
+      courseF_artist_for5_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseF_artist_for5_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Comments: Iruzkinak
+      courseF_artist_for6:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Color: Kolorea
+      courseF_artist_for6_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Color: Kolorea
+      courseF_artist_for6_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Color: Kolorea
+      courseF_artist_for7:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      courseF_artist_for7_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      courseF_artist_for7_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      courseF_artist_for8:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      courseF_artist_for8_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      courseF_artist_for8_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      courseF_artist_for9:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+      courseF_artist_for9_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_for9_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Brushes: Pintzelak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_for_challenge1:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      courseF_artist_for_challenge1_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      courseF_artist_for_challenge1_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      courseF_artist_for_challenge2:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      courseF_artist_for_challenge2_2018:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      courseF_artist_for_challenge2_2019:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      courseF_artist_fwp2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Functions: Funtzioak
+      courseF_artist_fwp2_predict1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Functions: Funtzioak
+      courseF_artist_fwp3:
+        Functions: Funtzioak
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+      courseF_artist_fwp4:
+        Actions: Ekintzak
+        Math: Matematika
+        Functions: Funtzioak
+      courseF_artist_fwp5:
+        Actions: Ekintzak
+        Functions: Funtzioak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+      courseF_artist_fwp6:
+        Actions: Ekintzak
+        Functions: Funtzioak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+      courseF_artist_fwp7:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Functions: Funtzioak
+        Loops: Itzuliak
+        Math: Matematika
+      courseF_artist_fwp8:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Functions: Funtzioak
+        Loops: Itzuliak
+        Math: Matematika
+      courseF_artist_fwp9:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+        Functions: Funtzioak
+      courseF_artist_fwp_challenge1:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+        Functions: Funtzioak
+      courseF_artist_fwp_challenge2:
+        Actions: Ekintzak
+        Brushes: Pintzelak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+        Functions: Funtzioak
+      courseF_artist_variables10_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Variables: Aldagaiak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_variables10_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Variables: Aldagaiak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_variables7_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Variables: Aldagaiak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_variables7_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Variables: Aldagaiak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_variables8_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Variables: Aldagaiak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_variables8_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Variables: Aldagaiak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_variables9_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Variables: Aldagaiak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_variables9_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Variables: Aldagaiak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_variablesFP_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Variables: Aldagaiak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_artist_variablesFP_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Brushes: Pintzelak
+        Variables: Aldagaiak
+        Functions: Funtzioak
+        Comments: Iruzkinak
+      courseF_bee_conditionals10:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_conditionals2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_conditionals3:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_conditionals4:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_conditionals5:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_conditionals8:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_for10:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for10_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for10_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for11:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for11_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for11_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for1_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      courseF_bee_for1_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      courseF_bee_for2_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      courseF_bee_for2_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      courseF_bee_for3_predict1:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for3_predict1_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for3_predict1_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for4:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for4_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      courseF_bee_for4_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      courseF_bee_for5:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for5_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for5_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for6:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for6_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for6_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for7:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for7_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      courseF_bee_for7_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+        Comments: Iruzkinak
+      courseF_bee_for8:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for8_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for8_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for9:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        Variables: Aldagaiak
+      courseF_bee_for9_2018:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for9_2019:
+        Actions: Ekintzak
+        Math: Matematika
+        Loops: Itzuliak
+        'Variables ': 'Aldagaiak '
+        Comments: Iruzkinak
+      courseF_bee_for_challenge1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_for_challenge1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_for_challenge1_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_for_challenge2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+      courseF_bee_for_challenge2_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+      courseF_bee_for_challenge2_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+      courseF_bee_functions2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_functions3:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_functions3a:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_functions4:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_functions5a:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_functions6:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_functions7:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_functions8a:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_functionsPre7:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_functions_challenge1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_functions_challenge2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_fwp1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Math: Matematika
+        Conditionals: Baldintzak
+      courseF_bee_fwp2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_fwp3:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_fwp4:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_fwp5:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_fwp6:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_fwp7:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_fwp8:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_fwp9_predict1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_fwp_challenge1:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_fwp_challenge2:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Math: Matematika
+      courseF_bee_variables_1_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_1_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_2_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_2_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_3_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_3_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_4_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_4_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_5_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_5_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_6_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_6_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_7_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_7_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+        Comments: Iruzkinak
+      courseF_bee_variables_8_2018:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+      courseF_bee_variables_8_2019:
+        Actions: Ekintzak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Math: Matematika
+      courseF_playlab_variables1a:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Variables: Aldagaiak
+      courseF_playlab_variables2b:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        'Variables ': 'Aldagaiak '
+      courseF_playlab_variables3b_josh:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Variables: Aldagaiak
+      courseF_playlab_variables4b:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Variables: Aldagaiak
+      courseF_playlab_variables4c_predictive1:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      courseF_playlab_variables5c:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Logic: Logika
+        Variables: Aldagaiak
+        Text: Testua
+      courseF_playlab_variables6c:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Variables: Aldagaiak
+      courseF_playlab_variables7b:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Conditionals: Baldintzak
+        Math: Matematika
+        Text: Testua
+        Functions: Funtzioak
+        Variables: Aldagaiak
+        Game/Score: Jokoa/Puntuak
+      courseF_playlab_variables7c:
+        Default: Lehenetsia
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Variables: Aldagaiak
+      courseF_playlab_variables8c:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+        Variables: Aldagaiak
+      courseF_playlab_variables_challenge1:
+        Actions: Ekintzak
+        Events: Gertaerak
+        Loops: Itzuliak
+        Math: Matematika
+        Functions: Funtzioak
+        Variables: Aldagaiak
