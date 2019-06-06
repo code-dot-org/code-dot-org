@@ -111,8 +111,11 @@ class ScriptTeacherPanel extends React.Component {
           <ViewAsToggle />
           {currentStudent && (
             <SelectedStudentInfo
+              students={students}
               selectedStudent={currentStudent}
               level={currentStudentScriptLevel}
+              onSelectUser={this.props.onSelectUser}
+              getSelectedUserId={this.props.getSelectedUserId}
             />
           )}
           {sectionData && sectionData.level_examples && (
