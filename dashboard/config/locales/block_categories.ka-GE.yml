@@ -1,56 +1,2396 @@
 ---
-ka:
+ka-GE:
   data:
     block_categories:
-      Actions: მოქმედებები
-      Loops: ციკლები
-      Functions: ფუნქციები
-      Color: ფერი
-      Brushes: ფუნჯები
-      Math: მათემატიკა
-      Logic: ლოგიკა
-      Variables: ცვლადები
-      Number: რიცხვი
-      String: სტრიქონი
-      Image: სურათი
-      Boolean: ბულის ცვლადი
-      Conditionals: პირობითი ბრძანებები
-      Events: მოვლენები
-      Games/Score: თამაშები/ქულა
-      Comments: კომენტარები
-      Category: კატეგორია
-      Prebuilt: წინასწარ ჩაშენებული
-      Text: ტექსტი
-      Picker: ამომრჩევი
-      Comment: კომენტარი
-      World: სამყარო
-      Sprites: სპრაიტები
-      Behaviors: ქცევა
-      'Variables ': 'ცვლადები '
-      Default: ნაგულისხმევი
-      Locations: მდებარეობები
-      everythingelse: ყველაფერი სხვა
-      Location: ადგილმდებარეობა
-      numbers: რიცხვები
-      Numbers: რიცხვები
-      Input: შემომავალი ინფორმაცია
-      Groups: ჯგუფები
-      Advanced: დამატებით
-      Start: დაწყება
-      Music: მუსიკა
-      Dancing: ცეკვა
-      Sprite: სპრაიტი
-      Brush: ფუნჯი
-      Make Sprite: სპრაიტის შექმნა
-      Movement: მოძრაობა
-      Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
-      Functional: ფუნქციები
-      Predefined: წინასწარ განსაზღვრული
-      test: ტესტი
-      test2: ტესტი2
-      Foo: Foo
-      Name: სახელი
-      NEW BLOCKS: ახალი ბლოკები
-      'Functions ': 'ფუნქციები '
-      Game/Score: თამაში/ქულა
-      Function: ფუნქცია
+      4-5 Artist Patterns Free Play:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      Alien Defender:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Games/Score: თამაშები/ქულა
+        Comments: კომენტარები
+      Choose Your Own Adventure:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Games/Score: თამაშები/ქულა
+        Comments: კომენტარები
+      Course 4 Artist For Loops 11:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      Course 4 Artist For Loops 11a:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      Course 4 Artist For Loops 14:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      Course 4 Artist For Loops 15:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Variables ': 'ცვლადები '
+      Course 4 Artist For Loops 4:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      Course 4 Artist For Loops 6a:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      Course 4 Artist For Loops 8:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      Course 4 Artist For Loops Challenge:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      Course 4 Artist For Loops inspire:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      Course 4 Artist Functions Inspiration:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+      Course 4 Artist Functions challenge:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+      Course 4 Bee Params 1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      Course 4 Bee Params 2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      Course 4 Bee Params 3:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        'Variables ': 'ცვლადები '
+      Course 4 Bee Params 4:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        'Variables ': 'ცვლადები '
+        Math: მათემატიკა
+      Course 4 Bee Params 5:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      Course 4 Bee Params 6:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      Course 4 Bee Params 7:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        'Variables ': 'ცვლადები '
+      Course 4 Bee Params 8:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        'Variables ': 'ცვლადები '
+      Course 4 EC 1a:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      Course 4 EC 1b:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      Course 4 EC 2a:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      Course 4 EC 2b:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        Variables: ცვლადები
+        Functions: ფუნქციები
+      Course 4 EC 2c:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        Variables: ცვლადები
+        Functions: ფუნქციები
+      Course 4 Play Lab Params 10:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      Course 4 Play Lab Params 7:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      Course 4 Play Lab Params 8:
+        Events: მოვლენები
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      Course 4 Play Lab Params 9:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      Course 4 Play Lab Vars 9:
+        Events: მოვლენები
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Variables: ცვლადები
+      Course 4 SCF 1:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+        Functions: ფუნქციები
+      Course 4 SCF 1a:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        'Variables ': 'ცვლადები '
+      Course 4 SCF 1b:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Logic: ლოგიკა
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      Course 4 SCF 2:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+        Functions: ფუნქციები
+      Course 4 SCF 3:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+        Functions: ფუნქციები
+      Course 4 SCFL 1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+      Course 4 SCFL 1a:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+      Course 4 SCFL 1b:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+      Course 4 SCFL 2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+      Course 4 SCFL 3:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      Course 4 SCFL 4:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      Course 4 SCFL 6:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      Course 4 SCFL 7:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      Course 4 SCV 6:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      'Course E: Play Lab Project':
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Games/Score: თამაშები/ქულა
+        Comments: კომენტარები
+      'Course F: Artist Project':
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      'Course F: Artist Project - Revise':
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      'Course F: Artist Project - Revise_2018':
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      'Course F: Artist Project_2018':
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      'Course F: Artist Project_2019':
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      CourseD_Dance_Party_11_5:
+        World: სამყარო
+        Groups: ჯგუფები
+        Events: მოვლენები
+      CourseD_Dance_Party_12:
+        World: სამყარო
+        Groups: ჯგუფები
+        Events: მოვლენები
+        Numbers: რიცხვები
+        Logic: ლოგიკა
+      CourseE_Project_SpriteLab:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Logic: ლოგიკა
+        Text: ტექსტი
+        Advanced: დამატებით
+        Comments: კომენტარები
+      CourseE_Project_SpriteLab_2019:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+      CourseE_hoops:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+        Functions: ფუნქციები
+      CourseF_Project_Revise_SpriteLab:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+        Functions: ფუნქციები
+      CourseF_Project_SpriteLab:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+        Functions: ფუნქციები
+      CourseF_Project_SpriteLab_2019:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Locations: მდებარეობები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Text: ტექსტი
+        Comments: კომენტარები
+      Dance Party 2:
+        Sprites: სპრაიტები
+        Behaviors: ქცევა
+        Events: მოვლენები
+        Comments: კომენტარები
+      Dance Party 6:
+        Sprites: სპრაიტები
+        Behaviors: ქცევა
+        Events: მოვლენები
+        Comments: კომენტარები
+      Dance Party Freeplay:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+        Comments: კომენტარები
+      Dance_Party_11_5:
+        World: სამყარო
+        Groups: ჯგუფები
+        Events: მოვლენები
+      Dance_Party_12:
+        World: სამყარო
+        Groups: ჯგუფები
+        Events: მოვლენები
+        Numbers: რიცხვები
+        Logic: ლოგიკა
+      Dance_Party_extras_battle:
+        World: სამყარო
+        Groups: ჯგუფები
+        Events: მოვლენები
+        Numbers: რიცხვები
+        Logic: ლოგიკა
+      Dance_Party_extras_every_beat:
+        World: სამყარო
+        Groups: ჯგუფები
+        Events: მოვლენები
+        Numbers: რიცხვები
+        Logic: ლოგიკა
+      Dance_Party_extras_layout:
+        World: სამყარო
+        Groups: ჯგუფები
+        Events: მოვლენები
+        Numbers: რიცხვები
+        Logic: ლოგიკა
+      Dance_Party_extras_on_beat:
+        World: სამყარო
+        Groups: ჯგუფები
+        Events: მოვლენები
+        Numbers: რიცხვები
+        Logic: ლოგიკა
+      Dance_Party_extras_speed:
+        World: სამყარო
+        Groups: ჯგუფები
+        Events: მოვლენები
+        Numbers: რიცხვები
+        Logic: ლოგიკა
+      Dance_Party_extras_visible:
+        World: სამყარო
+        Groups: ჯგუფები
+        Events: მოვლენები
+        Numbers: რიცხვები
+        Logic: ლოგიკა
+      Find the Wizard:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Games/Score: თამაშები/ქულა
+        Comments: კომენტარები
+      Fish Tank 5-validated:
+        Sprites: სპრაიტები
+        World: სამყარო
+        Behaviors: ქცევა
+        Comments: კომენტარები
+      Fish Tank 5-validated_2019:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Behaviors: ქცევა
+        Comments: კომენტარები
+      Fish Tank 6-validated:
+        Sprites: სპრაიტები
+        World: სამყარო
+        Behaviors: ქცევა
+        Comments: კომენტარები
+      Fish Tank 6-validated_2019:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Behaviors: ქცევა
+        Comments: კომენტარები
+      Fish Tank 7-validated:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Behaviors: ქცევა
+        Events: მოვლენები
+        Comments: კომენტარები
+      Fish Tank 7-validated_2019:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Behaviors: ქცევა
+        Events: მოვლენები
+        Comments: კომენტარები
+      FoodFight:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Games/Score: თამაშები/ქულა
+        Comments: კომენტარები
+      Geometric Sun:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      Geometric Sun_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      Guess The Number:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Games/Score: თამაშები/ქულა
+        Comments: კომენტარები
+      InspirationalArtwork:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      InspirationalArtwork_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      NEW Course 4 Artist Functions 14:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+      NEW Course 4 Artist Params 1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      NEW Course 4 Artist Params 10:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      NEW Course 4 Artist Params 11:
+        Actions: მოქმედებები
+        Functions: ფუნქციები
+        Loops: ციკლები
+        Math: მათემატიკა
+      NEW Course 4 Artist Params 12:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      NEW Course 4 Artist Params 12a:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      NEW Course 4 Artist Params 13:
+        Actions: მოქმედებები
+        Functions: ფუნქციები
+        Loops: ციკლები
+        Math: მათემატიკა
+      NEW Course 4 Artist Params 14:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+        Loops: ციკლები
+        Math: მათემატიკა
+      NEW Course 4 Artist Params 15:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+        Functions: ფუნქციები
+      NEW Course 4 Artist Params 2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      NEW Course 4 Artist Params 3:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      NEW Course 4 Artist Params 6:
+        Actions: მოქმედებები
+        Functions: ფუნქციები
+        Loops: ციკლები
+        Math: მათემატიკა
+      NEW Course 4 Artist Params 7:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+      NEW Course 4 Artist Params 8:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Loops: ციკლები
+      NEW Course 4 Artist Params 9:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      NEW Course 4 Artist Params inspire:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      NEW Course 4 Play Lab Params 11:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Games/Score: თამაშები/ქულა
+      Robot Doodle:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      Robot Doodle_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      Virtual Pet 2:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+        Comments: კომენტარები
+      Virtual Pet 3:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+      Virtual Pet 4:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+      Virtual Pet 5:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+      Virtual Pet 6:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+      Virtual Pet Freeplay:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+      behaviors 3a:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Behaviors: ქცევა
+        Actions: მოქმედებები
+      behaviors 5:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Behaviors: ქცევა
+        Actions: მოქმედებები
+      behaviors 6:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+      behaviors 7:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+      behaviors free play:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Behaviors: ქცევა
+        Actions: მოქმედებები
+        Events: მოვლენები
+      course3_bee_functions_challenge1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      course3_bee_functions_challenge2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      course3_bee_functions_challenge3:
+        Default: ნაგულისხმევი
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      course3_bee_functions_challenge4:
+        Default: ნაგულისხმევი
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      course3_playLab_challenge1:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      course4_artist_fwp_challenge1:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+        Functions: ფუნქციები
+      course4_bee_for_challenge1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      course4_bee_fwp_challenge1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      course4_bee_fwp_challenge2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      course4_playlab_variables_challenge1:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      courseD_artist_project1:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project1a:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project1a_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project1a_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project2:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project2_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project2_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project2a:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project2a_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project2a_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project3:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project3_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project3_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project3a:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project3a_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project3a_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project4:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project4_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project4_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project4a:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project4a_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project4a_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project5:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project5_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_artist_project5_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseD_playLab_condFP:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Games/Score: თამაშები/ქულა
+      courseD_playLab_condFP_2018:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Games/Score: თამაშები/ქულა
+        Comment: კომენტარი
+      courseE_Dogger_2:
+        World: სამყარო
+        Sprites: სპრაიტები
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Behaviors: ქცევა
+        Variables: ცვლადები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Text: ტექსტი
+        Functions: ფუნქციები
+      courseE_artist_concept1_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_concept4:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+      courseE_artist_concept4_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions10:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      courseE_artist_functions10_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions10_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions2_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Functions ': 'ფუნქციები '
+        Comments: კომენტარები
+      courseE_artist_functions2_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Functions ': 'ფუნქციები '
+        Comments: კომენტარები
+      courseE_artist_functions3_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseE_artist_functions3_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseE_artist_functions5_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Functions ': 'ფუნქციები '
+        Comments: კომენტარები
+      courseE_artist_functions5_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Functions ': 'ფუნქციები '
+        Comments: კომენტარები
+      courseE_artist_functions7_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Functions ': 'ფუნქციები '
+        Comments: კომენტარები
+      courseE_artist_functions7_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Functions ': 'ფუნქციები '
+        Comments: კომენტარები
+      courseE_artist_functions8:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      courseE_artist_functions8_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions8_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions8a_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions8a_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions8b_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions8b_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions8c_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions8c_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions9:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      courseE_artist_functions9_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions9_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functionsProj_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functionsProj_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_artist_functions_predict2:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      courseE_artist_functions_predict2_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      courseE_artist_functions_predict2_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      courseE_bee_concept1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_bee_concept2_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_bee_concept3_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_bee_concept4_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_bee_concept5_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_bee_functions6:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      courseE_bee_functions7:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      courseE_bee_functions_challenge1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_bee_functions_challenge2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Functions: ფუნქციები
+      courseE_farmer_concept1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_concept2_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_concept3_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions10a1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions10a1_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions10b:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions11_predict:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions11_predict_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions11_predict_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions13_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions13_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions1_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions1a:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions1a_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions1a_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions2b:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions2b_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions2b_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions2ba:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions2ba_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions2ba_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions3c:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions3c1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions3c1_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions3c_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions3c_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions4b:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions5c:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions6c:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions7a1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions7a1_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions7b:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions8a1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions8a1_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions8b:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_farmer_functions9a1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions9a1_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseE_farmer_functions9b:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_playLab_challenge1:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_playLab_scaffold5:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseE_playLab_scaffold6:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+      courseF_artist_for1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Color: ფერი
+      courseF_artist_for10:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Variables ': 'ცვლადები '
+      courseF_artist_for10_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Variables ': 'ცვლადები '
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_for10_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Variables ': 'ცვლადები '
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_for10_predict1:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Variables ': 'ცვლადები '
+      courseF_artist_for10_predict1_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Variables ': 'ცვლადები '
+      courseF_artist_for10_predict1_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        'Variables ': 'ცვლადები '
+      courseF_artist_for1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseF_artist_for1_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseF_artist_for2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Color: ფერი
+      courseF_artist_for2_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseF_artist_for2_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseF_artist_for3:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Color: ფერი
+      courseF_artist_for3_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseF_artist_for3_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseF_artist_for4:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Color: ფერი
+      courseF_artist_for4_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseF_artist_for4_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseF_artist_for5:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Color: ფერი
+      courseF_artist_for5_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseF_artist_for5_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Comments: კომენტარები
+      courseF_artist_for6:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Color: ფერი
+      courseF_artist_for6_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Color: ფერი
+      courseF_artist_for6_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Color: ფერი
+      courseF_artist_for7:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      courseF_artist_for7_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      courseF_artist_for7_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      courseF_artist_for8:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      courseF_artist_for8_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      courseF_artist_for8_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      courseF_artist_for9:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+      courseF_artist_for9_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_for9_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_for_challenge1:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      courseF_artist_for_challenge1_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      courseF_artist_for_challenge1_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      courseF_artist_for_challenge2:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      courseF_artist_for_challenge2_2018:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      courseF_artist_for_challenge2_2019:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      courseF_artist_fwp2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+      courseF_artist_fwp2_predict1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+      courseF_artist_fwp3:
+        Functions: ფუნქციები
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseF_artist_fwp4:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+      courseF_artist_fwp5:
+        Actions: მოქმედებები
+        Functions: ფუნქციები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+      courseF_artist_fwp6:
+        Actions: მოქმედებები
+        Functions: ფუნქციები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+      courseF_artist_fwp7:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseF_artist_fwp8:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Functions: ფუნქციები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseF_artist_fwp9:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+        Functions: ფუნქციები
+      courseF_artist_fwp_challenge1:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+        Functions: ფუნქციები
+      courseF_artist_fwp_challenge2:
+        Actions: მოქმედებები
+        Brushes: ფუნჯები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+        Functions: ფუნქციები
+      courseF_artist_variables10_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Variables: ცვლადები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_variables10_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Variables: ცვლადები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_variables7_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Variables: ცვლადები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_variables7_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Variables: ცვლადები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_variables8_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Variables: ცვლადები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_variables8_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Variables: ცვლადები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_variables9_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Variables: ცვლადები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_variables9_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Variables: ცვლადები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_variablesFP_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Variables: ცვლადები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_artist_variablesFP_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Brushes: ფუნჯები
+        Variables: ცვლადები
+        Functions: ფუნქციები
+        Comments: კომენტარები
+      courseF_bee_conditionals10:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_conditionals2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_conditionals3:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_conditionals4:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_conditionals5:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_conditionals8:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_for10:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for10_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for10_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for11:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for11_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for11_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for1_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      courseF_bee_for1_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      courseF_bee_for2_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      courseF_bee_for2_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      courseF_bee_for3_predict1:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for3_predict1_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for3_predict1_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for4:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for4_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      courseF_bee_for4_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      courseF_bee_for5:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for5_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for5_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for6:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for6_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for6_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for7:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for7_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      courseF_bee_for7_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+        Comments: კომენტარები
+      courseF_bee_for8:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for8_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for8_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for9:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        Variables: ცვლადები
+      courseF_bee_for9_2018:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for9_2019:
+        Actions: მოქმედებები
+        Math: მათემატიკა
+        Loops: ციკლები
+        'Variables ': 'ცვლადები '
+        Comments: კომენტარები
+      courseF_bee_for_challenge1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_for_challenge1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_for_challenge1_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_for_challenge2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseF_bee_for_challenge2_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseF_bee_for_challenge2_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+      courseF_bee_functions2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_functions3:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_functions3a:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_functions4:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_functions5a:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_functions6:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_functions7:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_functions8a:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_functionsPre7:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_functions_challenge1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_functions_challenge2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_fwp1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Conditionals: პირობითი ბრძანებები
+      courseF_bee_fwp2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_fwp3:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_fwp4:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_fwp5:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_fwp6:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_fwp7:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_fwp8:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_fwp9_predict1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_fwp_challenge1:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_fwp_challenge2:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Math: მათემატიკა
+      courseF_bee_variables_1_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_1_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_2_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_2_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_3_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_3_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_4_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_4_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_5_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_5_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_6_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_6_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_7_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_7_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+        Comments: კომენტარები
+      courseF_bee_variables_8_2018:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+      courseF_bee_variables_8_2019:
+        Actions: მოქმედებები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Math: მათემატიკა
+      courseF_playlab_variables1a:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Variables: ცვლადები
+      courseF_playlab_variables2b:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        'Variables ': 'ცვლადები '
+      courseF_playlab_variables3b_josh:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Variables: ცვლადები
+      courseF_playlab_variables4b:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Variables: ცვლადები
+      courseF_playlab_variables4c_predictive1:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      courseF_playlab_variables5c:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Logic: ლოგიკა
+        Variables: ცვლადები
+        Text: ტექსტი
+      courseF_playlab_variables6c:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Variables: ცვლადები
+      courseF_playlab_variables7b:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Conditionals: პირობითი ბრძანებები
+        Math: მათემატიკა
+        Text: ტექსტი
+        Functions: ფუნქციები
+        Variables: ცვლადები
+        Input: შემომავალი ინფორმაცია
+        Game/Score: თამაში/ქულა
+      courseF_playlab_variables7c:
+        Default: ნაგულისხმევი
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Input: შემომავალი ინფორმაცია
+        Variables: ცვლადები
+      courseF_playlab_variables8c:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები
+      courseF_playlab_variables_challenge1:
+        Actions: მოქმედებები
+        Events: მოვლენები
+        Loops: ციკლები
+        Math: მათემატიკა
+        Functions: ფუნქციები
+        Variables: ცვლადები

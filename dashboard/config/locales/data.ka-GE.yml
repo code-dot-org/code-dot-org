@@ -727,6 +727,7 @@ ka:
         csd_pair_programming: პროგრამირება წყვილებში
         csd_applab_parameters: ფუნქციები პარამეტრებით
         csd_problem_solving_process: პროებლემების გადაჭრის პროცესი
+        CSF_SpriteLab_SpritesInAction_v2: სპრაიტები მოქმედებაში
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ
