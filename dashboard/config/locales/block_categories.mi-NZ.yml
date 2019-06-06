@@ -1,17 +1,1935 @@
 ---
-mi:
+mi-NZ:
   data:
     block_categories:
-      Actions: Ngā Hohenga
-      Loops: Ngā Koromeke
-      Functions: Ngā Taumahi
-      Color: Tae
-      Math: Pāngarau
-      Logic: Ararau
-      Variables: Ngā Taurangi
-      Conditionals: Ngā Here
-      Events: Ngā Takunetanga
-      Text: Kuputuhi
-      test: whakamātautau
-      Name: Ingoa
-      Function: Taumahi
+      4-5 Artist Patterns Free Play:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Alien Defender:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Choose Your Own Adventure:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Course 4 Artist For Loops 11:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      Course 4 Artist For Loops 11a:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      Course 4 Artist For Loops 14:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      Course 4 Artist For Loops 15:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      Course 4 Artist For Loops 4:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      Course 4 Artist For Loops 6a:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      Course 4 Artist For Loops 8:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      Course 4 Artist For Loops Challenge:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      Course 4 Artist For Loops inspire:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      Course 4 Artist Functions Inspiration:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      Course 4 Artist Functions challenge:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      Course 4 Bee Params 1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      Course 4 Bee Params 2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      Course 4 Bee Params 3:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Functions: Ngā Taumahi
+      Course 4 Bee Params 4:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      Course 4 Bee Params 5:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Course 4 Bee Params 6:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Course 4 Bee Params 7:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 Bee Params 8:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 EC 1a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 EC 1b:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 EC 2a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Course 4 EC 2b:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      Course 4 EC 2c:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      Course 4 Play Lab Params 10:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Course 4 Play Lab Params 7:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 Play Lab Params 8:
+        Events: Ngā Takunetanga
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 Play Lab Params 9:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Course 4 Play Lab Vars 9:
+        Events: Ngā Takunetanga
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+      Course 4 SCF 1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 SCF 1a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 SCF 1b:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Logic: Ararau
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 SCF 2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 SCF 3:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      Course 4 SCFL 1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      Course 4 SCFL 1a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      Course 4 SCFL 1b:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      Course 4 SCFL 2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+      Course 4 SCFL 3:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      Course 4 SCFL 4:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      Course 4 SCFL 6:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      Course 4 SCFL 7:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      Course 4 SCV 6:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      'Course E: Play Lab Project':
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      'Course F: Artist Project':
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      'Course F: Artist Project - Revise':
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      'Course F: Artist Project - Revise_2018':
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      'Course F: Artist Project_2018':
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      'Course F: Artist Project_2019':
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      CourseD_Dance_Party_11_5:
+        Events: Ngā Takunetanga
+      CourseD_Dance_Party_12:
+        Events: Ngā Takunetanga
+        Logic: Ararau
+      CourseE_Project_SpriteLab:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+        Logic: Ararau
+        Text: Kuputuhi
+      CourseE_Project_SpriteLab_2019:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+      CourseE_hoops:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+        Functions: Ngā Taumahi
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+        Functions: Ngā Taumahi
+      CourseF_Project_SpriteLab:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+        Functions: Ngā Taumahi
+      CourseF_Project_SpriteLab_2019:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Text: Kuputuhi
+      Dance Party 2:
+        Events: Ngā Takunetanga
+      Dance Party 6:
+        Events: Ngā Takunetanga
+      Dance Party Freeplay:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+      Dance_Party_11_5:
+        Events: Ngā Takunetanga
+      Dance_Party_12:
+        Events: Ngā Takunetanga
+        Logic: Ararau
+      Dance_Party_extras_battle:
+        Events: Ngā Takunetanga
+        Logic: Ararau
+      Dance_Party_extras_every_beat:
+        Events: Ngā Takunetanga
+        Logic: Ararau
+      Dance_Party_extras_layout:
+        Events: Ngā Takunetanga
+        Logic: Ararau
+      Dance_Party_extras_on_beat:
+        Events: Ngā Takunetanga
+        Logic: Ararau
+      Dance_Party_extras_speed:
+        Events: Ngā Takunetanga
+        Logic: Ararau
+      Dance_Party_extras_visible:
+        Events: Ngā Takunetanga
+        Logic: Ararau
+      Find the Wizard:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Fish Tank 7-validated:
+        Events: Ngā Takunetanga
+      Fish Tank 7-validated_2019:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+      FoodFight:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Geometric Sun:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Geometric Sun_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Guess The Number:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      InspirationalArtwork:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      InspirationalArtwork_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      NEW Course 4 Artist Functions 14:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      NEW Course 4 Artist Params 1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      NEW Course 4 Artist Params 10:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      NEW Course 4 Artist Params 11:
+        Actions: Ngā Hohenga
+        Functions: Ngā Taumahi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      NEW Course 4 Artist Params 12:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      NEW Course 4 Artist Params 12a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      NEW Course 4 Artist Params 13:
+        Actions: Ngā Hohenga
+        Functions: Ngā Taumahi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      NEW Course 4 Artist Params 14:
+        Actions: Ngā Hohenga
+        Functions: Ngā Taumahi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      NEW Course 4 Artist Params 15:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      NEW Course 4 Artist Params 2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      NEW Course 4 Artist Params 3:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      NEW Course 4 Artist Params 6:
+        Actions: Ngā Hohenga
+        Functions: Ngā Taumahi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      NEW Course 4 Artist Params 7:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      NEW Course 4 Artist Params 8:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+        Loops: Ngā Koromeke
+      NEW Course 4 Artist Params 9:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      NEW Course 4 Artist Params inspire:
+        Actions: Ngā Hohenga
+        Functions: Ngā Taumahi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      NEW Course 4 Play Lab Params 11:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Robot Doodle:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Robot Doodle_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      Virtual Pet 2:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+      Virtual Pet 3:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+      Virtual Pet 4:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+      Virtual Pet 5:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+      Virtual Pet 6:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+      Virtual Pet Freeplay:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+      behaviors 3a:
+        Actions: Ngā Hohenga
+      behaviors 5:
+        Actions: Ngā Hohenga
+      behaviors 6:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+        Logic: Ararau
+      behaviors 7:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+        Logic: Ararau
+      behaviors free play:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+      course3_bee_functions_challenge1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      course3_bee_functions_challenge2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      course3_bee_functions_challenge3:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      course3_bee_functions_challenge4:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      course3_playLab_challenge1:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      course4_artist_fwp_challenge1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      course4_bee_for_challenge1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      course4_bee_fwp_challenge1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      course4_bee_fwp_challenge2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      course4_playlab_variables_challenge1:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      courseD_artist_project1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project1a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project1a_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project1a_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project2_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project2_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project2a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project2a_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project2a_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project3:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project3_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project3_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project3a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project3a_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project3a_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project4:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project4_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project4_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project4a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project4a_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project4a_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project5:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project5_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_artist_project5_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseD_playLab_condFP:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+      courseD_playLab_condFP_2018:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+      courseE_Dogger_2:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Variables: Ngā Taurangi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Text: Kuputuhi
+        Functions: Ngā Taumahi
+      courseE_artist_concept1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      courseE_artist_concept4:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_concept4_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      courseE_artist_functions10:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions10_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions10_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions2_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseE_artist_functions2_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseE_artist_functions3_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseE_artist_functions3_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseE_artist_functions5_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseE_artist_functions5_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseE_artist_functions7_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseE_artist_functions7_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseE_artist_functions8:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions8_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions8_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions8a_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions8a_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions8b_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions8b_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions8c_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions8c_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions9:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions9_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions9_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functionsProj_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      courseE_artist_functionsProj_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      courseE_artist_functions_predict2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions_predict2_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_artist_functions_predict2_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_bee_concept1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_bee_concept2_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_bee_concept3_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_bee_concept4_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_bee_concept5_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_bee_functions6:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_bee_functions7:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_bee_functions_challenge1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_bee_functions_challenge2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseE_farmer_concept1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_concept2_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_concept3_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions10a1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions10a1_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions10b:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions11_predict:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions11_predict_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions11_predict_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions13_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions13_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions1_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions1a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions1a_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions1a_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions2b:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions2b_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions2b_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions2ba:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions2ba_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions2ba_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions3c:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions3c1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions3c1_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions3c_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions3c_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions4b:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions5c:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions6c:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions7a1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions7a1_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions7b:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions8a1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions8a1_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions8b:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions9a1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions9a1_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_farmer_functions9b:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_playLab_challenge1:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_playLab_scaffold5:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseE_playLab_scaffold6:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+      courseF_artist_for1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Color: Tae
+      courseF_artist_for10:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_artist_for10_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseF_artist_for10_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseF_artist_for10_predict1:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_artist_for10_predict1_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_artist_for10_predict1_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_artist_for1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for1_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Color: Tae
+      courseF_artist_for2_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for2_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for3:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Color: Tae
+      courseF_artist_for3_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for3_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for4:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Color: Tae
+      courseF_artist_for4_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for4_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for5:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Color: Tae
+      courseF_artist_for5_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for5_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for6:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Color: Tae
+      courseF_artist_for6_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Color: Tae
+      courseF_artist_for6_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Color: Tae
+      courseF_artist_for7:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for7_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for7_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for8:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for8_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for8_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for9:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+      courseF_artist_for9_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseF_artist_for9_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+      courseF_artist_for_challenge1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_for_challenge1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_for_challenge1_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_for_challenge2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_for_challenge2_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_for_challenge2_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_fwp2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      courseF_artist_fwp2_predict1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      courseF_artist_fwp3:
+        Functions: Ngā Taumahi
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_fwp4:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      courseF_artist_fwp5:
+        Actions: Ngā Hohenga
+        Functions: Ngā Taumahi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_fwp6:
+        Actions: Ngā Hohenga
+        Functions: Ngā Taumahi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_fwp7:
+        Actions: Ngā Hohenga
+        Functions: Ngā Taumahi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_fwp8:
+        Actions: Ngā Hohenga
+        Functions: Ngā Taumahi
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_artist_fwp9:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      courseF_artist_fwp_challenge1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      courseF_artist_fwp_challenge2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+      courseF_artist_variables10_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      courseF_artist_variables10_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      courseF_artist_variables7_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      courseF_artist_variables7_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      courseF_artist_variables8_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      courseF_artist_variables8_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      courseF_artist_variables9_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      courseF_artist_variables9_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      courseF_artist_variablesFP_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      courseF_artist_variablesFP_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+        Functions: Ngā Taumahi
+      courseF_bee_conditionals10:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_conditionals2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_conditionals3:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_conditionals4:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_conditionals5:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_conditionals8:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_for10:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for10_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for10_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for11:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for11_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for11_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for1_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for1_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for2_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for2_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for3_predict1:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for3_predict1_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for3_predict1_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for4:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for4_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for4_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for5:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for5_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for5_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for6:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for6_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for6_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for7:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for7_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for7_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for8:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for8_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for8_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for9:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+        Variables: Ngā Taurangi
+      courseF_bee_for9_2018:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for9_2019:
+        Actions: Ngā Hohenga
+        Math: Pāngarau
+        Loops: Ngā Koromeke
+      courseF_bee_for_challenge1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_for_challenge1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_for_challenge1_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_for_challenge2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_bee_for_challenge2_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_bee_for_challenge2_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_bee_functions2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_functions3:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_functions3a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_functions4:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_functions5a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_functions6:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_functions7:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_functions8a:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_functionsPre7:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_functions_challenge1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_functions_challenge2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_fwp1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Conditionals: Ngā Here
+      courseF_bee_fwp2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_fwp3:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_fwp4:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_fwp5:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_fwp6:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_fwp7:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_fwp8:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_fwp9_predict1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_fwp_challenge1:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_fwp_challenge2:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Math: Pāngarau
+      courseF_bee_variables_1_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_1_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_2_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_2_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_3_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_3_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_4_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_4_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_5_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_5_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_6_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_6_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_7_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_7_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_8_2018:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_bee_variables_8_2019:
+        Actions: Ngā Hohenga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+        Math: Pāngarau
+      courseF_playlab_variables1a:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+      courseF_playlab_variables2b:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+      courseF_playlab_variables3b_josh:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+      courseF_playlab_variables4b:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+      courseF_playlab_variables4c_predictive1:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      courseF_playlab_variables5c:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Logic: Ararau
+        Variables: Ngā Taurangi
+        Text: Kuputuhi
+      courseF_playlab_variables6c:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+      courseF_playlab_variables7b:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Conditionals: Ngā Here
+        Math: Pāngarau
+        Text: Kuputuhi
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      courseF_playlab_variables7c:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Variables: Ngā Taurangi
+      courseF_playlab_variables8c:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
+      courseF_playlab_variables_challenge1:
+        Actions: Ngā Hohenga
+        Events: Ngā Takunetanga
+        Loops: Ngā Koromeke
+        Math: Pāngarau
+        Functions: Ngā Taumahi
+        Variables: Ngā Taurangi
