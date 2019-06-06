@@ -27,6 +27,7 @@ export function exportProject(shareUrl) {
         <ExportDialog
           isProjectLevel={!!project.isProjectLevel()}
           i18n={i18n}
+          md5SavedSources={project.md5SavedSources()}
           shareUrl={shareUrl}
           thumbnailUrl={project.getThumbnailUrl()}
           isAbusive={project.exceedsAbuseThreshold()}

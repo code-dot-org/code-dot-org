@@ -522,6 +522,13 @@ const sourceHandler = {
       callback({});
     }
   },
+  setInitialProjectProperties(projectProperties) {
+    getAppOptions().initialProjectProperties = projectProperties;
+  },
+  getProjectProperties() {
+    const {getProjectProperties} = getAppOptions();
+    return getProjectProperties && getProjectProperties();
+  },
   prepareForRemix() {
     const {prepareForRemix} = getAppOptions();
     if (prepareForRemix) {
