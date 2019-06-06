@@ -47,4 +47,12 @@ ruby
   def sublevels
     Level.where(name: properties['sublevels']).sort_by {|l| properties['sublevels'].index(l.name)}
   end
+
+  def summarize
+    {
+      title: title,
+      description: description,
+      sublevels: sublevels
+    }
+  end
 end
