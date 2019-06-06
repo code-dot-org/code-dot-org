@@ -147,6 +147,28 @@ describe('details plugin', () => {
     assert.equal(rendered, expected);
   });
 
+  it('can redact nested', () => {
+    const markdown =
+      ':::: details [outer]\n' +
+      '::: details [inner]\n' +
+      'innermost content\n' +
+      ':::\n' +
+      '::::';
+    const expected =
+      '[outer][0]\n' +
+      '\n' +
+      '[inner][1]\n' +
+      '\n' +
+      'innermost content\n' +
+      '\n' +
+      '[/][1]\n' +
+      '\n' +
+      '[/][0]\n';
+
+    const rendered = parser.sourceToRedacted(markdown);
+    assert.equal(rendered, expected);
+  });
+
   it('can restore', () => {
     const original =
       '::: details [summary-content]\n' +
@@ -164,6 +186,38 @@ describe('details plugin', () => {
       'contenu, qui sont parfois des éléments de bloc supplémentaires\n' +
       '\n' +
       ':::\n';
+    const restored = parser.sourceAndRedactedToMarkdown(original, translated);
+    assert.equal(restored, expected);
+  });
+
+  it('can restore nested', () => {
+    const original =
+      ':::: details [outer]\n' +
+      '::: details [inner]\n' +
+      'innermost content\n' +
+      ':::\n' +
+      '::::';
+    const translated =
+      '[extérieur][0]\n' +
+      '\n' +
+      '[interne][1]\n' +
+      '\n' +
+      'contenu le plus profond\n' +
+      '\n' +
+      '[/][1]\n' +
+      '\n' +
+      '[/][0]\n';
+    // Note the relative colon counts are preserved
+    const expected =
+      ':::: details [extérieur]\n' +
+      '\n' +
+      '::: details [interne]\n' +
+      '\n' +
+      'contenu le plus profond\n' +
+      '\n' +
+      ':::\n' +
+      '\n' +
+      '::::\n';
     const restored = parser.sourceAndRedactedToMarkdown(original, translated);
     assert.equal(restored, expected);
   });
