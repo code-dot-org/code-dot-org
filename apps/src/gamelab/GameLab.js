@@ -68,6 +68,7 @@ import {
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
 import {generateExpoApk} from '../util/exporter';
+import {projectChanged} from '../code-studio/initApp/project';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -85,6 +86,10 @@ const validationLibraryName = 'ValidationSetup';
 
 const DRAW_LOOP_START = 'drawLoopStart';
 const DRAW_LOOP_MEASURE = 'drawLoop';
+
+const DEFAULT_PROJECT_PROPERTIES = {
+  export: {}
+};
 
 /**
  * An instantiable GameLab class
@@ -108,6 +113,7 @@ var GameLab = function() {
   /** @private {JsInterpreterLogger} */
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
+  this.projectProperties = DEFAULT_PROJECT_PROPERTIES;
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -397,6 +403,11 @@ GameLab.prototype.init = function(config) {
       : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
+  this.projectProperties = {
+    ...DEFAULT_PROJECT_PROPERTIES,
+    ...config.initialProjectProperties
+  };
+
   // Pre-register all audio preloads with our Sounds API, which will load
   // them into memory so they can play immediately:
   $('link[as=fetch][rel=preload]').each((i, {href}) => {
@@ -434,17 +445,26 @@ GameLab.prototype.exportApp = async function(expoOpts) {
   // TODO: find another way to get this info that doesn't rely on globals.
   const appName =
     (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
-  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
+  const {mode, md5SavedSources, expoSnackId, iconUri, splashImageUri} =
+    expoOpts || {};
   if (mode === 'expoGenerateApk') {
-    return generateExpoApk(
+    const apkUrl = await generateExpoApk(
       {
         appName,
+        md5SavedSources,
         expoSnackId,
         iconUri,
         splashImageUri
       },
       this.studioApp_.config
     );
+    this.projectProperties.export.android = {
+      md5ApkSavedSources: md5SavedSources,
+      snackId: expoSnackId,
+      apkUrl
+    };
+    projectChanged();
+    return apkUrl;
   }
   await this.whenAnimationsAreReady();
   return this.exportAppWithAnimations(
@@ -1458,6 +1478,14 @@ GameLab.prototype.getSerializedAnimationList = function(callback) {
       callback(getSerializedAnimationList(getStore().getState().animationList));
     })
   );
+};
+
+/**
+ * Get the project properties for upload to the sources API.
+ * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ */
+GameLab.prototype.getProjectProperties = function() {
+  return this.projectProperties;
 };
 
 /**

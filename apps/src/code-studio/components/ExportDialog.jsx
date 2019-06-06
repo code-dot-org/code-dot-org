@@ -188,7 +188,8 @@ class ExportDialog extends React.Component {
       t: PropTypes.func.isRequired
     }).isRequired,
     exportApp: PropTypes.func.isRequired,
-    projectUpdatedAt: PropTypes.string,
+    md5SavedSources: PropTypes.string.isRequired,
+    previousExport: PropTypes.object,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
     channelId: PropTypes.string.isRequired,
@@ -206,11 +207,11 @@ class ExportDialog extends React.Component {
   };
 
   componentDidUpdate(prevProps) {
-    const {isOpen, projectUpdatedAt} = this.props;
-    const {exportProjectUpdatedAt} = this.state;
+    const {isOpen, md5SavedSources} = this.props;
+    const {md5ExportSavedSources} = this.state;
     if (isOpen && !prevProps.isOpen) {
       recordExport('open');
-      if (projectUpdatedAt !== exportProjectUpdatedAt) {
+      if (md5SavedSources !== md5ExportSavedSources) {
         // The project has changed since we last opened the dialog,
         // reset our export state, so we will need to export again:
         this.resetExportState();
@@ -282,10 +283,10 @@ class ExportDialog extends React.Component {
         splashImageUri
       };
     }
-    const {exportApp, projectUpdatedAt} = this.props;
+    const {exportApp, md5SavedSources} = this.props;
     this.setState({
       exporting: true,
-      exportProjectUpdatedAt: projectUpdatedAt
+      md5ExportSavedSources: md5SavedSources
     });
     try {
       const exportResult = await exportApp({
@@ -300,7 +301,7 @@ class ExportDialog extends React.Component {
     } catch (e) {
       this.setState({
         exporting: false,
-        exportProjectUpdatedAt: null,
+        md5ExportSavedSources: null,
         expoUri: null,
         expoSnackId: null,
         exportError: 'Failed to create app. Please try again later.'
@@ -319,7 +320,7 @@ class ExportDialog extends React.Component {
   }
 
   async publishAndGenerateApk() {
-    const {exportApp} = this.props;
+    const {exportApp, md5SavedSources} = this.props;
 
     if (this.state.apkUri) {
       // We have already have generated an APK
@@ -341,6 +342,7 @@ class ExportDialog extends React.Component {
     try {
       const apkUri = await exportApp({
         mode: 'expoGenerateApk',
+        md5SavedSources,
         expoSnackId,
         iconUri,
         splashImageUri
@@ -756,7 +758,6 @@ export default connect(
   state => ({
     exportApp: state.pageConstants.exportApp,
     isOpen: state.exportDialog.isOpen,
-    projectUpdatedAt: state.header.projectUpdatedAt,
     signInState: state.progress.signInState
   }),
   dispatch => ({
