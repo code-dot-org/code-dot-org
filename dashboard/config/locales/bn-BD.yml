@@ -48,7 +48,6 @@ bn:
   of: এর
   more: বেশি
   less: কম
-  beta: বেটা
   try_hoc: Hour of Code এ আসতে, এখানে ক্লিক করো>>
   try_k8intro: আমাদের 'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' করে দেখুন (১৫-২৫
     ঘন্টা)
@@ -368,18 +367,14 @@ bn:
     projects: প্রকল্প
     create: প্রকল্প তৈরি করুন
     new: নতুন তৈরি করুন
-    rename: পুনঃনামকরণ করুন
-    save: সংরক্ষন করন
     exit: কোর্সের কাছে ফিরে যান।
     project_gallery: প্রকল্প
-    share: শেয়ার
     name: নাম
     updated: আপডেট
     project_type: প্রকল্পের ধরন
     saved: গ্যালারিতে সংরক্ষিত!
     not_saved: সংরক্ষিত নয়
     view_all: আমার প্রকল্প প্রদর্শন করুন
-    remix: রিমিক্স
     edit_project: প্রকল্প সম্পাদন করুন
     abuse:
       report_abuse_form:

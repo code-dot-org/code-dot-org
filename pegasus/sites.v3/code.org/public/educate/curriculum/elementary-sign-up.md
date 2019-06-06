@@ -19,6 +19,7 @@ Sign up below to receive monthly email updates on Code.org’s Computer Science 
 - <a href="http://go.pardot.com/webmail/153401/536562034/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">March 2019</a>
 - <a href="http://go.pardot.com/webmail/153401/542853974/bc5d935d43d22868ec7d92aed71739209dedca6ea207af5147ed43a328cd8cfb", target=_"blank">April 2019</a>
 - <a href="http://go.pardot.com/webmail/153401/550615944/bc5d935d43d22868ec7d92aed71739209dedca6ea207af5147ed43a328cd8cfb", target=_"blank">May 2019</a>
+- <a href="http://go.pardot.com/webmail/153401/555994057/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">June 2019</a>
 
 ### 2018
 

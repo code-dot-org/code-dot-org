@@ -57,7 +57,6 @@ mi:
   of: "o"
   more: "NUI AKE"
   less: "ITI IHO"
-  beta: "beta"
   try_hoc: "Tēnā whakamātauria te Hour of Code, pāwhiritia i konei >> "
   try_k8intro: "Whakamātauria tā mātou Akoranga Whakataki K-8 ki te Pūtaiao Rorohiko (15-25 haora)"
   k8intro: "Akoranga Whakataki K-8 ki te Pūtaiao Rorohiko (15-25 haora)"
@@ -587,10 +586,8 @@ mi:
     create: "Waihanga Tūmahi"
     create_a_project: 'Waihanga i tētahi tūmahi hou:'
     new: "Waihanga mea Hou"
-    rename: "Whakaingoa anō"
     exit: "Hoki atu ki te Akoranga"
     project_gallery: "Ngā Tūmahi"
-    share: "Tiri"
     share_title: Tiria tō tūmahi
     share_copy_link: "Tāruatia te honongaitua:"
     share_embed_description: "E āhei ana koe te waehere tāmau te whakapiri ki tētahi whārangi HTML ki te whakaatu i te tūmahi ki tētahi whārangi tukutuku."
@@ -605,8 +602,6 @@ mi:
     saved: "Kua Tiakina"
     not_saved: "Kāore anō kia tiakina"
     view_all: 'Tirohia Aku Tūmahi'
-    remix: 'Ranu Anō'
-    click_to_remix: "Pāwhiritia te \"Ranu Anō\" ki te waihanga i tāu ake putanga!"
     edit_project: 'Whakatika Tūmahi'
     abuse:
       tos: "Kua pūrongotia tēnei tūmahi, nā te mea, kua takahia <a href='http://code.org/tos'>Ngā Ture Ratonga</a> o Code.org, ā, kāore e whakaae ana kia tiria ki tangata kē atu."

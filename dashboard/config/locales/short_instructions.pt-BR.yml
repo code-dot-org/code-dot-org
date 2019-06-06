@@ -1682,6 +1682,10 @@ pt-BR:
         execute até que role um 6. (Clique para ver as instruções completas)
       CSP Pilot U5 Mini PT Project: Projete e implemente sua prática Criar tarefa
         de desempenho. (Clique para ver instruções completas)
+      CSP Pilot U7 Mini PT Project 2: Projete e implemente sua prática Criar tarefa
+        de desempenho. (Clique para ver instruções completas)
+      CSP Pilot U7 Mini PT Project: Projete e implemente sua prática Criar tarefa
+        de desempenho. (Clique para ver instruções completas)
       CSP U4 - JSON Object Intro - Bad Way: Acione ambos os eventos do teclado e do
         mouse e examine os objetos de evento exibidos no console. Por que um objeto
         seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções
@@ -10671,11 +10675,54 @@ pt-BR:
         este desafio.
       courseE_farmer_functions13_2018: Solucione este desafio com 23 blocos ou menos.
       courseE_farmer_functions13_2019: Solucione este desafio com 23 blocos ou menos.
+      courseE_farmer_functions2a: Vamos procurar plantações em muitos quadrados em
+        alguns dos próximos quebra-cabeças. Vamos colocar tudo em uma função para
+        facilitar.
+      courseE_farmer_functions2aALT: Vamos procurar plantações em muitos quadrados
+        em alguns dos próximos quebra-cabeças. Vamos colocar tudo em uma função para
+        facilitar.
       courseE_farmer_functions2b: Ajude a colheitadeira a pegar os milhos e as abóboras.
       courseE_farmer_functions2b_2018: Ajude a colheitadeira a pegar os milhos e as
         abóboras.
       courseE_farmer_functions2b_2019: Ajude a colheitadeira a pegar os milhos e as
         abóboras.
+      courseE_farmer_functions2ba: Ajude o agricultor a colher o milho e as abóboras
+        usando a função `milho e abóbora`.
+      courseE_farmer_functions2ba_2018: Use as funções abaixo para ajudar o agricultor
+        a colher o milho e as abóboras.
+      courseE_farmer_functions2ba_2019: Ajude o agricultor a colher o milho e as abóboras
+        usando a função `milho e abóbora`.
+      courseE_farmer_functions3: "O que acontece quando todos os caminhos para as
+        abóboras têm comprimentos diferentes?  \n\nPegue todas elas com o menor número
+        de blocos possível."
+      courseE_farmer_functions3b: Agora ajude o fazendeiro a colher milho, alface
+        **e** abóbora.
+      courseE_farmer_functions3c: Agora, preencha a função você mesmo puxando os blocos
+        do código e soltando-os na \*\* definição de função \*\*.
+      courseE_farmer_functions3c1_2018: Esta função chama outras funções!
+      courseE_farmer_functions3c1_2019: Esta função chama outras funções!
+      courseE_farmer_functions3c_2018: Tente um caminho mais longo.
+      courseE_farmer_functions3c_2019: Tente um caminho mais longo.
+      courseE_farmer_functions4: |-
+        Ótimo! Agora você tem código que funcionará para obter abóboras de qualquer tamanho de caminho.
+
+        Vamos arrastar esse código para uma função para que possamos usá-lo de várias formas... mas primeiro use-o para resolver esse quebra-cabeça novamente.
+      courseE_farmer_functions5: Como você pode mudar seu programa para fazer com
+        que esta função funcione para cada um desses caminhos?
+      courseE_farmer_functions5a: Como você pode mudar seu programa para fazer com
+        que esta função funcione para cada um desses caminhos?
+      courseE_farmer_functions5b: As culturas estão crescendo agora em grupos. Adicione
+        alguns novos laços `while` à sua função para ter certeza de obter tudo que
+        foi produzido.
+      courseE_farmer_functions6: |-
+        \_ "Alface-rá que podemos inventar algo novo agora?" \_
+
+        Aqui está um código para coletar toda a alface. Mova-o para uma função para que possamos usá-lo mais tarde.
+      courseE_farmer_functions6c: O que você precisa para adicionar neste programa
+        para verificar se um broto é de milho ou de alface?
+      courseE_farmer_functions6c_2018: O que você precisa para adicionar neste programa
+        para verificar se um broto é de milho ou de alface?
+      courseE_farmer_functions7: Use suas funções para resolver este quebra-cabeças.
       courseE_farmer_functions7a1_2018: Crie uma função que envie a colheitadeira
         por um caminho quadrado para colher uma única cabeça de alface no meio de
         cada linha.
@@ -11192,30 +11239,111 @@ pt-BR:
         de cada flor.
       courseF_bee_functions2_2018: Use a função `pegar só nectar` para coletar o néctar
         de cada flor.
+      courseF_bee_functions3: Clique em "editar" para colocar código dentro da função
+        `só faz mel`, então use-a para resolver este quebra-cabeça.
+      courseF_bee_functions3_2018: Clique em "editar" para colocar código dentro da
+        função `só faz mel`, então use-a para resolver este quebra-cabeça.
+      courseF_bee_functions3a: Escreva uma função que obtenha néctar se a abelha estiver
+        em uma flor, caso contrário, obterá mel. Use sua função para resolver o quebra-cabeça!
+      courseF_bee_functions3a_2018: Escreva uma função que obtenha néctar se a abelha
+        estiver em uma flor, caso contrário, obterá mel. Use sua função para resolver
+        o quebra-cabeça!
       courseF_bee_functions4: "A função \"mova e obtenha néctar\" vira\na abelha,
         coleta néctar, e então retorna a abelha para onde ela começou. \\\r\n\\\r\nUse\na
         função para coletar todo o néctar."
       courseF_bee_functions4_2018: "A função \"mova e obtenha néctar\" vira\na abelha,
         coleta néctar, e então retorna a abelha para onde ela começou. \\\r\n\\\r\nUse\na
         função para coletar todo o néctar."
+      courseF_bee_functions5a: Use a função `mover e checar` para coletar todo o néctar.
+      courseF_bee_functions5a_2018: Use a função `mover e checar` para coletar todo
+        o néctar.
+      courseF_bee_functions6: Ajude a abelha através do labirinto, virando à esquerda
+        nas flores e à direita no favo de mel.
+      courseF_bee_functions6_2018: Ajude a abelha através do labirinto, virando à
+        esquerda nas flores e à direita no favo de mel.
+      courseF_bee_functions7: Reconstrua sua função do último quebra-cabeça para resolver
+        esse labirinto.
+      courseF_bee_functions7_2018: Reconstrua sua função do último quebra-cabeça para
+        resolver esse labirinto.
+      courseF_bee_functions8a: Colete todo o néctar ou faça todo o mel!
+      courseF_bee_functions8a_2018: Colete todo o néctar ou faça todo o mel!
+      courseF_bee_functionsPre7: Agora tente construir uma função para resolver esse
+        labirinto. No que é diferente da última vez?
+      courseF_bee_functionsPre7_2018: Agora tente construir uma função para resolver
+        esse labirinto. No que é diferente da última vez?
+      courseF_bee_functions_1_2018: Termine este código para que a abelha possa coletar
+        todo o mel e néctar.
+      courseF_bee_functions_2_2018: Edite sua solução em um lugar para que a abelha
+        possa coletar todo o mel e o néctar.
+      courseF_bee_functions_3_2018: Subtraia um da variável a cada execução do laço
+        se você quiser usar a mesma função para resolver este nível.
+      courseF_bee_functions_challenge1: Crie uma nova função para coletar todo o néctar
+        e o mel enquanto houver um caminho à frente.
+      courseF_bee_functions_challenge1_2018: Crie uma nova função para coletar todo
+        o néctar e o mel enquanto houver um caminho à frente.
+      courseF_bee_functions_challenge2_recursion: Colete todo o néctar ou faça todo
+        o mel!
+      courseF_bee_fwp2: Puxe este código para uma função e, em seguida, chame a função
+        para verificar essa linha em busca de néctar.
+      courseF_bee_fwp2_2018: Puxe este código para uma função e, em seguida, chame
+        a função para verificar essa linha em busca de néctar.
+      courseF_bee_fwp3: Vamos ver se a função facilita a coleta dessas três linhas
+        de néctar.
+      courseF_bee_fwp3_2018: Vamos ver se a função facilita a coleta dessas três linhas
+        de néctar.
+      courseF_bee_fwp4: Adicione um parâmetro `comprimento` à função para que ela
+        ainda funcione quando a linha tiver um tamanho diferente.
+      courseF_bee_fwp4_2018: Adicione um parâmetro `comprimento` à função para que
+        ela ainda funcione quando a linha tiver um tamanho diferente.
       courseF_bee_fwp5: Use esta função para coletar todo o nectar.
       courseF_bee_fwp5_2018: Use esta função para coletar todo o nectar.
+      courseF_bee_fwp6: Construa uma solução curta e doce para esse quebra-cabeça.
+      courseF_bee_fwp6_2018: Construa uma solução curta e doce para esse quebra-cabeça.
+      courseF_bee_fwp7: "**Desafio:** Modifique sua função para também fazer mel."
+      courseF_bee_fwp7_2018: "**Desafio:** Modifique sua função para também fazer
+        mel."
+      courseF_bee_fwp_challenge1: Use um `laço for` em uma função com um parâmetro
+        `comprimento` para coletar todo o milho.
+      courseF_bee_fwp_challenge1_2018: Use um `laço for` em uma função com um parâmetro
+        `comprimento` para coletar todo o milho.
+      courseF_bee_fwp_challenge2: 'Use um `laço for` em uma função com um parâmetro
+        `comprimento` para coletar todos os vegetais em cada linha. '
+      courseF_bee_fwp_challenge2_2018: 'Use um `laço for` em uma função com um parâmetro
+        `comprimento` para coletar todos os vegetais em cada linha. '
+      courseF_bee_variables_1_2018: Termine este código para que a abelha possa coletar
+        todo o mel e néctar.
+      courseF_bee_variables_1_2019: Termine este código para que a abelha possa coletar
+        todo o mel e néctar.
+      courseF_bee_variables_2_2018: Edite sua solução em um lugar para que a abelha
+        possa coletar todo o mel e o néctar.
+      courseF_bee_variables_2_2019: Edite sua solução em um lugar para que a abelha
+        possa coletar todo o mel e o néctar.
+      courseF_bee_variables_3_2018: Subtraia um da variável a cada execução do laço
+        se você quiser usar a mesma função para resolver este nível.
+      courseF_bee_variables_3_2019: Subtraia um da variável a cada execução do laço
+        se você quiser usar a mesma função para resolver este nível.
       courseF_bee_variables_4_2018: Altere o código para funcionar com este desafio.
       courseF_bee_variables_4_2019: Altere o código para funcionar com este desafio.
       courseF_bee_variables_5_2018: Crie seu próprio código para resolver este enigma
       courseF_bee_variables_5_2019: Crie seu próprio código para resolver este enigma
+      courseF_bee_variables_6_2018: "**Desafio** Agora experimente este quebra-cabeça!"
+      courseF_bee_variables_6_2019: "**Desafio** Agora experimente este quebra-cabeça!"
       courseF_bee_variables_7_2018: Este enigma é um pouco diferente. O que você precisa
         para resolvê-lo?
       courseF_bee_variables_7_2019: Este enigma é um pouco diferente. O que você precisa
         para resolvê-lo?
       courseF_bee_variables_8_2018: Quantos néctares a abelha irá coletar desta flor?
       courseF_bee_variables_8_2019: Quantos néctares a abelha irá coletar desta flor?
+      courseF_data_1: Bem-vindo ao SimSelvagem, o simulador de vida selvagem que VOCÊ
+        controla! Clique no coelho, lobo e cenoura e observe o que acontece com os
+        números acima de suas cabeças.
       courseF_farmer_ramp11: Este quebra-cabeça também usa laços aninhados. Você consegue
         descobrir como?
       courseF_farmer_ramp11_2018: Este quebra-cabeça também usa laços aninhados. Você
         consegue descobrir como?
       courseF_maze_predict1: Este código inclui um novo bloco. O que você acha que
         aconteceria se você pressionar o bloco "Executar"?
+      courseF_maze_ramp13: Hora de outro quebra-cabeça Angry Birds para juntar tudo!
       courseF_maze_ramp15: Use o que você aprendeu para levar o pássaro para o porco!
       courseF_maze_ramp4: Evite a(s) TNT(s) ou penas irão voar!
       courseF_maze_ramp4_2018: Evite a(s) TNT(s) ou penas irão voar!
@@ -11226,16 +11354,78 @@ pt-BR:
       courseF_maze_ramp6_2018: '"Mantenha a calma e me ajude a encontrar o porco malvado.
         Senão eu posso ficar zangado!"'
       courseF_maze_ramp7: Use o que você aprendeu para levar o pássaro para o porco!
+      courseF_playlab_brokenText: No restante desta fase, vamos construir um jogo
+        que você controla!
+      courseF_playlab_embed_vars: Responda as perguntas do Pirata Pegleg. O que acontece
+        se você digitar o codinome "senha"? E quanto a outro codinome?
       courseF_playlab_variables0: Esta é uma Perna de Pirata. Ele é muito difícil
         de entender nos dias de hoje!
       courseF_playlab_variables1: Esta é uma Perna de Pirata. Ele é muito difícil
         de entender nos dias de hoje!
+      courseF_playlab_variables1a: Variáveis podem ser usadas para armazenar o texto
+        que você deseja usar mais tarde. Faça Kiki, o jogador de futebol, gritar "Gol!"
+        atribuindo esse texto à variável `grito`.
+      courseF_playlab_variables1a_2018: Variáveis podem ser usadas para armazenar
+        o texto que você deseja usar mais tarde. Faça Kiki, o jogador de futebol,
+        gritar "Gol!" atribuindo esse texto à variável `grito`.
       courseF_playlab_variables2: "Agora, decodifique a fala da Perna de Pirata mudando
         o valor das variáveis em apenas dois lugares! \\\r"
       courseF_playlab_variables2a: "Agora, decodifique a fala da Perna de Pirata mudando
         o valor das variáveis em apenas dois lugares! \\\r"
+      courseF_playlab_variables2b RYAN CLONE: Insira a variável `cor` no meio de uma
+        sentença colocando-a no espaço vazio no bloco`junte`.
+      courseF_playlab_variables2b: Insira a variável `cor` no meio de uma sentença
+        colocando-a no espaço vazio no bloco`junte`.
+      courseF_playlab_variables2b_2018: Insira a variável `cor` no meio de uma sentença
+        colocando-a no espaço vazio no bloco`junte`.
+      courseF_playlab_variables3: O bloco `pergunta` armazenará automaticamente qualquer
+        coisa que o usuário responder na variável de sua escolha.
+      courseF_playlab_variables4: Você pode encontrar a variável correta na caixa
+        de ferramentas para preencher o espaço?
+      courseF_playlab_variables4b: Coloque as variáveis nos lugares corretos para
+        criar essa conversa.
+      courseF_playlab_variables4b_2018: Coloque as variáveis nos lugares corretos
+        para criar essa conversa.
+      courseF_playlab_variables5: Você pode encontrar a variável correta na caixa
+        de ferramentas para preencher o espaço?
+      courseF_playlab_variables5b: Coloque todas as variáveis no lugar correto para
+        que a história de Pegleg faça sentido.
+      courseF_playlab_variables5c RYAN Copy: Vamos combinar o bloco `pergunta` com
+        uma declaração `if/else` para criar um jogo!
+      courseF_playlab_variables5c: Vamos combinar o bloco `pergunta` com uma declaração
+        `if/else` para nos divertirmos!
+      courseF_playlab_variables5c_2018: Vamos combinar o bloco `pergunta` com uma
+        declaração `if/else` para nos divertirmos!
+      courseF_playlab_variables6b: Junte as variáveis para criar uma história divertida
+        que leve mais de um balão para ser contada.
+      courseF_playlab_variables6c: No restante desta fase, vamos construir um jogo
+        que você controla!
+      courseF_playlab_variables6c_2018: No restante desta fase, vamos construir um
+        jogo que você controla!
+      courseF_playlab_variables7b: Crie algumas perguntas e junte as respostas em
+        sua própria história.
+      courseF_playlab_variables7b_2018: Crie algumas perguntas e junte as respostas
+        em sua própria história.
+      courseF_playlab_variables7c: Faça o jogo fazer algo pedindo ao usuário para
+        adivinhar uma cor.
+      courseF_playlab_variables7c_2018: Faça o jogo fazer algo pedindo ao usuário
+        para adivinhar uma cor.
+      courseF_playlab_variables8b: Use o que você aprendeu para criar uma cena de
+        improvisação entre os atores.
       courseF_playlab_variables8c: Use as variáveis para tornar o jogo mais pessoal.
       courseF_playlab_variables8c_2018: Use as variáveis para tornar o jogo mais pessoal.
+      courseF_playlab_variables_challenge1: 'Use esses blocos para fazer os atores
+        compartilharem uma piada. '
+      courseF_playlab_variables_challenge1_2018: 'Use esses blocos para fazer os atores
+        compartilharem uma piada. '
+      courseF_playlab_variables_challenge2: Este jogo vai usar variáveis para acompanhar
+        os pontos. Pegue o Gato para obter 2 pontos. Pegue o Pinguim para obter 3
+        pontos. Quando  o Gato e o Pinguim se tocam, tire pontos. Obtenha exatamente
+        10 pontos para ganhar!
+      courseF_playlab_variables_challenge2_2018: Este jogo vai usar variáveis para
+        acompanhar os pontos. Pegue o Gato para obter 2 pontos. Pegue o Pinguim para
+        obter 3 pontos. Quando  o Gato e o Pinguim se tocam, tire pontos. Obtenha
+        exatamente 10 pontos para ganhar!
       courseF_playlab_variables_challenge3: Você pode descobrir como este aplicativo
         "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
       courseF_video_createFunctions: Ainda não temos um vídeo para criar funções.
@@ -11253,10 +11443,17 @@ pt-BR:
       coursef_explore_CYOA_Witch: Você pode fazer o que quiser no laboratório de jogo!
         Aqui está um exemplo de escolher sua própria história de aventura no laboratório
         de jogo.
+      coursef_explore_playlab2: Você pode fazer o que quiser no laboratório de jogo!
+        Aqui está um exemplo de história no laboratório de jogo.
+      coursef_explore_playlab_cat_game: Você pode fazer o que quiser no laboratório
+        de jogo! Aqui está um exemplo de jogo que você pode fazer.
       coursef_maze_ramp3: Há um bloco extra que vai fazer com que o pássaro caia.
         Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       coursef_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia.
         Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      drawings!: Desenhe o triângulo equilátero - todos os lados são iguais!
+      express_maze_debugging9_2019: Use os blocos na caixa de ferramentas para criar
+        seu programa. Faça o Scrat ir até a avelã.
       flappy_1: Conecte um bloco no bloco "quando clicar" e, em seguida, clique em
         "Executar". Clique ou toque na tela para mover o passarinho em direção ao
         alvo.
@@ -11312,16 +11509,34 @@ pt-BR:
       frozen circle function in circle: |-
         Agora vamos criar 20 círculos
         sobrepostos, virando 18 graus entre cada círculo.
+      frozen circle function in circle_b: Agora vamos criar **20** círculos sobrepostos,
+        girando **18 graus** entre cada círculo.
+      frozen circle function in circle_test: Agora vamos criar **20** círculos sobrepostos,
+        girando **18 graus** entre cada círculo.
       frozen circle function with parameter: |-
         Temos aqui um bloco "crie um círculo"
         que pode fazer círculos de tamanhos diferentes. Você pode usar isso para criar
         um pequeno círculo de tamanho 5 e um círculo maior de tamanho 10?
+      frozen circle function with parameter_b: Use a nova função para criar um pequeno
+        círculo de tamanho **5** e um círculo maior de tamanho **10**.
+      frozen circle function with parameter_test: Use a nova função para criar um
+        pequeno círculo de tamanho **5** e um círculo maior de tamanho **10**.
       frozen circle function: |-
         Use o novo bloco "crie um círculo" para
         criar 10 círculos sobrepostos. Não se esqueça de avançar entre os círculos.
+      frozen circle function_b: Use a nova função `criar um círculo` para criar 10
+        círculos sobrepostos. Não se esqueça de pular pra frente 25 pixels entre os
+        círculos!
+      frozen circle function_test: Use a nova função `criar um círculo` para criar
+        10 círculos sobrepostos. Não se esqueça de pular pra frente 25 pixels entre
+        os círculos!
       frozen circle: |-
         Um círculo é uma forma especial. Você pode descobrir
         que número usar para substituir os pontos de interrogação para desenhar um círculo?
+      frozen circle_b: Você consegue descobrir o que **"???"** deveria se tornar para
+        desenhar um círculo?
+      frozen circle_test: Você consegue descobrir o que **"???"** deveria se tornar
+        para desenhar um círculo?
       frozen cross rotate dense: |-
         Vamos repetir isso 90 vezes! Quantas
         vezes 90 cabe em 360? Dica: é um número realmente pequeno.
@@ -11337,32 +11552,62 @@ pt-BR:
       frozen cross: |-
         Envolva um bloco "Repita" em torno desses comandos para criar
         um sinal de adição. Você notou que Elsa pode se mover para a frente e para trás?
+      frozen cross_b: Desenhe uma linha com **100** pixels de comprimento e, em seguida,
+        volte ao centro antes de girar **90 graus**. Repita **4** vezes.
+      frozen cross_test: Desenhe uma linha com **100** pixels de comprimento e, em
+        seguida, volte ao centro antes de girar **90 graus**. Repita **4** vezes.
       frozen diamond mini snowflake: |-
         Você sabia que cada floco de neve
         tem uma forma diferente? Vamos criar um novo floco de neve usando o bloco "Repita"
         para repetir um paralelogramo 4 vezes, virando 90 graus à direita entre
         cada paralelogramo.
+      frozen diamond mini snowflake_b: Faça um novo floco de neve repetindo este diamante
+        4 vezes.
+      frozen diamond mini snowflake_test: Faça um novo floco de neve repetindo este
+        diamante 4 vezes.
       frozen diamond snowflake: |-
         Agora, vamos criar um novo floco de neve
         usando o bloco repita para repetir um paralelogramo 10 vezes, virando 36 graus
         à direita entre cada um.
+      frozen diamond snowflake_b: Deixe o seu floco de neve incrível repetindo o diamante
+        **10** vezes.
+      frozen diamond snowflake_test: Deixe o seu floco de neve incrível repetindo
+        o diamante **10** vezes.
       frozen diamond: |-
         Use um bloco "Repita" em torno desses blocos para criar um paralelogramo.
         É como um retângulo mas tem ângulos diferentes. Este tem ângulos de 60 graus
         e 120 graus em vez de todos os ângulos terem 90 graus.
+      frozen diamond_b: 'Adicione um bloco a este código para criar um paralelogramo. '
+      frozen diamond_test: 'Adicione um bloco a este código para criar um paralelogramo. '
       frozen freeplay: |-
         Você se tornou oficialmente um artista mestre!
         Crie um país das maravilhas de gelo.
+      frozen freeplay_b: Aqui está tudo que você precisa para criar sua própria terra
+        das maravilhas de inverno!
+      frozen freeplay_test: Aqui está tudo que você precisa para criar sua própria
+        terra das maravilhas de inverno!
       frozen line: |-
         Oi! Eu sou Elsa de Arendelle. Ajude-me a criar uma
         reta.
+      frozen line_b: Ajude Elsa a desenhar uma linha com 100 pixels de comprimento.
+      frozen line_test: Ajude Elsa a desenhar uma linha com 100 pixels de comprimento.
       frozen perpendicular: |-
         Agora, vamos ver se podemos criar duas retas
         que formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco "vire"
         e também o bloco "mova".
+      frozen perpendicular_b: Agora, crie duas linhas com um giro de 90 graus entre
+        elas.
+      frozen perpendicular_test: Agora, crie duas linhas com um giro de 90 graus entre
+        elas.
       frozen snowflake branch: |-
         Tente usar o bloco "crie um floco de neve do tipo ramificado”
         para criar três ramificações, o que começa a parecer um floco de neve.
+      frozen snowflake branch_b: Tente usar a nova função `criar um ramo de floco
+        de neve` para criar três pernas de um floco de neve.
+      frozen snowflake branch_template: Tente usar a nova função `criar um ramo de
+        floco de neve` para criar três pernas de um floco de neve.
+      frozen snowflake branch_test: Tente usar o bloco `criar um ramo de floco de
+        neve` para criar três pernas de um floco de neve.
       frozen snowflake full: |-
         Agora, vamos repetir isso 8 vezes para fazer um
         belo floco de neve!
@@ -11370,16 +11615,30 @@ pt-BR:
         lindo floco de neve!
       frozen snowflake full_test: Agora, vamos repetir isso **8** vezes para criar
         um lindo floco de neve!
+      frozen snowflake fuller_b: O que acontece se você pular para trás antes de desenhar
+        cada ramo?
       frozen snowflower: |-
         Padrões de neve complexos podem ser criados com
         formas muito simples. Você pode criar um padrão repetindo 5 círculos de tamanho
         5 e 5 círculos de tamanho 10?
+      frozen snowflower_b: Você pode fazer um novo floco de neve repetindo este código
+        **5** vezes e girando **72** graus entre cada conjunto?
+      frozen snowflower_test: Você pode fazer um novo floco de neve repetindo este
+        código **5** vezes e girando **72** graus entre cada conjunto?
       frozen square iterative: |-
         Parece que estamos na metade do caminho para fazer
         um quadrado. Vamos juntar 4 retas para criar um quadrado.
+      frozen square iterative_b: Adicione mais quatro blocos de código para finalizar
+        o quadrado.
+      frozen square iterative_test: Adicione mais quatro blocos de código para finalizar
+        o quadrado.
       frozen square loop 3x: |-
         Vamos criar três quadrados, virando depois
         de cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado.
+      frozen square loop 3x_b: 'Ajude Anna a desenhar três quadrados, girando **120
+        graus** depois de cada um. '
+      frozen square loop 3x_test: 'Ajude Anna a desenhar três quadrados, girando **120
+        graus** depois de cada um. '
       frozen square loop: |-
         Oi, eu sou Anna de Arendelle! Vamos fazer um quadrado
         com o bloco "repita", que usa menos blocos. Quantas vezes (???) o bloco
@@ -11539,12 +11798,27 @@ pt-BR:
       grade2_playlab_project_5: "Adicione blocos ao evento \"quando correr\"\npara
         mudar o plano de fundo e a velocidade de Valfredo.\\\r\n\\\r\nJogue e\nmova
         Valfredo com as setas até marcar pontos."
+      grade2_playlab_project_6: Crie sua própria história. Quando terminar, clique
+        em "Concluir" para compartilhar com os amigos.
       grade2_puppy_loops2: |-
         Você consegue pegar o porco criando um laço que usa
         apenas um bloco "avance" dentro de um bloco "repita"?
+      grade2_puppy_loops3: |-
+        "Me leve para o porco!"
+
+        Resolva esse quebra-cabeça criando um laço!
       grade2_puppy_loops4: |-
         Neste desafio, dois laços "repita" ajudarão você
         a pegar o porco com o menor número possível de blocos!
+      grade2_puppy_loops5: '"Me leve para o porco o mais rápido possível!"'
+      grade2_puppy_loops6: |-
+        "Este porco está arrebentando minhas penas!"
+
+        Laços até funcionam com mais de um bloco dentro! Você pode repetir essa sequência?
+      grade2_puppy_loops7: |-
+        "Me leve para o porco!"
+
+        Use o que você aprendeu em outros quebra-cabeças!
       grade3_AboutMyRobot_1: Faça seu robô dizer "Olá!" quando o botão é clicado.
       grade3_AboutMyRobot_2: Edite o código para que quando o segundo pássaro é clicado,
         seu programa toque um som!
@@ -11555,6 +11829,8 @@ pt-BR:
         o quarto pássaro é clicado. Seja criativo!
       grade3_AboutMyRobot_5: Sobre o Projeto Meu Robô! Escreva código para que ao
         clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
+      grade3_AboutMyRobot_TeacherIDo: Execute este quebra-cabeça e clique no robô
+        para ver o que acontece!
       grade3_ConditionalsElse_1: |-
         Esta nuvem está tapando minha visão! Veja
         se há uma flor atrás da nuvem, e só colete néctar se houver
@@ -11653,6 +11929,7 @@ pt-BR:
       grade3_Debugging_TeacherIDo: |-
         Esses blocos estão me incomodando. Corrija o(s)
         erro(s) para coletar todo o néctar e produzir todo o mel.
+      grade3_Loops_1: 'Você pode me ajudar a coletar o néctar dessas flores? '
       grade3_Loops_10: "Que abelha trabalhadora!\\\r\n\\\r\nAjude a abelha a coletar
         todo o\nnéctar e produzir todo o mel com o menor número de blocos possível."
       grade3_Loops_11: "O formato deste caminho é diferente dos\ndemais. \\\r\n\\\r\nVocê
@@ -11681,11 +11958,27 @@ pt-BR:
         em cada colmeia usando o menor número possível de blocos.
       grade3_Loops_TeacherIDo: "Essas flores parecem deliciosas!\\\r\n\\\r\nColete
         o néctar\nde cada uma das flores usando o menor número possível de blocos."
+      grade3_RunningFarm_1: Use condicionais para se certificar de que você colheu
+        todo o milho, mas não perturbe os talos onde nada está crescendo por enquanto.
+      grade3_RunningFarm_2: Ajude o fazendeiro a coletar milho e alface do campo.
       grade3_RunningFarm_3: _"Milho, alface E abóboras! Ajude-me a colher todos eles."_
       grade3_RunningFarm_4: Ajude o fazendeiro a colher toda a alface em cada pé antes
         de passar para o próximo grupo.
+      grade3_RunningFarm_5: Este campo tem grupos de milho, alface e abóboras crescendo
+        juntos. Você pode coletar todos eles?
       grade3_RunningFarm_6: Você consegue descobrir como pegar a abóbora? Certifique-se
         de recolher todo o milho ao longo do caminho!
+      grade3_RunningFarm_8: Faça trigo e batatas serem plantados aleatoriamente em
+        vários estágios de crescimento. Agora introduzimos vários laços while (empilhados)
+        aninhados dentro de um laço. Os dois laços while na solução representam diferentes
+        laços while (enquanto houver batata e enquanto houver trigo)
+      grade3_RunningFarm_9: Adicione o elemento Erva Daninha. Ervas Daninhas começam
+        em pontos aleatórios no campo e se espalham mais e mais rapidamente com o
+        passar do tempo. Esse quebra-cabeça é o quebra-cabeça culminante em estilo
+        de jogo. Os alunos devem ter os blocos de eventos (para cima, para baixo,
+        para a esquerda, para a direita, barra de espaço) disponíveis na caixa de
+        ferramentas para usar, se quiserem. O campo inteiro deve ser plantado aleatoriamente
+        principalmente com trigo, batatas e algumas ervas daninhas.
       grade3_bee_conditionals_new1a: "Ajude a abelha a recolher todo o néctar. \n\nVocê
         só pode coletar néctar de flores, mas você pode verificar qualquer espaço
         para ver se há uma flor."
@@ -12282,6 +12575,7 @@ pt-BR:
       gradek_playlab_eventsPre: Este é um nível de Laboratório. Mova os blocos para
         o área de trabalho e veja o que acontece!
       group test: Faça um jogo
+      harvester_Kahoot: Agora ajude o fazendeiro a colher milho, alface **e** abóbora.
       iceAgeLoopsforVideo: Você consegue chegar à bolota com apenas um bloco `avançar`?
       iceage_click_hello: 'Você pode ajudar Sid a ligar para os amigos dele quando
         você clica nele? '
