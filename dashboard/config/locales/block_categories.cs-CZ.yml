@@ -1,24 +1,1963 @@
 ---
-cs:
+cs-CZ:
   data:
     block_categories:
-      Actions: Akce
-      Loops: Smyčky
-      Functions: Funkce
-      Color: Barva
-      Math: Matematika
-      Logic: Logika
-      Variables: Proměnné
-      Conditionals: Podmínky
-      Events: Události
-      Text: text
-      Location: Místo
-      numbers: čísla
-      Numbers: Čísla
-      Dancers: Tanečníci
-      Groups: Skupiny
-      Start: Spustit
-      Booleans: Logické hodnoty
-      test: otestuj
-      Name: Jméno
-      Function: Funkce
+      4-5 Artist Patterns Free Play:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Alien Defender:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Choose Your Own Adventure:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Course 4 Artist For Loops 11:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      Course 4 Artist For Loops 11a:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      Course 4 Artist For Loops 14:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      Course 4 Artist For Loops 15:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      Course 4 Artist For Loops 4:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      Course 4 Artist For Loops 6a:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      Course 4 Artist For Loops 8:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      Course 4 Artist For Loops Challenge:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      Course 4 Artist For Loops inspire:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      Course 4 Artist Functions Inspiration:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      Course 4 Artist Functions challenge:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      Course 4 Bee Params 1:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      Course 4 Bee Params 2:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      Course 4 Bee Params 3:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Functions: Funkce
+      Course 4 Bee Params 4:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Functions: Funkce
+        Math: Matematika
+      Course 4 Bee Params 5:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Course 4 Bee Params 6:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Course 4 Bee Params 7:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkce
+      Course 4 Bee Params 8:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkce
+      Course 4 EC 1a:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkce
+      Course 4 EC 1b:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkce
+      Course 4 EC 2a:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkce
+        Variables: Proměnné
+      Course 4 EC 2b:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      Course 4 EC 2c:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      Course 4 Play Lab Params 10:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkce
+        Variables: Proměnné
+      Course 4 Play Lab Params 7:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      Course 4 Play Lab Params 8:
+        Events: Události
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      Course 4 Play Lab Params 9:
+        Actions: Akce
+        Math: Matematika
+        Functions: Funkce
+        Variables: Proměnné
+      Course 4 Play Lab Vars 9:
+        Events: Události
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+      Course 4 SCF 1:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      Course 4 SCF 1a:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkce
+      Course 4 SCF 1b:
+        Actions: Akce
+        Loops: Smyčky
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkce
+      Course 4 SCF 2:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      Course 4 SCF 3:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      Course 4 SCFL 1:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      Course 4 SCFL 1a:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      Course 4 SCFL 1b:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      Course 4 SCFL 2:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+      Course 4 SCFL 3:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      Course 4 SCFL 4:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      Course 4 SCFL 6:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      Course 4 SCFL 7:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      Course 4 SCV 6:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      'Course E: Play Lab Project':
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      'Course F: Artist Project':
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      'Course F: Artist Project - Revise':
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      'Course F: Artist Project - Revise_2018':
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      'Course F: Artist Project_2018':
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      'Course F: Artist Project_2019':
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      CourseD_Dance_Party_11_5:
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Události
+      CourseD_Dance_Party_12:
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Události
+        Numbers: Čísla
+        Logic: Logika
+      CourseE_Project_SpriteLab:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+        Logic: Logika
+        Text: text
+      CourseE_Project_SpriteLab_2019:
+        Actions: Akce
+        Events: Události
+      CourseE_hoops:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+        Functions: Funkce
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+        Functions: Funkce
+      CourseF_Project_SpriteLab:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+        Functions: Funkce
+      CourseF_Project_SpriteLab_2019:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Text: text
+      Dance Party 2:
+        Events: Události
+      Dance Party 6:
+        Events: Události
+      Dance Party Freeplay:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+      Dance_Party_11_5:
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Události
+      Dance_Party_12:
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Události
+        Numbers: Čísla
+        Logic: Logika
+      Dance_Party_extras_battle:
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Události
+        Numbers: Čísla
+        Logic: Logika
+      Dance_Party_extras_every_beat:
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Události
+        Numbers: Čísla
+        Logic: Logika
+      Dance_Party_extras_layout:
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Události
+        Numbers: Čísla
+        Logic: Logika
+      Dance_Party_extras_on_beat:
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Události
+        Numbers: Čísla
+        Logic: Logika
+      Dance_Party_extras_speed:
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Události
+        Numbers: Čísla
+        Logic: Logika
+      Dance_Party_extras_visible:
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Události
+        Numbers: Čísla
+        Logic: Logika
+      Find the Wizard:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Fish Tank 7-validated:
+        Events: Události
+      Fish Tank 7-validated_2019:
+        Actions: Akce
+        Events: Události
+      FoodFight:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Geometric Sun:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Geometric Sun_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Guess The Number:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      InspirationalArtwork:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      InspirationalArtwork_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      NEW Course 4 Artist Functions 14:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      NEW Course 4 Artist Params 1:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+        Variables: Proměnné
+      NEW Course 4 Artist Params 10:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      NEW Course 4 Artist Params 11:
+        Actions: Akce
+        Functions: Funkce
+        Loops: Smyčky
+        Math: Matematika
+      NEW Course 4 Artist Params 12:
+        Actions: Akce
+        Math: Matematika
+        Functions: Funkce
+      NEW Course 4 Artist Params 12a:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      NEW Course 4 Artist Params 13:
+        Actions: Akce
+        Functions: Funkce
+        Loops: Smyčky
+        Math: Matematika
+      NEW Course 4 Artist Params 14:
+        Actions: Akce
+        Functions: Funkce
+        Loops: Smyčky
+        Math: Matematika
+      NEW Course 4 Artist Params 15:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      NEW Course 4 Artist Params 2:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      NEW Course 4 Artist Params 3:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      NEW Course 4 Artist Params 6:
+        Actions: Akce
+        Functions: Funkce
+        Loops: Smyčky
+        Math: Matematika
+      NEW Course 4 Artist Params 7:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      NEW Course 4 Artist Params 8:
+        Actions: Akce
+        Math: Matematika
+        Functions: Funkce
+        Loops: Smyčky
+      NEW Course 4 Artist Params 9:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      NEW Course 4 Artist Params inspire:
+        Actions: Akce
+        Functions: Funkce
+        Loops: Smyčky
+        Math: Matematika
+      NEW Course 4 Play Lab Params 11:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Robot Doodle:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Robot Doodle_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkce
+        Variables: Proměnné
+      Virtual Pet 2:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+      Virtual Pet 3:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+      Virtual Pet 4:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+      Virtual Pet 5:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+      Virtual Pet 6:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+      Virtual Pet Freeplay:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+      behaviors 3a:
+        Actions: Akce
+      behaviors 5:
+        Actions: Akce
+      behaviors 6:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Math: Matematika
+        Logic: Logika
+      behaviors 7:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Math: Matematika
+        Logic: Logika
+      behaviors free play:
+        Actions: Akce
+        Events: Události
+      course3_bee_functions_challenge1:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      course3_bee_functions_challenge2:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      course3_bee_functions_challenge3:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      course3_bee_functions_challenge4:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      course3_playLab_challenge1:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      course4_artist_fwp_challenge1:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      course4_bee_for_challenge1:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+        Math: Matematika
+      course4_bee_fwp_challenge1:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      course4_bee_fwp_challenge2:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      course4_playlab_variables_challenge1:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+        Variables: Proměnné
+      courseD_artist_project1:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project1a:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project1a_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project1a_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project2:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project2_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project2_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project2a:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project2a_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project2a_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project3:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project3_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project3_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project3a:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project3a_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project3a_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project4:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project4_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project4_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project4a:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project4a_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project4a_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project5:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project5_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_artist_project5_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseD_playLab_condFP:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+      courseD_playLab_condFP_2018:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+      courseE_Dogger_2:
+        Actions: Akce
+        Events: Události
+        Variables: Proměnné
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Text: text
+        Functions: Funkce
+      courseE_artist_concept1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      courseE_artist_concept4:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_concept4_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      courseE_artist_functions10:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions10_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions10_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions2_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseE_artist_functions2_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseE_artist_functions3_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseE_artist_functions3_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseE_artist_functions5_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseE_artist_functions5_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseE_artist_functions7_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseE_artist_functions7_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseE_artist_functions8:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions8_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions8_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions8a_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions8a_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions8b_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions8b_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions8c_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions8c_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions9:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions9_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions9_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functionsProj_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      courseE_artist_functionsProj_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      courseE_artist_functions_predict2:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions_predict2_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_artist_functions_predict2_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_bee_concept1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_bee_concept2_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_bee_concept3_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_bee_concept4_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_bee_concept5_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_bee_functions6:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_bee_functions7:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_bee_functions_challenge1:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_bee_functions_challenge2:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseE_farmer_concept1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_concept2_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_concept3_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions1:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions10a1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions10a1_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions10b:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions11_predict:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions11_predict_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions11_predict_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions13_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions13_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions1_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions1a:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions1a_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions1a_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions2b:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions2b_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions2b_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions2ba:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions2ba_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions2ba_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions3c:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions3c1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions3c1_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions3c_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions3c_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions4b:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions5c:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions6c:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions7a1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions7a1_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions7b:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions8a1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions8a1_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions8b:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions9a1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions9a1_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_farmer_functions9b:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_playLab_challenge1:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_playLab_scaffold5:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseE_playLab_scaffold6:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+      courseF_artist_for1:
+        Actions: Akce
+        Loops: Smyčky
+        Color: Barva
+      courseF_artist_for10:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_artist_for10_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Functions: Funkce
+      courseF_artist_for10_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Functions: Funkce
+      courseF_artist_for10_predict1:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_artist_for10_predict1_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_artist_for10_predict1_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_artist_for1_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for1_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for2:
+        Actions: Akce
+        Loops: Smyčky
+        Color: Barva
+      courseF_artist_for2_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for2_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for3:
+        Actions: Akce
+        Loops: Smyčky
+        Color: Barva
+      courseF_artist_for3_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for3_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for4:
+        Actions: Akce
+        Loops: Smyčky
+        Color: Barva
+      courseF_artist_for4_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for4_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for5:
+        Actions: Akce
+        Loops: Smyčky
+        Color: Barva
+      courseF_artist_for5_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for5_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for6:
+        Actions: Akce
+        Loops: Smyčky
+        Color: Barva
+      courseF_artist_for6_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Color: Barva
+      courseF_artist_for6_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Color: Barva
+      courseF_artist_for7:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for7_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for7_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for8:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for8_2018:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for8_2019:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for9:
+        Actions: Akce
+        Loops: Smyčky
+      courseF_artist_for9_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseF_artist_for9_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+      courseF_artist_for_challenge1:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_for_challenge1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_for_challenge1_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_for_challenge2:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_for_challenge2_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_for_challenge2_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_fwp2:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      courseF_artist_fwp2_predict1:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      courseF_artist_fwp3:
+        Functions: Funkce
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_fwp4:
+        Actions: Akce
+        Math: Matematika
+        Functions: Funkce
+      courseF_artist_fwp5:
+        Actions: Akce
+        Functions: Funkce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_fwp6:
+        Actions: Akce
+        Functions: Funkce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_fwp7:
+        Actions: Akce
+        Functions: Funkce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_fwp8:
+        Actions: Akce
+        Functions: Funkce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_artist_fwp9:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      courseF_artist_fwp_challenge1:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      courseF_artist_fwp_challenge2:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+      courseF_artist_variables10_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      courseF_artist_variables10_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      courseF_artist_variables7_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      courseF_artist_variables7_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      courseF_artist_variables8_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      courseF_artist_variables8_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      courseF_artist_variables9_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      courseF_artist_variables9_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      courseF_artist_variablesFP_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      courseF_artist_variablesFP_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+        Functions: Funkce
+      courseF_bee_conditionals10:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_conditionals2:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_conditionals3:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_conditionals4:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_conditionals5:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_conditionals8:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_for10:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for10_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for10_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for11:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for11_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for11_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for1_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for1_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for2_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for2_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for3_predict1:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for3_predict1_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for3_predict1_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for4:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for4_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for4_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for5:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for5_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for5_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for6:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for6_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for6_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for7:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for7_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for7_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for8:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for8_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for8_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for9:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+        Variables: Proměnné
+      courseF_bee_for9_2018:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for9_2019:
+        Actions: Akce
+        Math: Matematika
+        Loops: Smyčky
+      courseF_bee_for_challenge1:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_for_challenge1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_for_challenge1_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_for_challenge2:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_bee_for_challenge2_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_bee_for_challenge2_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+      courseF_bee_functions2:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_functions3:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_functions3a:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_functions4:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_functions5a:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_functions6:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_functions7:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_functions8a:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_functionsPre7:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_functions_challenge1:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_functions_challenge2:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_fwp1:
+        Actions: Akce
+        Loops: Smyčky
+        Math: Matematika
+        Conditionals: Podmínky
+      courseF_bee_fwp2:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_fwp3:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_fwp4:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_fwp5:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_fwp6:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_fwp7:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_fwp8:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_fwp9_predict1:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_fwp_challenge1:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_fwp_challenge2:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Math: Matematika
+      courseF_bee_variables_1_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_1_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_2_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_2_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_3_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_3_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_4_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_4_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_5_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_5_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_6_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_6_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_7_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_7_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_8_2018:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_bee_variables_8_2019:
+        Actions: Akce
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Functions: Funkce
+        Variables: Proměnné
+        Math: Matematika
+      courseF_playlab_variables1a:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+      courseF_playlab_variables2b:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+      courseF_playlab_variables3b_josh:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+      courseF_playlab_variables4b:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+      courseF_playlab_variables4c_predictive1:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+        Variables: Proměnné
+      courseF_playlab_variables5c:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Logic: Logika
+        Variables: Proměnné
+        Text: text
+      courseF_playlab_variables6c:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+      courseF_playlab_variables7b:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Conditionals: Podmínky
+        Math: Matematika
+        Text: text
+        Functions: Funkce
+        Variables: Proměnné
+      courseF_playlab_variables7c:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Variables: Proměnné
+      courseF_playlab_variables8c:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+        Variables: Proměnné
+      courseF_playlab_variables_challenge1:
+        Actions: Akce
+        Events: Události
+        Loops: Smyčky
+        Math: Matematika
+        Functions: Funkce
+        Variables: Proměnné
