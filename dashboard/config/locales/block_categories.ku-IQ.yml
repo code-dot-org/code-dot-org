@@ -1,15 +1,1546 @@
 ---
-ku:
+ku-IQ:
   data:
     block_categories:
-      Actions: کردەوەکان
-      Loops: گرێکان
-      Color: ڕەنگ
-      Math: بیرکاری
-      Logic: لۆژيك
-      Variables: گۆڕاوەکان
-      Text: دەق
-      Start: دەستپێبکە
-      test: تاقیکردنەوە
-      Name: ناو
-      Function: فرمان
+      4-5 Artist Patterns Free Play:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Alien Defender:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Choose Your Own Adventure:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Course 4 Artist For Loops 11:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      Course 4 Artist For Loops 11a:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      Course 4 Artist For Loops 14:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      Course 4 Artist For Loops 15:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      Course 4 Artist For Loops 4:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      Course 4 Artist For Loops 6a:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      Course 4 Artist For Loops 8:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      Course 4 Artist For Loops Challenge:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      Course 4 Artist For Loops inspire:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      Course 4 Artist Functions Inspiration:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      Course 4 Artist Functions challenge:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      Course 4 Bee Params 1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      Course 4 Bee Params 2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      Course 4 Bee Params 3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+      Course 4 Bee Params 4:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+      Course 4 Bee Params 5:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Course 4 Bee Params 6:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Course 4 Bee Params 7:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+      Course 4 Bee Params 8:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+      Course 4 EC 1a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+      Course 4 EC 1b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+      Course 4 EC 2a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      Course 4 EC 2b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      Course 4 EC 2c:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      Course 4 Play Lab Params 10:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      Course 4 Play Lab Params 7:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 Play Lab Params 8:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 Play Lab Params 9:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      Course 4 Play Lab Vars 9:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+      Course 4 Playlab For Loop Freeplay:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      Course 4 SCF 1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 SCF 1a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+      Course 4 SCF 1b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Logic: لۆژيك
+        Math: بیرکاری
+      Course 4 SCF 2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 SCF 3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 SCFL 1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 SCFL 1a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 SCFL 1b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 SCFL 2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+      Course 4 SCFL 3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 SCFL 4:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 SCFL 6:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 SCFL 7:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      Course 4 SCV 6:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      'Course E: Play Lab Project':
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      'Course F: Artist Project':
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      'Course F: Artist Project - Revise':
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      'Course F: Artist Project - Revise_2018':
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      'Course F: Artist Project_2018':
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      'Course F: Artist Project_2019':
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      CourseD_Dance_Party_12:
+        Logic: لۆژيك
+      CourseE_Project_SpriteLab:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      CourseE_Project_SpriteLab_2019:
+        Actions: کردەوەکان
+      CourseE_hoops:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      CourseF_Project_Revise_SpriteLab:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      CourseF_Project_SpriteLab:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      CourseF_Project_SpriteLab_2019:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      Dance Party Freeplay:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      Dance_Party_12:
+        Logic: لۆژيك
+      Dance_Party_extras_battle:
+        Logic: لۆژيك
+      Dance_Party_extras_every_beat:
+        Logic: لۆژيك
+      Dance_Party_extras_layout:
+        Logic: لۆژيك
+      Dance_Party_extras_on_beat:
+        Logic: لۆژيك
+      Dance_Party_extras_speed:
+        Logic: لۆژيك
+      Dance_Party_extras_visible:
+        Logic: لۆژيك
+      Find the Wizard:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Fish Tank 7-validated_2019:
+        Actions: کردەوەکان
+      FoodFight:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Geometric Sun:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Geometric Sun_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Guess The Number:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      InspirationalArtwork:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      InspirationalArtwork_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      NEW Course 4 Artist Functions 14:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      NEW Course 4 Artist Params 1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      NEW Course 4 Artist Params 10:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 11:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 12:
+        Actions: کردەوەکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 12a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 13:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 14:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 15:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 6:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 7:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params 8:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      NEW Course 4 Artist Params 9:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Artist Params inspire:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      NEW Course 4 Play Lab Params 11:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Robot Doodle:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Robot Doodle_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+      Virtual Pet 2:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      Virtual Pet 3:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      Virtual Pet 4:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      Virtual Pet 5:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      Virtual Pet 6:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      Virtual Pet Freeplay:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      behaviors 3a:
+        Actions: کردەوەکان
+      behaviors 5:
+        Actions: کردەوەکان
+      behaviors 6:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+        Logic: لۆژيك
+      behaviors 7:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+        Logic: لۆژيك
+      behaviors free play:
+        Actions: کردەوەکان
+      course3_bee_functions_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      course3_bee_functions_challenge2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      course3_bee_functions_challenge3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      course3_bee_functions_challenge4:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      course3_playLab_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      course4_artist_fwp_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      course4_bee_for_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      course4_bee_fwp_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      course4_bee_fwp_challenge2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      course4_playlab_variables_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseD_artist_project1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project1a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project1a_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project1a_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project2_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project2_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project2a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project2a_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project2a_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project3_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project3_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project3a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project3a_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project3a_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project4:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project4_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project4_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project4a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project4a_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project4a_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project5:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project5_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_artist_project5_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseD_playLab_condFP:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+      courseD_playLab_condFP_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+      courseE_Dogger_2:
+        Actions: کردەوەکان
+        Variables: گۆڕاوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Text: دەق
+      courseE_artist_concept1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseE_artist_concept4:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_concept4_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseE_artist_functions10:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions10_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions10_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions2_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions2_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions3_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions3_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions5_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions5_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions7_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions7_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions8:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions8_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions8_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions8a_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions8a_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions8b_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions8b_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions8c_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions8c_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions9:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions9_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions9_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functionsProj_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseE_artist_functionsProj_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseE_artist_functions_predict2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions_predict2_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_artist_functions_predict2_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_bee_concept1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_bee_concept2_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_bee_concept3_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_bee_concept4_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_bee_concept5_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_bee_functions6:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_bee_functions7:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_bee_functions_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_bee_functions_challenge2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_concept1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_concept2_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_concept3_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions10a1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions10a1_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions10b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions11_predict:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions11_predict_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions11_predict_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions13_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions13_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions1_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions1a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions1a_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions1a_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions2b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions2b_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions2b_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions2ba:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions2ba_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions2ba_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions3c:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions3c1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions3c1_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions3c_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions3c_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions4b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions5c:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions6c:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions7a1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions7a1_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions7b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions8a1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions8a1_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions8b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions9a1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions9a1_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_farmer_functions9b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_playLab_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_playLab_scaffold5:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseE_playLab_scaffold6:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Color: ڕەنگ
+      courseF_artist_for10:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_artist_for10_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_artist_for10_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_artist_for10_predict1:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_artist_for10_predict1_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_artist_for10_predict1_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_artist_for1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for1_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Color: ڕەنگ
+      courseF_artist_for2_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for2_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Color: ڕەنگ
+      courseF_artist_for3_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for3_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for4:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Color: ڕەنگ
+      courseF_artist_for4_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for4_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for5:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Color: ڕەنگ
+      courseF_artist_for5_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for5_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for6:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Color: ڕەنگ
+      courseF_artist_for6_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Color: ڕەنگ
+      courseF_artist_for6_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Color: ڕەنگ
+      courseF_artist_for7:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for7_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for7_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for8:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for8_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for8_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for9:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for9_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for9_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+      courseF_artist_for_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_for_challenge1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_for_challenge1_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_for_challenge2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_for_challenge2_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_for_challenge2_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_fwp2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_fwp2_predict1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_fwp3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_fwp4:
+        Actions: کردەوەکان
+        Math: بیرکاری
+      courseF_artist_fwp5:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_fwp6:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_fwp7:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_fwp8:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_fwp9:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_fwp_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_fwp_challenge2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_artist_variables10_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_artist_variables10_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_artist_variables7_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_artist_variables7_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_artist_variables8_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_artist_variables8_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_artist_variables9_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_artist_variables9_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_artist_variablesFP_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_artist_variablesFP_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_bee_conditionals10:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_conditionals2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_conditionals3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_conditionals4:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_conditionals5:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_conditionals8:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_for10:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for10_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for10_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for11:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for11_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for11_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for1_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for1_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for2_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for2_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for3_predict1:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for3_predict1_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for3_predict1_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for4:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for4_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for4_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for5:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for5_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for5_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for6:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for6_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for6_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for7:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for7_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for7_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for8:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for8_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for8_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for9:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+      courseF_bee_for9_2018:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for9_2019:
+        Actions: کردەوەکان
+        Math: بیرکاری
+        Loops: گرێکان
+      courseF_bee_for_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_for_challenge1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_for_challenge1_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_for_challenge2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_for_challenge2_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_for_challenge2_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functions2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functions3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functions3a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functions4:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functions5a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functions6:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functions7:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functions8a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functionsPre7:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functions_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_functions_challenge2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp3:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp4:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp5:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp6:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp7:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp8:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp9_predict1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_fwp_challenge2:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_bee_variables_1_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_1_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_2_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_2_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_3_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_3_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_4_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_4_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_5_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_5_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_6_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_6_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_7_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_7_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_8_2018:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_bee_variables_8_2019:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Variables: گۆڕاوەکان
+        Math: بیرکاری
+      courseF_playlab_variables1a:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_playlab_variables2b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+      courseF_playlab_variables3b_josh:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_playlab_variables4b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_playlab_variables4c_predictive1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_playlab_variables5c:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Logic: لۆژيك
+        Variables: گۆڕاوەکان
+        Text: دەق
+      courseF_playlab_variables6c:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_playlab_variables7b:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Text: دەق
+        Variables: گۆڕاوەکان
+      courseF_playlab_variables7c:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_playlab_variables8c:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
+      courseF_playlab_variables_challenge1:
+        Actions: کردەوەکان
+        Loops: گرێکان
+        Math: بیرکاری
+        Variables: گۆڕاوەکان
