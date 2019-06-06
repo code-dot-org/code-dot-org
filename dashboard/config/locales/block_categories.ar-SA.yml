@@ -1,51 +1,2377 @@
 ---
-ar:
+ar-SA:
   data:
     block_categories:
-      Actions: الإجراءات
-      Loops: الحلقات
-      Functions: دوال
-      Color: اللون
-      Brushes: فرش
-      Math: العمليات الحسابية
-      Logic: المنطق
-      Variables: المتغيرات
-      Number: رقم
-      String: نص
-      Image: صورة
-      Boolean: قيمة منطقية
-      Conditionals: الجمل الشرطية
-      Events: الأحداث
-      Games/Score: ألعاب/نقطة
-      Comments: تعليقات
-      Category: فئة
-      Prebuilt: معدّة مسبقاً
-      Text: النص
-      Comment: تعليق
-      World: العالم
-      Behaviors: السلوك
-      'Variables ': 'المتغيرات '
-      Default: الافتراضي
-      Locations: مواقع
-      everythingelse: كل شيء اخر
-      Location: الموقع
-      numbers: أرقام
-      Numbers: أرقام
-      Dancers: الراقصون
-      Groups: المجموعات
-      Advanced: مُتقدم
-      Start: إبدأ
-      Dancing: رقص
-      Brush: فرشاة
-      Movement: حركة
-      Booleans: القيم المنطقية
-      Functional: الدوال
-      While Events: التكرار بواسطة (while)
-      Predefined: معرف مسبقاً
-      test: اختبار
-      test2: تجربة2
-      Name: الاسم
-      NEW BLOCKS: كتل برمجية جديدة
-      'Functions ': 'الدوال '
-      Game/Score: لعبة/نقطة
-      Function: دالة
+      4-5 Artist Patterns Free Play:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+      Alien Defender:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Games/Score: ألعاب/نقطة
+        Comments: تعليقات
+      Choose Your Own Adventure:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Games/Score: ألعاب/نقطة
+        Comments: تعليقات
+      Course 4 Artist For Loops 11:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+      Course 4 Artist For Loops 11a:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+      Course 4 Artist For Loops 14:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+      Course 4 Artist For Loops 15:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+        'Variables ': 'المتغيرات '
+      Course 4 Artist For Loops 4:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+      Course 4 Artist For Loops 6a:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+      Course 4 Artist For Loops 8:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+      Course 4 Artist For Loops Challenge:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+      Course 4 Artist For Loops inspire:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+      Course 4 Artist Functions Inspiration:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Functions: دوال
+      Course 4 Artist Functions challenge:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Functions: دوال
+      Course 4 Bee Params 1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Functions: دوال
+      Course 4 Bee Params 2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Functions: دوال
+      Course 4 Bee Params 3:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Functions: دوال
+        'Variables ': 'المتغيرات '
+      Course 4 Bee Params 4:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Functions: دوال
+        'Variables ': 'المتغيرات '
+        Math: العمليات الحسابية
+      Course 4 Bee Params 5:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+      Course 4 Bee Params 6:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+      Course 4 Bee Params 7:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        Functions: دوال
+        'Variables ': 'المتغيرات '
+      Course 4 Bee Params 8:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        Functions: دوال
+        'Variables ': 'المتغيرات '
+      Course 4 EC 1a:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        Functions: دوال
+      Course 4 EC 1b:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        Functions: دوال
+      Course 4 EC 2a:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        Functions: دوال
+        Variables: المتغيرات
+      Course 4 EC 2b:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        Variables: المتغيرات
+        Functions: دوال
+      Course 4 EC 2c:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        Variables: المتغيرات
+        Functions: دوال
+      Course 4 Play Lab Params 10:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        Functions: دوال
+        Variables: المتغيرات
+      Course 4 Play Lab Params 7:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+      Course 4 Play Lab Params 8:
+        Events: الأحداث
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+      Course 4 Play Lab Params 9:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Variables: المتغيرات
+      Course 4 Play Lab Vars 9:
+        Events: الأحداث
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Variables: المتغيرات
+      Course 4 SCF 1:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+        Functions: دوال
+      Course 4 SCF 1a:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        Functions: دوال
+        'Variables ': 'المتغيرات '
+      Course 4 SCF 1b:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Logic: المنطق
+        Math: العمليات الحسابية
+        Functions: دوال
+      Course 4 SCF 2:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+        Functions: دوال
+      Course 4 SCF 3:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+        Functions: دوال
+      Course 4 SCFL 1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      Course 4 SCFL 1a:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      Course 4 SCFL 1b:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      Course 4 SCFL 2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+      Course 4 SCFL 3:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      Course 4 SCFL 4:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      Course 4 SCFL 6:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      Course 4 SCFL 7:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      Course 4 SCV 6:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      'Course E: Play Lab Project':
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Games/Score: ألعاب/نقطة
+        Comments: تعليقات
+      'Course F: Artist Project':
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+      'Course F: Artist Project - Revise':
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+      'Course F: Artist Project - Revise_2018':
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+      'Course F: Artist Project_2018':
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+      'Course F: Artist Project_2019':
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+      CourseD_Dance_Party_11_5:
+        World: العالم
+        Dancers: الراقصون
+        Groups: المجموعات
+        Events: الأحداث
+      CourseD_Dance_Party_12:
+        World: العالم
+        Dancers: الراقصون
+        Groups: المجموعات
+        Events: الأحداث
+        Numbers: أرقام
+        Logic: المنطق
+      CourseE_Project_SpriteLab:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Logic: المنطق
+        Text: النص
+        Advanced: مُتقدم
+        Comments: تعليقات
+      CourseE_Project_SpriteLab_2019:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+      CourseE_hoops:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+        Functions: دوال
+      CourseF_Project_Revise_SpriteLab:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+        Functions: دوال
+      CourseF_Project_SpriteLab:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+        Functions: دوال
+      CourseF_Project_SpriteLab_2019:
+        World: العالم
+        Locations: مواقع
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Text: النص
+        Comments: تعليقات
+      Dance Party 2:
+        Behaviors: السلوك
+        Events: الأحداث
+        Comments: تعليقات
+      Dance Party 6:
+        Behaviors: السلوك
+        Events: الأحداث
+        Comments: تعليقات
+      Dance Party Freeplay:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+        Comments: تعليقات
+      Dance_Party_11_5:
+        World: العالم
+        Dancers: الراقصون
+        Groups: المجموعات
+        Events: الأحداث
+      Dance_Party_12:
+        World: العالم
+        Dancers: الراقصون
+        Groups: المجموعات
+        Events: الأحداث
+        Numbers: أرقام
+        Logic: المنطق
+      Dance_Party_extras_battle:
+        World: العالم
+        Dancers: الراقصون
+        Groups: المجموعات
+        Events: الأحداث
+        Numbers: أرقام
+        Logic: المنطق
+      Dance_Party_extras_every_beat:
+        World: العالم
+        Dancers: الراقصون
+        Groups: المجموعات
+        Events: الأحداث
+        Numbers: أرقام
+        Logic: المنطق
+      Dance_Party_extras_layout:
+        World: العالم
+        Dancers: الراقصون
+        Groups: المجموعات
+        Events: الأحداث
+        Numbers: أرقام
+        Logic: المنطق
+      Dance_Party_extras_on_beat:
+        World: العالم
+        Dancers: الراقصون
+        Groups: المجموعات
+        Events: الأحداث
+        Numbers: أرقام
+        Logic: المنطق
+      Dance_Party_extras_speed:
+        World: العالم
+        Dancers: الراقصون
+        Groups: المجموعات
+        Events: الأحداث
+        Numbers: أرقام
+        Logic: المنطق
+      Dance_Party_extras_visible:
+        World: العالم
+        Dancers: الراقصون
+        Groups: المجموعات
+        Events: الأحداث
+        Numbers: أرقام
+        Logic: المنطق
+      Find the Wizard:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Games/Score: ألعاب/نقطة
+        Comments: تعليقات
+      Fish Tank 5-validated:
+        World: العالم
+        Behaviors: السلوك
+        Comments: تعليقات
+      Fish Tank 5-validated_2019:
+        World: العالم
+        Behaviors: السلوك
+        Comments: تعليقات
+      Fish Tank 6-validated:
+        World: العالم
+        Behaviors: السلوك
+        Comments: تعليقات
+      Fish Tank 6-validated_2019:
+        World: العالم
+        Behaviors: السلوك
+        Comments: تعليقات
+      Fish Tank 7-validated:
+        World: العالم
+        Behaviors: السلوك
+        Events: الأحداث
+        Comments: تعليقات
+      Fish Tank 7-validated_2019:
+        World: العالم
+        Actions: الإجراءات
+        Behaviors: السلوك
+        Events: الأحداث
+        Comments: تعليقات
+      FoodFight:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Games/Score: ألعاب/نقطة
+        Comments: تعليقات
+      Geometric Sun:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Comments: تعليقات
+      Geometric Sun_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Comments: تعليقات
+      Guess The Number:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Games/Score: ألعاب/نقطة
+        Comments: تعليقات
+      InspirationalArtwork:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Comments: تعليقات
+      InspirationalArtwork_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Comments: تعليقات
+      NEW Course 4 Artist Functions 14:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Functions: دوال
+      NEW Course 4 Artist Params 1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Variables: المتغيرات
+      NEW Course 4 Artist Params 10:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+      NEW Course 4 Artist Params 11:
+        Actions: الإجراءات
+        Functions: دوال
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      NEW Course 4 Artist Params 12:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Functions: دوال
+      NEW Course 4 Artist Params 12a:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+      NEW Course 4 Artist Params 13:
+        Actions: الإجراءات
+        Functions: دوال
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      NEW Course 4 Artist Params 14:
+        Actions: الإجراءات
+        Brushes: فرش
+        Functions: دوال
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      NEW Course 4 Artist Params 15:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+        Functions: دوال
+      NEW Course 4 Artist Params 2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+      NEW Course 4 Artist Params 3:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+      NEW Course 4 Artist Params 6:
+        Actions: الإجراءات
+        Functions: دوال
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      NEW Course 4 Artist Params 7:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Functions: دوال
+      NEW Course 4 Artist Params 8:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Loops: الحلقات
+      NEW Course 4 Artist Params 9:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+      NEW Course 4 Artist Params inspire:
+        Actions: الإجراءات
+        Brushes: فرش
+        Functions: دوال
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      NEW Course 4 Play Lab Params 11:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Games/Score: ألعاب/نقطة
+      Robot Doodle:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Comments: تعليقات
+      Robot Doodle_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Functions: دوال
+        Variables: المتغيرات
+        Comments: تعليقات
+      Virtual Pet 2:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+        Comments: تعليقات
+      Virtual Pet 3:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+      Virtual Pet 4:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+      Virtual Pet 5:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+      Virtual Pet 6:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+      Virtual Pet Freeplay:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+      behaviors 3a:
+        World: العالم
+        Behaviors: السلوك
+        Actions: الإجراءات
+      behaviors 5:
+        World: العالم
+        Behaviors: السلوك
+        Actions: الإجراءات
+      behaviors 6:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Logic: المنطق
+      behaviors 7:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Logic: المنطق
+      behaviors free play:
+        World: العالم
+        Behaviors: السلوك
+        Actions: الإجراءات
+        Events: الأحداث
+      course3_bee_functions_challenge1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      course3_bee_functions_challenge2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Functions: دوال
+      course3_bee_functions_challenge3:
+        Default: الافتراضي
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      course3_bee_functions_challenge4:
+        Default: الافتراضي
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      course3_playLab_challenge1:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      course4_artist_fwp_challenge1:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+        Functions: دوال
+      course4_bee_for_challenge1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Functions: دوال
+        Math: العمليات الحسابية
+      course4_bee_fwp_challenge1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      course4_bee_fwp_challenge2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      course4_playlab_variables_challenge1:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Variables: المتغيرات
+      courseD_artist_project1:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project1a:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project1a_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project1a_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project2:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project2_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project2_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project2a:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project2a_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project2a_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project3:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project3_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project3_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project3a:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project3a_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project3a_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project4:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project4_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project4_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project4a:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project4a_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project4a_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project5:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project5_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_artist_project5_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseD_playLab_condFP:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Games/Score: ألعاب/نقطة
+      courseD_playLab_condFP_2018:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Games/Score: ألعاب/نقطة
+        Comment: تعليق
+      courseE_Dogger_2:
+        World: العالم
+        Actions: الإجراءات
+        Events: الأحداث
+        Behaviors: السلوك
+        Variables: المتغيرات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Text: النص
+        Functions: دوال
+      courseE_artist_concept1_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_concept4:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Functions: دوال
+      courseE_artist_concept4_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions10:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+      courseE_artist_functions10_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions10_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions2_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        'Functions ': 'الدوال '
+        Comments: تعليقات
+      courseE_artist_functions2_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        'Functions ': 'الدوال '
+        Comments: تعليقات
+      courseE_artist_functions3_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseE_artist_functions3_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseE_artist_functions5_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        'Functions ': 'الدوال '
+        Comments: تعليقات
+      courseE_artist_functions5_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        'Functions ': 'الدوال '
+        Comments: تعليقات
+      courseE_artist_functions7_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        'Functions ': 'الدوال '
+        Comments: تعليقات
+      courseE_artist_functions7_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        'Functions ': 'الدوال '
+        Comments: تعليقات
+      courseE_artist_functions8:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+      courseE_artist_functions8_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions8_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions8a_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions8a_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions8b_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions8b_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions8c_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions8c_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions9:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+      courseE_artist_functions9_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions9_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functionsProj_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functionsProj_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_artist_functions_predict2:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+      courseE_artist_functions_predict2_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+      courseE_artist_functions_predict2_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Functions: دوال
+      courseE_bee_concept1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_bee_concept2_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_bee_concept3_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_bee_concept4_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_bee_concept5_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_bee_functions6:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Functions: دوال
+      courseE_bee_functions7:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Functions: دوال
+      courseE_bee_functions_challenge1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_bee_functions_challenge2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Functions: دوال
+      courseE_farmer_concept1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_concept2_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_concept3_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions10a1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions10a1_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions10b:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions11_predict:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions11_predict_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions11_predict_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions13_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions13_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions1_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions1a:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions1a_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions1a_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions2b:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions2b_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions2b_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions2ba:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions2ba_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions2ba_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions3c:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions3c1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions3c1_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions3c_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions3c_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions4b:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions5c:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions6c:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions7a1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions7a1_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions7b:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions8a1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions8a1_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions8b:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_farmer_functions9a1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions9a1_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Comments: تعليقات
+      courseE_farmer_functions9b:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_playLab_challenge1:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_playLab_scaffold5:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseE_playLab_scaffold6:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+      courseF_artist_for1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Color: اللون
+      courseF_artist_for10:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+        'Variables ': 'المتغيرات '
+      courseF_artist_for10_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+        'Variables ': 'المتغيرات '
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_for10_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+        'Variables ': 'المتغيرات '
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_for10_predict1:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+        'Variables ': 'المتغيرات '
+      courseF_artist_for10_predict1_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+        'Variables ': 'المتغيرات '
+      courseF_artist_for10_predict1_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Brushes: فرش
+        'Variables ': 'المتغيرات '
+      courseF_artist_for1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseF_artist_for1_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseF_artist_for2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Color: اللون
+      courseF_artist_for2_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseF_artist_for2_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseF_artist_for3:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Color: اللون
+      courseF_artist_for3_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseF_artist_for3_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseF_artist_for4:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Color: اللون
+      courseF_artist_for4_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseF_artist_for4_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseF_artist_for5:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Color: اللون
+      courseF_artist_for5_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseF_artist_for5_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Comments: تعليقات
+      courseF_artist_for6:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Color: اللون
+      courseF_artist_for6_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Color: اللون
+      courseF_artist_for6_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Color: اللون
+      courseF_artist_for7:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+      courseF_artist_for7_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+      courseF_artist_for7_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+      courseF_artist_for8:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+      courseF_artist_for8_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+      courseF_artist_for8_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+      courseF_artist_for9:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+      courseF_artist_for9_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_for9_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Brushes: فرش
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_for_challenge1:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      courseF_artist_for_challenge1_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      courseF_artist_for_challenge1_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      courseF_artist_for_challenge2:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      courseF_artist_for_challenge2_2018:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      courseF_artist_for_challenge2_2019:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      courseF_artist_fwp2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Functions: دوال
+      courseF_artist_fwp2_predict1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Functions: دوال
+      courseF_artist_fwp3:
+        Functions: دوال
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseF_artist_fwp4:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Functions: دوال
+      courseF_artist_fwp5:
+        Actions: الإجراءات
+        Functions: دوال
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+      courseF_artist_fwp6:
+        Actions: الإجراءات
+        Functions: دوال
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+      courseF_artist_fwp7:
+        Actions: الإجراءات
+        Brushes: فرش
+        Functions: دوال
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseF_artist_fwp8:
+        Actions: الإجراءات
+        Brushes: فرش
+        Functions: دوال
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseF_artist_fwp9:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+        Functions: دوال
+      courseF_artist_fwp_challenge1:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+        Functions: دوال
+      courseF_artist_fwp_challenge2:
+        Actions: الإجراءات
+        Brushes: فرش
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+        Functions: دوال
+      courseF_artist_variables10_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Variables: المتغيرات
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_variables10_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Variables: المتغيرات
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_variables7_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Variables: المتغيرات
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_variables7_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Variables: المتغيرات
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_variables8_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Variables: المتغيرات
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_variables8_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Variables: المتغيرات
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_variables9_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Variables: المتغيرات
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_variables9_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Variables: المتغيرات
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_variablesFP_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Variables: المتغيرات
+        Functions: دوال
+        Comments: تعليقات
+      courseF_artist_variablesFP_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Brushes: فرش
+        Variables: المتغيرات
+        Functions: دوال
+        Comments: تعليقات
+      courseF_bee_conditionals10:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_conditionals2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_conditionals3:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_conditionals4:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_conditionals5:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_conditionals8:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_for10:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for10_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for10_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for11:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for11_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for11_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for1_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+        Comments: تعليقات
+      courseF_bee_for1_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+        Comments: تعليقات
+      courseF_bee_for2_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+        Comments: تعليقات
+      courseF_bee_for2_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+        Comments: تعليقات
+      courseF_bee_for3_predict1:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for3_predict1_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for3_predict1_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for4:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for4_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+        Comments: تعليقات
+      courseF_bee_for4_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+        Comments: تعليقات
+      courseF_bee_for5:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for5_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for5_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for6:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for6_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for6_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for7:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for7_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+        Comments: تعليقات
+      courseF_bee_for7_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+        Comments: تعليقات
+      courseF_bee_for8:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for8_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for8_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for9:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        Variables: المتغيرات
+      courseF_bee_for9_2018:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for9_2019:
+        Actions: الإجراءات
+        Math: العمليات الحسابية
+        Loops: الحلقات
+        'Variables ': 'المتغيرات '
+        Comments: تعليقات
+      courseF_bee_for_challenge1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_for_challenge1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_for_challenge1_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_for_challenge2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseF_bee_for_challenge2_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseF_bee_for_challenge2_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+      courseF_bee_functions2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_functions3:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_functions3a:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_functions4:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_functions5a:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_functions6:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_functions7:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_functions8a:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_functionsPre7:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_functions_challenge1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_functions_challenge2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_fwp1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Conditionals: الجمل الشرطية
+      courseF_bee_fwp2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_fwp3:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_fwp4:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_fwp5:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_fwp6:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_fwp7:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_fwp8:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_fwp9_predict1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_fwp_challenge1:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_fwp_challenge2:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Math: العمليات الحسابية
+      courseF_bee_variables_1_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_1_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_2_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_2_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_3_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_3_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_4_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_4_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_5_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_5_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_6_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_6_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_7_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_7_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+        Comments: تعليقات
+      courseF_bee_variables_8_2018:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+      courseF_bee_variables_8_2019:
+        Actions: الإجراءات
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Functions: دوال
+        Variables: المتغيرات
+        Math: العمليات الحسابية
+      courseF_playlab_variables1a:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Variables: المتغيرات
+      courseF_playlab_variables2b:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        'Variables ': 'المتغيرات '
+      courseF_playlab_variables3b_josh:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Variables: المتغيرات
+      courseF_playlab_variables4b:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Variables: المتغيرات
+      courseF_playlab_variables4c_predictive1:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Variables: المتغيرات
+      courseF_playlab_variables5c:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Logic: المنطق
+        Variables: المتغيرات
+        Text: النص
+      courseF_playlab_variables6c:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Variables: المتغيرات
+      courseF_playlab_variables7b:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Conditionals: الجمل الشرطية
+        Math: العمليات الحسابية
+        Text: النص
+        Functions: دوال
+        Variables: المتغيرات
+        Game/Score: لعبة/نقطة
+      courseF_playlab_variables7c:
+        Default: الافتراضي
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Variables: المتغيرات
+      courseF_playlab_variables8c:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Variables: المتغيرات
+      courseF_playlab_variables_challenge1:
+        Actions: الإجراءات
+        Events: الأحداث
+        Loops: الحلقات
+        Math: العمليات الحسابية
+        Functions: دوال
+        Variables: المتغيرات

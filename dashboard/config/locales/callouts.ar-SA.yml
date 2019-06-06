@@ -1,322 +1,168 @@
 ---
-ar:
+ar-SA:
   data:
     callouts:
-      2-3 Artist Debugging 1_callout:
+      2-3 Artist Debugging 1:
         2-3_Artist_Debugging_1_a: لا يمتلك الفنان رز "خطوة"، لكن يمكنك سحب الشريط
           المنزلق إلى اليسار لمشاهدة تشغيل البرنامج ببطء.
-      Course 4 Artist 4_callout:
+      Course 4 Artist 4:
         repeat_full_circle: أدخل عدد المرات التي يجب أن يتحرك الزومبي ليقوم بدائرة
           كاملة
-      Course 4 Artist 7_callout:
+      Course 4 Artist 7:
         repeat_blocks: إستخدم كتلة "كرر" و لفّ حولها القطع في مساحة العمل
-      Course 4 Artist For Loops 4_callout:
+      Course 4 Artist For Loops 4:
         place_counter_variable: سحب متغير العداد داخل مربع البرمجة هذا
-      Course 4 Artist Functions 4_callout:
-        create_function: انقر هنا لفتح القائمة المنبثقة "المهام"، ثم انقر فوق الزر
-          "إنشاء مهمة".
-      Course 4 Artist Functions 5 OLD_callout:
-        house_hint: موافق إذا كانت الصورة لا تبدو وكأنها منزل حتى الآن. سيتم إصلاحه
-          في اللغز القادم.
-      Course 4 Artist Functions 8_callout:
-        edit_function: انقر هنا لتحرير وظيفتك.
-      Course 4 Artist Params 2_callout:
-        length_parameter: يمكن أن تقوم بتحديث هذه الوظيفة حيث أنه يستخدم المعلمة "طول"؟
-      Course 4 Artist Params 4_callout:
-        create_function: انقر هنا لفتح القائمة المنبثقة "المهام"، ثم انقر فوق الزر
-          "إنشاء مهمة".
-      Course 4 Artist Vars 1_callout:
+      Course 4 Artist Vars 1:
         repeat_blocks: إستخدم كتلة "كرر" و لفّ حولها القطع في مساحة العمل
-      Course 4 Artist Vars 10_callout:
-        set_sides: تستخدم هذه الكتلة لتعيين "الجانبين" إلى العدد المطلوب لإكمال اللغز.
-      Course 4 Artist Vars 12_callout:
+      Course 4 Artist Vars 12:
         set_length: تستخدم هذه الكتلة لتعيين "طول" إلى القيمة الصحيحة.
-      Course 4 Artist Vars 2_callout:
+      Course 4 Artist Vars 2:
         set_length: تستخدم هذه الكتلة لتعيين "طول" إلى القيمة الصحيحة.
-      Course 4 Artist Vars 3_callout:
-        place_variable: سحب المتغير الخاص بك داخل مربع الترجمة هذا
-      Course 4 Artist Vars 6_callout:
+      Course 4 Artist Vars 6:
         degrees_per_side: قسمة 360 على عدد الجانبين للحصول على حجم كل زاوية في درجات.
-      Course 4 Artist Vars 9_callout:
-        set_sides: تستخدم هذه الكتلة لتعيين "الجانبين" إلى العدد المطلوب لإكمال اللغز.
-      Course 4 Bee For Loops 1_callout:
-        get_nectar: استخدام الكتلة الجديدة "الحصول على رحيق".
-      Course 4 Bee For Loops 6_callout:
-        actions_category: أداة مربع حصلت على نظرة جديدة! كتل "الإجراءات" هنا الآن.
-      Course 4 Bee Params 2_callout:
+      Course 4 Bee Params 2:
         edit_get_nectar: استخدم هذا الزر لتحرير المهمة وتغيير اتجاه النحلة سوف تتحول
           إلى الحصول على الرحيق.
-      Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
-      Course 4 Maze 4_callout:
+      Course 4 Maze 4:
         repeat: ضع مربعات برمجة داخل الحلقة لتكرار الأوامر
-      Course 4 Play Lab Params 3_callout:
+      Course 4 Play Lab Params 3:
         edit_function: انقر هنا لتحرير وظيفتك.
-      Course 4 Play Lab Params 6_callout:
+      Course 4 Play Lab Params 6:
         edit_add_parameter: انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك
-      Course 4 Play Lab Vars 1_callout:
+      Course 4 Play Lab Vars 1:
         arrows_move_actor: استخدم الأسهم لتحريك الفنان
-      CourseD_Dance_Party_01_callout:
+      CourseD_Dance_Party_01:
         dance_callout_01: أضف هذا المربع البرمجي إلى برنامجك!
-      CourseD_Dance_Party_02_callout:
+      CourseD_Dance_Party_02:
         dance_callout_02: أضف هذا المربع البرمجي إلى برنامجك!
-      CourseD_Dance_Party_04_callout:
+      CourseD_Dance_Party_04:
         dance_callout_04: أضف هذا المربع البرمجي إلى برنامجك!
-      CourseD_Dance_Party_06_callout:
+      CourseD_Dance_Party_06:
         dance_callout_06: أضف راقصك الجديد هنا
-      CourseD_Dance_Party_11_callout:
+      CourseD_Dance_Party_11:
         dance_callout_11_a: مربع برمجي جديد!
         dance_callout_11_b: مربع برمجي جديد!
-      CourseF_PlayLab_vars1_callout:
-        arrows_move_actor: استخدم الأسهم لتحريك الفنان
-      Dance_Party_01_callout:
+      Dance_Party_01:
         dance_callout_01: أضف هذا المربع البرمجي إلى برنامجك!
-      Dance_Party_01_low_callout:
-        dance_callout_01: أضف هذا المربع البرمجي إلى برنامجك!
-      Dance_Party_02_callout:
+      Dance_Party_02:
         dance_callout_02: أضف هذا المربع البرمجي إلى برنامجك!
-      Dance_Party_04_callout:
+      Dance_Party_04:
         dance_callout_04: أضف هذا المربع البرمجي إلى برنامجك!
-      Dance_Party_06_callout:
+      Dance_Party_06:
         dance_callout_06: أضف راقصك الجديد هنا
-      Dance_Party_11_callout:
+      Dance_Party_11:
         dance_callout_11_a: مربع برمجي جديد!
         dance_callout_11_b: مربع برمجي جديد!
-      Eval Design Recipe .1_callout:
-        edit_function: انقر هنا لتحرير وظيفتك.
-      Frozen Project Test Toolbox_callout:
-        snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
-          الثلج!
-      Frozen Project Toolbox (Old)_callout:
-        snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
-          الثلج!
-      Function intro Ryan_callout:
+      Function intro Ryan:
         Function_intro_Ryan_1: هذه التعليمات تخبر الكمبيوتر أن يشغل الجزء الكبير من
           البرنامج بنفس الاسم في مساحة العمل.
-      Function intro Ryan_2019_callout:
+      Function intro Ryan_2019:
         Function_intro_Ryan_1: هذه التعليمات تخبر الكمبيوتر أن يشغل الجزء الكبير من
           البرنامج بنفس الاسم في مساحة العمل.
-      Infinity_move_collide_callout:
+      Infinity_move_collide:
         Infinity_move_collide_callout: تشغيل صوت عند حدوث هذا الحدث.
-      Infinity_move_directions_callout:
+      Infinity_move_directions:
         Infinity_move_directions_callout: أي من مربعات البرمجة ستجعل بايماكس يتنقل
           إلى أعلى عند الضغط على السهم لأعلى؟
         Infinity_move_directions_callout_arrow: استخدم هذه الأسهم للتوجيه
-      Infinity_move_right_callout:
+      Infinity_move_right:
         Infinity_move_right_runbutton: إضافة مربع برمجة تنقّل هنا
-      Infinity_repeat_callout:
+      Infinity_repeat:
         Infinity_repeat_callout: وضع مربعات برمجة التنقّل هنا
-      MC_HOC_2017_01_Cole_callout:
-        MC_HOC_2017_01_Cole_2: استخدم مفاتيح الأسهم أو انقر هنا لتحريك اللاعب.
-      MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: الآن لاعبك لديه صديق! يمكنك كتابة برنامج للكائن لمساعدتك
-          في التقدم المستويات.
-      MC_HOC_2017_03_Cole_callout:
+      MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: هذه حلقة "كرر"! انقر عليها في مساحة العمل وأضف الأوامر
           البرمجية التي تريد تكرارها مراراً.
-      MC_HOC_2017_03_Cole_2019_callout:
+      MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: هذه حلقة "كرر"! انقر عليها في مساحة العمل وأضف الأوامر
           البرمجية التي تريد تكرارها مراراً.
-      MC_HOC_2017_04_Cole_callout:
+      MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: يمكن للكائن أن يمشي فوق الماء، لكن اللاعب لا يمكنه
           فعل ذلك!
-      MC_HOC_2017_04_Cole_2019_callout:
+      MC_HOC_2017_04_Cole_2019:
         MC_HOC_2017_04_Cole_a: يمكن للكائن أن يمشي فوق الماء، لكن اللاعب لا يمكنه
           فعل ذلك!
-      MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: انقر هذا إلى مساحة العمل وأضف بعض الأوامر البرمجية
-          لتكرارها مراراً وتكراراً!
-      MC_HOC_2017_06_Cole_callout:
+      MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_1: لا يمكنك رمي هذه الكتل البرمجية بعيداً، لكن يمكنك تعديلها!
-      MC_HOC_2017_06_Cole_2019_callout:
+      MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: لا يمكنك رمي هذه الكتل البرمجية بعيداً، لكن يمكنك تعديلها!
-      MC_HOC_2017_08_RY_callout:
-        MC_HOC_2017_08_RY_1: 'يمكن للكائن أن يمشي فوق الحمم البركانية، لكن اللاعب
-          لا يمكنه فعل ذلك!  '
-      MC_HOC_2017_08_Will_callout:
-        MC_HOC_2017_08_RY_1: 'يمكن للكائن أن يمشي فوق الحمم البركانية، لكن اللاعب
-          لا يمكنه فعل ذلك!  '
-      MC_HOC_2017_Ali_callout:
+      MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: 'يمكن للكائن أن يمشي فوق الحمم البركانية، لكن ستيف وألكس
           لا يمكنهم فعل ذلك!  '
-      MC_HOC_2017_Ali_2019_callout:
+      MC_HOC_2017_Ali_2019:
         MC_HOC_2017_08_RY_1: 'يمكن للكائن أن يمشي فوق الحمم البركانية، لكن ستيف وألكس
           لا يمكنهم فعل ذلك!  '
-      NEW Course 4 Artist Functions 5_callout:
+      NEW Course 4 Artist Functions 7:
         edit_function: انقر هنا لتحرير وظيفتك.
-        function_editor_draw_square: هذا هو تعريف الدالة الخاصة بك. تشتغل مربعات البرمجة
-          هذه كل مرة تستخدم فيها مربع ترجمة "ارسم مربع"
-      NEW Course 4 Artist Functions 7_callout:
+      NEW Course 4 Artist Functions 8:
         edit_function: انقر هنا لتحرير وظيفتك.
-      NEW Course 4 Artist Functions 8_callout:
-        edit_function: انقر هنا لتحرير وظيفتك.
-      NEW Course 4 Artist Params 10_callout:
+      NEW Course 4 Artist Params 10:
         create_function: انقر هنا لفتح القائمة المنبثقة "المهام"، ثم انقر فوق الزر
           "إنشاء مهمة".
-      NEW Course 4 Artist Params 9_callout:
+      NEW Course 4 Artist Params 9:
         edit_add_parameter: انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك
         add_and_drag_parameter: اكتب اسم المعلمة الخاصة بك هنا، انقر فوق إضافة ومن
           ثم اسحبه إلى تعريف الدالة الخاصة بك
-      NEW Course 4 Artist Vars 6_callout:
+      NEW Course 4 Artist Vars 6:
         place_length_variable: اسحب متغير الطول هنا لاستبدال علامات الاستفهام
-      NEW Course 4 Bee For Loops 5_callout:
+      NEW Course 4 Bee For Loops 5:
         actions_category: أداة مربع حصلت على نظرة جديدة! كتل "الإجراءات" هنا الآن.
-      New Frozen Project_callout:
-        snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
-          الثلج!
-      Overworld Chop Trees_callout:
+      Overworld Chop Trees:
         craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
-      Overworld Chop Trees_2018_callout:
+      Overworld Chop Trees_2019:
         craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
-      Overworld Chop Trees_2019_callout:
-        craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
-      Overworld House Frame Chosen_callout:
+      Overworld House Frame Chosen:
         craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
           منزلك. هل يمكنك الانتهاء من ذلك؟
-      Overworld House Frame Chosen_2018_callout:
+      Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
           منزلك. هل يمكنك الانتهاء من ذلك؟
-      Overworld House Frame Chosen_2019_callout:
-        craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
-          منزلك. هل يمكنك الانتهاء من ذلك؟
-      Overworld Move to Sheep_callout:
+      Overworld Move to Sheep:
         craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
-      Overworld Move to Sheep_2018_callout:
+      Overworld Move to Sheep_2019:
         craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
-      Overworld Move to Sheep_2019_callout:
-        craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
-      Overworld Place Wall_callout:
+      Overworld Place Wall:
         craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
-      Overworld Place Wall_2018_callout:
+      Overworld Place Wall_2019:
         craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
-      Overworld Place Wall_2019_callout:
-        craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
-      Ryan_Demo_callout:
-        dance_callout_02: أضف هذا المربع البرمجي إلى برنامجك!
-      Underground Avoiding Lava_callout:
+      Underground Avoiding Lava:
         craft_callout_moveforward: ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك
           إضافة أمر للتقدم؟
-      Underground Avoiding Lava_2018_callout:
+      Underground Avoiding Lava_2019:
         craft_callout_moveforward: ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك
           إضافة أمر للتقدم؟
-      Underground Avoiding Lava_2019_callout:
-        craft_callout_moveforward: ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك
-          إضافة أمر للتقدم؟
-      Underground Iron_callout:
+      Underground Iron:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
-      Underground Iron_2018_callout:
+      Underground Iron_2019:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
-      Underground Iron_2019_callout:
-        craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
-      frozen circle function with parameter_callout:
+      frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: إستخدم القطعة "إنشاء دائرة"
           و غيّر الحجم.
-      frozen cross rotate_callout:
-        replace_questions_degree: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen cross rotate_b_callout:
-        replace_questions_degree: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen cross rotate_test_callout:
-        replace_questions_degree: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen cross_callout:
+      frozen cross:
         repeat_blocks_1: "(1) استخدام هذه الكتلة لوضعها حول الكتل الرمادية في مساحة
           العمل"
         repeat_blocks_2: أنقل المقطع "كرر" هنا، وضع المقاطع الرمادية بداخلهاا
-      frozen diamond snowflake_callout:
+      frozen cross rotate:
+        replace_questions_degree: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+      frozen diamond:
         frozen_diamond_repeat: إستخدم القطعة "كرر" لإنشاء هذا الشكل.
-      frozen diamond_callout:
+      frozen diamond snowflake:
         frozen_diamond_repeat: إستخدم القطعة "كرر" لإنشاء هذا الشكل.
-      frozen freeplay_callout:
+      frozen freeplay:
         snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
           الثلج!
-      frozen freeplay_b_callout:
-        snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
-          الثلج!
-      frozen freeplay_test_callout:
-        snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
-          الثلج!
-      frozen line_callout:
+      frozen line:
         move_elsa_forward: اسحب مربع البرمجة "تقدم إلى الأمام" وركّبها تحت مربع البرمجة
           "عند التشغيل" لجعل إلسا تتقدم إلى الأمام
-      frozen line_b_callout:
-        move_elsa_forward: اسحب مربع البرمجة "تقدم إلى الأمام" وركّبها تحت مربع البرمجة
-          "عند التشغيل" لجعل إلسا تتقدم إلى الأمام
-      frozen line_test_callout:
-        move_elsa_forward: اسحب مربع البرمجة "تقدم إلى الأمام" وركّبها تحت مربع البرمجة
-          "عند التشغيل" لجعل إلسا تتقدم إلى الأمام
-      frozen perpendicular_callout:
+      frozen perpendicular:
         turn_elsa: إستخدم القطعة البرمجية "اتجه" لجعل إلسا تدور. العدد الموجود في
           القائمة يحدد الزاوية التي ستستدرها
-      frozen snowflake branch_callout:
+      frozen snowflake branch:
         frozen_snowflake_branch: إستخدم قطعة "إنشاء فرع رقاقة الثلج"
-      frozen snowflake branch_test_callout:
-        frozen_snowflake_branch: إستخدم قطعة "إنشاء فرع رقاقة الثلج"
-      frozen square iterative_callout:
+      frozen square iterative:
         frozen_create_square: ركّب المزيد من القطع هنا لإنشاء مربع
-      frozen square iterative_b_callout:
-        frozen_create_square: ركّب المزيد من القطع هنا لإنشاء مربع
-      frozen square iterative_test_callout:
-        frozen_create_square: ركّب المزيد من القطع هنا لإنشاء مربع
-      frozen square loop 3x_callout:
+      frozen square loop:
         replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen square loop 3x_b_callout:
+      frozen square loop 3x:
         replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen square loop 3x_test_callout:
+      frozen square snowflake:
         replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen square loop_callout:
-        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen square loop_b_callout:
-        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen square loop_test_callout:
-        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen square snowflake_callout:
-        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen square snowflake_b_callout:
-        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      frozen square snowflake_test_callout:
-        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      grade4_artist_parameters_squares1_callout:
-        edit_add_parameter: انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك
-        add_and_drag_parameter: اكتب اسم المعلمة الخاصة بك هنا، انقر فوق إضافة ومن
-          ثم اسحبه إلى تعريف الدالة الخاصة بك
-      grade4_frozen_freeplay_callout:
-        snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
-          الثلج!
-      grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle: إستخدم القطعة "إنشاء دائرة"
-          و غيّر الحجم.
-      grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: إستخدم القطعة "كرر" لإنشاء هذا الشكل.
-      grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: إستخدم القطعة "كرر" لإنشاء هذا الشكل.
-      grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: إستخدم القطعة "كرر" لإنشاء هذا الشكل.
-      grade4_frozen_square_callout:
-        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      grade4_frozen_square_loop1_callout:
-        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      grade4_frozen_square_loop2_callout:
-        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      grade4_frozen_square_loop3_callout:
-        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
-      grade5_artist_parameters_squares1_callout:
-        edit_add_parameter: انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك
-        add_and_drag_parameter: اكتب اسم المعلمة الخاصة بك هنا، انقر فوق إضافة ومن
-          ثم اسحبه إلى تعريف الدالة الخاصة بك
-      grade5_artist_parameters_triangles1aa_callout:
-        edit_add_parameter: انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك
-        add_and_drag_parameter: اكتب اسم المعلمة الخاصة بك هنا، انقر فوق إضافة ومن
-          ثم اسحبه إلى تعريف الدالة الخاصة بك
-      grade5_artist_variables_pentagons1_callout:
-        place_length_variable: اسحب متغير الطول هنا لاستبدال علامات الاستفهام
-      grade5_artist_variables_pentagons12_callout:
-        set_length: تستخدم هذه الكتلة لتعيين "طول" إلى القيمة الصحيحة.
-      grade5_artist_variables_square7_callout:
-        degrees_per_side: قسمة 360 على عدد الجانبين للحصول على حجم كل زاوية في درجات.
-      grade5_artist_variables_triangles2_callout:
-        set_length: تستخدم هذه الكتلة لتعيين "طول" إلى القيمة الصحيحة.
-      grade5_playlab_variables1_callout:
-        arrows_move_actor: استخدم الأسهم لتحريك الفنان
-      grade5_playlab_variables11_callout:
-        edit_add_parameter: انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك
-      grade5_playlab_variables1ask_callout:
-        arrows_move_actor: استخدم الأسهم لتحريك الفنان
