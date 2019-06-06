@@ -6,9 +6,154 @@ ko:
         title: 제목화면 주제
       Begin planning your project_2018:
         description here: 설명 입력
+      Begin planning your project_2018_2019:
+        description here: 설명 입력
+      CSD U2 Design Project:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 Design Project_2018:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 Design Project_2018_2019:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 L1 Overview:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 L2 Overview:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 L3 Overview:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 L4 Overview:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 L5 Overview:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 L6 Overview:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 Lesson 6 Overview:
+        description here: 설명 입력
+      CSD U2 expand project:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 expand project_2018:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 expand project_2018_2019:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U2 project guide:
+        description here: 설명 입력
+      CSD U2 project guide_2018:
+        description here: 설명 입력
+      CSD U2 project guide_2018_2019:
+        description here: 설명 입력
+      CSD U3 Card Examples_2018:
+        description here: 설명 입력
+      CSD U3 Card Examples_2018_2019:
+        description here: 설명 입력
+      CSD U3 combining rep:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U3 combining rep_2018:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U3 combining rep_2018_2019:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U3 game intro:
+        description here: 설명 입력
+      CSD U3 game intro_2018:
+        description here: 설명 입력
+      CSD U3 game intro_2018_2019:
+        description here: 설명 입력
+      CSD U3 platform intro:
+        description here: 설명 입력
+      CSD U3 platform intro_2018:
+        description here: 설명 입력
+      CSD U3 platform intro_2018_2019:
+        description here: 설명 입력
+      CSD U5 Encryption 1:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U5 Encryption 1_2018:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U5 Encryption 1_2018_2019:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U5 Encryption 2:
+        description here: 설명 입력
+      CSD U5 Encryption 2_2018:
+        description here: 설명 입력
+      CSD U5 Encryption 2_2018_2019:
+        description here: 설명 입력
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U5 crosstab warmup:
+        description here: 설명 입력
+      CSD U5 crosstab warmup_2018:
+        description here: 설명 입력
+      CSD U5 crosstab warmup_2018_2019:
+        description here: 설명 입력
+      CSD U5 data visualization:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U5 data visualization_2018:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U5 data visualization_2018_2019:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U5 student record:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U5 student record_2018:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U5 student record_2018_2019:
+        description here: 설명 입력
+        title: 제목화면 주제
+      CSD U6 LED create intro:
+        description here: 설명 입력
+      CSD U6 LED create intro_2018:
+        description here: 설명 입력
+      CSD U6 LED create intro_2018_2019:
+        description here: 설명 입력
+      CSD U6 final intro:
+        description here: 설명 입력
+      CSD U6 final intro_2018:
+        description here: 설명 입력
+      CSD U6 final intro_2018_2019:
+        description here: 설명 입력
+      Internet Simulator Setup:
+        description here: 설명 입력
+      Internet Simulator Setup 2:
+        description here: 설명 입력
+        title: 제목화면 주제
+      Internet Simulator Setup 3:
+        description here: 설명 입력
+      Multi-Screen Apps:
+        description here: 설명 입력
+        title: 제목화면 주제
+      New Challenge Introduction:
+        description here: 설명 입력
+        title: 제목화면 주제
+      OPD-K5 Stage3aGo:
+        description here: 설명 입력
+        title: 제목화면 주제
       Prepare for your presentation:
         description here: 설명 입력
         title: 제목화면 주제
+      'Technique: Frequency Analysis':
+        description here: 설명 입력
+      Terminology Recap:
+        description here: 설명 입력
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: 단추에 알맞은 춤 동작을 고르세요.
@@ -203,6 +348,12 @@ ko:
       4-5 maze multi 1:
         Maze Multiple Choice: 미로 퍼즐 객관식
         Which blocks solve the puzzle?: 어떤 블록이 퍼즐을 해결할 수 있을까요?
+      CSD U3 Boolean MC:
+        title: 제목화면 주제
+      CSD U3 Boolean MC_2018:
+        title: 제목화면 주제
+      CSD U3 Boolean MC_2018_2019:
+        title: 제목화면 주제
       K-1 Artist 1 Multi 1:
         Multiple Choice: 객관식
         Which blocks solve this puzzle?: 어떤 블록이 퍼즐을 해결할 수 있을까요?
@@ -257,6 +408,10 @@ ko:
         SOUTH: 아래쪽
         SQUARE: 사각형
         Which word is spelled?: 말한 단어는?
+      behaviors 1 predict:
+        Incorrect: 틀림
+      behaviors 4 predict:
+        Incorrect: 틀림
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -265,9 +420,15 @@ ko:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: 잘 모르겠음
       courseC_multi_starWars_predict1_2018:
+        I don't know: 잘 모르겠음
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: 잘 모르겠음
       courseD_multi_artist_binary8_predict1:
         A: A
@@ -275,6 +436,11 @@ ko:
         C: C
         D: D
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -287,6 +453,10 @@ ko:
         A: A
         B: B
         C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -296,6 +466,14 @@ ko:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'
