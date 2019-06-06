@@ -1,17 +1,1710 @@
 ---
-ur:
+ur-PK:
   data:
     block_categories:
-      Actions: ایکشنز
-      Loops: لوپس
-      Color: رنگ بھریں
-      Math: ریاضی
-      Logic: منطق
-      Variables: متغیرات
-      Conditionals: شرائط
-      Events: موقعے
-      Text: متن
-      Start: شروع کریں
-      test: آزمانا
-      Name: نام
-      Function: فنکشن
+      4-5 Artist Patterns Free Play:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Alien Defender:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Choose Your Own Adventure:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Course 4 Artist For Loops 11:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      Course 4 Artist For Loops 11a:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      Course 4 Artist For Loops 14:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      Course 4 Artist For Loops 15:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      Course 4 Artist For Loops 4:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      Course 4 Artist For Loops 6a:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      Course 4 Artist For Loops 8:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      Course 4 Artist For Loops Challenge:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      Course 4 Artist For Loops inspire:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      Course 4 Artist Functions Inspiration:
+        Actions: ایکشنز
+        Loops: لوپس
+      Course 4 Artist Functions challenge:
+        Actions: ایکشنز
+        Loops: لوپس
+      Course 4 Bee Params 1:
+        Actions: ایکشنز
+        Loops: لوپس
+      Course 4 Bee Params 2:
+        Actions: ایکشنز
+        Loops: لوپس
+      Course 4 Bee Params 3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+      Course 4 Bee Params 4:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+      Course 4 Bee Params 5:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Variables: متغیرات
+      Course 4 Bee Params 6:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Course 4 Bee Params 7:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+      Course 4 Bee Params 8:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+      Course 4 EC 1a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+      Course 4 EC 1b:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+      Course 4 EC 2a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+        Variables: متغیرات
+      Course 4 EC 2b:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+        Variables: متغیرات
+      Course 4 EC 2c:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+        Variables: متغیرات
+      Course 4 Play Lab Params 10:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+        Variables: متغیرات
+      Course 4 Play Lab Params 7:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 Play Lab Params 8:
+        Events: موقعے
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 Play Lab Params 9:
+        Actions: ایکشنز
+        Math: ریاضی
+        Variables: متغیرات
+      Course 4 Play Lab Vars 9:
+        Events: موقعے
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+      Course 4 Playlab For Loop Freeplay:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      Course 4 SCF 1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 SCF 1a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+      Course 4 SCF 1b:
+        Actions: ایکشنز
+        Loops: لوپس
+        Logic: منطق
+        Math: ریاضی
+      Course 4 SCF 2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 SCF 3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 SCFL 1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 SCFL 1a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 SCFL 1b:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 SCFL 2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+      Course 4 SCFL 3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 SCFL 4:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 SCFL 6:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 SCFL 7:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      Course 4 SCV 6:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      'Course E: Play Lab Project':
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      'Course F: Artist Project':
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      'Course F: Artist Project - Revise':
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      'Course F: Artist Project - Revise_2018':
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      'Course F: Artist Project_2018':
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      'Course F: Artist Project_2019':
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      CourseD_Dance_Party_11_5:
+        Events: موقعے
+      CourseD_Dance_Party_12:
+        Events: موقعے
+        Logic: منطق
+      CourseE_Project_SpriteLab:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      CourseE_Project_SpriteLab_2019:
+        Actions: ایکشنز
+        Events: موقعے
+      CourseE_hoops:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      CourseF_Project_Revise_SpriteLab:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      CourseF_Project_SpriteLab:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      CourseF_Project_SpriteLab_2019:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      Dance Party 2:
+        Events: موقعے
+      Dance Party 6:
+        Events: موقعے
+      Dance Party Freeplay:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      Dance_Party_11_5:
+        Events: موقعے
+      Dance_Party_12:
+        Events: موقعے
+        Logic: منطق
+      Dance_Party_extras_battle:
+        Events: موقعے
+        Logic: منطق
+      Dance_Party_extras_every_beat:
+        Events: موقعے
+        Logic: منطق
+      Dance_Party_extras_layout:
+        Events: موقعے
+        Logic: منطق
+      Dance_Party_extras_on_beat:
+        Events: موقعے
+        Logic: منطق
+      Dance_Party_extras_speed:
+        Events: موقعے
+        Logic: منطق
+      Dance_Party_extras_visible:
+        Events: موقعے
+        Logic: منطق
+      Find the Wizard:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Fish Tank 7-validated:
+        Events: موقعے
+      Fish Tank 7-validated_2019:
+        Actions: ایکشنز
+        Events: موقعے
+      FoodFight:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Geometric Sun:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Geometric Sun_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Guess The Number:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      InspirationalArtwork:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      InspirationalArtwork_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      NEW Course 4 Artist Functions 14:
+        Actions: ایکشنز
+        Loops: لوپس
+      NEW Course 4 Artist Params 1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      NEW Course 4 Artist Params 10:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params 11:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params 12:
+        Actions: ایکشنز
+        Math: ریاضی
+      NEW Course 4 Artist Params 12a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params 13:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params 14:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params 15:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params 2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params 3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params 6:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params 7:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params 8:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      NEW Course 4 Artist Params 9:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Artist Params inspire:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      NEW Course 4 Play Lab Params 11:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Robot Doodle:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Robot Doodle_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+      Virtual Pet 2:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      Virtual Pet 3:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      Virtual Pet 4:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      Virtual Pet 5:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      Virtual Pet 6:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      Virtual Pet Freeplay:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      behaviors 3a:
+        Actions: ایکشنز
+      behaviors 5:
+        Actions: ایکشنز
+      behaviors 6:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Math: ریاضی
+        Logic: منطق
+      behaviors 7:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Math: ریاضی
+        Logic: منطق
+      behaviors free play:
+        Actions: ایکشنز
+        Events: موقعے
+      course3_bee_functions_challenge1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      course3_bee_functions_challenge2:
+        Actions: ایکشنز
+        Loops: لوپس
+      course3_bee_functions_challenge3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      course3_bee_functions_challenge4:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      course3_playLab_challenge1:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Conditionals: شرائط
+      course4_artist_fwp_challenge1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      course4_bee_for_challenge1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      course4_bee_fwp_challenge1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      course4_bee_fwp_challenge2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      course4_playlab_variables_challenge1:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseD_artist_project1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project1a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project1a_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project1a_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project2_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project2_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project2a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project2a_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project2a_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project3_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project3_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project3a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project3a_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project3a_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project4:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project4_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project4_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project4a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project4a_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project4a_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project5:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project5_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_artist_project5_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseD_playLab_condFP:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+      courseD_playLab_condFP_2018:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+      courseE_Dogger_2:
+        Actions: ایکشنز
+        Events: موقعے
+        Variables: متغیرات
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Text: متن
+      courseE_artist_concept1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseE_artist_concept4:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_concept4_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseE_artist_functions10:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions10_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions10_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions2_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions2_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions3_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions3_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions5_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions5_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions7_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions7_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions8:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions8_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions8_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions8a_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions8a_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions8b_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions8b_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions8c_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions8c_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions9:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions9_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions9_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functionsProj_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseE_artist_functionsProj_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseE_artist_functions_predict2:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions_predict2_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_artist_functions_predict2_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_bee_concept1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_bee_concept2_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_bee_concept3_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_bee_concept4_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_bee_concept5_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_bee_functions6:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_bee_functions7:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_bee_functions_challenge1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_bee_functions_challenge2:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseE_farmer_concept1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_concept2_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_concept3_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions10a1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions10a1_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions10b:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions11_predict:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions11_predict_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions11_predict_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions13_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions13_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions1_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions1a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions1a_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions1a_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions2b:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions2b_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions2b_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions2ba:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions2ba_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions2ba_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions3c:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions3c1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions3c1_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions3c_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions3c_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions4b:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions5c:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions6c:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions7a1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions7a1_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions7b:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions8a1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions8a1_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions8b:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions9a1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions9a1_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_farmer_functions9b:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_playLab_challenge1:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_playLab_scaffold5:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Conditionals: شرائط
+      courseE_playLab_scaffold6:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Conditionals: شرائط
+      courseF_artist_for1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Color: رنگ بھریں
+      courseF_artist_for10:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_artist_for10_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_artist_for10_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_artist_for10_predict1:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_artist_for10_predict1_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_artist_for10_predict1_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_artist_for1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for1_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Color: رنگ بھریں
+      courseF_artist_for2_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for2_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Color: رنگ بھریں
+      courseF_artist_for3_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for3_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for4:
+        Actions: ایکشنز
+        Loops: لوپس
+        Color: رنگ بھریں
+      courseF_artist_for4_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for4_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for5:
+        Actions: ایکشنز
+        Loops: لوپس
+        Color: رنگ بھریں
+      courseF_artist_for5_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for5_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for6:
+        Actions: ایکشنز
+        Loops: لوپس
+        Color: رنگ بھریں
+      courseF_artist_for6_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Color: رنگ بھریں
+      courseF_artist_for6_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Color: رنگ بھریں
+      courseF_artist_for7:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for7_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for7_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for8:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for8_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for8_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for9:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for9_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for9_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+      courseF_artist_for_challenge1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_for_challenge1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_for_challenge1_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_for_challenge2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_for_challenge2_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_for_challenge2_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_fwp2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_fwp2_predict1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_fwp3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_fwp4:
+        Actions: ایکشنز
+        Math: ریاضی
+      courseF_artist_fwp5:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_fwp6:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_fwp7:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_fwp8:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_fwp9:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_fwp_challenge1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_fwp_challenge2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_artist_variables10_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_artist_variables10_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_artist_variables7_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_artist_variables7_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_artist_variables8_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_artist_variables8_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_artist_variables9_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_artist_variables9_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_artist_variablesFP_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_artist_variablesFP_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_bee_conditionals10:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_conditionals2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_conditionals3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_conditionals4:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_conditionals5:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_conditionals8:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_for10:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for10_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for10_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for11:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for11_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for11_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for1_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for1_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for2_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for2_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for3_predict1:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for3_predict1_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for3_predict1_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for4:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for4_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for4_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for5:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for5_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for5_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for6:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for6_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for6_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for7:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for7_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for7_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for8:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for8_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for8_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for9:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+        Variables: متغیرات
+      courseF_bee_for9_2018:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for9_2019:
+        Actions: ایکشنز
+        Math: ریاضی
+        Loops: لوپس
+      courseF_bee_for_challenge1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_bee_for_challenge1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_bee_for_challenge1_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_bee_for_challenge2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_bee_for_challenge2_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_bee_for_challenge2_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+      courseF_bee_functions2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_functions3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_functions3a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_functions4:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_functions5a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_functions6:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_functions7:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_functions8a:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_functionsPre7:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_functions_challenge1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_functions_challenge2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_fwp1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Math: ریاضی
+        Conditionals: شرائط
+      courseF_bee_fwp2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_fwp3:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_fwp4:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_fwp5:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_fwp6:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_fwp7:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_fwp8:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_fwp9_predict1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_fwp_challenge1:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_fwp_challenge2:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+      courseF_bee_variables_1_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_1_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_2_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_2_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_3_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_3_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_4_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_4_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_5_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_5_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_6_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_6_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_7_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_7_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_8_2018:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_bee_variables_8_2019:
+        Actions: ایکشنز
+        Loops: لوپس
+        Conditionals: شرائط
+        Variables: متغیرات
+        Math: ریاضی
+      courseF_playlab_variables1a:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_playlab_variables2b:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+      courseF_playlab_variables3b_josh:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_playlab_variables4b:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_playlab_variables4c_predictive1:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_playlab_variables5c:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Logic: منطق
+        Variables: متغیرات
+        Text: متن
+      courseF_playlab_variables6c:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_playlab_variables7b:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Conditionals: شرائط
+        Math: ریاضی
+        Text: متن
+        Variables: متغیرات
+      courseF_playlab_variables7c:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_playlab_variables8c:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
+      courseF_playlab_variables_challenge1:
+        Actions: ایکشنز
+        Events: موقعے
+        Loops: لوپس
+        Math: ریاضی
+        Variables: متغیرات
