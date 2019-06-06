@@ -1,19 +1,1935 @@
 ---
-sl:
+sl-SI:
   data:
     block_categories:
-      Actions: Dejanja
-      Loops: Zanke
-      Functions: Funkcije
-      Color: Barva
-      Math: Matematika
-      Logic: Logika
-      Variables: Spremenljivke
-      Conditionals: Pogoji
-      Events: Dogodki
-      Text: Besedilo
-      Location: Lokacija
-      Start: Začni
-      test: preizkus
-      Name: Ime
-      Function: Funkcija
+      4-5 Artist Patterns Free Play:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Alien Defender:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Choose Your Own Adventure:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Course 4 Artist For Loops 11:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      Course 4 Artist For Loops 11a:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      Course 4 Artist For Loops 14:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      Course 4 Artist For Loops 15:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      Course 4 Artist For Loops 4:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      Course 4 Artist For Loops 6a:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      Course 4 Artist For Loops 8:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      Course 4 Artist For Loops Challenge:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      Course 4 Artist For Loops inspire:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      Course 4 Artist Functions Inspiration:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      Course 4 Artist Functions challenge:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      Course 4 Bee Params 1:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      Course 4 Bee Params 2:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      Course 4 Bee Params 3:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Functions: Funkcije
+      Course 4 Bee Params 4:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Functions: Funkcije
+        Math: Matematika
+      Course 4 Bee Params 5:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Course 4 Bee Params 6:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Course 4 Bee Params 7:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 Bee Params 8:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 EC 1a:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 EC 1b:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 EC 2a:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Course 4 EC 2b:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      Course 4 EC 2c:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      Course 4 Play Lab Params 10:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Course 4 Play Lab Params 7:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 Play Lab Params 8:
+        Events: Dogodki
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 Play Lab Params 9:
+        Actions: Dejanja
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Course 4 Play Lab Vars 9:
+        Events: Dogodki
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+      Course 4 SCF 1:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 SCF 1a:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 SCF 1b:
+        Actions: Dejanja
+        Loops: Zanke
+        Logic: Logika
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 SCF 2:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 SCF 3:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      Course 4 SCFL 1:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      Course 4 SCFL 1a:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      Course 4 SCFL 1b:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      Course 4 SCFL 2:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+      Course 4 SCFL 3:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      Course 4 SCFL 4:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      Course 4 SCFL 6:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      Course 4 SCFL 7:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      Course 4 SCV 6:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      'Course E: Play Lab Project':
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      'Course F: Artist Project':
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      'Course F: Artist Project - Revise':
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      'Course F: Artist Project - Revise_2018':
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      'Course F: Artist Project_2018':
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      'Course F: Artist Project_2019':
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      CourseD_Dance_Party_11_5:
+        Events: Dogodki
+      CourseD_Dance_Party_12:
+        Events: Dogodki
+        Logic: Logika
+      CourseE_Project_SpriteLab:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+        Logic: Logika
+        Text: Besedilo
+      CourseE_Project_SpriteLab_2019:
+        Actions: Dejanja
+        Events: Dogodki
+      CourseE_hoops:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+        Functions: Funkcije
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+        Functions: Funkcije
+      CourseF_Project_SpriteLab:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+        Functions: Funkcije
+      CourseF_Project_SpriteLab_2019:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Text: Besedilo
+      Dance Party 2:
+        Events: Dogodki
+      Dance Party 6:
+        Events: Dogodki
+      Dance Party Freeplay:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+      Dance_Party_11_5:
+        Events: Dogodki
+      Dance_Party_12:
+        Events: Dogodki
+        Logic: Logika
+      Dance_Party_extras_battle:
+        Events: Dogodki
+        Logic: Logika
+      Dance_Party_extras_every_beat:
+        Events: Dogodki
+        Logic: Logika
+      Dance_Party_extras_layout:
+        Events: Dogodki
+        Logic: Logika
+      Dance_Party_extras_on_beat:
+        Events: Dogodki
+        Logic: Logika
+      Dance_Party_extras_speed:
+        Events: Dogodki
+        Logic: Logika
+      Dance_Party_extras_visible:
+        Events: Dogodki
+        Logic: Logika
+      Find the Wizard:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Fish Tank 7-validated:
+        Events: Dogodki
+      Fish Tank 7-validated_2019:
+        Actions: Dejanja
+        Events: Dogodki
+      FoodFight:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Geometric Sun:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Geometric Sun_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Guess The Number:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      InspirationalArtwork:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      InspirationalArtwork_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      NEW Course 4 Artist Functions 14:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      NEW Course 4 Artist Params 1:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      NEW Course 4 Artist Params 10:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 11:
+        Actions: Dejanja
+        Functions: Funkcije
+        Loops: Zanke
+        Math: Matematika
+      NEW Course 4 Artist Params 12:
+        Actions: Dejanja
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 12a:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 13:
+        Actions: Dejanja
+        Functions: Funkcije
+        Loops: Zanke
+        Math: Matematika
+      NEW Course 4 Artist Params 14:
+        Actions: Dejanja
+        Functions: Funkcije
+        Loops: Zanke
+        Math: Matematika
+      NEW Course 4 Artist Params 15:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 2:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 3:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 6:
+        Actions: Dejanja
+        Functions: Funkcije
+        Loops: Zanke
+        Math: Matematika
+      NEW Course 4 Artist Params 7:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params 8:
+        Actions: Dejanja
+        Math: Matematika
+        Functions: Funkcije
+        Loops: Zanke
+      NEW Course 4 Artist Params 9:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      NEW Course 4 Artist Params inspire:
+        Actions: Dejanja
+        Functions: Funkcije
+        Loops: Zanke
+        Math: Matematika
+      NEW Course 4 Play Lab Params 11:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Robot Doodle:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Robot Doodle_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      Virtual Pet 2:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+      Virtual Pet 3:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+      Virtual Pet 4:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+      Virtual Pet 5:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+      Virtual Pet 6:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+      Virtual Pet Freeplay:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+      behaviors 3a:
+        Actions: Dejanja
+      behaviors 5:
+        Actions: Dejanja
+      behaviors 6:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Math: Matematika
+        Logic: Logika
+      behaviors 7:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Math: Matematika
+        Logic: Logika
+      behaviors free play:
+        Actions: Dejanja
+        Events: Dogodki
+      course3_bee_functions_challenge1:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      course3_bee_functions_challenge2:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      course3_bee_functions_challenge3:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      course3_bee_functions_challenge4:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      course3_playLab_challenge1:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      course4_artist_fwp_challenge1:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      course4_bee_for_challenge1:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+        Math: Matematika
+      course4_bee_fwp_challenge1:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      course4_bee_fwp_challenge2:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      course4_playlab_variables_challenge1:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      courseD_artist_project1:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project1a:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project1a_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project1a_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project2:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project2_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project2_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project2a:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project2a_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project2a_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project3:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project3_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project3_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project3a:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project3a_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project3a_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project4:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project4_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project4_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project4a:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project4a_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project4a_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project5:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project5_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_artist_project5_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseD_playLab_condFP:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+      courseD_playLab_condFP_2018:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+      courseE_Dogger_2:
+        Actions: Dejanja
+        Events: Dogodki
+        Variables: Spremenljivke
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Text: Besedilo
+        Functions: Funkcije
+      courseE_artist_concept1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      courseE_artist_concept4:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_concept4_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      courseE_artist_functions10:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions10_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions10_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions2_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseE_artist_functions2_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseE_artist_functions3_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseE_artist_functions3_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseE_artist_functions5_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseE_artist_functions5_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseE_artist_functions7_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseE_artist_functions7_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseE_artist_functions8:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions8_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions8_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions8a_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions8a_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions8b_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions8b_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions8c_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions8c_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions9:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions9_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions9_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functionsProj_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      courseE_artist_functionsProj_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      courseE_artist_functions_predict2:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions_predict2_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_artist_functions_predict2_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_bee_concept1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_bee_concept2_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_bee_concept3_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_bee_concept4_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_bee_concept5_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_bee_functions6:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_bee_functions7:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_bee_functions_challenge1:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_bee_functions_challenge2:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseE_farmer_concept1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_concept2_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_concept3_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions1:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions10a1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions10a1_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions10b:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions11_predict:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions11_predict_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions11_predict_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions13_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions13_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions1_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions1a:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions1a_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions1a_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions2b:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions2b_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions2b_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions2ba:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions2ba_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions2ba_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions3c:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions3c1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions3c1_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions3c_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions3c_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions4b:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions5c:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions6c:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions7a1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions7a1_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions7b:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions8a1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions8a1_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions8b:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions9a1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions9a1_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_farmer_functions9b:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_playLab_challenge1:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_playLab_scaffold5:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseE_playLab_scaffold6:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+      courseF_artist_for1:
+        Actions: Dejanja
+        Loops: Zanke
+        Color: Barva
+      courseF_artist_for10:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_artist_for10_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Functions: Funkcije
+      courseF_artist_for10_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Functions: Funkcije
+      courseF_artist_for10_predict1:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_artist_for10_predict1_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_artist_for10_predict1_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_artist_for1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for1_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for2:
+        Actions: Dejanja
+        Loops: Zanke
+        Color: Barva
+      courseF_artist_for2_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for2_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for3:
+        Actions: Dejanja
+        Loops: Zanke
+        Color: Barva
+      courseF_artist_for3_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for3_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for4:
+        Actions: Dejanja
+        Loops: Zanke
+        Color: Barva
+      courseF_artist_for4_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for4_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for5:
+        Actions: Dejanja
+        Loops: Zanke
+        Color: Barva
+      courseF_artist_for5_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for5_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for6:
+        Actions: Dejanja
+        Loops: Zanke
+        Color: Barva
+      courseF_artist_for6_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Color: Barva
+      courseF_artist_for6_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Color: Barva
+      courseF_artist_for7:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for7_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for7_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for8:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for8_2018:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for8_2019:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for9:
+        Actions: Dejanja
+        Loops: Zanke
+      courseF_artist_for9_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseF_artist_for9_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+      courseF_artist_for_challenge1:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_for_challenge1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_for_challenge1_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_for_challenge2:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_for_challenge2_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_for_challenge2_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_fwp2:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_fwp2_predict1:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_fwp3:
+        Functions: Funkcije
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_fwp4:
+        Actions: Dejanja
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_fwp5:
+        Actions: Dejanja
+        Functions: Funkcije
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_fwp6:
+        Actions: Dejanja
+        Functions: Funkcije
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_fwp7:
+        Actions: Dejanja
+        Functions: Funkcije
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_fwp8:
+        Actions: Dejanja
+        Functions: Funkcije
+        Loops: Zanke
+        Math: Matematika
+      courseF_artist_fwp9:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_fwp_challenge1:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_fwp_challenge2:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+      courseF_artist_variables10_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      courseF_artist_variables10_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      courseF_artist_variables7_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      courseF_artist_variables7_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      courseF_artist_variables8_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      courseF_artist_variables8_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      courseF_artist_variables9_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      courseF_artist_variables9_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      courseF_artist_variablesFP_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      courseF_artist_variablesFP_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+        Functions: Funkcije
+      courseF_bee_conditionals10:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_conditionals2:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_conditionals3:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_conditionals4:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_conditionals5:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_conditionals8:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_for10:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for10_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for10_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for11:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for11_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for11_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for1_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for1_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for2_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for2_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for3_predict1:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for3_predict1_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for3_predict1_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for4:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for4_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for4_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for5:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for5_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for5_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for6:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for6_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for6_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for7:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for7_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for7_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for8:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for8_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for8_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for9:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+        Variables: Spremenljivke
+      courseF_bee_for9_2018:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for9_2019:
+        Actions: Dejanja
+        Math: Matematika
+        Loops: Zanke
+      courseF_bee_for_challenge1:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_for_challenge1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_for_challenge1_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_for_challenge2:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseF_bee_for_challenge2_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseF_bee_for_challenge2_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+      courseF_bee_functions2:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions3:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions3a:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions4:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions5a:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions6:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions7:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions8a:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functionsPre7:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions_challenge1:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_functions_challenge2:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp1:
+        Actions: Dejanja
+        Loops: Zanke
+        Math: Matematika
+        Conditionals: Pogoji
+      courseF_bee_fwp2:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp3:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp4:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp5:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp6:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp7:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp8:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp9_predict1:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp_challenge1:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_fwp_challenge2:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Math: Matematika
+      courseF_bee_variables_1_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_1_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_2_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_2_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_3_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_3_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_4_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_4_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_5_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_5_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_6_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_6_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_7_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_7_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_8_2018:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_bee_variables_8_2019:
+        Actions: Dejanja
+        Loops: Zanke
+        Conditionals: Pogoji
+        Functions: Funkcije
+        Variables: Spremenljivke
+        Math: Matematika
+      courseF_playlab_variables1a:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+      courseF_playlab_variables2b:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+      courseF_playlab_variables3b_josh:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+      courseF_playlab_variables4b:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+      courseF_playlab_variables4c_predictive1:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      courseF_playlab_variables5c:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Logic: Logika
+        Variables: Spremenljivke
+        Text: Besedilo
+      courseF_playlab_variables6c:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+      courseF_playlab_variables7b:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Conditionals: Pogoji
+        Math: Matematika
+        Text: Besedilo
+        Functions: Funkcije
+        Variables: Spremenljivke
+      courseF_playlab_variables7c:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Variables: Spremenljivke
+      courseF_playlab_variables8c:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Spremenljivke
+      courseF_playlab_variables_challenge1:
+        Actions: Dejanja
+        Events: Dogodki
+        Loops: Zanke
+        Math: Matematika
+        Functions: Funkcije
+        Variables: Spremenljivke
