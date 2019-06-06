@@ -519,6 +519,7 @@ is:
         what_is_an_event: Hvað er atvik?
         csd_pair_programming: Félagaforritun
         csd_applab_parameters: Föll með stikum
+        CSF_SpriteLab_SpritesInAction_v2: Kvikar í verki
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

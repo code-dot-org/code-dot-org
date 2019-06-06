@@ -1,62 +1,2377 @@
 ---
-is:
+is-IS:
   data:
     block_categories:
-      Actions: Aðgerðir
-      Loops: Lykkjur
-      Functions: Föll
-      Color: Litir
-      Brushes: Penslar
-      Math: Reikningur
-      Logic: Rökvísi
-      Variables: Breytur
-      Number: Tölur
-      String: Texti
-      Image: Mynd
-      Boolean: Boole gildi
-      Conditionals: Skilyrði
-      Events: Atvik
-      Games/Score: Leikir/skor
-      Comments: Athugasemdir
-      Category: Flokkur
-      Prebuilt: Forsmíðað
-      Text: texti
-      Picker: Veljari
-      Comment: Athugasemd
-      World: Heimur
-      Sprites: Kvikar
-      Behaviors: Hegðun
-      'Variables ': 'Breytur '
-      Default: Sjálfgefið
-      Locations: Staðir
-      Bunny Game: Kanínuleikur
-      everythingelse: alltannað
-      Location: Staður
-      numbers: tölur
-      Numbers: Tölur
-      Input: Inntak
-      Dancers: Dansarar
-      Groups: Hópar
-      Advanced: Ítarlegt
-      Start: Byrja
-      Music: Tónlist
-      Dancing: Dans
-      Sprite: Kviki
-      Brush: Pensill
-      Make Sprite: Búa til kvika
-      Movement: Hreyfing
-      Booleans: Boolean gildi
-      Functional: Föll
-      While Events: Á-meðan atvik
-      Sprite Properties: Eiginleikar kvika
-      Predefined: Forstillt
-      test: prófun
-      test2: próf2
-      Use These Blocks: Notaðu þessa kubba
-      Do Not Use: Ekki nota
-      Foo: Fú
-      Name: Nafn
-      NEW BLOCKS: NÝIR KUBBAR
-      'Functions ': 'Föll '
-      Game/Score: Leikur/skor
-      Function: Aðgerð
+      4-5 Artist Patterns Free Play:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+      Alien Defender:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Games/Score: Leikir/skor
+        Comments: Athugasemdir
+      Choose Your Own Adventure:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Games/Score: Leikir/skor
+        Comments: Athugasemdir
+      Course 4 Artist For Loops 11:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+      Course 4 Artist For Loops 11a:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+      Course 4 Artist For Loops 14:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+      Course 4 Artist For Loops 15:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Variables ': 'Breytur '
+      Course 4 Artist For Loops 4:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+      Course 4 Artist For Loops 6a:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+      Course 4 Artist For Loops 8:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+      Course 4 Artist For Loops Challenge:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+      Course 4 Artist For Loops inspire:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+      Course 4 Artist Functions Inspiration:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Functions: Föll
+      Course 4 Artist Functions challenge:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Functions: Föll
+      Course 4 Bee Params 1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Functions: Föll
+      Course 4 Bee Params 2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Functions: Föll
+      Course 4 Bee Params 3:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Functions: Föll
+        'Variables ': 'Breytur '
+      Course 4 Bee Params 4:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Functions: Föll
+        'Variables ': 'Breytur '
+        Math: Reikningur
+      Course 4 Bee Params 5:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+      Course 4 Bee Params 6:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+      Course 4 Bee Params 7:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        Functions: Föll
+        'Variables ': 'Breytur '
+      Course 4 Bee Params 8:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        Functions: Föll
+        'Variables ': 'Breytur '
+      Course 4 EC 1a:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        Functions: Föll
+      Course 4 EC 1b:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        Functions: Föll
+      Course 4 EC 2a:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        Functions: Föll
+        Variables: Breytur
+      Course 4 EC 2b:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        Variables: Breytur
+        Functions: Föll
+      Course 4 EC 2c:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        Variables: Breytur
+        Functions: Föll
+      Course 4 Play Lab Params 10:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        Functions: Föll
+        Variables: Breytur
+      Course 4 Play Lab Params 7:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+      Course 4 Play Lab Params 8:
+        Events: Atvik
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+      Course 4 Play Lab Params 9:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Functions: Föll
+        Variables: Breytur
+      Course 4 Play Lab Vars 9:
+        Events: Atvik
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Variables: Breytur
+      Course 4 SCF 1:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+        Functions: Föll
+      Course 4 SCF 1a:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        Functions: Föll
+        'Variables ': 'Breytur '
+      Course 4 SCF 1b:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Logic: Rökvísi
+        Math: Reikningur
+        Functions: Föll
+      Course 4 SCF 2:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+        Functions: Föll
+      Course 4 SCF 3:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+        Functions: Föll
+      Course 4 SCFL 1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+      Course 4 SCFL 1a:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+      Course 4 SCFL 1b:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+      Course 4 SCFL 2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+      Course 4 SCFL 3:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      Course 4 SCFL 4:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      Course 4 SCFL 6:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      Course 4 SCFL 7:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      Course 4 SCV 6:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      'Course E: Play Lab Project':
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Games/Score: Leikir/skor
+        Comments: Athugasemdir
+      'Course F: Artist Project':
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+      'Course F: Artist Project - Revise':
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+      'Course F: Artist Project - Revise_2018':
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+      'Course F: Artist Project_2018':
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+      'Course F: Artist Project_2019':
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+      CourseD_Dance_Party_11_5:
+        World: Heimur
+        Dancers: Dansarar
+        Groups: Hópar
+        Events: Atvik
+      CourseD_Dance_Party_12:
+        World: Heimur
+        Dancers: Dansarar
+        Groups: Hópar
+        Events: Atvik
+        Numbers: Tölur
+        Logic: Rökvísi
+      CourseE_Project_SpriteLab:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+        Logic: Rökvísi
+        Text: texti
+        Advanced: Ítarlegt
+        Comments: Athugasemdir
+      CourseE_Project_SpriteLab_2019:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+      CourseE_hoops:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+        Functions: Föll
+      CourseF_Project_Revise_SpriteLab:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+        Functions: Föll
+      CourseF_Project_SpriteLab:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+        Functions: Föll
+      CourseF_Project_SpriteLab_2019:
+        World: Heimur
+        Locations: Staðir
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Text: texti
+        Comments: Athugasemdir
+      Dance Party 2:
+        Behaviors: Hegðun
+        Events: Atvik
+        Comments: Athugasemdir
+      Dance Party 6:
+        Behaviors: Hegðun
+        Events: Atvik
+        Comments: Athugasemdir
+      Dance Party Freeplay:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+        Comments: Athugasemdir
+      Dance_Party_11_5:
+        World: Heimur
+        Dancers: Dansarar
+        Groups: Hópar
+        Events: Atvik
+      Dance_Party_12:
+        World: Heimur
+        Dancers: Dansarar
+        Groups: Hópar
+        Events: Atvik
+        Numbers: Tölur
+        Logic: Rökvísi
+      Dance_Party_extras_battle:
+        World: Heimur
+        Dancers: Dansarar
+        Groups: Hópar
+        Events: Atvik
+        Numbers: Tölur
+        Logic: Rökvísi
+      Dance_Party_extras_every_beat:
+        World: Heimur
+        Dancers: Dansarar
+        Groups: Hópar
+        Events: Atvik
+        Numbers: Tölur
+        Logic: Rökvísi
+      Dance_Party_extras_layout:
+        World: Heimur
+        Dancers: Dansarar
+        Groups: Hópar
+        Events: Atvik
+        Numbers: Tölur
+        Logic: Rökvísi
+      Dance_Party_extras_on_beat:
+        World: Heimur
+        Dancers: Dansarar
+        Groups: Hópar
+        Events: Atvik
+        Numbers: Tölur
+        Logic: Rökvísi
+      Dance_Party_extras_speed:
+        World: Heimur
+        Dancers: Dansarar
+        Groups: Hópar
+        Events: Atvik
+        Numbers: Tölur
+        Logic: Rökvísi
+      Dance_Party_extras_visible:
+        World: Heimur
+        Dancers: Dansarar
+        Groups: Hópar
+        Events: Atvik
+        Numbers: Tölur
+        Logic: Rökvísi
+      Find the Wizard:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Games/Score: Leikir/skor
+        Comments: Athugasemdir
+      Fish Tank 5-validated:
+        World: Heimur
+        Behaviors: Hegðun
+        Comments: Athugasemdir
+      Fish Tank 5-validated_2019:
+        World: Heimur
+        Behaviors: Hegðun
+        Comments: Athugasemdir
+      Fish Tank 6-validated:
+        World: Heimur
+        Behaviors: Hegðun
+        Comments: Athugasemdir
+      Fish Tank 6-validated_2019:
+        World: Heimur
+        Behaviors: Hegðun
+        Comments: Athugasemdir
+      Fish Tank 7-validated:
+        World: Heimur
+        Behaviors: Hegðun
+        Events: Atvik
+        Comments: Athugasemdir
+      Fish Tank 7-validated_2019:
+        World: Heimur
+        Actions: Aðgerðir
+        Behaviors: Hegðun
+        Events: Atvik
+        Comments: Athugasemdir
+      FoodFight:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Games/Score: Leikir/skor
+        Comments: Athugasemdir
+      Geometric Sun:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Comments: Athugasemdir
+      Geometric Sun_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Comments: Athugasemdir
+      Guess The Number:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Games/Score: Leikir/skor
+        Comments: Athugasemdir
+      InspirationalArtwork:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Comments: Athugasemdir
+      InspirationalArtwork_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Comments: Athugasemdir
+      NEW Course 4 Artist Functions 14:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Functions: Föll
+      NEW Course 4 Artist Params 1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+        Variables: Breytur
+      NEW Course 4 Artist Params 10:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+      NEW Course 4 Artist Params 11:
+        Actions: Aðgerðir
+        Functions: Föll
+        Loops: Lykkjur
+        Math: Reikningur
+      NEW Course 4 Artist Params 12:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Functions: Föll
+      NEW Course 4 Artist Params 12a:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+      NEW Course 4 Artist Params 13:
+        Actions: Aðgerðir
+        Functions: Föll
+        Loops: Lykkjur
+        Math: Reikningur
+      NEW Course 4 Artist Params 14:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Functions: Föll
+        Loops: Lykkjur
+        Math: Reikningur
+      NEW Course 4 Artist Params 15:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+        Functions: Föll
+      NEW Course 4 Artist Params 2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+      NEW Course 4 Artist Params 3:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+      NEW Course 4 Artist Params 6:
+        Actions: Aðgerðir
+        Functions: Föll
+        Loops: Lykkjur
+        Math: Reikningur
+      NEW Course 4 Artist Params 7:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Functions: Föll
+      NEW Course 4 Artist Params 8:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Functions: Föll
+        Loops: Lykkjur
+      NEW Course 4 Artist Params 9:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+      NEW Course 4 Artist Params inspire:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Functions: Föll
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      NEW Course 4 Play Lab Params 11:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Games/Score: Leikir/skor
+      Robot Doodle:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Comments: Athugasemdir
+      Robot Doodle_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Functions: Föll
+        Variables: Breytur
+        Comments: Athugasemdir
+      Virtual Pet 2:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+        Comments: Athugasemdir
+      Virtual Pet 3:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+      Virtual Pet 4:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+      Virtual Pet 5:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+      Virtual Pet 6:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+      Virtual Pet Freeplay:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+      behaviors 3a:
+        World: Heimur
+        Behaviors: Hegðun
+        Actions: Aðgerðir
+      behaviors 5:
+        World: Heimur
+        Behaviors: Hegðun
+        Actions: Aðgerðir
+      behaviors 6:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Math: Reikningur
+        Logic: Rökvísi
+      behaviors 7:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Math: Reikningur
+        Logic: Rökvísi
+      behaviors free play:
+        World: Heimur
+        Behaviors: Hegðun
+        Actions: Aðgerðir
+        Events: Atvik
+      course3_bee_functions_challenge1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      course3_bee_functions_challenge2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Functions: Föll
+      course3_bee_functions_challenge3:
+        Default: Sjálfgefið
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      course3_bee_functions_challenge4:
+        Default: Sjálfgefið
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      course3_playLab_challenge1:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      course4_artist_fwp_challenge1:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+        Functions: Föll
+      course4_bee_for_challenge1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Functions: Föll
+        Math: Reikningur
+      course4_bee_fwp_challenge1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      course4_bee_fwp_challenge2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      course4_playlab_variables_challenge1:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+        Variables: Breytur
+      courseD_artist_project1:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project1a:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project1a_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project1a_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project2:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project2_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project2_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project2a:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project2a_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project2a_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project3:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project3_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project3_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project3a:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project3a_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project3a_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project4:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project4_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project4_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project4a:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project4a_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project4a_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project5:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project5_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_artist_project5_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+      courseD_playLab_condFP:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Games/Score: Leikir/skor
+      courseD_playLab_condFP_2018:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Games/Score: Leikir/skor
+        Comment: Athugasemd
+      courseE_Dogger_2:
+        World: Heimur
+        Actions: Aðgerðir
+        Events: Atvik
+        Behaviors: Hegðun
+        Variables: Breytur
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Text: texti
+        Functions: Föll
+      courseE_artist_concept1_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_concept4:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Functions: Föll
+      courseE_artist_concept4_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions10:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+      courseE_artist_functions10_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions10_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions2_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Functions ': 'Föll '
+        Comments: Athugasemdir
+      courseE_artist_functions2_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Functions ': 'Föll '
+        Comments: Athugasemdir
+      courseE_artist_functions3_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseE_artist_functions3_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseE_artist_functions5_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Functions ': 'Föll '
+        Comments: Athugasemdir
+      courseE_artist_functions5_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Functions ': 'Föll '
+        Comments: Athugasemdir
+      courseE_artist_functions7_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Functions ': 'Föll '
+        Comments: Athugasemdir
+      courseE_artist_functions7_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Functions ': 'Föll '
+        Comments: Athugasemdir
+      courseE_artist_functions8:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+      courseE_artist_functions8_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions8_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions8a_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions8a_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions8b_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions8b_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions8c_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions8c_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions9:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+      courseE_artist_functions9_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions9_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functionsProj_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functionsProj_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_artist_functions_predict2:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+      courseE_artist_functions_predict2_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+      courseE_artist_functions_predict2_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Functions: Föll
+      courseE_bee_concept1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_bee_concept2_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_bee_concept3_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_bee_concept4_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_bee_concept5_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_bee_functions6:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Functions: Föll
+      courseE_bee_functions7:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Functions: Föll
+      courseE_bee_functions_challenge1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_bee_functions_challenge2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Functions: Föll
+      courseE_farmer_concept1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_concept2_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_concept3_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions10a1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions10a1_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions10b:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions11_predict:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions11_predict_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions11_predict_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions13_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions13_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions1_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions1a:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions1a_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions1a_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions2b:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions2b_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions2b_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions2ba:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions2ba_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions2ba_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions3c:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions3c1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions3c1_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions3c_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions3c_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions4b:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions5c:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions6c:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions7a1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions7a1_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions7b:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions8a1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions8a1_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions8b:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_farmer_functions9a1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions9a1_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Comments: Athugasemdir
+      courseE_farmer_functions9b:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_playLab_challenge1:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_playLab_scaffold5:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseE_playLab_scaffold6:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+      courseF_artist_for1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Color: Litir
+      courseF_artist_for10:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Variables ': 'Breytur '
+      courseF_artist_for10_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Variables ': 'Breytur '
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_for10_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Variables ': 'Breytur '
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_for10_predict1:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Variables ': 'Breytur '
+      courseF_artist_for10_predict1_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Variables ': 'Breytur '
+      courseF_artist_for10_predict1_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Brushes: Penslar
+        'Variables ': 'Breytur '
+      courseF_artist_for1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseF_artist_for1_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseF_artist_for2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Color: Litir
+      courseF_artist_for2_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseF_artist_for2_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseF_artist_for3:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Color: Litir
+      courseF_artist_for3_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseF_artist_for3_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseF_artist_for4:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Color: Litir
+      courseF_artist_for4_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseF_artist_for4_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseF_artist_for5:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Color: Litir
+      courseF_artist_for5_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseF_artist_for5_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Comments: Athugasemdir
+      courseF_artist_for6:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Color: Litir
+      courseF_artist_for6_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Color: Litir
+      courseF_artist_for6_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Color: Litir
+      courseF_artist_for7:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+      courseF_artist_for7_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+      courseF_artist_for7_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+      courseF_artist_for8:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+      courseF_artist_for8_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+      courseF_artist_for8_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+      courseF_artist_for9:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+      courseF_artist_for9_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_for9_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Brushes: Penslar
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_for_challenge1:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      courseF_artist_for_challenge1_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      courseF_artist_for_challenge1_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      courseF_artist_for_challenge2:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      courseF_artist_for_challenge2_2018:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      courseF_artist_for_challenge2_2019:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      courseF_artist_fwp2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Functions: Föll
+      courseF_artist_fwp2_predict1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Functions: Föll
+      courseF_artist_fwp3:
+        Functions: Föll
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+      courseF_artist_fwp4:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Functions: Föll
+      courseF_artist_fwp5:
+        Actions: Aðgerðir
+        Functions: Föll
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+      courseF_artist_fwp6:
+        Actions: Aðgerðir
+        Functions: Föll
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+      courseF_artist_fwp7:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Functions: Föll
+        Loops: Lykkjur
+        Math: Reikningur
+      courseF_artist_fwp8:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Functions: Föll
+        Loops: Lykkjur
+        Math: Reikningur
+      courseF_artist_fwp9:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+        Functions: Föll
+      courseF_artist_fwp_challenge1:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+        Functions: Föll
+      courseF_artist_fwp_challenge2:
+        Actions: Aðgerðir
+        Brushes: Penslar
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+        Functions: Föll
+      courseF_artist_variables10_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Variables: Breytur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_variables10_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Variables: Breytur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_variables7_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Variables: Breytur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_variables7_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Variables: Breytur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_variables8_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Variables: Breytur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_variables8_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Variables: Breytur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_variables9_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Variables: Breytur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_variables9_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Variables: Breytur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_variablesFP_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Variables: Breytur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_artist_variablesFP_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Brushes: Penslar
+        Variables: Breytur
+        Functions: Föll
+        Comments: Athugasemdir
+      courseF_bee_conditionals10:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_conditionals2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_conditionals3:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_conditionals4:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_conditionals5:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_conditionals8:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_for10:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for10_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for10_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for11:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for11_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for11_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for1_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+        Comments: Athugasemdir
+      courseF_bee_for1_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+        Comments: Athugasemdir
+      courseF_bee_for2_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+        Comments: Athugasemdir
+      courseF_bee_for2_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+        Comments: Athugasemdir
+      courseF_bee_for3_predict1:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for3_predict1_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for3_predict1_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for4:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for4_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+        Comments: Athugasemdir
+      courseF_bee_for4_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+        Comments: Athugasemdir
+      courseF_bee_for5:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for5_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for5_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for6:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for6_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for6_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for7:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for7_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+        Comments: Athugasemdir
+      courseF_bee_for7_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+        Comments: Athugasemdir
+      courseF_bee_for8:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for8_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for8_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for9:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        Variables: Breytur
+      courseF_bee_for9_2018:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for9_2019:
+        Actions: Aðgerðir
+        Math: Reikningur
+        Loops: Lykkjur
+        'Variables ': 'Breytur '
+        Comments: Athugasemdir
+      courseF_bee_for_challenge1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_for_challenge1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_for_challenge1_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_for_challenge2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+      courseF_bee_for_challenge2_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+      courseF_bee_for_challenge2_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+      courseF_bee_functions2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_functions3:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_functions3a:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_functions4:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_functions5a:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_functions6:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_functions7:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_functions8a:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_functionsPre7:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_functions_challenge1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_functions_challenge2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_fwp1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Math: Reikningur
+        Conditionals: Skilyrði
+      courseF_bee_fwp2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_fwp3:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_fwp4:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_fwp5:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_fwp6:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_fwp7:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_fwp8:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_fwp9_predict1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_fwp_challenge1:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_fwp_challenge2:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Math: Reikningur
+      courseF_bee_variables_1_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_1_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_2_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_2_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_3_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_3_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_4_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_4_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_5_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_5_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_6_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_6_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_7_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_7_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+        Comments: Athugasemdir
+      courseF_bee_variables_8_2018:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+      courseF_bee_variables_8_2019:
+        Actions: Aðgerðir
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Functions: Föll
+        Variables: Breytur
+        Math: Reikningur
+      courseF_playlab_variables1a:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Variables: Breytur
+      courseF_playlab_variables2b:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        'Variables ': 'Breytur '
+      courseF_playlab_variables3b_josh:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Variables: Breytur
+      courseF_playlab_variables4b:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Variables: Breytur
+      courseF_playlab_variables4c_predictive1:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+        Variables: Breytur
+      courseF_playlab_variables5c:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Logic: Rökvísi
+        Variables: Breytur
+        Text: texti
+      courseF_playlab_variables6c:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Variables: Breytur
+      courseF_playlab_variables7b:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Conditionals: Skilyrði
+        Math: Reikningur
+        Text: texti
+        Functions: Föll
+        Variables: Breytur
+        Game/Score: Leikur/skor
+      courseF_playlab_variables7c:
+        Default: Sjálfgefið
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Variables: Breytur
+      courseF_playlab_variables8c:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+        Variables: Breytur
+      courseF_playlab_variables_challenge1:
+        Actions: Aðgerðir
+        Events: Atvik
+        Loops: Lykkjur
+        Math: Reikningur
+        Functions: Föll
+        Variables: Breytur
