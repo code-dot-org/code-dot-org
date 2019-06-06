@@ -3128,6 +3128,7 @@ es:
               name: Colaboración Abierta
             Digital Sharing:
               name: Compartir digital
+              description_teacher: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender los retos y beneficios de respetar la propiedad y derechos de autos, en particular en entornos digitales. Se debería animar a los estudiantes a respetar los derechos de los artistas como una parte importante para ser un ciudadano digital ético.
         dance-low:
           stages:
             Dance Party:
@@ -3139,6 +3140,7 @@ es:
               name: Programación en papel cuadriculado
             Relay Programming:
               name: Programación de Relevos
+              description_teacher: Esta actividad comenzará con una lección breve sobre depuración y persistencia, luego pasará rápidamente a una carrera contrarreloj mientras los estudiantes se agrupan en equipos y trabajan juntos para escribir una instrucción de un programa a la vez.
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
             Conditionals with Cards:
@@ -3151,6 +3153,8 @@ es:
               name: Artista binario
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+              description_student: Siente la fuerza cuando construyes tu propio juego de la Guerra de las Galaxias en esta lección.
+              description_teacher: En esta lección, los estudiantes pondrán en práctica utilizando eventos para construir un juego que pueden compartir en línea. Con R2-D2 y otros personajes de Star Wars, los estudiantes serán guiados a través de eventos, luego le dadas espacio para crear su propio juego.
             Dance Party:
               name: Fiesta para bailar
         coursee-2019:

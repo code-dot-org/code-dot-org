@@ -1,59 +1,2377 @@
 ---
-es:
+es-ES:
   data:
     block_categories:
-      Actions: Acciones
-      Loops: vuelta
-      Functions: funciones
-      Color: Color
-      Brushes: Pinceles
-      Math: Matemáticas
-      Logic: Lógica
-      Variables: variables
-      Number: Número
-      String: Cadena
-      Image: Imagen
-      Boolean: Booleano
-      Conditionals: Condicionales
-      Events: Eventos
-      Games/Score: Juegos/Puntaje
-      Comments: Comentario
-      Category: Categoría
-      Prebuilt: Precompilado
-      Text: Texto
-      Picker: Seleccionador
-      Comment: Comentario
-      World: Mundo
-      Behaviors: Comportamientos
-      'Variables ': Variables
-      Default: Por defecto
-      Locations: Ubicaciones
-      Bunny Game: Juego del conejo
-      everythingelse: todolodemás
-      Location: Ubicación
-      numbers: Numeros
-      Numbers: Numeros
-      Dancers: Bailarines
-      Groups: Grupos
-      Advanced: Avanzado
-      Start: Inicio
-      Music: Musica
-      Dancing: Bailando
-      Sprite: Sprite
-      Brush: Pincel
-      Make Sprite: Hacer sprite
-      Movement: Movimiento
-      Booleans: Valores booleanos
-      Functional: Funcional
-      While Events: Cuando Eventos
-      Sprite Properties: Propiedades de Sprites
-      Predefined: Predefinido
-      test: prueba
-      test2: test2
-      Use These Blocks: Use estos bloques
-      Do Not Use: No use
-      Name: Nombre
-      NEW BLOCKS: NUEVOS BLOQUES
-      'Functions ': Funciones
-      Game/Score: Juego/Puntaje
-      Function: Función
+      4-5 Artist Patterns Free Play:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+      Alien Defender:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Games/Score: Juegos/Puntaje
+        Comments: Comentario
+      Choose Your Own Adventure:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Games/Score: Juegos/Puntaje
+        Comments: Comentario
+      Course 4 Artist For Loops 11:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+      Course 4 Artist For Loops 11a:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+      Course 4 Artist For Loops 14:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+      Course 4 Artist For Loops 15:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+        'Variables ': Variables
+      Course 4 Artist For Loops 4:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+      Course 4 Artist For Loops 6a:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+      Course 4 Artist For Loops 8:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+      Course 4 Artist For Loops Challenge:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+      Course 4 Artist For Loops inspire:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+      Course 4 Artist Functions Inspiration:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Functions: funciones
+      Course 4 Artist Functions challenge:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Functions: funciones
+      Course 4 Bee Params 1:
+        Actions: Acciones
+        Loops: vuelta
+        Functions: funciones
+      Course 4 Bee Params 2:
+        Actions: Acciones
+        Loops: vuelta
+        Functions: funciones
+      Course 4 Bee Params 3:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Functions: funciones
+        'Variables ': Variables
+      Course 4 Bee Params 4:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Functions: funciones
+        'Variables ': Variables
+        Math: Matemáticas
+      Course 4 Bee Params 5:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+      Course 4 Bee Params 6:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+      Course 4 Bee Params 7:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        Functions: funciones
+        'Variables ': Variables
+      Course 4 Bee Params 8:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        Functions: funciones
+        'Variables ': Variables
+      Course 4 EC 1a:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        Functions: funciones
+      Course 4 EC 1b:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        Functions: funciones
+      Course 4 EC 2a:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        Functions: funciones
+        Variables: variables
+      Course 4 EC 2b:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        Variables: variables
+        Functions: funciones
+      Course 4 EC 2c:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        Variables: variables
+        Functions: funciones
+      Course 4 Play Lab Params 10:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        Functions: funciones
+        Variables: variables
+      Course 4 Play Lab Params 7:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+      Course 4 Play Lab Params 8:
+        Events: Eventos
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+      Course 4 Play Lab Params 9:
+        Actions: Acciones
+        Math: Matemáticas
+        Functions: funciones
+        Variables: variables
+      Course 4 Play Lab Vars 9:
+        Events: Eventos
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        'Variables ': Variables
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Variables: variables
+      Course 4 SCF 1:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+        Functions: funciones
+      Course 4 SCF 1a:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        Functions: funciones
+        'Variables ': Variables
+      Course 4 SCF 1b:
+        Actions: Acciones
+        Loops: vuelta
+        Logic: Lógica
+        Math: Matemáticas
+        Functions: funciones
+      Course 4 SCF 2:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+        Functions: funciones
+      Course 4 SCF 3:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+        Functions: funciones
+      Course 4 SCFL 1:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+      Course 4 SCFL 1a:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+      Course 4 SCFL 1b:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+      Course 4 SCFL 2:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+      Course 4 SCFL 3:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      Course 4 SCFL 4:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      Course 4 SCFL 6:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      Course 4 SCFL 7:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      Course 4 SCV 6:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      'Course E: Play Lab Project':
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Games/Score: Juegos/Puntaje
+        Comments: Comentario
+      'Course F: Artist Project':
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+      'Course F: Artist Project - Revise':
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+      'Course F: Artist Project - Revise_2018':
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+      'Course F: Artist Project_2018':
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+      'Course F: Artist Project_2019':
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+      CourseD_Dance_Party_11_5:
+        World: Mundo
+        Dancers: Bailarines
+        Groups: Grupos
+        Events: Eventos
+      CourseD_Dance_Party_12:
+        World: Mundo
+        Dancers: Bailarines
+        Groups: Grupos
+        Events: Eventos
+        Numbers: Numeros
+        Logic: Lógica
+      CourseE_Project_SpriteLab:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+        Logic: Lógica
+        Text: Texto
+        Advanced: Avanzado
+        Comments: Comentario
+      CourseE_Project_SpriteLab_2019:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+      CourseE_hoops:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+        Functions: funciones
+      CourseF_Project_Revise_SpriteLab:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+        Functions: funciones
+      CourseF_Project_SpriteLab:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+        Functions: funciones
+      CourseF_Project_SpriteLab_2019:
+        World: Mundo
+        Locations: Ubicaciones
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Text: Texto
+        Comments: Comentario
+      Dance Party 2:
+        Behaviors: Comportamientos
+        Events: Eventos
+        Comments: Comentario
+      Dance Party 6:
+        Behaviors: Comportamientos
+        Events: Eventos
+        Comments: Comentario
+      Dance Party Freeplay:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+        Comments: Comentario
+      Dance_Party_11_5:
+        World: Mundo
+        Dancers: Bailarines
+        Groups: Grupos
+        Events: Eventos
+      Dance_Party_12:
+        World: Mundo
+        Dancers: Bailarines
+        Groups: Grupos
+        Events: Eventos
+        Numbers: Numeros
+        Logic: Lógica
+      Dance_Party_extras_battle:
+        World: Mundo
+        Dancers: Bailarines
+        Groups: Grupos
+        Events: Eventos
+        Numbers: Numeros
+        Logic: Lógica
+      Dance_Party_extras_every_beat:
+        World: Mundo
+        Dancers: Bailarines
+        Groups: Grupos
+        Events: Eventos
+        Numbers: Numeros
+        Logic: Lógica
+      Dance_Party_extras_layout:
+        World: Mundo
+        Dancers: Bailarines
+        Groups: Grupos
+        Events: Eventos
+        Numbers: Numeros
+        Logic: Lógica
+      Dance_Party_extras_on_beat:
+        World: Mundo
+        Dancers: Bailarines
+        Groups: Grupos
+        Events: Eventos
+        Numbers: Numeros
+        Logic: Lógica
+      Dance_Party_extras_speed:
+        World: Mundo
+        Dancers: Bailarines
+        Groups: Grupos
+        Events: Eventos
+        Numbers: Numeros
+        Logic: Lógica
+      Dance_Party_extras_visible:
+        World: Mundo
+        Dancers: Bailarines
+        Groups: Grupos
+        Events: Eventos
+        Numbers: Numeros
+        Logic: Lógica
+      Find the Wizard:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Games/Score: Juegos/Puntaje
+        Comments: Comentario
+      Fish Tank 5-validated:
+        World: Mundo
+        Behaviors: Comportamientos
+        Comments: Comentario
+      Fish Tank 5-validated_2019:
+        World: Mundo
+        Behaviors: Comportamientos
+        Comments: Comentario
+      Fish Tank 6-validated:
+        World: Mundo
+        Behaviors: Comportamientos
+        Comments: Comentario
+      Fish Tank 6-validated_2019:
+        World: Mundo
+        Behaviors: Comportamientos
+        Comments: Comentario
+      Fish Tank 7-validated:
+        World: Mundo
+        Behaviors: Comportamientos
+        Events: Eventos
+        Comments: Comentario
+      Fish Tank 7-validated_2019:
+        World: Mundo
+        Actions: Acciones
+        Behaviors: Comportamientos
+        Events: Eventos
+        Comments: Comentario
+      FoodFight:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Games/Score: Juegos/Puntaje
+        Comments: Comentario
+      Geometric Sun:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Comments: Comentario
+      Geometric Sun_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Comments: Comentario
+      Guess The Number:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Games/Score: Juegos/Puntaje
+        Comments: Comentario
+      InspirationalArtwork:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Comments: Comentario
+      InspirationalArtwork_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Comments: Comentario
+      NEW Course 4 Artist Functions 14:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Functions: funciones
+      NEW Course 4 Artist Params 1:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+        Variables: variables
+      NEW Course 4 Artist Params 10:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+      NEW Course 4 Artist Params 11:
+        Actions: Acciones
+        Functions: funciones
+        Loops: vuelta
+        Math: Matemáticas
+      NEW Course 4 Artist Params 12:
+        Actions: Acciones
+        Math: Matemáticas
+        Functions: funciones
+      NEW Course 4 Artist Params 12a:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+      NEW Course 4 Artist Params 13:
+        Actions: Acciones
+        Functions: funciones
+        Loops: vuelta
+        Math: Matemáticas
+      NEW Course 4 Artist Params 14:
+        Actions: Acciones
+        Brushes: Pinceles
+        Functions: funciones
+        Loops: vuelta
+        Math: Matemáticas
+      NEW Course 4 Artist Params 15:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+        Functions: funciones
+      NEW Course 4 Artist Params 2:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+      NEW Course 4 Artist Params 3:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+      NEW Course 4 Artist Params 6:
+        Actions: Acciones
+        Functions: funciones
+        Loops: vuelta
+        Math: Matemáticas
+      NEW Course 4 Artist Params 7:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Functions: funciones
+      NEW Course 4 Artist Params 8:
+        Actions: Acciones
+        Math: Matemáticas
+        Functions: funciones
+        Loops: vuelta
+      NEW Course 4 Artist Params 9:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+      NEW Course 4 Artist Params inspire:
+        Actions: Acciones
+        Brushes: Pinceles
+        Functions: funciones
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      NEW Course 4 Play Lab Params 11:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Games/Score: Juegos/Puntaje
+      Robot Doodle:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Comments: Comentario
+      Robot Doodle_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Functions: funciones
+        Variables: variables
+        Comments: Comentario
+      Virtual Pet 2:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+        Comments: Comentario
+      Virtual Pet 3:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+      Virtual Pet 4:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+      Virtual Pet 5:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+      Virtual Pet 6:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+      Virtual Pet Freeplay:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+      behaviors 3a:
+        World: Mundo
+        Behaviors: Comportamientos
+        Actions: Acciones
+      behaviors 5:
+        World: Mundo
+        Behaviors: Comportamientos
+        Actions: Acciones
+      behaviors 6:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Math: Matemáticas
+        Logic: Lógica
+      behaviors 7:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Math: Matemáticas
+        Logic: Lógica
+      behaviors free play:
+        World: Mundo
+        Behaviors: Comportamientos
+        Actions: Acciones
+        Events: Eventos
+      course3_bee_functions_challenge1:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      course3_bee_functions_challenge2:
+        Actions: Acciones
+        Loops: vuelta
+        Functions: funciones
+      course3_bee_functions_challenge3:
+        Default: Por defecto
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      course3_bee_functions_challenge4:
+        Default: Por defecto
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      course3_playLab_challenge1:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      course4_artist_fwp_challenge1:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+        Functions: funciones
+      course4_bee_for_challenge1:
+        Actions: Acciones
+        Loops: vuelta
+        Functions: funciones
+        Math: Matemáticas
+      course4_bee_fwp_challenge1:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      course4_bee_fwp_challenge2:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      course4_playlab_variables_challenge1:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+        Variables: variables
+      courseD_artist_project1:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project1a:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project1a_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project1a_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project2:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project2_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project2_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project2a:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project2a_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project2a_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project3:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project3_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project3_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project3a:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project3a_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project3a_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project4:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project4_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project4_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project4a:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project4a_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project4a_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project5:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project5_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_artist_project5_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+      courseD_playLab_condFP:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Games/Score: Juegos/Puntaje
+      courseD_playLab_condFP_2018:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Games/Score: Juegos/Puntaje
+        Comment: Comentario
+      courseE_Dogger_2:
+        World: Mundo
+        Actions: Acciones
+        Events: Eventos
+        Behaviors: Comportamientos
+        Variables: variables
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Text: Texto
+        Functions: funciones
+      courseE_artist_concept1_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_concept4:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Functions: funciones
+      courseE_artist_concept4_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions10:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+      courseE_artist_functions10_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions10_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions2_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        'Functions ': Funciones
+        Comments: Comentario
+      courseE_artist_functions2_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        'Functions ': Funciones
+        Comments: Comentario
+      courseE_artist_functions3_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseE_artist_functions3_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseE_artist_functions5_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        'Functions ': Funciones
+        Comments: Comentario
+      courseE_artist_functions5_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        'Functions ': Funciones
+        Comments: Comentario
+      courseE_artist_functions7_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        'Functions ': Funciones
+        Comments: Comentario
+      courseE_artist_functions7_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        'Functions ': Funciones
+        Comments: Comentario
+      courseE_artist_functions8:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+      courseE_artist_functions8_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions8_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions8a_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions8a_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions8b_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions8b_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions8c_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions8c_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions9:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+      courseE_artist_functions9_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions9_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functionsProj_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functionsProj_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+        Comments: Comentario
+      courseE_artist_functions_predict2:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+      courseE_artist_functions_predict2_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+      courseE_artist_functions_predict2_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Functions: funciones
+      courseE_bee_concept1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_bee_concept2_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_bee_concept3_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_bee_concept4_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_bee_concept5_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_bee_functions6:
+        Actions: Acciones
+        Loops: vuelta
+        Functions: funciones
+      courseE_bee_functions7:
+        Actions: Acciones
+        Loops: vuelta
+        Functions: funciones
+      courseE_bee_functions_challenge1:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_bee_functions_challenge2:
+        Actions: Acciones
+        Loops: vuelta
+        Functions: funciones
+      courseE_farmer_concept1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_concept2_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_concept3_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions1:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions10a1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions10a1_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions10b:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions11_predict:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions11_predict_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions11_predict_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions13_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions13_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions1_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions1a:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions1a_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions1a_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions2b:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions2b_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions2b_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions2ba:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions2ba_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions2ba_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions3c:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions3c1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions3c1_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions3c_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions3c_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions4b:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions5c:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions6c:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions7a1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions7a1_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions7b:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions8a1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions8a1_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions8b:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_farmer_functions9a1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions9a1_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Comments: Comentario
+      courseE_farmer_functions9b:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_playLab_challenge1:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_playLab_scaffold5:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseE_playLab_scaffold6:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+      courseF_artist_for1:
+        Actions: Acciones
+        Loops: vuelta
+        Color: Color
+      courseF_artist_for10:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+        'Variables ': Variables
+      courseF_artist_for10_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+        'Variables ': Variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_for10_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+        'Variables ': Variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_for10_predict1:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+        'Variables ': Variables
+      courseF_artist_for10_predict1_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+        'Variables ': Variables
+      courseF_artist_for10_predict1_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Brushes: Pinceles
+        'Variables ': Variables
+      courseF_artist_for1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseF_artist_for1_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseF_artist_for2:
+        Actions: Acciones
+        Loops: vuelta
+        Color: Color
+      courseF_artist_for2_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseF_artist_for2_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseF_artist_for3:
+        Actions: Acciones
+        Loops: vuelta
+        Color: Color
+      courseF_artist_for3_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseF_artist_for3_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseF_artist_for4:
+        Actions: Acciones
+        Loops: vuelta
+        Color: Color
+      courseF_artist_for4_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseF_artist_for4_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseF_artist_for5:
+        Actions: Acciones
+        Loops: vuelta
+        Color: Color
+      courseF_artist_for5_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseF_artist_for5_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Comments: Comentario
+      courseF_artist_for6:
+        Actions: Acciones
+        Loops: vuelta
+        Color: Color
+      courseF_artist_for6_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Color: Color
+      courseF_artist_for6_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Color: Color
+      courseF_artist_for7:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+      courseF_artist_for7_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+      courseF_artist_for7_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+      courseF_artist_for8:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+      courseF_artist_for8_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+      courseF_artist_for8_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+      courseF_artist_for9:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+      courseF_artist_for9_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_for9_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Brushes: Pinceles
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_for_challenge1:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      courseF_artist_for_challenge1_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      courseF_artist_for_challenge1_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      courseF_artist_for_challenge2:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      courseF_artist_for_challenge2_2018:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      courseF_artist_for_challenge2_2019:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      courseF_artist_fwp2:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Functions: funciones
+      courseF_artist_fwp2_predict1:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Functions: funciones
+      courseF_artist_fwp3:
+        Functions: funciones
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+      courseF_artist_fwp4:
+        Actions: Acciones
+        Math: Matemáticas
+        Functions: funciones
+      courseF_artist_fwp5:
+        Actions: Acciones
+        Functions: funciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+      courseF_artist_fwp6:
+        Actions: Acciones
+        Functions: funciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+      courseF_artist_fwp7:
+        Actions: Acciones
+        Brushes: Pinceles
+        Functions: funciones
+        Loops: vuelta
+        Math: Matemáticas
+      courseF_artist_fwp8:
+        Actions: Acciones
+        Brushes: Pinceles
+        Functions: funciones
+        Loops: vuelta
+        Math: Matemáticas
+      courseF_artist_fwp9:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+        Functions: funciones
+      courseF_artist_fwp_challenge1:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+        Functions: funciones
+      courseF_artist_fwp_challenge2:
+        Actions: Acciones
+        Brushes: Pinceles
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+        Functions: funciones
+      courseF_artist_variables10_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Variables: variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_variables10_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Variables: variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_variables7_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Variables: variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_variables7_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Variables: variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_variables8_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Variables: variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_variables8_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Variables: variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_variables9_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Variables: variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_variables9_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Variables: variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_variablesFP_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Variables: variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_artist_variablesFP_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Brushes: Pinceles
+        Variables: variables
+        Functions: funciones
+        Comments: Comentario
+      courseF_bee_conditionals10:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_conditionals2:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_conditionals3:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_conditionals4:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_conditionals5:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_conditionals8:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_for10:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for10_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for10_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for11:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for11_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for11_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for1_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+        Comments: Comentario
+      courseF_bee_for1_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+        Comments: Comentario
+      courseF_bee_for2_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+        Comments: Comentario
+      courseF_bee_for2_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+        Comments: Comentario
+      courseF_bee_for3_predict1:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for3_predict1_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for3_predict1_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for4:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for4_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+        Comments: Comentario
+      courseF_bee_for4_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+        Comments: Comentario
+      courseF_bee_for5:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for5_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for5_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for6:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for6_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for6_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for7:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for7_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+        Comments: Comentario
+      courseF_bee_for7_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+        Comments: Comentario
+      courseF_bee_for8:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for8_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for8_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for9:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        Variables: variables
+      courseF_bee_for9_2018:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for9_2019:
+        Actions: Acciones
+        Math: Matemáticas
+        Loops: vuelta
+        'Variables ': Variables
+        Comments: Comentario
+      courseF_bee_for_challenge1:
+        Actions: Acciones
+        Loops: vuelta
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_for_challenge1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_for_challenge1_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_for_challenge2:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+      courseF_bee_for_challenge2_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+      courseF_bee_for_challenge2_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+      courseF_bee_functions2:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_functions3:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_functions3a:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_functions4:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_functions5a:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_functions6:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_functions7:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_functions8a:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_functionsPre7:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_functions_challenge1:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_functions_challenge2:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_fwp1:
+        Actions: Acciones
+        Loops: vuelta
+        Math: Matemáticas
+        Conditionals: Condicionales
+      courseF_bee_fwp2:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_fwp3:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_fwp4:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_fwp5:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_fwp6:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_fwp7:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_fwp8:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_fwp9_predict1:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_fwp_challenge1:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_fwp_challenge2:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Math: Matemáticas
+      courseF_bee_variables_1_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_1_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_2_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_2_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_3_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_3_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_4_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_4_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_5_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_5_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_6_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_6_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_7_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_7_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+        Comments: Comentario
+      courseF_bee_variables_8_2018:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+      courseF_bee_variables_8_2019:
+        Actions: Acciones
+        Loops: vuelta
+        Conditionals: Condicionales
+        Functions: funciones
+        Variables: variables
+        Math: Matemáticas
+      courseF_playlab_variables1a:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Variables: variables
+      courseF_playlab_variables2b:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        'Variables ': Variables
+      courseF_playlab_variables3b_josh:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Variables: variables
+      courseF_playlab_variables4b:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Variables: variables
+      courseF_playlab_variables4c_predictive1:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+        Variables: variables
+      courseF_playlab_variables5c:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Logic: Lógica
+        Variables: variables
+        Text: Texto
+      courseF_playlab_variables6c:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Variables: variables
+      courseF_playlab_variables7b:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Conditionals: Condicionales
+        Math: Matemáticas
+        Text: Texto
+        Functions: funciones
+        Variables: variables
+        Game/Score: Juego/Puntaje
+      courseF_playlab_variables7c:
+        Default: Por defecto
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Variables: variables
+      courseF_playlab_variables8c:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+        Variables: variables
+      courseF_playlab_variables_challenge1:
+        Actions: Acciones
+        Events: Eventos
+        Loops: vuelta
+        Math: Matemáticas
+        Functions: funciones
+        Variables: variables
