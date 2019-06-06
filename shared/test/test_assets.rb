@@ -142,6 +142,29 @@ class AssetsTest < FilesApiTestBase
     )
   end
 
+  def test_image_filenames_escaped
+    assert_access_image('dog.png')
+    assert_access_image('çat.png')
+    assert_access_image('%percent.png')
+    assert_access_image('fun%facts.png')
+    assert_access_image('left{curly.png')
+  end
+
+  def assert_access_image(filename)
+    # images are created via POST. this helper randomizes the filename.
+    _, filename = post_asset_file(@api, filename, 'stub-image-contents', 'image/jpeg')
+    assert successful?
+
+    @api.get_object(filename)
+    assert successful?
+
+    @api.delete_object(filename)
+    assert successful?
+
+    @api.get_object(filename)
+    assert not_found?
+  end
+
   def test_set_abuse_score
     asset_bucket = AssetBucket.new
 
