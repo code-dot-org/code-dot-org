@@ -96,7 +96,7 @@ module Pd::SurveyPipeline
           merge(
             qid: DailySurveyJoiner.compute_descendant_key(qid, "Sub question #{i + 1}"),
             name: DailySurveyJoiner.compute_descendant_key(qname, "Sub question #{i + 1}"),
-            text: "#{qtext}->Sub question #{i + 1}",
+            text: "#{qtext} -> Sub question #{i + 1}",
             type: TYPE_RADIO,
             answer: "Option #{i + 1}",
             answer_type: ANSWER_SINGLE_SELECT,
