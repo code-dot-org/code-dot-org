@@ -539,8 +539,9 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
+    filename = CGI.unescape(filename)
     filename.downcase! if endpoint == 'files'
-    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, CGI.unescape(filename)).to_json
+    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename).to_json
   end
 
   #
