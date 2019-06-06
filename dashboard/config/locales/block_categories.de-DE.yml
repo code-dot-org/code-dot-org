@@ -1,59 +1,2379 @@
 ---
-de:
+de-DE:
   data:
     block_categories:
-      Actions: Aktionen
-      Loops: Schleifen
-      Functions: Funktionen
-      Color: Farbe
-      Brushes: Bürsten
-      Math: Mathematik
-      Logic: Logik
-      Variables: Variablen
-      Number: Nummer
-      String: String
-      Image: Bild
-      Boolean: Boolean
-      Conditionals: Bedingungen
-      Events: Ereignisse
-      Games/Score: Spiele/Punktzahl
-      Comments: Kommentare
-      Category: Kategorie
-      Prebuilt: Vorgefertigt
-      Text: Text
-      Picker: Sammler
-      Comment: Kommentar
-      World: Welt
-      Behaviors: Verhaltensweisen
-      'Variables ': 'Variablen '
-      Default: Standard
-      Locations: Orte
-      Bunny Game: Hasenspiel
-      everythingelse: allesandere
-      Location: Standort
-      numbers: Nummern
-      Numbers: Nummern
-      Input: Eingabe
-      Dancers: Tänzer
-      Groups: Gruppen
-      Advanced: Erweitert
-      Start: Start
-      Dancing: Tanzen
-      Sprite: Sprite
-      Brush: Bürste
-      Make Sprite: Sprite erstellen
-      Movement: Bewegung
-      Booleans: Boolesche Werte
-      Functional: Funktional
-      Sprite Properties: Sprite Eigenschaften
-      Predefined: Vordefiniert
-      test: prüfe
-      test2: test2
-      Use These Blocks: Benutze diese Bausteine
-      Do Not Use: Nicht benutzen
-      Foo: Kram
-      Name: Name
-      NEW BLOCKS: NEUE BAUSTEINE
-      'Functions ': 'Funktionen '
-      Game/Score: Spiel/Punktzahl
-      Function: Funktion
+      4-5 Artist Patterns Free Play:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+      Alien Defender:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Games/Score: Spiele/Punktzahl
+        Comments: Kommentare
+      Choose Your Own Adventure:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Games/Score: Spiele/Punktzahl
+        Comments: Kommentare
+      Course 4 Artist For Loops 11:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+      Course 4 Artist For Loops 11a:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+      Course 4 Artist For Loops 14:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+      Course 4 Artist For Loops 15:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Variables ': 'Variablen '
+      Course 4 Artist For Loops 4:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+      Course 4 Artist For Loops 6a:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+      Course 4 Artist For Loops 8:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+      Course 4 Artist For Loops Challenge:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+      Course 4 Artist For Loops inspire:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+      Course 4 Artist Functions Inspiration:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Functions: Funktionen
+      Course 4 Artist Functions challenge:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Functions: Funktionen
+      Course 4 Bee Params 1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Functions: Funktionen
+      Course 4 Bee Params 2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Functions: Funktionen
+      Course 4 Bee Params 3:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Functions: Funktionen
+        'Variables ': 'Variablen '
+      Course 4 Bee Params 4:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Functions: Funktionen
+        'Variables ': 'Variablen '
+        Math: Mathematik
+      Course 4 Bee Params 5:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+      Course 4 Bee Params 6:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+      Course 4 Bee Params 7:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        Functions: Funktionen
+        'Variables ': 'Variablen '
+      Course 4 Bee Params 8:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        Functions: Funktionen
+        'Variables ': 'Variablen '
+      Course 4 EC 1a:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        Functions: Funktionen
+      Course 4 EC 1b:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        Functions: Funktionen
+      Course 4 EC 2a:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        Functions: Funktionen
+        Variables: Variablen
+      Course 4 EC 2b:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        Variables: Variablen
+        Functions: Funktionen
+      Course 4 EC 2c:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        Variables: Variablen
+        Functions: Funktionen
+      Course 4 Play Lab Params 10:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        Functions: Funktionen
+        Variables: Variablen
+      Course 4 Play Lab Params 7:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+      Course 4 Play Lab Params 8:
+        Events: Ereignisse
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+      Course 4 Play Lab Params 9:
+        Actions: Aktionen
+        Math: Mathematik
+        Functions: Funktionen
+        Variables: Variablen
+      Course 4 Play Lab Vars 9:
+        Events: Ereignisse
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Variables: Variablen
+      Course 4 SCF 1:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+        Functions: Funktionen
+      Course 4 SCF 1a:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        Functions: Funktionen
+        'Variables ': 'Variablen '
+      Course 4 SCF 1b:
+        Actions: Aktionen
+        Loops: Schleifen
+        Logic: Logik
+        Math: Mathematik
+        Functions: Funktionen
+      Course 4 SCF 2:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+        Functions: Funktionen
+      Course 4 SCF 3:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+        Functions: Funktionen
+      Course 4 SCFL 1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+      Course 4 SCFL 1a:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+      Course 4 SCFL 1b:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+      Course 4 SCFL 2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+      Course 4 SCFL 3:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      Course 4 SCFL 4:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      Course 4 SCFL 6:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      Course 4 SCFL 7:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      Course 4 SCV 6:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      'Course E: Play Lab Project':
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Games/Score: Spiele/Punktzahl
+        Comments: Kommentare
+      'Course F: Artist Project':
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+      'Course F: Artist Project - Revise':
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+      'Course F: Artist Project - Revise_2018':
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+      'Course F: Artist Project_2018':
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+      'Course F: Artist Project_2019':
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+      CourseD_Dance_Party_11_5:
+        World: Welt
+        Dancers: Tänzer
+        Groups: Gruppen
+        Events: Ereignisse
+      CourseD_Dance_Party_12:
+        World: Welt
+        Dancers: Tänzer
+        Groups: Gruppen
+        Events: Ereignisse
+        Numbers: Nummern
+        Logic: Logik
+      CourseE_Project_SpriteLab:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+        Logic: Logik
+        Text: Text
+        Advanced: Erweitert
+        Comments: Kommentare
+      CourseE_Project_SpriteLab_2019:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+      CourseE_hoops:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+        Functions: Funktionen
+      CourseF_Project_Revise_SpriteLab:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+        Functions: Funktionen
+      CourseF_Project_SpriteLab:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+        Functions: Funktionen
+      CourseF_Project_SpriteLab_2019:
+        World: Welt
+        Locations: Orte
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Text: Text
+        Comments: Kommentare
+      Dance Party 2:
+        Behaviors: Verhaltensweisen
+        Events: Ereignisse
+        Comments: Kommentare
+      Dance Party 6:
+        Behaviors: Verhaltensweisen
+        Events: Ereignisse
+        Comments: Kommentare
+      Dance Party Freeplay:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+        Comments: Kommentare
+      Dance_Party_11_5:
+        World: Welt
+        Dancers: Tänzer
+        Groups: Gruppen
+        Events: Ereignisse
+      Dance_Party_12:
+        World: Welt
+        Dancers: Tänzer
+        Groups: Gruppen
+        Events: Ereignisse
+        Numbers: Nummern
+        Logic: Logik
+      Dance_Party_extras_battle:
+        World: Welt
+        Dancers: Tänzer
+        Groups: Gruppen
+        Events: Ereignisse
+        Numbers: Nummern
+        Logic: Logik
+      Dance_Party_extras_every_beat:
+        World: Welt
+        Dancers: Tänzer
+        Groups: Gruppen
+        Events: Ereignisse
+        Numbers: Nummern
+        Logic: Logik
+      Dance_Party_extras_layout:
+        World: Welt
+        Dancers: Tänzer
+        Groups: Gruppen
+        Events: Ereignisse
+        Numbers: Nummern
+        Logic: Logik
+      Dance_Party_extras_on_beat:
+        World: Welt
+        Dancers: Tänzer
+        Groups: Gruppen
+        Events: Ereignisse
+        Numbers: Nummern
+        Logic: Logik
+      Dance_Party_extras_speed:
+        World: Welt
+        Dancers: Tänzer
+        Groups: Gruppen
+        Events: Ereignisse
+        Numbers: Nummern
+        Logic: Logik
+      Dance_Party_extras_visible:
+        World: Welt
+        Dancers: Tänzer
+        Groups: Gruppen
+        Events: Ereignisse
+        Numbers: Nummern
+        Logic: Logik
+      Find the Wizard:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Games/Score: Spiele/Punktzahl
+        Comments: Kommentare
+      Fish Tank 5-validated:
+        World: Welt
+        Behaviors: Verhaltensweisen
+        Comments: Kommentare
+      Fish Tank 5-validated_2019:
+        World: Welt
+        Behaviors: Verhaltensweisen
+        Comments: Kommentare
+      Fish Tank 6-validated:
+        World: Welt
+        Behaviors: Verhaltensweisen
+        Comments: Kommentare
+      Fish Tank 6-validated_2019:
+        World: Welt
+        Behaviors: Verhaltensweisen
+        Comments: Kommentare
+      Fish Tank 7-validated:
+        World: Welt
+        Behaviors: Verhaltensweisen
+        Events: Ereignisse
+        Comments: Kommentare
+      Fish Tank 7-validated_2019:
+        World: Welt
+        Actions: Aktionen
+        Behaviors: Verhaltensweisen
+        Events: Ereignisse
+        Comments: Kommentare
+      FoodFight:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Games/Score: Spiele/Punktzahl
+        Comments: Kommentare
+      Geometric Sun:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Comments: Kommentare
+      Geometric Sun_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Comments: Kommentare
+      Guess The Number:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Games/Score: Spiele/Punktzahl
+        Comments: Kommentare
+      InspirationalArtwork:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Comments: Kommentare
+      InspirationalArtwork_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Comments: Kommentare
+      NEW Course 4 Artist Functions 14:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Functions: Funktionen
+      NEW Course 4 Artist Params 1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+        Variables: Variablen
+      NEW Course 4 Artist Params 10:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+      NEW Course 4 Artist Params 11:
+        Actions: Aktionen
+        Functions: Funktionen
+        Loops: Schleifen
+        Math: Mathematik
+      NEW Course 4 Artist Params 12:
+        Actions: Aktionen
+        Math: Mathematik
+        Functions: Funktionen
+      NEW Course 4 Artist Params 12a:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+      NEW Course 4 Artist Params 13:
+        Actions: Aktionen
+        Functions: Funktionen
+        Loops: Schleifen
+        Math: Mathematik
+      NEW Course 4 Artist Params 14:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Functions: Funktionen
+        Loops: Schleifen
+        Math: Mathematik
+      NEW Course 4 Artist Params 15:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+        Functions: Funktionen
+      NEW Course 4 Artist Params 2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+      NEW Course 4 Artist Params 3:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+      NEW Course 4 Artist Params 6:
+        Actions: Aktionen
+        Functions: Funktionen
+        Loops: Schleifen
+        Math: Mathematik
+      NEW Course 4 Artist Params 7:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Functions: Funktionen
+      NEW Course 4 Artist Params 8:
+        Actions: Aktionen
+        Math: Mathematik
+        Functions: Funktionen
+        Loops: Schleifen
+      NEW Course 4 Artist Params 9:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+      NEW Course 4 Artist Params inspire:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Functions: Funktionen
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      NEW Course 4 Play Lab Params 11:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Games/Score: Spiele/Punktzahl
+      Robot Doodle:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Comments: Kommentare
+      Robot Doodle_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Functions: Funktionen
+        Variables: Variablen
+        Comments: Kommentare
+      Virtual Pet 2:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+        Comments: Kommentare
+      Virtual Pet 3:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+      Virtual Pet 4:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+      Virtual Pet 5:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+      Virtual Pet 6:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+      Virtual Pet Freeplay:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+      behaviors 3a:
+        World: Welt
+        Behaviors: Verhaltensweisen
+        Actions: Aktionen
+      behaviors 5:
+        World: Welt
+        Behaviors: Verhaltensweisen
+        Actions: Aktionen
+      behaviors 6:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Math: Mathematik
+        Logic: Logik
+      behaviors 7:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Math: Mathematik
+        Logic: Logik
+      behaviors free play:
+        World: Welt
+        Behaviors: Verhaltensweisen
+        Actions: Aktionen
+        Events: Ereignisse
+      course3_bee_functions_challenge1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      course3_bee_functions_challenge2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Functions: Funktionen
+      course3_bee_functions_challenge3:
+        Default: Standard
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      course3_bee_functions_challenge4:
+        Default: Standard
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      course3_playLab_challenge1:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      course4_artist_fwp_challenge1:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+        Functions: Funktionen
+      course4_bee_for_challenge1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Functions: Funktionen
+        Math: Mathematik
+      course4_bee_fwp_challenge1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      course4_bee_fwp_challenge2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      course4_playlab_variables_challenge1:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+        Variables: Variablen
+      courseD_artist_project1:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project1a:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project1a_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project1a_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project2:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project2_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project2_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project2a:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project2a_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project2a_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project3:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project3_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project3_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project3a:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project3a_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project3a_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project4:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project4_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project4_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project4a:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project4a_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project4a_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project5:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project5_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_artist_project5_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+      courseD_playLab_condFP:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Games/Score: Spiele/Punktzahl
+      courseD_playLab_condFP_2018:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Games/Score: Spiele/Punktzahl
+        Comment: Kommentar
+      courseE_Dogger_2:
+        World: Welt
+        Actions: Aktionen
+        Events: Ereignisse
+        Behaviors: Verhaltensweisen
+        Variables: Variablen
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Text: Text
+        Functions: Funktionen
+      courseE_artist_concept1_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_concept4:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Functions: Funktionen
+      courseE_artist_concept4_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions10:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+      courseE_artist_functions10_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions10_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions2_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Functions ': 'Funktionen '
+        Comments: Kommentare
+      courseE_artist_functions2_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Functions ': 'Funktionen '
+        Comments: Kommentare
+      courseE_artist_functions3_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseE_artist_functions3_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseE_artist_functions5_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Functions ': 'Funktionen '
+        Comments: Kommentare
+      courseE_artist_functions5_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Functions ': 'Funktionen '
+        Comments: Kommentare
+      courseE_artist_functions7_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Functions ': 'Funktionen '
+        Comments: Kommentare
+      courseE_artist_functions7_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Functions ': 'Funktionen '
+        Comments: Kommentare
+      courseE_artist_functions8:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+      courseE_artist_functions8_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions8_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions8a_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions8a_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions8b_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions8b_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions8c_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions8c_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions9:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+      courseE_artist_functions9_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions9_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functionsProj_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functionsProj_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_artist_functions_predict2:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+      courseE_artist_functions_predict2_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+      courseE_artist_functions_predict2_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Functions: Funktionen
+      courseE_bee_concept1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_bee_concept2_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_bee_concept3_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_bee_concept4_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_bee_concept5_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_bee_functions6:
+        Actions: Aktionen
+        Loops: Schleifen
+        Functions: Funktionen
+      courseE_bee_functions7:
+        Actions: Aktionen
+        Loops: Schleifen
+        Functions: Funktionen
+      courseE_bee_functions_challenge1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_bee_functions_challenge2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Functions: Funktionen
+      courseE_farmer_concept1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_concept2_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_concept3_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions10a1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions10a1_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions10b:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions11_predict:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions11_predict_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions11_predict_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions13_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions13_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions1_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions1a:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions1a_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions1a_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions2b:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions2b_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions2b_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions2ba:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions2ba_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions2ba_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions3c:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions3c1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions3c1_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions3c_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions3c_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions4b:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions5c:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions6c:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions7a1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions7a1_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions7b:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions8a1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions8a1_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions8b:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_farmer_functions9a1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions9a1_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseE_farmer_functions9b:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_playLab_challenge1:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_playLab_scaffold5:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseE_playLab_scaffold6:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+      courseF_artist_for1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Color: Farbe
+      courseF_artist_for10:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Variables ': 'Variablen '
+      courseF_artist_for10_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Variables ': 'Variablen '
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_for10_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Variables ': 'Variablen '
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_for10_predict1:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Variables ': 'Variablen '
+      courseF_artist_for10_predict1_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Variables ': 'Variablen '
+      courseF_artist_for10_predict1_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Brushes: Bürsten
+        'Variables ': 'Variablen '
+      courseF_artist_for1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseF_artist_for1_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseF_artist_for2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Color: Farbe
+      courseF_artist_for2_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseF_artist_for2_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseF_artist_for3:
+        Actions: Aktionen
+        Loops: Schleifen
+        Color: Farbe
+      courseF_artist_for3_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseF_artist_for3_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseF_artist_for4:
+        Actions: Aktionen
+        Loops: Schleifen
+        Color: Farbe
+      courseF_artist_for4_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseF_artist_for4_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseF_artist_for5:
+        Actions: Aktionen
+        Loops: Schleifen
+        Color: Farbe
+      courseF_artist_for5_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseF_artist_for5_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Comments: Kommentare
+      courseF_artist_for6:
+        Actions: Aktionen
+        Loops: Schleifen
+        Color: Farbe
+      courseF_artist_for6_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Color: Farbe
+      courseF_artist_for6_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Color: Farbe
+      courseF_artist_for7:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+      courseF_artist_for7_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+      courseF_artist_for7_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+      courseF_artist_for8:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+      courseF_artist_for8_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+      courseF_artist_for8_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+      courseF_artist_for9:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+      courseF_artist_for9_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_for9_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Brushes: Bürsten
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_for_challenge1:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      courseF_artist_for_challenge1_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      courseF_artist_for_challenge1_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      courseF_artist_for_challenge2:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      courseF_artist_for_challenge2_2018:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      courseF_artist_for_challenge2_2019:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      courseF_artist_fwp2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Functions: Funktionen
+      courseF_artist_fwp2_predict1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Functions: Funktionen
+      courseF_artist_fwp3:
+        Functions: Funktionen
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+      courseF_artist_fwp4:
+        Actions: Aktionen
+        Math: Mathematik
+        Functions: Funktionen
+      courseF_artist_fwp5:
+        Actions: Aktionen
+        Functions: Funktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+      courseF_artist_fwp6:
+        Actions: Aktionen
+        Functions: Funktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+      courseF_artist_fwp7:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Functions: Funktionen
+        Loops: Schleifen
+        Math: Mathematik
+      courseF_artist_fwp8:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Functions: Funktionen
+        Loops: Schleifen
+        Math: Mathematik
+      courseF_artist_fwp9:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+        Functions: Funktionen
+      courseF_artist_fwp_challenge1:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+        Functions: Funktionen
+      courseF_artist_fwp_challenge2:
+        Actions: Aktionen
+        Brushes: Bürsten
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+        Functions: Funktionen
+      courseF_artist_variables10_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Variables: Variablen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_variables10_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Variables: Variablen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_variables7_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Variables: Variablen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_variables7_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Variables: Variablen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_variables8_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Variables: Variablen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_variables8_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Variables: Variablen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_variables9_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Variables: Variablen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_variables9_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Variables: Variablen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_variablesFP_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Variables: Variablen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_artist_variablesFP_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Brushes: Bürsten
+        Variables: Variablen
+        Functions: Funktionen
+        Comments: Kommentare
+      courseF_bee_conditionals10:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_conditionals2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_conditionals3:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_conditionals4:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_conditionals5:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_conditionals8:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_for10:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for10_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for10_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for11:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for11_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for11_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for1_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+        Comments: Kommentare
+      courseF_bee_for1_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+        Comments: Kommentare
+      courseF_bee_for2_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+        Comments: Kommentare
+      courseF_bee_for2_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+        Comments: Kommentare
+      courseF_bee_for3_predict1:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for3_predict1_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for3_predict1_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for4:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for4_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+        Comments: Kommentare
+      courseF_bee_for4_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+        Comments: Kommentare
+      courseF_bee_for5:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for5_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for5_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for6:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for6_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for6_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for7:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for7_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+        Comments: Kommentare
+      courseF_bee_for7_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+        Comments: Kommentare
+      courseF_bee_for8:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for8_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for8_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for9:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        Variables: Variablen
+      courseF_bee_for9_2018:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for9_2019:
+        Actions: Aktionen
+        Math: Mathematik
+        Loops: Schleifen
+        'Variables ': 'Variablen '
+        Comments: Kommentare
+      courseF_bee_for_challenge1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_for_challenge1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_for_challenge1_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_for_challenge2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+      courseF_bee_for_challenge2_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+      courseF_bee_for_challenge2_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+      courseF_bee_functions2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_functions3:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_functions3a:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_functions4:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_functions5a:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_functions6:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_functions7:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_functions8a:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_functionsPre7:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_functions_challenge1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_functions_challenge2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_fwp1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Math: Mathematik
+        Conditionals: Bedingungen
+      courseF_bee_fwp2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_fwp3:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_fwp4:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_fwp5:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_fwp6:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_fwp7:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_fwp8:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_fwp9_predict1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_fwp_challenge1:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_fwp_challenge2:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Math: Mathematik
+      courseF_bee_variables_1_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_1_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_2_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_2_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_3_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_3_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_4_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_4_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_5_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_5_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_6_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_6_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_7_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_7_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+        Comments: Kommentare
+      courseF_bee_variables_8_2018:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+      courseF_bee_variables_8_2019:
+        Actions: Aktionen
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Functions: Funktionen
+        Variables: Variablen
+        Math: Mathematik
+      courseF_playlab_variables1a:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Variables: Variablen
+      courseF_playlab_variables2b:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        'Variables ': 'Variablen '
+      courseF_playlab_variables3b_josh:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Variables: Variablen
+      courseF_playlab_variables4b:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Variables: Variablen
+      courseF_playlab_variables4c_predictive1:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+        Variables: Variablen
+      courseF_playlab_variables5c:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Logic: Logik
+        Variables: Variablen
+        Text: Text
+      courseF_playlab_variables6c:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Variables: Variablen
+      courseF_playlab_variables7b:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Conditionals: Bedingungen
+        Math: Mathematik
+        Text: Text
+        Functions: Funktionen
+        Variables: Variablen
+        Input: Eingabe
+        Game/Score: Spiel/Punktzahl
+      courseF_playlab_variables7c:
+        Default: Standard
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Input: Eingabe
+        Variables: Variablen
+      courseF_playlab_variables8c:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+        Variables: Variablen
+      courseF_playlab_variables_challenge1:
+        Actions: Aktionen
+        Events: Ereignisse
+        Loops: Schleifen
+        Math: Mathematik
+        Functions: Funktionen
+        Variables: Variablen

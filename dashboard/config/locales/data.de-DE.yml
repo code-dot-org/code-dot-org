@@ -704,6 +704,7 @@ de:
         repeat_block: Benutze den Wiederholungsblock
         csd_pair_programming: Paarprogrammierung
         csd_applab_parameters: Funktionen mit Parametern
+        CSF_SpriteLab_SpritesInAction_v2: Sprites in Aktion
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den
