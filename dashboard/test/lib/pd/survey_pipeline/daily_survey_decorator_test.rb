@@ -9,6 +9,15 @@ module Pd::SurveyPipeline
       @facilitators = create_list :facilitator, 2
       @workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
         num_sessions: 1, facilitators: @facilitators
+
+      @program_manager = create :program_manager
+      @workshop_admin = create :workshop_admin
+
+      @summary_data_permission_test = [
+        {facilitator_id: @facilitators.first.id, reducer: 'avgerage', reducer_result: '1.1'},
+        {facilitator_id: @facilitators.last.id, reducer: 'avgerage', reducer_result: '2.2'},
+        {facilitator_id: nil, reducer: 'avgerage', reducer_result: '3.3'}
+      ]
     end
 
     test 'decorate facilitator survey results' do
@@ -83,7 +92,9 @@ module Pd::SurveyPipeline
         facilitator_response_counts: {}
       }
 
-      result = DailySurveyDecorator.decorate summary_data: summary_data, parsed_data: parsed_data
+      result = DailySurveyDecorator.decorate summary_data: summary_data,
+        parsed_data: parsed_data,
+        current_user: @workshop_admin
 
       assert_equal expected_result, result
     end
@@ -147,7 +158,9 @@ module Pd::SurveyPipeline
         facilitator_response_counts: {}
       }
 
-      result = DailySurveyDecorator.decorate summary_data: summary_data, parsed_data: parsed_data
+      result = DailySurveyDecorator.decorate summary_data: summary_data,
+        parsed_data: parsed_data,
+        current_user: @workshop_admin
 
       assert_equal expected_result, result
     end
@@ -180,6 +193,24 @@ module Pd::SurveyPipeline
       result = DailySurveyDecorator.index_question_by_names(questions)
 
       assert_equal expected_result, result
+    end
+
+    test 'facilitator cannot see other facilitator results' do
+      data = @summary_data_permission_test
+      user = @facilitators.first
+
+      assert_equal true, DailySurveyDecorator.data_visible_to_user?(user, data[0])
+      assert_equal false, DailySurveyDecorator.data_visible_to_user?(user, data[1])
+      assert_equal true, DailySurveyDecorator.data_visible_to_user?(user, data[2])
+    end
+
+    test 'program mamager and workshop admin see all facilitator results' do
+      data = @summary_data_permission_test
+      users = [@program_manager, @workshop_admin]
+
+      users.product(data).each do |user, data_row|
+        assert_equal true, DailySurveyDecorator.data_visible_to_user?(user, data_row)
+      end
     end
   end
 end
