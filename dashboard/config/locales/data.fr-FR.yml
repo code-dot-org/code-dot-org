@@ -804,6 +804,8 @@ fr:
         csd_pair_programming: Programmation en Binôme
         csd_gamelab_functions: Appeler et Définir des Fonctions
         csd_applab_parameters: Fonctions avec Paramètres
+        CSF_Spritelab_MakeSprite_v2: Comment créer un sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites en action
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.
