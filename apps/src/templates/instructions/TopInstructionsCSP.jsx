@@ -60,6 +60,13 @@ const styles = {
     right: 0
     // left handled by media queries for .editor-column
   },
+  mainRtl: {
+    position: 'absolute',
+    marginRight: 15,
+    top: 0,
+    left: 0
+    // right handled by media queries for .editor-column
+  },
   noViz: {
     left: 0,
     right: 0,
@@ -150,7 +157,8 @@ class TopInstructionsCSP extends Component {
     teacherMarkdown: PropTypes.string,
     hidden: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
-    isMinecraft: PropTypes.bool.isRequired
+    isMinecraft: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -422,7 +430,7 @@ class TopInstructionsCSP extends Component {
     const isCSDorCSP = this.props.noInstructionsWhenCollapsed;
 
     const mainStyle = [
-      styles.main,
+      this.props.isRtl ? styles.mainRtl : styles.main,
       {
         height: this.props.height - RESIZER_HEIGHT
       },
@@ -673,7 +681,8 @@ export default connect(
     noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
     teacherMarkdown: state.instructions.teacherMarkdown,
     hidden: state.pageConstants.isShareView,
-    shortInstructions: state.instructions.shortInstructions
+    shortInstructions: state.instructions.shortInstructions,
+    isRtl: state.isRtl
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
