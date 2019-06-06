@@ -1,46 +1,2401 @@
 ---
-it:
+it-IT:
   data:
     block_categories:
-      Actions: Azioni
-      Loops: Ripetizioni
-      Functions: Funzioni
-      Color: Colore
-      Brushes: Pennelli
-      Math: Matematica
-      Logic: Logica
-      Variables: Variabili
-      Number: Numero
-      String: Stringa
-      Image: Immagine
-      Boolean: Booleano
-      Conditionals: Istruzioni condizionali
-      Events: Eventi
-      Games/Score: Gioco/Punteggio
-      Comments: Commenti
-      Category: Categoria
-      Text: Testo
-      Picker: Selezione
-      Comment: Commento
-      World: Ambiente
-      Sprites: Personaggi
-      Behaviors: Comportamenti
-      'Variables ': 'Variabili '
-      Default: Impostazione predefinita
-      everythingelse: qualunque altra cosa
-      Location: Luogo
-      numbers: numeri
-      Numbers: Numeri
-      Dancers: Ballerini
-      Groups: Gruppi
-      Start: Inizia
-      Music: Musica
-      Dancing: Danza
-      Sprite: Personaggio
-      Brush: Pennello
-      Booleans: Valori Booleani
-      test: test
-      Do Not Use: Non usare
-      Name: Nome
-      'Functions ': 'Funzioni '
-      Function: Funzione
+      4-5 Artist Patterns Free Play:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+      Alien Defender:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Games/Score: Gioco/Punteggio
+        Comments: Commenti
+      Choose Your Own Adventure:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Games/Score: Gioco/Punteggio
+        Comments: Commenti
+      Course 4 Artist For Loops 11:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      Course 4 Artist For Loops 11a:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      Course 4 Artist For Loops 14:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      Course 4 Artist For Loops 15:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Variables ': 'Variabili '
+      Course 4 Artist For Loops 4:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      Course 4 Artist For Loops 6a:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      Course 4 Artist For Loops 8:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      Course 4 Artist For Loops Challenge:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      Course 4 Artist For Loops inspire:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      Course 4 Artist Functions Inspiration:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Functions: Funzioni
+      Course 4 Artist Functions challenge:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Functions: Funzioni
+      Course 4 Bee Params 1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Functions: Funzioni
+      Course 4 Bee Params 2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Functions: Funzioni
+      Course 4 Bee Params 3:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Functions: Funzioni
+        'Variables ': 'Variabili '
+      Course 4 Bee Params 4:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Functions: Funzioni
+        'Variables ': 'Variabili '
+        Math: Matematica
+      Course 4 Bee Params 5:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+      Course 4 Bee Params 6:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+      Course 4 Bee Params 7:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        Functions: Funzioni
+        'Variables ': 'Variabili '
+      Course 4 Bee Params 8:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        Functions: Funzioni
+        'Variables ': 'Variabili '
+      Course 4 EC 1a:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        Functions: Funzioni
+      Course 4 EC 1b:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        Functions: Funzioni
+      Course 4 EC 2a:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        Functions: Funzioni
+        Variables: Variabili
+      Course 4 EC 2b:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        Variables: Variabili
+        Functions: Funzioni
+      Course 4 EC 2c:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        Variables: Variabili
+        Functions: Funzioni
+      Course 4 Play Lab Params 10:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        Functions: Funzioni
+        Variables: Variabili
+      Course 4 Play Lab Params 7:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+      Course 4 Play Lab Params 8:
+        Events: Eventi
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+      Course 4 Play Lab Params 9:
+        Actions: Azioni
+        Math: Matematica
+        Functions: Funzioni
+        Variables: Variabili
+      Course 4 Play Lab Vars 9:
+        Events: Eventi
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        'Variables ': 'Variabili '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Variables: Variabili
+      Course 4 SCF 1:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+        Functions: Funzioni
+      Course 4 SCF 1a:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        Functions: Funzioni
+        'Variables ': 'Variabili '
+      Course 4 SCF 1b:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Logic: Logica
+        Math: Matematica
+        Functions: Funzioni
+      Course 4 SCF 2:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+        Functions: Funzioni
+      Course 4 SCF 3:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+        Functions: Funzioni
+      Course 4 SCFL 1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+      Course 4 SCFL 1a:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+      Course 4 SCFL 1b:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+      Course 4 SCFL 2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+      Course 4 SCFL 3:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      Course 4 SCFL 4:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      Course 4 SCFL 6:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      Course 4 SCFL 7:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      Course 4 SCV 6:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      'Course E: Play Lab Project':
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Games/Score: Gioco/Punteggio
+        Comments: Commenti
+      'Course F: Artist Project':
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+      'Course F: Artist Project - Revise':
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+      'Course F: Artist Project - Revise_2018':
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+      'Course F: Artist Project_2018':
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+      'Course F: Artist Project_2019':
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+      CourseD_Dance_Party_11_5:
+        World: Ambiente
+        Dancers: Ballerini
+        Groups: Gruppi
+        Events: Eventi
+      CourseD_Dance_Party_12:
+        World: Ambiente
+        Dancers: Ballerini
+        Groups: Gruppi
+        Events: Eventi
+        Numbers: Numeri
+        Logic: Logica
+      CourseE_Project_SpriteLab:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+        Logic: Logica
+        Text: Testo
+        Comments: Commenti
+      CourseE_Project_SpriteLab_2019:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+      CourseE_hoops:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+        Functions: Funzioni
+      CourseF_Project_Revise_SpriteLab:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+        Functions: Funzioni
+      CourseF_Project_SpriteLab:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+        Functions: Funzioni
+      CourseF_Project_SpriteLab_2019:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Text: Testo
+        Comments: Commenti
+      Dance Party 2:
+        Sprites: Personaggi
+        Behaviors: Comportamenti
+        Events: Eventi
+        Comments: Commenti
+      Dance Party 6:
+        Sprites: Personaggi
+        Behaviors: Comportamenti
+        Events: Eventi
+        Comments: Commenti
+      Dance Party Freeplay:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+        Comments: Commenti
+      Dance_Party_11_5:
+        World: Ambiente
+        Dancers: Ballerini
+        Groups: Gruppi
+        Events: Eventi
+      Dance_Party_12:
+        World: Ambiente
+        Dancers: Ballerini
+        Groups: Gruppi
+        Events: Eventi
+        Numbers: Numeri
+        Logic: Logica
+      Dance_Party_extras_battle:
+        World: Ambiente
+        Dancers: Ballerini
+        Groups: Gruppi
+        Events: Eventi
+        Numbers: Numeri
+        Logic: Logica
+      Dance_Party_extras_every_beat:
+        World: Ambiente
+        Dancers: Ballerini
+        Groups: Gruppi
+        Events: Eventi
+        Numbers: Numeri
+        Logic: Logica
+      Dance_Party_extras_layout:
+        World: Ambiente
+        Dancers: Ballerini
+        Groups: Gruppi
+        Events: Eventi
+        Numbers: Numeri
+        Logic: Logica
+      Dance_Party_extras_on_beat:
+        World: Ambiente
+        Dancers: Ballerini
+        Groups: Gruppi
+        Events: Eventi
+        Numbers: Numeri
+        Logic: Logica
+      Dance_Party_extras_speed:
+        World: Ambiente
+        Dancers: Ballerini
+        Groups: Gruppi
+        Events: Eventi
+        Numbers: Numeri
+        Logic: Logica
+      Dance_Party_extras_visible:
+        World: Ambiente
+        Dancers: Ballerini
+        Groups: Gruppi
+        Events: Eventi
+        Numbers: Numeri
+        Logic: Logica
+      Find the Wizard:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Games/Score: Gioco/Punteggio
+        Comments: Commenti
+      Fish Tank 5-validated:
+        Sprites: Personaggi
+        World: Ambiente
+        Behaviors: Comportamenti
+        Comments: Commenti
+      Fish Tank 5-validated_2019:
+        World: Ambiente
+        Sprites: Personaggi
+        Behaviors: Comportamenti
+        Comments: Commenti
+      Fish Tank 6-validated:
+        Sprites: Personaggi
+        World: Ambiente
+        Behaviors: Comportamenti
+        Comments: Commenti
+      Fish Tank 6-validated_2019:
+        World: Ambiente
+        Sprites: Personaggi
+        Behaviors: Comportamenti
+        Comments: Commenti
+      Fish Tank 7-validated:
+        World: Ambiente
+        Sprites: Personaggi
+        Behaviors: Comportamenti
+        Events: Eventi
+        Comments: Commenti
+      Fish Tank 7-validated_2019:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Behaviors: Comportamenti
+        Events: Eventi
+        Comments: Commenti
+      FoodFight:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Games/Score: Gioco/Punteggio
+        Comments: Commenti
+      Geometric Sun:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Comments: Commenti
+      Geometric Sun_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Comments: Commenti
+      Guess The Number:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Games/Score: Gioco/Punteggio
+        Comments: Commenti
+      InspirationalArtwork:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Comments: Commenti
+      InspirationalArtwork_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Comments: Commenti
+      NEW Course 4 Artist Functions 14:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Functions: Funzioni
+      NEW Course 4 Artist Params 1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+        Variables: Variabili
+      NEW Course 4 Artist Params 10:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+      NEW Course 4 Artist Params 11:
+        Actions: Azioni
+        Functions: Funzioni
+        Loops: Ripetizioni
+        Math: Matematica
+      NEW Course 4 Artist Params 12:
+        Actions: Azioni
+        Math: Matematica
+        Functions: Funzioni
+      NEW Course 4 Artist Params 12a:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+      NEW Course 4 Artist Params 13:
+        Actions: Azioni
+        Functions: Funzioni
+        Loops: Ripetizioni
+        Math: Matematica
+      NEW Course 4 Artist Params 14:
+        Actions: Azioni
+        Brushes: Pennelli
+        Functions: Funzioni
+        Loops: Ripetizioni
+        Math: Matematica
+      NEW Course 4 Artist Params 15:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+        Functions: Funzioni
+      NEW Course 4 Artist Params 2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+      NEW Course 4 Artist Params 3:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+      NEW Course 4 Artist Params 6:
+        Actions: Azioni
+        Functions: Funzioni
+        Loops: Ripetizioni
+        Math: Matematica
+      NEW Course 4 Artist Params 7:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Functions: Funzioni
+      NEW Course 4 Artist Params 8:
+        Actions: Azioni
+        Math: Matematica
+        Functions: Funzioni
+        Loops: Ripetizioni
+      NEW Course 4 Artist Params 9:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+      NEW Course 4 Artist Params inspire:
+        Actions: Azioni
+        Brushes: Pennelli
+        Functions: Funzioni
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      NEW Course 4 Play Lab Params 11:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Games/Score: Gioco/Punteggio
+      Robot Doodle:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Comments: Commenti
+      Robot Doodle_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Functions: Funzioni
+        Variables: Variabili
+        Comments: Commenti
+      Virtual Pet 2:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+        Comments: Commenti
+      Virtual Pet 3:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+      Virtual Pet 4:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+      Virtual Pet 5:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+      Virtual Pet 6:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+      Virtual Pet Freeplay:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+      behaviors 3a:
+        World: Ambiente
+        Sprites: Personaggi
+        Behaviors: Comportamenti
+        Actions: Azioni
+      behaviors 5:
+        World: Ambiente
+        Sprites: Personaggi
+        Behaviors: Comportamenti
+        Actions: Azioni
+      behaviors 6:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Math: Matematica
+        Logic: Logica
+      behaviors 7:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Math: Matematica
+        Logic: Logica
+      behaviors free play:
+        World: Ambiente
+        Sprites: Personaggi
+        Behaviors: Comportamenti
+        Actions: Azioni
+        Events: Eventi
+      course3_bee_functions_challenge1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      course3_bee_functions_challenge2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Functions: Funzioni
+      course3_bee_functions_challenge3:
+        Default: Impostazione predefinita
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      course3_bee_functions_challenge4:
+        Default: Impostazione predefinita
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      course3_playLab_challenge1:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      course4_artist_fwp_challenge1:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+        Functions: Funzioni
+      course4_bee_for_challenge1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Math: Matematica
+      course4_bee_fwp_challenge1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      course4_bee_fwp_challenge2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      course4_playlab_variables_challenge1:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+        Variables: Variabili
+      courseD_artist_project1:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project1a:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project1a_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project1a_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project2:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project2_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project2_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project2a:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project2a_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project2a_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project3:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project3_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project3_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project3a:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project3a_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project3a_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project4:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project4_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project4_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project4a:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project4a_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project4a_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project5:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project5_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_artist_project5_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+      courseD_playLab_condFP:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Games/Score: Gioco/Punteggio
+      courseD_playLab_condFP_2018:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Games/Score: Gioco/Punteggio
+        Comment: Commento
+      courseE_Dogger_2:
+        World: Ambiente
+        Sprites: Personaggi
+        Actions: Azioni
+        Events: Eventi
+        Behaviors: Comportamenti
+        Variables: Variabili
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Text: Testo
+        Functions: Funzioni
+      courseE_artist_concept1_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_concept4:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Functions: Funzioni
+      courseE_artist_concept4_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions10:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+      courseE_artist_functions10_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions10_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions2_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Functions ': 'Funzioni '
+        Comments: Commenti
+      courseE_artist_functions2_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Functions ': 'Funzioni '
+        Comments: Commenti
+      courseE_artist_functions3_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseE_artist_functions3_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseE_artist_functions5_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Functions ': 'Funzioni '
+        Comments: Commenti
+      courseE_artist_functions5_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Functions ': 'Funzioni '
+        Comments: Commenti
+      courseE_artist_functions7_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Functions ': 'Funzioni '
+        Comments: Commenti
+      courseE_artist_functions7_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Functions ': 'Funzioni '
+        Comments: Commenti
+      courseE_artist_functions8:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+      courseE_artist_functions8_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions8_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions8a_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions8a_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions8b_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions8b_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions8c_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions8c_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions9:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+      courseE_artist_functions9_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions9_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functionsProj_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functionsProj_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_artist_functions_predict2:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+      courseE_artist_functions_predict2_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+      courseE_artist_functions_predict2_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Functions: Funzioni
+      courseE_bee_concept1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_bee_concept2_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_bee_concept3_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_bee_concept4_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_bee_concept5_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_bee_functions6:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Functions: Funzioni
+      courseE_bee_functions7:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Functions: Funzioni
+      courseE_bee_functions_challenge1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_bee_functions_challenge2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Functions: Funzioni
+      courseE_farmer_concept1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_concept2_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_concept3_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions10a1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions10a1_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions10b:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions11_predict:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions11_predict_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions11_predict_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions13_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions13_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions1_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions1a:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions1a_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions1a_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions2b:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions2b_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions2b_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions2ba:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions2ba_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions2ba_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions3c:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions3c1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions3c1_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions3c_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions3c_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions4b:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions5c:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions6c:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions7a1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions7a1_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions7b:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions8a1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions8a1_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions8b:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_farmer_functions9a1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions9a1_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Comments: Commenti
+      courseE_farmer_functions9b:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_playLab_challenge1:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_playLab_scaffold5:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseE_playLab_scaffold6:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+      courseF_artist_for1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Color: Colore
+      courseF_artist_for10:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Variables ': 'Variabili '
+      courseF_artist_for10_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Variables ': 'Variabili '
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_for10_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Variables ': 'Variabili '
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_for10_predict1:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Variables ': 'Variabili '
+      courseF_artist_for10_predict1_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Variables ': 'Variabili '
+      courseF_artist_for10_predict1_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        'Variables ': 'Variabili '
+      courseF_artist_for1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseF_artist_for1_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseF_artist_for2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Color: Colore
+      courseF_artist_for2_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseF_artist_for2_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseF_artist_for3:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Color: Colore
+      courseF_artist_for3_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseF_artist_for3_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseF_artist_for4:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Color: Colore
+      courseF_artist_for4_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseF_artist_for4_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseF_artist_for5:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Color: Colore
+      courseF_artist_for5_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseF_artist_for5_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Comments: Commenti
+      courseF_artist_for6:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Color: Colore
+      courseF_artist_for6_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Color: Colore
+      courseF_artist_for6_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Color: Colore
+      courseF_artist_for7:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      courseF_artist_for7_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      courseF_artist_for7_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      courseF_artist_for8:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      courseF_artist_for8_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      courseF_artist_for8_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      courseF_artist_for9:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+      courseF_artist_for9_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_for9_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Brushes: Pennelli
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_for_challenge1:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      courseF_artist_for_challenge1_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      courseF_artist_for_challenge1_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      courseF_artist_for_challenge2:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      courseF_artist_for_challenge2_2018:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      courseF_artist_for_challenge2_2019:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      courseF_artist_fwp2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Functions: Funzioni
+      courseF_artist_fwp2_predict1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Functions: Funzioni
+      courseF_artist_fwp3:
+        Functions: Funzioni
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+      courseF_artist_fwp4:
+        Actions: Azioni
+        Math: Matematica
+        Functions: Funzioni
+      courseF_artist_fwp5:
+        Actions: Azioni
+        Functions: Funzioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+      courseF_artist_fwp6:
+        Actions: Azioni
+        Functions: Funzioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+      courseF_artist_fwp7:
+        Actions: Azioni
+        Brushes: Pennelli
+        Functions: Funzioni
+        Loops: Ripetizioni
+        Math: Matematica
+      courseF_artist_fwp8:
+        Actions: Azioni
+        Brushes: Pennelli
+        Functions: Funzioni
+        Loops: Ripetizioni
+        Math: Matematica
+      courseF_artist_fwp9:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+        Functions: Funzioni
+      courseF_artist_fwp_challenge1:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+        Functions: Funzioni
+      courseF_artist_fwp_challenge2:
+        Actions: Azioni
+        Brushes: Pennelli
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+        Functions: Funzioni
+      courseF_artist_variables10_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Variables: Variabili
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_variables10_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Variables: Variabili
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_variables7_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Variables: Variabili
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_variables7_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Variables: Variabili
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_variables8_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Variables: Variabili
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_variables8_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Variables: Variabili
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_variables9_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Variables: Variabili
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_variables9_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Variables: Variabili
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_variablesFP_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Variables: Variabili
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_artist_variablesFP_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Brushes: Pennelli
+        Variables: Variabili
+        Functions: Funzioni
+        Comments: Commenti
+      courseF_bee_conditionals10:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_conditionals2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_conditionals3:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_conditionals4:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_conditionals5:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_conditionals8:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_for10:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for10_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for10_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for11:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for11_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for11_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for1_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+        Comments: Commenti
+      courseF_bee_for1_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+        Comments: Commenti
+      courseF_bee_for2_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+        Comments: Commenti
+      courseF_bee_for2_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+        Comments: Commenti
+      courseF_bee_for3_predict1:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for3_predict1_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for3_predict1_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for4:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for4_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+        Comments: Commenti
+      courseF_bee_for4_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+        Comments: Commenti
+      courseF_bee_for5:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for5_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for5_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for6:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for6_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for6_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for7:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for7_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+        Comments: Commenti
+      courseF_bee_for7_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+        Comments: Commenti
+      courseF_bee_for8:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for8_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for8_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for9:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        Variables: Variabili
+      courseF_bee_for9_2018:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for9_2019:
+        Actions: Azioni
+        Math: Matematica
+        Loops: Ripetizioni
+        'Variables ': 'Variabili '
+        Comments: Commenti
+      courseF_bee_for_challenge1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_for_challenge1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_for_challenge1_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_for_challenge2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+      courseF_bee_for_challenge2_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+      courseF_bee_for_challenge2_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+      courseF_bee_functions2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_functions3:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_functions3a:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_functions4:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_functions5a:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_functions6:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_functions7:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_functions8a:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_functionsPre7:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_functions_challenge1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_functions_challenge2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_fwp1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Math: Matematica
+        Conditionals: Istruzioni condizionali
+      courseF_bee_fwp2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_fwp3:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_fwp4:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_fwp5:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_fwp6:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_fwp7:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_fwp8:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_fwp9_predict1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_fwp_challenge1:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_fwp_challenge2:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Math: Matematica
+      courseF_bee_variables_1_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_1_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_2_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_2_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_3_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_3_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_4_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_4_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_5_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_5_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_6_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_6_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_7_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_7_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+        Comments: Commenti
+      courseF_bee_variables_8_2018:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+      courseF_bee_variables_8_2019:
+        Actions: Azioni
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Functions: Funzioni
+        Variables: Variabili
+        Math: Matematica
+      courseF_playlab_variables1a:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Variables: Variabili
+      courseF_playlab_variables2b:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        'Variables ': 'Variabili '
+      courseF_playlab_variables3b_josh:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Variables: Variabili
+      courseF_playlab_variables4b:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Variables: Variabili
+      courseF_playlab_variables4c_predictive1:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+        Variables: Variabili
+      courseF_playlab_variables5c:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Logic: Logica
+        Variables: Variabili
+        Text: Testo
+      courseF_playlab_variables6c:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Variables: Variabili
+      courseF_playlab_variables7b:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Conditionals: Istruzioni condizionali
+        Math: Matematica
+        Text: Testo
+        Functions: Funzioni
+        Variables: Variabili
+      courseF_playlab_variables7c:
+        Default: Impostazione predefinita
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Variables: Variabili
+      courseF_playlab_variables8c:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+        Variables: Variabili
+      courseF_playlab_variables_challenge1:
+        Actions: Azioni
+        Events: Eventi
+        Loops: Ripetizioni
+        Math: Matematica
+        Functions: Funzioni
+        Variables: Variabili
