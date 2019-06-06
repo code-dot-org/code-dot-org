@@ -10,7 +10,7 @@ export const commands = {
   },
 
   locationOf(spriteId) {
-    let sprite = spriteUtils.singleOrGroup(spriteId)[0];
+    let sprite = spriteUtils.getSpriteArray(spriteId)[0];
     if (sprite) {
       return {x: sprite.x, y: sprite.y};
     }
