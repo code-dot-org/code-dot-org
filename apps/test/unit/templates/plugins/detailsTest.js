@@ -53,7 +53,11 @@ describe('details plugin', () => {
       '- markdown\n' +
       ':::';
     const expected =
-      '<details><summary>summary-content</summary><h1>Contents</h1><ul>\n<li>can</li>\n<li>be</li>\n<li>markdown</li>\n</ul></details>\n';
+      '<details><summary>summary-content</summary><h1>Contents</h1><ul>\n' +
+      '<li>can</li>\n' +
+      '<li>be</li>\n' +
+      '<li>markdown</li>\n' +
+      '</ul></details>\n';
 
     const rendered = parser.sourceToHtml(markdown);
     assert.equal(rendered, expected);
@@ -93,7 +97,9 @@ describe('details plugin', () => {
       'contents, which are sometimes further block elements\n' +
       ':::';
     const expected =
-      '<p>::: details\ncontents, which are sometimes further block elements\n:::</p>\n';
+      '<p>::: details\n' +
+      'contents, which are sometimes further block elements\n' +
+      ':::</p>\n';
 
     const rendered = parser.sourceToHtml(markdown);
     assert.equal(rendered, expected);
@@ -105,7 +111,9 @@ describe('details plugin', () => {
       'contents, which are sometimes further block elements\n' +
       ':::';
     const expected =
-      '<p>:: details [summary-content]\ncontents, which are sometimes further block elements\n:::</p>\n';
+      '<p>:: details [summary-content]\n' +
+      'contents, which are sometimes further block elements\n' +
+      ':::</p>\n';
 
     const rendered = parser.sourceToHtml(markdown);
     assert.equal(rendered, expected);
@@ -116,9 +124,28 @@ describe('details plugin', () => {
       '::: details [summary-content]\n' +
       'contents, which are sometimes further block elements\n';
     const expected =
-      '<p>::: details [summary-content]\ncontents, which are sometimes further block elements</p>\n';
+      '<p>::: details [summary-content]\n' +
+      'contents, which are sometimes further block elements</p>\n';
 
     const rendered = parser.sourceToHtml(markdown);
     assert.equal(rendered, expected);
   });
+
+  it('can redact', () => {
+    const markdown =
+      '::: details [summary-content]\n' +
+      'contents, which are sometimes further block elements\n' +
+      ':::';
+    const expected =
+      '[summary-content][0]\n' +
+      '\n' +
+      'contents, which are sometimes further block elements\n' +
+      '\n' +
+      '[/][0]\n';
+
+    const rendered = parser.sourceToRedacted(markdown);
+    assert.equal(rendered, expected);
+  });
+
+  it('can restore', () => {});
 });

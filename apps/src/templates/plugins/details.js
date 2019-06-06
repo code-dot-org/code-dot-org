@@ -148,8 +148,8 @@ function tokenizeDetails(eat, value, silent) {
     const open = add({
       type: 'redaction',
       redactionType: 'details',
-      summary: summary,
-      block: true
+      block: true,
+      children: summary
     });
 
     const contents = body.map(content => add(content));
