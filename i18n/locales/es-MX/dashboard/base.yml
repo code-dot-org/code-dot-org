@@ -68,7 +68,6 @@ es-MX:
   of: "de"
   more: "MÁS"
   less: "MENOS"
-  beta: "beta"
   try_hoc: "Prueba la Hora del Código, haz clic aquí >> "
   try_k8intro: "Prueba nuestro curso de Introducción a las Ciencias de la Computación (15-25 horas) para niños de 5 a 14 años"
   k8intro: "Curso de Introducción a las Ciencias de la Computación (15-25 horas) para niños de 5 a 14 años"
@@ -811,18 +810,10 @@ es-MX:
     create: "Crear un proyecto"
     create_a_project: 'Crear un nuevo proyecto:'
     new: "Crear nuevo"
-    rename: "Cambiar el nombre"
-    save: "Guardar"
-    import: "Importar"
-    share_link_import_bad_link_header: "No se reconoce el enlace compartido"
-    share_link_import_bad_link_body: "No pudimos importar el enlace compartido. Asegúrate de haber copiado el enlace completo del desafío Minecraft: Agente."
-    share_link_import_error_header: "Algo salió mal."
-    share_link_import_error_body: "Hubo un problema al importar el enlace compartido. Vuelve a intentarlo."
     exit: "Regresar al curso"
     project_gallery: "Proyectos"
     publish: "Publicar"
     unpublish: "No publicar"
-    share: "Compartir"
     share_title: Compartir tu proyecto
     share_copy_link: "Copiar el enlace:"
     share_embed_description: "Puedes pegar el código de publicación en una página HTML para mostrar el proyecto en una página web."
@@ -839,8 +830,6 @@ es-MX:
     saved: "Guardado"
     not_saved: "Sin guardar"
     view_all: 'Ver mis proyectos'
-    remix: 'Remix'
-    click_to_remix: "¡Haz clic en \"Remix\" para obtener tu propia versión!"
     edit_project: 'Editar proyecto'
     sharing_disabled: "Lo sentimos, no puedes compartir este proyecto. Si se trata de tu proyecto o del proyecto de uno de tus estudiantes, por favor <a href='https://studio.code.org/users/sign_in'>inicia sesión</a> en tu cuenta para verlo."
     abuse:
@@ -945,6 +934,7 @@ es-MX:
     csp_loops: 'Bucles'
     csp_traversals: 'Recorridos'
     csp_libraries: 'Bibliotecas'
+    csp_parameters_return_values: 'Parámetros y valores de retorno'
     dlp: 'Preguntas para reflexionar'
     time4cs_c1: 'Everglades y sus ecosistemas'
     time4cs_c2: 'Cadenas de comida en Everglades'

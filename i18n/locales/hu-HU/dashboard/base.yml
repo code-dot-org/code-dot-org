@@ -68,7 +68,6 @@ hu:
   of: "/"
   more: "TÖBB"
   less: "KEVESEBB"
-  beta: "béta"
   try_hoc: "Próbáld ki a Kódolás Óráját, kattints ide >> "
   try_k8intro: "Próbáld ki az általános iskolás Bevezető számítógép-tudományi tanfolyamot (15-25 óra)"
   k8intro: "K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)"
@@ -670,18 +669,10 @@ hu:
     create: "Projekt létrehozása"
     create_a_project: 'Új projekt létrehozása:'
     new: "Új létrehozása"
-    rename: "Átnevezés"
-    save: "Mentés"
-    import: "Importálás"
-    share_link_import_bad_link_header: "A megosztási hivatkozást a rendszer nem ismerte fel"
-    share_link_import_bad_link_body: "Nem sikerült importálni a megosztási hivatkozást. Bizonyosodj meg arról, hogy a Minecraft: Agent kirakósból származó hivatkozást használsz, és hogy a teljes hivatkozást lemásoltad."
-    share_link_import_error_header: "Hiba történt."
-    share_link_import_error_body: "Hiba történt a megosztási hivatkozás importálása során. Próbáld újra!"
     exit: "Vissza a tanfolyamhoz"
     project_gallery: "Projektek"
     publish: "Közzétesz"
     unpublish: "Közzététel visszavonása"
-    share: "Megosztás"
     share_title: A projekt megosztása
     share_copy_link: "A hivatkozás másolása:"
     embed: "Beágyaz"
@@ -693,8 +684,6 @@ hu:
     saved: "Mentve"
     not_saved: "Nincs mentve"
     view_all: 'Projektjeim megtekintése'
-    remix: 'Remix'
-    click_to_remix: "Kattints a 'Remix'-re, hogy lepörgesd a saját verziódat!"
     edit_project: 'Projekt szerkesztése'
     abuse:
       tos: "Ezt a projektet jelentették, mint amely nem tesz eleget a Code.org <a href='http://code.org/tos'>Felhasználói Feltételekben előírtaknak,</a> így nem osztható meg másokkal."

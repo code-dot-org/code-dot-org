@@ -948,9 +948,9 @@ es-MX:
             Packets and Making a Reliable Internet:
               name: 'Paquetes: cómo hacer que Internet sea confiable'
             Practice PT - Cybersecurity Innovations:
-              name: PT de práctica - Innovaciones en ciberseguridad
+              name: 'PT de práctica: innovaciones en ciberseguridad'
             Practice PT - The Internet and Society:
-              name: PT de práctica - Internet y la sociedad
+              name: 'PT de práctica: Internet y la sociedad'
             Public Key Crypto:
               name: Criptografía de claves públicas
             Routers and Redundancy:
@@ -969,15 +969,15 @@ es-MX:
           description_short: 'Enseñar programación funcional a través de álgebra'
           stages:
             Big Game - Animation:
-              name: El gran juego - Animación
+              name: 'El gran juego: animación'
             Big Game - Booleans:
-              name: El gran juego - Valores booleanos
+              name: 'El gran juego: valores booleanos'
             Big Game - Collision Detection:
-              name: El gran juego - Detección de colisiones
+              name: 'El gran juego: detección de colisiones'
             Big Game - Player Movement:
-              name: El gran juego - Movimiento de jugadores
+              name: 'El gran juego: movimiento de jugadores'
             Big Game - Variables:
-              name: El gran juego - Variables
+              name: 'El gran juego: variables'
             Booleans:
               name: Valores booleanos
             Defining Variables:
@@ -1080,7 +1080,7 @@ es-MX:
             Dance Lab:
               name: Laboratorio de baile
             Mini Rubric:
-              name: Mini rúbrica
+              name: Minirúbrica
             Pluralsight Test:
               name: Prueba de Pluralsight
             Externals Optionally Displayed as Unplugged:
@@ -1900,12 +1900,12 @@ es-MX:
             Getting Started:
               name: Primeros pasos
             Planning For the Future:
-              name: Planificación a futuro
+              name: Planificación para el futuro
             Sharing Student Work:
               name: Compartir el trabajo de los estudiantes
         csp1-2017:
           title: CSP Unidad 1 - Internet ('17-'18)
-          description: Esta unidad explora los desafíos técnicos y las preguntas que surgen de la necesidad de representar información digital en computadoras, y transferirla entre personas y dispositivos informáticos. Luego, la unidad explora la estructura y el diseño de Internet y las implicaciones de esas decisiones relacionadas con el diseño.
+          description: Esta unidad explora los desafíos técnicos y las preguntas que surgen de la necesidad de representar información digital en computadoras, y transferirla entre personas y dispositivos informáticos. Luego, la unidad explora la estructura y el diseño de Internet, y las implicaciones de esas decisiones relacionadas con el diseño.
           description_short: Explora los desafíos de representar información como bits y cómo llevar esos bits de un lugar a otro.
           stages:
             Binary Numbers:
@@ -1923,7 +1923,7 @@ es-MX:
             Personal Innovations:
               name: Innovaciones personales
             Practice PT - The Internet and Society:
-              name: PT de práctica - Internet y la sociedad
+              name: 'PT de práctica: Internet y la sociedad'
             Routers and Redundancy:
               name: Enrutadores y redundancia
             Sending Binary Messages:
@@ -2058,7 +2058,7 @@ es-MX:
             Identifying People with Data:
               name: Identificar personas mediante datos
             Practice PT - Cybersecurity Innovations:
-              name: PT de práctica - Innovaciones en ciberseguridad
+              name: 'PT de práctica: innovaciones en ciberseguridad'
             Practice PT - Propose an Innovation:
               name: PT de práctica - Proponer una innovación
             Public Key Crypto:
@@ -2898,7 +2898,7 @@ es-MX:
             Robot Running the Farm:
               name: Robot que dirige la granja
             Unplugged Conditionals with Loops:
-              name: 'Sin conexión: condiciones con bucles'
+              name: 'Sin conexión: condicionales con bucles'
         alltheplcthings:
           stages:
             Balancing Teachers and Tools:
@@ -2941,7 +2941,7 @@ es-MX:
             Drawing in Game Lab:
               name: Dibujar en el Laboratorio de juegos
               description_student: Se presenta el Laboratorio de juegos, el ambiente de programación de esta unidad, a la clase, que comienza a usarlo para colocar formas en la pantalla. Esta lección cubre los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, la clase crea una versión en línea de la imagen que diseñaron en la lección anterior.
-              description_teacher: Se presenta el Laboratorio de juegos, el ambiente de programación de esta unidad, a los estudiantes, que comienzan a usarlo para colocar formas en la pantalla. Aprenderán los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, los estudiantes podrán programar imágenes como las que crearon con la herramienta de dibujo de la lección anterior.
+              description_teacher: Se presenta a los estudiantes el Laboratorio de juegos, el ambiente de programación de esta unidad, quienes comienzan a usarlo para colocar formas en la pantalla. Aprenderán los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, los estudiantes podrán programar imágenes como las que crearon con la herramienta de dibujo de la lección anterior.
             'Project: Interactive Card':
               name: 'Proyecto: tarjeta interactiva'
             Sprites and Images:
@@ -2966,8 +2966,8 @@ es-MX:
               description_teacher: Los estudiantes aprenden a combinar las propiedades de velocidad de los sprites con el patrón de contador para crear un movimiento de sprite más complejo. En particular, los estudiantes aprenderán a simular la gravedad, hacer que un sprite salte y permitir que un sprite flote hacia la izquierda o hacia la derecha. En los niveles finales del avance de Code Studio, los estudiantes combinan estos movimientos para animar y controlar un solo sprite, y crear un juego simple en el que un personaje vuela y recoge monedas. Se anima a los estudiantes a agregar otros componentes al juego en el nivel final.
             Collisions:
               name: Colisiones
-              description_student: La clase programa sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque isTouching, la clase intercambia ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan isTouching para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (colisionar, desplazar, rebotar y bounceOff).
-              description_teacher: Los estudiantes programan sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque `isTouching`, los estudiantes intercambian ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan `isTouching` para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (`colisionar`, `desplazar`, `rebotar` y `bounceOff`).
+              description_student: La clase programa sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque isTouching, la clase intercambia ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan isTouching para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
+              description_teacher: Los estudiantes programan sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque `estáTocando`, los estudiantes intercambian ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan `estáTocando` para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (`colisionar`, `desplazar`, `rebotar` y `rebotarEn`).
             Functions:
               name: Funciones
               description_student: Esta lección trata las funciones como una forma de organizar su código, hacerlo más legible y eliminar bloques de código repetidos. La clase aprende que los pasos de nivel superior o más abstractos permiten entender y razonar sobre los pasos más fácilmente, y luego comienza a crear funciones en el Laboratorio de juegos. Al final de la lección, la clase utiliza estas habilidades para organizar y agregar funcionalidad a la versión final de su juego de desplazamiento lateral.
@@ -2990,8 +2990,8 @@ es-MX:
               description_teacher: Se pide a los estudiantes que consideren los "problemas" del aburrimiento y la autoexpresión, y que reflexionen sobre cómo abordan esos problemas en sus propias vidas. A partir de allí, los estudiantes explorarán cómo las Ciencias de la Computación, en general, y la programación, en particular, desempeñan un papel específico como una forma de entretenimiento o como un vehículo para la autoexpresión.
             Plotting Shapes:
               name: Trazar formas
-              description_student: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
-              description_teacher: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
+              description_student: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
+              description_teacher: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
             Shapes and Randomness:
               name: Formas y aleatoriedad
               description_student: Esta lección amplía las habilidades de dibujo para incluir el ancho y el alto, e introduce el concepto de generación de números aleatorios. La clase aprende a dibujar con versiones de elipse() y rect() que incluyen parámetros de ancho y alto, y a usar el bloque de fondo() para llenar de color la pantalla. Al final, se presenta el bloque númeroAleatorio() a la clase y se utilizan los nuevos bloques para dibujar una serpiente de arco iris aleatoria.
@@ -3027,14 +3027,14 @@ es-MX:
             Other Forms of Input:
               name: Otras formas de entrada
               description_student: La clase continúa explorando formas de usar sentencias condicionales para recibir información del usuario. Además del sencillo comando keyDown() que aprendieron ayer, la clase aprende sobre otros comandos de entrada de teclado y formas de utilizar la entrada de ratón.
-              description_teacher: En esta lección los estudiantes continúan explorando formas de usar sentencias condicionales para recibir información del usuario. Además del sencillo comando `keyDown()` que aprendieron ayer, los estudiantes aprenden sobre otros comandos de entrada de teclado y formas de utilizar la entrada de ratón.
+              description_teacher: En esta lección, los estudiantes continúan explorando formas de usar sentencias condicionales para recibir información del usuario. Además del sencillo comando `keyDown()` que aprendieron ayer, los estudiantes aprenden sobre otros comandos de entrada de teclado y formas de utilizar la entrada de ratón.
             Booleans Unplugged:
               name: Valores booleanos sin conexión
               description_student: Esta lección presenta los valores y la lógica booleanos, así como sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Luego, la clase agrupa los objetos en base a sentencias booleanas cada vez más complejas y observa cómo los condicionales pueden afectar el flujo de un programa.
               description_teacher: |-
-                En esta lección se presentan los valores y la lógica booleanos, así como las sentencias condicionales, a los estudiantes. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
+                En esta lección, se presentan los valores y la lógica booleanos a los estudiantes, además de las sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
 
-                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
+                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares, pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
 
                 Finalmente, revelamos los condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa mediante la incorporación de sentencias booleanas.
             Project - Interactive Card:
@@ -3044,7 +3044,7 @@ es-MX:
             Project - Design a Game:
               name: Proyecto - Diseñar un juego
               description_student: La clase planifica y desarrolla juegos originales mediante la guía de proyectos de las dos lecciones anteriores. Ya sea individualmente o en parejas, la clase planifica, desarrolla y da su opinión sobre los juegos. Después de incorporar los comentarios de los compañeros, la clase comparte los juegos finalizados.
-              description_teacher: Los estudiantes planificarán y desarrollarán sus propios juegos con la guía de proyectos de las dos lecciones anteriores para orientar su proyecto. Ya sea individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que quieren crear, inspirándose en un conjunto de juegos de muestra. Luego, completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y analizarán las variables, los sprites y las funciones que necesitarán crear. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A lo largo del proceso, los estudiantes compartirán sus proyectos para que los revisen sus compañeros e incorporarán los comentarios cuando finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completos con sus compañeros de clase. Este proyecto puede abarcar de 3 a 5 períodos de clase.
+              description_teacher: Los estudiantes planificarán y desarrollarán sus propios juegos con la guía de proyectos de las dos lecciones anteriores para orientar su proyecto. Ya sea individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que quieren crear, y se inspiran en un conjunto de juegos de muestra. Luego, completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y analizarán las variables, los sprites y las funciones que necesitarán crear. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A lo largo del proceso, los estudiantes compartirán sus proyectos para que los revisen sus compañeros e incorporarán los comentarios cuando finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completos con sus compañeros de clase. Este proyecto puede abarcar de 3 a 5 períodos de clase.
             Parameters and Randomization:
               name: Parámetros y aleatoriedad
             Shapes and Randomization:
@@ -3156,8 +3156,8 @@ es-MX:
               name: 'Encuesta anónima de estudiante: realizar el examen AP'
         csd1-2017:
           title: CSD Unidad 1 - Resolución de problemas ('17-'18)
-          description_short: "  Aprende cómo los humanos trabajan con computadoras para resolver problemas."
-          description: " \\r\nLa Unidad 1 es una introducción muy interactiva y colaborativa al campo de las ciencias de la computación, enmarcada dentro de una búsqueda más amplia orientada a resolver problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de desafíos y escenarios del mundo real. A continuación, aprenderás cómo las computadoras toman, generan, almacenan y procesan información para ayudar a las personas a resolver problemas. La unidad concluye con un proyecto en el que diseñas una aplicación que ayuda a resolver un problema de tu elección.\\r\n"
+          description_short: "Aprende cómo los humanos trabajan con computadoras para resolver problemas."
+          description: "\\r\nLa Unidad 1 es una introducción muy interactiva y colaborativa al campo de las ciencias de la computación, enmarcada dentro de una búsqueda más amplia orientada a resolver problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de desafíos y escenarios del mundo real. A continuación, aprenderás cómo las computadoras toman, generan, almacenan y procesan información para ayudar a las personas a resolver problemas. La unidad concluye con un proyecto en el que diseñas una aplicación que ayuda a resolver un problema de tu elección.\\r\n"
           stages:
             Intro to Problem Solving:
               name: Introducción a la resolución de problemas
@@ -3193,7 +3193,7 @@ es-MX:
             Input and Output:
               name: Entrada y salida
               description_student: En esta clase, los estudiantes consideran una serie de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Se asigna un dispositivo informático a cada grupo que, en base a una definición de entrada y salida proporcionada por el docente, enumera las entradas y salidas del dispositivo asignado. Para concluir la lección, la clase examina las actividades comunes que realizan en un dispositivo informático y selecciona del cuadro las entradas y salidas utilizadas para esa actividad.
-              description_teacher: En esta lección, los estudiantes consideran una cantidad de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Se asigna un dispositivo informático a cada grupo que, en base a una definición de entrada y salida proporcionada por el docente, enumera las entradas y salidas del dispositivo asignado. Al principio de la actividad, los estudiantes deben enfocarse en entradas y salidas físicas más obvias (por ejemplo, un teclado como entrada o una pantalla como salida) pero los debates posteriores llevan a los estudiantes a considerar ejemplos menos obvios (por ejemplo, que una pantalla táctil es tanto una entrada y salida, o que Internet puede servir como entrada y salida). A lo largo de la lección, el docente registra las entradas y salidas que se identifican en un cuadro que coloca al frente del aula. Para concluir la lección, los alumnos examinan las actividades comunes que realizan en un dispositivo informático y seleccionan del cuadro las entradas y salidas utilizadas para esa actividad.
+              description_teacher: En esta lección, los estudiantes consideran una cantidad de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Se asigna un dispositivo informático a cada grupo que, en base a una definición de entrada y salida proporcionada por el docente, enumera las entradas y salidas del dispositivo asignado. Al principio de la actividad, los estudiantes deben enfocarse en entradas y salidas físicas más obvias (por ejemplo, un teclado como entrada o una pantalla como salida), pero los debates posteriores llevan a los estudiantes a considerar ejemplos menos obvios (por ejemplo, que una pantalla táctil es tanto una entrada y salida, o que Internet puede servir como entrada y salida). A lo largo de la lección, el docente registra las entradas y salidas que se identifican en un cuadro que coloca al frente del aula. Para concluir la lección, los alumnos examinan las actividades comunes que realizan en un dispositivo informático y seleccionan del cuadro las entradas y salidas utilizadas para esa actividad.
             Processing:
               name: Procesamiento
               description_student: Esta lección profundiza en el concepto de procesamiento que se introdujo como parte de la definición de una computadora. Los estudiantes trabajarán en parejas para ordenar una baraja de naipes, lo cual es una forma de información de procesamiento. Al final, la clase discutirá qué significa el procesamiento a la hora de resolver problemas de información.
@@ -3204,8 +3204,8 @@ es-MX:
               description_teacher: Los estudiantes exploran la importancia del almacenamiento dentro del modelo de entrada, almacenamiento, procesamiento y salida de una computadora. A partir de la actividad de preparación, los estudiantes reflexionan sobre los tipos de información que han visto que almacenan las computadoras, como documentos, fotografías o videos. En la actividad principal sin conexión, los estudiantes desarrollan un algoritmo para procesar una pequeña pila de naipes en busca de naipes específicos dentro de la baraja. Debido a restricciones sobre cómo mover, los estudiantes deben considerar la importancia del almacenamiento, incluso mientras procesan la baraja. La lección concluye con un debate sobre los dos tipos de almacenamiento que los estudiantes vieron en esta lección y la importancia del almacenamiento al procesar la información.
             Apps and Problem Solving:
               name: Aplicaciones y resolución de problemas
-              description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto relevante y familiar para los estudiantes, el de las aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones y con un debate a cargo del docente sobre el impacto de las aplicaciones en la sociedad. '
-              description_teacher: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: aplicaciones. Los estudiantes se reúnen en parejas y evalúan varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como una discusión dirigida por el docente sobre el impacto de las aplicaciones en la sociedad. '
+              description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto relevante y familiar para los estudiantes: el de las aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones y con un debate a cargo del docente sobre el impacto de las aplicaciones en la sociedad. '
+              description_teacher: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: el de las aplicaciones. Los estudiantes se reúnen en parejas y evalúan varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como un debate dirigido por el docente sobre el impacto de las aplicaciones en la sociedad. '
             Project - Propose an App:
               name: Proyecto - Propuesta de aplicación
               description_student: Para concluir el estudio del proceso de resolución de problemas y el modelo de entrada/salida/almacenamiento/procesamiento de una computadora, la clase propone aplicaciones diseñadas para resolver problemas del mundo real. Este proyecto se completa en varios días y culmina en la presentación de un cartel que destaca las características de cada aplicación. El proyecto está diseñado para completarse en parejas, aunque se puede hacer individualmente.
@@ -3350,8 +3350,8 @@ es-MX:
               name: Laboratorio de juegos
         csd2-2017:
           title: CSD Unidad 2 - Desarrollo web ('17-'18)
-          description_short: "  Aprende a crear tu propio sitio web en el Laboratorio web."
-          description: " En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet."
+          description_short: " Aprende a crear tu propio sitio web en el Laboratorio web."
+          description: "En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet."
           stages:
             new stage:
               name: nueva etapa
@@ -3383,7 +3383,7 @@ es-MX:
               name: Modelo de caja y diseño de páginas
             Digital Footprint:
               name: Huella digital
-              description_student: Esta lección da un paso atrás desde la creación del sitio web personal para hablar sobre la información personal que las personas eligen compartir de forma digital. La clase comienza con un debate sobre qué tipo de información se puede compartir con otras personas, y luego observa varios ejemplos de páginas de redes sociales para ver qué tipos de información personal se pueden compartir de manera intencional o no. Finalmente, la clase presenta un conjunto de pautas a seguir a la hora de publicar información en línea.
+              description_student: Esta lección da un paso atrás desde la creación del sitio web personal para hablar sobre la información personal que las personas eligen compartir de forma digital. La clase comienza con un debate sobre qué tipo de información se puede compartir con otras personas, y luego observa varios ejemplos de páginas de redes sociales para ver qué tipos de información personal se pueden compartir de manera intencional o no. Finalmente, la clase presenta un conjunto de pautas por seguir a la hora de publicar información en línea.
               description_teacher: "Una vez que los estudiantes han pensado en el contenido real que se incluirá en sus sitios web personales, esta lección toma distancia del proyecto de la unidad (publicación de un sitio web personal) para ayudarlos a expresar qué información personal desean compartir de forma digital y con quién. También refuerza la idea de que gran parte de la información que eligen compartir digitalmente queda fuera de su control desde el momento en que se publica.  \\r\n\\r\nPara comenzar, los estudiantes identifican individualmente las audiencias a las que les compartirían información personal específica sin problemas. Luego, observan varias páginas de redes sociales para determinar qué tipo de información comparten las personas sobre sí mismas o entre ellas. Por último, los estudiantes reflexionan sobre las pautas que consideran apropiadas para publicar información en línea.\\r\n\\r\nEl objetivo final de esta lección no es asustar a los estudiantes, sino más bien que puedan darse cuenta de la pérdida de control cuando publican información en la web."
             Publishing a Website:
               name: Publicación de un sitio web
@@ -3429,7 +3429,7 @@ es-MX:
               description_teacher: Los estudiantes conocen las listas ordenadas y desordenadas en HTML, y trabajan en unos pocos niveles en los que usan las etiquetas &lt;ul&gt;, &lt;ol&gt; y &lt;li&gt;. Luego, regresan a su proyecto, donde agregan una nueva página HTML. Dentro de la nueva página, escriben el HTML para mostrar una receta, la lista de los diez principales o cualquier otro contenido que use las nuevas etiquetas que han aprendido.
             Intellectual Property and Images:
               name: Propiedad intelectual e imágenes
-              description_student: Esta lección explica cómo usar tipos de soporte, como imágenes, videos o música creados por otros, en un sitio web respetando los derechos del creador de esos soportes. Después de estudiar las licencias de Creative Commons por primera vez, la clase aprende cómo agregar imágenes a las páginas web y otorgar las atribuciones adecuadas al hacerlo.
+              description_student: Esta lección explica cómo usar en un sitio web tipos de soporte, como imágenes, videos o música creados por otros, respetando los derechos del creador de esos soportes. Después de estudiar las licencias de Creative Commons por primera vez, la clase aprende cómo agregar imágenes a las páginas web y otorgar las atribuciones adecuadas al hacerlo.
               description_teacher: "A partir de un debate en el que cada estudiante da su opinión personal sobre cómo otros deberían utilizar su trabajo, la clase explora el propósito y el rol de los derechos de autor tanto para aquellos que crean contenido como para quienes lo utilizan. Luego, los estudiantes realizarán una actividad en la que exploran las distintas licencias de Creative Commons como una solución a la dificultad de tratar con los derechos de autor. \\r\n\\r\nFinalmente, luego de comprender las restricciones de las diversas licencias de Creative Commons, aprenderán a agregar imágenes a sus páginas web mediante la etiqueta &lt;img&gt;."
             Project - Multi-Page Websites:
               name: Proyecto - Sitios web con varias páginas
@@ -3438,7 +3438,7 @@ es-MX:
             RGB Colors and Classes:
               name: Colores RGB y clases
               description_student: Esta lección cubre clases y colores personalizados. La clase primero aprende cómo especificar colores personalizados mediante valores RGB (rojo, verde, azul), y luego aplica estos colores a una nueva página web del Four Seasons, que usa clases de CSS. Mediante estas clases, los estudiantes agregan más estilos a la página web del Four Seasons, y luego los utilizan para dar estilo a sus sitios web personales.
-              description_teacher: En esta lección los estudiantes primero aprenden cómo especificar colores personalizados mediante valores RGB (rojo, verde, azul). Luego, aplican estos colores a una nueva página web del Four Seasons, que usa clases de CSS. A través de las clases CSS, los desarrolladores web pueden tratar grupos de elementos para que tengan estilos diferentes que otros elementos del mismo tipo. Mediante las clases, los estudiantes agregan más estilos a la página web del Four Seasons, y luego los utilizan para dar estilo a sus sitios web personales.
+              description_teacher: En esta lección, los estudiantes primero aprenden cómo especificar colores personalizados mediante valores RGB (rojo, verde, azul). Luego, aplican estos colores a una nueva página web del Four Seasons, que usa clases de CSS. A través de las clases CSS, los desarrolladores web pueden tratar grupos de elementos para que tengan estilos diferentes que otros elementos del mismo tipo. Mediante las clases, los estudiantes agregan más estilos a la página web del Four Seasons, y luego los utilizan para dar estilo a sus sitios web personales.
             Project - Personal Portfolio Website:
               name: Proyecto - Sitio web de portfolio personal
               description_student: En los últimos días de la unidad, la clase finaliza sus sitios web personales. Para ello, trabaja con sus compañeros para obtener comentarios, revisar la rúbrica y dar los toques finales al sitio. Para cerrar la unidad, todos comparten sus proyectos y la forma en que se desarrollaron.
@@ -3485,7 +3485,7 @@ es-MX:
             Understanding Your User:
               name: Entender a tu usuario
               description_student: Mediante los perfiles de usuario, la clase explora cómo reaccionan diferentes usuarios a una variedad de productos. Al desempeñar el rol de una persona diferente, cada miembro de la clase experimentará diseños a través de los ojos de otra persona.
-              description_teacher: "Los diseñadores deben comprender las necesidades de sus usuarios para crear productos útiles. A partir de un juego de rol en que los estudiantes adoptan el rol de otra persona y reaccionan según ese perfil de usuario a una serie de productos, esta lección los alienta a pensar en cómo diseñar para otra persona. A cada estudiante se le asigna un perfil de usuario que describe a una persona, que luego usan para elegir los productos adecuados, criticar el diseño del producto y sugerir mejoras.\\r\n"
+              description_teacher: "Los diseñadores deben comprender las necesidades de sus usuarios para crear productos útiles. A partir de un juego de rol en donde los estudiantes adoptan el rol de otra persona y reaccionan según ese perfil de usuario ante una serie de productos, esta lección los alienta a pensar en cómo diseñar para otra persona. A cada estudiante se le asigna un perfil de usuario que describe a una persona, que luego usan para elegir los productos adecuados, criticar el diseño del producto y sugerir mejoras.\\r\n"
             Discovering Users:
               name: Descubrir usuarios
             User-Centered Design Micro Activity:
@@ -3553,7 +3553,7 @@ es-MX:
             Identifying User Needs:
               name: Identificar las necesidades de los usuarios
               description_student: Hasta este punto, todos los usuarios considerados por la clase han sido remotos, y la única información de los usuarios provino del texto o del juego de roles. Ahora, la clase se convertirá en usuarios potenciales, y las parejas se entrevistarán entre sí para identificar las necesidades que podrían abordarse con el desarrollo de una aplicación.
-              description_teacher: 'Hasta este punto, los estudiantes se han centrado en el diseño para usuarios que, en cierta medida, no son cercanos. La conexión con un usuario final nunca ha sido directa sino a través de generación de ideas, perfiles o comentarios de texto. Esta distancia está pensada para ayudar a los estudiantes a no tener preconceptos cuando piensan en los usuarios. Pero, para obtener información directamente de un usuario real, los estudiantes deben confiar en sus compañeros de clase. En esta lección, los estudiantes se unen en parejas para convertirse en usuarios (y diseñadores), lo que les permite entrevistar en forma directa a su usuario final y hacer preguntas que permitan mejorar su diseño. Cada pareja de estudiantes se entrevista entre sí para identificar una necesidad específica que podría ser abordada por una aplicación. '
+              description_teacher: 'Hasta este punto, los estudiantes se han centrado en el diseño para usuarios que, en cierta medida, no son cercanos. La conexión con un usuario final nunca ha sido directa, sino a través de generación de ideas, perfiles o comentarios de texto. Esta distancia está pensada para ayudar a los estudiantes a no tener preconceptos cuando piensan en los usuarios. Pero para obtener información directamente de un usuario real, los estudiantes deben confiar en sus compañeros de clase. En esta lección, los estudiantes se unen en parejas para convertirse en usuarios (y diseñadores), lo que les permite entrevistar en forma directa a su usuario final y hacer preguntas que permitan mejorar su diseño. Cada pareja de estudiantes se entrevista entre sí para identificar una necesidad específica que podría ser abordada por una aplicación. '
             Project - Paper Prototype:
               name: Proyecto - Prototipo en papel
               description_student: Con la información de la entrevista de la lección anterior, la clase presenta ideas de aplicaciones para abordar las necesidades de sus usuarios. Para expresar esas ideas y probar su efectividad, cada estudiante crea y prueba prototipos propios en papel.
@@ -4286,7 +4286,7 @@ es-MX:
               description_teacher: En la Unidad 4, los estudiantes aprendieron un enfoque muy sencillo para el desarrollo de aplicaciones en el Laboratorio de aplicaciones, que requería una pantalla separada para la mayoría de las interacciones. Para ampliar los tipos de aplicaciones que los estudiantes pueden crear, y para animarlos a pensar nuevas maneras en que los usuarios pueden interactuar con aplicaciones, presentamos los conceptos de "getters" y "setters". Estos son comandos que pueden obtener y configurar (o cambiar) el contenido y las propiedades de varios elementos de diseño. En esta lección, los estudiantes desarrollan aplicaciones simples que requieren una sola pantalla, cuyo contenido se cambia mediante "getters" y "setters".
             The Circuit Playground:
               name: The Circuit Playground
-              description_student: Conoce el Circuit Playground, el tablero de circuitos que se utilizará a lo largo de esta unidad. Con el Laboratorio de aplicaciones podrás desarrollar programas que utilicen el Circuit Playground para generar resultados.
+              description_student: Conoce el Circuit Playground, el tablero de circuitos que se utilizará a lo largo de esta unidad. Con el Laboratorio de aplicaciones, podrás desarrollar programas que utilicen el Circuit Playground para generar resultados.
               description_teacher: En esta lección, los estudiantes tendrán su primera oportunidad de escribir programas que utilicen el Circuit Playground. Después de realizar una inspección visual del tablero y crear hipótesis sobre posibles funcionalidades, los estudiantes trabajan en línea, donde aprenderán a escribir aplicaciones que controlan un LED. Al combinar las pantallas del Laboratorio de aplicaciones con el Circuit Playground, pueden empezar a integrar elementos del tablero como un dispositivo de salida mientras utilizan el Laboratorio de aplicaciones para la entrada del usuario.
             Lists:
               name: Listas
@@ -4298,16 +4298,16 @@ es-MX:
               description_teacher: El Circuit Playground incluye 10 LED de color dispuestos en un anillo alrededor del borde exterior. Es posible acceder a estos LED a través del código como una lista llamada `colorLeds`. A partir de la comprensión de listas de la lección anterior, los estudiantes acceden a los LED de color desde una lista para escribir programas que los controlen.
             For Loops:
               name: Bucles Para
-              description_student: La clase aprende sobre la repetición de instrucciones con un _bucle desde_, primero al controlar un "robot" a través de una red, y luego en el Laboratorio de aplicaciones.
+              description_student: La clase aprende sobre la repetición de instrucciones con un _bucle desde_, primero al controlar un "robot" a través de una red, y luego, en el Laboratorio de aplicaciones.
               description_teacher: En esta lección, los estudiantes conocen el _bucle desde_ como una manera de repetir un código un cierto número de veces. Los estudiantes comienzan con una actividad sin conexión donde utilizan bucles para guiar un robot a través de una red. Una vez completada, aplican su conocimiento en el Laboratorio de aplicaciones, donde escriben programas que dependen de una repetición mediante un _bucle desde_.
             Lists and For Loops:
               name: Listas y bucles 'desde'
-              description_student: Al combinar _listas_ y _bucles desde_ puedes escribir código que impacta en cada elemento de una lista, independientemente de su longitud. La clase utiliza esta estructura para escribir programas que procesan todos los elementos de las listas, incluida la lista de LED de colores.
+              description_student: Al combinar _listas_ y _bucles desde_, puedes escribir código que impacta en cada elemento de una lista, independientemente de su longitud. La clase utiliza esta estructura para escribir programas que procesan todos los elementos de las listas, incluida la lista de LED de colores.
               description_teacher: 'Utilizar un _bucle desde_ para repetir todos los elementos de un arreglo es un recurso realmente útil en la mayoría de los lenguajes de programación. En esta lección, los estudiantes combinan lo que han aprendido sobre listas y bucles para empezar a aprender este patrón. Los estudiantes utilizan bucles ''desde'' para pasar por un elemento de la lista a la vez sin tener que escribir código para cada elemento. Hacia el final de la lección, los estudiantes aplicarán esto con la lista `colorLed` en el tablero. '
             Timed Loops:
               name: Bucles cronometrados
-              description_student: En esta lección nos apoyamos en los conocimientos de los estudiantes acerca de los bucles 'desde' para aprender sobre una estructura más sofisticada llamada bucle cronometrado. A diferencia de los bucles 'desde', puedes controlar la rapidez con que se repite un bucle cronometrado, y se puede ejecutar otro código (como los controladores de eventos) entre las repeticiones del bucle. Esto nos permite crear animaciones interesantes que se repiten infinitamente, mientras aún se permite la ejecución de otro código junto con él.
-              description_teacher: En esta lección nos apoyamos en los conocimientos de los estudiantes acerca de los _bucles desde_ para aprender sobre una estructura más sofisticada llamada _bucle cronometrado_. A diferencia de los _bucles desde_, puedes controlar la rapidez con que se repite un _bucle cronometrado_, y se puede ejecutar otro código (como los controladores de eventos) entre las repeticiones del bucle. Esto nos permite crear animaciones interesantes que se repiten infinitamente, mientras aún se permite la ejecución de otro código junto con él.
+              description_student: En esta lección, nos apoyamos en los conocimientos de los estudiantes acerca de los bucles 'desde' para aprender sobre una estructura más sofisticada llamada bucle cronometrado. A diferencia de los bucles 'desde', puedes controlar la rapidez con que se repite un bucle cronometrado, y se puede ejecutar otro código (como los controladores de eventos) entre las repeticiones del bucle. Esto nos permite crear animaciones interesantes que se repiten infinitamente, mientras que se sigue permitiendo la ejecución de otro código junto con él.
+              description_teacher: En esta lección, nos apoyamos en los conocimientos de los estudiantes acerca de los _bucles desde_ para aprender sobre una estructura más sofisticada llamada _bucle cronometrado_. A diferencia de los _bucles desde_, puedes controlar la rapidez con que se repite un _bucle cronometrado_, y se puede ejecutar otro código (como los controladores de eventos) entre las repeticiones del bucle. Esto nos permite crear animaciones interesantes que se repiten infinitamente, mientras que se sigue permitiendo la ejecución de otro código junto con él.
             'Project: Board Output':
               name: 'Proyecto: salida del tablero'
               description_student: Los estudiantes toman lo que han aprendido en el capítulo uno y desarrollan una aplicación con un diseño propio que utiliza el tablero para generar información.
@@ -4358,7 +4358,7 @@ es-MX:
               description_teacher: En esta lección, los estudiantes utilizarán los timbres para producir sonidos, notas y canciones. Comenzarán con una breve revisión de los parámetros de frecuencia y duración de los timbres, y luego pasarán al concepto de notas. A través de las notas, los estudiantes pueden limitarse a frecuencias que se utilizan en la música occidental y obtener una capa de abstracción que los ayuda a entender qué frecuencias pueden sonar bien juntas. Una vez que pueden reproducir notas en el timbre, usan arreglos para mantener y reproducir secuencias de notas, que forman canciones simples.
             Arrays and For Loops:
               name: Arreglos y bucles 'desde'
-              description_student: Al combinar _listas_ y _bucles desde_ puedes escribir código que impacta en cada elemento de una lista, independientemente de su longitud. La clase utiliza esta estructura para escribir programas que procesan todos los elementos de las listas, incluida la lista de LED de colores.
+              description_student: Al combinar _listas_ y _bucles desde_, puedes escribir código que impacta en cada elemento de una lista, independientemente de su longitud. La clase utiliza esta estructura para escribir programas que procesan todos los elementos de las listas, incluida la lista de LED de colores.
               description_teacher: Utilizar un _bucle desde_ para repetir todos los elementos de un arreglo es un recurso realmente útil en la mayoría de los lenguajes de programación. En esta lección, los estudiantes aprenden los aspectos básicos de cómo se puede usar un _bucle desde_ para repetir código, y luego lo combinan con lo que han aprendido sobre arreglos para escribir programas que procesen todos los elementos de un arreglo. Los estudiantes utilizan bucles 'desde' para pasar por un elemento de la lista a la vez sin tener que escribir código para cada elemento. Hacia el final de la lección, los estudiantes aplicarán esto con la lista `colorLed` en el tablero para crear una aplicación que cambie todos los LED cada vez que se hace clic en un botón.
             Accelerometer:
               name: Acelerómetro
@@ -4371,7 +4371,7 @@ es-MX:
             Circuits and Physical Prototypes:
               name: Circuitos y prototipos físicos
               description_student: Conecta circuitos simples para crear un prototipo físico que utilice materiales baratos fáciles de conseguir.
-              description_teacher: A la hora de preparar el proyecto final de este capítulo, los estudiantes aprenderán cómo desarrollar un prototipo de un objeto físico que incluya un Circuit Playground. Mediante una guía de planificación de proyectos modelados, y materiales baratos fáciles de conseguir, como cartulina y cinta adhesiva, los estudiantes aprenderán a conectar un par de circuitos simples y crear prototipos que puedan comunicar el diseño previsto de un producto.
+              description_teacher: A la hora de preparar el proyecto final de este capítulo, los estudiantes aprenderán cómo desarrollar un prototipo de un objeto físico que incluya un Circuit Playground. Mediante una guía de planificación de proyectos modelados y materiales baratos fáciles de conseguir, como cartulina y cinta adhesiva, los estudiantes aprenderán a conectar un par de circuitos simples y crear prototipos que puedan comunicar el diseño previsto de un producto.
             Innovations in Computing:
               name: Innovaciones en computación
             Arrays and Color LEDs:
@@ -4386,7 +4386,7 @@ es-MX:
               description_teacher: En la Unidad 4, los estudiantes aprendieron un enfoque muy sencillo para el desarrollo de aplicaciones en el Laboratorio de aplicaciones, que requería una pantalla separada para la mayoría de las interacciones. Para ampliar los tipos de aplicaciones que los estudiantes pueden crear, y para animarlos a pensar nuevas maneras en que los usuarios pueden interactuar con aplicaciones, presentamos el bloque `setProperty()`. Este comando se puede usar para configurar el contenido y las propiedades de varios elementos de la interfaz de usuario. En esta lección, los estudiantes desarrollan aplicaciones simples que requieren una sola pantalla, cuyo contenido se cambia mediante `setProperty()`.
             The Circuit Playground_:
               name: The Circuit Playground
-              description_student: Conoce el Circuit Playground, el tablero de circuitos que se utilizará a lo largo de esta unidad. Con el Laboratorio de aplicaciones podrás desarrollar programas que utilicen el Circuit Playground para generar resultados.
+              description_student: Conoce el Circuit Playground, el tablero de circuitos que se utilizará a lo largo de esta unidad. Con el Laboratorio de aplicaciones, podrás desarrollar programas que utilicen el Circuit Playground para generar resultados.
               description_teacher: En esta lección, los estudiantes tendrán su primera oportunidad de escribir programas que utilicen el Circuit Playground. Después de realizar una inspección visual del tablero y crear hipótesis sobre posibles funcionalidades, los estudiantes trabajan en línea, donde aprenderán a escribir aplicaciones que controlan un LED. Al combinar las pantallas del Laboratorio de aplicaciones con el Circuit Playground, pueden empezar a integrar elementos del tablero como un dispositivo de salida mientras utilizan el Laboratorio de aplicaciones para la entrada del usuario.
             Input Unplugged_:
               name: Entrada sin conexión
@@ -4398,8 +4398,8 @@ es-MX:
               description_teacher: A través de esta lección, los estudiantes pasan de considerar el Circuit Playground como un dispositivo estrictamente de salida a usarlo como una herramienta para entrada y salida. A partir de los botones y el interruptor del hardware, los estudiantes aprenden a usar `onBoardEvent()`, de forma semejante a `onEvent()`, para tomar información desde sus Circuit Playgrounds.
             Getting Properties_:
               name: Obtener propiedades
-              description_student: Esta lección presenta a los estudiantes el bloque getProperty, que les permite acceder a las propiedades de diferentes elementos a través del código. Los estudiantes primero usan el bloque para practicar y determinar lo que el usuario ha ingresado en varios elementos de la interfaz de usuario. Luego, los estudiantes usan getProperty y setProperty junto con el patrón del contador para que los elementos se muevan a través de la pantalla. También se presentan el deslizador, un nuevo elemento de pantalla, y onChange, un nuevo disparador de eventos.
-              description_teacher: Esta lección presenta a los estudiantes el bloque `getProperty`, que les permite acceder a las propiedades de diferentes elementos a través del código. Los estudiantes primero usan el bloque para practicar y determinar lo que el usuario ha ingresado en varios elementos de la interfaz de usuario. Luego, los estudiantes usan `getProperty` y `setProperty` junto con el patrón del contador para que los elementos se muevan a través de la pantalla. También se presentan el deslizador, un nuevo elemento de pantalla, y `onChange`, un nuevo disparador de eventos.
+              description_student: Esta lección presenta a los estudiantes el bloque obtenerPropiedad, que les permite acceder a las propiedades de diferentes elementos a través del código. Los estudiantes primero usan el bloque para practicar y determinar lo que el usuario ha ingresado en varios elementos de la interfaz de usuario. Luego, los estudiantes usan obtenerPropiedad y establecerPropiedad junto con el patrón del contador para que los elementos se muevan a través de la pantalla. También se presenta el deslizador, un nuevo elemento de pantalla, y enCambio, un nuevo disparador de eventos.
+              description_teacher: Esta lección presenta a los estudiantes el bloque `obtenerPropiedad`, que les permite acceder a las propiedades de diferentes elementos a través del código. Los estudiantes primero usan el bloque para practicar y determinar lo que el usuario ha ingresado en varios elementos de la interfaz de usuario. Luego, los estudiantes usan `obtenerPropiedad` y `establecerPropiedad` junto con el patrón del contador para que los elementos se muevan a través de la pantalla. También se presenta el deslizador, un nuevo elemento de pantalla, y `enCambio`, un nuevo disparador de eventos.
             Analog Input_:
               name: Entrada analógica
               description_student: Escribe programas que respondan al ambiente a través de sensores para explorar las entradas analógicas del Circuit Playground.
@@ -4418,7 +4418,7 @@ es-MX:
               description_teacher: En esta lección, los estudiantes utilizarán los timbres para producir sonidos, notas y canciones. Comenzarán con una breve revisión de los parámetros de frecuencia y duración de los timbres, y luego pasarán al concepto de notas. A través de las notas, los estudiantes pueden limitarse a frecuencias que se utilizan en la música occidental y obtener una capa de abstracción que los ayuda a entender qué frecuencias pueden sonar bien juntas. Una vez que pueden reproducir notas en el timbre, usan arreglos para mantener y reproducir secuencias de notas, que forman canciones simples.
             Arrays and For Loops_:
               name: Arreglos y bucles 'desde'
-              description_student: Al combinar _listas_ y _bucles desde_ puedes escribir código que impacta en cada elemento de una lista, independientemente de su longitud. La clase utiliza esta estructura para escribir programas que procesan todos los elementos de las listas, incluida la lista de LED de colores.
+              description_student: Al combinar _listas_ y _bucles desde_, puedes escribir código que impacta en cada elemento de una lista, independientemente de su longitud. La clase utiliza esta estructura para escribir programas que procesan todos los elementos de las listas, incluida la lista de LED de colores.
               description_teacher: Utilizar un _bucle desde_ para repetir todos los elementos de un arreglo es un recurso realmente útil en la mayoría de los lenguajes de programación. En esta lección, los estudiantes aprenden los aspectos básicos de cómo se puede usar un _bucle desde_ para repetir código, y luego lo combinan con lo que han aprendido sobre arreglos para escribir programas que procesen todos los elementos de un arreglo. Los estudiantes utilizan bucles 'desde' para pasar por un elemento de la lista a la vez sin tener que escribir código para cada elemento. Hacia el final de la lección, los estudiantes aplicarán esto con la lista `colorLed` en el tablero para crear una aplicación que cambie todos los LED cada vez que se hace clic en un botón.
             Accelerometer_:
               name: Acelerómetro
@@ -4431,7 +4431,7 @@ es-MX:
             Circuits and Physical Prototypes_:
               name: Circuitos y prototipos físicos
               description_student: Conecta circuitos simples para crear un prototipo físico que utilice materiales baratos fáciles de conseguir.
-              description_teacher: A la hora de preparar el proyecto final de este capítulo, los estudiantes aprenderán cómo desarrollar un prototipo de un objeto físico que incluya un Circuit Playground. Mediante una guía de planificación de proyectos modelados, y materiales baratos fáciles de conseguir, como cartulina y cinta adhesiva, los estudiantes aprenderán a conectar un par de circuitos simples y crear prototipos que puedan comunicar el diseño previsto de un producto.
+              description_teacher: A la hora de preparar el proyecto final de este capítulo, los estudiantes aprenderán cómo desarrollar un prototipo de un objeto físico que incluya un Circuit Playground. Mediante una guía de planificación de proyectos modelados y materiales baratos fáciles de conseguir, como cartulina y cinta adhesiva, los estudiantes aprenderán a conectar un par de circuitos simples y crear prototipos que puedan comunicar el diseño previsto de un producto.
             'Project: Prototype an Innovation_':
               name: 'Proyecto: crear el prototipo de una innovación'
               description_student: Usa todo lo que has aprendido en este curso y desarrolla dispositivos informáticos innovadores con un diseño propio.
@@ -4512,7 +4512,7 @@ es-MX:
             Patterns and Representation:
               name: Patrones y representación
               description_student: Esta lección analiza más de cerca lo que se necesita para crear un sistema de representación. Los grupos crean sistemas que pueden representar cualquier letra en el alfabeto mediante una pila de tarjetas; luego, crean mensajes con sus sistemas y los intercambian con otros grupos para garantizar que el sistema funcione como estaba previsto. La clase habla sobre los puntos en común entre los sistemas y reconoce que hay muchas soluciones posibles.
-              description_teacher: En esta lección, los estudiantes crean su propio sistema para representar información. Para comenzar, aportan ideas de todos los sistemas diferentes que ya utilizan para representar las respuestas de sí-no. Luego, trabajan en grupos pequeños para crear un sistema que pueda representar cualquier letra del alfabeto mediante una pila de tarjetas. Las tarjetas utilizadas tienen uno de los 6 dibujos posibles (6 animales, 6 colores, etc.) y, por lo tanto, para representar el alfabeto completo, los estudiantes deberán usar patrones de varias tarjetas para representar cada letra. Los estudiantes crean mensajes con sus sistemas e intercambian información con otros grupos para garantizar que el sistema funciona según lo previsto. En el debate de cierre, la clase revisa las ventajas y desventajas de los diferentes sistemas. Hablan sobre los puntos en común entre los sistemas, reconocen que hay muchas soluciones posibles para este problema y lo importante es que todos usen el mismo sistema para comunicarse.
+              description_teacher: En esta lección, los estudiantes crean su propio sistema para representar información. Para comenzar, aportan ideas de todos los sistemas diferentes que ya utilizan para representar las respuestas de sí-no. Luego, trabajan en grupos pequeños para crear un sistema que pueda representar cualquier letra del alfabeto mediante una pila de tarjetas. Las tarjetas utilizadas tienen uno de los 6 dibujos posibles (6 animales, 6 colores, etc.) y, por lo tanto, para representar el alfabeto completo, los estudiantes deberán usar patrones de varias tarjetas para representar cada letra. Los estudiantes crean mensajes con sus sistemas e intercambian información con otros grupos para garantizar que el sistema funciona según lo previsto. En el debate de cierre, la clase revisa las ventajas y desventajas de los diferentes sistemas. Hablan sobre los puntos en común entre los sistemas, reconocen que hay muchas soluciones posibles para este problema, y lo importante es que todos usen el mismo sistema para comunicarse.
             ASCII and Binary Representation:
               name: ASCII y representación binaria
               description_student: 'Esta lección presenta un sistema binario formal para codificar información: el sistema ASCII para representar letras y otros caracteres. Al comienzo de la lección, el docente introduce el hecho de que las computadoras deben representar información mediante la función de "encendido" o "apagado". Luego, la clase aborda el sistema ASCII para representar texto mediante símbolos binarios y practica con este sistema antes de codificar sus propios mensajes ASCII.'
@@ -4771,7 +4771,7 @@ es-MX:
               name: Condicionales y funciones en Abeja
         csppostsurvey-staging:
           title: "[Deprecated] Área de preparación de la encuesta de fin de curso de CSP"
-          description: Se movió a /s/csp-post-survey.  Destruir luego del 05.05.17
+          description: Se movió a /s/csp-post-survey. Destruir luego del 05.05.17
           stages:
             CSP Student Post Survey Staging:
               name: Preparación de la encuesta final para estudiantes de CSP
@@ -4810,7 +4810,7 @@ es-MX:
           title: Encuesta de fin de curso de CSP para estudiantes ('17-'18)
           description_audience: Estudiantes de CSP
           description_short: Encuesta de fin de curso para estudiantes de CSP
-          description: Bienvenido a la encuesta de fin de curso de Principios de Ciencias de la Computación de Code.org. Para completar esta encuesta, demorarás unos 15 minutos. Tus respuestas son privadas y anónimas, es decir que tu docente podrá ver los resultados anónimos acumulados para toda la clase. Los resultados son fundamentales para tu docente y para que Code.org mantenga y mejore el curso. Gracias por tu tiempo y consideración.
+          description: Bienvenido a la encuesta de fin de curso de Principios de Ciencias de la Computación de Code.org. Para completar esta encuesta, demorarás unos 15 minutos. Tus respuestas son privadas y anónimas, es decir que tu docente podrá ver los resultados anónimos acumulados para toda la clase. Los resultados son fundamentales para tu docente, y para que Code.org mantenga y mejore el curso. Gracias por tu tiempo y consideración.
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -5803,8 +5803,8 @@ es-MX:
             'Lesson 1: App Lab Intro':
               name: 'Lección 1: Introducción al Laboratorio de aplicaciones'
           title: Introducción al Laboratorio de aplicaciones
-          description_short: Crea tu propia aplicación en JavaScript mediante programación en bloque o texto. Si ya has programado algo con bloques, llevar tus habilidades al siguiente nivel.
-          description: Crea tu propia aplicación en JavaScript mediante programación en bloque o texto. Si ya has programado algo con bloques, llevar tus habilidades al siguiente nivel.
+          description_short: Crea tu propia aplicación en JavaScript mediante programación en bloque o texto. Si ya has programado algo con bloques, lleva tus habilidades al siguiente nivel.
+          description: Crea tu propia aplicación en JavaScript mediante programación en bloque o texto. Si ya has programado algo con bloques, lleva tus habilidades al siguiente nivel.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -6688,12 +6688,12 @@ es-MX:
               description_teacher: Se pide a los estudiantes que consideren los "problemas" del aburrimiento y la autoexpresión, y que reflexionen sobre cómo abordan esos problemas en sus propias vidas. A partir de allí, los estudiantes explorarán cómo las Ciencias de la Computación, en general, y la programación, en particular, desempeñan un papel específico como una forma de entretenimiento o como un vehículo para la autoexpresión.
             Plotting Shapes:
               name: Trazar formas
-              description_student: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
-              description_teacher: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
+              description_student: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
+              description_teacher: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
             Drawing in Game Lab:
               name: Dibujar en el Laboratorio de juegos
               description_student: Se presenta el Laboratorio de juegos, el ambiente de programación de esta unidad, a la clase, que comienza a usarlo para colocar formas en la pantalla. Esta lección cubre los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, la clase crea una versión en línea de la imagen que diseñaron en la lección anterior.
-              description_teacher: Se presenta el Laboratorio de juegos, el ambiente de programación de esta unidad, a los estudiantes, que comienzan a usarlo para colocar formas en la pantalla. Aprenderán los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, los estudiantes podrán programar imágenes como las que crearon con la herramienta de dibujo de la lección anterior.
+              description_teacher: Se presenta a los estudiantes el Laboratorio de juegos, el ambiente de programación de esta unidad, quienes comienzan a usarlo para colocar formas en la pantalla. Aprenderán los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, los estudiantes podrán programar imágenes como las que crearon con la herramienta de dibujo de la lección anterior.
             Shapes and Randomization:
               name: Formas y aleatoriedad
             Variables:
@@ -6720,9 +6720,9 @@ es-MX:
               name: Valores booleanos sin conexión
               description_student: Esta lección presenta los valores y la lógica booleanos, así como sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Luego, la clase agrupa los objetos en base a sentencias booleanas cada vez más complejas y observa cómo los condicionales pueden afectar el flujo de un programa.
               description_teacher: |-
-                En esta lección se presentan los valores y la lógica booleanos, así como las sentencias condicionales, a los estudiantes. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
+                En esta lección, se presentan los valores y la lógica booleanos a los estudiantes, además de las sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
 
-                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
+                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares, pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
 
                 Finalmente, revelamos los condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa mediante la incorporación de sentencias booleanas.
             Conditionals:
@@ -6736,7 +6736,7 @@ es-MX:
             Other Forms of Input:
               name: Otras formas de entrada
               description_student: La clase continúa explorando formas de usar sentencias condicionales para recibir información del usuario. Además del sencillo comando keyDown() que aprendieron ayer, la clase aprende sobre otros comandos de entrada de teclado y formas de utilizar la entrada de ratón.
-              description_teacher: En esta lección los estudiantes continúan explorando formas de usar sentencias condicionales para recibir información del usuario. Además del sencillo comando `keyDown()` que aprendieron ayer, los estudiantes aprenden sobre otros comandos de entrada de teclado y formas de utilizar la entrada de ratón.
+              description_teacher: En esta lección, los estudiantes continúan explorando formas de usar sentencias condicionales para recibir información del usuario. Además del sencillo comando `keyDown()` que aprendieron ayer, los estudiantes aprenden sobre otros comandos de entrada de teclado y formas de utilizar la entrada de ratón.
             Project - Interactive Card:
               name: Proyecto - Tarjeta interactiva
               description_student: En este proyecto integrado para el Capítulo 1, la clase planifica y desarrolla una tarjeta de felicitación interactiva mediante las técnicas de programación que ha aprendido hasta el momento.
@@ -6755,8 +6755,8 @@ es-MX:
               description_teacher: Los estudiantes aprenden a combinar las propiedades de velocidad de los sprites con el patrón de contador para crear un movimiento de sprite más complejo. En particular, los estudiantes aprenderán a simular la gravedad, hacer que un sprite salte y permitir que un sprite flote hacia la izquierda o hacia la derecha. En los niveles finales del avance de Code Studio, los estudiantes combinan estos movimientos para animar y controlar un solo sprite, y crear un juego simple en el que un personaje vuela y recoge monedas. Se anima a los estudiantes a agregar otros componentes al juego en el nivel final.
             Collisions:
               name: Colisiones
-              description_student: La clase programa sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque isTouching, la clase intercambia ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan isTouching para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (colisionar, desplazar, rebotar y bounceOff).
-              description_teacher: Los estudiantes programan sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque `isTouching`, los estudiantes intercambian ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan `isTouching` para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (`colisionar`, `desplazar`, `rebotar` y `bounceOff`).
+              description_student: La clase programa sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque isTouching, la clase intercambia ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan isTouching para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
+              description_teacher: Los estudiantes programan sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque `estáTocando`, los estudiantes intercambian ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan `estáTocando` para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (`colisionar`, `desplazar`, `rebotar` y `rebotarEn`).
             Functions:
               name: Funciones
               description_student: Esta lección trata las funciones como una forma de organizar su código, hacerlo más legible y eliminar bloques de código repetidos. La clase aprende que los pasos de nivel superior o más abstractos permiten entender y razonar sobre los pasos más fácilmente, y luego comienza a crear funciones en el Laboratorio de juegos. Al final de la lección, la clase utiliza estas habilidades para organizar y agregar funcionalidad a la versión final de su juego de desplazamiento lateral.
@@ -6772,15 +6772,15 @@ es-MX:
             Project - Design a Game:
               name: Proyecto - Diseñar un juego
               description_student: La clase planifica y desarrolla juegos originales mediante la guía de proyectos de las dos lecciones anteriores. Ya sea individualmente o en parejas, la clase planifica, desarrolla y da su opinión sobre los juegos. Después de incorporar los comentarios de los compañeros, la clase comparte los juegos finalizados.
-              description_teacher: Los estudiantes planificarán y desarrollarán sus propios juegos con la guía de proyectos de las dos lecciones anteriores para orientar su proyecto. Ya sea individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que quieren crear, inspirándose en un conjunto de juegos de muestra. Luego, completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y analizarán las variables, los sprites y las funciones que necesitarán crear. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A lo largo del proceso, los estudiantes compartirán sus proyectos para que los revisen sus compañeros e incorporarán los comentarios cuando finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completos con sus compañeros de clase. Este proyecto puede abarcar de 3 a 5 períodos de clase.
+              description_teacher: Los estudiantes planificarán y desarrollarán sus propios juegos con la guía de proyectos de las dos lecciones anteriores para orientar su proyecto. Ya sea individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que quieren crear, y se inspiran en un conjunto de juegos de muestra. Luego, completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y analizarán las variables, los sprites y las funciones que necesitarán crear. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A lo largo del proceso, los estudiantes compartirán sus proyectos para que los revisen sus compañeros e incorporarán los comentarios cuando finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completos con sus compañeros de clase. Este proyecto puede abarcar de 3 a 5 períodos de clase.
             CS Discoveries End of Semester Survey:
               name: Encuesta de fin de semestre de Descubrimientos de Ciencias de la Computación
             CS Discoveries Post-Course Survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
         csd2-2018:
           title: CSD Unidad 2 - Desarrollo web ('18-'19)
-          description: " En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet."
-          description_short: "  Aprende a crear tu propio sitio web en el Laboratorio web."
+          description: "En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet."
+          description_short: " Aprende a crear tu propio sitio web en el Laboratorio web."
           stages:
             Exploring Websites:
               name: Exploración de sitios web
@@ -6800,7 +6800,7 @@ es-MX:
               description_teacher: En esta lección, los estudiantes continúan utilizando el HTML para estructurar el texto en las páginas web, esta vez con encabezados. Los estudiantes aprenden cómo se muestran los diferentes elementos del encabezado de forma predeterminada y practican con ellos para crear títulos de páginas y secciones. Los estudiantes comienzan a decidir cómo organizarán su contenido en sus propias páginas web. En el último nivel, los estudiantes inician el proyecto en el que trabajarán a lo largo de la unidad.
             Digital Footprint:
               name: Huella digital
-              description_student: Esta lección da un paso atrás desde la creación del sitio web personal para hablar sobre la información personal que las personas eligen compartir de forma digital. La clase comienza con un debate sobre qué tipo de información se puede compartir con otras personas, y luego observa varios ejemplos de páginas de redes sociales para ver qué tipos de información personal se pueden compartir de manera intencional o no. Finalmente, la clase presenta un conjunto de pautas a seguir a la hora de publicar información en línea.
+              description_student: Esta lección da un paso atrás desde la creación del sitio web personal para hablar sobre la información personal que las personas eligen compartir de forma digital. La clase comienza con un debate sobre qué tipo de información se puede compartir con otras personas, y luego observa varios ejemplos de páginas de redes sociales para ver qué tipos de información personal se pueden compartir de manera intencional o no. Finalmente, la clase presenta un conjunto de pautas por seguir a la hora de publicar información en línea.
               description_teacher: "Una vez que los estudiantes han pensado en el contenido real que se incluirá en sus sitios web personales, esta lección toma distancia del proyecto de la unidad (publicación de un sitio web personal) para ayudarlos a expresar qué información personal desean compartir de forma digital y con quién. También refuerza la idea de que gran parte de la información que eligen compartir digitalmente queda fuera de su control desde el momento en que se publica.  \\r\n\\r\nPara comenzar, los estudiantes identifican individualmente las audiencias a las que les compartirían información personal específica sin problemas. Luego, observan varias páginas de redes sociales para determinar qué tipo de información comparten las personas sobre sí mismas o entre ellas. Por último, los estudiantes reflexionan sobre las pautas que consideran apropiadas para publicar información en línea.\\r\n\\r\nEl objetivo final de esta lección no es asustar a los estudiantes, sino más bien que puedan darse cuenta de la pérdida de control cuando publican información en la web."
             Lists:
               name: Listas
@@ -6808,7 +6808,7 @@ es-MX:
               description_teacher: Los estudiantes conocen las listas ordenadas y desordenadas en HTML, y trabajan en unos pocos niveles en los que usan las etiquetas &lt;ul&gt;, &lt;ol&gt; y &lt;li&gt;. Luego, regresan a su proyecto, donde agregan una nueva página HTML. Dentro de la nueva página, escriben el HTML para mostrar una receta, la lista de los diez principales o cualquier otro contenido que use las nuevas etiquetas que han aprendido.
             Intellectual Property and Images:
               name: Propiedad intelectual e imágenes
-              description_student: Esta lección explica cómo usar tipos de soporte, como imágenes, videos o música creados por otros, en un sitio web respetando los derechos del creador de esos soportes. Después de estudiar las licencias de Creative Commons por primera vez, la clase aprende cómo agregar imágenes a las páginas web y otorgar las atribuciones adecuadas al hacerlo.
+              description_student: Esta lección explica cómo usar en un sitio web tipos de soporte, como imágenes, videos o música creados por otros, respetando los derechos del creador de esos soportes. Después de estudiar las licencias de Creative Commons por primera vez, la clase aprende cómo agregar imágenes a las páginas web y otorgar las atribuciones adecuadas al hacerlo.
               description_teacher: "Luego de debatir sus opiniones personales sobre cómo otras personas deberían utilizar sus trabajos, la clase explora el propósito y el rol de los derechos de autor tanto para los creadores como para los usuarios del contenido creativo. Luego, pasan a una actividad que explora las diversas licencias de Creative Commons como una solución ante la dificultad de lidiar con los derechos de autor.\n\nFinalmente, luego de conocer las restricciones de varias licencias de Creative Commons, los estudiantes aprenden cómo agregar imágenes a sus páginas web mediante la etiqueta &lt;img&gt;."
             Clean Code and Debugging:
               name: Limpieza de código y depuración
@@ -6833,7 +6833,7 @@ es-MX:
             RGB Colors and Classes:
               name: Colores RGB y clases
               description_student: Esta lección cubre clases y colores personalizados. La clase primero aprende cómo especificar colores personalizados mediante valores RGB (rojo, verde, azul), y luego aplica estos colores a una nueva página web del Four Seasons, que usa clases de CSS. Mediante estas clases, los estudiantes agregan más estilos a la página web del Four Seasons, y luego los utilizan para dar estilo a sus sitios web personales.
-              description_teacher: En esta lección los estudiantes primero aprenden cómo especificar colores personalizados mediante valores RGB (rojo, verde, azul). Luego, aplican estos colores a una nueva página web del Four Seasons, que usa clases de CSS. A través de las clases CSS, los desarrolladores web pueden tratar grupos de elementos para que tengan estilos diferentes que otros elementos del mismo tipo. Mediante las clases, los estudiantes agregan más estilos a la página web del Four Seasons, y luego los utilizan para dar estilo a sus sitios web personales.
+              description_teacher: En esta lección, los estudiantes primero aprenden cómo especificar colores personalizados mediante valores RGB (rojo, verde, azul). Luego, aplican estos colores a una nueva página web del Four Seasons, que usa clases de CSS. A través de las clases CSS, los desarrolladores web pueden tratar grupos de elementos para que tengan estilos diferentes que otros elementos del mismo tipo. Mediante las clases, los estudiantes agregan más estilos a la página web del Four Seasons, y luego los utilizan para dar estilo a sus sitios web personales.
             Project - Personal Portfolio Website:
               name: Proyecto - Sitio web de portfolio personal
               description_student: En los últimos días de la unidad, la clase finaliza sus sitios web personales. Para ello, trabaja con sus compañeros para obtener comentarios, revisar la rúbrica y dar los toques finales al sitio. Para cerrar la unidad, todos comparten sus proyectos y la forma en que se desarrollaron.
@@ -7584,7 +7584,7 @@ es-MX:
               name: Condicionales con Granjera
         csp1-2018:
           title: CSP Unidad 1 - Internet ('18-'19)
-          description: Esta unidad explora los desafíos técnicos y las preguntas que surgen de la necesidad de representar información digital en computadoras, y transferirla entre personas y dispositivos informáticos. Luego, la unidad explora la estructura y el diseño de Internet y las implicaciones de esas decisiones relacionadas con el diseño.
+          description: Esta unidad explora los desafíos técnicos y las preguntas que surgen de la necesidad de representar información digital en computadoras, y transferirla entre personas y dispositivos informáticos. Luego, la unidad explora la estructura y el diseño de Internet, y las implicaciones de esas decisiones relacionadas con el diseño.
           description_short: Explora los desafíos de representar información como bits y cómo llevar esos bits de un lugar a otro.
           stages:
             CS Principles Pre-survey:
@@ -7618,15 +7618,15 @@ es-MX:
             HTTP and Abstraction:
               name: HTTP y abstracción
             Practice PT - The Internet and Society:
-              name: PT de práctica - Internet y la sociedad
+              name: 'PT de práctica: Internet y la sociedad'
             Unit 1 Chapter 2 Assessment:
               name: Evaluación del Capítulo 2 de la Unidad 1
             Sending Text:
               name: Envío de texto
         csd1-2018:
           title: CSD Unidad 1 - Resolución de problemas ('18-'19)
-          description: " \\r\nLa Unidad 1 es una introducción muy interactiva y colaborativa al campo de las ciencias de la computación, enmarcada dentro de una búsqueda más amplia orientada a resolver problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de desafíos y escenarios del mundo real. A continuación, aprenderás cómo las computadoras toman, generan, almacenan y procesan información para ayudar a las personas a resolver problemas. La unidad concluye con un proyecto en el que diseñas una aplicación que ayuda a resolver un problema de tu elección.\\r\n"
-          description_short: "  Aprende cómo los humanos trabajan con computadoras para resolver problemas."
+          description: "\\r\nLa Unidad 1 es una introducción muy interactiva y colaborativa al campo de las ciencias de la computación, enmarcada dentro de una búsqueda más amplia orientada a resolver problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de desafíos y escenarios del mundo real. A continuación, aprenderás cómo las computadoras toman, generan, almacenan y procesan información para ayudar a las personas a resolver problemas. La unidad concluye con un proyecto en el que diseñas una aplicación que ayuda a resolver un problema de tu elección.\\r\n"
+          description_short: "Aprende cómo los humanos trabajan con computadoras para resolver problemas."
           stages:
             CS Discoveries Pre-survey:
               name: Encuesta previa de Descubrimientos de Ciencias de la Computación
@@ -7649,7 +7649,7 @@ es-MX:
             Input and Output:
               name: Entrada y salida
               description_student: En esta clase, los estudiantes consideran una serie de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Se asigna un dispositivo informático a cada grupo que, en base a una definición de entrada y salida proporcionada por el docente, enumera las entradas y salidas del dispositivo asignado. Para concluir la lección, la clase examina las actividades comunes que realizan en un dispositivo informático y selecciona del cuadro las entradas y salidas utilizadas para esa actividad.
-              description_teacher: En esta lección, los estudiantes consideran una cantidad de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Se asigna un dispositivo informático a cada grupo que, en base a una definición de entrada y salida proporcionada por el docente, enumera las entradas y salidas del dispositivo asignado. Al principio de la actividad, los estudiantes deben enfocarse en entradas y salidas físicas más obvias (por ejemplo, un teclado como entrada o una pantalla como salida) pero los debates posteriores llevan a los estudiantes a considerar ejemplos menos obvios (por ejemplo, que una pantalla táctil es tanto una entrada y salida, o que Internet puede servir como entrada y salida). A lo largo de la lección, el docente registra las entradas y salidas que se identifican en un cuadro que coloca al frente del aula. Para concluir la lección, los alumnos examinan las actividades comunes que realizan en un dispositivo informático y seleccionan del cuadro las entradas y salidas utilizadas para esa actividad.
+              description_teacher: En esta lección, los estudiantes consideran una cantidad de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Se asigna un dispositivo informático a cada grupo que, en base a una definición de entrada y salida proporcionada por el docente, enumera las entradas y salidas del dispositivo asignado. Al principio de la actividad, los estudiantes deben enfocarse en entradas y salidas físicas más obvias (por ejemplo, un teclado como entrada o una pantalla como salida), pero los debates posteriores llevan a los estudiantes a considerar ejemplos menos obvios (por ejemplo, que una pantalla táctil es tanto una entrada y salida, o que Internet puede servir como entrada y salida). A lo largo de la lección, el docente registra las entradas y salidas que se identifican en un cuadro que coloca al frente del aula. Para concluir la lección, los alumnos examinan las actividades comunes que realizan en un dispositivo informático y seleccionan del cuadro las entradas y salidas utilizadas para esa actividad.
             Processing:
               name: Procesamiento
               description_student: Esta lección profundiza en el concepto de procesamiento que se introdujo como parte de la definición de una computadora. Los estudiantes trabajarán en parejas para ordenar una baraja de naipes, lo cual es una forma de procesar información. Al final, la clase discutirá qué significa el procesamiento a la hora de resolver problemas con la información.
@@ -7660,15 +7660,15 @@ es-MX:
               description_teacher: Los estudiantes exploran la importancia del almacenamiento dentro del modelo de entrada, almacenamiento, procesamiento y salida de una computadora. A partir de la actividad de preparación, los estudiantes reflexionan sobre los tipos de información que han visto que almacenan las computadoras, como documentos, fotografías o videos. En la actividad principal sin conexión, los estudiantes desarrollan un algoritmo para procesar una pequeña pila de naipes en busca de naipes específicos dentro de la baraja. Debido a restricciones sobre cómo mover, los estudiantes deben considerar la importancia del almacenamiento, incluso mientras procesan la baraja. La lección concluye con un debate sobre los dos tipos de almacenamiento que los estudiantes vieron en esta lección y la importancia del almacenamiento al procesar la información.
             Apps and Problem Solving:
               name: Aplicaciones y resolución de problemas
-              description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto relevante y familiar para los estudiantes, el de las aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones y con un debate a cargo del docente sobre el impacto de las aplicaciones en la sociedad. '
-              description_teacher: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: aplicaciones. Los estudiantes se reúnen en parejas y evalúan varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como una discusión dirigida por el docente sobre el impacto de las aplicaciones en la sociedad. '
+              description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto relevante y familiar para los estudiantes: el de las aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones y con un debate a cargo del docente sobre el impacto de las aplicaciones en la sociedad. '
+              description_teacher: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: el de las aplicaciones. Los estudiantes se reúnen en parejas y evalúan varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como un debate dirigido por el docente sobre el impacto de las aplicaciones en la sociedad. '
             Project - Propose an App:
               name: Proyecto - Propuesta de aplicación
               description_student: Para concluir el estudio del proceso de resolución de problemas y el modelo de entrada/salida/almacenamiento/procesamiento de una computadora, la clase propone aplicaciones diseñadas para resolver problemas del mundo real. Este proyecto se completa en varios días y culmina en la presentación de un cartel que destaca las características de cada aplicación. El proyecto está diseñado para completarse en parejas, aunque se puede hacer individualmente.
               description_teacher: Para concluir el estudio del proceso de resolución de problemas y el modelo de entrada/salida/almacenamiento/procesamiento de una computadora, los estudiantes propondrán aplicaciones diseñadas para resolver un problema del mundo real. Este proyecto se completará en varios días y tendrá como resultado la creación por parte de los estudiantes de un cartel que destaca las características de sus aplicaciones y que será presentado a sus compañeros de clase. La guía del proyecto aporta instrucciones paso a paso para los estudiantes y los ayuda a organizar sus pensamientos. El proyecto está diseñado para completarse en parejas, aunque se puede hacer individualmente.
             Apps and Storage:
               name: Aplicaciones y almacenamiento
-              description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto relevante y familiar para los estudiantes, el de las aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones y con un debate a cargo del docente sobre el impacto de las aplicaciones en la sociedad. '
+              description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto relevante y familiar para los estudiantes: el de las aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones y con un debate a cargo del docente sobre el impacto de las aplicaciones en la sociedad. '
               description_teacher: 'Esta lección revisa los aspectos de entrada, salida, almacenamiento y procesamiento de una computadora en un contexto relevante y familiar para los estudiantes, el de las aplicaciones. Los estudiantes se reúnen en parejas y evalúan aplicaciones de smartphones para analizar cómo resuelven los problemas específicos para los que fueron diseñadas, las entradas que necesitan para trabajar y el procesamiento que transforma esas entradas en la salida deseada, y qué información quieren almacenar para después. La clase concluye con un debate que conecta la lección con aquellas aplicaciones más conocidas para los estudiantes. '
         csd4-2018:
           title: CSD Unidad 4 - El proceso de diseño ('18-'19)
@@ -7682,7 +7682,7 @@ es-MX:
             Understanding Your User:
               name: Entender a tu usuario
               description_student: Mediante los perfiles de usuario, la clase explora cómo reaccionan diferentes usuarios a una variedad de productos. Al desempeñar el rol de una persona diferente, cada miembro de la clase experimentará diseños a través de los ojos de otra persona.
-              description_teacher: "Los diseñadores deben comprender las necesidades de sus usuarios para crear productos útiles. A partir de un juego de rol en que los estudiantes adoptan el rol de otra persona y reaccionan según ese perfil de usuario a una serie de productos, esta lección los alienta a pensar en cómo diseñar para otra persona. A cada estudiante se le asigna un perfil de usuario que describe a una persona, que luego usan para elegir los productos adecuados, criticar el diseño del producto y sugerir mejoras.\\r\n"
+              description_teacher: "Los diseñadores deben comprender las necesidades de sus usuarios para crear productos útiles. A partir de un juego de rol en donde los estudiantes adoptan el rol de otra persona y reaccionan según ese perfil de usuario ante una serie de productos, esta lección los alienta a pensar en cómo diseñar para otra persona. A cada estudiante se le asigna un perfil de usuario que describe a una persona, que luego usan para elegir los productos adecuados, criticar el diseño del producto y sugerir mejoras.\\r\n"
             User-Centered Design Micro Activity:
               name: Microactividad de diseño centrada en el usuario
               description_student: La clase se reúne en grupos pequeños y utiliza el proceso de diseño para generar ideas de ropa inteligente. Esta etapa, que va desde aportar ideas hasta identificar usuarios y proponer un diseño final, es la primera de varias oportunidades en esta unidad para practicar el diseño de una solución orientado a las necesidades de otras personas.
@@ -7698,7 +7698,7 @@ es-MX:
             Identifying User Needs:
               name: Identificar las necesidades de los usuarios
               description_student: Hasta este punto, todos los usuarios considerados por la clase han sido remotos, y la única información de los usuarios provino del texto o del juego de roles. Ahora, la clase se convertirá en usuarios potenciales, y las parejas se entrevistarán entre sí para identificar las necesidades que podrían abordarse con el desarrollo de una aplicación.
-              description_teacher: 'Hasta este punto, los estudiantes se han centrado en el diseño para usuarios que, en cierta medida, no son cercanos. La conexión con un usuario final nunca ha sido directa sino a través de generación de ideas, perfiles o comentarios de texto. Esta distancia está pensada para ayudar a los estudiantes a no tener preconceptos cuando piensan en los usuarios. Pero, para obtener información directamente de un usuario real, los estudiantes deben confiar en sus compañeros de clase. En esta lección, los estudiantes se unen en parejas para convertirse en usuarios (y diseñadores), lo que les permite entrevistar en forma directa a su usuario final y hacer preguntas que permitan mejorar su diseño. Cada pareja de estudiantes se entrevista entre sí para identificar una necesidad específica que podría ser abordada por una aplicación. '
+              description_teacher: 'Hasta este punto, los estudiantes se han centrado en el diseño para usuarios que, en cierta medida, no son cercanos. La conexión con un usuario final nunca ha sido directa, sino a través de generación de ideas, perfiles o comentarios de texto. Esta distancia está pensada para ayudar a los estudiantes a no tener preconceptos cuando piensan en los usuarios. Pero para obtener información directamente de un usuario real, los estudiantes deben confiar en sus compañeros de clase. En esta lección, los estudiantes se unen en parejas para convertirse en usuarios (y diseñadores), lo que les permite entrevistar en forma directa a su usuario final y hacer preguntas que permitan mejorar su diseño. Cada pareja de estudiantes se entrevista entre sí para identificar una necesidad específica que podría ser abordada por una aplicación. '
             Project - Paper Prototype:
               name: Proyecto - Prototipo en papel
               description_student: Con la información de la entrevista de la lección anterior, la clase presenta ideas de aplicaciones para abordar las necesidades de sus usuarios. Para expresar esas ideas y probar su efectividad, cada estudiante crea y prueba prototipos propios en papel.
@@ -7753,7 +7753,7 @@ es-MX:
             Patterns and Representation:
               name: Patrones y representación
               description_student: Esta lección analiza más de cerca lo que se necesita para crear un sistema de representación. Los grupos crean sistemas que pueden representar cualquier letra en el alfabeto mediante una pila de tarjetas; luego, crean mensajes con sus sistemas y los intercambian con otros grupos para garantizar que el sistema funcione como estaba previsto. La clase habla sobre los puntos en común entre los sistemas y reconoce que hay muchas soluciones posibles.
-              description_teacher: En esta lección, los estudiantes crean su propio sistema para representar información. Para comenzar, aportan ideas de todos los sistemas diferentes que ya utilizan para representar las respuestas de sí-no. Luego, trabajan en grupos pequeños para crear un sistema que pueda representar cualquier letra del alfabeto mediante una pila de tarjetas. Las tarjetas utilizadas tienen uno de los 6 dibujos posibles (6 animales, 6 colores, etc.) y, por lo tanto, para representar el alfabeto completo, los estudiantes deberán usar patrones de varias tarjetas para representar cada letra. Los estudiantes crean mensajes con sus sistemas e intercambian información con otros grupos para garantizar que el sistema funciona según lo previsto. En el debate de cierre, la clase revisa las ventajas y desventajas de los diferentes sistemas. Hablan sobre los puntos en común entre los sistemas, reconocen que hay muchas soluciones posibles para este problema y lo importante es que todos usen el mismo sistema para comunicarse.
+              description_teacher: En esta lección, los estudiantes crean su propio sistema para representar información. Para comenzar, aportan ideas de todos los sistemas diferentes que ya utilizan para representar las respuestas de sí-no. Luego, trabajan en grupos pequeños para crear un sistema que pueda representar cualquier letra del alfabeto mediante una pila de tarjetas. Las tarjetas utilizadas tienen uno de los 6 dibujos posibles (6 animales, 6 colores, etc.) y, por lo tanto, para representar el alfabeto completo, los estudiantes deberán usar patrones de varias tarjetas para representar cada letra. Los estudiantes crean mensajes con sus sistemas e intercambian información con otros grupos para garantizar que el sistema funciona según lo previsto. En el debate de cierre, la clase revisa las ventajas y desventajas de los diferentes sistemas. Hablan sobre los puntos en común entre los sistemas, reconocen que hay muchas soluciones posibles para este problema, y lo importante es que todos usen el mismo sistema para comunicarse.
             ASCII and Binary Representation:
               name: ASCII y representación binaria
               description_student: 'Esta lección presenta un sistema binario formal para codificar información: el sistema ASCII para representar letras y otros caracteres. Al comienzo de la lección, el docente introduce el hecho de que las computadoras deben representar información mediante la función de "encendido" o "apagado". Luego, la clase aborda el sistema ASCII para representar texto mediante símbolos binarios y practica con este sistema antes de codificar sus propios mensajes ASCII.'
@@ -8952,7 +8952,7 @@ es-MX:
         csd1-2019:
           title: CSD Unidad 1 - La resolución de problemas y la computación ('19-'20)
           description: "La unidad sobre la resolución de problemas y la computación es una introducción muy interactiva y colaborativa al campo de las ciencias de la computación, enmarcada dentro de una búsqueda más amplia orientada a resolver problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de desafíos y escenarios del mundo real. A continuación, aprenderás cómo las computadoras toman, generan, almacenan y procesan información para ayudar a las personas a resolver problemas. La unidad concluye con un proyecto en el que diseñas una aplicación que ayuda a resolver un problema de tu elección.\\r\n"
-          description_short: "  Aprende cómo los humanos trabajan con computadoras para resolver problemas."
+          description_short: "Aprende cómo los humanos trabajan con computadoras para resolver problemas."
           stages:
             CS Discoveries Pre-survey:
               name: Encuesta previa de Descubrimientos de Ciencias de la Computación
@@ -8975,14 +8975,14 @@ es-MX:
             Input and Output:
               name: Entrada y salida
               description_student: En esta clase, los estudiantes consideran una serie de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Se asigna un dispositivo informático a cada grupo que, en base a una definición de entrada y salida proporcionada por el docente, enumera las entradas y salidas del dispositivo asignado. Para concluir la lección, la clase examina las actividades comunes que realizan en un dispositivo informático y selecciona del cuadro las entradas y salidas utilizadas para esa actividad.
-              description_teacher: En esta lección, los estudiantes consideran una cantidad de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Se asigna un dispositivo informático a cada grupo que, en base a una definición de entrada y salida proporcionada por el docente, enumera las entradas y salidas del dispositivo asignado. Al principio de la actividad, los estudiantes deben enfocarse en entradas y salidas físicas más obvias (por ejemplo, un teclado como entrada o una pantalla como salida) pero los debates posteriores llevan a los estudiantes a considerar ejemplos menos obvios (por ejemplo, que una pantalla táctil es tanto una entrada y salida, o que Internet puede servir como entrada y salida). A lo largo de la lección, el docente registra las entradas y salidas que se identifican en un cuadro que coloca al frente del aula. Para concluir la lección, los alumnos examinan las actividades comunes que realizan en un dispositivo informático y seleccionan del cuadro las entradas y salidas utilizadas para esa actividad.
+              description_teacher: En esta lección, los estudiantes consideran una cantidad de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Se asigna un dispositivo informático a cada grupo que, en base a una definición de entrada y salida proporcionada por el docente, enumera las entradas y salidas del dispositivo asignado. Al principio de la actividad, los estudiantes deben enfocarse en entradas y salidas físicas más obvias (por ejemplo, un teclado como entrada o una pantalla como salida), pero los debates posteriores llevan a los estudiantes a considerar ejemplos menos obvios (por ejemplo, que una pantalla táctil es tanto una entrada y salida, o que Internet puede servir como entrada y salida). A lo largo de la lección, el docente registra las entradas y salidas que se identifican en un cuadro que coloca al frente del aula. Para concluir la lección, los alumnos examinan las actividades comunes que realizan en un dispositivo informático y seleccionan del cuadro las entradas y salidas utilizadas para esa actividad.
             Processing:
               name: Procesamiento
               description_student: Esta lección profundiza en el concepto de procesamiento que se introdujo como parte de la definición de una computadora. Los estudiantes trabajarán en parejas para ordenar una baraja de naipes, lo cual es una forma de procesar información. Al final, la clase discutirá qué significa el procesamiento a la hora de resolver problemas con la información.
               description_teacher: Los estudiantes completan dos actividades sin conexión de clasificación de naipes para explorar el significado del procesamiento y su relación con la resolución de problemas. La primera actividad tiene cierta dificultad y se utiliza para introducir una definición de alto nivel del procesamiento. La siguiente presenta más dificultades, que obligan a los estudiantes a desarrollar un algoritmo que siempre procesará los naipes con éxito. Los estudiantes desarrollan, prueban y comparten una y otra vez sus algoritmos con los compañeros de clase. A partir de un debate de cierre, los estudiantes tienen que reflexionar sobre los diferentes tipos de resolución de problemas que utilizan en estas actividades y el valor de producir un algoritmo para resolver un problema.
             Apps and Storage:
               name: Aplicaciones y almacenamiento
-              description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto relevante y familiar para los estudiantes, el de las aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones y con un debate a cargo del docente sobre el impacto de las aplicaciones en la sociedad. '
+              description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto relevante y familiar para los estudiantes: el de las aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones y con un debate a cargo del docente sobre el impacto de las aplicaciones en la sociedad. '
               description_teacher: 'Esta lección revisa los aspectos de entrada, salida, almacenamiento y procesamiento de una computadora en un contexto relevante y familiar para los estudiantes, el de las aplicaciones. Los estudiantes se reúnen en parejas y evalúan aplicaciones de smartphones para analizar cómo resuelven los problemas específicos para los que fueron diseñadas, las entradas que necesitan para trabajar y el procesamiento que transforma esas entradas en la salida deseada, y qué información quieren almacenar para después. La clase concluye con un debate que conecta la lección con aquellas aplicaciones más conocidas para los estudiantes. '
             Project - Propose an App:
               name: Proyecto - Propuesta de aplicación
@@ -9254,8 +9254,8 @@ es-MX:
               name: nueva etapa
         csd2-2019:
           title: CSD Unidad 2 - Desarrollo web ('19-'20)
-          description: " En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet."
-          description_short: "  Aprende a crear tu propio sitio web en el Laboratorio web."
+          description: "En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet."
+          description_short: " Aprende a crear tu propio sitio web en el Laboratorio web."
           stages:
             Exploring Websites:
               name: Exploración de sitios web
@@ -9275,7 +9275,7 @@ es-MX:
               description_teacher: En esta lección, los estudiantes continúan utilizando el HTML para estructurar el texto en las páginas web, esta vez con encabezados. Los estudiantes aprenden cómo se muestran los diferentes elementos del encabezado de forma predeterminada y practican con ellos para crear títulos de páginas y secciones. Los estudiantes comienzan a decidir cómo organizarán su contenido en sus propias páginas web. En el último nivel, los estudiantes inician el proyecto en el que trabajarán a lo largo de la unidad.
             Digital Footprint:
               name: Huella digital
-              description_student: Esta lección da un paso atrás desde la creación del sitio web personal para hablar sobre la información personal que las personas eligen compartir de forma digital. La clase comienza con un debate sobre qué tipo de información se puede compartir con otras personas, y luego observa varios ejemplos de páginas de redes sociales para ver qué tipos de información personal se pueden compartir de manera intencional o no. Finalmente, la clase presenta un conjunto de pautas a seguir a la hora de publicar información en línea.
+              description_student: Esta lección da un paso atrás desde la creación del sitio web personal para hablar sobre la información personal que las personas eligen compartir de forma digital. La clase comienza con un debate sobre qué tipo de información se puede compartir con otras personas, y luego observa varios ejemplos de páginas de redes sociales para ver qué tipos de información personal se pueden compartir de manera intencional o no. Finalmente, la clase presenta un conjunto de pautas por seguir a la hora de publicar información en línea.
               description_teacher: "Una vez que los estudiantes han pensado en el contenido real que se incluirá en sus sitios web personales, esta lección toma distancia del proyecto de la unidad (publicación de un sitio web personal) para ayudarlos a expresar qué información personal desean compartir de forma digital y con quién. También refuerza la idea de que gran parte de la información que eligen compartir digitalmente queda fuera de su control desde el momento en que se publica.  \\r\n\\r\nPara comenzar, los estudiantes identifican individualmente las audiencias a las que les compartirían información personal específica sin problemas. Luego, observan varias páginas de redes sociales para determinar qué tipo de información comparten las personas sobre sí mismas o entre ellas. Por último, los estudiantes reflexionan sobre las pautas que consideran apropiadas para publicar información en línea.\\r\n\\r\nEl objetivo final de esta lección no es asustar a los estudiantes, sino más bien que puedan darse cuenta de la pérdida de control cuando publican información en la web."
             Lists:
               name: Listas
@@ -9283,7 +9283,7 @@ es-MX:
               description_teacher: Los estudiantes conocen las listas ordenadas y desordenadas en HTML, y trabajan en unos pocos niveles en los que usan las etiquetas &lt;ul&gt;, &lt;ol&gt; y &lt;li&gt;. Luego, regresan a su proyecto, donde agregan una nueva página HTML. Dentro de la nueva página, escriben el HTML para mostrar una receta, la lista de los diez principales o cualquier otro contenido que use las nuevas etiquetas que han aprendido.
             Intellectual Property and Images:
               name: Propiedad intelectual e imágenes
-              description_student: Esta lección explica cómo usar tipos de soporte, como imágenes, videos o música creados por otros, en un sitio web respetando los derechos del creador de esos soportes. Después de estudiar las licencias de Creative Commons por primera vez, la clase aprende cómo agregar imágenes a las páginas web y otorgar las atribuciones adecuadas al hacerlo.
+              description_student: Esta lección explica cómo usar en un sitio web tipos de soporte, como imágenes, videos o música creados por otros, respetando los derechos del creador de esos soportes. Después de estudiar las licencias de Creative Commons por primera vez, la clase aprende cómo agregar imágenes a las páginas web y otorgar las atribuciones adecuadas al hacerlo.
               description_teacher: "Luego de debatir sus opiniones personales sobre cómo otras personas deberían utilizar sus trabajos, la clase explora el propósito y el rol de los derechos de autor tanto para los creadores como para los usuarios del contenido creativo. Luego, pasan a una actividad que explora las diversas licencias de Creative Commons como una solución ante la dificultad de lidiar con los derechos de autor.\n\nFinalmente, luego de conocer las restricciones de varias licencias de Creative Commons, los estudiantes aprenden cómo agregar imágenes a sus páginas web mediante la etiqueta &lt;img&gt;."
             Clean Code and Debugging:
               name: Limpieza de código y depuración
@@ -9308,7 +9308,7 @@ es-MX:
             RGB Colors and Classes:
               name: Colores RGB y clases
               description_student: Esta lección cubre clases y colores personalizados. La clase primero aprende cómo especificar colores personalizados mediante valores RGB (rojo, verde, azul), y luego aplica estos colores a una nueva página web del Four Seasons, que usa clases de CSS. Mediante estas clases, los estudiantes agregan más estilos a la página web del Four Seasons, y luego los utilizan para dar estilo a sus sitios web personales.
-              description_teacher: En esta lección los estudiantes primero aprenden cómo especificar colores personalizados mediante valores RGB (rojo, verde, azul). Luego, aplican estos colores a una nueva página web del Four Seasons, que usa clases de CSS. A través de las clases CSS, los desarrolladores web pueden tratar grupos de elementos para que tengan estilos diferentes que otros elementos del mismo tipo. Mediante las clases, los estudiantes agregan más estilos a la página web del Four Seasons, y luego los utilizan para dar estilo a sus sitios web personales.
+              description_teacher: En esta lección, los estudiantes primero aprenden cómo especificar colores personalizados mediante valores RGB (rojo, verde, azul). Luego, aplican estos colores a una nueva página web del Four Seasons, que usa clases de CSS. A través de las clases CSS, los desarrolladores web pueden tratar grupos de elementos para que tengan estilos diferentes que otros elementos del mismo tipo. Mediante las clases, los estudiantes agregan más estilos a la página web del Four Seasons, y luego los utilizan para dar estilo a sus sitios web personales.
             Project - Personal Portfolio Website:
               name: Proyecto - Sitio web de portfolio personal
               description_student: En los últimos días de la unidad, la clase finaliza sus sitios web personales. Para ello, trabaja con sus compañeros para obtener comentarios, revisar la rúbrica y dar los toques finales al sitio. Para cerrar la unidad, todos comparten sus proyectos y la forma en que se desarrollaron.
@@ -9326,12 +9326,12 @@ es-MX:
               description_teacher: Se pide a los estudiantes que consideren los "problemas" del aburrimiento y la autoexpresión, y que reflexionen sobre cómo abordan esos problemas en sus propias vidas. A partir de allí, los estudiantes explorarán cómo las Ciencias de la Computación, en general, y la programación, en particular, desempeñan un papel específico como una forma de entretenimiento o como un vehículo para la autoexpresión.
             Plotting Shapes:
               name: Trazar formas
-              description_student: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
-              description_teacher: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
+              description_student: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
+              description_teacher: Los estudiantes exploran los desafíos a la hora de comunicar cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en el Laboratorio de juegos. La actividad de preparación demuestra rápidamente los desafíos de comunicar una posición sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta del Laboratorio de juegos que les permite colocar formas de manera interactiva en la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para enseñar a un compañero a dibujar una imagen oculta con esta herramienta, un desafío que está muy presente cuando los estudiantes programan en el Laboratorio de aplicaciones. Los estudiantes pueden crear su propia imagen antes de comenzar a hablar sobre la información.
             Drawing in Game Lab:
               name: Dibujar en el Laboratorio de juegos
               description_student: Se presenta el Laboratorio de juegos, el ambiente de programación de esta unidad, a la clase, que comienza a usarlo para colocar formas en la pantalla. Esta lección cubre los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, la clase crea una versión en línea de la imagen que diseñaron en la lección anterior.
-              description_teacher: Se presenta el Laboratorio de juegos, el ambiente de programación de esta unidad, a los estudiantes, que comienzan a usarlo para colocar formas en la pantalla. Aprenderán los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, los estudiantes podrán programar imágenes como las que crearon con la herramienta de dibujo de la lección anterior.
+              description_teacher: Se presenta a los estudiantes el Laboratorio de juegos, el ambiente de programación de esta unidad, quienes comienzan a usarlo para colocar formas en la pantalla. Aprenderán los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, los estudiantes podrán programar imágenes como las que crearon con la herramienta de dibujo de la lección anterior.
             Shapes and Randomization:
               name: Formas y aleatoriedad
             Variables:
@@ -9358,9 +9358,9 @@ es-MX:
               name: Valores booleanos sin conexión
               description_student: Esta lección presenta los valores y la lógica booleanos, así como sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Luego, la clase agrupa los objetos en base a sentencias booleanas cada vez más complejas y observa cómo los condicionales pueden afectar el flujo de un programa.
               description_teacher: |-
-                En esta lección se presentan los valores y la lógica booleanos, así como las sentencias condicionales, a los estudiantes. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
+                En esta lección, se presentan los valores y la lógica booleanos a los estudiantes, además de las sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
 
-                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
+                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares, pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
 
                 Finalmente, revelamos los condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa mediante la incorporación de sentencias booleanas.
             Conditionals:
@@ -9374,7 +9374,7 @@ es-MX:
             Other Forms of Input:
               name: Otras formas de entrada
               description_student: La clase continúa explorando formas de usar sentencias condicionales para recibir información del usuario. Además del sencillo comando keyDown() que aprendieron ayer, la clase aprende sobre otros comandos de entrada de teclado y formas de utilizar la entrada de ratón.
-              description_teacher: En esta lección los estudiantes continúan explorando formas de usar sentencias condicionales para recibir información del usuario. Además del sencillo comando `keyDown()` que aprendieron ayer, los estudiantes aprenden sobre otros comandos de entrada de teclado y formas de utilizar la entrada de ratón.
+              description_teacher: En esta lección, los estudiantes continúan explorando formas de usar sentencias condicionales para recibir información del usuario. Además del sencillo comando `keyDown()` que aprendieron ayer, los estudiantes aprenden sobre otros comandos de entrada de teclado y formas de utilizar la entrada de ratón.
             Project - Interactive Card:
               name: Proyecto - Tarjeta interactiva
               description_student: En este proyecto integrado para el Capítulo 1, la clase planifica y desarrolla una tarjeta de felicitación interactiva mediante las técnicas de programación que ha aprendido hasta el momento.
@@ -9393,8 +9393,8 @@ es-MX:
               description_teacher: Los estudiantes aprenden a combinar las propiedades de velocidad de los sprites con el patrón de contador para crear un movimiento de sprite más complejo. En particular, los estudiantes aprenderán a simular la gravedad, hacer que un sprite salte y permitir que un sprite flote hacia la izquierda o hacia la derecha. En los niveles finales del avance de Code Studio, los estudiantes combinan estos movimientos para animar y controlar un solo sprite, y crear un juego simple en el que un personaje vuela y recoge monedas. Se anima a los estudiantes a agregar otros componentes al juego en el nivel final.
             Collisions:
               name: Colisiones
-              description_student: La clase programa sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque isTouching, la clase intercambia ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan isTouching para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (colisionar, desplazar, rebotar y bounceOff).
-              description_teacher: Los estudiantes programan sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque `isTouching`, los estudiantes intercambian ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan `isTouching` para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (`colisionar`, `desplazar`, `rebotar` y `bounceOff`).
+              description_student: La clase programa sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque isTouching, la clase intercambia ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan isTouching para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
+              description_teacher: Los estudiantes programan sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque `estáTocando`, los estudiantes intercambian ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan `estáTocando` para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (`colisionar`, `desplazar`, `rebotar` y `rebotarEn`).
             Functions:
               name: Funciones
               description_student: Esta lección trata las funciones como una forma de organizar su código, hacerlo más legible y eliminar bloques de código repetidos. La clase aprende que los pasos de nivel superior o más abstractos permiten entender y razonar sobre los pasos más fácilmente, y luego comienza a crear funciones en el Laboratorio de juegos. Al final de la lección, la clase utiliza estas habilidades para organizar y agregar funcionalidad a la versión final de su juego de desplazamiento lateral.
@@ -9410,7 +9410,7 @@ es-MX:
             Project - Design a Game:
               name: Proyecto - Diseñar un juego
               description_student: La clase planifica y desarrolla juegos originales mediante la guía de proyectos de las dos lecciones anteriores. Ya sea individualmente o en parejas, la clase planifica, desarrolla y da su opinión sobre los juegos. Después de incorporar los comentarios de los compañeros, la clase comparte los juegos finalizados.
-              description_teacher: Los estudiantes planificarán y desarrollarán sus propios juegos con la guía de proyectos de las dos lecciones anteriores para orientar su proyecto. Ya sea individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que quieren crear, inspirándose en un conjunto de juegos de muestra. Luego, completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y analizarán las variables, los sprites y las funciones que necesitarán crear. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A lo largo del proceso, los estudiantes compartirán sus proyectos para que los revisen sus compañeros e incorporarán los comentarios cuando finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completos con sus compañeros de clase. Este proyecto puede abarcar de 3 a 5 períodos de clase.
+              description_teacher: Los estudiantes planificarán y desarrollarán sus propios juegos con la guía de proyectos de las dos lecciones anteriores para orientar su proyecto. Ya sea individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que quieren crear, y se inspiran en un conjunto de juegos de muestra. Luego, completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y analizarán las variables, los sprites y las funciones que necesitarán crear. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A lo largo del proceso, los estudiantes compartirán sus proyectos para que los revisen sus compañeros e incorporarán los comentarios cuando finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completos con sus compañeros de clase. Este proyecto puede abarcar de 3 a 5 períodos de clase.
             CS Discoveries End of Semester Survey:
               name: Encuesta de fin de semestre de Descubrimientos de Ciencias de la Computación
             Post-Project Test:
@@ -9427,7 +9427,7 @@ es-MX:
             Understanding Your User:
               name: Entender a tu usuario
               description_student: Mediante los perfiles de usuario, la clase explora cómo reaccionan diferentes usuarios a una variedad de productos. Al desempeñar el rol de una persona diferente, cada miembro de la clase experimentará diseños a través de los ojos de otra persona.
-              description_teacher: "Los diseñadores deben comprender las necesidades de sus usuarios para crear productos útiles. A partir de un juego de rol en que los estudiantes adoptan el rol de otra persona y reaccionan según ese perfil de usuario a una serie de productos, esta lección los alienta a pensar en cómo diseñar para otra persona. A cada estudiante se le asigna un perfil de usuario que describe a una persona, que luego usan para elegir los productos adecuados, criticar el diseño del producto y sugerir mejoras.\\r\n"
+              description_teacher: "Los diseñadores deben comprender las necesidades de sus usuarios para crear productos útiles. A partir de un juego de rol en donde los estudiantes adoptan el rol de otra persona y reaccionan según ese perfil de usuario ante una serie de productos, esta lección los alienta a pensar en cómo diseñar para otra persona. A cada estudiante se le asigna un perfil de usuario que describe a una persona, que luego usan para elegir los productos adecuados, criticar el diseño del producto y sugerir mejoras.\\r\n"
             User-Centered Design Micro Activity:
               name: Microactividad de diseño centrada en el usuario
               description_student: La clase se reúne en grupos pequeños y utiliza el proceso de diseño para generar ideas de ropa inteligente. Esta etapa, que va desde aportar ideas hasta identificar usuarios y proponer un diseño final, es la primera de varias oportunidades en esta unidad para practicar el diseño de una solución orientado a las necesidades de otras personas.
@@ -9443,7 +9443,7 @@ es-MX:
             Identifying User Needs:
               name: Identificar las necesidades de los usuarios
               description_student: Hasta este punto, todos los usuarios considerados por la clase han sido remotos, y la única información de los usuarios provino del texto o del juego de roles. Ahora, la clase se convertirá en usuarios potenciales, y las parejas se entrevistarán entre sí para identificar las necesidades que podrían abordarse con el desarrollo de una aplicación.
-              description_teacher: 'Hasta este punto, los estudiantes se han centrado en el diseño para usuarios que, en cierta medida, no son cercanos. La conexión con un usuario final nunca ha sido directa sino a través de generación de ideas, perfiles o comentarios de texto. Esta distancia está pensada para ayudar a los estudiantes a no tener preconceptos cuando piensan en los usuarios. Pero, para obtener información directamente de un usuario real, los estudiantes deben confiar en sus compañeros de clase. En esta lección, los estudiantes se unen en parejas para convertirse en usuarios (y diseñadores), lo que les permite entrevistar en forma directa a su usuario final y hacer preguntas que permitan mejorar su diseño. Cada pareja de estudiantes se entrevista entre sí para identificar una necesidad específica que podría ser abordada por una aplicación. '
+              description_teacher: 'Hasta este punto, los estudiantes se han centrado en el diseño para usuarios que, en cierta medida, no son cercanos. La conexión con un usuario final nunca ha sido directa, sino a través de generación de ideas, perfiles o comentarios de texto. Esta distancia está pensada para ayudar a los estudiantes a no tener preconceptos cuando piensan en los usuarios. Pero para obtener información directamente de un usuario real, los estudiantes deben confiar en sus compañeros de clase. En esta lección, los estudiantes se unen en parejas para convertirse en usuarios (y diseñadores), lo que les permite entrevistar en forma directa a su usuario final y hacer preguntas que permitan mejorar su diseño. Cada pareja de estudiantes se entrevista entre sí para identificar una necesidad específica que podría ser abordada por una aplicación. '
             Project - Paper Prototype:
               name: Proyecto - Prototipo en papel
               description_student: Con la información de la entrevista de la lección anterior, la clase presenta ideas de aplicaciones para abordar las necesidades de sus usuarios. Para expresar esas ideas y probar su efectividad, cada estudiante crea y prueba prototipos propios en papel.
@@ -9496,7 +9496,7 @@ es-MX:
             Patterns and Representation:
               name: Patrones y representación
               description_student: Esta lección analiza más de cerca lo que se necesita para crear un sistema de representación. Los grupos crean sistemas que pueden representar cualquier letra en el alfabeto mediante una pila de tarjetas; luego, crean mensajes con sus sistemas y los intercambian con otros grupos para garantizar que el sistema funcione como estaba previsto. La clase habla sobre los puntos en común entre los sistemas y reconoce que hay muchas soluciones posibles.
-              description_teacher: En esta lección, los estudiantes crean su propio sistema para representar información. Para comenzar, aportan ideas de todos los sistemas diferentes que ya utilizan para representar las respuestas de sí-no. Luego, trabajan en grupos pequeños para crear un sistema que pueda representar cualquier letra del alfabeto mediante una pila de tarjetas. Las tarjetas utilizadas tienen uno de los 6 dibujos posibles (6 animales, 6 colores, etc.) y, por lo tanto, para representar el alfabeto completo, los estudiantes deberán usar patrones de varias tarjetas para representar cada letra. Los estudiantes crean mensajes con sus sistemas e intercambian información con otros grupos para garantizar que el sistema funciona según lo previsto. En el debate de cierre, la clase revisa las ventajas y desventajas de los diferentes sistemas. Hablan sobre los puntos en común entre los sistemas, reconocen que hay muchas soluciones posibles para este problema y lo importante es que todos usen el mismo sistema para comunicarse.
+              description_teacher: En esta lección, los estudiantes crean su propio sistema para representar información. Para comenzar, aportan ideas de todos los sistemas diferentes que ya utilizan para representar las respuestas de sí-no. Luego, trabajan en grupos pequeños para crear un sistema que pueda representar cualquier letra del alfabeto mediante una pila de tarjetas. Las tarjetas utilizadas tienen uno de los 6 dibujos posibles (6 animales, 6 colores, etc.) y, por lo tanto, para representar el alfabeto completo, los estudiantes deberán usar patrones de varias tarjetas para representar cada letra. Los estudiantes crean mensajes con sus sistemas e intercambian información con otros grupos para garantizar que el sistema funciona según lo previsto. En el debate de cierre, la clase revisa las ventajas y desventajas de los diferentes sistemas. Hablan sobre los puntos en común entre los sistemas, reconocen que hay muchas soluciones posibles para este problema, y lo importante es que todos usen el mismo sistema para comunicarse.
             ASCII and Binary Representation:
               name: ASCII y representación binaria
               description_student: 'Esta lección presenta un sistema binario formal para codificar información: el sistema ASCII para representar letras y otros caracteres. Al comienzo de la lección, el docente introduce el hecho de que las computadoras deben representar información mediante la función de "encendido" o "apagado". Luego, la clase aborda el sistema ASCII para representar texto mediante símbolos binarios y practica con este sistema antes de codificar sus propios mensajes ASCII.'
@@ -9643,7 +9643,7 @@ es-MX:
           title: 'Unidad 4: Variables, condicionales, funciones'
         csp1-2019:
           title: CSP Unidad 1 - Internet ('19-'20)
-          description: Esta unidad explora los desafíos técnicos y las preguntas que surgen de la necesidad de representar información digital en computadoras, y transferirla entre personas y dispositivos informáticos. Luego, la unidad explora la estructura y el diseño de Internet y las implicaciones de esas decisiones relacionadas con el diseño.
+          description: Esta unidad explora los desafíos técnicos y las preguntas que surgen de la necesidad de representar información digital en computadoras, y transferirla entre personas y dispositivos informáticos. Luego, la unidad explora la estructura y el diseño de Internet, y las implicaciones de esas decisiones relacionadas con el diseño.
           description_short: Explora los desafíos de representar información como bits y cómo llevar esos bits de un lugar a otro.
           stages:
             CS Principles Pre-survey:
@@ -9677,7 +9677,7 @@ es-MX:
             HTTP and Abstraction:
               name: HTTP y abstracción
             Practice PT - The Internet and Society:
-              name: PT de práctica - Internet y la sociedad
+              name: 'PT de práctica: Internet y la sociedad'
             Unit 1 Chapter 2 Assessment:
               name: Evaluación del Capítulo 2 de la Unidad 1
         csp2-2019:
@@ -9699,6 +9699,8 @@ es-MX:
               name: Investigación rápida - Confrontación de formatos
             Unit 2 Assessment:
               name: Evaluación de la Unidad 2
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp3-2019:
           title: CSP Unidad 3 - Introducción a la programación ('19-'20)
           description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
@@ -9728,6 +9730,8 @@ es-MX:
               name: Evaluación del Capítulo 1 de la Unidad 3
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp4-2019:
           title: CSP Unidad 4 - Grandes datos y privacidad ('19-'20)
           description: El mundo en el que vivimos, repleto de datos, introduce muchas preguntas complejas relacionadas con la política pública, la ley, la ética y el impacto social. Los objetivos de esta unidad son desarrollar una visión integral y equilibrada sobre los datos en el mundo, que incluya sus efectos positivos y negativos, y entender los fundamentos de cómo y por qué funciona el cifrado moderno.
@@ -10318,6 +10322,26 @@ es-MX:
               name: Funciones con parámetros y exploración de retorno
             Libraries:
               name: Bibliotecas
+            Parameters and Return Values Explore:
+              name: Exploración de parámetros y valores de retorno
+            Parameters and Return Values Investigate:
+              name: Investigación de parámetros y valores de retorno
+            Parameters and Return Values Practice:
+              name: Práctica de parámetros y valores de retorno
+            Libraries Explore:
+              name: Explorar bibliotecas
+            Libraries Investigate:
+              name: Investigar bibliotecas
+            Libraries Mini PT:
+              name: Mini PT de bibliotecas
+            Student Survey (Lists):
+              name: Encuesta de estudiantes (listas)
+            Teacher Survey (Lists):
+              name: Encuestas de docentes (listas)
+            Student Survey (Libraries):
+              name: Encuesta de estudiantes (bibliotecas)
+            Teacher Survey (Libraries):
+              name: Encuesta de docentes (bibliotecas)
           title: 'Unidad 7: Funciones y bibliotecas'
         csp8-pilot-staging:
           stages:
@@ -10473,7 +10497,7 @@ es-MX:
           title: Encuesta de fin de curso de CSP para estudiantes ('18-'19)
           description_audience: Estudiantes de CSP
           description_short: Encuesta de fin de curso para estudiantes de CSP
-          description: Bienvenido a la encuesta de fin de curso de Principios de Ciencias de la Computación de Code.org. Para completar esta encuesta, demorarás unos 15 minutos. Tus respuestas son privadas y anónimas, es decir que tu docente podrá ver los resultados anónimos acumulados para toda la clase. Los resultados son fundamentales para tu docente y para que Code.org mantenga y mejore el curso. Gracias por tu tiempo y consideración.
+          description: Bienvenido a la encuesta de fin de curso de Principios de Ciencias de la Computación de Code.org. Para completar esta encuesta, demorarás unos 15 minutos. Tus respuestas son privadas y anónimas, es decir que tu docente podrá ver los resultados anónimos acumulados para toda la clase. Los resultados son fundamentales para tu docente, y para que Code.org mantenga y mejore el curso. Gracias por tu tiempo y consideración.
         csp5-pilot:
           stages:
             new stage:
@@ -10516,6 +10540,14 @@ es-MX:
               name: Encuesta de estudiantes (mini PT)
             Loops Investigate and Practice:
               name: Bucles de investigar y practicar
+            Parameters and Return Values Explore:
+              name: Exploración de parámetros y valores de retorno
+            Parameters and Return Values Investigate:
+              name: Investigación de parámetros y valores de retorno
+            Parameters and Return Values Practice:
+              name: Práctica de parámetros y valores de retorno
+            App Lab Experiments Dashboard:
+              name: Panel de experimentos del Laboratorio de aplicaciones
           title: 'Unidad 5: Listas, bucles y recorridos'
         fit2019-novice:
           stages:
@@ -10548,3 +10580,21 @@ es-MX:
             Problem Solving Process:
               name: Proceso de resolución de problemas
           title: Widgets de prueba que guardan el estado
+        fit2019-apprentice:
+          stages:
+            Apprentice Reflection Overview:
+              name: Resumen de las reflexiones de los aprendices
+            Day 1:
+              name: Día 1
+            Day 2:
+              name: Día 2
+            Day 3:
+              name: Día 3
+            Day 4:
+              name: Día 4
+            Wrap Up:
+              name: Actividad de cierre
+          title: Reflexiones de aprendices para el taller de verano 2019
+          description_audience: Facilitadores aprendices de 6-12 en período de formación
+          description_short: 'Materiales de reflexión para facilitadores aprendices de 2019 en período de formación '
+          description: Este es el conjunto de reflexiones para facilitadores aprendices de Code.org en período de formación durante el taller de verano de 5 días. Aquí encontrarás indicaciones de reflexión para cada día de tu taller presencial de verano de 5 días. Estas preguntas serán la base del trabajo que hacemos en el Taller de Formación para Facilitadores
