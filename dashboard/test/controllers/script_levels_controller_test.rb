@@ -1536,6 +1536,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal script_level_by_id.level.id, assigns(:view_options)[:server_level_id]
   end
 
+  test "a bad bonus level name shows extras page" do
+    script_level_by_id = create :script_level
+    script_level_by_name = create :script_level, script: script_level_by_id.script
+    script_level_by_id.bonus = true
+    script_level_by_name.bonus = true
+    script_level_by_id.save!
+    script_level_by_name.save!
+    get :stage_extras, params: {
+      script_id: script_level_by_id.script,
+      stage_position: 1,
+      id: script_level_by_id.id,
+      level_name: script_level_by_name.level.name + "!!!"
+    }
+    assert_response :success
+  end
+
   test_user_gets_response_for :show, response: :redirect, user: nil,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'signed out user cannot view pilot script level'

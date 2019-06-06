@@ -201,7 +201,7 @@ class ScriptLevelsController < ApplicationController
       @level = @script_level.level
     elsif params[:level_name]
       @level = Level.find_by_name params[:level_name]
-      @script_level = @level.script_levels.find_by_script_id(@script.id)
+      @script_level = @level.script_levels.find_by_script_id(@script.id) if @level
     end
 
     if @level
