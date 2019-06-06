@@ -107,74 +107,101 @@ export function addEvent(type, args, callback) {
   inputEvents.push({type: type, args: args, callback: callback});
 }
 
-function checkEvent(inputEvent, p5Inst) {
+function whenPressEvent(inputEvent, p5Inst) {
+  return {
+    shouldEventFire: p5Inst.keyWentDown(inputEvent.args.key),
+    extraArgs: {}
+  };
+}
+
+function whilePressEvent(inputEvent, p5Inst) {
+  return {shouldEventFire: p5Inst.keyDown(inputEvent.args.key), extraArgs: {}};
+}
+
+function whenTouchEvent(inputEvent) {
   let shouldEventFire = false;
   let extraArgs = {};
+  let sprites = getSpriteArray(inputEvent.args.sprite1);
+  let targets = getSpriteArray(inputEvent.args.sprite2);
+  let overlap = false;
+  sprites.forEach(sprite => {
+    targets.forEach(target => {
+      if (sprite.overlap(target)) {
+        extraArgs.sprite = sprite.id;
+        extraArgs.target = sprite.id;
+        overlap = true;
+      }
+    });
+  });
+  if (overlap && !inputEvent.firedOnceForCollision) {
+    shouldEventFire = true;
+    inputEvent.firedOnceForCollision = true;
+  }
+  if (!overlap) {
+    inputEvent.firedOnceForCollision = false;
+  }
+  return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
+}
+
+function whileTouchEvent(inputEvent) {
+  let shouldEventFire = false;
+  let extraArgs = {};
+  let sprites = getSpriteArray(inputEvent.args.sprite1);
+  let targets = getSpriteArray(inputEvent.args.sprite2);
+  sprites.forEach(sprite => {
+    targets.forEach(target => {
+      if (sprite.overlap(target)) {
+        extraArgs.sprite = sprite.id;
+        extraArgs.target = target.id;
+        shouldEventFire = true;
+      }
+    });
+  });
+  return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
+}
+
+function whenClickEvent(inputEvent, p5Inst) {
+  let shouldEventFire = false;
+  let extraArgs = {};
+  if (p5Inst.mouseWentDown('leftButton')) {
+    let sprites = getSpriteArray(inputEvent.args.sprite);
+    sprites.forEach(sprite => {
+      if (p5Inst.mouseIsOver(sprite)) {
+        extraArgs.sprite = sprite.id;
+        shouldEventFire = true;
+      }
+    });
+  }
+  return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
+}
+
+function whileClickEvent(inputEvent, p5Inst) {
+  let shouldEventFire = false;
+  let extraArgs = {};
+  let sprites = getSpriteArray(inputEvent.args.sprite);
+  sprites.forEach(sprite => {
+    if (p5Inst.mousePressedOver(sprite)) {
+      extraArgs.sprite = sprite.id;
+      shouldEventFire = true;
+    }
+  });
+  return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
+}
+
+function checkEvent(inputEvent, p5Inst) {
   switch (inputEvent.type) {
     case 'whenpress':
-      shouldEventFire = p5Inst.keyWentDown(inputEvent.args.key);
-      return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
+      return whenPressEvent(inputEvent, p5Inst);
     case 'whilepress':
-      shouldEventFire = p5Inst.keyDown(inputEvent.args.key);
-      return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
-    case 'whentouch': {
-      let sprites = getSpriteArray(inputEvent.args.sprite1);
-      let targets = getSpriteArray(inputEvent.args.sprite2);
-      let overlap = false;
-      sprites.forEach(sprite => {
-        targets.forEach(target => {
-          if (sprite.overlap(target)) {
-            extraArgs.sprite = sprite.id;
-            extraArgs.target = target.id;
-            overlap = true;
-          }
-        });
-      });
-      if (overlap && !inputEvent.firedOnceForCollision) {
-        shouldEventFire = true;
-        inputEvent.firedOnceForCollision = true;
-      }
-      if (!overlap) {
-        inputEvent.firedOnceForCollision = false;
-      }
-      return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
-    }
-    case 'whiletouch': {
-      let sprites = getSpriteArray(inputEvent.args.sprite1);
-      let targets = getSpriteArray(inputEvent.args.sprite2);
-      sprites.forEach(sprite => {
-        targets.forEach(target => {
-          if (sprite.overlap(target)) {
-            extraArgs.sprite = sprite.id;
-            extraArgs.target = target.id;
-            shouldEventFire = true;
-          }
-        });
-      });
-      return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
-    }
-    case 'whenclick': {
-      if (p5Inst.mouseWentDown('leftButton')) {
-        let sprites = getSpriteArray(inputEvent.args.sprite);
-        sprites.forEach(sprite => {
-          if (p5Inst.mouseIsOver(sprite)) {
-            extraArgs.sprite = sprite.id;
-            shouldEventFire = true;
-          }
-        });
-      }
-      return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
-    }
-    case 'whileclick': {
-      let sprites = getSpriteArray(inputEvent.args.sprite);
-      sprites.forEach(sprite => {
-        if (p5Inst.mousePressedOver(sprite)) {
-          extraArgs.sprite = sprite.id;
-          shouldEventFire = true;
-        }
-      });
-      return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
-    }
+      return whilePressEvent(inputEvent, p5Inst);
+    case 'whentouch':
+      return whenTouchEvent(inputEvent);
+    case 'whiletouch':
+      return whileTouchEvent(inputEvent);
+    case 'whenclick':
+      return whenClickEvent(inputEvent, p5Inst);
+    case 'whileclick':
+      return whileClickEvent(inputEvent, p5Inst);
   }
 }
 
