@@ -7,7 +7,6 @@ require 'honeybadger/ruby'
 
 module Api::V1::Pd
   class WorkshopSurveyReportController < ReportControllerBase
-    include WorkshopScoreSummarizer
     include ::Pd::WorkshopSurveyReportCsvConverter
     include Pd::WorkshopSurveyResultsHelper
 
