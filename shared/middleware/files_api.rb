@@ -164,7 +164,7 @@ class FilesApi < Sinatra::Base
   get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id, filename|
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
-    get_file('files', encrypted_channel_id, filename, true)
+    get_file('files', encrypted_channel_id, CGI.unescape(filename), true)
   end
 
   #
@@ -554,7 +554,7 @@ class FilesApi < Sinatra::Base
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    SourceBucket.new.restore_previous_version(encrypted_channel_id, filename, request.GET['version'], current_user_id).to_json
+    SourceBucket.new.restore_previous_version(encrypted_channel_id, CGI.unescape(filename), request.GET['version'], current_user_id).to_json
   end
 
   #
