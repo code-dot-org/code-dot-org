@@ -33,6 +33,8 @@ module SchoolInfoInterstitialHelper
     return false if user.user_school_infos.empty?
 
     school_info = user.last_complete_school_info
+    return false unless school_info
+
     user_school_info = UserSchoolInfo.find_by(user: user, school_info: school_info)
 
     check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) &&
