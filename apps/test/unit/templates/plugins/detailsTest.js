@@ -63,6 +63,19 @@ describe('details plugin', () => {
     assert.equal(rendered, expected);
   });
 
+  it('ignores trailing colons', () => {
+    // Look how pretty this can be!
+    const markdown =
+      '::::::::::::: details [summary-content] :::::::::::::\n' +
+      'contents, which are sometimes further block elements\n' +
+      ':::::::::::::::::::::::::::::::::::::::::::::::::::::';
+    const expected =
+      '<details><summary>summary-content</summary><p>contents, which are sometimes further block elements</p></details>\n';
+
+    const rendered = parser.sourceToHtml(markdown);
+    assert.equal(rendered, expected);
+  });
+
   it('ignores excess whitespace', () => {
     const markdown =
       ':::      details       [summary-content]          \n' +
