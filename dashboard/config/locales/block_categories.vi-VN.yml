@@ -1,51 +1,2376 @@
 ---
-vi:
+vi-VN:
   data:
     block_categories:
-      Actions: hành động
-      Loops: Vòng lặp
-      Functions: Các hàm
-      Color: Màu sắc
-      Brushes: Bàn chải
-      Math: thuật toán
-      Logic: Logic
-      Variables: Các biến
-      Number: Số
-      String: Chuỗi
-      Image: Hình ảnh
-      Boolean: Luận lí
-      Conditionals: Điều kiện
-      Events: Các sự kiện
-      Games/Score: Trò chơi/Điểm
-      Comments: Bình luận
-      Category: Chuyên mục
-      Prebuilt: Dựng sẵn
-      Text: văn bản
-      Picker: Chọn
-      Comment: Bình luận
-      World: Thế giới
-      Behaviors: Hành vi
-      'Variables ': 'Các biến '
-      Default: Mặc định
-      everythingelse: thứ khác
-      Location: Địa điểm
-      numbers: các con số
-      Numbers: Các con số
-      Dancers: Vũ công
-      Groups: Nhóm
-      Advanced: Nâng cao
-      Start: Bắt đầu
-      Sprite: Ma
-      Brush: Chải
-      Make Sprite: Tạo ma
-      Movement: Phong trào
-      Booleans: Các toán tử
-      Functional: Chức năng
-      Predefined: Xác định trước
-      test: kiểm thử
-      test2: bàikiểmtra2
-      Name: Tên
-      NEW BLOCKS: NHỮNG KHỐI MỚI
-      'Functions ': 'Chức năng '
-      Game/Score: Trò chơi/Điểm
-      Function: Hàm
+      4-5 Artist Patterns Free Play:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+      Alien Defender:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Games/Score: Trò chơi/Điểm
+        Comments: Bình luận
+      Choose Your Own Adventure:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Games/Score: Trò chơi/Điểm
+        Comments: Bình luận
+      Course 4 Artist For Loops 11:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      Course 4 Artist For Loops 11a:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      Course 4 Artist For Loops 14:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      Course 4 Artist For Loops 15:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Variables ': 'Các biến '
+      Course 4 Artist For Loops 4:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      Course 4 Artist For Loops 6a:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      Course 4 Artist For Loops 8:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      Course 4 Artist For Loops Challenge:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      Course 4 Artist For Loops inspire:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      Course 4 Artist Functions Inspiration:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Functions: Các hàm
+      Course 4 Artist Functions challenge:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Functions: Các hàm
+      Course 4 Bee Params 1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Functions: Các hàm
+      Course 4 Bee Params 2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Functions: Các hàm
+      Course 4 Bee Params 3:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Functions: Các hàm
+        'Variables ': 'Các biến '
+      Course 4 Bee Params 4:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Functions: Các hàm
+        'Variables ': 'Các biến '
+        Math: thuật toán
+      Course 4 Bee Params 5:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+      Course 4 Bee Params 6:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+      Course 4 Bee Params 7:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        Functions: Các hàm
+        'Variables ': 'Các biến '
+      Course 4 Bee Params 8:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        Functions: Các hàm
+        'Variables ': 'Các biến '
+      Course 4 EC 1a:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        Functions: Các hàm
+      Course 4 EC 1b:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        Functions: Các hàm
+      Course 4 EC 2a:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        Functions: Các hàm
+        Variables: Các biến
+      Course 4 EC 2b:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        Variables: Các biến
+        Functions: Các hàm
+      Course 4 EC 2c:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        Variables: Các biến
+        Functions: Các hàm
+      Course 4 Play Lab Params 10:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        Functions: Các hàm
+        Variables: Các biến
+      Course 4 Play Lab Params 7:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+      Course 4 Play Lab Params 8:
+        Events: Các sự kiện
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+      Course 4 Play Lab Params 9:
+        Actions: hành động
+        Math: thuật toán
+        Functions: Các hàm
+        Variables: Các biến
+      Course 4 Play Lab Vars 9:
+        Events: Các sự kiện
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Variables: Các biến
+      Course 4 SCF 1:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+        Functions: Các hàm
+      Course 4 SCF 1a:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        Functions: Các hàm
+        'Variables ': 'Các biến '
+      Course 4 SCF 1b:
+        Actions: hành động
+        Loops: Vòng lặp
+        Logic: Logic
+        Math: thuật toán
+        Functions: Các hàm
+      Course 4 SCF 2:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+        Functions: Các hàm
+      Course 4 SCF 3:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+        Functions: Các hàm
+      Course 4 SCFL 1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+      Course 4 SCFL 1a:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+      Course 4 SCFL 1b:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+      Course 4 SCFL 2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+      Course 4 SCFL 3:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      Course 4 SCFL 4:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      Course 4 SCFL 6:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      Course 4 SCFL 7:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      Course 4 SCV 6:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      'Course E: Play Lab Project':
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Games/Score: Trò chơi/Điểm
+        Comments: Bình luận
+      'Course F: Artist Project':
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+      'Course F: Artist Project - Revise':
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+      'Course F: Artist Project - Revise_2018':
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+      'Course F: Artist Project_2018':
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+      'Course F: Artist Project_2019':
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+      CourseD_Dance_Party_11_5:
+        World: Thế giới
+        Dancers: Vũ công
+        Groups: Nhóm
+        Events: Các sự kiện
+      CourseD_Dance_Party_12:
+        World: Thế giới
+        Dancers: Vũ công
+        Groups: Nhóm
+        Events: Các sự kiện
+        Numbers: Các con số
+        Logic: Logic
+      CourseE_Project_SpriteLab:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+        Logic: Logic
+        Text: văn bản
+        Advanced: Nâng cao
+        Comments: Bình luận
+      CourseE_Project_SpriteLab_2019:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+      CourseE_hoops:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+        Functions: Các hàm
+      CourseF_Project_Revise_SpriteLab:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+        Functions: Các hàm
+      CourseF_Project_SpriteLab:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+        Functions: Các hàm
+      CourseF_Project_SpriteLab_2019:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Text: văn bản
+        Comments: Bình luận
+      Dance Party 2:
+        Behaviors: Hành vi
+        Events: Các sự kiện
+        Comments: Bình luận
+      Dance Party 6:
+        Behaviors: Hành vi
+        Events: Các sự kiện
+        Comments: Bình luận
+      Dance Party Freeplay:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+        Comments: Bình luận
+      Dance_Party_11_5:
+        World: Thế giới
+        Dancers: Vũ công
+        Groups: Nhóm
+        Events: Các sự kiện
+      Dance_Party_12:
+        World: Thế giới
+        Dancers: Vũ công
+        Groups: Nhóm
+        Events: Các sự kiện
+        Numbers: Các con số
+        Logic: Logic
+      Dance_Party_extras_battle:
+        World: Thế giới
+        Dancers: Vũ công
+        Groups: Nhóm
+        Events: Các sự kiện
+        Numbers: Các con số
+        Logic: Logic
+      Dance_Party_extras_every_beat:
+        World: Thế giới
+        Dancers: Vũ công
+        Groups: Nhóm
+        Events: Các sự kiện
+        Numbers: Các con số
+        Logic: Logic
+      Dance_Party_extras_layout:
+        World: Thế giới
+        Dancers: Vũ công
+        Groups: Nhóm
+        Events: Các sự kiện
+        Numbers: Các con số
+        Logic: Logic
+      Dance_Party_extras_on_beat:
+        World: Thế giới
+        Dancers: Vũ công
+        Groups: Nhóm
+        Events: Các sự kiện
+        Numbers: Các con số
+        Logic: Logic
+      Dance_Party_extras_speed:
+        World: Thế giới
+        Dancers: Vũ công
+        Groups: Nhóm
+        Events: Các sự kiện
+        Numbers: Các con số
+        Logic: Logic
+      Dance_Party_extras_visible:
+        World: Thế giới
+        Dancers: Vũ công
+        Groups: Nhóm
+        Events: Các sự kiện
+        Numbers: Các con số
+        Logic: Logic
+      Find the Wizard:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Games/Score: Trò chơi/Điểm
+        Comments: Bình luận
+      Fish Tank 5-validated:
+        World: Thế giới
+        Behaviors: Hành vi
+        Comments: Bình luận
+      Fish Tank 5-validated_2019:
+        World: Thế giới
+        Behaviors: Hành vi
+        Comments: Bình luận
+      Fish Tank 6-validated:
+        World: Thế giới
+        Behaviors: Hành vi
+        Comments: Bình luận
+      Fish Tank 6-validated_2019:
+        World: Thế giới
+        Behaviors: Hành vi
+        Comments: Bình luận
+      Fish Tank 7-validated:
+        World: Thế giới
+        Behaviors: Hành vi
+        Events: Các sự kiện
+        Comments: Bình luận
+      Fish Tank 7-validated_2019:
+        World: Thế giới
+        Actions: hành động
+        Behaviors: Hành vi
+        Events: Các sự kiện
+        Comments: Bình luận
+      FoodFight:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Games/Score: Trò chơi/Điểm
+        Comments: Bình luận
+      Geometric Sun:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Comments: Bình luận
+      Geometric Sun_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Comments: Bình luận
+      Guess The Number:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Games/Score: Trò chơi/Điểm
+        Comments: Bình luận
+      InspirationalArtwork:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Comments: Bình luận
+      InspirationalArtwork_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Comments: Bình luận
+      NEW Course 4 Artist Functions 14:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Functions: Các hàm
+      NEW Course 4 Artist Params 1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+        Variables: Các biến
+      NEW Course 4 Artist Params 10:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+      NEW Course 4 Artist Params 11:
+        Actions: hành động
+        Functions: Các hàm
+        Loops: Vòng lặp
+        Math: thuật toán
+      NEW Course 4 Artist Params 12:
+        Actions: hành động
+        Math: thuật toán
+        Functions: Các hàm
+      NEW Course 4 Artist Params 12a:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+      NEW Course 4 Artist Params 13:
+        Actions: hành động
+        Functions: Các hàm
+        Loops: Vòng lặp
+        Math: thuật toán
+      NEW Course 4 Artist Params 14:
+        Actions: hành động
+        Brushes: Bàn chải
+        Functions: Các hàm
+        Loops: Vòng lặp
+        Math: thuật toán
+      NEW Course 4 Artist Params 15:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+        Functions: Các hàm
+      NEW Course 4 Artist Params 2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+      NEW Course 4 Artist Params 3:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+      NEW Course 4 Artist Params 6:
+        Actions: hành động
+        Functions: Các hàm
+        Loops: Vòng lặp
+        Math: thuật toán
+      NEW Course 4 Artist Params 7:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Functions: Các hàm
+      NEW Course 4 Artist Params 8:
+        Actions: hành động
+        Math: thuật toán
+        Functions: Các hàm
+        Loops: Vòng lặp
+      NEW Course 4 Artist Params 9:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+      NEW Course 4 Artist Params inspire:
+        Actions: hành động
+        Brushes: Bàn chải
+        Functions: Các hàm
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      NEW Course 4 Play Lab Params 11:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Games/Score: Trò chơi/Điểm
+      Robot Doodle:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Comments: Bình luận
+      Robot Doodle_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Functions: Các hàm
+        Variables: Các biến
+        Comments: Bình luận
+      Virtual Pet 2:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+        Comments: Bình luận
+      Virtual Pet 3:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+      Virtual Pet 4:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+      Virtual Pet 5:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+      Virtual Pet 6:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+      Virtual Pet Freeplay:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+      behaviors 3a:
+        World: Thế giới
+        Behaviors: Hành vi
+        Actions: hành động
+      behaviors 5:
+        World: Thế giới
+        Behaviors: Hành vi
+        Actions: hành động
+      behaviors 6:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Math: thuật toán
+        Logic: Logic
+      behaviors 7:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Math: thuật toán
+        Logic: Logic
+      behaviors free play:
+        World: Thế giới
+        Behaviors: Hành vi
+        Actions: hành động
+        Events: Các sự kiện
+      course3_bee_functions_challenge1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      course3_bee_functions_challenge2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Functions: Các hàm
+      course3_bee_functions_challenge3:
+        Default: Mặc định
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      course3_bee_functions_challenge4:
+        Default: Mặc định
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      course3_playLab_challenge1:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      course4_artist_fwp_challenge1:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+        Functions: Các hàm
+      course4_bee_for_challenge1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Math: thuật toán
+      course4_bee_fwp_challenge1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      course4_bee_fwp_challenge2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      course4_playlab_variables_challenge1:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+        Variables: Các biến
+      courseD_artist_project1:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project1a:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project1a_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project1a_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project2:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project2_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project2_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project2a:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project2a_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project2a_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project3:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project3_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project3_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project3a:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project3a_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project3a_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project4:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project4_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project4_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project4a:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project4a_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project4a_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project5:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project5_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_artist_project5_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseD_playLab_condFP:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Games/Score: Trò chơi/Điểm
+      courseD_playLab_condFP_2018:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Games/Score: Trò chơi/Điểm
+        Comment: Bình luận
+      courseE_Dogger_2:
+        World: Thế giới
+        Actions: hành động
+        Events: Các sự kiện
+        Behaviors: Hành vi
+        Variables: Các biến
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Text: văn bản
+        Functions: Các hàm
+      courseE_artist_concept1_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_concept4:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Functions: Các hàm
+      courseE_artist_concept4_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions10:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+      courseE_artist_functions10_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions10_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions2_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Functions ': 'Chức năng '
+        Comments: Bình luận
+      courseE_artist_functions2_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Functions ': 'Chức năng '
+        Comments: Bình luận
+      courseE_artist_functions3_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseE_artist_functions3_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseE_artist_functions5_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Functions ': 'Chức năng '
+        Comments: Bình luận
+      courseE_artist_functions5_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Functions ': 'Chức năng '
+        Comments: Bình luận
+      courseE_artist_functions7_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Functions ': 'Chức năng '
+        Comments: Bình luận
+      courseE_artist_functions7_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Functions ': 'Chức năng '
+        Comments: Bình luận
+      courseE_artist_functions8:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+      courseE_artist_functions8_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions8_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions8a_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions8a_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions8b_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions8b_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions8c_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions8c_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions9:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+      courseE_artist_functions9_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions9_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functionsProj_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functionsProj_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_artist_functions_predict2:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+      courseE_artist_functions_predict2_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+      courseE_artist_functions_predict2_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Functions: Các hàm
+      courseE_bee_concept1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_bee_concept2_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_bee_concept3_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_bee_concept4_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_bee_concept5_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_bee_functions6:
+        Actions: hành động
+        Loops: Vòng lặp
+        Functions: Các hàm
+      courseE_bee_functions7:
+        Actions: hành động
+        Loops: Vòng lặp
+        Functions: Các hàm
+      courseE_bee_functions_challenge1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_bee_functions_challenge2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Functions: Các hàm
+      courseE_farmer_concept1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_concept2_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_concept3_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions10a1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions10a1_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions10b:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions11_predict:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions11_predict_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions11_predict_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions13_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions13_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions1_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions1a:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions1a_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions1a_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions2b:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions2b_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions2b_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions2ba:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions2ba_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions2ba_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions3c:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions3c1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions3c1_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions3c_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions3c_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions4b:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions5c:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions6c:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions7a1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions7a1_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions7b:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions8a1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions8a1_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions8b:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_farmer_functions9a1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions9a1_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Comments: Bình luận
+      courseE_farmer_functions9b:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_playLab_challenge1:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_playLab_scaffold5:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseE_playLab_scaffold6:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+      courseF_artist_for1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Color: Màu sắc
+      courseF_artist_for10:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Variables ': 'Các biến '
+      courseF_artist_for10_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Variables ': 'Các biến '
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_for10_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Variables ': 'Các biến '
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_for10_predict1:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Variables ': 'Các biến '
+      courseF_artist_for10_predict1_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Variables ': 'Các biến '
+      courseF_artist_for10_predict1_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        'Variables ': 'Các biến '
+      courseF_artist_for1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseF_artist_for1_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseF_artist_for2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Color: Màu sắc
+      courseF_artist_for2_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseF_artist_for2_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseF_artist_for3:
+        Actions: hành động
+        Loops: Vòng lặp
+        Color: Màu sắc
+      courseF_artist_for3_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseF_artist_for3_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseF_artist_for4:
+        Actions: hành động
+        Loops: Vòng lặp
+        Color: Màu sắc
+      courseF_artist_for4_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseF_artist_for4_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseF_artist_for5:
+        Actions: hành động
+        Loops: Vòng lặp
+        Color: Màu sắc
+      courseF_artist_for5_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseF_artist_for5_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Comments: Bình luận
+      courseF_artist_for6:
+        Actions: hành động
+        Loops: Vòng lặp
+        Color: Màu sắc
+      courseF_artist_for6_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Color: Màu sắc
+      courseF_artist_for6_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Color: Màu sắc
+      courseF_artist_for7:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      courseF_artist_for7_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      courseF_artist_for7_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      courseF_artist_for8:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      courseF_artist_for8_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      courseF_artist_for8_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      courseF_artist_for9:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+      courseF_artist_for9_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_for9_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Brushes: Bàn chải
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_for_challenge1:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      courseF_artist_for_challenge1_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      courseF_artist_for_challenge1_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      courseF_artist_for_challenge2:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      courseF_artist_for_challenge2_2018:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      courseF_artist_for_challenge2_2019:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      courseF_artist_fwp2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Functions: Các hàm
+      courseF_artist_fwp2_predict1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Functions: Các hàm
+      courseF_artist_fwp3:
+        Functions: Các hàm
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseF_artist_fwp4:
+        Actions: hành động
+        Math: thuật toán
+        Functions: Các hàm
+      courseF_artist_fwp5:
+        Actions: hành động
+        Functions: Các hàm
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+      courseF_artist_fwp6:
+        Actions: hành động
+        Functions: Các hàm
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+      courseF_artist_fwp7:
+        Actions: hành động
+        Brushes: Bàn chải
+        Functions: Các hàm
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseF_artist_fwp8:
+        Actions: hành động
+        Brushes: Bàn chải
+        Functions: Các hàm
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseF_artist_fwp9:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+        Functions: Các hàm
+      courseF_artist_fwp_challenge1:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+        Functions: Các hàm
+      courseF_artist_fwp_challenge2:
+        Actions: hành động
+        Brushes: Bàn chải
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+        Functions: Các hàm
+      courseF_artist_variables10_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Variables: Các biến
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_variables10_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Variables: Các biến
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_variables7_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Variables: Các biến
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_variables7_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Variables: Các biến
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_variables8_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Variables: Các biến
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_variables8_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Variables: Các biến
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_variables9_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Variables: Các biến
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_variables9_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Variables: Các biến
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_variablesFP_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Variables: Các biến
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_artist_variablesFP_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Brushes: Bàn chải
+        Variables: Các biến
+        Functions: Các hàm
+        Comments: Bình luận
+      courseF_bee_conditionals10:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_conditionals2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_conditionals3:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_conditionals4:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_conditionals5:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_conditionals8:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_for10:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for10_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for10_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for11:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for11_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for11_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for1_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+        Comments: Bình luận
+      courseF_bee_for1_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+        Comments: Bình luận
+      courseF_bee_for2_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+        Comments: Bình luận
+      courseF_bee_for2_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+        Comments: Bình luận
+      courseF_bee_for3_predict1:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for3_predict1_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for3_predict1_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for4:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for4_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+        Comments: Bình luận
+      courseF_bee_for4_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+        Comments: Bình luận
+      courseF_bee_for5:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for5_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for5_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for6:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for6_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for6_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for7:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for7_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+        Comments: Bình luận
+      courseF_bee_for7_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+        Comments: Bình luận
+      courseF_bee_for8:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for8_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for8_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for9:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        Variables: Các biến
+      courseF_bee_for9_2018:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for9_2019:
+        Actions: hành động
+        Math: thuật toán
+        Loops: Vòng lặp
+        'Variables ': 'Các biến '
+        Comments: Bình luận
+      courseF_bee_for_challenge1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_for_challenge1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_for_challenge1_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_for_challenge2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseF_bee_for_challenge2_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseF_bee_for_challenge2_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+      courseF_bee_functions2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_functions3:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_functions3a:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_functions4:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_functions5a:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_functions6:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_functions7:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_functions8a:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_functionsPre7:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_functions_challenge1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_functions_challenge2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_fwp1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Math: thuật toán
+        Conditionals: Điều kiện
+      courseF_bee_fwp2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_fwp3:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_fwp4:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_fwp5:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_fwp6:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_fwp7:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_fwp8:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_fwp9_predict1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_fwp_challenge1:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_fwp_challenge2:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Math: thuật toán
+      courseF_bee_variables_1_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_1_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_2_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_2_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_3_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_3_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_4_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_4_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_5_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_5_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_6_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_6_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_7_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_7_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+        Comments: Bình luận
+      courseF_bee_variables_8_2018:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+      courseF_bee_variables_8_2019:
+        Actions: hành động
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Functions: Các hàm
+        Variables: Các biến
+        Math: thuật toán
+      courseF_playlab_variables1a:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Variables: Các biến
+      courseF_playlab_variables2b:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        'Variables ': 'Các biến '
+      courseF_playlab_variables3b_josh:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Variables: Các biến
+      courseF_playlab_variables4b:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Variables: Các biến
+      courseF_playlab_variables4c_predictive1:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+        Variables: Các biến
+      courseF_playlab_variables5c:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Logic: Logic
+        Variables: Các biến
+        Text: văn bản
+      courseF_playlab_variables6c:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Variables: Các biến
+      courseF_playlab_variables7b:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Conditionals: Điều kiện
+        Math: thuật toán
+        Text: văn bản
+        Functions: Các hàm
+        Variables: Các biến
+        Game/Score: Trò chơi/Điểm
+      courseF_playlab_variables7c:
+        Default: Mặc định
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Variables: Các biến
+      courseF_playlab_variables8c:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+        Variables: Các biến
+      courseF_playlab_variables_challenge1:
+        Actions: hành động
+        Events: Các sự kiện
+        Loops: Vòng lặp
+        Math: thuật toán
+        Functions: Các hàm
+        Variables: Các biến
