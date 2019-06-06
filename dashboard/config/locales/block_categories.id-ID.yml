@@ -1,21 +1,1937 @@
 ---
-id:
+id-ID:
   data:
     block_categories:
-      Actions: Aksi
-      Loops: Loop
-      Functions: fungsi
-      Color: Warna
-      Math: Matematika
-      Logic: Logika
-      Variables: variabel
-      Conditionals: Kondisi
-      Events: kegiatan
-      Text: Teks
-      Location: Lokasi
-      Input: Masukan
-      Start: Mulai
-      Booleans: Boolean
-      test: test
-      Name: Nama
-      Function: Fungsi
+      4-5 Artist Patterns Free Play:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Alien Defender:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Choose Your Own Adventure:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Course 4 Artist For Loops 11:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      Course 4 Artist For Loops 11a:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      Course 4 Artist For Loops 14:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      Course 4 Artist For Loops 15:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      Course 4 Artist For Loops 4:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      Course 4 Artist For Loops 6a:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      Course 4 Artist For Loops 8:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      Course 4 Artist For Loops Challenge:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      Course 4 Artist For Loops inspire:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      Course 4 Artist Functions Inspiration:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      Course 4 Artist Functions challenge:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      Course 4 Bee Params 1:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      Course 4 Bee Params 2:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      Course 4 Bee Params 3:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Functions: fungsi
+      Course 4 Bee Params 4:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Functions: fungsi
+        Math: Matematika
+      Course 4 Bee Params 5:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Course 4 Bee Params 6:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Course 4 Bee Params 7:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+        Functions: fungsi
+      Course 4 Bee Params 8:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+        Functions: fungsi
+      Course 4 EC 1a:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+        Functions: fungsi
+      Course 4 EC 1b:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+        Functions: fungsi
+      Course 4 EC 2a:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+        Functions: fungsi
+        Variables: variabel
+      Course 4 EC 2b:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      Course 4 EC 2c:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      Course 4 Play Lab Params 10:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+        Functions: fungsi
+        Variables: variabel
+      Course 4 Play Lab Params 7:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      Course 4 Play Lab Params 8:
+        Events: kegiatan
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      Course 4 Play Lab Params 9:
+        Actions: Aksi
+        Math: Matematika
+        Functions: fungsi
+        Variables: variabel
+      Course 4 Play Lab Vars 9:
+        Events: kegiatan
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+      Course 4 SCF 1:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      Course 4 SCF 1a:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+        Functions: fungsi
+      Course 4 SCF 1b:
+        Actions: Aksi
+        Loops: Loop
+        Logic: Logika
+        Math: Matematika
+        Functions: fungsi
+      Course 4 SCF 2:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      Course 4 SCF 3:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      Course 4 SCFL 1:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      Course 4 SCFL 1a:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      Course 4 SCFL 1b:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      Course 4 SCFL 2:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+      Course 4 SCFL 3:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      Course 4 SCFL 4:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      Course 4 SCFL 6:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      Course 4 SCFL 7:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      Course 4 SCV 6:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      'Course E: Play Lab Project':
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      'Course F: Artist Project':
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      'Course F: Artist Project - Revise':
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      'Course F: Artist Project - Revise_2018':
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      'Course F: Artist Project_2018':
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      'Course F: Artist Project_2019':
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      CourseD_Dance_Party_11_5:
+        Events: kegiatan
+      CourseD_Dance_Party_12:
+        Events: kegiatan
+        Logic: Logika
+      CourseE_Project_SpriteLab:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+        Logic: Logika
+        Text: Teks
+      CourseE_Project_SpriteLab_2019:
+        Actions: Aksi
+        Events: kegiatan
+      CourseE_hoops:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+        Functions: fungsi
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+        Functions: fungsi
+      CourseF_Project_SpriteLab:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+        Functions: fungsi
+      CourseF_Project_SpriteLab_2019:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Text: Teks
+      Dance Party 2:
+        Events: kegiatan
+      Dance Party 6:
+        Events: kegiatan
+      Dance Party Freeplay:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+      Dance_Party_11_5:
+        Events: kegiatan
+      Dance_Party_12:
+        Events: kegiatan
+        Logic: Logika
+      Dance_Party_extras_battle:
+        Events: kegiatan
+        Logic: Logika
+      Dance_Party_extras_every_beat:
+        Events: kegiatan
+        Logic: Logika
+      Dance_Party_extras_layout:
+        Events: kegiatan
+        Logic: Logika
+      Dance_Party_extras_on_beat:
+        Events: kegiatan
+        Logic: Logika
+      Dance_Party_extras_speed:
+        Events: kegiatan
+        Logic: Logika
+      Dance_Party_extras_visible:
+        Events: kegiatan
+        Logic: Logika
+      Find the Wizard:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Fish Tank 7-validated:
+        Events: kegiatan
+      Fish Tank 7-validated_2019:
+        Actions: Aksi
+        Events: kegiatan
+      FoodFight:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Geometric Sun:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Geometric Sun_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Guess The Number:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      InspirationalArtwork:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      InspirationalArtwork_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      NEW Course 4 Artist Functions 14:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      NEW Course 4 Artist Params 1:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+        Variables: variabel
+      NEW Course 4 Artist Params 10:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      NEW Course 4 Artist Params 11:
+        Actions: Aksi
+        Functions: fungsi
+        Loops: Loop
+        Math: Matematika
+      NEW Course 4 Artist Params 12:
+        Actions: Aksi
+        Math: Matematika
+        Functions: fungsi
+      NEW Course 4 Artist Params 12a:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      NEW Course 4 Artist Params 13:
+        Actions: Aksi
+        Functions: fungsi
+        Loops: Loop
+        Math: Matematika
+      NEW Course 4 Artist Params 14:
+        Actions: Aksi
+        Functions: fungsi
+        Loops: Loop
+        Math: Matematika
+      NEW Course 4 Artist Params 15:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      NEW Course 4 Artist Params 2:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      NEW Course 4 Artist Params 3:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      NEW Course 4 Artist Params 6:
+        Actions: Aksi
+        Functions: fungsi
+        Loops: Loop
+        Math: Matematika
+      NEW Course 4 Artist Params 7:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      NEW Course 4 Artist Params 8:
+        Actions: Aksi
+        Math: Matematika
+        Functions: fungsi
+        Loops: Loop
+      NEW Course 4 Artist Params 9:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      NEW Course 4 Artist Params inspire:
+        Actions: Aksi
+        Functions: fungsi
+        Loops: Loop
+        Math: Matematika
+      NEW Course 4 Play Lab Params 11:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Robot Doodle:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Robot Doodle_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Functions: fungsi
+        Variables: variabel
+      Virtual Pet 2:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+      Virtual Pet 3:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+      Virtual Pet 4:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+      Virtual Pet 5:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+      Virtual Pet 6:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+      Virtual Pet Freeplay:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+      behaviors 3a:
+        Actions: Aksi
+      behaviors 5:
+        Actions: Aksi
+      behaviors 6:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Math: Matematika
+        Logic: Logika
+      behaviors 7:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Math: Matematika
+        Logic: Logika
+      behaviors free play:
+        Actions: Aksi
+        Events: kegiatan
+      course3_bee_functions_challenge1:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      course3_bee_functions_challenge2:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      course3_bee_functions_challenge3:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      course3_bee_functions_challenge4:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      course3_playLab_challenge1:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      course4_artist_fwp_challenge1:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      course4_bee_for_challenge1:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+        Math: Matematika
+      course4_bee_fwp_challenge1:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      course4_bee_fwp_challenge2:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      course4_playlab_variables_challenge1:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+        Variables: variabel
+      courseD_artist_project1:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project1a:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project1a_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project1a_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project2:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project2_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project2_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project2a:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project2a_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project2a_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project3:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project3_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project3_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project3a:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project3a_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project3a_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project4:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project4_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project4_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project4a:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project4a_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project4a_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project5:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project5_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_artist_project5_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseD_playLab_condFP:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+      courseD_playLab_condFP_2018:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+      courseE_Dogger_2:
+        Actions: Aksi
+        Events: kegiatan
+        Variables: variabel
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Text: Teks
+        Functions: fungsi
+      courseE_artist_concept1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      courseE_artist_concept4:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_concept4_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      courseE_artist_functions10:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions10_2018:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions10_2019:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions2_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseE_artist_functions2_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseE_artist_functions3_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseE_artist_functions3_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseE_artist_functions5_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseE_artist_functions5_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseE_artist_functions7_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseE_artist_functions7_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseE_artist_functions8:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions8_2018:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions8_2019:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions8a_2018:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions8a_2019:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions8b_2018:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions8b_2019:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions8c_2018:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions8c_2019:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions9:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions9_2018:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions9_2019:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functionsProj_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      courseE_artist_functionsProj_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      courseE_artist_functions_predict2:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions_predict2_2018:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_artist_functions_predict2_2019:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_bee_concept1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_bee_concept2_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_bee_concept3_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_bee_concept4_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_bee_concept5_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_bee_functions6:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_bee_functions7:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_bee_functions_challenge1:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_bee_functions_challenge2:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseE_farmer_concept1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_concept2_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_concept3_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions1:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions10a1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions10a1_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions10b:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions11_predict:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions11_predict_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions11_predict_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions13_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions13_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions1_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions1a:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions1a_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions1a_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions2b:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions2b_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions2b_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions2ba:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions2ba_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions2ba_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions3c:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions3c1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions3c1_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions3c_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions3c_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions4b:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions5c:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions6c:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions7a1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions7a1_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions7b:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions8a1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions8a1_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions8b:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions9a1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions9a1_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_farmer_functions9b:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_playLab_challenge1:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_playLab_scaffold5:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseE_playLab_scaffold6:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+      courseF_artist_for1:
+        Actions: Aksi
+        Loops: Loop
+        Color: Warna
+      courseF_artist_for10:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_artist_for10_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Functions: fungsi
+      courseF_artist_for10_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Functions: fungsi
+      courseF_artist_for10_predict1:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_artist_for10_predict1_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_artist_for10_predict1_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_artist_for1_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for1_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for2:
+        Actions: Aksi
+        Loops: Loop
+        Color: Warna
+      courseF_artist_for2_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for2_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for3:
+        Actions: Aksi
+        Loops: Loop
+        Color: Warna
+      courseF_artist_for3_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for3_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for4:
+        Actions: Aksi
+        Loops: Loop
+        Color: Warna
+      courseF_artist_for4_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for4_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for5:
+        Actions: Aksi
+        Loops: Loop
+        Color: Warna
+      courseF_artist_for5_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for5_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for6:
+        Actions: Aksi
+        Loops: Loop
+        Color: Warna
+      courseF_artist_for6_2018:
+        Actions: Aksi
+        Loops: Loop
+        Color: Warna
+      courseF_artist_for6_2019:
+        Actions: Aksi
+        Loops: Loop
+        Color: Warna
+      courseF_artist_for7:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for7_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for7_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for8:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for8_2018:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for8_2019:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for9:
+        Actions: Aksi
+        Loops: Loop
+      courseF_artist_for9_2018:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseF_artist_for9_2019:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+      courseF_artist_for_challenge1:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_for_challenge1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_for_challenge1_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_for_challenge2:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_for_challenge2_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_for_challenge2_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_fwp2:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      courseF_artist_fwp2_predict1:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      courseF_artist_fwp3:
+        Functions: fungsi
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_fwp4:
+        Actions: Aksi
+        Math: Matematika
+        Functions: fungsi
+      courseF_artist_fwp5:
+        Actions: Aksi
+        Functions: fungsi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_fwp6:
+        Actions: Aksi
+        Functions: fungsi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_fwp7:
+        Actions: Aksi
+        Functions: fungsi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_fwp8:
+        Actions: Aksi
+        Functions: fungsi
+        Loops: Loop
+        Math: Matematika
+      courseF_artist_fwp9:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      courseF_artist_fwp_challenge1:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      courseF_artist_fwp_challenge2:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+      courseF_artist_variables10_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      courseF_artist_variables10_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      courseF_artist_variables7_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      courseF_artist_variables7_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      courseF_artist_variables8_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      courseF_artist_variables8_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      courseF_artist_variables9_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      courseF_artist_variables9_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      courseF_artist_variablesFP_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      courseF_artist_variablesFP_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+        Functions: fungsi
+      courseF_bee_conditionals10:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_conditionals2:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_conditionals3:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_conditionals4:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_conditionals5:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_conditionals8:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_for10:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for10_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for10_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for11:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for11_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for11_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for1_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for1_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for2_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for2_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for3_predict1:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for3_predict1_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for3_predict1_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for4:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for4_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for4_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for5:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for5_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for5_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for6:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for6_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for6_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for7:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for7_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for7_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for8:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for8_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for8_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for9:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+        Variables: variabel
+      courseF_bee_for9_2018:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for9_2019:
+        Actions: Aksi
+        Math: Matematika
+        Loops: Loop
+      courseF_bee_for_challenge1:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_for_challenge1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_for_challenge1_2019:
+        Actions: Aksi
+        Loops: Loop
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_for_challenge2:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseF_bee_for_challenge2_2018:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseF_bee_for_challenge2_2019:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+      courseF_bee_functions2:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_functions3:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_functions3a:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_functions4:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_functions5a:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_functions6:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_functions7:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_functions8a:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_functionsPre7:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_functions_challenge1:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_functions_challenge2:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_fwp1:
+        Actions: Aksi
+        Loops: Loop
+        Math: Matematika
+        Conditionals: Kondisi
+      courseF_bee_fwp2:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_fwp3:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_fwp4:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_fwp5:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_fwp6:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_fwp7:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_fwp8:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_fwp9_predict1:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_fwp_challenge1:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_fwp_challenge2:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Math: Matematika
+      courseF_bee_variables_1_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_1_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_2_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_2_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_3_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_3_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_4_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_4_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_5_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_5_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_6_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_6_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_7_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_7_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_8_2018:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_bee_variables_8_2019:
+        Actions: Aksi
+        Loops: Loop
+        Conditionals: Kondisi
+        Functions: fungsi
+        Variables: variabel
+        Math: Matematika
+      courseF_playlab_variables1a:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+      courseF_playlab_variables2b:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+      courseF_playlab_variables3b_josh:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+      courseF_playlab_variables4b:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+      courseF_playlab_variables4c_predictive1:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+        Variables: variabel
+      courseF_playlab_variables5c:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Logic: Logika
+        Variables: variabel
+        Text: Teks
+      courseF_playlab_variables6c:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Variables: variabel
+      courseF_playlab_variables7b:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Conditionals: Kondisi
+        Math: Matematika
+        Text: Teks
+        Functions: fungsi
+        Variables: variabel
+        Input: Masukan
+      courseF_playlab_variables7c:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Input: Masukan
+        Variables: variabel
+      courseF_playlab_variables8c:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+        Variables: variabel
+      courseF_playlab_variables_challenge1:
+        Actions: Aksi
+        Events: kegiatan
+        Loops: Loop
+        Math: Matematika
+        Functions: fungsi
+        Variables: variabel

@@ -4870,6 +4870,9 @@ id:
               name: gambar Biner
             Artist Binary:
               name: Artis Biner
+            Build a Star Wars Game:
+              description_student: Merasakan kekuatan seperti yang anda membangun
+                anda sendiri Peran Bintang Permainan dalam pelajaran ini.
         coursee-2019:
           stages:
             Building a Foundation:
@@ -4988,6 +4991,9 @@ id:
               name: Melihat ke depan
             Binary Bracelets:
               name: Gelang biner
+            'End of Course Project: Create a Play Lab Game':
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean!
+                Saatnya untuk mulai membangun proyek anda.
         gamelab:
           title: Laboratorium Game
         coursea-2019:
