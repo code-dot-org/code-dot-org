@@ -9,9 +9,10 @@ import rehypeSanitize from 'rehype-sanitize';
 import rehypeReact from 'rehype-react';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
 
+import details from './plugins/details';
 import expandableImages from './plugins/expandableImages';
-import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 import externalLinks from './plugins/externalLinks';
+import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 
 // create custom sanitization schema as per
 // https://github.com/syntax-tree/hast-util-sanitize#schema
@@ -47,7 +48,7 @@ schema.tagNames.push(
 const markdownToReact = Parser.create()
   .getParser()
   // include custom plugins
-  .use([xmlAsTopLevelBlock, expandableImages])
+  .use([xmlAsTopLevelBlock, expandableImages, details])
   // convert markdown to an HTML Abstract Syntax Tree (HAST)
   .use(remarkRehype, {
     // include any raw HTML in the markdown as raw HTML nodes in the HAST
