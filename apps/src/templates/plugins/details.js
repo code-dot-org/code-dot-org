@@ -140,19 +140,35 @@ function tokenizeDetails(eat, value, silent) {
   let bodyContent = '';
   let closed = false;
   while (index < value.length) {
-    const prevCharacter = character;
-    const prevIndex = index;
-    const prevSubvalue = subvalue;
-    const closingColons = eatUntil(() => character !== colon);
-    if (closingColons.length >= openingColonCount) {
-      closed = true;
-      break;
-    } else {
-      character = prevCharacter;
-      index = prevIndex;
-      subvalue = prevSubvalue;
+    // First, check to see if the next line is our closing line.  To achieve
+    // this, if the next line starts with a colon we eat all the colons and
+    // check to make sure that:
+    //
+    //   1. The entire line is just colons. If not, then this is just regular
+    //      body content.
+    //   2. The line is at least as long as our opening set of colons. If not,
+    //      then this is likely the closing line of a nested element and should be
+    //      treated as part of the body.
+    //
+    // If either of these conditions is invalidated, then the string we just
+    // ate was not actually our closing line, so treat it as just part of the
+    // body and move on
+    if (character === colon) {
+      const closingColons = eatUntil(() => character !== colon);
+      if (
+        closingColons.length >= openingColonCount &&
+        (character === '' || character === newline)
+      ) {
+        closed = true;
+        break;
+      } else {
+        bodyContent += closingColons;
+      }
     }
 
+    // If we didn't find the closing line, then eat the next line of content
+    // (or the rest of the line, if we already ate part of the next line when
+    // checking for closing)
     bodyContent += eatLine();
   }
   if (!closed) {
