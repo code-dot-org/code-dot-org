@@ -1,5 +1,5 @@
 ---
-lv:
+lv-LV:
   data:
     display_name:
       CSD U2 Pair Programming Video: Pāru Programmēšana
@@ -8,7 +8,6 @@ lv:
       CSD U3 Variables Map: Mainīgie
       CSD U3 Variables Map_2018: Mainīgie
       CSD U3 Variables Map_2019: Mainīgie
-      CSD U3 functions map: Funkcijas
       CSD U6 for loop map: '"par" cikli'
       CSD U6 for loop map_2018: '"par" cikli'
       CSD U6 for loop map_2019: '"par" cikli'
@@ -16,5 +15,3 @@ lv:
       CSD U6 functions paramters video_2018: Funkcijas ar parametriem
       CSD U6 functions paramters video_2019: Funkcijas ar parametriem
       'CSD: For Loop_2018': '"par" cikli'
-      'CSD: For Loop_2019': '"par" cikli'
-      SG U3L07 More Subgoals: Dokumentācija

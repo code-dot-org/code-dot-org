@@ -1,19 +1,1935 @@
 ---
-lv:
+lv-LV:
   data:
     block_categories:
-      Actions: Darbības
-      Loops: Cikli
-      Functions: Funkcijas
-      Color: Krāsa
-      Math: Matemātika
-      Logic: Loģika
-      Variables: Mainīgie
-      Conditionals: Sazarojumi
-      Events: Pasākumi
-      Text: Teksts
-      Start: Sākt
-      Booleans: Booleans
-      test: pārbaude
-      Name: Vārds
-      Function: Funkcija
+      4-5 Artist Patterns Free Play:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Alien Defender:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Choose Your Own Adventure:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Course 4 Artist For Loops 11:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      Course 4 Artist For Loops 11a:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      Course 4 Artist For Loops 14:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      Course 4 Artist For Loops 15:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      Course 4 Artist For Loops 4:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      Course 4 Artist For Loops 6a:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      Course 4 Artist For Loops 8:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      Course 4 Artist For Loops Challenge:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      Course 4 Artist For Loops inspire:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      Course 4 Artist Functions Inspiration:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      Course 4 Artist Functions challenge:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      Course 4 Bee Params 1:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      Course 4 Bee Params 2:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      Course 4 Bee Params 3:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Functions: Funkcijas
+      Course 4 Bee Params 4:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Functions: Funkcijas
+        Math: Matemātika
+      Course 4 Bee Params 5:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Course 4 Bee Params 6:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Course 4 Bee Params 7:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 Bee Params 8:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 EC 1a:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 EC 1b:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 EC 2a:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Course 4 EC 2b:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      Course 4 EC 2c:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      Course 4 Play Lab Params 10:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Course 4 Play Lab Params 7:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 Play Lab Params 8:
+        Events: Pasākumi
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 Play Lab Params 9:
+        Actions: Darbības
+        Math: Matemātika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Course 4 Play Lab Vars 9:
+        Events: Pasākumi
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+      Course 4 SCF 1:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 SCF 1a:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 SCF 1b:
+        Actions: Darbības
+        Loops: Cikli
+        Logic: Loģika
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 SCF 2:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 SCF 3:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      Course 4 SCFL 1:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      Course 4 SCFL 1a:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      Course 4 SCFL 1b:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      Course 4 SCFL 2:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+      Course 4 SCFL 3:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      Course 4 SCFL 4:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      Course 4 SCFL 6:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      Course 4 SCFL 7:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      Course 4 SCV 6:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      'Course E: Play Lab Project':
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      'Course F: Artist Project':
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      'Course F: Artist Project - Revise':
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      'Course F: Artist Project - Revise_2018':
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      'Course F: Artist Project_2018':
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      'Course F: Artist Project_2019':
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      CourseD_Dance_Party_11_5:
+        Events: Pasākumi
+      CourseD_Dance_Party_12:
+        Events: Pasākumi
+        Logic: Loģika
+      CourseE_Project_SpriteLab:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+        Logic: Loģika
+        Text: Teksts
+      CourseE_Project_SpriteLab_2019:
+        Actions: Darbības
+        Events: Pasākumi
+      CourseE_hoops:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+        Functions: Funkcijas
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+        Functions: Funkcijas
+      CourseF_Project_SpriteLab:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+        Functions: Funkcijas
+      CourseF_Project_SpriteLab_2019:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Text: Teksts
+      Dance Party 2:
+        Events: Pasākumi
+      Dance Party 6:
+        Events: Pasākumi
+      Dance Party Freeplay:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+      Dance_Party_11_5:
+        Events: Pasākumi
+      Dance_Party_12:
+        Events: Pasākumi
+        Logic: Loģika
+      Dance_Party_extras_battle:
+        Events: Pasākumi
+        Logic: Loģika
+      Dance_Party_extras_every_beat:
+        Events: Pasākumi
+        Logic: Loģika
+      Dance_Party_extras_layout:
+        Events: Pasākumi
+        Logic: Loģika
+      Dance_Party_extras_on_beat:
+        Events: Pasākumi
+        Logic: Loģika
+      Dance_Party_extras_speed:
+        Events: Pasākumi
+        Logic: Loģika
+      Dance_Party_extras_visible:
+        Events: Pasākumi
+        Logic: Loģika
+      Find the Wizard:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Fish Tank 7-validated:
+        Events: Pasākumi
+      Fish Tank 7-validated_2019:
+        Actions: Darbības
+        Events: Pasākumi
+      FoodFight:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Geometric Sun:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Geometric Sun_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Guess The Number:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      InspirationalArtwork:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      InspirationalArtwork_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      NEW Course 4 Artist Functions 14:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      NEW Course 4 Artist Params 1:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      NEW Course 4 Artist Params 10:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      NEW Course 4 Artist Params 11:
+        Actions: Darbības
+        Functions: Funkcijas
+        Loops: Cikli
+        Math: Matemātika
+      NEW Course 4 Artist Params 12:
+        Actions: Darbības
+        Math: Matemātika
+        Functions: Funkcijas
+      NEW Course 4 Artist Params 12a:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      NEW Course 4 Artist Params 13:
+        Actions: Darbības
+        Functions: Funkcijas
+        Loops: Cikli
+        Math: Matemātika
+      NEW Course 4 Artist Params 14:
+        Actions: Darbības
+        Functions: Funkcijas
+        Loops: Cikli
+        Math: Matemātika
+      NEW Course 4 Artist Params 15:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      NEW Course 4 Artist Params 2:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      NEW Course 4 Artist Params 3:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      NEW Course 4 Artist Params 6:
+        Actions: Darbības
+        Functions: Funkcijas
+        Loops: Cikli
+        Math: Matemātika
+      NEW Course 4 Artist Params 7:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      NEW Course 4 Artist Params 8:
+        Actions: Darbības
+        Math: Matemātika
+        Functions: Funkcijas
+        Loops: Cikli
+      NEW Course 4 Artist Params 9:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      NEW Course 4 Artist Params inspire:
+        Actions: Darbības
+        Functions: Funkcijas
+        Loops: Cikli
+        Math: Matemātika
+      NEW Course 4 Play Lab Params 11:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Robot Doodle:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Robot Doodle_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      Virtual Pet 2:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+      Virtual Pet 3:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+      Virtual Pet 4:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+      Virtual Pet 5:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+      Virtual Pet 6:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+      Virtual Pet Freeplay:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+      behaviors 3a:
+        Actions: Darbības
+      behaviors 5:
+        Actions: Darbības
+      behaviors 6:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Math: Matemātika
+        Logic: Loģika
+      behaviors 7:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Math: Matemātika
+        Logic: Loģika
+      behaviors free play:
+        Actions: Darbības
+        Events: Pasākumi
+      course3_bee_functions_challenge1:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      course3_bee_functions_challenge2:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      course3_bee_functions_challenge3:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      course3_bee_functions_challenge4:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      course3_playLab_challenge1:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      course4_artist_fwp_challenge1:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      course4_bee_for_challenge1:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+        Math: Matemātika
+      course4_bee_fwp_challenge1:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      course4_bee_fwp_challenge2:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      course4_playlab_variables_challenge1:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      courseD_artist_project1:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project1a:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project1a_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project1a_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project2:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project2_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project2_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project2a:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project2a_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project2a_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project3:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project3_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project3_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project3a:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project3a_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project3a_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project4:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project4_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project4_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project4a:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project4a_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project4a_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project5:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project5_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_artist_project5_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseD_playLab_condFP:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+      courseD_playLab_condFP_2018:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+      courseE_Dogger_2:
+        Actions: Darbības
+        Events: Pasākumi
+        Variables: Mainīgie
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Text: Teksts
+        Functions: Funkcijas
+      courseE_artist_concept1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      courseE_artist_concept4:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_concept4_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      courseE_artist_functions10:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions10_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions10_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions2_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseE_artist_functions2_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseE_artist_functions3_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseE_artist_functions3_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseE_artist_functions5_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseE_artist_functions5_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseE_artist_functions7_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseE_artist_functions7_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseE_artist_functions8:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions8_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions8_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions8a_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions8a_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions8b_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions8b_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions8c_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions8c_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions9:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions9_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions9_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functionsProj_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      courseE_artist_functionsProj_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      courseE_artist_functions_predict2:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions_predict2_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_artist_functions_predict2_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_bee_concept1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_bee_concept2_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_bee_concept3_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_bee_concept4_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_bee_concept5_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_bee_functions6:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_bee_functions7:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_bee_functions_challenge1:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_bee_functions_challenge2:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseE_farmer_concept1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_concept2_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_concept3_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions1:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions10a1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions10a1_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions10b:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions11_predict:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions11_predict_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions11_predict_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions13_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions13_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions1_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions1a:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions1a_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions1a_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions2b:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions2b_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions2b_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions2ba:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions2ba_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions2ba_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions3c:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions3c1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions3c1_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions3c_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions3c_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions4b:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions5c:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions6c:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions7a1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions7a1_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions7b:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions8a1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions8a1_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions8b:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions9a1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions9a1_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_farmer_functions9b:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_playLab_challenge1:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_playLab_scaffold5:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseE_playLab_scaffold6:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+      courseF_artist_for1:
+        Actions: Darbības
+        Loops: Cikli
+        Color: Krāsa
+      courseF_artist_for10:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_artist_for10_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Functions: Funkcijas
+      courseF_artist_for10_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Functions: Funkcijas
+      courseF_artist_for10_predict1:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_artist_for10_predict1_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_artist_for10_predict1_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_artist_for1_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for1_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for2:
+        Actions: Darbības
+        Loops: Cikli
+        Color: Krāsa
+      courseF_artist_for2_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for2_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for3:
+        Actions: Darbības
+        Loops: Cikli
+        Color: Krāsa
+      courseF_artist_for3_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for3_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for4:
+        Actions: Darbības
+        Loops: Cikli
+        Color: Krāsa
+      courseF_artist_for4_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for4_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for5:
+        Actions: Darbības
+        Loops: Cikli
+        Color: Krāsa
+      courseF_artist_for5_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for5_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for6:
+        Actions: Darbības
+        Loops: Cikli
+        Color: Krāsa
+      courseF_artist_for6_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Color: Krāsa
+      courseF_artist_for6_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Color: Krāsa
+      courseF_artist_for7:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for7_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for7_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for8:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for8_2018:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for8_2019:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for9:
+        Actions: Darbības
+        Loops: Cikli
+      courseF_artist_for9_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseF_artist_for9_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+      courseF_artist_for_challenge1:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_for_challenge1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_for_challenge1_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_for_challenge2:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_for_challenge2_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_for_challenge2_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_fwp2:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      courseF_artist_fwp2_predict1:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      courseF_artist_fwp3:
+        Functions: Funkcijas
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_fwp4:
+        Actions: Darbības
+        Math: Matemātika
+        Functions: Funkcijas
+      courseF_artist_fwp5:
+        Actions: Darbības
+        Functions: Funkcijas
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_fwp6:
+        Actions: Darbības
+        Functions: Funkcijas
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_fwp7:
+        Actions: Darbības
+        Functions: Funkcijas
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_fwp8:
+        Actions: Darbības
+        Functions: Funkcijas
+        Loops: Cikli
+        Math: Matemātika
+      courseF_artist_fwp9:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      courseF_artist_fwp_challenge1:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      courseF_artist_fwp_challenge2:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+      courseF_artist_variables10_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      courseF_artist_variables10_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      courseF_artist_variables7_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      courseF_artist_variables7_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      courseF_artist_variables8_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      courseF_artist_variables8_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      courseF_artist_variables9_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      courseF_artist_variables9_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      courseF_artist_variablesFP_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      courseF_artist_variablesFP_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+        Functions: Funkcijas
+      courseF_bee_conditionals10:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_conditionals2:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_conditionals3:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_conditionals4:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_conditionals5:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_conditionals8:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_for10:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for10_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for10_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for11:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for11_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for11_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for1_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for1_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for2_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for2_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for3_predict1:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for3_predict1_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for3_predict1_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for4:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for4_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for4_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for5:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for5_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for5_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for6:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for6_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for6_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for7:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for7_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for7_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for8:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for8_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for8_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for9:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+        Variables: Mainīgie
+      courseF_bee_for9_2018:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for9_2019:
+        Actions: Darbības
+        Math: Matemātika
+        Loops: Cikli
+      courseF_bee_for_challenge1:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_for_challenge1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_for_challenge1_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_for_challenge2:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseF_bee_for_challenge2_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseF_bee_for_challenge2_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+      courseF_bee_functions2:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_functions3:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_functions3a:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_functions4:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_functions5a:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_functions6:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_functions7:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_functions8a:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_functionsPre7:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_functions_challenge1:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_functions_challenge2:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_fwp1:
+        Actions: Darbības
+        Loops: Cikli
+        Math: Matemātika
+        Conditionals: Sazarojumi
+      courseF_bee_fwp2:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_fwp3:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_fwp4:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_fwp5:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_fwp6:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_fwp7:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_fwp8:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_fwp9_predict1:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_fwp_challenge1:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_fwp_challenge2:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Math: Matemātika
+      courseF_bee_variables_1_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_1_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_2_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_2_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_3_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_3_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_4_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_4_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_5_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_5_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_6_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_6_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_7_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_7_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_8_2018:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_bee_variables_8_2019:
+        Actions: Darbības
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Functions: Funkcijas
+        Variables: Mainīgie
+        Math: Matemātika
+      courseF_playlab_variables1a:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+      courseF_playlab_variables2b:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+      courseF_playlab_variables3b_josh:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+      courseF_playlab_variables4b:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+      courseF_playlab_variables4c_predictive1:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      courseF_playlab_variables5c:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Logic: Loģika
+        Variables: Mainīgie
+        Text: Teksts
+      courseF_playlab_variables6c:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+      courseF_playlab_variables7b:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Conditionals: Sazarojumi
+        Math: Matemātika
+        Text: Teksts
+        Functions: Funkcijas
+        Variables: Mainīgie
+      courseF_playlab_variables7c:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Variables: Mainīgie
+      courseF_playlab_variables8c:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+        Variables: Mainīgie
+      courseF_playlab_variables_challenge1:
+        Actions: Darbības
+        Events: Pasākumi
+        Loops: Cikli
+        Math: Matemātika
+        Functions: Funkcijas
+        Variables: Mainīgie
