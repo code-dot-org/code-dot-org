@@ -1,18 +1,1935 @@
 ---
-ms:
+ms-MY:
   data:
     block_categories:
-      Actions: Tindakan
-      Loops: Gelung
-      Functions: Fungsi
-      Color: Warna
-      Math: Matematik
-      Logic: Logik
-      Variables: Pembolehubah
-      Conditionals: Bersyarat
-      Events: Acara-acara
-      Text: teks
-      Start: Mula
-      test: ujian
-      Name: Nama
-      Function: Fungsi
+      4-5 Artist Patterns Free Play:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Alien Defender:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Choose Your Own Adventure:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Course 4 Artist For Loops 11:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      Course 4 Artist For Loops 11a:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      Course 4 Artist For Loops 14:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      Course 4 Artist For Loops 15:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      Course 4 Artist For Loops 4:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      Course 4 Artist For Loops 6a:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      Course 4 Artist For Loops 8:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      Course 4 Artist For Loops Challenge:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      Course 4 Artist For Loops inspire:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      Course 4 Artist Functions Inspiration:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      Course 4 Artist Functions challenge:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      Course 4 Bee Params 1:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      Course 4 Bee Params 2:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      Course 4 Bee Params 3:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Functions: Fungsi
+      Course 4 Bee Params 4:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Functions: Fungsi
+        Math: Matematik
+      Course 4 Bee Params 5:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Course 4 Bee Params 6:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Course 4 Bee Params 7:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 Bee Params 8:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 EC 1a:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 EC 1b:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 EC 2a:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Course 4 EC 2b:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      Course 4 EC 2c:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      Course 4 Play Lab Params 10:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Course 4 Play Lab Params 7:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 Play Lab Params 8:
+        Events: Acara-acara
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 Play Lab Params 9:
+        Actions: Tindakan
+        Math: Matematik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Course 4 Play Lab Vars 9:
+        Events: Acara-acara
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+      Course 4 SCF 1:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 SCF 1a:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 SCF 1b:
+        Actions: Tindakan
+        Loops: Gelung
+        Logic: Logik
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 SCF 2:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 SCF 3:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      Course 4 SCFL 1:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      Course 4 SCFL 1a:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      Course 4 SCFL 1b:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      Course 4 SCFL 2:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+      Course 4 SCFL 3:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      Course 4 SCFL 4:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      Course 4 SCFL 6:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      Course 4 SCFL 7:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      Course 4 SCV 6:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      'Course E: Play Lab Project':
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      'Course F: Artist Project':
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      'Course F: Artist Project - Revise':
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      'Course F: Artist Project - Revise_2018':
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      'Course F: Artist Project_2018':
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      'Course F: Artist Project_2019':
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      CourseD_Dance_Party_11_5:
+        Events: Acara-acara
+      CourseD_Dance_Party_12:
+        Events: Acara-acara
+        Logic: Logik
+      CourseE_Project_SpriteLab:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+        Logic: Logik
+        Text: teks
+      CourseE_Project_SpriteLab_2019:
+        Actions: Tindakan
+        Events: Acara-acara
+      CourseE_hoops:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+        Functions: Fungsi
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+        Functions: Fungsi
+      CourseF_Project_SpriteLab:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+        Functions: Fungsi
+      CourseF_Project_SpriteLab_2019:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Text: teks
+      Dance Party 2:
+        Events: Acara-acara
+      Dance Party 6:
+        Events: Acara-acara
+      Dance Party Freeplay:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+      Dance_Party_11_5:
+        Events: Acara-acara
+      Dance_Party_12:
+        Events: Acara-acara
+        Logic: Logik
+      Dance_Party_extras_battle:
+        Events: Acara-acara
+        Logic: Logik
+      Dance_Party_extras_every_beat:
+        Events: Acara-acara
+        Logic: Logik
+      Dance_Party_extras_layout:
+        Events: Acara-acara
+        Logic: Logik
+      Dance_Party_extras_on_beat:
+        Events: Acara-acara
+        Logic: Logik
+      Dance_Party_extras_speed:
+        Events: Acara-acara
+        Logic: Logik
+      Dance_Party_extras_visible:
+        Events: Acara-acara
+        Logic: Logik
+      Find the Wizard:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Fish Tank 7-validated:
+        Events: Acara-acara
+      Fish Tank 7-validated_2019:
+        Actions: Tindakan
+        Events: Acara-acara
+      FoodFight:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Geometric Sun:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Geometric Sun_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Guess The Number:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      InspirationalArtwork:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      InspirationalArtwork_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      NEW Course 4 Artist Functions 14:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      NEW Course 4 Artist Params 1:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      NEW Course 4 Artist Params 10:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      NEW Course 4 Artist Params 11:
+        Actions: Tindakan
+        Functions: Fungsi
+        Loops: Gelung
+        Math: Matematik
+      NEW Course 4 Artist Params 12:
+        Actions: Tindakan
+        Math: Matematik
+        Functions: Fungsi
+      NEW Course 4 Artist Params 12a:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      NEW Course 4 Artist Params 13:
+        Actions: Tindakan
+        Functions: Fungsi
+        Loops: Gelung
+        Math: Matematik
+      NEW Course 4 Artist Params 14:
+        Actions: Tindakan
+        Functions: Fungsi
+        Loops: Gelung
+        Math: Matematik
+      NEW Course 4 Artist Params 15:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      NEW Course 4 Artist Params 2:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      NEW Course 4 Artist Params 3:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      NEW Course 4 Artist Params 6:
+        Actions: Tindakan
+        Functions: Fungsi
+        Loops: Gelung
+        Math: Matematik
+      NEW Course 4 Artist Params 7:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      NEW Course 4 Artist Params 8:
+        Actions: Tindakan
+        Math: Matematik
+        Functions: Fungsi
+        Loops: Gelung
+      NEW Course 4 Artist Params 9:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      NEW Course 4 Artist Params inspire:
+        Actions: Tindakan
+        Functions: Fungsi
+        Loops: Gelung
+        Math: Matematik
+      NEW Course 4 Play Lab Params 11:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Robot Doodle:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Robot Doodle_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      Virtual Pet 2:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+      Virtual Pet 3:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+      Virtual Pet 4:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+      Virtual Pet 5:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+      Virtual Pet 6:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+      Virtual Pet Freeplay:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+      behaviors 3a:
+        Actions: Tindakan
+      behaviors 5:
+        Actions: Tindakan
+      behaviors 6:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Math: Matematik
+        Logic: Logik
+      behaviors 7:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Math: Matematik
+        Logic: Logik
+      behaviors free play:
+        Actions: Tindakan
+        Events: Acara-acara
+      course3_bee_functions_challenge1:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      course3_bee_functions_challenge2:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      course3_bee_functions_challenge3:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      course3_bee_functions_challenge4:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      course3_playLab_challenge1:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      course4_artist_fwp_challenge1:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      course4_bee_for_challenge1:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+        Math: Matematik
+      course4_bee_fwp_challenge1:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      course4_bee_fwp_challenge2:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      course4_playlab_variables_challenge1:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      courseD_artist_project1:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project1a:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project1a_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project1a_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project2:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project2_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project2_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project2a:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project2a_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project2a_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project3:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project3_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project3_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project3a:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project3a_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project3a_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project4:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project4_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project4_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project4a:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project4a_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project4a_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project5:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project5_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_artist_project5_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseD_playLab_condFP:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+      courseD_playLab_condFP_2018:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+      courseE_Dogger_2:
+        Actions: Tindakan
+        Events: Acara-acara
+        Variables: Pembolehubah
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Text: teks
+        Functions: Fungsi
+      courseE_artist_concept1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      courseE_artist_concept4:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_concept4_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      courseE_artist_functions10:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions10_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions10_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions2_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseE_artist_functions2_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseE_artist_functions3_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseE_artist_functions3_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseE_artist_functions5_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseE_artist_functions5_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseE_artist_functions7_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseE_artist_functions7_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseE_artist_functions8:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions8_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions8_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions8a_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions8a_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions8b_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions8b_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions8c_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions8c_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions9:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions9_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions9_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functionsProj_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      courseE_artist_functionsProj_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      courseE_artist_functions_predict2:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions_predict2_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_artist_functions_predict2_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_bee_concept1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_bee_concept2_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_bee_concept3_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_bee_concept4_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_bee_concept5_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_bee_functions6:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_bee_functions7:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_bee_functions_challenge1:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_bee_functions_challenge2:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseE_farmer_concept1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_concept2_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_concept3_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions1:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions10a1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions10a1_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions10b:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions11_predict:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions11_predict_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions11_predict_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions13_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions13_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions1_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions1a:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions1a_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions1a_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions2b:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions2b_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions2b_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions2ba:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions2ba_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions2ba_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions3c:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions3c1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions3c1_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions3c_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions3c_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions4b:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions5c:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions6c:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions7a1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions7a1_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions7b:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions8a1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions8a1_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions8b:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions9a1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions9a1_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_farmer_functions9b:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_playLab_challenge1:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_playLab_scaffold5:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseE_playLab_scaffold6:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+      courseF_artist_for1:
+        Actions: Tindakan
+        Loops: Gelung
+        Color: Warna
+      courseF_artist_for10:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_artist_for10_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Functions: Fungsi
+      courseF_artist_for10_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Functions: Fungsi
+      courseF_artist_for10_predict1:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_artist_for10_predict1_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_artist_for10_predict1_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_artist_for1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for1_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for2:
+        Actions: Tindakan
+        Loops: Gelung
+        Color: Warna
+      courseF_artist_for2_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for2_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for3:
+        Actions: Tindakan
+        Loops: Gelung
+        Color: Warna
+      courseF_artist_for3_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for3_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for4:
+        Actions: Tindakan
+        Loops: Gelung
+        Color: Warna
+      courseF_artist_for4_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for4_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for5:
+        Actions: Tindakan
+        Loops: Gelung
+        Color: Warna
+      courseF_artist_for5_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for5_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for6:
+        Actions: Tindakan
+        Loops: Gelung
+        Color: Warna
+      courseF_artist_for6_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Color: Warna
+      courseF_artist_for6_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Color: Warna
+      courseF_artist_for7:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for7_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for7_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for8:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for8_2018:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for8_2019:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for9:
+        Actions: Tindakan
+        Loops: Gelung
+      courseF_artist_for9_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseF_artist_for9_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+      courseF_artist_for_challenge1:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_for_challenge1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_for_challenge1_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_for_challenge2:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_for_challenge2_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_for_challenge2_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_fwp2:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      courseF_artist_fwp2_predict1:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      courseF_artist_fwp3:
+        Functions: Fungsi
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_fwp4:
+        Actions: Tindakan
+        Math: Matematik
+        Functions: Fungsi
+      courseF_artist_fwp5:
+        Actions: Tindakan
+        Functions: Fungsi
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_fwp6:
+        Actions: Tindakan
+        Functions: Fungsi
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_fwp7:
+        Actions: Tindakan
+        Functions: Fungsi
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_fwp8:
+        Actions: Tindakan
+        Functions: Fungsi
+        Loops: Gelung
+        Math: Matematik
+      courseF_artist_fwp9:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      courseF_artist_fwp_challenge1:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      courseF_artist_fwp_challenge2:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+      courseF_artist_variables10_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      courseF_artist_variables10_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      courseF_artist_variables7_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      courseF_artist_variables7_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      courseF_artist_variables8_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      courseF_artist_variables8_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      courseF_artist_variables9_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      courseF_artist_variables9_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      courseF_artist_variablesFP_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      courseF_artist_variablesFP_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+        Functions: Fungsi
+      courseF_bee_conditionals10:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_conditionals2:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_conditionals3:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_conditionals4:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_conditionals5:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_conditionals8:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_for10:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for10_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for10_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for11:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for11_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for11_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for1_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for1_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for2_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for2_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for3_predict1:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for3_predict1_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for3_predict1_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for4:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for4_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for4_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for5:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for5_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for5_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for6:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for6_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for6_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for7:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for7_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for7_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for8:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for8_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for8_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for9:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+        Variables: Pembolehubah
+      courseF_bee_for9_2018:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for9_2019:
+        Actions: Tindakan
+        Math: Matematik
+        Loops: Gelung
+      courseF_bee_for_challenge1:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_for_challenge1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_for_challenge1_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_for_challenge2:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseF_bee_for_challenge2_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseF_bee_for_challenge2_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+      courseF_bee_functions2:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_functions3:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_functions3a:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_functions4:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_functions5a:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_functions6:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_functions7:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_functions8a:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_functionsPre7:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_functions_challenge1:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_functions_challenge2:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_fwp1:
+        Actions: Tindakan
+        Loops: Gelung
+        Math: Matematik
+        Conditionals: Bersyarat
+      courseF_bee_fwp2:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_fwp3:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_fwp4:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_fwp5:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_fwp6:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_fwp7:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_fwp8:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_fwp9_predict1:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_fwp_challenge1:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_fwp_challenge2:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Math: Matematik
+      courseF_bee_variables_1_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_1_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_2_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_2_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_3_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_3_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_4_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_4_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_5_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_5_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_6_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_6_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_7_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_7_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_8_2018:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_bee_variables_8_2019:
+        Actions: Tindakan
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Functions: Fungsi
+        Variables: Pembolehubah
+        Math: Matematik
+      courseF_playlab_variables1a:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+      courseF_playlab_variables2b:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+      courseF_playlab_variables3b_josh:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+      courseF_playlab_variables4b:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+      courseF_playlab_variables4c_predictive1:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      courseF_playlab_variables5c:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Logic: Logik
+        Variables: Pembolehubah
+        Text: teks
+      courseF_playlab_variables6c:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+      courseF_playlab_variables7b:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Conditionals: Bersyarat
+        Math: Matematik
+        Text: teks
+        Functions: Fungsi
+        Variables: Pembolehubah
+      courseF_playlab_variables7c:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Variables: Pembolehubah
+      courseF_playlab_variables8c:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+        Variables: Pembolehubah
+      courseF_playlab_variables_challenge1:
+        Actions: Tindakan
+        Events: Acara-acara
+        Loops: Gelung
+        Math: Matematik
+        Functions: Fungsi
+        Variables: Pembolehubah
