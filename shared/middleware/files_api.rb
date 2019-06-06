@@ -467,7 +467,7 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
-    put_file(endpoint, encrypted_channel_id, filename, file[:tempfile].read)
+    put_file(endpoint, encrypted_channel_id, CGI.unescape(filename), file[:tempfile].read)
   end
 
   # PUT /v3/animations/<channel-id>/<filename>?src=<source-filename>
@@ -479,10 +479,10 @@ class FilesApi < Sinatra::Base
     content_type 'text/plain'
     if request.content_type == 'image/png'
       body = request.body.read
-      put_file(endpoint, encrypted_channel_id, filename, body)
+      put_file(endpoint, encrypted_channel_id, CGI.unescape(filename), body)
     elsif !request.GET['src'].nil?
       # We use this method so that IE9 can still upload by posting to an iframe.
-      copy_file(endpoint, encrypted_channel_id, filename, request.GET['src'])
+      copy_file(endpoint, encrypted_channel_id, CGI.unescape(filename), request.GET['src'])
     else
       bad_request
     end
@@ -540,7 +540,7 @@ class FilesApi < Sinatra::Base
     content_type :json
 
     filename.downcase! if endpoint == 'files'
-    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename).to_json
+    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, CGI.unescape(filename)).to_json
   end
 
   #

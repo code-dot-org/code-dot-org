@@ -52,7 +52,7 @@ class FilesApiTestHelper
   end
 
   def post_object(filename, body = '', headers = {})
-    post "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
+    post "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}", body, headers
     last_response.body
   end
 

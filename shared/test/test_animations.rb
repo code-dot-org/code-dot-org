@@ -20,7 +20,7 @@ class AnimationsTest < FilesApiTestBase
   def test_upload_animations
     dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'
-    cat_image_filename = @api.randomize_filename('cat.png')
+    cat_image_filename = @api.randomize_filename('cat per%cent question?.png')
     cat_image_body = 'stub-cat-contents'
 
     # Make sure we have a clean starting point
