@@ -1,5 +1,5 @@
 ---
-gl:
+gl-ES:
   data:
     display_name:
       CSD U2 Pair Programming Video: Programación por parellas
@@ -50,7 +50,6 @@ gl:
       CSD U3 Variables Map: Variables
       CSD U3 Variables Map_2018: Variables
       CSD U3 Variables Map_2019: Variables
-      CSD U3 functions map: Funcións
       CSD U6 for loop map: Bucles "Para" (For)
       CSD U6 for loop map_2018: Bucles "Para" (For)
       CSD U6 for loop map_2019: Bucles "Para" (For)
@@ -58,6 +57,3 @@ gl:
       CSD U6 functions paramters video_2018: Funcións con parámetros
       CSD U6 functions paramters video_2019: Funcións con parámetros
       'CSD: For Loop_2018': Bucles "Para" (For)
-      'CSD: For Loop_2019': Bucles "Para" (For)
-      MC_HOC_2017_FP10x10: Xogo libre
-      MC_HOC_2017_FP10x10_RE: Xogo libre

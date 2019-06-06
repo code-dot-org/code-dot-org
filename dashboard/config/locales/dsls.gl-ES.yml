@@ -4,6 +4,64 @@ gl:
     external:
       Begin planning your project:
         title: Título
+      CSD U2 Design Project:
+        title: Título
+      CSD U2 Design Project_2018:
+        title: Título
+      CSD U2 Design Project_2018_2019:
+        title: Título
+      CSD U2 L1 Overview:
+        title: Título
+      CSD U2 L2 Overview:
+        title: Título
+      CSD U2 L3 Overview:
+        title: Título
+      CSD U2 L4 Overview:
+        title: Título
+      CSD U2 L5 Overview:
+        title: Título
+      CSD U2 L6 Overview:
+        title: Título
+      CSD U2 expand project:
+        title: Título
+      CSD U2 expand project_2018:
+        title: Título
+      CSD U2 expand project_2018_2019:
+        title: Título
+      CSD U3 combining rep:
+        title: Título
+      CSD U3 combining rep_2018:
+        title: Título
+      CSD U3 combining rep_2018_2019:
+        title: Título
+      CSD U5 Encryption 1:
+        title: Título
+      CSD U5 Encryption 1_2018:
+        title: Título
+      CSD U5 Encryption 1_2018_2019:
+        title: Título
+      CSD U5 L13 SFLP Interpreting Data:
+        title: Título
+      CSD U5 data visualization:
+        title: Título
+      CSD U5 data visualization_2018:
+        title: Título
+      CSD U5 data visualization_2018_2019:
+        title: Título
+      CSD U5 student record:
+        title: Título
+      CSD U5 student record_2018:
+        title: Título
+      CSD U5 student record_2018_2019:
+        title: Título
+      Internet Simulator Setup 2:
+        title: Título
+      Multi-Screen Apps:
+        title: Título
+      New Challenge Introduction:
+        title: Título
+      OPD-K5 Stage3aGo:
+        title: Título
       Prepare for your presentation:
         title: Título
     match:
@@ -255,6 +313,12 @@ gl:
       4-5 maze multi 1:
         Maze Multiple Choice: Labirinto - Múltiple escolla
         Which blocks solve the puzzle?: Cales bloques resolven o desafío?
+      CSD U3 Boolean MC:
+        title: Título
+      CSD U3 Boolean MC_2018:
+        title: Título
+      CSD U3 Boolean MC_2018_2019:
+        title: Título
       K-1 Artist 1 Multi 1:
         Multiple Choice: Múltiple Escolla
         Which blocks solve this puzzle?: Que bloques resolven o desafío?
@@ -320,6 +384,10 @@ gl:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseD_multi_artist_binary8_predict1:
         A: A
         B: B
@@ -330,11 +398,20 @@ gl:
         B: B
         C: C
         D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
+        D: D
       courseD_multi_artist_nestedLoops9_predict1:
         A: A
         B: B
         C: C
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -355,6 +432,22 @@ gl:
           a loop down.  This is all inside of another loop that happens twice. 4 times
           2 is 8!"
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

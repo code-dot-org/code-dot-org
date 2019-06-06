@@ -1,20 +1,1935 @@
 ---
-gl:
+gl-ES:
   data:
     block_categories:
-      Actions: Accións
-      Loops: Bucles
-      Functions: Funcións
-      Color: Cor
-      Math: Matemáticas
-      Logic: Lóxica
-      Variables: Variables
-      Conditionals: Condicionais
-      Events: Eventos
-      Text: Texto
-      Location: Localización
-      Start: Comezar
-      Booleans: Valores booleanos
-      test: test
-      Name: Nome
-      Function: Función
+      4-5 Artist Patterns Free Play:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Alien Defender:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Choose Your Own Adventure:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Course 4 Artist For Loops 11:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      Course 4 Artist For Loops 11a:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      Course 4 Artist For Loops 14:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      Course 4 Artist For Loops 15:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      Course 4 Artist For Loops 4:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      Course 4 Artist For Loops 6a:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      Course 4 Artist For Loops 8:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      Course 4 Artist For Loops Challenge:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      Course 4 Artist For Loops inspire:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      Course 4 Artist Functions Inspiration:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      Course 4 Artist Functions challenge:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      Course 4 Bee Params 1:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      Course 4 Bee Params 2:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      Course 4 Bee Params 3:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Functions: Funcións
+      Course 4 Bee Params 4:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Functions: Funcións
+        Math: Matemáticas
+      Course 4 Bee Params 5:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Course 4 Bee Params 6:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Course 4 Bee Params 7:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 Bee Params 8:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 EC 1a:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 EC 1b:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 EC 2a:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+        Functions: Funcións
+        Variables: Variables
+      Course 4 EC 2b:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      Course 4 EC 2c:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      Course 4 Play Lab Params 10:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+        Functions: Funcións
+        Variables: Variables
+      Course 4 Play Lab Params 7:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 Play Lab Params 8:
+        Events: Eventos
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 Play Lab Params 9:
+        Actions: Accións
+        Math: Matemáticas
+        Functions: Funcións
+        Variables: Variables
+      Course 4 Play Lab Vars 9:
+        Events: Eventos
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+      Course 4 SCF 1:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 SCF 1a:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 SCF 1b:
+        Actions: Accións
+        Loops: Bucles
+        Logic: Lóxica
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 SCF 2:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 SCF 3:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      Course 4 SCFL 1:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      Course 4 SCFL 1a:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      Course 4 SCFL 1b:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      Course 4 SCFL 2:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+      Course 4 SCFL 3:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      Course 4 SCFL 4:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      Course 4 SCFL 6:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      Course 4 SCFL 7:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      Course 4 SCV 6:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      'Course E: Play Lab Project':
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      'Course F: Artist Project':
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      'Course F: Artist Project - Revise':
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      'Course F: Artist Project - Revise_2018':
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      'Course F: Artist Project_2018':
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      'Course F: Artist Project_2019':
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      CourseD_Dance_Party_11_5:
+        Events: Eventos
+      CourseD_Dance_Party_12:
+        Events: Eventos
+        Logic: Lóxica
+      CourseE_Project_SpriteLab:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+        Logic: Lóxica
+        Text: Texto
+      CourseE_Project_SpriteLab_2019:
+        Actions: Accións
+        Events: Eventos
+      CourseE_hoops:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+        Functions: Funcións
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+        Functions: Funcións
+      CourseF_Project_SpriteLab:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+        Functions: Funcións
+      CourseF_Project_SpriteLab_2019:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Text: Texto
+      Dance Party 2:
+        Events: Eventos
+      Dance Party 6:
+        Events: Eventos
+      Dance Party Freeplay:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+      Dance_Party_11_5:
+        Events: Eventos
+      Dance_Party_12:
+        Events: Eventos
+        Logic: Lóxica
+      Dance_Party_extras_battle:
+        Events: Eventos
+        Logic: Lóxica
+      Dance_Party_extras_every_beat:
+        Events: Eventos
+        Logic: Lóxica
+      Dance_Party_extras_layout:
+        Events: Eventos
+        Logic: Lóxica
+      Dance_Party_extras_on_beat:
+        Events: Eventos
+        Logic: Lóxica
+      Dance_Party_extras_speed:
+        Events: Eventos
+        Logic: Lóxica
+      Dance_Party_extras_visible:
+        Events: Eventos
+        Logic: Lóxica
+      Find the Wizard:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Fish Tank 7-validated:
+        Events: Eventos
+      Fish Tank 7-validated_2019:
+        Actions: Accións
+        Events: Eventos
+      FoodFight:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Geometric Sun:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Geometric Sun_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Guess The Number:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      InspirationalArtwork:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      InspirationalArtwork_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      NEW Course 4 Artist Functions 14:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      NEW Course 4 Artist Params 1:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+        Variables: Variables
+      NEW Course 4 Artist Params 10:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      NEW Course 4 Artist Params 11:
+        Actions: Accións
+        Functions: Funcións
+        Loops: Bucles
+        Math: Matemáticas
+      NEW Course 4 Artist Params 12:
+        Actions: Accións
+        Math: Matemáticas
+        Functions: Funcións
+      NEW Course 4 Artist Params 12a:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      NEW Course 4 Artist Params 13:
+        Actions: Accións
+        Functions: Funcións
+        Loops: Bucles
+        Math: Matemáticas
+      NEW Course 4 Artist Params 14:
+        Actions: Accións
+        Functions: Funcións
+        Loops: Bucles
+        Math: Matemáticas
+      NEW Course 4 Artist Params 15:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      NEW Course 4 Artist Params 2:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      NEW Course 4 Artist Params 3:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      NEW Course 4 Artist Params 6:
+        Actions: Accións
+        Functions: Funcións
+        Loops: Bucles
+        Math: Matemáticas
+      NEW Course 4 Artist Params 7:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      NEW Course 4 Artist Params 8:
+        Actions: Accións
+        Math: Matemáticas
+        Functions: Funcións
+        Loops: Bucles
+      NEW Course 4 Artist Params 9:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      NEW Course 4 Artist Params inspire:
+        Actions: Accións
+        Functions: Funcións
+        Loops: Bucles
+        Math: Matemáticas
+      NEW Course 4 Play Lab Params 11:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Robot Doodle:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Robot Doodle_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Functions: Funcións
+        Variables: Variables
+      Virtual Pet 2:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+      Virtual Pet 3:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+      Virtual Pet 4:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+      Virtual Pet 5:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+      Virtual Pet 6:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+      Virtual Pet Freeplay:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+      behaviors 3a:
+        Actions: Accións
+      behaviors 5:
+        Actions: Accións
+      behaviors 6:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Math: Matemáticas
+        Logic: Lóxica
+      behaviors 7:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Math: Matemáticas
+        Logic: Lóxica
+      behaviors free play:
+        Actions: Accións
+        Events: Eventos
+      course3_bee_functions_challenge1:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      course3_bee_functions_challenge2:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      course3_bee_functions_challenge3:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      course3_bee_functions_challenge4:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      course3_playLab_challenge1:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      course4_artist_fwp_challenge1:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      course4_bee_for_challenge1:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+        Math: Matemáticas
+      course4_bee_fwp_challenge1:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      course4_bee_fwp_challenge2:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      course4_playlab_variables_challenge1:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+        Variables: Variables
+      courseD_artist_project1:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project1a:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project1a_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project1a_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project2:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project2_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project2_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project2a:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project2a_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project2a_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project3:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project3_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project3_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project3a:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project3a_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project3a_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project4:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project4_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project4_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project4a:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project4a_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project4a_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project5:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project5_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_artist_project5_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseD_playLab_condFP:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+      courseD_playLab_condFP_2018:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+      courseE_Dogger_2:
+        Actions: Accións
+        Events: Eventos
+        Variables: Variables
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Text: Texto
+        Functions: Funcións
+      courseE_artist_concept1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      courseE_artist_concept4:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_concept4_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      courseE_artist_functions10:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions10_2018:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions10_2019:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions2_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseE_artist_functions2_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseE_artist_functions3_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseE_artist_functions3_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseE_artist_functions5_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseE_artist_functions5_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseE_artist_functions7_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseE_artist_functions7_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseE_artist_functions8:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions8_2018:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions8_2019:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions8a_2018:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions8a_2019:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions8b_2018:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions8b_2019:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions8c_2018:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions8c_2019:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions9:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions9_2018:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions9_2019:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functionsProj_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      courseE_artist_functionsProj_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      courseE_artist_functions_predict2:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions_predict2_2018:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_artist_functions_predict2_2019:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_bee_concept1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_bee_concept2_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_bee_concept3_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_bee_concept4_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_bee_concept5_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_bee_functions6:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_bee_functions7:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_bee_functions_challenge1:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_bee_functions_challenge2:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseE_farmer_concept1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_concept2_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_concept3_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions1:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions10a1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions10a1_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions10b:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions11_predict:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions11_predict_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions11_predict_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions13_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions13_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions1_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions1a:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions1a_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions1a_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions2b:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions2b_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions2b_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions2ba:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions2ba_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions2ba_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions3c:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions3c1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions3c1_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions3c_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions3c_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions4b:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions5c:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions6c:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions7a1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions7a1_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions7b:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions8a1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions8a1_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions8b:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions9a1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions9a1_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_farmer_functions9b:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_playLab_challenge1:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_playLab_scaffold5:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseE_playLab_scaffold6:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+      courseF_artist_for1:
+        Actions: Accións
+        Loops: Bucles
+        Color: Cor
+      courseF_artist_for10:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_artist_for10_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Functions: Funcións
+      courseF_artist_for10_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Functions: Funcións
+      courseF_artist_for10_predict1:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_artist_for10_predict1_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_artist_for10_predict1_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_artist_for1_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for1_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for2:
+        Actions: Accións
+        Loops: Bucles
+        Color: Cor
+      courseF_artist_for2_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for2_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for3:
+        Actions: Accións
+        Loops: Bucles
+        Color: Cor
+      courseF_artist_for3_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for3_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for4:
+        Actions: Accións
+        Loops: Bucles
+        Color: Cor
+      courseF_artist_for4_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for4_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for5:
+        Actions: Accións
+        Loops: Bucles
+        Color: Cor
+      courseF_artist_for5_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for5_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for6:
+        Actions: Accións
+        Loops: Bucles
+        Color: Cor
+      courseF_artist_for6_2018:
+        Actions: Accións
+        Loops: Bucles
+        Color: Cor
+      courseF_artist_for6_2019:
+        Actions: Accións
+        Loops: Bucles
+        Color: Cor
+      courseF_artist_for7:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for7_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for7_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for8:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for8_2018:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for8_2019:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for9:
+        Actions: Accións
+        Loops: Bucles
+      courseF_artist_for9_2018:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseF_artist_for9_2019:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+      courseF_artist_for_challenge1:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_for_challenge1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_for_challenge1_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_for_challenge2:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_for_challenge2_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_for_challenge2_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_fwp2:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      courseF_artist_fwp2_predict1:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      courseF_artist_fwp3:
+        Functions: Funcións
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_fwp4:
+        Actions: Accións
+        Math: Matemáticas
+        Functions: Funcións
+      courseF_artist_fwp5:
+        Actions: Accións
+        Functions: Funcións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_fwp6:
+        Actions: Accións
+        Functions: Funcións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_fwp7:
+        Actions: Accións
+        Functions: Funcións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_fwp8:
+        Actions: Accións
+        Functions: Funcións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_artist_fwp9:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      courseF_artist_fwp_challenge1:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      courseF_artist_fwp_challenge2:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+      courseF_artist_variables10_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      courseF_artist_variables10_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      courseF_artist_variables7_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      courseF_artist_variables7_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      courseF_artist_variables8_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      courseF_artist_variables8_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      courseF_artist_variables9_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      courseF_artist_variables9_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      courseF_artist_variablesFP_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      courseF_artist_variablesFP_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+        Functions: Funcións
+      courseF_bee_conditionals10:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_conditionals2:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_conditionals3:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_conditionals4:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_conditionals5:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_conditionals8:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_for10:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for10_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for10_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for11:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for11_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for11_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for1_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for1_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for2_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for2_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for3_predict1:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for3_predict1_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for3_predict1_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for4:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for4_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for4_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for5:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for5_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for5_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for6:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for6_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for6_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for7:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for7_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for7_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for8:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for8_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for8_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for9:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+        Variables: Variables
+      courseF_bee_for9_2018:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for9_2019:
+        Actions: Accións
+        Math: Matemáticas
+        Loops: Bucles
+      courseF_bee_for_challenge1:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_for_challenge1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_for_challenge1_2019:
+        Actions: Accións
+        Loops: Bucles
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_for_challenge2:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_bee_for_challenge2_2018:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_bee_for_challenge2_2019:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_bee_functions2:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_functions3:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_functions3a:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_functions4:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_functions5a:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_functions6:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_functions7:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_functions8a:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_functionsPre7:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_functions_challenge1:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_functions_challenge2:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_fwp1:
+        Actions: Accións
+        Loops: Bucles
+        Math: Matemáticas
+        Conditionals: Condicionais
+      courseF_bee_fwp2:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_fwp3:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_fwp4:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_fwp5:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_fwp6:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_fwp7:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_fwp8:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_fwp9_predict1:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_fwp_challenge1:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_fwp_challenge2:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Math: Matemáticas
+      courseF_bee_variables_1_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_1_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_2_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_2_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_3_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_3_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_4_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_4_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_5_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_5_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_6_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_6_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_7_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_7_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_8_2018:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_bee_variables_8_2019:
+        Actions: Accións
+        Loops: Bucles
+        Conditionals: Condicionais
+        Functions: Funcións
+        Variables: Variables
+        Math: Matemáticas
+      courseF_playlab_variables1a:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+      courseF_playlab_variables2b:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+      courseF_playlab_variables3b_josh:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+      courseF_playlab_variables4b:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+      courseF_playlab_variables4c_predictive1:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+        Variables: Variables
+      courseF_playlab_variables5c:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Logic: Lóxica
+        Variables: Variables
+        Text: Texto
+      courseF_playlab_variables6c:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+      courseF_playlab_variables7b:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Conditionals: Condicionais
+        Math: Matemáticas
+        Text: Texto
+        Functions: Funcións
+        Variables: Variables
+      courseF_playlab_variables7c:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Variables: Variables
+      courseF_playlab_variables8c:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+        Variables: Variables
+      courseF_playlab_variables_challenge1:
+        Actions: Accións
+        Events: Eventos
+        Loops: Bucles
+        Math: Matemáticas
+        Functions: Funcións
+        Variables: Variables

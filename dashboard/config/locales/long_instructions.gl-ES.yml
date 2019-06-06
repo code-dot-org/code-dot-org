@@ -1,13 +1,11 @@
 ---
-gl:
+gl-ES:
   data:
     long_instructions:
       2-3 Artist 3.4: |-
         O bloque "salta" move o artista sen debuxar.
         Debuxa a liña trazada usando os bloques "salta" e "debuxa".
       2-3 Artist 4: Axúdame a completar a casa para o gato.
-      2-3 Artist 9 NEW: Termina este papaventos
-      2-3 Artist 9 REPLACEMENT: Termina de debuxar esta escaleira!
       2-3 Artist 9: Termina este papaventos
       2-3 Artist Debugging 10: |-
         O controlador de dirección do control do meu xogo
@@ -39,14 +37,6 @@ gl:
       2-3 Artist Functions 11.5: |-
         Aquí está a mesma función "Debuxa un hexágono".
         O que acontece se viras só 60 graos en cada repetición?
-      2-3 Artist Functions 12 Mike: "As funcións son óptimas para debuxar\ncousas
-        complexas varias veces. Podes usar a función \"debuxa unha flor\"\npara cubrir
-        o resto de plantas? (Pista: as plantas están todas separadas\npor unha lonxitude
-        de 100 pixels)  "
-      2-3 Artist Functions 12 a: "As funcións son óptimas para debuxar\ncousas complexas
-        varias veces. Podes usar a función \"debuxa unha flor\"\npara cubrir o resto
-        de plantas? (Pista: as plantas están todas separadas\npor unha lonxitude de
-        100 pixels)  "
       2-3 Artist Functions 12: "As funcións son óptimas para debuxar\ncousas complexas
         varias veces. Podes usar a función \"debuxa unha flor\"\npara cubrir o resto
         de plantas? (Pista: as plantas están todas separadas\npor unha lonxitude de
@@ -61,9 +51,6 @@ gl:
       2-3 Artist Functions 4: |-
         Usa o bloque "repita" para debuxar estes
         3 cadrados.
-      2-3 Artist Loops 1: |-
-        Podes facer un hexágono con lados de
-        100 pixels de lonxitude para terminar a célula? Lémbrate, iso significa que só vas precisar virar 60 graos!
       2-3 Artist Loops New 10: |-
         Agora imos conectar unha chea de V's,
         debuxándoos nun bucle.
@@ -148,9 +135,6 @@ gl:
         será executado mentres a condición sexa verdadeira, neste caso, mentres néctar > 0.
       2-3 Maze 15: Usa dous bucles para chegar até o porco usando menos bloques.
       2-3 Maze Loops 18: Lévame até o xirasol!
-      4-5 Artist 10: |-
-        Presiona "Executar" para probar o código. Daquela repite o código
-        o número suficiente de veces para completar o debuxo. As cores serán diferentes cada vez.
       4-5 Artist 2: Podes repetir este código para completar o cadrado?
       4-5 Artist 5: Que ángulo usas?
       4-5 Artist 6: |-
@@ -280,9 +264,6 @@ gl:
       4-5 While Loops 4: |-
         Uau, atopei un buraco realmente fondo! Non
         sei cantas pás de terra son necesarias. Podes escribir un programa que o cubra até que o solo fique nivelado? Pista: desta vez tenta usar o bucle "mentres".
-      Artist Autorun Test: |-
-        Usa o bloque "repita" para debuxar estes
-        3 cadrados.
       Course 4 Artist 13: |-
         Aínda xogando?  Temos aquí unha pantalla en branco
         na cal podes debuxar o que queiras!
@@ -296,41 +277,12 @@ gl:
       Course 4 Artist 8a: "Lémbraste desta figura? Agora ímoste deixar\nconstruíla
         sen dar ningún bloque inicial!\\\r\nPista: hai 3 triángulos dentro da rotación
         de 360 graos... cantas veces cabe 3 en\n360?"
-      Course 4 Artist Binary 1a: "Temos aquí unha función que recibe unha tira\nbinaria
-        de 1's e 0's que indica o artista a moverse da esquerda para\na dereita, de
-        enriba para baixo. O artista vai cubrir os cadrados nos que vexa un 1 e ignorar
-        os que tivesen un 0.\\\r\n\\\r\nExecuta este código para ver como\no artista
-        usa números binarios para debuxar este padrón."
-      Course 4 Artist For Loops 13: |-
-        Hmm, esas figuras están ficando cada vez
-        maiores! Non tíñamos resolvido xa este problema con variábeis? Como
-        podemos usar a variábel contador para deixar os lados menores conforme a figura ten máis lados? En vez de avanzar unha cantidade definida, avanza (100 /
-        contador) pixels.
       Course 4 Artist For Loops 4: "Como podes modificar o que aprendiches para debuxar
         estes cadrados?\nComezan con 15 pixels de lonxitude, o maior ten 300 pixels
         de lonxitude, e cada cadrado é 15 pixels maior que o anterior. "
-      Course 4 Artist For Loops 6: |-
-        Actividade libre: tenta usar un bucle "para"
-        para debuxar un padrón crecente de formas co teu propio debuxo.
       Course 4 Artist For Loops 6a: |-
         Fai tres pequenas alteracións no
         código do último nivel para conseguilo!
-      Course 4 Artist For Loops 8a: |-
-        Só unha pequena alteración no código
-        da última imaxe pode crear esta imaxe. Consegues descobrir cal é esa
-        alteración?
-      Course 4 Artist For Loops Challenge_a: "Podes descobrir como\nusar todas as
-        cousas que aprendiches para crear esta imaxe?\\\r\n\\\r\nPrecisas de unha
-        indicación? Clica aquí."
-      Course 4 Artist Vars 3: "Temos aquí un bucle que debuxa un cadrado pero\nalgo
-        está faltando. Podes correxilo para que use a variábel \"lonxitude\"\npara
-        descobrir cal debe ser o tamaño de cada lado? "
-      Course 4 Bee 7: |-
-        Usa todo o que aprendiches até agora para recoller
-        todo o néctar. A flor morada pode ter 1, 2 ou 3 néctares.
-      Course 4 Bee For Loops 11: |-
-        O que está errado neste bucle? Mira se
-        podes arranxalo e facer que a abella recolla todo o néctar.
       Course 4 Bee Params 1: |-
         Usa a función "obteña 3 néctares" que
         vira, se move para recoller o néctar e entón retorna á posición orixinal.
@@ -347,17 +299,6 @@ gl:
       Course 4 Play Labs For Loops 1: |-
         Imos facer falar o can todos
         os números de 1 a 100. Usa un bucle "para" e o bloque contador para que fale o valor da variábel contador cada vez que o bucle sexa executado.
-      Course 4 SCFP 1: |-
-        Crea unha función con parámetros que permiten
-        ao artista saltar para tras e para adiante x pixels, e tamén para enriba e para abaixo y pixels (usando números positivos e negativos).
-      Course 4 SCVP 1: |-
-        Crea unha función con parámetros que permiten
-        ao artista saltar para tras e para adiante x pixels, e tamén para enriba e para abaixo y pixels (usando números positivos e negativos).
-      CourseF_PlayLab_vars2: |-
-        A carreira do último desafío non foi moi xusta! Altera
-        a variábel "velocidade\_can" para garantir que poidas recoller máis bandeiras que o gato. O primeiro en recoller 10 bandeiras vence!
-      Dance Party Template 1_2019: Modelo
-      Dance Party Template 2_2019: Modelo
       K-1 Bee Loops 2: |-
         Usa un bucle "repita" para te mover e entón recolle o néctar e
         produce mel!
@@ -373,9 +314,6 @@ gl:
       K-1 Maze Loops 12: "Lévame até o porco! \\\r\nO bucle \"repita\" facilítao."
       K-1 Maze Loops 2: Usa o bloque "repita" para me levar até o porco!
       K-1 Maze Loops 8: Usa o bucle "repita" para me levar até o porco.
-      NEW Course 4 Artist Functions 10.1: |-
-        Usa as funcións dos desafíos
-        anteriores para debuxar este padrón.
       NEW Course 4 Artist Functions 12: |-
         Usa a función "debuxe unha liña de cadrados"
         do último desafío para debuxar este padrón."
@@ -401,18 +339,11 @@ gl:
         só unha vez e o código usa o valor correcto en todos os lugares?\\\r\n\\\r\n\\\r"
       Overworld Move to Sheep: Agrega un segundo comando "andar adiante" para chegar
         á ovella.
-      Overworld Move to Sheep_2018: Agrega un segundo comando "andar adiante" para
-        chegar á ovella.
       Overworld Move to Sheep_2019: Agrega un segundo comando "andar adiante" para
         chegar á ovella.
-      Testing Quantum Farmer: |-
-        Uau, atopei un buraco realmente fondo! Non
-        sei cantas pás de terra son necesarias. Podes escribir un programa que o cubra até que o solo fique nivelado? Pista: desta vez tenta usar o bucle "mentres".
       course4_artist_fwp_challenge1: Tenta executar este programa e fai as alteracións
         para ver o que acontece. Podes descubrir como funciona? (Ou eliminalo e substituílo
         por algo totalmente distinto)
-      courseD_bee_nestedLoops5: "Recolle todo o néctar de cada flor\ne produce mel
-        en cada colmea. Usa un bucle aniñado. "
       courseD_bee_nestedLoops8: "Recolle todo o néctar de cada flor\ne produce mel
         en cada colmea. Usa un bucle aniñado. "
       courseD_bee_nestedLoops8_2018: "Recolle todo o néctar de cada flor\ne produce
@@ -425,12 +356,6 @@ gl:
       courseE_bee_functions3: |-
         As funcións son bloques de código que realizan
         unha tarefa. Usa a función "obteña 5" para recoller 5 néctares dunha vez. Lémbrate tamén de usar un bucle para obter un contador ideal de bloque.
-      courseE_bee_functions3_2018: |-
-        As funcións son bloques de código que realizan
-        unha tarefa. Usa a función "obteña 5" para recoller 5 néctares dunha vez. Lémbrate tamén de usar un bucle para obter un contador ideal de bloque.
-      courseE_farmer_concept4: |-
-        Agora, imos nos profundizar máis un nivel!
-        Aniñamos todo o bloque de código dentro de outro bucle, pero necesitas posicionar o artista no lugar para debuxar a próxima recta. Cal destes bloques de código podes colocar no final do bucle máis externo para debuxar toda a grade?
       courseF_bee_for_challenge2: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
@@ -440,6 +365,12 @@ gl:
       courseF_bee_for_challenge2_2019: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
+      frozen circle: |-
+        Un círculo é unha figura especial. Podes descobrir
+        que número usar para substituír os puntos de interrogación para debuxar un círculo?
+      frozen circle function: |-
+        Usa o novo bloque "cree un círculo" para
+        crear 10 círculos sobrepostos. Non te esquezas de avanzar entre os círculos.
       frozen circle function in circle: |-
         Agora imos crear 20 círculos
         sobrepostos, virando 18 graos entre cada círculo.
@@ -447,21 +378,19 @@ gl:
         Temos aquí un bloque "cree un círculo"
         que pode facer círculos de tamaños diferentes. Podes usar isto para crear
         un pequeno círculo de tamaño 5 e un círculo maior de tamaño 10?
-      frozen circle function: |-
-        Usa o novo bloque "cree un círculo" para
-        crear 10 círculos sobrepostos. Non te esquezas de avanzar entre os círculos.
-      frozen circle: |-
-        Un círculo é unha figura especial. Podes descobrir
-        que número usar para substituír os puntos de interrogación para debuxar un círculo?
-      frozen cross rotate dense: |-
-        Imos repetir isto 90 veces! Cantas
-        veces 90 cabe en 360? Indicación: é un número realmente pequeno.
-      frozen cross rotate: |-
-        Agora tenta repetir isto 10 veces. Cntos graos
-        precisas virar entre cada recta?
       frozen cross: |-
         Envolve un bloque "Repita" en torno destes comandos para crear
         un sinal de suma. Notaches que a Elsa pode se mover para diante e para trás?
+      frozen cross rotate: |-
+        Agora tenta repetir isto 10 veces. Cntos graos
+        precisas virar entre cada recta?
+      frozen cross rotate dense: |-
+        Imos repetir isto 90 veces! Cantas
+        veces 90 cabe en 360? Indicación: é un número realmente pequeno.
+      frozen diamond: |-
+        Usa un bloque "Repita" en torno destes bloques para crear un paralelogramo.
+        É como un rectángulo pero ten ángulos diferentes. Este ten ángulos de 60 graos
+        e 120 graos en vez de todos os ángulos teren 90 graos.
       frozen diamond mini snowflake: |-
         Sabías que cada floco de neve
         ten unha forma diferente? Imos crear un nova floco de neve usando o bloque "Repita" para repetir un paralelogramo 4 veces, virando 90 graos á dereita entre
@@ -469,10 +398,6 @@ gl:
       frozen diamond snowflake: |-
         Agora, imos crear unha nova folerpa
         usando o bloque "repita" para repetir un paralelogramo 10 veces, virando 36 graos á dereita entre cada un.
-      frozen diamond: |-
-        Usa un bloque "Repita" en torno destes bloques para crear un paralelogramo.
-        É como un rectángulo pero ten ángulos diferentes. Este ten ángulos de 60 graos
-        e 120 graos en vez de todos os ángulos teren 90 graos.
       frozen freeplay: |-
         Oficialmente convertícheste nun artista mestre! Crea
         un país das maravillas invernal.
@@ -493,215 +418,14 @@ gl:
       frozen square iterative: |-
         Parece que estamos na metade do camiño para facer
         un cadrado. Imos xuntar 4 rectas para crear un cadrado.
-      frozen square loop 3x: |-
-        Imos crear tres cadrados, virando despois
-        de cada cadrado. Lémbrate de virar 120 graos antes de cada novo cadrado.
       frozen square loop: |-
         Oi, son a Anna de Arendelle! Imos facer un cadrado
         co bloque "repita", que usa menos bloques. Cantas veces (???) o bloque
         "repita" debe repetir os bloques dentro del para facer un cadrado?
+      frozen square loop 3x: |-
+        Imos crear tres cadrados, virando despois
+        de cada cadrado. Lémbrate de virar 120 graos antes de cada novo cadrado.
       frozen square snowflake: |-
         Consegues crear unha folerpa usando o bloque
         "repita" para crear un cadrado 10 veces e o bloque "vire" para virar 36
         graos entre cada cadrado?
-      grade2_MakeDogTag_8: |-
-        Agora imos conectar unha chea de V's,
-        debuxándoos nun bucle.
-      grade2_PuppyLoops_10: |-
-        O meu cataventos non está preparado. Cantas
-        veces preciso repetir para terminalo?
-      grade2_PuppyLoops_4: Usa dous bucles para chegar até o porco usando menos bloques.
-      grade2_PuppyLoops_8: 'O código para os tres bigodes que ves está errado. Pista:
-        cada bigode ten a lonxitude de 75 pixels. Corrixe este código para debuxar
-        os bigodes.'
-      grade2_PuppyLoops_9: |-
-        Parece que o C no código está debuxado ao contrario.
-        Podes facelo parecer a un C?
-      grade2_puppy_loops4: Usa dous bucles para chegar até o porco usando menos bloques.
-      grade3_ConditionalsElse_2: |-
-        Agora a abella só quere néctar. Lémbrate,
-        non todos os obxectos son flores, entón mira se o obxecto debaixo da nube é
-        unha flor. Se é, entón podes recoller o néctar.
-      grade3_ConditionalsElse_5: |-
-        Debe haber unha flor ou unha colmea
-        baixo esas nubes. Usa o bloque se-senón para recoller néctar se houbese
-        unha flor, se non para producir mel (porque hai, entón, unha colmea).
-      grade3_ConditionalsElse_6: |-
-        Esa flor morada pode ter 1,
-        2 ou 3 néctares. Aquí un bloque "se-senón" está combinado con outro bloque "se-senón" para crear un bloque "se, senón"-"se, senón". Completa a solución para recoller a cantidade descoñecida de néctar.
-      grade3_ConditionalsElse_7: |-
-        Lémbrate de que as flores moradas poden ter
-        1, 2 ou 3 néctares. Completa a función "verifique a flor morada" e úsaa
-        para recoller todo o néctar das flores.
-      grade3_ConditionalsElse_8: |-
-        Escribe dentro da función "verifique flor e
-        produza mel". A túa función debe verificar se a flor morada ten 3, 2 ou
-        1 néctar e recoller todo o néctar. Daquela, sigue adiante e produce mel.
-      grade3_ConditionalsElse_9: |-
-        Avaliación: este código é erróneo.
-        Completa a función "recolla néctar ou produza mel" e daquela chámea para recoller todo o néctar e producir o mel. Lémbrate, as flores moradas poden ter 1, 2 ou 3 néctares.
-      grade3_ConditionalsElse_TeacherIDo: |-
-        Debe haber unha flor ou unha colmea
-        baixo esas nubes. Usa o bloque se-senón para recoller néctar se houbese
-        unha flor, se non para producir mel (porque hai, entón, unha colmea).
-      grade3_Conditionals_10: |-
-        Recolle néctar e produce mel. Pista:
-        o que acontece se usases a condición "se houbese néctar" nunha flor vermella? Podes completar isto cun bucle?
-      grade3_Conditionals_12: Recolle néctar das catro flores.
-      grade3_Conditionals_2: |-
-        Axúdame a recoller todo o néctar das
-        flores e a producir mel. Usa un bucle.
-      grade3_Conditionals_8: Recolle néctar onde as flores teñen néctar.
-      grade3_Debugging_6: |-
-        Estes bloques están me incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar.
-      grade3_Debugging_9: |-
-        Estes bloques estanme incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar e producir todo o mel.
-      grade3_Loops_3: Podes usar un bucle para recoller todo o néctar?
-      grade3_Loops_4: Agora, usa o novo bloque "repita" para recoller todo o néctar
-        e producir todo o mel.
-      grade3_Loops_6: O que acontece se repetes esta secuencia 3 veces? Non te esquezas
-        de facer o mel ao final!
-      grade3_Loops_7: "Cada flor contén unha unidade de néctar. Recolle\no néctar
-        de cada unha das flores. "
-      grade3_Loops_TeacherIDo: "Cada flor contén unha unidade de néctar. Recolle\no
-        néctar de cada unha das flores. "
-      grade3_bee_conditionals_quantum2: |-
-        Agora a abella só quere néctar. Lémbrate,
-        non todos os obxectos son flores, entón mira se o obxecto debaixo da nube é
-        unha flor. Se é, entón podes recoller o néctar.
-      grade3_maze_loops2: Lévame até o xirasol!
-      grade3_maze_nestedLoops4: Usa dous bucles para chegar até o porco usando menos
-        bloques.
-      grade4_arist_nested_loop_flags1: Repite o código dado para crear un muiño de
-        vento.
-      grade4_arist_nested_loop_polygons1: |-
-        Repite este debuxo 10 veces. Canto
-        necesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)
-      grade4_arist_nested_loop_polygons2: |-
-        Repita este debuxo 6 veces. Canto
-        precisas virar a cada repetición? (Pista: canto é 360 dividido por 6?)
-      grade4_arist_nested_loop_triangles3: |-
-        Podes debuxar un hexágono repetindo o
-        código do triángulo?
-      grade4_arist_nested_loop_triangles4: Debuxa o dente na boca do crocodilo!
-      grade4_arist_nested_loop_triangles5: "Crea un sol aniñando o código inicial\ndentro
-        de outro bucle. Chamamos a isto bucle aniñado.\\\r"
-      grade4_arist_nested_loop_triangles6: |-
-        Podes debuxar estes 36 triángulos usando
-        un bucle aniñado?
-      grade4_artist_functions2: |-
-        As funcións permiten que definas novos bloques! Movemos
-        os bloques para debuxar un cadrado para dentro dunha función chamada "debuxa un cadrado".
-        Podes usar a función "debuxa un cadrado" para crear os lentes? Os cadrados están separados por 75 pixels.
-      grade4_artist_nested_loop_flags1: Repite o código dado para crear un muiño de
-        vento.
-      grade4_artist_nested_loop_polygons1: |-
-        Repite este debuxo 10 veces. Canto
-        necesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)
-      grade4_artist_nested_loop_triangles5: "Crea un sol aniñando o código inicial\ndentro
-        de outro bucle. Chamamos a isto bucle aniñado.\\\r"
-      grade4_artist_nested_loop_triangles6: |-
-        Podes debuxar estes 36 triángulos usando
-        un bucle aniñado?
-      grade4_artist_parameters_triangles2: |-
-        Percibes algo diferente
-        sobre estes bloques de función? Clica en "Executar" para ver o que acontece.
-      grade4_bee_conditionals_quantum2: |-
-        Agora a abella só quere néctar. Lémbrate,
-        non todos os obxectos son flores, entón mira se o obxecto debaixo da nube é
-        unha flor. Se é, entón podes recoller o néctar.
-      grade4_bee_conditionals_quantum5: |-
-        Debe haber unha flor ou unha colmea
-        baixo esas nubes. Usa o bloque se-senón para recoller néctar se houbese
-        unha flor, se non para producir mel (porque hai, entón, unha colmea).
-      grade4_bee_functions3: |-
-        As funcións son bloques de código que realizan
-        unha tarefa. Usa a función "obteña 5" para recoller 5 néctares dunha vez. Lémbrate tamén de usar un bucle para obter un contador ideal de bloque.
-      grade4_bee_nestedLoops4: "Recolle todo o néctar de cada flor\ne produce mel
-        en cada colmea. Usa un bucle aniñado. "
-      grade4_frozen_freeplay: |-
-        Oficialmente convertícheste nun artista mestre! Crea
-        un país das maravillas invernal.
-      grade4_frozen_functions0: |-
-        Un círculo é unha figura especial. Podes descobrir
-        que número usar para substituír os puntos de interrogación para debuxar un círculo?
-      grade4_frozen_functions1a: |-
-        Usa o novo bloque "cree un círculo" para
-        crear 10 círculos sobrepostos. Non te esquezas de avanzar entre os círculos.
-      grade4_frozen_functions2: |-
-        Agora imos crear 20 círculos
-        sobrepostos, virando 18 graos entre cada círculo.
-      grade4_frozen_functions3: |-
-        Temos aquí un bloque "cree un círculo"
-        que pode facer círculos de tamaños diferentes. Podes usar isto para crear
-        un pequeno círculo de tamaño 5 e un círculo maior de tamaño 10?
-      grade4_frozen_functions4: |-
-        Poden ser creados padróns de neve complexos con
-        formas moi simples. Podes crear un padrón repetindo 5 círculos de tamaño
-        5 e 5 círculos de tamaño 10?
-      grade4_frozen_nested_loop_diamonds2: |-
-        Sabías que cada floco de neve
-        ten unha forma diferente? Imos crear un nova floco de neve usando o bloque "Repita" para repetir un paralelogramo 4 veces, virando 90 graos á dereita entre
-        cada paralelogramo.
-      grade4_frozen_nested_loop_diamonds3: |-
-        Agora, imos crear unha nova folerpa
-        usando o bloque "repita" para repetir un paralelogramo 10 veces, virando 36 graos á dereita entre cada un.
-      grade4_frozen_square: |-
-        Oi, son a Anna de Arendelle! Imos facer un cadrado
-        co bloque "repita", que usa menos bloques. Cantas veces (???) o bloque
-        "repita" debe repetir os bloques dentro del para facer un cadrado?
-      grade4_frozen_square_loop1: |-
-        Oi, son a Anna de Arendelle! Imos facer un cadrado
-        co bloque "repita", que usa menos bloques. Cantas veces (???) o bloque
-        "repita" debe repetir os bloques dentro del para facer un cadrado?
-      grade4_frozen_square_loop2: |-
-        Imos crear tres cadrados, virando despois
-        de cada cadrado. Lémbrate de virar 120 graos antes de cada novo cadrado.
-      grade4_frozen_square_loop3: |-
-        Consegues crear unha folerpa usando o bloque
-        "repita" para crear un cadrado 10 veces e o bloque "vire" para virar 36
-        graos entre cada cadrado?
-      grade4_review_artist3: |-
-        O bloque "salta" move o artista sen debuxar.
-        Debuxa a liña trazada usando os bloques "salta" e "debuxa".
-      grade4_review_bee1: Agora, usa o novo bloque "repita" para recoller todo o néctar
-        e producir todo o mel.
-      grade5_artist_for_loops1: |-
-        Debuxa este triángulo que ten 50 pixels.
-        Pista: usa un bloque "repita".
-      grade5_artist_for_loops10: "Podes descobrir como\nusar todas as cousas que aprendiches
-        para crear esta imaxe?\\\r\n\\\r\nPrecisas de unha indicación? Clica aquí."
-      grade5_artist_for_loops5: "Unha pequena alteración no código\nda última imaxe
-        pode crear este debuxo. Podes descobrir cal é\nesta alteración?\\\r\n\\\r\nPista:
-        algo precisa ser removido!"
-      grade5_artist_parameters_triangles2a: |-
-        Percibes algo diferente
-        sobre estes bloques de función? Clica en "Executar" para ver o que acontece.
-      grade5_artist_variables_hexagons1: |-
-        Imos tentar novamente. Consegues definir
-        a variábel "lonxitude" para facer este fantástico debuxo con hexágonos? Pista: é un múltiplo de 10.
-      grade5_artist_variables_pentagon9: |-
-        Agora, recrea o algoritmo do último
-        nivel para crear un pentágono de lados de 150.
-      grade5_artist_variables_pentagons1: "Debuxa este padrón colocando a\nvariábel
-        lonxitude nos lugares correctos e definindo o valor correcto para\nlonxitude.
-        (Pista: é un múltiplo de 10).  \\\r\n\\\r\nPercibes como defines o valor de\nlonxitude
-        só unha vez e o código usa o valor correcto en todos os lugares?\\\r\n\\\r\n\\\r"
-      grade5_playlab_variables13: |-
-        Usa un bloque "cando o personaxe toque" para enviar
-        o Can de volta para a parte superior esquerda SOMENTE se toca en calquera outro personaxe.
-      grade5_playlab_variables2: |-
-        A carreira do último desafío non foi moi xusta! Altera
-        a variábel "velocidade\_can" para garantir que poidas recoller máis bandeiras que o gato. O primeiro en recoller 10 bandeiras vence!
-      grade5_playlab_variables9: |-
-        Aquí temos unha función chamada "patrulle".
-        Edítaa para mover o gato 400 pixels para enriba, e entón 400 pixels para baixo.
-      level 'grade3_Loops_3: Podes usar un bucle para recoller todo o néctar?
-      level 'grade3_Loops_4: Agora, usa o novo bloque "repita" para recoller todo
-        o néctar e producir todo o mel.
-      level 'grade3_Loops_6: O que acontece se repetes esta secuencia 3 veces? Non
-        te esquezas de facer o mel ao final!
-      level 'grade3_Loops_7: "Cada flor contén unha unidade de néctar. Recolle\no
-        néctar de cada unha das flores. "
