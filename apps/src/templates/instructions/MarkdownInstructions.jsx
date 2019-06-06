@@ -53,7 +53,7 @@ class MarkdownInstructions extends React.Component {
   componentWillUnmount() {
     const detailsDOM = $(ReactDOM.findDOMNode(this)).find('details');
     if (detailsDOM.details) {
-      detailsDOM.off('toggle.details.TopInstructionsCSP');
+      detailsDOM.off('toggle.details.TopInstructions');
     }
   }
 
@@ -72,7 +72,7 @@ class MarkdownInstructions extends React.Component {
     if (detailsDOM.details) {
       detailsDOM.details();
       detailsDOM.on({
-        'toggle.details.TopInstructionsCSP': () => {
+        'toggle.details.TopInstructions': () => {
           this.props.onResize();
         }
       });
