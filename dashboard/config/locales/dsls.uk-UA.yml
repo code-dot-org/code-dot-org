@@ -8,15 +8,165 @@ uk:
       Begin planning your project_2018:
         Begin planning your project: Почніть планувати свій проект
         description here: опис тут
+      Begin planning your project_2018_2019:
+        Begin planning your project: Почніть планувати свій проект
+        description here: опис тут
+      CSD U2 Design Project:
+        description here: опис тут
+        title: назва
+      CSD U2 Design Project_2018:
+        description here: опис тут
+        title: назва
+      CSD U2 Design Project_2018_2019:
+        description here: опис тут
+        title: назва
+      CSD U2 L1 Overview:
+        description here: опис тут
+        title: назва
+      CSD U2 L2 Overview:
+        description here: опис тут
+        title: назва
+      CSD U2 L3 Overview:
+        description here: опис тут
+        title: назва
+      CSD U2 L4 Overview:
+        description here: опис тут
+        title: назва
+      CSD U2 L5 Overview:
+        description here: опис тут
+        title: назва
+      CSD U2 L6 Overview:
+        description here: опис тут
+        title: назва
+      CSD U2 Lesson 6 Overview:
+        description here: опис тут
+      CSD U2 expand project:
+        description here: опис тут
+        title: назва
+      CSD U2 expand project_2018:
+        description here: опис тут
+        title: назва
+      CSD U2 expand project_2018_2019:
+        description here: опис тут
+        title: назва
+      CSD U2 project guide:
+        description here: опис тут
+      CSD U2 project guide_2018:
+        description here: опис тут
+      CSD U2 project guide_2018_2019:
+        description here: опис тут
+      CSD U3 Card Examples_2018:
+        description here: опис тут
+      CSD U3 Card Examples_2018_2019:
+        description here: опис тут
+      CSD U3 combining rep:
+        description here: опис тут
+        title: назва
+      CSD U3 combining rep_2018:
+        description here: опис тут
+        title: назва
+      CSD U3 combining rep_2018_2019:
+        description here: опис тут
+        title: назва
+      CSD U3 game intro:
+        description here: опис тут
+      CSD U3 game intro_2018:
+        description here: опис тут
+      CSD U3 game intro_2018_2019:
+        description here: опис тут
+      CSD U3 platform intro:
+        description here: опис тут
+      CSD U3 platform intro_2018:
+        description here: опис тут
+      CSD U3 platform intro_2018_2019:
+        description here: опис тут
+      CSD U5 Encryption 1:
+        description here: опис тут
+        title: назва
+      CSD U5 Encryption 1_2018:
+        description here: опис тут
+        title: назва
+      CSD U5 Encryption 1_2018_2019:
+        description here: опис тут
+        title: назва
+      CSD U5 Encryption 2:
+        description here: опис тут
+      CSD U5 Encryption 2_2018:
+        description here: опис тут
+      CSD U5 Encryption 2_2018_2019:
+        description here: опис тут
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: опис тут
+        title: назва
+      CSD U5 crosstab warmup:
+        description here: опис тут
+      CSD U5 crosstab warmup_2018:
+        description here: опис тут
+      CSD U5 crosstab warmup_2018_2019:
+        description here: опис тут
+      CSD U5 data visualization:
+        description here: опис тут
+        title: назва
+      CSD U5 data visualization_2018:
+        description here: опис тут
+        title: назва
+      CSD U5 data visualization_2018_2019:
+        description here: опис тут
+        title: назва
+      CSD U5 student record:
+        description here: опис тут
+        title: назва
+      CSD U5 student record_2018:
+        description here: опис тут
+        title: назва
+      CSD U5 student record_2018_2019:
+        description here: опис тут
+        title: назва
+      CSD U6 LED create intro:
+        description here: опис тут
+      CSD U6 LED create intro_2018:
+        description here: опис тут
+      CSD U6 LED create intro_2018_2019:
+        description here: опис тут
+      CSD U6 final intro:
+        description here: опис тут
+      CSD U6 final intro_2018:
+        description here: опис тут
+      CSD U6 final intro_2018_2019:
+        description here: опис тут
+      Internet Simulator Setup:
+        description here: опис тут
+      Internet Simulator Setup 2:
+        description here: опис тут
+        title: назва
+      Internet Simulator Setup 3:
+        description here: опис тут
+      Multi-Screen Apps:
+        description here: опис тут
+        title: назва
+      New Challenge Introduction:
+        description here: опис тут
+        title: назва
+      OPD-K5 Stage3aGo:
+        description here: опис тут
+        title: назва
       Prepare for your presentation:
         description here: опис тут
         title: назва
       Prepare for your presentation_2018:
         Prepare for yur presentation: Підготуйтеся до презентації в юрті
+      'Technique: Frequency Analysis':
+        description here: опис тут
+      Terminology Recap:
+        description here: опис тут
       courseD_external_binary1:
         Binary Drawing: Двійкове Малювання
       courseD_external_binary1_2018:
         Binary Drawing: Двійкове Малювання
+      courseD_external_binary1_2018_2019:
+        Binary Drawing: Двійкове Малювання
+      courseE_project_exemplars_2019:
+        Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
       courseF_markdown_algorithms_end:
         Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
       courseF_markdown_algorithms_intro:
@@ -31,7 +181,11 @@ uk:
         Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
       courseF_markdown_forloops_end:
         Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
+      courseF_markdown_forloops_end_2019:
+        Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
       courseF_markdown_forloops_intro:
+        Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
+      courseF_markdown_forloops_intro_2019:
         Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
       courseF_markdown_loops_end:
         Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
@@ -43,7 +197,13 @@ uk:
         Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
       courseF_markdown_variables_end:
         Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
+      courseF_markdown_variables_end_2019:
+        Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
       courseF_markdown_variables_intro:
+        Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
+      courseF_markdown_variables_intro_2019:
+        Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
+      courseF_project_exemplars_2019:
         Test Markdown Textbook Page: Тест зменшення Сторінки Підручника
       gradek1_activity_beNice:
         The computer is your friend: Комп'ютер - твій друг
@@ -300,6 +460,12 @@ uk:
       4-5 maze multi 1:
         Maze Multiple Choice: Лабіринт - вибір
         Which blocks solve the puzzle?: Які блоки розв'яжуть задачу?
+      CSD U3 Boolean MC:
+        title: назва
+      CSD U3 Boolean MC_2018:
+        title: назва
+      CSD U3 Boolean MC_2018_2019:
+        title: назва
       K-1 Artist 1 Multi 1:
         Multiple Choice: Множинний вибір
         Which blocks solve this puzzle?: Які блоки розв'яжуть задачу?
@@ -361,11 +527,19 @@ uk:
         SOUTH: SOUTH (ПІВДЕНЬ)
         SQUARE: SQUARE (КВАДРАТ)
         Which word is spelled?: Яке написано слово?
+      behaviors 1 predict:
+        Incorrect: Неправильно
+      behaviors 4 predict:
+        Incorrect: Неправильно
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
         '4': '4'
       courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
         '12': '12'
         '15': '15'
         '4': '4'
@@ -379,11 +553,20 @@ uk:
         B: Б
         C: В
         D: Г
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        A: А
+        B: Б
+        C: В
+        D: Г
       courseD_multi_artist_nestedLoops9_predict1:
         A: А
         B: Б
         C: В
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: А
+        B: Б
+        C: В
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: А
         B: Б
         C: В
@@ -404,6 +587,22 @@ uk:
           a loop down.  This is all inside of another loop that happens twice. 4 times
           2 is 8!"
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

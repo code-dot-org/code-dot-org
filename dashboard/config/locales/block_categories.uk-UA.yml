@@ -1,37 +1,2150 @@
 ---
-uk:
+uk-UA:
   data:
     block_categories:
-      Actions: Дії
-      Loops: Цикли
-      Functions: функції
-      Color: Колір
-      Math: Математика
-      Logic: Логіка
-      Variables: змінні
-      Number: Число
-      String: Рядок
-      Image: Зображення
-      Boolean: Логічне
-      Conditionals: Умови
-      Events: Події
-      Comments: Коментарі
-      Category: Категорія
-      Text: Текст
-      Comment: Коментар
-      World: Світ
-      Default: Типова
-      Locations: Розташування
-      Location: Місце знаходження
-      numbers: числа
-      Numbers: Числа
-      Dancers: Виконавці
-      Groups: Групи
-      Advanced: Розширені
-      Start: Початок
-      Booleans: Логічні вирази
-      Functional: Функції
-      test: тест
-      Name: Ім’я
-      'Functions ': 'Функції '
-      Function: Функція
+      4-5 Artist Patterns Free Play:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+      Alien Defender:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      Choose Your Own Adventure:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      Course 4 Artist For Loops 11:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      Course 4 Artist For Loops 11a:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      Course 4 Artist For Loops 14:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      Course 4 Artist For Loops 15:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      Course 4 Artist For Loops 4:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      Course 4 Artist For Loops 6a:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      Course 4 Artist For Loops 8:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      Course 4 Artist For Loops Challenge:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      Course 4 Artist For Loops inspire:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      Course 4 Artist Functions Inspiration:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      Course 4 Artist Functions challenge:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      Course 4 Bee Params 1:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      Course 4 Bee Params 2:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      Course 4 Bee Params 3:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Functions: функції
+      Course 4 Bee Params 4:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Functions: функції
+        Math: Математика
+      Course 4 Bee Params 5:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+      Course 4 Bee Params 6:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+      Course 4 Bee Params 7:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+        Functions: функції
+      Course 4 Bee Params 8:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+        Functions: функції
+      Course 4 EC 1a:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+        Functions: функції
+      Course 4 EC 1b:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+        Functions: функції
+      Course 4 EC 2a:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+        Functions: функції
+        Variables: змінні
+      Course 4 EC 2b:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+      Course 4 EC 2c:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+      Course 4 Play Lab Params 10:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+        Functions: функції
+        Variables: змінні
+      Course 4 Play Lab Params 7:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      Course 4 Play Lab Params 8:
+        Events: Події
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      Course 4 Play Lab Params 9:
+        Actions: Дії
+        Math: Математика
+        Functions: функції
+        Variables: змінні
+      Course 4 Play Lab Vars 9:
+        Events: Події
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+      Course 4 SCF 1:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      Course 4 SCF 1a:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+        Functions: функції
+      Course 4 SCF 1b:
+        Actions: Дії
+        Loops: Цикли
+        Logic: Логіка
+        Math: Математика
+        Functions: функції
+      Course 4 SCF 2:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      Course 4 SCF 3:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      Course 4 SCFL 1:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      Course 4 SCFL 1a:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      Course 4 SCFL 1b:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      Course 4 SCFL 2:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+      Course 4 SCFL 3:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      Course 4 SCFL 4:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      Course 4 SCFL 6:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      Course 4 SCFL 7:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      Course 4 SCV 6:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      'Course E: Play Lab Project':
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      'Course F: Artist Project':
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+      'Course F: Artist Project - Revise':
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+      'Course F: Artist Project - Revise_2018':
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+      'Course F: Artist Project_2018':
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+      'Course F: Artist Project_2019':
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+      CourseD_Dance_Party_11_5:
+        World: Світ
+        Dancers: Виконавці
+        Groups: Групи
+        Events: Події
+      CourseD_Dance_Party_12:
+        World: Світ
+        Dancers: Виконавці
+        Groups: Групи
+        Events: Події
+        Numbers: Числа
+        Logic: Логіка
+      CourseE_Project_SpriteLab:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+        Logic: Логіка
+        Text: Текст
+        Advanced: Розширені
+        Comments: Коментарі
+      CourseE_Project_SpriteLab_2019:
+        World: Світ
+        Actions: Дії
+        Events: Події
+      CourseE_hoops:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+        Functions: функції
+      CourseF_Project_Revise_SpriteLab:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+        Functions: функції
+      CourseF_Project_SpriteLab:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+        Functions: функції
+      CourseF_Project_SpriteLab_2019:
+        World: Світ
+        Locations: Розташування
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Text: Текст
+        Comments: Коментарі
+      Dance Party 2:
+        Events: Події
+        Comments: Коментарі
+      Dance Party 6:
+        Events: Події
+        Comments: Коментарі
+      Dance Party Freeplay:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+        Comments: Коментарі
+      Dance_Party_11_5:
+        World: Світ
+        Dancers: Виконавці
+        Groups: Групи
+        Events: Події
+      Dance_Party_12:
+        World: Світ
+        Dancers: Виконавці
+        Groups: Групи
+        Events: Події
+        Numbers: Числа
+        Logic: Логіка
+      Dance_Party_extras_battle:
+        World: Світ
+        Dancers: Виконавці
+        Groups: Групи
+        Events: Події
+        Numbers: Числа
+        Logic: Логіка
+      Dance_Party_extras_every_beat:
+        World: Світ
+        Dancers: Виконавці
+        Groups: Групи
+        Events: Події
+        Numbers: Числа
+        Logic: Логіка
+      Dance_Party_extras_layout:
+        World: Світ
+        Dancers: Виконавці
+        Groups: Групи
+        Events: Події
+        Numbers: Числа
+        Logic: Логіка
+      Dance_Party_extras_on_beat:
+        World: Світ
+        Dancers: Виконавці
+        Groups: Групи
+        Events: Події
+        Numbers: Числа
+        Logic: Логіка
+      Dance_Party_extras_speed:
+        World: Світ
+        Dancers: Виконавці
+        Groups: Групи
+        Events: Події
+        Numbers: Числа
+        Logic: Логіка
+      Dance_Party_extras_visible:
+        World: Світ
+        Dancers: Виконавці
+        Groups: Групи
+        Events: Події
+        Numbers: Числа
+        Logic: Логіка
+      Find the Wizard:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      Fish Tank 5-validated:
+        World: Світ
+        Comments: Коментарі
+      Fish Tank 5-validated_2019:
+        World: Світ
+        Comments: Коментарі
+      Fish Tank 6-validated:
+        World: Світ
+        Comments: Коментарі
+      Fish Tank 6-validated_2019:
+        World: Світ
+        Comments: Коментарі
+      Fish Tank 7-validated:
+        World: Світ
+        Events: Події
+        Comments: Коментарі
+      Fish Tank 7-validated_2019:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Comments: Коментарі
+      FoodFight:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      Geometric Sun:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      Geometric Sun_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      Guess The Number:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      InspirationalArtwork:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      InspirationalArtwork_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      NEW Course 4 Artist Functions 14:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      NEW Course 4 Artist Params 1:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+        Variables: змінні
+      NEW Course 4 Artist Params 10:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      NEW Course 4 Artist Params 11:
+        Actions: Дії
+        Functions: функції
+        Loops: Цикли
+        Math: Математика
+      NEW Course 4 Artist Params 12:
+        Actions: Дії
+        Math: Математика
+        Functions: функції
+      NEW Course 4 Artist Params 12a:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      NEW Course 4 Artist Params 13:
+        Actions: Дії
+        Functions: функції
+        Loops: Цикли
+        Math: Математика
+      NEW Course 4 Artist Params 14:
+        Actions: Дії
+        Functions: функції
+        Loops: Цикли
+        Math: Математика
+      NEW Course 4 Artist Params 15:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      NEW Course 4 Artist Params 2:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      NEW Course 4 Artist Params 3:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      NEW Course 4 Artist Params 6:
+        Actions: Дії
+        Functions: функції
+        Loops: Цикли
+        Math: Математика
+      NEW Course 4 Artist Params 7:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      NEW Course 4 Artist Params 8:
+        Actions: Дії
+        Math: Математика
+        Functions: функції
+        Loops: Цикли
+      NEW Course 4 Artist Params 9:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      NEW Course 4 Artist Params inspire:
+        Actions: Дії
+        Functions: функції
+        Loops: Цикли
+        Math: Математика
+      NEW Course 4 Play Lab Params 11:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+      Robot Doodle:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      Robot Doodle_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Functions: функції
+        Variables: змінні
+        Comments: Коментарі
+      Virtual Pet 2:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+        Comments: Коментарі
+      Virtual Pet 3:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+      Virtual Pet 4:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+      Virtual Pet 5:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+      Virtual Pet 6:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+      Virtual Pet Freeplay:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+      behaviors 3a:
+        World: Світ
+        Actions: Дії
+      behaviors 5:
+        World: Світ
+        Actions: Дії
+      behaviors 6:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Math: Математика
+        Logic: Логіка
+      behaviors 7:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Math: Математика
+        Logic: Логіка
+      behaviors free play:
+        World: Світ
+        Actions: Дії
+        Events: Події
+      course3_bee_functions_challenge1:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      course3_bee_functions_challenge2:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      course3_bee_functions_challenge3:
+        Default: Типова
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      course3_bee_functions_challenge4:
+        Default: Типова
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      course3_playLab_challenge1:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      course4_artist_fwp_challenge1:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      course4_bee_for_challenge1:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Math: Математика
+      course4_bee_fwp_challenge1:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      course4_bee_fwp_challenge2:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      course4_playlab_variables_challenge1:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+        Variables: змінні
+      courseD_artist_project1:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project1a:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project1a_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project1a_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project2:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project2_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project2_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project2a:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project2a_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project2a_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project3:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project3_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project3_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project3a:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project3a_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project3a_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project4:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project4_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project4_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project4a:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project4a_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project4a_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project5:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project5_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_artist_project5_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseD_playLab_condFP:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+      courseD_playLab_condFP_2018:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Comment: Коментар
+      courseE_Dogger_2:
+        World: Світ
+        Actions: Дії
+        Events: Події
+        Variables: змінні
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Text: Текст
+        Functions: функції
+      courseE_artist_concept1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_concept4:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      courseE_artist_concept4_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions10:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      courseE_artist_functions10_2018:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions10_2019:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions2_2018:
+        Actions: Дії
+        Loops: Цикли
+        'Functions ': 'Функції '
+        Comments: Коментарі
+      courseE_artist_functions2_2019:
+        Actions: Дії
+        Loops: Цикли
+        'Functions ': 'Функції '
+        Comments: Коментарі
+      courseE_artist_functions3_2018:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseE_artist_functions3_2019:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseE_artist_functions5_2018:
+        Actions: Дії
+        Loops: Цикли
+        'Functions ': 'Функції '
+        Comments: Коментарі
+      courseE_artist_functions5_2019:
+        Actions: Дії
+        Loops: Цикли
+        'Functions ': 'Функції '
+        Comments: Коментарі
+      courseE_artist_functions7_2018:
+        Actions: Дії
+        Loops: Цикли
+        'Functions ': 'Функції '
+        Comments: Коментарі
+      courseE_artist_functions7_2019:
+        Actions: Дії
+        Loops: Цикли
+        'Functions ': 'Функції '
+        Comments: Коментарі
+      courseE_artist_functions8:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      courseE_artist_functions8_2018:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions8_2019:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions8a_2018:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions8a_2019:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions8b_2018:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions8b_2019:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions8c_2018:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions8c_2019:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions9:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      courseE_artist_functions9_2018:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions9_2019:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functionsProj_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functionsProj_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+        Comments: Коментарі
+      courseE_artist_functions_predict2:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      courseE_artist_functions_predict2_2018:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      courseE_artist_functions_predict2_2019:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      courseE_bee_concept1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_bee_concept2_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_bee_concept3_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_bee_concept4_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_bee_concept5_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_bee_functions6:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      courseE_bee_functions7:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      courseE_bee_functions_challenge1:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_bee_functions_challenge2:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+      courseE_farmer_concept1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_concept2_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_concept3_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions1:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions10a1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions10a1_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions10b:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions11_predict:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions11_predict_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions11_predict_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions13_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions13_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions1_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions1a:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions1a_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions1a_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions2b:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions2b_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions2b_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions2ba:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions2ba_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions2ba_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions3c:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions3c1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions3c1_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions3c_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions3c_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions4b:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions5c:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions6c:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions7a1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions7a1_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions7b:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions8a1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions8a1_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions8b:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_farmer_functions9a1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions9a1_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Comments: Коментарі
+      courseE_farmer_functions9b:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_playLab_challenge1:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_playLab_scaffold5:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseE_playLab_scaffold6:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+      courseF_artist_for1:
+        Actions: Дії
+        Loops: Цикли
+        Color: Колір
+      courseF_artist_for10:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      courseF_artist_for10_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_for10_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_for10_predict1:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      courseF_artist_for10_predict1_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      courseF_artist_for10_predict1_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+      courseF_artist_for1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_artist_for1_2019:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_artist_for2:
+        Actions: Дії
+        Loops: Цикли
+        Color: Колір
+      courseF_artist_for2_2018:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_artist_for2_2019:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_artist_for3:
+        Actions: Дії
+        Loops: Цикли
+        Color: Колір
+      courseF_artist_for3_2018:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_artist_for3_2019:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_artist_for4:
+        Actions: Дії
+        Loops: Цикли
+        Color: Колір
+      courseF_artist_for4_2018:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_artist_for4_2019:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_artist_for5:
+        Actions: Дії
+        Loops: Цикли
+        Color: Колір
+      courseF_artist_for5_2018:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_artist_for5_2019:
+        Actions: Дії
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_artist_for6:
+        Actions: Дії
+        Loops: Цикли
+        Color: Колір
+      courseF_artist_for6_2018:
+        Actions: Дії
+        Loops: Цикли
+        Color: Колір
+      courseF_artist_for6_2019:
+        Actions: Дії
+        Loops: Цикли
+        Color: Колір
+      courseF_artist_for7:
+        Actions: Дії
+        Loops: Цикли
+      courseF_artist_for7_2018:
+        Actions: Дії
+        Loops: Цикли
+      courseF_artist_for7_2019:
+        Actions: Дії
+        Loops: Цикли
+      courseF_artist_for8:
+        Actions: Дії
+        Loops: Цикли
+      courseF_artist_for8_2018:
+        Actions: Дії
+        Loops: Цикли
+      courseF_artist_for8_2019:
+        Actions: Дії
+        Loops: Цикли
+      courseF_artist_for9:
+        Actions: Дії
+        Loops: Цикли
+      courseF_artist_for9_2018:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_for9_2019:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_for_challenge1:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_for_challenge1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_for_challenge1_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_for_challenge2:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_for_challenge2_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_for_challenge2_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_fwp2:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      courseF_artist_fwp2_predict1:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      courseF_artist_fwp3:
+        Functions: функції
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_fwp4:
+        Actions: Дії
+        Math: Математика
+        Functions: функції
+      courseF_artist_fwp5:
+        Actions: Дії
+        Functions: функції
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_fwp6:
+        Actions: Дії
+        Functions: функції
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_fwp7:
+        Actions: Дії
+        Functions: функції
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_fwp8:
+        Actions: Дії
+        Functions: функції
+        Loops: Цикли
+        Math: Математика
+      courseF_artist_fwp9:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      courseF_artist_fwp_challenge1:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      courseF_artist_fwp_challenge2:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+      courseF_artist_variables10_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_variables10_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_variables7_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_variables7_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_variables8_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_variables8_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_variables9_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_variables9_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_variablesFP_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+        Comments: Коментарі
+      courseF_artist_variablesFP_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+        Functions: функції
+        Comments: Коментарі
+      courseF_bee_conditionals10:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_conditionals2:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_conditionals3:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_conditionals4:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_conditionals5:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_conditionals8:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_for10:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for10_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for10_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for11:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for11_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for11_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for1_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+        Comments: Коментарі
+      courseF_bee_for1_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+        Comments: Коментарі
+      courseF_bee_for2_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+        Comments: Коментарі
+      courseF_bee_for2_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+        Comments: Коментарі
+      courseF_bee_for3_predict1:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for3_predict1_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for3_predict1_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for4:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for4_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+        Comments: Коментарі
+      courseF_bee_for4_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+        Comments: Коментарі
+      courseF_bee_for5:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for5_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for5_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for6:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for6_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for6_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for7:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for7_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+        Comments: Коментарі
+      courseF_bee_for7_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+        Comments: Коментарі
+      courseF_bee_for8:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for8_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for8_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for9:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Variables: змінні
+      courseF_bee_for9_2018:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for9_2019:
+        Actions: Дії
+        Math: Математика
+        Loops: Цикли
+        Comments: Коментарі
+      courseF_bee_for_challenge1:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Math: Математика
+      courseF_bee_for_challenge1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Math: Математика
+      courseF_bee_for_challenge1_2019:
+        Actions: Дії
+        Loops: Цикли
+        Functions: функції
+        Math: Математика
+      courseF_bee_for_challenge2:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseF_bee_for_challenge2_2018:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseF_bee_for_challenge2_2019:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+      courseF_bee_functions2:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_functions3:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_functions3a:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_functions4:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_functions5a:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_functions6:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_functions7:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_functions8a:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_functionsPre7:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_functions_challenge1:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_functions_challenge2:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_fwp1:
+        Actions: Дії
+        Loops: Цикли
+        Math: Математика
+        Conditionals: Умови
+      courseF_bee_fwp2:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_fwp3:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_fwp4:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_fwp5:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_fwp6:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_fwp7:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_fwp8:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_fwp9_predict1:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_fwp_challenge1:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_fwp_challenge2:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Math: Математика
+      courseF_bee_variables_1_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_1_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_2_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_2_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_3_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_3_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_4_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_4_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_5_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_5_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_6_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_6_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_7_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_7_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+        Comments: Коментарі
+      courseF_bee_variables_8_2018:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+      courseF_bee_variables_8_2019:
+        Actions: Дії
+        Loops: Цикли
+        Conditionals: Умови
+        Functions: функції
+        Variables: змінні
+        Math: Математика
+      courseF_playlab_variables1a:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+      courseF_playlab_variables2b:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+      courseF_playlab_variables3b_josh:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+      courseF_playlab_variables4b:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+      courseF_playlab_variables4c_predictive1:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+        Variables: змінні
+      courseF_playlab_variables5c:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Logic: Логіка
+        Variables: змінні
+        Text: Текст
+      courseF_playlab_variables6c:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+      courseF_playlab_variables7b:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Conditionals: Умови
+        Math: Математика
+        Text: Текст
+        Functions: функції
+        Variables: змінні
+      courseF_playlab_variables7c:
+        Default: Типова
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Variables: змінні
+      courseF_playlab_variables8c:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+        Variables: змінні
+      courseF_playlab_variables_challenge1:
+        Actions: Дії
+        Events: Події
+        Loops: Цикли
+        Math: Математика
+        Functions: функції
+        Variables: змінні
