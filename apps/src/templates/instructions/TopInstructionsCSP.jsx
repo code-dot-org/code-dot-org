@@ -15,8 +15,7 @@ import HelpTabContents from './HelpTabContents';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
-  setInstructionsRenderedHeight,
-  setInstructionsHeight
+  setInstructionsRenderedHeight
 } from '../../redux/instructions';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
@@ -24,9 +23,10 @@ import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
 import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
+import InstructionsCSF from './InstructionsCSF';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -36,7 +36,20 @@ const MIN_HEIGHT = RESIZER_HEIGHT + 60;
 const TabType = {
   INSTRUCTIONS: 'instructions',
   RESOURCES: 'resources',
-  COMMENTS: 'comments'
+  COMMENTS: 'comments',
+  TEACHER_ONLY: 'teacher-only'
+};
+
+// Minecraft-specific styles
+const craftStyles = {
+  instructionsBody: {
+    // $below-header-background from craft/style.scss
+    backgroundColor: '#646464'
+  },
+  headerBar: {
+    color: color.white,
+    backgroundColor: '#3b3b3b'
+  }
 };
 
 const styles = {
@@ -55,18 +68,30 @@ const styles = {
   },
   body: {
     backgroundColor: 'white',
-    overflowY: 'scroll',
     paddingLeft: 10,
     paddingRight: 10,
     position: 'absolute',
     top: HEADER_HEIGHT,
     bottom: 0,
     left: 0,
-    right: 0
+    right: 0,
+    overflowY: 'scroll'
+  },
+  csfBody: {
+    backgroundColor: '#ddd',
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    overflow: 'hidden'
   },
   embedView: {
     height: undefined,
     bottom: 0
+  },
+  csfEmbedView: {
+    display: 'none'
   },
   paneHeaderOverride: {
     color: color.default_text
@@ -103,8 +128,6 @@ class TopInstructionsCSP extends Component {
   static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
-    puzzleNumber: PropTypes.number.isRequired,
-    stageTotal: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
@@ -112,7 +135,6 @@ class TopInstructionsCSP extends Component {
     collapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
-    setInstructionsHeight: PropTypes.func.isRequired,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
@@ -123,7 +145,12 @@ class TopInstructionsCSP extends Component {
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     readOnlyWorkspace: PropTypes.bool,
     serverLevelId: PropTypes.number,
-    user: PropTypes.number
+    user: PropTypes.number,
+    noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
+    teacherMarkdown: PropTypes.string,
+    hidden: PropTypes.bool.isRequired,
+    shortInstructions: PropTypes.string,
+    isMinecraft: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -166,7 +193,7 @@ class TopInstructionsCSP extends Component {
 
     const promises = [];
 
-    if (this.props.viewAs === ViewType.Student) {
+    if (this.props.viewAs === ViewType.Student && user && serverLevelId) {
       promises.push(
         $.ajax({
           url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
@@ -197,7 +224,12 @@ class TopInstructionsCSP extends Component {
       );
     }
 
-    if (this.state.teacherViewingStudentWork) {
+    if (
+      this.state.teacherViewingStudentWork &&
+      user &&
+      serverLevelId &&
+      studentId
+    ) {
       promises.push(
         $.ajax({
           url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${serverLevelId}&teacher_id=${user}`,
@@ -283,6 +315,9 @@ class TopInstructionsCSP extends Component {
       case TabType.COMMENTS:
         element = this.refs.commentTab;
         break;
+      case TabType.TEACHER_ONLY:
+        element = this.refs.teacherOnlyTab;
+        break;
     }
     const maxNeededHeight =
       $(ReactDOM.findDOMNode(element)).outerHeight(true) +
@@ -302,7 +337,7 @@ class TopInstructionsCSP extends Component {
     this.props.toggleInstructionsCollapsed();
 
     // adjust rendered height based on next collapsed state
-    if (collapsed) {
+    if (collapsed && this.props.noInstructionsWhenCollapsed) {
       this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
@@ -318,24 +353,36 @@ class TopInstructionsCSP extends Component {
   };
 
   handleHelpTabClick = () => {
-    this.setState({tabSelected: TabType.RESOURCES});
+    this.scrollToTopOfTab();
+    this.setState({tabSelected: TabType.RESOURCES}, this.scrollToTopOfTab);
   };
 
   handleInstructionTabClick = () => {
-    this.setState({tabSelected: TabType.INSTRUCTIONS});
+    this.scrollToTopOfTab();
+    this.setState({tabSelected: TabType.INSTRUCTIONS}, this.scrollToTopOfTab);
   };
 
   handleCommentTabClick = () => {
+    this.scrollToTopOfTab();
     // Only increment visit count if user is switching from another tab to the
     // comments tab.
     if (this.state.tabSelected !== TabType.COMMENTS) {
       this.incrementFeedbackVisitCount();
     }
 
-    this.setState(
-      {tabSelected: TabType.COMMENTS},
-      this.forceTabResizeToMaxHeight
-    );
+    this.setState({tabSelected: TabType.COMMENTS}, () => {
+      this.forceTabResizeToMaxHeight();
+      this.scrollToTopOfTab();
+    });
+  };
+
+  handleTeacherOnlyTabClick = () => {
+    this.setState({tabSelected: TabType.TEACHER_ONLY}, this.scrollToTopOfTab);
+  };
+
+  scrollToTopOfTab = () => {
+    var myDiv = document.getElementById('scroll-container');
+    myDiv.scrollTo(0, 0);
   };
 
   /**
@@ -364,13 +411,24 @@ class TopInstructionsCSP extends Component {
   );
 
   render() {
+    const {
+      hidden,
+      shortInstructions,
+      longInstructions,
+      hasContainedLevels
+    } = this.props;
+
+    const isCSF = !this.props.noInstructionsWhenCollapsed;
+    const isCSDorCSP = this.props.noInstructionsWhenCollapsed;
+
     const mainStyle = [
       styles.main,
       {
         height: this.props.height - RESIZER_HEIGHT
       },
       this.props.noVisualization && styles.noViz,
-      this.props.isEmbedView && styles.embedView
+      this.props.isEmbedView && styles.embedView,
+      this.props.isEmbedView && isCSF && styles.csfEmbedView
     ];
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
@@ -402,7 +460,9 @@ class TopInstructionsCSP extends Component {
       ((this.props.viewAs === ViewType.Student && !studentHasFeedback) ||
         (this.props.viewAs === ViewType.Teacher &&
           !this.state.teacherViewingStudentWork));
-    const feedbackTabText = displayKeyConcept ? 'Key Concept' : msg.feedback();
+    const feedbackTabText = displayKeyConcept
+      ? i18n.keyConcept()
+      : i18n.feedback();
 
     const displayFeedback =
       displayKeyConcept ||
@@ -414,21 +474,36 @@ class TopInstructionsCSP extends Component {
       this.state.tabSelected === TabType.COMMENTS &&
       this.state.teacherViewingStudentWork;
 
+    if (
+      hidden ||
+      (!shortInstructions && !longInstructions && !hasContainedLevels)
+    ) {
+      return <div />;
+    }
+
     return (
       <div style={mainStyle} className="editor-column">
-        <PaneHeader hasFocus={false} teacherOnly={teacherOnly}>
+        <PaneHeader
+          hasFocus={false}
+          teacherOnly={teacherOnly}
+          isMinecraft={this.props.isMinecraft}
+        >
           <div style={styles.paneHeaderOverride}>
-            {this.state.tabSelected === TabType.INSTRUCTIONS && ttsUrl && (
-              <InlineAudio src={ttsUrl} style={audioStyle} />
-            )}
+            {/* For CSF contained levels we use the same audio button location as CSD/CSP*/}
+            {this.state.tabSelected === TabType.INSTRUCTIONS &&
+              ttsUrl &&
+              (this.props.hasContainedLevels || isCSDorCSP) && (
+                <InlineAudio src={ttsUrl} style={audioStyle} />
+              )}
             {this.props.documentationUrl &&
               this.state.tabSelected !== TabType.COMMENTS && (
                 <PaneButton
                   iconClass="fa fa-book"
-                  label={msg.documentation()}
+                  label={i18n.documentation()}
                   isRtl={false}
                   headerHasFocus={false}
                   onClick={this.handleDocumentationClick}
+                  isMinecraft={this.props.isMinecraft}
                 />
               )}
             <div style={styles.helpTabs}>
@@ -436,39 +511,70 @@ class TopInstructionsCSP extends Component {
                 className="uitest-instructionsTab"
                 onClick={this.handleInstructionTabClick}
                 selected={this.state.tabSelected === TabType.INSTRUCTIONS}
-                text={msg.instructions()}
+                text={i18n.instructions()}
                 teacherOnly={teacherOnly}
+                isMinecraft={this.props.isMinecraft}
               />
-              {displayHelpTab && (
+              {isCSDorCSP && displayHelpTab && (
                 <InstructionsTab
                   className="uitest-helpTab"
                   onClick={this.handleHelpTabClick}
                   selected={this.state.tabSelected === TabType.RESOURCES}
-                  text={msg.helpTips()}
+                  text={i18n.helpTips()}
                   teacherOnly={teacherOnly}
+                  isMinecraft={this.props.isMinecraft}
                 />
               )}
-              {displayFeedback && (!this.state.fetchingData || teacherOnly) && (
-                <InstructionsTab
-                  className="uitest-feedback"
-                  onClick={this.handleCommentTabClick}
-                  selected={this.state.tabSelected === TabType.COMMENTS}
-                  text={feedbackTabText}
-                  teacherOnly={teacherOnly}
-                />
-              )}
+              {isCSDorCSP &&
+                displayFeedback &&
+                (!this.state.fetchingData || teacherOnly) && (
+                  <InstructionsTab
+                    className="uitest-feedback"
+                    onClick={this.handleCommentTabClick}
+                    selected={this.state.tabSelected === TabType.COMMENTS}
+                    text={feedbackTabText}
+                    teacherOnly={teacherOnly}
+                    isMinecraft={this.props.isMinecraft}
+                  />
+                )}
+              {isCSF &&
+                this.props.viewAs === ViewType.Teacher &&
+                this.props.teacherMarkdown && (
+                  <InstructionsTab
+                    className="uitest-teacherOnlyTab"
+                    onClick={this.handleTeacherOnlyTabClick}
+                    selected={this.state.tabSelected === TabType.TEACHER_ONLY}
+                    text={i18n.teacherOnly()}
+                    teacherOnly={teacherOnly}
+                    isMinecraft={this.props.isMinecraft}
+                  />
+                )}
             </div>
-            {!this.props.isEmbedView && (
-              <CollapserIcon
-                collapsed={this.props.collapsed}
-                onClick={this.handleClickCollapser}
-                teacherOnly={teacherOnly}
-              />
-            )}
+            {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
+            {!this.props.isEmbedView &&
+              (isCSDorCSP || this.props.hasContainedLevels) && (
+                <CollapserIcon
+                  collapsed={this.props.collapsed}
+                  onClick={this.handleClickCollapser}
+                  teacherOnly={teacherOnly}
+                />
+              )}
           </div>
         </PaneHeader>
-        <div style={[this.props.collapsed && commonStyles.hidden]}>
-          <div style={styles.body}>
+        <div
+          style={[this.props.collapsed && isCSDorCSP && commonStyles.hidden]}
+        >
+          <div
+            style={[
+              isCSF &&
+              !this.props.hasContainedLevels &&
+              this.state.tabSelected === TabType.INSTRUCTIONS
+                ? styles.csfBody
+                : styles.body,
+              this.props.isMinecraft && craftStyles.instructionsBody
+            ]}
+            id="scroll-container"
+          >
             <div ref="instructions">
               {this.props.hasContainedLevels && (
                 <ContainedLevel
@@ -477,6 +583,16 @@ class TopInstructionsCSP extends Component {
                 />
               )}
               {!this.props.hasContainedLevels &&
+                isCSF &&
+                this.state.tabSelected === TabType.INSTRUCTIONS && (
+                  <InstructionsCSF
+                    ref="instructions"
+                    handleClickCollapser={this.handleClickCollapser}
+                    adjustMaxNeededHeight={this.adjustMaxNeededHeight}
+                  />
+                )}
+              {!this.props.hasContainedLevels &&
+                isCSDorCSP &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <div>
                     <Instructions
@@ -512,6 +628,12 @@ class TopInstructionsCSP extends Component {
                 token={this.state.token}
               />
             )}
+            {isCSF &&
+              this.props.viewAs === ViewType.Teacher &&
+              this.props.teacherMarkdown &&
+              this.state.tabSelected === TabType.TEACHER_ONLY && (
+                <TeacherOnlyMarkdown ref="teacherOnlyTab" />
+              )}
           </div>
           {!this.props.isEmbedView && (
             <HeightResizer
@@ -529,8 +651,7 @@ export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
-    puzzleNumber: state.pageConstants.puzzleNumber,
-    stageTotal: state.pageConstants.stageTotal,
+    isMinecraft: !!state.pageConstants.isMinecraft,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
     maxHeight: Math.min(
@@ -548,14 +669,15 @@ export default connect(
     viewAs: state.viewAs,
     readOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     serverLevelId: state.pageConstants.serverLevelId,
-    user: state.pageConstants.userId
+    user: state.pageConstants.userId,
+    noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
+    teacherMarkdown: state.instructions.teacherMarkdown,
+    hidden: state.pageConstants.isShareView,
+    shortInstructions: state.instructions.shortInstructions
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
       dispatch(toggleInstructionsCollapsed());
-    },
-    setInstructionsHeight(height) {
-      dispatch(setInstructionsHeight(height));
     },
     setInstructionsRenderedHeight(height) {
       dispatch(setInstructionsRenderedHeight(height));
