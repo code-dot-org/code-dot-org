@@ -121,7 +121,7 @@
     }
   }
 
-  .user_menu, .create_menu {
+  .user_menu, .create_menu, #help-contents {
     color: $white;
     background-color: transparent;
     border: 2px solid $white;
@@ -130,7 +130,7 @@
       font-family: 'Gotham 4r', sans-serif;
     }
 
-    .user_options, .create_options {
+    .user_options, .create_options, #help-contents {
       font-size: 14px;
     }
   }

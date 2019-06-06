@@ -1,6 +1,6 @@
 @import 'color';
 @import 'font';
-.user_menu, .create_menu {
+.user_menu, .create_menu, #help-button {
   user-select: none;
   height: 38px;
 
@@ -21,7 +21,7 @@
     margin-top: -3px;
   }
 
-  .user_options, .create_options {
+  .user_options, .create_options, #help-contents {
     position: absolute;
     top: 55px;
     right: 55px;
@@ -72,8 +72,76 @@
     a + a {
       border-top: 1px solid $charcoal;
     }
+
+    &.hide-responsive-menu {
+      display: none;
+    }
+
+
   }
 }
+
+#help-button {
+  padding-left: 15px;
+  padding-top: 4px;
+
+  &.show-mobile {
+    display: none;
+  }
+  .show-mobile {
+    display: none;
+  }
+  &.show-always {
+    display: block;
+  }
+  .show-mobile {
+    display: none;
+  }
+  display: inline-block;
+  float: right;
+  z-index: 99;
+  position: relative;
+
+  #help-icon {
+    padding: 9px 0 16px 0;
+    font-size: 26px;
+    color: $white;
+    height: 25px;
+    cursor: pointer;
+    height: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+ 
+  }
+
+  #help-contents {
+    z-index: 100001;
+    text-align: left;
+    white-space: nowrap;
+    padding: 0;
+
+    .display_name {
+      font-family: $gotham-bold;
+      background-color: $charcoal;
+      color: $white;
+      padding: 10px;
+      text-align: center;
+      cursor: default;
+    }
+
+    a {
+      display: block;
+      padding: 10px;
+      font-family: $gotham-bold;
+    }
+
+    a + a {
+      border-top: 1px solid $charcoal;
+    }
+  }
+}
+
+
 
 .create_menu {
   .create_options {
@@ -107,3 +175,5 @@
     }
   }
 }
+
+
