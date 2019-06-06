@@ -165,6 +165,34 @@ class AssetsTest < FilesApiTestBase
     assert not_found?
   end
 
+  def test_sound_filenames_escaped
+    # assert_access_sound('dog.mp3')
+    assert_access_sound('çat.mp3')
+    assert_access_sound('%percent.mp3')
+    assert_access_sound('fun%facts.mp3')
+    assert_access_sound('left{curly.mp3')
+  end
+
+  def assert_access_sound(filename)
+    filename = @api.randomize_filename(filename)
+
+    @api.get_object(filename)
+    assert not_found?
+
+    # sounds are created via PUT.
+    @api.put_object(filename, 'sound-body')
+    assert successful?
+
+    @api.get_object(filename)
+    assert successful?
+
+    @api.delete_object(filename)
+    assert successful?
+
+    @api.get_object(filename)
+    assert not_found?
+  end
+
   def test_set_abuse_score
     asset_bucket = AssetBucket.new
 

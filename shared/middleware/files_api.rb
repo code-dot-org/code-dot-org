@@ -411,7 +411,7 @@ class FilesApi < Sinatra::Base
     # header.
     body = request.body.read
 
-    put_file(endpoint, encrypted_channel_id, filename, body)
+    put_file(endpoint, encrypted_channel_id, CGI.unescape(filename), body)
   end
 
   # POST /v3/assets/<channel-id>/

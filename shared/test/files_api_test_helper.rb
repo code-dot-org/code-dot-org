@@ -47,7 +47,7 @@ class FilesApiTestHelper
   end
 
   def put_object(filename, body = '', headers = {})
-    put "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
+    put "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}", body, headers
     last_response.body
   end
 
