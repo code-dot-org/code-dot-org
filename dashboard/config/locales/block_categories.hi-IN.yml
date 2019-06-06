@@ -1,23 +1,2002 @@
 ---
-hi:
+hi-IN:
   data:
     block_categories:
-      Actions: क्रियाएँ
-      Loops: फंदे
-      Functions: कार्य
-      Color: रंग
-      Math: गणित
-      Logic: तर्क
-      Variables: चर
-      Conditionals: शर्तें
-      Events: घटनाएँ
-      Text: पाठ
-      World: विश्व
-      Location: स्थान
-      Numbers: नंबर
-      Dancers: नर्तकों
-      Groups: समूह
-      Start: शुरू करें
-      test: परिक्षा
-      Name: नाम
-      Function: कार्य
+      4-5 Artist Patterns Free Play:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Alien Defender:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Choose Your Own Adventure:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Course 4 Artist For Loops 11:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      Course 4 Artist For Loops 11a:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      Course 4 Artist For Loops 14:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      Course 4 Artist For Loops 15:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      Course 4 Artist For Loops 4:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      Course 4 Artist For Loops 6a:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      Course 4 Artist For Loops 8:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      Course 4 Artist For Loops Challenge:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      Course 4 Artist For Loops inspire:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      Course 4 Artist Functions Inspiration:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      Course 4 Artist Functions challenge:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      Course 4 Bee Params 1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      Course 4 Bee Params 2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      Course 4 Bee Params 3:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Functions: कार्य
+      Course 4 Bee Params 4:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Functions: कार्य
+        Math: गणित
+      Course 4 Bee Params 5:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Course 4 Bee Params 6:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Course 4 Bee Params 7:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+        Functions: कार्य
+      Course 4 Bee Params 8:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+        Functions: कार्य
+      Course 4 EC 1a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+        Functions: कार्य
+      Course 4 EC 1b:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+        Functions: कार्य
+      Course 4 EC 2a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+        Functions: कार्य
+        Variables: चर
+      Course 4 EC 2b:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      Course 4 EC 2c:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      Course 4 Play Lab Params 10:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+        Functions: कार्य
+        Variables: चर
+      Course 4 Play Lab Params 7:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      Course 4 Play Lab Params 8:
+        Events: घटनाएँ
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      Course 4 Play Lab Params 9:
+        Actions: क्रियाएँ
+        Math: गणित
+        Functions: कार्य
+        Variables: चर
+      Course 4 Play Lab Vars 9:
+        Events: घटनाएँ
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+      Course 4 Playlab For Loop Freeplay:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+      Course 4 SCF 1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      Course 4 SCF 1a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+        Functions: कार्य
+      Course 4 SCF 1b:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Logic: तर्क
+        Math: गणित
+        Functions: कार्य
+      Course 4 SCF 2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      Course 4 SCF 3:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      Course 4 SCFL 1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      Course 4 SCFL 1a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      Course 4 SCFL 1b:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      Course 4 SCFL 2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+      Course 4 SCFL 3:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      Course 4 SCFL 4:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      Course 4 SCFL 6:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      Course 4 SCFL 7:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      Course 4 SCV 6:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      'Course E: Play Lab Project':
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      'Course F: Artist Project':
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      'Course F: Artist Project - Revise':
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      'Course F: Artist Project - Revise_2018':
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      'Course F: Artist Project_2018':
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      'Course F: Artist Project_2019':
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      CourseD_Dance_Party_11_5:
+        World: विश्व
+        Dancers: नर्तकों
+        Groups: समूह
+        Events: घटनाएँ
+      CourseD_Dance_Party_12:
+        World: विश्व
+        Dancers: नर्तकों
+        Groups: समूह
+        Events: घटनाएँ
+        Numbers: नंबर
+        Logic: तर्क
+      CourseE_Project_SpriteLab:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+        Logic: तर्क
+        Text: पाठ
+      CourseE_Project_SpriteLab_2019:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+      CourseE_hoops:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+        Functions: कार्य
+      CourseF_Project_Revise_SpriteLab:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+        Functions: कार्य
+      CourseF_Project_SpriteLab:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+        Functions: कार्य
+      CourseF_Project_SpriteLab_2019:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Text: पाठ
+      Dance Party 2:
+        Events: घटनाएँ
+      Dance Party 6:
+        Events: घटनाएँ
+      Dance Party Freeplay:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+      Dance_Party_11_5:
+        World: विश्व
+        Dancers: नर्तकों
+        Groups: समूह
+        Events: घटनाएँ
+      Dance_Party_12:
+        World: विश्व
+        Dancers: नर्तकों
+        Groups: समूह
+        Events: घटनाएँ
+        Numbers: नंबर
+        Logic: तर्क
+      Dance_Party_extras_battle:
+        World: विश्व
+        Dancers: नर्तकों
+        Groups: समूह
+        Events: घटनाएँ
+        Numbers: नंबर
+        Logic: तर्क
+      Dance_Party_extras_every_beat:
+        World: विश्व
+        Dancers: नर्तकों
+        Groups: समूह
+        Events: घटनाएँ
+        Numbers: नंबर
+        Logic: तर्क
+      Dance_Party_extras_layout:
+        World: विश्व
+        Dancers: नर्तकों
+        Groups: समूह
+        Events: घटनाएँ
+        Numbers: नंबर
+        Logic: तर्क
+      Dance_Party_extras_on_beat:
+        World: विश्व
+        Dancers: नर्तकों
+        Groups: समूह
+        Events: घटनाएँ
+        Numbers: नंबर
+        Logic: तर्क
+      Dance_Party_extras_speed:
+        World: विश्व
+        Dancers: नर्तकों
+        Groups: समूह
+        Events: घटनाएँ
+        Numbers: नंबर
+        Logic: तर्क
+      Dance_Party_extras_visible:
+        World: विश्व
+        Dancers: नर्तकों
+        Groups: समूह
+        Events: घटनाएँ
+        Numbers: नंबर
+        Logic: तर्क
+      Find the Wizard:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Fish Tank 5-validated:
+        World: विश्व
+      Fish Tank 5-validated_2019:
+        World: विश्व
+      Fish Tank 6-validated:
+        World: विश्व
+      Fish Tank 6-validated_2019:
+        World: विश्व
+      Fish Tank 7-validated:
+        World: विश्व
+        Events: घटनाएँ
+      Fish Tank 7-validated_2019:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+      FoodFight:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Geometric Sun:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Geometric Sun_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Guess The Number:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      InspirationalArtwork:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      InspirationalArtwork_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      NEW Course 4 Artist Functions 14:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      NEW Course 4 Artist Params 1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+        Variables: चर
+      NEW Course 4 Artist Params 10:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      NEW Course 4 Artist Params 11:
+        Actions: क्रियाएँ
+        Functions: कार्य
+        Loops: फंदे
+        Math: गणित
+      NEW Course 4 Artist Params 12:
+        Actions: क्रियाएँ
+        Math: गणित
+        Functions: कार्य
+      NEW Course 4 Artist Params 12a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      NEW Course 4 Artist Params 13:
+        Actions: क्रियाएँ
+        Functions: कार्य
+        Loops: फंदे
+        Math: गणित
+      NEW Course 4 Artist Params 14:
+        Actions: क्रियाएँ
+        Functions: कार्य
+        Loops: फंदे
+        Math: गणित
+      NEW Course 4 Artist Params 15:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      NEW Course 4 Artist Params 2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      NEW Course 4 Artist Params 3:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      NEW Course 4 Artist Params 6:
+        Actions: क्रियाएँ
+        Functions: कार्य
+        Loops: फंदे
+        Math: गणित
+      NEW Course 4 Artist Params 7:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      NEW Course 4 Artist Params 8:
+        Actions: क्रियाएँ
+        Math: गणित
+        Functions: कार्य
+        Loops: फंदे
+      NEW Course 4 Artist Params 9:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      NEW Course 4 Artist Params inspire:
+        Actions: क्रियाएँ
+        Functions: कार्य
+        Loops: फंदे
+        Math: गणित
+      NEW Course 4 Play Lab Params 11:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Robot Doodle:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Robot Doodle_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Functions: कार्य
+        Variables: चर
+      Virtual Pet 2:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+      Virtual Pet 3:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+      Virtual Pet 4:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+      Virtual Pet 5:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+      Virtual Pet 6:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+      Virtual Pet Freeplay:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+      behaviors 3a:
+        World: विश्व
+        Actions: क्रियाएँ
+      behaviors 5:
+        World: विश्व
+        Actions: क्रियाएँ
+      behaviors 6:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Math: गणित
+        Logic: तर्क
+      behaviors 7:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Math: गणित
+        Logic: तर्क
+      behaviors free play:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+      course3_bee_functions_challenge1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      course3_bee_functions_challenge2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      course3_bee_functions_challenge3:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      course3_bee_functions_challenge4:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      course3_playLab_challenge1:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      course4_artist_fwp_challenge1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      course4_bee_for_challenge1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+        Math: गणित
+      course4_bee_fwp_challenge1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      course4_bee_fwp_challenge2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      course4_playlab_variables_challenge1:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+        Variables: चर
+      courseD_artist_project1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project1a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project1a_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project1a_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project2_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project2_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project2a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project2a_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project2a_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project3:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project3_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project3_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project3a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project3a_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project3a_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project4:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project4_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project4_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project4a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project4a_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project4a_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project5:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project5_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_artist_project5_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseD_playLab_condFP:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+      courseD_playLab_condFP_2018:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+      courseE_Dogger_2:
+        World: विश्व
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Variables: चर
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Text: पाठ
+        Functions: कार्य
+      courseE_artist_concept1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      courseE_artist_concept4:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_concept4_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      courseE_artist_functions10:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions10_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions10_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions2_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseE_artist_functions2_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseE_artist_functions3_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseE_artist_functions3_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseE_artist_functions5_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseE_artist_functions5_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseE_artist_functions7_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseE_artist_functions7_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseE_artist_functions8:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions8_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions8_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions8a_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions8a_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions8b_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions8b_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions8c_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions8c_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions9:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions9_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions9_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functionsProj_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      courseE_artist_functionsProj_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      courseE_artist_functions_predict2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions_predict2_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_artist_functions_predict2_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_bee_concept1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_bee_concept2_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_bee_concept3_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_bee_concept4_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_bee_concept5_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_bee_functions6:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_bee_functions7:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_bee_functions_challenge1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_bee_functions_challenge2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseE_farmer_concept1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_concept2_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_concept3_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions10a1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions10a1_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions10b:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions11_predict:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions11_predict_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions11_predict_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions13_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions13_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions1_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions1a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions1a_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions1a_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions2b:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions2b_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions2b_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions2ba:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions2ba_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions2ba_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions3c:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions3c1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions3c1_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions3c_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions3c_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions4b:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions5c:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions6c:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions7a1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions7a1_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions7b:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions8a1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions8a1_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions8b:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions9a1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions9a1_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_farmer_functions9b:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_playLab_challenge1:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_playLab_scaffold5:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseE_playLab_scaffold6:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+      courseF_artist_for1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Color: रंग
+      courseF_artist_for10:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_artist_for10_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Functions: कार्य
+      courseF_artist_for10_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Functions: कार्य
+      courseF_artist_for10_predict1:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_artist_for10_predict1_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_artist_for10_predict1_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_artist_for1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for1_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Color: रंग
+      courseF_artist_for2_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for2_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for3:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Color: रंग
+      courseF_artist_for3_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for3_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for4:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Color: रंग
+      courseF_artist_for4_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for4_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for5:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Color: रंग
+      courseF_artist_for5_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for5_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for6:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Color: रंग
+      courseF_artist_for6_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Color: रंग
+      courseF_artist_for6_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Color: रंग
+      courseF_artist_for7:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for7_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for7_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for8:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for8_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for8_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for9:
+        Actions: क्रियाएँ
+        Loops: फंदे
+      courseF_artist_for9_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseF_artist_for9_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+      courseF_artist_for_challenge1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_for_challenge1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_for_challenge1_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_for_challenge2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_for_challenge2_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_for_challenge2_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_fwp2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      courseF_artist_fwp2_predict1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      courseF_artist_fwp3:
+        Functions: कार्य
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_fwp4:
+        Actions: क्रियाएँ
+        Math: गणित
+        Functions: कार्य
+      courseF_artist_fwp5:
+        Actions: क्रियाएँ
+        Functions: कार्य
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_fwp6:
+        Actions: क्रियाएँ
+        Functions: कार्य
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_fwp7:
+        Actions: क्रियाएँ
+        Functions: कार्य
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_fwp8:
+        Actions: क्रियाएँ
+        Functions: कार्य
+        Loops: फंदे
+        Math: गणित
+      courseF_artist_fwp9:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      courseF_artist_fwp_challenge1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      courseF_artist_fwp_challenge2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+      courseF_artist_variables10_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      courseF_artist_variables10_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      courseF_artist_variables7_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      courseF_artist_variables7_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      courseF_artist_variables8_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      courseF_artist_variables8_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      courseF_artist_variables9_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      courseF_artist_variables9_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      courseF_artist_variablesFP_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      courseF_artist_variablesFP_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+        Functions: कार्य
+      courseF_bee_conditionals10:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_conditionals2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_conditionals3:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_conditionals4:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_conditionals5:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_conditionals8:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_for10:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for10_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for10_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for11:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for11_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for11_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for1_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for1_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for2_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for2_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for3_predict1:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for3_predict1_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for3_predict1_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for4:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for4_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for4_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for5:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for5_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for5_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for6:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for6_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for6_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for7:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for7_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for7_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for8:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for8_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for8_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for9:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+        Variables: चर
+      courseF_bee_for9_2018:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for9_2019:
+        Actions: क्रियाएँ
+        Math: गणित
+        Loops: फंदे
+      courseF_bee_for_challenge1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_for_challenge1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_for_challenge1_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_for_challenge2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_bee_for_challenge2_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_bee_for_challenge2_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_bee_functions2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_functions3:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_functions3a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_functions4:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_functions5a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_functions6:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_functions7:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_functions8a:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_functionsPre7:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_functions_challenge1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_functions_challenge2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_fwp1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Math: गणित
+        Conditionals: शर्तें
+      courseF_bee_fwp2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_fwp3:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_fwp4:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_fwp5:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_fwp6:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_fwp7:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_fwp8:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_fwp9_predict1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_fwp_challenge1:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_fwp_challenge2:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Math: गणित
+      courseF_bee_variables_1_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_1_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_2_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_2_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_3_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_3_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_4_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_4_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_5_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_5_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_6_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_6_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_7_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_7_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_8_2018:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_bee_variables_8_2019:
+        Actions: क्रियाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Functions: कार्य
+        Variables: चर
+        Math: गणित
+      courseF_playlab_variables1a:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+      courseF_playlab_variables2b:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+      courseF_playlab_variables3b_josh:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+      courseF_playlab_variables4b:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+      courseF_playlab_variables4c_predictive1:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+        Variables: चर
+      courseF_playlab_variables5c:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Logic: तर्क
+        Variables: चर
+        Text: पाठ
+      courseF_playlab_variables6c:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+      courseF_playlab_variables7b:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Conditionals: शर्तें
+        Math: गणित
+        Text: पाठ
+        Functions: कार्य
+        Variables: चर
+      courseF_playlab_variables7c:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Variables: चर
+      courseF_playlab_variables8c:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+        Variables: चर
+      courseF_playlab_variables_challenge1:
+        Actions: क्रियाएँ
+        Events: घटनाएँ
+        Loops: फंदे
+        Math: गणित
+        Functions: कार्य
+        Variables: चर
