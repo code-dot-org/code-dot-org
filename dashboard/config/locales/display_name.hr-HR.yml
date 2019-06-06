@@ -1,5 +1,5 @@
 ---
-hr:
+hr-HR:
   data:
     display_name:
       CSD U2 Pair Programming Video: Programiranje u paru
@@ -50,7 +50,6 @@ hr:
       CSD U3 Variables Map: Varijable
       CSD U3 Variables Map_2018: Varijable
       CSD U3 Variables Map_2019: Varijable
-      CSD U3 functions map: Funkcije
       CSD U6 for loop map: Petlja brojača
       CSD U6 for loop map_2018: Petlja brojača
       CSD U6 for loop map_2019: Petlja brojača
@@ -58,6 +57,3 @@ hr:
       CSD U6 functions paramters video_2018: Funkcije s parametrima
       CSD U6 functions paramters video_2019: Funkcije s parametrima
       'CSD: For Loop_2018': Petlja brojača
-      'CSD: For Loop_2019': Petlja brojača
-      MC_HOC_2017_FP10x10: Slobodna igra
-      MC_HOC_2017_FP10x10_RE: Slobodna igra

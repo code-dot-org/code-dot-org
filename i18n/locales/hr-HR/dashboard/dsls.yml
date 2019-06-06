@@ -6,9 +6,154 @@ hr:
         title: naslov
       Begin planning your project_2018:
         description here: opis ovdje
+      Begin planning your project_2018_2019:
+        description here: opis ovdje
+      CSD U2 Design Project:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 Design Project_2018:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 Design Project_2018_2019:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 L1 Overview:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 L2 Overview:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 L3 Overview:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 L4 Overview:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 L5 Overview:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 L6 Overview:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 Lesson 6 Overview:
+        description here: opis ovdje
+      CSD U2 expand project:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 expand project_2018:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 expand project_2018_2019:
+        description here: opis ovdje
+        title: naslov
+      CSD U2 project guide:
+        description here: opis ovdje
+      CSD U2 project guide_2018:
+        description here: opis ovdje
+      CSD U2 project guide_2018_2019:
+        description here: opis ovdje
+      CSD U3 Card Examples_2018:
+        description here: opis ovdje
+      CSD U3 Card Examples_2018_2019:
+        description here: opis ovdje
+      CSD U3 combining rep:
+        description here: opis ovdje
+        title: naslov
+      CSD U3 combining rep_2018:
+        description here: opis ovdje
+        title: naslov
+      CSD U3 combining rep_2018_2019:
+        description here: opis ovdje
+        title: naslov
+      CSD U3 game intro:
+        description here: opis ovdje
+      CSD U3 game intro_2018:
+        description here: opis ovdje
+      CSD U3 game intro_2018_2019:
+        description here: opis ovdje
+      CSD U3 platform intro:
+        description here: opis ovdje
+      CSD U3 platform intro_2018:
+        description here: opis ovdje
+      CSD U3 platform intro_2018_2019:
+        description here: opis ovdje
+      CSD U5 Encryption 1:
+        description here: opis ovdje
+        title: naslov
+      CSD U5 Encryption 1_2018:
+        description here: opis ovdje
+        title: naslov
+      CSD U5 Encryption 1_2018_2019:
+        description here: opis ovdje
+        title: naslov
+      CSD U5 Encryption 2:
+        description here: opis ovdje
+      CSD U5 Encryption 2_2018:
+        description here: opis ovdje
+      CSD U5 Encryption 2_2018_2019:
+        description here: opis ovdje
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: opis ovdje
+        title: naslov
+      CSD U5 crosstab warmup:
+        description here: opis ovdje
+      CSD U5 crosstab warmup_2018:
+        description here: opis ovdje
+      CSD U5 crosstab warmup_2018_2019:
+        description here: opis ovdje
+      CSD U5 data visualization:
+        description here: opis ovdje
+        title: naslov
+      CSD U5 data visualization_2018:
+        description here: opis ovdje
+        title: naslov
+      CSD U5 data visualization_2018_2019:
+        description here: opis ovdje
+        title: naslov
+      CSD U5 student record:
+        description here: opis ovdje
+        title: naslov
+      CSD U5 student record_2018:
+        description here: opis ovdje
+        title: naslov
+      CSD U5 student record_2018_2019:
+        description here: opis ovdje
+        title: naslov
+      CSD U6 LED create intro:
+        description here: opis ovdje
+      CSD U6 LED create intro_2018:
+        description here: opis ovdje
+      CSD U6 LED create intro_2018_2019:
+        description here: opis ovdje
+      CSD U6 final intro:
+        description here: opis ovdje
+      CSD U6 final intro_2018:
+        description here: opis ovdje
+      CSD U6 final intro_2018_2019:
+        description here: opis ovdje
+      Internet Simulator Setup:
+        description here: opis ovdje
+      Internet Simulator Setup 2:
+        description here: opis ovdje
+        title: naslov
+      Internet Simulator Setup 3:
+        description here: opis ovdje
+      Multi-Screen Apps:
+        description here: opis ovdje
+        title: naslov
+      New Challenge Introduction:
+        description here: opis ovdje
+        title: naslov
+      OPD-K5 Stage3aGo:
+        description here: opis ovdje
+        title: naslov
       Prepare for your presentation:
         description here: opis ovdje
         title: naslov
+      'Technique: Frequency Analysis':
+        description here: opis ovdje
+      Terminology Recap:
+        description here: opis ovdje
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Poveži kombinacije oblika s plesnim pokretima.
@@ -203,6 +348,12 @@ hr:
       4-5 maze multi 1:
         Maze Multiple Choice: Labirint - višestruki izbor
         Which blocks solve the puzzle?: Koji blokovi rješavaju ovaj zadatak?
+      CSD U3 Boolean MC:
+        title: naslov
+      CSD U3 Boolean MC_2018:
+        title: naslov
+      CSD U3 Boolean MC_2018_2019:
+        title: naslov
       K-1 Artist 1 Multi 1:
         Multiple Choice: Višestruki izbor
         Which blocks solve this puzzle?: Koji blokovi rješavaju ovu zagonetku?
@@ -265,12 +416,21 @@ hr:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseD_multi_artist_binary8_predict1:
         A: A
         B: B
         C: C
         D: D
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -283,6 +443,10 @@ hr:
         A: A
         B: B
         C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -292,6 +456,14 @@ hr:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'
