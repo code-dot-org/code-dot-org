@@ -87,29 +87,29 @@ class FilesApiTestHelper
   end
 
   def list_object_versions(filename)
-    get "/v3/#{@endpoint}/#{@channel_id}/#{filename}/versions"
+    get "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}/versions"
     JSON.parse(last_response.body)
   end
 
   def get_object_version(filename, version_id, body = '', headers = {})
-    get "/v3/#{@endpoint}/#{@channel_id}/#{filename}?version=#{version_id}", body, headers
+    get "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}?version=#{version_id}", body, headers
     last_response.body
   end
 
   def put_object_version(filename, version_id, body = '', headers = {}, timestamp = nil)
     params = "?version=#{version_id}"
     params += "&firstSaveTimestamp=#{timestamp}" if timestamp
-    put "/v3/#{@endpoint}/#{@channel_id}/#{filename}#{params}", body, headers
+    put "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}#{params}", body, headers
     last_response.body
   end
 
   def post_object_version(filename, version_id, body = '', headers = {})
-    post "/v3/#{@endpoint}/#{@channel_id}/#{filename}?version=#{version_id}", body, headers
+    post "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}?version=#{version_id}", body, headers
     last_response.body
   end
 
   def restore_sources_version(filename, version_id, body = '', headers = {})
-    put "/v3/sources/#{@channel_id}/#{filename}/restore?version=#{version_id}", body, headers
+    put "/v3/sources/#{@channel_id}/#{CGI.escape(filename)}/restore?version=#{version_id}", body, headers
     JSON.parse(last_response.body)
   end
 
