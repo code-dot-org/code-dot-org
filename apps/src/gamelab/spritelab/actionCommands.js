@@ -135,16 +135,16 @@ export const commands = {
       }
     });
   },
-  turn(spriteId, n, direction) {
-    if (!n) {
+  turn(spriteId, degrees, direction) {
+    if (!degrees) {
       return;
     }
     let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => {
       if (direction === 'right') {
-        sprite.rotation += n;
+        sprite.rotation += degrees;
       } else {
-        sprite.rotation -= n;
+        sprite.rotation -= degrees;
       }
     });
   }
