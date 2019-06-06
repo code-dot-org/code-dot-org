@@ -17,6 +17,13 @@
  * :::
  */
 
+const colon = ':';
+const openBracket = '[';
+const closeBracket = ']';
+const newline = '\n';
+const space = ' ';
+const tab = '\t';
+
 let redact;
 
 module.exports = function details() {
@@ -26,12 +33,13 @@ module.exports = function details() {
   const restorationMethods = Parser.prototype.restorationMethods;
 
   restorationMethods.details = function(add, nodes, content, children) {
+    const colonCount = nodes.open.openingColonCount;
     const open = add({
       type: 'paragraph',
       children: [
         {
           type: 'rawtext',
-          value: `::: details [${content}]`
+          value: `${colon.repeat(colonCount)} details [${content}]`
         }
       ]
     });
@@ -43,7 +51,7 @@ module.exports = function details() {
       children: [
         {
           type: 'rawtext',
-          value: ':::'
+          value: colon.repeat(colonCount)
         }
       ]
     });
@@ -56,13 +64,6 @@ module.exports = function details() {
   /* Run it just before `paragraph`. */
   methods.splice(methods.indexOf('paragraph'), 0, 'details');
 };
-
-const colon = ':';
-const openBracket = '[';
-const closeBracket = ']';
-const newline = '\n';
-const space = ' ';
-const tab = '\t';
 
 function tokenizeDetails(eat, value, silent) {
   let index = 0;
@@ -171,7 +172,8 @@ function tokenizeDetails(eat, value, silent) {
       type: 'redaction',
       redactionType: 'details',
       block: true,
-      children: summary
+      children: summary,
+      openingColonCount
     });
 
     const contents = body.map(content => add(content));
