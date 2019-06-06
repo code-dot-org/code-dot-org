@@ -306,6 +306,6 @@ class SchoolInfo < ActiveRecord::Base
     ].include?(school_type)
 
     # Given we got past above cases, school name is sufficient
-    !!school_name
+    !school_name.blank?
   end
 end

@@ -545,4 +545,15 @@ class SchoolInfoTest < ActiveSupport::TestCase
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_CHARTER
     refute school_info.complete?
   end
+
+  test 'not complete if name is entirely whitespace' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_info.school_name = 'Primary School'
+    assert school_info.complete?
+
+    school_info.school_name = '     '
+    refute school_info.complete?
+  end
 end
