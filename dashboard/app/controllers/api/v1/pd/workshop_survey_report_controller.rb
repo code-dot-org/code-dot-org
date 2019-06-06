@@ -155,7 +155,7 @@ module Api::V1::Pd
       joiner = Pd::SurveyPipeline::DailySurveyJoiner
 
       # Mapper + Reducers
-      group_config = [:workshop_id, :form_id, :name, :type, :answer_type]
+      group_config = [:workshop_id, :form_id, :facilitator_id, :name, :type, :answer_type]
 
       is_single_select_answer = lambda {|hash| hash.dig(:answer_type) == 'singleSelect'}
       is_free_format_question = lambda {|hash| ['textbox', 'textarea'].include?(hash[:type])}
