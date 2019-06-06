@@ -10,7 +10,6 @@ import {
 import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import {action} from '@storybook/addon-actions';
 import InstructionsCSF from './InstructionsCSF';
 
 /**
@@ -190,8 +189,8 @@ export default storybook => {
       return (
         <Provider store={store}>
           <InstructionsCSF
-            handleClickCollapser={action('handleClickCollapser')}
-            adjustMaxNeededHeight={action('adjustMaxNeededHeight')}
+            handleClickCollapser={() => {}}
+            adjustMaxNeededHeight={() => {}}
           />
         </Provider>
       );
