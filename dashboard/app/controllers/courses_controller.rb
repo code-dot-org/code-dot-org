@@ -89,7 +89,9 @@ class CoursesController < ApplicationController
     course = Course.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
-    course.update_attribute(:has_verified_resources, !!params[:has_verified_resources])
+    # Convert has_verified_resources from a string ("on") to a boolean.
+    params[:has_verified_resources] = !!params[:has_verified_resources]
+    course.update(course_params)
     redirect_to course
   end
 
@@ -111,6 +113,10 @@ class CoursesController < ApplicationController
   end
 
   private
+
+  def course_params
+    params.permit(:version_year, :family_name, :has_verified_resources).to_h
+  end
 
   def set_redirect_override
     if params[:course_name] && params[:no_redirect]
