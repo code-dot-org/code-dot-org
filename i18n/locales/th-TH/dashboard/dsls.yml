@@ -3,6 +3,64 @@ th:
     external:
       Begin planning your project:
         title: ชื่อเรื่อง
+      CSD U2 Design Project:
+        title: ชื่อเรื่อง
+      CSD U2 Design Project_2018:
+        title: ชื่อเรื่อง
+      CSD U2 Design Project_2018_2019:
+        title: ชื่อเรื่อง
+      CSD U2 L1 Overview:
+        title: ชื่อเรื่อง
+      CSD U2 L2 Overview:
+        title: ชื่อเรื่อง
+      CSD U2 L3 Overview:
+        title: ชื่อเรื่อง
+      CSD U2 L4 Overview:
+        title: ชื่อเรื่อง
+      CSD U2 L5 Overview:
+        title: ชื่อเรื่อง
+      CSD U2 L6 Overview:
+        title: ชื่อเรื่อง
+      CSD U2 expand project:
+        title: ชื่อเรื่อง
+      CSD U2 expand project_2018:
+        title: ชื่อเรื่อง
+      CSD U2 expand project_2018_2019:
+        title: ชื่อเรื่อง
+      CSD U3 combining rep:
+        title: ชื่อเรื่อง
+      CSD U3 combining rep_2018:
+        title: ชื่อเรื่อง
+      CSD U3 combining rep_2018_2019:
+        title: ชื่อเรื่อง
+      CSD U5 Encryption 1:
+        title: ชื่อเรื่อง
+      CSD U5 Encryption 1_2018:
+        title: ชื่อเรื่อง
+      CSD U5 Encryption 1_2018_2019:
+        title: ชื่อเรื่อง
+      CSD U5 L13 SFLP Interpreting Data:
+        title: ชื่อเรื่อง
+      CSD U5 data visualization:
+        title: ชื่อเรื่อง
+      CSD U5 data visualization_2018:
+        title: ชื่อเรื่อง
+      CSD U5 data visualization_2018_2019:
+        title: ชื่อเรื่อง
+      CSD U5 student record:
+        title: ชื่อเรื่อง
+      CSD U5 student record_2018:
+        title: ชื่อเรื่อง
+      CSD U5 student record_2018_2019:
+        title: ชื่อเรื่อง
+      Internet Simulator Setup 2:
+        title: ชื่อเรื่อง
+      Multi-Screen Apps:
+        title: ชื่อเรื่อง
+      New Challenge Introduction:
+        title: ชื่อเรื่อง
+      OPD-K5 Stage3aGo:
+        title: ชื่อเรื่อง
       Prepare for your presentation:
         title: ชื่อเรื่อง
       courseD_external_binary1_2018:
@@ -163,6 +221,12 @@ th:
       4-5 maze multi 1:
         Maze Multiple Choice: เขาวงกต คำถามแบบปรนัย
         Which blocks solve the puzzle?: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
+      CSD U3 Boolean MC:
+        title: ชื่อเรื่อง
+      CSD U3 Boolean MC_2018:
+        title: ชื่อเรื่อง
+      CSD U3 Boolean MC_2018_2019:
+        title: ชื่อเรื่อง
       K-1 Artist 1 Multi 1:
         Multiple Choice: คำถามแบบปรนัย
         Which blocks solve this puzzle?: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
@@ -210,11 +274,19 @@ th:
       K-1 Word Search Multi 3:
         Multiple Choice: คำถามแบบปรนัย
         Which word is spelled?: สะกดเป็นคำว่าอะไร?
+      behaviors 1 predict:
+        Incorrect: ไม่ถูกต้อง
+      behaviors 4 predict:
+        Incorrect: ไม่ถูกต้อง
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
         '4': '4'
       courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
         '12': '12'
         '15': '15'
         '4': '4'
@@ -227,6 +299,14 @@ th:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

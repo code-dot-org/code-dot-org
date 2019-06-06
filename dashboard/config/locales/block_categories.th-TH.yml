@@ -1,24 +1,2240 @@
 ---
-th:
+th-TH:
   data:
     block_categories:
-      Actions: การดำเนินการ
-      Loops: ลูป
-      Functions: ฟังก์ชัน
-      Color: สี
-      Brushes: พู่กัน
-      Math: คำนวณ
-      Logic: ตรรกะ
-      Variables: ตัวแปร
-      Conditionals: เงื่อนไข
-      Events: อีเวนท์
-      Comments: หมายเหตุ (Comment)
-      Text: ข้อความ
-      Comment: หมายเหตุ (Comment)
-      Location: ที่อยู่
-      Dancers: นักเต้น
-      Groups: กลุ่ม
-      Start: เริ่มต้น
-      test: ทดสอบ
-      Name: ชื่อ
-      Function: ฟังก์ชัน
+      4-5 Artist Patterns Free Play:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      Alien Defender:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      Choose Your Own Adventure:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      Course 4 Artist For Loops 11:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      Course 4 Artist For Loops 11a:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      Course 4 Artist For Loops 14:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      Course 4 Artist For Loops 15:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      Course 4 Artist For Loops 4:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      Course 4 Artist For Loops 6a:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      Course 4 Artist For Loops 8:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      Course 4 Artist For Loops Challenge:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      Course 4 Artist For Loops inspire:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      Course 4 Artist Functions Inspiration:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+      Course 4 Artist Functions challenge:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+      Course 4 Bee Params 1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      Course 4 Bee Params 2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      Course 4 Bee Params 3:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+      Course 4 Bee Params 4:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      Course 4 Bee Params 5:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      Course 4 Bee Params 6:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      Course 4 Bee Params 7:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 Bee Params 8:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 EC 1a:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 EC 1b:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 EC 2a:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      Course 4 EC 2b:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+      Course 4 EC 2c:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+      Course 4 Play Lab Params 10:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      Course 4 Play Lab Params 7:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 Play Lab Params 8:
+        Events: เหตุการณ์
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 Play Lab Params 9:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      Course 4 Play Lab Vars 9:
+        Events: เหตุการณ์
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+      Course 4 Playlab For Loop Freeplay:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Variables: ตัวแปร
+      Course 4 SCF 1:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 SCF 1a:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 SCF 1b:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Logic: ตรรกะ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 SCF 2:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 SCF 3:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      Course 4 SCFL 1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+      Course 4 SCFL 1a:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+      Course 4 SCFL 1b:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+      Course 4 SCFL 2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+      Course 4 SCFL 3:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      Course 4 SCFL 4:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      Course 4 SCFL 6:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      Course 4 SCFL 7:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      Course 4 SCV 6:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      'Course E: Play Lab Project':
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      'Course F: Artist Project':
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      'Course F: Artist Project - Revise':
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      'Course F: Artist Project - Revise_2018':
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      'Course F: Artist Project_2018':
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      'Course F: Artist Project_2019':
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      CourseD_Dance_Party_11_5:
+        Dancers: นักเต้น
+        Groups: กลุ่ม
+        Events: เหตุการณ์
+      CourseD_Dance_Party_12:
+        Dancers: นักเต้น
+        Groups: กลุ่ม
+        Events: เหตุการณ์
+        Logic: ตรรกะ
+      CourseE_Project_SpriteLab:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Logic: ตรรกะ
+        Text: ข้อความ
+        Comments: หมายเหตุ (Comment)
+      CourseE_Project_SpriteLab_2019:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+      CourseE_hoops:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+        Functions: ฟังก์ชัน
+      CourseF_Project_Revise_SpriteLab:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+        Functions: ฟังก์ชัน
+      CourseF_Project_SpriteLab:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+        Functions: ฟังก์ชัน
+      CourseF_Project_SpriteLab_2019:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Text: ข้อความ
+        Comments: หมายเหตุ (Comment)
+      Dance Party 2:
+        Events: เหตุการณ์
+        Comments: หมายเหตุ (Comment)
+      Dance Party 6:
+        Events: เหตุการณ์
+        Comments: หมายเหตุ (Comment)
+      Dance Party Freeplay:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+        Comments: หมายเหตุ (Comment)
+      Dance_Party_11_5:
+        Dancers: นักเต้น
+        Groups: กลุ่ม
+        Events: เหตุการณ์
+      Dance_Party_12:
+        Dancers: นักเต้น
+        Groups: กลุ่ม
+        Events: เหตุการณ์
+        Logic: ตรรกะ
+      Dance_Party_extras_battle:
+        Dancers: นักเต้น
+        Groups: กลุ่ม
+        Events: เหตุการณ์
+        Logic: ตรรกะ
+      Dance_Party_extras_every_beat:
+        Dancers: นักเต้น
+        Groups: กลุ่ม
+        Events: เหตุการณ์
+        Logic: ตรรกะ
+      Dance_Party_extras_layout:
+        Dancers: นักเต้น
+        Groups: กลุ่ม
+        Events: เหตุการณ์
+        Logic: ตรรกะ
+      Dance_Party_extras_on_beat:
+        Dancers: นักเต้น
+        Groups: กลุ่ม
+        Events: เหตุการณ์
+        Logic: ตรรกะ
+      Dance_Party_extras_speed:
+        Dancers: นักเต้น
+        Groups: กลุ่ม
+        Events: เหตุการณ์
+        Logic: ตรรกะ
+      Dance_Party_extras_visible:
+        Dancers: นักเต้น
+        Groups: กลุ่ม
+        Events: เหตุการณ์
+        Logic: ตรรกะ
+      Find the Wizard:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      Fish Tank 5-validated:
+        Comments: หมายเหตุ (Comment)
+      Fish Tank 5-validated_2019:
+        Comments: หมายเหตุ (Comment)
+      Fish Tank 6-validated:
+        Comments: หมายเหตุ (Comment)
+      Fish Tank 6-validated_2019:
+        Comments: หมายเหตุ (Comment)
+      Fish Tank 7-validated:
+        Events: เหตุการณ์
+        Comments: หมายเหตุ (Comment)
+      Fish Tank 7-validated_2019:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Comments: หมายเหตุ (Comment)
+      FoodFight:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      Geometric Sun:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      Geometric Sun_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      Guess The Number:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      InspirationalArtwork:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      InspirationalArtwork_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      NEW Course 4 Artist Functions 14:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+      NEW Course 4 Artist Params 1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      NEW Course 4 Artist Params 10:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      NEW Course 4 Artist Params 11:
+        Actions: การดำเนินการ
+        Functions: ฟังก์ชัน
+        Loops: ลูป
+        Math: คำนวณ
+      NEW Course 4 Artist Params 12:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      NEW Course 4 Artist Params 12a:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      NEW Course 4 Artist Params 13:
+        Actions: การดำเนินการ
+        Functions: ฟังก์ชัน
+        Loops: ลูป
+        Math: คำนวณ
+      NEW Course 4 Artist Params 14:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+        Loops: ลูป
+        Math: คำนวณ
+      NEW Course 4 Artist Params 15:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      NEW Course 4 Artist Params 2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      NEW Course 4 Artist Params 3:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      NEW Course 4 Artist Params 6:
+        Actions: การดำเนินการ
+        Functions: ฟังก์ชัน
+        Loops: ลูป
+        Math: คำนวณ
+      NEW Course 4 Artist Params 7:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+      NEW Course 4 Artist Params 8:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Loops: ลูป
+      NEW Course 4 Artist Params 9:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      NEW Course 4 Artist Params inspire:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+        Loops: ลูป
+        Math: คำนวณ
+      NEW Course 4 Play Lab Params 11:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      Robot Doodle:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      Robot Doodle_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      Virtual Pet 2:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+        Comments: หมายเหตุ (Comment)
+      Virtual Pet 3:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+      Virtual Pet 4:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+      Virtual Pet 5:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+      Virtual Pet 6:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+      Virtual Pet Freeplay:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+      behaviors 3a:
+        Actions: การดำเนินการ
+      behaviors 5:
+        Actions: การดำเนินการ
+      behaviors 6:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Logic: ตรรกะ
+      behaviors 7:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Logic: ตรรกะ
+      behaviors free play:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+      course3_bee_functions_challenge1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      course3_bee_functions_challenge2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      course3_bee_functions_challenge3:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      course3_bee_functions_challenge4:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      course3_playLab_challenge1:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      course4_artist_fwp_challenge1:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      course4_bee_for_challenge1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      course4_bee_fwp_challenge1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      course4_bee_fwp_challenge2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      course4_playlab_variables_challenge1:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      courseD_artist_project1:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project1a:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project1a_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project1a_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project2:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project2_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project2_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project2a:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project2a_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project2a_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project3:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project3_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project3_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project3a:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project3a_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project3a_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project4:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project4_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project4_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project4a:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project4a_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project4a_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project5:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project5_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_artist_project5_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseD_playLab_condFP:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+      courseD_playLab_condFP_2018:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Comment: หมายเหตุ (Comment)
+      courseE_Dogger_2:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Variables: ตัวแปร
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Text: ข้อความ
+        Functions: ฟังก์ชัน
+      courseE_artist_concept1_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_concept4:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+      courseE_artist_concept4_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions10:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      courseE_artist_functions10_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions10_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions2_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions2_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions3_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions3_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions5_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions5_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions7_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions7_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions8:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      courseE_artist_functions8_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions8_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions8a_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions8a_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions8b_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions8b_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions8c_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions8c_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions9:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      courseE_artist_functions9_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions9_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functionsProj_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functionsProj_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_artist_functions_predict2:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      courseE_artist_functions_predict2_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      courseE_artist_functions_predict2_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      courseE_bee_concept1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_bee_concept2_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_bee_concept3_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_bee_concept4_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_bee_concept5_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_bee_functions6:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      courseE_bee_functions7:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      courseE_bee_functions_challenge1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_bee_functions_challenge2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+      courseE_farmer_concept1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_concept2_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_concept3_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions10a1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions10a1_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions10b:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions11_predict:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions11_predict_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions11_predict_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions13_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions13_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions1_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions1a:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions1a_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions1a_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions2b:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions2b_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions2b_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions2ba:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions2ba_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions2ba_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions3c:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions3c1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions3c1_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions3c_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions3c_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions4b:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions5c:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions6c:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions7a1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions7a1_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions7b:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions8a1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions8a1_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions8b:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_farmer_functions9a1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions9a1_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseE_farmer_functions9b:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_playLab_challenge1:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_playLab_scaffold5:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseE_playLab_scaffold6:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+      courseF_artist_for1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Color: สี
+      courseF_artist_for10:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for10_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for10_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for10_predict1:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for10_predict1_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for10_predict1_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for1_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Color: สี
+      courseF_artist_for2_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for2_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for3:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Color: สี
+      courseF_artist_for3_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for3_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for4:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Color: สี
+      courseF_artist_for4_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for4_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for5:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Color: สี
+      courseF_artist_for5_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for5_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for6:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Color: สี
+      courseF_artist_for6_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Color: สี
+      courseF_artist_for6_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Color: สี
+      courseF_artist_for7:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for7_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for7_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for8:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for8_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for8_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for9:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+      courseF_artist_for9_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for9_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_for_challenge1:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_artist_for_challenge1_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_artist_for_challenge1_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_artist_for_challenge2:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_artist_for_challenge2_2018:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_artist_for_challenge2_2019:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_artist_fwp2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+      courseF_artist_fwp2_predict1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+      courseF_artist_fwp3:
+        Functions: ฟังก์ชัน
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_artist_fwp4:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      courseF_artist_fwp5:
+        Actions: การดำเนินการ
+        Functions: ฟังก์ชัน
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+      courseF_artist_fwp6:
+        Actions: การดำเนินการ
+        Functions: ฟังก์ชัน
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+      courseF_artist_fwp7:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_artist_fwp8:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Functions: ฟังก์ชัน
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_artist_fwp9:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      courseF_artist_fwp_challenge1:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      courseF_artist_fwp_challenge2:
+        Actions: การดำเนินการ
+        Brushes: พู่กัน
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+      courseF_artist_variables10_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_variables10_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_variables7_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_variables7_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_variables8_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_variables8_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_variables9_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_variables9_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_variablesFP_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_artist_variablesFP_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Brushes: พู่กัน
+        Variables: ตัวแปร
+        Functions: ฟังก์ชัน
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_conditionals10:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_conditionals2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_conditionals3:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_conditionals4:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_conditionals5:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_conditionals8:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_for10:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for10_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for10_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for11:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for11_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for11_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for1_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for1_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for2_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for2_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for3_predict1:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for3_predict1_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for3_predict1_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for4:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for4_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for4_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for5:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for5_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for5_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for6:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for6_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for6_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for7:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for7_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for7_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for8:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for8_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for8_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for9:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Variables: ตัวแปร
+      courseF_bee_for9_2018:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for9_2019:
+        Actions: การดำเนินการ
+        Math: คำนวณ
+        Loops: ลูป
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_for_challenge1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_for_challenge1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_for_challenge1_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_for_challenge2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_bee_for_challenge2_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_bee_for_challenge2_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_bee_functions2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_functions3:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_functions3a:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_functions4:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_functions5a:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_functions6:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_functions7:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_functions8a:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_functionsPre7:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_functions_challenge1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_functions_challenge2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_fwp1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Math: คำนวณ
+        Conditionals: 'เงื่อนไข '
+      courseF_bee_fwp2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_fwp3:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_fwp4:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_fwp5:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_fwp6:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_fwp7:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_fwp8:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_fwp9_predict1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_fwp_challenge1:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_fwp_challenge2:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Math: คำนวณ
+      courseF_bee_variables_1_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_1_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_2_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_2_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_3_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_3_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_4_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_4_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_5_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_5_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_6_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_6_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_7_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_7_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+        Comments: หมายเหตุ (Comment)
+      courseF_bee_variables_8_2018:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+      courseF_bee_variables_8_2019:
+        Actions: การดำเนินการ
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+        Math: คำนวณ
+      courseF_playlab_variables1a:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Variables: ตัวแปร
+      courseF_playlab_variables2b:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+      courseF_playlab_variables3b_josh:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Variables: ตัวแปร
+      courseF_playlab_variables4b:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Variables: ตัวแปร
+      courseF_playlab_variables4c_predictive1:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      courseF_playlab_variables5c:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Logic: ตรรกะ
+        Variables: ตัวแปร
+        Text: ข้อความ
+      courseF_playlab_variables6c:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Variables: ตัวแปร
+      courseF_playlab_variables7b:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Conditionals: 'เงื่อนไข '
+        Math: คำนวณ
+        Text: ข้อความ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      courseF_playlab_variables7c:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Variables: ตัวแปร
+      courseF_playlab_variables8c:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
+      courseF_playlab_variables_challenge1:
+        Actions: การดำเนินการ
+        Events: เหตุการณ์
+        Loops: ลูป
+        Math: คำนวณ
+        Functions: ฟังก์ชัน
+        Variables: ตัวแปร
