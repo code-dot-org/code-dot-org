@@ -26,7 +26,29 @@ module.exports = function details() {
   const restorationMethods = Parser.prototype.restorationMethods;
 
   restorationMethods.details = function(add, nodes, content, children) {
-    // TODO
+    const open = add({
+      type: 'paragraph',
+      children: [
+        {
+          type: 'rawtext',
+          value: `::: details [${content}]`
+        }
+      ]
+    });
+
+    const childNodes = children.map(child => add(child));
+
+    const close = add({
+      type: 'paragraph',
+      children: [
+        {
+          type: 'rawtext',
+          value: ':::'
+        }
+      ]
+    });
+
+    return [open, ...childNodes, close];
   };
   redact = Parser.prototype.options.redact;
   tokenizers.details = tokenizeDetails;
