@@ -143,6 +143,12 @@ export const commands = {
     return spriteCommands.countByAnimation(animation);
   },
 
+  /**
+   * name parameter is unused but needs to be here because the generated code
+   * calls createNewSprite() with name as an argument.
+   * TODO (ajpal): change generated code to not pass assignment arguments
+   * to the generated function.
+   */
   createNewSprite(name, animation, location) {
     return spriteCommands.makeSprite.apply(this, [animation, location]);
   },
