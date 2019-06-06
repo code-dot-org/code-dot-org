@@ -80,6 +80,7 @@ export const commands = {
     };
     if (!dirs[direction]) {
       console.error('invalid direction: ' + direction);
+      return;
     }
     sprites.forEach(sprite => {
       dirs[direction](sprite);
