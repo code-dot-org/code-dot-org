@@ -61,6 +61,10 @@ export function getAnimationsInUse() {
   return Array.from(animations);
 }
 
+/**
+ * @param {string} animation
+ * @return {number} Number of behaviors associated with the specified animation.
+ */
 export function getBehaviorsForAnimation(animation) {
   let numBehaviors = 0;
   behaviors.forEach(behavior => {
