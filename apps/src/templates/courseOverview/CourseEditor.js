@@ -18,6 +18,9 @@ const styles = {
   },
   checkbox: {
     margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
   }
 };
 
@@ -25,25 +28,33 @@ export default class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    familyName: PropTypes.string,
+    versionYear: PropTypes.string,
     descriptionShort: PropTypes.string,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
-    hasVerifiedResources: PropTypes.bool.isRequired
+    hasVerifiedResources: PropTypes.bool.isRequired,
+    courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   render() {
     const {
       name,
       title,
+      familyName,
+      versionYear,
       descriptionShort,
       descriptionStudent,
       descriptionTeacher,
       scriptsInCourse,
       scriptNames,
-      teacherResources
+      teacherResources,
+      courseFamilies,
+      versionYearOptions
     } = this.props;
     return (
       <div>
@@ -56,6 +67,36 @@ export default class CourseEditor extends Component {
             defaultValue={title}
             style={styles.input}
           />
+        </label>
+        <label>
+          Family Name
+          <select
+            name="family_name"
+            defaultValue={familyName}
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {courseFamilies.map(familyOption => (
+              <option key={familyOption} value={familyOption}>
+                {familyOption}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Version Year
+          <select
+            name="version_year"
+            defaultValue={versionYear}
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {versionYearOptions.map(year => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
         </label>
         <label>
           Short Description (used in course cards on homepage)
