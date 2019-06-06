@@ -1,20 +1,1935 @@
 ---
-et:
+et-EE:
   data:
     block_categories:
-      Actions: Tegevused
-      Loops: Tsüklid
-      Functions: Funktsioonid
-      Color: Värv
-      Math: Matemaatika
-      Logic: Loogika
-      Variables: Muutujad
-      Conditionals: Tingimuslaused
-      Events: Sündmused
-      Text: Tekst
-      Location: Asukoht
-      Start: Alusta
-      Booleans: Booleans
-      test: test
-      Name: Nimi
-      Function: Funktsioon
+      4-5 Artist Patterns Free Play:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Alien Defender:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Choose Your Own Adventure:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Course 4 Artist For Loops 11:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      Course 4 Artist For Loops 11a:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      Course 4 Artist For Loops 14:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      Course 4 Artist For Loops 15:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      Course 4 Artist For Loops 4:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      Course 4 Artist For Loops 6a:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      Course 4 Artist For Loops 8:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      Course 4 Artist For Loops Challenge:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      Course 4 Artist For Loops inspire:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      Course 4 Artist Functions Inspiration:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      Course 4 Artist Functions challenge:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      Course 4 Bee Params 1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      Course 4 Bee Params 2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      Course 4 Bee Params 3:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Functions: Funktsioonid
+      Course 4 Bee Params 4:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Functions: Funktsioonid
+        Math: Matemaatika
+      Course 4 Bee Params 5:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Course 4 Bee Params 6:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Course 4 Bee Params 7:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 Bee Params 8:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 EC 1a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 EC 1b:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 EC 2a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Course 4 EC 2b:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      Course 4 EC 2c:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      Course 4 Play Lab Params 10:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Course 4 Play Lab Params 7:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 Play Lab Params 8:
+        Events: Sündmused
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 Play Lab Params 9:
+        Actions: Tegevused
+        Math: Matemaatika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Course 4 Play Lab Vars 9:
+        Events: Sündmused
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+      Course 4 SCF 1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 SCF 1a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 SCF 1b:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Logic: Loogika
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 SCF 2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 SCF 3:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      Course 4 SCFL 1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      Course 4 SCFL 1a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      Course 4 SCFL 1b:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      Course 4 SCFL 2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+      Course 4 SCFL 3:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      Course 4 SCFL 4:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      Course 4 SCFL 6:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      Course 4 SCFL 7:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      Course 4 SCV 6:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      'Course E: Play Lab Project':
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      'Course F: Artist Project':
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      'Course F: Artist Project - Revise':
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      'Course F: Artist Project - Revise_2018':
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      'Course F: Artist Project_2018':
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      'Course F: Artist Project_2019':
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      CourseD_Dance_Party_11_5:
+        Events: Sündmused
+      CourseD_Dance_Party_12:
+        Events: Sündmused
+        Logic: Loogika
+      CourseE_Project_SpriteLab:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+        Logic: Loogika
+        Text: Tekst
+      CourseE_Project_SpriteLab_2019:
+        Actions: Tegevused
+        Events: Sündmused
+      CourseE_hoops:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+        Functions: Funktsioonid
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+        Functions: Funktsioonid
+      CourseF_Project_SpriteLab:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+        Functions: Funktsioonid
+      CourseF_Project_SpriteLab_2019:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Text: Tekst
+      Dance Party 2:
+        Events: Sündmused
+      Dance Party 6:
+        Events: Sündmused
+      Dance Party Freeplay:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+      Dance_Party_11_5:
+        Events: Sündmused
+      Dance_Party_12:
+        Events: Sündmused
+        Logic: Loogika
+      Dance_Party_extras_battle:
+        Events: Sündmused
+        Logic: Loogika
+      Dance_Party_extras_every_beat:
+        Events: Sündmused
+        Logic: Loogika
+      Dance_Party_extras_layout:
+        Events: Sündmused
+        Logic: Loogika
+      Dance_Party_extras_on_beat:
+        Events: Sündmused
+        Logic: Loogika
+      Dance_Party_extras_speed:
+        Events: Sündmused
+        Logic: Loogika
+      Dance_Party_extras_visible:
+        Events: Sündmused
+        Logic: Loogika
+      Find the Wizard:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Fish Tank 7-validated:
+        Events: Sündmused
+      Fish Tank 7-validated_2019:
+        Actions: Tegevused
+        Events: Sündmused
+      FoodFight:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Geometric Sun:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Geometric Sun_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Guess The Number:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      InspirationalArtwork:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      InspirationalArtwork_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      NEW Course 4 Artist Functions 14:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      NEW Course 4 Artist Params 1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      NEW Course 4 Artist Params 10:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      NEW Course 4 Artist Params 11:
+        Actions: Tegevused
+        Functions: Funktsioonid
+        Loops: Tsüklid
+        Math: Matemaatika
+      NEW Course 4 Artist Params 12:
+        Actions: Tegevused
+        Math: Matemaatika
+        Functions: Funktsioonid
+      NEW Course 4 Artist Params 12a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      NEW Course 4 Artist Params 13:
+        Actions: Tegevused
+        Functions: Funktsioonid
+        Loops: Tsüklid
+        Math: Matemaatika
+      NEW Course 4 Artist Params 14:
+        Actions: Tegevused
+        Functions: Funktsioonid
+        Loops: Tsüklid
+        Math: Matemaatika
+      NEW Course 4 Artist Params 15:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      NEW Course 4 Artist Params 2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      NEW Course 4 Artist Params 3:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      NEW Course 4 Artist Params 6:
+        Actions: Tegevused
+        Functions: Funktsioonid
+        Loops: Tsüklid
+        Math: Matemaatika
+      NEW Course 4 Artist Params 7:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      NEW Course 4 Artist Params 8:
+        Actions: Tegevused
+        Math: Matemaatika
+        Functions: Funktsioonid
+        Loops: Tsüklid
+      NEW Course 4 Artist Params 9:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      NEW Course 4 Artist Params inspire:
+        Actions: Tegevused
+        Functions: Funktsioonid
+        Loops: Tsüklid
+        Math: Matemaatika
+      NEW Course 4 Play Lab Params 11:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Robot Doodle:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Robot Doodle_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      Virtual Pet 2:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+      Virtual Pet 3:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+      Virtual Pet 4:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+      Virtual Pet 5:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+      Virtual Pet 6:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+      Virtual Pet Freeplay:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+      behaviors 3a:
+        Actions: Tegevused
+      behaviors 5:
+        Actions: Tegevused
+      behaviors 6:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Math: Matemaatika
+        Logic: Loogika
+      behaviors 7:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Math: Matemaatika
+        Logic: Loogika
+      behaviors free play:
+        Actions: Tegevused
+        Events: Sündmused
+      course3_bee_functions_challenge1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      course3_bee_functions_challenge2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      course3_bee_functions_challenge3:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      course3_bee_functions_challenge4:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      course3_playLab_challenge1:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      course4_artist_fwp_challenge1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      course4_bee_for_challenge1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+        Math: Matemaatika
+      course4_bee_fwp_challenge1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      course4_bee_fwp_challenge2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      course4_playlab_variables_challenge1:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      courseD_artist_project1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project1a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project1a_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project1a_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project2_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project2_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project2a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project2a_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project2a_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project3:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project3_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project3_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project3a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project3a_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project3a_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project4:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project4_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project4_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project4a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project4a_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project4a_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project5:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project5_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_artist_project5_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseD_playLab_condFP:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+      courseD_playLab_condFP_2018:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+      courseE_Dogger_2:
+        Actions: Tegevused
+        Events: Sündmused
+        Variables: Muutujad
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Text: Tekst
+        Functions: Funktsioonid
+      courseE_artist_concept1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      courseE_artist_concept4:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_concept4_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      courseE_artist_functions10:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions10_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions10_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions2_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseE_artist_functions2_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseE_artist_functions3_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseE_artist_functions3_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseE_artist_functions5_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseE_artist_functions5_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseE_artist_functions7_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseE_artist_functions7_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseE_artist_functions8:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions8_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions8_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions8a_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions8a_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions8b_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions8b_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions8c_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions8c_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions9:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions9_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions9_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functionsProj_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      courseE_artist_functionsProj_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      courseE_artist_functions_predict2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions_predict2_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_artist_functions_predict2_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_bee_concept1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_bee_concept2_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_bee_concept3_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_bee_concept4_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_bee_concept5_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_bee_functions6:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_bee_functions7:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_bee_functions_challenge1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_bee_functions_challenge2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseE_farmer_concept1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_concept2_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_concept3_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions10a1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions10a1_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions10b:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions11_predict:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions11_predict_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions11_predict_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions13_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions13_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions1_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions1a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions1a_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions1a_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions2b:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions2b_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions2b_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions2ba:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions2ba_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions2ba_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions3c:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions3c1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions3c1_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions3c_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions3c_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions4b:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions5c:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions6c:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions7a1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions7a1_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions7b:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions8a1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions8a1_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions8b:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions9a1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions9a1_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_farmer_functions9b:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_playLab_challenge1:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_playLab_scaffold5:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseE_playLab_scaffold6:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+      courseF_artist_for1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Color: Värv
+      courseF_artist_for10:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_artist_for10_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseF_artist_for10_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseF_artist_for10_predict1:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_artist_for10_predict1_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_artist_for10_predict1_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_artist_for1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for1_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Color: Värv
+      courseF_artist_for2_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for2_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for3:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Color: Värv
+      courseF_artist_for3_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for3_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for4:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Color: Värv
+      courseF_artist_for4_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for4_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for5:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Color: Värv
+      courseF_artist_for5_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for5_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for6:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Color: Värv
+      courseF_artist_for6_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Color: Värv
+      courseF_artist_for6_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Color: Värv
+      courseF_artist_for7:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for7_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for7_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for8:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for8_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for8_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for9:
+        Actions: Tegevused
+        Loops: Tsüklid
+      courseF_artist_for9_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseF_artist_for9_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+      courseF_artist_for_challenge1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_for_challenge1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_for_challenge1_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_for_challenge2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_for_challenge2_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_for_challenge2_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_fwp2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      courseF_artist_fwp2_predict1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      courseF_artist_fwp3:
+        Functions: Funktsioonid
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_fwp4:
+        Actions: Tegevused
+        Math: Matemaatika
+        Functions: Funktsioonid
+      courseF_artist_fwp5:
+        Actions: Tegevused
+        Functions: Funktsioonid
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_fwp6:
+        Actions: Tegevused
+        Functions: Funktsioonid
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_fwp7:
+        Actions: Tegevused
+        Functions: Funktsioonid
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_fwp8:
+        Actions: Tegevused
+        Functions: Funktsioonid
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_artist_fwp9:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      courseF_artist_fwp_challenge1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      courseF_artist_fwp_challenge2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+      courseF_artist_variables10_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      courseF_artist_variables10_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      courseF_artist_variables7_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      courseF_artist_variables7_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      courseF_artist_variables8_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      courseF_artist_variables8_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      courseF_artist_variables9_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      courseF_artist_variables9_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      courseF_artist_variablesFP_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      courseF_artist_variablesFP_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+        Functions: Funktsioonid
+      courseF_bee_conditionals10:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_conditionals2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_conditionals3:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_conditionals4:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_conditionals5:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_conditionals8:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_for10:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for10_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for10_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for11:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for11_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for11_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for1_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for1_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for2_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for2_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for3_predict1:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for3_predict1_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for3_predict1_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for4:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for4_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for4_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for5:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for5_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for5_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for6:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for6_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for6_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for7:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for7_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for7_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for8:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for8_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for8_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for9:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+        Variables: Muutujad
+      courseF_bee_for9_2018:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for9_2019:
+        Actions: Tegevused
+        Math: Matemaatika
+        Loops: Tsüklid
+      courseF_bee_for_challenge1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_for_challenge1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_for_challenge1_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_for_challenge2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_bee_for_challenge2_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_bee_for_challenge2_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_bee_functions2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_functions3:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_functions3a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_functions4:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_functions5a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_functions6:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_functions7:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_functions8a:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_functionsPre7:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_functions_challenge1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_functions_challenge2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_fwp1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Conditionals: Tingimuslaused
+      courseF_bee_fwp2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_fwp3:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_fwp4:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_fwp5:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_fwp6:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_fwp7:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_fwp8:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_fwp9_predict1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_fwp_challenge1:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_fwp_challenge2:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Math: Matemaatika
+      courseF_bee_variables_1_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_1_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_2_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_2_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_3_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_3_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_4_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_4_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_5_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_5_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_6_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_6_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_7_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_7_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_8_2018:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_bee_variables_8_2019:
+        Actions: Tegevused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Functions: Funktsioonid
+        Variables: Muutujad
+        Math: Matemaatika
+      courseF_playlab_variables1a:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+      courseF_playlab_variables2b:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+      courseF_playlab_variables3b_josh:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+      courseF_playlab_variables4b:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+      courseF_playlab_variables4c_predictive1:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      courseF_playlab_variables5c:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Logic: Loogika
+        Variables: Muutujad
+        Text: Tekst
+      courseF_playlab_variables6c:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+      courseF_playlab_variables7b:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Conditionals: Tingimuslaused
+        Math: Matemaatika
+        Text: Tekst
+        Functions: Funktsioonid
+        Variables: Muutujad
+      courseF_playlab_variables7c:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Variables: Muutujad
+      courseF_playlab_variables8c:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+        Variables: Muutujad
+      courseF_playlab_variables_challenge1:
+        Actions: Tegevused
+        Events: Sündmused
+        Loops: Tsüklid
+        Math: Matemaatika
+        Functions: Funktsioonid
+        Variables: Muutujad
