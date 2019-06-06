@@ -1082,8 +1082,10 @@ class ContactRollups
       attempts += 1
       sleep delay
     end
-    raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster" \
-      " #{DATABASE_CLUSTER_CLONE_ID} deletion to complete.  Current cluster status - #{cluster_state}"
-    )
+    unless cluster_state == 'deleted'
+      raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster" \
+        " #{DATABASE_CLUSTER_CLONE_ID} deletion to complete.  Current cluster status - #{cluster_state}"
+      )
+    end
   end
 end
