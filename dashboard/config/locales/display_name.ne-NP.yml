@@ -1,5 +1,5 @@
 ---
-ne:
+ne-NP:
   data:
     display_name:
       CSD U2 Pair Programming Video: Pair Programming
@@ -8,7 +8,6 @@ ne:
       CSD U3 Variables Map: Variables
       CSD U3 Variables Map_2018: Variables
       CSD U3 Variables Map_2019: Variables
-      CSD U3 functions map: Functions
       CSD U6 for loop map: For Loops
       CSD U6 for loop map_2018: For Loops
       CSD U6 for loop map_2019: For Loops
@@ -16,4 +15,3 @@ ne:
       CSD U6 functions paramters video_2018: Functions with Parameters
       CSD U6 functions paramters video_2019: Functions with Parameters
       'CSD: For Loop_2018': For Loops
-      'CSD: For Loop_2019': For Loops
