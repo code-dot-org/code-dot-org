@@ -3,6 +3,7 @@
 - data[:script_id] = @script.id
 - data[:section] = @section&.summarize
 - data[:stage_extra] = @stage_extras
+- data[:teacher_level] = @script_level&.summarize_for_teacher_panel(@current_user)
 
 - if @level && @script_level
   - if @level.try(:examples).present? && current_user.authorized_teacher? # 'solutions' for applab-type levels

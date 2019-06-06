@@ -106,7 +106,7 @@ class ScriptTeacherPanel extends React.Component {
           id: null,
           name: 'Me'
         };
-        currentStudentScriptLevel = currentSectionScriptLevels[0];
+        currentStudentScriptLevel = sectionData.teacher_level;
       }
     }
 
