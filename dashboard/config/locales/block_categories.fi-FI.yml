@@ -1,22 +1,1955 @@
 ---
-fi:
+fi-FI:
   data:
     block_categories:
-      Actions: Toiminnot
-      Loops: Silmukat
-      Functions: Funktiot
-      Color: Väri
-      Math: Matematiikka
-      Logic: Logiikka
-      Variables: Muuttujat
-      Conditionals: Ehtolausekkeet
-      Events: Tapahtumat
-      Text: teksti
-      Location: Sijainti
-      Dancers: Tanssijat
-      Groups: Ryhmät
-      Start: Aloita
-      Booleans: Totuusarvot
-      test: ehto
-      Name: Nimi
-      Function: Funktio
+      4-5 Artist Patterns Free Play:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Alien Defender:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Choose Your Own Adventure:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Course 4 Artist For Loops 11:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      Course 4 Artist For Loops 11a:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      Course 4 Artist For Loops 14:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      Course 4 Artist For Loops 15:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      Course 4 Artist For Loops 4:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      Course 4 Artist For Loops 6a:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      Course 4 Artist For Loops 8:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      Course 4 Artist For Loops Challenge:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      Course 4 Artist For Loops inspire:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      Course 4 Artist Functions Inspiration:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      Course 4 Artist Functions challenge:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      Course 4 Bee Params 1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      Course 4 Bee Params 2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      Course 4 Bee Params 3:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Functions: Funktiot
+      Course 4 Bee Params 4:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Functions: Funktiot
+        Math: Matematiikka
+      Course 4 Bee Params 5:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Course 4 Bee Params 6:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Course 4 Bee Params 7:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 Bee Params 8:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 EC 1a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 EC 1b:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 EC 2a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Course 4 EC 2b:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      Course 4 EC 2c:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      Course 4 Play Lab Params 10:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Course 4 Play Lab Params 7:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 Play Lab Params 8:
+        Events: Tapahtumat
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 Play Lab Params 9:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Course 4 Play Lab Vars 9:
+        Events: Tapahtumat
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+      Course 4 SCF 1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 SCF 1a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 SCF 1b:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Logic: Logiikka
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 SCF 2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 SCF 3:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      Course 4 SCFL 1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      Course 4 SCFL 1a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      Course 4 SCFL 1b:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      Course 4 SCFL 2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+      Course 4 SCFL 3:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      Course 4 SCFL 4:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      Course 4 SCFL 6:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      Course 4 SCFL 7:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      Course 4 SCV 6:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      'Course E: Play Lab Project':
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      'Course F: Artist Project':
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      'Course F: Artist Project - Revise':
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      'Course F: Artist Project - Revise_2018':
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      'Course F: Artist Project_2018':
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      'Course F: Artist Project_2019':
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      CourseD_Dance_Party_11_5:
+        Dancers: Tanssijat
+        Groups: Ryhmät
+        Events: Tapahtumat
+      CourseD_Dance_Party_12:
+        Dancers: Tanssijat
+        Groups: Ryhmät
+        Events: Tapahtumat
+        Logic: Logiikka
+      CourseE_Project_SpriteLab:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+        Logic: Logiikka
+        Text: teksti
+      CourseE_Project_SpriteLab_2019:
+        Actions: Toiminnot
+        Events: Tapahtumat
+      CourseE_hoops:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+        Functions: Funktiot
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+        Functions: Funktiot
+      CourseF_Project_SpriteLab:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+        Functions: Funktiot
+      CourseF_Project_SpriteLab_2019:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Text: teksti
+      Dance Party 2:
+        Events: Tapahtumat
+      Dance Party 6:
+        Events: Tapahtumat
+      Dance Party Freeplay:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+      Dance_Party_11_5:
+        Dancers: Tanssijat
+        Groups: Ryhmät
+        Events: Tapahtumat
+      Dance_Party_12:
+        Dancers: Tanssijat
+        Groups: Ryhmät
+        Events: Tapahtumat
+        Logic: Logiikka
+      Dance_Party_extras_battle:
+        Dancers: Tanssijat
+        Groups: Ryhmät
+        Events: Tapahtumat
+        Logic: Logiikka
+      Dance_Party_extras_every_beat:
+        Dancers: Tanssijat
+        Groups: Ryhmät
+        Events: Tapahtumat
+        Logic: Logiikka
+      Dance_Party_extras_layout:
+        Dancers: Tanssijat
+        Groups: Ryhmät
+        Events: Tapahtumat
+        Logic: Logiikka
+      Dance_Party_extras_on_beat:
+        Dancers: Tanssijat
+        Groups: Ryhmät
+        Events: Tapahtumat
+        Logic: Logiikka
+      Dance_Party_extras_speed:
+        Dancers: Tanssijat
+        Groups: Ryhmät
+        Events: Tapahtumat
+        Logic: Logiikka
+      Dance_Party_extras_visible:
+        Dancers: Tanssijat
+        Groups: Ryhmät
+        Events: Tapahtumat
+        Logic: Logiikka
+      Find the Wizard:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Fish Tank 7-validated:
+        Events: Tapahtumat
+      Fish Tank 7-validated_2019:
+        Actions: Toiminnot
+        Events: Tapahtumat
+      FoodFight:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Geometric Sun:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Geometric Sun_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Guess The Number:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      InspirationalArtwork:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      InspirationalArtwork_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      NEW Course 4 Artist Functions 14:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      NEW Course 4 Artist Params 1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      NEW Course 4 Artist Params 10:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      NEW Course 4 Artist Params 11:
+        Actions: Toiminnot
+        Functions: Funktiot
+        Loops: Silmukat
+        Math: Matematiikka
+      NEW Course 4 Artist Params 12:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Functions: Funktiot
+      NEW Course 4 Artist Params 12a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      NEW Course 4 Artist Params 13:
+        Actions: Toiminnot
+        Functions: Funktiot
+        Loops: Silmukat
+        Math: Matematiikka
+      NEW Course 4 Artist Params 14:
+        Actions: Toiminnot
+        Functions: Funktiot
+        Loops: Silmukat
+        Math: Matematiikka
+      NEW Course 4 Artist Params 15:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      NEW Course 4 Artist Params 2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      NEW Course 4 Artist Params 3:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      NEW Course 4 Artist Params 6:
+        Actions: Toiminnot
+        Functions: Funktiot
+        Loops: Silmukat
+        Math: Matematiikka
+      NEW Course 4 Artist Params 7:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      NEW Course 4 Artist Params 8:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Functions: Funktiot
+        Loops: Silmukat
+      NEW Course 4 Artist Params 9:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      NEW Course 4 Artist Params inspire:
+        Actions: Toiminnot
+        Functions: Funktiot
+        Loops: Silmukat
+        Math: Matematiikka
+      NEW Course 4 Play Lab Params 11:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Robot Doodle:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Robot Doodle_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      Virtual Pet 2:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+      Virtual Pet 3:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+      Virtual Pet 4:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+      Virtual Pet 5:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+      Virtual Pet 6:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+      Virtual Pet Freeplay:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+      behaviors 3a:
+        Actions: Toiminnot
+      behaviors 5:
+        Actions: Toiminnot
+      behaviors 6:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Math: Matematiikka
+        Logic: Logiikka
+      behaviors 7:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Math: Matematiikka
+        Logic: Logiikka
+      behaviors free play:
+        Actions: Toiminnot
+        Events: Tapahtumat
+      course3_bee_functions_challenge1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      course3_bee_functions_challenge2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      course3_bee_functions_challenge3:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      course3_bee_functions_challenge4:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      course3_playLab_challenge1:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      course4_artist_fwp_challenge1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      course4_bee_for_challenge1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+        Math: Matematiikka
+      course4_bee_fwp_challenge1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      course4_bee_fwp_challenge2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      course4_playlab_variables_challenge1:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      courseD_artist_project1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project1a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project1a_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project1a_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project2_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project2_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project2a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project2a_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project2a_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project3:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project3_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project3_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project3a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project3a_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project3a_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project4:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project4_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project4_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project4a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project4a_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project4a_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project5:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project5_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_artist_project5_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseD_playLab_condFP:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+      courseD_playLab_condFP_2018:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+      courseE_Dogger_2:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Variables: Muuttujat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Text: teksti
+        Functions: Funktiot
+      courseE_artist_concept1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      courseE_artist_concept4:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_concept4_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      courseE_artist_functions10:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions10_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions10_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions2_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseE_artist_functions2_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseE_artist_functions3_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseE_artist_functions3_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseE_artist_functions5_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseE_artist_functions5_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseE_artist_functions7_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseE_artist_functions7_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseE_artist_functions8:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions8_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions8_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions8a_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions8a_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions8b_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions8b_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions8c_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions8c_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions9:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions9_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions9_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functionsProj_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      courseE_artist_functionsProj_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      courseE_artist_functions_predict2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions_predict2_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_artist_functions_predict2_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_bee_concept1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_bee_concept2_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_bee_concept3_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_bee_concept4_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_bee_concept5_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_bee_functions6:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_bee_functions7:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_bee_functions_challenge1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_bee_functions_challenge2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseE_farmer_concept1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_concept2_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_concept3_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions10a1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions10a1_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions10b:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions11_predict:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions11_predict_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions11_predict_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions13_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions13_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions1_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions1a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions1a_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions1a_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions2b:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions2b_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions2b_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions2ba:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions2ba_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions2ba_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions3c:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions3c1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions3c1_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions3c_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions3c_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions4b:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions5c:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions6c:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions7a1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions7a1_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions7b:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions8a1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions8a1_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions8b:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions9a1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions9a1_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_farmer_functions9b:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_playLab_challenge1:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_playLab_scaffold5:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseE_playLab_scaffold6:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+      courseF_artist_for1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Color: Väri
+      courseF_artist_for10:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_artist_for10_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Functions: Funktiot
+      courseF_artist_for10_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Functions: Funktiot
+      courseF_artist_for10_predict1:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_artist_for10_predict1_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_artist_for10_predict1_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_artist_for1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for1_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Color: Väri
+      courseF_artist_for2_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for2_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for3:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Color: Väri
+      courseF_artist_for3_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for3_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for4:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Color: Väri
+      courseF_artist_for4_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for4_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for5:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Color: Väri
+      courseF_artist_for5_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for5_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for6:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Color: Väri
+      courseF_artist_for6_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Color: Väri
+      courseF_artist_for6_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Color: Väri
+      courseF_artist_for7:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for7_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for7_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for8:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for8_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for8_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for9:
+        Actions: Toiminnot
+        Loops: Silmukat
+      courseF_artist_for9_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseF_artist_for9_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+      courseF_artist_for_challenge1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_for_challenge1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_for_challenge1_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_for_challenge2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_for_challenge2_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_for_challenge2_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_fwp2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      courseF_artist_fwp2_predict1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      courseF_artist_fwp3:
+        Functions: Funktiot
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_fwp4:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Functions: Funktiot
+      courseF_artist_fwp5:
+        Actions: Toiminnot
+        Functions: Funktiot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_fwp6:
+        Actions: Toiminnot
+        Functions: Funktiot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_fwp7:
+        Actions: Toiminnot
+        Functions: Funktiot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_fwp8:
+        Actions: Toiminnot
+        Functions: Funktiot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_artist_fwp9:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      courseF_artist_fwp_challenge1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      courseF_artist_fwp_challenge2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+      courseF_artist_variables10_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      courseF_artist_variables10_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      courseF_artist_variables7_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      courseF_artist_variables7_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      courseF_artist_variables8_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      courseF_artist_variables8_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      courseF_artist_variables9_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      courseF_artist_variables9_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      courseF_artist_variablesFP_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      courseF_artist_variablesFP_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+        Functions: Funktiot
+      courseF_bee_conditionals10:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_conditionals2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_conditionals3:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_conditionals4:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_conditionals5:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_conditionals8:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_for10:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for10_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for10_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for11:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for11_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for11_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for1_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for1_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for2_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for2_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for3_predict1:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for3_predict1_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for3_predict1_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for4:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for4_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for4_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for5:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for5_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for5_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for6:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for6_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for6_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for7:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for7_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for7_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for8:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for8_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for8_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for9:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+        Variables: Muuttujat
+      courseF_bee_for9_2018:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for9_2019:
+        Actions: Toiminnot
+        Math: Matematiikka
+        Loops: Silmukat
+      courseF_bee_for_challenge1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_for_challenge1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_for_challenge1_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_for_challenge2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_bee_for_challenge2_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_bee_for_challenge2_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_bee_functions2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_functions3:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_functions3a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_functions4:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_functions5a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_functions6:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_functions7:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_functions8a:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_functionsPre7:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_functions_challenge1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_functions_challenge2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_fwp1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Math: Matematiikka
+        Conditionals: Ehtolausekkeet
+      courseF_bee_fwp2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_fwp3:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_fwp4:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_fwp5:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_fwp6:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_fwp7:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_fwp8:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_fwp9_predict1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_fwp_challenge1:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_fwp_challenge2:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Math: Matematiikka
+      courseF_bee_variables_1_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_1_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_2_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_2_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_3_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_3_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_4_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_4_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_5_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_5_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_6_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_6_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_7_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_7_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_8_2018:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_bee_variables_8_2019:
+        Actions: Toiminnot
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Functions: Funktiot
+        Variables: Muuttujat
+        Math: Matematiikka
+      courseF_playlab_variables1a:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+      courseF_playlab_variables2b:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+      courseF_playlab_variables3b_josh:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+      courseF_playlab_variables4b:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+      courseF_playlab_variables4c_predictive1:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      courseF_playlab_variables5c:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Logic: Logiikka
+        Variables: Muuttujat
+        Text: teksti
+      courseF_playlab_variables6c:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+      courseF_playlab_variables7b:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Conditionals: Ehtolausekkeet
+        Math: Matematiikka
+        Text: teksti
+        Functions: Funktiot
+        Variables: Muuttujat
+      courseF_playlab_variables7c:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Variables: Muuttujat
+      courseF_playlab_variables8c:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+        Variables: Muuttujat
+      courseF_playlab_variables_challenge1:
+        Actions: Toiminnot
+        Events: Tapahtumat
+        Loops: Silmukat
+        Math: Matematiikka
+        Functions: Funktiot
+        Variables: Muuttujat
