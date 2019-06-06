@@ -1,61 +1,2377 @@
 ---
-nn:
+nn-NO:
   data:
     block_categories:
-      Actions: Handlingar
-      Loops: Løkker
-      Functions: Funksjonar
-      Color: Farge
-      Brushes: Penslar
-      Math: Matematikk
-      Logic: Logikk
-      Variables: Variablar
-      Number: Tal
-      String: Tekst
-      Image: Bilete
-      Boolean: Boolsk
-      Conditionals: Betingelser
-      Events: Hendingar
-      Games/Score: Spel/Poengsum
-      Comments: Kommentar
-      Category: Kategori
-      Prebuilt: Forhåndsbygde
-      Text: Tekst
-      Picker: Veljar
-      Comment: Kommentar
-      World: Verd
-      Sprites: Sprites
-      Behaviors: Atferd
-      'Variables ': 'Variablar '
-      Default: Standard
-      Locations: Stadar
-      everythingelse: resten
-      Location: Stad
-      numbers: tal
-      Numbers: Tal
-      Input: Inngang
-      Dancers: Dansarar
-      Groups: Grupper
-      Advanced: Avansert
-      Start: Start
-      Music: Musikk
-      Dancing: Dansing
-      Sprite: Sprite
-      Brush: Pensel
-      Make Sprite: Lag Sprite
-      Movement: Rørsle
-      Booleans: Boolske verdiar
-      Functional: Funksjonell
-      While Events: Medan-hendingar
-      Sprite Properties: Eigenskapar ved Sprite
-      Predefined: Forhåndsdefinerte
-      test: test
-      test2: test2
-      Use These Blocks: Bruk disse blokkene
-      Do Not Use: Ikke bruk
-      Foo: Foo
-      Name: Namn
-      NEW BLOCKS: NYE BLOKKER
-      'Functions ': 'Funksjonar '
-      Game/Score: Spel/Poengsum
-      Function: Funksjon
+      4-5 Artist Patterns Free Play:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+      Alien Defender:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Games/Score: Spel/Poengsum
+        Comments: Kommentar
+      Choose Your Own Adventure:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Games/Score: Spel/Poengsum
+        Comments: Kommentar
+      Course 4 Artist For Loops 11:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+      Course 4 Artist For Loops 11a:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+      Course 4 Artist For Loops 14:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+      Course 4 Artist For Loops 15:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+        'Variables ': 'Variablar '
+      Course 4 Artist For Loops 4:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+      Course 4 Artist For Loops 6a:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+      Course 4 Artist For Loops 8:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+      Course 4 Artist For Loops Challenge:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+      Course 4 Artist For Loops inspire:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+      Course 4 Artist Functions Inspiration:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Functions: Funksjonar
+      Course 4 Artist Functions challenge:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Functions: Funksjonar
+      Course 4 Bee Params 1:
+        Actions: Handlingar
+        Loops: Løkker
+        Functions: Funksjonar
+      Course 4 Bee Params 2:
+        Actions: Handlingar
+        Loops: Løkker
+        Functions: Funksjonar
+      Course 4 Bee Params 3:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Functions: Funksjonar
+        'Variables ': 'Variablar '
+      Course 4 Bee Params 4:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Functions: Funksjonar
+        'Variables ': 'Variablar '
+        Math: Matematikk
+      Course 4 Bee Params 5:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+      Course 4 Bee Params 6:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+      Course 4 Bee Params 7:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        Functions: Funksjonar
+        'Variables ': 'Variablar '
+      Course 4 Bee Params 8:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        Functions: Funksjonar
+        'Variables ': 'Variablar '
+      Course 4 EC 1a:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        Functions: Funksjonar
+      Course 4 EC 1b:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        Functions: Funksjonar
+      Course 4 EC 2a:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        Functions: Funksjonar
+        Variables: Variablar
+      Course 4 EC 2b:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        Variables: Variablar
+        Functions: Funksjonar
+      Course 4 EC 2c:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        Variables: Variablar
+        Functions: Funksjonar
+      Course 4 Play Lab Params 10:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        Functions: Funksjonar
+        Variables: Variablar
+      Course 4 Play Lab Params 7:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+      Course 4 Play Lab Params 8:
+        Events: Hendingar
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+      Course 4 Play Lab Params 9:
+        Actions: Handlingar
+        Math: Matematikk
+        Functions: Funksjonar
+        Variables: Variablar
+      Course 4 Play Lab Vars 9:
+        Events: Hendingar
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Variables: Variablar
+      Course 4 SCF 1:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+        Functions: Funksjonar
+      Course 4 SCF 1a:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        Functions: Funksjonar
+        'Variables ': 'Variablar '
+      Course 4 SCF 1b:
+        Actions: Handlingar
+        Loops: Løkker
+        Logic: Logikk
+        Math: Matematikk
+        Functions: Funksjonar
+      Course 4 SCF 2:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+        Functions: Funksjonar
+      Course 4 SCF 3:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+        Functions: Funksjonar
+      Course 4 SCFL 1:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+      Course 4 SCFL 1a:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+      Course 4 SCFL 1b:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+      Course 4 SCFL 2:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+      Course 4 SCFL 3:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      Course 4 SCFL 4:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      Course 4 SCFL 6:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      Course 4 SCFL 7:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      Course 4 SCV 6:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      'Course E: Play Lab Project':
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Games/Score: Spel/Poengsum
+        Comments: Kommentar
+      'Course F: Artist Project':
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+      'Course F: Artist Project - Revise':
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+      'Course F: Artist Project - Revise_2018':
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+      'Course F: Artist Project_2018':
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+      'Course F: Artist Project_2019':
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+      CourseD_Dance_Party_11_5:
+        World: Verd
+        Dancers: Dansarar
+        Groups: Grupper
+        Events: Hendingar
+      CourseD_Dance_Party_12:
+        World: Verd
+        Dancers: Dansarar
+        Groups: Grupper
+        Events: Hendingar
+        Numbers: Tal
+        Logic: Logikk
+      CourseE_Project_SpriteLab:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+        Logic: Logikk
+        Text: Tekst
+        Advanced: Avansert
+        Comments: Kommentar
+      CourseE_Project_SpriteLab_2019:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+      CourseE_hoops:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+        Functions: Funksjonar
+      CourseF_Project_Revise_SpriteLab:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+        Functions: Funksjonar
+      CourseF_Project_SpriteLab:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+        Functions: Funksjonar
+      CourseF_Project_SpriteLab_2019:
+        World: Verd
+        Locations: Stadar
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Text: Tekst
+        Comments: Kommentar
+      Dance Party 2:
+        Behaviors: Atferd
+        Events: Hendingar
+        Comments: Kommentar
+      Dance Party 6:
+        Behaviors: Atferd
+        Events: Hendingar
+        Comments: Kommentar
+      Dance Party Freeplay:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+        Comments: Kommentar
+      Dance_Party_11_5:
+        World: Verd
+        Dancers: Dansarar
+        Groups: Grupper
+        Events: Hendingar
+      Dance_Party_12:
+        World: Verd
+        Dancers: Dansarar
+        Groups: Grupper
+        Events: Hendingar
+        Numbers: Tal
+        Logic: Logikk
+      Dance_Party_extras_battle:
+        World: Verd
+        Dancers: Dansarar
+        Groups: Grupper
+        Events: Hendingar
+        Numbers: Tal
+        Logic: Logikk
+      Dance_Party_extras_every_beat:
+        World: Verd
+        Dancers: Dansarar
+        Groups: Grupper
+        Events: Hendingar
+        Numbers: Tal
+        Logic: Logikk
+      Dance_Party_extras_layout:
+        World: Verd
+        Dancers: Dansarar
+        Groups: Grupper
+        Events: Hendingar
+        Numbers: Tal
+        Logic: Logikk
+      Dance_Party_extras_on_beat:
+        World: Verd
+        Dancers: Dansarar
+        Groups: Grupper
+        Events: Hendingar
+        Numbers: Tal
+        Logic: Logikk
+      Dance_Party_extras_speed:
+        World: Verd
+        Dancers: Dansarar
+        Groups: Grupper
+        Events: Hendingar
+        Numbers: Tal
+        Logic: Logikk
+      Dance_Party_extras_visible:
+        World: Verd
+        Dancers: Dansarar
+        Groups: Grupper
+        Events: Hendingar
+        Numbers: Tal
+        Logic: Logikk
+      Find the Wizard:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Games/Score: Spel/Poengsum
+        Comments: Kommentar
+      Fish Tank 5-validated:
+        World: Verd
+        Behaviors: Atferd
+        Comments: Kommentar
+      Fish Tank 5-validated_2019:
+        World: Verd
+        Behaviors: Atferd
+        Comments: Kommentar
+      Fish Tank 6-validated:
+        World: Verd
+        Behaviors: Atferd
+        Comments: Kommentar
+      Fish Tank 6-validated_2019:
+        World: Verd
+        Behaviors: Atferd
+        Comments: Kommentar
+      Fish Tank 7-validated:
+        World: Verd
+        Behaviors: Atferd
+        Events: Hendingar
+        Comments: Kommentar
+      Fish Tank 7-validated_2019:
+        World: Verd
+        Actions: Handlingar
+        Behaviors: Atferd
+        Events: Hendingar
+        Comments: Kommentar
+      FoodFight:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Games/Score: Spel/Poengsum
+        Comments: Kommentar
+      Geometric Sun:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Comments: Kommentar
+      Geometric Sun_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Comments: Kommentar
+      Guess The Number:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Games/Score: Spel/Poengsum
+        Comments: Kommentar
+      InspirationalArtwork:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Comments: Kommentar
+      InspirationalArtwork_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Comments: Kommentar
+      NEW Course 4 Artist Functions 14:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Functions: Funksjonar
+      NEW Course 4 Artist Params 1:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+        Variables: Variablar
+      NEW Course 4 Artist Params 10:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+      NEW Course 4 Artist Params 11:
+        Actions: Handlingar
+        Functions: Funksjonar
+        Loops: Løkker
+        Math: Matematikk
+      NEW Course 4 Artist Params 12:
+        Actions: Handlingar
+        Math: Matematikk
+        Functions: Funksjonar
+      NEW Course 4 Artist Params 12a:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+      NEW Course 4 Artist Params 13:
+        Actions: Handlingar
+        Functions: Funksjonar
+        Loops: Løkker
+        Math: Matematikk
+      NEW Course 4 Artist Params 14:
+        Actions: Handlingar
+        Brushes: Penslar
+        Functions: Funksjonar
+        Loops: Løkker
+        Math: Matematikk
+      NEW Course 4 Artist Params 15:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+        Functions: Funksjonar
+      NEW Course 4 Artist Params 2:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+      NEW Course 4 Artist Params 3:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+      NEW Course 4 Artist Params 6:
+        Actions: Handlingar
+        Functions: Funksjonar
+        Loops: Løkker
+        Math: Matematikk
+      NEW Course 4 Artist Params 7:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Functions: Funksjonar
+      NEW Course 4 Artist Params 8:
+        Actions: Handlingar
+        Math: Matematikk
+        Functions: Funksjonar
+        Loops: Løkker
+      NEW Course 4 Artist Params 9:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+      NEW Course 4 Artist Params inspire:
+        Actions: Handlingar
+        Brushes: Penslar
+        Functions: Funksjonar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      NEW Course 4 Play Lab Params 11:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Games/Score: Spel/Poengsum
+      Robot Doodle:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Comments: Kommentar
+      Robot Doodle_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Functions: Funksjonar
+        Variables: Variablar
+        Comments: Kommentar
+      Virtual Pet 2:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+        Comments: Kommentar
+      Virtual Pet 3:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+      Virtual Pet 4:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+      Virtual Pet 5:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+      Virtual Pet 6:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+      Virtual Pet Freeplay:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+      behaviors 3a:
+        World: Verd
+        Behaviors: Atferd
+        Actions: Handlingar
+      behaviors 5:
+        World: Verd
+        Behaviors: Atferd
+        Actions: Handlingar
+      behaviors 6:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Math: Matematikk
+        Logic: Logikk
+      behaviors 7:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Math: Matematikk
+        Logic: Logikk
+      behaviors free play:
+        World: Verd
+        Behaviors: Atferd
+        Actions: Handlingar
+        Events: Hendingar
+      course3_bee_functions_challenge1:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      course3_bee_functions_challenge2:
+        Actions: Handlingar
+        Loops: Løkker
+        Functions: Funksjonar
+      course3_bee_functions_challenge3:
+        Default: Standard
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      course3_bee_functions_challenge4:
+        Default: Standard
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      course3_playLab_challenge1:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      course4_artist_fwp_challenge1:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+        Functions: Funksjonar
+      course4_bee_for_challenge1:
+        Actions: Handlingar
+        Loops: Løkker
+        Functions: Funksjonar
+        Math: Matematikk
+      course4_bee_fwp_challenge1:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      course4_bee_fwp_challenge2:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      course4_playlab_variables_challenge1:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+        Variables: Variablar
+      courseD_artist_project1:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project1a:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project1a_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project1a_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project2:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project2_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project2_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project2a:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project2a_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project2a_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project3:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project3_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project3_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project3a:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project3a_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project3a_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project4:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project4_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project4_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project4a:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project4a_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project4a_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project5:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project5_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_artist_project5_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+      courseD_playLab_condFP:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Games/Score: Spel/Poengsum
+      courseD_playLab_condFP_2018:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Games/Score: Spel/Poengsum
+        Comment: Kommentar
+      courseE_Dogger_2:
+        World: Verd
+        Actions: Handlingar
+        Events: Hendingar
+        Behaviors: Atferd
+        Variables: Variablar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Text: Tekst
+        Functions: Funksjonar
+      courseE_artist_concept1_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_concept4:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Functions: Funksjonar
+      courseE_artist_concept4_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions10:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+      courseE_artist_functions10_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions10_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions2_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        'Functions ': 'Funksjonar '
+        Comments: Kommentar
+      courseE_artist_functions2_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        'Functions ': 'Funksjonar '
+        Comments: Kommentar
+      courseE_artist_functions3_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseE_artist_functions3_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseE_artist_functions5_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        'Functions ': 'Funksjonar '
+        Comments: Kommentar
+      courseE_artist_functions5_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        'Functions ': 'Funksjonar '
+        Comments: Kommentar
+      courseE_artist_functions7_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        'Functions ': 'Funksjonar '
+        Comments: Kommentar
+      courseE_artist_functions7_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        'Functions ': 'Funksjonar '
+        Comments: Kommentar
+      courseE_artist_functions8:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+      courseE_artist_functions8_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions8_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions8a_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions8a_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions8b_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions8b_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions8c_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions8c_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions9:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+      courseE_artist_functions9_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions9_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functionsProj_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functionsProj_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_artist_functions_predict2:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+      courseE_artist_functions_predict2_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+      courseE_artist_functions_predict2_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Functions: Funksjonar
+      courseE_bee_concept1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_bee_concept2_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_bee_concept3_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_bee_concept4_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_bee_concept5_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_bee_functions6:
+        Actions: Handlingar
+        Loops: Løkker
+        Functions: Funksjonar
+      courseE_bee_functions7:
+        Actions: Handlingar
+        Loops: Løkker
+        Functions: Funksjonar
+      courseE_bee_functions_challenge1:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_bee_functions_challenge2:
+        Actions: Handlingar
+        Loops: Løkker
+        Functions: Funksjonar
+      courseE_farmer_concept1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_concept2_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_concept3_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions1:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions10a1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions10a1_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions10b:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions11_predict:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions11_predict_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions11_predict_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions13_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions13_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions1_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions1a:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions1a_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions1a_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions2b:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions2b_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions2b_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions2ba:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions2ba_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions2ba_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions3c:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions3c1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions3c1_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions3c_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions3c_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions4b:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions5c:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions6c:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions7a1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions7a1_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions7b:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions8a1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions8a1_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions8b:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_farmer_functions9a1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions9a1_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseE_farmer_functions9b:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_playLab_challenge1:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_playLab_scaffold5:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseE_playLab_scaffold6:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+      courseF_artist_for1:
+        Actions: Handlingar
+        Loops: Løkker
+        Color: Farge
+      courseF_artist_for10:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+        'Variables ': 'Variablar '
+      courseF_artist_for10_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+        'Variables ': 'Variablar '
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_for10_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+        'Variables ': 'Variablar '
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_for10_predict1:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+        'Variables ': 'Variablar '
+      courseF_artist_for10_predict1_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+        'Variables ': 'Variablar '
+      courseF_artist_for10_predict1_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Brushes: Penslar
+        'Variables ': 'Variablar '
+      courseF_artist_for1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseF_artist_for1_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseF_artist_for2:
+        Actions: Handlingar
+        Loops: Løkker
+        Color: Farge
+      courseF_artist_for2_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseF_artist_for2_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseF_artist_for3:
+        Actions: Handlingar
+        Loops: Løkker
+        Color: Farge
+      courseF_artist_for3_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseF_artist_for3_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseF_artist_for4:
+        Actions: Handlingar
+        Loops: Løkker
+        Color: Farge
+      courseF_artist_for4_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseF_artist_for4_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseF_artist_for5:
+        Actions: Handlingar
+        Loops: Løkker
+        Color: Farge
+      courseF_artist_for5_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseF_artist_for5_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Comments: Kommentar
+      courseF_artist_for6:
+        Actions: Handlingar
+        Loops: Løkker
+        Color: Farge
+      courseF_artist_for6_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Color: Farge
+      courseF_artist_for6_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Color: Farge
+      courseF_artist_for7:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+      courseF_artist_for7_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+      courseF_artist_for7_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+      courseF_artist_for8:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+      courseF_artist_for8_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+      courseF_artist_for8_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+      courseF_artist_for9:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+      courseF_artist_for9_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_for9_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Brushes: Penslar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_for_challenge1:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      courseF_artist_for_challenge1_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      courseF_artist_for_challenge1_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      courseF_artist_for_challenge2:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      courseF_artist_for_challenge2_2018:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      courseF_artist_for_challenge2_2019:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      courseF_artist_fwp2:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Functions: Funksjonar
+      courseF_artist_fwp2_predict1:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Functions: Funksjonar
+      courseF_artist_fwp3:
+        Functions: Funksjonar
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+      courseF_artist_fwp4:
+        Actions: Handlingar
+        Math: Matematikk
+        Functions: Funksjonar
+      courseF_artist_fwp5:
+        Actions: Handlingar
+        Functions: Funksjonar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+      courseF_artist_fwp6:
+        Actions: Handlingar
+        Functions: Funksjonar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+      courseF_artist_fwp7:
+        Actions: Handlingar
+        Brushes: Penslar
+        Functions: Funksjonar
+        Loops: Løkker
+        Math: Matematikk
+      courseF_artist_fwp8:
+        Actions: Handlingar
+        Brushes: Penslar
+        Functions: Funksjonar
+        Loops: Løkker
+        Math: Matematikk
+      courseF_artist_fwp9:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+        Functions: Funksjonar
+      courseF_artist_fwp_challenge1:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+        Functions: Funksjonar
+      courseF_artist_fwp_challenge2:
+        Actions: Handlingar
+        Brushes: Penslar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+        Functions: Funksjonar
+      courseF_artist_variables10_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Variables: Variablar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_variables10_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Variables: Variablar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_variables7_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Variables: Variablar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_variables7_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Variables: Variablar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_variables8_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Variables: Variablar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_variables8_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Variables: Variablar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_variables9_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Variables: Variablar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_variables9_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Variables: Variablar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_variablesFP_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Variables: Variablar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_artist_variablesFP_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Brushes: Penslar
+        Variables: Variablar
+        Functions: Funksjonar
+        Comments: Kommentar
+      courseF_bee_conditionals10:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_conditionals2:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_conditionals3:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_conditionals4:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_conditionals5:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_conditionals8:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_for10:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for10_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for10_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for11:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for11_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for11_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for1_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+        Comments: Kommentar
+      courseF_bee_for1_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+        Comments: Kommentar
+      courseF_bee_for2_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+        Comments: Kommentar
+      courseF_bee_for2_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+        Comments: Kommentar
+      courseF_bee_for3_predict1:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for3_predict1_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for3_predict1_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for4:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for4_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+        Comments: Kommentar
+      courseF_bee_for4_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+        Comments: Kommentar
+      courseF_bee_for5:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for5_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for5_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for6:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for6_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for6_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for7:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for7_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+        Comments: Kommentar
+      courseF_bee_for7_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+        Comments: Kommentar
+      courseF_bee_for8:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for8_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for8_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for9:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        Variables: Variablar
+      courseF_bee_for9_2018:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for9_2019:
+        Actions: Handlingar
+        Math: Matematikk
+        Loops: Løkker
+        'Variables ': 'Variablar '
+        Comments: Kommentar
+      courseF_bee_for_challenge1:
+        Actions: Handlingar
+        Loops: Løkker
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_for_challenge1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_for_challenge1_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_for_challenge2:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+      courseF_bee_for_challenge2_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+      courseF_bee_for_challenge2_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+      courseF_bee_functions2:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_functions3:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_functions3a:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_functions4:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_functions5a:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_functions6:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_functions7:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_functions8a:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_functionsPre7:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_functions_challenge1:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_functions_challenge2:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_fwp1:
+        Actions: Handlingar
+        Loops: Løkker
+        Math: Matematikk
+        Conditionals: Betingelser
+      courseF_bee_fwp2:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_fwp3:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_fwp4:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_fwp5:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_fwp6:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_fwp7:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_fwp8:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_fwp9_predict1:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_fwp_challenge1:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_fwp_challenge2:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Math: Matematikk
+      courseF_bee_variables_1_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_1_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_2_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_2_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_3_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_3_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_4_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_4_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_5_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_5_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_6_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_6_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_7_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_7_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+        Comments: Kommentar
+      courseF_bee_variables_8_2018:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+      courseF_bee_variables_8_2019:
+        Actions: Handlingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Functions: Funksjonar
+        Variables: Variablar
+        Math: Matematikk
+      courseF_playlab_variables1a:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Variables: Variablar
+      courseF_playlab_variables2b:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        'Variables ': 'Variablar '
+      courseF_playlab_variables3b_josh:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Variables: Variablar
+      courseF_playlab_variables4b:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Variables: Variablar
+      courseF_playlab_variables4c_predictive1:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+        Variables: Variablar
+      courseF_playlab_variables5c:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Logic: Logikk
+        Variables: Variablar
+        Text: Tekst
+      courseF_playlab_variables6c:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Variables: Variablar
+      courseF_playlab_variables7b:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Conditionals: Betingelser
+        Math: Matematikk
+        Text: Tekst
+        Functions: Funksjonar
+        Variables: Variablar
+        Game/Score: Spel/Poengsum
+      courseF_playlab_variables7c:
+        Default: Standard
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Variables: Variablar
+      courseF_playlab_variables8c:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+        Variables: Variablar
+      courseF_playlab_variables_challenge1:
+        Actions: Handlingar
+        Events: Hendingar
+        Loops: Løkker
+        Math: Matematikk
+        Functions: Funksjonar
+        Variables: Variablar

@@ -1,8 +1,7 @@
 ---
-nn:
+nn-NO:
   data:
     display_name:
-      AppLab Intro 4 - Video Welcome: Velkommen til kodetimen
       CSD U2 Pair Programming Video: Parprogrammering
       CSD U2 Pair Programming Video_2018: Parprogrammering
       CSD U2 Pair Programming Video_2019: Parprogrammering
@@ -57,7 +56,6 @@ nn:
       CSD U3 Variables Map: Variablar
       CSD U3 Variables Map_2018: Variablar
       CSD U3 Variables Map_2019: Variablar
-      CSD U3 functions map: Funksjonar
       CSD U6 for loop map: For-løkker
       CSD U6 for loop map_2018: For-løkker
       CSD U6 for loop map_2019: For-løkker
@@ -65,20 +63,13 @@ nn:
       CSD U6 functions paramters video_2018: Funksjonar med parameter
       CSD U6 functions paramters video_2019: Funksjonar med parameter
       'CSD: For Loop_2018': For-løkker
-      'CSD: For Loop_2019': For-løkker
       Dance_Party_extras_battle: Dansegrupper
       Dance_Party_extras_every_beat: Firedelsnoter
       Dance_Party_extras_layout: Kom i formasjon
       Dance_Party_extras_on_beat: Bass, mellomtone og diskant
       Dance_Party_extras_speed: Fortere, saktere
       Dance_Party_extras_visible: Hvor ble det av dem?
-      MC_HOC_2017_FP10x10: Gjer kva du vil
-      MC_HOC_2017_FP10x10_RE: Gjer kva du vil
-      SG U3L07 More Subgoals: Dokumentasjon
       courseA_video_Stevie: Stevie og det store prosjektet
       courseA_video_Stevie_2018: Stevie og det store prosjektet
-      courseA_video_Stevie_2019: Stevie og det store prosjektet
       courseB_video_Unspotted: Feil som ikkje er funne
       courseB_video_Unspotted_2018: Feil som ikkje er funne
-      courseB_video_Unspotted_2019: Feil som ikkje er funne
-      expresslink: Ekspresskurs
