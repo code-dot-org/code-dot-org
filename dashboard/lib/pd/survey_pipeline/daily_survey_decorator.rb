@@ -3,15 +3,15 @@ require_relative 'decorator.rb'
 module Pd::SurveyPipeline
   class DailySurveyDecorator < DecoratorBase
     FORM_IDS_TO_NAMES = {
-      90_066_184_161_150 => {
+      "90066184161150".to_i => {
         full_name: 'CS Fundamentals Deep Dive Pre-survey',
         short_name: 'Pre Workshop'
       },
-      90_065_524_560_150 => {
+      "90065524560150".to_i => {
         full_name: 'CS Fundamentals Deep Dive Post-survey',
         short_name: 'Post Workshop'
       },
-      91_405_279_991_164 => {
+      "91405279991164".to_i => {
         full_name: 'Facilitator Feedback Survey',
         short_name: 'Facilitator'
       }
@@ -21,7 +21,7 @@ module Pd::SurveyPipeline
     #
     # @param summary_data [Array<Hash>] an array of summary results.
     # @param parsed_data [Hash{:questions, :submissions => Hash}}] parsed questions and
-    #   submissions we got from previous steps.
+    #   submissions we got from the previous step DailySurveyParser.
     #
     # @return [Hash] data returned to client to render.
     def self.decorate(summary_data:, parsed_data:)
@@ -37,45 +37,83 @@ module Pd::SurveyPipeline
         facilitator_response_counts: {}
       }
 
-      # Build non-hidden question list result[:questions]
-      # Hash{form_name => {general => {question_name => question_content}}}
-      questions = parsed_data[:questions]
-      questions.each do |form_id, form_questions|
-        form_name = get_form_name(form_id)
+      question_by_names = index_question_by_names(parsed_data[:questions])
 
-        result[:questions][form_name] ||= {general: {}}
-        dest_collection = result[:questions][form_name][:general]
-
-        form_questions.each do |_, qcontent|
-          next if qcontent[:hidden]
-          dest_collection[qcontent[:name]] = qcontent.except(:name)
-        end
-      end
-
-      # Populate results for result[:this_workshop]
-      # Hash{form_name => {response_count => number, general => {question_name => summary_result}}}
+      # Populate entries for result[:this_workshop] and result[:questions]
       summary_data.each do |summary|
-        # Only process summarization for specific workshops and forms
+        # Only process summarization for specific workshops and forms.
         form_id = summary[:form_id]
         next unless summary[:workshop_id] && form_id
 
+        form_name = get_form_short_name(form_id)
         workshop_id = summary[:workshop_id]
-        form_name = get_form_name(form_id)
+        q_name = summary[:name]
 
+        # Create top structures if not already created
         result[:course_name] ||= Pd::Workshop.find_by_id(workshop_id)&.course
         result[:this_workshop][form_name] ||= {
           response_count: parsed_data[:submissions][form_id].size,
-          general: {}
+          general: {},
+          facilitator: {}
         }
+        result[:questions][form_name] ||= {general: {}, facilitator: {}}
 
-        result[:this_workshop][form_name][:general][summary[:name]] = summary[:reducer_result]
+        # Create an entry in result[:this_workshop].
+        # General format:
+        # Hash{form_name => {response_count => number, general => {question_name => summary_result}}}
+        #
+        # Format for facilicator-specific result:
+        # Hash{form_name => {response_count => number,
+        #   facilitator => {question_name => {factilitator_name => summary_result}}}}
+        if summary[:facilitator_id]
+          facilitator_name = User.find_by_id(summary[:facilitator_id])&.name ||
+            summary[:facilitator_id].to_s
+
+          result[:this_workshop][form_name][:facilitator][q_name] ||= {}
+          result[:this_workshop][form_name][:facilitator][q_name][facilitator_name] =
+            summary[:reducer_result]
+        else
+          result[:this_workshop][form_name][:general][q_name] = summary[:reducer_result]
+        end
+
+        # Create an entry in result[:questions].
+        # General question format:
+        # Hash{form_name => {general => {question_name => question_content}}}
+        #
+        # Facilitator question format:
+        # Hash{form_name => {facilitator => {question_name => question_content}}}
+        q_content = question_by_names.dig(form_id, q_name)
+        if summary[:facilitator_id]
+          result[:questions][form_name][:facilitator][q_name] ||= q_content
+        else
+          result[:questions][form_name][:general][q_name] ||= q_content
+        end
       end
 
       result
     end
 
-    def self.get_form_name(form_id)
-      FORM_IDS_TO_NAMES[form_id]&.dig(:short_name) || form_id.to_s
+    def self.get_form_short_name(form_id)
+      FORM_IDS_TO_NAMES.dig(form_id, :short_name) || form_id.to_s
+    end
+
+    # Index question collection by form id and question name.
+    #
+    # @param questions [Hash{form_id => {question_id => question_content}}]
+    #   question_content is Hash{:type, :name, :text, :order, :hidden}.
+    #   @see DailySurveyParser parse_survey function to see how questions data is created.
+    #
+    # @return [Hash{form_id => {question_name => question_content}}]
+    def self.index_question_by_names(questions)
+      q_indexes = {}
+      questions&.each do |form_id, form_questions|
+        form_questions.each do |_, q_content|
+          q_indexes[form_id] ||= {}
+          q_indexes[form_id][q_content[:name]] = q_content.except(:name)
+        end
+      end
+
+      q_indexes
     end
   end
 end
