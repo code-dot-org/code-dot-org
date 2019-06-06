@@ -1,5 +1,122 @@
 ---
-se:
+se-FI:
   data:
     block_categories:
-      Events: Dáhpáhusaid
+      Alien Defender:
+        Events: Dáhpáhusaid
+      Choose Your Own Adventure:
+        Events: Dáhpáhusaid
+      Course 4 Play Lab Params 8:
+        Events: Dáhpáhusaid
+      Course 4 Play Lab Vars 9:
+        Events: Dáhpáhusaid
+      Course 4 Playlab For Loop Freeplay:
+        Events: Dáhpáhusaid
+      'Course E: Play Lab Project':
+        Events: Dáhpáhusaid
+      CourseD_Dance_Party_11_5:
+        Events: Dáhpáhusaid
+      CourseD_Dance_Party_12:
+        Events: Dáhpáhusaid
+      CourseE_Project_SpriteLab:
+        Events: Dáhpáhusaid
+      CourseE_Project_SpriteLab_2019:
+        Events: Dáhpáhusaid
+      CourseE_hoops:
+        Events: Dáhpáhusaid
+      CourseF_Project_Revise_SpriteLab:
+        Events: Dáhpáhusaid
+      CourseF_Project_SpriteLab:
+        Events: Dáhpáhusaid
+      CourseF_Project_SpriteLab_2019:
+        Events: Dáhpáhusaid
+      Dance Party 2:
+        Events: Dáhpáhusaid
+      Dance Party 6:
+        Events: Dáhpáhusaid
+      Dance Party Freeplay:
+        Events: Dáhpáhusaid
+      Dance_Party_11_5:
+        Events: Dáhpáhusaid
+      Dance_Party_12:
+        Events: Dáhpáhusaid
+      Dance_Party_extras_battle:
+        Events: Dáhpáhusaid
+      Dance_Party_extras_every_beat:
+        Events: Dáhpáhusaid
+      Dance_Party_extras_layout:
+        Events: Dáhpáhusaid
+      Dance_Party_extras_on_beat:
+        Events: Dáhpáhusaid
+      Dance_Party_extras_speed:
+        Events: Dáhpáhusaid
+      Dance_Party_extras_visible:
+        Events: Dáhpáhusaid
+      Find the Wizard:
+        Events: Dáhpáhusaid
+      Fish Tank 7-validated:
+        Events: Dáhpáhusaid
+      Fish Tank 7-validated_2019:
+        Events: Dáhpáhusaid
+      FoodFight:
+        Events: Dáhpáhusaid
+      Guess The Number:
+        Events: Dáhpáhusaid
+      NEW Course 4 Play Lab Params 11:
+        Events: Dáhpáhusaid
+      Virtual Pet 2:
+        Events: Dáhpáhusaid
+      Virtual Pet 3:
+        Events: Dáhpáhusaid
+      Virtual Pet 4:
+        Events: Dáhpáhusaid
+      Virtual Pet 5:
+        Events: Dáhpáhusaid
+      Virtual Pet 6:
+        Events: Dáhpáhusaid
+      Virtual Pet Freeplay:
+        Events: Dáhpáhusaid
+      behaviors 6:
+        Events: Dáhpáhusaid
+      behaviors 7:
+        Events: Dáhpáhusaid
+      behaviors free play:
+        Events: Dáhpáhusaid
+      course3_playLab_challenge1:
+        Events: Dáhpáhusaid
+      course4_playlab_variables_challenge1:
+        Events: Dáhpáhusaid
+      courseD_playLab_condFP:
+        Events: Dáhpáhusaid
+      courseD_playLab_condFP_2018:
+        Events: Dáhpáhusaid
+      courseE_Dogger_2:
+        Events: Dáhpáhusaid
+      courseE_playLab_challenge1:
+        Events: Dáhpáhusaid
+      courseE_playLab_scaffold5:
+        Events: Dáhpáhusaid
+      courseE_playLab_scaffold6:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables1a:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables2b:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables3b_josh:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables4b:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables4c_predictive1:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables5c:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables6c:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables7b:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables7c:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables8c:
+        Events: Dáhpáhusaid
+      courseF_playlab_variables_challenge1:
+        Events: Dáhpáhusaid
