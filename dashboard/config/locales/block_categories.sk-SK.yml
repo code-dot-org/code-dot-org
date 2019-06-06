@@ -1,61 +1,2377 @@
 ---
-sk:
+sk-SK:
   data:
     block_categories:
-      Actions: Akcie
-      Loops: Cykly
-      Functions: Funkcie
-      Color: Farba
-      Brushes: Štetce
-      Math: Matematické
-      Logic: Logické
-      Variables: Premenné
-      Number: Číslo
-      String: Reťazec
-      Image: Obrázok
-      Boolean: Logická hodnota
-      Conditionals: Podmienky
-      Events: Udalosti
-      Games/Score: Hry/skóre
-      Comments: Komentáre
-      Category: Kategória
-      Prebuilt: Vopred vytvorené
-      Text: Text
-      Picker: Nástroj výberu
-      Comment: Komentár
-      World: Prostredie
-      Sprites: Postavy
-      Behaviors: Správanie
-      'Variables ': 'Premenné '
-      Default: Predvolené
-      Locations: Miesta
-      Bunny Game: Hra so zajačikmi
-      everythingelse: všetko ostatné
-      Location: Miesto
-      numbers: čisla
-      Numbers: Čísla
-      Input: Vstup
-      Dancers: Tanečníci
-      Groups: Skupiny
-      Advanced: Pokročilé
-      Start: Spustiť
-      Music: Hudba
-      Dancing: Tancovanie
-      Sprite: Postavy
-      Brush: Štetec
-      Make Sprite: Vytvoriť postavu
-      Movement: Pohyb
-      Booleans: Logické hodnoty
-      Functional: Funkcie
-      While Events: Udalosti "pokiaľ"
-      Sprite Properties: Vlastnosti postáv
-      Predefined: Preddefinované
-      test: test
-      test2: test2
-      Use These Blocks: Použi tieto bloky
-      Do Not Use: Nepoužívaj
-      Name: Meno
-      NEW BLOCKS: NOVÉ BLOKY
-      'Functions ': 'Funkcie '
-      Game/Score: Hra/skóre
-      Function: Funkcia
+      4-5 Artist Patterns Free Play:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+      Alien Defender:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Games/Score: Hry/skóre
+        Comments: Komentáre
+      Choose Your Own Adventure:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Games/Score: Hry/skóre
+        Comments: Komentáre
+      Course 4 Artist For Loops 11:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+      Course 4 Artist For Loops 11a:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+      Course 4 Artist For Loops 14:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+      Course 4 Artist For Loops 15:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+        'Variables ': 'Premenné '
+      Course 4 Artist For Loops 4:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+      Course 4 Artist For Loops 6a:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+      Course 4 Artist For Loops 8:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+      Course 4 Artist For Loops Challenge:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+      Course 4 Artist For Loops inspire:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+      Course 4 Artist Functions Inspiration:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Functions: Funkcie
+      Course 4 Artist Functions challenge:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Functions: Funkcie
+      Course 4 Bee Params 1:
+        Actions: Akcie
+        Loops: Cykly
+        Functions: Funkcie
+      Course 4 Bee Params 2:
+        Actions: Akcie
+        Loops: Cykly
+        Functions: Funkcie
+      Course 4 Bee Params 3:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Functions: Funkcie
+        'Variables ': 'Premenné '
+      Course 4 Bee Params 4:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Functions: Funkcie
+        'Variables ': 'Premenné '
+        Math: Matematické
+      Course 4 Bee Params 5:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+      Course 4 Bee Params 6:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+      Course 4 Bee Params 7:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        Functions: Funkcie
+        'Variables ': 'Premenné '
+      Course 4 Bee Params 8:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        Functions: Funkcie
+        'Variables ': 'Premenné '
+      Course 4 EC 1a:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        Functions: Funkcie
+      Course 4 EC 1b:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        Functions: Funkcie
+      Course 4 EC 2a:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        Functions: Funkcie
+        Variables: Premenné
+      Course 4 EC 2b:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        Variables: Premenné
+        Functions: Funkcie
+      Course 4 EC 2c:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        Variables: Premenné
+        Functions: Funkcie
+      Course 4 Play Lab Params 10:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        Functions: Funkcie
+        Variables: Premenné
+      Course 4 Play Lab Params 7:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+      Course 4 Play Lab Params 8:
+        Events: Udalosti
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+      Course 4 Play Lab Params 9:
+        Actions: Akcie
+        Math: Matematické
+        Functions: Funkcie
+        Variables: Premenné
+      Course 4 Play Lab Vars 9:
+        Events: Udalosti
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        'Variables ': 'Premenné '
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Variables: Premenné
+      Course 4 SCF 1:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+        Functions: Funkcie
+      Course 4 SCF 1a:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        Functions: Funkcie
+        'Variables ': 'Premenné '
+      Course 4 SCF 1b:
+        Actions: Akcie
+        Loops: Cykly
+        Logic: Logické
+        Math: Matematické
+        Functions: Funkcie
+      Course 4 SCF 2:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+        Functions: Funkcie
+      Course 4 SCF 3:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+        Functions: Funkcie
+      Course 4 SCFL 1:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+      Course 4 SCFL 1a:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+      Course 4 SCFL 1b:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+      Course 4 SCFL 2:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+      Course 4 SCFL 3:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      Course 4 SCFL 4:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      Course 4 SCFL 6:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      Course 4 SCFL 7:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      Course 4 SCV 6:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      'Course E: Play Lab Project':
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Games/Score: Hry/skóre
+        Comments: Komentáre
+      'Course F: Artist Project':
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+      'Course F: Artist Project - Revise':
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+      'Course F: Artist Project - Revise_2018':
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+      'Course F: Artist Project_2018':
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+      'Course F: Artist Project_2019':
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+      CourseD_Dance_Party_11_5:
+        World: Prostredie
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Udalosti
+      CourseD_Dance_Party_12:
+        World: Prostredie
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Udalosti
+        Numbers: Čísla
+        Logic: Logické
+      CourseE_Project_SpriteLab:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+        Logic: Logické
+        Text: Text
+        Advanced: Pokročilé
+        Comments: Komentáre
+      CourseE_Project_SpriteLab_2019:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+      CourseE_hoops:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+        Functions: Funkcie
+      CourseF_Project_Revise_SpriteLab:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+        Functions: Funkcie
+      CourseF_Project_SpriteLab:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+        Functions: Funkcie
+      CourseF_Project_SpriteLab_2019:
+        World: Prostredie
+        Locations: Miesta
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Text: Text
+        Comments: Komentáre
+      Dance Party 2:
+        Behaviors: Správanie
+        Events: Udalosti
+        Comments: Komentáre
+      Dance Party 6:
+        Behaviors: Správanie
+        Events: Udalosti
+        Comments: Komentáre
+      Dance Party Freeplay:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+        Comments: Komentáre
+      Dance_Party_11_5:
+        World: Prostredie
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Udalosti
+      Dance_Party_12:
+        World: Prostredie
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Udalosti
+        Numbers: Čísla
+        Logic: Logické
+      Dance_Party_extras_battle:
+        World: Prostredie
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Udalosti
+        Numbers: Čísla
+        Logic: Logické
+      Dance_Party_extras_every_beat:
+        World: Prostredie
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Udalosti
+        Numbers: Čísla
+        Logic: Logické
+      Dance_Party_extras_layout:
+        World: Prostredie
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Udalosti
+        Numbers: Čísla
+        Logic: Logické
+      Dance_Party_extras_on_beat:
+        World: Prostredie
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Udalosti
+        Numbers: Čísla
+        Logic: Logické
+      Dance_Party_extras_speed:
+        World: Prostredie
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Udalosti
+        Numbers: Čísla
+        Logic: Logické
+      Dance_Party_extras_visible:
+        World: Prostredie
+        Dancers: Tanečníci
+        Groups: Skupiny
+        Events: Udalosti
+        Numbers: Čísla
+        Logic: Logické
+      Find the Wizard:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Games/Score: Hry/skóre
+        Comments: Komentáre
+      Fish Tank 5-validated:
+        World: Prostredie
+        Behaviors: Správanie
+        Comments: Komentáre
+      Fish Tank 5-validated_2019:
+        World: Prostredie
+        Behaviors: Správanie
+        Comments: Komentáre
+      Fish Tank 6-validated:
+        World: Prostredie
+        Behaviors: Správanie
+        Comments: Komentáre
+      Fish Tank 6-validated_2019:
+        World: Prostredie
+        Behaviors: Správanie
+        Comments: Komentáre
+      Fish Tank 7-validated:
+        World: Prostredie
+        Behaviors: Správanie
+        Events: Udalosti
+        Comments: Komentáre
+      Fish Tank 7-validated_2019:
+        World: Prostredie
+        Actions: Akcie
+        Behaviors: Správanie
+        Events: Udalosti
+        Comments: Komentáre
+      FoodFight:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Games/Score: Hry/skóre
+        Comments: Komentáre
+      Geometric Sun:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Comments: Komentáre
+      Geometric Sun_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Comments: Komentáre
+      Guess The Number:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Games/Score: Hry/skóre
+        Comments: Komentáre
+      InspirationalArtwork:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Comments: Komentáre
+      InspirationalArtwork_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Comments: Komentáre
+      NEW Course 4 Artist Functions 14:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Functions: Funkcie
+      NEW Course 4 Artist Params 1:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+        Variables: Premenné
+      NEW Course 4 Artist Params 10:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+      NEW Course 4 Artist Params 11:
+        Actions: Akcie
+        Functions: Funkcie
+        Loops: Cykly
+        Math: Matematické
+      NEW Course 4 Artist Params 12:
+        Actions: Akcie
+        Math: Matematické
+        Functions: Funkcie
+      NEW Course 4 Artist Params 12a:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+      NEW Course 4 Artist Params 13:
+        Actions: Akcie
+        Functions: Funkcie
+        Loops: Cykly
+        Math: Matematické
+      NEW Course 4 Artist Params 14:
+        Actions: Akcie
+        Brushes: Štetce
+        Functions: Funkcie
+        Loops: Cykly
+        Math: Matematické
+      NEW Course 4 Artist Params 15:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+        Functions: Funkcie
+      NEW Course 4 Artist Params 2:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+      NEW Course 4 Artist Params 3:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+      NEW Course 4 Artist Params 6:
+        Actions: Akcie
+        Functions: Funkcie
+        Loops: Cykly
+        Math: Matematické
+      NEW Course 4 Artist Params 7:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Functions: Funkcie
+      NEW Course 4 Artist Params 8:
+        Actions: Akcie
+        Math: Matematické
+        Functions: Funkcie
+        Loops: Cykly
+      NEW Course 4 Artist Params 9:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+      NEW Course 4 Artist Params inspire:
+        Actions: Akcie
+        Brushes: Štetce
+        Functions: Funkcie
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      NEW Course 4 Play Lab Params 11:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Games/Score: Hry/skóre
+      Robot Doodle:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Comments: Komentáre
+      Robot Doodle_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Functions: Funkcie
+        Variables: Premenné
+        Comments: Komentáre
+      Virtual Pet 2:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+        Comments: Komentáre
+      Virtual Pet 3:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+      Virtual Pet 4:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+      Virtual Pet 5:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+      Virtual Pet 6:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+      Virtual Pet Freeplay:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+      behaviors 3a:
+        World: Prostredie
+        Behaviors: Správanie
+        Actions: Akcie
+      behaviors 5:
+        World: Prostredie
+        Behaviors: Správanie
+        Actions: Akcie
+      behaviors 6:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Math: Matematické
+        Logic: Logické
+      behaviors 7:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Math: Matematické
+        Logic: Logické
+      behaviors free play:
+        World: Prostredie
+        Behaviors: Správanie
+        Actions: Akcie
+        Events: Udalosti
+      course3_bee_functions_challenge1:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      course3_bee_functions_challenge2:
+        Actions: Akcie
+        Loops: Cykly
+        Functions: Funkcie
+      course3_bee_functions_challenge3:
+        Default: Predvolené
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      course3_bee_functions_challenge4:
+        Default: Predvolené
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      course3_playLab_challenge1:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      course4_artist_fwp_challenge1:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+        Functions: Funkcie
+      course4_bee_for_challenge1:
+        Actions: Akcie
+        Loops: Cykly
+        Functions: Funkcie
+        Math: Matematické
+      course4_bee_fwp_challenge1:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      course4_bee_fwp_challenge2:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      course4_playlab_variables_challenge1:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+        Variables: Premenné
+      courseD_artist_project1:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project1a:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project1a_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project1a_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project2:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project2_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project2_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project2a:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project2a_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project2a_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project3:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project3_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project3_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project3a:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project3a_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project3a_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project4:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project4_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project4_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project4a:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project4a_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project4a_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project5:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project5_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_artist_project5_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+      courseD_playLab_condFP:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Games/Score: Hry/skóre
+      courseD_playLab_condFP_2018:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Games/Score: Hry/skóre
+        Comment: Komentár
+      courseE_Dogger_2:
+        World: Prostredie
+        Actions: Akcie
+        Events: Udalosti
+        Behaviors: Správanie
+        Variables: Premenné
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Text: Text
+        Functions: Funkcie
+      courseE_artist_concept1_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_concept4:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Functions: Funkcie
+      courseE_artist_concept4_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions10:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+      courseE_artist_functions10_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions10_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions2_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        'Functions ': 'Funkcie '
+        Comments: Komentáre
+      courseE_artist_functions2_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        'Functions ': 'Funkcie '
+        Comments: Komentáre
+      courseE_artist_functions3_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseE_artist_functions3_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseE_artist_functions5_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        'Functions ': 'Funkcie '
+        Comments: Komentáre
+      courseE_artist_functions5_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        'Functions ': 'Funkcie '
+        Comments: Komentáre
+      courseE_artist_functions7_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        'Functions ': 'Funkcie '
+        Comments: Komentáre
+      courseE_artist_functions7_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        'Functions ': 'Funkcie '
+        Comments: Komentáre
+      courseE_artist_functions8:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+      courseE_artist_functions8_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions8_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions8a_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions8a_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions8b_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions8b_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions8c_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions8c_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions9:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+      courseE_artist_functions9_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions9_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functionsProj_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functionsProj_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_artist_functions_predict2:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+      courseE_artist_functions_predict2_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+      courseE_artist_functions_predict2_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Functions: Funkcie
+      courseE_bee_concept1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_bee_concept2_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_bee_concept3_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_bee_concept4_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_bee_concept5_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_bee_functions6:
+        Actions: Akcie
+        Loops: Cykly
+        Functions: Funkcie
+      courseE_bee_functions7:
+        Actions: Akcie
+        Loops: Cykly
+        Functions: Funkcie
+      courseE_bee_functions_challenge1:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_bee_functions_challenge2:
+        Actions: Akcie
+        Loops: Cykly
+        Functions: Funkcie
+      courseE_farmer_concept1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_concept2_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_concept3_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions1:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions10a1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions10a1_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions10b:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions11_predict:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions11_predict_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions11_predict_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions13_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions13_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions1_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions1a:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions1a_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions1a_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions2b:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions2b_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions2b_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions2ba:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions2ba_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions2ba_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions3c:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions3c1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions3c1_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions3c_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions3c_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions4b:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions5c:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions6c:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions7a1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions7a1_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions7b:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions8a1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions8a1_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions8b:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_farmer_functions9a1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions9a1_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Comments: Komentáre
+      courseE_farmer_functions9b:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_playLab_challenge1:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_playLab_scaffold5:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseE_playLab_scaffold6:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+      courseF_artist_for1:
+        Actions: Akcie
+        Loops: Cykly
+        Color: Farba
+      courseF_artist_for10:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+        'Variables ': 'Premenné '
+      courseF_artist_for10_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+        'Variables ': 'Premenné '
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_for10_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+        'Variables ': 'Premenné '
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_for10_predict1:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+        'Variables ': 'Premenné '
+      courseF_artist_for10_predict1_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+        'Variables ': 'Premenné '
+      courseF_artist_for10_predict1_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Brushes: Štetce
+        'Variables ': 'Premenné '
+      courseF_artist_for1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseF_artist_for1_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseF_artist_for2:
+        Actions: Akcie
+        Loops: Cykly
+        Color: Farba
+      courseF_artist_for2_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseF_artist_for2_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseF_artist_for3:
+        Actions: Akcie
+        Loops: Cykly
+        Color: Farba
+      courseF_artist_for3_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseF_artist_for3_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseF_artist_for4:
+        Actions: Akcie
+        Loops: Cykly
+        Color: Farba
+      courseF_artist_for4_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseF_artist_for4_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseF_artist_for5:
+        Actions: Akcie
+        Loops: Cykly
+        Color: Farba
+      courseF_artist_for5_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseF_artist_for5_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Comments: Komentáre
+      courseF_artist_for6:
+        Actions: Akcie
+        Loops: Cykly
+        Color: Farba
+      courseF_artist_for6_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Color: Farba
+      courseF_artist_for6_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Color: Farba
+      courseF_artist_for7:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+      courseF_artist_for7_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+      courseF_artist_for7_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+      courseF_artist_for8:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+      courseF_artist_for8_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+      courseF_artist_for8_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+      courseF_artist_for9:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+      courseF_artist_for9_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_for9_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Brushes: Štetce
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_for_challenge1:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      courseF_artist_for_challenge1_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      courseF_artist_for_challenge1_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      courseF_artist_for_challenge2:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      courseF_artist_for_challenge2_2018:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      courseF_artist_for_challenge2_2019:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      courseF_artist_fwp2:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Functions: Funkcie
+      courseF_artist_fwp2_predict1:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Functions: Funkcie
+      courseF_artist_fwp3:
+        Functions: Funkcie
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+      courseF_artist_fwp4:
+        Actions: Akcie
+        Math: Matematické
+        Functions: Funkcie
+      courseF_artist_fwp5:
+        Actions: Akcie
+        Functions: Funkcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+      courseF_artist_fwp6:
+        Actions: Akcie
+        Functions: Funkcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+      courseF_artist_fwp7:
+        Actions: Akcie
+        Brushes: Štetce
+        Functions: Funkcie
+        Loops: Cykly
+        Math: Matematické
+      courseF_artist_fwp8:
+        Actions: Akcie
+        Brushes: Štetce
+        Functions: Funkcie
+        Loops: Cykly
+        Math: Matematické
+      courseF_artist_fwp9:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+        Functions: Funkcie
+      courseF_artist_fwp_challenge1:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+        Functions: Funkcie
+      courseF_artist_fwp_challenge2:
+        Actions: Akcie
+        Brushes: Štetce
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+        Functions: Funkcie
+      courseF_artist_variables10_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Variables: Premenné
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_variables10_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Variables: Premenné
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_variables7_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Variables: Premenné
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_variables7_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Variables: Premenné
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_variables8_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Variables: Premenné
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_variables8_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Variables: Premenné
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_variables9_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Variables: Premenné
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_variables9_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Variables: Premenné
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_variablesFP_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Variables: Premenné
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_artist_variablesFP_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Brushes: Štetce
+        Variables: Premenné
+        Functions: Funkcie
+        Comments: Komentáre
+      courseF_bee_conditionals10:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_conditionals2:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_conditionals3:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_conditionals4:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_conditionals5:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_conditionals8:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_for10:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for10_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for10_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for11:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for11_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for11_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for1_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+        Comments: Komentáre
+      courseF_bee_for1_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+        Comments: Komentáre
+      courseF_bee_for2_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+        Comments: Komentáre
+      courseF_bee_for2_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+        Comments: Komentáre
+      courseF_bee_for3_predict1:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for3_predict1_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for3_predict1_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for4:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for4_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+        Comments: Komentáre
+      courseF_bee_for4_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+        Comments: Komentáre
+      courseF_bee_for5:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for5_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for5_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for6:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for6_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for6_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for7:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for7_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+        Comments: Komentáre
+      courseF_bee_for7_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+        Comments: Komentáre
+      courseF_bee_for8:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for8_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for8_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for9:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        Variables: Premenné
+      courseF_bee_for9_2018:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for9_2019:
+        Actions: Akcie
+        Math: Matematické
+        Loops: Cykly
+        'Variables ': 'Premenné '
+        Comments: Komentáre
+      courseF_bee_for_challenge1:
+        Actions: Akcie
+        Loops: Cykly
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_for_challenge1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_for_challenge1_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_for_challenge2:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+      courseF_bee_for_challenge2_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+      courseF_bee_for_challenge2_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+      courseF_bee_functions2:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_functions3:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_functions3a:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_functions4:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_functions5a:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_functions6:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_functions7:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_functions8a:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_functionsPre7:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_functions_challenge1:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_functions_challenge2:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_fwp1:
+        Actions: Akcie
+        Loops: Cykly
+        Math: Matematické
+        Conditionals: Podmienky
+      courseF_bee_fwp2:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_fwp3:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_fwp4:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_fwp5:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_fwp6:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_fwp7:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_fwp8:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_fwp9_predict1:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_fwp_challenge1:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_fwp_challenge2:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Math: Matematické
+      courseF_bee_variables_1_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_1_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_2_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_2_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_3_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_3_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_4_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_4_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_5_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_5_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_6_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_6_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_7_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_7_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+        Comments: Komentáre
+      courseF_bee_variables_8_2018:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+      courseF_bee_variables_8_2019:
+        Actions: Akcie
+        Loops: Cykly
+        Conditionals: Podmienky
+        Functions: Funkcie
+        Variables: Premenné
+        Math: Matematické
+      courseF_playlab_variables1a:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Variables: Premenné
+      courseF_playlab_variables2b:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        'Variables ': 'Premenné '
+      courseF_playlab_variables3b_josh:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Variables: Premenné
+      courseF_playlab_variables4b:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Variables: Premenné
+      courseF_playlab_variables4c_predictive1:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+        Variables: Premenné
+      courseF_playlab_variables5c:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Logic: Logické
+        Variables: Premenné
+        Text: Text
+      courseF_playlab_variables6c:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Variables: Premenné
+      courseF_playlab_variables7b:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Conditionals: Podmienky
+        Math: Matematické
+        Text: Text
+        Functions: Funkcie
+        Variables: Premenné
+        Game/Score: Hra/skóre
+      courseF_playlab_variables7c:
+        Default: Predvolené
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Variables: Premenné
+      courseF_playlab_variables8c:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+        Variables: Premenné
+      courseF_playlab_variables_challenge1:
+        Actions: Akcie
+        Events: Udalosti
+        Loops: Cykly
+        Math: Matematické
+        Functions: Funkcie
+        Variables: Premenné

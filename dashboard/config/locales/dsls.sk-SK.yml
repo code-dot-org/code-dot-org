@@ -4,6 +4,64 @@ sk:
     external:
       Begin planning your project:
         title: nadpis
+      CSD U2 Design Project:
+        title: nadpis
+      CSD U2 Design Project_2018:
+        title: nadpis
+      CSD U2 Design Project_2018_2019:
+        title: nadpis
+      CSD U2 L1 Overview:
+        title: nadpis
+      CSD U2 L2 Overview:
+        title: nadpis
+      CSD U2 L3 Overview:
+        title: nadpis
+      CSD U2 L4 Overview:
+        title: nadpis
+      CSD U2 L5 Overview:
+        title: nadpis
+      CSD U2 L6 Overview:
+        title: nadpis
+      CSD U2 expand project:
+        title: nadpis
+      CSD U2 expand project_2018:
+        title: nadpis
+      CSD U2 expand project_2018_2019:
+        title: nadpis
+      CSD U3 combining rep:
+        title: nadpis
+      CSD U3 combining rep_2018:
+        title: nadpis
+      CSD U3 combining rep_2018_2019:
+        title: nadpis
+      CSD U5 Encryption 1:
+        title: nadpis
+      CSD U5 Encryption 1_2018:
+        title: nadpis
+      CSD U5 Encryption 1_2018_2019:
+        title: nadpis
+      CSD U5 L13 SFLP Interpreting Data:
+        title: nadpis
+      CSD U5 data visualization:
+        title: nadpis
+      CSD U5 data visualization_2018:
+        title: nadpis
+      CSD U5 data visualization_2018_2019:
+        title: nadpis
+      CSD U5 student record:
+        title: nadpis
+      CSD U5 student record_2018:
+        title: nadpis
+      CSD U5 student record_2018_2019:
+        title: nadpis
+      Internet Simulator Setup 2:
+        title: nadpis
+      Multi-Screen Apps:
+        title: nadpis
+      New Challenge Introduction:
+        title: nadpis
+      OPD-K5 Stage3aGo:
+        title: nadpis
       Prepare for your presentation:
         title: nadpis
     match:
@@ -258,6 +316,12 @@ sk:
       4-5 maze multi 1:
         Maze Multiple Choice: Bludisko - Vyber správnu odpoveď
         Which blocks solve the puzzle?: Ktorý z blokov vyrieši rébus?
+      CSD U3 Boolean MC:
+        title: nadpis
+      CSD U3 Boolean MC_2018:
+        title: nadpis
+      CSD U3 Boolean MC_2018_2019:
+        title: nadpis
       K-1 Artist 1 Multi 1:
         Multiple Choice: Vyber správnu odpoveď
         Which blocks solve this puzzle?: Ktoré bloky sú riešením tejto úlohy?
@@ -316,6 +380,14 @@ sk:
       K-1 Word Search Multi 3:
         Multiple Choice: Vyber správnu odpoveď
         Which word is spelled?: Ktoré slovo je vyhláskované?
+      behaviors 1 predict:
+        Correct!: Správne!
+        Incorrect: Nesprávne
+        Incorrect.: Nesprávne.
+      behaviors 4 predict:
+        Correct!: Správne!
+        Incorrect: Nesprávne
+        Incorrect.: Nesprávne.
       courseC_multi_artist_prog6_predict1:
         Correct!: Správne!
         I don't know.: Neviem.
@@ -327,6 +399,17 @@ sk:
         The artist will draw a triangle with three equal sides.: Umelec nakreslí trojuholník
           s tromi rovnakými stranami.
       courseC_multi_artist_prog6_predict1_2018:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect.  The artist draws a square.: Nesprávne. Umelec nakreslí štvorec.
+        Look carefully at the code below.  What will happen when you click "Run"?: Pozorne
+          si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+        The artist draws a square.: Umelec nakreslí štvorec.
+        The artist will draw a single line.: Umelec nakreslí jednu čiaru.
+        The artist will draw a square.: Umelec nakreslí štvorec.
+        The artist will draw a triangle with three equal sides.: Umelec nakreslí trojuholník
+          s tromi rovnakými stranami.
+      courseC_multi_artist_prog6_predict1_2018_2019:
         Correct!: Správne!
         I don't know.: Neviem.
         Incorrect.  The artist draws a square.: Nesprávne. Umelec nakreslí štvorec.
@@ -350,6 +433,18 @@ sk:
         The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Farmárka
           pozbiera 4 tekvice v každom z 3 opakovaní.  4 krát 3 je 12!
       courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Nesprávne.
+          Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4 krát 3 je 12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Pozri
+          sa pozorne na tento kód. Koľko tekvíc farmárka pozbiera po kliknutí na "Spustiť"?
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Farmárka
+          pozbiera 4 tekvice v každom z 3 opakovaní.  4 krát 3 je 12!
+      courseC_multi_harvester_loops11_predict1_2018_2019:
         '12': '12'
         '15': '15'
         '4': '4'
@@ -397,6 +492,24 @@ sk:
           chyba je, že Scrat pôjde zlým smerom po svojom poslednom otočení. '
         The program won't fail. Scrat will get to the acorn.: Program nezlyhá. Scrat
           sa dostane až k žaluďu.
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect. Scrat goes the wrong way after his final turn.: Nesprávne. Scrat
+          pôjde zlým smerom po svojom poslednom otočení.
+        Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Nesprávne.
+          Scrat neurobí dosť krokov až potom, ako sa otočí nesprávnym smerom.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Pozri
+          sa pozorne na tento kód.  Aká je prvá chyba, kvôli ktorej tento program
+          zlyhá? '
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat nespraví
+          dostatok krokov a nedôjde až k žaluďu.
+        Scrat will go the wrong way after his final turn.: Scrat pôjde zlým smerom
+          po svojom poslednom otočení.
+        'The first error is that Scrat goes the wrong way after his final turn. ': 'Prvá
+          chyba je, že Scrat pôjde zlým smerom po svojom poslednom otočení. '
+        The program won't fail. Scrat will get to the acorn.: Program nezlyhá. Scrat
+          sa dostane až k žaluďu.
       courseC_multi_maze_programming8_predict1:
         Correct!: Správne!
         I don't know.: Neviem.
@@ -423,6 +536,19 @@ sk:
         The bird will run into the TNT.: Vták narazí do TNT.
         This code gets the bird perfectly to the pig.: Tento kód dostane vtáka rovno
           k prasiatku.
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect. This code gets the bird perfectly to the pig.: Nesprávne. Tento
+          kód dostane vtáka rovno k prasiatku.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Prezri
+          si nasledujúci kód veľmi pozorne. Čo sa stane keď stlačíš "Spustiť"?
+        The bird will end up one step short of the pig.: Vták skončí jeden krok pred
+          prasiatkom.
+        The bird will make it to the pig.: Vták sa dostane až k prasiatku.
+        The bird will run into the TNT.: Vták narazí do TNT.
+        This code gets the bird perfectly to the pig.: Tento kód dostane vtáka rovno
+          k prasiatku.
       courseC_multi_starWars_predict1:
         BB-8 will move 5 times and get all of the scrap metal: BB-8 sa pohne 5 krát
           a pozbiera všetok šrot
@@ -437,6 +563,19 @@ sk:
         What do you think will happen when you click "Run"?: Čo si myslíš, že sa stane
           potom ako klikneš "Spustiť"?
       courseC_multi_starWars_predict1_2018:
+        BB-8 will move 5 times and get all of the scrap metal: BB-8 sa pohne 5 krát
+          a pozbiera všetok šrot
+        BB-8 will move only one space: BB-8 sa posunie iba o jeden krok
+        BB-8 will not move.: BB-8 sa nepohne.
+        Correct!: Správne!
+        I don't know: Neviem
+        Incorrect. The repeat block will make the BB-8 move forward 5 times.: Nesprávne.
+          Opakovací blok posunie BB-8 dopredu 5-krát.
+        The repeat block will make the BB-8 move forward 5 times.: Opakovací blok
+          posunie BB-8 dopredu 5-krát.
+        What do you think will happen when you click "Run"?: Čo si myslíš, že sa stane
+          potom ako klikneš "Spustiť"?
+      courseC_multi_starWars_predict1_2018_2019:
         BB-8 will move 5 times and get all of the scrap metal: BB-8 sa pohne 5 krát
           a pozbiera všetok šrot
         BB-8 will move only one space: BB-8 sa posunie iba o jeden krok
@@ -485,6 +624,24 @@ sk:
         The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Prvé
           opakovanie umožní BB-8 posunúť sa len o dva kroky, ale potrebuje sa posunúť
           o 3.
+      courseC_multi_starWars_predict2_2018_2019:
+        BB-8 will collect all of the scrap metal with no problems.: BB-8 pozbiera
+          všetok šrot, bez akýchkoľvek problémov.
+        BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8
+          v prvom opakovaní nedôjde dostatočne ďaleko nato, aby pozbieral všetok kovový
+          šrot.
+        BB-8 will travel too far in the first loop.: BB-8 zájde v prvom opakovaní
+          príliš ďaleko.
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Nesprávne.
+          Prvé opakovanie umožní BB-8 posunúť sa len o dva kroky, ale potrebuje sa
+          posunúť o 3.
+        Look closely at the code below.  What will happen when you click "Run"?: Pozri
+          sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+        The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Prvé
+          opakovanie umožní BB-8 posunúť sa len o dva kroky, ale potrebuje sa posunúť
+          o 3.
       courseD_multi_artist_binary8_predict1:
         A: A
         B: B
@@ -496,6 +653,16 @@ sk:
           sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí, keď stlačíš
           "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        Correct!: Správne!
+        D: D
+        Incorrect.: Nesprávne.
+        Take a close look at the code below.  Which image will it create after you click "Run"?: Dobre
+          sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí, keď stlačíš
+          "Spustiť"?
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -519,6 +686,19 @@ sk:
         The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Vnútorný
           cyklus nakreslí päťuholník a ten vonkajší ho 4-krát zopakuje.
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Nesprávne.
+          Vnútorný cyklus nakreslí päťuholník a ten vonkajší ho 4-krát zopakuje.
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Dobre
+          sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí, keď stlačíš
+          "Spustiť"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Vnútorný
+          cyklus nakreslí päťuholník a ten vonkajší ho 4-krát zopakuje.
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -557,6 +737,31 @@ sk:
           včela musí zobrať 1 nektár. Ak pod ním nie je kvet,  včela by nemala robiť
           nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?'
       courseD_multi_bee_conditionals1_predict1_2018:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Nesprávne.
+          Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať nektár, len ak je
+          pod oblakom kvet.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Nesprávne.
+          Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať nektár ak je pod
+          oblakom kvet.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Blok
+          `ak pri kvete` spôsobí, že včela sa pokúsi získať nektár, len ak je pod
+          oblakom kvet.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: Včela
+          sa posunie nad oblak a pokúsi sa zobrať nektár len ak je pod ním kvet.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'Včela
+          sa posunie nad oblak a neurobí nič viac, bez ohľadu na to, čo je pod oblakom. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'Včela
+          sa posunie nad oblak a bude sa snažiť zobrať nektár, bez ohľadu na to, čo
+          je pod oblakom. '
+        0: '? Oblak ti zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod ním kvet,
+          včela musí zobrať 1 nektár. Ak pod ním nie je kvet,  včela by nemala robiť
+          nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?'
+        1: ': Oblak ti zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod ním kvet,
+          včela musí zobrať 1 nektár. Ak pod ním nie je kvet,  včela by nemala robiť
+          nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?'
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
         Correct!: Správne!
         I don't know.: Neviem.
         Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Nesprávne.
@@ -623,6 +828,27 @@ sk:
           vyrobiť med na kvete aj na pláste.
         The bee will try to get nectar from both flowers and honeycomb.: Včela sa
           pokúsi zobrať nektár z kvetu aj z plástu.
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Nesprávne.
+          Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu a vyrobiť
+          med na každom pláste.
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Nesprávne.
+          Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu a vyrobiť
+          med na každom pláste.
+        0: ': ''Pozorne si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš
+          "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *1* plást, alebo *1*
+          kvet.'''
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Blok
+          `ak na kvete` umožní včele zobrať nektár z každého kvetu a vyrobiť med na
+          každom pláste.
+        The bee will get nectar at each flower and honey at each honeycomb.: Včela
+          vezme nektár na každom kvete a vyrobí med na každom pláste.
+        The bee will try to get honey from both flowers and honeycomb.: Včela sa pokúsi
+          vyrobiť med na kvete aj na pláste.
+        The bee will try to get nectar from both flowers and honeycomb.: Včela sa
+          pokúsi zobrať nektár z kvetu aj z plástu.
       courseD_multi_bee_nestedLoops2_predict1:
         Correct!: Správne!
         I don't know.: Neviem.
@@ -639,6 +865,21 @@ sk:
         The bee will move forward and get nectar only one time.: Včela sa pohne dopredu
           a vezme 1 nektár.
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Nesprávne.
+          Včela zopakuje aktivitu pohybu vpred a zbierania medu vo vnorenom cykle,
+          čím vyrieši úlohu.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Pozri
+          sa pozorne na tieto vnorené cykly.  Čo sa stane, keď klikneš "Spustiť"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Včela
+          zopakuje aktivitu pohybu vpred a zbierania medu vo vnorenom cykle, čím vyrieši
+          úlohu.
+        The bee will get all of the nectar.: Včela zozbiera všetok nektár.
+        The bee will get only 2 units of nectar.: Včela zozbiera len 2 nektáre.
+        The bee will move forward and get nectar only one time.: Včela sa pohne dopredu
+          a vezme 1 nektár.
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         Correct!: Správne!
         I don't know.: Neviem.
         Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Nesprávne.
@@ -672,6 +913,24 @@ sk:
         16: ": Včela pozbiera 2 nektáre v cykle vpred,  potom 2 nektáre v cykle nadol.
           Toto celé je v ďalšom cykle s 2 opakovaniami. 4 krát 2 je 8!"
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        Correct!: Správne!
+        I don't know.: Neviem.
+        13: "? Nesprávne. Včela pozbiera 2 nektáre v cykle vpred,  potom 2 nektáre
+          v cykle nadol. Toto celé je v ďalšom cykle s 2 opakovaniami. 4 krát 2 je
+          8!"
+        14: ": Nesprávne. Včela pozbiera 2 nektáre v cykle vpred,  potom 2 nektáre
+          v cykle nadol. Toto celé je v ďalšom cykle s 2 opakovaniami. 4 krát 2 je
+          8!"
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Pozri
+          sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš "Spustiť"?
+        15: "? Včela pozbiera 2 nektáre v cykle vpred,  potom 2 nektáre v cykle nadol.
+          Toto celé je v ďalšom cykle s 2 opakovaniami. 4 krát 2 je 8!"
+        16: ": Včela pozbiera 2 nektáre v cykle vpred,  potom 2 nektáre v cykle nadol.
+          Toto celé je v ďalšom cykle s 2 opakovaniami. 4 krát 2 je 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'
@@ -729,6 +988,23 @@ sk:
           the pumpkin."
         The harvester will not pick any of the crops with the path she is taking.: Záhradníčka
           po ceste nepozbiera žiadne plodiny.
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        0: "? Incorrect. The code will have the harvester repeatedly make a stairstep
+          pattern and pick as much corn or lettuce as she comes across. She will not
+          pick the pumpkin."
+        1: ": Incorrect. The code will have the harvester repeatedly make a stairstep
+          pattern and pick as much corn or lettuce as she comes across. She will not
+          pick the pumpkin."
+        2: "? The code will have the harvester repeatedly make a stairstep pattern
+          and pick as much corn or lettuce as she comes across. She will not pick
+          the pumpkin."
+        3: ": The code will have the harvester repeatedly make a stairstep pattern
+          and pick as much corn or lettuce as she comes across. She will not pick
+          the pumpkin."
+        The harvester will not pick any of the crops with the path she is taking.: Záhradníčka
+          po ceste nepozbiera žiadne plodiny.
       courseD_multi_farmer_ramp13:
         Correct!: Správne!
         I don't know.: Neviem.
@@ -750,6 +1026,19 @@ sk:
         This code will leave the pile completely untouched.: Tento kód sa hromady
           ani nedotkne.
       courseD_multi_farmer_while10_predict2_2018:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect. There is no code to remove dirt from the pile.: Nesprávne. Chýba
+          kód na odstránenie hliny z hromady.
+        Nothing.  This code will leave only level ground.: Nič. Tento kód zanechá
+          rovnú zem.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Dobre
+          si prezri tento kód. Čo zostane na konci úlohy?
+        This code will leave the holes completely untouched.: Tento kód sa jám ani
+          nedotkne.
+        This code will leave the pile completely untouched.: Tento kód sa hromady
+          ani nedotkne.
+      courseD_multi_farmer_while10_predict2_2018_2019:
         Correct!: Správne!
         I don't know.: Neviem.
         Incorrect. There is no code to remove dirt from the pile.: Nesprávne. Chýba
@@ -792,6 +1081,21 @@ sk:
           bude odstraňovať hlinu pokiaľ tam je hromada a zastaví, keď hromada zmizne
         The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: Farmárka
           bude odstraňovať hlinu pokiaľ tam je hromada a zastaví, keď hromada zmizne.
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Nesprávne.
+          Farmárka bude odstraňovať hlinu pokiaľ tam je hromada a zastaví, keď hromada
+          zmizne
+        Look closely at the code below.  What will happen after you click "Run"?: Pozri
+          sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+        Nothing will happen.: Nestane sa nič.
+        The farmer will never stop removing dirt.: Farmárka bude donekonečna odstraňovať
+          hlinu.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Farmárka
+          bude odstraňovať hlinu pokiaľ tam je hromada a zastaví, keď hromada zmizne
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: Farmárka
+          bude odstraňovať hlinu pokiaľ tam je hromada a zastaví, keď hromada zmizne.
       courseD_multi_maze_until10_predict2:
         Correct!: Správne!
         I don't know.: Neviem.
@@ -806,6 +1110,11 @@ sk:
         Look carefully at the code below.  What will happen after you click "Run"?: Pozorne
           si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseD_multi_maze_until10_predict2_2018:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Look carefully at the code below.  What will happen after you click "Run"?: Pozorne
+          si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseD_multi_maze_until10_predict2_2018_2019:
         Correct!: Správne!
         I don't know.: Neviem.
         Look carefully at the code below.  What will happen after you click "Run"?: Pozorne
@@ -835,6 +1144,30 @@ sk:
           kód bude vtáka posúvať dopredu tak dlho, kým je pred ním cesta a potom ho
           otočí doľava. Toto bude robiť, až kým sa nedostane ku prasiatku!
       courseD_multi_maze_until2_predict1_2018:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        0: "? Nesprávne. Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred
+          ním cesta a potom ho otočí doľava. Toto bude robiť, až kým sa nedostane
+          ku prasiatku!"
+        1: ": Nesprávne. Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred
+          ním cesta a potom ho otočí doľava. Toto bude robiť, až kým sa nedostane
+          ku prasiatku!"
+        2: "? Nesprávne. Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred
+          ním bezpečná  cesta a potom ho otočí doľava. Toto bude robiť, až kým sa
+          nedostane ku prasiatku!"
+        3: ": Nesprávne. Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred
+          ním bezpečná  cesta a potom ho otočí doľava. Toto bude robiť, až kým sa
+          nedostane ku prasiatku!"
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Pozri
+          sa pozorne na tento kód. Čo si myslíš, že sa stane, keď klikneš "Spustiť"?
+        The bird will make it to the pig.: Vták sa dostane až k prasiatku.
+        The bird will move forward and run into the TNT.: Vták sa posunie dopredu
+          a narazí do TNT.
+        The bird will not move at all.: Vták sa nepohne.
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: Tento
+          kód bude vtáka posúvať dopredu tak dlho, kým je pred ním cesta a potom ho
+          otočí doľava. Toto bude robiť, až kým sa nedostane ku prasiatku!
+      courseD_multi_maze_until2_predict1_2018_2019:
         Correct!: Správne!
         I don't know.: Neviem.
         0: "? Nesprávne. Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred
@@ -910,6 +1243,15 @@ sk:
         The harvester will pick the corn.: Záhradníčka pozbiera kukuricu.
         The harvester will pick the lettuce.: Záhradníčka pozbiera šalát.
         The harvester will pick two pumpkins.: Záhradníčka zoberie dve tekvice.
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        Correct!: Správne!
+        Look at the functions defined below.  What will the harvester pick?: Pozri
+          si funkcie zadefinované nižšie.  Čo pozbiera záhradníčka?
+        The harvester will pick all of the pumpkins.: Záhradníčka pozbiera všetky
+          tekvice.
+        The harvester will pick the corn.: Záhradníčka pozbiera kukuricu.
+        The harvester will pick the lettuce.: Záhradníčka pozbiera šalát.
+        The harvester will pick two pumpkins.: Záhradníčka zoberie dve tekvice.
       courseE_multi_farmer_predict1:
         Correct!: Správne!
         I don't know: Neviem
@@ -962,10 +1304,26 @@ sk:
           where 1 gets added each time. The bee then collects 2 nectar units."
         1: ": The variable gets set back to 0 before the last two function calls,
           where 1 gets added each time. The bee then collects 2 nectar units."
+      courseF_bee_variables_8a_2018_2019:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Look at the code below.  How many units of nectar will the bee collect at the end?: Pozri
+          sa na kód dole. Koľko jednotiek nektáru pozbiera včela na konci?
+        The bee will collect all of the nectar.: Včela pozbiera všetok nektár.
+        The bee will only collect 2 nectar.: Včela pozbiera iba 2 nektáre.
+        The bee won't collect any nectar because the variable isn't called "gather".: Včela
+          nepozbiera žiadny nektár, pretoźe premenná sa nevolá "získaj".
+        0: "? The variable gets set back to 0 before the last two function calls,
+          where 1 gets added each time. The bee then collects 2 nectar units."
+        1: ": The variable gets set back to 0 before the last two function calls,
+          where 1 gets added each time. The bee then collects 2 nectar units."
       courseF_multi_artist_for10_predict1:
         Correct!: Správne!
         I don't know.: Neviem.
       courseF_multi_artist_for10_predict1_2018:
+        Correct!: Správne!
+        I don't know.: Neviem.
+      courseF_multi_artist_for10_predict1_2018_2019:
         Correct!: Správne!
         I don't know.: Neviem.
       courseF_multi_artist_fwp2_predict1:
@@ -1004,6 +1362,21 @@ sk:
         We have set the variable "length" to 50.  What will happen when you click "Run"?: Nastavili
           sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
       courseF_multi_artist_variables3a_predict1_2018:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        0: "? The `length` variable is set to 50 and is being used in the `move forward
+          by` block, so the artist will draw a triangle with 50 pixel sides."
+        1: ": The `length` variable is set to 50 and is being used in the `move forward
+          by` block, so the artist will draw a triangle with 50 pixel sides."
+        The artist will draw a 50-sided polygon with 3 pixel sides.: Umelec nakreslí
+          50-stranný mnohouholník s dĺžkou strán 3 pixely.
+        The artist will draw a triangle with 50 pixel sides.: Umelec nakreslí trojuholník
+          s dĺžkou strán 50 pixelov.
+        The artist will draw three open sides with 50 degree turns.: Umelec nakreslí
+          tri strany s 50 stupňovými otočeniami.
+        We have set the variable "length" to 50.  What will happen when you click "Run"?: Nastavili
+          sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
+      courseF_multi_artist_variables3a_predict1_2018_2019:
         Correct!: Správne!
         I don't know.: Neviem.
         0: "? The `length` variable is set to 50 and is being used in the `move forward
@@ -1075,6 +1448,17 @@ sk:
           pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
         'The bee will move forward and collect one nectar from each flower. ': 'Včela
           pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
+      courseF_multi_bee_for3_predict1_2018_2019:
+        Correct!: Správne!
+        'I don''t know. ': 'Neviem. '
+        Read the code below.  What will happen when you click "Run"?: Pozri si kód
+          nižšie. Čo sa stane, keď stlačíš "Spustiť"?
+        The bee will move forward and collect all of the nectar from every flower, except for one.: Včela
+          pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem jedného.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'Včela
+          pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
+        'The bee will move forward and collect one nectar from each flower. ': 'Včela
+          pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
       courseF_multi_bee_fwp9_predict1:
         0: "? Clicking to look inside of the function shows that it is set to collect
           as many nectar or honey as is passed through a parameter."
@@ -1086,6 +1470,8 @@ sk:
       coursee_prediction_artistfunction2:
         Correct!: Správne!
       coursee_prediction_artistfunction2_2018:
+        Correct!: Správne!
+      coursee_prediction_artistfunction2_2018_2019:
         Correct!: Správne!
       grade2_multi_collector_A_predict1:
         Correct!: Správne!
@@ -1105,6 +1491,21 @@ sk:
         1: ": Look closely at the code below.  If the code were to run to the end
           (ignoring any errors) how many pieces of treasure would Laurel collect?"
       grade2_multi_collector_A_predict1_2018:
+        Correct!: Správne!
+        I don't know.: Neviem.
+        Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Nesprávne.
+          Laurel sa pokúša zobrať drahokam na mieste, kde žiadny nie je a to spôsobuje
+          chybu.
+        Laurel tries to collect treasure where there is none and it causes an error.: Laurel
+          sa pokúša zobrať drahokam na mieste, kde žiadny nie je a to spôsobuje chybu.
+        Laurel will collect 4 pieces of treasure using this code.: Laurel pomocou
+          tohto kódu pozbiera 4 drahokamy.
+        Laurel will collect all of the treasure.: Laurel pozbiera všetky drahokamy.
+        Laurel will try to collect treasure where there is not any and it causes an error.: Laurel
+          sa pokúsi zobrať drahokam na mieste, kde žiadny nie je a to spôsobí chybu.
+        Look at this code carefully. What do you think will happen when the program runs?: Pozorne
+          si prezri tento kód. Čo si myslíš, že sa stane po spustení programu?
+      grade2_multi_collector_A_predict1_2018_2019:
         Correct!: Správne!
         I don't know.: Neviem.
         Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Nesprávne.

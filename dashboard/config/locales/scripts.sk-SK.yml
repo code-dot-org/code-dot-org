@@ -3999,10 +3999,17 @@ sk:
               name: Premenné v obálkach
             Variables as Constant in Artist:
               name: Premenné s Umelcom
+              description_student: Nezabudni do triedy priniesť svoju tvorivosť! V
+                týchto úlohách pomocou premenných vytvoríš fantastické kresby.
             Variables that Change in Bee:
               name: Meniace sa premenné s včelou
             Variables that Change in Artist:
               name: Meniace sa premenné s Umelcom
+              description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich
+                sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa
+                naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal
+                aj chápal. Prejdením riadených úloh, študenti kočia úrovňou volných
+                hier a uvidia čo sa naučili a ako tvoria svoje vlastné dizajny.
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
@@ -4088,8 +4095,21 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+              description_student: Táto lekcia ťa naučí viac o crowdsourcingu - procese,
+                ktorým riešiš úlohu spolu ako tím.
+              description_teacher: V informatike čelíme viacerým veľkým problémom
+                (napríklad hľadanie najväčšieho prvočísla či analýza DNA), ktoré by
+                jednotlivci osamote neboli schopní vyriešiť. Spojenými silami sa však
+                aj s takýmito úlohami vieme popasovať. V tejto lekcii študenti zažijú,
+                akou užitočnou môže byť v informatike tímová práca.
             Digital Sharing:
               name: Digitálne zdieľanie
+              description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských
+                práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám
+                rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne
+                prostredie. Študenti by mali byť vedení k dodržiavaniu autorských
+                práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho
+                občana.
         dance-low:
           stages:
             Dance Party:
@@ -4108,8 +4128,19 @@ sk:
               name: Programovanie na štvorčekový papier
             Introduction to Online Puzzles:
               name: Predstavenie online úloh
+              description_teacher: V týchto úlohých študenti začnú úvodom (alebo opakovaním
+                - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia
+                Code.org. Videá vám vysvetlia ako funguje pracovné prostredie, vrátane
+                tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu ako presúvať
+                bloky a ako ich vymazať či spájať. Následne si študenti precvičia
+                svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti
+                uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Záhradníčka.
             Relay Programming:
               name: Štafetové programovanie
+              description_teacher: Táto aktivita začne krátkym cvičením v hľadaní
+                a opravovaní chýb a vo vytrvalosti. Následne sa študenti rozdelia
+                do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých
+                príkazoch vytvoria program.
             Debugging in Collector:
               name: Odstraňovanie chýb s Laurel
             Events in Bounce:
@@ -4130,12 +4161,16 @@ sk:
               name: Cykly "dovtedy kým" v bludisku
             Conditionals with Cards:
               name: Podmienky s kartami
+              description_student: Je čas na hru, v ktorej budeš zbierať body len
+                za určitých podmienok!
             Conditionals in Bee:
               name: Podmienky "ak/inak" s včelou
             Conditionals & Loops in Harvester:
               name: Zber úrody s podmienkami
             Digital Citizenship:
               name: Digitálne občianstvo
+              description_student: Niektoré informácie nie je vhodné zdieľať online.
+                Táto lekcia vám pomôže rozlišovať medzi súkromnými a osobnými informáciami.
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             'Unplugged: Binary':
@@ -4144,6 +4179,12 @@ sk:
               name: Binárny Umelec
             Build a Star Wars Game:
               name: Vytvor hru Star Wars
+              description_student: Nech ťa sila sprevádza pri tvorení tvojej vlastnej
+                hry Star Wars.
+              description_teacher: V tejto lekcii si študenti precvičia využitie udalostí
+                na vytvorenie hry, ktorú môžu zdieľať online. R2-D2 a ďalšie postavy
+                zo Star Wars (Hviezdnych vojen) študentov prevedú konceptom udalostí
+                a potom im ponechajú priestor na vytvorenie vlastnej hry.
             Dance Party:
               name: Tanečná Párty
         coursee-2019:
@@ -4209,6 +4250,8 @@ sk:
               name: Funkcie v Minecrafte
             Functions in Harvester:
               name: Funkcie so Záhradníčkou
+              description_student: Funkcie vám ušetria veľa práce počas pomáhania
+                farmárke s jej úrodou!
             Copyright and Creativity:
               name: Autorské práva a Kreativita
             Functions in Artist:
@@ -4289,6 +4332,13 @@ sk:
               name: Vnorené cykly v bludisku
             Nested Loops in Artist:
               name: Ornamenty pomocou vnorených cyklov
+              description_student: Viac vnorených cyklov! Tentokrát s vnorenými cyklami
+                vytvoríš ÚŽASNÉ kresby.
+              description_teacher: V dnešných úlohách študenti s pomocou Umelca vytvoria
+                spletité kresby. Precvičovanie vnorených cyklov v nových, komplexnejších
+                úlohách umožní študentom uvedomiť si širšie možnosti ich využitia.
+                Tieto úlohy tiež ponúkajú vyššiu mieru kreativity s možnosťou vytvorenia
+                vlastnej kresby v poslednej úlohe.
             Nested Loops in Frozen:
               name: Vnorené cykly s Frozen
             End of Course Project:
@@ -4482,6 +4532,8 @@ sk:
               name: Vytvor si vlastné obrázky s cyklami
             'End of Course Project: Create a Play Lab Game':
               name: 'Záverečný projekt: Vytvor si hru v Play Labe'
+              description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
+                tvoj projekt.
             'Programming: My Robotic Friends':
               name: Moji robotickí kamaráti (ml.)
             'Loops: My Loopy Robotic Friends':
@@ -4559,6 +4611,11 @@ sk:
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
             Ocean Scene with Loops:
               name: Na mori s cyklami
+              description_teacher: Vrátením sa k slučkám, študenti sa učia kresliť
+                použitím jednoduchých postupností pokynov. V predchádzajúcej lekcii
+                sme skučky použili na prechádzanie bludiskom a zbieraním pokladu.
+                Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím
+                slučiek vytvoriť vlastné útvary.
             Loops in Ice Age:
               name: Cykly so Scratom
             Programming in Ice Age:
@@ -4598,6 +4655,10 @@ sk:
               name: Cykly s Laurel
             'Events: The Big Event':
               name: Veľká udalosť Jr.
+              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
+                pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym.
+                Niekedy chceme, aby náš program reagoval na používateľa presne v tom
+                momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               name: Kráľovská bitka s udalosťami
             'Loops: Getting Loopy':
