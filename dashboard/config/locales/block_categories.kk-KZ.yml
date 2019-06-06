@@ -1,20 +1,1935 @@
 ---
-kk:
+kk-KZ:
   data:
     block_categories:
-      Actions: Іс-әрекеттер
-      Loops: Ілмек
-      Functions: Функциялар
-      Color: Түс
-      Math: Математика
-      Logic: Логика
-      Variables: Айнымалылар
-      Conditionals: Шарттар
-      Events: Шаралар
-      Text: Мәтін
-      Location: Тұрғылықты жер
-      Start: Бастау
-      Booleans: Бульдік тип
-      test: таңдау
-      Name: Атыңыз
-      Function: Функция
+      4-5 Artist Patterns Free Play:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Alien Defender:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Choose Your Own Adventure:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Course 4 Artist For Loops 11:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      Course 4 Artist For Loops 11a:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      Course 4 Artist For Loops 14:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      Course 4 Artist For Loops 15:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      Course 4 Artist For Loops 4:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      Course 4 Artist For Loops 6a:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      Course 4 Artist For Loops 8:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      Course 4 Artist For Loops Challenge:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      Course 4 Artist For Loops inspire:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      Course 4 Artist Functions Inspiration:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      Course 4 Artist Functions challenge:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      Course 4 Bee Params 1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      Course 4 Bee Params 2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      Course 4 Bee Params 3:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Functions: Функциялар
+      Course 4 Bee Params 4:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Functions: Функциялар
+        Math: Математика
+      Course 4 Bee Params 5:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Course 4 Bee Params 6:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Course 4 Bee Params 7:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+        Functions: Функциялар
+      Course 4 Bee Params 8:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+        Functions: Функциялар
+      Course 4 EC 1a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+        Functions: Функциялар
+      Course 4 EC 1b:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+        Functions: Функциялар
+      Course 4 EC 2a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Course 4 EC 2b:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      Course 4 EC 2c:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      Course 4 Play Lab Params 10:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Course 4 Play Lab Params 7:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      Course 4 Play Lab Params 8:
+        Events: Шаралар
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      Course 4 Play Lab Params 9:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Course 4 Play Lab Vars 9:
+        Events: Шаралар
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+      Course 4 Playlab For Loop Freeplay:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+      Course 4 SCF 1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      Course 4 SCF 1a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+        Functions: Функциялар
+      Course 4 SCF 1b:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Logic: Логика
+        Math: Математика
+        Functions: Функциялар
+      Course 4 SCF 2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      Course 4 SCF 3:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      Course 4 SCFL 1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      Course 4 SCFL 1a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      Course 4 SCFL 1b:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      Course 4 SCFL 2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+      Course 4 SCFL 3:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      Course 4 SCFL 4:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      Course 4 SCFL 6:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      Course 4 SCFL 7:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      Course 4 SCV 6:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      'Course E: Play Lab Project':
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      'Course F: Artist Project':
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      'Course F: Artist Project - Revise':
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      'Course F: Artist Project - Revise_2018':
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      'Course F: Artist Project_2018':
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      'Course F: Artist Project_2019':
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      CourseD_Dance_Party_11_5:
+        Events: Шаралар
+      CourseD_Dance_Party_12:
+        Events: Шаралар
+        Logic: Логика
+      CourseE_Project_SpriteLab:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+        Logic: Логика
+        Text: Мәтін
+      CourseE_Project_SpriteLab_2019:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+      CourseE_hoops:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+        Functions: Функциялар
+      CourseF_Project_Revise_SpriteLab:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+        Functions: Функциялар
+      CourseF_Project_SpriteLab:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+        Functions: Функциялар
+      CourseF_Project_SpriteLab_2019:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Text: Мәтін
+      Dance Party 2:
+        Events: Шаралар
+      Dance Party 6:
+        Events: Шаралар
+      Dance Party Freeplay:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+      Dance_Party_11_5:
+        Events: Шаралар
+      Dance_Party_12:
+        Events: Шаралар
+        Logic: Логика
+      Dance_Party_extras_battle:
+        Events: Шаралар
+        Logic: Логика
+      Dance_Party_extras_every_beat:
+        Events: Шаралар
+        Logic: Логика
+      Dance_Party_extras_layout:
+        Events: Шаралар
+        Logic: Логика
+      Dance_Party_extras_on_beat:
+        Events: Шаралар
+        Logic: Логика
+      Dance_Party_extras_speed:
+        Events: Шаралар
+        Logic: Логика
+      Dance_Party_extras_visible:
+        Events: Шаралар
+        Logic: Логика
+      Find the Wizard:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Fish Tank 7-validated:
+        Events: Шаралар
+      Fish Tank 7-validated_2019:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+      FoodFight:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Geometric Sun:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Geometric Sun_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Guess The Number:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      InspirationalArtwork:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      InspirationalArtwork_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      NEW Course 4 Artist Functions 14:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      NEW Course 4 Artist Params 1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      NEW Course 4 Artist Params 10:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      NEW Course 4 Artist Params 11:
+        Actions: Іс-әрекеттер
+        Functions: Функциялар
+        Loops: Ілмек
+        Math: Математика
+      NEW Course 4 Artist Params 12:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Functions: Функциялар
+      NEW Course 4 Artist Params 12a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      NEW Course 4 Artist Params 13:
+        Actions: Іс-әрекеттер
+        Functions: Функциялар
+        Loops: Ілмек
+        Math: Математика
+      NEW Course 4 Artist Params 14:
+        Actions: Іс-әрекеттер
+        Functions: Функциялар
+        Loops: Ілмек
+        Math: Математика
+      NEW Course 4 Artist Params 15:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      NEW Course 4 Artist Params 2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      NEW Course 4 Artist Params 3:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      NEW Course 4 Artist Params 6:
+        Actions: Іс-әрекеттер
+        Functions: Функциялар
+        Loops: Ілмек
+        Math: Математика
+      NEW Course 4 Artist Params 7:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      NEW Course 4 Artist Params 8:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Functions: Функциялар
+        Loops: Ілмек
+      NEW Course 4 Artist Params 9:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      NEW Course 4 Artist Params inspire:
+        Actions: Іс-әрекеттер
+        Functions: Функциялар
+        Loops: Ілмек
+        Math: Математика
+      NEW Course 4 Play Lab Params 11:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Robot Doodle:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Robot Doodle_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      Virtual Pet 2:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+      Virtual Pet 3:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+      Virtual Pet 4:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+      Virtual Pet 5:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+      Virtual Pet 6:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+      Virtual Pet Freeplay:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+      behaviors 3a:
+        Actions: Іс-әрекеттер
+      behaviors 5:
+        Actions: Іс-әрекеттер
+      behaviors 6:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Math: Математика
+        Logic: Логика
+      behaviors 7:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Math: Математика
+        Logic: Логика
+      behaviors free play:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+      course3_bee_functions_challenge1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      course3_bee_functions_challenge2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      course3_bee_functions_challenge3:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      course3_bee_functions_challenge4:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      course3_playLab_challenge1:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      course4_artist_fwp_challenge1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      course4_bee_for_challenge1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+        Math: Математика
+      course4_bee_fwp_challenge1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      course4_bee_fwp_challenge2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      course4_playlab_variables_challenge1:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      courseD_artist_project1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project1a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project1a_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project1a_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project2_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project2_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project2a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project2a_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project2a_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project3:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project3_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project3_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project3a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project3a_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project3a_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project4:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project4_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project4_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project4a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project4a_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project4a_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project5:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project5_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_artist_project5_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseD_playLab_condFP:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+      courseD_playLab_condFP_2018:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+      courseE_Dogger_2:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Variables: Айнымалылар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Text: Мәтін
+        Functions: Функциялар
+      courseE_artist_concept1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      courseE_artist_concept4:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_concept4_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      courseE_artist_functions10:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions10_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions10_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions2_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseE_artist_functions2_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseE_artist_functions3_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseE_artist_functions3_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseE_artist_functions5_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseE_artist_functions5_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseE_artist_functions7_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseE_artist_functions7_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseE_artist_functions8:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions8_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions8_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions8a_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions8a_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions8b_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions8b_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions8c_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions8c_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions9:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions9_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions9_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functionsProj_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      courseE_artist_functionsProj_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      courseE_artist_functions_predict2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions_predict2_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_artist_functions_predict2_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_bee_concept1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_bee_concept2_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_bee_concept3_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_bee_concept4_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_bee_concept5_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_bee_functions6:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_bee_functions7:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_bee_functions_challenge1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_bee_functions_challenge2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseE_farmer_concept1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_concept2_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_concept3_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions10a1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions10a1_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions10b:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions11_predict:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions11_predict_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions11_predict_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions13_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions13_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions1_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions1a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions1a_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions1a_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions2b:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions2b_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions2b_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions2ba:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions2ba_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions2ba_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions3c:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions3c1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions3c1_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions3c_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions3c_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions4b:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions5c:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions6c:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions7a1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions7a1_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions7b:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions8a1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions8a1_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions8b:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions9a1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions9a1_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_farmer_functions9b:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_playLab_challenge1:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_playLab_scaffold5:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseE_playLab_scaffold6:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+      courseF_artist_for1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Color: Түс
+      courseF_artist_for10:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_artist_for10_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Functions: Функциялар
+      courseF_artist_for10_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Functions: Функциялар
+      courseF_artist_for10_predict1:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_artist_for10_predict1_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_artist_for10_predict1_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_artist_for1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for1_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Color: Түс
+      courseF_artist_for2_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for2_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for3:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Color: Түс
+      courseF_artist_for3_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for3_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for4:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Color: Түс
+      courseF_artist_for4_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for4_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for5:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Color: Түс
+      courseF_artist_for5_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for5_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for6:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Color: Түс
+      courseF_artist_for6_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Color: Түс
+      courseF_artist_for6_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Color: Түс
+      courseF_artist_for7:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for7_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for7_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for8:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for8_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for8_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for9:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+      courseF_artist_for9_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseF_artist_for9_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+      courseF_artist_for_challenge1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_for_challenge1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_for_challenge1_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_for_challenge2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_for_challenge2_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_for_challenge2_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_fwp2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      courseF_artist_fwp2_predict1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      courseF_artist_fwp3:
+        Functions: Функциялар
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_fwp4:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Functions: Функциялар
+      courseF_artist_fwp5:
+        Actions: Іс-әрекеттер
+        Functions: Функциялар
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_fwp6:
+        Actions: Іс-әрекеттер
+        Functions: Функциялар
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_fwp7:
+        Actions: Іс-әрекеттер
+        Functions: Функциялар
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_fwp8:
+        Actions: Іс-әрекеттер
+        Functions: Функциялар
+        Loops: Ілмек
+        Math: Математика
+      courseF_artist_fwp9:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      courseF_artist_fwp_challenge1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      courseF_artist_fwp_challenge2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+      courseF_artist_variables10_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      courseF_artist_variables10_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      courseF_artist_variables7_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      courseF_artist_variables7_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      courseF_artist_variables8_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      courseF_artist_variables8_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      courseF_artist_variables9_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      courseF_artist_variables9_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      courseF_artist_variablesFP_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      courseF_artist_variablesFP_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+        Functions: Функциялар
+      courseF_bee_conditionals10:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_conditionals2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_conditionals3:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_conditionals4:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_conditionals5:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_conditionals8:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_for10:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for10_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for10_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for11:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for11_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for11_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for1_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for1_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for2_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for2_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for3_predict1:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for3_predict1_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for3_predict1_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for4:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for4_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for4_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for5:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for5_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for5_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for6:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for6_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for6_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for7:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for7_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for7_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for8:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for8_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for8_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for9:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+        Variables: Айнымалылар
+      courseF_bee_for9_2018:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for9_2019:
+        Actions: Іс-әрекеттер
+        Math: Математика
+        Loops: Ілмек
+      courseF_bee_for_challenge1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_for_challenge1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_for_challenge1_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_for_challenge2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseF_bee_for_challenge2_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseF_bee_for_challenge2_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+      courseF_bee_functions2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_functions3:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_functions3a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_functions4:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_functions5a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_functions6:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_functions7:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_functions8a:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_functionsPre7:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_functions_challenge1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_functions_challenge2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_fwp1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Math: Математика
+        Conditionals: Шарттар
+      courseF_bee_fwp2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_fwp3:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_fwp4:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_fwp5:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_fwp6:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_fwp7:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_fwp8:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_fwp9_predict1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_fwp_challenge1:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_fwp_challenge2:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Math: Математика
+      courseF_bee_variables_1_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_1_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_2_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_2_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_3_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_3_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_4_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_4_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_5_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_5_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_6_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_6_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_7_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_7_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_8_2018:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_bee_variables_8_2019:
+        Actions: Іс-әрекеттер
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Functions: Функциялар
+        Variables: Айнымалылар
+        Math: Математика
+      courseF_playlab_variables1a:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+      courseF_playlab_variables2b:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+      courseF_playlab_variables3b_josh:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+      courseF_playlab_variables4b:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+      courseF_playlab_variables4c_predictive1:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      courseF_playlab_variables5c:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Logic: Логика
+        Variables: Айнымалылар
+        Text: Мәтін
+      courseF_playlab_variables6c:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+      courseF_playlab_variables7b:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Conditionals: Шарттар
+        Math: Математика
+        Text: Мәтін
+        Functions: Функциялар
+        Variables: Айнымалылар
+      courseF_playlab_variables7c:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Variables: Айнымалылар
+      courseF_playlab_variables8c:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+        Variables: Айнымалылар
+      courseF_playlab_variables_challenge1:
+        Actions: Іс-әрекеттер
+        Events: Шаралар
+        Loops: Ілмек
+        Math: Математика
+        Functions: Функциялар
+        Variables: Айнымалылар
