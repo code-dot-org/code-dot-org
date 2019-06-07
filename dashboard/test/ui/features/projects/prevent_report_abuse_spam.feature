@@ -24,7 +24,6 @@ Scenario: Report Abuse link hidden if the user already reported AppLab project -
   Then I open the small footer menu
   And element ".ui-test-how-it-works" is visible
   And element ".ui-test-report-abuse" is visible
-  Then I open the small footer menu
   And I press menu item "Report Abuse"
   Then I report abuse on the project
   Then I wait until current URL contains "projects"
@@ -54,7 +53,6 @@ Scenario: Report Abuse link hidden if the user already reported Game Lab project
   Then I open the small footer menu
   And element ".ui-test-how-it-works" is visible
   And element ".ui-test-report-abuse" is visible
-  Then I open the small footer menu
   And I press menu item "Report Abuse"
   Then I report abuse on the project
   Then I wait until current URL contains "projects"
