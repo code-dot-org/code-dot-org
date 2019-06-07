@@ -322,15 +322,15 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       var input = 'hello world';
       getStore().dispatch(
         actions.appendLog({
-          input: `${input}`
+          input: input
         })
       );
       getStore().dispatch(
         actions.appendLog({
-          output: `${input}`
+          output: input
         })
       );
-      expect(debugOutput().text()).to.equal('> hello world< "hello world"');
+      expect(debugOutput().text()).to.equal(`> ${input}< "${input}"`);
     });
 
     it('the original integer or mathematical operation is prepended with >, and the interpreted integer or mathematical operation is prepended with <', () => {
