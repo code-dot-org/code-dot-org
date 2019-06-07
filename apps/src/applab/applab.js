@@ -83,6 +83,10 @@ import {generateExpoApk} from '../util/exporter';
 const Applab = {};
 export default Applab;
 
+const DEFAULT_PROJECT_PROPERTIES = {
+  export: {}
+};
+
 /**
  * @type {JsInterpreterLogger} observes the interpreter and logs to console
  */
@@ -384,6 +388,12 @@ Applab.init = function(config) {
 
   // Necessary for tests.
   thumbnailUtils.init();
+
+  Applab.generatedProperties = {
+    ...DEFAULT_PROJECT_PROPERTIES,
+    ...config.initialGeneratedProperties
+  };
+  config.getGeneratedProperties = getGeneratedProperties;
 
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
@@ -888,7 +898,7 @@ Applab.render = function() {
   );
 };
 
-Applab.exportApp = function(expoOpts) {
+Applab.exportApp = async function(expoOpts) {
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
@@ -896,17 +906,26 @@ Applab.exportApp = function(expoOpts) {
   // TODO: find another way to get this info that doesn't rely on globals.
   const appName = project.getCurrentName() || 'my-app';
 
-  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
+  const {mode, md5SavedSources, expoSnackId, iconUri, splashImageUri} =
+    expoOpts || {};
   if (mode === 'expoGenerateApk') {
-    return generateExpoApk(
+    const apkUri = await generateExpoApk(
       {
         appName,
+        md5SavedSources,
         expoSnackId,
         iconUri,
         splashImageUri
       },
       studioApp().config
     );
+    Applab.generatedProperties.export.android = {
+      md5ApkSavedSources: md5SavedSources,
+      snackId: expoSnackId,
+      apkUri
+    };
+    project.projectChanged();
+    return apkUri;
   }
 
   return Exporter.exportApp(
@@ -1161,6 +1180,10 @@ function codeContainsError() {
   });
 
   return errors.length > 0;
+}
+
+function getGeneratedProperties() {
+  return Applab.generatedProperties;
 }
 
 /**

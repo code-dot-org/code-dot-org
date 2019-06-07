@@ -5,31 +5,14 @@ import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedExportDialog as ExportDialog} from '@cdo/apps/code-studio/components/ExportDialog';
 import {SignInState} from '@cdo/apps/code-studio/progressRedux';
 
-/*
-    i18n: PropTypes.shape({
-      t: PropTypes.func.isRequired
-    }).isRequired,
-    exportApp: PropTypes.func,
-    projectUpdatedAt: PropTypes.string,
-    isAbusive: PropTypes.bool.isRequired,
-    isOpen: PropTypes.bool.isRequired,
-    channelId: PropTypes.string.isRequired,
-    appType: PropTypes.string.isRequired,
-    onClose: PropTypes.func.isRequired,
-    hideBackdrop: BaseDialog.propTypes.hideBackdrop,
-    canShareSocial: PropTypes.bool.isRequired,
-    userSharingDisabled: PropTypes.bool,
-    signInState: PropTypes.oneOf(Object.values(SignInState)),
-    isProjectLevel: PropTypes.bool.isRequired
-
-*/
-
 describe('ExportDialog', () => {
   it('renders our signed in version when signed in', () => {
     const wrapper = shallow(
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
         channelId="fakeChannelId"
@@ -48,6 +31,8 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
         channelId="fakeChannelId"
@@ -66,6 +51,8 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
         channelId="fakeChannelId"
@@ -87,6 +74,8 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
         channelId="fakeChannelId"
@@ -107,6 +96,8 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={true}
         isOpen={true}
         channelId="fakeChannelId"
@@ -125,6 +116,8 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={true}
         isOpen={true}
         channelId="fakeChannelId"
@@ -148,6 +141,8 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={exportApp}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={true}
         isOpen={true}
         channelId="fakeChannelId"
@@ -176,6 +171,8 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={exportApp}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={true}
         isOpen={true}
         channelId="fakeChannelId"
@@ -191,6 +188,7 @@ describe('ExportDialog', () => {
       .to.have.been.calledTwice.and.calledWith({mode: 'expoPublish'})
       .and.calledWith({
         mode: 'expoGenerateApk',
+        md5SavedSources: 'fakeHash',
         expoSnackId: 'id',
         iconUri: 'iconUri',
         splashImageUri: 'splashUri'

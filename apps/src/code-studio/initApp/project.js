@@ -123,7 +123,7 @@ function unpackSources(data) {
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
     md5SavedSources: data.md5SavedSources,
-    projectProperties: data.projectProperties,
+    generatedProperties: data.generatedProperties,
     selectedSong: data.selectedSong,
     libraries: data.libraries
   };
@@ -524,8 +524,8 @@ var projects = (module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
-   * @param {function(Object)} sourceHandler.setInitialProjectProperties
-   * @param {function(): Object} sourceHandler.getProjectProperties
+   * @param {function(Object)} sourceHandler.setInitialGeneratedProperties
+   * @param {function(): Object} sourceHandler.getGeneratedProperties
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
@@ -555,9 +555,9 @@ var projects = (module.exports = {
         sourceHandler.setInitialAnimationList(currentSources.animations);
       }
 
-      if (currentSources.projectProperties) {
-        sourceHandler.setInitialProjectProperties(
-          currentSources.projectProperties
+      if (currentSources.generatedProperties) {
+        sourceHandler.setInitialGeneratedProperties(
+          currentSources.generatedProperties
         );
       }
 
@@ -921,8 +921,8 @@ var projects = (module.exports = {
       this.saveThumbnail(blob);
     }
 
-    this.updateSourcesWithMD5(sourceAndHtml);
-    unpackSources(sourceAndHtml);
+    const savedSources = this.updateSourcesWithMD5(sourceAndHtml);
+    unpackSources(savedSources);
 
     if (this.useSourcesApi()) {
       let params = '';
@@ -1080,7 +1080,7 @@ var projects = (module.exports = {
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
-        const projectProperties = this.sourceHandler.getProjectProperties();
+        const generatedProperties = this.sourceHandler.getGeneratedProperties();
         const libraries =
           this.sourceHandler.getLevelLibraries &&
           this.sourceHandler.getLevelLibraries();
@@ -1090,7 +1090,7 @@ var projects = (module.exports = {
           animations,
           makerAPIsEnabled,
           selectedSong,
-          projectProperties
+          generatedProperties
         };
         if (libraries) {
           sourceAndHtml['libraries'] = libraries;
@@ -1102,6 +1102,10 @@ var projects = (module.exports = {
 
   getSelectedSong() {
     return currentSources.selectedSong;
+  },
+
+  getGeneratedProperties() {
+    return currentSources.generatedProperties;
   },
 
   /**
@@ -1226,15 +1230,25 @@ var projects = (module.exports = {
     }
     header.updateTimestamp();
   },
+  /**
+   * Calculates a md5 hash for everything within sources except the
+   * generatedProperties. Returns a new sources object with a md5SavedSources
+   * property added.
+   * @param {Object} sources Full sources.
+   * @return {Object} Full sources updated with a md5SavedSources property.
+   */
   updateSourcesWithMD5(sources) {
     const {
-      projectProperties, // eslint-disable-line no-unused-vars
+      generatedProperties, // eslint-disable-line no-unused-vars
       ...sourcesWithoutProperties
     } = sources;
     const md5SavedSources = MD5(
       JSON.stringify(sourcesWithoutProperties)
     ).toString();
-    sources.md5SavedSources = md5SavedSources;
+    return {
+      ...sources,
+      md5SavedSources
+    };
   },
   /**
    * Autosave the code if things have changed. Calls `callback` if autosave was

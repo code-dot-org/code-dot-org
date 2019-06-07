@@ -522,12 +522,12 @@ const sourceHandler = {
       callback({});
     }
   },
-  setInitialProjectProperties(projectProperties) {
-    getAppOptions().initialProjectProperties = projectProperties;
+  setInitialGeneratedProperties(generatedProperties) {
+    getAppOptions().initialGeneratedProperties = generatedProperties;
   },
-  getProjectProperties() {
-    const {getProjectProperties} = getAppOptions();
-    return getProjectProperties && getProjectProperties();
+  getGeneratedProperties() {
+    const {getGeneratedProperties} = getAppOptions();
+    return getGeneratedProperties && getGeneratedProperties();
   },
   prepareForRemix() {
     const {prepareForRemix} = getAppOptions();

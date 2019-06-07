@@ -30,6 +30,7 @@ const baseStyles = {
     borderWidth: 1,
     borderColor: color.border_gray,
     fontSize: 'larger',
+    outline: 'none',
     padding: 10,
     marginTop: 0,
     marginBottom: 0,
@@ -96,6 +97,16 @@ const styles = {
     color: color.white
   },
   actionButtonDisabled: {
+    ...baseStyles.button,
+    backgroundColor: color.gray,
+    color: color.white
+  },
+  backButton: {
+    ...baseStyles.button,
+    backgroundColor: color.gray,
+    color: color.black
+  },
+  backButtonDisabled: {
     ...baseStyles.button,
     backgroundColor: color.gray,
     color: color.white
@@ -188,6 +199,7 @@ class ExportDialog extends React.Component {
       t: PropTypes.func.isRequired
     }).isRequired,
     exportApp: PropTypes.func.isRequired,
+    exportGeneratedProperties: PropTypes.object.isRequired,
     md5SavedSources: PropTypes.string.isRequired,
     previousExport: PropTypes.object,
     isAbusive: PropTypes.bool.isRequired,
@@ -211,21 +223,32 @@ class ExportDialog extends React.Component {
     const {md5ExportSavedSources} = this.state;
     if (isOpen && !prevProps.isOpen) {
       recordExport('open');
-      if (md5SavedSources !== md5ExportSavedSources) {
-        // The project has changed since we last opened the dialog,
-        // reset our export state, so we will need to export again:
-        this.resetExportState();
+      if (md5ExportSavedSources && md5SavedSources !== md5ExportSavedSources) {
+        // The project has changed since we last published within this dialog,
+        // cancel any builds in progress and reset our export state, so we will
+        // start all over again:
+        this.cancelIfGeneratingAndResetState();
       }
     }
   }
 
+  cancelIfGeneratingAndResetState() {
+    const {screen, generatingApk} = this.state;
+    if (screen === 'generating' && generatingApk) {
+      // TODO: Call snack-sdk turtle build cancel once available
+    }
+    this.resetExportState();
+  }
+
   resetExportState() {
     this.setState({
+      screen: 'intro',
       exporting: false,
       exportError: null,
       expoUri: undefined,
       expoSnackId: undefined,
       iconUri: undefined,
+      md5ExportSavedSources: undefined,
       splashImageUri: undefined,
       showSendToPhone: false,
       apkUri: undefined,
@@ -235,15 +258,6 @@ class ExportDialog extends React.Component {
   }
 
   close = () => {
-    const {expoUri} = this.state;
-    if (expoUri) {
-      // If we are re-opened, start at the platform page:
-      this.setState({screen: 'platform'});
-    } else {
-      // If we don't haven't succesfully exported, then clear all export
-      // state so we will start again fresh the next time:
-      this.resetExportState();
-    }
     recordExport('close');
     this.props.onClose();
   };
@@ -360,6 +374,24 @@ class ExportDialog extends React.Component {
     }
   }
 
+  generateApkAsNeeded() {
+    const {exportGeneratedProperties, md5SavedSources} = this.props;
+    const {android = {}} = exportGeneratedProperties;
+    const {md5ApkSavedSources, apkUri} = android;
+
+    if (
+      apkUri &&
+      md5ApkSavedSources &&
+      md5SavedSources === md5ApkSavedSources
+    ) {
+      this.setState({
+        apkUri
+      });
+    } else {
+      this.publishAndGenerateApk();
+    }
+  }
+
   onActionButton = () => {
     const {screen} = this.state;
 
@@ -374,13 +406,52 @@ class ExportDialog extends React.Component {
       // case 'icon':
       //   return this.setState({screen: 'publish'});
       case 'publish':
-        this.publishAndGenerateApk();
+        this.generateApkAsNeeded();
         return this.setState({screen: 'generating'});
       case 'generating':
         return this.close();
       default:
         throw new Error(`ExportDialog: Unexpected screen: ${screen}`);
     }
+  };
+
+  onBackButton = () => {
+    const {screen} = this.state;
+
+    switch (screen) {
+      case 'intro':
+        return;
+      // case 'export':
+      case 'platform':
+        return this.setState({screen: 'intro'});
+      // case 'icon':
+      case 'publish':
+        return this.setState({screen: 'platform'});
+      case 'generating':
+        return this.setState({screen: 'publish'});
+      default:
+        throw new Error(`ExportDialog: Unexpected screen: ${screen}`);
+    }
+  };
+
+  onCancelButton = () => {
+    // Treat this just like a close, unless an operation is in progress.
+    // If an operation is in progress, cancel and reset back the
+    // beginning as part of the close operation:
+    const {screen, exporting, generatingApk} = this.state;
+    switch (screen) {
+      case 'generating':
+        if (generatingApk) {
+          this.cancelIfGeneratingAndResetState();
+        }
+        break;
+      case 'export':
+        if (exporting) {
+          this.resetExportState();
+        }
+        break;
+    }
+    this.close();
   };
 
   renderMainContent() {
@@ -648,6 +719,20 @@ class ExportDialog extends React.Component {
     return info;
   }
 
+  backButtonEnabled() {
+    const {screen, exporting, generatingApk} = this.state;
+    switch (screen) {
+      case 'intro':
+        return false;
+      case 'generating':
+        return !exporting && !generatingApk;
+      case 'export':
+        return !exporting;
+      default:
+        return true;
+    }
+  }
+
   render() {
     const {
       canShareSocial,
@@ -659,6 +744,7 @@ class ExportDialog extends React.Component {
       signInState,
       userSharingDisabled
     } = this.props;
+    const {screen} = this.state;
 
     const needToSignIn =
       !isProjectLevel && signInState !== SignInState.SignedIn;
@@ -671,6 +757,8 @@ class ExportDialog extends React.Component {
       text: actionText,
       enabled: actionEnabled
     } = this.getActionButtonInfo();
+    const backVisible = screen !== 'intro';
+    const backEnabled = this.backButtonEnabled();
     const showShareWarning = !canShareSocial;
     return (
       <div>
@@ -726,10 +814,24 @@ class ExportDialog extends React.Component {
                   <button
                     type="button"
                     style={styles.cancelButton}
-                    onClick={this.close}
+                    onClick={this.onCancelButton}
                   >
                     Cancel
                   </button>
+                  {backVisible && (
+                    <button
+                      type="button"
+                      style={
+                        backEnabled
+                          ? styles.backButton
+                          : styles.backButtonDisabled
+                      }
+                      onClick={this.onBackButton}
+                      disabled={!backEnabled}
+                    >
+                      Back
+                    </button>
+                  )}
                   <button
                     type="button"
                     style={

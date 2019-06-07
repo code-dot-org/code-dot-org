@@ -10,7 +10,7 @@
  * @property {string} levelPosition
  * @property {AutoplayVideo} autoplayVideo
  * @property {SerializedAnimationList} initialAnimationList
- * @property {Object} initialProjectProperties
+ * @property {Object} initialGeneratedProperties
  * @property {string} levelGameName
  * @property {string} skinId
  * @property {string} baseUrl
