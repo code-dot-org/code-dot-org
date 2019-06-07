@@ -318,7 +318,8 @@ class User < ActiveRecord::Base
   # Most recently created user_school_info referring to a complete school_info entry
   def last_complete_user_school_info
     user_school_infos.
-      select {|tenure| tenure.school_info.complete?}.
+      includes(:school_info).
+      select {|usi| usi.school_info.complete?}.
       sort_by(&:created_at).
       last
   end
