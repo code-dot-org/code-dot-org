@@ -495,7 +495,6 @@ class FilesApi < Sinatra::Base
     dont_cache
 
     abuse_score = request.GET['abuse_score']
-
     not_modified if abuse_score.nil?
 
     buckets = get_bucket_impl(endpoint).new
