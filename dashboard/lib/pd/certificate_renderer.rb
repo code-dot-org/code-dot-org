@@ -6,10 +6,9 @@ module Pd
 
     # Given a PD enrollment, renders a workshop completion certificate.
     #
-    # NOTE:
-    # This method returns a newly-allocated Magick::Image object.
-    # The caller MUST ensure image#destroy! is called on the returned image
-    # object to avoid memory leaks.
+    # @note This method returns a newly-allocated Magick::Image object.
+    #       The caller MUST ensure image#destroy! is called on the returned image
+    #       object to avoid memory leaks.
     #
     # @param [Pd::Enrollment] a teacher's workshop enrollment
     def self.render_workshop_certificate(enrollment)
