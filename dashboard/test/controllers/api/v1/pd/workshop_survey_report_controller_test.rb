@@ -19,25 +19,6 @@ module Api::V1::Pd
 
     API = '/api/v1/pd/workshops'
 
-    test_user_gets_response_for(
-      :workshop_survey_report,
-      user: :workshop_admin,
-      params: -> {{workshop_id: @workshop.id}}
-    )
-
-    test 'facilitators can view their survey' do
-      sign_in @facilitator
-      get :workshop_survey_report, params: {workshop_id: @workshop.id}
-      assert_response :success
-
-      @controller = WorkshopSurveyReportController.new
-
-      other_facilitator = create :facilitator
-      other_workshop = create(:pd_workshop, organizer: @program_manager, facilitators: [other_facilitator])
-      get :workshop_survey_report, params: {workshop_id: other_workshop.id}
-      assert_response :forbidden
-    end
-
     test 'teachercon survey report for facilitator' do
       teachercon_1 = create :pd_workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
       teachercon_2 = create :pd_workshop, :teachercon, facilitators: teachercon_1.facilitators, num_sessions: 5, num_completed_surveys: 10
@@ -182,13 +163,6 @@ module Api::V1::Pd
       )
     end
 
-    test_user_gets_response_for(
-      :workshop_survey_report,
-      response: :forbidden,
-      user: :teacher,
-      params: -> {{workshop_id: @workshop.id}}
-    )
-
     test 'facilitators can see results for local summer workshops' do
       workshop = create :pd_workshop, :local_summer_workshop, facilitators: [@facilitator]
       sign_in @facilitator
@@ -217,34 +191,6 @@ module Api::V1::Pd
         {'error' => "Do not know how to process survey results for this workshop"\
           " #{workshop.course} #{workshop.subject}"},
         JSON.parse(@response.body)
-      )
-    end
-
-    test 'facilitators see filtered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @facilitator,
-        expected_facilitator_name_filter: @facilitator.name
-      )
-    end
-
-    test 'workshop admins see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: create(:workshop_admin),
-        expected_facilitator_name_filter: nil
-      )
-    end
-
-    test 'workshop organizers see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @workshop.organizer,
-        expected_facilitator_name_filter: nil
-      )
-    end
-
-    test 'program managers see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @program_manager,
-        expected_facilitator_name_filter: nil
       )
     end
 
