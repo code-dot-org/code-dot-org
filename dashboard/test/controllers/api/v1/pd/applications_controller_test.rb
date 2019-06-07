@@ -1128,7 +1128,7 @@ module Api::V1::Pd
       # no workshop
       create FACILITATOR_APPLICATION_FACTORY, :locked, status: :accepted
 
-      #create some applications that won't be included in fit_cohort
+      # create some applications that won't be included in fit_cohort
       # not locked
       create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id, status: :accepted
 
