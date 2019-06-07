@@ -59,13 +59,6 @@ const styles = {
     right: 0
     // left handled by media queries for .editor-column
   },
-  mainRtl: {
-    position: 'absolute',
-    marginRight: 15,
-    top: 0,
-    left: 0
-    // right handled by media queries for .editor-column
-  },
   withOverlay: {
     zIndex: OVERLAY_Z_INDEX + 1
   },
@@ -524,7 +517,7 @@ class InstructionsCSF extends React.Component {
 
   render() {
     const mainStyle = [
-      this.props.isRtl ? styles.mainRtl : styles.main,
+      styles.main,
       {
         height: this.props.height
       },
