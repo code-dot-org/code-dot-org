@@ -24,7 +24,8 @@ const DEFAULT_PROPS = {
   noInstructionsWhenCollapsed: true,
   shortInstructions: '',
   hidden: false,
-  isMinecraft: false
+  isMinecraft: false,
+  isRtl: false
 };
 
 describe('TopInstructionsCSP', () => {
