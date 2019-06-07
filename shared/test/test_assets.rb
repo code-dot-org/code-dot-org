@@ -19,7 +19,6 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_assets
-    skip
     @api.ensure_aws_credentials
 
     image_body = 'stub-image-contents'
@@ -144,7 +143,6 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_set_abuse_score
-    skip
     asset_bucket = AssetBucket.new
 
     # create a couple assets without an abuse score
@@ -224,7 +222,7 @@ class AssetsTest < FilesApiTestBase
     end
 
     # set abuse
-    # @api.patch_abuse(15)
+    @api.patch_abuse(15)
 
     # owner can view
     @api.get_object(asset_name)
@@ -264,7 +262,6 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_assets_copy_some
-    skip
     delete_all_assets('assets_test/1/2')
     dest_channel_id = create_channel
     src_api = FilesApiTestHelper.new(current_session, 'assets', @channel_id)
@@ -305,7 +302,6 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_assets_copy_all
-    skip
     # This test creates 2 channels
     delete_all_assets('assets_test/1/2')
     dest_channel_id = create_channel
@@ -353,7 +349,6 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_assets_auth
-    skip
     basename = 'dog.jpg'
     body = 'stub-image-contents'
     content_type = 'image/jpeg'
@@ -384,7 +379,6 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_assets_quota
-    skip
     FilesApi.any_instance.stubs(:max_file_size).returns(5)
     FilesApi.any_instance.stubs(:max_app_size).returns(10)
 
@@ -419,7 +413,6 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_assets_quota_newrelic_logging
-    skip
     FilesApi.any_instance.stubs(:max_file_size).returns(5)
     FilesApi.any_instance.stubs(:max_app_size).returns(10)
     CDO.stub(:newrelic_logging, true) do
@@ -464,7 +457,6 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_asset_last_modified
-    skip
     file, filename = @api.create_temp_file('test.png', 'version 1', 'image/png')
 
     post @channel_id, file
@@ -486,14 +478,12 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_invalid_mime_type_returns_unsupported_media_type
-    skip
     @api.get_object 'filewithinvalidmimetype.asdasdas%25dasdasd'
     assert_equal 415, last_response.status # 415 = Unsupported media type
     assert_newrelic_metrics []
   end
 
   def test_bad_channel_id
-    skip
     get "/v3/assets/undefined"
     assert_equal 400, last_response.status
     assert_newrelic_metrics []

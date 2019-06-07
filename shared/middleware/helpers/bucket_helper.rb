@@ -120,7 +120,6 @@ class BucketHelper
       0
     else
       metadata = response[:metadata]
-
       [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     end
   end
@@ -166,9 +165,6 @@ class BucketHelper
   end
 
   def replace_abuse_score(encrypted_channel_id, filename, abuse_score)
-    puts "abuse_score in replace_abuse_score: "
-    puts abuse_score
-    puts
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename
 
