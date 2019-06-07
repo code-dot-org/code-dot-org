@@ -112,6 +112,11 @@ const styles = {
     float: 'left',
     paddingTop: 6,
     paddingLeft: 30
+  },
+  helpTabsRtl: {
+    float: 'right',
+    paddingTop: 6,
+    paddingRight: 30
   }
 };
 
@@ -518,13 +523,15 @@ class TopInstructionsCSP extends Component {
                 <PaneButton
                   iconClass="fa fa-book"
                   label={i18n.documentation()}
-                  isRtl={false}
+                  isRtl={this.props.isRtl}
                   headerHasFocus={false}
                   onClick={this.handleDocumentationClick}
                   isMinecraft={this.props.isMinecraft}
                 />
               )}
-            <div style={styles.helpTabs}>
+            <div
+              style={this.props.isRtl ? styles.helpTabsRtl : styles.helpTabs}
+            >
               <InstructionsTab
                 className="uitest-instructionsTab"
                 onClick={this.handleInstructionTabClick}
@@ -532,6 +539,7 @@ class TopInstructionsCSP extends Component {
                 text={i18n.instructions()}
                 teacherOnly={teacherOnly}
                 isMinecraft={this.props.isMinecraft}
+                isRtl={this.props.isRtl}
               />
               {isCSDorCSP && displayHelpTab && (
                 <InstructionsTab
@@ -541,6 +549,7 @@ class TopInstructionsCSP extends Component {
                   text={i18n.helpTips()}
                   teacherOnly={teacherOnly}
                   isMinecraft={this.props.isMinecraft}
+                  isRtl={this.props.isRtl}
                 />
               )}
               {isCSDorCSP &&
@@ -553,6 +562,7 @@ class TopInstructionsCSP extends Component {
                     text={feedbackTabText}
                     teacherOnly={teacherOnly}
                     isMinecraft={this.props.isMinecraft}
+                    isRtl={this.props.isRtl}
                   />
                 )}
               {isCSF &&
@@ -565,6 +575,7 @@ class TopInstructionsCSP extends Component {
                     text={i18n.teacherOnly()}
                     teacherOnly={teacherOnly}
                     isMinecraft={this.props.isMinecraft}
+                    isRtl={this.props.isRtl}
                   />
                 )}
             </div>
@@ -575,6 +586,7 @@ class TopInstructionsCSP extends Component {
                   collapsed={this.props.collapsed}
                   onClick={this.handleClickCollapser}
                   teacherOnly={teacherOnly}
+                  isRtl={this.props.isRtl}
                 />
               )}
           </div>
