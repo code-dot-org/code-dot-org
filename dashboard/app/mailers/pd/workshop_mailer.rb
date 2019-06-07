@@ -95,7 +95,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @is_reminder = true
     @pre_survey_url = @workshop.local_summer? ?
       url_for(action: 'new_general', controller: 'pd/workshop_daily_survey', day: 0,
-        enrollment_code: @enrollment.code
+        enrollmentCode: @enrollment.code
       ) :
       pd_new_pre_workshop_survey_url(enrollment_code: @enrollment.code)
     @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
