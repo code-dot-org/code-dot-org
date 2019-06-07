@@ -52,11 +52,22 @@ Then(/^I make a "([^"]*)" project named "([^"]*)"$/) do |project_type, name|
     And I type "#{name}" into "input.project_name"
     And I click selector ".project_save"
     And I wait until element ".project_edit" is visible
-<Erin - you left off here! You need to make this more generic and then use it.>
-    Then I should see title "#{name} - Play Lab"
     And I press "#runButton" using jQuery
     And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until initial thumbnail capture is complete
+  }
+end
+
+Then(/^I report abuse on the project$/) do
+  steps %Q{
+    Then I switch tabs
+    Then I wait until current URL contains "report_abuse"
+    And I type "abuse_reporter@school.edu" into "#uitest-email"
+    And I select the "Other" option in dropdown "uitest-abuse-type"
+    And I type "I just don't like it." into "#uitest-abuse-detail"
+    Then I click selector "#uitest-submit-report-abuse" once I see it
+    Then I wait until current URL contains "support.code.org"
+    Then I switch tabs
   }
 end
 

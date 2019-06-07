@@ -322,7 +322,11 @@ export default class SmallFooter extends React.Component {
     const menuItemElements = this.props.menuItems.map(
       function(item, index) {
         return (
-          <li key={index} style={styles.listItem}>
+          <li
+            key={index}
+            style={styles.listItem}
+            className={`ui-test-${item.key}`}
+          >
             <a
               href={item.link}
               ref={item.copyright ? 'menuCopyright' : undefined}
