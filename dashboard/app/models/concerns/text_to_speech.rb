@@ -193,6 +193,12 @@ module TextToSpeech
     end
   end
 
+  def tts_should_update_contained_properties?
+    return tts_should_update("markdown") ||
+      tts_should_update("questions") ||
+      tts_should_update("answers")
+  end
+
   def tts_should_update_long_instructions?
     relevant_property = tts_long_instructions_override ? 'tts_long_instructions_override' : 'long_instructions'
     return tts_should_update(relevant_property)
@@ -205,8 +211,15 @@ module TextToSpeech
   end
 
   def tts_update
-    tts_upload_to_s3(tts_short_instructions_text) if tts_should_update_short_instructions?
+    # if the level is a DSL-defined level, then it might be contained in a
+    # level and should therefore trigger an update on its containing level
+    if is_a?(DSLDefined) && (tts_should_update_long_instructions? || tts_should_update_contained_properties?)
+      containing_levels.each do |containing_level|
+        containing_level.tts_upload_to_s3(containing_level.tts_long_instructions_text)
+      end
+    end
 
+    tts_upload_to_s3(tts_short_instructions_text) if tts_should_update_short_instructions?
     tts_upload_to_s3(tts_long_instructions_text) if tts_should_update_long_instructions?
 
     if authored_hints && tts_should_update('authored_hints')
