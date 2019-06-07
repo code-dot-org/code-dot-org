@@ -54,7 +54,9 @@ export default class BubbleChoice extends React.Component {
       return <img src={sublevel.thumbnail_url} style={styles.thumbnail} />;
     } else {
       // Render a square-shaped placeholder if we don't have a thumbnail.
-      return <div style={styles.placeholderThumbnail} />;
+      return (
+        <div style={styles.placeholderThumbnail} className="placeholder" />
+      );
     }
   };
 
