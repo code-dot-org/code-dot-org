@@ -133,6 +133,11 @@
       .admin-report-abuse{ style: 'display: none;' }
         = link_to 'Report Abuse', '/report_abuse'
 
+      %br
+      .admin-sharing
+        Sharing disabled?
+        %span.admin-sharing-disabled
+
       #disable-auto-moderation{'style' => ('display: none;' if content_moderation_disabled)}
         %br
         %button{id: "disable-auto-moderation", class: "btn btn-default btn-sm"}
