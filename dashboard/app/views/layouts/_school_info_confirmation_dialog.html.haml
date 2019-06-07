@@ -10,7 +10,7 @@
 - current_user_school_info = current_user.last_complete_school_info
 
 - script_data = {}
-- script_data[:formUrl] = registration_url('user')
+- script_data[:formUrl] = '/api/v1/user_school_infos'
 - script_data[:authTokenName] = request_forgery_protection_token.to_s
 - script_data[:authTokenValue] = form_authenticity_token
 - script_data[:existingSchoolInfo] = {}
