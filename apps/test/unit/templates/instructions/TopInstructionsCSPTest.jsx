@@ -6,6 +6,8 @@ import {UnconnectedTopInstructionsCSP as TopInstructionsCSP} from '@cdo/apps/tem
 const DEFAULT_PROPS = {
   isEmbedView: false,
   hasContainedLevels: false,
+  puzzleNumber: 2,
+  stageTotal: 0,
   height: 200,
   expandedHeight: 300,
   maxHeight: 300,
@@ -19,34 +21,10 @@ const DEFAULT_PROPS = {
   viewAs: 'Teacher',
   readOnlyWorkspace: false,
   serverLevelId: 123,
-  user: 5,
-  teacherMarkdown: 'Some teacher only markdown',
-  noInstructionsWhenCollapsed: true,
-  shortInstructions: '',
-  hidden: false,
-  isMinecraft: false
+  user: 5
 };
 
 describe('TopInstructionsCSP', () => {
-  it('is an empty div if passed the "hidden" property', () => {
-    const wrapper = shallow(
-      <TopInstructionsCSP {...DEFAULT_PROPS} hidden={true} />
-    );
-    expect(wrapper.find('div')).to.have.lengthOf(1);
-  });
-
-  it('is an empty div if there are no instructions to display', () => {
-    const wrapper = shallow(
-      <TopInstructionsCSP
-        {...DEFAULT_PROPS}
-        shortInstructions={null}
-        longInstructions={null}
-        hasContainedLevels={false}
-      />
-    );
-    expect(wrapper.find('div')).to.have.lengthOf(1);
-  });
-
   describe('viewing the Feedback Tab', () => {
     describe('as a teacher', () => {
       it('does not show the feedback tab on a level with no rubric where the teacher is not giving feedback', () => {
@@ -139,88 +117,6 @@ describe('TopInstructionsCSP', () => {
         });
 
         expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(0);
-      });
-    });
-  });
-  describe('viewing the Teacher Instructions Tab', () => {
-    describe('as a teacher', () => {
-      it('does not show the Teacher Instructions tab on a level with no markdown', () => {
-        const wrapper = shallow(
-          <TopInstructionsCSP {...DEFAULT_PROPS} teacherMarkdown={null} />
-        );
-
-        wrapper.setState({
-          tabSelected: 'instructions',
-          feedbacks: [],
-          rubric: null,
-          teacherViewingStudentWork: false,
-          studentId: null,
-          fetchingData: false,
-          token: null
-        });
-
-        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(0);
-      });
-
-      it('shows the Teacher Instructions on a level with markdown for CSF', () => {
-        const wrapper = shallow(
-          <TopInstructionsCSP
-            {...DEFAULT_PROPS}
-            noInstructionsWhenCollapsed={false}
-          />
-        );
-
-        wrapper.setState({
-          tabSelected: 'instructions',
-          feedbacks: [],
-          rubric: null,
-          teacherViewingStudentWork: false,
-          studentId: null,
-          fetchingData: false,
-          token: null
-        });
-
-        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(1);
-      });
-
-      it('does not show the Teacher Instructions on a level with markdown for CSP and CSD', () => {
-        const wrapper = shallow(<TopInstructionsCSP {...DEFAULT_PROPS} />);
-
-        wrapper.setState({
-          tabSelected: 'instructions',
-          feedbacks: [],
-          rubric: null,
-          teacherViewingStudentWork: false,
-          studentId: null,
-          fetchingData: false,
-          token: null
-        });
-
-        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(0);
-      });
-    });
-
-    describe('as a student', () => {
-      it('does not show the Teacher Instructions tab', () => {
-        const wrapper = shallow(
-          <TopInstructionsCSP
-            {...DEFAULT_PROPS}
-            viewAs={'Student'}
-            teacherMarkdown={null}
-          />
-        );
-
-        wrapper.setState({
-          tabSelected: 'instructions',
-          feedbacks: [],
-          rubric: null,
-          teacherViewingStudentWork: false,
-          studentId: 1,
-          fetchingData: false,
-          token: null
-        });
-
-        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(0);
       });
     });
   });

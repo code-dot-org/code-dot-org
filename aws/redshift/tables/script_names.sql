@@ -10,13 +10,11 @@ CREATE TABLE analysis.script_names
 
 INSERT INTO analysis.script_names values
 -- unversioned courses
+(1,  NULL, '20-hour', '20 Hour'),
 (17, NULL, 'course1', 'Course 1'),
 (18, NULL, 'course2', 'Course 2'),	
 (19, NULL, 'course3', 'Course 3'),
-(23, NULL, 'course4', 'Course 4'), 
-(218, NULL, 'coursed-ramp', 'Course D Ramp' ),
-(220, NULL, 'coursee-ramp', 'Course E Ramp' ),
-(227, NULL, 'coursef-ramp', 'Course F Ramp' ),	
+(23, NULL, 'course4', 'Course 4'), 	
 -- versioned courses: CSF
 (236,'coursea-2017','coursea','Course A'),
 (237,'courseb-2017','courseb','Course B'),

@@ -88,12 +88,11 @@ class PaneHeader extends React.Component {
   static propTypes = {
     hasFocus: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    teacherOnly: PropTypes.bool,
-    isMinecraft: PropTypes.bool
+    teacherOnly: PropTypes.bool
   };
 
   render() {
-    let {hasFocus, teacherOnly, style, isMinecraft, ...props} = this.props;
+    let {hasFocus, teacherOnly, style, ...props} = this.props;
 
     // TODO: AnimationTab should likely use components from PaneHeader, at
     // which point purpleHeader style should move in here.
@@ -102,8 +101,7 @@ class PaneHeader extends React.Component {
       ...commonStyles.purpleHeader,
       ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
       ...(teacherOnly && commonStyles.teacherBlueHeader),
-      ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused),
-      ...(isMinecraft && commonStyles.minecraftHeader)
+      ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused)
     };
 
     return <div {...props} style={composedStyle} />;
