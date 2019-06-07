@@ -49,17 +49,6 @@ export default class BubbleChoice extends React.Component {
     })
   };
 
-  renderThumbnail = sublevel => {
-    if (sublevel.thumbnail_url) {
-      return <img src={sublevel.thumbnail_url} style={styles.thumbnail} />;
-    } else {
-      // Render a square-shaped placeholder if we don't have a thumbnail.
-      return (
-        <div style={styles.placeholderThumbnail} className="placeholder" />
-      );
-    }
-  };
-
   render() {
     const {level} = this.props;
 
@@ -70,7 +59,15 @@ export default class BubbleChoice extends React.Component {
         <h2 style={styles.h2}>{i18n.chooseActivity()}</h2>
         {level.sublevels.map(sublevel => (
           <div key={sublevel.id} style={styles.row}>
-            {this.renderThumbnail(sublevel)}
+            {/* Render a square-shaped placeholder if we don't have a thumbnail. */}
+            {sublevel.thumbnail_url ? (
+              <img src={sublevel.thumbnail_url} style={styles.thumbnail} />
+            ) : (
+              <div
+                style={styles.placeholderThumbnail}
+                className="placeholder"
+              />
+            )}
             <div style={styles.column}>
               <span style={styles.title}>{sublevel.title}</span>
             </div>
