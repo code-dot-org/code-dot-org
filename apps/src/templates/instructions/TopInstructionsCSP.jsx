@@ -312,6 +312,16 @@ class TopInstructionsCSP extends Component {
    */
 
   adjustMaxNeededHeight = () => {
+    // if not showing the instructions area the max needed height should be 0
+    if (
+      this.props.hidden ||
+      (!this.props.shortInstructions &&
+        !this.props.longInstructions &&
+        !this.props.hasContainedLevels)
+    ) {
+      return 0;
+    }
+
     let element;
     switch (this.state.tabSelected) {
       case TabType.RESOURCES:
