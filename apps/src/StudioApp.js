@@ -834,7 +834,7 @@ export function makeFooterMenuItems() {
 
   if (userAlreadyReportedAbuse) {
     _.remove(footerMenuItems, function(menuItem) {
-      return menuItem.key === 'reportAbuse';
+      return menuItem.key === 'report-abuse';
     });
   }
 
