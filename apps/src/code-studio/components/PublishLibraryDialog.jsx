@@ -32,6 +32,12 @@ const styles = {
   comment: {
     margin: 4,
     flex: 1
+  },
+  warningMessage: {
+    color: color.red,
+    marginTop: 20,
+    marginLeft: 4,
+    fontSize: 'large'
   }
 };
 
@@ -49,7 +55,8 @@ class PublishLibraryDialog extends React.Component {
     showShareLink: false,
     selectedFunctions: {},
     functionComments: {},
-    shareLink: ''
+    shareLink: '',
+    showWarningMessage: false
   };
 
   componentDidUpdate(prevProps) {
@@ -137,6 +144,14 @@ class PublishLibraryDialog extends React.Component {
     var functionNames = selectedFunctions.map(
       selectedFunction => selectedFunction.name
     );
+    var withoutComments = selectedFunctions.filter(selectedFunction => {
+      return !this.state.functionComments[selectedFunction.name];
+    });
+    if (withoutComments.length > 0) {
+      this.setState({showWarningMessage: true, showShareLink: false});
+      return;
+    }
+    this.setState({showWarningMessage: false});
     var dropletConfig = selectedFunctions.map(selectedFunction => {
       var config = {
         func: this.props.libraryName + '.' + selectedFunction.name,
@@ -190,7 +205,7 @@ class PublishLibraryDialog extends React.Component {
   }
 
   close = () => {
-    this.setState(state => ({showShareLink: false}));
+    this.setState(state => ({showShareLink: false, showWarningMessage: false}));
     this.props.onClose();
   };
 
@@ -213,6 +228,11 @@ class PublishLibraryDialog extends React.Component {
           >
             Publish
           </button>
+          {this.state.showWarningMessage && (
+            <div style={styles.warningMessage}>
+              You must add comments for all shared functions
+            </div>
+          )}
           {this.shareLink()}
         </div>
       </BaseDialog>

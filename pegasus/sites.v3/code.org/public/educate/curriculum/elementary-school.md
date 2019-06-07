@@ -43,7 +43,7 @@ Tens of thousands of teachers have participated and rate our workshops 4.8 out o
 
 ## It's relevant.
 
-Our curriculum was created with the 2017 Computer Science Teachers Association (CSTA) standards</a> in mind, but also includes opportunities to support national Math, English Language Arts, and Science standards. In fact, <a href="https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e", target=_"blank">a recent research study</a> found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching these lessons. Click <a href="https://curriculum.code.org/csf-18/standards/", target=_"blank">here</a> to see how CS Fundamentals lessons support standards.
+Our curriculum was created with the 2017 Computer Science Teachers Association (CSTA) standards</a> in mind, but also includes opportunities to support national Math, English Language Arts, and Science standards. In fact, <a href="https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e", target=_"blank">a recent research study</a> found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching these lessons. Click <a href="https://curriculum.code.org/csf-19/standards/", target=_"blank">here</a> to see how CS Fundamentals lessons support standards.
 
 ### Supported Standards
 
@@ -97,7 +97,7 @@ Courses
 
 <img src="/images/fit-970/CSFimages/Course_Map.png" style="max-width: 100%"/>
 
-For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). Explore the lesson plans and download the 2018 version of the <a href="https://curriculum.code.org/csf/", target=_"blank">curriculum guide for Courses A-F here</a>.
+For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). Explore the lesson plans and download the 2019 version of the <a href="https://curriculum.code.org/csf/", target=_"blank">curriculum guide for Courses A-F here</a>.
 
 If you've been teaching Courses 1-4 and want to know how to transition to teaching Courses A-F, check out our <a href="https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing", target=_"blank">Transition Guide</a>.
 
@@ -105,14 +105,14 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursea-2018'), cta_text: 'View course', lesson_plans: curriculum_url('csf-18/coursea'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course A', ages: 'Recommended for Kindergarten (Supports pre-readers)', description: 'Teaches basic programming concepts such as loops and events. Lessons also teach students to collaborate with others meaningfully, investigate different problem-solving techniques, persist in the face of difficult tasks, and learn about internet safety. At the end of this course, students create their very own custom game or story they can share.
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursea-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursea'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course A', ages: 'Recommended for Kindergarten (Supports pre-readers)', description: 'Teaches basic programming concepts such as loops and events. Lessons also teach students to collaborate with others meaningfully, investigate different problem-solving techniques, persist in the face of difficult tasks, and learn about internet safety. At the end of this course, students create their very own custom game or story they can share.
 '%>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/courseb-2018'), cta_text: 'View course', lesson_plans: curriculum_url('csf-18/courseb'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course B', ages: 'Recommended for 1st grade (Supports pre-readers)', description: 'Closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Covers the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create their very own custom game they can share.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/courseb-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/courseb'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course B', ages: 'Recommended for 1st grade (Supports pre-readers)', description: 'Closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Covers the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create their very own custom game they can share.'%>
 
 [/col-50]
 
@@ -120,13 +120,13 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursec-2018'), cta_text: 'View course', lesson_plans: curriculum_url('csf-18/coursec'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course C', ages: 'Recommended for 2nd grade', description: 'Students will create programs with loops and events. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursec-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursec'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course C', ages: 'Recommended for 2nd grade', description: 'Students will create programs with loops and events. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share.'%>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursed-2018'), cta_text: 'View course', lesson_plans: curriculum_url('csf-18/coursed'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course D', ages: 'Recommended for 3rd grade', description: 'Students develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursed-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursed'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course D', ages: 'Recommended for 3rd grade', description: 'Students develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.' %>
 
 [/col-50]
 
@@ -134,13 +134,13 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursee-2018'), cta_text: 'View course', lesson_plans: curriculum_url('csf-18/coursee'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course E', ages: 'Recommended for 4th grade', description: 'Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. In the second part of the course, students design and create a capstone project they can share.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursee-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursee'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course E', ages: 'Recommended for 4th grade', description: 'Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. In the second part of the course, students design and create a capstone project they can share.' %>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef-2018'), cta_text: 'View course', lesson_plans: curriculum_url('csf-18/coursef'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Recommended for 5th grade', description: 'Students review the use of loops, events, functions, and conditionals before learning about variables and for loops. They will investigate helpful problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursef'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Recommended for 5th grade', description: 'Students review the use of loops, events, functions, and conditionals before learning about variables and for loops. They will investigate helpful problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
 
 [/col-50]
 
@@ -149,15 +149,18 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 # Express Course
 
 <div class="col-50" style="padding-right: 10px;">
-  <a href="<%= CDO.studio_url('/s/pre-express-2018') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width:100%"></a>
+  <a href="<%= CDO.studio_url('/s/pre-express-2019') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width:100%"></a>
   <br>
   <br>
-  <a href="<%= CDO.studio_url('/s/express-2018') %>"><img src="/images/curriculum/course-tile-express.png" style="max-width:100%"></a>
+  <a href="<%= CDO.studio_url('/s/express-2019') %>"><img src="/images/curriculum/course-tile-express.png" style="max-width:100%"></a>
 </div>
 
 [col-50]
 
-CS Fundamentals Express combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple courses in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat concepts for students unnecessarily. This is also our recommended option for students studying computer science on their own, outside of a classroom.
+In addition to courses A-F, CS Fundamentals also offers two “express courses”, which are designed for situations where the teacher is not able to play an active role in engaging students. An express course might be used, for example, if a student is learning CS on her own. 
+
+Express courses do not have unplugged lessons (lessons that do not use a computer), and instead focus on covering the content from their A-F counterparts in a way that can be delivered without a teacher. The table below mapping between courses A-F and the two express courses:
+
 
 [/col-50]
 

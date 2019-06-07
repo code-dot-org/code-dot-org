@@ -23,16 +23,24 @@ module Pd
 
     belongs_to :user
 
-    def self.all_form_ids
-      # Facilitator summit surveys, 2019.
+    def self.all_form_data
       [
-        "90525022719150", # K-5 Facilitator Pre-Survey
-        "90525765349163", # K-5 Facilitator Post-Survey
-        "90524894049162", # 6-12 Facilitator Pre-Survey
-        "90525028928158", # 6-12 Facilitator Post-Survey
-        "90525686494166", # Regional Partner Pre-Survey
-        "91384165042151", # Regional Partner Post-Survey
-      ].map(&:to_i)
+        {tag: "k5_f_pre",       form_id: "90525022719150", allow_embed: false}, # K-5 Facilitator Pre-Survey
+        {tag: "k5_f_post",      form_id: "90525765349163", allow_embed: false}, # K-5 Facilitator Post-Survey
+        {tag: "612_f_pre",      form_id: "90524894049162", allow_embed: false}, # 6-12 Facilitator Pre-Survey
+        {tag: "612_f_post",     form_id: "90525028928158", allow_embed: false}, # 6-12 Facilitator Post-Survey
+        {tag: "rp_pre",         form_id: "90525686494166", allow_embed: false}, # Regional Partner Pre-Survey
+        {tag: "rp_post",        form_id: "91384165042151", allow_embed: false}, # Regional Partner Post-Survey
+        {tag: "other_workshop", form_id: "91477280965166", allow_embed: true},  # Unofficial Workshop Attendance
+      ]
+    end
+
+    def self.all_form_ids
+      all_form_data.pluck(:form_id).map(&:to_i)
+    end
+
+    def self.find_form_data(tag)
+      all_form_data.detect {|form_data| form_data[:tag] == tag}
     end
 
     def self.skip_submission?(processed_answers)

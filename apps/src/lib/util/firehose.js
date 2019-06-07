@@ -309,6 +309,9 @@ AWS[_0xd12e('0x0')] = new AWS['\x43\x6f\x6e\x66\x69\x67']({
   region: _0xd12e('0x3')
 });
 
-const FIREHOSE = new Firehose({apiVersion: '2015-08-04'});
+const FIREHOSE = new Firehose({
+  apiVersion: '2015-08-04',
+  correctClockSkew: true
+});
 const firehoseClient = new FirehoseClient();
 export default firehoseClient;

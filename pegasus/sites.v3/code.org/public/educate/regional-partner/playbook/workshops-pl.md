@@ -123,6 +123,7 @@ Updated guidance for hosting 2019 Local Summer Workshops is now available!
 
 ### Academic Year Workshop Specific
 
+- **[2019-20 Guidelines for Scheduling Academic Year Workshops](https://docs.google.com/document/d/1f9W6qwayfHLmx2a66rRu6MpR0Xb47O7JLomMhKGOEww/edit)**
 - **[2019-2020 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1sJUI1F7r270k8LYMbLBBZwqQho7xJMc0G-YUrfiRJwM/edit?usp=sharing)**
 - **[2018-2019 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1P1IhiMVgGCGZFVaof9bdc7pRKmTK0ZOQTOw0KDkhMxs/edit?ts=5b294bbb)**
 
