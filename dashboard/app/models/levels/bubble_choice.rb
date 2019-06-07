@@ -49,10 +49,18 @@ ruby
   end
 
   def summarize
+    sublevel_summary = sublevels.map do |level|
+      {
+        id: level.id,
+        title: level.display_name || level.name,
+        thumbnail_url: level.try(:thumbnail_url)
+      }
+    end
+
     {
       title: title,
       description: description,
-      sublevels: sublevels
+      sublevels: sublevel_summary
     }
   end
 end
