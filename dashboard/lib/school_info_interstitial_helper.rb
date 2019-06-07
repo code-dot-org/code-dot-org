@@ -4,12 +4,10 @@ module SchoolInfoInterstitialHelper
 
     return false if user.account_age_days < 7
 
-    school_info = user.school_info
-
     # Interstitial should pop up the first time for the teacher if it has been at least 30 days since the teacher signed
     # up for an account AND the teacher hasn’t previously filled out all the fields already (e.g. as part
     # of workshop registration).
-    return false if school_info && school_info.complete?
+    return false if user.last_complete_school_info
 
     if user.last_seen_school_info_interstitial
       days_since_interstitial_seen = (DateTime.now - user.last_seen_school_info_interstitial.to_datetime).to_i
@@ -32,10 +30,9 @@ module SchoolInfoInterstitialHelper
 
     return false if user.user_school_infos.empty?
 
-    school_info = user.last_complete_school_info
+    user_school_info = user.last_complete_user_school_info
+    school_info = user_school_info&.school_info
     return false unless school_info
-
-    user_school_info = UserSchoolInfo.find_by(user: user, school_info: school_info)
 
     check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) &&
       school_info.complete? && school_info.usa?
