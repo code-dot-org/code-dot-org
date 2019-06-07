@@ -17,7 +17,8 @@ export const styles = {
   intro: {
     fontSize: 18,
     fontFamily: "'Gotham 5r', sans-serif",
-    color: color.charcoal
+    color: color.charcoal,
+    paddingRight: 20
   },
   schoolName: {
     color: color.purple,
