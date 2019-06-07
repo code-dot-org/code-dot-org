@@ -102,13 +102,13 @@ Whether you’re brand new to computer science or an experienced tech teacher lo
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd1-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'Problem Solving', description: 'Explore the problem-solving process and the different ways humans and computers solve problems.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd1-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd-19/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'Problem Solving', description: 'Explore the problem-solving process and the different ways humans and computers solve problems.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd2-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Web Development', description: 'Discover the languages powering the web. Build your own websites in HTML and CSS using Web Lab.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd2-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd-19/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Web Development', description: 'Discover the languages powering the web. Build your own websites in HTML and CSS using Web Lab.'%>
 
 [/col-50]
 
@@ -116,13 +116,13 @@ Whether you’re brand new to computer science or an experienced tech teacher lo
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd3-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Animations and Games', description: 'Learn the powerful constructs underlying programming languages. Build interactive games in JavaScript using Game Lab.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd3-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd-19/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Animations and Games', description: 'Learn the powerful constructs underlying programming languages. Build interactive games in JavaScript using Game Lab.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd4-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'The Design Process', description: 'Follow a design process to identify and empathize with problems faced by a target audience. Prototype an app to help solve that problem using App Lab.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd4-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd-19/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'The Design Process', description: 'Follow a design process to identify and empathize with problems faced by a target audience. Prototype an app to help solve that problem using App Lab.'%>
 
 [/col-50]
 
@@ -130,13 +130,13 @@ Whether you’re brand new to computer science or an experienced tech teacher lo
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd5-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Data and Society', description: 'Develop binary representations of different kinds of information. Collect, analyze, visualize, and make automated decisions using data.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd5-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd-19/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Data and Society', description: 'Develop binary representations of different kinds of information. Collect, analyze, visualize, and make automated decisions using data.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd6-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit6/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 6', ages: 'Physical Computing', description: "Explore the relationship between hardware and software, while building interactive projects on Adafruit's Circuit Playground using App Lab."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd6-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd-19/unit6/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 6', ages: 'Physical Computing', description: "Explore the relationship between hardware and software, while building interactive projects on Adafruit's Circuit Playground using App Lab."%>
 
 [/col-50]
 
