@@ -89,7 +89,8 @@ module Pd::Application
       queue_email :confirmation, deliver_now: true
     end
 
-    # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
+    # Queries for locked and (accepted or withdrawn) CSD/CSP facilitator applications
+    # that have filled out the FiT Weekend Registration form.
     # @param [ActiveRecord::Relation<Pd::Application::Facilitator1920Application>] applications_query
     #   (optional) defaults to all
     # @note this is not chainable since it inspects fit_workshop_id from serialized attributes,
