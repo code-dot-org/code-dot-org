@@ -5,14 +5,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
-var instructions = require('../../redux/instructions');
-var color = require('../../util/color');
-var styleConstants = require('../../styleConstants');
-var commonStyles = require('../../commonStyles');
-import ContainedLevel from '../ContainedLevel';
-
-var Instructions = require('./Instructions');
-var HeightResizer = require('./HeightResizer');
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
@@ -24,21 +16,23 @@ import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
 import LegacyButton from '../LegacyButton';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
-import msg from '@cdo/locale';
-
+import i18n from '@cdo/locale';
 import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
-
 import {getOuterHeight, scrollTo, shouldDisplayChatTips} from './utils';
-
 import {levenshtein} from '../../utils';
-import InlineAudio from './InlineAudio';
+import color from '../../util/color';
+import commonStyles from '../../commonStyles';
+import Instructions from './Instructions';
+import styleConstants from '../../styleConstants';
+import {setInstructionsMaxHeightNeeded} from '../../redux/instructions';
 
+var instructions = require('../../redux/instructions');
+
+const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
-const CONTAINED_LEVEL_PADDING = 10;
-const MIN_CONTAINED_LEVEL_HEIGHT = 50;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -58,42 +52,9 @@ const craftStyles = {
   }
 };
 
-const containedLevelStyles = {
-  background: {
-    backgroundColor: color.background_gray,
-    overflowY: 'scroll'
-  },
-  level: {
-    paddingTop: CONTAINED_LEVEL_PADDING,
-    paddingLeft: CONTAINED_LEVEL_PADDING,
-    paddingRight: CONTAINED_LEVEL_PADDING
-  },
-  heightResizer: {
-    backgroundColor: color.background_gray
-  }
-};
-
-const audioStyle = {
-  wrapper: {
-    display: 'flex',
-    justifyContent: 'center',
-    border: '2px solid ' + color.lighter_gray,
-    borderRadius: '4px'
-  },
-  button: {
-    height: '32px',
-    backgroundColor: '#FFFFFF'
-  },
-  buttonImg: {
-    lineHeight: '32px',
-    fontSize: 20
-  }
-};
-
 const styles = {
   main: {
-    position: 'absolute',
-    marginLeft: 15,
+    position: 'relative',
     top: 0,
     right: 0
     // left handled by media queries for .editor-column
@@ -116,24 +77,19 @@ const styles = {
   },
   body: {
     backgroundColor: '#ddd',
-    borderTopRightRadius: 5,
-    borderTopLeftRadius: 5,
     width: '100%'
   },
   leftCol: {
     position: 'absolute',
-    bottom: 0,
+    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
     left: 0,
     marginLeft: 0
   },
   leftColRtl: {
     position: 'absolute',
-    bottom: 0,
+    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
     right: 0,
     marginRight: 0
-  },
-  embedView: {
-    display: 'none'
   },
   collapserButton: {
     position: 'absolute',
@@ -172,16 +128,22 @@ const styles = {
   instructionsWithTipsRtl: {
     width: 'calc(100% - 20px)',
     float: 'left'
-  },
-  audioControls: {
-    paddingTop: 10
   }
 };
 
-class TopInstructions extends React.Component {
+class InstructionsCSF extends React.Component {
   static propTypes = {
+    handleClickCollapser: PropTypes.func,
+    adjustMaxNeededHeight: PropTypes.func,
     overlayVisible: PropTypes.bool,
     skinId: PropTypes.string,
+    isMinecraft: PropTypes.bool.isRequired,
+    inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
+    noVisualization: PropTypes.bool,
+    hideOverlay: PropTypes.func.isRequired,
+    aniGifURL: PropTypes.string,
+    isRtl: PropTypes.bool.isRequired,
+
     hints: PropTypes.arrayOf(
       PropTypes.shape({
         hintId: PropTypes.string.isRequired,
@@ -192,43 +154,33 @@ class TopInstructions extends React.Component {
     ).isRequired,
     hasUnseenHint: PropTypes.bool.isRequired,
     showNextHint: PropTypes.func.isRequired,
-    hasContainedLevels: PropTypes.bool,
-    isEmbedView: PropTypes.bool,
-    isMinecraft: PropTypes.bool.isRequired,
-    aniGifURL: PropTypes.string,
-    height: PropTypes.number.isRequired,
-    expandedHeight: PropTypes.number.isRequired,
-    maxHeight: PropTypes.number.isRequired,
+    hasAuthoredHints: PropTypes.bool.isRequired,
+
     collapsed: PropTypes.bool.isRequired,
+
     shortInstructions: PropTypes.string,
     shortInstructions2: PropTypes.string,
     longInstructions: PropTypes.string,
+
     clearFeedback: PropTypes.func.isRequired,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
       isFailure: PropTypes.bool
     }),
-    hasAuthoredHints: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired,
+
     smallStaticAvatar: PropTypes.string,
     failureAvatar: PropTypes.string,
-    inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
-    noVisualization: PropTypes.bool,
 
     ttsShortInstructionsUrl: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
-    textToSpeechEnabled: PropTypes.bool,
 
-    hideOverlay: PropTypes.func.isRequired,
-    toggleInstructionsCollapsed: PropTypes.func.isRequired,
-    setInstructionsHeight: PropTypes.func.isRequired,
+    height: PropTypes.number.isRequired,
+    maxHeight: PropTypes.number.isRequired,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired
   };
 
   static defaultProps = {
-    hasContainedLevels: false,
-    isEmbedView: false,
     noVisualization: false
   };
 
@@ -246,8 +198,6 @@ class TopInstructions extends React.Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    window.addEventListener('resize', this.adjustMaxNeededHeight);
-
     // Might want to increase the size of our instructions after our icon image
     // has loaded, to make sure the image fits
     $(ReactDOM.findDOMNode(this.icon)).load(
@@ -259,11 +209,7 @@ class TopInstructions extends React.Component {
       }.bind(this)
     );
 
-    const maxNeededHeight = this.adjustMaxNeededHeight();
-
-    // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
-    // adjusts max height.
-    this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+    this.updateRightColumnWidth();
   }
 
   /**
@@ -293,12 +239,57 @@ class TopInstructions extends React.Component {
         promptForHint: false
       });
       if (nextProps.collapsed) {
-        this.handleClickCollapser();
+        this.props.handleClickCollapser();
       }
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
+    this.updateRightColumnWidth();
+
+    const contentContainer = this.instructions.parentElement;
+    const canScroll =
+      contentContainer.scrollHeight > contentContainer.clientHeight;
+    if (canScroll !== this.state.displayScrollButtons) {
+      // see comment above
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({
+        displayScrollButtons: canScroll
+      });
+    }
+
+    const gotNewHint = prevProps.hints.length !== this.props.hints.length;
+    if (gotNewHint) {
+      const images = ReactDOM.findDOMNode(
+        this.instructions
+      ).getElementsByTagName('img');
+      for (let i = 0, image; (image = images[i]); i++) {
+        image.onload = image.onload || this.scrollInstructionsToBottom;
+      }
+    }
+
+    if (this.props.feedback || this.state.promptForHint || gotNewHint) {
+      this.scrollInstructionsToBottom();
+    }
+
+    const minHeight = this.getMinHeight();
+    const maxHeight = this.getMaxHeight();
+    const heightOutOfBounds =
+      this.props.height < minHeight || this.props.height > maxHeight;
+
+    if (heightOutOfBounds) {
+      const newHeight = Math.max(
+        Math.min(this.props.height, maxHeight),
+        minHeight
+      );
+      this.props.setInstructionsRenderedHeight(newHeight);
+      this.props.setInstructionsMaxHeightNeeded(maxHeight);
+    }
+
+    this.props.adjustMaxNeededHeight();
+  }
+
+  updateRightColumnWidth = () => {
     if (
       this.shouldDisplayCollapserButton() &&
       this.getRightColWidth() === undefined
@@ -322,64 +313,16 @@ class TopInstructions extends React.Component {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({rightColWidth});
     }
-
-    this.adjustMaxNeededHeight();
-
-    if (this.instructions) {
-      const contentContainer = this.instructions.parentElement;
-      const canScroll =
-        contentContainer.scrollHeight > contentContainer.clientHeight;
-      if (canScroll !== this.state.displayScrollButtons) {
-        // see comment above
-        // eslint-disable-next-line react/no-did-update-set-state
-        this.setState({
-          displayScrollButtons: canScroll
-        });
-      }
-    }
-
-    const gotNewHint = prevProps.hints.length !== this.props.hints.length;
-    if (gotNewHint) {
-      const images = ReactDOM.findDOMNode(
-        this.instructions
-      ).getElementsByTagName('img');
-      for (let i = 0, image; (image = images[i]); i++) {
-        image.onload = image.onload || this.scrollInstructionsToBottom;
-      }
-    }
-
-    if (this.props.feedback || this.state.promptForHint || gotNewHint) {
-      this.scrollInstructionsToBottom();
-    }
-
-    if (!this.props.collapsed && !prevProps.collapsed) {
-      const minHeight = this.getMinHeight();
-      const maxHeight = this.props.maxHeight;
-      const heightOutOfBounds =
-        this.props.height < minHeight || this.props.height > maxHeight;
-
-      if (heightOutOfBounds) {
-        const newHeight = Math.max(
-          Math.min(this.props.height, maxHeight),
-          minHeight
-        );
-        this.props.setInstructionsRenderedHeight(newHeight);
-      }
-    }
-  }
+  };
 
   /**
    * @param {boolean} collapsed whether or not the height should be
    * caluclated as if the instructions are collapsed. Defaults to
    * current collapsed state.
    * @returns {number} The minimum height of the top instructions (which is just
-   * the height of the little icon and the height of the resizer if we're not
-   * collapsed
+   * the height of the little icon if we're not collapsed
    */
   getMinHeight(collapsed = this.props.collapsed) {
-    if (this.containedLevel) {
-      return MIN_CONTAINED_LEVEL_HEIGHT;
-    }
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
       !collapsed && this.scrollButtons
@@ -387,9 +330,11 @@ class TopInstructions extends React.Component {
         : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
+    const instructionsHeight = getOuterHeight(this.instructions, true);
+    //If not collapsed we want to show either the whole instructions or at least 200 of it
     const minInstructionsHeight = this.props.collapsed
-      ? getOuterHeight(this.instructions, true)
-      : 0;
+      ? instructionsHeight
+      : Math.min(200, instructionsHeight);
 
     const domNode = $(ReactDOM.findDOMNode(this));
     const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
@@ -397,79 +342,43 @@ class TopInstructions extends React.Component {
     const leftColHeight = minIconHeight;
     const middleColHeight = minInstructionsHeight;
     const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
-
-    // Only include resizer height if resizer is available
-    const resizerHeight = collapsed ? 0 : RESIZER_HEIGHT;
-
     return (
       Math.max(leftColHeight, middleColHeight, rightColHeight) +
-      resizerHeight +
-      margins
+      margins +
+      HEADER_HEIGHT +
+      RESIZER_HEIGHT
     );
   }
 
   /**
-   * Given a prospective delta, determines how much we can actually change the
-   * height (accounting for min/max) and changes height by that much.
-   * @param {number} delta
-   * @returns {number} How much we actually changed
+   * @param {boolean} collapsed whether or not the height should be
+   * calculated as if the instructions are collapsed. Defaults to
+   * current collapsed state.
+   * @returns {number} The max height of the top instructions
    */
-  handleHeightResize = (delta = 0) => {
-    const minHeight = this.getMinHeight();
-    const currentHeight = this.props.height;
+  getMaxHeight(collapsed = this.props.collapsed) {
+    const collapseButtonHeight = getOuterHeight(this.collapser, true);
+    const scrollButtonsHeight =
+      !collapsed && this.scrollButtons
+        ? this.scrollButtons.getWrappedInstance().getMinHeight()
+        : 0;
 
-    let newHeight = Math.max(minHeight, currentHeight + delta);
-    if (this.containedLevel) {
-      const maxContainedLevelHeight =
-        getOuterHeight(this.containedLevel, true) +
-        RESIZER_HEIGHT +
-        CONTAINED_LEVEL_PADDING;
-      newHeight = Math.min(newHeight, maxContainedLevelHeight);
-    } else {
-      newHeight = Math.min(newHeight, this.props.maxHeight);
-    }
+    const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
+    const instructionsHeight = getOuterHeight(this.instructions, true);
 
-    this.props.setInstructionsRenderedHeight(newHeight);
-    return newHeight - currentHeight;
-  };
+    const domNode = $(ReactDOM.findDOMNode(this));
+    const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
 
-  /**
-   * Calculate how much height it would take to show top instructions with our
-   * entire instructions visible and update store with this value.
-   * @returns {number}
-   */
-  adjustMaxNeededHeight = () => {
-    const minHeight = this.getMinHeight();
-    const instructionsContent = this.instructions;
-    const maxNeededHeight =
-      (this.props.hasContainedLevels
-        ? getOuterHeight(this.containedLevel, true) + CONTAINED_LEVEL_PADDING
-        : getOuterHeight(instructionsContent, true)) +
-      (this.props.collapsed ? 0 : RESIZER_HEIGHT);
-
-    this.props.setInstructionsMaxHeightNeeded(
-      Math.max(minHeight, maxNeededHeight)
+    const leftColHeight = minIconHeight;
+    const middleColHeight = instructionsHeight;
+    const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
+    return (
+      Math.max(leftColHeight, middleColHeight, rightColHeight) +
+      margins +
+      HEADER_HEIGHT +
+      RESIZER_HEIGHT
     );
-    return maxNeededHeight;
-  };
-
-  /**
-   * Handle a click to our collapser icon by changing our collapse state, and
-   * updating our rendered height.
-   */
-  handleClickCollapser = () => {
-    const nextCollapsed = !this.props.collapsed;
-    this.props.toggleInstructionsCollapsed();
-
-    // adjust rendered height based on next collapsed state
-    if (nextCollapsed) {
-      this.props.setInstructionsRenderedHeight(
-        this.getMinHeight(nextCollapsed)
-      );
-    } else {
-      this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
-    }
-  };
+  }
 
   /**
    * @return {Element} scrollTarget
@@ -488,10 +397,6 @@ class TopInstructions extends React.Component {
    */
   scrollInstructionsToBottom() {
     const instructions = this.instructions;
-    if (!instructions) {
-      // If we have a contained level instead of instructions, do nothing
-      return;
-    }
     const contentContainer = instructions.parentElement;
     if (instructions.children.length > 1) {
       const lastChild = instructions.children[instructions.children.length - 1];
@@ -511,7 +416,7 @@ class TopInstructions extends React.Component {
         promptForHint: true
       });
       if (this.props.collapsed) {
-        this.handleClickCollapser();
+        this.props.handleClickCollapser();
       }
     }
   };
@@ -608,16 +513,18 @@ class TopInstructions extends React.Component {
     return this.state.rightColWidth[this.getCurrentRightColWidthProperty()];
   }
 
-  render() {
-    const resizerHeight = this.props.collapsed ? 0 : RESIZER_HEIGHT;
-    const topInstructionsHeight = this.props.height - resizerHeight;
+  legacyButtonClicked = () => {
+    this.props.hideOverlay();
+    this.props.setInstructionsRenderedHeight(this.getMinHeight());
+    this.props.adjustMaxNeededHeight();
+  };
 
+  render() {
     const mainStyle = [
       this.props.isRtl ? styles.mainRtl : styles.main,
       {
-        height: topInstructionsHeight
+        height: this.props.height
       },
-      this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
       this.props.overlayVisible && styles.withOverlay
     ];
@@ -630,54 +537,12 @@ class TopInstructions extends React.Component {
       ? this.props.ttsShortInstructionsUrl
       : this.props.ttsLongInstructionsUrl;
 
-    // We use ttsLongInstructionsUrl for contained level so we should recompute whether to show audio controls.
-    const showAudioControls =
-      this.props.textToSpeechEnabled && this.props.ttsLongInstructionsUrl;
-
-    if (this.props.hasContainedLevels) {
-      return (
-        <div style={mainStyle} className="editor-column">
-          <div
-            style={{
-              ...containedLevelStyles.background,
-              height: topInstructionsHeight,
-              display: 'flex',
-              justifyContent: 'space-around'
-            }}
-          >
-            <div style={containedLevelStyles.level} className="contained-level">
-              <ContainedLevel
-                ref={c => {
-                  this.containedLevel = c;
-                }}
-              />
-            </div>
-            {showAudioControls && (
-              <div style={styles.audioControls}>
-                <InlineAudio
-                  src={this.props.ttsLongInstructionsUrl}
-                  style={audioStyle}
-                />
-              </div>
-            )}
-          </div>
-          {!this.props.collapsed && !this.props.isEmbedView && (
-            <HeightResizer
-              position={this.props.height}
-              onResize={this.handleHeightResize}
-              style={containedLevelStyles.heightResizer}
-            />
-          )}
-        </div>
-      );
-    }
-
     const leftColWidth =
       (this.getAvatar() ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
 
     return (
-      <div style={mainStyle} className="editor-column">
+      <div style={mainStyle}>
         <ThreeColumns
           styles={{
             container: [
@@ -688,7 +553,7 @@ class TopInstructions extends React.Component {
           }}
           leftColWidth={leftColWidth}
           rightColWidth={this.getRightColWidth() || 0}
-          height={this.props.height - resizerHeight}
+          height={this.props.height - HEADER_HEIGHT - RESIZER_HEIGHT}
         >
           <div
             style={[
@@ -735,7 +600,7 @@ class TopInstructions extends React.Component {
                   this.instructions = c;
                 }}
                 longInstructions={markdown}
-                onResize={this.adjustMaxNeededHeight}
+                onResize={this.props.adjustMaxNeededHeight}
                 inputOutputTable={
                   this.props.collapsed ? undefined : this.props.inputOutputTable
                 }
@@ -752,8 +617,11 @@ class TopInstructions extends React.Component {
               {this.props.overlayVisible && (
                 <div>
                   <hr />
-                  <LegacyButton type="primary" onClick={this.props.hideOverlay}>
-                    {msg.dialogOK()}
+                  <LegacyButton
+                    type="primary"
+                    onClick={this.legacyButtonClicked}
+                  >
+                    {i18n.dialogOK()}
                   </LegacyButton>
                 </div>
               )}
@@ -798,7 +666,7 @@ class TopInstructions extends React.Component {
                 !this.shouldDisplayCollapserButton() && commonStyles.hidden
               ]}
               collapsed={this.props.collapsed}
-              onClick={this.handleClickCollapser}
+              onClick={this.props.handleClickCollapser}
             />
             {!this.props.collapsed && (
               <ScrollButtons
@@ -817,18 +685,15 @@ class TopInstructions extends React.Component {
                 getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}
                 height={
-                  this.props.height - styles.scrollButtons.top - resizerHeight
+                  this.props.height -
+                  HEADER_HEIGHT -
+                  RESIZER_HEIGHT -
+                  styles.scrollButtons.top
                 }
               />
             )}
           </div>
         </ThreeColumns>
-        {!this.props.collapsed && !this.props.isEmbedView && (
-          <HeightResizer
-            position={this.props.height}
-            onResize={this.handleHeightResize}
-          />
-        )}
       </div>
     );
   }
@@ -838,35 +703,30 @@ module.exports = connect(
   function propsFromStore(state) {
     return {
       overlayVisible: state.instructions.overlayVisible,
-      ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
-      ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
-      hasContainedLevels: state.pageConstants.hasContainedLevels,
-      hints: state.authoredHints.seenHints,
-      hasUnseenHint: state.authoredHints.unseenHints.length > 0,
       skinId: state.pageConstants.skinId,
-      showNextHint: state.pageConstants.showNextHint,
-      isEmbedView: state.pageConstants.isEmbedView,
       isMinecraft: !!state.pageConstants.isMinecraft,
       aniGifURL: state.pageConstants.aniGifURL,
+      inputOutputTable: state.pageConstants.inputOutputTable,
+      isRtl: state.isRtl,
+      noVisualization: state.pageConstants.noVisualization,
+      feedback: state.instructions.feedback,
+      collapsed: state.instructions.collapsed,
+      hints: state.authoredHints.seenHints,
+      hasUnseenHint: state.authoredHints.unseenHints.length > 0,
+      hasAuthoredHints: state.instructions.hasAuthoredHints,
+      showNextHint: state.pageConstants.showNextHint,
       height: state.instructions.renderedHeight,
-      expandedHeight: state.instructions.expandedHeight,
       maxHeight: Math.min(
         state.instructions.maxAvailableHeight,
         state.instructions.maxNeededHeight
       ),
-      collapsed: state.instructions.collapsed,
+      ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
+      ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
       shortInstructions: state.instructions.shortInstructions,
       shortInstructions2: state.instructions.shortInstructions2,
       longInstructions: state.instructions.longInstructions,
-      hasAuthoredHints: state.instructions.hasAuthoredHints,
-      feedback: state.instructions.feedback,
-      isRtl: state.isRtl,
       smallStaticAvatar: state.pageConstants.smallStaticAvatar,
-      failureAvatar: state.pageConstants.failureAvatar,
-      inputOutputTable: state.pageConstants.inputOutputTable,
-      noVisualization: state.pageConstants.noVisualization,
-      textToSpeechEnabled:
-        state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1
+      failureAvatar: state.pageConstants.failureAvatar
     };
   },
   function propsFromDispatch(dispatch) {
@@ -874,23 +734,17 @@ module.exports = connect(
       hideOverlay: function() {
         dispatch(instructions.hideOverlay());
       },
-      toggleInstructionsCollapsed: function() {
-        dispatch(instructions.toggleInstructionsCollapsed());
-      },
-      setInstructionsHeight: function(height) {
-        dispatch(instructions.setInstructionsHeight(height));
-      },
       setInstructionsRenderedHeight(height) {
         dispatch(instructions.setInstructionsRenderedHeight(height));
       },
-      setInstructionsMaxHeightNeeded(height) {
-        dispatch(instructions.setInstructionsMaxHeightNeeded(height));
-      },
       clearFeedback(height) {
         dispatch(instructions.setFeedback(null));
+      },
+      setInstructionsMaxHeightNeeded(height) {
+        dispatch(setInstructionsMaxHeightNeeded(height));
       }
     };
   },
   null,
   {withRef: true}
-)(Radium(TopInstructions));
+)(Radium(InstructionsCSF));

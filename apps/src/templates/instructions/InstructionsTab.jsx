@@ -2,6 +2,16 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
 
+const craftStyles = {
+  text: {
+    color: color.white
+  },
+  highlighted: {
+    borderBottom: '2px solid ' + color.white,
+    color: color.white
+  }
+};
+
 const styles = {
   tab: {
     marginRight: 5,
@@ -34,7 +44,8 @@ export default class InstructionsTab extends Component {
     onClick: PropTypes.func.isRequired,
     style: PropTypes.object,
     text: PropTypes.string.isRequired,
-    teacherOnly: PropTypes.bool
+    teacherOnly: PropTypes.bool,
+    isMinecraft: PropTypes.bool
   };
 
   render() {
@@ -44,9 +55,13 @@ export default class InstructionsTab extends Component {
       ...(this.props.selected
         ? this.props.teacherOnly
           ? styles.teacherHighlighted
+          : this.props.isMinecraft
+          ? craftStyles.highlighted
           : styles.highlighted
         : this.props.teacherOnly
         ? styles.teacherText
+        : this.props.isMinecraft
+        ? craftStyles.text
         : styles.text)
     };
     return (
