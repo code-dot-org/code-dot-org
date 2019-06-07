@@ -32,21 +32,22 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Trial and error is a great method, but you can also solve the problem by dividing the 90 degree angle into thirds.\\n\\n**90 / 3 = _____**\",\r\n  \"hint_id\": \"4-5_Artist_5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Trial and error is a great method, but you can also solve the problem by dividing the 90 degree angle into thirds.\\n\\n**90 / 3 = \\\\_\\\\_\\\\_\\\\_\\\\_**\",\"hint_id\":\"4-5_Artist_5_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/687a4c499faf882837234649fdc6f1b1/4-5 Artist 5.mp3\"}]",
     "hint_prompt_attempts_threshold": 9,
-    "contained_level_names": null,
-    "preload_asset_list": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_type_hints": "false",
-    "discard_background": "false"
+    "discard_background": "false",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-10-03 20:29:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-10-03 20:29:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-06-04 00:55:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1

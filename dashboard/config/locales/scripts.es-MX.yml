@@ -1010,9 +1010,9 @@ es-MX:
             Packets and Making a Reliable Internet:
               name: 'Paquetes: cómo hacer que Internet sea confiable'
             Practice PT - Cybersecurity Innovations:
-              name: PT de práctica - Innovaciones en ciberseguridad
+              name: 'PT de práctica: innovaciones en ciberseguridad'
             Practice PT - The Internet and Society:
-              name: PT de práctica - Internet y la sociedad
+              name: 'PT de práctica: Internet y la sociedad'
             Public Key Crypto:
               name: Criptografía de claves públicas
             Routers and Redundancy:
@@ -1031,15 +1031,15 @@ es-MX:
           description_short: Enseñar programación funcional a través de álgebra
           stages:
             Big Game - Animation:
-              name: El gran juego - Animación
+              name: 'El gran juego: animación'
             Big Game - Booleans:
-              name: El gran juego - Valores booleanos
+              name: 'El gran juego: valores booleanos'
             Big Game - Collision Detection:
-              name: El gran juego - Detección de colisiones
+              name: 'El gran juego: detección de colisiones'
             Big Game - Player Movement:
-              name: El gran juego - Movimiento de jugadores
+              name: 'El gran juego: movimiento de jugadores'
             Big Game - Variables:
-              name: El gran juego - Variables
+              name: 'El gran juego: variables'
             Booleans:
               name: Valores booleanos
             Defining Variables:
@@ -1144,7 +1144,7 @@ es-MX:
             Dance Lab:
               name: Laboratorio de baile
             Mini Rubric:
-              name: Mini rúbrica
+              name: Minirúbrica
             Pluralsight Test:
               name: Prueba de Pluralsight
             Externals Optionally Displayed as Unplugged:
@@ -1976,7 +1976,7 @@ es-MX:
             Getting Started:
               name: Primeros pasos
             Planning For the Future:
-              name: Planificación a futuro
+              name: Planificación para el futuro
             Sharing Student Work:
               name: Compartir el trabajo de los estudiantes
         csp1-2017:
@@ -1984,8 +1984,8 @@ es-MX:
           description: Esta unidad explora los desafíos técnicos y las preguntas que
             surgen de la necesidad de representar información digital en computadoras,
             y transferirla entre personas y dispositivos informáticos. Luego, la unidad
-            explora la estructura y el diseño de Internet y las implicaciones de esas
-            decisiones relacionadas con el diseño.
+            explora la estructura y el diseño de Internet, y las implicaciones de
+            esas decisiones relacionadas con el diseño.
           description_short: Explora los desafíos de representar información como
             bits y cómo llevar esos bits de un lugar a otro.
           stages:
@@ -2004,7 +2004,7 @@ es-MX:
             Personal Innovations:
               name: Innovaciones personales
             Practice PT - The Internet and Society:
-              name: PT de práctica - Internet y la sociedad
+              name: 'PT de práctica: Internet y la sociedad'
             Routers and Redundancy:
               name: Enrutadores y redundancia
             Sending Binary Messages:
@@ -2166,7 +2166,7 @@ es-MX:
             Identifying People with Data:
               name: Identificar personas mediante datos
             Practice PT - Cybersecurity Innovations:
-              name: PT de práctica - Innovaciones en ciberseguridad
+              name: 'PT de práctica: innovaciones en ciberseguridad'
             Practice PT - Propose an Innovation:
               name: PT de práctica - Proponer una innovación
             Public Key Crypto:
@@ -3023,7 +3023,7 @@ es-MX:
             Robot Running the Farm:
               name: Robot que dirige la granja
             Unplugged Conditionals with Loops:
-              name: 'Sin conexión: condiciones con bucles'
+              name: 'Sin conexión: condicionales con bucles'
         alltheplcthings:
           stages:
             Balancing Teachers and Tools:
@@ -3076,9 +3076,9 @@ es-MX:
                 básicos de secuencias y depuración, así como algunos comandos simples.
                 Al final de la lección, la clase crea una versión en línea de la imagen
                 que diseñaron en la lección anterior.
-              description_teacher: Se presenta el Laboratorio de juegos, el ambiente
-                de programación de esta unidad, a los estudiantes, que comienzan a
-                usarlo para colocar formas en la pantalla. Aprenderán los conceptos
+              description_teacher: Se presenta a los estudiantes el Laboratorio de
+                juegos, el ambiente de programación de esta unidad, quienes comienzan
+                a usarlo para colocar formas en la pantalla. Aprenderán los conceptos
                 básicos de secuencias y depuración, así como algunos comandos simples.
                 Al final de la lección, los estudiantes podrán programar imágenes
                 como las que crearon con la herramienta de dibujo de la lección anterior.
@@ -3150,14 +3150,14 @@ es-MX:
                 bloque isTouching, la clase intercambia ideas sobre otras formas en
                 que dos sprites podrían interactuar. Luego, usan isTouching para hacer
                 que un sprite presione a otro en la pantalla antes de practicar con
-                los cuatro bloques de colisión (colisionar, desplazar, rebotar y bounceOff).
+                los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
               description_teacher: Los estudiantes programan sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
-                bloque `isTouching`, los estudiantes intercambian ideas sobre otras
-                formas en que dos sprites podrían interactuar. Luego, usan `isTouching`
+                bloque `estáTocando`, los estudiantes intercambian ideas sobre otras
+                formas en que dos sprites podrían interactuar. Luego, usan `estáTocando`
                 para hacer que un sprite presione a otro en la pantalla antes de practicar
                 con los cuatro bloques de colisión (`colisionar`, `desplazar`, `rebotar`
-                y `bounceOff`).
+                y `rebotarEn`).
             Functions:
               name: Funciones
               description_student: Esta lección trata las funciones como una forma
@@ -3245,7 +3245,7 @@ es-MX:
                 una posición sin algún punto de referencia compartido. En la actividad
                 principal, los estudiantes exploran una herramienta del Laboratorio
                 de juegos que les permite colocar formas de manera interactiva en
-                la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para
+                la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para
                 enseñar a un compañero a dibujar una imagen oculta con esta herramienta,
                 un desafío que está muy presente cuando los estudiantes programan
                 en el Laboratorio de aplicaciones. Los estudiantes pueden crear su
@@ -3257,7 +3257,7 @@ es-MX:
                 una posición sin algún punto de referencia compartido. En la actividad
                 principal, los estudiantes exploran una herramienta del Laboratorio
                 de juegos que les permite colocar formas de manera interactiva en
-                la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para
+                la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para
                 enseñar a un compañero a dibujar una imagen oculta con esta herramienta,
                 un desafío que está muy presente cuando los estudiantes programan
                 en el Laboratorio de aplicaciones. Los estudiantes pueden crear su
@@ -3395,7 +3395,7 @@ es-MX:
                 comando keyDown() que aprendieron ayer, la clase aprende sobre otros
                 comandos de entrada de teclado y formas de utilizar la entrada de
                 ratón.
-              description_teacher: En esta lección los estudiantes continúan explorando
+              description_teacher: En esta lección, los estudiantes continúan explorando
                 formas de usar sentencias condicionales para recibir información del
                 usuario. Además del sencillo comando `keyDown()` que aprendieron ayer,
                 los estudiantes aprenden sobre otros comandos de entrada de teclado
@@ -3410,9 +3410,9 @@ es-MX:
                 en base a sentencias booleanas cada vez más complejas y observa cómo
                 los condicionales pueden afectar el flujo de un programa.
               description_teacher: |-
-                En esta lección se presentan los valores y la lógica booleanos, así como las sentencias condicionales, a los estudiantes. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
+                En esta lección, se presentan los valores y la lógica booleanos a los estudiantes, además de las sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
 
-                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
+                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares, pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
 
                 Finalmente, revelamos los condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa mediante la incorporación de sentencias booleanas.
             Project - Interactive Card:
@@ -3435,7 +3435,7 @@ es-MX:
                 propios juegos con la guía de proyectos de las dos lecciones anteriores
                 para orientar su proyecto. Ya sea individualmente o en parejas, los
                 estudiantes primero decidirán el tipo de juego que quieren crear,
-                inspirándose en un conjunto de juegos de muestra. Luego, completarán
+                y se inspiran en un conjunto de juegos de muestra. Luego, completarán
                 una guía de proyecto en blanco donde describirán el comportamiento
                 del juego y analizarán las variables, los sprites y las funciones
                 que necesitarán crear. En Code Studio, una serie de niveles les indica
@@ -3557,9 +3557,9 @@ es-MX:
               name: 'Encuesta anónima de estudiante: realizar el examen AP'
         csd1-2017:
           title: CSD Unidad 1 - Resolución de problemas ('17-'18)
-          description_short: "  Aprende cómo los humanos trabajan con computadoras
-            para resolver problemas."
-          description: " \r\nLa Unidad 1 es una introducción muy interactiva y colaborativa
+          description_short: Aprende cómo los humanos trabajan con computadoras para
+            resolver problemas.
+          description: "\r\nLa Unidad 1 es una introducción muy interactiva y colaborativa
             al campo de las ciencias de la computación, enmarcada dentro de una búsqueda
             más amplia orientada a resolver problemas. Practicarás el uso de un proceso
             de resolución de problemas para abordar una serie de desafíos y escenarios
@@ -3673,7 +3673,7 @@ es-MX:
                 por el docente, enumera las entradas y salidas del dispositivo asignado.
                 Al principio de la actividad, los estudiantes deben enfocarse en entradas
                 y salidas físicas más obvias (por ejemplo, un teclado como entrada
-                o una pantalla como salida) pero los debates posteriores llevan a
+                o una pantalla como salida), pero los debates posteriores llevan a
                 los estudiantes a considerar ejemplos menos obvios (por ejemplo, que
                 una pantalla táctil es tanto una entrada y salida, o que Internet
                 puede servir como entrada y salida). A lo largo de la lección, el
@@ -3725,7 +3725,7 @@ es-MX:
             Apps and Problem Solving:
               name: Aplicaciones y resolución de problemas
               description_student: 'Esta lección cubre los aspectos de entrada y salida
-                de las computadoras en un contexto relevante y familiar para los estudiantes,
+                de las computadoras en un contexto relevante y familiar para los estudiantes:
                 el de las aplicaciones. La clase evalúa varias aplicaciones web para
                 analizar los problemas específicos que fueron diseñados para resolverse,
                 las entradas que necesitan para trabajar y las salidas que proporcionan
@@ -3734,12 +3734,13 @@ es-MX:
                 en la sociedad. '
               description_teacher: 'Esta lección cubre los aspectos de entrada y salida
                 de las computadoras en un contexto que es relevante y familiar para
-                los estudiantes: aplicaciones. Los estudiantes se reúnen en parejas
-                y evalúan varias aplicaciones web para analizar los problemas específicos
-                que fueron diseñados para resolverse, las entradas que necesitan para
-                trabajar y las salidas que proporcionan a los usuarios. La clase concluye
-                con observaciones de estas aplicaciones, así como una discusión dirigida
-                por el docente sobre el impacto de las aplicaciones en la sociedad. '
+                los estudiantes: el de las aplicaciones. Los estudiantes se reúnen
+                en parejas y evalúan varias aplicaciones web para analizar los problemas
+                específicos que fueron diseñados para resolverse, las entradas que
+                necesitan para trabajar y las salidas que proporcionan a los usuarios.
+                La clase concluye con observaciones de estas aplicaciones, así como
+                un debate dirigido por el docente sobre el impacto de las aplicaciones
+                en la sociedad. '
             Project - Propose an App:
               name: Proyecto - Propuesta de aplicación
               description_student: Para concluir el estudio del proceso de resolución
@@ -3901,14 +3902,14 @@ es-MX:
               name: Laboratorio de juegos
         csd2-2017:
           title: CSD Unidad 2 - Desarrollo web ('17-'18)
-          description_short: "  Aprende a crear tu propio sitio web en el Laboratorio
+          description_short: " Aprende a crear tu propio sitio web en el Laboratorio
             web."
-          description: " En la Unidad 2, aprenderás cómo crear y compartir el contenido
+          description: En la Unidad 2, aprenderás cómo crear y compartir el contenido
             en tus propias páginas web. Después de decidir qué contenido deseas compartir
             con los demás, aprenderás a estructurar y diseñar tus páginas mediante
             HTML y CSS. También practicarás valiosas habilidades de programación,
             como depurar y comentar. Al final de la unidad, tendrás un sitio web personal
-            que podrás publicar en Internet."
+            que podrás publicar en Internet.
           stages:
             new stage:
               name: nueva etapa
@@ -3958,7 +3959,7 @@ es-MX:
                 otras personas, y luego observa varios ejemplos de páginas de redes
                 sociales para ver qué tipos de información personal se pueden compartir
                 de manera intencional o no. Finalmente, la clase presenta un conjunto
-                de pautas a seguir a la hora de publicar información en línea.
+                de pautas por seguir a la hora de publicar información en línea.
               description_teacher: "Una vez que los estudiantes han pensado en el
                 contenido real que se incluirá en sus sitios web personales, esta
                 lección toma distancia del proyecto de la unidad (publicación de un
@@ -4114,8 +4115,8 @@ es-MX:
                 que han aprendido.
             Intellectual Property and Images:
               name: Propiedad intelectual e imágenes
-              description_student: Esta lección explica cómo usar tipos de soporte,
-                como imágenes, videos o música creados por otros, en un sitio web
+              description_student: Esta lección explica cómo usar en un sitio web
+                tipos de soporte, como imágenes, videos o música creados por otros,
                 respetando los derechos del creador de esos soportes. Después de estudiar
                 las licencias de Creative Commons por primera vez, la clase aprende
                 cómo agregar imágenes a las páginas web y otorgar las atribuciones
@@ -4151,7 +4152,7 @@ es-MX:
                 estas clases, los estudiantes agregan más estilos a la página web
                 del Four Seasons, y luego los utilizan para dar estilo a sus sitios
                 web personales.
-              description_teacher: En esta lección los estudiantes primero aprenden
+              description_teacher: En esta lección, los estudiantes primero aprenden
                 cómo especificar colores personalizados mediante valores RGB (rojo,
                 verde, azul). Luego, aplican estos colores a una nueva página web
                 del Four Seasons, que usa clases de CSS. A través de las clases CSS,
@@ -4256,8 +4257,8 @@ es-MX:
                 experimentará diseños a través de los ojos de otra persona.
               description_teacher: "Los diseñadores deben comprender las necesidades
                 de sus usuarios para crear productos útiles. A partir de un juego
-                de rol en que los estudiantes adoptan el rol de otra persona y reaccionan
-                según ese perfil de usuario a una serie de productos, esta lección
+                de rol en donde los estudiantes adoptan el rol de otra persona y reaccionan
+                según ese perfil de usuario ante una serie de productos, esta lección
                 los alienta a pensar en cómo diseñar para otra persona. A cada estudiante
                 se le asigna un perfil de usuario que describe a una persona, que
                 luego usan para elegir los productos adecuados, criticar el diseño
@@ -4499,10 +4500,10 @@ es-MX:
                 de una aplicación.
               description_teacher: 'Hasta este punto, los estudiantes se han centrado
                 en el diseño para usuarios que, en cierta medida, no son cercanos.
-                La conexión con un usuario final nunca ha sido directa sino a través
+                La conexión con un usuario final nunca ha sido directa, sino a través
                 de generación de ideas, perfiles o comentarios de texto. Esta distancia
                 está pensada para ayudar a los estudiantes a no tener preconceptos
-                cuando piensan en los usuarios. Pero, para obtener información directamente
+                cuando piensan en los usuarios. Pero para obtener información directamente
                 de un usuario real, los estudiantes deben confiar en sus compañeros
                 de clase. En esta lección, los estudiantes se unen en parejas para
                 convertirse en usuarios (y diseñadores), lo que les permite entrevistar
@@ -5374,7 +5375,7 @@ es-MX:
               name: The Circuit Playground
               description_student: Conoce el Circuit Playground, el tablero de circuitos
                 que se utilizará a lo largo de esta unidad. Con el Laboratorio de
-                aplicaciones podrás desarrollar programas que utilicen el Circuit
+                aplicaciones, podrás desarrollar programas que utilicen el Circuit
                 Playground para generar resultados.
               description_teacher: En esta lección, los estudiantes tendrán su primera
                 oportunidad de escribir programas que utilicen el Circuit Playground.
@@ -5410,7 +5411,7 @@ es-MX:
               name: Bucles Para
               description_student: La clase aprende sobre la repetición de instrucciones
                 con un _bucle desde_, primero al controlar un "robot" a través de
-                una red, y luego en el Laboratorio de aplicaciones.
+                una red, y luego, en el Laboratorio de aplicaciones.
               description_teacher: En esta lección, los estudiantes conocen el _bucle
                 desde_ como una manera de repetir un código un cierto número de veces.
                 Los estudiantes comienzan con una actividad sin conexión donde utilizan
@@ -5419,7 +5420,7 @@ es-MX:
                 programas que dependen de una repetición mediante un _bucle desde_.
             Lists and For Loops:
               name: Listas y bucles 'desde'
-              description_student: Al combinar _listas_ y _bucles desde_ puedes escribir
+              description_student: Al combinar _listas_ y _bucles desde_, puedes escribir
                 código que impacta en cada elemento de una lista, independientemente
                 de su longitud. La clase utiliza esta estructura para escribir programas
                 que procesan todos los elementos de las listas, incluida la lista
@@ -5434,22 +5435,23 @@ es-MX:
                 aplicarán esto con la lista `colorLed` en el tablero. '
             Timed Loops:
               name: Bucles cronometrados
-              description_student: En esta lección nos apoyamos en los conocimientos
+              description_student: En esta lección, nos apoyamos en los conocimientos
                 de los estudiantes acerca de los bucles 'desde' para aprender sobre
                 una estructura más sofisticada llamada bucle cronometrado. A diferencia
                 de los bucles 'desde', puedes controlar la rapidez con que se repite
                 un bucle cronometrado, y se puede ejecutar otro código (como los controladores
                 de eventos) entre las repeticiones del bucle. Esto nos permite crear
-                animaciones interesantes que se repiten infinitamente, mientras aún
-                se permite la ejecución de otro código junto con él.
-              description_teacher: En esta lección nos apoyamos en los conocimientos
+                animaciones interesantes que se repiten infinitamente, mientras que
+                se sigue permitiendo la ejecución de otro código junto con él.
+              description_teacher: En esta lección, nos apoyamos en los conocimientos
                 de los estudiantes acerca de los _bucles desde_ para aprender sobre
                 una estructura más sofisticada llamada _bucle cronometrado_. A diferencia
                 de los _bucles desde_, puedes controlar la rapidez con que se repite
                 un _bucle cronometrado_, y se puede ejecutar otro código (como los
                 controladores de eventos) entre las repeticiones del bucle. Esto nos
                 permite crear animaciones interesantes que se repiten infinitamente,
-                mientras aún se permite la ejecución de otro código junto con él.
+                mientras que se sigue permitiendo la ejecución de otro código junto
+                con él.
             'Project: Board Output':
               name: 'Proyecto: salida del tablero'
               description_student: Los estudiantes toman lo que han aprendido en el
@@ -5618,7 +5620,7 @@ es-MX:
                 que forman canciones simples.
             Arrays and For Loops:
               name: Arreglos y bucles 'desde'
-              description_student: Al combinar _listas_ y _bucles desde_ puedes escribir
+              description_student: Al combinar _listas_ y _bucles desde_, puedes escribir
                 código que impacta en cada elemento de una lista, independientemente
                 de su longitud. La clase utiliza esta estructura para escribir programas
                 que procesan todos los elementos de las listas, incluida la lista
@@ -5674,7 +5676,7 @@ es-MX:
               description_teacher: A la hora de preparar el proyecto final de este
                 capítulo, los estudiantes aprenderán cómo desarrollar un prototipo
                 de un objeto físico que incluya un Circuit Playground. Mediante una
-                guía de planificación de proyectos modelados, y materiales baratos
+                guía de planificación de proyectos modelados y materiales baratos
                 fáciles de conseguir, como cartulina y cinta adhesiva, los estudiantes
                 aprenderán a conectar un par de circuitos simples y crear prototipos
                 que puedan comunicar el diseño previsto de un producto.
@@ -5715,7 +5717,7 @@ es-MX:
               name: The Circuit Playground
               description_student: Conoce el Circuit Playground, el tablero de circuitos
                 que se utilizará a lo largo de esta unidad. Con el Laboratorio de
-                aplicaciones podrás desarrollar programas que utilicen el Circuit
+                aplicaciones, podrás desarrollar programas que utilicen el Circuit
                 Playground para generar resultados.
               description_teacher: En esta lección, los estudiantes tendrán su primera
                 oportunidad de escribir programas que utilicen el Circuit Playground.
@@ -5753,23 +5755,23 @@ es-MX:
             Getting Properties_:
               name: Obtener propiedades
               description_student: Esta lección presenta a los estudiantes el bloque
-                getProperty, que les permite acceder a las propiedades de diferentes
+                obtenerPropiedad, que les permite acceder a las propiedades de diferentes
                 elementos a través del código. Los estudiantes primero usan el bloque
                 para practicar y determinar lo que el usuario ha ingresado en varios
-                elementos de la interfaz de usuario. Luego, los estudiantes usan getProperty
-                y setProperty junto con el patrón del contador para que los elementos
-                se muevan a través de la pantalla. También se presentan el deslizador,
-                un nuevo elemento de pantalla, y onChange, un nuevo disparador de
-                eventos.
+                elementos de la interfaz de usuario. Luego, los estudiantes usan obtenerPropiedad
+                y establecerPropiedad junto con el patrón del contador para que los
+                elementos se muevan a través de la pantalla. También se presenta el
+                deslizador, un nuevo elemento de pantalla, y enCambio, un nuevo disparador
+                de eventos.
               description_teacher: Esta lección presenta a los estudiantes el bloque
-                `getProperty`, que les permite acceder a las propiedades de diferentes
+                `obtenerPropiedad`, que les permite acceder a las propiedades de diferentes
                 elementos a través del código. Los estudiantes primero usan el bloque
                 para practicar y determinar lo que el usuario ha ingresado en varios
-                elementos de la interfaz de usuario. Luego, los estudiantes usan `getProperty`
-                y `setProperty` junto con el patrón del contador para que los elementos
-                se muevan a través de la pantalla. También se presentan el deslizador,
-                un nuevo elemento de pantalla, y `onChange`, un nuevo disparador de
-                eventos.
+                elementos de la interfaz de usuario. Luego, los estudiantes usan `obtenerPropiedad`
+                y `establecerPropiedad` junto con el patrón del contador para que
+                los elementos se muevan a través de la pantalla. También se presenta
+                el deslizador, un nuevo elemento de pantalla, y `enCambio`, un nuevo
+                disparador de eventos.
             Analog Input_:
               name: Entrada analógica
               description_student: Escribe programas que respondan al ambiente a través
@@ -5837,7 +5839,7 @@ es-MX:
                 que forman canciones simples.
             Arrays and For Loops_:
               name: Arreglos y bucles 'desde'
-              description_student: Al combinar _listas_ y _bucles desde_ puedes escribir
+              description_student: Al combinar _listas_ y _bucles desde_, puedes escribir
                 código que impacta en cada elemento de una lista, independientemente
                 de su longitud. La clase utiliza esta estructura para escribir programas
                 que procesan todos los elementos de las listas, incluida la lista
@@ -5893,7 +5895,7 @@ es-MX:
               description_teacher: A la hora de preparar el proyecto final de este
                 capítulo, los estudiantes aprenderán cómo desarrollar un prototipo
                 de un objeto físico que incluya un Circuit Playground. Mediante una
-                guía de planificación de proyectos modelados, y materiales baratos
+                guía de planificación de proyectos modelados y materiales baratos
                 fáciles de conseguir, como cartulina y cinta adhesiva, los estudiantes
                 aprenderán a conectar un par de circuitos simples y crear prototipos
                 que puedan comunicar el diseño previsto de un producto.
@@ -6039,7 +6041,7 @@ es-MX:
                 para garantizar que el sistema funciona según lo previsto. En el debate
                 de cierre, la clase revisa las ventajas y desventajas de los diferentes
                 sistemas. Hablan sobre los puntos en común entre los sistemas, reconocen
-                que hay muchas soluciones posibles para este problema y lo importante
+                que hay muchas soluciones posibles para este problema, y lo importante
                 es que todos usen el mismo sistema para comunicarse.
             ASCII and Binary Representation:
               name: ASCII y representación binaria
@@ -6538,7 +6540,7 @@ es-MX:
         csppostsurvey-staging:
           title: "[Deprecated] Área de preparación de la encuesta de fin de curso
             de CSP"
-          description: Se movió a /s/csp-post-survey.  Destruir luego del 05.05.17
+          description: Se movió a /s/csp-post-survey. Destruir luego del 05.05.17
           stages:
             CSP Student Post Survey Staging:
               name: Preparación de la encuesta final para estudiantes de CSP
@@ -6583,8 +6585,8 @@ es-MX:
             de la Computación de Code.org. Para completar esta encuesta, demorarás
             unos 15 minutos. Tus respuestas son privadas y anónimas, es decir que
             tu docente podrá ver los resultados anónimos acumulados para toda la clase.
-            Los resultados son fundamentales para tu docente y para que Code.org mantenga
-            y mejore el curso. Gracias por tu tiempo y consideración.
+            Los resultados son fundamentales para tu docente, y para que Code.org
+            mantenga y mejore el curso. Gracias por tu tiempo y consideración.
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -8108,10 +8110,10 @@ es-MX:
               name: 'Lección 1: Introducción al Laboratorio de aplicaciones'
           title: Introducción al Laboratorio de aplicaciones
           description_short: Crea tu propia aplicación en JavaScript mediante programación
-            en bloque o texto. Si ya has programado algo con bloques, llevar tus habilidades
+            en bloque o texto. Si ya has programado algo con bloques, lleva tus habilidades
             al siguiente nivel.
           description: Crea tu propia aplicación en JavaScript mediante programación
-            en bloque o texto. Si ya has programado algo con bloques, llevar tus habilidades
+            en bloque o texto. Si ya has programado algo con bloques, lleva tus habilidades
             al siguiente nivel.
         e-f-ramp:
           stages:
@@ -8674,6 +8676,8 @@ es-MX:
               name: Implementación de la encuesta final de CSP de 2019
             CSD post course survey 2019 staging:
               name: Implementación de la encuesta final de CSD de 2019
+            Place for testing crazy stuff:
+              name: Un lugar para probar cosas locas
           title: Todas las encuestas
           description_short: Un lugar para implementar y probar las encuestas de Code.org
         k1hoc2017:
@@ -9076,7 +9080,7 @@ es-MX:
                 una posición sin algún punto de referencia compartido. En la actividad
                 principal, los estudiantes exploran una herramienta del Laboratorio
                 de juegos que les permite colocar formas de manera interactiva en
-                la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para
+                la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para
                 enseñar a un compañero a dibujar una imagen oculta con esta herramienta,
                 un desafío que está muy presente cuando los estudiantes programan
                 en el Laboratorio de aplicaciones. Los estudiantes pueden crear su
@@ -9088,7 +9092,7 @@ es-MX:
                 una posición sin algún punto de referencia compartido. En la actividad
                 principal, los estudiantes exploran una herramienta del Laboratorio
                 de juegos que les permite colocar formas de manera interactiva en
-                la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para
+                la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para
                 enseñar a un compañero a dibujar una imagen oculta con esta herramienta,
                 un desafío que está muy presente cuando los estudiantes programan
                 en el Laboratorio de aplicaciones. Los estudiantes pueden crear su
@@ -9101,9 +9105,9 @@ es-MX:
                 básicos de secuencias y depuración, así como algunos comandos simples.
                 Al final de la lección, la clase crea una versión en línea de la imagen
                 que diseñaron en la lección anterior.
-              description_teacher: Se presenta el Laboratorio de juegos, el ambiente
-                de programación de esta unidad, a los estudiantes, que comienzan a
-                usarlo para colocar formas en la pantalla. Aprenderán los conceptos
+              description_teacher: Se presenta a los estudiantes el Laboratorio de
+                juegos, el ambiente de programación de esta unidad, quienes comienzan
+                a usarlo para colocar formas en la pantalla. Aprenderán los conceptos
                 básicos de secuencias y depuración, así como algunos comandos simples.
                 Al final de la lección, los estudiantes podrán programar imágenes
                 como las que crearon con la herramienta de dibujo de la lección anterior.
@@ -9192,9 +9196,9 @@ es-MX:
                 en base a sentencias booleanas cada vez más complejas y observa cómo
                 los condicionales pueden afectar el flujo de un programa.
               description_teacher: |-
-                En esta lección se presentan los valores y la lógica booleanos, así como las sentencias condicionales, a los estudiantes. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
+                En esta lección, se presentan los valores y la lógica booleanos a los estudiantes, además de las sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
 
-                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
+                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares, pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
 
                 Finalmente, revelamos los condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa mediante la incorporación de sentencias booleanas.
             Conditionals:
@@ -9238,7 +9242,7 @@ es-MX:
                 comando keyDown() que aprendieron ayer, la clase aprende sobre otros
                 comandos de entrada de teclado y formas de utilizar la entrada de
                 ratón.
-              description_teacher: En esta lección los estudiantes continúan explorando
+              description_teacher: En esta lección, los estudiantes continúan explorando
                 formas de usar sentencias condicionales para recibir información del
                 usuario. Además del sencillo comando `keyDown()` que aprendieron ayer,
                 los estudiantes aprenden sobre otros comandos de entrada de teclado
@@ -9310,14 +9314,14 @@ es-MX:
                 bloque isTouching, la clase intercambia ideas sobre otras formas en
                 que dos sprites podrían interactuar. Luego, usan isTouching para hacer
                 que un sprite presione a otro en la pantalla antes de practicar con
-                los cuatro bloques de colisión (colisionar, desplazar, rebotar y bounceOff).
+                los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
               description_teacher: Los estudiantes programan sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
-                bloque `isTouching`, los estudiantes intercambian ideas sobre otras
-                formas en que dos sprites podrían interactuar. Luego, usan `isTouching`
+                bloque `estáTocando`, los estudiantes intercambian ideas sobre otras
+                formas en que dos sprites podrían interactuar. Luego, usan `estáTocando`
                 para hacer que un sprite presione a otro en la pantalla antes de practicar
                 con los cuatro bloques de colisión (`colisionar`, `desplazar`, `rebotar`
-                y `bounceOff`).
+                y `rebotarEn`).
             Functions:
               name: Funciones
               description_student: Esta lección trata las funciones como una forma
@@ -9389,7 +9393,7 @@ es-MX:
                 propios juegos con la guía de proyectos de las dos lecciones anteriores
                 para orientar su proyecto. Ya sea individualmente o en parejas, los
                 estudiantes primero decidirán el tipo de juego que quieren crear,
-                inspirándose en un conjunto de juegos de muestra. Luego, completarán
+                y se inspiran en un conjunto de juegos de muestra. Luego, completarán
                 una guía de proyecto en blanco donde describirán el comportamiento
                 del juego y analizarán las variables, los sprites y las funciones
                 que necesitarán crear. En Code Studio, una serie de niveles les indica
@@ -9402,15 +9406,18 @@ es-MX:
             CS Discoveries End of Semester Survey:
               name: Encuesta de fin de semestre de Descubrimientos de Ciencias de
                 la Computación
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
         csd2-2018:
           title: CSD Unidad 2 - Desarrollo web ('18-'19)
-          description: " En la Unidad 2, aprenderás cómo crear y compartir el contenido
+          description: En la Unidad 2, aprenderás cómo crear y compartir el contenido
             en tus propias páginas web. Después de decidir qué contenido deseas compartir
             con los demás, aprenderás a estructurar y diseñar tus páginas mediante
             HTML y CSS. También practicarás valiosas habilidades de programación,
             como depurar y comentar. Al final de la unidad, tendrás un sitio web personal
-            que podrás publicar en Internet."
-          description_short: "  Aprende a crear tu propio sitio web en el Laboratorio
+            que podrás publicar en Internet.
+          description_short: " Aprende a crear tu propio sitio web en el Laboratorio
             web."
           stages:
             Exploring Websites:
@@ -9494,7 +9501,7 @@ es-MX:
                 otras personas, y luego observa varios ejemplos de páginas de redes
                 sociales para ver qué tipos de información personal se pueden compartir
                 de manera intencional o no. Finalmente, la clase presenta un conjunto
-                de pautas a seguir a la hora de publicar información en línea.
+                de pautas por seguir a la hora de publicar información en línea.
               description_teacher: "Una vez que los estudiantes han pensado en el
                 contenido real que se incluirá en sus sitios web personales, esta
                 lección toma distancia del proyecto de la unidad (publicación de un
@@ -9527,8 +9534,8 @@ es-MX:
                 que han aprendido.
             Intellectual Property and Images:
               name: Propiedad intelectual e imágenes
-              description_student: Esta lección explica cómo usar tipos de soporte,
-                como imágenes, videos o música creados por otros, en un sitio web
+              description_student: Esta lección explica cómo usar en un sitio web
+                tipos de soporte, como imágenes, videos o música creados por otros,
                 respetando los derechos del creador de esos soportes. Después de estudiar
                 las licencias de Creative Commons por primera vez, la clase aprende
                 cómo agregar imágenes a las páginas web y otorgar las atribuciones
@@ -9616,7 +9623,7 @@ es-MX:
                 estas clases, los estudiantes agregan más estilos a la página web
                 del Four Seasons, y luego los utilizan para dar estilo a sus sitios
                 web personales.
-              description_teacher: En esta lección los estudiantes primero aprenden
+              description_teacher: En esta lección, los estudiantes primero aprenden
                 cómo especificar colores personalizados mediante valores RGB (rojo,
                 verde, azul). Luego, aplican estos colores a una nueva página web
                 del Four Seasons, que usa clases de CSS. A través de las clases CSS,
@@ -9639,6 +9646,9 @@ es-MX:
                 revisar la rúbrica y reflexionar sobre su proceso. Para cerrar la
                 unidad, compartirán sus proyectos y también un resumen del proceso
                 que siguieron para llegar a ese diseño final.\r\n"
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
         coursea-2018:
           title: Curso A (2018)
           assignment_family_title: Curso A
@@ -10238,6 +10248,9 @@ es-MX:
               name: Circuitos y prototipos físicos
             'Project: Prototype an Innovation':
               name: 'Proyecto: crear el prototipo de una innovación'
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
         coursee-2018:
           title: Curso E (2018)
           assignment_family_title: Curso E
@@ -10686,8 +10699,8 @@ es-MX:
           description: Esta unidad explora los desafíos técnicos y las preguntas que
             surgen de la necesidad de representar información digital en computadoras,
             y transferirla entre personas y dispositivos informáticos. Luego, la unidad
-            explora la estructura y el diseño de Internet y las implicaciones de esas
-            decisiones relacionadas con el diseño.
+            explora la estructura y el diseño de Internet, y las implicaciones de
+            esas decisiones relacionadas con el diseño.
           description_short: Explora los desafíos de representar información como
             bits y cómo llevar esos bits de un lugar a otro.
           stages:
@@ -10722,14 +10735,14 @@ es-MX:
             HTTP and Abstraction:
               name: HTTP y abstracción
             Practice PT - The Internet and Society:
-              name: PT de práctica - Internet y la sociedad
+              name: 'PT de práctica: Internet y la sociedad'
             Unit 1 Chapter 2 Assessment:
               name: Evaluación del Capítulo 2 de la Unidad 1
             Sending Text:
               name: Envío de texto
         csd1-2018:
           title: CSD Unidad 1 - Resolución de problemas ('18-'19)
-          description: " \r\nLa Unidad 1 es una introducción muy interactiva y colaborativa
+          description: "\r\nLa Unidad 1 es una introducción muy interactiva y colaborativa
             al campo de las ciencias de la computación, enmarcada dentro de una búsqueda
             más amplia orientada a resolver problemas. Practicarás el uso de un proceso
             de resolución de problemas para abordar una serie de desafíos y escenarios
@@ -10737,8 +10750,8 @@ es-MX:
             generan, almacenan y procesan información para ayudar a las personas a
             resolver problemas. La unidad concluye con un proyecto en el que diseñas
             una aplicación que ayuda a resolver un problema de tu elección.\r\n"
-          description_short: "  Aprende cómo los humanos trabajan con computadoras
-            para resolver problemas."
+          description_short: Aprende cómo los humanos trabajan con computadoras para
+            resolver problemas.
           stages:
             CS Discoveries Pre-survey:
               name: Encuesta previa de Descubrimientos de Ciencias de la Computación
@@ -10846,7 +10859,7 @@ es-MX:
                 por el docente, enumera las entradas y salidas del dispositivo asignado.
                 Al principio de la actividad, los estudiantes deben enfocarse en entradas
                 y salidas físicas más obvias (por ejemplo, un teclado como entrada
-                o una pantalla como salida) pero los debates posteriores llevan a
+                o una pantalla como salida), pero los debates posteriores llevan a
                 los estudiantes a considerar ejemplos menos obvios (por ejemplo, que
                 una pantalla táctil es tanto una entrada y salida, o que Internet
                 puede servir como entrada y salida). A lo largo de la lección, el
@@ -10899,7 +10912,7 @@ es-MX:
             Apps and Problem Solving:
               name: Aplicaciones y resolución de problemas
               description_student: 'Esta lección cubre los aspectos de entrada y salida
-                de las computadoras en un contexto relevante y familiar para los estudiantes,
+                de las computadoras en un contexto relevante y familiar para los estudiantes:
                 el de las aplicaciones. La clase evalúa varias aplicaciones web para
                 analizar los problemas específicos que fueron diseñados para resolverse,
                 las entradas que necesitan para trabajar y las salidas que proporcionan
@@ -10908,12 +10921,13 @@ es-MX:
                 en la sociedad. '
               description_teacher: 'Esta lección cubre los aspectos de entrada y salida
                 de las computadoras en un contexto que es relevante y familiar para
-                los estudiantes: aplicaciones. Los estudiantes se reúnen en parejas
-                y evalúan varias aplicaciones web para analizar los problemas específicos
-                que fueron diseñados para resolverse, las entradas que necesitan para
-                trabajar y las salidas que proporcionan a los usuarios. La clase concluye
-                con observaciones de estas aplicaciones, así como una discusión dirigida
-                por el docente sobre el impacto de las aplicaciones en la sociedad. '
+                los estudiantes: el de las aplicaciones. Los estudiantes se reúnen
+                en parejas y evalúan varias aplicaciones web para analizar los problemas
+                específicos que fueron diseñados para resolverse, las entradas que
+                necesitan para trabajar y las salidas que proporcionan a los usuarios.
+                La clase concluye con observaciones de estas aplicaciones, así como
+                un debate dirigido por el docente sobre el impacto de las aplicaciones
+                en la sociedad. '
             Project - Propose an App:
               name: Proyecto - Propuesta de aplicación
               description_student: Para concluir el estudio del proceso de resolución
@@ -10936,7 +10950,7 @@ es-MX:
             Apps and Storage:
               name: Aplicaciones y almacenamiento
               description_student: 'Esta lección cubre los aspectos de entrada y salida
-                de las computadoras en un contexto relevante y familiar para los estudiantes,
+                de las computadoras en un contexto relevante y familiar para los estudiantes:
                 el de las aplicaciones. La clase evalúa varias aplicaciones web para
                 analizar los problemas específicos que fueron diseñados para resolverse,
                 las entradas que necesitan para trabajar y las salidas que proporcionan
@@ -10990,8 +11004,8 @@ es-MX:
                 experimentará diseños a través de los ojos de otra persona.
               description_teacher: "Los diseñadores deben comprender las necesidades
                 de sus usuarios para crear productos útiles. A partir de un juego
-                de rol en que los estudiantes adoptan el rol de otra persona y reaccionan
-                según ese perfil de usuario a una serie de productos, esta lección
+                de rol en donde los estudiantes adoptan el rol de otra persona y reaccionan
+                según ese perfil de usuario ante una serie de productos, esta lección
                 los alienta a pensar en cómo diseñar para otra persona. A cada estudiante
                 se le asigna un perfil de usuario que describe a una persona, que
                 luego usan para elegir los productos adecuados, criticar el diseño
@@ -11062,10 +11076,10 @@ es-MX:
                 de una aplicación.
               description_teacher: 'Hasta este punto, los estudiantes se han centrado
                 en el diseño para usuarios que, en cierta medida, no son cercanos.
-                La conexión con un usuario final nunca ha sido directa sino a través
+                La conexión con un usuario final nunca ha sido directa, sino a través
                 de generación de ideas, perfiles o comentarios de texto. Esta distancia
                 está pensada para ayudar a los estudiantes a no tener preconceptos
-                cuando piensan en los usuarios. Pero, para obtener información directamente
+                cuando piensan en los usuarios. Pero para obtener información directamente
                 de un usuario real, los estudiantes deben confiar en sus compañeros
                 de clase. En esta lección, los estudiantes se unen en parejas para
                 convertirse en usuarios (y diseñadores), lo que les permite entrevistar
@@ -11232,6 +11246,9 @@ es-MX:
                 presentar su proceso de desarrollo de aplicaciones, incluido el problema
                 que se propusieron resolver; las formas en que han incorporado los
                 comentarios de las pruebas, y sus planes para el futuro.
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
         csd5-2018:
           title: CSP Unidad 5 - Los datos y la sociedad ('18-'19)
           description: La Unidad 5 trata sobre la importancia de los datos a la hora
@@ -11289,7 +11306,7 @@ es-MX:
                 para garantizar que el sistema funciona según lo previsto. En el debate
                 de cierre, la clase revisa las ventajas y desventajas de los diferentes
                 sistemas. Hablan sobre los puntos en común entre los sistemas, reconocen
-                que hay muchas soluciones posibles para este problema y lo importante
+                que hay muchas soluciones posibles para este problema, y lo importante
                 es que todos usen el mismo sistema para comunicarse.
             ASCII and Binary Representation:
               name: ASCII y representación binaria
@@ -11551,6 +11568,9 @@ es-MX:
                 para hacer recomendaciones a algunos compañeros de clase. Los estudiantes
                 realizan una revisión en conjunto y hacen las mejoras necesarias en
                 sus proyectos antes de preparar una presentación para la clase.
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
         csp2-2018:
           title: CSP Unidad 2 - Información digital ('18-'19)
           description: Esta unidad explora las formas en que se codifica, representa
@@ -11649,6 +11669,8 @@ es-MX:
               name: Creación de funciones con parámetros
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp-explore-2018:
           title: Explorar - Preparación de AP Performance Task ('18-'19)
           description: Estas lecciones buscan ayudarte a comprender, preparar y realizar
@@ -11670,6 +11692,8 @@ es-MX:
               name: PT de exploración - Completar la tarea
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp-create-2018:
           title: Crear - Preparación de AP Performance Task ('18-'19)
           description: Estas lecciones buscan ayudarte a comprender, preparar y realizar
@@ -11689,6 +11713,8 @@ es-MX:
               name: Preparación de PT de creación - Planificar
             Create PT - Complete the Task:
               name: PT de creación - Completar la tarea
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp4-2018:
           title: CSP Unidad 4 - Grandes datos y privacidad ('18-'19)
           description: El mundo en el que vivimos, repleto de datos, introduce muchas
@@ -11731,6 +11757,8 @@ es-MX:
               name: Evaluación de la Unidad 4
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp5-2018:
           title: CSP Unidad 5 - Desarrollo de aplicaciones ('18-'19)
           description: Esta unidad continúa la presentación de los conceptos fundamentales
@@ -11794,6 +11822,8 @@ es-MX:
               name: "¡Participa en un estudio longitudinal!"
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csppostap-2018:
           title: Post AP - Herramientas de datos ('18-'19)
           description: "En el primer capítulo de esta unidad, los alumnos desarrollan
@@ -11852,6 +11882,8 @@ es-MX:
               name: Evaluación del Capítulo 2 de la Unidad 2
             Chapter 1 Assessment:
               name: Evaluación del Capítulo 1
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         spritelab:
           stages:
             'Fish Tank: Creating Sprites':
@@ -13068,8 +13100,6 @@ es-MX:
               name: Internet
             Crowdsourcing:
               name: Colaboración abierta
-            Concept Practice with Minecraft:
-              name: Mirando hacia el Futuro con Minecraft
             Editing Behaviors:
               name: Editar comportamientos
             Virtual Pet with Sprite Lab:
@@ -13078,6 +13108,8 @@ es-MX:
               name: Fiesta de baile
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Condicionales en Minecraft: Voyage Aquatic'
+            Concept Practice with Minecraft:
+              name: Mirando hacia el Futuro con Minecraft
         csd1-2019:
           title: CSD Unidad 1 - La resolución de problemas y la computación ('19-'20)
           description: "La unidad sobre la resolución de problemas y la computación
@@ -13089,8 +13121,8 @@ es-MX:
             y procesan información para ayudar a las personas a resolver problemas.
             La unidad concluye con un proyecto en el que diseñas una aplicación que
             ayuda a resolver un problema de tu elección.\r\n"
-          description_short: "  Aprende cómo los humanos trabajan con computadoras
-            para resolver problemas."
+          description_short: Aprende cómo los humanos trabajan con computadoras para
+            resolver problemas.
           stages:
             CS Discoveries Pre-survey:
               name: Encuesta previa de Descubrimientos de Ciencias de la Computación
@@ -13198,7 +13230,7 @@ es-MX:
                 por el docente, enumera las entradas y salidas del dispositivo asignado.
                 Al principio de la actividad, los estudiantes deben enfocarse en entradas
                 y salidas físicas más obvias (por ejemplo, un teclado como entrada
-                o una pantalla como salida) pero los debates posteriores llevan a
+                o una pantalla como salida), pero los debates posteriores llevan a
                 los estudiantes a considerar ejemplos menos obvios (por ejemplo, que
                 una pantalla táctil es tanto una entrada y salida, o que Internet
                 puede servir como entrada y salida). A lo largo de la lección, el
@@ -13230,7 +13262,7 @@ es-MX:
             Apps and Storage:
               name: Aplicaciones y almacenamiento
               description_student: 'Esta lección cubre los aspectos de entrada y salida
-                de las computadoras en un contexto relevante y familiar para los estudiantes,
+                de las computadoras en un contexto relevante y familiar para los estudiantes:
                 el de las aplicaciones. La clase evalúa varias aplicaciones web para
                 analizar los problemas específicos que fueron diseñados para resolverse,
                 las entradas que necesitan para trabajar y las salidas que proporcionan
@@ -13586,13 +13618,13 @@ es-MX:
               name: nueva etapa
         csd2-2019:
           title: CSD Unidad 2 - Desarrollo web ('19-'20)
-          description: " En la Unidad 2, aprenderás cómo crear y compartir el contenido
+          description: En la Unidad 2, aprenderás cómo crear y compartir el contenido
             en tus propias páginas web. Después de decidir qué contenido deseas compartir
             con los demás, aprenderás a estructurar y diseñar tus páginas mediante
             HTML y CSS. También practicarás valiosas habilidades de programación,
             como depurar y comentar. Al final de la unidad, tendrás un sitio web personal
-            que podrás publicar en Internet."
-          description_short: "  Aprende a crear tu propio sitio web en el Laboratorio
+            que podrás publicar en Internet.
+          description_short: " Aprende a crear tu propio sitio web en el Laboratorio
             web."
           stages:
             Exploring Websites:
@@ -13676,7 +13708,7 @@ es-MX:
                 otras personas, y luego observa varios ejemplos de páginas de redes
                 sociales para ver qué tipos de información personal se pueden compartir
                 de manera intencional o no. Finalmente, la clase presenta un conjunto
-                de pautas a seguir a la hora de publicar información en línea.
+                de pautas por seguir a la hora de publicar información en línea.
               description_teacher: "Una vez que los estudiantes han pensado en el
                 contenido real que se incluirá en sus sitios web personales, esta
                 lección toma distancia del proyecto de la unidad (publicación de un
@@ -13709,8 +13741,8 @@ es-MX:
                 que han aprendido.
             Intellectual Property and Images:
               name: Propiedad intelectual e imágenes
-              description_student: Esta lección explica cómo usar tipos de soporte,
-                como imágenes, videos o música creados por otros, en un sitio web
+              description_student: Esta lección explica cómo usar en un sitio web
+                tipos de soporte, como imágenes, videos o música creados por otros,
                 respetando los derechos del creador de esos soportes. Después de estudiar
                 las licencias de Creative Commons por primera vez, la clase aprende
                 cómo agregar imágenes a las páginas web y otorgar las atribuciones
@@ -13798,7 +13830,7 @@ es-MX:
                 estas clases, los estudiantes agregan más estilos a la página web
                 del Four Seasons, y luego los utilizan para dar estilo a sus sitios
                 web personales.
-              description_teacher: En esta lección los estudiantes primero aprenden
+              description_teacher: En esta lección, los estudiantes primero aprenden
                 cómo especificar colores personalizados mediante valores RGB (rojo,
                 verde, azul). Luego, aplican estos colores a una nueva página web
                 del Four Seasons, que usa clases de CSS. A través de las clases CSS,
@@ -13857,7 +13889,7 @@ es-MX:
                 una posición sin algún punto de referencia compartido. En la actividad
                 principal, los estudiantes exploran una herramienta del Laboratorio
                 de juegos que les permite colocar formas de manera interactiva en
-                la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para
+                la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para
                 enseñar a un compañero a dibujar una imagen oculta con esta herramienta,
                 un desafío que está muy presente cuando los estudiantes programan
                 en el Laboratorio de aplicaciones. Los estudiantes pueden crear su
@@ -13869,7 +13901,7 @@ es-MX:
                 una posición sin algún punto de referencia compartido. En la actividad
                 principal, los estudiantes exploran una herramienta del Laboratorio
                 de juegos que les permite colocar formas de manera interactiva en
-                la cuadrícula de 400 por 400 del laboratorio. Luego, se turnan para
+                la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para
                 enseñar a un compañero a dibujar una imagen oculta con esta herramienta,
                 un desafío que está muy presente cuando los estudiantes programan
                 en el Laboratorio de aplicaciones. Los estudiantes pueden crear su
@@ -13882,9 +13914,9 @@ es-MX:
                 básicos de secuencias y depuración, así como algunos comandos simples.
                 Al final de la lección, la clase crea una versión en línea de la imagen
                 que diseñaron en la lección anterior.
-              description_teacher: Se presenta el Laboratorio de juegos, el ambiente
-                de programación de esta unidad, a los estudiantes, que comienzan a
-                usarlo para colocar formas en la pantalla. Aprenderán los conceptos
+              description_teacher: Se presenta a los estudiantes el Laboratorio de
+                juegos, el ambiente de programación de esta unidad, quienes comienzan
+                a usarlo para colocar formas en la pantalla. Aprenderán los conceptos
                 básicos de secuencias y depuración, así como algunos comandos simples.
                 Al final de la lección, los estudiantes podrán programar imágenes
                 como las que crearon con la herramienta de dibujo de la lección anterior.
@@ -13973,9 +14005,9 @@ es-MX:
                 en base a sentencias booleanas cada vez más complejas y observa cómo
                 los condicionales pueden afectar el flujo de un programa.
               description_teacher: |-
-                En esta lección se presentan los valores y la lógica booleanos, así como las sentencias condicionales, a los estudiantes. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
+                En esta lección, se presentan los valores y la lógica booleanos a los estudiantes, además de las sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
 
-                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
+                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares, pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
 
                 Finalmente, revelamos los condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa mediante la incorporación de sentencias booleanas.
             Conditionals:
@@ -14019,7 +14051,7 @@ es-MX:
                 comando keyDown() que aprendieron ayer, la clase aprende sobre otros
                 comandos de entrada de teclado y formas de utilizar la entrada de
                 ratón.
-              description_teacher: En esta lección los estudiantes continúan explorando
+              description_teacher: En esta lección, los estudiantes continúan explorando
                 formas de usar sentencias condicionales para recibir información del
                 usuario. Además del sencillo comando `keyDown()` que aprendieron ayer,
                 los estudiantes aprenden sobre otros comandos de entrada de teclado
@@ -14091,14 +14123,14 @@ es-MX:
                 bloque isTouching, la clase intercambia ideas sobre otras formas en
                 que dos sprites podrían interactuar. Luego, usan isTouching para hacer
                 que un sprite presione a otro en la pantalla antes de practicar con
-                los cuatro bloques de colisión (colisionar, desplazar, rebotar y bounceOff).
+                los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
               description_teacher: Los estudiantes programan sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
-                bloque `isTouching`, los estudiantes intercambian ideas sobre otras
-                formas en que dos sprites podrían interactuar. Luego, usan `isTouching`
+                bloque `estáTocando`, los estudiantes intercambian ideas sobre otras
+                formas en que dos sprites podrían interactuar. Luego, usan `estáTocando`
                 para hacer que un sprite presione a otro en la pantalla antes de practicar
                 con los cuatro bloques de colisión (`colisionar`, `desplazar`, `rebotar`
-                y `bounceOff`).
+                y `rebotarEn`).
             Functions:
               name: Funciones
               description_student: Esta lección trata las funciones como una forma
@@ -14170,7 +14202,7 @@ es-MX:
                 propios juegos con la guía de proyectos de las dos lecciones anteriores
                 para orientar su proyecto. Ya sea individualmente o en parejas, los
                 estudiantes primero decidirán el tipo de juego que quieren crear,
-                inspirándose en un conjunto de juegos de muestra. Luego, completarán
+                y se inspiran en un conjunto de juegos de muestra. Luego, completarán
                 una guía de proyecto en blanco donde describirán el comportamiento
                 del juego y analizarán las variables, los sprites y las funciones
                 que necesitarán crear. En Code Studio, una serie de niveles les indica
@@ -14223,8 +14255,8 @@ es-MX:
                 experimentará diseños a través de los ojos de otra persona.
               description_teacher: "Los diseñadores deben comprender las necesidades
                 de sus usuarios para crear productos útiles. A partir de un juego
-                de rol en que los estudiantes adoptan el rol de otra persona y reaccionan
-                según ese perfil de usuario a una serie de productos, esta lección
+                de rol en donde los estudiantes adoptan el rol de otra persona y reaccionan
+                según ese perfil de usuario ante una serie de productos, esta lección
                 los alienta a pensar en cómo diseñar para otra persona. A cada estudiante
                 se le asigna un perfil de usuario que describe a una persona, que
                 luego usan para elegir los productos adecuados, criticar el diseño
@@ -14295,10 +14327,10 @@ es-MX:
                 de una aplicación.
               description_teacher: 'Hasta este punto, los estudiantes se han centrado
                 en el diseño para usuarios que, en cierta medida, no son cercanos.
-                La conexión con un usuario final nunca ha sido directa sino a través
+                La conexión con un usuario final nunca ha sido directa, sino a través
                 de generación de ideas, perfiles o comentarios de texto. Esta distancia
                 está pensada para ayudar a los estudiantes a no tener preconceptos
-                cuando piensan en los usuarios. Pero, para obtener información directamente
+                cuando piensan en los usuarios. Pero para obtener información directamente
                 de un usuario real, los estudiantes deben confiar en sus compañeros
                 de clase. En esta lección, los estudiantes se unen en parejas para
                 convertirse en usuarios (y diseñadores), lo que les permite entrevistar
@@ -14522,7 +14554,7 @@ es-MX:
                 para garantizar que el sistema funciona según lo previsto. En el debate
                 de cierre, la clase revisa las ventajas y desventajas de los diferentes
                 sistemas. Hablan sobre los puntos en común entre los sistemas, reconocen
-                que hay muchas soluciones posibles para este problema y lo importante
+                que hay muchas soluciones posibles para este problema, y lo importante
                 es que todos usen el mismo sistema para comunicarse.
             ASCII and Binary Representation:
               name: ASCII y representación binaria
@@ -14784,6 +14816,8 @@ es-MX:
                 para hacer recomendaciones a algunos compañeros de clase. Los estudiantes
                 realizan una revisión en conjunto y hacen las mejoras necesarias en
                 sus proyectos antes de preparar una presentación para la clase.
+            Post-Project Test:
+              name: Prueba posterior al proyecto
         csd6-2019:
           title: CSD Unidad 6 - Computación física ('19-'20)
           description: La Unidad 6 explora el papel de las plataformas de hardware
@@ -14829,6 +14863,8 @@ es-MX:
               name: Circuitos y prototipos físicos
             'Project: Prototype an Innovation':
               name: 'Proyecto: crear el prototipo de una innovación'
+            Post-Project Test:
+              name: Prueba posterior al proyecto
         csp4-pilot:
           stages:
             Variables Explore:
@@ -14885,8 +14921,8 @@ es-MX:
           description: Esta unidad explora los desafíos técnicos y las preguntas que
             surgen de la necesidad de representar información digital en computadoras,
             y transferirla entre personas y dispositivos informáticos. Luego, la unidad
-            explora la estructura y el diseño de Internet y las implicaciones de esas
-            decisiones relacionadas con el diseño.
+            explora la estructura y el diseño de Internet, y las implicaciones de
+            esas decisiones relacionadas con el diseño.
           description_short: Explora los desafíos de representar información como
             bits y cómo llevar esos bits de un lugar a otro.
           stages:
@@ -14921,7 +14957,7 @@ es-MX:
             HTTP and Abstraction:
               name: HTTP y abstracción
             Practice PT - The Internet and Society:
-              name: PT de práctica - Internet y la sociedad
+              name: 'PT de práctica: Internet y la sociedad'
             Unit 1 Chapter 2 Assessment:
               name: Evaluación del Capítulo 2 de la Unidad 1
         csp2-2019:
@@ -14952,6 +14988,8 @@ es-MX:
               name: Investigación rápida - Confrontación de formatos
             Unit 2 Assessment:
               name: Evaluación de la Unidad 2
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp3-2019:
           title: CSP Unidad 3 - Introducción a la programación ('19-'20)
           description: "Esta unidad presenta los conceptos fundamentales de la programación
@@ -14990,6 +15028,8 @@ es-MX:
               name: Evaluación del Capítulo 1 de la Unidad 3
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp4-2019:
           title: CSP Unidad 4 - Grandes datos y privacidad ('19-'20)
           description: El mundo en el que vivimos, repleto de datos, introduce muchas
@@ -15523,6 +15563,30 @@ es-MX:
               name: 'Práctica de bucles: bucles mientras'
             'Loops Practice: Simulations':
               name: 'Práctica de bucles: simulaciones'
+            Lists Make:
+              name: Crear listas
+            Traversals Investigate:
+              name: Investigar recorridos
+            Traversals Practice:
+              name: Practicar recorridos
+            Traversals Make:
+              name: Crear recorridos
+            Unit 5 Mini Assessment:
+              name: Mini evaluación de la Unidad 5
+            Mini PT:
+              name: Mini PT
+            Student Survey (Lists):
+              name: Encuesta de estudiantes (listas)
+            Teacher Survey (Lists):
+              name: Encuestas de docentes (listas)
+            Student Survey (Traversals):
+              name: Encuesta de estudiantes (recorridos)
+            Teacher Survey (Traversals):
+              name: Encuestas de docentes (recorridos)
+            Student Survey (Mini PT):
+              name: Encuesta de estudiantes (mini PT)
+            Loops Investigate and Practice:
+              name: Bucles de investigar y practicar
           title: 'Unidad 5: Listas, bucles y recorridos'
         csp6-pilot-staging:
           stages:
@@ -15611,6 +15675,26 @@ es-MX:
               name: Funciones con parámetros y exploración de retorno
             Libraries:
               name: Bibliotecas
+            Parameters and Return Values Explore:
+              name: Exploración de parámetros y valores de retorno
+            Parameters and Return Values Investigate:
+              name: Investigación de parámetros y valores de retorno
+            Parameters and Return Values Practice:
+              name: Práctica de parámetros y valores de retorno
+            Libraries Explore:
+              name: Explorar bibliotecas
+            Libraries Investigate:
+              name: Investigar bibliotecas
+            Libraries Mini PT:
+              name: Mini PT de bibliotecas
+            Student Survey (Lists):
+              name: Encuesta de estudiantes (listas)
+            Teacher Survey (Lists):
+              name: Encuestas de docentes (listas)
+            Student Survey (Libraries):
+              name: Encuesta de estudiantes (bibliotecas)
+            Teacher Survey (Libraries):
+              name: Encuesta de docentes (bibliotecas)
           title: 'Unidad 7: Funciones y bibliotecas'
         csp8-pilot-staging:
           stages:
@@ -15749,6 +15833,14 @@ es-MX:
             Loops with Rey and BB-8:
               name: Bucles con Rey y BB-8
           title: CSF Express 2018 para Vietnam
+          description_short: Giới thiệu Khoa học máy tính cơ bản cho học sinh Việt
+            Nam.
+          description: "Khoa Học Máy Tính (Computer Science) là môn học cơ bản của
+            thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada,
+            Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa
+            Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng
+            trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô động
+            cho phù hợp với học sinh Việt Nam.\r\n"
         csd-post-survey-2018:
           stages:
             CSD post-course survey:
@@ -15774,8 +15866,8 @@ es-MX:
             de la Computación de Code.org. Para completar esta encuesta, demorarás
             unos 15 minutos. Tus respuestas son privadas y anónimas, es decir que
             tu docente podrá ver los resultados anónimos acumulados para toda la clase.
-            Los resultados son fundamentales para tu docente y para que Code.org mantenga
-            y mejore el curso. Gracias por tu tiempo y consideración.
+            Los resultados son fundamentales para tu docente, y para que Code.org
+            mantenga y mejore el curso. Gracias por tu tiempo y consideración.
         csp5-pilot:
           stages:
             new stage:
@@ -15786,6 +15878,8 @@ es-MX:
               name: Investigar listas
             Lists Practice:
               name: Práctica de listas
+            Lists Make:
+              name: Crear listas
             Loops Explore:
               name: Explorar bucles
             'Loops Practice: While Loops':
@@ -15794,4 +15888,93 @@ es-MX:
               name: 'Práctica de bucles: simulaciones'
             Traversals Explore:
               name: Explorar recorridos
+            Traversals Investigate:
+              name: Investigar recorridos
+            Traversals Practice:
+              name: Practicar recorridos
+            Traversals Make:
+              name: Crear recorridos
+            Student Survey (Lists):
+              name: Encuesta de estudiantes (listas)
+            Student Survey (Traversals):
+              name: Encuesta de estudiantes (recorridos)
+            Unit 5 Mini Assessment:
+              name: Mini evaluación de la Unidad 5
+            Mini PT:
+              name: Mini PT
+            Teacher Survey (Lists):
+              name: Encuestas de docentes (listas)
+            Teacher Survey (Traversals):
+              name: Encuestas de docentes (recorridos)
+            Student Survey (Mini PT):
+              name: Encuesta de estudiantes (mini PT)
+            Loops Investigate and Practice:
+              name: Bucles de investigar y practicar
+            Parameters and Return Values Explore:
+              name: Exploración de parámetros y valores de retorno
+            Parameters and Return Values Investigate:
+              name: Investigación de parámetros y valores de retorno
+            Parameters and Return Values Practice:
+              name: Práctica de parámetros y valores de retorno
+            App Lab Experiments Dashboard:
+              name: Panel de experimentos del Laboratorio de aplicaciones
           title: 'Unidad 5: Listas, bucles y recorridos'
+        fit2019-novice:
+          stages:
+            Novice Reflection Overview:
+              name: Resumen de las reflexiones de los novatos
+            Day 1:
+              name: Día 1
+            Day 2:
+              name: Día 2
+            Day 3:
+              name: Día 3
+            Day 4:
+              name: Día 4
+            Wrap Up:
+              name: Actividad de cierre
+          title: Reflexiones de novatos para el taller de verano 2019
+          description_audience: Facilitadores novatos de 6-12 en período de formación
+          description_short: 'Materiales de reflexión para facilitadores novatos de
+            2019 en período de formación '
+          description: Este es el conjunto de reflexiones para facilitadores novatos
+            de Code.org en período de formación durante el taller de verano de 5 días.
+            Aquí encontrarás indicaciones de reflexión para cada día de tu taller
+            presencial de verano de 5 días. Estas preguntas serán la base del trabajo
+            que hacemos en el Taller de Formación para Facilitadores.
+        csd-test-saving-state:
+          stages:
+            csd digital unplugged WIAC L1:
+              name: csd digital sin conexión WIAC L1
+            csd digital unplugged WIAC L2:
+              name: csd digital sin conexión WIAC L2
+            csd digital unplugged WIAC L3:
+              name: csd digital sin conexión WIAC L3
+            What is a Computer?:
+              name: "¿Qué es una computadora?"
+            Problem Solving Process:
+              name: Proceso de resolución de problemas
+          title: Widgets de prueba que guardan el estado
+        fit2019-apprentice:
+          stages:
+            Apprentice Reflection Overview:
+              name: Resumen de las reflexiones de los aprendices
+            Day 1:
+              name: Día 1
+            Day 2:
+              name: Día 2
+            Day 3:
+              name: Día 3
+            Day 4:
+              name: Día 4
+            Wrap Up:
+              name: Actividad de cierre
+          title: Reflexiones de aprendices para el taller de verano 2019
+          description_audience: Facilitadores aprendices de 6-12 en período de formación
+          description_short: 'Materiales de reflexión para facilitadores aprendices
+            de 2019 en período de formación '
+          description: Este es el conjunto de reflexiones para facilitadores aprendices
+            de Code.org en período de formación durante el taller de verano de 5 días.
+            Aquí encontrarás indicaciones de reflexión para cada día de tu taller
+            presencial de verano de 5 días. Estas preguntas serán la base del trabajo
+            que hacemos en el Taller de Formación para Facilitadores

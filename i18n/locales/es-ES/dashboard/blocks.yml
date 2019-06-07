@@ -16,7 +16,7 @@ es:
             '"saturation"': saturación
             '"brightness"': brillo
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} hacer {MOVE} {DIR} siempre"
+        text: "{GROUP} hace {MOVE} {DIR} para siempre"
         options:
           GROUP:
             sprites: todo
@@ -50,7 +50,7 @@ es:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} hacer {MOVE} {DIR} siempre"
+        text: "{SPRITE} hace {MOVE} {DIR} para siempre"
         options:
           MOVE:
             '"next"': "(Siguiente)"
@@ -81,7 +81,7 @@ es:
             '"x"': posición horizontal
             '"y"': posición vertical
       Dancelab_doMoveEachLR:
-        text: "{GROUP} hacer {MOVE} {DIR} una vez"
+        text: "{GROUP} hace {MOVE} {DIR} una vez"
         options:
           GROUP:
             sprites: todo
@@ -125,7 +125,7 @@ es:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} hacer {MOVE} {DIR} una vez"
+        text: "{SPRITE} hace {MOVE} {DIR} una vez"
         options:
           MOVE:
             '"rand"': "(Aleatorio)"
@@ -356,7 +356,7 @@ es:
       Dancelab_setBackground:
         text: establecer color de fondo {COLOR}
       Dancelab_setBackgroundEffect:
-        text: stablecer efecto de fondo {EFFECT} {PALETTE}
+        text: establecer efecto de fondo {EFFECT}
         options:
           EFFECT:
             '"none"': Ninguno
@@ -862,7 +862,7 @@ es:
       gamelab_makeNewGroup:
         text: crear un nuevo grupo
       gamelab_makeNewSpriteAnon:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+        text: aalab crea un nuevo gráfico {ANIMATION\_NAME} en {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} encara {DIRECTION}"
         options:
@@ -1437,9 +1437,9 @@ es:
       aalab_createNewSpriteAdvanced:
         text: "hacer un nuevo gráfico llamado {NAME} \n con traje {COSTUME} \n en {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+        text: aalab crea un nuevo gráfico {ANIMATION\_NAME} en {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+        text: aalab crea un nuevo gráfico {ANIMATION\_NAME} en {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           hacer un nuevo grupo de gráficos llamado {VAR}

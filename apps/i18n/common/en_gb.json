@@ -183,6 +183,8 @@
   "positionTopRight": "to the top right position",
   "predictionInstructions": "Make a prediction before you run the program.",
   "projectGroupMath": "Mathematics",
+  "projectShareLinkImportBadLinkHeader": "Share link not recognised",
+  "projectShareLinkImportBadLinkBody": "We couldn't import that share link. Make sure that you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.",
   "projectType": "Type",
   "projectTypeInfinity": "Infinity",
   "print": "Print",

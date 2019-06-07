@@ -317,6 +317,7 @@ class Level < ActiveRecord::Base
     'Map', # no user submitted content
     'Match', # dsl defined, covered in dsl
     'Multi', # dsl defined, covered in dsl
+    'BubbleChoice', # dsl defined, covered in dsl
     'NetSim', # widget
     'Odometer', # widget
     'Pixelation', # widget

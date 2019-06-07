@@ -339,10 +339,19 @@ html[dir='rtl'] .editor-column {
   z-index: 3;
 }
 
+// By defining the rule for pause icons first, the warning and error icons will take priority over showing the pause
+// icon.
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
-  border-radius: 15px 0px 0px 15px;
-  box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
+  background-image: url('#{$common_root}gutterPause.png');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  border-radius: 15px 0 0 15px;
+  background-color: rgba(0, 0, 255, 0.5);
   color: white;
+}
+
+.droplet-gutter-line.droplet_breakpoint {
+  background-position: 4px 4px;
 }
 
 .ace_gutter-cell.ace_error, .droplet-gutter-line.droplet_error {
@@ -362,7 +371,11 @@ html[dir='rtl'] .editor-column {
 }
 
 .ace_gutter-cell.ace_error, .ace_gutter-cell.ace_warning {
-  background-position: 2px 0px;
+  background-position: 2px 0;
+}
+
+.droplet-gutter-line.droplet_warning {
+  background-position: 2px 2px;
 }
 
 #visualizationResizeBar {

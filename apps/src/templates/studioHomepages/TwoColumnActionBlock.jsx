@@ -245,7 +245,7 @@ export class SpecialAnnouncementActionBlock extends Component {
       <TwoColumnActionBlock
         id="teacher-application-announcement"
         imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-deadline.jpg'
+          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-closing-soon.jpg'
         )}
         subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019Deadline()}
         subHeadingSmallFont={true}

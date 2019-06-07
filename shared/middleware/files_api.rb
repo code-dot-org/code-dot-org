@@ -29,6 +29,8 @@ class FilesApi < Sinatra::Base
       FileBucket
     when 'sources'
       SourceBucket
+    when 'librarypilot'
+      LibraryPilotBucket
     else
       not_found
     end
@@ -107,7 +109,7 @@ class FilesApi < Sinatra::Base
   end
 
   helpers do
-    %w(core.rb bucket_helper.rb animation_bucket.rb file_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb).each do |file|
+    %w(core.rb bucket_helper.rb animation_bucket.rb file_bucket.rb librarypilot_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
@@ -135,11 +137,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/(animations|assets|sources|files)/<channel-id>/<filename>?version=<version-id>
+  # GET /v3/(animations|assets|sources|librarypilot|files)/<channel-id>/<filename>?version=<version-id>
   #
   # Read a file. Optionally get a specific version instead of the most recent.
   #
-  get %r{/v3/(animations|assets|sources|files)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|assets|sources|librarypilot|files)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     get_file(endpoint, encrypted_channel_id, filename)
   end
 
@@ -394,10 +396,11 @@ class FilesApi < Sinatra::Base
   #
   # PUT /v3/(sources)/<channel-id>/<filename>?version=<version-id>
   # PUT /v3/(assets)/<channel-id>/<filename>
+  # PUT /v3/(librarypilot)/<channel-id>/<filename>
   #
   # Create or replace a file. For sources endpoint, optionally overwrite a specific version.
   #
-  put %r{/v3/(sources|assets)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/(sources|librarypilot|assets)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
