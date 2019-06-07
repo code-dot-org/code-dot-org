@@ -177,6 +177,7 @@ function shouldRenderFooter() {
 Applab.makeFooterMenuItems = function(isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
+      key: 'how-it-works',
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/view'),
       newWindow: true
@@ -187,7 +188,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
         link: '/projects/applab/new'
       },
     {
-      key: 'reportAbuse',
+      key: 'report-abuse',
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
@@ -213,7 +214,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
 
   if (userAlreadyReportedAbuse) {
     _.remove(footerMenuItems, function(menuItem) {
-      return menuItem.key === 'reportAbuse';
+      return menuItem.key === 'report-abuse';
     });
   }
 
