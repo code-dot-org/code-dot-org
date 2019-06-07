@@ -49,7 +49,7 @@ Scenario: Report Abuse link hidden if the user already reported GameLab project 
 
 Scenario: Report Abuse link hidden if the user already reported Game Lab project - share page
   Given I create a student named "Project Maker"
-  And I make a "applab" project named "Game Lab Project 2"
+  And I make a "gamelab" project named "Game Lab Project 2"
   Then I navigate to the shared version of my project
   Then I open the small footer menu
   And element ".ui-test-how-it-works" is visible
