@@ -330,8 +330,14 @@ class InstructionsCSF extends React.Component {
         : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
-    const instructionsHeight = getOuterHeight(this.instructions, true);
-    const minInstructionsHeight = this.props.collapsed ? instructionsHeight : 0;
+    const instructionsHeight = Math.min(
+      getOuterHeight(this.instructions, true),
+      this.props.maxHeight
+    );
+    const minInstructionsHeight =
+      this.props.collapsed || this.props.overlayVisible
+        ? instructionsHeight
+        : 0;
 
     const domNode = $(ReactDOM.findDOMNode(this));
     const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
