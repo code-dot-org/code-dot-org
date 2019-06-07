@@ -1,12 +1,10 @@
 import React from 'react';
-import $ from 'jquery';
 import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
 import {Body} from '@cdo/apps/templates/Dialog';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import SchoolInfoConfirmationDialog from '@cdo/apps/lib/ui/SchoolInfoConfirmationDialog';
-import Button from '@cdo/apps/templates/Button';
 
 describe('SchoolInfoConfirmationDialog', () => {
   const MINIMUM_PROPS = {
@@ -50,29 +48,6 @@ describe('SchoolInfoConfirmationDialog', () => {
     );
 
     expect(wrapper.find(Body)).to.have.lengthOf(1);
-  });
-
-  it('simulates click save', () => {
-    const wrapper = mount(
-      <SchoolInfoConfirmationDialog
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {
-            country: 'US'
-          }
-        }}
-      />
-    );
-    const handleClickSaveStub = sinon.stub(
-      wrapper.instance(),
-      'handleClickSave'
-    );
-    handleClickSaveStub.callsFake(() => {});
-    wrapper.instance().setState({showSchoolInterstitial: true});
-    wrapper.find('Button');
-
-    expect(wrapper.find('Button').length).to.equal(1);
   });
 
   it('confirms there are two buttons in the school information confirmation modal', () => {
@@ -148,29 +123,6 @@ describe('SchoolInfoConfirmationDialog', () => {
         await setTimeout(() => {}, 50);
         expect(wrapper.state('showSchoolInterstitial')).to.be.false;
         handleclickYesSpy.restore();
-      });
-
-      it('calls handleClickSave method when a user does not need to update school information', async () => {
-        stubedFetch.resolves('just a test ');
-        const postStub = sinon.stub($, 'post').callsFake(() => ({
-          done: cb => {
-            cb();
-            return {fail: cb => cb()};
-          }
-        }));
-        await fetch('anything');
-        const wrapperInstance = wrapper.instance();
-        sinon.spy(wrapperInstance, 'handleClickSave');
-        wrapper.instance().setState({showSchoolInterstitial: true});
-        wrapper.find(Button).simulate('click');
-
-        await setTimeout(() => {}, 500);
-        expect(wrapperInstance.handleClickSave).to.have.been.called;
-        await setTimeout(() => {}, 100);
-        expect(onClose).to.have.been.called;
-        await setTimeout(() => {}, 50);
-        expect(wrapper.state('isOpen')).to.be.false;
-        postStub.restore();
       });
     });
   });
