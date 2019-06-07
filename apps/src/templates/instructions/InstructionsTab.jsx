@@ -21,6 +21,14 @@ const styles = {
     fontWeight: 'bold',
     cursor: 'pointer'
   },
+  tabRtl: {
+    marginLeft: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 6,
+    fontWeight: 'bold',
+    cursor: 'pointer'
+  },
   text: {
     color: color.charcoal
   },
@@ -45,12 +53,13 @@ export default class InstructionsTab extends Component {
     style: PropTypes.object,
     text: PropTypes.string.isRequired,
     teacherOnly: PropTypes.bool,
-    isMinecraft: PropTypes.bool
+    isMinecraft: PropTypes.bool,
+    isRtl: PropTypes.bool
   };
 
   render() {
     const combinedStyle = {
-      ...styles.tab,
+      ...(this.props.isRtl ? styles.tabRtl : styles.tab),
       ...this.props.style,
       ...(this.props.selected
         ? this.props.teacherOnly
