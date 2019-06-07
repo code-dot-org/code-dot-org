@@ -57,6 +57,7 @@ class SchoolInfoConfirmationDialog extends Component {
 
   closeModal = () => {
     this.setState({isOpen: false});
+    this.props.onClose();
   };
 
   handleClickYes = () => {
@@ -67,7 +68,7 @@ class SchoolInfoConfirmationDialog extends Component {
       }/update_last_confirmation_date`,
       {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
     )
-      .then(() => this.props.onClose())
+      .then(this.closeModal)
       .catch(error => {
         this.setState({error});
       });
@@ -75,18 +76,6 @@ class SchoolInfoConfirmationDialog extends Component {
 
   handleClickUpdate = () => {
     this.setState({showSchoolInterstitial: true});
-  };
-
-  handleClickSave = async () => {
-    const {authTokenName, authTokenValue} = this.props.scriptData;
-    fetch(`/api/v1/user_school_infos`, {
-      method: 'PATCH',
-      headers: {[authTokenName]: authTokenValue}
-    })
-      .then(() => this.props.onClose())
-      .catch(error => {
-        this.setState({error});
-      });
   };
 
   renderInitialContent = () => {
@@ -123,10 +112,7 @@ class SchoolInfoConfirmationDialog extends Component {
       <Body>
         <SchoolInfoInterstitial
           scriptData={this.props.scriptData}
-          onClose={() => {
-            this.handleClickSave();
-            this.setState({isOpen: false});
-          }}
+          onClose={this.closeModal}
         />
       </Body>
     );
