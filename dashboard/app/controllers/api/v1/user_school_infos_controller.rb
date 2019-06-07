@@ -9,7 +9,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
     head :no_content
   end
 
-  # PATCH /api/v1/users_school_infos/<id>/school_info
+  # PATCH /api/v1/users_school_infos
   def update
     return unless school_info_params[:school_id].present? || school_info_params[:country].present?
 
