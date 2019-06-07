@@ -2374,10 +2374,8 @@ it:
       MC_HOC_2017_10_Cole: Crea una funzione che ti aiuti a terminare questo vagonetto.
       MC_HOC_2017_10_Cole_old: Crea una funzione che ti aiuti a terminare questo vagonetto.
       MC_HOC_2017_10_Kiki: Crea una funzione che ti aiuti a terminare questo vagonetto.
-      MC_HOC_2017_10_RETRY: Crea una funzione che permetta di terminare la rotaia
-        del vagonetto.
-      MC_HOC_2017_10_RETRY_2019: Crea una funzione che permetta di terminare la rotaia
-        del vagonetto.
+      MC_HOC_2017_10_RETRY: Usa le funzioni per terminare la rotaia del vagonetto.
+      MC_HOC_2017_10_RETRY_2019: Usa le funzioni per terminare la rotaia del vagonetto.
       MC_HOC_2017_10_RYAN: Crea una funzione che ti aiuti a terminare questo vagonetto.
       MC_HOC_2017_10_RYAN2: Crea una funzione che ti aiuti a terminare questo vagonetto.
       MC_HOC_2017_13_Cole: "**Tempo di giocare:**  è ora di andare ad esplorare da
@@ -4910,13 +4908,13 @@ it:
       courseD_bee_conditionals10_2018: Raccogli tutto il nettare e fai tutto il miele.
       courseD_bee_conditionals10_2019: Raccogli tutto il nettare e fai tutto il miele.
       courseD_bee_conditionals2: Prima di prendere il nettare, controlla sotto ogni
-        nuvola se sta nascondendo un fiore.
+        nuvola, per vedere se sta nascondendo un fiore.
       courseD_bee_conditionals2_2018: Prima di prendere il nettare, controlla sotto
-        ogni nuvola se sta nascondendo un fiore.
+        ogni nuvola, per vedere se sta nascondendo un fiore.
       courseD_bee_conditionals2_2019: Prima di prendere il nettare, controlla sotto
-        ogni nuvola se sta nascondendo un fiore.
+        ogni nuvola, per vedere se sta nascondendo un fiore.
       courseD_bee_conditionals2_test: Prima di prendere il nettare, controlla sotto
-        ogni nuvola se sta nascondendo un fiore.
+        ogni nuvola, per vedere se sta nascondendo un fiore.
       courseD_bee_conditionals3: |-
         Aiuta l'ape a raccogliere tutto il nettare.
 
@@ -4968,17 +4966,17 @@ it:
       courseD_bee_conditionals9: Raccogli tutto il nettare o fai tutto il miele.
       courseD_bee_conditionals9_2018: Raccogli tutto il nettare o fai tutto il miele.
       courseD_bee_conditionals9_2019: Raccogli tutto il nettare o fai tutto il miele.
-      courseD_bee_conditionals_challenge1: Raccogli tutto il nettare o fai tutto il
+      courseD_bee_conditionals_challenge1: Raccogli tutto il nettare e fai tutto il
         miele.
-      courseD_bee_conditionals_challenge1_2018: Raccogli tutto il nettare o fai tutto
+      courseD_bee_conditionals_challenge1_2018: Raccogli tutto il nettare e fai tutto
         il miele.
-      courseD_bee_conditionals_challenge1_2019: Raccogli tutto il nettare o fai tutto
+      courseD_bee_conditionals_challenge1_2019: Raccogli tutto il nettare e fai tutto
         il miele.
-      courseD_bee_conditionals_challenge2: Raccogli tutto il nettare o fai tutto il
+      courseD_bee_conditionals_challenge2: Raccogli tutto il nettare e fai tutto il
         miele.
-      courseD_bee_conditionals_challenge2_2018: Raccogli tutto il nettare o fai tutto
+      courseD_bee_conditionals_challenge2_2018: Raccogli tutto il nettare e fai tutto
         il miele.
-      courseD_bee_conditionals_challenge2_2019: Raccogli tutto il nettare o fai tutto
+      courseD_bee_conditionals_challenge2_2019: Raccogli tutto il nettare e fai tutto
         il miele.
       courseD_bee_conditionals_challenge3: Raccogli tutto il nettare o fai tutto il
         miele.

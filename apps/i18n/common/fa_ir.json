@@ -451,6 +451,7 @@
   "projectTypePlaylab": "آزمایشگاه بازی",
   "projectTypeStarwars": "جنگ ستارگان",
   "projects": "پروژه ها",
+  "projectsSubHeading": "{project_count} پروژه ساخته شده است",
   "print": "چاپ کن",
   "privacyPolicy": "قوانین حفظ حریم خصوصی",
   "projectWarning": "توجه: شما در سطحی هستید که خود بخشی از یک پروژه بزرگتراست. تغییراتی که در این سطح ایجاد میشود در سطوح دیگر پروژه نیز ظاهر خواهند شد.",

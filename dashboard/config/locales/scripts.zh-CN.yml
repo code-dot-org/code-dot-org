@@ -10665,7 +10665,7 @@ zh-CN:
             Unit 4 Assessment:
               name: 第4单元评估
             Libraries:
-              name: 使用的开源库
+              name: 库
           title: '单元 7: 功能和库'
         csp8-pilot-staging:
           stages:
@@ -10824,3 +10824,17 @@ zh-CN:
           stages:
             What is a Computer?:
               name: 什么是电脑？
+        fit2019-apprentice:
+          stages:
+            Apprentice Reflection Overview:
+              name: 学徒反思概述
+            Day 1:
+              name: 第一天
+            Day 2:
+              name: 第二天
+            Day 3:
+              name: 第三天
+            Day 4:
+              name: 第四天
+            Wrap Up:
+              name: 总结

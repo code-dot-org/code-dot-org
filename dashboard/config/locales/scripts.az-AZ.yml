@@ -860,3 +860,7 @@ az:
           stages:
             Wrap Up:
               name: Yekun
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Yekun

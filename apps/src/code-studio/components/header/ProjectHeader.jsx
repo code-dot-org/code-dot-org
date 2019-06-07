@@ -1,19 +1,28 @@
 /* globals appOptions */
 
+import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
 import EditableProjectName from './EditableProjectName';
 import ProjectImport from './ProjectImport';
 import ProjectRemix from './ProjectRemix';
 import ProjectShare from './ProjectShare';
+import ProjectExport from './ProjectExport';
 
-export default class ProjectHeader extends React.Component {
+class ProjectHeader extends React.Component {
+  static propTypes = {
+    includeExportInProjectHeader: PropTypes.bool.isRequired
+  };
+
   render() {
+    const {includeExportInProjectHeader} = this.props;
     return (
       <div>
         <EditableProjectName />
         <ProjectShare />
+        {includeExportInProjectHeader && <ProjectExport />}
         <ProjectRemix lightStyle />
 
         {/* For Minecraft Code Connection (aka CodeBuilder) projects, add the
@@ -29,3 +38,11 @@ export default class ProjectHeader extends React.Component {
     );
   }
 }
+
+export const UnconnectedProjectHeader = ProjectHeader;
+export default connect(
+  state => ({
+    includeExportInProjectHeader: state.header.includeExportInProjectHeader
+  }),
+  null
+)(ProjectHeader);

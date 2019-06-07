@@ -5493,3 +5493,7 @@ vi:
           stages:
             What is a Computer?:
               name: Máy tính là gì?
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Tổng kết

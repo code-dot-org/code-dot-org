@@ -801,6 +801,7 @@ pt-BR:
         hoc_dance_congrats: Festa Dançante - Festejar!
         c_and_c_great_to_create: É Ótimo Criar e Jogar Limpo
         c_and_c_digital_sharing: Compartilhamento Digital
+        teaching_csf_how_it_works: 'Ensinando Fundamentos da CC: Como o Curso funciona'
         elem_pd_2: Ciência da computação no Ensino Fundamental - Vídeo PD 2/2
         what_is_cs: O que é ciência da computação?
         repeat_block: Usando o bloco repita
@@ -817,7 +818,9 @@ pt-BR:
         teaching_problem_solving: 'Ensinando Fundamentos da CC: Ensinando Resolução
           de Problemas'
         csd_pair_programming: Programação em duplas
+        csd_gamelab_functions: Chamando e Definindo Funções
         csd_applab_parameters: Funções com Parâmetros
+        CSF_Going_Places_Safely: Minha Vizinhança Online
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

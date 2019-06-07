@@ -33,6 +33,7 @@ function initPage() {
     store,
     teacherPanelData.script_id,
     teacherPanelData.section,
+    teacherPanelData.script_name,
     teacherPanelData
   );
 }

@@ -56,6 +56,7 @@ class ScriptTeacherPanel extends React.Component {
     onSelectUser: PropTypes.func,
     getSelectedUserId: PropTypes.func,
     sectionData: PropTypes.object,
+    scriptName: PropTypes.string,
 
     // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -67,13 +68,11 @@ class ScriptTeacherPanel extends React.Component {
     }),
     scriptHasLockableStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    students: PropTypes.arrayOf(studentShape),
-    inMiniRubricExperiment: PropTypes.bool
+    students: PropTypes.arrayOf(studentShape)
   };
 
   render() {
     const {
-      inMiniRubricExperiment,
       sectionData,
       viewAs,
       hasSections,
@@ -81,7 +80,8 @@ class ScriptTeacherPanel extends React.Component {
       selectedSection,
       scriptHasLockableStages,
       unlockedStageNames,
-      students
+      students,
+      scriptName
     } = this.props;
 
     let currentSectionScriptLevels = null;
@@ -102,6 +102,8 @@ class ScriptTeacherPanel extends React.Component {
       }
     }
 
+    const sectionId = selectedSection && selectedSection.id;
+
     return (
       <TeacherPanel>
         <h3>{i18n.teacherPanel()}</h3>
@@ -111,7 +113,6 @@ class ScriptTeacherPanel extends React.Component {
             <SelectedStudentInfo
               selectedStudent={currentStudent}
               level={currentStudentScriptLevel}
-              inMiniRubricExperiment={inMiniRubricExperiment}
             />
           )}
           {sectionData && sectionData.level_examples && (
@@ -182,7 +183,8 @@ class ScriptTeacherPanel extends React.Component {
               students={students}
               onSelectUser={this.props.onSelectUser}
               getSelectedUserId={this.props.getSelectedUserId}
-              inMiniRubricExperiment={inMiniRubricExperiment}
+              sectionId={sectionId}
+              scriptName={scriptName}
             />
           )}
         </div>

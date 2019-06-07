@@ -7247,6 +7247,45 @@ sk:
       courseF_artist_variables_8_authored_hint:
         courseF_artist_variables_8_a: Vyskúšaj použiť tieto bloky ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)
           na konci tela tvojho cyklu.
+      courseF_bee_for1_authored_hint:
+        courseF_bee_for1_a: Potiahni fialový čiselný blok do prázdneho miesta v cykle
+          `opakuj`, aby si povedal, koľko krát sa má opakovať.
+        courseF_bee_for1_b: Potrebuješ dva bloky v tvojom cykle ’opkauj’, aby si pozbieral
+          všetok nektár.
+      courseF_bee_for1_2018_authored_hint:
+        courseF_bee_for1_a: Potiahni fialový čiselný blok do prázdneho miesta v cykle
+          `opakuj`, aby si povedal, koľko krát sa má opakovať.
+        courseF_bee_for1_b: Potrebuješ dva bloky v tvojom cykle ’opkauj’, aby si pozbieral
+          všetok nektár.
+      courseF_bee_for1_2019_authored_hint:
+        courseF_bee_for1_a: Potiahni fialový čiselný blok do prázdneho miesta v cykle
+          `opakuj`, aby si povedal, koľko krát sa má opakovať.
+        courseF_bee_for1_b: Potrebuješ dva bloky v tvojom cykle ’opkauj’, aby si pozbieral
+          všetok nektár.
+      courseF_bee_for2_authored_hint:
+        courseF_bee_for2_a: Ak si zmätený, tak pracuj vždy len na jednom kvete a často
+          testuj.
+        courseF_bee_for2_b: Nezabudni sa posunúť dopredu medzi každým cyklom, takže
+          sa dostaneš ku kaźdému kvetu.
+      courseF_bee_for2_2018_authored_hint:
+        courseF_bee_for2_a: Ak si zmätený, tak pracuj vždy len na jednom kvete a často
+          testuj.
+        courseF_bee_for2_b: Nezabudni sa posunúť dopredu medzi každým cyklom, takže
+          sa dostaneš ku kaźdému kvetu.
+      courseF_bee_for2_2019_authored_hint:
+        courseF_bee_for2_a: Ak si zmätený, tak pracuj vždy len na jednom kvete a často
+          testuj.
+        courseF_bee_for2_b: Nezabudni sa posunúť dopredu medzi každým cyklom, takže
+          sa dostaneš ku kaźdému kvetu.
+      courseF_bee_for4_authored_hint:
+        courseF_bee_for4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide
+          od 1 do 7 so zvyšovaním o 1.
+      courseF_bee_for4_2018_authored_hint:
+        courseF_bee_for4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide
+          od 1 do 7 so zvyšovaním o 1.
+      courseF_bee_for4_2019_authored_hint:
+        courseF_bee_for4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide
+          od 1 do 7 so zvyšovaním o 1.
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
@@ -7594,6 +7633,9 @@ sk:
           tvoj kód.
         grade5_artist_variables_triangles1_c: Vo vnútri tvojho cyklu sa chceš pohnúť
           dopredu o 50 pixelov, a potom otočiť doľava o 120 stupňov.
+      grade5_bee_for_loops4_authored_hint:
+        grade5_bee_for_loops4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý
+          ide od 1 do 7 so zvyšovaním o 1.
       gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť
           číslo navrchu bloku.

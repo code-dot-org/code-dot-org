@@ -68,7 +68,6 @@ nn:
   of: "av"
   more: "MEIR"
   less: "MINDRE"
-  beta: "beta"
   try_hoc: "Prøv Kodetimen, klikk her >> "
   try_k8intro: "Eller prøv vår barneskuleintroduksjon til informatikkurs (15-25 timar)"
   k8intro: "Barneskuleintroduksjon til informatikkurs (15-25 timar)"
@@ -790,18 +789,10 @@ nn:
     create: "Opprett prosjekt"
     create_a_project: 'Lag eit nytt prosjekt:'
     new: "Lag ny"
-    rename: "Gje nytt navn"
-    save: "Lagre"
-    import: "Importér"
-    share_link_import_bad_link_header: "Delelenke ikkje attkjend"
-    share_link_import_bad_link_body: "Vi kunne ikke importere lenka. Kontroller at du brukar ei lenke frå ei Minecraft: Agent-oppgåve, og at du har kopiert hele lenka."
-    share_link_import_error_header: "Noke gjekk gale."
-    share_link_import_error_body: "Det oppstod eit problem ved import av lenka. Prøv igjen."
     exit: "Attende til kurset"
     project_gallery: "Prosjekt"
     publish: "Publisér"
     unpublish: "Opphev publisering"
-    share: "Del"
     share_title: Del prosjektet ditt
     share_copy_link: "Kopier lenkja:"
     share_embed_description: "Du kan lime den innebygde koden i ei HTML side for å vise prosjektet på ei nettside."
@@ -818,8 +809,6 @@ nn:
     saved: "Lagra"
     not_saved: "Ikkje lagra"
     view_all: 'Sjå Mine prosjekt'
-    remix: 'Remix'
-    click_to_remix: "Klikk \"Remix\" for å snurre i gong din eigen versjon!"
     edit_project: 'Endre prosjekt'
     sharing_disabled: "Beklager, dette prosjektet er ikke tilgjengelig for deling. Hvis dette er ditt eller en av dine elevers prosjekt, vennligst <a href='https://studio.code.org/users/sign_in'>logg på</a> din konto for å se prosjektet."
     abuse:

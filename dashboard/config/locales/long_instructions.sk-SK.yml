@@ -3647,6 +3647,18 @@ sk:
       courseF_artistembed_variables9: "Čas na nejaké umenie! \n\nSleduj, čo sa stane,
         ak zopakuješ kód z predošlej úlohy **30** krát namiesto 3!\n\nNeobmedzuj sa,
         sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu."
+      courseF_bee_for2: |-
+        Napíš kód, ktorý pomôže včele pozbierať všetok nektár.
+
+        Potrebuješ veľa blokov pre túto výzvu, ale v ďalšej úlohe sa naučíme jednoduchší spôsob.
+      courseF_bee_for2_2018: |-
+        Napíš kód, ktorý pomôže včele pozbierať všetok nektár.
+
+        Potrebuješ veľa blokov pre túto výzvu, ale v ďalšej úlohe sa naučíme jednoduchší spôsob.
+      courseF_bee_for2_2019: |-
+        Napíš kód, ktorý pomôže včele pozbierať všetok nektár.
+
+        Potrebuješ veľa blokov pre túto výzvu, ale v ďalšej úlohe sa naučíme jednoduchší spôsob.
       courseF_bee_for_challenge2: Vyrieš túto úlohu použitím čo najmenšieho možného
         počtu blokov.
       courseF_bee_for_challenge2_2018: Vyrieš túto úlohu použitím čo najmenšieho možného
@@ -4149,6 +4161,7 @@ sk:
         Nakreslime rovnostranný trojuholník.
 
         Každú stranu musí mať dlhú presne 50 pixelov.
+      grade5_bee_for_loops4: Pomôž včele pozbierať všetok nektár.
       harvester_Kahoot: |-
         \_"Joj, všade samá zelenina!"-
 

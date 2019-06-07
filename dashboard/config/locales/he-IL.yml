@@ -74,7 +74,6 @@ he:
   of: של
   more: יותר
   less: פחות
-  beta: בטא
   try_hoc: 'נסה את שעת קוד, לחץ כאן >> '
   try_k8intro: נסה את הקורס מבוא למדעי המחשב לכיתות גן-ח'(15-25 שעות)
   k8intro: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
@@ -917,15 +916,10 @@ he:
     create: צור פרויקט
     create_a_project: 'צור פרויקט חדש:'
     new: צור חדש
-    rename: שנה שם
-    save: שמור
-    import: ייבא
-    share_link_import_error_header: משהו השתבש.
     exit: חזור לקורס
     project_gallery: פרויקטים
     publish: פרסם
     unpublish: בטל פרסום
-    share: שתף
     share_title: שתף את הפרויקט שלך
     share_copy_link: 'העתק קישור:'
     share_embed_description: תוכל להדביק את הקוד לתוך דף HTML כדי להציג את הפרויקט
@@ -948,8 +942,6 @@ he:
     saved: נשמר
     not_saved: לא נשמר
     view_all: הצג את הפרויקטים שלי
-    remix: צור משלך
-    click_to_remix: לחץ "צור משלך" כדי ליצר גרסה משלך לפרויקט!
     edit_project: ערוך פרויקט
     sharing_disabled: מצטערים, פרויקט זה אינו זמין לשיתוף. אם זה הפרויקט שלך או הפרויקט
       של אחד מתלמידיך, אנא <a href='https://studio.code.org/users/sign_in'>התחבר</a>

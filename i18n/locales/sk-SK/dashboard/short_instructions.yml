@@ -1656,6 +1656,12 @@ sk:
       courseD_bee_debugging6: 'Výzva: Oprav chyby, aby si získal všetok nektár a vyrobil všetok med.'
       courseD_bee_debugging9: Pomôž včele opraviť kód a pozbierať všetok nektár.
       courseD_bee_debugging_challenge1a: Pozri sa, ako včela pozbiera nektár. Podobným postupom pomôž včele vyrobiť všetok med.
+      courseD_bee_nestedLoops1: Pomôž včele pozbierať všetok nektár.
+      courseD_bee_nestedLoops1_2018: Pomôž včele pozbierať všetok nektár.
+      courseD_bee_nestedLoops1_2019: Pomôž včele pozbierať všetok nektár.
+      courseD_bee_nestedLoops1a: Pomôž včele pozbierať všetok nektár.
+      courseD_bee_nestedLoops1a_2018: Pomôž včele pozbierať všetok nektár.
+      courseD_bee_nestedLoops1a_2019: Pomôž včele pozbierať všetok nektár.
       courseD_bee_nestedLoops2: Aj v tejto úlohe pomôž včele zozbierať všetok nektár, skús ale použiť čo najmenej blokov.
       courseD_bee_nestedLoops2_2018: Aj v tejto úlohe pomôž včele zozbierať všetok nektár, skús ale použiť čo najmenej blokov.
       courseD_bee_nestedLoops2_2019: Aj v tejto úlohe pomôž včele zozbierať všetok nektár, skús ale použiť čo najmenej blokov.
@@ -2049,6 +2055,15 @@ sk:
       courseF_bee_conditionals4_2018: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov.
       courseF_bee_conditionals5: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
       courseF_bee_conditionals5_2018: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
+      courseF_bee_for1: Pozbieraj nektár z každého kvetu s použitím čo najmenšieho počtu blokov.
+      courseF_bee_for1_2018: Pozbieraj nektár z každého kvetu s použitím čo najmenšieho počtu blokov.
+      courseF_bee_for1_2019: Pozbieraj nektár z každého kvetu s použitím čo najmenšieho počtu blokov.
+      courseF_bee_for2: Napíš kód, ktorý pomôže včele pozbierať všetok nektár.
+      courseF_bee_for2_2018: Napíš kód, ktorý pomôže včele pozbierať všetok nektár.
+      courseF_bee_for2_2019: Napíš kód, ktorý pomôže včele pozbierať všetok nektár.
+      courseF_bee_for4: Pomôž včele pozbierať všetok nektár.
+      courseF_bee_for4_2018: Pomôž včele pozbierať všetok nektár.
+      courseF_bee_for4_2019: Pomôž včele pozbierať všetok nektár.
       courseF_bee_functions4: Funkcia "move and get nectar" prikáže včele otočiť sa, zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok nektár.
       courseF_bee_functions4_2018: Funkcia "move and get nectar" prikáže včele otočiť sa, zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok nektár.
       courseF_bee_functions_1_2018: Dokonči tento kód, aby včela mohla pozbierať všetok nektár a vyrobiť všetok med.
@@ -2376,6 +2391,7 @@ sk:
 
         Pozrite sa, čo sa stane, keď začneme byť kreatívni!
       grade5_bee_for_loops1: Použite slučku pre pozbieranie nektáru z každej kvetinky.
+      grade5_bee_for_loops4: Pomôž včele pozbierať všetok nektár.
       grade5_pixelation: Zakóduj akýkoľvek obrázok do binárnej sústavy. Binárna sústava je reprezentovaná číslami '0' a '1'.
       gradek_artist_loopsPre: Toto je nový typ úlohy nazývaný "Umelec". V tomto leveli sa trochu pohraj a nakresli niečo zábavné.
       harvey_pixelation: Zakóduj akýkoľvek obrázok do binárnej sústavy. Binárna sústava je reprezentovaná číslami '0' a '1'.

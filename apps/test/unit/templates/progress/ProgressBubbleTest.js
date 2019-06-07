@@ -13,8 +13,7 @@ const defaultProps = {
     name: 'level_name',
     progression: 'progression_name'
   },
-  disabled: false,
-  inMiniRubricExperiment: false
+  disabled: false
 };
 
 describe('ProgressBubble', () => {
@@ -54,7 +53,7 @@ describe('ProgressBubble', () => {
     assert.equal(div.props().style.backgroundColor, color.level_perfect);
   });
 
-  it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level, and in experiment', () => {
+  it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level ', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
@@ -63,7 +62,6 @@ describe('ProgressBubble', () => {
           kind: LevelKind.assessment,
           status: LevelStatus.completed_assessment
         }}
-        inMiniRubricExperiment={true}
       />
     );
 
@@ -238,7 +236,7 @@ describe('ProgressBubble', () => {
     );
   });
 
-  it('shows assessment icon on assessment level, in experiment', () => {
+  it('shows assessment icon on assessment level', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
@@ -246,14 +244,13 @@ describe('ProgressBubble', () => {
           ...defaultProps.level,
           kind: LevelKind.assessment
         }}
-        inMiniRubricExperiment={true}
       />
     );
 
     expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
   });
 
-  it('does not show assessment icon on bubble on assessment level, in experiment, if smallBubble is true', () => {
+  it('does not show assessment icon on bubble on assessment level, if smallBubble is true', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
@@ -262,14 +259,13 @@ describe('ProgressBubble', () => {
           ...defaultProps.level,
           kind: LevelKind.assessment
         }}
-        inMiniRubricExperiment={true}
       />
     );
 
     expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 
-  it('does not show assessment icon on bubble on assessment level, in experiment, if hideAssessmentIcon is true', () => {
+  it('does not show assessment icon on bubble on assessment level if hideAssessmentIcon is true', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
@@ -278,7 +274,6 @@ describe('ProgressBubble', () => {
           ...defaultProps.level,
           kind: LevelKind.assessment
         }}
-        inMiniRubricExperiment={true}
       />
     );
 

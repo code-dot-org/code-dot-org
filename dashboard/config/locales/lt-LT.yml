@@ -67,7 +67,6 @@ lt:
   of: iš
   more: DAUGIAU
   less: MAŽIAU
-  beta: beta
   try_hoc: 'Išmėgink „Programavimo valandą“, spausk čia >> '
   try_k8intro: Išmėgink mūsų programavimo įvado kursą (15-25 valandos)
   k8intro: Programavimo įvadas 5-8 klasėms (15-25 valandos)
@@ -679,11 +678,8 @@ lt:
     create: Sukurti projektą
     create_a_project: 'Sukurti naują projektą:'
     new: Sukurti naują
-    rename: Pervadinti
-    save: Išsaugoti
     exit: Grįžti prie kursų
     project_gallery: Projektai
-    share: Dalintis
     share_title: Bendrinti savo projektą
     share_copy_link: 'Kopijuoti nuorodą:'
     advanced_share: Rodyti išplėstinius nustatymus
@@ -697,8 +693,6 @@ lt:
     saved: Išsaugota
     not_saved: Neišsaugota
     view_all: Peržiūrėti mano projektus
-    remix: Remiksas
-    click_to_remix: Paspausk ant „Remiksas“ ir sukurk savo versiją!
     edit_project: Redaguoti projektą
     abuse:
       tos: Buvo pranešta, kad šis projektas pažeidė Code.org <a href='http://code.org/tos'>Naudojimosi

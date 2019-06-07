@@ -4652,3 +4652,7 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Încheiere

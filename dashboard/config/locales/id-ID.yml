@@ -80,7 +80,6 @@ id:
   of: dari
   more: lebih
   less: KURANG
-  beta: Percobaan
   try_hoc: 'Cobalah Jam Kode, klik di sini >> '
   try_k8intro: Cobalah pendahuluan K-8 kami tentang pelajaran ilmu komputer (15-25
     jam)
@@ -1101,21 +1100,10 @@ id:
     create: Buat proyek
     create_a_project: 'Buat proyek baru:'
     new: Buat baru
-    rename: Ubah Nama
-    save: Simpan
-    import: Impor
-    share_link_import_bad_link_header: Tautan berbagi tidak dikenali
-    share_link_import_bad_link_body: 'Kami tidak bisa mengimpor tautan berbagi tersebut.
-      Pastikan kamu menggunakan tautan dari teka-teki Minecraft: Agent dan bahwa kamu
-      telah menyalin tautan lengkap.'
-    share_link_import_error_header: Terjadi kesalahan.
-    share_link_import_error_body: Ada masalah saat mengimpor tautan berbagi tersebut.
-      Coba lagi.
     exit: Kembali ke Kursus
     project_gallery: Proyek
     publish: Publikasikan
     unpublish: Tidak dipublikasikan
-    share: Bagikan
     share_title: Bagikan proyek Anda
     share_copy_link: 'Salin link:'
     share_embed_description: Anda dapat menyisipkan kode embed ke sebuah halaman HTML
@@ -1139,8 +1127,6 @@ id:
     saved: Disimpan
     not_saved: Tidak disimpan
     view_all: Lihat proyek saya
-    remix: Remix
-    click_to_remix: Klik 'Remix' untuk mematikan putaran versi Anda sendiri!
     edit_project: Sunting Proyek
     sharing_disabled: Maaf, proyek ini tidak tersedia untuk dibagikan. Jika ini adalah
       proyek anda atau proyek salah satu siswa anda, <a href='https://studio.code.org/users/sign_in'>masuk</a>ke

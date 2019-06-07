@@ -4188,3 +4188,7 @@ sk:
           stages:
             Wrap Up:
               name: Zhrnutie
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Zhrnutie

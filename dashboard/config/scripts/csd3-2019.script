@@ -7,10 +7,12 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit3/"],
 stage_extras_available true
 has_verified_resources true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/csd-19/unit3/{LESSON}'
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
 family_name 'csd3'
 version_year '2019'
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 
@@ -334,5 +336,6 @@ level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019', progression: 'Refle
 stage 'Post-Project Test', lockable: true, flex_category: 'csd3_2'
 level 'CSD Interactive Animations and Games Post-Project Test', assessment: true
 
-stage 'CS Discoveries End of Semester Survey', lockable: true, flex_category: 'cspSurvey'
+stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
+level 'csd-post-survey-intro-2019'
 level 'csd-post-survey-2017-levelgroup_2018_2019', assessment: true

@@ -8394,3 +8394,7 @@ fil:
           stages:
             What is a Computer?:
               name: Ano ang isang Kompyuter?
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Tapusin Na

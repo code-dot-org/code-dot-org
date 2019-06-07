@@ -4931,3 +4931,7 @@ id:
           stages:
             What is a Computer?:
               name: Apa itu komputer?
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Penutupan
