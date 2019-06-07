@@ -17,8 +17,7 @@ const defaultProps = {
     passed: false,
     status: LevelStatus.not_tried,
     user_id: 1
-  },
-  inMiniRubricExperiment: false
+  }
 };
 
 describe('SelectedStudentInfo', () => {

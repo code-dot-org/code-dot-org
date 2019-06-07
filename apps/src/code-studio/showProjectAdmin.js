@@ -91,6 +91,11 @@ export default project => {
     }
   }
 
+  if ($('.admin-sharing').length) {
+    var sharingDisabled = project.getSharingDisabled();
+    $('.admin-sharing-disabled').text(sharingDisabled);
+  }
+
   $('#disable-auto-moderation').click(async function() {
     await project.disableAutoContentModeration();
     $('#disable-auto-moderation').hide();

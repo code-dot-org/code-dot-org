@@ -5,6 +5,8 @@
  *
  */
 import $ from 'jquery';
+import cookies from 'js-cookie';
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
@@ -98,10 +100,21 @@ var jsInterpreterLogger = null;
  */
 Applab.log = function(object, logLevel) {
   if (jsInterpreterLogger) {
-    jsInterpreterLogger.log(object);
+    jsInterpreterLogger.log(
+      experiments.isEnabled('react-inspector')
+        ? {output: object, fromConsoleLog: true}
+        : object
+    );
   }
 
-  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  getStore().dispatch(
+    jsDebugger.appendLog(
+      experiments.isEnabled('react-inspector')
+        ? {output: object, fromConsoleLog: true}
+        : object,
+      logLevel
+    )
+  );
 };
 consoleApi.setLogMethod(Applab.log);
 
@@ -176,6 +189,7 @@ function shouldRenderFooter() {
 Applab.makeFooterMenuItems = function(isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
+      key: 'how-it-works',
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/view'),
       newWindow: true
@@ -186,6 +200,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
         link: '/projects/applab/new'
       },
     {
+      key: 'report-abuse',
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
@@ -201,6 +216,20 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
       newWindow: true
     }
   ].filter(item => item);
+
+  var userAlreadyReportedAbuse =
+    cookies.get('reported_abuse') &&
+    _.includes(
+      JSON.parse(cookies.get('reported_abuse')),
+      project.getCurrentId()
+    );
+
+  if (userAlreadyReportedAbuse) {
+    _.remove(footerMenuItems, function(menuItem) {
+      return menuItem.key === 'report-abuse';
+    });
+  }
+
   return footerMenuItems;
 };
 
@@ -378,6 +407,7 @@ Applab.init = function(config) {
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
   config.getLibrary = getLibrary;
+  config.codeContainsError = codeContainsError;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -521,6 +551,7 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
+    getStore().dispatch(setApplabLibraries(config.level.startLibraries));
     Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
     Applab.storage.populateKeyValue(
       level.dataProperties,
@@ -681,10 +712,11 @@ Applab.init = function(config) {
 
   var librariesExist = level.libraries && level.libraries.length > 0;
 
-  // Temporarily, always use the levelbuilder-created libraries if they
-  // exist. Once 'Start Over' is implemented for libraries, allow
-  // student-created libraries. (Add check for !librariesExist)
-  if (level.startLibraries && level.startLibraries.length > 0) {
+  if (
+    !librariesExist &&
+    level.startLibraries &&
+    level.startLibraries.length > 0
+  ) {
     level.libraries = level.startLibraries;
     librariesExist = true;
   }
@@ -697,6 +729,9 @@ Applab.init = function(config) {
   }
 
   if (experiments.isEnabled('student-libraries') && librariesExist) {
+    level.libraries.forEach(library => {
+      config.dropletConfig.additionalPredefValues.push(library.name);
+    });
     let importedConfigs = level.libraries
       .map(library => library.dropletConfig)
       .reduce((a, b) => a.concat(b));
@@ -1133,6 +1168,17 @@ function getLibrary() {
   var temporaryInterpreter = new JSInterpreter({studioApp: studioApp()});
   temporaryInterpreter.parse({code: studioApp().getCode()});
   return temporaryInterpreter.getFunctionsAndParams(studioApp().getCode());
+}
+
+/**
+ * Returns true if a lint error (red gutter warning) exists in the code
+ */
+function codeContainsError() {
+  var errors = annotationList.getJSLintAnnotations().filter(annotation => {
+    return annotation.type === 'error';
+  });
+
+  return errors.length > 0;
 }
 
 /**
