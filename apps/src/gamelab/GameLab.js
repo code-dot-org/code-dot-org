@@ -113,7 +113,7 @@ var GameLab = function() {
   /** @private {JsInterpreterLogger} */
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
-  this.projectProperties = DEFAULT_PROJECT_PROPERTIES;
+  this.generatedProperties = DEFAULT_PROJECT_PROPERTIES;
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -403,9 +403,9 @@ GameLab.prototype.init = function(config) {
       : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
-  this.projectProperties = {
+  this.generatedProperties = {
     ...DEFAULT_PROJECT_PROPERTIES,
-    ...config.initialProjectProperties
+    ...config.initialGeneratedProperties
   };
 
   // Pre-register all audio preloads with our Sounds API, which will load
@@ -448,7 +448,7 @@ GameLab.prototype.exportApp = async function(expoOpts) {
   const {mode, md5SavedSources, expoSnackId, iconUri, splashImageUri} =
     expoOpts || {};
   if (mode === 'expoGenerateApk') {
-    const apkUrl = await generateExpoApk(
+    const apkUri = await generateExpoApk(
       {
         appName,
         md5SavedSources,
@@ -458,13 +458,13 @@ GameLab.prototype.exportApp = async function(expoOpts) {
       },
       this.studioApp_.config
     );
-    this.projectProperties.export.android = {
+    this.generatedProperties.export.android = {
       md5ApkSavedSources: md5SavedSources,
       snackId: expoSnackId,
-      apkUrl
+      apkUri
     };
     projectChanged();
-    return apkUrl;
+    return apkUri;
   }
   await this.whenAnimationsAreReady();
   return this.exportAppWithAnimations(
@@ -1484,8 +1484,8 @@ GameLab.prototype.getSerializedAnimationList = function(callback) {
  * Get the project properties for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
  */
-GameLab.prototype.getProjectProperties = function() {
-  return this.projectProperties;
+GameLab.prototype.getGeneratedProperties = function() {
+  return this.generatedProperties;
 };
 
 /**
