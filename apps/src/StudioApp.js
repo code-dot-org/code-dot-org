@@ -8,6 +8,7 @@ import _ from 'lodash';
 import url from 'url';
 import {Provider} from 'react-redux';
 import trackEvent from './util/trackEvent';
+import cookies from 'js-cookie';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -195,7 +196,6 @@ class StudioApp extends EventEmitter {
     this.libraries = {};
   }
 }
-
 /**
  * Configure StudioApp options
  */
@@ -792,11 +792,13 @@ export function makeFooterMenuItems() {
       newWindow: true
     },
     {
+      key: 'how-it-works',
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/edit'),
       newWindow: false
     },
     {
+      key: 'report-abuse',
       text: i18n.t('footer.report_abuse'),
       link: '/report_abuse',
       newWindow: true
@@ -821,6 +823,19 @@ export function makeFooterMenuItems() {
   //Removes 'Try-HOC' from only gamelab footer menu
   if (project.getStandaloneApp() === 'gamelab') {
     footerMenuItems.shift();
+  }
+
+  var userAlreadyReportedAbuse =
+    cookies.get('reported_abuse') &&
+    _.includes(
+      JSON.parse(cookies.get('reported_abuse')),
+      project.getCurrentId()
+    );
+
+  if (userAlreadyReportedAbuse) {
+    _.remove(footerMenuItems, function(menuItem) {
+      return menuItem.key === 'report-abuse';
+    });
   }
 
   return footerMenuItems;

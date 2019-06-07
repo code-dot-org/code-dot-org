@@ -8,8 +8,9 @@ TIME_NOW = DateTime.now.strftime('%F %T').freeze
 JOTFORM_SURVEY_RESPONSE_CLASSES = [
   Pd::WorkshopDailySurvey,
   Pd::WorkshopFacilitatorDailySurvey,
-  Pd::PostCourseSurvey
-]
+  Pd::PostCourseSurvey,
+  Pd::MiscSurvey
+].freeze
 
 # @param unsanitized [String, nil] the unsanitized string
 # @returns [String, nil] the sanitized version of the string, with newlines stripped and double

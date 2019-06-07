@@ -134,8 +134,13 @@ def distribute_course_content(locale)
     translated_data.each do |type, type_data|
       next if type_data.blank?
       type_data.each do |level_url, level_data|
-        level = get_level_from_url(level_url)
-        translated_strings[type][level.name] = level_data
+        # We want function_names and block_categories to be flat (not keyed by level)
+        if ["function_names", "block_categories"].include? type
+          translated_strings[type] = translated_strings[type].merge(level_data)
+        else
+          level = get_level_from_url(level_url)
+          translated_strings[type][level.name] = level_data
+        end
       end
     end
   end
