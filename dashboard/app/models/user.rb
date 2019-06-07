@@ -316,12 +316,15 @@ class User < ActiveRecord::Base
   end
 
   # Most recently created user_school_info referring to a complete school_info entry
-  def last_complete_school_info
+  def last_complete_user_school_info
     user_school_infos.
-        select {|tenure| tenure.school_info.complete?}.
-        sort_by(&:created_at).
-        last&.
-        school_info
+      select {|tenure| tenure.school_info.complete?}.
+      sort_by(&:created_at).
+      last
+  end
+
+  def last_complete_school_info
+    last_complete_user_school_info&.school_info
   end
 
   belongs_to :invited_by, polymorphic: true
