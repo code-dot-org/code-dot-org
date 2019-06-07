@@ -274,7 +274,13 @@ class TopInstructionsCSP extends Component {
     if (
       !nextProps.collapsed &&
       nextProps.height < MIN_HEIGHT &&
-      nextProps.height < nextProps.maxHeight
+      nextProps.height < nextProps.maxHeight &&
+      !(
+        nextProps.hidden ||
+        (!nextProps.shortInstructions &&
+          !nextProps.longInstructions &&
+          !nextProps.hasContainedLevels)
+      )
     ) {
       this.props.setInstructionsRenderedHeight(
         Math.min(nextProps.maxHeight, MIN_HEIGHT)
