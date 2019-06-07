@@ -525,6 +525,46 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_equal @second_teacher.user_school_infos.last.school_info.school, new_school
   end
 
+  test 'confirmation, previous complete and partial infos, submit unchanged complete info' do
+    # A gross edge case involving partial school info:
+
+    # Given a user with a complete (dropdown OR manual) school info `A`
+    school_info = create :school_info
+    @teacher.update school_info: school_info
+    tenure_a = @teacher.user_school_infos.first
+    assert tenure_a.school_info.complete?
+
+    # When a year later they click "No" and enter an incomplete school info
+    Timecop.travel 1.year
+    sign_in @teacher
+    submit_partial_school_info
+    assert_response :success, response.body
+
+    # Then we make a new, incomplete school info `B`
+    @teacher.reload
+    assert_equal 2, @teacher.user_school_infos.count
+    tenure_b = @teacher.user_school_infos.last
+    refute tenure_b.school_info.complete?
+
+    # When 7 days later they click "No" and "Save" without changing anything
+    # (Because we loaded the last _complete_ school info into the dialog)
+    Timecop.travel 7.days
+    submit_complete_school_info_from_dropdown school_info.school
+    assert_response :success, response.body
+
+    # `A`'s confirmation date is updated, and `B` is unchanged.
+    @teacher.reload
+    assert_equal 2, @teacher.user_school_infos.count
+
+    tenure_a.reload
+    assert tenure_a.school_info.complete?
+    assert_same_date Time.now, tenure_a.last_confirmation_date
+
+    tenure_b.reload
+    refute tenure_b.school_info.complete?
+    assert_same_date 7.days.ago, tenure_b.last_confirmation_date
+  end
+
   private def partial_manual_school_info
     SchoolInfo.create(
       country: 'United States',
