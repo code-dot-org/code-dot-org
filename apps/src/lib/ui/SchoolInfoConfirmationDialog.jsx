@@ -62,11 +62,16 @@ class SchoolInfoConfirmationDialog extends Component {
 
   handleClickYes = () => {
     const {authTokenName, authTokenValue} = this.props.scriptData;
+    const formData = new FormData();
+    formData.append(authTokenName, authTokenValue);
     fetch(
       `/api/v1/user_school_infos/${
         this.props.scriptData.existingSchoolInfo.user_school_info_id
       }/update_last_confirmation_date`,
-      {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
+      {
+        method: 'PATCH',
+        body: formData
+      }
     )
       .then(this.closeModal)
       .catch(error => {
