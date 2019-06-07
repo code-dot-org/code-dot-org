@@ -792,12 +792,13 @@ export function makeFooterMenuItems() {
       newWindow: true
     },
     {
+      key: 'how-it-works',
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/edit'),
       newWindow: false
     },
     {
-      key: 'reportAbuse',
+      key: 'report-abuse',
       text: i18n.t('footer.report_abuse'),
       link: '/report_abuse',
       newWindow: true
