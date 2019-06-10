@@ -94,20 +94,11 @@ class ScriptTeacherPanel extends React.Component {
         currentStudent = sectionData.section.students.find(
           student => this.props.getSelectedUserId() === student.id
         );
-
-        if (currentStudent) {
-          if (currentSectionScriptLevels) {
-            currentStudentScriptLevel = currentSectionScriptLevels.find(
-              level => this.props.getSelectedUserId() === level.user_id
-            );
-          }
-        } else {
-          currentStudent = {
-            id: null,
-            name: i18n.studentTableTeacherDemo()
-          };
-          currentStudentScriptLevel = sectionData.teacher_level;
-        }
+      }
+      if (currentSectionScriptLevels && currentStudent) {
+        currentStudentScriptLevel = currentSectionScriptLevels.find(
+          level => this.props.getSelectedUserId() === level.user_id
+        );
       }
     }
 
@@ -120,11 +111,8 @@ class ScriptTeacherPanel extends React.Component {
           <ViewAsToggle />
           {currentStudent && (
             <SelectedStudentInfo
-              students={students}
               selectedStudent={currentStudent}
               level={currentStudentScriptLevel}
-              onSelectUser={this.props.onSelectUser}
-              getSelectedUserId={this.props.getSelectedUserId}
             />
           )}
           {sectionData && sectionData.level_examples && (
