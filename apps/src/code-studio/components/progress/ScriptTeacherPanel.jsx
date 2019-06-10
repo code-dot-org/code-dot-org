@@ -104,7 +104,7 @@ class ScriptTeacherPanel extends React.Component {
       } else {
         currentStudent = {
           id: null,
-          name: 'Me'
+          name: i18n.studentTableTeacherDemo()
         };
         currentStudentScriptLevel = sectionData.teacher_level;
       }
