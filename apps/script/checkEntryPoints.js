@@ -92,7 +92,8 @@ const SILENCED = [
   'cookieBanner',
   'dance',
   'regionalPartnerSearch',
-  'regionalPartnerMiniContact'
+  'regionalPartnerMiniContact',
+  'code.org/public/educate/curriculum/courses'
 ];
 const SITES_CONFIG = {
   studio: {
