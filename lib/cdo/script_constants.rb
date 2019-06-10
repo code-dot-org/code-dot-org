@@ -134,12 +134,6 @@ module ScriptConstants
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
     ],
-    # Currently only used for TTS.
-    csp_2019: [
-      CSP3_2019_NAME = 'csp3-2019'.freeze,
-      CSP5_2019_NAME = 'csp5-2019'.freeze,
-      CSP_POSTAP_2019_NAME = 'csppostap-2019'.freeze,
-    ],
     csp_2018: [
       CSP1_2018_NAME = 'csp1-2018'.freeze,
       CSP2_2018_NAME = 'csp2-2018'.freeze,
