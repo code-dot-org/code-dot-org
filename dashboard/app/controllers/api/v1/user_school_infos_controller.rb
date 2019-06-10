@@ -22,6 +22,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
       current_user.user_school_infos.where(school_info: submitted_school_info).
         update(last_confirmation_date: DateTime.now)
     else
+      puts "do I make it here?"
       current_user.user_school_infos.where(school_info: existing_school_info).
         update(last_confirmation_date: DateTime.now)
     end
