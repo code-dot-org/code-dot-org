@@ -49,6 +49,10 @@ export default function initPage(scriptEditorData) {
         locales={locales}
         projectSharing={scriptData.project_sharing}
         curriculumUmbrella={scriptData.curriculum_umbrella}
+        familyName={scriptData.family_name}
+        versionYear={scriptData.version_year}
+        scriptFamilies={scriptEditorData.script_families}
+        versionYearOptions={scriptEditorData.version_year_options}
       />
     </Provider>,
     document.querySelector('.edit_container')
