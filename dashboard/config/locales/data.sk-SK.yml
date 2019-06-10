@@ -734,6 +734,7 @@ sk:
         csd_gamelab_functions: Názvy a definície funkcií
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
+        CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

@@ -3,6 +3,64 @@ ga:
     external:
       Begin planning your project:
         title: teideal
+      CSD U2 Design Project:
+        title: teideal
+      CSD U2 Design Project_2018:
+        title: teideal
+      CSD U2 Design Project_2018_2019:
+        title: teideal
+      CSD U2 L1 Overview:
+        title: teideal
+      CSD U2 L2 Overview:
+        title: teideal
+      CSD U2 L3 Overview:
+        title: teideal
+      CSD U2 L4 Overview:
+        title: teideal
+      CSD U2 L5 Overview:
+        title: teideal
+      CSD U2 L6 Overview:
+        title: teideal
+      CSD U2 expand project:
+        title: teideal
+      CSD U2 expand project_2018:
+        title: teideal
+      CSD U2 expand project_2018_2019:
+        title: teideal
+      CSD U3 combining rep:
+        title: teideal
+      CSD U3 combining rep_2018:
+        title: teideal
+      CSD U3 combining rep_2018_2019:
+        title: teideal
+      CSD U5 Encryption 1:
+        title: teideal
+      CSD U5 Encryption 1_2018:
+        title: teideal
+      CSD U5 Encryption 1_2018_2019:
+        title: teideal
+      CSD U5 L13 SFLP Interpreting Data:
+        title: teideal
+      CSD U5 data visualization:
+        title: teideal
+      CSD U5 data visualization_2018:
+        title: teideal
+      CSD U5 data visualization_2018_2019:
+        title: teideal
+      CSD U5 student record:
+        title: teideal
+      CSD U5 student record_2018:
+        title: teideal
+      CSD U5 student record_2018_2019:
+        title: teideal
+      Internet Simulator Setup 2:
+        title: teideal
+      Multi-Screen Apps:
+        title: teideal
+      New Challenge Introduction:
+        title: teideal
+      OPD-K5 Stage3aGo:
+        title: teideal
       Prepare for your presentation:
         title: teideal
     match:
@@ -193,6 +251,12 @@ ga:
       4-5 maze multi 1:
         Maze Multiple Choice: 'Cathair Ghríobháin: Ilroghnach'
         Which blocks solve the puzzle?: Cé acu blocanna a réiteodh an dúshlán?
+      CSD U3 Boolean MC:
+        title: teideal
+      CSD U3 Boolean MC_2018:
+        title: teideal
+      CSD U3 Boolean MC_2018_2019:
+        title: teideal
       K-1 Artist 1 Multi 1:
         Multiple Choice: Ilroghnach
         Which blocks solve this puzzle?: Cé acu blocanna a réiteodh an dúshlán seo?
@@ -244,6 +308,10 @@ ga:
       K-1 Word Search Multi 3:
         Multiple Choice: Ilroghnach
         Which word is spelled?: Cén focal a litreodh na blocanna seo?
+      behaviors 1 predict:
+        Incorrect: Mícheart
+      behaviors 4 predict:
+        Incorrect: Mícheart
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -252,9 +320,15 @@ ga:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: Níl a fhios agam
       courseC_multi_starWars_predict1_2018:
+        I don't know: Níl a fhios agam
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: Níl a fhios agam
       courseD_multi_artist_binary8_predict1:
         A: A
@@ -262,6 +336,11 @@ ga:
         C: C
         D: D
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -274,6 +353,10 @@ ga:
         A: A
         B: B
         C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -283,6 +366,14 @@ ga:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'
