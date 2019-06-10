@@ -233,6 +233,10 @@ class ScriptLevel < ActiveRecord::Base
     return level.properties["anonymous"] == "true"
   end
 
+  def bubble_choice?
+    level.is_a? BubbleChoice
+  end
+
   def name
     stage.localized_name
   end
