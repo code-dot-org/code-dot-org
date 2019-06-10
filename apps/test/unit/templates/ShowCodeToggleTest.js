@@ -103,8 +103,8 @@ describe('The ShowCodeToggle component', () => {
 
   describe('when the studioApp editor has currentlyUsingBlocks=false', () => {
     beforeEach(() => {
-      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
       editor.session.currentlyUsingBlocks = false;
+      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
       studioApp().init(config);
     });
 
@@ -265,6 +265,7 @@ describe('The ShowCodeToggle component', () => {
       beforeEach(() => {
         config.enableShowCode = false;
         studioApp().init(config);
+        toggle.update();
       });
       it('will reflect the most recent config passed to studioApp().init()', () => {
         expect(
@@ -310,6 +311,7 @@ describe('The ShowCodeToggle component', () => {
       toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
       config.enableShowCode = false;
       studioApp().init(config);
+      toggle.update();
     });
 
     it('will reflect the most recent config passed to studioApp().init(). i.e. it will be hidden', () => {
