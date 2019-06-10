@@ -1853,11 +1853,6 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
 StudioApp.prototype.setConfigValues_ = function(config) {
   this.share = config.share;
 
-  // We want our embedded levels to look the same as regular levels,
-  // just without the editor
-  config.centerEmbedded = false;
-  config.responsiveEmbedded = true;
-
   // If set to true, we use our wireframe share (or chromeless share on mobile).
   config.wireframeShare = utils.valueOr(config.wireframeShare, false);
 
@@ -3155,9 +3150,8 @@ StudioApp.prototype.polishGeneratedCodeString = function(code) {
  * the visualizationColumn.
  */
 StudioApp.prototype.isResponsiveFromConfig = function(config) {
-  const isResponsiveEmbedView = !!(config.embed && config.responsiveEmbedded);
   const isWorkspaceView = !config.hideSource;
-  return isResponsiveEmbedView || isWorkspaceView;
+  return config.embed || isWorkspaceView;
 };
 
 /**
