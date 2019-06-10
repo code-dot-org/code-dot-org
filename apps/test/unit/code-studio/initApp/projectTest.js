@@ -771,6 +771,8 @@ function createStubSourceHandler() {
     getLevelHtml: sinon.stub(),
     setInitialLevelSource: sinon.stub(),
     getLevelSource: sinon.stub().resolves(),
+    setInitialLevelLibraries: sinon.stub(),
+    getLevelLibraries: sinon.stub().resolves(),
     setInitialAnimationList: sinon.stub(),
     getAnimationList: sinon.stub().callsFake(cb => cb({})),
     setMakerAPIsEnabled: sinon.stub(),

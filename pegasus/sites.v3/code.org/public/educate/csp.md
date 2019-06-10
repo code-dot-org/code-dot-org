@@ -28,7 +28,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csp-2018'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csp', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Principles', ages: 'Recommended for Grades 9-12', description: 'Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csp-2019'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csp', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Principles', ages: 'Recommended for Grades 9-12', description: 'Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.'%>
 
 [/col-50]
 
@@ -120,13 +120,13 @@ Whether you’re brand new to computer science or an experienced tech teacher lo
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp1-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'The Internet', description: "Students learn how the multi-layered systems of the Internet function as they collaboratively solve problems and puzzles about encoding and transmitting data, both 'unplugged' and using Code.org's Internet Simulator."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp1-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'The Internet', description: "Students learn how the multi-layered systems of the Internet function as they collaboratively solve problems and puzzles about encoding and transmitting data, both 'unplugged' and using Code.org's Internet Simulator."%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp2-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Digital Information', description: 'Students learn how complex information like text and images is stored in a computer and the way compression helps reduce the size of those files.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp2-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Digital Information', description: 'Students learn how complex information like text and images is stored in a computer and the way compression helps reduce the size of those files.'%>
 
 [/col-50]
 
@@ -134,13 +134,13 @@ Whether you’re brand new to computer science or an experienced tech teacher lo
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp3-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Algorithms and Programming', description: "In this unit, students learn the JavaScript language with turtle programming in Code.org's App Lab. Students are introduced the general principles of algorithms and program design that are applicapble to any programming language."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp3-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Algorithms and Programming', description: "In this unit, students learn the JavaScript language with turtle programming in Code.org's App Lab. Students are introduced the general principles of algorithms and program design that are applicapble to any programming language."%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp4-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'Big Data and Privacy', description: 'Students research current events around the complex questions related to public policy, law, ethics, and societal impact. Students are also introduced to the basics of how and why modern encryption works.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp4-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'Big Data and Privacy', description: 'Students research current events around the complex questions related to public policy, law, ethics, and societal impact. Students are also introduced to the basics of how and why modern encryption works.'%>
 
 [/col-50]
 
@@ -148,13 +148,13 @@ Whether you’re brand new to computer science or an experienced tech teacher lo
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-explore-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-explore/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Explore Performance Task', ages: 'Explore - Impact of Computing Innovations', description: 'This unit provides activities and resources for students to prepare for and complete the AP Explore Performance Task, which requires students to identify a computing innovation, explore its impact, and create a related digital artifact.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-explore-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/csp-explore/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Explore Performance Task', ages: 'Explore - Impact of Computing Innovations', description: 'This unit provides activities and resources for students to prepare for and complete the AP Explore Performance Task, which requires students to identify a computing innovation, explore its impact, and create a related digital artifact.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp5-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Building Apps', description: "Students continue learning how to program in the JavaScript language. Using Code.org's App Lab environment, students create a series of applications that live on the web. Each app highlights a core concept of programming."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp5-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Building Apps', description: "Students continue learning how to program in the JavaScript language. Using Code.org's App Lab environment, students create a series of applications that live on the web. Each app highlights a core concept of programming."%>
 
 [/col-50]
 
@@ -162,13 +162,13 @@ Whether you’re brand new to computer science or an experienced tech teacher lo
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-create-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-create/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Create Performance Task', ages: 'Create - Applications from Ideas', description: 'This unit provides activities and resources for students to prepare for and complete the AP Create Performance Task, which asks students to develop a program on a topic that interests them or one that solves a problem.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-create-2019'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp-19/csp-create/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Create Performance Task', ages: 'Create - Applications from Ideas', description: 'This unit provides activities and resources for students to prepare for and complete the AP Create Performance Task, which asks students to develop a program on a topic that interests them or one that solves a problem.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csppostap-2018'), cta_text: 'View unit', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, students learn how to analyze data using spreadsheets and use App Lab's database capabilities to create apps that store data in the cloud.
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csppostap-2019'), cta_text: 'View unit', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, students learn how to analyze data using spreadsheets and use App Lab's database capabilities to create apps that store data in the cloud.
 <br><br>"%>
 
 [/col-50]

@@ -10,13 +10,13 @@
     "instructions_important": "false",
     "display_name": "Video: Problem Solving Process",
     "long_instructions": "## Questions to consider\r\n* How did you follow the problem solving process in the last lesson?\r\n* How could you use this process on a problem in your everyday life?",
-    "encrypted_teacher_markdown": "aVU7Q8YCiyggaiCqkGdM7R/HTqglsN4nrPXEcSuKD8F9EfwpfVlZFys0m56E\nfYfa8X3+03EgFqsY0L3opAyVzTxfjjB/gDxIvjDOd8Twywuk+DI8wzxCW/uf\nW9vG3wXnmFou5RmRN3qCA3rdka/9+BduWOhUFiO6Tmt1Nodo+YMnSjNwRY4m\nY7i+ycCSDNfeVobR245MB2+Rx4mC9XIYcRUNWaX287ySXVk29ljmpOzouAxn\n9HB2iRo0TfEE7RKUiuxb2fKTdn93Inbbfyfty4SePuD1gWAD7HevEorDDo62\nCNvvXg4zymoMTsog/GlVDJzwXcoXTsZwOJvc1bTUzHoU+3sirf/FeAQ4zQ3n\nGIQ0nPdbphsakC0FBWDGENfsYEmziOLq/IwMZ4fU+HPtA1msXl8qP4nIwUxu\n1sxdZnGs67GJ0wBjaOkNPKQ6+U0keSBPLQ4DZzpqUqcZj6iFyl8Ma76gqyRe\nEz+Ks0NlCTrkN5BZqAyleU5wh+0ECZzrp/MLvPRf+RoM+PVg7gzY4lT6Gs0X\nv9MB9zrlfG0w2vIxh2C7lXMO7RdcUk6D9IvWPd1G3rE+/FFXVOiS9n6RSJmf\nmMncxQkT2XZV2tPALr92V3+xK13mHnYFHtYjXLfUdKSEbhlHqtmp3OgBFIdF\n/hy3sJsX8Co1TsFvYmieQpbuSrKn0Mb8BZ7IkCEe/1LtwkslKtp2II4ldVns\ntTFeEZOilDRvf1Kh/OziDoCzs4JOz+NgGI9JidDXB1j1OXPZ9mXHNyrcahSB\nGyf1tOWqKE1jiZQYsO3bsacucSNQECvkGGYG+EwrqpBpuL13Cs1ReKRGX1gN\nQEus1+HpBRwWBAheAWbv+QbG5+m+uW+YVqe0Jw0WuHfslViVhmCUfwaaJ+xW\nMLOTWaB4UgMOIXizgcY+WrDJsE5qqbe+DH8uG72KADQLp4UcPpPQFizW7+FS\nLubq7OEScu5y5STQ1O/d8KEa4TspLC25GPWK7SV7lW8w82+5YLy7aix3AnW+\nXYFBBmZiSNykKbDKC+x8okxApD6RU3pzueYW/FlXYtUpketyRLsiWOIkdYnu\nLp8QuPPQ\n",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "teacher_markdown": "## Discussion Goals\r\n\r\nThe first discussion question is part of the core activity in the rest of the lesson.  Students should take time working in their groups to think of specific things that they did that follow each step of the process.   The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity.\r\n\r\nThe second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps my look in different domains.  The goal of this discussion is to makes sure students have a general enough understanding of the process that they can apply it to a wider variety of problems, since the process will be used throughout the course in various domains."
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-05-06 17:49:58 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-05-06 17:49:58 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-15 19:17:00 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":42,\"changed_by_email\":\"sarah.filman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

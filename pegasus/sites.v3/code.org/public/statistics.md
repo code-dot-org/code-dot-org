@@ -272,7 +272,30 @@ Young women wanted to make apps about the weather and the young men wanted to ma
 
 </div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1130883455930327047" target="_blank"><img src="/images/statistics/fit-250/more-likely-to-share.png"></a>
+
+<br>
+
+Boys in our classes are 50% more likely to share the projects they create to <a href="https://studio.code.org/projects/public">Code.org's project gallery</a>. Yet, the best ambassadors for girls in CS are the other girls. How can we encourage them to share their projects and show their friends what they’ve made? What has worked for girls you’ve worked with?
+
+</div>
+
 <div style="clear: both;"></div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="" target="_blank"><img src="/images/statistics/fit-250/state-policies.png"></a>
+
+<br>
+
+States across the country have passed more than 200 policies to support computer science! See how close your state is to passing all 9 policies our advocacy coalition recommends and join the movement: <a href="https://advocacy.code.org/">advocacy.code.org.</a>
+
+</div>
+
+<div style="clear: both;"></div>
+
 
 <br>
 

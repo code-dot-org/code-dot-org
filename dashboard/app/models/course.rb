@@ -25,6 +25,11 @@ class Course < ApplicationRecord
 
   scope :with_associated_models, -> {includes([:plc_course, :default_course_scripts])}
 
+  FAMILY_NAMES = [
+    CSD = 'csd'.freeze,
+    CSP = 'csp'.freeze
+  ].freeze
+
   def skip_name_format_validation
     !!plc_course
   end
@@ -265,6 +270,8 @@ class Course < ApplicationRecord
       id: id,
       title: localized_title,
       assignment_family_title: localized_assignment_family_title,
+      family_name: family_name,
+      version_year: version_year,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
@@ -535,5 +542,11 @@ class Course < ApplicationRecord
       # Populate cache on miss.
       course_cache[id_or_name.to_s] = get_without_cache(id_or_name)
     end
+  end
+
+  # Returns an array of version year strings, starting with 2017 and ending 1 year
+  # from the current year.
+  def self.get_version_year_options
+    (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
   end
 end

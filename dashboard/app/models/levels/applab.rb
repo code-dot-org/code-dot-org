@@ -38,6 +38,7 @@ class Applab < Blockly
     hide_design_mode
     beginner_mode
     start_html
+    start_libraries
     submittable
     log_conditions
     data_tables
@@ -49,7 +50,6 @@ class Applab < Blockly
     fail_on_lint_errors
     debugger_disabled
     makerlab_enabled
-    teacher_markdown
     helper_libraries
   )
 
@@ -109,8 +109,9 @@ class Applab < Blockly
   def update_json_fields
     palette_result = update_palette
     log_conditions_result = parse_json_property_field('log_conditions')
+    start_libraries_result = parse_json_property_field('start_libraries')
 
-    success = palette_result && log_conditions_result
+    success = palette_result && log_conditions_result && start_libraries_result
     throw :abort unless success
   end
 

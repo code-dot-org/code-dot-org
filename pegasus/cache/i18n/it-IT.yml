@@ -1201,7 +1201,7 @@ it-IT:
   tynker_name: Costruisci un gioco come vuoi tu
   scratch_name: Scopri la tua creatività con la programmazione
   thinkersmith_name: I miei amici robotici
-  condcards_name: Istruzioni condizionali con le Carte da Gioco
+  condcards_name: Istruzioni condizionali con le carte da gioco
   codehs_name: Imparare a programmare con il cane Karel
   codemonkey_name: CodeMonkey
   codeavengers_name: Costruisci un gioco con JavaScript
@@ -1258,14 +1258,8 @@ it-IT:
   coursed-2018_name: Corso D (2018)
   coursee-2018_name: Corso E (2018)
   coursef-2018_name: Corso F (2018)
-  accelerated_name: Corso rapido
-  express_name: Corso Rapido
-  pre-express_name: Corso Rapido pre-scolare
-  express-2017_name: Corso Rapido (2017)
-  pre-express-2017_name: Corso Rapido pre-scolare (2017)
   express-2018_name: Corso Rapido
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
-  cspunit1_name: Princìpi dell'Informatica - Unità 1
   cspunit2_name: Princìpi dell'Informatica - Unità 2
   cspunit3_name: Princìpi dell'Informatica - Unità 3
   cspunit4_name: Princìpi dell'Informatica - Unità 4
@@ -2133,6 +2127,7 @@ it-IT:
   full_course_category_name: Corsi Avanzati
   user_header_label: Ciao %{username}
   user_header_team: Squadra
+  user_header_my_projects: Collezione Privata
   user_header_settings: Il mio account
   user_header_logout: Esci
   user_header_signin: Accedi

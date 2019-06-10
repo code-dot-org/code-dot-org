@@ -109,4 +109,29 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     test_user.reload
     assert_equal response["next_census_display"], test_user.next_census_display
   end
+
+  test "a get request to get school_name returns school object" do
+    sign_in(@user)
+    get :get_school_name, params: {user_id: @user.id}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal @user.school, response["school_name"]
+  end
+
+  test "school name is not returned for a user that is not signed in" do
+    get :get_school_name, params: {user_id: 234}
+    assert_response 403
+  end
+
+  test 'get school name will 403 if given a user id other than the person logged in' do
+    sign_in(@user)
+    get :get_school_name, params: {user_id: @user.id + 1}
+    assert_response 403
+  end
+
+  test "get_school_user will 403 if user id does not exist" do
+    sign_in(@user)
+    get :get_school_name, params: {user_id: '-1'}
+    assert_response 403
+  end
 end
