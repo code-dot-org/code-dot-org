@@ -1,5 +1,5 @@
 ---
-et:
+et-EE:
   data:
     display_name:
       CSD U2 Pair Programming Video: Paarisprogrammeerimine
@@ -53,7 +53,6 @@ et:
       CSD U3 Variables Map: Muutujad
       CSD U3 Variables Map_2018: Muutujad
       CSD U3 Variables Map_2019: Muutujad
-      CSD U3 functions map: Funktsioonid
       CSD U6 for loop map: For tsükkel
       CSD U6 for loop map_2018: For tsükkel
       CSD U6 for loop map_2019: For tsükkel
@@ -61,13 +60,7 @@ et:
       CSD U6 functions paramters video_2018: Parameetritega funktsioonid
       CSD U6 functions paramters video_2019: Parameetritega funktsioonid
       'CSD: For Loop_2018': For tsükkel
-      'CSD: For Loop_2019': For tsükkel
-      MC_HOC_2017_FP10x10: Tasuta mäng
-      MC_HOC_2017_FP10x10_RE: Tasuta mäng
-      SG U3L07 More Subgoals: Dokumentatsioon
       courseA_video_Stevie: Stevie ja suur projekt
       courseA_video_Stevie_2018: Stevie ja suur projekt
-      courseA_video_Stevie_2019: Stevie ja suur projekt
       courseB_video_Unspotted: Märkamata vead
       courseB_video_Unspotted_2018: Märkamata vead
-      courseB_video_Unspotted_2019: Märkamata vead

@@ -3,6 +3,64 @@ sl:
     external:
       Begin planning your project:
         title: naslov
+      CSD U2 Design Project:
+        title: naslov
+      CSD U2 Design Project_2018:
+        title: naslov
+      CSD U2 Design Project_2018_2019:
+        title: naslov
+      CSD U2 L1 Overview:
+        title: naslov
+      CSD U2 L2 Overview:
+        title: naslov
+      CSD U2 L3 Overview:
+        title: naslov
+      CSD U2 L4 Overview:
+        title: naslov
+      CSD U2 L5 Overview:
+        title: naslov
+      CSD U2 L6 Overview:
+        title: naslov
+      CSD U2 expand project:
+        title: naslov
+      CSD U2 expand project_2018:
+        title: naslov
+      CSD U2 expand project_2018_2019:
+        title: naslov
+      CSD U3 combining rep:
+        title: naslov
+      CSD U3 combining rep_2018:
+        title: naslov
+      CSD U3 combining rep_2018_2019:
+        title: naslov
+      CSD U5 Encryption 1:
+        title: naslov
+      CSD U5 Encryption 1_2018:
+        title: naslov
+      CSD U5 Encryption 1_2018_2019:
+        title: naslov
+      CSD U5 L13 SFLP Interpreting Data:
+        title: naslov
+      CSD U5 data visualization:
+        title: naslov
+      CSD U5 data visualization_2018:
+        title: naslov
+      CSD U5 data visualization_2018_2019:
+        title: naslov
+      CSD U5 student record:
+        title: naslov
+      CSD U5 student record_2018:
+        title: naslov
+      CSD U5 student record_2018_2019:
+        title: naslov
+      Internet Simulator Setup 2:
+        title: naslov
+      Multi-Screen Apps:
+        title: naslov
+      New Challenge Introduction:
+        title: naslov
+      OPD-K5 Stage3aGo:
+        title: naslov
       Prepare for your presentation:
         title: naslov
     match:
@@ -184,6 +242,12 @@ sl:
       4-5 maze multi 1:
         Maze Multiple Choice: Labirint izbirno vprašanje
         Which blocks solve the puzzle?: Kateri bloki rešijo uganko?
+      CSD U3 Boolean MC:
+        title: naslov
+      CSD U3 Boolean MC_2018:
+        title: naslov
+      CSD U3 Boolean MC_2018_2019:
+        title: naslov
       K-1 Artist 1 Multi 1:
         Multiple Choice: Izbirno vprašanje
         Which blocks solve this puzzle?: Kateri bloki rešijo to uganko?
@@ -241,12 +305,21 @@ sl:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseD_multi_artist_binary8_predict1:
         A: A
         B: B
         C: C
         D: D
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -259,6 +332,10 @@ sl:
         A: A
         B: B
         C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -268,6 +345,14 @@ sl:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

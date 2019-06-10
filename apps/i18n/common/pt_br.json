@@ -896,6 +896,7 @@
   "note": "*Nota:",
   "notInRightPlace": "Parece que você não está no lugar certo",
   "notAnswered": "Não Respondido",
+  "notApplicable": "N/A",
   "notSaved": "Não salvo",
   "notStarted": "Não iniciado",
   "nPoints": "{numPoints, plural,one {1 ponto} other {# pontos}}",

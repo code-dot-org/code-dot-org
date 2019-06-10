@@ -1010,7 +1010,7 @@ es-MX:
             Packets and Making a Reliable Internet:
               name: 'Paquetes: cómo hacer que Internet sea confiable'
             Practice PT - Cybersecurity Innovations:
-              name: 'PT de práctica: innovaciones en ciberseguridad'
+              name: PT de práctica - Innovaciones en ciberseguridad
             Practice PT - The Internet and Society:
               name: 'PT de práctica: Internet y la sociedad'
             Public Key Crypto:
@@ -1031,15 +1031,15 @@ es-MX:
           description_short: Enseñar programación funcional a través de álgebra
           stages:
             Big Game - Animation:
-              name: 'El gran juego: animación'
+              name: El gran juego - Animación
             Big Game - Booleans:
-              name: 'El gran juego: valores booleanos'
+              name: El gran juego - Valores booleanos
             Big Game - Collision Detection:
-              name: 'El gran juego: detección de colisiones'
+              name: El gran juego - Detección de colisiones
             Big Game - Player Movement:
-              name: 'El gran juego: movimiento de jugadores'
+              name: El gran juego - Movimiento de jugadores
             Big Game - Variables:
-              name: 'El gran juego: variables'
+              name: El gran juego - Variables
             Booleans:
               name: Valores booleanos
             Defining Variables:
@@ -1144,7 +1144,7 @@ es-MX:
             Dance Lab:
               name: Laboratorio de baile
             Mini Rubric:
-              name: Minirúbrica
+              name: Mini rúbrica
             Pluralsight Test:
               name: Prueba de Pluralsight
             Externals Optionally Displayed as Unplugged:
@@ -2036,7 +2036,7 @@ es-MX:
           description: Esta unidad explora las formas en que se codifica, representa
             y manipula la información digital. La capacidad de manipular digitalmente
             los datos, visualizarlos e identificar patrones, tendencias y posibles
-            significados, es una habilidad práctica importante que los especialistas
+            significados es una habilidad práctica importante que los especialistas
             en computación realizan todos los días. Las principales habilidades que
             se abordan en la unidad tienen que ver con comprender de dónde provienen
             los datos, tener intuiciones sobre lo que se podría aprender o extraer
@@ -2166,7 +2166,7 @@ es-MX:
             Identifying People with Data:
               name: Identificar personas mediante datos
             Practice PT - Cybersecurity Innovations:
-              name: 'PT de práctica: innovaciones en ciberseguridad'
+              name: PT de práctica - Innovaciones en ciberseguridad
             Practice PT - Propose an Innovation:
               name: PT de práctica - Proponer una innovación
             Public Key Crypto:
@@ -11576,7 +11576,7 @@ es-MX:
           description: Esta unidad explora las formas en que se codifica, representa
             y manipula la información digital. La capacidad de manipular digitalmente
             los datos, visualizarlos e identificar patrones, tendencias y posibles
-            significados, es una habilidad práctica importante que los especialistas
+            significados es una habilidad práctica importante que los especialistas
             en computación realizan todos los días. Las principales habilidades que
             se abordan en la unidad tienen que ver con comprender de dónde provienen
             los datos, tener intuiciones sobre lo que se podría aprender o extraer
@@ -12628,10 +12628,18 @@ es-MX:
                 debatirlo durante mucho tiempo al final de la lección.
             Variables as Constant in Artist:
               name: Variables como constante en Artista
+              description_student: "¡No olvides tu creatividad! En estos desafíos,
+                usarás las variables para hacer dibujos fantásticos."
             Variables that Change in Bee:
               name: Variables que cambian en Abeja
             Variables that Change in Artist:
               name: Variables que cambian en Artista
+              description_teacher: En esta lección, los alumnos explorarán la creación
+                de diseños repetitivos mediante variables en el entorno de Artista.
+                Los alumnos aprenderán cómo usar las variables para que el código
+                sea más fácil de escribir y leer. Luego de los desafíos guiados, los
+                alumnos terminarán en un nivel de juego libre para demostrar lo que
+                han aprendido y crear sus propios diseños.
             For Loop Fun:
               name: Diversión con bucles Para
               description_student: "¡Te vas a divertir mucho mientras aprendes sobre
@@ -12719,6 +12727,15 @@ es-MX:
               name: El Artista
             Nested Loops in the Maze:
               name: Bucles anidados en Laberinto
+              description_student: Loops dentro de loops dentro de loops. ¿Qué significa
+                esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro
+                de otro loop.
+              description_teacher: En esta actividad online, los/as estudiantes tendrán
+                la oportunidad de llevar su comprensión de los loops a un nuevo nivel.
+                Jugando con la Abeja y Plantas versus Zombis, los/as estudiantes aprenderán
+                cómo programar un loop para que esté dentro de otro loop. También
+                se les animará a que descifren cómo cambios pequeños en cualquier
+                loop, afectarán su programa cuando hagan clic en Ejecutar.
             Sequencing in the Maze:
               name: Secuencias en el Laberinto
             Programming and Loops with the Artist:
@@ -12739,10 +12756,32 @@ es-MX:
               name: Derechos de Autor y Creatividad
             Internet:
               name: Internet
+              description_student: "¿Alguna vez te preguntaste cómo viaja la información
+                a través de Internet? ¡No es magia! Esta lección te enseñará los conceptos
+                básicos de cómo funciona Internet."
+              description_teacher: A pesar de que muchas personas utilizan Internet
+                todos los días, no muchos saben cómo funciona. En esta lección, los
+                estudiantes viajarán a través de Internet y aprenderán acerca de conexiones,
+                URL, direcciones IP y el DNS.
             Crowdsourcing:
               name: Colaboración abierta
+              description_student: Esta lección te enseñará sobre crowdsourcing, el
+                proceso de creación de un proyecto con un equipo.
+              description_teacher: En las ciencias de la computación, nos enfrentamos
+                a problemas grandes y abrumadores. Retos como encontrar números primos
+                grandes o crear una secuencia de ADN son casi imposibles de hacer
+                por uno mismo. Al sumar la capacidad de otros, estas tareas se vuelven
+                manejables. Esta lección mostrará a tus estudiantes lo útil que puede
+                ser el trabajo en equipo en la industria de las ciencias de la computación.
             Digital Sharing:
               name: Colaboración digital
+              description_teacher: Esta lección, cedida al curso de Fundamentos de
+                Ciencias de la Computación por parte del equipo de Derechos de Autor
+                y Creatividad, tiene el propósito de ayudar a los estudiantes a entender
+                los desafíos y beneficios de respetar la propiedad y los derechos
+                de autor, particularmente en entornos digitales. Los estudiantes deberían
+                ser alentados a respetar los derechos de los artistas como una parte
+                importante de ser un ciudadano digital ético.
             Running Simulations:
               name: Ejecutar simulaciones
             Simulating Experiments:
@@ -12767,42 +12806,115 @@ es-MX:
               name: Programación con Papel Cuadriculado
             Introduction to Online Puzzles:
               name: Introducción a los desafíos en línea
+              description_student: Esta lección te entrenará en las habilidades que
+                necesitarás para este curso.
+              description_teacher: 'En este grupo de desafíos, los/as estudiantes
+                comenzarán con una introducción (o revisión dependiendo de la experiencia
+                de su clase) al espacio de trabajo online de Code.org. Habrá videos
+                señalando la funcionalidad básica del espacio de trabajo incluyendo
+                los botones Ejecutar, Reiniciar y Paso. También se discute en estos
+                videos: Arrastrar los bloques Blockly, borrar bloques Blockly y conectar
+                bloques Blockly. Luego, los/as estudiantes practicarán sus habilidades
+                de secuenciación y debugging en laberinto. Desde ahí en adelante,
+                los/as estudiantes verán nuevos desafíos como Recolector, Artista
+                y Cosechador una vez comprendan las bases de -loops-.'
             Relay Programming:
               name: Programación de relevos
+              description_student: "¿Recuerdas al principio del curso cuando hiciste
+                dibujos con código? ¡En esta lección trabajarás con un equipo para
+                hacer algo muy similar!"
+              description_teacher: Esta actividad comenzará con una breve lección
+                sobre debugging y persistencia, luego pasará rápidamente a una carrera
+                contrarreloj a medida que los estudiantes se dividen en equipos y
+                trabajan juntos para escribir un programa a la vez.
             Debugging in Collector:
               name: Depuración con Laurel
+              description_student: "¿Alguna vez has tenido problemas al programar?
+                En esta lección, aprenderás sobre los secretos de debugging. Debugging
+                es el proceso de encontrar y arreglar problemas en tu código."
+              description_teacher: En esta actividad online, los/as estudiantes practicarán
+                debugging en el entorno "recolector". Los/as estudiantes podrán practicar
+                la lectura y edición de código para arreglar desafíos con algoritmos
+                simples, loops y loops anidados.
             Events in Bounce:
               name: Eventos de Rebote
+              description_student: "¿Has pensado que alguna vez puedes jugar videojuegos
+                en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
+              description_teacher: En esta actividad online, los/as estudiantes aprenderán
+                lo que son los eventos, y cómo los computadores los usan en los programas
+                como los videojuegos. Los/as estudiantes trabajarán los desafíos haciendo
+                que el programa reaccione a los eventos (como presionar los botones
+                de flecha). Al final del desafío, los/as estudiantes tendrán la oportunidad
+                de personalizar su juego con diferentes velocidades y sonidos.
             Loops in Ice Age:
               name: Bucles de la Era de Hielo
             Loops in Artist:
               name: Dibujar formas con bucles
             Nested Loops in Bee:
               name: Bucles anidados en Laberinto
+              description_teacher: En esta actividad online, los/as estudiantes tendrán
+                la oportunidad de llevar su comprensión de los loops a un nuevo nivel.
+                Jugando con la Abeja y Plantas versus Zombis, los/as estudiantes aprenderán
+                cómo programar un loop para que esté dentro de otro loop. También
+                se les animará a que descifren cómo cambios pequeños en cualquier
+                loop, afectarán su programa cuando hagan clic en Ejecutar.
             Nested Loops in Artist:
               name: Bucles anidados en Artista
             Nested Loops in Frozen:
               name: Bucles anidados en Frozen
             While Loops in Farmer:
               name: Bucles 'mientras' en Granjera
+              description_student: 'Los loops son tan útiles en la codificación. Esta
+                lección te enseñará sobre un nuevo tipo de loops: ¡loops mientras!'
             Until Loops in Maze:
               name: Bucles 'mientras' en el Laberinto
             Conditionals with Cards:
               name: Condicionales con tarjetas
+              description_student: "¡Es hora de jugar un juego donde ganas puntos
+                sólo bajo ciertas condiciones!"
             Conditionals in Bee:
               name: Condicionales con Abeja
+              description_student: 'Ahora que entiendes los condicionales, es hora
+                de programar Bee para usarlos al recolectar miel y néctar. '
+              description_teacher: Hasta ahora los/as estudiantes han estado escribiendo
+                código que se ejecuta exactamente del mismo modo cada vez que se ejecuta
+                - confiable, pero no muy flexible. En esta lección, su clase comenzará
+                a codificar con condicionales, permitiéndoles escribir código que
+                funcione de forma diferente dependiendo de las condiciones específicas
+                que el programa encuentre.
             Conditionals & Loops in Harvester:
               name: Cosechar con condicionales
+              description_student: No siempre está claro cuándo usar cada condicional.
+                Esta lección te ayudará a tener práctica en decidir qué hacer.
+              description_teacher: Los/as estudiantes practicarán loops `while`, loops
+                `hasta`, y las declaraciones `if / else`. Todos estos bloques usarán
+                condicionales. Al practicar los tres, los/as estudiantes aprenderán
+                a escribir código complejo y flexible.
             Digital Citizenship:
               name: Ciudadanía digital
+              description_student: Algunas informaciones no son seguras para compartir
+                online. Esta lección te ayudará a aprender la diferencia entre información
+                segura y privada.
             Build a Play Lab Game:
               name: Crea un juego del Laboratorio de juegos
             'Unplugged: Binary':
               name: Imágenes binarias
+              description_teacher: Aunque mucha gente piense en lo binario estrictamente
+                como ceros y unos, se le presentará a los/as estudiantes la idea de
+                que la información puede ser representada en una variedad de opciones
+                binarias. Esta lección toma el concepto de un paso más allá a medida
+                que ilustra cómo un computador puede también almacenar incluso información
+                más compleja (como imágenes y colores) en binario.
             Artist Binary:
               name: Artista binario
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+              description_student: Siente la fuerza mientras construyes tu propio
+                juego de la Guerra de las Galaxias en esta lección.
+              description_teacher: En esta lección, los estudiantes pondrán en práctica
+                eventos para crear un juego que pueden compartir en línea. Con R2-D2
+                y otros personajes de la Guerra de las Galaxias, los estudiantes serán
+                guiados a través de eventos, y luego podrán crear su propio juego.
             Dance Party:
               name: Fiesta de baile
         coursee-2019:
@@ -12880,6 +12992,8 @@ es-MX:
               name: Funciones en Minecraft
             Functions in Harvester:
               name: Funciones en Cosechadora
+              description_student: "¡Las funciones te ahorrarán mucho trabajo mientras
+                ayudas a la granjera con su cosecha!"
             Copyright and Creativity:
               name: Derechos de Autor y Creatividad
             Functions in Artist:
@@ -12968,8 +13082,26 @@ es-MX:
                 ser el trabajo en equipo en la industria de las ciencias de la computación.
             Nested Loops in Bee:
               name: Bucles anidados en Laberinto
+              description_student: Loops dentro de loops dentro de loops. ¿Qué significa
+                esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro
+                de otro loop.
+              description_teacher: En esta actividad online, los/as estudiantes tendrán
+                la oportunidad de llevar su comprensión de los loops a un nuevo nivel.
+                Jugando con la Abeja y Plantas versus Zombis, los/as estudiantes aprenderán
+                cómo programar un loop para que esté dentro de otro loop. También
+                se les animará a que descifren cómo cambios pequeños en cualquier
+                loop, afectarán su programa cuando hagan clic en Ejecutar.
             Nested Loops in Artist:
               name: Formas elegantes con bucles anidados
+              description_student: "¡Más loops anidados! Esta vez, harás algunos SORPRENDENTES
+                dibujos con loops anidados."
+              description_teacher: Los/as estudiantes crearán diseños complicados
+                usando Artista en el conjunto de los desafíos de hoy. Al continuar
+                practicando loops anidados con nuevos objetivos, los/as estudiantes
+                verán más usos de loops en general. Este conjunto de desafíos también
+                ofrece mucho más potencial para la creatividad con la oportunidad
+                para que los/as estudiantes creen su propio diseño al final de la
+                etapa.
             Nested Loops in Frozen:
               name: Bucles anidados con Frozen
             Sequencing in the Maze:
@@ -13387,6 +13519,8 @@ es-MX:
               name: Crea un Diseño con Loops
             'End of Course Project: Create a Play Lab Game':
               name: 'Fin del Proyecto del Curso: Crea un Juego de Play Lab'
+              description_student: "¡Prepara las manos para mucha programación! Llegó
+                el momento de comenzar a crear tu proyecto."
             'Programming: My Robotic Friends':
               name: Mis amigos robóticos Jr.
             'Loops: My Loopy Robotic Friends':
@@ -13492,8 +13626,19 @@ es-MX:
                 historia en el Laboratorio de juegos!
             Ocean Scene with Loops:
               name: Escena del océano con bucles
+              description_teacher: En cuanto a los bucles, los estudiantes aprenden
+                a dibujar imágenes mediante bucles de secuencias simples de instrucciones.
+                En la actividad conectada anterior, los bucles se utilizaron para
+                recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones.
+                Al final de esta etapa, los estudiantes tendrán la oportunidad de
+                crear sus propias imágenes mediante bucles.
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
+              description_teacher: Esta lección dará a los estudiantes una idea de
+                qué esperar cuando se dirigen al laboratorio de computación. Comienza
+                con un breve debate sobre los modales en un laboratorio de computación
+                y continúa con el uso de una computadora para completar desafíos en
+                línea.
             Loops in Ice Age:
               name: Bucles con Scrat
             Programming in Ice Age:
@@ -13502,6 +13647,11 @@ es-MX:
               name: Programación con Rey y BB-8
             Sequencing with Scrat:
               name: Secuencias con Scrat
+              description_teacher: Esta lección dará a los estudiantes una idea de
+                qué esperar cuando se dirigen al laboratorio de computación. Comienza
+                con un breve debate sobre los modales en un laboratorio de computación
+                y continúa con el uso de una computadora para completar desafíos en
+                línea.
         courseb-2019:
           title: Curso B (2019)
           description: Aprende los fundamentos de las ciencias de la computación y
@@ -13535,6 +13685,9 @@ es-MX:
               name: Loops en Artista
             'Events: The Big Event':
               name: El Gran Evento Jr.
+              description_teacher: Los eventos son una excelente manera de agregar
+                variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo
+                es que el programa responda al usuario exactamente cuando éste quiere.
             Events in Play Lab:
               name: Una batalla real con eventos
             'Loops: Getting Loopy':
@@ -13549,6 +13702,11 @@ es-MX:
               name: Programación con la cosechadora
             Sequencing in Maze:
               name: Secuencias con Angry Birds
+              description_teacher: Esta lección dará a los estudiantes una idea de
+                qué esperar cuando se dirigen al laboratorio de computación. Comienza
+                con un breve debate sobre los modales en un laboratorio de computación
+                y continúa con el uso de una computadora para completar desafíos en
+                línea.
         pre-express-2019:
           title: Curso Express para prelectores (2019)
           description: Aprende los fundamentos de las ciencias de la computación y
@@ -14497,6 +14655,8 @@ es-MX:
                 presentar su proceso de desarrollo de aplicaciones, incluido el problema
                 que se propusieron resolver; las formas en que han incorporado los
                 comentarios de las pruebas, y sus planes para el futuro.
+            Post-Project Test:
+              name: Prueba posterior al proyecto
         csd5-2019:
           title: CSP Unidad 5 - Los datos y la sociedad ('19-'20)
           description: La Unidad 5 trata sobre la importancia de los datos a la hora
@@ -14965,7 +15125,7 @@ es-MX:
           description: Esta unidad explora las formas en que se codifica, representa
             y manipula la información digital. La capacidad de manipular digitalmente
             los datos, visualizarlos e identificar patrones, tendencias y posibles
-            significados, es una habilidad práctica importante que los especialistas
+            significados es una habilidad práctica importante que los especialistas
             en computación realizan todos los días. Las principales habilidades que
             se abordan en la unidad tienen que ver con comprender de dónde provienen
             los datos, tener intuiciones sobre lo que se podría aprender o extraer
@@ -15068,6 +15228,8 @@ es-MX:
               name: Encuesta de mitad de año
             'Optional: Data Questions':
               name: 'Opcional: preguntas de datos'
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp5-2019:
           title: CSP Unidad 5 - Desarrollo de aplicaciones ('19-'20)
           description: Esta unidad continúa la presentación de los conceptos fundamentales
@@ -15127,6 +15289,8 @@ es-MX:
                 en AP
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp-explore-2019:
           title: Explorar - Preparación de AP Performance Task ('19-'20)
           description: Estas lecciones buscan ayudarte a comprender, preparar y realizar
@@ -15148,6 +15312,8 @@ es-MX:
               name: PT de exploración - Completar la tarea
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp-create-2019:
           title: Crear - Preparación de AP Performance Task ('19-'20)
           description: Estas lecciones buscan ayudarte a comprender, preparar y realizar
@@ -15167,6 +15333,8 @@ es-MX:
               name: Preparación de PT de creación - Planificar
             Create PT - Complete the Task:
               name: PT de creación - Completar la tarea
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csppostap-2019:
           title: Post AP - Herramientas de datos ('19-'20)
           description: "En el primer capítulo de esta unidad, los alumnos desarrollan
@@ -15219,6 +15387,8 @@ es-MX:
               name: Aplicaciones de muestra
             Final Project:
               name: Proyecto final
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp1-pilot:
           stages:
             new stage:
@@ -15587,6 +15757,14 @@ es-MX:
               name: Encuesta de estudiantes (mini PT)
             Loops Investigate and Practice:
               name: Bucles de investigar y practicar
+            Libraries Explore:
+              name: Explorar bibliotecas
+            Libraries Investigate:
+              name: Investigar bibliotecas
+            Student Survey (Libraries):
+              name: Encuesta de estudiantes (bibliotecas)
+            Teacher Survey (Libraries):
+              name: Encuesta de docentes (bibliotecas)
           title: 'Unidad 5: Listas, bucles y recorridos'
         csp6-pilot-staging:
           stages:
@@ -15918,6 +16096,14 @@ es-MX:
               name: Práctica de parámetros y valores de retorno
             App Lab Experiments Dashboard:
               name: Panel de experimentos del Laboratorio de aplicaciones
+            Libraries Explore:
+              name: Explorar bibliotecas
+            Libraries Investigate:
+              name: Investigar bibliotecas
+            Student Survey (Libraries):
+              name: Encuesta de estudiantes (bibliotecas)
+            Teacher Survey (Libraries):
+              name: Encuesta de docentes (bibliotecas)
           title: 'Unidad 5: Listas, bucles y recorridos'
         fit2019-novice:
           stages:

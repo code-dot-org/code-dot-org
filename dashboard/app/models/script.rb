@@ -1179,6 +1179,7 @@ class Script < ActiveRecord::Base
             hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
             login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
             wrapup_video: general_params[:wrapup_video],
+            family_name: general_params[:family_name],
             properties: Script.build_property_hash(general_params)
           },
           script_data[:stages],
@@ -1340,7 +1341,9 @@ class Script < ActiveRecord::Base
       pilot_experiment: pilot_experiment,
       show_assign_button: assignable?(user),
       project_sharing: project_sharing,
-      curriculum_umbrella: curriculum_umbrella
+      curriculum_umbrella: curriculum_umbrella,
+      family_name: family_name,
+      version_year: version_year
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
@@ -1472,6 +1475,7 @@ class Script < ActiveRecord::Base
       has_lesson_plan: !!script_data[:has_lesson_plan],
       curriculum_path: script_data[:curriculum_path],
       script_announcements: script_data[:script_announcements] || false,
+      family_name: script_data[:family_name],
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
       supported_locales: script_data[:supported_locales],
@@ -1639,5 +1643,9 @@ class Script < ActiveRecord::Base
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|script| script.has_pilot_experiment?(user)}
+  end
+
+  def self.get_version_year_options
+    Course.get_version_year_options
   end
 end
