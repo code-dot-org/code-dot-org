@@ -4,6 +4,64 @@ cs:
     external:
       Begin planning your project:
         title: název
+      CSD U2 Design Project:
+        title: název
+      CSD U2 Design Project_2018:
+        title: název
+      CSD U2 Design Project_2018_2019:
+        title: název
+      CSD U2 L1 Overview:
+        title: název
+      CSD U2 L2 Overview:
+        title: název
+      CSD U2 L3 Overview:
+        title: název
+      CSD U2 L4 Overview:
+        title: název
+      CSD U2 L5 Overview:
+        title: název
+      CSD U2 L6 Overview:
+        title: název
+      CSD U2 expand project:
+        title: název
+      CSD U2 expand project_2018:
+        title: název
+      CSD U2 expand project_2018_2019:
+        title: název
+      CSD U3 combining rep:
+        title: název
+      CSD U3 combining rep_2018:
+        title: název
+      CSD U3 combining rep_2018_2019:
+        title: název
+      CSD U5 Encryption 1:
+        title: název
+      CSD U5 Encryption 1_2018:
+        title: název
+      CSD U5 Encryption 1_2018_2019:
+        title: název
+      CSD U5 L13 SFLP Interpreting Data:
+        title: název
+      CSD U5 data visualization:
+        title: název
+      CSD U5 data visualization_2018:
+        title: název
+      CSD U5 data visualization_2018_2019:
+        title: název
+      CSD U5 student record:
+        title: název
+      CSD U5 student record_2018:
+        title: název
+      CSD U5 student record_2018_2019:
+        title: název
+      Internet Simulator Setup 2:
+        title: název
+      Multi-Screen Apps:
+        title: název
+      New Challenge Introduction:
+        title: název
+      OPD-K5 Stage3aGo:
+        title: název
       Prepare for your presentation:
         title: název
     match:
@@ -249,6 +307,12 @@ cs:
       4-5 maze multi 1:
         Maze Multiple Choice: Bludištní vícenásobná volba
         Which blocks solve the puzzle?: Které bloky vyřeší puzzle?
+      CSD U3 Boolean MC:
+        title: název
+      CSD U3 Boolean MC_2018:
+        title: název
+      CSD U3 Boolean MC_2018_2019:
+        title: název
       K-1 Artist 1 Multi 1:
         Multiple Choice: Vícenásobná volba
         Which blocks solve this puzzle?: Které bloky vyřeší hádanku?
@@ -308,6 +372,10 @@ cs:
       K-1 Word Search Multi 3:
         Multiple Choice: Vícenásobná volba
         Which word is spelled?: Které slovo je napsáno?
+      behaviors 1 predict:
+        Incorrect: Nesprávně
+      behaviors 4 predict:
+        Incorrect: Nesprávně
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -316,9 +384,15 @@ cs:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: Nevím
       courseC_multi_starWars_predict1_2018:
+        I don't know: Nevím
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: Nevím
       courseD_multi_artist_binary8_predict1:
         A: A
@@ -330,11 +404,20 @@ cs:
         B: B
         C: C
         D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
+        D: D
       courseD_multi_artist_nestedLoops9_predict1:
         A: A
         B: B
         C: C
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -355,6 +438,22 @@ cs:
           a loop down.  This is all inside of another loop that happens twice. 4 times
           2 is 8!"
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

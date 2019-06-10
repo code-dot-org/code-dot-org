@@ -938,6 +938,7 @@ zh-CN:
     csf_for_loops: 计数循环
     csf_internet: 互联网
     csf_impacts: 计算的影响
+    csf_warmup: 热身
     csd1_1: 第 1 章︰ 解决问题的流程
     csd1_2: 第 2 章︰ 计算机和解决问题的能力
     csd2_1: 第 1 章︰ 网站内容和 HTML
@@ -976,6 +977,7 @@ zh-CN:
     csp_loops: 循环
     csp_traversals: 遍历
     csp_libraries: 库
+    csp_parameters_return_values: 参数和返回值
     dlp: 反思提示
     time4cs_c1: 湿地及其生态系统
     time4cs_c2: 湿地里的食物链

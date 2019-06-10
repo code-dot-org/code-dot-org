@@ -4,6 +4,64 @@ he:
     external:
       Begin planning your project:
         title: כותרת
+      CSD U2 Design Project:
+        title: כותרת
+      CSD U2 Design Project_2018:
+        title: כותרת
+      CSD U2 Design Project_2018_2019:
+        title: כותרת
+      CSD U2 L1 Overview:
+        title: כותרת
+      CSD U2 L2 Overview:
+        title: כותרת
+      CSD U2 L3 Overview:
+        title: כותרת
+      CSD U2 L4 Overview:
+        title: כותרת
+      CSD U2 L5 Overview:
+        title: כותרת
+      CSD U2 L6 Overview:
+        title: כותרת
+      CSD U2 expand project:
+        title: כותרת
+      CSD U2 expand project_2018:
+        title: כותרת
+      CSD U2 expand project_2018_2019:
+        title: כותרת
+      CSD U3 combining rep:
+        title: כותרת
+      CSD U3 combining rep_2018:
+        title: כותרת
+      CSD U3 combining rep_2018_2019:
+        title: כותרת
+      CSD U5 Encryption 1:
+        title: כותרת
+      CSD U5 Encryption 1_2018:
+        title: כותרת
+      CSD U5 Encryption 1_2018_2019:
+        title: כותרת
+      CSD U5 L13 SFLP Interpreting Data:
+        title: כותרת
+      CSD U5 data visualization:
+        title: כותרת
+      CSD U5 data visualization_2018:
+        title: כותרת
+      CSD U5 data visualization_2018_2019:
+        title: כותרת
+      CSD U5 student record:
+        title: כותרת
+      CSD U5 student record_2018:
+        title: כותרת
+      CSD U5 student record_2018_2019:
+        title: כותרת
+      Internet Simulator Setup 2:
+        title: כותרת
+      Multi-Screen Apps:
+        title: כותרת
+      New Challenge Introduction:
+        title: כותרת
+      OPD-K5 Stage3aGo:
+        title: כותרת
       Prepare for your presentation:
         title: כותרת
     match:
@@ -244,6 +302,12 @@ he:
       4-5 maze multi 1:
         Maze Multiple Choice: מבוך - אפשרויות מרובות
         Which blocks solve the puzzle?: איזה מהבלוקים יפתרו את החידה?
+      CSD U3 Boolean MC:
+        title: כותרת
+      CSD U3 Boolean MC_2018:
+        title: כותרת
+      CSD U3 Boolean MC_2018_2019:
+        title: כותרת
       K-1 Artist 1 Multi 1:
         Multiple Choice: בחירה מרובה
         Which blocks solve this puzzle?: איזה מהבלוקים יפתרו את החידה?
@@ -311,9 +375,15 @@ he:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: אינני יודע
       courseC_multi_starWars_predict1_2018:
+        I don't know: אינני יודע
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: אינני יודע
       courseD_multi_artist_binary8_predict1:
         A: א
@@ -325,11 +395,20 @@ he:
         B: ב
         C: ג
         D: ד
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        A: א
+        B: ב
+        C: ג
+        D: ד
       courseD_multi_artist_nestedLoops9_predict1:
         A: א
         B: ב
         C: ג
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: א
+        B: ב
+        C: ג
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: א
         B: ב
         C: ג
@@ -350,6 +429,22 @@ he:
           a loop down.  This is all inside of another loop that happens twice. 4 times
           2 is 8!"
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

@@ -1,9 +1,7 @@
 ---
-id:
+id-ID:
   data:
     display_name:
-      AppLab Intro 4 - Video setProperty: Dapat Dimulai
-      AppLab Intro 6 - Video welcome: Dapat Dimulai
       CSD U2 Pair Programming Video: Pemrograman berpasangan
       CSD U2 Pair Programming Video_2018: Pemrograman berpasangan
       CSD U2 Pair Programming Video_2019: Pemrograman berpasangan
@@ -58,7 +56,6 @@ id:
       CSD U3 collisions build isTouching: Deteksi tumbukan
       CSD U3 collisions build isTouching_2018: Deteksi tumbukan
       CSD U3 collisions build isTouching_2019: Deteksi tumbukan
-      CSD U3 functions map: fungsi
       CSD U6 arrays intro: Pengenalan untuk array
       CSD U6 arrays intro_2018: Pengenalan untuk array
       CSD U6 for loop map: Untuk Pengulangan
@@ -71,12 +68,5 @@ id:
       CSD U6 setProperty Map_2018: Perancangan Layar dengan Kode
       CSD U6 setProperty Map_2019: Perancangan Layar dengan Kode
       'CSD: For Loop_2018': Untuk Pengulangan
-      'CSD: For Loop_2019': Untuk Pengulangan
-      MC_HOC_2017_FP10x10: Permainan Gratis
-      MC_HOC_2017_FP10x10_RE: Permainan Gratis
       Making Music_2018: Membuat musik
       Making Music_2019: Membuat musik
-      SG U3L07 More Subgoals: Dokumentasi
-      Text Compression_2018: kompresi Teks
-      Text Compression_2019: kompresi Teks
-      harvey_pixelation: Widget Pixelasi
