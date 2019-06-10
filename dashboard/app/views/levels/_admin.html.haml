@@ -126,17 +126,28 @@
 
     - if current_user.project_validator?
       %br
-      %div.admin-abuse{ :style => "display: none" }
-        Abuse score:
-        %span.admin-abuse-score
-        = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
-      .admin-report-abuse{ style: 'display: none;' }
-        = link_to 'Report Abuse', '/report_abuse'
+      .admin-project-sharing
+        .unblocked{ style: 'display: none;' }
+          This project is safe to share.
+        .blocked{ style: 'display: none;' }
+          This project is blocked from sharing.
+      %ul.blocked-reasons
+        %li.admin-sharing{ style: 'display: none;' }
+          Sharing is disabled
+        %li.privacy-profanity{ style: 'display: none;' }
+          Private or profane text
+        %li.abusive-image{ style: 'display: none;' }
+          Inapproprate image
+        %li.reported-abuse{ style: 'display: none;' }
+          Manually reported abusive
+          .admin-abuse{ :style => "display: none" }
+            Abuse score:
+            %span.admin-abuse-score
+            = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
 
       %br
-      .admin-sharing
-        Sharing disabled?
-        %span.admin-sharing-disabled
+      .admin-report-abuse
+        = link_to 'Report Abuse', '/report_abuse'
 
       #disable-auto-moderation{'style' => ('display: none;' if content_moderation_disabled)}
         %br
