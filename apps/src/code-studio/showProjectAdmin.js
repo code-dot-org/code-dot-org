@@ -75,13 +75,17 @@ export default project => {
     });
   }
 
-  if ($('.admin-project-sharing').length) {
+  if (
+    $('.admin-project-sharing').length &&
+    (project.isProjectLevel() || !project.shouldHideShareAndRemix())
+  ) {
     var sharingDisabled = project.getSharingDisabled();
     var privateOrProfane = project.hasPrivacyProfanityViolation();
     var abuseScore = project.getAbuseScore();
     var abusive = project.exceedsAbuseThreshold();
     if (sharingDisabled || privateOrProfane || abusive) {
       $('.blocked').show();
+      $('.blocked-reasons').show();
       $('.unblocked').hide();
       if (sharingDisabled) {
         $('.admin-sharing').show();
