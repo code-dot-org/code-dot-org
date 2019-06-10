@@ -284,6 +284,19 @@ Boys in our classes are 50% more likely to share the projects they create to <a 
 
 <div style="clear: both;"></div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="" target="_blank"><img src="/images/statistics/fit-250/state-policies.png"></a>
+
+<br>
+
+States across the country have passed more than 200 policies to support computer science! See how close your state is to passing all 9 policies our advocacy coalition recommends and join the movement: <a href="https://advocacy.code.org/">advocacy.code.org.</a>
+
+</div>
+
+<div style="clear: both;"></div>
+
+
 <br>
 
 ## Statistics at a glance
