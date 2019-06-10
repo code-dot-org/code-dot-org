@@ -201,10 +201,8 @@ class ExportDialog extends React.Component {
     exportApp: PropTypes.func.isRequired,
     exportGeneratedProperties: PropTypes.object.isRequired,
     md5SavedSources: PropTypes.string.isRequired,
-    previousExport: PropTypes.object,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
-    channelId: PropTypes.string.isRequired,
     appType: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
@@ -637,7 +635,7 @@ class ExportDialog extends React.Component {
     } = this.state;
     const waiting = exporting || generatingApk;
     const error = exportError || apkError;
-    const {appType, channelId} = this.props;
+    const {appType} = this.props;
     const titleText = waiting
       ? 'Creating Android Package...'
       : error
@@ -684,7 +682,6 @@ class ExportDialog extends React.Component {
               </button>
               {showSendToPhone && (
                 <SendToPhone
-                  channelId={channelId}
                   appType={appType}
                   downloadUrl={apkUri}
                   isLegacyShare={false}

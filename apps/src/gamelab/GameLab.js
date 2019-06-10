@@ -458,10 +458,15 @@ GameLab.prototype.exportApp = async function(expoOpts) {
       },
       this.studioApp_.config
     );
-    this.generatedProperties.export.android = {
-      md5ApkSavedSources: md5SavedSources,
-      snackId: expoSnackId,
-      apkUri
+    // Spread the previous object so changes here will always fail shallow
+    // compare and trigger react prop changes
+    this.generatedProperties.export = {
+      ...this.generatedProperties.export,
+      android: {
+        md5ApkSavedSources: md5SavedSources,
+        snackId: expoSnackId,
+        apkUri
+      }
     };
     projectChanged();
     return apkUri;
