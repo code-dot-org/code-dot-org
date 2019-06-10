@@ -1,29 +1,20 @@
 ---
-hr:
+hr-HR:
   data:
     function_names:
-      x: x
+      collect: prikupi
+      diamond: dijamant
+      do something: radi nešto
       draw a circle: nacrtaj krug
-      draw a hexagon: nacrtaj šesterokut
       draw a flower: nacrtaj cvijet
-      draw a square: nacrtaj kvadrat
+      draw a hexagon: nacrtaj šesterokut
+      draw a house: nacrtaj kuću
       draw a snowflake: nacrtaj pahuljicu
+      draw a square: nacrtaj kvadrat
+      draw a star: nacrtaj zvijezdu
       draw a tree: nacrtaj drvo
       draw a triangle: nacrtaj trokut
-      draw a house: nacrtaj kuću
-      draw a star: nacrtaj zvijezdu
-      do something: radi nešto
+      get nectar: pokupi nektar
       jump: skoči
       set score: postavi rezultat
-      get nectar: pokupi nektar
-      test: provjera
-      diamond: dijamant
-      move: pomakni
-      move right: pomakni desno
-      move up: pomakni gore
-      move down: pomakni dolje
-      move left: pomakni lijevo
-      collect: prikupi
-      turn left: okreni ulijevo
-      move forward: idi naprijed
-      turn right: okreni udesno
+      x: x

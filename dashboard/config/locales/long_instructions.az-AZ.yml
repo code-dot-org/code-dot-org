@@ -1,5 +1,5 @@
 ---
-az:
+az-AZ:
   data:
     long_instructions:
       2-3 Artist 1 new: "Salam, mən rəssamam. Siz kod yazmaqla mənə, demək olar ki,
@@ -24,8 +24,6 @@ az:
         bölməklə hər heyvan üçün yer düzəldin.\\\r\n\\\r\nMəsləhət:\nDüzbucaqlının
         eni 200 piksel, hündürlüyü 100 pikseldir.\\\r\n\\\r\nBu tapmacanı həll etmək
         üçün çoxlu müxtəlif yollar var."
-      2-3 Artist 9 NEW: Bu çərpələngi bitirin
-      2-3 Artist 9 REPLACEMENT: Bu pilleleri cekmeyi bitirin!
       2-3 Artist 9: Bu çərpələngi bitirin
       2-3 Artist Assessment 1: "**Yoxlama:** Axırıncı dişi çəkib qurtarın. O, 25 piksel
         enində və 25 piksel hündürlüyündədir."
@@ -50,25 +48,9 @@ az:
         Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
       4-5 Maze Conditionals 9: "\"Əgər-əks halda\" bloklu bir məşq tapmacası daha!\\\r\n\\\r\nBarmağınızı
         üzərində gəzdirin, görün, birinci cəhddən bunu edə bilərsinizmi."
-      Dance Party Template 1_2019: Şablon
-      Dance Party Template 2_2019: Şablon
       course4_artist_fwp_challenge1: Bu proqramı icra etməyə çalışın və dəyişikliklər
         etdikdə nə baş verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz?
         (Və ya onu silin və tamamilə fərqlisi ilə əvəzləyin)
       courseE_bee_functions3: Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan
         ibarət blokdur. 5 nektar əldə etmək üçün "get 5" funksiyasından istifadə edin.
         Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
-      courseE_bee_functions3_2018: Funksiyalar hər hansı bir tapşırığı yerinə yetirən
-        kodlardan ibarət blokdur. 5 nektar əldə etmək üçün "get 5" funksiyasından
-        istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə
-        edin.
-      grade2_PuppyLoops_10: Müəlliməm deyir ki, başladığlm işi başa çatdırmalıyam!
-        Fır-fıramı bitirməkdə mənə kömək edin. Nəyin səhv olduğunu tapa bilərsiniz?
-      grade2_PuppyLoops_8: |-
-        Pisiyin biglari ucun olan bu kod sehvdir.
-        Hamisi eyni uzunluqda olan biglari cekmek ucun bu kodu duzelt.
-      grade4_bee_functions3: Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan
-        ibarət blokdur. 5 nektar əldə etmək üçün "get 5" funksiyasından istifadə edin.
-        Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
-      grade4_review_artist2: "Bu evə dam lazımdır! Üçbucaq çəkin. \\\r\n\\\r\nMəsləhət:\nHər
-        üç tərəf eyni uzunluqdadır.\\\r\n\\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"

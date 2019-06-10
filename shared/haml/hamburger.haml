@@ -29,15 +29,15 @@
   #hamburger-icon.clicktag{class: contents[:visibility]}
     %span{style: "pointer-events: none"}
 
-#help-button{class: "show-always"}
+#help-button{class: "hide-mobile"}
   #help-contents.hide-responsive-menu
     - help_items.each do |entry|
-      %div{class: "show-always"}
+      %div{class: "hide-mobile"}
         .item
           - target = entry[:target] ? entry[:target] : "_self"
           %a{id: entry[:id], href: entry[:url], target: target}= entry[:title]
 
-  %i#help-icon.clicktag{class: "fa fa-question-circle show-always"}
+  %i#help-icon.clicktag{class: "fa fa-question-circle hide-mobile"}
     %span{style: "pointer-events: none"}
 
 

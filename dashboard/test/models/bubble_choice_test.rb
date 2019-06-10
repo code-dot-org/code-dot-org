@@ -73,4 +73,24 @@ DSL
     level = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
     assert_equal [sublevel1, sublevel2, sublevel3], level.sublevels
   end
+
+  test 'summarize' do
+    sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png'
+    sublevel2 = create :level, name: 'choice_2'
+    bubble_choice = BubbleChoice.create(name: 'bubble_choices', title: 'Bubble Choices', description: 'Choose one or more!')
+    bubble_choice.properties['sublevels'] = [sublevel1.name, sublevel2.name]
+    bubble_choice.save!
+
+    summary = bubble_choice.summarize
+    expected_summary = {
+      title: bubble_choice.title,
+      description: bubble_choice.description,
+      sublevels: [
+        {id: sublevel1.id, title: sublevel1.display_name, thumbnail_url: sublevel1.thumbnail_url},
+        {id: sublevel2.id, title: sublevel2.name, thumbnail_url: nil}
+      ]
+    }
+
+    assert_equal expected_summary, summary
+  end
 end
