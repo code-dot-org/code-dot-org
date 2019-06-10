@@ -24,6 +24,8 @@
 #
 
 class BubbleChoice < DSLDefined
+  include LevelsHelper
+  include Rails.application.routes.url_helpers
   include SerializedProperties
 
   serialized_attrs %w(
@@ -48,19 +50,30 @@ ruby
     Level.where(name: properties['sublevels']).sort_by {|l| properties['sublevels'].index(l.name)}
   end
 
-  def summarize
-    sublevel_summary = sublevels.map do |level|
-      {
+  def summarize(script_level: nil)
+    {
+      title: title,
+      description: description,
+      sublevels: summarize_sublevels(script_level: script_level)
+    }
+  end
+
+  def summarize_sublevels(script_level: nil)
+    summary = []
+    sublevels.each_with_index do |level, index|
+      level_info = {
         id: level.id,
         title: level.display_name || level.name,
         thumbnail_url: level.try(:thumbnail_url)
       }
+
+      if script_level
+        level_info[:url] = build_script_level_url(script_level, {sublevel_position: index + 1})
+      end
+
+      summary << level_info
     end
 
-    {
-      title: title,
-      description: description,
-      sublevels: sublevel_summary
-    }
+    summary
   end
 end
