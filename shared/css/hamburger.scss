@@ -16,6 +16,10 @@
     display: none;
   }
 
+  &.hide-mobile {
+    display: block;
+  }
+
   &.show-always {
     display: block;
   }
@@ -26,6 +30,10 @@
 
   .show-mobile {
     display: none;
+  }
+
+  .hide-mobile {
+    display: block;
   }
 
   .show-always {
@@ -199,9 +207,21 @@
     .show-mobile {
       display: block;
     }
-    #hamburger-contents, #help-contents {
+    &.hide-mobile {
+      display: none;
+    }
+    .hide-mobile {
+      display: none;
+    }
+    #hamburger-contents {
       font-size: 18px;
     }
+    #hamburger {
+      padding-left: 0;
+    }
+    #help-button {
+      display: none;
+    } 
   }
 }
 
