@@ -1853,11 +1853,10 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
 StudioApp.prototype.setConfigValues_ = function(config) {
   this.share = config.share;
 
-  // By default, we center our embedded levels. Can be overridden by apps.
-  config.centerEmbedded = utils.valueOr(config.centerEmbedded, true);
-
-  // By default, embedded levels are not responsive.
-  config.responsiveEmbedded = utils.valueOr(config.responsiveEmbedded, false);
+  // We want our embedded levels to look the same as regular levels,
+  // just without the editor
+  config.centerEmbedded = false;
+  config.responsiveEmbedded = true;
 
   // If set to true, we use our wireframe share (or chromeless share on mobile).
   config.wireframeShare = utils.valueOr(config.wireframeShare, false);
@@ -1993,8 +1992,8 @@ StudioApp.prototype.configureDom = function(config) {
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
-  // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
-  // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
+  // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use if in CSP/CSD (in which case
+  // display videos in the top instructions) or InstructionsCSF (in which case the videos are appended here).
 
   const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed;
   if (!referenceAreaInTopInstructions && referenceArea) {
@@ -2038,14 +2037,6 @@ StudioApp.prototype.configureDom = function(config) {
 
   if (config.readonlyWorkspace) {
     $(codeWorkspace).addClass('readonly');
-  }
-
-  // NOTE: Can end up with embed true and hideSource false in level builder
-  // scenarios. See https://github.com/code-dot-org/code-dot-org/pull/1744
-  if (config.embed && config.hideSource && config.centerEmbedded) {
-    container.className = container.className + ' centered_embed';
-    visualizationColumn.className =
-      visualizationColumn.className + ' centered_embed';
   }
 
   var smallFooter = document.querySelector(
