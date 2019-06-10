@@ -518,6 +518,7 @@ it:
         csd_pair_programming: Programmazione in coppia
         csd_applab_parameters: Funzioni con parametri
         CSF_Going_Places_Safely: Il mio quartiere digitale
+        CSF_SpriteLab_SpritesInAction_v2: Personaggi in Azione
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra
