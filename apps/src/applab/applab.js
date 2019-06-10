@@ -919,10 +919,15 @@ Applab.exportApp = async function(expoOpts) {
       },
       studioApp().config
     );
-    Applab.generatedProperties.export.android = {
-      md5ApkSavedSources: md5SavedSources,
-      snackId: expoSnackId,
-      apkUri
+    // Spread the previous object so changes here will always fail shallow
+    // compare and trigger react prop changes
+    Applab.generatedProperties.export = {
+      ...Applab.generatedProperties.export,
+      android: {
+        md5ApkSavedSources: md5SavedSources,
+        snackId: expoSnackId,
+        apkUri
+      }
     };
     project.projectChanged();
     return apkUri;

@@ -122,7 +122,6 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
-    md5SavedSources: data.md5SavedSources,
     generatedProperties: data.generatedProperties,
     selectedSong: data.selectedSong,
     libraries: data.libraries
@@ -263,8 +262,17 @@ var projects = (module.exports = {
     return currentSources.makerAPIsEnabled;
   },
 
-  md5SavedSources() {
-    return currentSources.md5SavedSources;
+  /**
+   * Calculates a md5 hash for everything within sources except the
+   * generatedProperties.
+   * @return {string} md5 hash string.
+   */
+  md5CurrentSources() {
+    const {
+      generatedProperties, // eslint-disable-line no-unused-vars
+      ...sourcesWithoutProperties
+    } = currentSources;
+    return MD5(JSON.stringify(sourcesWithoutProperties)).toString();
   },
 
   getCurrentSourceVersionId() {
@@ -921,8 +929,7 @@ var projects = (module.exports = {
       this.saveThumbnail(blob);
     }
 
-    const savedSources = this.updateSourcesWithMD5(sourceAndHtml);
-    unpackSources(savedSources);
+    unpackSources(sourceAndHtml);
 
     if (this.useSourcesApi()) {
       let params = '';
@@ -1229,26 +1236,6 @@ var projects = (module.exports = {
       }
     }
     header.updateTimestamp();
-  },
-  /**
-   * Calculates a md5 hash for everything within sources except the
-   * generatedProperties. Returns a new sources object with a md5SavedSources
-   * property added.
-   * @param {Object} sources Full sources.
-   * @return {Object} Full sources updated with a md5SavedSources property.
-   */
-  updateSourcesWithMD5(sources) {
-    const {
-      generatedProperties, // eslint-disable-line no-unused-vars
-      ...sourcesWithoutProperties
-    } = sources;
-    const md5SavedSources = MD5(
-      JSON.stringify(sourcesWithoutProperties)
-    ).toString();
-    return {
-      ...sources,
-      md5SavedSources
-    };
   },
   /**
    * Autosave the code if things have changed. Calls `callback` if autosave was

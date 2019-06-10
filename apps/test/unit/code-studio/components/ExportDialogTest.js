@@ -15,7 +15,6 @@ describe('ExportDialog', () => {
         md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -35,7 +34,6 @@ describe('ExportDialog', () => {
         md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -55,7 +53,6 @@ describe('ExportDialog', () => {
         md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -78,7 +75,6 @@ describe('ExportDialog', () => {
         md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -100,7 +96,6 @@ describe('ExportDialog', () => {
         md5SavedSources="fakeHash"
         isAbusive={true}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -118,9 +113,8 @@ describe('ExportDialog', () => {
         exportApp={async () => ({})}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
-        isAbusive={true}
+        isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={false}
@@ -143,9 +137,8 @@ describe('ExportDialog', () => {
         exportApp={exportApp}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
-        isAbusive={true}
+        isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -173,9 +166,8 @@ describe('ExportDialog', () => {
         exportApp={exportApp}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
-        isAbusive={true}
+        isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -193,5 +185,59 @@ describe('ExportDialog', () => {
         iconUri: 'iconUri',
         splashImageUri: 'splashUri'
       });
+  });
+
+  it('exportApp() not called by generateApkAsNeeded() if exportGeneratedProperties contains matching apkUri', () => {
+    const exportApp = sinon.spy();
+    const wrapper = shallow(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={exportApp}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'fakeHash',
+            snackId: 'fakeSnackId',
+            apkUri: 'fakeApkUri'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={true}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.instance().generateApkAsNeeded();
+    expect(exportApp).to.not.have.been.called;
+  });
+
+  it('exportApp() will be called by generateApkAsNeeded() if exportGeneratedProperties does not contain matching apkUri', () => {
+    const exportApp = sinon.spy();
+    const wrapper = shallow(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={exportApp}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'differentHash',
+            snackId: 'fakeSnackId',
+            apkUri: 'fakeApkUri'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={true}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.instance().generateApkAsNeeded();
+    expect(exportApp).to.have.been.called;
   });
 });
