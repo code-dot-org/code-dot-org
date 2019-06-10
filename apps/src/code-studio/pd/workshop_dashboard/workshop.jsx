@@ -115,7 +115,8 @@ export class Workshop extends React.Component {
             'account_required_for_attendance?',
             'ready_to_close?',
             'regional_partner_name',
-            'regional_partner_id'
+            'regional_partner_id',
+            'scholarship_workshop?'
           ])
         });
       })
@@ -510,7 +511,7 @@ export class Workshop extends React.Component {
       } else if (this.state.pendingAdminAction === 'reopen') {
         bodyText = `Are you sure you want to reopen this workshop and change it back to "In Progress"?
           Note reopening then ending again will send exit survey emails for new attendees,
-          but will not re-send surveys that were already sent. 
+          but will not re-send surveys that were already sent.
           `;
       }
       return (
@@ -766,6 +767,7 @@ export class Workshop extends React.Component {
           accountRequiredForAttendance={
             this.state.workshop['account_required_for_attendance?']
           }
+          scholarshipWorkshop={this.state.workshop['scholarship_workshop?']}
           activeTab={this.state.enrollmentActiveTab}
           onTabSelect={this.handleEnrollmentActiveTabSelect}
         />

@@ -4503,6 +4503,8 @@ id:
               name: gambar Biner
             Artist Binary:
               name: Artis Biner
+            Build a Star Wars Game:
+              description_student: Merasakan kekuatan seperti yang anda membangun anda sendiri Peran Bintang Permainan dalam pelajaran ini.
         coursee-2019:
           stages:
             Building a Foundation:
@@ -4539,6 +4541,8 @@ id:
               name: 'Algoritma: Kertas Grafik Pemrograman'
             Relay Programming:
               name: Pemrograman bergiliran
+            'Concept Practice with Minecraft ':
+              name: Melihat ke depan
             Conditionals with Cards:
               name: Bersyarat dengan kartu
             Screen Out the Mean:
@@ -4563,6 +4567,8 @@ id:
               name: Internet
             Crowdsourcing:
               name: Sumber kerumunan
+            Concept Practice with Minecraft:
+              name: Melihat ke depan
         csd1-2019:
           stages:
             The Problem Solving Process:
@@ -4593,6 +4599,8 @@ id:
               name: Melihat ke depan
             Binary Bracelets:
               name: Gelang biner
+            'End of Course Project: Create a Play Lab Game':
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
         gamelab:
           title: Laboratorium Game
         coursea-2019:
@@ -4919,3 +4927,15 @@ id:
           stages:
             Graph Paper Programming:
               name: Pemrograman grafis diatas kertas
+        fit2019-novice:
+          stages:
+            Wrap Up:
+              name: Penutupan
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: Apa itu komputer?
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Penutupan

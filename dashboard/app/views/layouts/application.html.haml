@@ -78,7 +78,7 @@
           .push
 
       - if view_options[:small_footer]
-        = render partial: 'layouts/small_footer'
+        = render partial: 'layouts/small_footer', locals: {channel: view_options[:channel]}
 
       - if view_options[:responsive_content]
         .responsive-content-mobile-footer

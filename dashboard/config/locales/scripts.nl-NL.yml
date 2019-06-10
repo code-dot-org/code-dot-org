@@ -2006,6 +2006,8 @@ nl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Dansfeest
         andrea-test:
           stages:
             'null':

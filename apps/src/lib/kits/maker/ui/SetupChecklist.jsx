@@ -5,6 +5,8 @@ import React, {Component} from 'react';
 import * as utils from '../../../../utils';
 import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import i18n from '@cdo/locale';
 import {
   isWindows,
   isChrome,
@@ -13,7 +15,6 @@ import {
   isLinux
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
-import SurveySupportSection from './SurveySupportSection';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -53,19 +54,6 @@ export default class SetupChecklist extends Component {
 
   thumb(selector) {
     this.setState({[selector]: Status.CELEBRATING});
-  }
-
-  getSurveyURL() {
-    const baseFormURL =
-      'https://docs.google.com/forms/d/e/1FAIpQLSe4NB7weq20sydf4kKn3QzIIn1O91hfPNU0U6b2xc1W6w44eQ/viewform';
-    const userAgentFieldFill = `entry.1520933088=${encodeURIComponent(
-      navigator.userAgent
-    )}`;
-    const prettifiedCurrentStates = JSON.stringify(this.state, null, 2);
-    const setupStatesFieldFill = `entry.804069894=${encodeURIComponent(
-      prettifiedCurrentStates
-    )}`;
-    return `${baseFormURL}?${userAgentFieldFill}&${setupStatesFieldFill}`;
   }
 
   detect() {
@@ -204,7 +192,7 @@ export default class SetupChecklist extends Component {
           <br />
           If a prompt asking for permission for Code Studio to connect to the
           Chrome App pops up, click Accept.
-          {this.surveyLink()}
+          {this.contactSupport()}
         </ValidationStep>
       );
     } else {
@@ -222,15 +210,8 @@ export default class SetupChecklist extends Component {
     }
   }
 
-  surveyLink() {
-    return (
-      <span>
-        <br />
-        Still having trouble? Please{' '}
-        <a href={this.getSurveyURL()}>submit our quick survey</a> about your
-        setup issues.
-      </span>
-    );
+  contactSupport() {
+    return <UnsafeRenderedMarkdown markdown={i18n.contactGeneralSupport()} />;
   }
 
   render() {
@@ -278,7 +259,7 @@ export default class SetupChecklist extends Component {
                 to install the drivers and try again.
               </p>
             )}
-            {this.surveyLink()}
+            {this.contactSupport()}
           </ValidationStep>
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
@@ -316,7 +297,7 @@ export default class SetupChecklist extends Component {
                 .
               </div>
             )}
-            {this.surveyLink()}
+            {this.contactSupport()}
           </ValidationStep>
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
@@ -331,10 +312,14 @@ export default class SetupChecklist extends Component {
               install the Circuit Playground Firmata sketch with these
               instructions
             </a>
-            .{this.surveyLink()}
+            .{this.contactSupport()}
           </ValidationStep>
         </div>
-        <SurveySupportSection surveyUrl={this.getSurveyURL()} />
+        <div>
+          <h2>{i18n.support()}</h2>
+          <UnsafeRenderedMarkdown markdown={i18n.debugMakerToolkit()} />
+          {this.contactSupport()}
+        </div>
       </div>
     );
   }

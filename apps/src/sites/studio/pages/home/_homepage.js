@@ -15,7 +15,6 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
 
 $(document).ready(showHomepage);
@@ -50,8 +49,6 @@ function showHomepage() {
   }
 
   const announcement = getTeacherAnnouncement(announcementOverride);
-
-  measureVideoConnectivity();
 
   ReactDOM.render(
     <Provider store={store}>

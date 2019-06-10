@@ -1,0 +1,7 @@
+name 'Levelgroup-for-testing-stuff'
+title 'Testing crazy stuff'
+submittable 'true'
+anonymous 'true'
+
+page
+level 'ChooseTwoSurveyTestItem'

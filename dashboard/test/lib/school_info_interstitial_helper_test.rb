@@ -28,6 +28,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     assert_nil school_info.school_id
     refute_nil school_info.school_name
     assert_nil school_info.full_address
+
     assert SchoolInfoInterstitialHelper.complete? school_info
   end
 
@@ -86,5 +87,119 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
 
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_CHARTER
     refute SchoolInfoInterstitialHelper.complete? school_info
+  end
+
+  test 'school info confirmation dialog is shown when all information is provided' do
+    user = create :teacher, last_seen_school_info_interstitial: 7.days.ago
+
+    school_info = create :school_info
+
+    assert_equal school_info.school_type, SchoolInfo::SCHOOL_TYPE_PUBLIC
+
+    create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 2.years.ago, start_date: user.created_at
+
+    assert SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
+  end
+
+  test 'last_seen_school_info_interstitial is updated' do
+    user = create :teacher, last_seen_school_info_interstitial: 7.days.ago
+
+    original_value = user.last_seen_school_info_interstitial
+
+    school_info = create :school_info
+
+    create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 2.years.ago, start_date: user.created_at
+
+    assert SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
+
+    updated_value = user.last_seen_school_info_interstitial
+
+    refute_equal original_value, updated_value
+  end
+
+  test 'last_seen_school_info_interstitial is not updated when dialog is not shown' do
+    user = create :teacher, last_seen_school_info_interstitial: 6.days.ago
+
+    original_value = user.last_seen_school_info_interstitial
+
+    school_info = create :school_info
+
+    create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 2.years.ago, start_date: user.created_at
+
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
+
+    updated_value = user.last_seen_school_info_interstitial
+
+    assert_equal original_value, updated_value
+  end
+
+  test 'school info confirmation dialog is not shown when the US school type is not private, public or charter' do
+    user = create :teacher, last_seen_school_info_interstitial: 7.days.ago
+
+    school_info = create :school_info_us_homeschool
+
+    create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 2.years.ago, start_date: user.created_at
+
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
+  end
+
+  test 'school info confirmation dialog is not shown when the country is non-US' do
+    user = create :teacher, last_seen_school_info_interstitial: 7.days.ago
+
+    school_info = create :school_info_non_us
+
+    create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 2.years.ago, start_date: user.created_at
+
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
+  end
+
+  test 'school info confirmation dialog is not shown if the last seen school interstitial is less than 7 days' do
+    user = create :teacher, last_seen_school_info_interstitial: 6.days.ago
+
+    school_info = create :school_info
+
+    create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 2.years.ago, start_date: user.created_at
+
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
+  end
+
+  test 'for form completeness' do
+    user = create :teacher, last_seen_school_info_interstitial: 7.days.ago
+
+    school_info = create :school_info, school_id: nil, country: nil, validation_type: SchoolInfo::VALIDATION_NONE
+
+    create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 2.years.ago, start_date: user.created_at
+
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
+  end
+
+  test 'school info confirmation dialog is not shown when the user school infos table is empty' do
+    user = create :teacher, last_seen_school_info_interstitial: 7.days.ago
+
+    user.user_school_infos = []
+
+    assert_nil user.school_info
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
+  end
+
+  test 'does not show school info confirmation dialog if user is not a teacher' do
+    user = create :user
+
+    school_info = create :school_info
+
+    create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 2.years.ago, start_date: user.created_at
+
+    assert_equal user.user_type, 'student'
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
+  end
+
+  test 'does not show school info confirmation dialog when last confirmation date is less than a year' do
+    user = create :teacher, last_seen_school_info_interstitial: 7.days.ago
+
+    school_info = create :school_info
+
+    create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 1.day.ago, start_date: user.created_at
+
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
   end
 end

@@ -1693,6 +1693,8 @@ ko:
               name: 인터넷
             Crowdsourcing:
               name: 클라우드소싱
+            Dance Party:
+              name: 댄스 파티
         andrea-test:
           stages:
             'null':

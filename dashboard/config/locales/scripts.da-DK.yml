@@ -1569,6 +1569,8 @@ da:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Dansefest
         andrea-test:
           stages:
             'null':

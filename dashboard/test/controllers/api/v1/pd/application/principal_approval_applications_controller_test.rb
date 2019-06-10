@@ -50,7 +50,7 @@ module Api::V1::Pd::Application
         principal_free_lunch_percent: '50.00%',
         principal_underrepresented_minority_percent: '52.00%',
         principal_wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
-        principal_pay_fee: 'Yes, my school or teacher will be able to pay the full program fee.'
+        principal_pay_fee: 'Yes, my school will be able to pay the full program fee.'
       }
       actual_principal_fields = @teacher_application.sanitize_form_data_hash.slice(*expected_principal_fields.keys)
       assert_equal expected_principal_fields, actual_principal_fields

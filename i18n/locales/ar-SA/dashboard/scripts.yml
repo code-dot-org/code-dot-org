@@ -1449,6 +1449,8 @@ ar:
               name: الإنترنت
             Crowdsourcing:
               name: حشد المصادر
+            Dance Party:
+              name: حفلة رقص
         andrea-test:
           stages:
             'null':

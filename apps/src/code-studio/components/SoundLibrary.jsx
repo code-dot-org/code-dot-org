@@ -144,6 +144,7 @@ export default class SoundLibrary extends React.Component {
       category: '',
       search: ''
     });
+    this.sounds.stopAllAudio();
   };
 
   animationCategoriesRendering() {

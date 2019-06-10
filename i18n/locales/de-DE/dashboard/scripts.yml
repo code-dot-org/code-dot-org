@@ -1781,6 +1781,8 @@ de:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Tanzparty
         andrea-test:
           stages:
             'null':

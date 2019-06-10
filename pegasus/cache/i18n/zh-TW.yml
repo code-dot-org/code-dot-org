@@ -302,6 +302,7 @@ zh-TW:
   homepage_action_text_teachervideo: 觀看影片
   homepage_action_text_watchvideo: 觀看影片
   homepage_action_text_girlvideo: 鼓勵女生參與
+  homepage_action_text_learn: 開始學習
   homepage_action_text_signpetition: 在意願書上簽名
   homepage_action_text_wincelebritychat: 贏得與名人聊天的機會
   homepage_signpetition_dropdown: 我同意 &#x25BE;
@@ -935,13 +936,13 @@ zh-TW:
   coursed-2018_name: 課程 D（2018）
   coursee-2018_name: 課程 E（2018）
   coursef-2018_name: 課程 F（2018）
-  accelerated_name: 速成課程
-  express_name: 速學課程
-  pre-express_name: 學前兒童的速學課程
-  express-2017_name: 速學課程（2017）
-  pre-express-2017_name: 學前兒童的速學課程（2017）
+  coursea-2019_name: 課程 A（2019）
+  courseb-2019_name: 課程 B（2019）
+  coursec-2019_name: 課程 C（2019）
+  coursed-2019_name: 課程 D（2019）
+  coursee-2019_name: 課程 E（2019）
+  coursef-2019_name: 課程 F（2019）
   pre-express-2018_name: 學前兒童的速學課程（2018）
-  cspunit1_name: "（舊）單元 1：數位資訊"
   cspunit2_name: "（舊）單元 2：網際網路"
   cspunit3_name: "（舊）單元 3：程式設計"
   cspunit4_name: "（舊）單元 4：數據"
@@ -1103,7 +1104,7 @@ zh-TW:
   lightbotintl_platformtext: iOS，Android（或 web 瀏覽器）
   codehs_platformtext: 主流瀏覽器。（後續課程需要 $$）
   codecademy_platformtext: 主流的 web 瀏覽器。iOS，Android Apps。
-  codecombat_platformtext: 現代瀏覽器。（後續課程需要 $$）
+  codecombat_platformtext: 主流的瀏覽器。（後續課程需要 $$）
   codemonkey_platformtext: 現代 Web 瀏覽器
   codeavengers_platformtext: 現代 Web 瀏覽器
   processing_platformtext: 現代 Web 瀏覽器
@@ -1128,7 +1129,7 @@ zh-TW:
   starwars_platformtext: 主流的瀏覽器 + 平板
   playlab_platformtext: 主流的瀏覽器、手機、平板
   monstercoding_platformtext: 主流的瀏覽器、iOS、Android
-  allcancode_platformtext: 現代瀏覽器、iOS
+  allcancode_platformtext: 主流的瀏覽器、iOS
   csfirst_platformtext: 現代 Web 瀏覽器
   boxisland_platformtext: Android, iOS
   codesters_platformtext: 現代 Web 瀏覽器
@@ -1334,7 +1335,7 @@ zh-TW:
   hacketyhack_beyond_platformtext: 電腦版安裝
   robomind_beyond_platformtext: 現代 web 瀏覽器、行動網路
   makeschool_beyond_platformtext: 當代 Web 瀏覽器
-  appinventor_beyond_platformtext: 現代瀏覽器 + Android
+  appinventor_beyond_platformtext: 主流的瀏覽器 + Android
   touchdevelop_beyond_platformtext: 主流的瀏覽器、手機、所有裝置
   codehs_beyond_platformtext: 主流的瀏覽器 （需要 $$ ）
   udemy_beyond_platformtext: Web 式
@@ -1595,7 +1596,7 @@ zh-TW:
   hoc2018_mc_details: 多種語言 | 主流瀏覽器或平板 | 年級 2+
   hoc2018_mc_aquatic_announcement: 為你的班級註冊，試試一小時玩程式活動（Hour of Code，每年的 12 月 3- 9 日舉辦）的其中一個，我們有超過
     150 個的主題活動，其中推薦你試試我們在 2018 年推出的全新一小時玩  Minecraft  - 水上巡航。快來註冊你的班級吧！
-  hoc2018_mc_aquatic_title: Minecraft 水上航行
+  hoc2018_mc_aquatic_title: Minecraft 水世界
   hoc2018_mc_aquatic_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
   hoc2018_mc_hero_title: Minecraft 英雄之旅
   hoc2018_mc_hero_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。

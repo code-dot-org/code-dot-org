@@ -44,6 +44,19 @@ function initialize(setupHandler) {
   setupHandler();
 }
 
+// Temporary wrappers for sprite methods, to facilitate transition to native.
+function destroy(sprite) {
+  sprite.destroy();
+}
+
+function setTint(sprite, color) {
+  sprite.setTint(color);
+}
+
+function removeTint(sprite) {
+  sprite.removeTint();
+}
+
 // Behaviors
 function addBehavior(sprite, behavior) {
   if (sprite && behavior) {
@@ -158,6 +171,14 @@ function spriteClicked(condition, sprite, event) {
   	inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
   } else {
   	inputEvents.push({type: mousePressedOver, event: event, param: sprite});
+  }
+}
+
+function spriteClickedSet(condition, sprite, clicked, event) {
+  if (condition === "when") {
+    inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
+  } else {
+    inputEvents.push({type: mousePressedOver, event: event, param: sprite});
   }
 }
 

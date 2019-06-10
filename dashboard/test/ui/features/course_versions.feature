@@ -2,10 +2,10 @@ Feature: Course versions
 
 @as_student
 @no_mobile
-Scenario: Version warning announcement on course and unit overview pages
-  # course and unit pages do not show version warning initially
+Scenario: Version warning announcement on course and script overview pages
+  # course and script pages do not show version warning initially
 
-  When I am on "http://studio.code.org/courses/csp-2018"
+  When I am on "http://studio.code.org/courses/csp-2019"
   And I wait to see ".uitest-CourseScript"
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
@@ -13,12 +13,12 @@ Scenario: Version warning announcement on course and unit overview pages
   # students must be assigned or have progress to view older script versions
 
   Given I am assigned to script "csp3-2017"
-  When I am on "http://studio.code.org/courses/csp-2018"
+  When I am on "http://studio.code.org/courses/csp-2019"
   And I wait to see ".uitest-CourseScript"
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
 
-  When I am on "http://studio.code.org/s/csp2-2018"
+  When I am on "http://studio.code.org/s/csp2-2019"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is visible
@@ -30,14 +30,14 @@ Scenario: Version warning announcement on course and unit overview pages
 
   # course and unit pages now show version warning
 
-  When I am on "http://studio.code.org/courses/csp-2018"
+  When I am on "http://studio.code.org/courses/csp-2019"
   And I wait to see ".uitest-CourseScript"
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
   # make sure we are showing the warning specific to course overview pages
   Then element ".announcement-notification:contains(using the dropdown below)" is visible
 
-  When I am on "http://studio.code.org/s/csp2-2018"
+  When I am on "http://studio.code.org/s/csp2-2019"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is visible
@@ -55,7 +55,7 @@ Scenario: Version warning announcement on course and unit overview pages
   Then element ".announcement-notification:contains(newer version)" is not visible
 
   # The course overview warning banner also stays closed
-  When I am on "http://studio.code.org/courses/csp-2018"
+  When I am on "http://studio.code.org/courses/csp-2019"
   And I wait to see ".uitest-CourseScript"
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" does not exist
@@ -63,7 +63,7 @@ Scenario: Version warning announcement on course and unit overview pages
 @as_student
 @no_mobile
 Scenario: Versions warning announcement on script overview page
-  When I am on "http://studio.code.org/s/coursea-2018"
+  When I am on "http://studio.code.org/s/coursea-2019"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
@@ -72,7 +72,7 @@ Scenario: Versions warning announcement on script overview page
   When I am on "http://studio.code.org/s/coursea-2017/next"
   And I wait until current URL contains "/s/coursea-2017/stage/1/puzzle/1"
 
-  When I am on "http://studio.code.org/s/coursea-2018"
+  When I am on "http://studio.code.org/s/coursea-2019"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
@@ -103,7 +103,7 @@ Scenario: Versions warning announcement on script overview page
 Scenario: Switch versions using dropdown on script overview page
   # Older script versions are not visible to students who are not assigned to them
   When I am on "http://studio.code.org/s/coursea-2017"
-  And I get redirected to "s/coursea-2018" via "dashboard"
+  And I get redirected to "s/coursea-2019" via "dashboard"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
 
@@ -112,12 +112,14 @@ Scenario: Switch versions using dropdown on script overview page
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is visible
   And I click selector "#assignment-version-year" once I see it
-  And I click selector ".assignment-version-title:contains(2018)" once I see it
-  Then I wait until I am on "http://studio.code.org/s/coursea-2018"
+  And element ".assignment-version-title:contains(2018)" is not visible
+  And I click selector ".assignment-version-title:contains(2019)" once I see it
+  Then I wait until I am on "http://studio.code.org/s/coursea-2019"
 
   When I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is visible
   And I click selector "#assignment-version-year" once I see it
+  And element ".assignment-version-title:contains(2018)" is not visible
   And I click selector ".assignment-version-title:contains(2017)" once I see it
   Then I wait until I am on "http://studio.code.org/s/coursea-2017"
 
@@ -125,14 +127,4 @@ Scenario: Switch versions using dropdown on script overview page
 @no_mobile
 Scenario: Course unit family names redirect to their latest stable version
   When I am on "http://studio.code.org/s/csp3"
-  And I get redirected to "/s/csp3-2018" via "dashboard"
-
-@as_student
-@no_mobile
-Scenario: Script levels in renamed scripts redirect to their original version
-  Given I am assigned to script "csp3-2017"
-  When I am on "http://studio.code.org/s/csp3/stage/9/puzzle/11"
-  # Keep redirecting to the original version of a script level after a later
-  # script version becomes stable, because a user with a deep link to a specific
-  # level will most likely expect to see their previous progress there.
-  And I get redirected to "/s/csp3-2017/stage/9/puzzle/11" via "dashboard"
+  And I get redirected to "/s/csp3-2019" via "dashboard"

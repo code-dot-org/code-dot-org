@@ -466,6 +466,7 @@ pt-BR:
       behaviors 1_callout:
         behaviors_edit: Clique aqui para ver como funciona esse comportamento.
       behaviors 3a_callout:
+        behavior_callout: Por que este comportamento não está funcionando para a estrela do meio?
         this_sprite_callout: Testando
       behaviors 4_callout:
         behaviors_edit: Clique aqui para ver como funciona esse comportamento.
@@ -516,8 +517,6 @@ pt-BR:
       courseA_artist_loops8_2019_callout:
         courseA_artist_loops8_1: Você sabia que você pode desenhar por cima de uma linha sempre que precisar?
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
-      courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
       courseA_collector_loops1_2019_callout:
         courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
@@ -636,6 +635,10 @@ pt-BR:
         courseC_PlayLab_events_challenge1_1: Este bloco permite mover atores para diferentes partes do espaço do jogo.
       courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Este bloco permite mover atores para diferentes partes do espaço do jogo.
+      courseC_artist_loops1a_2019_callout:
+        jumpto_callout: Este bloco é muito importante para este projeto. Certifique-se de usá-lo!
+      courseC_artist_loops1b_2019_callout:
+        sticker2: Adicione isto no meio do seu programa.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Comece utilizando este bloco para levar o artista ao centro da tela.
       courseC_artist_loopsPrePre1a_2018_callout:

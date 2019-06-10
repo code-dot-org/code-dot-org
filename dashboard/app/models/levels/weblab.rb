@@ -29,7 +29,6 @@ class Weblab < Level
   serialized_attrs %w(
     project_template_level_name
     start_sources
-    teacher_markdown
     hide_share_and_remix
     is_project_level
     encrypted_examples

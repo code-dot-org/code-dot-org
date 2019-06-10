@@ -26,3 +26,9 @@ it:
         csp-2018:
           assignment_family_title: Princìpi dell'Informatica
           description_short: Impara i concetti fondamentali dell'informatica.
+        csp-2019:
+          description_short: Impara i concetti fondamentali dell'informatica.
+        csd-2019:
+          description_short: Corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni.
+          description_student: Alla Scoperta dell'Informatica è un corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving ed il divertimento.
+          description_teacher: Alla Scoperta dell'Informatica è un corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving ed il divertimento.

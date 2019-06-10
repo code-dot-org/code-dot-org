@@ -14,7 +14,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
       }.to_json,
       name: 'Prince Charles',
       birthday: 13.years.ago.to_datetime,
-
+      abuse_score: 0
     }
     stub_projects = [published_applab_project]
 

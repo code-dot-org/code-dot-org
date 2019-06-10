@@ -1640,6 +1640,8 @@ cs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Taneční večírek
         andrea-test:
           stages:
             'null':
