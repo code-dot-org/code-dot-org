@@ -1,3 +1,5 @@
+import cookies from 'js-cookie';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -50,6 +52,16 @@ export default class ReportAbuseForm extends React.Component {
     return getChannelIdFromUrl(abuseUrl);
   }
 
+  writeCookie() {
+    if (cookies.get('reported_abuse')) {
+      const reportedProjectIds = JSON.parse(cookies.get('reported_abuse'));
+      reportedProjectIds.push(this.getChannelId());
+      cookies.set('reported_abuse', _.uniq(reportedProjectIds));
+    } else {
+      cookies.set('reported_abuse', [this.getChannelId()]);
+    }
+  }
+
   handleSubmit = event => {
     const i18n = this.props.i18n;
     if (this.refs.email.value === '') {
@@ -75,6 +87,7 @@ export default class ReportAbuseForm extends React.Component {
       event.preventDefault();
       return;
     }
+    this.writeCookie();
   };
 
   render() {
