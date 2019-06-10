@@ -4,11 +4,6 @@
 - data[:section] = @section&.summarize
 - data[:stage_extra] = @stage_extras
 
-- if @stage_extras
-  - data[:teacher_level] = ScriptLevel.summarize_as_bonus_for_teacher_panel(@stage.script, @bonus_level_ids, @current_user)
-- else
-  - data[:teacher_level] = @script_level&.summarize_for_teacher_panel(@current_user)
-
 - if @level && @script_level
   - if @level.try(:examples).present? && current_user.authorized_teacher? # 'solutions' for applab-type levels
     - level_example_links = @level.examples.map do |example|
