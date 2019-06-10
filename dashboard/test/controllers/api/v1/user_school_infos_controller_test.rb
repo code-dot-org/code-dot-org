@@ -182,27 +182,26 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'initial, partial previous, unchanged, manual' do
+    # Teacher starts with one partial school info
     school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
-
+    refute school_info.complete?
     @teacher.update school_info: school_info
     sign_in @teacher
 
-    refute @teacher.school_info.country.nil?
-
-    Timecop.travel 1.hour
+    # Teacher is prompted to complete info, submits unchanged
+    Timecop.travel 7.days
     submit_unchanged_school_info(school_info)
-
-    @teacher.reload
-
     assert_response :success, response.body
 
-    assert_equal @teacher.school_info.id, school_info.id
-    assert_equal @teacher.school_info, school_info
-    assert_first_tenure(@teacher)
-    refute_nil @teacher.school_info.country
+    # Teacher should still have one partial school info,
+    # with an updated confirmation date
+    @teacher.reload
+    assert_equal 1, @teacher.user_school_infos.count
+    assert_equal school_info, @teacher.user_school_infos.first.school_info
+    assert_same_date Time.now, @teacher.user_school_infos.first.last_confirmation_date
   end
 
-  test 'initial, partial previous, submit, partial, manual' do
+  test 'initial, partial previous, partial, manual' do
     school_info = create :school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
     @teacher.update school_info: school_info
@@ -225,7 +224,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_nil @teacher.school_info.country
   end
 
-  test 'initial, partial previous, submit, complete, drop down' do
+  test 'initial, partial previous, complete, drop down' do
     school_info = create :school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
     @teacher.update school_info: school_info
@@ -247,7 +246,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_first_tenure(@teacher)
   end
 
-  test 'initial, partial previous, submit, complete, manual' do
+  test 'initial, partial previous, complete, manual' do
     school_info = create :school_info, school_id: nil, school_name: nil, full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
     @teacher.update school_info: school_info
@@ -266,7 +265,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_first_tenure(@teacher)
   end
 
-  test 'confirmation, complete previous, submit, blank, manual' do
+  test 'confirmation, complete previous, blank, manual' do
     school_info = create :school_info
 
     @teacher.update school_info: school_info
@@ -285,7 +284,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_in_delta 1.hour.ago.to_i, @teacher.user_school_infos.last.last_confirmation_date.to_i, 10
   end
 
-  test 'confirmation, complete previous, submit, unchanged, dropdown' do
+  test 'confirmation, complete previous, unchanged, dropdown' do
     school_info = create :school_info
 
     @teacher.update school_info: school_info
@@ -302,7 +301,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_first_tenure(@teacher)
   end
 
-  test 'confirmation, complete previous, submit, unchanged, manual' do
+  test 'confirmation, complete previous, unchanged, manual' do
     school_info = partial_manual_school_info
 
     @teacher.update school_info: school_info
@@ -318,7 +317,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_first_tenure(@teacher)
   end
 
-  test 'confirmation, complete previous, submit, partial, manual' do
+  test 'confirmation, complete previous, partial, manual' do
     school_info = partial_manual_school_info
 
     @teacher.update school_info: school_info
@@ -337,7 +336,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal Time.now.utc.to_date, @teacher.user_school_infos.first.end_date.to_date
   end
 
-  test 'confirmation, complete previous, submit, complete, dropdown' do
+  test 'confirmation, complete previous, complete, dropdown' do
     school_info = create :school_info
 
     @teacher.update school_info: school_info
@@ -360,7 +359,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal Time.now.utc.to_date, @teacher.user_school_infos.first.end_date.to_date
   end
 
-  test 'confirmation, complete previous, submit, complete, manual' do
+  test 'confirmation, complete previous, complete, manual' do
     school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
 
     @teacher.update school_info: school_info
