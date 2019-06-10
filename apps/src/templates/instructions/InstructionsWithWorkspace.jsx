@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
-import TopInstructions from './TopInstructions';
+import TopInstructionsCSP from './TopInstructionsCSP';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
 
 /**
@@ -96,7 +96,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   render() {
     return (
       <span>
-        <TopInstructions />
+        <TopInstructionsCSP />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
           topMargin={this.props.instructionsHeight}
