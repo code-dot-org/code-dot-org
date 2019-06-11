@@ -24,6 +24,15 @@ module MultipleExtnameFileUtils
     (extnames & file_extnames).length == file_extnames.length
   end
 
+  # Returns true if and only if the given path can be found inside the given
+  # directory in the filesystem.
+  #
+  # Used to make sure that tricky URIs with ".." can't load files
+  # from outside our template hierarchy
+  def self.directory_contains_path(directory, path)
+    File.expand_path(path).start_with?(File.expand_path(directory))
+  end
+
   # Find all files of a given name in a given directory that use only the given
   # extnames
   #
@@ -33,7 +42,8 @@ module MultipleExtnameFileUtils
   def self.find_with_extnames(dir, name, extnames)
     target_name = File.join(dir, name)
     Dir.glob(target_name + ".*").select do |filename|
-      file_has_only_extnames(filename.sub(target_name, 'name'), extnames)
+      directory_contains_path(dir, filename) &&
+        file_has_only_extnames(filename.sub(target_name, 'name'), extnames)
     end
   end
 end
