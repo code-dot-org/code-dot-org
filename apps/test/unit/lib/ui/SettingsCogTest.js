@@ -77,11 +77,6 @@ describe('SettingsCog', () => {
   it('does not show maker toggle when "showMakerToggle" is false', () => {
     const wrapper = mount(<SettingsCog showMakerToggle={false} />);
     expect(wrapper.find(ToggleMaker)).to.have.lengthOf(0);
-    // wrapper.instance().open();
-    // wrapper.update();
-    // const menuWrapper = getPortalContent(wrapper);
-    // const numMenuItems = menuWrapper.find(PopUpMenu.Item).length;
-    // expect(numMenuItems).to.equal(1);
   });
 
   describe('menu items', () => {
