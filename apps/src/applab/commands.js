@@ -125,12 +125,11 @@ function apiValidateDomIdExistence(
       outputWarning(invalidIdMessage(funcName, varName, id, message));
     }
 
-    if (-1 !== id.search(/\s/)) {
+    var idContainsWhiteSpace = -1 !== id.search(/\s/);
+    if (idContainsWhiteSpace) {
       valid = false;
-      message = `contains whitespace. Change the id name to ("${id.replace(
-        /\s+/g,
-        ''
-      )}")`;
+      var validId = id.replace(/\s+/g, '');
+      message = `contains whitespace. Change the id name to ("${validId}")`;
       outputWarning(invalidIdMessage(funcName, varName, id, message));
     }
     opts[validatedDomKey] = valid;
