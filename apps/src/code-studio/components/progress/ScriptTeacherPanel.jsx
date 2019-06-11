@@ -94,11 +94,20 @@ class ScriptTeacherPanel extends React.Component {
         currentStudent = sectionData.section.students.find(
           student => this.props.getSelectedUserId() === student.id
         );
-      }
-      if (currentSectionScriptLevels && currentStudent) {
-        currentStudentScriptLevel = currentSectionScriptLevels.find(
-          level => this.props.getSelectedUserId() === level.user_id
-        );
+
+        if (currentStudent) {
+          if (currentSectionScriptLevels) {
+            currentStudentScriptLevel = currentSectionScriptLevels.find(
+              level => this.props.getSelectedUserId() === level.user_id
+            );
+          }
+        } else {
+          currentStudent = {
+            id: null,
+            name: i18n.studentTableTeacherDemo()
+          };
+          currentStudentScriptLevel = sectionData.teacher_level;
+        }
       }
     }
 
@@ -109,25 +118,30 @@ class ScriptTeacherPanel extends React.Component {
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle />
-          {currentStudent && (
+          {viewAs === ViewType.Teacher && currentStudent && (
             <SelectedStudentInfo
+              students={students}
               selectedStudent={currentStudent}
               level={currentStudentScriptLevel}
+              onSelectUser={this.props.onSelectUser}
+              getSelectedUserId={this.props.getSelectedUserId}
             />
           )}
-          {sectionData && sectionData.level_examples && (
-            <div style={styles.exampleSolutions}>
-              {sectionData.level_examples.map((example, index) => (
-                <Button
-                  key={index}
-                  text={i18n.exampleSolution({number: index + 1})}
-                  color="blue"
-                  href={example}
-                  target="_blank"
-                />
-              ))}
-            </div>
-          )}
+          {viewAs === ViewType.Teacher &&
+            sectionData &&
+            sectionData.level_examples && (
+              <div style={styles.exampleSolutions}>
+                {sectionData.level_examples.map((example, index) => (
+                  <Button
+                    key={index}
+                    text={i18n.exampleSolution({number: index + 1})}
+                    color="blue"
+                    href={example}
+                    target="_blank"
+                  />
+                ))}
+              </div>
+            )}
           {!sectionsAreLoaded && (
             <div style={styles.text}>{i18n.loading()}</div>
           )}

@@ -278,9 +278,7 @@ GameLab.prototype.init = function(config) {
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
 
-  config.centerEmbedded = false;
   config.wireframeShare = true;
-  config.responsiveEmbedded = true;
   config.noHowItWorks = config.droplet;
 
   config.shareWarningInfo = {
