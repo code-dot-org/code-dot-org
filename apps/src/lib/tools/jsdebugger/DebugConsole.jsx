@@ -17,6 +17,10 @@ import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
 import color from '../../../util/color';
 import Inspector from 'react-inspector';
+import {geoMercator, geoPath} from 'd3-geo';
+import {feature} from 'topojson-client';
+// import d3 from 'd3';
+import {scaleSqrt} from 'd3-scale';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -239,6 +243,92 @@ export default connect(
           return style.debugOutputBackgroundWarning;
       }
     }
+    projection() {
+      return geoMercator()
+        .scale(100)
+        .translate([800 / 2, 450 / 2]);
+    }
+
+    mercator() {
+      let quakeradius = function() {
+        const scale = scaleSqrt()
+          .domain([0, 100])
+          .range([0, 6]);
+        return function(quake) {
+          return scale(Math.exp(quake.properties.mag));
+        };
+      };
+      console.log('quakeradius', quakeradius());
+      let fetchData = async () => {
+        return fetch(
+          'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
+        );
+      };
+
+      let quakes = async function() {
+        var hello = await fetchData();
+        var json = await hello.json();
+        return json;
+      };
+      let exampleQuake = quakes();
+      console.log('exampleQuake', exampleQuake.features);
+      let world = async function() {
+        var world = await fetch(
+          'https://unpkg.com/world-atlas@1/world/110m.json'
+        );
+
+        var json = await world.json();
+
+        return feature(json, json.objects.countries);
+      };
+
+      let world2 = world();
+      console.log('world2', world2);
+
+      return (
+        <svg width={800} height={450}>
+          <g className="countries">
+            {exampleQuake.features.map((d, i) => (
+              <path
+                key={`path-${i}`}
+                d={geoPath().projection(this.projection())(d)}
+                className="country"
+                fill={'red'}
+                stroke="#FFFFFF"
+                strokeWidth={0.5}
+              />
+            ))}
+          </g>
+        </svg>
+      );
+      // var c = DOM.context2d(1000, 700);
+      // var canvas = c.canvas;
+      //
+
+      // var path = geoPath(projection, c);
+      //
+      // c.lineWidth = 0.1;
+      // c.fillStyle = 'skyblue';
+      // c.beginPath();
+      // // c.arc(s/2, s/2, radius, 0, 2*Math.PI);
+      // c.fill();
+      // c.stroke();
+      //
+      // c.lineWidth = 0.35;
+      // c.fillStyle = 'green';
+      // c.beginPath();
+      // path(world2);
+      // c.fill();
+      // c.stroke();
+      //
+      // c.fillStyle = 'red';
+      // path.pointRadius(quakeradius());
+      // exampleQuake.features.forEach(quake => {
+      //   c.beginPath(), path(quake), c.fill();
+      // });
+
+      // return canvas;
+    }
 
     isValidOutput(rowValue) {
       if (rowValue.output) {
@@ -288,7 +378,7 @@ export default connect(
       if (!this.props.debugWatch) {
         classes += ' no-watch';
       }
-
+      this.mercator();
       return (
         <div
           id="debug-console"
@@ -317,6 +407,7 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
+            <div>{this.mercator()}</div>
             {this.props.showReactInspector
               ? this.displayOutputToConsole()
               : this.props.logOutput}
