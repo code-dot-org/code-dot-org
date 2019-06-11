@@ -193,6 +193,10 @@ class ScriptLevelsController < ApplicationController
       end
     end
 
+    # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
+    # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
+    return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+
     @script = Script.get_from_cache(params[:script_id])
     @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
 
@@ -201,7 +205,7 @@ class ScriptLevelsController < ApplicationController
       @level = @script_level.level
     elsif params[:level_name]
       @level = Level.find_by_name params[:level_name]
-      @script_level = @level.script_levels.find_by_script_id(@script.id)
+      @script_level = @level.script_levels.find_by_script_id(@script.id) if @level
     end
 
     if @level
