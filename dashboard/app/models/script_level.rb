@@ -128,11 +128,14 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def next_level_or_redirect_path_for_user(user, extras_stage=nil)
-    # if we're coming from an unplugged level, it's ok to continue to unplugged
-    # level (example: if you start a sequence of assessments associated with an
-    # unplugged level you should continue on that sequence instead of skipping to
-    # next stage)
-    if valid_progression_level?(user)
+    if bubble_choice?
+      # Redirect user back to the BubbleChoice activity page.
+      level_to_follow = self
+    elsif valid_progression_level?(user)
+      # if we're coming from an unplugged level, it's ok to continue to unplugged
+      # level (example: if you start a sequence of assessments associated with an
+      # unplugged level you should continue on that sequence instead of skipping to
+      # next stage)
       level_to_follow = next_progression_level(user)
     else
       # don't ever continue continue to a locked/hidden level
