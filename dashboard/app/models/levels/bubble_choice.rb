@@ -50,6 +50,10 @@ ruby
     Level.where(name: properties['sublevels']).sort_by {|l| properties['sublevels'].index(l.name)}
   end
 
+  def sublevel_at(index)
+    sublevels[index]
+  end
+
   def summarize(script_level: nil)
     {
       title: title,

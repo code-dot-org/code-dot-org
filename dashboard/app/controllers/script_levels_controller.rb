@@ -370,10 +370,8 @@ class ScriptLevelsController < ApplicationController
   def select_level
     # If a BubbleChoice level's sublevel has been requested, return it.
     if @script_level.bubble_choice? && params[:sublevel_position]
-      sublevel_index = params[:sublevel_position].to_i - 1
-      # TODO: cache sublevels
-      sublevel = @script_level.level.sublevels[sublevel_index]
-      return sublevel if sublevel.present?
+      sublevel = @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
+      return sublevel if sublevel
     end
 
     # If there's only one level in this scriptlevel, use that
