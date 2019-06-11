@@ -564,28 +564,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_same_date 7.days.ago, tenure_b.last_confirmation_date
   end
 
-  test 'confirmation complete submit unchanged complete info' do
-    # Edge case involving complete school info from NCES
-
-    # Given a user with a complete dropdown school info
-    school_info = create :school_info
-    @teacher.update school_info: school_info
-    tenure = @teacher.user_school_infos.first
-    assert tenure.school_info.complete?
-
-    # When a year later they click "No" and "Save" without changing anything
-    Timecop.travel 1.year
-    sign_in @teacher
-    submit_complete_school_info_from_dropdown school_info.school
-    assert_response :success, response.body
-
-    # Then, no new school info should be created
-    @teacher.reload
-    assert_equal 1, @teacher.user_school_infos.count
-    assert tenure.school_info.complete?
-    assert_equal @teacher.school_info.id, school_info.id
-  end
-
   private def partial_manual_school_info
     SchoolInfo.create(
       country: 'United States',
