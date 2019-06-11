@@ -16,6 +16,7 @@ var ALLOWED_KEYS = new Set([
   'isResponsive',
   'isIframeEmbed',
   'isReadOnlyWorkspace',
+  'isNotStartedLevel',
   'isShareView',
   'isProjectLevel',
   'isSubmittable',

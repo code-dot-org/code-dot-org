@@ -3155,6 +3155,18 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 };
 
 /**
+ * Checks if the level a teacher is viewing of a students has
+ * not been started.
+ */
+StudioApp.prototype.isNotStartedLevel = function(config) {
+  return (
+    config.noInstructionsWhenCollapsed &&
+    config.readonlyWorkspace &&
+    !config.channel
+  );
+};
+
+/**
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
  * @param {AppOptionsConfig} config
@@ -3178,6 +3190,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
+      isNotStartedLevel: this.isNotStartedLevel(config),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
