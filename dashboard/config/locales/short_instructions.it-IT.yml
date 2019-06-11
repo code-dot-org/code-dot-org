@@ -1063,8 +1063,9 @@ it-IT:
         per raggiungere il tesoro.
       Crack Random Substitution: Istruzioni
       Crack a Caesar Cipher: Istruzioni
-      Dance Party 2: Cambia il comportamento nel blocco `___begins___` (_inizia_)
-        per fare in modo che all'inizio l'alieno gironzoli qua e là.
+      Dance Party 1-validated: 'Cosa pensi che succederà quando cliccherai sull''alieno?  '
+      Dance Party 2: Cambia il comportamento nel blocco `il personaggio ... inizia`
+        per fare in modo che l'alieno gironzoli qua e là.
       Dance Party 2_2019: Cambia il comportamento nel blocco `___begins___` (_inizia_)
         per fare in modo che all'inizio l'alieno gironzoli qua e là.
       Dance Party 3: Crea un nuovo personaggio chiamato `alien2`.  Fagli fare un passo
@@ -1079,10 +1080,10 @@ it-IT:
         si clicca su di esso.
       Dance Party 5_2019: Aggiungi del codice per cambiare il colore di ogni alieno
         quando si clicca su di esso.
-      Dance Party 6: Usa il blocco `stops everything` (_ferma tutto_) per fermare
-        ogni alieno quando viene cliccato.
-      Dance Party 6_2019: Usa il blocco `stops everything` (_ferma tutto_) per fermare
-        ogni alieno quando viene cliccato.
+      Dance Party 6: Usa il blocco `... interrompe tutto` per fermare ogni alieno
+        quando viene cliccato.
+      Dance Party 6_2019: Usa il blocco `... interrompe tutto` per fermare ogni alieno
+        quando viene cliccato.
       Dance Party 7: Aggiungi un nuovo personaggio chiamato 'myBell' (_la mia campanella_)
         che fa fare a tutti gli alieni la sua stessa danza quando viene cliccata.
       Dance Party 7_2019: Aggiungi un nuovo personaggio chiamato 'myBell' (_la mia
@@ -1137,10 +1138,10 @@ it-IT:
       Fish Tank 3-validated_2019: Modifica il comportamento del pesce in modo che
         nuoti da una parta all'altra dell'acquario (cerca il blocco giusto tra i tanti
         presenti nella cassetta degli attrezzi).
-      Fish Tank 4-validated: Usa il blocco `set background color` (_imposta colore
-        sfondo_) per impostare lo sfondo blu.
-      Fish Tank 4-validated_2019: Usa il blocco `set background color` (_imposta colore
-        sfondo_) per impostare lo sfondo blu.
+      Fish Tank 4-validated: Usa il blocco `imposta il colore dello sfondo` per impostare
+        lo sfondo blu.
+      Fish Tank 4-validated_2019: Usa il blocco `imposta il colore dello sfondo` per
+        impostare lo sfondo blu.
       Fish Tank 5-validated: Il nostro pesce si sente un po' solo. Aggiungi un altro
         personaggio nell'acquario.
       Fish Tank 5-validated_2019: Il nostro pesce si sente un po' solo. Aggiungi un

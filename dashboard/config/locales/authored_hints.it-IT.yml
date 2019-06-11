@@ -10718,16 +10718,11 @@ it-IT:
           per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
         courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals2_2019:
-        courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
-          il video-suggerimento!
         courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
           vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare
           un blocco `se`.
-        courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo
-          `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
         courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
           per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
-        courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -10751,16 +10746,11 @@ it-IT:
           ancora risolto l'esercizio.
         courseD_bee_conditionals3_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals3_2019:
-        courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
-          il video-suggerimento!
         courseD_bee_conditionals3_a: Assicurati di usare un'istruzione condizionale
           `se` per verificare in ogni casella se c'è un fiore.
-        courseD_bee_conditionals3_b: Per far andare avanti l'ape, puoi usare sia un
-          ciclo `ripeti ... volte` sia un ciclo `mentre`. Usa quello che preferisci!
         courseD_bee_conditionals3_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
-        courseD_bee_conditionals3_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -10784,16 +10774,10 @@ it-IT:
           l'ape se c'è un fiore?
         courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals4_2019:
-        courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
-          il video-suggerimento!
         courseD_bee_conditionals4_a: Puoi sempre trattare ogni casella come se avesse
           sopra una nuvola, anche se in questo caso riesci a vedere tutto il percorso.
         courseD_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
           controllare la presenza di un fiore in ogni casella.
-        courseD_bee_conditionals4_c: Grazie ad un blocco <xml><block type="maze_untilBlocked"/></xml>
-          riesci ad andare avanti e controllare se c'è un fiore. Cosa dovrebbe fare
-          l'ape se c'è un fiore?
-        courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -10811,22 +10795,6 @@ it-IT:
           se c'è un fiore? Cosa fai se c'è un fiore?
         courseD_bee_conditionals5_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals5_2018:
-        courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
-          il video-suggerimento!
-        courseD_bee_conditionals5_a: Pensa ad ogni lato del percorso rettangolare
-          come ad un percorso a sé stante. Imposta un ciclo annidato con un blocco
-          `ripeti ... volte` all'esterno ed uno `mentre c'è strada in avanti` all'interno.
-          Lungo quanti lati deve volare l'ape per ronzare su ogni fiore?
-        courseD_bee_conditionals5_c: Ci sono 3 lati del rettangolo con dei fiori,
-          quindi il codice deve `"ripetersi" 3 volte`. Ad ogni ripetizione, l'ape
-          deve procedere lungo il percorso `mentre c'è strada in avanti`. Per proseguire,
-          l'ape deve `"andare" avanti`. Lungo il percorso, l'ape deve controllare
-          se c'è un fiore. `se c'è un fiore`, l'ape deve `"prendere" il nettare`.
-        courseD_bee_conditionals5_b: All'interno del blocco `mentre c'è strada in
-          avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
-          se c'è un fiore? Cosa fai se c'è un fiore?
-        courseD_bee_conditionals5_hintVid2: Guarda il video per risolvere questo esercizio.
-      courseD_bee_conditionals5_2019:
         courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
         courseD_bee_conditionals5_a: Pensa ad ogni lato del percorso rettangolare
@@ -10863,15 +10831,12 @@ it-IT:
           più semplice?
         courseD_bee_conditionals6_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals6_2019:
-        courseD_bee_conditionals6_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
-          il video-suggerimento!
         courseD_bee_conditionals6_a: Assicurati di usare un'istruzione condizionale
           `se` per verificare sotto ogni nuvola se c'è un favo.
         courseD_bee_conditionals6_b: In questo caso, non è necessario controllare
           se ci sono fiori sotto le nuvole.
         courseD_bee_conditionals6_c: Potresti usare un ciclo per rendere il programma
           più semplice?
-        courseD_bee_conditionals6_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals7:
         courseD_bee_conditionals7_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -10893,15 +10858,12 @@ it-IT:
           di una casella vuota.
         courseD_bee_conditionals7_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals7_2019:
-        courseD_bee_conditionals7_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
-          il video-suggerimento!
         courseD_bee_conditionals7_a: "**Ricorda:** Ogni volta che esegui il programma
           ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
           usare il blocco condizionale `se/altrimenti`."
         courseD_bee_conditionals7_b: Se sotto a una nuvola non c'è un fiore, sappi
           che c'è sicuramente un favo, quindi non hai bisogno di considerare il caso
           di una casella vuota.
-        courseD_bee_conditionals7_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals7_predict2:
         courseD_bee_conditionals7_a: "**Ricorda:** Ogni volta che esegui il programma
           ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
@@ -13115,20 +13077,20 @@ it-IT:
           -   salta in avanti di **100 pixel**
       courseE_artist_functions8c_2018:
         courseD_artist_functions8_f: È più facile di quanto sembri! Non dovresti aver
-          bisogno di altri blocchi `vai avanti` o`salta`!
+          bisogno di altri blocchi `vai avanti` o `salta`!
         courseD_artist_functions8_a: La seconda fila di quadrati può essere disegnata
           proprio come la prima, dopo che l'artista si è girato di 180 gradi!
         courseD_artist_functions8_c: Alla fine della prima fila di quadrati, l'artista
           deve solo ruotare di 180 gradi prima di disegnare la successiva. Metti il
-          tutto in un ciclo`ripeti ... volte` per prepararti al prossimo esercizio!
+          tutto in un ciclo `ripeti ... volte` per prepararti al prossimo esercizio!
       courseE_artist_functions8c_2019:
         courseD_artist_functions8_f: È più facile di quanto sembri! Non dovresti aver
-          bisogno di altri blocchi `vai avanti` o`salta`!
+          bisogno di altri blocchi `vai avanti` o `salta`!
         courseD_artist_functions8_a: La seconda fila di quadrati può essere disegnata
           proprio come la prima, dopo che l'artista si è girato di 180 gradi!
         courseD_artist_functions8_c: Alla fine della prima fila di quadrati, l'artista
           deve solo ruotare di 180 gradi prima di disegnare la successiva. Metti il
-          tutto in un ciclo`ripeti ... volte` per prepararti al prossimo esercizio!
+          tutto in un ciclo `ripeti ... volte` per prepararti al prossimo esercizio!
       courseE_artist_functions9:
         courseD_artist_functions9_e: |-
           Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`.
@@ -13337,15 +13299,15 @@ it-IT:
           davvero risolvere il dilemma.
         courseE_bee_concept4_b: Uno schema a scalinata può aiutarti a passare in rassegna
           tutti i fiori e i favi.
-        courseE_bee_concept4_c: Quando se sei su un fiore, quante dosi di nettare
-          devi raccogliere? È lo stesso numero per tutti i fiori?
+        courseE_bee_concept4_c: Quando sei su un fiore, quante dosi di nettare devi
+          raccogliere? È lo stesso numero per tutti i fiori?
       courseE_bee_concept4_2018:
         courseE_bee_concept4_a: Un'istruzione condizionale `se/altrimenti` potrebbe
           davvero risolvere il dilemma.
         courseE_bee_concept4_b: Uno schema a scalinata può aiutarti a passare in rassegna
           tutti i fiori e i favi.
-        courseE_bee_concept4_c: Quando se sei su un fiore, quante dosi di nettare
-          devi raccogliere? È lo stesso numero per tutti i fiori?
+        courseE_bee_concept4_c: Quando sei su un fiore, quante dosi di nettare devi
+          raccogliere? È lo stesso numero per tutti i fiori?
       courseE_bee_concept5:
         courseE_bee_concept5_a: I fiori sono disposti lungo un percorso rettangolare.
           Puoi seguire quel percorso usando un ciclo `mentre c'è strada in avanti`
