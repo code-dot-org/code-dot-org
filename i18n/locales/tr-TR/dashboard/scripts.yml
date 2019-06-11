@@ -7172,6 +7172,10 @@ tr:
               name: Zarf değişkenleri
               description_student: 'Zarflar ve değişkenlerin ortak bir yönü var: ikisi de değerli şeyleri tutarlar. Burada değişkenlerin ne olduğunu ve onların yapabileceği harika şeyleri öğreneceksiniz.'
               description_teacher: Değişkenler sayılar ya da sözcükler gibi değerler için yer tutucu olarak kullanılır. Değişkenler programlamada çok fazla özgürlüğe izin verir. Bir ifadeyi defalarca yazmak veya belirsiz bir numarayı hatırlamak yerine, bilgisayar bilimcileri değişkenleri kendilerine referans olarak kullanabilir. Bu ders değişkenlerin ne olduğunu ve bunları farklı şekillerde nasıl kullanabileceğimizin açıklamada yardımcı olur. Değişkenler fikri kavramak için kolay bir görüş değil bu yüzden dersin sonunda tartışma için bol bol vakit ayırmanızı öneririz.
+            Variables as Constant in Artist:
+              description_student: Sınıfa yaratıcılık getirmeyi unutmayın! Bu bulmacalarda değişkenleri kullanarak muhteşem çizimler yapacaksınız.
+            Variables that Change in Artist:
+              description_teacher: Bu derste öğrenciler, Sanatçı çevresindeki değişkenleri kullanarak tekrar eden tasarımların oluşturulmasını tecrübe edecekler. Öğrenciler, kodların daha kolay yazılmasını ve okunması daha kolay hale getirilebilmesi için değişkenlerin nasıl kullanılacağını öğrenecek. Kılavuzlu bulmacalardan sonra, öğrenciler öğrendiklerini göstermek ve kendi tasarımlarını oluşturmak için serbest seviye seviyesinde sona ereceklerdir.
             For Loop Fun:
               name: Şununla Say Döngüsü Eğlencesi
               description_student: '`for` döngülerini öğrenmek için eğlenceli şeyler bulacaksınız!'
@@ -7205,8 +7209,12 @@ tr:
               name: Labirentte İçiçe Döngüler
             Internet:
               name: İnternet
+              description_student: İnternet üzerinde bilginin nasıl seyahat ettiğini hiç merak ettiniz mi? Bu sihir değil! Bu ders, size, internetin nasıl çalıştığının temellerini öğretecek.
+              description_teacher: Birçok kişi interneti her gün kullanıyor olmasına rağmen, çok fazla insan nasıl çalıştığını bilmiyor. Bu derste, öğrenciler bağlantıları, URL'ler, IP Adresleri ve DNS hakkında bilgi edinecek ve internet üzerinden akmaya devam edeceklerini iddia edeceklerdir.
             Crowdsourcing:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+              description_student: Bu ders size kitle hakkında, bir ekiple bir proje oluşturma sürecini öğretecektir.
+              description_teacher: Bilgisayar bilimlerinde, bazı büyük, korkutucu problemler ile karşı karşıyayız. Büyük asal sayı bulma ya da DNA dizilimi yapma gibi zorlukların birey olarak yapılması neredeyse imkansızdır. Başkalarının gücünü eklemek bu görevleri yönetilebilir yapar. Bu ders öğrencilere, ekip çalışmasının bilgisayar bilimleri endüstrisinde nasıl faydalı olabileceğini gösterecektir.
             Digital Sharing:
               name: Dijital Paylaşım
         dance-low:
@@ -7249,6 +7257,8 @@ tr:
               name: Sanaçtı İkili Taban
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
+              description_student: Bu derste kendi Star Wars oyununu kurarken gücünü hissedin.
+              description_teacher: Bu derste öğrenciler, olayları kullanarak çevrimiçi olarak paylaşabilecekleri bir oyun yapacaklar. R2-D2 ve diğer Star Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek ve sonra kendi oyunlarını oluşturmaları için süre verilecek.
             Dance Party:
               name: Dans Partisi
         coursee-2019:
@@ -7277,10 +7287,7 @@ tr:
             Private and Personal Information:
               name: Özel ve Kişisel Bilgiler
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
-              description_teacher: |-
-                Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
-
-                Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
+              description_teacher: "Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.\n\nÖğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler."
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
               description_student: Bu derste kendi Star Wars oyununu kurarken gücünü hissedin.
@@ -7487,6 +7494,8 @@ tr:
               name: Geleceğe bakış
             Binary Bracelets:
               name: İkilik Bileklikler
+            'End of Course Project: Create a Play Lab Game':
+              description_student: Bol kodlama için elleri hazırla! Projenizi oluşturmaya başlamanın zamanı geldi.
             'Programming: My Robotic Friends':
               name: 'Programlama: Robot dostlarım'
             'Loops: My Loopy Robotic Friends':
@@ -7504,7 +7513,7 @@ tr:
           stages:
             'Programming: Happy Maps':
               name: Mutlu Haritalar
-              description_teacher: Öğrenciler bir dizinin planlanması ve bu diziyi uygun dile kodlaması arasındaki farkı anlarlarsa algoritmalardan programlamaya köprü kısa olabilir. Bu etkinlik, öğrencilerin kısa kodda okuma ve yazma deneyim kazanmalarına yardımcı olacaktır.
+              description_teacher: 'Öğrenciler bir dizinin planlanması ve bu diziyi uygun dile kodlaması arasındaki farkı anlarlarsa algoritmalardan programlamaya köprü kısa olabilir. Bu etkinlik, öğrencilerin kısa kodda okuma ve yazma deneyim kazanmalarına yardımcı olacaktır.'
             Programming in Maze:
               name: Labirentte Programlama
               description_teacher: Bu çevrimiçi bulmacalar dizisinde, öğrenciler algoritmalar, hata ayıklama ve genel bilgisayar okuryazarlığı konularında bilgi edinecekler. Angry Birds oyunundan karakterler içeren öğrenciler kuşu duvarlara veya TNT'ye çarpmadan domuza sokmak için ardışık algoritmalar geliştirecekler. Problem çözme ve eleştirel düşünme ile ek uygulama için bu aşamada hata ayıklama bulmacaları da karıştırılmıştır.
@@ -7526,10 +7535,14 @@ tr:
               description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!
             Ocean Scene with Loops:
               name: Sanatçıların Döngüleri
+              description_teacher: Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.
             Programming with Rey and BB-8:
               name: Rey ve BB-8 ile programlama
+            Sequencing with Scrat:
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.
         courseb-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_audience: 'Yaş: 5-8'
@@ -7548,12 +7561,16 @@ tr:
               name: Toplayıcıda Döngüler
             Loops in Artist:
               name: Sanatçı- Döngüler
+            'Events: The Big Event':
+              description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar işte bunun içindir.
             Events in Play Lab:
               name: Play Lab' da Olaylar
             'Loops: Getting Loopy':
               name: Döngüselleşme
             Programming in Maze:
               name: Labirentte Programlama
+            Sequencing in Maze:
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.
         pre-express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: 'Ön okurlar için bilgisayar bilimlerine giriş: anaokulu ve birinci sınıf derslerimizin en iyisini birleştirir.'

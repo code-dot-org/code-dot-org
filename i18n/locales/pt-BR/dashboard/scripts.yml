@@ -2790,6 +2790,7 @@ pt-BR:
               name: 'Projeto: Construir um Jogo'
             Shapes and Randomness:
               description_student: Esta aula estende as habilidades de desenho para incluir largura e altura e introduz o conceito de geração de números aleatórios. A turma aprende a desenhar com versões de elipse() e ret() que incluem parâmetros de largura e altura e a usar o bloco fundo() para preencher a tela com alguma cor. No final, a turma é introduzida ao bloco numeroAleatorio() e usa os novos blocos para desenhar uma cobra arco-íris aleatória.
+              description_teacher: Nessa aula, a turma continua desenvolvendo suas habilidades de desenho. No começo da aula, uma discussão guiada pela pessoa professora conecta a funcionalidade de blocos expandidos (e.g. formas de tamanhos diferentes) com a necessidade de mais "inserções de dados" nos blocos, ou seja, "parâmetros". A turma aprende como desenhar com versões de `elipse()` e `ret()`que incluem os parâmetros de largura e altura. A turma também aprende como usar o bloco `fundo()`. No fim, apresenta-se o bloco `numeroAleatorio()`. Combinando essas habilidades, a turma vai desenhar uma cobra com cores aleatórias no final da aula.
             Variables:
               name: variáveis
             Sprites:
@@ -5113,6 +5114,7 @@ pt-BR:
               name: Crowdsourcing
             Digital Sharing:
               name: Compartilhamento Digital
+              description_teacher: Emprestado para os Fundamentos de Ciência da Computação pelo time em Direitos Autorais e Criatividade, esta lição existe para ajudar os estudantes a entenderem os desafios e benefícios de respeitar posse e direitos autorais, particularmente em ambientes digitais. Estudantes deveriam ser encorajados a respeitar os direitos dos artistas como uma parte importante de ser um cidadão digital ético.
         dance-low:
           stages:
             Dance Party:
@@ -5126,6 +5128,7 @@ pt-BR:
               name: Programação em papel quadriculado
             Relay Programming:
               name: Programação por revezamento
+              description_teacher: Esta atividade começará com uma pequena aula sobre depuração e persistência, então irá mudar rapidamente para uma corrida contra o tempo à medida que os alunos se dividem em times e trabalham juntos para escrever um programa uma instrução por vez.
             Loops in Ice Age:
               name: Repetições na Era do gelo
             Nested Loops in Bee:
@@ -5138,6 +5141,9 @@ pt-BR:
               name: Imagens binárias
             Artist Binary:
               name: 'Artista: binário'
+            Build a Star Wars Game:
+              description_student: Sinta a força ao construir seu próprio jogo Star Wars nesta lição.
+              description_teacher: Nesta lição, os alunos irão praticar o uso de eventos para criar um jogo que eles possam compartilhar on-line. Apresentando R2-D2 e outros personagens de Star Wars, os alunos serão guiados através de eventos e, em seguida, terão espaço para criar seu próprio jogo.
             Dance Party:
               name: Festa dançante
         coursee-2019:
@@ -5311,7 +5317,7 @@ pt-BR:
               name: Sequenciamento no labirinto
             'Programming: Happy Maps':
               name: Mapas divertidos
-              description_teacher: A ponte de algoritmos para programação pode ser curta se os alunos entenderem a diferença entre planejar uma sequência e programar esta sequência em uma linguagem apropriada. Esta atividade irá ajudar os alunos a ganhar experiência escrevendo e lendo em códigos abreviados.
+              description_teacher: 'A ponte de algoritmos para programação pode ser curta se os alunos entenderem a diferença entre planejar uma sequência e programar esta sequência em uma linguagem apropriada. Esta atividade irá ajudar os alunos a ganhar experiência escrevendo e lendo em códigos abreviados.'
             Programming in Maze:
               name: Programação no labirinto
               description_teacher: Nesta série de quebra-cabeças online, os alunos irão construir o entendimento de algoritmos, depuração, e alfabetização geral em computadores. Com a apresentação de personagens do jogo Angry Birds, os alunos irão desenvolver algoritmos sequenciais para levar o pássaro até o porco sem bater nas paredes ou explosivos. Depurações de quebra-cabeças também foram misturadas neste nível para adicionar a prática com resolução de problemas e pensamento crítico.
@@ -5333,8 +5339,10 @@ pt-BR:
               description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
             Ocean Scene with Loops:
               name: Cena do Oceano com Repetições
+              description_teacher: Retornando às repetições, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na última lição online, repetições foram utilizadas para atravessar um labirinto e coletar tesouro. Aqui, as repetições estão criando padrões. No fim deste nível, os alunos terão a oportunidade de criar as suas próprias imagens usando repetições.
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
             Loops in Ice Age:
               name: Repetições com Scrat
             Programming in Ice Age:
@@ -5343,6 +5351,7 @@ pt-BR:
               name: Programação com Rey e BB-8
             Sequencing with Scrat:
               name: Sequenciando com Scrat
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
         courseb-2019:
           title: Curso B (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
@@ -5369,6 +5378,8 @@ pt-BR:
               name: Repetições na Era do gelo
             Loops in Collector:
               name: Repetições com Laurel
+            'Events: The Big Event':
+              description_teacher: "Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.\nÉ para isto que os eventos servem."
             Events in Play Lab:
               name: Um Battle Royal com eventos
             'Loops: Getting Loopy':
@@ -5383,6 +5394,7 @@ pt-BR:
               name: Programação com Colheitadeira
             Sequencing in Maze:
               name: Sequenciando com Angry Birds
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
         pre-express-2019:
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           stages:
@@ -5501,6 +5513,8 @@ pt-BR:
               name: Protótipo de Teste
             Improving and Iterating:
               name: Improvizando e Interagindo
+            Post-Project Test:
+              name: Teste pós-projeto
         csd5-2019:
           stages:
             Representation Matters:

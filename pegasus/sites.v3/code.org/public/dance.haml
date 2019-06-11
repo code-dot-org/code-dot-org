@@ -3,6 +3,10 @@ title: "<%= I18n.t(:hoc2018_dance_party_landing_title) %>"
 theme: responsive
 ---
 
+:javascript
+  window.pegasus = window.pegasus || {};
+  window.pegasus.STUDIO_URL = "#{CDO.studio_url}";
+
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: minifiable_asset_path('js/code.org/public/dance.js')}

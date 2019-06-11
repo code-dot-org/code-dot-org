@@ -6,9 +6,154 @@ nl:
         title: titel
       Begin planning your project_2018:
         description here: beschrijving hier
+      Begin planning your project_2018_2019:
+        description here: beschrijving hier
+      CSD U2 Design Project:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 Design Project_2018:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 Design Project_2018_2019:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 L1 Overview:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 L2 Overview:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 L3 Overview:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 L4 Overview:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 L5 Overview:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 L6 Overview:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 Lesson 6 Overview:
+        description here: beschrijving hier
+      CSD U2 expand project:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 expand project_2018:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 expand project_2018_2019:
+        description here: beschrijving hier
+        title: titel
+      CSD U2 project guide:
+        description here: beschrijving hier
+      CSD U2 project guide_2018:
+        description here: beschrijving hier
+      CSD U2 project guide_2018_2019:
+        description here: beschrijving hier
+      CSD U3 Card Examples_2018:
+        description here: beschrijving hier
+      CSD U3 Card Examples_2018_2019:
+        description here: beschrijving hier
+      CSD U3 combining rep:
+        description here: beschrijving hier
+        title: titel
+      CSD U3 combining rep_2018:
+        description here: beschrijving hier
+        title: titel
+      CSD U3 combining rep_2018_2019:
+        description here: beschrijving hier
+        title: titel
+      CSD U3 game intro:
+        description here: beschrijving hier
+      CSD U3 game intro_2018:
+        description here: beschrijving hier
+      CSD U3 game intro_2018_2019:
+        description here: beschrijving hier
+      CSD U3 platform intro:
+        description here: beschrijving hier
+      CSD U3 platform intro_2018:
+        description here: beschrijving hier
+      CSD U3 platform intro_2018_2019:
+        description here: beschrijving hier
+      CSD U5 Encryption 1:
+        description here: beschrijving hier
+        title: titel
+      CSD U5 Encryption 1_2018:
+        description here: beschrijving hier
+        title: titel
+      CSD U5 Encryption 1_2018_2019:
+        description here: beschrijving hier
+        title: titel
+      CSD U5 Encryption 2:
+        description here: beschrijving hier
+      CSD U5 Encryption 2_2018:
+        description here: beschrijving hier
+      CSD U5 Encryption 2_2018_2019:
+        description here: beschrijving hier
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: beschrijving hier
+        title: titel
+      CSD U5 crosstab warmup:
+        description here: beschrijving hier
+      CSD U5 crosstab warmup_2018:
+        description here: beschrijving hier
+      CSD U5 crosstab warmup_2018_2019:
+        description here: beschrijving hier
+      CSD U5 data visualization:
+        description here: beschrijving hier
+        title: titel
+      CSD U5 data visualization_2018:
+        description here: beschrijving hier
+        title: titel
+      CSD U5 data visualization_2018_2019:
+        description here: beschrijving hier
+        title: titel
+      CSD U5 student record:
+        description here: beschrijving hier
+        title: titel
+      CSD U5 student record_2018:
+        description here: beschrijving hier
+        title: titel
+      CSD U5 student record_2018_2019:
+        description here: beschrijving hier
+        title: titel
+      CSD U6 LED create intro:
+        description here: beschrijving hier
+      CSD U6 LED create intro_2018:
+        description here: beschrijving hier
+      CSD U6 LED create intro_2018_2019:
+        description here: beschrijving hier
+      CSD U6 final intro:
+        description here: beschrijving hier
+      CSD U6 final intro_2018:
+        description here: beschrijving hier
+      CSD U6 final intro_2018_2019:
+        description here: beschrijving hier
+      Internet Simulator Setup:
+        description here: beschrijving hier
+      Internet Simulator Setup 2:
+        description here: beschrijving hier
+        title: titel
+      Internet Simulator Setup 3:
+        description here: beschrijving hier
+      Multi-Screen Apps:
+        description here: beschrijving hier
+        title: titel
+      New Challenge Introduction:
+        description here: beschrijving hier
+        title: titel
+      OPD-K5 Stage3aGo:
+        description here: beschrijving hier
+        title: titel
       Prepare for your presentation:
         description here: beschrijving hier
         title: titel
+      'Technique: Frequency Analysis':
+        description here: beschrijving hier
+      Terminology Recap:
+        description here: beschrijving hier
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Verbind de knoppencombinatie aan de dansbewegingen.
@@ -203,6 +348,12 @@ nl:
       4-5 maze multi 1:
         Maze Multiple Choice: Doolhof Meerkeuze
         Which blocks solve the puzzle?: Welke blokken lossen de puzzel op?
+      CSD U3 Boolean MC:
+        title: titel
+      CSD U3 Boolean MC_2018:
+        title: titel
+      CSD U3 Boolean MC_2018_2019:
+        title: titel
       K-1 Artist 1 Multi 1:
         Multiple Choice: Meerkeuze
         Which blocks solve this puzzle?: Welke blokken lossen deze puzzel op?
@@ -257,6 +408,10 @@ nl:
         SOUTH: ZUID
         SQUARE: VIERKANT
         Which word is spelled?: Welk woord wordt gespeld?
+      behaviors 1 predict:
+        Incorrect: Incorrect
+      behaviors 4 predict:
+        Incorrect: Incorrect
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -265,9 +420,15 @@ nl:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: Ik weet het niet
       courseC_multi_starWars_predict1_2018:
+        I don't know: Ik weet het niet
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: Ik weet het niet
       courseD_multi_artist_binary8_predict1:
         A: A
@@ -275,6 +436,11 @@ nl:
         C: C
         D: D
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -287,6 +453,10 @@ nl:
         A: A
         B: B
         C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -296,6 +466,14 @@ nl:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

@@ -4656,6 +4656,7 @@ zh-TW:
               name: 用撲克牌學習條件判斷（Conditionals）
             Digital Citizenship:
               name: 數位公民
+              description_student: 有些資訊在網上分享是不安全的。本課將讓學生瞭解安全資訊和私人資訊之間的區別。
             'Unplugged: Binary':
               name: 二進制圖像
             Artist Binary:
@@ -4807,7 +4808,7 @@ zh-TW:
           stages:
             'Programming: Happy Maps':
               name: 快樂地圖
-              description_teacher: 如果學生理解規畫順序和將它循序編程之間的區別，那麼從演算法過渡到程式設計的時間就不會太長，這項活動將透過速記讀寫代碼的方式幫助學生獲得經驗。
+              description_teacher: '如果學生理解規畫順序和將它循序編程之間的區別，那麼從演算法過渡到程式設計的時間就不會太長，這項活動將透過速記讀寫代碼的方式幫助學生獲得經驗。'
             Programming in Maze:
               name: 在迷宮中編程（Programming ）
               description_teacher: 在這一系列的線上關卡中，學生將建立演算法、除錯、一般計算機理論的知識。登場的是「憤怒鳥」遊戲中的角色，學生將開發循序演算法，讓憤怒鳥不會撞牆或碰上炸藥。關卡的除錯也被混合到這個階段，以增加解決問題和批判性思維的練習。

@@ -200,7 +200,7 @@ pt-BR:
       Dancelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
-          {DO1} {DO2}
+          {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bater palmas
@@ -882,7 +882,7 @@ pt-BR:
       gamelab_makeNewGroup:
         text: criar um novo grupo
       gamelab_makeNewSpriteAnon:
-        text: criar novo {ANIMATION\_NAME} elemento em {LOCATION}
+        text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} vira para {DIRECTION}"
         options:
@@ -1293,7 +1293,7 @@ pt-BR:
       Mikelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
-          {DO1} {DO2}
+          {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bater palmas
@@ -1453,9 +1453,9 @@ pt-BR:
       aalab_createNewSpriteAdvanced:
         text: "faça um novo elemento chamado {NAME} \n com fantasia {COSTUME} \n em {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: criar novo {ANIMATION\_NAME} elemento em {LOCATION}
+        text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab criará novo {ANIMATION\_NAME} elemento em {LOCATION}
+        text: aalab criará novo {ANIMATION_NAME} elemento em {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           faça um novo grupo de elementos chamado {VAR}

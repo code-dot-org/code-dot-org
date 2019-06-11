@@ -7411,6 +7411,10 @@ fil:
               name: Balot ng mga Variables
               description_student: 'Ang mga sobre at mga variable ay mayroong isang bagay na magkatulad: pareho silang maaaring humawak ng mga mahahalagang mga bagay. Dito matutunan mo kung ano ang mga variables at ang mga kasindak-sindak na mga bagay na magagawa nila.'
               description_teacher: Ang mga variable ay ginagamit bilang mga placeholder para sa mga halaga gaya ng mga numero o mga salita. Ang mga variable ay nagbibigay daan sa napakaraming kalayaan sa pag-program. Sa halip na kailangang i-type ang isang parirala ng maraming beses o kailangan tandaan ang isang malabong numero, ang mga siyentista sa kompyuter ay maaaring gumagamit ng mga variable para mag-reperensya sa kanila. Ang araling ito ay nakakatulong para ipaliwanag kung ano ang mga variables at kung paano natin maaaring gamitin ang mga ito sa napakaraming iba't ibang pamamaraan. Ang ideya ng mga variable hindi isang madaling konsepto na maintindihan, kaya aming inirerekomenda na maglaan ng malaking oras para sa diskusyon sa dulo ng aralin.
+            Variables as Constant in Artist:
+              description_student: Huwag kalimutan ng magdala ng pagkamalikhain sa klase! Sa mga palaisipang ito ikaw ay gagawa ng hindi kapani-paniwalang mga drowing gamit ang mga variable.
+            Variables that Change in Artist:
+              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang mga variables maaaring gamitin para madaling isulat ang mga code at madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga estudyante ay magtatapos sa isang libreng laro na antas para ipakita kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga disenyo.
             For Loop Fun:
               name: Saya sa For Loop
               description_student: Magkakaroon ka ng napakasayang pag-aaral tungkol sa mga `for` loop!
@@ -7449,8 +7453,12 @@ fil:
               name: Naka-nest na mga Loops sa Maze
             Internet:
               name: The Internet
+              description_student: Nagtataka ka na ba kung paano ang mga impormasyon naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang Internet gumagana.
+              description_teacher: Kahit na maraming mga tao ang gumamit ng Internet araw-araw, hindi masyadong marami ang may alam kung paano ito gumagana. Sa araling ito, ang mga estudyante ay magkukunwaring dumaloy sa Internet, habang natututo tungkol sa mga koneksyon, mga URL, mga IP Address, at ang DNS.
             Crowdsourcing:
               name: Pag-crowdsourcing
+              description_student: Ang araling ito ay nagtuturo sa iyo tungkol sa crowdsourcing, ang proseso sa pagbuo ng isang proyekto sa isang pangkat.
+              description_teacher: Sa computer science, makakaharap tayo ng iilang mga malalaki, nakakatakot na mga problema. Mga hamon gaya ng paghahanap sa pinakamalaking prime na numero o pagsunod-sunod sa DNA ay halos imposibleng magawa bilang isang indibidwal. Ang pagdadagdag ng kapangyarihan ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong ang pagtutulungan sa industriya ng computer science.
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -7487,6 +7495,8 @@ fil:
               name: Artist na Binary
             Build a Star Wars Game:
               name: Bumuo ng Star Wars na Laro
+              description_student: Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito.
+              description_teacher: Sa araling ito, ang mga estudyante ay magsasanay sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
         coursee-2019:
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
           description_audience: 'Mga Edad: 8-12'
@@ -7515,10 +7525,7 @@ fil:
             Private and Personal Information:
               name: Pribado at Personal na Impormasyon
               description_student: Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado.
-              description_teacher: |-
-                Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.
-
-                Habang ang mga estudyante ay bibisita ng mga site na naghihingi ng mga impormasyon tungkol sa kanilang pagkakakilanlan, sila at matutong gumamit na kritikal na proseso sa pagsiyasat na magbibigay kapangyarihan sa kanila na maprotektahan ang kanilang mga sarili at ang kanilang pamilya mula sa pagnanakaw sa pagkakakilanlan. Sa araling ito, ang mga estudyante ay matututong kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hinihiling o kinakailangan ng iilang mga website. Matutunan nila ang kaibahan ng pribadong impormasyon sa personal na impormasyon, pati na rin kung paano magtukoy kung ano ang ligtas o hindi ligtas ibahagai online.
+              description_teacher: "Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.\n\nHabang ang mga estudyante ay bibisita ng mga site na naghihingi ng mga impormasyon tungkol sa kanilang pagkakakilanlan, sila at matutong gumamit na kritikal na proseso sa pagsiyasat na magbibigay kapangyarihan sa kanila na maprotektahan ang kanilang mga sarili at ang kanilang pamilya mula sa pagnanakaw sa pagkakakilanlan. Sa araling ito, ang mga estudyante ay matututong kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hinihiling o kinakailangan ng iilang mga website. Matutunan nila ang kaibahan ng pribadong impormasyon sa personal na impormasyon, pati na rin kung paano magtukoy kung ano ang ligtas o hindi ligtas ibahagai online."
             Build a Star Wars Game:
               name: Bumuo ng Star Wars na Laro
               description_student: Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito.
@@ -7720,6 +7727,8 @@ fil:
               name: Masdan ang Hinaharap
             Binary Bracelets:
               name: Binary na mga Pulseras
+            'End of Course Project: Create a Play Lab Game':
+              description_student: Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.
             'Programming: My Robotic Friends':
               name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
             'Loops: My Loopy Robotic Friends':
@@ -7735,7 +7744,7 @@ fil:
           stages:
             'Programming: Happy Maps':
               name: Happy Maps
-              description_teacher: Ang tulay mula sa mga algoritmo papunta sa pag-program ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng madaliang code.
+              description_teacher: 'Ang tulay mula sa mga algoritmo papunta sa pag-program ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng madaliang code.'
             Programming in Maze:
               name: Pag-Program sa Maze
               description_teacher: Sa seryeng ito ng mga online na mga palaisipan, ang mga estudyante ay bubuo sa kanilang pag-uunawa sa mga algoritmo, pag-debug, at pangkaraniwang literasiya sa kompyuter. Nagpapakita sa mga karakter mula sa larong Angry Birds, ang mga estudyante ay bubuo ng mga sekwensyal na mga algoritmo para mapagawang makapunta ang ibon sa baboy nang hindi nababanga sa mga balakid o TNT. Ang pag-debug ng mga palaisipain ay naihalo din sa yugtong ito para sa karagdagang pagsasanay sa paglutas ng problema at kritikal na pag-iisip.
@@ -7752,10 +7761,15 @@ fil:
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
             Events in Play Lab:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
+            Ocean Scene with Loops:
+              description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.
             Learn to Drag and Drop:
               name: Matutong Mag-Drag at Mag-Drop
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
+            Sequencing with Scrat:
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
         courseb-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_audience: 'Mga Edad: 5-8'
@@ -7770,12 +7784,16 @@ fil:
               name: Pag-Program kasama sina Rey at BB-8
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            'Events: The Big Event':
+              description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
             'Loops: Getting Loopy':
               name: Pagiging Loopy
             Loops in Harvester:
               name: Mga Loops sa Harvester
             Programming in Maze:
               name: Pag-Program sa Maze
+            Sequencing in Maze:
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
         pre-express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
