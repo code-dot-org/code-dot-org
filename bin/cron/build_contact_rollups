@@ -6,7 +6,7 @@ require 'cdo/contact_rollups_validation'
 require 'cdo/pardot'
 require 'cdo/chat_client'
 require 'cdo/only_one'
-# require 'aws-sdk-rds'
+require 'aws-sdk-rds'
 require 'cdo/log_object'
 
 CHAT_CHANNEL = "cron-daily".freeze
@@ -52,6 +52,8 @@ def main
 
   # Any other failures along the way will be unrescued exceptions that
   # go to HoneyBadger
+
+  # TODO: notify honeybadger if there are errors
 ensure
   # log_object.time('Clean up db clone') {ContactRollups.delete_database_clone}
   puts log_object.to_s

@@ -4,20 +4,21 @@ class LogObject
     @logs = []
   end
 
-  def time(message = nil)
+  def time(action_name = nil)
     start_time = Time.now
     yield if block_given?
-    info("#{message || 'Unnamed'} action completed in #{Time.now - start_time} seconds")
+    info("#{action_name || 'Unnamed'} action completed in #{Time.now - start_time} seconds.")
   rescue => e
-    # TODO: this catchs all standard errors and exception
-    @errors << e
-    error("#{message || 'Unnamed'} action exited with error(s) in #{Time.now - start_time} seconds")
+    # @note this catchs all standard errors and exception
+    error("#{action_name || 'Unnamed'} action exited with error "\
+      "in #{Time.now - start_time} seconds.\n"\
+      "Error = #{e.inspect}."
+    )
   end
 
   def to_s
-    str = "#{@errors.size} error massages and #{@logs.size} log messages."
-    # TODO: print error messages (not stack traces)
-    @errors.each {|error| str.concat("\n#{error.message}")}
+    str = "Recorded #{@errors.size} error messages and #{@logs.size} log messages."
+    @errors.each {|error| str.concat("\n#{error}")}
     @logs.each {|log| str.concat("\n#{log}")}
     str
   end
@@ -27,7 +28,7 @@ class LogObject
   end
 
   def error(message)
-    @logs << "[#{Time.now}] ERROR: #{message}"
+    @errors << "[#{Time.now}] ERROR: #{message}"
   end
 
   alias_method :inspect, :to_s
