@@ -408,18 +408,10 @@ class Blockly < Level
     options.freeze
   end
 
-  # @param extra_identifier [Boolean] we for some reason use the property name
-  #   twice in the internationalization key: once pluralized as a category name,
-  #   and once again singularized as an addition to the level name itself. This
-  #   is unnecessary, so we are gradually removing the extra key. If this is
-  #   true, keep the extra key in. If false, exclude it. TODO elijah: remove all
-  #   instances of this extra key and then this property.
-  def get_localized_property(property_name, extra_identifier: true)
+  def get_localized_property(property_name)
     if should_localize? && try(property_name)
-      key = name
-      key += "_#{property_name.singularize}" if extra_identifier
       I18n.t(
-        key,
+        name,
         scope: [:data, property_name.pluralize],
         default: nil,
         smart: true
@@ -432,14 +424,14 @@ class Blockly < Level
   end
 
   def localized_long_instructions
-    get_localized_property("long_instructions", extra_identifier: false)
+    get_localized_property("long_instructions")
   end
 
   def localized_authored_hints
     return unless authored_hints
 
     if should_localize?
-      scope = [:data, :authored_hints, "#{name}_authored_hint"]
+      scope = [:data, :authored_hints, name]
 
       localized_hints = JSON.parse(authored_hints).map do |hint|
         # Skip empty hints, or hints with videos (these aren't translated).
@@ -470,7 +462,7 @@ class Blockly < Level
 
   def localized_short_instructions
     if custom?
-      loc_val = get_localized_property("short_instructions", extra_identifier: false)
+      loc_val = get_localized_property("short_instructions")
       unless I18n.en? || loc_val.nil?
         return loc_val
       end

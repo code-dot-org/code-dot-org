@@ -5,7 +5,6 @@ import i18n from '@cdo/locale';
 import ProgressBubble from './ProgressBubble';
 import FontAwesome from '../FontAwesome';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   table: {
@@ -100,13 +99,7 @@ export default class ProgressLegend extends Component {
   render() {
     const {excludeCsfColumn} = this.props;
 
-    const miniRubricExperiment = experiments.isEnabled(
-      experiments.MINI_RUBRIC_2019
-    );
-    const purpleBubbleHeader = miniRubricExperiment
-      ? i18n.assessmentAndSurvey()
-      : i18n.submitted();
-    const secondRowRowSpan = miniRubricExperiment ? 2 : 1;
+    const secondRowRowSpan = 2;
 
     return (
       <table style={styles.table}>
@@ -136,7 +129,7 @@ export default class ProgressLegend extends Component {
                 <div style={styles.secondaryText}>({i18n.perfect()})</div>
               )}
             </TD>
-            <TD>{purpleBubbleHeader}</TD>
+            <TD>{i18n.assessmentAndSurvey()}</TD>
           </tr>
         </thead>
         <tbody>
@@ -169,7 +162,6 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.concept()}: ${i18n.notStarted()}`
                   }}
                   disabled={false}
-                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -182,7 +174,6 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.concept()}: ${i18n.inProgress()}`
                   }}
                   disabled={false}
-                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -196,7 +187,6 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
                   }}
                   disabled={false}
-                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -211,42 +201,30 @@ export default class ProgressLegend extends Component {
                 <FontAwesome icon="scissors" style={styles.icon} />
                 {i18n.unplugged()}
               </div>
-              {miniRubricExperiment && (
-                <div style={styles.iconAndTextDivBottom}>
-                  <FontAwesome icon="flag-checkered" style={styles.icon} />
-                  {i18n.stageExtras()}
-                </div>
-              )}
+              <div style={styles.iconAndTextDivBottom}>
+                <FontAwesome icon="flag-checkered" style={styles.icon} />
+                {i18n.stageExtras()}
+              </div>
             </TD>
             <TD>
               <div style={styles.iconAndTextDivTop}>
                 <FontAwesome icon="desktop" style={styles.icon} />
                 {i18n.online()}
               </div>
-              {miniRubricExperiment && (
-                <div style={styles.iconAndTextDivBottom}>
-                  <FontAwesome icon="check-circle" style={styles.icon} />
-                  {i18n.progressLegendAssessment()}
-                </div>
-              )}
+              <div style={styles.iconAndTextDivBottom}>
+                <FontAwesome icon="check-circle" style={styles.icon} />
+                {i18n.progressLegendAssessment()}
+              </div>
             </TD>
             <TD style={styles.rightBorder}>
-              <div
-                style={
-                  miniRubricExperiment
-                    ? styles.iconAndTextDiv
-                    : styles.iconAndTextDivTop
-                }
-              >
+              <div style={styles.iconAndTextDiv}>
                 <FontAwesome icon="list-ul" style={styles.icon} />
                 {i18n.question()}
               </div>
-              {miniRubricExperiment && (
-                /* Blank space to keep spacing consistent */
-                <div style={styles.conAndTextDivBottom}>
-                  <FontAwesome icon="" style={styles.icon} />{' '}
-                </div>
-              )}
+              {/* Blank space to keep spacing consistent */}
+              <div style={styles.conAndTextDivBottom}>
+                <FontAwesome icon="" style={styles.icon} />{' '}
+              </div>
             </TD>
             <TD rowSpan={secondRowRowSpan}>
               <div style={styles.center}>
@@ -257,7 +235,6 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.activity()}: ${i18n.notStarted()}`
                   }}
                   disabled={false}
-                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -270,7 +247,6 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.activity()}: ${i18n.inProgress()}`
                   }}
                   disabled={false}
-                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -297,7 +273,6 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
                   }}
                   disabled={false}
-                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -310,7 +285,6 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.activity()}: ${i18n.submitted()}`
                   }}
                   disabled={false}
-                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>

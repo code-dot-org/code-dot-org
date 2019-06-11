@@ -6,8 +6,11 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursef/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course F!", "link"=>"https://curriculum.code.org/csf-19/coursef", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursef'
 version_year '2019'
+is_stable true
+curriculum_umbrella 'CSF'
 
 stage 'Functions in Minecraft', flex_category: 'ramp_up'
 level 'MC_HOC_2017_01_RETRY_2019', progression: 'Practice'

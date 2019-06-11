@@ -24,10 +24,15 @@ const styles = {
   },
   checkbox: {
     margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
   }
 };
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
+
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP'];
 
 /**
  * Component for editing course scripts.
@@ -56,7 +61,12 @@ export default class ScriptEditor extends React.Component {
     announcements: PropTypes.arrayOf(announcementShape),
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
     locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
-    projectSharing: PropTypes.bool
+    projectSharing: PropTypes.bool,
+    curriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
+    familyName: PropTypes.string,
+    versionYear: PropTypes.string,
+    scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   handleClearProjectWidgetSelectClick = () => {
@@ -140,6 +150,56 @@ export default class ScriptEditor extends React.Component {
           inputStyle={styles.input}
         />
         <h2>Basic Settings</h2>
+        <label>
+          Is this script part of one of the core courses?
+          <select
+            name="curriculum_umbrella"
+            style={styles.dropdown}
+            defaultValue={this.props.curriculumUmbrella}
+            ref={select => (this.curriculumUmbrellaSelect = select)}
+          >
+            <option value="">(None)</option>
+            {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
+              <option key={curriculumUmbrella} value={curriculumUmbrella}>
+                {curriculumUmbrella}
+              </option>
+            ))}
+          </select>
+          <p>
+            By selecting one of the above, this script will have a property,
+            curriculum_umbrella, specific to that course regardless of version.
+          </p>
+        </label>
+        <label>
+          Family Name
+          <select
+            name="family_name"
+            defaultValue={this.props.familyName}
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {this.props.scriptFamilies.map(familyOption => (
+              <option key={familyOption} value={familyOption}>
+                {familyOption}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Version Year
+          <select
+            name="version_year"
+            defaultValue={this.props.versionYear}
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {this.props.versionYearOptions.map(year => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </label>
         <label>
           Visible in Teacher Dashboard
           <input

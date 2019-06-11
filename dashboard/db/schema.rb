@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190515203100) do
+ActiveRecord::Schema.define(version: 20190521215856) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -348,7 +348,7 @@ ActiveRecord::Schema.define(version: 20190515203100) do
 
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                            null: false
-    t.integer  "user_level_id"
+    t.bigint   "user_level_id",                                   unsigned: true
     t.integer  "level_source_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -501,8 +501,8 @@ ActiveRecord::Schema.define(version: 20190515203100) do
   end
 
   create_table "paired_user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "driver_user_level_id"
-    t.integer  "navigator_user_level_id"
+    t.bigint   "driver_user_level_id",                 unsigned: true
+    t.bigint   "navigator_user_level_id",              unsigned: true
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.index ["driver_user_level_id"], name: "index_paired_user_levels_on_driver_user_level_id", using: :btree
@@ -682,6 +682,18 @@ ActiveRecord::Schema.define(version: 20190515203100) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_pd_international_opt_ins_on_user_id", using: :btree
+  end
+
+  create_table "pd_misc_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint   "form_id",                     null: false
+    t.bigint   "submission_id",               null: false
+    t.text     "answers",       limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["form_id"], name: "index_pd_misc_surveys_on_form_id", using: :btree
+    t.index ["submission_id"], name: "index_pd_misc_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_misc_surveys_on_user_id", using: :btree
   end
 
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1630,7 +1642,6 @@ ActiveRecord::Schema.define(version: 20190515203100) do
   add_foreign_key "pd_teachercon1819_registrations", "regional_partners"
   add_foreign_key "pd_teachercon1819_registrations", "users"
   add_foreign_key "pd_workshops", "regional_partners"
-  add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
   add_foreign_key "peer_reviews", "scripts"
   add_foreign_key "peer_reviews", "users", column: "reviewer_id"

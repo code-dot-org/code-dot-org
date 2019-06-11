@@ -48,19 +48,29 @@ Code.org pays Regional Partners for program expenses related to hosting workshop
 **How you'll be paid**
 
 - All CS Fundamentals, CS Discoveries, CS Principles, and Admin/Counselor workshop payments are now made via ACH direct deposit (unless otherwise agreed with a partner).
-- Payments for CS Fairs, Community Events, workshop supplies payments, and other reimbursements will still be paid via check. Submit your invoice to invoices@code.org with receipts and attendance list (if required) to initiate the payment process.
+- Payments for CS Fairs, Community Events, workshop supplies payments, and other reimbursements will still be paid via check. Complete the form at bit.ly/codeinvoices with your invoice, receipts and attendance list (if required) to initiate the payment process.
 
 **When you'll be paid**
 
+**Group 1 and 2 - Code.org Funded Partners:** All payments will be provided as outlined in the 2019-20 Regional Partner Agreement. Please refer to your agreements for detailed information on when payments will be disbursed and how final amounts will be calculated (Review exhibits that outline the Teacher Scholarship Fund, Scholarship Fund Implementation and Scholarship Fund Match).
+
+**Group 3 and 4 - Code.org Funded Partners:**
+
+**Local Summer Workshops:** Local summer workshop payment amounts will be calculated based on the details outlined in your Regional Partner Agreement.
 - The Code.org payment cycle runs twice per month to capture workshops that took place between the *1st-15th* and *16th-last day* of each month.
 - At the close of a payment cycle, Code.org prepares a payment report.
 - You will receive an email from **workshoppayments@code.org** with summary payment details for each workshop that you ran during that period, with an opportunity to amend any incorrect information within 3 business days.
-- After the review period, Code.org initates remittance via ACH direct deposit and you will receive an email confirming the amount that has been deposited.
-- If you hosted both K-5 and 6-12 workshops during a given payment cycle, you will receive two deposits in the amount due per batch of workshops.
+- After the review period, Code.org initiates remittance via ACH direct deposit and you will receive an email confirming the amount that has been deposited.
 
-**Paying Facilitators**
+**Academic Year Workshops:** Academic Year Workshop payments have been split into two categories, Fixed Costs and Per Person (variable) Costs, which will be paid at different times. This information is outlined in amendments to the original Regional Partner agreements.
+- Fixed Costs include facilitator, venue, and staffer pay, and will be paid in advance of your workshops, in 4 installments, at fixed times of the year (August 1, 2019, November 1, 2019, February 1, 2020, and April 1, 2020). 
+- Per Person Costs include food payments, and will be paid 30 business days after the close of the payment cycle in which the workshop is held.
+Payment amounts have not changed and will continue to be as outlined in your original agreement.
 
-- When you arrange for a facilitator to lead an upcoming workshop, please be upfront with them about the process and timeline for payments so they know:
+**General Note:**
+If you hosted both K-5 and 6-12 workshops during a given payment cycle, you will receive two deposits in the amount due per batch of workshops.
+
+**Paying Facilitators**: When you arrange for a facilitator to lead an upcoming workshop, please be upfront with them about the process and timeline for payments so they know:
 	- how much they will be paid,
 	- any steps they need to take to request payment (e.g., signing an invoice, submitting a timesheet, etc.), and
 	- how many weeks after the workshop they can expect to receive payment.
@@ -184,11 +194,10 @@ See more information about the CS Fair and reimbursable expenses on the [Communi
 ________________
 <a id="LSW"></a>
 
-## Local Summer Workshop Community Building Event
-Code.org reimburses up to $45 per person for attendees including teachers in the CS Discoveries and CS Principles cohorts, Regional Partner staff, and Code.org staff. To receive reimbursement for costs associated with the event, submit an official invoice, receipts, and an attendance list at [bit.ly/codeinvoices](http://bit.ly/codeinvoices) within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+## Group 4 Local Summer Workshop Community Building Event
+Code.org will reimburse **Group 4 Partners** up to $45 per person for attendees including teachers in the CS Discoveries and CS Principles cohorts, Regional Partner staff, and Code.org staff. To receive reimbursement for costs associated with the event, submit an official invoice, receipts, and an attendance list at [bit.ly/codeinvoices](http://bit.ly/codeinvoices) within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
 Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).
-See more info in the [Community Building tile](http://code.org/educate/regional-partner/playbook/community).
 
 [**Back to the top**](#top)
 ________________

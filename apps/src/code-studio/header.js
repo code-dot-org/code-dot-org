@@ -208,22 +208,23 @@ header.showLevelBuilderSaveButton = function(getChanges) {
 
 /**
  * @param {object} options{{
- *   showShareAndRemix: boolean
+ *   showShareAndRemix: boolean,
+ *   showExport: boolean
  * }}
  */
 header.showHeaderForProjectBacked = function(options) {
   if (options.showShareAndRemix) {
-    getStore().dispatch(showProjectBackedHeader());
+    getStore().dispatch(showProjectBackedHeader(options.showExport));
   }
 
   getStore().dispatch(showProjectUpdatedAt());
   header.updateTimestamp();
 };
 
-header.showProjectHeader = function() {
+header.showProjectHeader = function(options) {
   header.updateTimestamp();
   getStore().dispatch(refreshProjectName());
-  getStore().dispatch(showProjectHeader());
+  getStore().dispatch(showProjectHeader(options.showExport));
 };
 
 header.updateTimestamp = function() {

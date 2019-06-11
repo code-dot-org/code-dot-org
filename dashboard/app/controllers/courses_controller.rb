@@ -25,9 +25,8 @@ class CoursesController < ApplicationController
   end
 
   def show
-    # csp and csd are each "course families", each containing two "course versions",
-    # one with version year 2017 and one with version year 2018. When the url
-    # of a course family is requested, redirect to a specific course version.
+    # csp and csd are each "course families", each containing multiple "course versions".
+    # When the url of a course family is requested, redirect to a specific course version.
     #
     # For now, Hard-code the redirection logic because there are only two course
     # families to worry about. In the future we will want to make this redirect
@@ -35,10 +34,10 @@ class CoursesController < ApplicationController
     redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
     case params[:course_name]
     when 'csd'
-      redirect_to "/courses/csd-2018#{redirect_query_string}"
+      redirect_to "/courses/csd-2019#{redirect_query_string}"
       return
     when 'csp'
-      redirect_to "/courses/csp-2018#{redirect_query_string}"
+      redirect_to "/courses/csp-2019#{redirect_query_string}"
       return
     end
 
@@ -90,7 +89,9 @@ class CoursesController < ApplicationController
     course = Course.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
-    course.update_attribute(:has_verified_resources, !!params[:has_verified_resources])
+    # Convert has_verified_resources from a string ("on") to a boolean.
+    params[:has_verified_resources] = !!params[:has_verified_resources]
+    course.update(course_params)
     redirect_to course
   end
 
@@ -112,6 +113,10 @@ class CoursesController < ApplicationController
   end
 
   private
+
+  def course_params
+    params.permit(:version_year, :family_name, :has_verified_resources).to_h
+  end
 
   def set_redirect_override
     if params[:course_name] && params[:no_redirect]

@@ -2,6 +2,7 @@
 
 import $ from 'jquery';
 import React from 'react';
+import i18n from '@cdo/locale';
 
 import {convertBlocksXml} from '../../../craft/code-connection/utils';
 
@@ -31,8 +32,8 @@ export default class ProjectImport extends React.Component {
       } catch (e) {
         // a shareLink that does not represent a valid URL will throw a TypeError
         Craft.showErrorMessagePopup(
-          dashboard.i18n.t('project.share_link_import_bad_link_header'),
-          dashboard.i18n.t('project.share_link_import_bad_link_body')
+          i18n.projectShareLinkImportBadLinkHeader(),
+          i18n.projectShareLinkImportBadLinkBody()
         );
         return;
       }
@@ -74,8 +75,8 @@ export default class ProjectImport extends React.Component {
 
       const onError = function() {
         Craft.showErrorMessagePopup(
-          dashboard.i18n.t('project.share_link_import_error_header'),
-          dashboard.i18n.t('project.share_link_import_error_body')
+          i18n.projectShareLinkImportErrorHeader(),
+          i18n.projectShareLinkImportErrorBody()
         );
       };
 
@@ -105,8 +106,8 @@ export default class ProjectImport extends React.Component {
         });
       } else {
         Craft.showErrorMessagePopup(
-          dashboard.i18n.t('project.share_link_import_bad_link_header'),
-          dashboard.i18n.t('project.share_link_import_bad_link_body')
+          i18n.projectShareLinkImportBadLinkHeader(),
+          i18n.projectShareLinkImportBadLinkBody()
         );
       }
     });
@@ -117,7 +118,7 @@ export default class ProjectImport extends React.Component {
         className="project_import header_button header_button_light"
         onClick={this.importProject}
       >
-        {dashboard.i18n.t('project.import')}
+        {i18n.import()}
       </div>
     );
   }

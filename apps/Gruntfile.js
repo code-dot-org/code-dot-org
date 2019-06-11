@@ -504,12 +504,16 @@ describe('entry tests', () => {
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
+    'levels/_bubble_choice':
+      './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     schoolInfo: './src/sites/studio/pages/schoolInfo.js',
+    schoolInfoConfirmationDialog:
+      './src/sites/studio/pages/schoolInfoConfirmationDialog.js',
     schoolInfoInterstitial:
       './src/sites/studio/pages/schoolInfoInterstitial.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',

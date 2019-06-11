@@ -185,6 +185,16 @@ const customInputTypes = {
       return block.getTitleValue(arg.name);
     }
   },
+  spritePointer: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldImage('', 32, 32), inputConfig.name);
+    },
+    generateCode(block, arg) {
+      return `'${block.getTitleValue(arg.name)}'`;
+    }
+  },
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       block.getVars = function() {

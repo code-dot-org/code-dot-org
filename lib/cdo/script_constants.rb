@@ -47,6 +47,16 @@ module ScriptConstants
       EXPRESS_2018_NAME = 'express-2018'.freeze,
       PRE_READER_EXPRESS_2018_NAME = 'pre-express-2018'.freeze,
     ],
+    csf_2019: [
+      COURSEA_2019_NAME = 'coursea-2019'.freeze,
+      COURSEB_2019_NAME = 'courseb-2019'.freeze,
+      COURSEC_2019_NAME = 'coursec-2019'.freeze,
+      COURSED_2019_NAME = 'coursed-2019'.freeze,
+      COURSEE_2019_NAME = 'coursee-2019'.freeze,
+      COURSEF_2019_NAME = 'coursef-2019'.freeze,
+      EXPRESS_2019_NAME = 'express-2019'.freeze,
+      PRE_READER_EXPRESS_2019_NAME = 'pre-express-2019'.freeze,
+    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
@@ -124,6 +134,12 @@ module ScriptConstants
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
     ],
+    # Currently only used for TTS.
+    csp_2019: [
+      CSP3_2019_NAME = 'csp3-2019'.freeze,
+      CSP5_2019_NAME = 'csp5-2019'.freeze,
+      CSP_POSTAP_2019_NAME = 'csppostap-2019'.freeze,
+    ],
     csp_2018: [
       CSP1_2018_NAME = 'csp1-2018'.freeze,
       CSP2_2018_NAME = 'csp2-2018'.freeze,
@@ -174,6 +190,22 @@ module ScriptConstants
       TTS_NAME = 'allthettsthings'.freeze
     ],
   }.freeze
+
+  ADDITIONAL_I18N_SCRIPTS = [
+    APPLAB_1HOUR = 'applab-1hour'.freeze,
+    APPLAB_2HOUR = 'applab-2hour'.freeze,
+    CSD_POST_SURVEY = 'csd-post-survey'.freeze,
+    DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
+    FESBINARY = 'fesbinary'.freeze,
+    FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
+    GAMELAB = 'gamelab'.freeze,
+    K1HOC_2017 = 'k1hoc2017'.freeze,
+    K5_ONLINE_PD = 'K5-OnlinePD'.freeze,
+    NETSIM = 'netsim'.freeze,
+    ODOMETER = 'odometer'.freeze,
+    PIXELATION = 'pixelation'.freeze,
+    VIGENERE = 'vigenere'.freeze
+  ]
 
   DEFAULT_VERSION_YEAR = '2017'
 
@@ -250,9 +282,9 @@ module ScriptConstants
   # Sections can be assigned to both courses and scripts. We want to make sure
   # we give teacher dashboard the same information for both sets of assignables.
   # We also expect to be in a mixed world for a time where this info is asked for
-  # both by dashboard and pegasus, and we want to keep that in sycn. We accomplish
+  # both by dashboard and pegasus, and we want to keep that in sync. We accomplish
   # most of that through this shared method, leaving it to dashboard/pegasus
-  # to take care of translating name/cateogry (with the unfortunate affect that
+  # to take care of translating name/cateogry (with the unfortunate effect that
   # we could have two different translations).
   # @param course_or_script [Course|Script] A row object from either our courses
   #   or scripts dashboard db tables.
@@ -277,13 +309,21 @@ module ScriptConstants
     script == ACCELERATED_NAME ||
       ScriptConstants.script_in_category?(:csf_international, script) ||
       ScriptConstants.script_in_category?(:csf, script) ||
-      ScriptConstants.script_in_category?(:csf_2018, script)
+      ScriptConstants.script_in_category?(:csf_2018, script) ||
+      ScriptConstants.script_in_category?(:csf_2019, script)
   end
 
   def self.i18n?(script)
     ScriptConstants.script_in_category?(:csf_international, script) ||
       ScriptConstants.script_in_category?(:csf, script) ||
       ScriptConstants.script_in_category?(:csf_2018, script) ||
-      ScriptConstants.script_in_category?(:twenty_hour, script)
+      ScriptConstants.script_in_category?(:csf_2019, script) ||
+      ScriptConstants.script_in_category?(:csd, script) ||
+      ScriptConstants.script_in_category?(:csd_2018, script) ||
+      ScriptConstants.script_in_category?(:csd_2019, script) ||
+      ScriptConstants.script_in_category?(:twenty_hour, script) ||
+      ScriptConstants.script_in_category?(:hoc, script) ||
+      JIGSAW_NAME == script ||
+      ADDITIONAL_I18N_SCRIPTS.include?(script)
   end
 end

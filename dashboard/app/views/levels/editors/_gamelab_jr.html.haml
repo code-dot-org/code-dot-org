@@ -1,5 +1,8 @@
 %legend.control-legend.levelTypeHeader
   Sprite Lab Options
+
+= render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'spritelab'}
+
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
 
