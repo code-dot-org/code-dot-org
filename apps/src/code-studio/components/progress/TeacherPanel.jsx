@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import TeacherPanel from '../TeacherPanel';
+import TeacherPanelContainer from '../TeacherPanelContainer';
 import SectionSelector from './SectionSelector';
 import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -51,7 +51,7 @@ const styles = {
   }
 };
 
-class ScriptTeacherPanel extends React.Component {
+class TeacherPanel extends React.Component {
   static propTypes = {
     onSelectUser: PropTypes.func,
     getSelectedUserId: PropTypes.func,
@@ -105,7 +105,7 @@ class ScriptTeacherPanel extends React.Component {
     const sectionId = selectedSection && selectedSection.id;
 
     return (
-      <TeacherPanel>
+      <TeacherPanelContainer>
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle />
@@ -188,12 +188,12 @@ class ScriptTeacherPanel extends React.Component {
             />
           )}
         </div>
-      </TeacherPanel>
+      </TeacherPanelContainer>
     );
   }
 }
 
-export const UnconnectedScriptTeacherPanel = ScriptTeacherPanel;
+export const UnconnectedTeacherPanel = TeacherPanel;
 export default connect(state => {
   const {stagesBySectionId, lockableAuthorized} = state.stageLock;
   const {
@@ -228,4 +228,4 @@ export default connect(state => {
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id]),
     students: state.teacherSections.selectedStudents
   };
-})(ScriptTeacherPanel);
+})(TeacherPanel);
