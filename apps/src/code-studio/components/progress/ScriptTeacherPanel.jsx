@@ -118,15 +118,17 @@ class ScriptTeacherPanel extends React.Component {
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle />
-          {viewAs === ViewType.Teacher && currentStudent && (
-            <SelectedStudentInfo
-              students={students}
-              selectedStudent={currentStudent}
-              level={currentStudentScriptLevel}
-              onSelectUser={this.props.onSelectUser}
-              getSelectedUserId={this.props.getSelectedUserId}
-            />
-          )}
+          {viewAs === ViewType.Teacher &&
+            currentStudent &&
+            (students || []).length > 0 && (
+              <SelectedStudentInfo
+                students={students}
+                selectedStudent={currentStudent}
+                level={currentStudentScriptLevel}
+                onSelectUser={this.props.onSelectUser}
+                getSelectedUserId={this.props.getSelectedUserId}
+              />
+            )}
           {viewAs === ViewType.Teacher &&
             sectionData &&
             sectionData.level_examples && (
