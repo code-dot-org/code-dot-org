@@ -175,7 +175,7 @@ export default class JSInterpreter {
             }
           }
         };
-        if (intFunc.node && intFunc.node.id) {
+        if (intFunc && intFunc.node && intFunc.node.id) {
           retFunc.funcName = intFunc.node.id.name;
         }
         return retFunc;
