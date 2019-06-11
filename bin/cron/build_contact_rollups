@@ -16,8 +16,8 @@ def main
   log_object = LogObject.new
 
   # Delete clone database cluster if it was left behind by the last execution of Contact Rollups.
-  log_object.time!('Delete db clone') {ContactRollups.delete_database_clone}
-  log_object.time!('Create db clone') {ContactRollups.create_database_clone}
+  # log_object.time!('Delete db clone') {ContactRollups.delete_database_clone}
+  # log_object.time!('Create db clone') {ContactRollups.create_database_clone}
 
   # Build new daily table of contact rollups
   log_object.time!('Build contact rollups') {ContactRollups.build_contact_rollups(log_object)}
@@ -45,7 +45,7 @@ def main
 rescue => e
   log_object.record_exception(e)
 ensure
-  log_object.time('Clean up db clone') {ContactRollups.delete_database_clone}
+  # log_object.time('Clean up db clone') {ContactRollups.delete_database_clone}
 
   log_object.info("Script finished with #{log_object.error_count} error(s) in #{Time.now - time_start} seconds.")
 

@@ -138,7 +138,7 @@ class ContactRollups
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
   CENSUS_FORM_NAME = "Census".freeze
 
-  def self.build_contact_rollups(log_object = nil)
+  def self.build_contact_rollups(log_object)
     start = Time.now
 
     log_object.time!('initialize_connections_to_database_clone') {initialize_connections_to_database_clone}
@@ -172,7 +172,7 @@ class ContactRollups
 
     # parse all forms that collect user-reported address/location or other data of interest
     FORM_KINDS_WITH_DATA.each do |kind|
-      log_object.time!("update_data_from_forms #{kind}") {update_data_from_forms(kind)}
+      log_object.time!("update_data_from_forms kind=#{kind}") {update_data_from_forms(kind)}
     end
 
     # Add contacts to the Teacher role based on form responses

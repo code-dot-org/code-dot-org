@@ -1,4 +1,4 @@
-# copy skeleton from lib/test/cdo/test_safe_names.rb
+# TODO: remove
 # bundle exec ruby lib/test/cdo/test_log_object.rb
 
 require_relative '../test_helper'
