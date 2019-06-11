@@ -1626,8 +1626,10 @@ function fetchSharingDisabled(resolve) {
 
 function fetchShareFailure(resolve) {
   channels.fetch(current.id + '/share-failure', (err, data) => {
-    // data.has_violation is 0 or true, coerce to a boolean
-    currentShareFailure = (data && !!data.share_failure) || currentShareFailure;
+    currentShareFailure =
+      data && data.share_failure && data.share_failure.content
+        ? data.share_failure.content
+        : currentShareFailure;
     resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
