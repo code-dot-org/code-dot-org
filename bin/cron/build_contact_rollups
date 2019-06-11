@@ -47,7 +47,7 @@ rescue => e
 ensure
   # log_object.time('Clean up db clone') {ContactRollups.delete_database_clone}
 
-  log_object.info("Script finished with #{log_object.error_count} caught error(s) in #{Time.now - time_start} seconds.")
+  log_object.info("Script finished with #{log_object.error_count} caught exception(s) in #{Time.now - time_start} seconds.")
 
   ChatClient.message(CHAT_CHANNEL, log_object.to_s)
   puts log_object.to_s  # TODO: remove

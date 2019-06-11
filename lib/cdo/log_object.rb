@@ -10,10 +10,7 @@ class LogObject
     yield if block_given?
     info("#{action_name || 'Unnamed'} action completed without error in #{Time.now - start_time} seconds.")
   rescue StandardError => e
-    error("#{action_name || 'Unnamed'} action exited with error "\
-      "in #{Time.now - start_time} seconds.\n"\
-      "Error = #{e.inspect}."
-    )
+    error("#{action_name || 'Unnamed'} action exited with error in #{Time.now - start_time} seconds.")
 
     record_exception(e)
   end
@@ -24,9 +21,8 @@ class LogObject
     yield if block_given?
     info("#{action_name || 'Unnamed'} action completed without error in #{Time.now - start_time} seconds.")
   rescue StandardError => e
-    error("#{action_name || 'Unnamed'} action exited with error "\
-      "in #{Time.now - start_time} seconds.\n"\
-      "Error = #{e.inspect}."
+    error("#{action_name || 'Unnamed'} action exited with error in #{Time.now - start_time} seconds."\
+      " Exception re-raised!"
     )
 
     # To be handle by caller
@@ -51,8 +47,8 @@ class LogObject
 
   def record_exception(e)
     @errors << e
-    error("Caught error: #{e.inspect}.")
-    # error("Caught error: #{e.inspect}.\nStack trace joined: #{e.backtrace.join('\n')}.")
+    error("Exception caught: #{e.inspect}.")
+    # error("Exception caught: #{e.inspect}.\nStack trace joined: #{e.backtrace.join('\n')}.")
   end
 
   def ok?
