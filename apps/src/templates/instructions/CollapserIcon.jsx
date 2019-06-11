@@ -17,6 +17,18 @@ const styles = {
       color: color.white
     }
   },
+  showHideButtonRtl: {
+    position: 'absolute',
+    top: 0,
+    right: 8,
+    margin: 0,
+    lineHeight: styleConstants['workspace-headers-height'] + 'px',
+    fontSize: 18,
+    ':hover': {
+      cursor: 'pointer',
+      color: color.white
+    }
+  },
   teacherOnlyColor: {
     color: color.lightest_cyan,
     ':hover': {
@@ -33,7 +45,8 @@ class CollapserIcon extends Component {
   static propTypes = {
     onClick: PropTypes.func.isRequired,
     collapsed: PropTypes.bool.isRequired,
-    teacherOnly: PropTypes.bool
+    teacherOnly: PropTypes.bool,
+    isRtl: PropTypes.bool
   };
 
   render() {
@@ -42,7 +55,7 @@ class CollapserIcon extends Component {
       : 'fa-chevron-circle-up';
 
     const combinedStyle = {
-      ...styles.showHideButton,
+      ...(this.props.isRtl ? styles.showHideButtonRtl : styles.showHideButton),
       ...(this.props.teacherOnly && styles.teacherOnlyColor)
     };
     return (
