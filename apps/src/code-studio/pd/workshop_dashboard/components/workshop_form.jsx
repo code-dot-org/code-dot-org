@@ -14,6 +14,7 @@ import moment from 'moment';
 import Spinner from '../../components/spinner';
 import SessionListFormPart from './session_list_form_part';
 import FacilitatorListFormPart from './facilitator_list_form_part';
+import OrganizerFormPart from './organizer_form_part';
 import {
   Grid,
   Row,
@@ -957,6 +958,7 @@ export class WorkshopForm extends React.Component {
               readOnly={this.props.readOnly}
             />
           )}
+          {this.props.permission.has(WorkshopAdmin) && <OrganizerFormPart />}
           {this.renderFormButtons()}
           {this.props.children}
         </form>
