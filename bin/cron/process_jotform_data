@@ -124,7 +124,7 @@ def main
       survey_answers = []
       submissions.each do |submission|
         # skipping blank submissions
-        if submission.answers == "{}"
+        if submission.answers == "{}" || submission.user_id.nil?
           next
         end
         answers = submission.form_data_hash
