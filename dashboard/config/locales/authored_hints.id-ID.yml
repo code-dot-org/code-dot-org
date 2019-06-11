@@ -4289,17 +4289,11 @@ id-ID:
         courseD_bee_conditionals2_hintVid2: Tonton video ini untuk membantu memecahkan
           teka-teki ini.
       courseD_bee_conditionals2_2019:
-        courseD_bee_conditionals2_hintVid1: Butuh bantuan untuk memulai? Tonton video
-          itu!
         courseD_bee_conditionals2_a: Terkadang akan ada bunga di sana, terkadang tidak.
           Jika anda ingin kode anda berjalan dalam kedua kasus, pastikan untuk menggunakan
           pernyataan `if`.
-        courseD_bee_conditionals2_b: Anda dapat menggunakan sebuah `ulangi` lingkaran
-          atau suatu `sementara jalan di depan` untuk bergerak melalui labirin ini.
         courseD_bee_conditionals2_c: Anda tidak perlu memeriksa sarang lebah, hanya
           ada bunga atau ruang kosong di bawah awan.
-        courseD_bee_conditionals2_hintVid2: Tonton video ini untuk membantu memecahkan
-          teka-teki ini.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
@@ -4329,19 +4323,12 @@ id-ID:
         courseD_bee_conditionals3_hintVid2: Tonton video ini untuk membantu memecahkan
           teka-teki ini.
       courseD_bee_conditionals3_2019:
-        courseD_bee_conditionals3_hintVid1: Butuh bantuan untuk memulai? Tonton video
-          itu!
         courseD_bee_conditionals3_a: Pastikan untuk menggunakan pernyataan `if` untuk
           memeriksa setiap ruang untuk melihat apakah itu berisi bunga atau tidak
           sama sekali.
-        courseD_bee_conditionals3_b: Anda dapat menggunakan sebuah `ulangi` lingkaran
-          atau suatu `sementara` lingkaran untuk menjaga lebah bergerak maju. Gunakan
-          yang mana saja yang kamu suka!
         courseD_bee_conditionals3_c: Jangan takut untuk membuat kesalahan! Cobalah
           menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan
           jika anda belum memecahkan teka-teki itu.
-        courseD_bee_conditionals3_hintVid2: Tonton video ini untuk membantu memecahkan
-          teka-teki ini.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
@@ -4361,14 +4348,10 @@ id-ID:
         courseD_bee_conditionals4_hintVid2: Tonton video ini untuk membantu memecahkan
           teka-teki ini.
       courseD_bee_conditionals4_2019:
-        courseD_bee_conditionals4_hintVid1: Butuh bantuan untuk memulai? Tonton video
-          itu!
         courseD_bee_conditionals4_a: Anda masih bisa memperlakukan setiap ruangan
           seolah ada awan di atasnya, walaupun anda bisa melihat keseluruhan jalan.
         courseD_bee_conditionals4_b: 'Gunakan pernyataan `if` di dalam loop anda untuk
           memeriksa setiap ruang untuk nektar. '
-        courseD_bee_conditionals4_hintVid2: Tonton video ini untuk membantu memecahkan
-          teka-teki ini.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
@@ -4390,26 +4373,6 @@ id-ID:
         courseD_bee_conditionals5_hintVid2: Tonton video ini untuk membantu memecahkan
           teka-teki ini.
       courseD_bee_conditionals5_2018:
-        courseD_bee_conditionals5_hintVid1: Butuh bantuan untuk memulai? Tonton video
-          itu!
-        courseD_bee_conditionals5_a: Pikirkan setiap sisi jalan segi empat sebagai
-          jalan dengan sendirinya. Atur loop bersarang dengan blok `repeat` di bagian
-          luar dan sebuah loop`while there is a path ahead` di bagian dalam. Berapa
-          banyak jalan yang dibutuhkan lebah untuk mereda jika lebah perlu menggulingkan
-          setiap sisi dengan bunga?
-        courseD_bee_conditionals5_c: Ada 3 sisi dari persegi panjang dengan bunga,
-          sehingga kode perlu `mengulang 3 waktu`. Dalam setiap ulangi, lebah akan
-          perlu untuk terus sepanjang jalan, `sementara ada sebuah jalan di depan`.
-          Untuk terus menyusuri jalan setapak, lebah perlu `bergerak maju`. Sementara
-          di jalan, lebah perlu memeriksa sebuah bunga. `Jika ada sebuah bunga`, lebah
-          harus`mendapatkan nektar`.
-        courseD_bee_conditionals5_b: Di dalam `sementara ada sebuah jalan di depan`
-          blok Anda akan perlu untuk bergerak maju dan memeriksa sebuah bunga. Bagaimana
-          cara Anda memeriksa jika ada sebuah bunga? Apa yang Anda lakukan jika ada
-          sebuah bunga?
-        courseD_bee_conditionals5_hintVid2: Tonton video ini untuk membantu memecahkan
-          teka-teki ini.
-      courseD_bee_conditionals5_2019:
         courseD_bee_conditionals5_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
         courseD_bee_conditionals5_a: Pikirkan setiap sisi jalan segi empat sebagai
@@ -4452,16 +4415,12 @@ id-ID:
         courseD_bee_conditionals6_hintVid2: Tonton video ini untuk membantu memecahkan
           teka-teki ini.
       courseD_bee_conditionals6_2019:
-        courseD_bee_conditionals6_hintVid1: Butuh bantuan untuk memulai? Tonton video
-          itu!
         courseD_bee_conditionals6_a: Pastikan untuk menggunakan pernyataan `if` untuk
           memeriksa sarang lebah di bawah setiap awan.
         courseD_bee_conditionals6_b: Dalam hal ini, Anda tidak perlu untuk memeriksa
           bunga di bawah awan.
         courseD_bee_conditionals6_c: Apakah ada sebuah lingkaran dapat Anda gunakan
           untuk membuat kode Anda lebih sederhana?
-        courseD_bee_conditionals6_hintVid2: Tonton video ini untuk membantu memecahkan
-          teka-teki ini.
       courseD_bee_conditionals7:
         courseD_bee_conditionals7_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
@@ -4479,13 +4438,9 @@ id-ID:
         courseD_bee_conditionals7_hintVid2: Tonton video ini untuk membantu memecahkan
           teka-teki ini.
       courseD_bee_conditionals7_2019:
-        courseD_bee_conditionals7_hintVid1: Butuh bantuan untuk memulai? Tonton video
-          itu!
         courseD_bee_conditionals7_b: Jika tidak ada satu bunga di bawah awan, harus
           ada sebuah sarang lebah, sehingga Anda tidak perlu berpikir tentang kasus
           sebuah ruang kosong.
-        courseD_bee_conditionals7_hintVid2: Tonton video ini untuk membantu memecahkan
-          teka-teki ini.
       courseD_bee_conditionals8:
         courseD_bee_conditionals8_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
