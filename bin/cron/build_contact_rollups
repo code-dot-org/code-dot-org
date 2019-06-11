@@ -47,7 +47,7 @@ rescue => e
 ensure
   # log_object.time('Clean up db clone') {ContactRollups.delete_database_clone}
 
-  log_object.info("Script finished with #{log_object.error_count} error(s) in #{Time.now - time_start} seconds.")
+  log_object.info("Script finished with #{log_object.error_count} caught error(s) in #{Time.now - time_start} seconds.")
 
   ChatClient.message(CHAT_CHANNEL, log_object.to_s)
   puts log_object.to_s  # TODO: remove
@@ -55,6 +55,7 @@ ensure
   # TODO: uncomment before running in production
   # Notify HoneyBadger if there is caught error/exception.
   # raise log_object.error_str unless log_object.ok?
+  puts "To be raised to HB: #{log_object.error_str}"
 end
 
 main if only_one_running?(__FILE__)

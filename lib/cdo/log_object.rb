@@ -15,14 +15,14 @@ class LogObject
       "Error = #{e.inspect}."
     )
 
-    @errors << e
+    record_exception(e)
   end
 
   # Re-raise execption if caught. Disrupt the caller flow.
   def time!(action_name = nil)
     start_time = Time.now
     yield if block_given?
-    info("#{action_name || 'Unnamed'} action completed  without error in #{Time.now - start_time} seconds.")
+    info("#{action_name || 'Unnamed'} action completed without error in #{Time.now - start_time} seconds.")
   rescue StandardError => e
     error("#{action_name || 'Unnamed'} action exited with error "\
       "in #{Time.now - start_time} seconds.\n"\
@@ -36,8 +36,6 @@ class LogObject
   def to_s
     str = "Recorded #{@errors.size} errors and #{@logs.size} log messages."
     @logs.each {|log| str.concat("\n#{log}")}
-    # @errors.each {|error| str.concat("\n#{error}")}
-    # str.concat(error_str)
     str
   end
 
@@ -53,7 +51,8 @@ class LogObject
 
   def record_exception(e)
     @errors << e
-    error("Caught exception #{e.inspect}")
+    error("Caught error: #{e.inspect}.")
+    # error("Caught error: #{e.inspect}.\nStack trace joined: #{e.backtrace.join('\n')}.")
   end
 
   def ok?
