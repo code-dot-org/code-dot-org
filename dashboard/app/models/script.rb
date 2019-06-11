@@ -787,6 +787,10 @@ class Script < ActiveRecord::Base
       Script::CSD3_2018_NAME,
       Script::CSD4_2018_NAME,
       Script::CSD6_2018_NAME,
+      Script::CSD2_2019_NAME,
+      Script::CSD3_2019_NAME,
+      Script::CSD4_2019_NAME,
+      Script::CSD6_2019_NAME
     ].include?(name)
   end
 
@@ -798,6 +802,9 @@ class Script < ActiveRecord::Base
       Script::CSP3_2018_NAME,
       Script::CSP5_2018_NAME,
       Script::CSP_POSTAP_2018_NAME,
+      Script::CSP3_2019_NAME,
+      Script::CSP5_2019_NAME,
+      Script::CSP_POSTAP_2019_NAME
     ].include?(name)
   end
 
