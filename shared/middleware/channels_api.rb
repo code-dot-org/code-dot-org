@@ -260,8 +260,7 @@ class ChannelsApi < Sinatra::Base
     content_type :json
 
     value = explain_share_failure(id)
-    # {share_failure: value}.to_json
-    {share_failure: "did this work?"}.to_json
+    {share_failure: value}.to_json
   end
   #
   #
