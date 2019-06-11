@@ -12,52 +12,49 @@ require 'cdo/log_object'
 CHAT_CHANNEL = "cron-daily".freeze
 
 def main
-  # time_start = Time.now
-
-  # Delete clone database cluster if it was left behind by the last execution of Contact Rollups.
-  # TODO: log timing after each main task. Always write to Slack. do not bail out.
-  # Result/Log object: log level
-
+  time_start = Time.now
   log_object = LogObject.new
 
-  # log_object.time('Delete db clone') {ContactRollups.delete_database_clone}
-  # log_object.time('Create db clone') {ContactRollups.create_database_clone}
+  # Delete clone database cluster if it was left behind by the last execution of Contact Rollups.
+  log_object.time!('Delete db clone') {ContactRollups.delete_database_clone}
+  log_object.time!('Create db clone') {ContactRollups.create_database_clone}
 
   # Build new daily table of contact rollups
-  log_object.time('Build contact rollups') {ContactRollups.build_contact_rollups(log_object)}
+  log_object.time!('Build contact rollups') {ContactRollups.build_contact_rollups(log_object)}
 
   # Validate that daily contact rollups meets sanity expectations
-  # TODO: how to propagate result up
-  # results = ContactRollupsValidation.validate_contact_rollups
-  # unless results[:pass]
-  #   message = "Contact rollups process failed. "\
-  #             "Validation of daily rollup failed:\n#{results[:output]}"
-  #   ChatClient.message(CHAT_CHANNEL, message)
-  #   # Raise exception so this goes to HoneyBadger
-  #   raise message
-  # end
+  log_object.time!('Validate contact rollups') do
+    validation_results = ContactRollupsValidation.validate_contact_rollups
 
-  # # Sync daily rollup to master rollup and compute deltas
-  # ContactRollups.sync_contact_rollups_to_main
+    raise "Validation of daily rollup failed:\n#{validation_results[:output]}" unless validation_results[:pass]
+  end
 
-  # # Sync deltas into Pardot
-  # results = Pardot.sync_contact_rollups_to_pardot
+  # Sync daily rollup to master rollup and compute deltas
+  log_object.time!('Sync to main db') {ContactRollups.sync_contact_rollups_to_main}
 
-  # time_elapsed = (Time.now - time_start).to_i
-  # message = "Contact rollups process complete. #{results[:num_inserts]} "\
-  #   "inserts and #{results[:num_updates]} updates to Pardot. "\
-  #   "Total time: #{time_elapsed} sec"
+  # TODO: uncomment before running in production
+  # Sync deltas into Pardot
+  # log_object.time!('Sync to Pardot') do
+  #   sync_results = Pardot.sync_contact_rollups_to_pardot
+  #   log_object.info(
+  #     "Syncing completed: #{sync_results[:num_inserts]} inserts, #{sync_results[:num_updates]} updates."
+  #   )
+  # end if log_object.ok?
 
-  # ChatClient.message(CHAT_CHANNEL, message)
-
-  # Any other failures along the way will be unrescued exceptions that
-  # go to HoneyBadger
-
-  # TODO: notify honeybadger if there are errors
+  raise 'test'
+rescue => e
+  log_object.record_exception(e)
 ensure
-  # log_object.time('Clean up db clone') {ContactRollups.delete_database_clone}
-  puts log_object.to_s
+  log_object.time('Clean up db clone') {ContactRollups.delete_database_clone}
+
+  log_object.info("Script finished with #{log_object.error_count} error(s) in #{Time.now - time_start} seconds.")
+
+  ChatClient.message(CHAT_CHANNEL, log_object.to_s)
+  puts log_object.to_s  # TODO: remove
+
+  # TODO: uncomment before running in production
+  # Notify HoneyBadger if there is caught error/exception.
+  # raise log_object.error_str unless log_object.ok?
 end
 
-# main if only_one_running?(__FILE__)
-main
+main if only_one_running?(__FILE__)
