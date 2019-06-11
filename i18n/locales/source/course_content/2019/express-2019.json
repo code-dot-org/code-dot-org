@@ -281,7 +281,6 @@
     "https://studio.code.org/s/express-2019/stage/24/puzzle/7": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
     "https://studio.code.org/s/express-2019/stage/24/puzzle/8": "Add a behavior to the fish's new friend.",
     "https://studio.code.org/s/express-2019/stage/24/puzzle/9": "Use some new blocks from the toolbox to make your fish tank special!",
-    "https://studio.code.org/s/express-2019/stage/25/puzzle/1": "What do you think will happen when you click on the alien?  ",
     "https://studio.code.org/s/express-2019/stage/25/puzzle/3": "Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning!",
     "https://studio.code.org/s/express-2019/stage/25/puzzle/4": "Create a new sprite that looks like a pink alien, then make it do a any move when it's clicked.  ",
     "https://studio.code.org/s/express-2019/stage/25/puzzle/5": "Create a third sprite that looks like a yellow alien, make it do a dance when clicked, and set all of your aliens to stand in a horizontal line.",
@@ -302,14 +301,14 @@
   },
   "long_instructions": {
     "https://studio.code.org/s/express-2019/stage/1/puzzle/1": "_Let's have a dance party!_\n\nDrag the `make a new` block into the workspace, and connect it inside the `setup` block to create your first dancer.\n\n-   _You can also click the lightbulb to the left if you want more information or extra challenges._",
-    "https://studio.code.org/s/express-2019/stage/1/puzzle/2": "Let's get this moose dancing!\n\nDrag out the <xml><block type=\"Dancelab_changeMoveLR\" block-text=\"new_dancer do floss\"><title name=\"SPRITE\">new\\\\_dancer</title><title name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml> block onto the workspace. Connect it underneath the <xml><block type=\"Dancelab_atTimestamp\" block-text=\"after 4 measures\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml> event block. Your dancer should start a new move after the fourth measure.\n\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
+    "https://studio.code.org/s/express-2019/stage/1/puzzle/2": "Let's get this moose dancing!\n\nDrag out the <xml><block type=\"Dancelab_changeMoveLR\" block-text=\"new_dancer do floss\"><title name=\"SPRITE\">new\\_dancer</title><title name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml> block onto the workspace. Connect it underneath the <xml><block type=\"Dancelab_atTimestamp\" block-text=\"after 4 measures\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml> event block. Your dancer should start a new move after the fourth measure.\n\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
     "https://studio.code.org/s/express-2019/stage/1/puzzle/3": "_Now we're grooving!_ \n\nAdd an <xml><block type=\"Dancelab_atTimestamp\" block-text=\"after 6 measures\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> event block to your workspace. Make the dancer start a new move after 6 measures.",
     "https://studio.code.org/s/express-2019/stage/1/puzzle/4": "_This dance needs some flash!_\n\nLook for a new block in your toolbox that adds a background effect behind your dancer. Watch the effects change in time with the music!",
     "https://studio.code.org/s/express-2019/stage/1/puzzle/5": "Use another new block to make the dancer change moves **every 2 measures**!\n\n-   Choosing `(Next)`, `(Previous)`, or `(Random)` tells the dancer to perform a different move every time the code is run.",
     "https://studio.code.org/s/express-2019/stage/1/puzzle/6": "_We need more dancers!_\n\nCreate a backup dancer called `backup_dancer1` to dance with the cat.",
     "https://studio.code.org/s/express-2019/stage/1/puzzle/7": "Every dancer has a set of _properties_ that control what it looks like.\n\nYou can make it look like a dancer is in the background by making their _size_ smaller. Can you make both backup dancers the same size?",
     "https://studio.code.org/s/express-2019/stage/1/puzzle/8": "Dancers have a \"tint\" property that can add a layer of color. Try changing the tint of one of your dancers.\n\n-   Tints will mix the color you choose with the colors of the dancer.",
-    "https://studio.code.org/s/express-2019/stage/1/puzzle/9": "Now we know how to change a dancer's properties. We can also make the same properties automatically respond to the music using this block:\n<xml>\n  <block type=\"Dancelab_startMapping\" block-text=\"right_unicorn begins following bass\">\n    <title name=\"SPRITE\">right\\\\_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <title name=\"RANGE\">\"bass\"</title>\n  </block></xml>\n\nThis program uses the music's \"bass\" volume (the low sounds) to control one dancer's height. Can you make the other dancer respond to the music too?",
+    "https://studio.code.org/s/express-2019/stage/1/puzzle/9": "Now we know how to change a dancer's properties. We can also make the same properties automatically respond to the music using this block:\n<xml>\n  <block type=\"Dancelab_startMapping\" block-text=\"right_unicorn begins following bass\">\n    <title name=\"SPRITE\">right\\_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <title name=\"RANGE\">\"bass\"</title>\n  </block></xml>\n\nThis program uses the music's \"bass\" volume (the low sounds) to control one dancer's height. Can you make the other dancer respond to the music too?",
     "https://studio.code.org/s/express-2019/stage/1/puzzle/10": "The <xml><block type=\"Dancelab_whenKey\" block-text=\"when up pressed\"></block></xml> event block lets you run code when the up arrow is pressed. \n\nYou might change the dance move, change a dancer's properties, or do a quick move just once. Be creative and look out for new blocks!",
     "https://studio.code.org/s/express-2019/stage/1/puzzle/11": "It's time for a dance-off! The Cat dabs when you press the left arrow key. Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key.\n\n**Use the keys to get the Robot to do the drop-clap-drop-clap as fast as you can!**",
     "https://studio.code.org/s/express-2019/stage/1/puzzle/12": "Check out this block:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\" block-text=\"Make 6 new ducks in a circle\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n\nNow you can create a bunch of dancers at once!\nTry using some of the \"all ducks\" blocks to write code that will make all of the ducks dance together.",
@@ -520,14 +519,12 @@
     "https://studio.code.org/s/express-2019/stage/23/puzzle/12": "**Free Play:** Try using the `counter` variable with other drawing elements to make magical images like this one.\n\n[][0]",
     "https://studio.code.org/s/express-2019/stage/23/extras?level_name=courseF_artist_for_challenge1_2019": "Can you figure out how to re-create this drawing? \n\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\" width=\"350px\"/>",
     "https://studio.code.org/s/express-2019/stage/23/extras?level_name=courseF_artist_for_challenge2_2019": "Can you figure out how to re-create this drawing with a single loop? \n\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\" width=\"350px\"/>",
-    "https://studio.code.org/s/express-2019/stage/24/puzzle/2": "**Make a prediction**: What do you think will happen when you run this code?",
     "https://studio.code.org/s/express-2019/stage/24/puzzle/3": "Let's make a fish tank!  \n\nChange the tumbleweed sprite into any kind of fish by clicking <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\n\nBe sure to also update this sprite's costume in <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>.",
     "https://studio.code.org/s/express-2019/stage/24/puzzle/4": "The fish is getting dizzy! \n\nChange the fish's behavior so that it swims left and right.",
     "https://studio.code.org/s/express-2019/stage/24/puzzle/5": "Our fish tank needs some water! \n\nUse <xml><block type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n  </block></xml> to make the background any color. We recommend blue!",
     "https://studio.code.org/s/express-2019/stage/24/puzzle/7": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
     "https://studio.code.org/s/express-2019/stage/24/puzzle/8": "What do you want your fish’s new friend to do?\n\nAdd a behavior and watch them go!",
     "https://studio.code.org/s/express-2019/stage/24/puzzle/9": "We've added a lot of new blocks to the toolbox.   \n\nPlay with them to make your fish tank special!",
-    "https://studio.code.org/s/express-2019/stage/25/puzzle/1": "**Make a prediction:** Here’s a sprite that looks like a blue alien! \n\nWhat do you think will happen when you click on it?  ",
     "https://studio.code.org/s/express-2019/stage/25/puzzle/3": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.\n\nReplace the behavior block in <xml>\n<block type=\"gamelab_addBehaviorSimple\" block-text=\"the sprite begins block\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"blue alien\"</title>\n          </block>\n        </value>\n      </block></xml> to a different one that will make the alien start spinning!",
     "https://studio.code.org/s/express-2019/stage/25/puzzle/4": "Create a new sprite that looks like a pink alien. <img src=\"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png\" width=\"3%\"></img>\n\nMake it do any move you want when it's clicked. Try using a new move this time!",
     "https://studio.code.org/s/express-2019/stage/25/puzzle/5": "Form an alien dance crew! \n\n-   Create a third sprite that looks like a yellow alien, and make it begin a dance move when clicked.\n-   Set all of your aliens to stand in a horizontal line, like this:\n\n[][0]",
@@ -963,45 +960,29 @@
       "courseD_bee_conditionals1_a": "You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar."
     },
     "https://studio.code.org/s/express-2019/stage/11/puzzle/3": {
-      "courseD_bee_conditionals2_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals2_a": "Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.",
-      "courseD_bee_conditionals2_b": "You can use a `repeat` loop or a `while path ahead` to move through this maze.",
-      "courseD_bee_conditionals2_c": "You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.",
-      "courseD_bee_conditionals2_hintVid2": "Watch this video for help solving this puzzle."
+      "courseD_bee_conditionals2_c": "You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds."
     },
     "https://studio.code.org/s/express-2019/stage/11/puzzle/4": {
-      "courseD_bee_conditionals3_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals3_a": "Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.",
-      "courseD_bee_conditionals3_b": "You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!",
-      "courseD_bee_conditionals3_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.",
-      "courseD_bee_conditionals3_hintVid2": "Watch this video for help solving this puzzle."
+      "courseD_bee_conditionals3_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
     },
     "https://studio.code.org/s/express-2019/stage/11/puzzle/5": {
-      "courseD_bee_conditionals4_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals4_a": "You can still treat every space as if there is a cloud over it, even though you can see the whole path.",
-      "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. ",
-      "courseD_bee_conditionals4_c": "Using <xml><block type=\"maze_untilBlocked\"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
-      "courseD_bee_conditionals4_hintVid2": "Watch this video for help solving this puzzle."
+      "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. "
     },
     "https://studio.code.org/s/express-2019/stage/11/puzzle/6": {
-      "courseD_bee_conditionals5_hintVid1": "Need help getting started?  Watch the video!",
-      "courseD_bee_conditionals5_a": "Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz down every side with a flower?",
-      "courseD_bee_conditionals5_c": "There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.",
-      "courseD_bee_conditionals5_b": "Inside the `while path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?",
-      "courseD_bee_conditionals5_hintVid2": "Watch this video for help solving this puzzle."
+      "courseD_bee_conditionals5_a": "If you use an `if at flower` block, you can solve this using a nested loop. Write a program for the left and bottom paths, then repeat everything twice!",
+      "courseD_bee_conditionals5_c": "To continue down the path, the bee will need to `move forward`. As it moves, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`."
     },
     "https://studio.code.org/s/express-2019/stage/11/puzzle/7": {
-      "courseD_bee_conditionals6_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals6_a": "Make sure to use an `if` statement to check for honeycomb beneath each cloud.",
       "courseD_bee_conditionals6_b": "In this case, you do not need to check for flowers under the clouds.",
-      "courseD_bee_conditionals6_c": "Is there a loop you can use to make your code simpler?",
-      "courseD_bee_conditionals6_hintVid2": "Watch this video for help solving this puzzle."
+      "courseD_bee_conditionals6_c": "Is there a loop you can use to make your code simpler?"
     },
     "https://studio.code.org/s/express-2019/stage/11/puzzle/9": {
-      "courseD_bee_conditionals7_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals7_a": "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge.",
-      "courseD_bee_conditionals7_b": "If there is not a flower under the cloud, there must be a honeycomb, so you don't need to think about the case of an empty space.",
-      "courseD_bee_conditionals7_hintVid2": "Watch this video for help solving this puzzle."
+      "courseD_bee_conditionals7_b": "If there is not a flower under the cloud, there must be a honeycomb, so you don't need to think about the case of an empty space."
     },
     "https://studio.code.org/s/express-2019/stage/11/puzzle/10": {
       "courseD_bee_conditionals7_a": "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
