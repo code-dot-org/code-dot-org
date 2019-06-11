@@ -8,7 +8,7 @@ class LogObject
   def time(action_name = nil)
     start_time = Time.now
     yield if block_given?
-    info("#{action_name || 'Unnamed'} action completed in #{Time.now - start_time} seconds.")
+    info("#{action_name || 'Unnamed'} action completed without error in #{Time.now - start_time} seconds.")
   rescue StandardError => e
     error("#{action_name || 'Unnamed'} action exited with error "\
       "in #{Time.now - start_time} seconds.\n"\
@@ -22,7 +22,7 @@ class LogObject
   def time!(action_name = nil)
     start_time = Time.now
     yield if block_given?
-    info("#{action_name || 'Unnamed'} action completed in #{Time.now - start_time} seconds.")
+    info("#{action_name || 'Unnamed'} action completed  without error in #{Time.now - start_time} seconds.")
   rescue StandardError => e
     error("#{action_name || 'Unnamed'} action exited with error "\
       "in #{Time.now - start_time} seconds.\n"\
