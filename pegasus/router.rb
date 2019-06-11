@@ -378,23 +378,16 @@ class Documents < Sinatra::Base
       nil
     end
 
-    def directory_contains_path(directory, path)
-      # Helper method to make sure that tricky URIs with ".." can't load files
-      # from outside our template hierarchy
-      File.expand_path(path).starts_with?(File.expand_path(directory))
-    end
-
     def resolve_template(subdir, extnames, uri, is_document = false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
         found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), uri, extnames)
-        return found.first if !found.empty? && directory_contains_path(content_subdir, path)
+        return found.first unless found.empty?
       end
 
       # Also look for shared items.
-      shared_dir = content_dir('..', '..', 'shared', 'haml')
-      found = MultipleExtnameFileUtils.find_with_extnames(shared_dir, uri, extnames)
-      return found.first if !found.empty? && directory_contains_path(content_subdir, path)
+      found = MultipleExtnameFileUtils.find_with_extnames(content_dir('..', '..', 'shared', 'haml'), uri, extnames)
+      return found.first unless found.empty?
     end
 
     # Scans the filesystem and finds all documents served by Pegasus CMS.
