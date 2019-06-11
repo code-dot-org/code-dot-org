@@ -49,7 +49,7 @@
       "downButton",
       "upButton"
     ],
-    "validation_code": "// They need to use at least one costume.\r\nif(World.frameCount > 50) {\r\n  if(Object.keys(animationGroups).length === 0) {\r\n    levelSuccess(3);\r\n  } else {\r\n    levelSuccess(0);\r\n  }\r\n}",
+    "validation_code": "// They need to use at least one costume.\r\nif(World.frameCount > 50) {\r\n  if (getAnimationsInUse().length === 0) {\r\n    levelSuccess(3);\r\n  } else {\r\n    levelSuccess(0);\r\n  }\r\n}",
     "preload_asset_list": null
   },
   "published": true,
