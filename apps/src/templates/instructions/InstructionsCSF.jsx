@@ -136,6 +136,7 @@ class InstructionsCSF extends React.Component {
     hideOverlay: PropTypes.func.isRequired,
     aniGifURL: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
+    isEmbedView: PropTypes.bool,
 
     hints: PropTypes.arrayOf(
       PropTypes.shape({
@@ -328,7 +329,9 @@ class InstructionsCSF extends React.Component {
       this.props.maxHeight
     );
     const minInstructionsHeight =
-      this.props.collapsed || this.props.overlayVisible
+      this.props.collapsed ||
+      this.props.overlayVisible ||
+      this.props.isEmbedView
         ? instructionsHeight
         : 0;
 
