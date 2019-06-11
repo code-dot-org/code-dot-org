@@ -8,8 +8,7 @@ import Playground from 'playground-io';
 import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
-  destroyCircuitPlaygroundComponents,
-  resetCircuitPlaygroundComponents,
+  cleanupCircuitPlaygroundComponents,
   componentConstructors
 } from './PlaygroundComponents';
 import {
@@ -152,7 +151,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     this.dynamicComponents_.length = 0;
 
     if (this.prewiredComponents_) {
-      destroyCircuitPlaygroundComponents(this.prewiredComponents_);
+      cleanupCircuitPlaygroundComponents(
+        this.prewiredComponents_,
+        true /* shouldDestroyComponents */
+      );
     }
     this.prewiredComponents_ = null;
 
@@ -206,7 +208,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   reset() {
-    resetCircuitPlaygroundComponents(this.prewiredComponents_);
+    cleanupCircuitPlaygroundComponents(
+      this.prewiredComponents_,
+      false /* shouldDestroyComponents */
+    );
   }
 
   /**

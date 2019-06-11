@@ -69,20 +69,31 @@ export function createCircuitPlaygroundComponents(board) {
   });
 }
 
-export function resetCircuitPlaygroundComponents(components) {
+/**
+ * De-initializes any Johnny-Five components that might have been created
+ * by createCircuitPlaygroundComponents
+ * @param {Object} components - map of components, as originally returned by
+ *   createCircuitPlaygroundComponents.  This object will be mutated: Destroyed
+ *   components will be removed. Additional members of this object will be
+ *   ignored.
+ * @param {boolean} shouldDestroyComponents - whether or not to fully delete the
+ *   components, or just reset to their initial state.
+ */
+export function cleanupCircuitPlaygroundComponents(
+  components,
+  shouldDestroyComponents
+) {
   if (components.colorLeds) {
     components.colorLeds.forEach(led => {
       led.color('white');
       led.intensity(100);
-      led.stop();
       led.off();
     });
   }
 
   if (components.led) {
-    components.led.intensity(100);
+    components.led.intensity(0);
     components.led.off();
-    components.led.stop();
   }
 
   if (components.buzzer) {
@@ -105,64 +116,24 @@ export function resetCircuitPlaygroundComponents(components) {
   if (components.accelerometer) {
     components.accelerometer.stop();
   }
-}
+  if (shouldDestroyComponents) {
+    delete components.colorLeds;
+    delete components.led;
+    delete components.toggleSwitch;
+    delete components.buzzer;
+    delete components.soundSensor;
+    delete components.lightSensor;
+    delete components.tempSensor;
+    delete components.accelerometer;
+    delete components.buttonL;
+    delete components.buttonR;
 
-/**
- * De-initializes any Johnny-Five components that might have been created
- * by createCircuitPlaygroundComponents
- * @param {Object} components - map of components, as originally returned by
- *   createCircuitPlaygroundComponents.  This object will be mutated: Destroyed
- *   components will be removed. Additional members of this object will be
- *   ignored.
- */
-export function destroyCircuitPlaygroundComponents(components) {
-  if (components.colorLeds) {
-    components.colorLeds.forEach(led => led.stop());
-  }
-  delete components.colorLeds;
-
-  if (components.led) {
-    components.led.stop();
-  }
-  delete components.led;
-
-  // No reset needed for Switch
-  delete components.toggleSwitch;
-
-  if (components.buzzer) {
-    components.buzzer.stop();
-  }
-  delete components.buzzer;
-
-  if (components.soundSensor) {
-    components.soundSensor.disable();
-  }
-  delete components.soundSensor;
-
-  if (components.lightSensor) {
-    components.lightSensor.disable();
-  }
-  delete components.lightSensor;
-
-  if (components.tempSensor) {
-    components.tempSensor.disable();
-  }
-  delete components.tempSensor;
-
-  if (components.accelerometer) {
-    components.accelerometer.stop();
-  }
-  delete components.accelerometer;
-
-  // No reset needed for Button
-  delete components.buttonL;
-  delete components.buttonR;
-
-  if (experiments.isEnabled('maker-captouch')) {
-    // Remove listeners from each TouchSensor
-    TOUCH_PINS.forEach(pin => {
-      delete components[`touchPad${pin}`];
-    });
+    if (experiments.isEnabled('maker-captouch')) {
+      // Remove listeners from each TouchSensor
+      TOUCH_PINS.forEach(pin => {
+        delete components[`touchPad${pin}`];
+      });
+    }
   }
 }
 
