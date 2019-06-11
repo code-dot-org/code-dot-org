@@ -64,7 +64,6 @@ bs:
   of: od
   more: VIŠE
   less: MANJE
-  beta: beta
   try_hoc: 'Isprobaj Sat Kodiranja, klikni ovdje >> '
   try_k8intro: Isprobaj naš informatički kurs za djecu u osnovnoj školi (15-25 sati)
   k8intro: Uvod u informatiku za osnovnu školu (15-25 sati)
@@ -630,13 +629,9 @@ bs:
     create: Stvori Projekt
     create_a_project: 'Stvori novi projekat:'
     new: Kreiraj novi
-    rename: Preimenuj
-    save: Snimi
-    share_link_import_error_header: Nešto je pošlo naopako.
     exit: Povratak na Kurs
     project_gallery: Projekti
     publish: Objavi
-    share: Podijeli
     share_title: Podijeli svoj projekat
     share_copy_link: 'Kopiraj link:'
     advanced_share: Pokažite napredne opcije
@@ -652,8 +647,6 @@ bs:
     saved: Spremljeno
     not_saved: Nije spremljeno
     view_all: Pregledaj Moje Projekte
-    remix: Remix
-    click_to_remix: Klikni na "Remix" da bi otpočeo svoju verziju!
     edit_project: Uredi Projekat
     abuse:
       tos: Ovaj projekat je prijavljen da krši <a href='http://code.org/tos'>Uvjete

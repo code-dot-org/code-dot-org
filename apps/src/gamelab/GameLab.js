@@ -168,9 +168,20 @@ module.exports = GameLab;
  * @param {string} logLevel
  */
 GameLab.prototype.log = function(object, logLevel) {
-  this.consoleLogger_.log(object);
+  this.consoleLogger_.log(
+    experiments.isEnabled('react-inspector')
+      ? {output: object, fromConsoleLog: true}
+      : object
+  );
   if (this.debuggerEnabled) {
-    getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+    getStore().dispatch(
+      jsDebugger.appendLog(
+        experiments.isEnabled('react-inspector')
+          ? {output: object, fromConsoleLog: true}
+          : object,
+        logLevel
+      )
+    );
   }
 };
 
@@ -267,9 +278,7 @@ GameLab.prototype.init = function(config) {
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
 
-  config.centerEmbedded = false;
   config.wireframeShare = true;
-  config.responsiveEmbedded = true;
   config.noHowItWorks = config.droplet;
 
   config.shareWarningInfo = {

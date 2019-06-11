@@ -80,7 +80,6 @@ vi:
   of: của
   more: NHIỀU HƠN
   less: ÍT HƠN
-  beta: phiên bản thử nghiệm
   try_hoc: 'Tham gia thử Hour of Code, bấm vào đây >> '
   try_k8intro: Hãy thử Khóa K-8 về Khóa học về Khoa học Máy tính (15-25 giờ)
   k8intro: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15-25 giờ)
@@ -1055,21 +1054,10 @@ vi:
     create: Tạo ra chương trình
     create_a_project: 'Tạo một chương trình mới:'
     new: Tạo mới
-    rename: Đổi tên
-    save: Lưu
-    import: Nhập
-    share_link_import_bad_link_header: Chia sẻ liên kết không được công nhận
-    share_link_import_bad_link_body: 'Chúng tôi không thể truy xuất đường link chia
-      sẻ này. Hãy chắc chắn rằng bạn đang sử dụng một đường link từ Minecraft: câu
-      đố về nhiệm vụ của Đặc vụ và bạn đã copy đầy đủ đường link đó.'
-    share_link_import_error_header: Có gì đó không ổn.
-    share_link_import_error_body: Đã xảy ra sự cố khi nhập liên kết chia sẻ đó. Vui
-      lòng thử lại.
     exit: Trở về khóa học
     project_gallery: chương trình
     publish: Xuất bản
     unpublish: Hủy xuất bản
-    share: Chia sẻ
     share_title: Chia sẻ chương trình của tôi
     share_copy_link: 'Sao chép liên kết:'
     share_embed_description: Bạn có thể dán mã nhúng vào trang HTML để hiển thị dự
@@ -1094,8 +1082,6 @@ vi:
     saved: Đã lưu
     not_saved: Không lưu
     view_all: Xem chương trình của tôi
-    remix: đảo lại
-    click_to_remix: Nhấp vào 'Remix' để xáo trộn phiên bản của bạn!
     edit_project: Chỉnh sửa dự án
     sharing_disabled: Xin lỗi, dự án này không có sẵn để chia sẻ. Nếu đây là dự án
       của bạn hoặc dự án của một trong những sinh viên của bạn, vui lòng <a href='https://studio.code.org/users/sign_in'>đăng

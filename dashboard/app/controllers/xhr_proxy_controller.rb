@@ -31,6 +31,8 @@ class XhrProxyController < ApplicationController
     api.coinmarketcap.com
     api.data.gov
     api.datamuse.com
+    api.energidataservice.dk
+    api.exchangeratesapi.io
     api.football-data.org
     api.foursquare.com
     api.nasa.gov
@@ -62,7 +64,6 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     qrng.anu.edu.au
     quandl.com
-    query.yahooapis.com
     quizlet.com
     rejseplanen.dk
     noaa.gov

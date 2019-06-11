@@ -16,7 +16,13 @@ import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 /**
  * Render our teacher panel that shows up on our course overview page.
  */
-export function renderTeacherPanel(store, scriptId, section) {
+export function renderTeacherPanel(
+  store,
+  scriptId,
+  section,
+  scriptName,
+  sectionData = null
+) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
   queryLockStatus(store, scriptId);
@@ -39,7 +45,9 @@ export function renderTeacherPanel(store, scriptId, section) {
   ReactDOM.render(
     <Provider store={store}>
       <ScriptTeacherPanel
+        sectionData={sectionData}
         onSelectUser={onSelectUser}
+        scriptName={scriptName}
         getSelectedUserId={getSelectedUserId}
       />
     </Provider>,
