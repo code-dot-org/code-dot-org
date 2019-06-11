@@ -91,7 +91,7 @@ class School < ActiveRecord::Base
   # Seeds all the data from the source file.
   # @param options [Hash] Optional map of options.
   def self.seed_all(options = {})
-    options[:stub_school_data] ||= CDO.stub_school_data
+    #options[:stub_school_data] ||= CDO.stub_school_data
 
     if options[:stub_school_data]
       # use a much smaller dataset in environments that reseed data frequently.
@@ -99,12 +99,8 @@ class School < ActiveRecord::Base
       School.transaction do
         merge_from_csv(schools_tsv)
       end
-      # this also needs to be commented out to prevent seeding
-      # of new schools until school_districts table is updated
-      # b/c we'll get foreign key errors if this were to be executed
-      # (i.e., schools added without appropriate school districts)
-      # else
-      #   School.seed_from_s3
+    else
+      School.seed_from_s3
     end
   end
 
