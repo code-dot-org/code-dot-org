@@ -324,6 +324,10 @@ GameLab.prototype.init = function(config) {
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
+    // remove 'setup' from unusedConfig so that we can show a warning for redefining it.
+    if (config.unusedConfig.indexOf('setup') !== -1) {
+      config.unusedConfig.splice(config.unusedConfig.indexOf('setup'), 1);
+    }
 
     // Ignore user's code on embedded levels, so that changes made
     // to starting code by levelbuilders will be shown.
