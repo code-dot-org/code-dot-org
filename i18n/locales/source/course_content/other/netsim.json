@@ -20,6 +20,5 @@
     "https://studio.code.org/s/netsim/stage/8/puzzle/1": "# Introduction to DNS\n\nIn this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other. From the DNS tab in the left column, one person can take over as DNS.\n\nYour teacher will hand out more specific instructions for this activity.",
     "https://studio.code.org/s/netsim/stage/9/puzzle/1": "# Domain Name System (DNS)\n\nIn this version of the Internet Simulator, a Domain Name System (DNS) is provided for you and knows the IP addresses of all connected computers. You can only see the hostnames of other connected computers.  \n[][0]\n\nThe address of the DNS is always \\<yourRouterNumber>.15. Send a message with protocol `GET [hostname]`, for example `GET Bob2`, to the DNS to get another student's address. You can keep track of the responses in the Notes section in the DNS tab.  \n[][1]\n\nYour teacher will hand out more specific instructions for this activity.",
     "https://studio.code.org/s/netsim/stage/10/puzzle/1": "# Internet Simulator Freeplay\n\nIn this version of the Internet Simulator, most of the options are turned on and are configurable. Messages can be sent to any router within the class, and messages will take different paths to reach their destination.\n\nYour teacher will hand out more specific instructions for this activity."
-  },
-  "authored_hints": null
+  }
 }

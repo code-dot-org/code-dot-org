@@ -17,7 +17,10 @@ const defaultProps = {
     passed: false,
     status: LevelStatus.not_tried,
     user_id: 1
-  }
+  },
+  students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
+  onSelectUser: () => {},
+  getSelectedUserId: () => {}
 };
 
 describe('SelectedStudentInfo', () => {

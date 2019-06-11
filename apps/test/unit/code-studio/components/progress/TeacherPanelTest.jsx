@@ -9,6 +9,8 @@ import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle
 import i18n from '@cdo/locale';
 import FontAwesome from '../../../../../src/templates/FontAwesome';
 
+const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
+
 const MINIMUM_PROPS = {
   viewAs: ViewType.Student,
   hasSections: false,
@@ -18,10 +20,9 @@ const MINIMUM_PROPS = {
   unlockedStageNames: [],
   sectionData: null,
   onSelectUser: () => {},
-  getSelectedUserId: () => {}
+  getSelectedUserId: () => {},
+  students: null
 };
-
-const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 
 describe('TeacherPanel', () => {
   describe('on script page', () => {
@@ -240,6 +241,7 @@ describe('TeacherPanel', () => {
         const wrapper = shallow(
           <TeacherPanel
             {...MINIMUM_PROPS}
+            students={students}
             viewAs={ViewType.Teacher}
             sectionData={{
               level_examples: [
@@ -259,6 +261,7 @@ describe('TeacherPanel', () => {
         const wrapper = shallow(
           <TeacherPanel
             {...MINIMUM_PROPS}
+            students={students}
             viewAs={ViewType.Teacher}
             sectionData={{
               level_examples: null,
