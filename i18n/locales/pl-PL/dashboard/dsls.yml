@@ -3,6 +3,64 @@ pl:
     external:
       Begin planning your project:
         title: tytuł
+      CSD U2 Design Project:
+        title: tytuł
+      CSD U2 Design Project_2018:
+        title: tytuł
+      CSD U2 Design Project_2018_2019:
+        title: tytuł
+      CSD U2 L1 Overview:
+        title: tytuł
+      CSD U2 L2 Overview:
+        title: tytuł
+      CSD U2 L3 Overview:
+        title: tytuł
+      CSD U2 L4 Overview:
+        title: tytuł
+      CSD U2 L5 Overview:
+        title: tytuł
+      CSD U2 L6 Overview:
+        title: tytuł
+      CSD U2 expand project:
+        title: tytuł
+      CSD U2 expand project_2018:
+        title: tytuł
+      CSD U2 expand project_2018_2019:
+        title: tytuł
+      CSD U3 combining rep:
+        title: tytuł
+      CSD U3 combining rep_2018:
+        title: tytuł
+      CSD U3 combining rep_2018_2019:
+        title: tytuł
+      CSD U5 Encryption 1:
+        title: tytuł
+      CSD U5 Encryption 1_2018:
+        title: tytuł
+      CSD U5 Encryption 1_2018_2019:
+        title: tytuł
+      CSD U5 L13 SFLP Interpreting Data:
+        title: tytuł
+      CSD U5 data visualization:
+        title: tytuł
+      CSD U5 data visualization_2018:
+        title: tytuł
+      CSD U5 data visualization_2018_2019:
+        title: tytuł
+      CSD U5 student record:
+        title: tytuł
+      CSD U5 student record_2018:
+        title: tytuł
+      CSD U5 student record_2018_2019:
+        title: tytuł
+      Internet Simulator Setup 2:
+        title: tytuł
+      Multi-Screen Apps:
+        title: tytuł
+      New Challenge Introduction:
+        title: tytuł
+      OPD-K5 Stage3aGo:
+        title: tytuł
       Prepare for your presentation:
         title: tytuł
     match:
@@ -199,6 +257,12 @@ pl:
       4-5 maze multi 1:
         Maze Multiple Choice: 'Labirynt: Test wielokrotnego wyboru'
         Which blocks solve the puzzle?: Które bloki rozwiązują tę łamigłówkę?
+      CSD U3 Boolean MC:
+        title: tytuł
+      CSD U3 Boolean MC_2018:
+        title: tytuł
+      CSD U3 Boolean MC_2018_2019:
+        title: tytuł
       K-1 Artist 1 Multi 1:
         Multiple Choice: Test wielokrotnego wyboru
         Which blocks solve this puzzle?: Które bloki rozwiązują tę łamigłówkę?
@@ -253,6 +317,10 @@ pl:
         SOUTH: SOUTH
         SQUARE: SQUARE
         Which word is spelled?: Które ze słów zostanie utworzone?
+      behaviors 1 predict:
+        Incorrect: Nieprawidłowe
+      behaviors 4 predict:
+        Incorrect: Nieprawidłowe
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -261,9 +329,15 @@ pl:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: Nie wiem
       courseC_multi_starWars_predict1_2018:
+        I don't know: Nie wiem
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: Nie wiem
       courseD_multi_artist_binary8_predict1:
         A: A
@@ -271,6 +345,11 @@ pl:
         C: B
         D: R
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: B
+        D: R
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: B
@@ -283,10 +362,17 @@ pl:
         A: A
         B: B
         C: B
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: A
+        B: B
+        C: B
       courseD_multi_bee_nestedLoops2_predict1:
         The bee will get all of the nectar.: Pszczółka zbierze cały nektar.
         The bee will get only 2 units of nectar.: Pszczółka zbierze tylko 2 nektary.
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        The bee will get all of the nectar.: Pszczółka zbierze cały nektar.
+        The bee will get only 2 units of nectar.: Pszczółka zbierze tylko 2 nektary.
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         The bee will get all of the nectar.: Pszczółka zbierze cały nektar.
         The bee will get only 2 units of nectar.: Pszczółka zbierze tylko 2 nektary.
       courseD_multi_bee_nestedLoops9_predict2:
@@ -307,6 +393,15 @@ pl:
         Look closely at the code below. How much honey will the bee make when you click "Run"?: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy klikniesz "Uruchom"?
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy klikniesz "Uruchom"?
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseE_multi_farmer_predict1:
         I don't know: Nie wiem
         0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
@@ -318,9 +413,17 @@ pl:
         The bee will only collect 2 nectar.: Pszczółka zbierze tylko 2 nektary.
         0: '? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
         1: ': The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
+      courseF_bee_variables_8a_2018_2019:
+        The bee will collect all of the nectar.: Pszczółka zbierze cały nektar.
+        The bee will only collect 2 nectar.: Pszczółka zbierze tylko 2 nektary.
+        0: '? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
+        1: ': The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
       courseF_multi_bee_for3_predict1:
         The bee will move forward and collect all of the nectar from every flower, except for one.: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów oprócz jednego.
         'The bee will move forward and collect one nectar from each flower. ': 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
       courseF_multi_bee_for3_predict1_2018:
+        The bee will move forward and collect all of the nectar from every flower, except for one.: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów oprócz jednego.
+        'The bee will move forward and collect one nectar from each flower. ': 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
+      courseF_multi_bee_for3_predict1_2018_2019:
         The bee will move forward and collect all of the nectar from every flower, except for one.: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów oprócz jednego.
         'The bee will move forward and collect one nectar from each flower. ': 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '

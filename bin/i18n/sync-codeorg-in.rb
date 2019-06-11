@@ -78,11 +78,15 @@ def localize_level_content
 
       script.levels.each do |level|
         url = get_level_url_key(script, level)
-        if level.is_a?(DSLDefined)
-          level.contained_levels.each do |contained_level|
-            dsl_i18n_strings.deep_merge! get_dsl_i18n_strings(contained_level)
-          end
 
+        # TODO: we also need to deal with contained levels that are not
+        # DSL-Defined, like FreeResponse. That, or just get rid of contained
+        # levels entirely.
+        level.contained_levels.each do |contained_level|
+          dsl_i18n_strings.deep_merge! get_dsl_i18n_strings(contained_level) if contained_level.is_a?(DSLDefined)
+        end
+
+        if level.is_a?(DSLDefined)
           dsl_i18n_strings.deep_merge! get_dsl_i18n_strings(level)
         else
           # display_name

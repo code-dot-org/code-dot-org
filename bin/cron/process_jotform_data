@@ -8,8 +8,9 @@ TIME_NOW = DateTime.now.strftime('%F %T').freeze
 JOTFORM_SURVEY_RESPONSE_CLASSES = [
   Pd::WorkshopDailySurvey,
   Pd::WorkshopFacilitatorDailySurvey,
-  Pd::PostCourseSurvey
-]
+  Pd::PostCourseSurvey,
+  Pd::MiscSurvey
+].freeze
 
 # @param unsanitized [String, nil] the unsanitized string
 # @returns [String, nil] the sanitized version of the string, with newlines stripped and double
@@ -123,7 +124,7 @@ def main
       survey_answers = []
       submissions.each do |submission|
         # skipping blank submissions
-        if submission.answers == "{}"
+        if submission.answers == "{}" || submission.user_id.nil?
           next
         end
         answers = submission.form_data_hash

@@ -194,8 +194,12 @@ module TextToSpeech
   end
 
   def tts_should_update_long_instructions?
+    # Long instruction audio should be updated if the relevant long
+    # instructions property on the level itself was updated, or if the levels
+    # contained by this level were updated (since we treat contained level
+    # content as long instructions for TTS purposes)
     relevant_property = tts_long_instructions_override ? 'tts_long_instructions_override' : 'long_instructions'
-    return tts_should_update(relevant_property)
+    return tts_should_update(relevant_property) || tts_should_update('contained_level_names')
   end
 
   def tts_authored_hints_texts

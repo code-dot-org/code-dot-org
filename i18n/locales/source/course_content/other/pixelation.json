@@ -14,6 +14,5 @@
     "https://studio.code.org/s/pixelation/stage/3/puzzle/3": "# Pixelation: Task 3\n\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200>\n\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using _12-bits per pixel_. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n-   Row 1 - fill with shades of red. \n-   Row 2 - shades of green. \n-   Row 3 - shades of blue. \n-   Row 4 - shades of gray.",
     "https://studio.code.org/s/pixelation/stage/4/puzzle/1": "# Example of more bits per pixel\n\nHere is a bigger image at 9 bits per pixel. With 9 bits per pixel you can express 512 different colors. Click through to see the next image which is even more sophisticated, but easier to understand.",
     "https://studio.code.org/s/pixelation/stage/4/puzzle/2": "# Example of 12 bits per pixel\n\n-   This larger image of a bee encodes color with 12 bits per pixel, but viewing in hex makes it easier to see the color of each pixel.\n-   If you switch to binary mode - hold on to your hat - it's a lot of bits.\n-   Here's another mind-blowing thing to try: slide the bits per pixel up to 24 bits per pixel. What happens? Can you explain this behavior?"
-  },
-  "authored_hints": null
+  }
 }
