@@ -10615,40 +10615,40 @@ es-MX:
           partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!
         course_starWars_loops8_b: Piensa en la primera parte de este problema como
           un problema del escalón. ¿Cómo resolviste eso antes?
-        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n\\!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
+        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
       courseC_starWars_loops8_2018:
         course_starWars_loops8_a: Trata de pensar sobre este problema en pequeñas
           partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!
         course_starWars_loops8_b: Piensa en la primera parte de este problema como
           un problema del escalón. ¿Cómo resolviste eso antes?
-        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n\\!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
+        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
       courseC_starWars_loops8_2019:
         course_starWars_loops8_a: Trata de pensar sobre este problema en pequeñas
           partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!
         course_starWars_loops8_b: Piensa en la primera parte de este problema como
           un problema del escalón. ¿Cómo resolviste eso antes?
-        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n\\!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
+        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
       courseC_starWars_loops9:
         course_starWars_loops9_b: Puedes poner más de un bloque dentro de un loop
           'repetir'.
         course_starWars_loops9_c: |-
           No necesitas girar a la izquierda para resolver este rompecabezas . Todos tus giros pueden ser hacia la derecha.
 
-          \!\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
+          !\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
       courseC_starWars_loops9_2018:
         course_starWars_loops9_b: Puedes poner más de un bloque dentro de un loop
           'repetir'.
         course_starWars_loops9_c: |-
           No necesitas girar a la izquierda para resolver este rompecabezas . Todos tus giros pueden ser hacia la derecha.
 
-          \!\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
+          !\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
       courseC_starWars_loops9_2019:
         course_starWars_loops9_b: Puedes poner más de un bloque dentro de un loop
           'repetir'.
         course_starWars_loops9_c: |-
           No necesitas girar a la izquierda para resolver este rompecabezas . Todos tus giros pueden ser hacia la derecha.
 
-          \!\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
+          !\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
       courseC_video_angles2:
         courseF_artist_ramp10_a: No olvide girar 60 grados después de cada triángulo.
           ¿Qué ciclo necesitas para poner esa instrucción adentro?
@@ -10865,7 +10865,7 @@ es-MX:
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_a: "Deberás dibujar un total de 6 triángulos.
           Después de terminar cada triángulo, gíra 60 grados y muévete para comenzar
-          el siguiente triángulo. \n\n\\!\\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)"
+          el siguiente triángulo. \n\n!\\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)"
         courseD_artist_nestedLoops1a_b: Si creas tu triángulo con un loop, el artista
           debe estar mirando hacia la misma dirección desde que comenzó. Esto hará
           que los giros en 60 grados sean mucho más fáciles.
@@ -10885,7 +10885,7 @@ es-MX:
       courseD_artist_nestedLoops1a_2019:
         courseD_artist_nestedLoops1a_a: "Deberás dibujar un total de 6 triángulos.
           Después de terminar cada triángulo, gíra 60 grados y muévete para comenzar
-          el siguiente triángulo. \n\n\\!\\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)"
+          el siguiente triángulo. \n\n!\\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)"
         courseD_artist_nestedLoops1a_b: Si creas tu triángulo con un loop, el artista
           debe estar mirando hacia la misma dirección desde que comenzó. Esto hará
           que los giros en 60 grados sean mucho más fáciles.
@@ -11568,7 +11568,7 @@ es-MX:
           cada camino, sin importar qué tan largo sea el camino?"
         courseD_bee_conditionals8_d: "Aunque hay una nube justo frente a ti, no tienes
           que visitarla primero. Intenta comenzar con la nube en la parte inferior
-          derecha del cuadrado. \n\n\\!\\[] (<https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png>)"
+          derecha del cuadrado. \n\n!\\[] (<https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png>)"
         courseD_bee_conditionals8_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals8_2018:
@@ -11584,7 +11584,7 @@ es-MX:
           cada camino, sin importar qué tan largo sea el camino?"
         courseD_bee_conditionals8_d: "Aunque hay una nube justo frente a ti, no tienes
           que visitarla primero. Intenta comenzar con la nube en la parte inferior
-          derecha del cuadrado. \n\n\\!\\[] (<https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png>)"
+          derecha del cuadrado. \n\n!\\[] (<https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png>)"
         courseD_bee_conditionals8_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals8_2019:
@@ -12006,7 +12006,7 @@ es-MX:
           en la cabeza.
       courseD_collector_debugging_challenge2:
         courseD_collector_debugging_challenge2_a: "Comienza recogiendo solo **dos**
-          gemas de cada una de las primeras **dos** pilas . \n\n\\!\\[] (<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04>
+          gemas de cada una de las primeras **dos** pilas . \n\n!\\[] (<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04>
           SOY copy.png) Usa estos bloques .\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
           type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
@@ -12429,17 +12429,17 @@ es-MX:
           programa.
       courseD_farmer_condLoops7:
         courseD_farmer_condLoops7_a: "Ten en cuenta que el camino más fácil para llegar
-          a todos los cultivos sigue siendo una espiral. \n\n\\!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
+          a todos los cultivos sigue siendo una espiral. \n\n!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
         courseD_farmer_condLoops7_b: Intenta usar `cuando camino adelante` para mantener
           a la cosechadora moviéndose el número correcto de pasos.
       courseD_farmer_condLoops7_2018:
         courseD_farmer_condLoops7_a: "Ten en cuenta que el camino más fácil para llegar
-          a todos los cultivos sigue siendo una espiral. \n\n\\!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
+          a todos los cultivos sigue siendo una espiral. \n\n!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
         courseD_farmer_condLoops7_b: Intenta usar `cuando camino adelante` para mantener
           a la cosechadora moviéndose el número correcto de pasos.
       courseD_farmer_condLoops7_2019:
         courseD_farmer_condLoops7_a: "Ten en cuenta que el camino más fácil para llegar
-          a todos los cultivos sigue siendo una espiral. \n\n\\!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
+          a todos los cultivos sigue siendo una espiral. \n\n!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
         courseD_farmer_condLoops7_b: Intenta usar `cuando camino adelante` para mantener
           a la cosechadora moviéndose el número correcto de pasos.
       courseD_farmer_condLoops_challenge1:
