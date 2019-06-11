@@ -17,6 +17,7 @@ class CodeWorkspaceContainer extends React.Component {
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
+    studentHasNotStartedLevel: PropTypes.bool,
 
     // not in redux
     topMargin: PropTypes.number.isRequired,
@@ -48,6 +49,8 @@ class CodeWorkspaceContainer extends React.Component {
       ...(hidden && commonStyles.hidden)
     };
 
+    console.log(this.props.studentHasNotStartedLevel);
+
     return (
       <div style={mainStyle} className="editor-column">
         <div id="codeWorkspace" style={styles.codeWorkspace}>
@@ -61,6 +64,7 @@ class CodeWorkspaceContainer extends React.Component {
 export const TestableCodeWorkspaceContainer = Radium(CodeWorkspaceContainer);
 export default connect(
   state => ({
+    studentHasNotStartedLevel: state.pageConstants.isNotStartedLevel,
     hidden:
       state.pageConstants.hideSource &&
       !state.pageConstants.visualizationInWorkspace,

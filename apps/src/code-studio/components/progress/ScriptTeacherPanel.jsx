@@ -13,8 +13,6 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import {SelectedStudentInfo} from './SelectedStudentInfo';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   scrollable: {
@@ -73,18 +71,6 @@ class ScriptTeacherPanel extends React.Component {
     students: PropTypes.arrayOf(studentShape)
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showNoWorkDialog: true
-    };
-  }
-
-  handleCloseStudentWorkNotification = () => {
-    this.setState({showNoWorkDialog: !this.state.showNoWorkDialog});
-  };
-
   render() {
     const {
       sectionData,
@@ -125,23 +111,10 @@ class ScriptTeacherPanel extends React.Component {
       }
     }
 
-    const studentHasNotAttemptedLevel =
-      currentStudentScriptLevel &&
-      currentStudentScriptLevel.status === LevelStatus.not_tried;
-
     const sectionId = selectedSection && selectedSection.id;
 
     return (
       <TeacherPanel>
-        {studentHasNotAttemptedLevel && (
-          <BaseDialog
-            isOpen={this.state.showNoWorkDialog}
-            handleClose={this.handleCloseStudentWorkNotification}
-            handleKeyDown={this.handleCloseStudentWorkNotification}
-          >
-            <div>The student has not started this level.</div>
-          </BaseDialog>
-        )}
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle />
