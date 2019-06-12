@@ -229,7 +229,6 @@ class CodeWorkspace extends React.Component {
             {i18n.levelNotStartedWarning()}
           </div>
         )}
-        }
         {props.showDebugger && (
           <JsDebugger
             onSlideShut={this.onDebuggerSlide}
