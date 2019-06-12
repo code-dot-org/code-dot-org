@@ -845,6 +845,20 @@ FactoryGirl.define do
     end
   end
 
+  factory :bubble_choice_level, class: BubbleChoice do
+    game {create(:game, app: "bubble_choice")}
+    name 'name'
+    title 'title'
+
+    trait :with_sublevels do
+      after(:create) do |bc|
+        sublevels = create_list(:sublevel, 3)
+        bc.properties['sublevels'] = sublevels.pluck(:name)
+        bc.save!
+      end
+    end
+  end
+
   factory :survey_result do
     user {create :teacher}
     kind 'Diversity2016'
