@@ -14,7 +14,7 @@ describe('InstructionsWithWorkspace', () => {
       />
     );
 
-    expect(wrapper.find('Connect(TopInstructionsCSP)')).to.have.lengthOf(1);
+    expect(wrapper.find('Connect(TopInstructions)')).to.have.lengthOf(1);
     expect(wrapper.find('Connect(CodeWorkspaceContainer)')).to.have.lengthOf(1);
   });
 
