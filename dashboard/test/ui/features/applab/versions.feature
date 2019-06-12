@@ -47,7 +47,7 @@ Scenario: Project Load and Reload
   And I wait for the page to fully load
   And I press "versions-header"
   And I wait until element "button:contains(Current Version)" is visible
-  And I save the timestamp from ".versionTimestamp"
+  And I save the timestamp from ".versionRow:nth-child(1) time"
 
   # There is currently no guarantee that Version History will initially be
   # empty, because we don't necessarily clear past project data from S3 between
@@ -68,7 +68,7 @@ Scenario: Project Load and Reload
   And I press "versions-header"
   And I wait until element "button:contains(Current Version)" is visible
 
-  Then ".versionRow:nth-child(2) .versionTimestamp" contains the saved timestamp
+  Then ".versionRow:nth-child(2) time" contains the saved timestamp
   And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
 
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
@@ -92,7 +92,7 @@ Scenario: Project Version Checkpoints
   # The dialog contains only the initial version and the current version, and
   # possibly some versions created more than 90 seconds ago which we ignore.
   Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version)" is not visible
-  And I save the timestamp from ".versionTimestamp"
+  And I save the timestamp from ".versionRow:nth-child(1) time"
 
   When I close the dialog
   And I set the project version interval to 1 second
@@ -106,7 +106,7 @@ Scenario: Project Version Checkpoints
   And I wait until element "button:contains(Current Version)" is visible
   # The version containing "comment A" is saved as a checkpoint, because the
   # project version interval time period had passed.
-  Then ".versionRow:nth-child(2) .versionTimestamp" contains the saved timestamp
+  Then ".versionRow:nth-child(2) time" contains the saved timestamp
   And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
 

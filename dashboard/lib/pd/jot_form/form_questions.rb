@@ -55,7 +55,11 @@ module Pd
       end
 
       def [](id_or_name)
-        if id_or_name.is_a? Integer
+        get_question_by_id_or_name(id_or_name)
+      end
+
+      def get_question_by_id_or_name(id_or_name)
+        if id_or_name.to_i.to_s == id_or_name
           get_question_by_id id_or_name
         else
           get_question_by_name id_or_name
@@ -85,7 +89,7 @@ module Pd
       # @see Question#process_answers
       def process_answers(answers_data, show_hidden_questions: false)
         questions_with_form_data = answers_data.map do |question_id, answer_data|
-          question = get_question_by_id(question_id)
+          question = get_question_by_id_or_name(question_id)
           raise "Unrecognized question id #{question_id}" unless question
 
           next if question.hidden? && !show_hidden_questions

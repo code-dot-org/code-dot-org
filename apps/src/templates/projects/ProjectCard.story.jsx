@@ -1,16 +1,14 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
-// publishedAt data is normally a timestamp, but for Storybook
-// display purposes, use a descriptive string
 const defaultData = {
   channel: 'abcdef',
   name: 'Puppy Playdate',
   studentName: 'Penelope',
   studentAgeRange: '8+',
   type: 'applab',
-  publishedAt: 'a day ago',
-  updatedAt: 'about a week ago'
+  publishedAt: new Date(),
+  updatedAt: new Date()
 };
 
 export default storybook => {
