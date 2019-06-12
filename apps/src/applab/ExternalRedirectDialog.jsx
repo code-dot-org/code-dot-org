@@ -8,7 +8,14 @@ import {connect} from 'react-redux';
 import {actions} from './redux/applab';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
-class RedirectDialog extends React.Component {
+const styles = {
+  title: {
+    display: 'inline',
+    wordWrap: 'break-word'
+  }
+};
+
+class ExternalRedirectDialog extends React.Component {
   static propTypes = {
     handleClose: PropTypes.func,
     redirects: PropTypes.array
@@ -26,7 +33,7 @@ class RedirectDialog extends React.Component {
       title = i18n.redirectTitle();
       body = (
         <div>
-          <h2>{i18n.redirectConfirm({url: url})}</h2>
+          <h2 style={styles.title}>{i18n.redirectConfirm({url: url})}</h2>
           <p>
             {i18n.redirectExplanation()}
             <span>
@@ -77,7 +84,7 @@ class RedirectDialog extends React.Component {
   }
 }
 
-export const UnconnectedRedirectDialog = RedirectDialog;
+export const UnconnectedExternalRedirectDialog = ExternalRedirectDialog;
 export default connect(
   state => ({
     redirects: state.redirectDisplay
@@ -87,4 +94,4 @@ export default connect(
       dispatch(actions.dismissRedirectNotice());
     }
   })
-)(UnconnectedRedirectDialog);
+)(UnconnectedExternalRedirectDialog);
