@@ -134,6 +134,22 @@ const audioStyle = {
   }
 };
 
+const audioStyleRTL = {
+  wrapper: {
+    float: 'left'
+  },
+  button: {
+    height: 24,
+    marginTop: '3px',
+    marginBottom: '3px'
+  },
+  buttonImg: {
+    lineHeight: '24px',
+    fontSize: 15,
+    paddingLeft: 12
+  }
+};
+
 class TopInstructions extends Component {
   static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
@@ -545,7 +561,10 @@ class TopInstructions extends Component {
             {this.state.tabSelected === TabType.INSTRUCTIONS &&
               ttsUrl &&
               (this.props.hasContainedLevels || isCSDorCSP) && (
-                <InlineAudio src={ttsUrl} style={audioStyle} />
+                <InlineAudio
+                  src={ttsUrl}
+                  style={this.props.isRtl ? audioStyleRTL : audioStyle}
+                />
               )}
             {this.props.documentationUrl &&
               this.state.tabSelected !== TabType.COMMENTS && (
