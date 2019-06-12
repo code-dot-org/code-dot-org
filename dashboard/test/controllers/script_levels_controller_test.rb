@@ -134,6 +134,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
+  test "should render sublevel for BubbleChoice script_level with sublevel_position param" do
+    script = create :script
+    level = create(:bubble_choice_level, :with_sublevels)
+    script_level = create :script_level, script: script, levels: [level]
+    sublevel_position = 1
+
+    get :show, params: {
+      script_id: script,
+      stage_position: script_level.stage.relative_position,
+      id: script_level.position,
+      sublevel_position: sublevel_position
+    }
+    assert_response :success
+    assert_equal level.sublevels[sublevel_position - 1], assigns(:level)
+  end
+
   test 'project template level sets start blocks when defined' do
     template_level = create :level
     template_level.start_blocks = '<xml/>'
