@@ -5,7 +5,7 @@
 # - Prevent non-fatal errors from stopping process execution but still want to know about them.
 # - Bubble up combined errors and info from lower levels to higher levels, or to external components
 #   such as HoneyBadger and Slack.
-
+#
 class LogCollector
   attr_reader :errors, :logs
 
