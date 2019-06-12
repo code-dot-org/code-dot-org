@@ -27,6 +27,7 @@ import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -359,6 +360,24 @@ class TopInstructions extends Component {
    * updating our rendered height.
    */
   handleClickCollapser = () => {
+    if (this.props.collapsed) {
+      firehoseClient.putRecord({
+        study: 'top-instructions',
+        event: 'expand-instructions',
+        data_json: JSON.stringify({
+          csfStyleInstructions: !this.props.noInstructionsWhenCollapsed
+        })
+      });
+    } else {
+      firehoseClient.putRecord({
+        study: 'top-instructions',
+        event: 'collapse-instructions',
+        data_json: JSON.stringify({
+          csfStyleInstructions: !this.props.noInstructionsWhenCollapsed
+        })
+      });
+    }
+
     const collapsed = !this.props.collapsed;
     this.props.toggleInstructionsCollapsed();
 
@@ -381,6 +400,10 @@ class TopInstructions extends Component {
   handleHelpTabClick = () => {
     this.scrollToTopOfTab();
     this.setState({tabSelected: TabType.RESOURCES}, this.scrollToTopOfTab);
+    firehoseClient.putRecord({
+      study: 'top-instructions',
+      event: 'click-help-and-tips-tab'
+    });
   };
 
   handleInstructionTabClick = () => {
@@ -404,6 +427,10 @@ class TopInstructions extends Component {
 
   handleTeacherOnlyTabClick = () => {
     this.setState({tabSelected: TabType.TEACHER_ONLY}, this.scrollToTopOfTab);
+    firehoseClient.putRecord({
+      study: 'top-instructions',
+      event: 'click-teacher-only-tab'
+    });
   };
 
   scrollToTopOfTab = () => {
