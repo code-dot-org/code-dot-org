@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import commonStyles from '../commonStyles';
 import color from '../util/color';
 import * as utils from '@cdo/apps/utils';
@@ -127,7 +127,7 @@ class CodeWorkspace extends React.Component {
           className="fa fa-chevron-circle-right"
         />
         <span style={textStyle}>
-          {editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}
+          {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
         </span>
         {settingsCog}
       </PaneSection>,
@@ -142,7 +142,7 @@ class CodeWorkspace extends React.Component {
             style={chevronStyle}
             className="fa fa-chevron-circle-right"
           />
-          <span>{msg.showToolbox()}</span>
+          <span>{i18n.showToolbox()}</span>
         </span>
         {settingsCog}
       </PaneSection>
@@ -185,7 +185,7 @@ class CodeWorkspace extends React.Component {
                 id="clear-puzzle-header"
                 headerHasFocus={hasFocus}
                 iconClass="fa fa-undo"
-                label={msg.clearPuzzle()}
+                label={i18n.clearPuzzle()}
                 isRtl={isRtl}
                 isMinecraft={props.isMinecraft}
               />
@@ -194,7 +194,7 @@ class CodeWorkspace extends React.Component {
               id="versions-header"
               headerHasFocus={hasFocus}
               iconClass="fa fa-clock-o"
-              label={msg.showVersionsHeader()}
+              label={i18n.showVersionsHeader()}
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}
             />
@@ -204,8 +204,8 @@ class CodeWorkspace extends React.Component {
               )}
               <span id="workspace-header-span">
                 {props.readonlyWorkspace
-                  ? msg.readonlyWorkspaceHeader()
-                  : msg.workspaceHeaderShort()}
+                  ? i18n.readonlyWorkspaceHeader()
+                  : i18n.workspaceHeaderShort()}
               </span>
               <div id="blockCounter" ref={el => (this.blockCounterEl = el)}>
                 <ProtectedStatefulDiv
@@ -214,7 +214,7 @@ class CodeWorkspace extends React.Component {
                 />
                 <span> / </span>
                 <span id="idealBlockNumber" />
-                <span>{' ' + msg.blocks()}</span>
+                <span>{' ' + i18n.blocks()}</span>
               </div>
             </PaneSection>
           </div>
@@ -228,7 +228,7 @@ class CodeWorkspace extends React.Component {
         )}
         {this.props.studentHasNotStartedLevel && (
           <div style={styles.studentNotStartedWarning}>
-            {'Student has not started this level'}
+            {i18n.levelNotStartedWarning()}
           </div>
         )}
         }
