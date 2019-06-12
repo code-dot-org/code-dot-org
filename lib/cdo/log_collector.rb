@@ -70,7 +70,7 @@ class LogCollector
 
   def record_exception(e)
     errors << e
-    error("Exception caught: #{e.inspect}.")
+    error("Exception caught: #{e.inspect}. Stack trace:\n#{e.backtrace.join("\n")}")
   end
 
   def ok?
