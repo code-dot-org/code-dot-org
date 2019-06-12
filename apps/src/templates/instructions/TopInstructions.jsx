@@ -362,16 +362,16 @@ class TopInstructions extends Component {
   handleClickCollapser = () => {
     if (!this.props.collapsed) {
       firehoseClient.putRecord({
-        study: 'collapse-instructions',
-        event: 'collapse',
+        study: 'top-instructions',
+        event: 'collapse-instructions',
         data_json: JSON.stringify({
           csfStyleInstructions: !this.props.noInstructionsWhenCollapsed
         })
       });
     } else {
       firehoseClient.putRecord({
-        study: 'collapse-instructions',
-        event: 'expand',
+        study: 'top-instructions',
+        event: 'expand-instructions',
         data_json: JSON.stringify({
           csfStyleInstructions: !this.props.noInstructionsWhenCollapsed
         })
@@ -400,6 +400,10 @@ class TopInstructions extends Component {
   handleHelpTabClick = () => {
     this.scrollToTopOfTab();
     this.setState({tabSelected: TabType.RESOURCES}, this.scrollToTopOfTab);
+    firehoseClient.putRecord({
+      study: 'top-instructions',
+      event: 'click-help-and-tips-tab'
+    });
   };
 
   handleInstructionTabClick = () => {
@@ -424,8 +428,8 @@ class TopInstructions extends Component {
   handleTeacherOnlyTabClick = () => {
     this.setState({tabSelected: TabType.TEACHER_ONLY}, this.scrollToTopOfTab);
     firehoseClient.putRecord({
-      study: 'teacher-only-tab',
-      event: 'click'
+      study: 'top-instructions',
+      event: 'click-teacher-only-tab'
     });
   };
 
