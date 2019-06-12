@@ -1,4 +1,4 @@
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {commands} from '@cdo/apps/gamelab/spritelab/locationCommands';
 import * as spriteUtils from '@cdo/apps/gamelab/spritelab/spriteUtils';
 import createGameLabP5 from '../../../util/gamelab/TestableGameLabP5';
