@@ -1,3 +1,11 @@
+# LogObject is a simple container to save errors and important info
+# when executing a process. It can also time block execution and log the result.
+#
+# LogObject is helpful when we want to
+# - Prevent non-fatal errors from stopping process execution but still want to know about them.
+# - Bubble up combined errors and info from lower levels to higher levels.
+#   Even to external components such as HoneyBadger or Slack channel.
+
 class LogObject
   attr_reader :errors, :logs
 
