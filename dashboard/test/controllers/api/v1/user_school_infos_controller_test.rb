@@ -196,6 +196,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     # Teacher should still have one partial school info,
     # with an updated confirmation date
     @teacher.reload
+    puts @teacher.user_school_infos.inspect
     assert_equal 1, @teacher.user_school_infos.count
     assert_equal school_info, @teacher.user_school_infos.first.school_info
     assert_same_date Time.now, @teacher.user_school_infos.first.last_confirmation_date
