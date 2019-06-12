@@ -1,9 +1,9 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {assert, expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedScriptTeacherPanel as ScriptTeacherPanel} from '@cdo/apps/code-studio/components/progress/ScriptTeacherPanel';
+import {UnconnectedTeacherPanel as TeacherPanel} from '@cdo/apps/code-studio/components/progress/TeacherPanel';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import TeacherPanel from '@cdo/apps/code-studio/components/TeacherPanel';
+import TeacherPanelContainer from '@cdo/apps/code-studio/components/TeacherPanelContainer';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import i18n from '@cdo/locale';
@@ -24,39 +24,39 @@ const MINIMUM_PROPS = {
   students: null
 };
 
-describe('ScriptTeacherPanel', () => {
+describe('TeacherPanel', () => {
   describe('on script page', () => {
     it('initial view as student', () => {
       const wrapper = shallow(
-        <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Student} />
+        <TeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Student} />
       );
 
       expect(
         wrapper.containsMatchingElement(
-          <TeacherPanel>
+          <TeacherPanelContainer>
             <h3>{i18n.teacherPanel()}</h3>
             <div>
               <ViewAsToggle />
               <div>{i18n.loading()}</div>
             </div>
-          </TeacherPanel>
+          </TeacherPanelContainer>
         )
       ).to.be.true;
     });
 
     it('initial view as teacher', () => {
       const wrapper = shallow(
-        <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />
+        <TeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />
       );
       assert(
         wrapper.containsMatchingElement(
-          <TeacherPanel>
+          <TeacherPanelContainer>
             <h3>{i18n.teacherPanel()}</h3>
             <div>
               <ViewAsToggle />
               <div>{i18n.loading()}</div>
             </div>
-          </TeacherPanel>
+          </TeacherPanelContainer>
         )
       );
     });
@@ -64,21 +64,21 @@ describe('ScriptTeacherPanel', () => {
 
   it('shows loading message when sections are not loaded', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={false} />
+      <TeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={false} />
     );
     assert(wrapper.containsMatchingElement(<div>{i18n.loading()}</div>));
   });
 
   it('hides loading message when sections are loaded', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={true} />
+      <TeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={true} />
     );
     assert(!wrapper.containsMatchingElement(<div>{i18n.loading()}</div>));
   });
 
   it('shows SectionSelector if hasSections and sectionsAreLoaded', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel
+      <TeacherPanel
         {...MINIMUM_PROPS}
         hasSections={true}
         sectionsAreLoaded={true}
@@ -89,21 +89,21 @@ describe('ScriptTeacherPanel', () => {
 
   it('hides SectionSelector if hasSections is false', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel {...MINIMUM_PROPS} hasSections={false} />
+      <TeacherPanel {...MINIMUM_PROPS} hasSections={false} />
     );
     assert(!wrapper.containsMatchingElement(<SectionSelector />));
   });
 
   it('hides SectionSelector if sectionsAreLoaded is false', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={false} />
+      <TeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={false} />
     );
     assert(!wrapper.containsMatchingElement(<SectionSelector />));
   });
 
   it('shows section selection instructions if viewing as a teacher, and has sections and lockable stages', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel
+      <TeacherPanel
         {...MINIMUM_PROPS}
         viewAs={ViewType.Teacher}
         scriptHasLockableStages={true}
@@ -121,7 +121,7 @@ describe('ScriptTeacherPanel', () => {
 
   it('adds a warning if there are also unlocked stages', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel
+      <TeacherPanel
         {...MINIMUM_PROPS}
         viewAs={ViewType.Teacher}
         scriptHasLockableStages={true}
@@ -154,7 +154,7 @@ describe('ScriptTeacherPanel', () => {
   describe('StudentTable', () => {
     it('displays StudentTable for teacher with students', () => {
       const wrapper = shallow(
-        <ScriptTeacherPanel
+        <TeacherPanel
           {...MINIMUM_PROPS}
           viewAs={ViewType.Teacher}
           students={students}
@@ -165,7 +165,7 @@ describe('ScriptTeacherPanel', () => {
 
     it('does not display StudentTable for teacher with no students', () => {
       const wrapper = shallow(
-        <ScriptTeacherPanel
+        <TeacherPanel
           {...MINIMUM_PROPS}
           viewAs={ViewType.Teacher}
           students={[]}
@@ -176,7 +176,7 @@ describe('ScriptTeacherPanel', () => {
 
     it('does not display StudentTable for student', () => {
       const wrapper = shallow(
-        <ScriptTeacherPanel
+        <TeacherPanel
           {...MINIMUM_PROPS}
           viewAs={ViewType.Student}
           students={students}
@@ -190,7 +190,7 @@ describe('ScriptTeacherPanel', () => {
     describe('on script', () => {
       it('does not display SelectedStudentInfo', () => {
         const wrapper = shallow(
-          <ScriptTeacherPanel
+          <TeacherPanel
             {...MINIMUM_PROPS}
             viewAs={ViewType.Teacher}
             students={students}
@@ -206,7 +206,7 @@ describe('ScriptTeacherPanel', () => {
     describe('on level', () => {
       it('displays SelectedStudentInfo when student selected', () => {
         const wrapper = shallow(
-          <ScriptTeacherPanel
+          <TeacherPanel
             {...MINIMUM_PROPS}
             viewAs={ViewType.Teacher}
             students={students}
@@ -230,7 +230,7 @@ describe('ScriptTeacherPanel', () => {
     describe('on script', () => {
       it('does not display example solutions', () => {
         const wrapper = shallow(
-          <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />
+          <TeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />
         );
         expect(wrapper.find('Button')).to.have.length(0);
       });
@@ -239,7 +239,7 @@ describe('ScriptTeacherPanel', () => {
     describe('on level', () => {
       it('displays example solution for level with one example solution', () => {
         const wrapper = shallow(
-          <ScriptTeacherPanel
+          <TeacherPanel
             {...MINIMUM_PROPS}
             students={students}
             viewAs={ViewType.Teacher}
@@ -259,7 +259,7 @@ describe('ScriptTeacherPanel', () => {
 
       it('does not display example solution for level with no example solution', () => {
         const wrapper = shallow(
-          <ScriptTeacherPanel
+          <TeacherPanel
             {...MINIMUM_PROPS}
             students={students}
             viewAs={ViewType.Teacher}
