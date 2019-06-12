@@ -138,10 +138,10 @@ class ContactRollups
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
   CENSUS_FORM_NAME = "Census".freeze
 
-  def self.build_contact_rollups(log_object)
+  def self.build_contact_rollups(log_collector)
     start = Time.now
 
-    log_object.time!('initialize_connections_to_database_clone') {initialize_connections_to_database_clone}
+    log_collector.time!('initialize_connections_to_database_clone') {initialize_connections_to_database_clone}
 
     @@pegasus_clone_db_writer.run "SET SQL_SAFE_UPDATES = 0"
     # set READ UNCOMMITTED transaction isolation level on both read connections to avoid taking locks
@@ -149,21 +149,21 @@ class ContactRollups
     @@dashboard_clone_db_reader.run "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
     ActiveRecord::Base.connection.execute "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
 
-    log_object.time!('create_destination_table') {create_destination_table}
-    log_object.time!('insert_from_pegasus_forms') {insert_from_pegasus_forms}
-    log_object.time!('insert_from_dashboard_contacts') {insert_from_dashboard_contacts}
-    log_object.time!('insert_from_dashboard_pd_enrollments') {insert_from_dashboard_pd_enrollments}
-    log_object.time!('insert_from_dashboard_census_submissions') {insert_from_dashboard_census_submissions}
-    log_object.time!('update_geo_from_school_data') {update_geo_from_school_data}
-    log_object.time!('update_unsubscribe_info') {update_unsubscribe_info}
-    log_object.time!('update_roles') {update_roles}
-    log_object.time!('update_grades_taught') {update_grades_taught}
-    log_object.time!('update_ages_taught') {update_ages_taught}
-    log_object.time!('update_district') {update_district}
-    log_object.time!('update_school') {update_school}
-    log_object.time!('update_courses_facilitated') {update_courses_facilitated}
-    log_object.time!('update_professional_learning_enrollment') {update_professional_learning_enrollment}
-    log_object.time!('update_professional_learning_attendance') {update_professional_learning_attendance}
+    log_collector.time!('create_destination_table') {create_destination_table}
+    log_collector.time!('insert_from_pegasus_forms') {insert_from_pegasus_forms}
+    log_collector.time!('insert_from_dashboard_contacts') {insert_from_dashboard_contacts}
+    log_collector.time!('insert_from_dashboard_pd_enrollments') {insert_from_dashboard_pd_enrollments}
+    log_collector.time!('insert_from_dashboard_census_submissions') {insert_from_dashboard_census_submissions}
+    log_collector.time!('update_geo_from_school_data') {update_geo_from_school_data}
+    log_collector.time!('update_unsubscribe_info') {update_unsubscribe_info}
+    log_collector.time!('update_roles') {update_roles}
+    log_collector.time!('update_grades_taught') {update_grades_taught}
+    log_collector.time!('update_ages_taught') {update_ages_taught}
+    log_collector.time!('update_district') {update_district}
+    log_collector.time!('update_school') {update_school}
+    log_collector.time!('update_courses_facilitated') {update_courses_facilitated}
+    log_collector.time!('update_professional_learning_enrollment') {update_professional_learning_enrollment}
+    log_collector.time!('update_professional_learning_attendance') {update_professional_learning_attendance}
 
     # record contacts' interactions with us based on forms
     FORM_INFOS.each do |form_info|
@@ -172,23 +172,23 @@ class ContactRollups
 
     # parse all forms that collect user-reported address/location or other data of interest
     FORM_KINDS_WITH_DATA.each do |kind|
-      log_object.time!("update_data_from_forms kind=#{kind}") {update_data_from_forms(kind)}
+      log_collector.time!("update_data_from_forms kind=#{kind}") {update_data_from_forms(kind)}
     end
 
     # Add contacts to the Teacher role based on form responses
-    log_object.time!('update_teachers_from_forms') {update_teachers_from_forms}
-    log_object.time!('update_teachers_from_census_submissions') {update_teachers_from_census_submissions}
+    log_collector.time!('update_teachers_from_forms') {update_teachers_from_forms}
+    log_collector.time!('update_teachers_from_census_submissions') {update_teachers_from_census_submissions}
 
     # Set opt_in based on information collected in Dashboard Email Preference.
-    log_object.time!('update_email_preferences') {update_email_preferences}
+    log_collector.time!('update_email_preferences') {update_email_preferences}
 
     count = @@pegasus_clone_db_reader["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
 
-    log_object.info("#{count} records created in contact_rollups_daily table")
+    log_collector.info("#{count} records created in contact_rollups_daily table")
   end
 
-  def self.sync_contact_rollups_to_main
+  def self.sync_contact_rollups_to_main(log_collector)
     log("#{Time.now} Starting")
 
     num_inserts = 0
@@ -280,6 +280,7 @@ class ContactRollups
     end
 
     log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
+    log_collector.info("#{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
   end
 
   def self.create_destination_table
