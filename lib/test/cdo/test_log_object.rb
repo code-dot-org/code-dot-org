@@ -1,23 +1,41 @@
-# TODO: remove
-# bundle exec ruby lib/test/cdo/test_log_object.rb
-
 require_relative '../test_helper'
 require 'cdo/log_object'
 
 class LogObjectTest < Minitest::Test
   def test_time_a_function
-    lo = LogObject.new
-    lo.time('increase once') {increase_by_one}
-    repetition = 10000
-    lo.time("increase #{repetition} times") {increase_by_one(repetition)}
-    puts lo.to_s
+    log_object = LogObject.new
+    log_object.time('Do something') {do_something}
+
+    assert log_object.ok?
+    assert_equal 1, log_object.logs.size
+  end
+
+  def test_time_a_function_that_errors
+    log_object = LogObject.new
+    log_object.time('Do something that errors') {do_something_that_errors}
+
+    refute log_object.ok?
+    assert_equal 2, log_object.logs.size
+  end
+
+  def test_time_a_function_that_errors_then_reraise
+    log_object = LogObject.new
+
+    assert_raises do
+      log_object.time!('Do something that errors') {do_something_that_errors}
+    end
+
+    assert_equal 1, log_object.logs.size
   end
 
   private
 
-  def increase_by_one(repetition = 1)
-    result = 0
-    repetition.times {result += 1}
-    result
+  # Dummy function to be used in a block
+  def do_something
+    1
+  end
+
+  def do_something_that_errors
+    raise 'error'
   end
 end
