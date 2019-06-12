@@ -181,26 +181,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_nil @teacher.school_info.country
   end
 
-  test 'initial, partial previous, unchanged, manual' do
-    # Teacher starts with one partial school info
-    school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
-    refute school_info.complete?
-    @teacher.update school_info: school_info
-    sign_in @teacher
-
-    # Teacher is prompted to complete info, submits unchanged
-    Timecop.travel 7.days
-    submit_unchanged_school_info(school_info)
-    assert_response :success, response.body
-
-    # Teacher should still have one partial school info,
-    # with an updated confirmation date
-    @teacher.reload
-    assert_equal 1, @teacher.user_school_infos.count
-    assert_equal school_info, @teacher.user_school_infos.first.school_info
-    assert_same_date Time.now, @teacher.user_school_infos.first.last_confirmation_date
-  end
-
   test 'initial, partial previous, partial, manual' do
     school_info = create :school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
