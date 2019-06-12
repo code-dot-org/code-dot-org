@@ -270,7 +270,9 @@ zh-CN:
             '"plus"': 添加
             '"random"': 随机
       Dancelab_makeNewDanceSprite:
-        text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME}
+        text: |-
+          新建 {COSTUME}
+          命名为 {NAME}，位置位于 {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': 外星人
@@ -296,7 +298,7 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Dancelab_makeNewDanceSpriteGroup:
-        text: 在 {LAYOUT} 创造 {N} 新的 {COSTUME}
+        text: 在 {LAYOUT} 新建 {N} {COSTUME}
         options:
           'N':
             '2': '2'
@@ -712,6 +714,8 @@ zh-CN:
             '"while"': 当
       gamelab_clickedOn:
         text: 当 {SPRITE} 被点击时
+      gamelab_clickedSpritePointer:
+        text: 点击 {SPRITE}
       gamelab_comment:
         text: '注释: {COMMENT}'
       gamelab_console.log:
@@ -923,6 +927,8 @@ zh-CN:
         text: 朝 {TARGET} 移动 {SPRITE} 距离 {DISTANCE}
       gamelab_moveUp:
         text: "{THIS} 向上移动"
+      gamelab_objectSprite:
+        text: 精灵对象
       gamelab_playSound:
         text: 播放音效{SOUND}
       gamelab_pointInDirection:
@@ -963,9 +969,13 @@ zh-CN:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': 洞穴
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': 院子
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': 沙漠
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': 银河系
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 网格
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 彩虹
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': 科幻
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 星球
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 水底
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
             undefined: 没有
@@ -1024,6 +1034,7 @@ zh-CN:
             '"when"': 当
             '"while"': 当
       gamelab_spriteClickedSet:
+        text: 点击 {CONDITION} {SPRITE} 设置 {CLICK}
         options:
           CONDITION:
             '"when"': 当
@@ -1070,6 +1081,8 @@ zh-CN:
         text: 最后一个 {VALUE}
       gamelab_spritesWhereRandom:
         text: 在组 {VALUE} 中随机
+      gamelab_subjectSprite:
+        text: 精灵主体
       gamelab_thisBeginsBehaviorSimple:
         text: 精灵 {SPRITE} 开始 {BEHAVIOR}
         options:
@@ -1121,6 +1134,7 @@ zh-CN:
       gamelab_whenTouchingAny:
         text: 当 {SPRITE} 碰到任何 {GROUP}
       gamelab_whenTouchingSet:
+        text: "{CONDITION} {SPRITE1} 碰触 {SPRITE2} 设置 {SPRITEA} 和设置 {SPRITEB}"
         options:
           CONDITION:
             '"when"': 当
@@ -1474,9 +1488,7 @@ zh-CN:
       aalab_createNewSpriteAnonReturn:
         text: aalab 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
       aalab_createPropertyGroup:
-        text: |-
-          创建一个叫做 {VAR} 的精灵组
-          包括所有的 {COSTUME} 精灵
+        text: 创建一个名为 {VAR} 的精灵组，其中包括所有的着装为 {COSTUME} 精灵
       aalab_createSpriteGroup:
         text: 创造一个叫做 {VAR} 的新精灵组
       aalab_getSpritesByName:

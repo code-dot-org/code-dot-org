@@ -2033,3 +2033,7 @@ hu:
           stages:
             Graph Paper Programming:
               name: Grafikus programozás
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: Mi az a számítógép?

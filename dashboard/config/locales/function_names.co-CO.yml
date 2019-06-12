@@ -1,9 +1,6 @@
 ---
-co:
+co-CO:
   data:
     function_names:
-      get nectar: ottene nettaru
       collect: culletà
-      turn left: girà à manca
-      move forward: avanzà
-      turn right: girà à diritta
+      get nectar: ottene nettaru

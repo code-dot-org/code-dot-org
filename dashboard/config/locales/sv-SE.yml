@@ -68,7 +68,6 @@ sv:
   of: av
   more: MER
   less: MINDRE
-  beta: beta
   try_hoc: 'Prova Hour of Code, klicka här >> '
   try_k8intro: 'Prova vår grundskolekurs: Introduktion till Datavetenskap (15-25 timmar)'
   k8intro: Introduktion till grundskolekurs i datavetenskap (15-25 timmar)
@@ -794,19 +793,8 @@ sv:
     create: Skapa projekt
     create_a_project: 'Skapa ett nytt projekt:'
     new: Skapa ny
-    rename: Ändra namn
-    save: Spara
-    import: Importera
-    share_link_import_bad_link_header: Delningslänken kändes inte igen
-    share_link_import_bad_link_body: 'Vi kunde inte importera delningslänken. Se till
-      att du använder en länk från ett Minecraft: Agent-pussel, och att du har kopierat
-      hela länken.'
-    share_link_import_error_header: Någonting gick fel.
-    share_link_import_error_body: Det gick inte att importera delningslänken. Försök
-      igen.
     exit: Tillbaka till kursen
     project_gallery: Projekt
-    share: Dela
     share_title: Dela ditt projekt
     share_copy_link: 'Kopiera länken:'
     share_embed_description: Du kan klistra in inbäddad kod i en HTML-sida att visa
@@ -825,8 +813,6 @@ sv:
     saved: Sparade
     not_saved: Inte sparad
     view_all: Titta på mina projekt
-    remix: Remix
-    click_to_remix: Klicka på "Remix" för att göra en spin-off som din egen version!
     edit_project: Redigera projektet
     abuse:
       tos: Detta projekt har rapporterats för brott mot Code.org i <a href='http://code.org/tos'>

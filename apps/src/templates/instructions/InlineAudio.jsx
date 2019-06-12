@@ -163,16 +163,16 @@ class InlineAudio extends React.Component {
   getAudioSrc() {
     if (this.props.src) {
       return this.props.src;
+    } else if (this.props.message) {
+      const voice = VOICES[this.props.locale];
+      const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
+
+      const message = this.props.message.replace('"???"', 'the question marks');
+      const hash = MD5(message).toString();
+      const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
+
+      return `${TTS_URL}/${voicePath}/${contentPath}`;
     }
-
-    const voice = VOICES[this.props.locale];
-    const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
-
-    const message = this.props.message.replace('"???"', 'the question marks');
-    const hash = MD5(message).toString();
-    const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
-
-    return `${TTS_URL}/${voicePath}/${contentPath}`;
   }
 
   toggleAudio = () => {

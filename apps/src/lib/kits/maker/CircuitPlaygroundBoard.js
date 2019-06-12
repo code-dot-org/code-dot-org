@@ -85,6 +85,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       board.once('ready', () => {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
+        this.fiveBoard_.samplingInterval(100);
         resolve();
       });
       board.on('error', reject);

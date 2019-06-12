@@ -137,7 +137,7 @@ sk:
       CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Skontrolujte, či hráč vyhral
       Counting_callout:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti? Prihláste sa pre uloženie projektu do vášho konta!
       Course 4 Artist 4_callout:
@@ -306,7 +306,7 @@ sk:
       MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Na rozdiel od Alex a Steva sa agent môže vznášať nad lávou!  '
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti? Prihláste sa pre uloženie projektu do vášho konta!
       NEW Course 4 Artist Functions 3_callout:
@@ -330,13 +330,13 @@ sk:
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: Panel s nástrojmi má nový vzhľad! Bloky s "akciami" sú odteraz tu.
       New Artist Project_callout:
-        New Artist Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
+        New Artist Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Artist Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti? Prihláste sa pre uloženie projektu do vášho konta!
       New Frozen Project_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti? Prihláste sa pre uloženie projektu do vášho konta!
       Overworld Chop Trees_callout:
@@ -396,7 +396,7 @@ sk:
       Robot_callout:
         4-5_Artist_Patterns_Free_Play_1: Všetky tvoje obľúbené bloky sú usporiadané do kategórií.  Klikni na tieto slová aby si videl, kam  všetko odišlo!
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti? Prihláste sa pre uloženie projektu do vášho konta!
       Rocket Height Course A_callout:
@@ -418,7 +418,7 @@ sk:
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Uprave túto funkciu, aby Samo nezašiel do pravej strany
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti? Prihláste sa pre uloženie projektu do vášho konta!
       U3L08 how to add comments_callout:
@@ -658,11 +658,11 @@ sk:
       courseC_collector_prog7_2019_callout:
         courseC_collector_prog7_1: Ak potrebuješ, z panela nástrojov môžeš vziať aj viac blokov!
       courseC_harvester_loops1_callout:
-        courseC_harvester_loops1_callout1: Čislo štyri na tekvici vám hovorí, že na zozbieranie sú k dispozícií štyri tekvice.
+        courseC_harvester_loops1_callout1: Číslo štyri na tekvici znamená, že na tomto políčku môžeme pozbierať štyri tekvice.
       courseC_harvester_loops1_2018_callout:
-        courseC_harvester_loops1_callout1: Čislo štyri na tekvici vám hovorí, že na zozbieranie sú k dispozícií štyri tekvice.
+        courseC_harvester_loops1_callout1: Číslo štyri na tekvici znamená, že na tomto políčku môžeme pozbierať štyri tekvice.
       courseC_harvester_loops1_2019_callout:
-        courseC_harvester_loops1_callout1: Čislo štyri na tekvici vám hovorí, že na zozbieranie sú k dispozícií štyri tekvice.
+        courseC_harvester_loops1_callout1: Číslo štyri na tekvici znamená, že na tomto políčku môžeme pozbierať štyri tekvice.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Šedé bloky nemôžu byť vymazané!
       courseC_maze_debugging5_2018_callout:
@@ -794,15 +794,15 @@ sk:
       courseD_maze_ramp6a_callout:
         courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát, koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseD_playLab_condFP_callout:
-        courseD_playLab_condFP_1: sme zoradili bloky do kategórií, aby ste mali viac kódu na hranie sa! Kliknite sem a pozrite sa, kam sme všetko dali.
+        courseD_playLab_condFP_1: Bloky sme usporiadali do kategórií, v ktorých nájdeš ešte viac možností! Klikni sem a pozri sa, čo všetko v jednotlivých kategóriach nájdeš.
       courseD_playLab_condFP_2018_callout:
-        courseD_playLab_condFP_1: sme zoradili bloky do kategórií, aby ste mali viac kódu na hranie sa! Kliknite sem a pozrite sa, kam sme všetko dali.
+        courseD_playLab_condFP_1: Bloky sme usporiadali do kategórií, v ktorých nájdeš ešte viac možností! Klikni sem a pozri sa, čo všetko v jednotlivých kategóriach nájdeš.
       courseD_playLab_condFP_2019_callout:
-        courseD_playLab_condFP_1: sme zoradili bloky do kategórií, aby ste mali viac kódu na hranie sa! Kliknite sem a pozrite sa, kam sme všetko dali.
+        courseD_playLab_condFP_1: Bloky sme usporiadali do kategórií, v ktorých nájdeš ešte viac možností! Klikni sem a pozri sa, čo všetko v jednotlivých kategóriach nájdeš.
       courseD_playLab_condFP_a_callout:
-        courseD_playLab_condFP_1: sme zoradili bloky do kategórií, aby ste mali viac kódu na hranie sa! Kliknite sem a pozrite sa, kam sme všetko dali.
+        courseD_playLab_condFP_1: Bloky sme usporiadali do kategórií, v ktorých nájdeš ešte viac možností! Klikni sem a pozri sa, čo všetko v jednotlivých kategóriach nájdeš.
       courseD_playLab_condForVideo_callout:
-        courseD_playLab_condFP_1: sme zoradili bloky do kategórií, aby ste mali viac kódu na hranie sa! Kliknite sem a pozrite sa, kam sme všetko dali.
+        courseD_playLab_condFP_1: Bloky sme usporiadali do kategórií, v ktorých nájdeš ešte viac možností! Klikni sem a pozri sa, čo všetko v jednotlivých kategóriach nájdeš.
       courseD_scrat_ramp1_callout:
         grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseD_scrat_ramp1_2018_callout:
@@ -1076,7 +1076,7 @@ sk:
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné a možno ich vyriešite až na niekoľkatý pokus.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti? Prihláste sa pre uloženie projektu do vášho konta!
       courseF_playlab_brokenText_callout:
@@ -1245,10 +1245,10 @@ sk:
       grade4_frozen_square_loop3_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie vášho programu
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti? Prihláste sa pre uloženie projektu do vášho konta!
       grade5_artist_freeplay_callout:
@@ -1310,7 +1310,7 @@ sk:
       harvester_Kahoot_callout:
         courseE_farmer_functions1a_1: Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh.
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do vášho programu
+        New Play Lab Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti? Prihláste sa pre uloženie projektu do vášho konta!
       subgoal-test-clone_callout:
