@@ -19,7 +19,7 @@ import color from '../../../util/color';
 import Inspector from 'react-inspector';
 import {geoMercator, geoPath} from 'd3-geo';
 import {feature} from 'topojson-client';
-// import d3 from 'd3';
+// import WorldMap from './WorldMap';
 import {scaleSqrt} from 'd3-scale';
 
 const DEBUG_INPUT_HEIGHT = 16;
@@ -145,6 +145,17 @@ export default connect(
       showReactInspector: PropTypes.bool
     };
 
+    state = {
+      mercator: ''
+    };
+
+    async componentDidMount() {
+      let value = await this.mercator();
+      this.setState({
+        mercator: value
+      });
+    }
+
     onInputKeyDown = e => {
       const input = e.target.value;
       if (e.keyCode === KeyCodes.ENTER) {
@@ -245,11 +256,11 @@ export default connect(
     }
     projection() {
       return geoMercator()
-        .scale(100)
-        .translate([800 / 2, 450 / 2]);
+        .scale(60)
+        .translate([400 / 2, 200 / 2]);
     }
 
-    mercator() {
+    async mercator() {
       let quakeradius = function() {
         const scale = scaleSqrt()
           .domain([0, 100])
@@ -264,14 +275,19 @@ export default connect(
           'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
         );
       };
+      console.log('fetchData', fetchData());
 
-      let quakes = async function() {
+      async function quakes() {
         var hello = await fetchData();
         var json = await hello.json();
+        console.log('json', json);
+        //
         return json;
-      };
-      let exampleQuake = quakes();
-      console.log('exampleQuake', exampleQuake.features);
+      }
+
+      let exampleQuake = await quakes();
+
+      console.log('something', exampleQuake);
       let world = async function() {
         var world = await fetch(
           'https://unpkg.com/world-atlas@1/world/110m.json'
@@ -279,21 +295,24 @@ export default connect(
 
         var json = await world.json();
 
-        return feature(json, json.objects.countries);
+        return feature(json, json.objects.countries).features;
       };
 
-      let world2 = world();
+      let world2 = await world();
       console.log('world2', world2);
 
+      // let projection = geoMercator();
+      // let path = geoPath();
+
       return (
-        <svg width={800} height={450}>
+        <svg width={400} height={200}>
           <g className="countries">
-            {exampleQuake.features.map((d, i) => (
+            {world2.map((d, i) => (
               <path
                 key={`path-${i}`}
                 d={geoPath().projection(this.projection())(d)}
                 className="country"
-                fill={'red'}
+                fill={'green'}
                 stroke="#FFFFFF"
                 strokeWidth={0.5}
               />
@@ -301,33 +320,6 @@ export default connect(
           </g>
         </svg>
       );
-      // var c = DOM.context2d(1000, 700);
-      // var canvas = c.canvas;
-      //
-
-      // var path = geoPath(projection, c);
-      //
-      // c.lineWidth = 0.1;
-      // c.fillStyle = 'skyblue';
-      // c.beginPath();
-      // // c.arc(s/2, s/2, radius, 0, 2*Math.PI);
-      // c.fill();
-      // c.stroke();
-      //
-      // c.lineWidth = 0.35;
-      // c.fillStyle = 'green';
-      // c.beginPath();
-      // path(world2);
-      // c.fill();
-      // c.stroke();
-      //
-      // c.fillStyle = 'red';
-      // path.pointRadius(quakeradius());
-      // exampleQuake.features.forEach(quake => {
-      //   c.beginPath(), path(quake), c.fill();
-      // });
-
-      // return canvas;
     }
 
     isValidOutput(rowValue) {
@@ -378,7 +370,7 @@ export default connect(
       if (!this.props.debugWatch) {
         classes += ' no-watch';
       }
-      this.mercator();
+
       return (
         <div
           id="debug-console"
@@ -407,7 +399,7 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
-            <div>{this.mercator()}</div>
+            <div>{this.state.mercator}</div>
             {this.props.showReactInspector
               ? this.displayOutputToConsole()
               : this.props.logOutput}
