@@ -16,8 +16,8 @@ def main
   log_object = LogObject.new
 
   # Delete clone database cluster if it was left behind by the last execution of Contact Rollups.
-  # log_object.time!('Delete db clone') {ContactRollups.delete_database_clone}
-  # log_object.time!('Create db clone') {ContactRollups.create_database_clone}
+  log_object.time!('Delete db clone') {ContactRollups.delete_database_clone}
+  log_object.time!('Create db clone') {ContactRollups.create_database_clone}
 
   # Build new daily table of contact rollups
   log_object.time!('Build contact rollups') {ContactRollups.build_contact_rollups(log_object)}
@@ -32,7 +32,6 @@ def main
   # Sync daily rollup to master rollup and compute deltas
   log_object.time!('Sync to main db') {ContactRollups.sync_contact_rollups_to_main}
 
-  # TODO: uncomment before running in production
   # Sync deltas into Pardot
   # log_object.time!('Sync to Pardot') do
   #   sync_results = Pardot.sync_contact_rollups_to_pardot
@@ -40,22 +39,21 @@ def main
   #     "Syncing completed: #{sync_results[:num_inserts]} inserts, #{sync_results[:num_updates]} updates."
   #   )
   # end if log_object.ok?
-
-  raise 'test'
 rescue => e
   log_object.record_exception(e)
 ensure
   # log_object.time('Clean up db clone') {ContactRollups.delete_database_clone}
 
-  log_object.info("Script finished with #{log_object.error_count} caught exception(s) in #{Time.now - time_start} seconds.")
+  log_object.info("Script finished with #{log_object.errors.size} caught exception(s) in #{Time.now - time_start} seconds.")
 
   ChatClient.message(CHAT_CHANNEL, log_object.to_s)
-  puts log_object.to_s  # TODO: remove
+  # TODO: remove
+  puts log_object.to_s
 
   # TODO: uncomment before running in production
-  # Notify HoneyBadger if there is caught error/exception.
-  # raise log_object.error_str unless log_object.ok?
-  puts "To be raised to HB: #{log_object.error_str}"
+  # Notify HoneyBadger about the last caught error/exception.
+  # raise log_object.errors.last unless log_object.ok?
+  puts "To be raised to HB: #{log_object.errors.last}"
 end
 
 main if only_one_running?(__FILE__)
