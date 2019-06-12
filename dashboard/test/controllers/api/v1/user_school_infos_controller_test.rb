@@ -196,6 +196,8 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     # Teacher should still have one partial school info,
     # with an updated confirmation date
     @teacher.reload
+    puts @teacher
+    puts @teacher.user_school_infos.inspect
     @teacher.user_school_infos.each do |s|
       puts s.school_info.inspect
     end
