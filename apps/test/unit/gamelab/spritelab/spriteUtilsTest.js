@@ -1,14 +1,10 @@
 /* global p5 */
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import createGameLabP5 from '../../../util/gamelab/TestableGameLabP5';
-import {sandboxDocumentBody} from '../../../util/testUtils';
 import * as spriteUtils from '@cdo/apps/gamelab/spritelab/spriteUtils';
 
 describe('Sprite Utils', () => {
   let gameLabP5, createSprite, animation;
-  // Using the aggressive sandbox here because the P5 library generates
-  // a default canvas when it's not attached to an existing one.
-  sandboxDocumentBody();
 
   beforeEach(function() {
     gameLabP5 = createGameLabP5();
