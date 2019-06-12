@@ -3159,11 +3159,18 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
  * not been started.
  */
 StudioApp.prototype.isNotStartedLevel = function(config) {
-  return (
-    config.noInstructionsWhenCollapsed &&
-    config.readonlyWorkspace &&
-    !config.channel
-  );
+  const progress = getStore().getState().progress;
+
+  if (
+    ['Gamelab', 'Applab', 'Weblab', 'Spritelab'].includes(config.levelGameName)
+  ) {
+    return config.readonlyWorkspace && !config.channel;
+  } else if (!config.level.freePlay) {
+    return (
+      config.readonlyWorkspace &&
+      progress.levelProgress[progress.currentLevelId] === undefined
+    );
+  }
 };
 
 /**
