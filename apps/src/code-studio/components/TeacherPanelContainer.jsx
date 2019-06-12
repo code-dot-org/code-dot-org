@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
-export default class TeacherPanel extends React.Component {
+export default class TeacherPanelContainer extends React.Component {
   static propTypes = {
     children: PropTypes.node
   };
