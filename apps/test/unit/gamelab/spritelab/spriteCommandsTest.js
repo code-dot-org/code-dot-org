@@ -1,5 +1,5 @@
 /* global p5 */
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {commands} from '@cdo/apps/gamelab/spritelab/spriteCommands';
 import * as spriteUtils from '@cdo/apps/gamelab/spritelab/spriteUtils';
 import createGameLabP5 from '../../../util/gamelab/TestableGameLabP5';
@@ -70,7 +70,7 @@ describe('Sprite Commands', () => {
     sprite.anotherProp = 'value';
     let id = spriteUtils.addSprite(sprite);
     expect(commands.getProp(id, 'x')).to.equal(123);
-    expect(commands.getProp(id, 'y')).to.equal(79);
+    expect(commands.getProp(id, 'y')).to.equal(400 - 321);
     expect(commands.getProp(id, 'costume')).to.equal('label');
     expect(commands.getProp(id, 'anotherProp')).to.equal('value');
   });
