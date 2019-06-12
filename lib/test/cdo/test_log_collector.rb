@@ -1,9 +1,9 @@
 require_relative '../test_helper'
-require 'cdo/log_object'
+require 'cdo/log_collector'
 
-class LogObjectTest < Minitest::Test
+class LogCollectorTest < Minitest::Test
   def test_time_a_function
-    log_object = LogObject.new
+    log_object = LogCollector.new
     log_object.time('Do something') {do_something}
 
     assert log_object.ok?
@@ -11,7 +11,7 @@ class LogObjectTest < Minitest::Test
   end
 
   def test_time_a_function_that_errors
-    log_object = LogObject.new
+    log_object = LogCollector.new
     log_object.time('Do something that errors') {do_something_that_errors}
 
     refute log_object.ok?
@@ -19,7 +19,7 @@ class LogObjectTest < Minitest::Test
   end
 
   def test_time_a_function_that_errors_then_reraise
-    log_object = LogObject.new
+    log_object = LogCollector.new
 
     assert_raises do
       log_object.time!('Do something that errors') {do_something_that_errors}
