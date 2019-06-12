@@ -35,6 +35,8 @@ const createCommonStore = function(options = {}) {
 
   pageConstants.textToSpeechEnabled = true;
   pageConstants.locale = 'en_us';
+  // Embed levels just show the instructions area at full height - should be tested elsewhere
+  pageConstants.isEmbedView = false;
 
   // Grab some arbitrary preexisting audio files for this test; they will not
   // match the displayed text for this test, but that doesn't seem necessary
