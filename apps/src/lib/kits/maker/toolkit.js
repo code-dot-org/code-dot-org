@@ -90,7 +90,7 @@ export function connect({interpreter, onDisconnect}) {
       commands.injectBoardController(currentBoard);
       currentBoard.installOnInterpreter(interpreter);
       if (typeof onDisconnect === 'function') {
-        currentBoard.once('disconnect', onDisconnect);
+        currentBoard.once('disconnect', () => disconnect(onDisconnect));
       }
       dispatch(redux.reportConnected());
       trackEvent('Maker', 'ConnectionSuccess');
@@ -107,6 +107,28 @@ export function connect({interpreter, onDisconnect}) {
         return Promise.reject(error);
       }
     });
+}
+
+/**
+ * Called when the board disconnects
+ * Throw away reference to the currentBoard, so that next time we run
+ * we make a new board.
+ */
+function disconnect(onDisconnect) {
+  onDisconnect();
+  if (!redux.isEnabled(getStore().getState())) {
+    return;
+  }
+
+  const setDisconnected = () => {
+    currentBoard = null;
+    getStore().dispatch(redux.disconnect);
+  };
+  if (currentBoard) {
+    currentBoard.destroy().then(setDisconnected);
+  } else {
+    setDisconnected();
+  }
 }
 
 /**
@@ -146,8 +168,7 @@ function shouldRunWithFakeBoard() {
 
 /**
  * Called when execution of the student app ends.
- * Resets the board state, disconnects and destroys the current board controller,
- * and puts maker UI back in a default state.
+ * Resets the board state and puts maker UI back in a default state.
  */
 export function reset() {
   if (currentBoard) {
