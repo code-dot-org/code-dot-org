@@ -117,8 +117,8 @@ function apiValidateDomIdExistence(
     }
 
     if (
-      (!callback || !callback(existsInApplab)) &&
-      shouldExist !== existsInApplab
+      shouldExist !== existsInApplab &&
+      (!callback || !callback(existsInApplab))
     ) {
       valid = false;
       message = existsInApplab ? 'already exists.' : 'does not exist.';
