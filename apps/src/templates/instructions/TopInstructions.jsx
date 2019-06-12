@@ -360,10 +360,10 @@ class TopInstructions extends Component {
    * updating our rendered height.
    */
   handleClickCollapser = () => {
-    if (!this.props.collapsed) {
+    if (this.props.collapsed) {
       firehoseClient.putRecord({
         study: 'top-instructions',
-        event: 'collapse-instructions',
+        event: 'expand-instructions',
         data_json: JSON.stringify({
           csfStyleInstructions: !this.props.noInstructionsWhenCollapsed
         })
@@ -371,7 +371,7 @@ class TopInstructions extends Component {
     } else {
       firehoseClient.putRecord({
         study: 'top-instructions',
-        event: 'expand-instructions',
+        event: 'collapse-instructions',
         data_json: JSON.stringify({
           csfStyleInstructions: !this.props.noInstructionsWhenCollapsed
         })
