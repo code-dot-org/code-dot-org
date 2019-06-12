@@ -162,8 +162,6 @@ class CodeWorkspace extends React.Component {
     const hasFocus = !(props.runModeIndicators && props.isRunning);
     const isRtl = this.props.isRtl;
 
-    console.log(this.props.studentHasNotStartedLevel);
-
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>
         <PaneHeader

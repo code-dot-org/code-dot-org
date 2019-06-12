@@ -297,7 +297,7 @@ StudioApp.prototype.init = function(config) {
     document.body.appendChild(document.createElement('div'))
   );
 
-  if (config.usesAssets) {
+  if (config.usesAssets && config.channel) {
     assetPrefix.init(config);
 
     // Pre-populate asset list
