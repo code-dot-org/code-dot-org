@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 
 export const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
-const SCHOOL_TYPES_HAVING_NAMES = [
+export const SCHOOL_TYPES_HAVING_NAMES = [
   'charter',
   'private',
   'public',
