@@ -7,9 +7,9 @@ require 'json'
 require 'aws-sdk-rds'
 
 class ContactRollups
-  # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
+  # Production database has a global max query execution timeout setting. This 30 minute setting can be used
   # to override the timeout for a specific session or query.
-  MAX_EXECUTION_TIME = 1_200_000
+  MAX_EXECUTION_TIME = 1_800_000
   MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
 
   DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
