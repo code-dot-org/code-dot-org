@@ -28,11 +28,20 @@ const styles = {
   },
   runningIcon: {
     color: color.dark_charcoal
+  },
+  studentNotStartedWarning: {
+    zIndex: 99,
+    backgroundColor: color.lightest_red,
+    width: '100%',
+    height: 20,
+    padding: 5,
+    opacity: 0.9
   }
 };
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
+    studentHasNotStartedLevel: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -153,6 +162,8 @@ class CodeWorkspace extends React.Component {
     const hasFocus = !(props.runModeIndicators && props.isRunning);
     const isRtl = this.props.isRtl;
 
+    console.log(this.props.studentHasNotStartedLevel);
+
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>
         <PaneHeader
@@ -215,6 +226,12 @@ class CodeWorkspace extends React.Component {
             className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
           />
         )}
+        {this.props.studentHasNotStartedLevel && (
+          <div style={styles.studentNotStartedWarning}>
+            {'Student has not started this level'}
+          </div>
+        )}
+        }
         {props.showDebugger && (
           <JsDebugger
             onSlideShut={this.onDebuggerSlide}
@@ -228,6 +245,7 @@ class CodeWorkspace extends React.Component {
 
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
 export default connect(state => ({
+  studentHasNotStartedLevel: state.pageConstants.isNotStartedLevel,
   editCode: state.pageConstants.isDroplet,
   isRtl: state.isRtl,
   readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
