@@ -142,9 +142,10 @@ module ProxyHelper
   end
 
   # Wrap constant in a method so it can be stubbed in a test.
-  def self.dashboard_ip_address
+  def dashboard_ip_address
     DASHBOARD_IP_ADDRESS
   end
+  module_function :dashboard_ip_address
 
   private
 
