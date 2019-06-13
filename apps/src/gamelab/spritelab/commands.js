@@ -213,6 +213,10 @@ export const commands = {
     return validationCommands.getBehaviorsForAnimation(animation);
   },
 
+  getBehaviorsForSpriteId(spriteId) {
+    return validationCommands.getBehaviorsForSpriteId(spriteId);
+  },
+
   getSpriteIdsInUse() {
     return validationCommands.getSpriteIdsInUse();
   }
