@@ -670,6 +670,9 @@ class TopInstructions extends Component {
                     handleClickCollapser={this.handleClickCollapser}
                     adjustMaxNeededHeight={this.adjustMaxNeededHeight}
                     isEmbedView={this.props.isEmbedView}
+                    teacherViewingStudentWork={
+                      this.state.teacherViewingStudentWork
+                    }
                   />
                 )}
               {!this.props.hasContainedLevels &&
