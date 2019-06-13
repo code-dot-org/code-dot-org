@@ -90,7 +90,10 @@ export function connect({interpreter, onDisconnect}) {
       commands.injectBoardController(currentBoard);
       currentBoard.installOnInterpreter(interpreter);
       if (typeof onDisconnect === 'function') {
-        currentBoard.once('disconnect', () => disconnect(onDisconnect));
+        currentBoard.once('disconnect', () => {
+          onDisconnect();
+          disconnect();
+        });
       }
       dispatch(redux.reportConnected());
       trackEvent('Maker', 'ConnectionSuccess');
@@ -114,8 +117,7 @@ export function connect({interpreter, onDisconnect}) {
  * Throw away reference to the currentBoard, so that next time we run
  * we make a new board.
  */
-function disconnect(onDisconnect) {
-  onDisconnect();
+function disconnect() {
   if (!redux.isEnabled(getStore().getState())) {
     return;
   }
