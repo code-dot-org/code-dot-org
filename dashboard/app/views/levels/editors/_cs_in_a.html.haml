@@ -28,3 +28,9 @@
       %p An array of tuples where each tuple is [input, output].
       %p i.e. The table for f(x) = x - 5 might look like: [ [15, 10], [10, 5], [25, 20] ]
       = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: @level.input_output_table
+
+  -# We already include this in studio level so don't include twice
+  - if @level.respond_to?(:coordinate_grid_background) && !@level.is_a?(Studio)
+    .field
+      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
+
