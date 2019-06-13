@@ -141,6 +141,11 @@ module ProxyHelper
     return 400, "Network error #{e.class} #{e.message}"
   end
 
+  # Wrap constant in a method so it can be stubbed in a test.
+  def self.dashboard_ip_address
+    DASHBOARD_IP_ADDRESS
+  end
+
   private
 
   # Returns true if the url's hostname ends in one of the allowed suffixes.
@@ -165,11 +170,6 @@ module ProxyHelper
   # sometimes proxy to ourselves, which is an internal IP address on development / continuous integration environments).
   def allowed_ip_address?(hostname)
     host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
-    PRIVATE_IPS.none? {|private_ip| private_ip.include?(host_ip_address)} || host_ip_address == ::ProxyHelper.dashboard_ip_address
-  end
-
-  # Wrap constant in a method so it can be stubbed in a test.
-  def dashboard_ip_address
-    DASHBOARD_IP_ADDRESS
+    PRIVATE_IPS.none? {|private_ip| private_ip.include?(host_ip_address)} || host_ip_address == ProxyHelper.dashboard_ip_address
   end
 end
