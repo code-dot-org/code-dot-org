@@ -128,7 +128,7 @@ function whenTouchEvent(inputEvent) {
     targets.forEach(target => {
       if (sprite.overlap(target)) {
         extraArgs.sprite = sprite.id;
-        extraArgs.target = sprite.id;
+        extraArgs.target = target.id;
         overlap = true;
       }
     });
