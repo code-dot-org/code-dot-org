@@ -3,14 +3,12 @@ require_relative 'hooks_utils.rb'
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 
 # Returns whether a filename should be prohibited from a staging commit. Reasons for this:
-#   * any file not in pegasus. (All files committed by content scoop are somewhere in the pegasus directory tree.)
 #   * any file with an extension in {.mp4, .mov} (e.g., 'dashboard/dir/my_bad_file.mov')
 #   * any file with non-lowercase letters in the extension (e.g., 'dashboard/dir/my_bad_file.PnG')
 #   * any file with spaces in the name
 # @param filename [String] A filename.
 # @return [Boolean] Whether the filename should be prohibited in a commit.
 def prohibited?(filename)
-  return true unless filename.delete_prefix(REPO_DIR).start_with?('/pegasus')
   return true if ['.mp4', '.mov'].include? File.extname(filename)
   return true if File.extname(filename) != File.extname(filename).downcase
   return true if filename.include?(' ')
