@@ -10,7 +10,5 @@
     "https://studio.code.org/s/flappy/stage/1/puzzle/8": "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.",
     "https://studio.code.org/s/flappy/stage/1/puzzle/9": "To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.",
     "https://studio.code.org/s/flappy/stage/1/puzzle/10": "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-  },
-  "authored_hints": null,
-  "long_instructions": null
+  }
 }

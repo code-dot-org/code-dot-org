@@ -12,22 +12,46 @@ describe('showProjectAdmin', () => {
         isPublished: sinon.spy(),
         isProjectLevel: sinon.stub(),
         shouldHideShareAndRemix: sinon.stub(),
-        getAbuseScore: sinon.stub()
+        getAbuseScore: sinon.stub(),
+        exceedsAbuseThreshold: sinon.stub(),
+        getSharingDisabled: sinon.stub(),
+        hasPrivacyProfanityViolation: sinon.stub()
       };
 
       rootElement = document.createElement('div');
       rootElement.innerHTML = `
       <div class="content">
+        <div class="admin-project-sharing">
+          <div class="unblocked" style="display: none">
+            This project is safe to share.
+          </div>
+          <div class="blocked" style="display: none">
+            This project is blocked from sharing.
+          </div>
+        </div>
+        <ul class="blocked-reasons" style= "display: none">
+          <li class="admin-sharing" style="display: none">
+            Sharing is disabled
+          </li>
+          <li class="privacy-profanity" style="display: none">
+            Private or profane text
+          </li>
+          <li class="abusive-image" style="display: none">
+            Inappropriate image
+          </li>
+          <li class="reported-abuse" style="display: none">
+            Manually reported abusive
+          </li>
+        </ul>
         <div class="admin-abuse" style="display: none">
           Abuse score:
           <span class="admin-abuse-score"></span>
           <a class="admin-abuse-reset" href="#">Reset</a>
         </div>
-        <div class="admin-report-abuse" style="display: none">
+        <div class="admin-report-abuse">
           <a href="/report_abuse">Report Abuse</a>
         </div>
-      </div>
-      `;
+      </div>`;
       document.body.appendChild(rootElement);
     });
 
@@ -58,18 +82,41 @@ describe('showProjectAdmin', () => {
           project.shouldHideShareAndRemix.returns(true);
         });
 
-        it('shows no abuse controls', () => {
+        it('does not show sharing and abuse information', () => {
           showProjectAdmin(project);
-          assertHidden('.admin-report-abuse');
-          assertHidden('.admin-abuse');
-          assertHidden('.admin-abuse-score');
-          assertHidden('.admin-abuse-reset');
+          assertHidden('.unblocked');
+          assertHidden('.blocked');
+          assertHidden('.blocked-reasons');
+          assertHidden('.admin-sharing');
+          assertHidden('.privacy-profanity');
+          assertHidden('.abusive-image');
+          assertHidden('.reported-abuse');
         });
       });
 
       function testAbuseControlBehaviors() {
-        describe('with zero abuse score', () => {
-          beforeEach(() => project.getAbuseScore.returns(0));
+        describe('project is safe to share', () => {
+          beforeEach(() => {
+            project.getAbuseScore.returns(0);
+            project.exceedsAbuseThreshold.returns(false);
+            project.hasPrivacyProfanityViolation.returns(false);
+            project.getSharingDisabled.returns(false);
+          });
+
+          it('shows sharing unblocked message', () => {
+            showProjectAdmin(project);
+            assertVisible('.unblocked');
+            assertHidden('.blocked');
+          });
+
+          it('does not show sharing blocked reasons', () => {
+            showProjectAdmin(project);
+            assertHidden('.blocked-reasons');
+            assertHidden('.admin-sharing');
+            assertHidden('.privacy-profanity');
+            assertHidden('.abusive-image');
+            assertHidden('.reported-abuse');
+          });
 
           it('shows report abuse link', () => {
             showProjectAdmin(project);
@@ -84,12 +131,140 @@ describe('showProjectAdmin', () => {
           });
         });
 
-        describe('with a positive abuse score', () => {
-          beforeEach(() => project.getAbuseScore.returns(10));
+        describe('sharing is disabled', () => {
+          beforeEach(() => {
+            project.getAbuseScore.returns(0);
+            project.exceedsAbuseThreshold.returns(false);
+            project.hasPrivacyProfanityViolation.returns(false);
+            project.getSharingDisabled.returns(true);
+          });
 
-          it('does not show report abuse link', () => {
+          it('shows sharing blocked message', () => {
             showProjectAdmin(project);
-            assertHidden('.admin-report-abuse');
+            assertVisible('.blocked');
+            assertHidden('.unblocked');
+          });
+
+          it('shows sharing blocked reasons, sharing disabled', () => {
+            showProjectAdmin(project);
+            assertVisible('.blocked-reasons');
+            assertVisible('.admin-sharing');
+            assertHidden('.privacy-profanity');
+            assertHidden('.abusive-image');
+            assertHidden('.reported-abuse');
+          });
+
+          it('shows report abuse link', () => {
+            showProjectAdmin(project);
+            assertVisible('.admin-report-abuse');
+          });
+
+          it('does not show reset abuse control', () => {
+            showProjectAdmin(project);
+            assertHidden('.admin-abuse');
+            assertHidden('.admin-abuse-score');
+            assertHidden('.admin-abuse-reset');
+          });
+        });
+
+        describe('text moderation flagged project', () => {
+          beforeEach(() => {
+            project.getAbuseScore.returns(0);
+            project.exceedsAbuseThreshold.returns(false);
+            project.hasPrivacyProfanityViolation.returns(true);
+            project.getSharingDisabled.returns(false);
+          });
+
+          it('shows sharing blocked message', () => {
+            showProjectAdmin(project);
+            assertVisible('.blocked');
+            assertHidden('.unblocked');
+          });
+
+          it('shows sharing blocked reasons, privacy or profanity', () => {
+            showProjectAdmin(project);
+            assertVisible('.blocked-reasons');
+            assertHidden('.admin-sharing');
+            assertVisible('.privacy-profanity');
+            assertHidden('.abusive-image');
+            assertHidden('.reported-abuse');
+          });
+
+          it('shows report abuse link', () => {
+            showProjectAdmin(project);
+            assertVisible('.admin-report-abuse');
+          });
+
+          it('does not show reset abuse control', () => {
+            showProjectAdmin(project);
+            assertHidden('.admin-abuse');
+            assertHidden('.admin-abuse-score');
+            assertHidden('.admin-abuse-reset');
+          });
+        });
+
+        describe('image moderation flagged project', () => {
+          beforeEach(() => {
+            project.getAbuseScore.returns(15);
+            project.exceedsAbuseThreshold.returns(true);
+            project.hasPrivacyProfanityViolation.returns(false);
+            project.getSharingDisabled.returns(false);
+          });
+
+          it('shows sharing blocked message', () => {
+            showProjectAdmin(project);
+            assertVisible('.blocked');
+            assertHidden('.unblocked');
+          });
+
+          it('shows sharing blocked reasons, abusive image', () => {
+            showProjectAdmin(project);
+            assertVisible('.blocked-reasons');
+            assertHidden('.admin-sharing');
+            assertHidden('.privacy-profanity');
+            assertVisible('.abusive-image');
+            assertHidden('.reported-abuse');
+          });
+
+          it('shows report abuse link', () => {
+            showProjectAdmin(project);
+            assertVisible('.admin-report-abuse');
+          });
+
+          it('shows reset abuse control', () => {
+            showProjectAdmin(project);
+            assertVisible('.admin-abuse');
+            assertVisible('.admin-abuse-score');
+            assertVisible('.admin-abuse-reset');
+          });
+        });
+
+        describe('with a manually reported positive abuse score above threshold', () => {
+          beforeEach(() => {
+            project.getAbuseScore.returns(20);
+            project.exceedsAbuseThreshold.returns(true);
+            project.hasPrivacyProfanityViolation.returns(false);
+            project.getSharingDisabled.returns(false);
+          });
+
+          it('shows sharing blocked message', () => {
+            showProjectAdmin(project);
+            assertVisible('.blocked');
+            assertHidden('.unblocked');
+          });
+
+          it('shows sharing blocked reasons, reported abuse', () => {
+            showProjectAdmin(project);
+            assertVisible('.blocked-reasons');
+            assertHidden('.admin-sharing');
+            assertHidden('.privacy-profanity');
+            assertHidden('.abusive-image');
+            assertVisible('.reported-abuse');
+          });
+
+          it('shows report abuse link', () => {
+            showProjectAdmin(project);
+            assertVisible('.admin-report-abuse');
           });
 
           it('shows reset abuse control', () => {
