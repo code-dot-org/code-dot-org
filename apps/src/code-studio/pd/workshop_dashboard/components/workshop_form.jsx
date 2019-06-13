@@ -83,7 +83,11 @@ export class WorkshopForm extends React.Component {
       sessions: PropTypes.array.isRequired,
       enrolled_teacher_count: PropTypes.number.isRequired,
       regional_partner_name: PropTypes.string,
-      regional_partner_id: PropTypes.number
+      regional_partner_id: PropTypes.number,
+      organizers: PropTypes.array,
+      organizer: PropTypes.shape({
+        id: PropTypes.number
+      })
     }),
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
@@ -958,7 +962,12 @@ export class WorkshopForm extends React.Component {
               readOnly={this.props.readOnly}
             />
           )}
-          {this.props.permission.has(WorkshopAdmin) && <OrganizerFormPart />}
+          {this.props.permission.has(WorkshopAdmin) && (
+            <OrganizerFormPart
+              organizers={this.props.workshop.organizers}
+              organizer_id={this.props.workshop.organizer.id}
+            />
+          )}
           {this.renderFormButtons()}
           {this.props.children}
         </form>
