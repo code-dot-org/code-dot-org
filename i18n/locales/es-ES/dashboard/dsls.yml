@@ -6,9 +6,154 @@ es:
         title: Título
       Begin planning your project_2018:
         description here: descripción aquí
+      Begin planning your project_2018_2019:
+        description here: descripción aquí
+      CSD U2 Design Project:
+        description here: descripción aquí
+        title: Título
+      CSD U2 Design Project_2018:
+        description here: descripción aquí
+        title: Título
+      CSD U2 Design Project_2018_2019:
+        description here: descripción aquí
+        title: Título
+      CSD U2 L1 Overview:
+        description here: descripción aquí
+        title: Título
+      CSD U2 L2 Overview:
+        description here: descripción aquí
+        title: Título
+      CSD U2 L3 Overview:
+        description here: descripción aquí
+        title: Título
+      CSD U2 L4 Overview:
+        description here: descripción aquí
+        title: Título
+      CSD U2 L5 Overview:
+        description here: descripción aquí
+        title: Título
+      CSD U2 L6 Overview:
+        description here: descripción aquí
+        title: Título
+      CSD U2 Lesson 6 Overview:
+        description here: descripción aquí
+      CSD U2 expand project:
+        description here: descripción aquí
+        title: Título
+      CSD U2 expand project_2018:
+        description here: descripción aquí
+        title: Título
+      CSD U2 expand project_2018_2019:
+        description here: descripción aquí
+        title: Título
+      CSD U2 project guide:
+        description here: descripción aquí
+      CSD U2 project guide_2018:
+        description here: descripción aquí
+      CSD U2 project guide_2018_2019:
+        description here: descripción aquí
+      CSD U3 Card Examples_2018:
+        description here: descripción aquí
+      CSD U3 Card Examples_2018_2019:
+        description here: descripción aquí
+      CSD U3 combining rep:
+        description here: descripción aquí
+        title: Título
+      CSD U3 combining rep_2018:
+        description here: descripción aquí
+        title: Título
+      CSD U3 combining rep_2018_2019:
+        description here: descripción aquí
+        title: Título
+      CSD U3 game intro:
+        description here: descripción aquí
+      CSD U3 game intro_2018:
+        description here: descripción aquí
+      CSD U3 game intro_2018_2019:
+        description here: descripción aquí
+      CSD U3 platform intro:
+        description here: descripción aquí
+      CSD U3 platform intro_2018:
+        description here: descripción aquí
+      CSD U3 platform intro_2018_2019:
+        description here: descripción aquí
+      CSD U5 Encryption 1:
+        description here: descripción aquí
+        title: Título
+      CSD U5 Encryption 1_2018:
+        description here: descripción aquí
+        title: Título
+      CSD U5 Encryption 1_2018_2019:
+        description here: descripción aquí
+        title: Título
+      CSD U5 Encryption 2:
+        description here: descripción aquí
+      CSD U5 Encryption 2_2018:
+        description here: descripción aquí
+      CSD U5 Encryption 2_2018_2019:
+        description here: descripción aquí
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: descripción aquí
+        title: Título
+      CSD U5 crosstab warmup:
+        description here: descripción aquí
+      CSD U5 crosstab warmup_2018:
+        description here: descripción aquí
+      CSD U5 crosstab warmup_2018_2019:
+        description here: descripción aquí
+      CSD U5 data visualization:
+        description here: descripción aquí
+        title: Título
+      CSD U5 data visualization_2018:
+        description here: descripción aquí
+        title: Título
+      CSD U5 data visualization_2018_2019:
+        description here: descripción aquí
+        title: Título
+      CSD U5 student record:
+        description here: descripción aquí
+        title: Título
+      CSD U5 student record_2018:
+        description here: descripción aquí
+        title: Título
+      CSD U5 student record_2018_2019:
+        description here: descripción aquí
+        title: Título
+      CSD U6 LED create intro:
+        description here: descripción aquí
+      CSD U6 LED create intro_2018:
+        description here: descripción aquí
+      CSD U6 LED create intro_2018_2019:
+        description here: descripción aquí
+      CSD U6 final intro:
+        description here: descripción aquí
+      CSD U6 final intro_2018:
+        description here: descripción aquí
+      CSD U6 final intro_2018_2019:
+        description here: descripción aquí
+      Internet Simulator Setup:
+        description here: descripción aquí
+      Internet Simulator Setup 2:
+        description here: descripción aquí
+        title: Título
+      Internet Simulator Setup 3:
+        description here: descripción aquí
+      Multi-Screen Apps:
+        description here: descripción aquí
+        title: Título
+      New Challenge Introduction:
+        description here: descripción aquí
+        title: Título
+      OPD-K5 Stage3aGo:
+        description here: descripción aquí
+        title: Título
       Prepare for your presentation:
         description here: descripción aquí
         title: Título
+      'Technique: Frequency Analysis':
+        description here: descripción aquí
+      Terminology Recap:
+        description here: descripción aquí
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Haz que coincidan las combinaciones de botones con los movimientos.
@@ -203,6 +348,12 @@ es:
       4-5 maze multi 1:
         Maze Multiple Choice: Laberinto - Opción Múltiple
         Which blocks solve the puzzle?: '¿Qué bloque resuelve el rompecabezas?'
+      CSD U3 Boolean MC:
+        title: Título
+      CSD U3 Boolean MC_2018:
+        title: Título
+      CSD U3 Boolean MC_2018_2019:
+        title: Título
       K-1 Artist 1 Multi 1:
         Multiple Choice: '- Respuesta múltiple'
         Which blocks solve this puzzle?: '¿Qué bloques resuelven este puzzle?'
@@ -257,9 +408,15 @@ es:
         SOUTH: SUR
         SQUARE: CUADRADO
         Which word is spelled?: '¿Qué palabra se forma?'
+      behaviors 1 predict:
+        Incorrect: Incorrecto
+      behaviors 4 predict:
+        Incorrect: Incorrecto
       courseC_multi_artist_prog6_predict1:
         I don't know.: No lo se.
       courseC_multi_artist_prog6_predict1_2018:
+        I don't know.: No lo se.
+      courseC_multi_artist_prog6_predict1_2018_2019:
         I don't know.: No lo se.
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
@@ -271,29 +428,55 @@ es:
         '15': '15'
         '4': '4'
         I don't know.: No lo se.
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        I don't know.: No lo se.
       courseC_multi_maze_debugging8_predict1:
         I don't know.: No lo se.
-        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Fíjate en el código siguiente.  ¿Cuál es el primer error que hará este programa falle? '
-        Scrat takes one too few steps and ends up short of the acorn.: Scrat hace demasiados pocos pasos y termina a punto de coger la bellota.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Fíjate en el código siguiente.  ¿Cuál es el primer error que hará que este programa falle? '
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat hace muy pocos pasos y termina antes de coger la bellota.
         Scrat will go the wrong way after his final turn.: Scrat se equivocará después de su último giro.
         The program won't fail. Scrat will get to the acorn.: El programa no fallará. Scrat conseguirá la bellota.
       courseC_multi_maze_debugging8_predict1_2018:
         I don't know.: No lo se.
-        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Fíjate en el código siguiente.  ¿Cuál es el primer error que hará este programa falle? '
-        Scrat takes one too few steps and ends up short of the acorn.: Scrat hace demasiados pocos pasos y termina a punto de coger la bellota.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Fíjate en el código siguiente.  ¿Cuál es el primer error que hará que este programa falle? '
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat hace muy pocos pasos y termina antes de coger la bellota.
+        Scrat will go the wrong way after his final turn.: Scrat se equivocará después de su último giro.
+        The program won't fail. Scrat will get to the acorn.: El programa no fallará. Scrat conseguirá la bellota.
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        I don't know.: No lo se.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Fíjate en el código siguiente.  ¿Cuál es el primer error que hará que este programa falle? '
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat hace muy pocos pasos y termina antes de coger la bellota.
         Scrat will go the wrong way after his final turn.: Scrat se equivocará después de su último giro.
         The program won't fail. Scrat will get to the acorn.: El programa no fallará. Scrat conseguirá la bellota.
       courseC_multi_maze_programming8_predict1:
         I don't know.: No lo se.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Lee el código que hay debajo con atención. ¿Qué pasará cuando pulses "Ejecutar"?
+        The bird will end up one step short of the pig.: El pájaro se quedará a un paso del cerdo.
+        The bird will run into the TNT.: El pájaro caerá en el TNT.
       courseC_multi_maze_programming8_predict1_2018:
         I don't know.: No lo se.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Lee el código que hay debajo con atención. ¿Qué pasará cuando pulses "Ejecutar"?
+        The bird will end up one step short of the pig.: El pájaro se quedará a un paso del cerdo.
+        The bird will run into the TNT.: El pájaro caerá en el TNT.
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        I don't know.: No lo se.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Lee el código que hay debajo con atención. ¿Qué pasará cuando pulses "Ejecutar"?
+        The bird will end up one step short of the pig.: El pájaro se quedará a un paso del cerdo.
+        The bird will run into the TNT.: El pájaro caerá en el TNT.
       courseC_multi_starWars_predict1:
         I don't know: No lo sé
       courseC_multi_starWars_predict1_2018:
         I don't know: No lo sé
+      courseC_multi_starWars_predict1_2018_2019:
+        I don't know: No lo sé
       courseC_multi_starWars_predict2:
         I don't know.: No lo se.
       courseC_multi_starWars_predict2_2018:
+        I don't know.: No lo se.
+      courseC_multi_starWars_predict2_2018_2019:
         I don't know.: No lo se.
       courseD_multi_artist_binary8_predict1:
         A: A
@@ -301,6 +484,11 @@ es:
         C: C
         D: D
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -315,11 +503,20 @@ es:
         B: B
         C: C
         I don't know.: No lo se.
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
+        I don't know.: No lo se.
       courseD_multi_bee_conditionals1_predict1:
         I don't know.: No lo se.
         0: '? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
         1: ': The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
       courseD_multi_bee_conditionals1_predict1_2018:
+        I don't know.: No lo se.
+        0: '? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+        1: ': The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
         I don't know.: No lo se.
         0: '? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
         1: ': The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
@@ -329,6 +526,9 @@ es:
       courseD_multi_bee_conditionals7_predict2_2018:
         I don't know.: No lo se.
         0: ': ''Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'''
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        I don't know.: No lo se.
+        0: ': ''Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'''
       courseD_multi_bee_nestedLoops2_predict1:
         I don't know.: No lo se.
         Look closely at the nested loops below.  What will happen when you click "Run"?: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué ocurrirá si haces clic en "Ejecutar"?
@@ -336,6 +536,12 @@ es:
         The bee will get only 2 units of nectar.: La abeja recogerá sólo dos unidades de néctar.
         The bee will move forward and get nectar only one time.: La abeja se moverá y obtendrá el néctar sólo una vez.
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        I don't know.: No lo se.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué ocurrirá si haces clic en "Ejecutar"?
+        The bee will get all of the nectar.: La abeja recogerá todo el néctar.
+        The bee will get only 2 units of nectar.: La abeja recogerá sólo dos unidades de néctar.
+        The bee will move forward and get nectar only one time.: La abeja se moverá y obtendrá el néctar sólo una vez.
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         I don't know.: No lo se.
         Look closely at the nested loops below.  What will happen when you click "Run"?: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué ocurrirá si haces clic en "Ejecutar"?
         The bee will get all of the nectar.: La abeja recogerá todo el néctar.
@@ -361,6 +567,16 @@ es:
         Look closely at the code below. How much honey will the bee make when you click "Run"?: Mira detenidamente el código que hay debajo. ¿Cuánta miel hará la abeja cuando hagas clic en "Ejecutar"?
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        I don't know.: No lo se.
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Mira detenidamente el código que hay debajo. ¿Cuánta miel hará la abeja cuando hagas clic en "Ejecutar"?
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_collector_debugging10_predict1:
         I don't know.: No lo se.
         0: ': ''Look closely at the code below.  Why won''''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'''
@@ -376,6 +592,12 @@ es:
         1: ': Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
         2: '? The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
         3: ': The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        I don't know.: No lo se.
+        0: '? Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+        1: ': Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+        2: '? The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+        3: ': The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
       courseD_multi_farmer_ramp13:
         I don't know.: No lo se.
         0: '? Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.'
@@ -384,9 +606,13 @@ es:
         I don't know.: No lo se.
       courseD_multi_farmer_while10_predict2_2018:
         I don't know.: No lo se.
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        I don't know.: No lo se.
       courseD_multi_farmer_while4_predict1:
         I don't know.: No lo se.
       courseD_multi_farmer_while4_predict1_2018:
+        I don't know.: No lo se.
+      courseD_multi_farmer_while4_predict1_2018_2019:
         I don't know.: No lo se.
       courseD_multi_maze_until10_predict2:
         I don't know.: No lo se.
@@ -396,18 +622,29 @@ es:
         3: ': Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.'
       courseD_multi_maze_until10_predict2_2018:
         I don't know.: No lo se.
+      courseD_multi_maze_until10_predict2_2018_2019:
+        I don't know.: No lo se.
       courseD_multi_maze_until2_predict1:
         I don't know.: No lo se.
         0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
         1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
         2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
         3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+        The bird will not move at all.: El pájaro no se moverá.
       courseD_multi_maze_until2_predict1_2018:
         I don't know.: No lo se.
         0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
         1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
         2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
         3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+        The bird will not move at all.: El pájaro no se moverá.
+      courseD_multi_maze_until2_predict1_2018_2019:
+        I don't know.: No lo se.
+        0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+        1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+        2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+        3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+        The bird will not move at all.: El pájaro no se moverá.
       courseD_multi_scrat_predict1:
         I don't know.: No lo se.
         Nothing. Scrat will not move at all.: Nada. Scrat no se moverá.
@@ -442,15 +679,22 @@ es:
         3: ': The ''repeat until at pumpkin'' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.'
       courseE_multi_maze_predict1:
         I don't know.: No lo se.
+        Nothing. The bird will not move at all.: Nada. El pájaro no se moverá.
         0: '? Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
         1: ': Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
       courseF_bee_variables_8a_2018:
         I don't know.: No lo se.
         0: '? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
         1: ': The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
+      courseF_bee_variables_8a_2018_2019:
+        I don't know.: No lo se.
+        0: '? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
+        1: ': The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
       courseF_multi_artist_for10_predict1:
         I don't know.: No lo se.
       courseF_multi_artist_for10_predict1_2018:
+        I don't know.: No lo se.
+      courseF_multi_artist_for10_predict1_2018_2019:
         I don't know.: No lo se.
       courseF_multi_artist_fwp2_predict1:
         I don't know.: No lo se.
@@ -470,6 +714,10 @@ es:
         I don't know.: No lo se.
         0: '? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
         1: ': The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        I don't know.: No lo se.
+        0: '? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
+        1: ': The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
       courseF_multi_bee_conditionals1_predict1:
         I don't know.: No lo se.
         0: '? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
@@ -478,6 +726,10 @@ es:
         I don't know.: No lo se.
         0: '? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
         1: ': Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+      courseF_multi_bee_for3_predict1_2018:
+        'I don''t know. ': 'No lo se. '
+      courseF_multi_bee_for3_predict1_2018_2019:
+        'I don''t know. ': 'No lo se. '
       courseF_multi_bee_fwp9_predict1:
         0: '? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
         1: ': Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
@@ -489,4 +741,6 @@ es:
         0: '? Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?'
         1: ': Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?'
       grade2_multi_collector_A_predict1_2018:
+        I don't know.: No lo se.
+      grade2_multi_collector_A_predict1_2018_2019:
         I don't know.: No lo se.

@@ -821,6 +821,8 @@ pt-BR:
         csd_gamelab_functions: Chamando e Definindo Funções
         csd_applab_parameters: Funções com Parâmetros
         CSF_Going_Places_Safely: Minha Vizinhança Online
+        CSF_Spritelab_MakeSprite_v2: Como fazer um Sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites em Ação
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

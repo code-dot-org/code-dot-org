@@ -97,10 +97,6 @@ html[dir='rtl'] #visualizationColumn {
   overflow: visible;
 }
 
-#visualizationColumn.centered_embed {
-  margin: 0 auto;
-}
-
 #visualizationColumn.pin_bottom {
   position: absolute;
   bottom: 0px;
@@ -108,10 +104,6 @@ html[dir='rtl'] #visualizationColumn {
   #belowVisualization {
     position: absolute;
     overflow: auto;
-  }
-
-  &.centered_embed {
-    position: relative;
   }
 }
 

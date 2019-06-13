@@ -6,9 +6,154 @@ bg:
         title: Заглавие
       Begin planning your project_2018:
         description here: опишете тук
+      Begin planning your project_2018_2019:
+        description here: опишете тук
+      CSD U2 Design Project:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 Design Project_2018:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 Design Project_2018_2019:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 L1 Overview:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 L2 Overview:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 L3 Overview:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 L4 Overview:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 L5 Overview:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 L6 Overview:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 Lesson 6 Overview:
+        description here: опишете тук
+      CSD U2 expand project:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 expand project_2018:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 expand project_2018_2019:
+        description here: опишете тук
+        title: Заглавие
+      CSD U2 project guide:
+        description here: опишете тук
+      CSD U2 project guide_2018:
+        description here: опишете тук
+      CSD U2 project guide_2018_2019:
+        description here: опишете тук
+      CSD U3 Card Examples_2018:
+        description here: опишете тук
+      CSD U3 Card Examples_2018_2019:
+        description here: опишете тук
+      CSD U3 combining rep:
+        description here: опишете тук
+        title: Заглавие
+      CSD U3 combining rep_2018:
+        description here: опишете тук
+        title: Заглавие
+      CSD U3 combining rep_2018_2019:
+        description here: опишете тук
+        title: Заглавие
+      CSD U3 game intro:
+        description here: опишете тук
+      CSD U3 game intro_2018:
+        description here: опишете тук
+      CSD U3 game intro_2018_2019:
+        description here: опишете тук
+      CSD U3 platform intro:
+        description here: опишете тук
+      CSD U3 platform intro_2018:
+        description here: опишете тук
+      CSD U3 platform intro_2018_2019:
+        description here: опишете тук
+      CSD U5 Encryption 1:
+        description here: опишете тук
+        title: Заглавие
+      CSD U5 Encryption 1_2018:
+        description here: опишете тук
+        title: Заглавие
+      CSD U5 Encryption 1_2018_2019:
+        description here: опишете тук
+        title: Заглавие
+      CSD U5 Encryption 2:
+        description here: опишете тук
+      CSD U5 Encryption 2_2018:
+        description here: опишете тук
+      CSD U5 Encryption 2_2018_2019:
+        description here: опишете тук
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: опишете тук
+        title: Заглавие
+      CSD U5 crosstab warmup:
+        description here: опишете тук
+      CSD U5 crosstab warmup_2018:
+        description here: опишете тук
+      CSD U5 crosstab warmup_2018_2019:
+        description here: опишете тук
+      CSD U5 data visualization:
+        description here: опишете тук
+        title: Заглавие
+      CSD U5 data visualization_2018:
+        description here: опишете тук
+        title: Заглавие
+      CSD U5 data visualization_2018_2019:
+        description here: опишете тук
+        title: Заглавие
+      CSD U5 student record:
+        description here: опишете тук
+        title: Заглавие
+      CSD U5 student record_2018:
+        description here: опишете тук
+        title: Заглавие
+      CSD U5 student record_2018_2019:
+        description here: опишете тук
+        title: Заглавие
+      CSD U6 LED create intro:
+        description here: опишете тук
+      CSD U6 LED create intro_2018:
+        description here: опишете тук
+      CSD U6 LED create intro_2018_2019:
+        description here: опишете тук
+      CSD U6 final intro:
+        description here: опишете тук
+      CSD U6 final intro_2018:
+        description here: опишете тук
+      CSD U6 final intro_2018_2019:
+        description here: опишете тук
+      Internet Simulator Setup:
+        description here: опишете тук
+      Internet Simulator Setup 2:
+        description here: опишете тук
+        title: Заглавие
+      Internet Simulator Setup 3:
+        description here: опишете тук
+      Multi-Screen Apps:
+        description here: опишете тук
+        title: Заглавие
+      New Challenge Introduction:
+        description here: опишете тук
+        title: Заглавие
+      OPD-K5 Stage3aGo:
+        description here: опишете тук
+        title: Заглавие
       Prepare for your presentation:
         description here: опишете тук
         title: Заглавие
+      'Technique: Frequency Analysis':
+        description here: опишете тук
+      Terminology Recap:
+        description here: опишете тук
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Открийте комбинацията от бутони за танцовите движения.
@@ -203,6 +348,12 @@ bg:
       4-5 maze multi 1:
         Maze Multiple Choice: 'Лабиринт: тест с избор от множество отговори'
         Which blocks solve the puzzle?: Кои блокове решават пъзела?
+      CSD U3 Boolean MC:
+        title: Заглавие
+      CSD U3 Boolean MC_2018:
+        title: Заглавие
+      CSD U3 Boolean MC_2018_2019:
+        title: Заглавие
       K-1 Artist 1 Multi 1:
         Multiple Choice: избор от множество отговори
         Which blocks solve this puzzle?: Кои блокове решават пъзела?
@@ -257,6 +408,10 @@ bg:
         SOUTH: SOUTH
         SQUARE: SQUARE
         Which word is spelled?: Коя дума е написана?
+      behaviors 1 predict:
+        Incorrect: Неправилен
+      behaviors 4 predict:
+        Incorrect: Неправилен
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -265,9 +420,15 @@ bg:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: Не знам
       courseC_multi_starWars_predict1_2018:
+        I don't know: Не знам
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: Не знам
       courseD_multi_artist_binary8_predict1:
         A: А
@@ -275,6 +436,11 @@ bg:
         C: В
         D: Г
       courseD_multi_artist_binary8_predict1_2018:
+        A: А
+        B: Б
+        C: В
+        D: Г
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: А
         B: Б
         C: В
@@ -287,6 +453,10 @@ bg:
         A: А
         B: Б
         C: В
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: А
+        B: Б
+        C: В
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -296,6 +466,14 @@ bg:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

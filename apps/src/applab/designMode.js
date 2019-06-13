@@ -228,7 +228,6 @@ designMode.updateProperty = function(
   }
   switch (name) {
     case 'id':
-      value = value.trim();
       elementUtils.setId(element, value);
       if (
         elementLibrary.getElementType(element) ===

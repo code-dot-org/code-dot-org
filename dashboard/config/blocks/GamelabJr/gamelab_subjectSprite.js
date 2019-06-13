@@ -1,3 +1,0 @@
-function subjectSprite() {
-  return thisSprite;
-}
