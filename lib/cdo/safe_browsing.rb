@@ -36,7 +36,21 @@ module SafeBrowsing
       response = http.start {http.request(req)}
     end
 
+    threat_type = "Determined safe"
+
     response_value = response.nil? ? nil : JSON.parse(response.body).empty?
+
+    # Determine safe if bad request (response code is 400) or if rate-limited (429)
+    error_response = response.nil? ? false : (response.code == '400' || response.code == '429')
+
+    # Create human readable text to log the type of response
+    if response_value.nil?
+      threat_type = 'No response from API'
+    elsif !response_value
+      threat_type = JSON.parse(response.body)['matches'][0]['threatType']
+    elsif error_response
+      threat_type = "Error code: #{response.code}"
+    end
 
     # Record to Firehose the response time of request rounded to thousandths of a second
     FirehoseClient.instance.put_record(
@@ -46,14 +60,12 @@ module SafeBrowsing
       data_json: {
         response_time: response_time.round(3),
         request_url: url_to_check,
-        response_value: response_value
+        response_value: threat_type
       }.to_json
     )
 
-    # Safe Browsing API returns empty JSON object is no threat matches found
-    # Do not determine safe if response is nil
-    # Determine safe if bad request (response code is 400) or if rate-limited (429)
-    error_response = response.nil? ? false : (response.code == '400' || response.code == '429')
-    response.nil? ? false : (error_response || response_value)
+    # Safe Browsing API returns empty JSON object if no threat matches found
+    # Do determine safe if response is nil
+    response_value.nil? ? true : (error_response || response_value)
   end
 end
