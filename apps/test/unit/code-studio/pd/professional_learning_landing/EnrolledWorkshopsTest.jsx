@@ -1,9 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
-import {expect} from 'chai';
+import sinon from 'sinon';
+import {assert, expect} from 'chai';
+import * as utils from '@cdo/apps/utils';
 
-describe('Tests for the upcoming workshops page', () => {
+describe('EnrolledWorkshops', () => {
   const workshops = [
     {
       id: 1,
@@ -58,6 +60,14 @@ describe('Tests for the upcoming workshops page', () => {
     }
   ];
 
+  beforeEach(() => {
+    sinon.stub(utils, 'windowOpen');
+  });
+
+  afterEach(() => {
+    utils.windowOpen.restore();
+  });
+
   it('Clicking cancel enrollment cancels the enrollment', () => {
     const enrolledWorkshopsTable = shallow(
       <EnrolledWorkshopsTable workshops={workshops} />
@@ -79,6 +89,27 @@ describe('Tests for the upcoming workshops page', () => {
     expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.true;
     expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
       'code1'
+    );
+  });
+
+  it('Clicking "Print Certificate" opens the certificate in a new tab', function() {
+    const enrolledWorkshopsTable = shallow(
+      <EnrolledWorkshopsTable workshops={workshops} />
+    );
+
+    // Click the "Print Certificate" button
+    enrolledWorkshopsTable
+      .find('tr')
+      .last()
+      .find('Button')
+      .first()
+      .simulate('click');
+
+    assert(utils.windowOpen.calledOnce);
+    assert(
+      utils.windowOpen.calledWith(
+        `/pd/generate_workshop_certificate/${workshops[2].enrollment_code}`
+      )
     );
   });
 });
