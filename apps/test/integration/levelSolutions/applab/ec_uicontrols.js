@@ -241,7 +241,7 @@ module.exports = {
           var debugOutput = document.getElementById('debug-output');
           assert.equal(
             debugOutput.textContent,
-            'WARNING: Line: 1: button() id parameter refers to an id ("button1") which already exists.'
+            'WARNING: Line: 1: The button() id parameter refers to an id ("button1") which already exists.'
           );
           Applab.onPuzzleComplete();
         });
@@ -263,7 +263,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'ERROR: Line: 1: Error: button() id parameter refers to an id ' +
+          'ERROR: Line: 1: Error: The button() id parameter refers to an id ' +
             '("runButton") which is already being used outside of App Lab. Please use a different id.'
         );
         assert(
@@ -289,7 +289,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'ERROR: Line: 1: Error: button() id parameter refers to an id ' +
+          'ERROR: Line: 1: Error: The button() id parameter refers to an id ' +
             '("submitButton") which is already being used outside of App Lab. Please use a different id.'
         );
         assert(

@@ -264,7 +264,8 @@ GameLab.prototype.init = function(config) {
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
-    onDraw: this.onP5Draw.bind(this)
+    onDraw: this.onP5Draw.bind(this),
+    spritelab: this.studioApp_.isUsingBlockly()
   });
 
   config.afterClearPuzzle = function() {
@@ -278,9 +279,7 @@ GameLab.prototype.init = function(config) {
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
 
-  config.centerEmbedded = false;
   config.wireframeShare = true;
-  config.responsiveEmbedded = true;
   config.noHowItWorks = config.droplet;
 
   config.shareWarningInfo = {
@@ -757,7 +756,9 @@ GameLab.prototype.rerunSetupCode = function() {
   }
   Sounds.getSingleton().muteURLs();
   this.gameLabP5.p5.allSprites.removeSprites();
-  delete this.gameLabP5.p5.World.background_color;
+  if (this.gameLabP5.spritelab) {
+    this.gameLabP5.spritelab.reset();
+  }
   this.JSInterpreter.deinitialize();
   this.initInterpreter(false /* attachDebugger */);
   this.onP5Setup();
@@ -951,6 +952,17 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
         propList[prop][0],
         propList[prop][1]
       );
+    }
+
+    if (this.gameLabP5.spritelab) {
+      const spritelabCommands = this.gameLabP5.spritelab.commands;
+      for (const command in spritelabCommands) {
+        this.JSInterpreter.createGlobalProperty(
+          command,
+          spritelabCommands[command].bind(this.gameLabP5.p5),
+          null
+        );
+      }
     }
 
     this.JSInterpreter.createGlobalProperty(
