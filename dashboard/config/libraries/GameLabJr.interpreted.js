@@ -146,14 +146,14 @@ function setupSim(
   }
   addBehaviorSimple(s1costume, new Behavior(movementBehavior(s1speed)));
 
-  checkTouching('when', s1costume, s3costume, function(extraArgs) {
+  checkTouching('while', s1costume, s3costume, function(extraArgs) {
     destroy(extraArgs.target);
     World.sprite1score++;
     printText(s1costume + ' has collected ' + World.sprite1score);
     checkSimulationEnd();
   });
 
-  checkTouching('when', s2costume, s3costume, function(extraArgs) {
+  checkTouching('while', s2costume, s3costume, function(extraArgs) {
     destroy(extraArgs.target);
     World.sprite2score++;
     printText(s2costume + ' has collected ' + World.sprite2score);
