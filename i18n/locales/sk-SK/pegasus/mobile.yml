@@ -930,14 +930,15 @@
   coursed-2018_name: Kurz D (2018)
   coursee-2018_name: Kurz E (2018)
   coursef-2018_name: Kurz F (2018)
-  accelerated_name: "Zrýchlený kurz"
-  express_name: "Zrýchlený kurz"
-  pre-express_name: Zrýchlený kurz pre predškolákov
-  express-2017_name: Zrýchlený kurz (2017)
-  pre-express-2017_name: Zrýchlený kurz pre predškolákov (2017)
+  coursea-2019_name: Kurz A (2019)
+  courseb-2019_name: Kurz B (2019)
+  coursec-2019_name: Kurz C (2019)
+  coursed-2019_name: Kurz D (2019)
+  coursee-2019_name: Kurz E (2019)
+  coursef-2019_name: Kurz F (2019)
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
-  cspunit1_name: "(staré) Lekcia 2: Digitálne informácie"
+  express-2019_name: Zrýchlený kurz (2019)
   cspunit2_name: "(staré) Lekcia 2: Internet"
   cspunit3_name: "(staré) Lekcia 3: Programovanie"
   cspunit4_name: "(staré) Lekcia 4: Údaje"

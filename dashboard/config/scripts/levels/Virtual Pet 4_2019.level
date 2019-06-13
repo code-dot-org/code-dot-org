@@ -64,7 +64,7 @@
       "downButton",
       "upButton"
     ],
-    "validation_code": "// TODO: Add behavior checks. Want to see if two specific sprites share the \"wandering\" behavior.\r\n// However, this is complicated to validate, since one of the two sprites could be the virtual pet! \r\n// Would need a way to single out the virtual pet. As is, there is no programmable way to distinguish it from the other // two sprites, except its index in the animationGroups keys array, which is arbitrary (based on block sequence). \r\nif(World.frameCount > 100) {\r\n  if(Object.keys(animationGroups).length < 3) {\r\n    levelSuccess(3);\r\n  } else {\r\n    levelSuccess(0);\r\n  }\r\n}",
+    "validation_code": "// TODO: Add behavior checks. Want to see if two specific sprites share the \"wandering\" behavior.\r\n// However, this is complicated to validate, since one of the two sprites could be the virtual pet! \r\n// Would need a way to single out the virtual pet. As is, there is no programmable way to distinguish it from the other // two sprites, except its index in the animationGroups keys array, which is arbitrary (based on block sequence). \r\nif(World.frameCount > 100) {\r\n  if(getAnimationsInUse().length < 3) {\r\n    levelSuccess(3);\r\n  } else {\r\n    levelSuccess(0);\r\n  }\r\n}",
     "preload_asset_list": null
   },
   "published": true,

@@ -147,7 +147,7 @@ class GameLabVisualizationColumn extends React.Component {
     const spriteLab = this.props.spriteLab;
 
     return (
-      <span>
+      <div style={{position: 'relative'}}>
         <ProtectedVisualizationDiv>
           <Pointable
             id="divGameLab"
@@ -192,7 +192,7 @@ class GameLabVisualizationColumn extends React.Component {
             onClick={() => this.props.cancelPicker()}
           />
         )}
-      </span>
+      </div>
     );
   }
 }

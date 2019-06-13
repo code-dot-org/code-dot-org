@@ -6,9 +6,154 @@ lv:
         title: nosaukums
       Begin planning your project_2018:
         description here: apraksts šeit
+      Begin planning your project_2018_2019:
+        description here: apraksts šeit
+      CSD U2 Design Project:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 Design Project_2018:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 Design Project_2018_2019:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 L1 Overview:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 L2 Overview:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 L3 Overview:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 L4 Overview:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 L5 Overview:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 L6 Overview:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 Lesson 6 Overview:
+        description here: apraksts šeit
+      CSD U2 expand project:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 expand project_2018:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 expand project_2018_2019:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U2 project guide:
+        description here: apraksts šeit
+      CSD U2 project guide_2018:
+        description here: apraksts šeit
+      CSD U2 project guide_2018_2019:
+        description here: apraksts šeit
+      CSD U3 Card Examples_2018:
+        description here: apraksts šeit
+      CSD U3 Card Examples_2018_2019:
+        description here: apraksts šeit
+      CSD U3 combining rep:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U3 combining rep_2018:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U3 combining rep_2018_2019:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U3 game intro:
+        description here: apraksts šeit
+      CSD U3 game intro_2018:
+        description here: apraksts šeit
+      CSD U3 game intro_2018_2019:
+        description here: apraksts šeit
+      CSD U3 platform intro:
+        description here: apraksts šeit
+      CSD U3 platform intro_2018:
+        description here: apraksts šeit
+      CSD U3 platform intro_2018_2019:
+        description here: apraksts šeit
+      CSD U5 Encryption 1:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U5 Encryption 1_2018:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U5 Encryption 1_2018_2019:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U5 Encryption 2:
+        description here: apraksts šeit
+      CSD U5 Encryption 2_2018:
+        description here: apraksts šeit
+      CSD U5 Encryption 2_2018_2019:
+        description here: apraksts šeit
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U5 crosstab warmup:
+        description here: apraksts šeit
+      CSD U5 crosstab warmup_2018:
+        description here: apraksts šeit
+      CSD U5 crosstab warmup_2018_2019:
+        description here: apraksts šeit
+      CSD U5 data visualization:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U5 data visualization_2018:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U5 data visualization_2018_2019:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U5 student record:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U5 student record_2018:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U5 student record_2018_2019:
+        description here: apraksts šeit
+        title: nosaukums
+      CSD U6 LED create intro:
+        description here: apraksts šeit
+      CSD U6 LED create intro_2018:
+        description here: apraksts šeit
+      CSD U6 LED create intro_2018_2019:
+        description here: apraksts šeit
+      CSD U6 final intro:
+        description here: apraksts šeit
+      CSD U6 final intro_2018:
+        description here: apraksts šeit
+      CSD U6 final intro_2018_2019:
+        description here: apraksts šeit
+      Internet Simulator Setup:
+        description here: apraksts šeit
+      Internet Simulator Setup 2:
+        description here: apraksts šeit
+        title: nosaukums
+      Internet Simulator Setup 3:
+        description here: apraksts šeit
+      Multi-Screen Apps:
+        description here: apraksts šeit
+        title: nosaukums
+      New Challenge Introduction:
+        description here: apraksts šeit
+        title: nosaukums
+      OPD-K5 Stage3aGo:
+        description here: apraksts šeit
+        title: nosaukums
       Prepare for your presentation:
         description here: apraksts šeit
         title: nosaukums
+      'Technique: Frequency Analysis':
+        description here: apraksts šeit
+      Terminology Recap:
+        description here: apraksts šeit
     match:
       2-3 Big Event Match 1:
         Matching: Saskaņots
@@ -181,6 +326,12 @@ lv:
       4-5 maze multi 1:
         Maze Multiple Choice: Labirints Vairākas izvēles
         Which blocks solve the puzzle?: Kuri programmas bloki atrisina šo mīklu?
+      CSD U3 Boolean MC:
+        title: nosaukums
+      CSD U3 Boolean MC_2018:
+        title: nosaukums
+      CSD U3 Boolean MC_2018_2019:
+        title: nosaukums
       K-1 Artist 1 Multi 1:
         Multiple Choice: Atbilžu varianti
         Which blocks solve this puzzle?: Kuri programmas bloki atrisina šo mīklu?
@@ -241,9 +392,15 @@ lv:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: Es nezinu
       courseC_multi_starWars_predict1_2018:
+        I don't know: Es nezinu
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: Es nezinu
       courseD_multi_artist_binary8_predict1:
         A: A
@@ -251,6 +408,11 @@ lv:
         C: C
         D: D
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -263,6 +425,10 @@ lv:
         A: A
         B: B
         C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -272,6 +438,14 @@ lv:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

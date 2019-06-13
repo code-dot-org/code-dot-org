@@ -157,4 +157,37 @@ class TextToSpeechTest < ActiveSupport::TestCase
     I18n.backend.store_translations test_locale, custom_i18n
     assert_equal "regular instructions in another language\n", translatable_level.tts_short_instructions_text
   end
+
+  test 'updating the long instructions for a level should cause it to create new long instructions audio' do
+    level = create :level,
+      name: 'level 1',
+      type: 'Blockly',
+      long_instructions: "test long instructions",
+      published: true
+    level.save
+
+    level.stubs(:write_to_file?).returns(true)
+
+    refute level.tts_should_update_long_instructions?
+    level.long_instructions = "test long instructions updated"
+    assert level.tts_should_update_long_instructions?
+  end
+
+  test 'updating the contained level for a level should cause it to create new long instructions audio' do
+    contained_level_one = create :level, name: 'contained level 1', type: 'FreeResponse', properties: {
+      long_instructions: "This is the first contained"
+    }
+    contained_level_two = create :level, name: 'contained level 2', type: 'FreeResponse', properties: {
+      long_instructions: "This is the second contained"
+    }
+    outer_level = create :level, name: 'level 1', type: 'Blockly', published: true
+    outer_level.contained_level_names = [contained_level_one.name]
+    outer_level.save
+
+    outer_level.stubs(:write_to_file?).returns(true)
+
+    refute outer_level.tts_should_update_long_instructions?
+    outer_level.contained_level_names = [contained_level_two.name]
+    assert outer_level.tts_should_update_long_instructions?
+  end
 end
