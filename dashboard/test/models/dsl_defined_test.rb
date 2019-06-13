@@ -36,4 +36,27 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
     expected = [{'text' => "un"}, {'text' => "deux"}, {'text' => "troi"}]
     assert_equal level.localized_property('answers'), expected
   end
+
+  test 'localized_property can return partially-localized data' do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "match" => {
+          "Test DSLDefined" => {
+            answers: [{text: "un"}, nil, {}]
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create :match, name: "Test DSLDefined", properties: {
+      answers: [{text: "one"}, {text: "two"}, {text: "three"}]
+    }
+
+    # Note that we again expect string keys
+    expected = [{'text' => "un"}, {'text' => "two"}, {'text' => "three"}]
+    assert_equal level.localized_property('answers'), expected
+  end
 end

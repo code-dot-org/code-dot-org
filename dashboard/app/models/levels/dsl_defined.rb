@@ -47,15 +47,29 @@ class DSLDefined < Level
       default: nil,
       smart: true
     )
+
+    source = try(property) || properties[property]
     # When the result of I18n.t is a hash (or an array of hashes), they always
     # have symbol keys regardless of the input format. We always want strings,
     # so convert the value here.
-    if localized.nil?
-      try(property) || properties[property]
+    self.class.resolve_partially_localized(localized, source)
+  end
+
+  # Localized content for DSL-Defined levels can be any combination of strings,
+  # arrays, or hashes. In every case, when we do not yet have a translation for
+  # a piece of content it comes back as nil. When that happens, we want to
+  # default back to the source (English) content; but we also want to make sure
+  # that we can deal with cases when _some_ of the content has been translated,
+  # but other parts return nil.
+  def self.resolve_partially_localized(localized, source)
+    if localized.blank?
+      source
     elsif localized.is_a? Hash
-      localized.deep_stringify_keys
+      source.deep_merge(localized).deep_stringify_keys
     elsif localized.is_a? Array
-      localized.map(&:deep_stringify_keys)
+      localized.zip(source).map do |loc, src|
+        resolve_partially_localized(loc, src)
+      end
     else
       localized
     end
