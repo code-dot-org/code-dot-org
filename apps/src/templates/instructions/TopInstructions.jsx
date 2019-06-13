@@ -191,11 +191,9 @@ class TopInstructions extends Component {
       window.location.search.includes('user_id');
 
     this.state = {
-      // We don't want to start in the comments tab for CSF since its hidden
-      tabSelected:
-        teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
-          ? TabType.COMMENTS
-          : TabType.INSTRUCTIONS,
+      tabSelected: teacherViewingStudentWork
+        ? TabType.COMMENTS
+        : TabType.INSTRUCTIONS,
       feedbacks: [],
       rubric: null,
       studentId: studentId,

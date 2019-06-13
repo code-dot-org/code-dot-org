@@ -108,29 +108,32 @@ function apiValidateDomIdExistence(
     };
     var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
-    var valid = true;
-    var message;
-    if (existsOutsideApplab) {
-      message =
-        'is already being used outside of App Lab. Please use a different id.';
-      throw new Error(invalidIdMessage(funcName, varName, id, message));
-    }
+    var valid = !existsOutsideApplab && shouldExist === existsInApplab;
 
-    if (
-      shouldExist !== existsInApplab &&
-      (!callback || !callback(existsInApplab))
-    ) {
-      valid = false;
-      message = existsInApplab ? 'already exists.' : 'does not exist.';
-      outputWarning(invalidIdMessage(funcName, varName, id, message));
-    }
-
-    var idContainsWhiteSpace = -1 !== id.search(/\s/);
-    if (idContainsWhiteSpace) {
-      valid = false;
-      var validId = id.replace(/\s+/g, '');
-      message = `contains whitespace. Change the id name to ("${validId}")`;
-      outputWarning(invalidIdMessage(funcName, varName, id, message));
+    if (!valid) {
+      var errorString = '';
+      if (existsOutsideApplab) {
+        errorString =
+          funcName +
+          '() ' +
+          varName +
+          ' parameter refers to an id ("' +
+          id +
+          '") which is already being used outside of App Lab. Please use a different id.';
+        throw new Error(errorString);
+      } else {
+        if (!callback || !callback(existsInApplab)) {
+          outputWarning(
+            funcName +
+              '() ' +
+              varName +
+              ' parameter refers to an id ("' +
+              id +
+              '") which ' +
+              (existsInApplab ? 'already exists.' : 'does not exist.')
+          );
+        }
+      }
     }
     opts[validatedDomKey] = valid;
   }
@@ -1349,10 +1352,6 @@ function setSize_(elementId, width, height) {
   }
 }
 
-function invalidIdMessage(functionName, variableName, id, message) {
-  return `The ${functionName}() ${variableName} parameter refers to an id ("${id}") which ${message}`;
-}
-
 applabCommands.setProperty = function(opts) {
   apiValidateDomIdExistence(
     opts,
@@ -1361,10 +1360,15 @@ applabCommands.setProperty = function(opts) {
     opts.elementId,
     true,
     exists => {
-      var idExistsMessage = exists ? 'already exists.' : 'does not exist.';
-      var warningMessage = `${idExistsMessage} You should be able to find the list of all the possible ids in the dropdown (unless you created the element inside your code).`;
       outputWarning(
-        invalidIdMessage('setProperty', 'id', opts.elementId, warningMessage)
+        `The setProperty() id parameter refers to an id (“${
+          opts.elementId
+        }”) ` +
+          `which ${
+            exists ? 'already exists.' : 'does not exist.'
+          } You should be able to ` +
+          'find the list of all the possible ids in the dropdown (unless you created the ' +
+          'element inside your code).'
       );
       return true;
     }

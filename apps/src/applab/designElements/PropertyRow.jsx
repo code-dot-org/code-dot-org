@@ -55,12 +55,8 @@ export default class PropertyRow extends React.Component {
   }
 
   handleChangeInternal = event => {
-    var isIdRow = this.props.isIdRow;
-    var value = event.target.value;
-    if (isIdRow) {
-      value = value.replace(/\s+/g, '');
-    }
-    const isValidValue = !isIdRow || this.isIdAvailable(value);
+    const value = event.target.value;
+    const isValidValue = !this.props.isIdRow || this.isIdAvailable(value);
     this.setValue(value, isValidValue);
   };
 
