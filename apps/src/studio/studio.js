@@ -2363,18 +2363,6 @@ Studio.init = function(config) {
       !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/)
   };
 
-  if (
-    config.embed &&
-    config.level.longInstructions &&
-    !config.level.shortInstructions
-  ) {
-    // if we are an embedded level with long instructions but no short
-    // instructions, we want to display CSP-style instructions and not be
-    // centered
-    config.noInstructionsWhenCollapsed = true;
-    config.centerEmbedded = false;
-  }
-
   // for hoc2015x, we only have permission to show the Rey avatar for approved
   // scripts. For all others, we override the avatars with an empty image
   if (

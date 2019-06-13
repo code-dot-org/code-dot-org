@@ -6,7 +6,8 @@ import color from '../../util/color';
 import BaseDialog from '../../templates/BaseDialog';
 import Button from '../../templates/Button';
 import SchoolInfoInputs, {
-  SCHOOL_TYPES_HAVING_NCES_SEARCH
+  SCHOOL_TYPES_HAVING_NCES_SEARCH,
+  SCHOOL_TYPES_HAVING_NAMES
 } from '../../templates/SchoolInfoInputs';
 import firehoseClient from '../util/firehose';
 
@@ -179,10 +180,18 @@ export default class SchoolInfoInterstitial extends React.Component {
       };
     }
 
+    if (SCHOOL_TYPES_HAVING_NAMES.includes(schoolType)) {
+      return {
+        'user[school_info_attributes][country]': country,
+        'user[school_info_attributes][school_type]': schoolType,
+        'user[school_info_attributes][school_name]': this.state.schoolName,
+        'user[school_info_attributes][full_address]': this.state.schoolLocation
+      };
+    }
+
     return {
       'user[school_info_attributes][country]': country,
       'user[school_info_attributes][school_type]': schoolType,
-      'user[school_info_attributes][school_name]': this.state.schoolName,
       'user[school_info_attributes][full_address]': this.state.schoolLocation
     };
   }
