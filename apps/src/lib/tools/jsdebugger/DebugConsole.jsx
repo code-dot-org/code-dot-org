@@ -19,8 +19,6 @@ import color from '../../../util/color';
 import Inspector from 'react-inspector';
 import {geoMercator, geoPath} from 'd3-geo';
 import {feature} from 'topojson-client';
-// import WorldMap from './WorldMap';
-import {scaleSqrt} from 'd3-scale';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -257,57 +255,26 @@ export default connect(
     projection() {
       return geoMercator()
         .scale(60)
-        .translate([400 / 2, 200 / 2]);
+        .translate([400 / 2, 400 / 2]);
     }
 
     async mercator() {
-      let quakeradius = function() {
-        const scale = scaleSqrt()
-          .domain([0, 100])
-          .range([0, 6]);
-        return function(quake) {
-          return scale(Math.exp(quake.properties.mag));
-        };
-      };
-      console.log('quakeradius', quakeradius());
-      let fetchData = async () => {
-        return fetch(
-          'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
-        );
-      };
-      console.log('fetchData', fetchData());
+      let displayWorldMap = async function() {
+        const worldMapUrl = 'https://unpkg.com/world-atlas@1/world/110m.json';
+        let response = await fetch(worldMapUrl);
 
-      async function quakes() {
-        var hello = await fetchData();
-        var json = await hello.json();
-        console.log('json', json);
-        //
-        return json;
-      }
+        let worldData = await response.json();
 
-      let exampleQuake = await quakes();
-
-      console.log('something', exampleQuake);
-      let world = async function() {
-        var world = await fetch(
-          'https://unpkg.com/world-atlas@1/world/110m.json'
-        );
-
-        var json = await world.json();
-
-        return feature(json, json.objects.countries).features;
+        return feature(worldData, worldData.objects.countries).features;
       };
 
-      let world2 = await world();
-      console.log('world2', world2);
-
-      // let projection = geoMercator();
-      // let path = geoPath();
+      let worldMap = await displayWorldMap();
+      console.log('world2', worldMap);
 
       return (
-        <svg width={400} height={200}>
+        <svg width={400} height={400}>
           <g className="countries">
-            {world2.map((d, i) => (
+            {worldMap.map((d, i) => (
               <path
                 key={`path-${i}`}
                 d={geoPath().projection(this.projection())(d)}
