@@ -12,7 +12,8 @@ import {
   setProjectUpdatedSaving,
   showProjectUpdatedAt,
   setProjectUpdatedAt,
-  refreshProjectName
+  refreshProjectName,
+  setShowTryAgainDialog
 } from './headerRedux';
 
 import progress from './progress';
@@ -237,6 +238,14 @@ header.showProjectSaveError = () => {
 
 header.showProjectSaving = () => {
   getStore().dispatch(setProjectUpdatedSaving());
+};
+
+header.showTryAgainDialog = () => {
+  getStore().dispatch(setShowTryAgainDialog(true));
+};
+
+header.hideTryAgainDialog = () => {
+  getStore().dispatch(setShowTryAgainDialog(false));
 };
 
 export default header;
