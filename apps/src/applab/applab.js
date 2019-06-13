@@ -5,6 +5,8 @@
  *
  */
 import $ from 'jquery';
+import cookies from 'js-cookie';
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
@@ -187,6 +189,7 @@ function shouldRenderFooter() {
 Applab.makeFooterMenuItems = function(isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
+      key: 'how-it-works',
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/view'),
       newWindow: true
@@ -197,6 +200,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
         link: '/projects/applab/new'
       },
     {
+      key: 'report-abuse',
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
@@ -212,6 +216,20 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
       newWindow: true
     }
   ].filter(item => item);
+
+  var userAlreadyReportedAbuse =
+    cookies.get('reported_abuse') &&
+    _.includes(
+      JSON.parse(cookies.get('reported_abuse')),
+      project.getCurrentId()
+    );
+
+  if (userAlreadyReportedAbuse) {
+    _.remove(footerMenuItems, function(menuItem) {
+      return menuItem.key === 'report-abuse';
+    });
+  }
+
   return footerMenuItems;
 };
 
@@ -564,11 +582,7 @@ Applab.init = function(config) {
 
   config.enableShowLinesCount = false;
 
-  // In Applab, we want our embedded levels to look the same as regular levels,
-  // just without the editor
-  config.centerEmbedded = false;
   config.wireframeShare = true;
-  config.responsiveEmbedded = true;
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
