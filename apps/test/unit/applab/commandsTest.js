@@ -83,7 +83,7 @@ describe('setSelectionRange', () => {
       selectionEnd: 0
     });
     expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
-      'The setSelectionRange() elementId parameter refers to ' +
+      'setSelectionRange() elementId parameter refers to ' +
         'an id ("fakeElementId") which does not exist.'
     );
   });
