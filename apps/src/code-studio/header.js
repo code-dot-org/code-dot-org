@@ -10,7 +10,6 @@ import {
   showLevelBuilderSaveButton,
   setProjectUpdatedError,
   setProjectUpdatedSaving,
-  setProjectUpdatedSaved,
   showProjectUpdatedAt,
   setProjectUpdatedAt,
   refreshProjectName
@@ -238,10 +237,6 @@ header.showProjectSaveError = () => {
 
 header.showProjectSaving = () => {
   getStore().dispatch(setProjectUpdatedSaving());
-};
-
-header.showProjectSaved = () => {
-  getStore().dispatch(setProjectUpdatedSaved());
 };
 
 export default header;
