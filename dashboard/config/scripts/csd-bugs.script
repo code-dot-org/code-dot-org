@@ -1,0 +1,7 @@
+family_name ''
+
+stage 'Game Lab Bugs'
+level 'gamelab bug declare sprite in loop'
+level 'gamelab bug text behind sprites'
+level 'gamelab bug infinity mouse 1'
+level 'gamelab bug infinity mouse 2'
