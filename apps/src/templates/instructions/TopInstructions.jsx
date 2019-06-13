@@ -191,9 +191,11 @@ class TopInstructions extends Component {
       window.location.search.includes('user_id');
 
     this.state = {
-      tabSelected: teacherViewingStudentWork
-        ? TabType.COMMENTS
-        : TabType.INSTRUCTIONS,
+      // We don't want to start in the comments tab for CSF since its hidden
+      tabSelected:
+        teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
+          ? TabType.COMMENTS
+          : TabType.INSTRUCTIONS,
       feedbacks: [],
       rubric: null,
       studentId: studentId,
@@ -668,6 +670,9 @@ class TopInstructions extends Component {
                     handleClickCollapser={this.handleClickCollapser}
                     adjustMaxNeededHeight={this.adjustMaxNeededHeight}
                     isEmbedView={this.props.isEmbedView}
+                    teacherViewingStudentWork={
+                      this.state.teacherViewingStudentWork
+                    }
                   />
                 )}
               {!this.props.hasContainedLevels &&
