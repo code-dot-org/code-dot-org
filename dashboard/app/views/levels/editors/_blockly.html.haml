@@ -7,15 +7,7 @@
 
 %legend.control-legend.levelTypeHeader
   Blockly Options
-= render partial: 'levels/editors/authored_hints', locals: {f: f}
 
-= render partial: 'levels/editors/ani_gif', locals: {f: f}
-.field
-  = f.label :skin
-  = f.select :skin, options_for_select(@level.class.skins, @level.skin)
-- unless @level.is_a? GamelabJr
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :is_k1, description: "Is K1 level"}
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_modal_function_editor, description: "Use modal function editor"}
 .field
