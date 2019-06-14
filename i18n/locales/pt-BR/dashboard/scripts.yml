@@ -3991,7 +3991,7 @@ pt-BR:
             Building a Foundation:
               name: Criando uma base
             Loops in Ice Age:
-              name: Laços na Era do gelo
+              name: Repetições na Era do gelo
         csp3-a:
           stages:
             new stage:
@@ -4466,7 +4466,7 @@ pt-BR:
             Artist Binary:
               name: 'Artista: binário'
             Loops in Ice Age:
-              name: Laços na Era do gelo
+              name: Repetições na Era do gelo
             Graph Paper Programming:
               name: Programação em papel quadriculado
             Relay Programming:
@@ -5130,7 +5130,7 @@ pt-BR:
               name: Programação por revezamento
               description_teacher: Esta atividade começará com uma pequena aula sobre depuração e persistência, então irá mudar rapidamente para uma corrida contra o tempo à medida que os alunos se dividem em times e trabalham juntos para escrever um programa uma instrução por vez.
             Loops in Ice Age:
-              name: Laços na Era do gelo
+              name: Repetições na Era do gelo
             Nested Loops in Bee:
               name: Laços Aninhados no Labirinto
             Conditionals with Cards:
@@ -5375,7 +5375,7 @@ pt-BR:
             'Loops: My Loopy Robotic Friends':
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Ice Age:
-              name: Laços na Era do gelo
+              name: Repetições na Era do gelo
             Loops in Collector:
               name: Repetições com Laurel
             'Events: The Big Event':
@@ -6063,59 +6063,3 @@ pt-BR:
               name: Dia 4
             Wrap Up:
               name: Resumo
-        csd1-pilot:
-          description: "Resolução de Problemas e Computação é uma introdução altamente interativa e colaborativa para o campo da ciência da computação, enquadrada na busca mais ampla de resolução de problemas. Você irá praticar usando um processo de solução de problemas para resolver uma série de enigmas, desafios e cenários do mundo real. Em seguida, você aprenderá como os computadores inserem, produzem, armazenam e processam informações para ajudar as pessoas a resolver problemas. A unidade é concluída com um projeto em que você cria um aplicativo que ajuda a resolver um problema de sua escolha.\\r\n"
-          stages:
-            Processing:
-              name: Processando
-            Post-Project Test:
-              name: Teste pós-projeto
-        csd2-pilot:
-          stages:
-            Intro to HTML:
-              name: Introdução a HTML
-            Digital Footprint:
-              name: Pegada Digital
-            Lists:
-              name: Listas
-            Clean Code and Debugging:
-              name: Código limpo e depuração
-            Sources and Search Engines:
-              name: Fontes e mecanismos de pesquisa
-            Post-Project Test:
-              name: Teste pós-projeto
-        csd3-pilot:
-          description_short: "Programação"
-          stages:
-            Drawing in Game Lab:
-              name: Desenhando no Laboratório de Jogos
-            Shapes and Randomization:
-              name: Formas e Randomização
-            Variables:
-              name: variáveis
-            Sprites:
-              name: Sprite
-            Booleans Unplugged:
-              name: Booleanos off-line
-            Conditionals:
-              name: Condições
-            Project - Interactive Card:
-              name: Projeto - Cartão Interativo
-            Velocity:
-              name: Velocidade
-            Collision Detection:
-              name: Detecção de Colisão
-            Complex Sprite Movement:
-              name: Movimento complexo de Sprite
-            Collisions:
-              name: Colisões
-            Functions:
-              name: funções
-            The Game Design Process:
-              name: O processo de design de jogos
-            Using the Game Design Process:
-              name: Usando o processo de design de jogos
-            Project - Design a Game:
-              name: Projeto - Projetar um Jogo
-            Post-Project Test:
-              name: Teste pós-projeto

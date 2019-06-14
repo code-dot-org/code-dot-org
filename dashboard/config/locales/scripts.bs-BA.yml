@@ -2207,17 +2207,3 @@ bs:
           stages:
             Graph Paper Programming:
               name: Papirno Programiranje Grafikona
-        csd2-pilot:
-          stages:
-            Lists:
-              name: Liste
-        csd3-pilot:
-          stages:
-            Variables:
-              name: Varijable
-            Conditionals:
-              name: Uvjeti
-            Velocity:
-              name: Brzina
-            Functions:
-              name: Funkcije
