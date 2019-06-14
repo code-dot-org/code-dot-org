@@ -2,8 +2,14 @@ require 'test_helper'
 
 class BubbleChoiceTest < ActiveSupport::TestCase
   setup_all do
-    create :game, name: 'BubbleChoice'
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+    create :game, name: 'BubbleChoice'
+
+    @sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png'
+    @sublevel2 = create :level, name: 'choice_2'
+    sublevels = [@sublevel1, @sublevel2]
+    @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', title: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
+    @script_level = create :script_level, levels: [@bubble_choice]
   end
 
   test 'create_from_level_builder creates level from DSL input' do
@@ -75,22 +81,33 @@ DSL
   end
 
   test 'summarize' do
-    sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png'
-    sublevel2 = create :level, name: 'choice_2'
-    bubble_choice = BubbleChoice.create(name: 'bubble_choices', title: 'Bubble Choices', description: 'Choose one or more!')
-    bubble_choice.properties['sublevels'] = [sublevel1.name, sublevel2.name]
-    bubble_choice.save!
-
-    summary = bubble_choice.summarize
+    summary = @bubble_choice.summarize
     expected_summary = {
-      title: bubble_choice.title,
-      description: bubble_choice.description,
+      title: @bubble_choice.title,
+      description: @bubble_choice.description,
       sublevels: [
-        {id: sublevel1.id, title: sublevel1.display_name, thumbnail_url: sublevel1.thumbnail_url},
-        {id: sublevel2.id, title: sublevel2.name, thumbnail_url: nil}
+        {id: @sublevel1.id, title: @sublevel1.display_name, thumbnail_url: @sublevel1.thumbnail_url},
+        {id: @sublevel2.id, title: @sublevel2.name, thumbnail_url: nil}
       ]
     }
 
     assert_equal expected_summary, summary
+  end
+
+  test 'summarize_sublevels' do
+    sublevel_summary = @bubble_choice.summarize_sublevels
+    expected_summary = [
+      {id: @sublevel1.id, title: @sublevel1.display_name, thumbnail_url: @sublevel1.thumbnail_url},
+      {id: @sublevel2.id, title: @sublevel2.name, thumbnail_url: nil}
+    ]
+
+    assert_equal expected_summary, sublevel_summary
+  end
+
+  test 'summarize_sublevels with script_level' do
+    sublevel_summary = @bubble_choice.summarize_sublevels(script_level: @script_level)
+    assert_equal 2, sublevel_summary.length
+    refute_nil sublevel_summary.first[:url]
+    refute_nil sublevel_summary.last[:url]
   end
 end

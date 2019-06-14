@@ -4,8 +4,18 @@ import {assert} from '../../../util/reconfiguredChai';
 import BubbleChoice from '@cdo/apps/code-studio/components/BubbleChoice';
 
 const fakeSublevels = [
-  {id: 1, title: 'Choice 1', thumbnail_url: 'some-fake.url/kittens.png'},
-  {id: 2, title: 'Choice 2', thumbnail_url: null}
+  {
+    id: 1,
+    title: 'Choice 1',
+    thumbnail_url: 'some-fake.url/kittens.png',
+    url: '/s/script/stage/1/puzzle/1/sublevel/1'
+  },
+  {
+    id: 2,
+    title: 'Choice 2',
+    thumbnail_url: null,
+    url: '/s/script/stage/1/puzzle/1/sublevel/2'
+  }
 ];
 
 const DEFAULT_PROPS = {
