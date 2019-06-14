@@ -698,7 +698,7 @@
       "courseD_playLab_cond3_a": "You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again."
     },
     "https://studio.code.org/s/coursed-2018/stage/17/puzzle/4": {
-      "courseD_playLab_cond3_c": "-   `If` the dragon is happy \n\n    -   `score point`\n    -   `score point`  \n\n\n-   `Else` `score point`"
+      "courseD_playLab_cond3_c": "-   `If` the dragon is happy \n    -   `score point`\n    -   `score point`  \n\n-   `Else` `score point`"
     },
     "https://studio.code.org/s/coursed-2018/stage/17/puzzle/5": {
       "courseD_playLab_cond4_a": "You will want to use the `when run` event to get the ninja to chase the pirate.",

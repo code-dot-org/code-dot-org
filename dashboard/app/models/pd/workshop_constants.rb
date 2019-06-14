@@ -66,6 +66,10 @@ module Pd
       COURSE_CSD => {
         SUBJECT_CSD_SUMMER_WORKSHOP => {max_hours: 33.5},
         SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
+      },
+      COURSE_CSF => {
+        SUBJECT_CSF_101 => {min_days: 1, max_days: 1, max_hours: 7},
+        SUBJECT_CSF_201 => {min_days: 1, max_days: 1, max_hours: 6}
       }
     }.freeze
 
@@ -87,8 +91,6 @@ module Pd
       COURSE_CSD => {course_name: 'csd-2019'},
       COURSE_CSP => {course_name: 'csp-2019'}
     }.freeze
-
-    CSF_201_PILOT_END_DATE = Date.new(2019, 5, 20)
 
     COURSE_KEY_MAP = {
       COURSE_CSF => 'csf',

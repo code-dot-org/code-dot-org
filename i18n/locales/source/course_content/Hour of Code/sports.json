@@ -8,7 +8,5 @@
     "https://studio.code.org/s/sports/stage/1/puzzle/6": "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice!",
     "https://studio.code.org/s/sports/stage/1/puzzle/7": "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!",
     "https://studio.code.org/s/sports/stage/1/puzzle/8": "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
-  },
-  "authored_hints": null,
-  "long_instructions": null
+  }
 }

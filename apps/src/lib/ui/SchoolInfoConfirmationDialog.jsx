@@ -17,7 +17,8 @@ export const styles = {
   intro: {
     fontSize: 18,
     fontFamily: "'Gotham 5r', sans-serif",
-    color: color.charcoal
+    color: color.charcoal,
+    paddingRight: 20
   },
   schoolName: {
     color: color.purple,
@@ -34,6 +35,7 @@ class SchoolInfoConfirmationDialog extends Component {
       authTokenValue: PropTypes.string.isRequired,
       existingSchoolInfo: PropTypes.shape({
         id: PropTypes.number,
+        user_school_info_id: PropTypes.number,
         school_id: PropTypes.string,
         country: PropTypes.string,
         school_type: PropTypes.string,
@@ -56,17 +58,23 @@ class SchoolInfoConfirmationDialog extends Component {
 
   closeModal = () => {
     this.setState({isOpen: false});
+    this.props.onClose();
   };
 
   handleClickYes = () => {
     const {authTokenName, authTokenValue} = this.props.scriptData;
+    const formData = new FormData();
+    formData.append(authTokenName, authTokenValue);
     fetch(
       `/api/v1/user_school_infos/${
-        this.props.scriptData.existingSchoolInfo.id
+        this.props.scriptData.existingSchoolInfo.user_school_info_id
       }/update_last_confirmation_date`,
-      {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
+      {
+        method: 'PATCH',
+        body: formData
+      }
     )
-      .then(() => this.props.onClose())
+      .then(this.closeModal)
       .catch(error => {
         this.setState({error});
       });
@@ -74,25 +82,6 @@ class SchoolInfoConfirmationDialog extends Component {
 
   handleClickUpdate = () => {
     this.setState({showSchoolInterstitial: true});
-  };
-
-  handleClickSave = async () => {
-    const {authTokenName, authTokenValue} = this.props.scriptData;
-    fetch(
-      `/api/v1/user_school_infos/${
-        this.props.scriptData.existingSchoolInfo.id
-      }/update_end_date`,
-      {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
-    )
-      .then(() => {
-        fetch(
-          `/api/v1/users/${
-            this.props.scriptData.existingSchoolInfo.id
-          }/update_school_info_id`,
-          {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
-        ).then(() => this.props.onClose());
-      })
-      .catch(() => {});
   };
 
   renderInitialContent = () => {
@@ -129,10 +118,7 @@ class SchoolInfoConfirmationDialog extends Component {
       <Body>
         <SchoolInfoInterstitial
           scriptData={this.props.scriptData}
-          onClose={() => {
-            this.handleClickSave();
-            this.setState({isOpen: false});
-          }}
+          onClose={this.closeModal}
         />
       </Body>
     );
