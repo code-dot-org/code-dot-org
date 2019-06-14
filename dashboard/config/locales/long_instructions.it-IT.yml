@@ -707,8 +707,8 @@ it-IT:
         di 89 gradi, invece di 90 gradi.
       Course 4 Artist For Loops 2: "In questo esercizio il codice per disegnare un
         triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100
-        con _passo_ di 10.  \n\n**Attenzione**: assicurati di aver guardato bene il
-        codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\"
+        con _passo_ di 10.  \n  \n  \n**Attenzione**: assicurati di aver guardato
+        bene il codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\"
         target=\"_blank\">Video doppiato in italiano</a>"
       Course 4 Artist For Loops 3: Per disegnare questa figura usa come riferimento
         il codice del precedente esercizio. Il triangolo più piccolo ha i lati di
@@ -814,11 +814,12 @@ it-IT:
         parametro chiamato `direction` (<i>direzione </i>)?
       Course 4 Bee Params 6: "In questo esercizio, sui fiori si trovano quantità differenti
         di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe
-        bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n\nModifica
-        la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un
-        nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica
-        la quantità di nettare da raccogliere.\n\nProbabilmente sarà meglio cambiare
-        anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri."
+        bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n
+        \ \n  \nModifica la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>)
+        aggiungendo un nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>),
+        che specifica la quantità di nettare da raccogliere.\n\nProbabilmente sarà
+        meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il nome
+        anche ai parametri."
       Course 4 Bee Params 7: Usa la nuova funzione `get many nectar` (<i>prendi molte
         dosi di nettare</i>) per raccogliere tutto il nettare.
       Course 4 Bee Params 8: |-
@@ -1109,7 +1110,9 @@ it-IT:
         ! Usa i coralli rossi e blu come punti di riferimento per raggiungere il **forziere**
         del tesoro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Dance Party 1-validated: "**Fai una previsione:** Ecco un personaggio chiamato
-        `alien1`! \n\nCosa pensi accadrà quando ci cliccherai sopra?  "
+        `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
+      Dance Party 1-validated_2019: "**Fai una previsione:** Ecco un personaggio chiamato
+        `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       Dance Party 2: "L'alieno era orgoglioso delle sue capacità di ballo su Marte,
         ma ora può spostarsi solo da un lato all'altro.\n\nPuoi modificare il comportamento
         all'interno del blocco <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n
@@ -1126,8 +1129,9 @@ it-IT:
         un passo di danza diverso ogni volta che ci clicchi sopra."
       Dance Party 3_2019: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli
         fare un passo di danza diverso ogni volta che ci clicchi sopra."
-      Dance Party 4: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci a posizionare
-        tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
+      Dance Party 4: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci ad
+        posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo
+        aliena!"
       Dance Party 4_2019: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci
         ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo
         aliena!"
@@ -1264,6 +1268,8 @@ it-IT:
         -   Nascondi tutti i ballerini e passa a un emozionante effetto di sfondo
       Fish Tank 1-validated: "**Fai una previsione**: Che cosa pensi accadrà quando
         eseguirai questo codice?"
+      Fish Tank 1-validated_2019: "**Fai una previsione**: Che cosa pensi accadrà
+        quando eseguirai questo codice?"
       Fish Tank 2-validated: "Facciamo un acquario!  \n\nTrasforma Dusty (il cespuglio
         rotolante) in un pesce."
       Fish Tank 2-validated_2019: "Facciamo un acquario!  \n\nTrasforma Dusty (il
@@ -1425,10 +1431,10 @@ it-IT:
         Programma l'Agente per ricostruire il ponte usando il blocco  <xml> <block type="craft_placeBlock">     <title name="TYPE"> </title>   </block></xml> in modo che {currentPlayerName} possa raggiungere la **pala** [diamond_shovel].
       MC_HOC_2017_06_Cole: "Un altro fiume, ma questo è molto più largo! \n\nCorreggi
         questo codice per aiutare l'Agente a costruire un ponte in modo che {currentPlayerName}
-        possa raggiungere la **piccozza** [diamond_pickaxe]. "
+        possa raggiungere il **piccone** [diamond_pickaxe]. "
       MC_HOC_2017_06_Cole_2019: "Un altro fiume, ma questo è molto più largo! \n\nCorreggi
         questo codice per aiutare l'Agente a costruire un ponte in modo che {currentPlayerName}
-        possa raggiungere la **piccozza** [diamond_pickaxe]. "
+        possa raggiungere il **piccone** [diamond_pickaxe]. "
       MC_HOC_2017_07_Cole: "C'è del ghiaccio che blocca il percorso!  \\\r\n \\\r\nLa
         funzione `libera il passaggio` può aiutarti a rimuovere il ghiaccio e far
         arrivare {currentPlayerName} fino al vagonetto [minecart_normal]! "
@@ -5213,16 +5219,16 @@ it-IT:
 
         -   Le finestre del piano di sopra distano 50 pixel una dall'altra.
         -   Le finestre del piano terra si trovano 100 pixel al di sotto delle precedenti.
-      courseE_artist_functions7_2018: "Disegnare singolarmente tutte queste finestre
+      courseE_artist_functions7_2018: "Disegnare singolarmente tutte queste finestra
         sarebbe una noia!  \n\nProvare a risolvere questo esercizio creando la funzione
-        `disegna una finestra` e richiamandola cinque volte. Fai attenzione alla porta!\n\n*
+        'disegna una finestra' e richiamandola cinque volte. Fai attenzione alla porta!\n\n*
         * *\n\n-   Ogni finestra è composta da quattro riquadri da **25** pixel di
         lato.\n-   Le finestre del piano di sopra si disegnano facendo un salto di
         **100** pixel tra una e l'altra.  \n-   Quelle del piano terra si raggiungono
         facendo un salto di **150** pixel dal piano di sopra."
-      courseE_artist_functions7_2019: "Disegnare singolarmente tutte queste finestre
+      courseE_artist_functions7_2019: "Disegnare singolarmente tutte queste finestra
         sarebbe una noia!  \n\nProvare a risolvere questo esercizio creando la funzione
-        `disegna una finestra` e richiamandola cinque volte. Fai attenzione alla porta!\n\n*
+        'disegna una finestra' e richiamandola cinque volte. Fai attenzione alla porta!\n\n*
         * *\n\n-   Ogni finestra è composta da quattro riquadri da **25** pixel di
         lato.\n-   Le finestre del piano di sopra si disegnano facendo un salto di
         **100** pixel tra una e l'altra.  \n-   Quelle del piano terra si raggiungono
@@ -5268,12 +5274,12 @@ it-IT:
         **Sfida:** Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
 
         -   Ogni triangolo ha i lati lunghi **50 pixel**.
-        -   Per disegnare un rombo, dovrai alternare svolte a **60 gradi con svolte a 120 gradi**.
+        -   Per disegnare un rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi.
       courseE_artist_functions9_2019: |-
         **Sfida:** Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
 
         -   Ogni triangolo ha i lati lunghi **50 pixel**.
-        -   Per disegnare un rombo, dovrai alternare svolte a **60 gradi con svolte a 120 gradi**.
+        -   Per disegnare un rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi.
       courseE_artist_functionsProj_2018: |-
         **Ispirazione:** Usa ciò che hai imparato per creare quello che vuoi!
 
