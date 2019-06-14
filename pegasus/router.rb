@@ -102,7 +102,7 @@ class Documents < Sinatra::Base
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found', '.404']
     set :redirect_extnames, ['.redirect', '.moved', '.found', '.301', '.302']
-    set :template_extnames, ['.erb', '.haml', '.html', '.md']
+    set :template_extnames, ['.erb', '.haml', '.html', '.md', '.partial']
     set :non_static_extnames,
       settings.not_found_extnames +
       settings.redirect_extnames +
@@ -349,6 +349,23 @@ class Documents < Sinatra::Base
       raise
     end
 
+    def render_partials(template_content)
+      # Template types that do not have thier own way of rendering partials
+      # (ie, markdown) can include other partials with the syntax:
+      #
+      #     {{ path/to/partial }}
+      #
+      # Because such content can be translated, we want to make sure that if a
+      # translator accidentally translates the path to the template, we simply
+      # render nothing rather than throwing an error
+      template_content.
+        gsub(/{{([^}]*)}}/) do
+          view($1.strip)
+        rescue
+          ''
+        end
+    end
+
     def preprocess_markdown(markdown_content)
       markdown_content.gsub(/```/, "```\n")
     end
@@ -500,6 +517,8 @@ class Documents < Sinatra::Base
         when '.md'
           preprocessed = preprocess_markdown result
           result = markdown preprocessed, options
+        when '.partial'
+          result = render_partials(result)
         when '.redirect', '.moved', '.301'
           result = redirect erb(result, options), 301
         when '.found', '.302'
