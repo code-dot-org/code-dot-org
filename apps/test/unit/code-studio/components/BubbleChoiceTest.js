@@ -71,14 +71,14 @@ describe('BubbleChoice', () => {
       const backButton = wrapper.find('button').at(0);
       backButton.simulate('click');
       expect(utils.navigateToHref).to.have.been.calledWith(
-        DEFAULT_PROPS.level.previous_level_url
+        DEFAULT_PROPS.level.previous_level_url + window.location.search
       );
 
       const continueButton = wrapper.find('button').at(1);
       assert.equal('Continue', continueButton.text());
       continueButton.simulate('click');
       expect(utils.navigateToHref).to.have.been.calledWith(
-        DEFAULT_PROPS.level.next_level_url
+        DEFAULT_PROPS.level.next_level_url + window.location.search
       );
     });
 
@@ -95,14 +95,14 @@ describe('BubbleChoice', () => {
       const backButton = wrapper.find('button').at(0);
       backButton.simulate('click');
       expect(utils.navigateToHref).to.have.been.calledWith(
-        DEFAULT_PROPS.level.script_url
+        DEFAULT_PROPS.level.script_url + window.location.search
       );
 
       const finishButton = wrapper.find('button').at(1);
       assert.equal('Finish', finishButton.text());
       finishButton.simulate('click');
       expect(utils.navigateToHref).to.have.been.calledWith(
-        DEFAULT_PROPS.level.script_url
+        DEFAULT_PROPS.level.script_url + window.location.search
       );
     });
   });
