@@ -54,6 +54,10 @@ ruby
     sublevels[index]
   end
 
+  # Summarizes the level.
+  # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels,
+  # previous/next levels, and script will be included in the summary.
+  # @return [Hash]
   def summarize(script_level: nil)
     summary = {
       title: title,
