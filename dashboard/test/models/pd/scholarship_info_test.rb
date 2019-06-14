@@ -11,17 +11,12 @@ class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
     @user = create :teacher
   end
 
-  test 'application year is set on create' do
-    scholarship_info = Pd::ScholarshipInfo.create(user: @user, scholarship_status: YES_CDO)
-
-    assert_equal(APPLICATION_CURRENT_YEAR, scholarship_info.application_year)
-  end
-
-  test 'cannot create multiple scholarship infos with same user and year' do
-    Pd::ScholarshipInfo.create(user: @user, scholarship_status: YES_CDO)
+  test 'cannot create multiple scholarship infos with same user, year, and course' do
+    course = COURSE_KEY_MAP[COURSE_CSD]
+    Pd::ScholarshipInfo.create(user: @user, application_year: '2019-2020', scholarship_status: YES_CDO, course: course)
 
     assert_raises(ActiveRecord::RecordNotUnique) do
-      Pd::ScholarshipInfo.create(user: @user, scholarship_status: YES_CDO)
+      Pd::ScholarshipInfo.create(user: @user, application_year: '2019-2020', scholarship_status: YES_CDO, course: course)
     end
   end
 

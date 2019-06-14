@@ -327,9 +327,7 @@ module Pd::Application
     end
 
     def friendly_scholarship_status
-      if scholarship_status
-        Pd::ScholarshipInfoConstants::SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
-      end
+      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course)&.friendly_status_name
     end
 
     def allow_sending_principal_email?

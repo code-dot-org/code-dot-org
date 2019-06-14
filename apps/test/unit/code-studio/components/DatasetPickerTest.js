@@ -20,21 +20,11 @@ describe('DatasetPicker', () => {
 
   it('calls Firebase on chooseAsset', () => {
     const wrapper = mount(<DatasetPicker {...defaultProps} />);
-    var xhr = sinon.useFakeXMLHttpRequest();
-    var requests = [];
-    xhr.onCreate = function(xhr) {
-      requests.push(xhr);
-    };
-    var createStub = sinon.stub(FirebaseStorage, 'createTable');
-    var importStub = sinon.stub(FirebaseStorage, 'importCsv');
+    var importDatasetStub = sinon.stub(FirebaseStorage, 'importDataset');
 
     wrapper.instance().chooseAsset('name', 'url');
-    requests[0].respond(200);
 
-    assert.isTrue(createStub.called);
-    assert.isTrue(importStub.called);
-    xhr.restore();
-    createStub.restore();
-    importStub.restore();
+    assert.isTrue(importDatasetStub.called);
+    importDatasetStub.restore();
   });
 });

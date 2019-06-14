@@ -182,7 +182,7 @@ class Level < ActiveRecord::Base
     if custom?
       unless callout_json.blank?
         return JSON.parse(callout_json).map do |callout_definition|
-          i18n_key = "data.callouts.#{name}_callout.#{callout_definition['localization_key']}"
+          i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
           callout_text = should_localize? &&
             I18n.t(i18n_key, default: nil) ||
             callout_definition['callout_text']
@@ -317,6 +317,7 @@ class Level < ActiveRecord::Base
     'Map', # no user submitted content
     'Match', # dsl defined, covered in dsl
     'Multi', # dsl defined, covered in dsl
+    'BubbleChoice', # dsl defined, covered in dsl
     'NetSim', # widget
     'Odometer', # widget
     'Pixelation', # widget

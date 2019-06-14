@@ -149,10 +149,10 @@ describe('Local Summer Workshop Daily Survey Results class', () => {
     let firstTab = results.find('Tab').first();
     let secondTab = results.find('Tab').at(1);
 
-    expect(firstTab.find('SingleChoiceResponses')).to.have.length(3);
+    expect(firstTab.find('ChoiceResponses')).to.have.length(3);
     expect(firstTab.find('TextResponses')).to.have.length(2);
 
-    expect(secondTab.find('SingleChoiceResponses')).to.have.length(2);
+    expect(secondTab.find('ChoiceResponses')).to.have.length(2);
     expect(secondTab.find('TextResponses')).to.have.length(3);
 
     expect(firstTab.find('h3').map(x => x.text())).to.deep.equal([
