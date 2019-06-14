@@ -42,10 +42,10 @@
 = render partial: 'levels/editors/sub_level_types', locals: {f: f}
 
 - if @level.is_a?(Weblab) || (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.respond_to?(:disable_sharing)
-  %legend.control-legend{data: {toggle: "collapse", target: "#shareAndRemix"}}
+  %legend.control-legend{data: {toggle: "collapse", target: "#share_and_remix"}}
     Share and Remix Settings
 
-  #shareAndRemix.collapse
+  #share_and_remix.collapse
     -if @level.is_a?(Weblab) || (@level.uses_droplet?) || @level.is_a?(Blockly)
       = render partial: 'levels/editors/hide_share_and_remix', locals: {f: f}
 

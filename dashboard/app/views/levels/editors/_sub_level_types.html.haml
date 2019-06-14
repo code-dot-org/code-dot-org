@@ -1,9 +1,9 @@
-%legend.control-legend{data: {toggle: "collapse", target: "#specialLevel"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#special_level"}}
   Special Level Types
 
 %p Project Template Levels. Contained (Predict) Levels. Free Play Levels. Embed Levels.
 
-#specialLevel.collapse
+#special_level.collapse
   - if @level.respond_to? :free_play
     .field
       = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :free_play, description: "Free Play"}
