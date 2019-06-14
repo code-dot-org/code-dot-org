@@ -14,7 +14,7 @@ CHAT_CHANNEL = "cron-daily".freeze
 
 def main
   start_time = Time.now
-  log_collector = LogCollector.new
+  log_collector = LogCollector.new "Build contact rollups"
 
   # Delete clone database cluster if it was left behind by the last execution of Contact Rollups.
   log_collector.time!('Delete db clone') {ContactRollups.delete_database_clone}
