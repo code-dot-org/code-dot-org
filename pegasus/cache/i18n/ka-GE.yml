@@ -1248,6 +1248,12 @@ ka-GE:
   coursed-2018_gradelevel: კლასები 8+
   coursee-2018_gradelevel: ასაკი 8-12
   coursef-2018_gradelevel: 9-13 წელი
+  coursea-2019_gradelevel: 4-7 წელი
+  courseb-2019_gradelevel: 5-8 წელი
+  coursec-2019_gradelevel: 6-10 წელი
+  coursed-2019_gradelevel: კლასები 8+
+  coursee-2019_gradelevel: ასაკი 8-12
+  coursef-2019_gradelevel: 9-13 წელი
   accelerated_gradelevel: 'ასაკი: 10-18'
   codeorg_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   codeintl_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
@@ -1398,6 +1404,10 @@ ka-GE:
   coursea-2018_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში მათთვის,
     ვინც ჯერ კითხვა არ იცის.
   courseb-2018_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
+    მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+  coursea-2019_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში მათთვის,
+    ვინც ჯერ კითხვა არ იცის.
+  courseb-2019_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
     მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
   codeorg_longdescription: ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
     ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი,
