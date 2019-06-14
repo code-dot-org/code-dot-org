@@ -1670,6 +1670,10 @@ Then /^current URL is different from the last saved URL$/ do
   expect(@browser.current_url).not_to include(saved_url)
 end
 
+Then /^I navigate to the saved URL$/ do
+  steps %Q{Then I am on "#{saved_url}"}
+end
+
 Then /^I sign out using jquery$/ do
   code = <<-JAVASCRIPT
     window.signOutComplete = false;

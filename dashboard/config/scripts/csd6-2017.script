@@ -12,6 +12,7 @@ family_name 'csd6'
 version_year '2017'
 is_stable true
 project_sharing true
+curriculum_umbrella 'CSD'
 
 stage 'Innovations in Computing_', flex_category: 'csd6_1'
 level 'CSD U6L01 TFMD', named: true

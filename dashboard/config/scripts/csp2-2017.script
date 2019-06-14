@@ -11,6 +11,7 @@ family_name 'csp2'
 version_year '2017'
 is_stable true
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Bytes and File Sizes', flex_category: 'csp2_1'
 level 'v2 U2L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'

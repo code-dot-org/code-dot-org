@@ -92,10 +92,12 @@ class AnimationTab extends React.Component {
             </div>
           </div>
         </ResizablePanes>
-        <AnimationPicker
-          channelId={this.props.channelId}
-          allowedExtensions=".png,.jpg,.jpeg"
-        />
+        {this.props.channelId && (
+          <AnimationPicker
+            channelId={this.props.channelId}
+            allowedExtensions=".png,.jpg,.jpeg"
+          />
+        )}
       </div>
     );
   }

@@ -37,7 +37,7 @@ ru:
         NetSim: Интернет-симулятор
         Custom: Художник
         CustomStudio: Лаборатория игр
-        Gamelab: Игровая лаборатория
+        Gamelab: Лаборатория игр
     trophy:
       name:
         Bronze: Бронзовый
@@ -396,6 +396,7 @@ ru:
         csp_applab_functions_parameters: Процедуры с параметрами
         csp_applab_loops: Циклы
         csp_concept_rgb: Немного о пикселях
+        csp_cs_is_changing_everything: Информатика изменяет всё
         csp_pixelation_color_1: Инструмент пикселизации цвета - часть 1
         csp_pixelation_color_2: Инструмент пикселизации цвета - часть 2
         csp_pixelation_color_3: Инструмент пикселизации цвета - часть 3
@@ -473,6 +474,10 @@ ru:
         csd_gamelab_conditional_statements: Условные операторы
         csd_gamelab_if_else: Операторы Если/Иначе
         CSF_StarWars_ProjectIntro: Введение в проект Звездные войны
+        mc_2018_intro: 'Майнкрафт: Водное путешествие. Введение'
+        MC_2018_loops: 'Майнкрафт: Водное путешествие. Повторять пока'
+        mc_2018_conditionals: 'Майнкрафт: Водное путешествие. Условия'
+        mc_2018_closing: 'Майнкрафт: Водное путешествие. Поздравления'
         hoc_dance_warmup: Танцевальная вечеринка - разминка
         csd_pair_programming: Программирование в парах
         csd_applab_parameters: Процедуры с параметрами

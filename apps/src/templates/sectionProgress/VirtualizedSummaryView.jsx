@@ -32,8 +32,7 @@ class VirtualizedSummaryView extends Component {
     lessonOfInterest: PropTypes.number.isRequired,
     getLevels: PropTypes.func,
     onScroll: PropTypes.func,
-    jumpToLessonDetails: PropTypes.func.isRequired,
-    inMiniRubricExperiment: PropTypes.bool
+    jumpToLessonDetails: PropTypes.func.isRequired
   };
 
   state = {
@@ -66,8 +65,7 @@ class VirtualizedSummaryView extends Component {
         stageIdIndex,
         key,
         cellStyle,
-        stageData.position,
-        this.props.inMiniRubricExperiment
+        stageData.position
       );
     }
 
@@ -99,8 +97,7 @@ class VirtualizedSummaryView extends Component {
     stageIdIndex,
     key,
     style,
-    position,
-    inMiniRubricExperiment
+    position
   ) => {
     const {section, getLevels} = this.props;
 
@@ -129,7 +126,6 @@ class VirtualizedSummaryView extends Component {
             levelsWithStatus={getLevels(student.id, stageIdIndex)}
             style={progressStyles.summaryCell}
             onSelectDetailView={() => this.props.jumpToLessonDetails(position)}
-            inMiniRubricExperiment={inMiniRubricExperiment}
           />
         )}
       </div>

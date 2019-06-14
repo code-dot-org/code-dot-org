@@ -1,3 +1,5 @@
+require 'pd/certificate_renderer'
+
 class Pd::WorkshopMailer < ActionMailer::Base
   include Rails.application.routes.url_helpers
 
@@ -94,7 +96,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
     @pre_survey_url = @workshop.local_summer? ?
-      url_for(action: 'new_general', controller: 'pd/workshop_daily_survey', day: 0) :
+      url_for(action: 'new_general', controller: 'pd/workshop_daily_survey', day: 0,
+        enrollmentCode: @enrollment.code
+      ) :
       pd_new_pre_workshop_survey_url(enrollment_code: @enrollment.code)
     @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
@@ -225,14 +229,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   def generate_csf_certificate
-    image = create_certificate_image2(
-      dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
-      @enrollment.full_name,
-      y: 444,
-      height: 100,
-    )
+    image = Pd::CertificateRenderer.render_workshop_certificate @enrollment
     image.format = 'jpg'
     image.to_blob
+  ensure
+    image.try :destroy!
   end
 
   def email_address(display_name, email)

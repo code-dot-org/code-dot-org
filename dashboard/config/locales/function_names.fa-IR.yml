@@ -1,40 +1,31 @@
 ---
-fa:
+fa-IR:
   data:
     function_names:
-      x: طول (x)
+      collect: جمع آوری
       details: جزئیات
-      draw eyebrow: کشیدن ابرو
-      draw a circle: یک دایره بکشید
-      draw a car: یک ماشین بکش
-      jump to middle: به وسط بپر
+      diamond: الماس
+      do something: یه کاری بکن
       draw a button: یک دکمه بکش
-      draw left leg: پای چپ را بکش
-      draw right leg: پای راست را بکش
-      draw body and arms: بدن و دست ها را بکش
-      draw a head: یک سر را بکش
-      draw head: سر را بکش
-      draw arms: دست ها را بکش
-      draw a hexagon: یک شش ضلعی بکش
+      draw a car: یک ماشین بکش
+      draw a circle: یک دایره بکشید
       draw a flower: یک گل نقاشی بکن
-      draw a square: یک مربع بکشید
+      draw a head: یک سر را بکش
+      draw a hexagon: یک شش ضلعی بکش
+      draw a house: یک خانه بکشید
       draw a snowflake: یک دانه ی برف بکش
+      draw a square: یک مربع بکشید
+      draw a star: رسم یک ستاره
       draw a tree: یک درخت بکشید
       draw a triangle: یک مثلث بکشید
-      draw a house: یک خانه بکشید
-      draw a star: رسم یک ستاره
-      do something: یه کاری بکن
-      jump: پرش
-      set score: تنظیم امتیاز
+      draw arms: دست ها را بکش
+      draw body and arms: بدن و دست ها را بکش
+      draw eyebrow: کشیدن ابرو
+      draw head: سر را بکش
+      draw left leg: پای چپ را بکش
+      draw right leg: پای راست را بکش
       get nectar: گرفتن شهد
-      test: آزمایش
-      diamond: الماس
-      move: حرکت
-      move right: برو به راست
-      move up: برو بالا
-      move down: برو پایین
-      move left: برو به چپ
-      collect: جمع آوری
-      turn left: بپیچ به چپ
-      move forward: برو جلو
-      turn right: بپیچ به راست
+      jump: پرش
+      jump to middle: به وسط بپر
+      set score: تنظیم امتیاز
+      x: طول (x)

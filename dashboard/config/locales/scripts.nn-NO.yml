@@ -2279,6 +2279,8 @@ nn:
               name: Internett
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Dansefest
         andrea-test:
           stages:
             'null':
@@ -2328,6 +2330,10 @@ nn:
               name: Hendingar i Spel-lab
             Spelling Bee:
               name: Stavekonkurranse
+            Tell a Story in Play Lab:
+              name: Hendingar i Spellab
+            Make a Game in Play Lab:
+              name: Hendingar i Spellab
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':

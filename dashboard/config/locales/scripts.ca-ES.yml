@@ -1308,6 +1308,8 @@ ca:
               name: Internet
             Crowdsourcing:
               name: Col·laboració oberta
+            Dance Party:
+              name: Festa amb ball
         andrea-test:
           stages:
             'null':

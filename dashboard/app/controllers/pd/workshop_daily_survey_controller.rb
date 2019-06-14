@@ -225,19 +225,27 @@ module Pd
       render :new_general
     end
 
+    # Display CSF201 (Deep Dive) pre-workshop survey.
     # GET workshop_survey/csf/pre201
     def new_csf_pre201
+      # Find the closest CSF 201 workshop the current user enrolled in.
       workshop = Pd::Workshop.
         where(course: COURSE_CSF, subject: SUBJECT_CSF_201).
         enrolled_in_by(current_user).nearest
 
       return render :not_enrolled unless workshop
       return render :too_late unless workshop.state != STATE_ENDED
+
       render_csf_survey(PRE_DEEPDIVE_SURVEY, workshop)
     end
 
+    # Display CSF201 (Deep Dive) post-workshop survey.
+    # The JotForm survey, on submit, will redirect to the new_facilitator route for user
+    # to submit facilitator surveys.
     # GET workshop_survey/csf/post201(/:enrollment_code)
     def new_csf_post201
+      # Use enrollment_code to find a specific workshop
+      # or search all CSF201 workshops the current user enrolled in.
       enrolled_workshops = nil
       if params[:enrollment_code].present?
         enrolled_workshops = Workshop.joins(:enrollments).
@@ -254,6 +262,7 @@ module Pd
 
       attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
       return render :no_attendance unless attended_workshop
+
       render_csf_survey(POST_DEEPDIVE_SURVEY, attended_workshop)
     end
 
@@ -293,12 +302,18 @@ module Pd
 
     def redirect_facilitator(key_params)
       session = Session.find(key_params[:sessionId])
+      session_size = session.workshop.sessions.size
       next_facilitator_index = key_params[:facilitatorIndex].to_i + 1
+
       if next_facilitator_index.between?(1, session.workshop.facilitators.size - 1)
-        redirect_to action: :new_facilitator, session_id: session.id, facilitator_index: next_facilitator_index
-      # No facilitators left. Academic workshops redirect to post if its the last day
-      elsif !session.workshop.summer? && key_params[:day].to_i == session.workshop.sessions.size
-        redirect_to action: :new_post, enrollment_code: Pd::Enrollment.find_by(user: current_user, workshop: session.workshop).code
+        redirect_to action: :new_facilitator,
+          session_id: session.id, facilitator_index: next_facilitator_index
+      # No facilitators left. Academic workshops redirect to post if its the last day.
+      # Summer workshops and CSF 201 workshops redirect to thanks.
+      elsif !session.workshop.summer? &&
+        !session.workshop.csf_201? && key_params[:day].to_i == session_size
+        enrollment_code = Pd::Enrollment.find_by(user: current_user, workshop: session.workshop).code
+        redirect_to action: :new_post, enrollment_code: enrollment_code
       else
         redirect_to action: :thanks
       end
@@ -316,11 +331,16 @@ module Pd
     def render_csf_survey(survey_name, workshop)
       @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, survey_name
 
+      # There are facilitator surveys after post workshop survey.
+      # Use sessionId to create URL query to those facilitator surveys.
+      session_id = survey_name == POST_DEEPDIVE_SURVEY ? workshop.sessions.first&.id : nil
+
       key_params = {
         environment: Rails.env,
         userId: current_user.id,
         workshopId: workshop.id,
         day: CSF_SURVEY_INDEXES[survey_name],
+        sessionId: session_id,
         formId: @form_id
       }
 

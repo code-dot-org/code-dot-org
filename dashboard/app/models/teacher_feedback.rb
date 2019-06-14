@@ -2,15 +2,18 @@
 #
 # Table name: teacher_feedbacks
 #
-#  id          :integer          not null, primary key
-#  comment     :text(65535)
-#  student_id  :integer
-#  level_id    :integer
-#  teacher_id  :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  deleted_at  :datetime
-#  performance :string(255)
+#  id                       :integer          not null, primary key
+#  comment                  :text(65535)
+#  student_id               :integer
+#  level_id                 :integer
+#  teacher_id               :integer
+#  created_at               :datetime         not null
+#  updated_at               :datetime         not null
+#  deleted_at               :datetime
+#  performance              :string(255)
+#  student_visit_count      :integer
+#  student_first_visited_at :datetime
+#  student_last_visited_at  :datetime
 #
 # Indexes
 #
@@ -56,5 +59,23 @@ class TeacherFeedback < ApplicationRecord
 
   def self.latest
     find_by(id: maximum(:id))
+  end
+
+  # Increments student_visit_count and related metrics timestamps for a TeacherFeedback.
+  def increment_visit_count
+    now = DateTime.now
+
+    if student_visit_count
+      self.student_visit_count += 1
+    else
+      self.student_visit_count = 1
+    end
+
+    unless student_first_visited_at
+      self.student_first_visited_at = now
+    end
+
+    self.student_last_visited_at = now
+    save
   end
 end

@@ -35,7 +35,6 @@ ku:
   stage_number: "قۆناغی %{number}"
   more: "زیاتر"
   less: "کەمتر"
-  beta: "تاقیکاری"
   continue: 'بەردەوام بە'
   more_info: 'زانیاری زیاتر'
   auth:
@@ -139,11 +138,7 @@ ku:
       other: "هی تر"
     submit: "بنێرە"
   project:
-    save: "پاشه‌كه‌وت بكە"
-    delete: "بسڕەوە"
-    share: "بڵاوكەوە"
     name: "ناو"
-    really_delete: 'بسڕێتەوە؟'
     abuse:
       report_abuse_form:
         abuse_type:

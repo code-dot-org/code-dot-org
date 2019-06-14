@@ -2,12 +2,13 @@
   "category": "Events",
   "config": {
     "func": "clickedSpritePointer",
-    "blockText": "clicked sprite",
-    "returnType": "Sprite",
-    "color": [
-      5,
-      ".7",
-      ".7"
-    ]
+    "blockText": "clicked {SPRITE}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "customInput": "spritePointer"
+      }
+    ],
+    "returnType": "Sprite"
   }
 }

@@ -1926,6 +1926,8 @@ sv:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Dansparty
         andrea-test:
           stages:
             'null':

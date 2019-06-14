@@ -228,7 +228,6 @@ designMode.updateProperty = function(
   }
   switch (name) {
     case 'id':
-      value = value.trim();
       elementUtils.setId(element, value);
       if (
         elementLibrary.getElementType(element) ===
@@ -581,7 +580,8 @@ designMode.readProperty = function(element, name) {
 designMode.onDuplicate = function(element, event) {
   let isScreen = $(element).hasClass('screen');
   if (isScreen) {
-    return duplicateScreen(element);
+    const newScreenId = duplicateScreen(element);
+    return elementUtils.getPrefixedElementById(newScreenId);
   }
 
   var duplicateElement = $(element).clone(true)[0];
@@ -673,8 +673,23 @@ designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
 function duplicateScreen(element) {
   const sourceScreen = $(element);
   const sourceScreenId = elementUtils.getId(element);
-  const newScreen = designMode.createScreen();
-  designMode.changeScreen(newScreen);
+  const newScreenId = designMode.createScreen();
+  const newScreenElement = elementUtils.getPrefixedElementById(newScreenId);
+  const sourceElement = elementUtils.getPrefixedElementById(sourceScreenId);
+  const backgroundColor = 'backgroundColor';
+  designMode.updateProperty(
+    newScreenElement,
+    backgroundColor,
+    designMode.readProperty(sourceElement, backgroundColor)
+  );
+
+  const backgroundImage = 'screen-image';
+  const sourceImage = designMode.readProperty(sourceElement, backgroundImage);
+  if (sourceImage) {
+    designMode.updateProperty(newScreenElement, backgroundImage, sourceImage);
+  }
+
+  designMode.changeScreen(newScreenId);
 
   // Unwrap the draggable wrappers around the elements in the source screen:
   const madeUndraggable = makeUndraggable(sourceScreen.children());
@@ -699,12 +714,12 @@ function duplicateScreen(element) {
   };
   const alert = (
     <div style={styles}>
-      Duplicated <b>{sourceScreenId}</b> to <b>{newScreen}</b>
+      Duplicated <b>{sourceScreenId}</b> to <b>{newScreenId}</b>
     </div>
   );
   studioApp().displayPlayspaceNotification(alert);
 
-  return newScreen;
+  return newScreenId;
 }
 
 designMode.onCopyElementToScreen = function(element, destScreen) {
@@ -1512,6 +1527,27 @@ designMode.addScreenIfNecessary = function(html) {
   return rootDiv[0].outerHTML;
 };
 
+designMode.setAsClipboardElement = function(element) {
+  if (!element) {
+    return;
+  }
+  let madeUndraggable;
+  const jqueryElement = $(element);
+  const isScreen = jqueryElement.hasClass('screen');
+  if (isScreen) {
+    // Unwrap the draggable wrappers around the child elements:
+    madeUndraggable = makeUndraggable(jqueryElement.children());
+  }
+
+  // Remember the current element on the clipboard
+  clipboardElement = jqueryElement.clone(true)[0];
+
+  // Restore the draggable wrappers on the child elements:
+  if (isScreen && madeUndraggable) {
+    makeDraggable(jqueryElement.children());
+  }
+};
+
 designMode.addKeyboardHandlers = function() {
   $('#designModeViz').keydown(function(event) {
     if (!Applab.isInDesignMode() || Applab.isRunning()) {
@@ -1522,18 +1558,13 @@ designMode.addKeyboardHandlers = function() {
     if (event.altKey || event.ctrlKey || event.metaKey) {
       switch (event.which) {
         case KeyCodes.COPY:
-          if (currentlyEditedElement) {
-            // Remember the current element on the clipboard
-            clipboardElement = $(currentlyEditedElement).clone(true)[0];
-          }
+          designMode.setAsClipboardElement(currentlyEditedElement);
           break;
         case KeyCodes.PASTE:
           // Paste the clipboard element with updated position and ID
           if (clipboardElement) {
-            let duplicateElement = designMode.onDuplicate(clipboardElement);
-            if (duplicateElement) {
-              clipboardElement = $(duplicateElement).clone(true)[0];
-            }
+            const duplicateElement = designMode.onDuplicate(clipboardElement);
+            designMode.setAsClipboardElement(duplicateElement);
           }
           break;
         default:

@@ -1,17 +1,25 @@
+require 'honeybadger/ruby'
+
+#
+# This controller is deprecated as of June 2019.  All certificates should be served
+# through WorkshopCertificateController now.
+# We're not immediately removing this because teachers may have bookmarked their
+# certificate link and would expect to get the same certificate, here.
+#
 class Pd::CsfCertificateController < ApplicationController
-  before_action :authenticate_user!
-  load_resource :enrollment, class: 'Pd::Enrollment', find_by: :code, id_param: :enrollment_code
-
   def generate_certificate
-    image = create_certificate_image2(
-      dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
-      @enrollment.try(:full_name) || '',
-      y: 444,
-      height: 100
+    Honeybadger.notify(
+      error_class: 'DeprecatedEndpointWarning',
+      error_message: <<~MESSAGE,
+      Somebody called GET #{request.path}, which was deprecated in June 2019.
+      This might be someone visiting a bookmark or browser history, but we should
+      follow up and see if we have a leftover link to this route somewhere.
+      See https://github.com/code-dot-org/code-dot-org/pull/28762 for details.
+      MESSAGE
+      context: {
+        referer: request.referer
+      }
     )
-
-    send_data image.to_blob, type: 'image/png', disposition: 'inline'
-  ensure
-    image.try(:destroy!)
+    redirect_to controller: 'pd/workshop_certificate', action: 'generate_certificate'
   end
 end
