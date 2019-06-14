@@ -17,7 +17,7 @@
     "https://studio.code.org/s/applab-intro/stage/1/puzzle/15": "This Or That"
   },
   "long_instructions": {
-    "https://studio.code.org/s/applab-intro/stage/1/puzzle/2": "<div style=\"float:right\">\n\\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54 AM.png\" style=\"height:150px\"> \n</div>\n\n**Goal:** Make the screen green. \n\n**How:** Drag in a `setProperty()` block. Use the dropdowns to set the screen's `\"background-color\"` to `\"green\"`. Then hit \"Run\".\n\n**Stuck? Click here:** [expandable][0]",
+    "https://studio.code.org/s/applab-intro/stage/1/puzzle/2": "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54 AM.png\" style=\"height:150px\"> \n</div>\n\n**Goal:** Make the screen green. \n\n**How:** Drag in a `setProperty()` block. Use the dropdowns to set the screen's `\"background-color\"` to `\"green\"`. Then hit \"Run\".\n\n**Stuck? Click here:** [expandable][0]",
     "https://studio.code.org/s/applab-intro/stage/1/puzzle/3": "<div style=\"float:right\">\n<img src=\"https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png\" style=\"height:200px;\">\n</div>\n\n**Goal:** Make the text bigger and blue.\n\n**How:**  You'll need two lines of code. Give `\"label1\"` a `\"font-size\"` of `80` and `\"text-color\"` of `\"blue\"`.\n\n**Stuck? Click here:** [expandable][0]",
     "https://studio.code.org/s/applab-intro/stage/1/puzzle/4": "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19 AM.png\" style=\"height:200px\">\n</div>\n\n**Goal:** Make the buttons `\"red\"` and `\"blue\"`. Then change the text in the large orange label.\n\n**How:** \n\n-   Remember you can hover over elements to see their `\"id\"`.\n-   Set the `\"background-color\"` of the buttons to `\"red\"` and `\"blue\"`.\n-   Set the `\"text\"` property of the label to anything you want, like `\"Welcome to my app!\"`.\n\n**Stuck? Click here:** [expandable][0]",
     "https://studio.code.org/s/applab-intro/stage/1/puzzle/6": "<img src=\"https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif\" style=\"float:right;height:200px\">\n\n**Goal:** The screen will start out blue. Add code so it turns green when you click the \"Green-ify\" button.\n\n**How:** Add code inside the `onEvent()` that sets the screen's `\"background-color\"` to `\"green\"`.\n\n**Stuck? Click here:** [expandable][0]",
@@ -35,7 +35,5 @@
     "https://studio.code.org/s/applab-intro/stage/1/puzzle/11": {
       "AppLabHoCFinal11": "You're now in Design Mode."
     }
-  },
-  "authored_hints": null,
-  "short_instructions": null
+  }
 }
