@@ -126,6 +126,7 @@ const styles = {
 
 class InstructionsCSF extends React.Component {
   static propTypes = {
+    teacherViewingStudentWork: PropTypes.bool,
     handleClickCollapser: PropTypes.func,
     adjustMaxNeededHeight: PropTypes.func,
     overlayVisible: PropTypes.bool,
@@ -136,6 +137,7 @@ class InstructionsCSF extends React.Component {
     hideOverlay: PropTypes.func.isRequired,
     aniGifURL: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
+    isEmbedView: PropTypes.bool,
 
     hints: PropTypes.arrayOf(
       PropTypes.shape({
@@ -191,6 +193,11 @@ class InstructionsCSF extends React.Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
+    //Overlay is not needed when a teacher is viewing the students work
+    if (this.props.teacherViewingStudentWork) {
+      this.props.hideOverlay();
+    }
+
     // Might want to increase the size of our instructions after our icon image
     // has loaded, to make sure the image fits
     $(ReactDOM.findDOMNode(this.icon)).load(
@@ -328,7 +335,9 @@ class InstructionsCSF extends React.Component {
       this.props.maxHeight
     );
     const minInstructionsHeight =
-      this.props.collapsed || this.props.overlayVisible
+      this.props.collapsed ||
+      this.props.overlayVisible ||
+      this.props.isEmbedView
         ? instructionsHeight
         : 0;
 

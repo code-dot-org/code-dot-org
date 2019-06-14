@@ -76,24 +76,42 @@ export default project => {
   }
 
   if (
-    $('.admin-abuse').length &&
+    $('.admin-project-sharing').length &&
     (project.isProjectLevel() || !project.shouldHideShareAndRemix())
   ) {
-    var abuseScore = project.getAbuseScore();
-    if (abuseScore) {
-      $('.admin-abuse').show();
-      $('.admin-abuse-score').text(abuseScore);
-      $('.admin-abuse-reset').click(function() {
-        project.adminResetAbuseScore();
-      });
-    } else {
-      $('.admin-report-abuse').show();
-    }
-  }
-
-  if ($('.admin-sharing').length) {
     var sharingDisabled = project.getSharingDisabled();
-    $('.admin-sharing-disabled').text(sharingDisabled);
+    var privateOrProfane = project.hasPrivacyProfanityViolation();
+    var abuseScore = project.getAbuseScore();
+    var abusive = project.exceedsAbuseThreshold();
+    if (sharingDisabled || privateOrProfane || abusive) {
+      $('.blocked').show();
+      $('.blocked-reasons').show();
+      $('.unblocked').hide();
+      if (sharingDisabled) {
+        $('.admin-sharing').show();
+      }
+      if (privateOrProfane) {
+        $('.privacy-profanity').show();
+      }
+      if (abusive) {
+        // The image moderation service sets the abuse score to 15 to
+        // differentiate from manual reports.
+        if (abuseScore === 15) {
+          $('.abusive-image').show();
+        } else {
+          $('.reported-abuse').show();
+        }
+        $('.admin-abuse').show();
+        $('.admin-abuse-score').text(abuseScore);
+        $('.admin-abuse-reset').click(function() {
+          project.adminResetAbuseScore();
+        });
+      }
+    } else {
+      $('.unblocked').show();
+      $('.blocked').hide();
+      $('.blocked-reasons').hide();
+    }
   }
 
   $('#disable-auto-moderation').click(async function() {

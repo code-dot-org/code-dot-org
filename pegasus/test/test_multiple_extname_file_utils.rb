@@ -39,4 +39,12 @@ class MultipleExtnameFileUtilsTest < Minitest::Test
 
     refute_empty MultipleExtnameFileUtils.find_with_extnames(dir, "public/test_view", [".md"])
   end
+
+  def test_find_with_extnames_only_subdirectory
+    dir = File.join(File.dirname(__FILE__), "fixtures/sites/code.org/public/")
+    subdir = File.join(dir, "folder")
+    refute_empty MultipleExtnameFileUtils.find_with_extnames(dir, "test_md", [".md"])
+    refute_empty MultipleExtnameFileUtils.find_with_extnames(subdir, "index", [".md"])
+    assert_empty MultipleExtnameFileUtils.find_with_extnames(subdir, "../test_md", [".md"])
+  end
 end

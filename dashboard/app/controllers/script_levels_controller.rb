@@ -105,12 +105,13 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    # In the case of the puzzle_page, send it through to be included in the
+    # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
     extra_params = {}
     if @script_level.long_assessment?
       extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
     end
+    extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
 
     can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
     override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
@@ -192,6 +193,10 @@ class ScriptLevelsController < ApplicationController
         @user = @section&.students&.find_by(id: params[:user_id])
       end
     end
+
+    # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
+    # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
+    return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
 
     @script = Script.get_from_cache(params[:script_id])
     @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
@@ -367,6 +372,12 @@ class ScriptLevelsController < ApplicationController
   end
 
   def select_level
+    # If a BubbleChoice level's sublevel has been requested, return it.
+    if @script_level.bubble_choice? && params[:sublevel_position]
+      sublevel = @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
+      return sublevel if sublevel
+    end
+
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
 

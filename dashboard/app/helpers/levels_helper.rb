@@ -20,6 +20,8 @@ module LevelsHelper
       else
         puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
       end
+    elsif params[:sublevel_position]
+      sublevel_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:sublevel_position])
     elsif script_level.stage.lockable?
       script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     elsif script_level.bonus
@@ -654,7 +656,7 @@ module LevelsHelper
     )
   end
 
-  def render_multi_or_match_content(text, level = @level)
+  def render_multi_or_match_content(text)
     return unless text
 
     path, width = text.split(',')
@@ -662,7 +664,7 @@ module LevelsHelper
     return match_answer_as_embedded_blockly(path) if File.extname(path).ends_with? '_blocks'
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
-    level.localized_text(text)
+    text
   end
 
   def level_title
