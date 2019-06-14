@@ -421,11 +421,6 @@ Applab.init = function(config) {
       start_html: Applab.getHtml(),
       start_libraries: Applab.getLibraries()
     }));
-  } else if (!config.channel) {
-    throw new Error(
-      'Cannot initialize App Lab without a channel id. ' +
-        'You may need to sign in to your code studio account first.'
-    );
   }
   Applab.channelId = config.channel;
   Applab.storage = initFirebaseStorage({
@@ -582,11 +577,7 @@ Applab.init = function(config) {
 
   config.enableShowLinesCount = false;
 
-  // In Applab, we want our embedded levels to look the same as regular levels,
-  // just without the editor
-  config.centerEmbedded = false;
   config.wireframeShare = true;
-  config.responsiveEmbedded = true;
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.

@@ -67,6 +67,7 @@ describe('StudioApp', () => {
       it('will pre-populate assets for levels that use assets', () => {
         studioApp().init({
           usesAssets: true,
+          channel: 'anldkWKklensa',
           enableShowCode: true,
           containerId: 'foo',
           level: {
