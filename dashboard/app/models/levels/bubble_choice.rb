@@ -77,6 +77,10 @@ ruby
     summary
   end
 
+  # Summarizes the level's sublevels.
+  # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels
+  # will be included in the summary.
+  # @return [Hash[]]
   def summarize_sublevels(script_level: nil)
     summary = []
     sublevels.each_with_index do |level, index|
