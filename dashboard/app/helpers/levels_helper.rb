@@ -654,7 +654,7 @@ module LevelsHelper
     )
   end
 
-  def render_multi_or_match_content(text, level = @level)
+  def render_multi_or_match_content(text)
     return unless text
 
     path, width = text.split(',')
@@ -662,7 +662,7 @@ module LevelsHelper
     return match_answer_as_embedded_blockly(path) if File.extname(path).ends_with? '_blocks'
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
-    level.localized_text(text)
+    text
   end
 
   def level_title

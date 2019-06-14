@@ -297,7 +297,7 @@ StudioApp.prototype.init = function(config) {
     document.body.appendChild(document.createElement('div'))
   );
 
-  if (config.usesAssets) {
+  if (config.usesAssets && config.channel) {
     assetPrefix.init(config);
 
     // Pre-populate asset list
@@ -3155,6 +3155,25 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 };
 
 /**
+ * Checks if the level a teacher is viewing of a students has
+ * not been started.
+ */
+StudioApp.prototype.isNotStartedLevel = function(config) {
+  const progress = getStore().getState().progress;
+
+  if (
+    ['Gamelab', 'Applab', 'Weblab', 'Spritelab'].includes(config.levelGameName)
+  ) {
+    return config.readonlyWorkspace && !config.channel;
+  } else if (!config.level.freePlay) {
+    return (
+      config.readonlyWorkspace &&
+      progress.levelProgress[progress.currentLevelId] === undefined
+    );
+  }
+};
+
+/**
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
  * @param {AppOptionsConfig} config
@@ -3178,6 +3197,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
+      isNotStartedLevel: this.isNotStartedLevel(config),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,

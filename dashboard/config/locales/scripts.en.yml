@@ -12813,3 +12813,11 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+        csd-bugs:
+          stages:
+            Game Lab Bugs:
+              name: Game Lab Bugs
+          title: Example of Bugs for CSD Teachers
+          description_audience: ''
+          description_short: ''
+          description: ''

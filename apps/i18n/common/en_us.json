@@ -750,6 +750,7 @@
   "levelHeader": "Level",
   "levelIncompleteError": "Keep coding! Something's not quite right yet.",
   "levelN": "LEVEL {levelNumber}",
+  "levelNotStartedWarning": "This student has not started the level.",
   "levelStatus": "Level Status",
   "levelType": "Level Type",
   "linesOfCode": "Lines of Code",
