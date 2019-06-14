@@ -58,8 +58,10 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         useFilesApi: false
       },
-      finishVersionHistoryLoad: () =>
-        sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE),
+      finishVersionHistoryLoad: () => {
+        sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
+        wrapper.update();
+      },
       failVersionHistoryLoad: () => sourcesApi.ajax.firstCall.args[3](),
       restoreSpy: () => sourcesApi.restorePreviousFileVersion,
       finishRestoreVersion: () =>
@@ -85,10 +87,12 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         useFilesApi: true
       },
-      finishVersionHistoryLoad: () =>
+      finishVersionHistoryLoad: () => {
         filesApi.getVersionHistory.firstCall.args[0](
           FAKE_VERSION_LIST_RESPONSE
-        ),
+        );
+        wrapper.update();
+      },
       failVersionHistoryLoad: () =>
         filesApi.getVersionHistory.firstCall.args[1](),
       restoreSpy: () => filesApi.restorePreviousVersion,
@@ -126,7 +130,6 @@ describe('VersionHistory', () => {
       wrapper = mount(<VersionHistory {...props} />);
       // Call third argument, the success handler
       finishVersionHistoryLoad();
-      wrapper.update();
 
       // Spinner goes away
       assert(
@@ -142,7 +145,6 @@ describe('VersionHistory', () => {
     it('attempts to restore a chosen version when clicking restore button', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.update();
       expect(restoreSpy()).not.to.have.been.called;
 
       wrapper
@@ -155,7 +157,6 @@ describe('VersionHistory', () => {
     it('renders an error on failed restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.update();
       wrapper
         .find('.btn-info')
         .first()
@@ -168,7 +169,6 @@ describe('VersionHistory', () => {
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.update();
       wrapper
         .find('.btn-info')
         .first()
@@ -182,7 +182,6 @@ describe('VersionHistory', () => {
     it('shows a confirmation after clicking Start Over', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.update();
 
       // Click "Start Over"
       wrapper.find('.btn-danger').simulate('click');
@@ -208,7 +207,6 @@ describe('VersionHistory', () => {
     it('goes back to version list after cancelling Start Over', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.update();
 
       // Click "Start Over"
       wrapper.find('.btn-danger').simulate('click');
@@ -238,7 +236,7 @@ describe('VersionHistory', () => {
     });
 
     describe('confirming Start Over', () => {
-      let wrapper, handleClearPuzzle;
+      let handleClearPuzzle;
 
       beforeEach(() => {
         sinon.stub(firehoseClient, 'putRecord');
@@ -255,7 +253,6 @@ describe('VersionHistory', () => {
           <VersionHistory {...props} handleClearPuzzle={handleClearPuzzle} />
         );
         finishVersionHistoryLoad();
-        wrapper.update();
         wrapper.find('.btn-danger').simulate('click');
         wrapper.find('#confirm-button').simulate('click');
       });
