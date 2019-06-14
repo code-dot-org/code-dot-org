@@ -1,5 +1,5 @@
 # LogCollector is a simple container that collects errors and important info
-# when executing a process. It can also time block execution and log the result.
+# when executing a task. It can also time block execution and log the result.
 #
 # LogCollector is helpful when we want to
 # - Prevent non-fatal errors from stopping process execution but still want to know about them.
@@ -7,11 +7,14 @@
 #   such as HoneyBadger and Slack.
 #
 class LogCollector
-  attr_reader :errors, :logs
+  attr_reader :errors, :logs, :task_name
 
-  def initialize
+  def initialize(task_name = nil)
+    @task_name = task_name
+
     # List of rescued error objects
     @errors = []
+
     # List of message logs
     @logs = []
   end
@@ -51,13 +54,13 @@ class LogCollector
     info("#{action_name || 'Unnamed'} action completed without error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}."
     )
-  rescue StandardError => e
+  rescue StandardError
     error("#{action_name || 'Unnamed'} action exited with error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}. Exception re-raised!"
     )
 
     # To be handled by caller
-    raise e
+    raise
   end
 
   def info(message)
@@ -78,7 +81,7 @@ class LogCollector
   end
 
   def to_s
-    str = "Recorded #{errors.size} errors and #{logs.size} log messages."
+    str = "#{task_name} task recorded #{errors.size} error(s) and #{logs.size} log message(s)."
     logs.each {|log| str.concat("\n#{log}")}
     str
   end
