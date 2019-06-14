@@ -39,7 +39,8 @@
 #audit_log_info.collapse
   = render partial: 'levels/editors/audit_log', locals: {f: f}
 
-= render partial: 'levels/editors/sub_level_types', locals: {f: f}
+- if @level.respond_to?(:free_play) || (@level.uses_droplet?) || @level.is_a?(Blockly)
+  = render partial: 'levels/editors/sub_level_types', locals: {f: f}
 
 - if @level.is_a?(Weblab) || (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.respond_to?(:disable_sharing)
   %legend.control-legend{data: {toggle: "collapse", target: "#shareAndRemix"}}
