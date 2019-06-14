@@ -1,45 +1,29 @@
-%legend.control-legend.levelTypeHeader
-  Sprite Lab Options
+= render partial: 'levels/editors/control_buttons', locals: {f: f}
 
-// Dance lab is a subset of GamelabJr aka Sprite Lab levels
-- if @level.is_a?(Dancelab)
-  = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'dance'}
-- elsif @level.is_a?(GamelabJr)
-  = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'spritelab'}
+= render partial: 'levels/editors/animation', locals: {f: f}
 
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
+= render partial: 'levels/editors/helper_libraries', locals: {f: f}
 
-.field
-  %p{data: {toggle: "collapse", target: "#custom_blocks_output"}}
-    Custom block defintions
+%legend.control-legend{data: {toggle: "collapse", target: "#setupCode"}}
+  Setup Code
 
-  %p
-    Add some custom JSON block definitions
-    <a href="#" onClick="toggleBlock('custom_blocks_more'); return false">Read more...</a>
-  #custom_blocks_more{style: 'display: none'}
-    %p
-      Here is an example.
-    %pre
-      :preserve
-        {
-          "func": "isDestroyed",
-          "args": [
-            { "name": "SPRITE" }
-          ],
-          "blockText": "{SPRITE} is destroyed?",
-          "returnType": "Boolean",
-        }
-    %p
-      Some notes:
-    %ul
-      %li <code>returnType</code> and <code>args[].type</code> can be any of 'String', 'Number', 'Image', 'Boolean', 'Function', 'Colour', or 'Array'. If none of those apply, or you don't want to enforce a type, just use 'None'
-      %li <code>blockText</code> must contain a placeholder for every argument in the <code>args</code> list
-  #custom_blocks_output.collapse
-    ~ f.text_area :custom_blocks, placeholder: 'Custom blocks', rows: 4, value: @level.custom_blocks
-    #custom-blocks-validation
-.field
-  =f.label 'Custom helper library code'
-  %p
-    This code will be injected between the official helper library and the student's code
-  ~ f.text_area :custom_helper_library, placeholder: 'Add some arbitrary javascript', rows: 4, value: @level.custom_helper_library
+%p Create custom setup code. Immediately show results of setup code in playspace
+
+#setupCode.collapse
+  = f.label 'Immediately show the results of setup code changes in the playspace?'
+  :ruby
+    selector = f.select :auto_run_setup, options_for_select([
+      ['No', nil],
+      ['Yes, run the draw loop once', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_loop],
+      ['Yes, call drawSprites()', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_sprites],
+      ['Yes, run some other JavaScript', SharedConstants::GAMELAB_AUTORUN_OPTIONS.custom],
+    ], selected: @level.auto_run_setup)
+  = selector
+  = f.label 'Custom setup code'
+  = f.text_field :custom_setup_code
+
+= render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'spritelab'}
+
+= render partial: 'levels/editors/validation_code', locals: {f: f}
+
+= render partial: 'levels/editors/submittable', locals: {f: f}
