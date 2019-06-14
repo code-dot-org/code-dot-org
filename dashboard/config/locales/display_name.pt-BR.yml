@@ -488,7 +488,7 @@ pt-BR:
       CSD U6 arrays intro: Introdução a Arrays
       CSD U6 arrays intro_2018: Introdução a Arrays
       CSD U6 arrays intro_2019: Vetores
-      CSD U6 arrays video: 'Vídeo: Introdução aos Arrays'
+      CSD U6 arrays video: 'Vídeo: Introdução a Vetores'
       CSD U6 challenge motorcycle_2018: 'Desafio: Motocicleta'
       CSD U6 challenge motorcycle_2019: 'Desafio: Motocicleta'
       CSD U6 circuit LED map: Circuitos e LEDs
@@ -618,6 +618,7 @@ pt-BR:
       'CSD: Drawing in Game Lab 2_2019': 'Vídeo: Desenho no laboratório de jogo -
         parte 2'
       'CSD: For Loop_2018': Laços para
+      'CSD: For Loop_2019': 'Vídeo: Laços For'
       'CSD: Introduction to the Draw Loop': 'Vídeo: Introdução ao laço Draw'
       'CSD: Introduction to the Draw Loop_2018': 'Vídeo: Introdução ao laço Draw'
       'CSD: Introduction to the Draw Loop_2019': 'Vídeo: Introdução ao laço Draw'
@@ -651,8 +652,8 @@ pt-BR:
       CSS U2 Body Map_2019: O elemento do corpo
       'Course F: Artist Project_2018': Curso F Projeto Artista
       'Course F: Artist Project_2019': Curso F Projeto Artista
-      CourseEF_video_IntroSpriteLab: Este é o Laboratório de Sprite
-      CourseEF_video_IntroSpriteLab_2019: Este é o Laboratório de Sprite
+      CourseEF_video_IntroSpriteLab: Este é o Laboratório de Sprites
+      CourseEF_video_IntroSpriteLab_2019: Este é o Laboratório de Sprites
       CourseEF_video_MakeSprite: Como fazer um Sprite
       CourseEF_video_MakeSprite_2019: Como fazer um Sprite
       CourseE_hoops: 'Coelho '

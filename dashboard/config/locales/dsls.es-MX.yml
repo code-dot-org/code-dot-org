@@ -947,6 +947,7 @@ es-MX:
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
+        true<br>false<br>true: verdadero<br>falso<br>verdadero
       CSD U3 Boolean MC_2018:
         answers:
         - text: verdadero<br>falso<br>verdadero
@@ -960,6 +961,7 @@ es-MX:
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
+        true<br>false<br>true: verdadero<br>falso<br>verdadero
       CSD U3 Boolean MC_2018_2019:
         answers:
         - text: verdadero<br>falso<br>verdadero

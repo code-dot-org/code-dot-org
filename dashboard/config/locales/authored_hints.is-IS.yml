@@ -9312,17 +9312,11 @@ is-IS:
         courseD_bee_conditionals2_hintVid2: Þetta myndband getur hjálpað að leysa
           þessa þraut.
       courseD_bee_conditionals2_2019:
-        courseD_bee_conditionals2_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
-          á myndbandið1!
         courseD_bee_conditionals2_a: Stundum er blóm á reit, en stundum ekki.  Ef
           þú vilt að kóðinn ráði við bæði tilfellin, skaltu gæta þess að nota `ef`
           setningu.
-        courseD_bee_conditionals2_b: Þú getur notað `endurtaka` lykkju eða `meðan
-          slóð framundan` til að fara í gegnum þetta völundarhús.
         courseD_bee_conditionals2_c: Þú þarft ekki að athuga með býkúpur. Undir skýi
           eru annað hvort blóm eða ekkert.
-        courseD_bee_conditionals2_hintVid2: Þetta myndband getur hjálpað að leysa
-          þessa þraut.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
@@ -9348,17 +9342,11 @@ is-IS:
         courseD_bee_conditionals3_hintVid2: Þetta myndband getur hjálpað að leysa
           þessa þraut.
       courseD_bee_conditionals3_2019:
-        courseD_bee_conditionals3_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
-          á myndbandið1!
         courseD_bee_conditionals3_a: Gættu þess að nota `ef` setningu til að athuga
           fyrir hvern reit hvort hann hafi blóm eða ekkert.
-        courseD_bee_conditionals3_b: Þú getur notað `endurtaka` lykkju eða `meðan`
-          lykkju til að láta býfluguna færast áfram. Þú færð að velja!
         courseD_bee_conditionals3_c: Ekki hræðast að gera mistök! Prófaðu að bæta
           við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
-        courseD_bee_conditionals3_hintVid2: Þetta myndband getur hjálpað að leysa
-          þessa þraut.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
@@ -9384,17 +9372,10 @@ is-IS:
         courseD_bee_conditionals4_hintVid2: Þetta myndband getur hjálpað að leysa
           þessa þraut.
       courseD_bee_conditionals4_2019:
-        courseD_bee_conditionals4_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
-          á myndbandið1!
         courseD_bee_conditionals4_a: Þú getur unnið með hvern reit eins og hann væri
           hulinn skýi, jafnvel þó þú sjáir alla slóðinaþ.
         courseD_bee_conditionals4_b: 'Notaðu `ef` setningu innan í lykkjunni til að
           athuga fyrir hvern reit hvort hann hafi blómasafa. '
-        courseD_bee_conditionals4_c: Notaðu kubbinn <xml><block type="maze_untilBlocked"/></xml>
-          og í honum `færa áfram` og athuga með blóm. Ef það er blóm, hvað ætti býflugan
-          að gera?
-        courseD_bee_conditionals4_hintVid2: Þetta myndband getur hjálpað að leysa
-          þessa þraut.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
@@ -9413,23 +9394,6 @@ is-IS:
         courseD_bee_conditionals5_hintVid2: Þetta myndband getur hjálpað að leysa
           þessa þraut.
       courseD_bee_conditionals5_2018:
-        courseD_bee_conditionals5_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
-          á myndbandið1!
-        courseD_bee_conditionals5_a: Hugsaðu hverja hlið á rétthyrndu slóðinni sem
-          sjálfstæða slóð. Settu `meðan slóð framundan` lykkju innan í `endurtaka`
-          lykkju. Eftir hve mörgum slóðum þarf býflugan að fljúga, ef býflugan þarf
-          að fara hverja slóð sem hefur blóm?
-        courseD_bee_conditionals5_c: Þrjár hliðar rétthyrningsins hafa blóm, svo að
-          kóðinn þarf að `endurtaka 3 sinnum`. Í hverri umferð þarf býflugan að fara
-          eftir slóðinni `meðan slóð framundan`. Til að fara eftir slóðinni þarf býflugan
-          að `færa áfram`. Á slóðinni þarf býflugan að athuga með blóm. Ef þar er
-          blóm, á býflugan að `sækja blómasafa`.
-        courseD_bee_conditionals5_b: Innan í `meðan slóð framundan` kubbi þarft þú
-          að hafa `færa áfram` og athuga með blóm. Hvernig athugar þú með blóm? Hvað
-          gerir þú ef þar er blóm?
-        courseD_bee_conditionals5_hintVid2: Þetta myndband getur hjálpað að leysa
-          þessa þraut.
-      courseD_bee_conditionals5_2019:
         courseD_bee_conditionals5_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
         courseD_bee_conditionals5_a: Hugsaðu hverja hlið á rétthyrndu slóðinni sem
@@ -9467,15 +9431,11 @@ is-IS:
         courseD_bee_conditionals6_hintVid2: Þetta myndband getur hjálpað að leysa
           þessa þraut.
       courseD_bee_conditionals6_2019:
-        courseD_bee_conditionals6_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
-          á myndbandið1!
         courseD_bee_conditionals6_a: Gættu þess að nota `ef` yrðingu til að athuga
           með býkúpu undir hverju skýi.
         courseD_bee_conditionals6_b: Í þessu tilfelli þarftu ekki að athuga með blómasafa
           undir skýjunum.
         courseD_bee_conditionals6_c: Er til lykkja sem gæti einfaldað kóðann þinn?
-        courseD_bee_conditionals6_hintVid2: Þetta myndband getur hjálpað að leysa
-          þessa þraut.
       courseD_bee_conditionals7:
         courseD_bee_conditionals7_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
@@ -9497,15 +9457,11 @@ is-IS:
         courseD_bee_conditionals7_hintVid2: Þetta myndband getur hjálpað að leysa
           þessa þraut.
       courseD_bee_conditionals7_2019:
-        courseD_bee_conditionals7_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
-          á myndbandið1!
         courseD_bee_conditionals7_a: "**Mundu:** Þessi þraut breytist í hvert sinn
           sem hún er keyrð. \n\nÞú þarft að nota skilyrðiskubb (`ef/annars`) til að
           leysa þessa áskorun."
         courseD_bee_conditionals7_b: Ef ský felur ekki blóm þá hlýtur það að fela
           býkúpu, svo þú þarft ekki að hafa áhyggjur af tómum reitum.
-        courseD_bee_conditionals7_hintVid2: Þetta myndband getur hjálpað að leysa
-          þessa þraut.
       courseD_bee_conditionals7_predict2:
         courseD_bee_conditionals7_a: "**Mundu:** Þessi þraut breytist í hvert sinn
           sem hún er keyrð. \n\nÞú þarft að nota skilyrðiskubb (`ef/annars`) til að

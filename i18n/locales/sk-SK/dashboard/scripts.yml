@@ -4206,3 +4206,23 @@ sk:
           stages:
             Wrap Up:
               name: Zhrnutie
+        csd2-pilot:
+          stages:
+            'Websites for Expression ':
+              description_student: 'Táto lekcia predstavuje webstránky ako spôsob osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok pripravených študentami z predošlých kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu zvyšku kapitoly. '
+            Digital Footprint:
+              name: Digitálna stopa
+            Lists:
+              name: Zoznamy
+            Project - Multi-Page Websites:
+              name: Projekt - Viacstránkové webstránky
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Premenné
+            Conditionals:
+              name: Podmienky
+            Velocity:
+              name: Rýchlosť
+            Functions:
+              name: Funkcie
