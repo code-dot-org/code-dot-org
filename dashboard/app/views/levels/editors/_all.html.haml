@@ -105,7 +105,3 @@
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_sharing, description: "Disable sharing"}
     %p If set, this level cannot be shared or saved to galleries even if it's free play.
-
-- if @level.respond_to? :coordinate_grid_background
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
