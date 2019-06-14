@@ -1,6 +1,9 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levelbuilder.js')}
 
+.field
+  = link_to 'Find documentation for levelbuilder and its processes here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Welcome-to-Levelbuilder', target: '_blank'
+
 %pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
