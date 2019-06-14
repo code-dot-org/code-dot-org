@@ -64,6 +64,8 @@ class SoundListEntry extends React.Component {
   }
 
   componentDidMount() {
+    // Using the _isMounted pattern to prevent onEnded callbacks from soundsRegistry
+    // attempting to set state in this component after it's been unmounted
     this._isMounted = true;
   }
 
