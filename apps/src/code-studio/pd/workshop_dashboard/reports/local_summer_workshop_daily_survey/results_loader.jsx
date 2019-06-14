@@ -20,8 +20,9 @@ export class ResultsLoader extends React.Component {
   load() {
     const url = `/api/v1/pd/workshops/${
       this.props.params['workshopId']
-    }/local_workshop_daily_survey_report`;
+    }/generic_survey_report`;
 
+    // TODO: Handle server failure gracefully; right now it just shows a infinite spinning wheel.
     this.loadRequest = $.ajax({
       method: 'GET',
       url: url,

@@ -672,6 +672,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 33.5, workshop_csp_summer.effective_num_hours
   end
 
+  test 'CSF 101 workshops are capped at 7 hours' do
+    workshop_csf_101 = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101,
+      num_sessions: 1,
+      each_session_hours: 8
+
+    assert_equal 7, workshop_csf_101.effective_num_hours
+  end
+
+  test 'CSF 201 workshops are capped at 6 hours' do
+    workshop_csf_201 = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_201,
+      num_sessions: 1,
+      each_session_hours: 7
+
+    assert_equal 6, workshop_csf_201.effective_num_hours
+  end
+
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil)
@@ -1200,34 +1220,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # No problem. Return the one associated with the most recent attendance
     create :pd_attendance, teacher: teacher, session: csp_workshops[0].sessions.last
     assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
-  end
-
-  test 'pilot csf201 workshop does not get exit email' do
-    skip "Skip this test from #{CSF_201_PILOT_END_DATE}" unless
-      DateTime.now < CSF_201_PILOT_END_DATE
-
-    ended_pilot_workshop = create :pd_ended_workshop,
-      course: COURSE_CSF, subject: SUBJECT_CSF_201,
-      num_sessions: 1, sessions_from: CSF_201_PILOT_END_DATE - 1.day
-
-    Pd::Workshop.any_instance.expects(:send_exit_surveys).never
-    Pd::Workshop.process_ended_workshop_async ended_pilot_workshop.id
-  end
-
-  test 'pilot csf201 workshop does not get reminder email' do
-    skip "Skip this test from #{CSF_201_PILOT_END_DATE + 7.days}" unless
-      DateTime.now < CSF_201_PILOT_END_DATE + 7.days
-
-    create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
-      num_sessions: 1, sessions_from: DateTime.now
-
-    assert Pd::Workshop.scheduled_start_in_days(0).present?
-
-    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).never
-    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).never
-    Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).never
-
-    Pd::Workshop.send_reminder_for_upcoming_in_days(0)
   end
 
   private

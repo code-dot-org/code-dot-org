@@ -7,7 +7,7 @@ Scenario: Toggle on Multi Level
   Then I sign in as "Teacher_Daenerys"
   Then I am on "http://studio.code.org/s/allthethings/stage/9/puzzle/1"
   And I see no difference for "page load"
-  Then I click selector ".show-handle .fa-chevron-left" once I see it
+  And I wait to see ".submitButton"
   Then I click selector ".uitest-viewAsStudent"
   And I see no difference for "view as student"
   Then I click selector ".uitest-viewAsTeacher"
@@ -15,7 +15,7 @@ Scenario: Toggle on Multi Level
   Then I open the progress drop down of the current page
   And I see no difference for "progress dropdown for teacher"
 
-  And I click selector ".section-student .name a" to load a new page
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait to see ".header_popup_link"
   Then I open the progress drop down of the current page
   And I wait until element ".user-stats-block:contains(Jigsaw)" is visible
@@ -59,7 +59,8 @@ Scenario: Toggle on Lockable Level
   And element ".level-group" is visible
   And I see no difference for "view as teacher while locked"
 
-  And I click selector ".section-student .name a" to load a new page
+  # Click the first student
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait until element "#level-body" is visible
   And element "#level-body" contains text "This survey is anonymous"
   And element "#locked-stage" is not visible
@@ -80,52 +81,11 @@ Scenario: Toggle on Lockable Level
   Then I click selector ".uitest-viewAsTeacher"
   And element "#locked-stage" is not visible
 
-  And I click selector ".section-student .name a" to load a new page
+  # Click the first student
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait until element "#level-body" is visible
   And element "#level-body" contains text "This survey is anonymous"
   And element "#locked-stage" is not visible
   And element ".level-group" is not visible
 
   And I close my eyes
-
-Scenario: Toggle on Lockable Level with new teacher panel
-  Given I create an authorized teacher-associated student named "Joffrey"
-  Then I sign in as "Teacher_Joffrey"
-
-  Then I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/1?noautoplay=true&newTeacherPanel=1"
-  And I wait until element ".level-group" is visible
-  And element "#locked-stage" is not visible
-  Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".uitest-viewAsStudent"
-  And I wait until element "#locked-stage" is visible
-  Then I click selector ".uitest-viewAsTeacher"
-  And element "#locked-stage" is not visible
-  And element ".level-group" is visible
-
-  # Click the first student
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-  And I wait until element "#level-body" is visible
-  And element "#level-body" contains text "This survey is anonymous"
-  And element "#locked-stage" is not visible
-  And element ".level-group" is not visible
-
-  Then I am on "http://studio.code.org/s/allthethings"
-  Then I open the stage lock dialog
-  Then I unlock the stage for students
-
-  Then I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/1?noautoplay=true&newTeacherPanel=1"
-  And I wait until element ".level-group" is visible
-  And element "#locked-stage" is not visible
-  Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".uitest-viewAsStudent"
-  And element "#locked-stage" is not visible
-
-  Then I click selector ".uitest-viewAsTeacher"
-  And element "#locked-stage" is not visible
-
-  # Click the first student
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-  And I wait until element "#level-body" is visible
-  And element "#level-body" contains text "This survey is anonymous"
-  And element "#locked-stage" is not visible
-  And element ".level-group" is not visible

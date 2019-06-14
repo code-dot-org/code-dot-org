@@ -39,6 +39,7 @@ namespace :seed do
     'express-2017',
     'pre-express-2017',
     'coursea-2018',
+    'coursea-2019',
     'csp1-2017',
     'csp2-2017',
     'csp3-2017',
@@ -60,6 +61,14 @@ namespace :seed do
     'csp-create-2018',
     'csppostap-2018',
     'csp-post-survey-2018',
+    'csp1-2019',
+    'csp2-2019',
+    'csp3-2019',
+    'csp4-2019',
+    'csp5-2019',
+    'csp-explore-2019',
+    'csp-create-2019',
+    'csppostap-2019',
     'dance',
     'events',
     'express-2017',
@@ -133,7 +142,7 @@ namespace :seed do
 
   task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2018).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2018 csp-2019).each do |course_name|
       Course.load_from_path("config/courses/#{course_name}.course")
     end
   end

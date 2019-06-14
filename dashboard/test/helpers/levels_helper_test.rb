@@ -98,7 +98,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "get video choices" do
     choices_cached = video_key_choices
-    assert_equal(choices_cached.count, Video.count)
+    assert_equal(choices_cached.count, Video.where(locale: 'en-US').count)
     Video.all.each {|video| assert_includes(choices_cached, video.key)}
   end
 
@@ -650,49 +650,6 @@ class LevelsHelperTest < ActionView::TestCase
   test 'render_multi_or_match_content can retrieve plain text' do
     @level = create :multi, name: "test render_multi_or_match_content plain text"
     assert_equal render_multi_or_match_content("test"), "test"
-  end
-
-  test 'render_multi_or_match_content can retrieve translated text' do
-    @level = create :multi, name: "test render_multi_or_match_content translation"
-    input = "test text"
-    expected = "translated test text"
-
-    test_locale = :"te-ST"
-    I18n.locale = test_locale
-    custom_i18n = {
-      "data" => {
-        "multi" => {
-          @level.name => {
-            input => expected
-          }
-        }
-      }
-    }
-    I18n.backend.store_translations test_locale, custom_i18n
-
-    assert_equal render_multi_or_match_content(input), expected
-  end
-
-  test 'render_multi_or_match_content will prefer english translations over raw string even in english' do
-    # Note that this isn't necessarily functionality we care about preserving,
-    # but it is how our system currently works
-
-    @level = create :multi, name: "test render_multi_or_match_content english"
-    input = "test text"
-    expected = "stored source test text"
-
-    custom_i18n = {
-      "data" => {
-        "multi" => {
-          @level.name => {
-            input => expected
-          }
-        }
-      }
-    }
-    I18n.backend.store_translations I18n.default_locale, custom_i18n
-
-    assert_equal render_multi_or_match_content(input), expected
   end
 
   test 'render_multi_or_match_content can generate images' do

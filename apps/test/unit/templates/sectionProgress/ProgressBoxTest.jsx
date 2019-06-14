@@ -10,15 +10,12 @@ const DEFAULT_PROPS = {
   imperfect: 0,
   perfect: 2,
   style: {},
-  stageIsAllAssessment: false,
-  inMiniRubricExperiment: false
+  stageIsAllAssessment: false
 };
 
 describe('ProgressBox', () => {
   it('renders progress bar as green when stageIsAllAssessment prop is false', () => {
-    const wrapper = shallow(
-      <ProgressBox {...DEFAULT_PROPS} inMiniRubricExperiment={true} />
-    );
+    const wrapper = shallow(<ProgressBox {...DEFAULT_PROPS} />);
     assert.equal(
       wrapper
         .find('.uitest-perfect-bar')
@@ -28,24 +25,7 @@ describe('ProgressBox', () => {
     );
   });
 
-  it('renders progress bar as purple when stageIsAllAssessment prop is true and in experiment', () => {
-    const wrapper = shallow(
-      <ProgressBox
-        {...DEFAULT_PROPS}
-        stageIsAllAssessment={true}
-        inMiniRubricExperiment={true}
-      />
-    );
-    assert.equal(
-      wrapper
-        .find('.uitest-perfect-bar')
-        .first()
-        .props().style.backgroundColor,
-      color.level_submitted
-    );
-  });
-
-  it('renders progress bar as green when stageIsAllAssessment prop is true and not in experiment', () => {
+  it('renders progress bar as purple when stageIsAllAssessment prop is true', () => {
     const wrapper = shallow(
       <ProgressBox {...DEFAULT_PROPS} stageIsAllAssessment={true} />
     );
@@ -54,7 +34,7 @@ describe('ProgressBox', () => {
         .find('.uitest-perfect-bar')
         .first()
         .props().style.backgroundColor,
-      color.level_perfect
+      color.level_submitted
     );
   });
 });
