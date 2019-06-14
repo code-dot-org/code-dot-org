@@ -75,6 +75,20 @@ export function getBehaviorsForAnimation(animation) {
   return numBehaviors;
 }
 
+/**
+ * @param {number} spriteId
+ * @return {number} Number of behaviors associated with the specified sprite
+ */
+export function getBehaviorsForSpriteId(spriteId) {
+  let numBehaviors = 0;
+  behaviors.forEach(behavior => {
+    if (behavior.sprite.id === spriteId) {
+      numBehaviors++;
+    }
+  });
+  return numBehaviors;
+}
+
 export function getSpriteIdsInUse() {
   let spriteIds = [];
   Object.keys(nativeSpriteMap).forEach(spriteId =>

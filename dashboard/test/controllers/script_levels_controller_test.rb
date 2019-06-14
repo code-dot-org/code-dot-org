@@ -134,6 +134,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
+  test "should render sublevel for BubbleChoice script_level with sublevel_position param" do
+    script = create :script
+    level = create(:bubble_choice_level, :with_sublevels)
+    script_level = create :script_level, script: script, levels: [level]
+    sublevel_position = 1
+
+    get :show, params: {
+      script_id: script,
+      stage_position: script_level.stage.relative_position,
+      id: script_level.position,
+      sublevel_position: sublevel_position
+    }
+    assert_response :success
+    assert_equal level.sublevels[sublevel_position - 1], assigns(:level)
+  end
+
   test 'project template level sets start blocks when defined' do
     template_level = create :level
     template_level.start_blocks = '<xml/>'
@@ -965,7 +981,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute_includes response.body, fake_last_attempt
   end
 
-  test 'does not load applab if you are a teacher viewing your student and they do not have a channel id' do
+  test 'loads applab if you are a teacher viewing your student and they do not have a channel id' do
     sign_in @teacher
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
@@ -989,9 +1005,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       section_id: @section.id
     }
 
-    assert_select '#notStarted'
-    assert_select '#codeApp', 0
-    refute_includes response.body, fake_last_attempt
+    assert_select '#codeApp'
+    assert_select '#notStarted', 0
+    assert_includes response.body, fake_last_attempt
   end
 
   test 'chooses section when teacher has multiple sections, but only one unhidden' do

@@ -86,10 +86,12 @@ class GameLabView extends React.Component {
         >
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
           <GameLabVisualizationColumn finishButton={showFinishButton} />
-          <AnimationPicker
-            channelId={this.getChannelId()}
-            allowedExtensions=".png,.jpg,.jpeg"
-          />
+          {this.getChannelId() && (
+            <AnimationPicker
+              channelId={this.getChannelId()}
+              allowedExtensions=".png,.jpg,.jpeg"
+            />
+          )}
         </div>
         {this.props.isIframeEmbed && !this.props.isRunning && (
           <IFrameEmbedOverlay
