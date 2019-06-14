@@ -19,6 +19,7 @@ describe('Action Commands', () => {
     commands.changePropBy(spriteId, 'y', 100);
     expect(spriteCommands.getProp(spriteId, 'y')).to.equal(400 - 221);
 
+    expect(spriteCommands.getProp(spriteId, 'direction')).to.equal(0);
     commands.changePropBy(spriteId, 'direction', 200);
     expect(spriteCommands.getProp(spriteId, 'direction')).to.equal(200);
     commands.changePropBy(spriteId, 'direction', 200);
@@ -100,11 +101,6 @@ describe('Action Commands', () => {
       expect(spriteCommands.getProp(spriteId, 'direction')).to.equal(100);
       commands.setProp(spriteId, 'direction', 400);
       expect(spriteCommands.getProp(spriteId, 'direction')).to.equal(40);
-    });
-
-    it('sets y', () => {
-      commands.setProp(spriteId, 'y', 100);
-      expect(spriteCommands.getProp(spriteId, 'y')).to.equal(100);
     });
 
     it('sets arbitrary properties', () => {
