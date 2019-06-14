@@ -50,11 +50,17 @@
 .field
   = f.label :remove_items_when_actor_collides, 'Remove an item (e.g. a stormtrooper) when the actor collides with it'
   = boolean_check_box f, :remove_items_when_actor_collides
-.field
-  = f.label :background, 'Default background'
-  = f.text_field :background
 
-%div.collapsed_area_header{data: {toggle: "collapse", target: "#cs_in_a"}}
-  CS in A Options
-.collapse{id: "cs_in_a"}
-  = render partial: 'levels/editors/cs_in_a', locals: {f: f}
+%legend.control-legend{data: {toggle: "collapse", target: "#background"}}
+  Background Settings
+
+#background.collapse
+  .field
+    = f.label :background, 'Default background'
+    = f.text_field :background
+
+  - if @level.respond_to? :coordinate_grid_background
+    .field
+      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
+
+= render partial: 'levels/editors/cs_in_a', locals: {f: f}
