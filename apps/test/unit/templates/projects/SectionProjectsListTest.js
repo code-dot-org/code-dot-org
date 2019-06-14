@@ -84,35 +84,35 @@ describe('SectionProjectsList', () => {
     expect(rows).to.have.length(5);
 
     assertRowContentsWithoutThumbnail(
-      rows.at(0).instance(),
+      rows.get(0),
       'Project Name',
       'Student Name',
       'Type',
       'Last Edited'
     );
     assertRowContentsWithoutThumbnail(
-      rows.at(1).instance(),
+      rows.get(1),
       'Dominoes',
       'Bob',
       'Game Lab',
       'January 1, 2017'
     );
     assertRowContentsWithoutThumbnail(
-      rows.at(2).instance(),
+      rows.get(2),
       'Antelope Freeway',
       'Alice',
       'Web Lab',
       'December 29, 2016'
     );
     assertRowContentsWithoutThumbnail(
-      rows.at(3).instance(),
+      rows.get(3),
       'Cats and Kittens',
       'Charlie',
       'Web Lab',
       'November 30, 2016'
     );
     assertRowContentsWithoutThumbnail(
-      rows.at(4).instance(),
+      rows.get(4),
       'A1 Locksmith',
       'Alice',
       'App Lab',
@@ -124,7 +124,7 @@ describe('SectionProjectsList', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -132,7 +132,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       null,
       'Dominoes',
       'Bob',
@@ -140,7 +140,7 @@ describe('SectionProjectsList', () => {
       'January 1, 2017'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       null,
       'Antelope Freeway',
       'Alice',
@@ -148,7 +148,7 @@ describe('SectionProjectsList', () => {
       'December 29, 2016'
     );
     assertRowContents(
-      rows.at(3).instance(),
+      rows.get(3),
       CAT_IMAGE_URL,
       'Cats and Kittens',
       'Charlie',
@@ -156,7 +156,7 @@ describe('SectionProjectsList', () => {
       'November 30, 2016'
     );
     assertRowContents(
-      rows.at(4).instance(),
+      rows.get(4),
       null,
       'A1 Locksmith',
       'Alice',
@@ -165,7 +165,7 @@ describe('SectionProjectsList', () => {
     );
 
     const lastEditedHeader = root.find('th').at(COLUMNS.LAST_EDITED);
-    expect(lastEditedHeader.instance().innerText).to.contain('Last Edited');
+    expect(lastEditedHeader.get(0).innerText).to.contain('Last Edited');
 
     // Show least recently edited first
     lastEditedHeader.simulate('click');
@@ -173,7 +173,7 @@ describe('SectionProjectsList', () => {
     rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -181,7 +181,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       null,
       'A1 Locksmith',
       'Alice',
@@ -189,7 +189,7 @@ describe('SectionProjectsList', () => {
       'October 29, 2016'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       CAT_IMAGE_URL,
       'Cats and Kittens',
       'Charlie',
@@ -197,7 +197,7 @@ describe('SectionProjectsList', () => {
       'November 30, 2016'
     );
     assertRowContents(
-      rows.at(3).instance(),
+      rows.get(3),
       null,
       'Antelope Freeway',
       'Alice',
@@ -205,7 +205,7 @@ describe('SectionProjectsList', () => {
       'December 29, 2016'
     );
     assertRowContents(
-      rows.at(4).instance(),
+      rows.get(4),
       null,
       'Dominoes',
       'Bob',
@@ -216,7 +216,7 @@ describe('SectionProjectsList', () => {
 
   it('can be sorted by project name', () => {
     const projectNameHeader = root.find('th').at(COLUMNS.PROJECT_NAME);
-    expect(projectNameHeader.instance().innerText).to.contain('Project Name');
+    expect(projectNameHeader.get(0).innerText).to.contain('Project Name');
 
     // Sort in ascending order by project name
     projectNameHeader.simulate('click');
@@ -224,7 +224,7 @@ describe('SectionProjectsList', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -232,7 +232,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       null,
       'A1 Locksmith',
       'Alice',
@@ -240,7 +240,7 @@ describe('SectionProjectsList', () => {
       'October 29, 2016'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       null,
       'Antelope Freeway',
       'Alice',
@@ -248,7 +248,7 @@ describe('SectionProjectsList', () => {
       'December 29, 2016'
     );
     assertRowContents(
-      rows.at(3).instance(),
+      rows.get(3),
       CAT_IMAGE_URL,
       'Cats and Kittens',
       'Charlie',
@@ -256,7 +256,7 @@ describe('SectionProjectsList', () => {
       'November 30, 2016'
     );
     assertRowContents(
-      rows.at(4).instance(),
+      rows.get(4),
       null,
       'Dominoes',
       'Bob',
@@ -270,7 +270,7 @@ describe('SectionProjectsList', () => {
     rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -278,7 +278,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       null,
       'Dominoes',
       'Bob',
@@ -286,7 +286,7 @@ describe('SectionProjectsList', () => {
       'January 1, 2017'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       CAT_IMAGE_URL,
       'Cats and Kittens',
       'Charlie',
@@ -294,7 +294,7 @@ describe('SectionProjectsList', () => {
       'November 30, 2016'
     );
     assertRowContents(
-      rows.at(3).instance(),
+      rows.get(3),
       null,
       'Antelope Freeway',
       'Alice',
@@ -302,7 +302,7 @@ describe('SectionProjectsList', () => {
       'December 29, 2016'
     );
     assertRowContents(
-      rows.at(4).instance(),
+      rows.get(4),
       null,
       'A1 Locksmith',
       'Alice',
@@ -313,7 +313,7 @@ describe('SectionProjectsList', () => {
 
   it('can be sorted by student name', () => {
     const projectNameHeader = root.find('th').at(COLUMNS.STUDENT_NAME);
-    expect(projectNameHeader.instance().innerText).to.contain('Student Name');
+    expect(projectNameHeader.get(0).innerText).to.contain('Student Name');
 
     // Sort in ascending order by student name
     projectNameHeader.simulate('click');
@@ -321,7 +321,7 @@ describe('SectionProjectsList', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -329,7 +329,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       null,
       'Antelope Freeway',
       'Alice',
@@ -337,7 +337,7 @@ describe('SectionProjectsList', () => {
       'December 29, 2016'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       null,
       'A1 Locksmith',
       'Alice',
@@ -345,7 +345,7 @@ describe('SectionProjectsList', () => {
       'October 29, 2016'
     );
     assertRowContents(
-      rows.at(3).instance(),
+      rows.get(3),
       null,
       'Dominoes',
       'Bob',
@@ -353,7 +353,7 @@ describe('SectionProjectsList', () => {
       'January 1, 2017'
     );
     assertRowContents(
-      rows.at(4).instance(),
+      rows.get(4),
       CAT_IMAGE_URL,
       'Cats and Kittens',
       'Charlie',
@@ -367,7 +367,7 @@ describe('SectionProjectsList', () => {
     rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -375,7 +375,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       CAT_IMAGE_URL,
       'Cats and Kittens',
       'Charlie',
@@ -383,7 +383,7 @@ describe('SectionProjectsList', () => {
       'November 30, 2016'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       null,
       'Dominoes',
       'Bob',
@@ -393,7 +393,7 @@ describe('SectionProjectsList', () => {
     // There is no secondary sort key. When the sort by name is reversed, elements with the same
     // primary sort key do not change in order relative to each other.
     assertRowContents(
-      rows.at(3).instance(),
+      rows.get(3),
       null,
       'Antelope Freeway',
       'Alice',
@@ -401,7 +401,7 @@ describe('SectionProjectsList', () => {
       'December 29, 2016'
     );
     assertRowContents(
-      rows.at(4).instance(),
+      rows.get(4),
       null,
       'A1 Locksmith',
       'Alice',
@@ -412,7 +412,7 @@ describe('SectionProjectsList', () => {
 
   it('can be sorted by app type', () => {
     const appTypeHeader = root.find('th').at(COLUMNS.APP_TYPE);
-    expect(appTypeHeader.instance().innerText).to.contain('Type');
+    expect(appTypeHeader.get(0).innerText).to.contain('Type');
 
     // Sort in ascending order by app type
     appTypeHeader.simulate('click');
@@ -420,7 +420,7 @@ describe('SectionProjectsList', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -428,7 +428,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       null,
       'A1 Locksmith',
       'Alice',
@@ -436,7 +436,7 @@ describe('SectionProjectsList', () => {
       'October 29, 2016'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       null,
       'Dominoes',
       'Bob',
@@ -444,7 +444,7 @@ describe('SectionProjectsList', () => {
       'January 1, 2017'
     );
     assertRowContents(
-      rows.at(3).instance(),
+      rows.get(3),
       null,
       'Antelope Freeway',
       'Alice',
@@ -452,7 +452,7 @@ describe('SectionProjectsList', () => {
       'December 29, 2016'
     );
     assertRowContents(
-      rows.at(4).instance(),
+      rows.get(4),
       CAT_IMAGE_URL,
       'Cats and Kittens',
       'Charlie',
@@ -466,7 +466,7 @@ describe('SectionProjectsList', () => {
     rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -476,7 +476,7 @@ describe('SectionProjectsList', () => {
     // There is no secondary sort key. When the sort by name is reversed, elements with the same
     // primary sort key do not change in order relative to each other.
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       null,
       'Antelope Freeway',
       'Alice',
@@ -484,7 +484,7 @@ describe('SectionProjectsList', () => {
       'December 29, 2016'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       CAT_IMAGE_URL,
       'Cats and Kittens',
       'Charlie',
@@ -492,7 +492,7 @@ describe('SectionProjectsList', () => {
       'November 30, 2016'
     );
     assertRowContents(
-      rows.at(3).instance(),
+      rows.get(3),
       null,
       'Dominoes',
       'Bob',
@@ -500,7 +500,7 @@ describe('SectionProjectsList', () => {
       'January 1, 2017'
     );
     assertRowContents(
-      rows.at(4).instance(),
+      rows.get(4),
       null,
       'A1 Locksmith',
       'Alice',
@@ -512,24 +512,24 @@ describe('SectionProjectsList', () => {
   it('shows the correct list of students in the student filter dropdown', () => {
     const options = root.find('option');
     expect(options).to.have.length(4);
-    expect(options.at(0).instance().innerText).to.equal('All students');
-    expect(options.at(1).instance().innerText).to.equal('Alice');
-    expect(options.at(2).instance().innerText).to.equal('Bob');
-    expect(options.at(3).instance().innerText).to.equal('Charlie');
+    expect(options.get(0).innerText).to.equal('All students');
+    expect(options.get(1).innerText).to.equal('Alice');
+    expect(options.get(2).innerText).to.equal('Bob');
+    expect(options.get(3).innerText).to.equal('Charlie');
 
     const select = root.find('select');
-    expect(select.at(0).instance().value).to.equal('_all_students');
+    expect(select.get(0).value).to.equal('_all_students');
   });
 
   it('filters projects when a student is selected from the dropdown', () => {
     const select = root.find('select');
     select.simulate('change', {target: {value: 'Alice'}});
-    expect(select.at(0).instance().value).to.equal('Alice');
+    expect(select.get(0).value).to.equal('Alice');
 
     const rows = root.find('tr');
     expect(rows).to.have.length(3);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -537,7 +537,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       null,
       'Antelope Freeway',
       'Alice',
@@ -545,7 +545,7 @@ describe('SectionProjectsList', () => {
       'December 29, 2016'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       null,
       'A1 Locksmith',
       'Alice',
@@ -557,10 +557,10 @@ describe('SectionProjectsList', () => {
   it('can filter by student and then sort by app type', () => {
     const select = root.find('select');
     select.simulate('change', {target: {value: 'Alice'}});
-    expect(select.at(0).instance().value).to.equal('Alice');
+    expect(select.get(0).value).to.equal('Alice');
 
     const appTypeHeader = root.find('th').at(COLUMNS.APP_TYPE);
-    expect(appTypeHeader.instance().innerText).to.contain('Type');
+    expect(appTypeHeader.get(0).innerText).to.contain('Type');
 
     // Sort in ascending order by app type
     appTypeHeader.simulate('click');
@@ -568,7 +568,7 @@ describe('SectionProjectsList', () => {
     const rows = root.find('tr');
     expect(rows).to.have.length(3);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -576,7 +576,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       null,
       'A1 Locksmith',
       'Alice',
@@ -584,7 +584,7 @@ describe('SectionProjectsList', () => {
       'October 29, 2016'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       null,
       'Antelope Freeway',
       'Alice',
@@ -596,12 +596,12 @@ describe('SectionProjectsList', () => {
   it('shows all students projects if the current students projects all disappear', () => {
     const select = root.find('select');
     select.simulate('change', {target: {value: 'Charlie'}});
-    expect(select.at(0).instance().value).to.equal('Charlie');
+    expect(select.get(0).value).to.equal('Charlie');
 
     let rows = root.find('tr');
     expect(rows).to.have.length(2);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -609,7 +609,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       CAT_IMAGE_URL,
       'Cats and Kittens',
       'Charlie',
@@ -627,10 +627,10 @@ describe('SectionProjectsList', () => {
 
     // We should now see all students projects, except Charlie's
     rows = root.find('tr');
-    expect(select.at(0).instance().value).to.equal('_all_students');
+    expect(select.get(0).value).to.equal('_all_students');
     expect(rows).to.have.length(4);
     assertRowContents(
-      rows.at(0).instance(),
+      rows.get(0),
       null,
       'Project Name',
       'Student Name',
@@ -638,7 +638,7 @@ describe('SectionProjectsList', () => {
       'Last Edited'
     );
     assertRowContents(
-      rows.at(1).instance(),
+      rows.get(1),
       null,
       'Dominoes',
       'Bob',
@@ -646,7 +646,7 @@ describe('SectionProjectsList', () => {
       'January 1, 2017'
     );
     assertRowContents(
-      rows.at(2).instance(),
+      rows.get(2),
       null,
       'Antelope Freeway',
       'Alice',
@@ -654,7 +654,7 @@ describe('SectionProjectsList', () => {
       'December 29, 2016'
     );
     assertRowContents(
-      rows.at(3).instance(),
+      rows.get(3),
       null,
       'A1 Locksmith',
       'Alice',
@@ -665,9 +665,9 @@ describe('SectionProjectsList', () => {
     // Charlie should no longer appear in the dropdown
     const options = root.find('option');
     expect(options).to.have.length(3);
-    expect(options.at(0).instance().innerText).to.equal('All students');
-    expect(options.at(1).instance().innerText).to.equal('Alice');
-    expect(options.at(2).instance().innerText).to.equal('Bob');
+    expect(options.get(0).innerText).to.equal('All students');
+    expect(options.get(1).innerText).to.equal('Alice');
+    expect(options.get(2).innerText).to.equal('Bob');
   });
 
   describe('getStudentNames', () => {
