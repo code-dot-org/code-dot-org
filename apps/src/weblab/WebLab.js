@@ -91,7 +91,6 @@ WebLab.prototype.init = function(config) {
   config.usesAssets = true;
 
   config.makeYourOwn = false;
-  config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
 

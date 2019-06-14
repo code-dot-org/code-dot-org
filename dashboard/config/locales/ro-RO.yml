@@ -81,7 +81,6 @@ ro:
   of: de
   more: MAI MULT
   less: MAI PUŢIN
-  beta: beta
   try_hoc: 'Încearcă Ora de Programare, faceți clic aici >> '
   try_k8intro: Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)
   k8intro: Cursul Introducere K-8 in Programare (15-25 ore)
@@ -1107,20 +1106,10 @@ ro:
     create: Creează proiect
     create_a_project: 'Creează un proiect nou:'
     new: Creează unul nou
-    rename: Redenumește
-    save: Salvează
-    import: Importaţi
-    share_link_import_bad_link_header: Link de distribuție nerecunoscut
-    share_link_import_bad_link_body: 'Nu am putut importa link-ul. Asigurați-vă că
-      utilizați un link din puzzle-ul Minecraft: Agent și că ați copiat link-ul complet.'
-    share_link_import_error_header: Ceva nu a funcționat.
-    share_link_import_error_body: A existat o problemă la importul link-ului de distribuire.
-      Vă rugăm să încercați din nou.
     exit: Revenire la curs
     project_gallery: Proiecte
     publish: Publicare
     unpublish: Anulează publicarea
-    share: Distribuie
     share_title: Ditribuie proiectul tău
     share_copy_link: 'Copiază link-ul:'
     share_embed_description: Puteţi insera codul de încorporare într-o pagină HTML
@@ -1145,8 +1134,6 @@ ro:
     saved: Salvat
     not_saved: Nesalvat
     view_all: Vizualizează proiectele mele
-    remix: Remix
-    click_to_remix: Fă clic pe "Remix" pentru a-ți crea propria ta versiune!
     edit_project: Editare proiect
     sharing_disabled: Ne pare rău, acest proiect nu este disponibil pentru distribuire.
       Dacă acesta este proiectul dumneavoastră sau proiectul unuia dintre elevii dvs.,

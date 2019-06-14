@@ -220,7 +220,7 @@ hi-IN:
   learn_sign_up_button: साइन अप
   blockly_name: ब्लॉक्ली
   math_category_name: गणित
-  csf_category_name: CS बुनियादी बातें
+  csf_category_name: कंप्यूटर साइंस की बुनियादी बातें
   codeorg_gradelevel: उम्र 4-104
   codeintl_gradelevel: उम्र 4-104
   tynker_gradelevel: उम्र 5-13
@@ -282,6 +282,10 @@ hi-IN:
   sphero_beyond_gradelevel: उम्र 8 +
   flappy_shortcode: फ़ड़फ़ड़ाय
   header_courses: पाठ्यक्रम
+  header_course_catalog: कोर्स कैटलॉग
+  header_project_gallery: प्रोजेक्ट्स
+  header_about: के बारे में
+  header_report_bug: "“समस्या की रिपोर्ट करें”"
   user_header_signin: दाखिल करना
   user_header_dance: डांस पार्टी
   applab_tile_start_tutorial: शुरू करें

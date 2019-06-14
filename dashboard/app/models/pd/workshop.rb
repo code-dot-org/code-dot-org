@@ -261,6 +261,10 @@ class Pd::Workshop < ActiveRecord::Base
     "#{course_subject} workshop on #{start_time} at #{location_name} in #{friendly_location}"[0...255]
   end
 
+  def friendly_subject
+    subject ? "#{subject} Workshop" : nil
+  end
+
   # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
   # Assume no workshops will span a new year
   def friendly_date_range
@@ -334,20 +338,10 @@ class Pd::Workshop < ActiveRecord::Base
     ].include? subject
   end
 
-  def self.csf_201_pilot?(workshop)
-    workshop.csf? &&
-      workshop.subject == SUBJECT_CSF_201 &&
-      workshop.sessions.present? &&
-      workshop.sessions.first.start < CSF_201_PILOT_END_DATE
-  end
-
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     scheduled_start_in_days(days).each do |workshop|
-      # Don't send emails to CSF 201 pilot workshops
-      next if csf_201_pilot?(workshop)
-
       workshop.enrollments.each do |enrollment|
         email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
         email.deliver_now
@@ -420,7 +414,6 @@ class Pd::Workshop < ActiveRecord::Base
 
   def self.process_ended_workshop_async(id)
     workshop = Pd::Workshop.find(id)
-    return if csf_201_pilot?(workshop)
     raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
 
     workshop.send_exit_surveys
@@ -585,6 +578,10 @@ class Pd::Workshop < ActiveRecord::Base
 
   def csf?
     course == COURSE_CSF
+  end
+
+  def csf_201?
+    course == COURSE_CSF && subject == SUBJECT_CSF_201
   end
 
   def funded_csf?

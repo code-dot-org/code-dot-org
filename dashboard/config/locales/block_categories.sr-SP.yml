@@ -1,20 +1,14 @@
 ---
-sr:
+sr-SP:
   data:
     block_categories:
       Actions: Акције
-      Loops: Петље
-      Functions: Функције
       Color: Боја
-      Math: Математика
-      Logic: Логика
-      Variables: Променљиве
       Conditionals: Кондиционали
       Events: Догађаји
+      Functions: Функције
+      Logic: Логика
+      Loops: Петље
+      Math: Математика
       Text: текст
-      Location: Место
-      Start: Покрени
-      Booleans: Booleans
-      test: тест
-      Name: Име
-      Function: Функција
+      Variables: Променљиве

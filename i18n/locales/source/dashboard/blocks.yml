@@ -732,7 +732,7 @@ en:
       gamelab_clickedOn:
         text: when [SPRITE][0] clicked
       gamelab_clickedSpritePointer:
-        text: clicked sprite
+        text: clicked [SPRITE][0]
       gamelab_comment:
         text: 'comment: [COMMENT][0]'
       gamelab_console.log:
@@ -1552,7 +1552,7 @@ en:
       aalab_allSpritesWithAnimation:
         text: "[ANIMATION][0]"
       aalab_changePropByFlexible:
-        text: change [SPRITE][0] [PROPERTY][1] by [VAL][2]
+        text: aalab change [SPRITE][0] [PROPERTY][1] by [VAL][2]
         options:
           PROPERTY:
             '"scale"': size

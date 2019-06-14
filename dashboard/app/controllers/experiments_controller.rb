@@ -22,7 +22,7 @@ class ExperimentsController < ApplicationController
     redirect_to '/', flash: {notice: "You have successfully joined the experiment '#{params[:experiment_name]}'."}
   end
 
-  VALID_EXPERIMENTS = ['2018-teacher-experience', '2019-mini-rubric']
+  VALID_EXPERIMENTS = ['2018-teacher-experience']
 
   # GET /experiments/set_single_user_experiment/:experiment_name
   def set_single_user_experiment

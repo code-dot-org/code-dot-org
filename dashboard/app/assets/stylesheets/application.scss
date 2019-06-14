@@ -320,17 +320,8 @@ img.video_thumbnail {
 
   .user_menu, .create_menu {
     margin-top: 6px;
-    height: 38px;
-    user-select: none;
 
     .create_button, .display_name, .pairing_name {
-      max-width: 120px;
-      display: inline-block;
-      float: left;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-
       html[dir=rtl] & {
         float: right;
       }
@@ -343,76 +334,9 @@ img.video_thumbnail {
       padding-top: 3px;
     }
 
-    .user_menu_arrow_down,
-    .user_menu_arrow_up,
-    .create_menu_arrow_down,
-    .create_menu_arrow_up, {
-      font-size: 30px;
-    }
-
     .user_options {
-      position: absolute;
-      top: 55px;
-      right: 55px;
       font-size: 14px;
       line-height: 20px;
-    }
-
-    .create_options {
-      position: absolute;
-      top: 55px;
-      right: 55px;
-      background-color: $white;
-      width: max-content;
-      z-index: 10000;
-      border: 1px solid $charcoal;
-      border-bottom: 0;
-      a {
-        color: $charcoal;
-        font-family: 'Gotham 5r', sans-serif;
-        min-width: 240px;
-        font-size: 14px;
-        border-bottom: 1px solid $charcoal;
-        box-sizing: content-box;
-        white-space: nowrap;
-        cursor: pointer;
-      }
-      a:hover {
-        background-color: $lightest_gray;
-      }
-      img {
-        height: 70px;
-        width: 70px;
-      }
-      .project_link_box {
-        display: block;
-      }
-      .project_link {
-        display: inline-block;
-        padding: 0 10px 0 4px;
-        line-height: 67px;
-      }
-      #view_all_projects {
-        height: 70px;
-        padding-left: 10px;
-      }
-    }
-
-    .user_menu_arrow_down,
-    .user_menu_arrow_up,
-    .create_menu_arrow_down,
-    .create_menu_arrow_up, {
-      font-size: 25px;
-    }
-
-    .user_menu_arrow_up,
-    .create_menu_arrow_up {
-      margin-top: -3px;
-    }
-
-    .user_menu_arrow_down,
-    .create_menu_arrow_down {
-      margin-top: -2px;
     }
   }
 
@@ -730,7 +654,6 @@ $small-footer-standard-width: 400px;
 
 .user_options {
   display: none;
-  background-color: $white;
   a:link {
     color: $black;
   }
@@ -747,19 +670,8 @@ $small-footer-standard-width: 400px;
     background-color: $dark_color;
   }
   border: 1px solid $black;
-  z-index: 100001;
-  text-align: left;
-  white-space: nowrap;
   color: $black;
-  position: absolute;
-  right: 0;
   padding: 10px;
-  left: auto;
-  bottom: auto;
-}
-
-.user_options a {
-  color: $black;
 }
 
 .user_options .pairing_summary {

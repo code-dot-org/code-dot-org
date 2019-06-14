@@ -63,9 +63,11 @@ var DropletFunctionTooltip = function(appMsg, definition) {
   /** @type {?string} */
   this.customDocURL = definition.customDocURL;
 
-  var description = this.getLocalization(this.descriptionKey());
-  if (description) {
-    this.description = description();
+  var localizedDescription = this.getLocalization(this.descriptionKey());
+  if (definition.description) {
+    this.description = definition.description;
+  } else if (localizedDescription) {
+    this.description = localizedDescription();
   }
 
   var signatureOverride = this.getLocalization(this.signatureOverrideKey());

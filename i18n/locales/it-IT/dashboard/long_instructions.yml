@@ -594,7 +594,7 @@ it:
       Course 4 Artist For Loops 11a: Cerchiamo di mettere tutto insieme!  Usando le conoscenze che hai acquisito sui <i>cicli con contatore</i> e sulla variabile `counter` (<i>contatore</i>), prova a creare questo disegno in cui ogni figura ha due lati in più della precedente. Accertati che ogni lato sia 10 volte più lungo del numero di lati del poligono.
       Course 4 Artist For Loops 13: Hmmm, queste forme stanno diventando sempre più grandi! Non avevamo già risolto questo problema usando le variabili? Come possiamo usare la variabile "contatore" per rendere i lati più piccoli man mano che ce ne sono sempre di più? Invece di spostarti in avanti di una quantità sempre fissa, prova a spostarti di una quantità di pixel pari a  (100 / contatore).
       Course 4 Artist For Loops 14: Se ruoti un po' di più, o un po' di meno, di quanto fai di solito, puoi ottenere un effetto diverso. Per creare questa spirale quadrata avvitata, prova ad usare il codice del precedente esercizio ruotando di 89 gradi, invece di 90 gradi.
-      Course 4 Artist For Loops 2: "In questo esercizio il codice per disegnare un triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100 con _passo_ di 10.  \n  \n  \n**Attenzione**: assicurati di aver guardato bene il codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+      Course 4 Artist For Loops 2: "In questo esercizio il codice per disegnare un triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100 con _passo_ di 10.  \n\n**Attenzione**: assicurati di aver guardato bene il codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
       Course 4 Artist For Loops 3: Per disegnare questa figura usa come riferimento il codice del precedente esercizio. Il triangolo più piccolo ha i lati di 20 pixel, il triangolo più grande ha i lati di 200 pixel ed ogni triangolo, rispetto al precedente, ha il lato di 20 pixel più grande.
       Course 4 Artist For Loops 4: Come puoi modificare quello che hai imparato sui triangoli per disegnare questi quadrati? Il quadrato più piccolo ha i lati di 15 pixel, il quadrato più grande ha i lati di 300 pixel ed ogni quadrato, rispetto al precedente, ha il lato di 15 pixel più grande.
       Course 4 Artist For Loops 6: Spazio Libero! Prova ad usare un ciclo FOR per disegnare un modello di forma crescente a piacere.
@@ -680,7 +680,7 @@ it:
         <br>
         Modifica il codice della funzione in modo che l'ape giri nella direzione indicata dal parametro passato alla funzione.
       Course 4 Bee Params 5: Partiamo da zero! Riesci a creare una nuova funzione chiamata `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) che usa un nuovo parametro chiamato `direction` (<i>direzione </i>)?
-      Course 4 Bee Params 6: "In questo esercizio, sui fiori si trovano quantità differenti di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n  \n  \nModifica la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica la quantità di nettare da raccogliere.\n\nProbabilmente sarà meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri."
+      Course 4 Bee Params 6: "In questo esercizio, sui fiori si trovano quantità differenti di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n\nModifica la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica la quantità di nettare da raccogliere.\n\nProbabilmente sarà meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri."
       Course 4 Bee Params 7: Usa la nuova funzione `get many nectar` (<i>prendi molte dosi di nettare</i>) per raccogliere tutto il nettare.
       Course 4 Bee Params 8: |-
         Una piccola sfida: ora c'è anche il miele di cui occuparsi!<br>
@@ -1319,14 +1319,8 @@ it:
       MC_HOC_2017_01_RETRY: "La porta è bloccata, ma l'Agente è pronto per venire in aiuto! \n\nAggancia un blocco `vai avanti` al blocco `quando si clicca su \"Esegui\"` per far arrivare l'Agente sulla pedana a pressione [PressurePlate_Up], poi premi \"Esegui\" e usa le frecce per far uscire di casa il giocatore e raccogliere la **cassa** [chest]."
       MC_HOC_2017_01_RETRY_2019: "La porta è bloccata, ma l'Agente è pronto per venire in aiuto! \n\nAggancia un blocco `vai avanti` al blocco `quando si clicca su \"Esegui\"` per far arrivare l'Agente sulla pedana a pressione [PressurePlate_Up], poi premi \"Esegui\" e usa le frecce per far uscire di casa il giocatore e raccogliere la **cassa** [chest]."
       MC_HOC_2017_02: Il giocatore deve entrare in quel Bosco Segreto.  Aiuta l'Agent ad aprire il cancello scrivendo il codice necessario a farlo arrivare alla pedana a pressione.
-      MC_HOC_2017_02_Cole: |-
-        {currentPlayerName} sta per partire per un'avventura! Aiutalo a recuperare la **mappa** [map_empty] che si trova oltre la porta chiusa a destra.
-
-        Tracina nell'area di lavoro i blocchi necessari per muovere l'Agente sulla pedana a pressione [PressurePlate_Up] in modo che {currentPlayerName} possa entrare.
-      MC_HOC_2017_02_Cole_2019: |-
-        {currentPlayerName} sta per partire per un'avventura! Aiutalo a recuperare la **mappa** [map_empty] che si trova oltre la porta chiusa a destra.
-
-        Tracina nell'area di lavoro i blocchi necessari per muovere l'Agente sulla pedana a pressione [PressurePlate_Up] in modo che {currentPlayerName} possa entrare.
+      MC_HOC_2017_02_Cole: "{currentPlayerName} sta per partire per un'avventura! Aiutalo a recuperare la **mappa** [map_empty] che si trova oltre la porta chiusa a destra. \n\nTrascina nell'area di lavoro i blocchi necessari per muovere l'Agente sulla pedana a pressione [PressurePlate_Up] in modo che {currentPlayerName} possa entrare. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} sta per partire per un'avventura! Aiutalo a recuperare la **mappa** [map_empty] che si trova oltre la porta chiusa a destra. \n\nTrascina nell'area di lavoro i blocchi necessari per muovere l'Agente sulla pedana a pressione [PressurePlate_Up] in modo che {currentPlayerName} possa entrare. "
       MC_HOC_2017_02_Kiki: |-
         Il giocatore sta per partire per un'avventura, ma prima deve ottenere la torcia nascosta al di là di quella porta chiusa. \\r
         \\r
@@ -1378,14 +1372,8 @@ it:
         È ora che il giocatore lasci il bosco segreto e prosegua la sua avventura, ma il ponte è fuori uso! \\r
         \\r
         Aiuta l'Agent a ricostruire il ponte, poi raggiungi l'asse di legno in modo che il giocatore possa arrivare alla casella arancione.
-      MC_HOC_2017_06_Cole: |-
-        Un altro fiume, ma questo è molto più largo! \\r
-         \\r
-        Correggi questo codice per aiutare l'Agente a costruire un ponte in modo che {currentPlayerName} possa raggiungere la **piccozza** [diamond_pickaxe].
-      MC_HOC_2017_06_Cole_2019: |-
-        Un altro fiume, ma questo è molto più largo! \\r
-         \\r
-        Correggi questo codice per aiutare l'Agente a costruire un ponte in modo che {currentPlayerName} possa raggiungere la **piccozza** [diamond_pickaxe].
+      MC_HOC_2017_06_Cole: "Un altro fiume, ma questo è molto più largo! \n\nCorreggi questo codice per aiutare l'Agente a costruire un ponte in modo che {currentPlayerName} possa raggiungere il **piccone** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Un altro fiume, ma questo è molto più largo! \n\nCorreggi questo codice per aiutare l'Agente a costruire un ponte in modo che {currentPlayerName} possa raggiungere il **piccone** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: |-
         Un altro fiume, ma questo è molto più largo!  \\r
         \\r
@@ -1629,8 +1617,8 @@ it:
       Virtual Pet Predict: '**Fai una previsione:** Questa è Geraldine, la tua nuova giraffa domestica. Cosa pensi accadrà quando premerai  "▶ Esegui" e cliccherai su di lei?'
       Virtual Pet Template_2019: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone."
       beeDebugVideo1: Raccogli tutto il nettare.
-      comment_intro_maze_2018: "_\"Sono confuso. Ricordami come uscire da questo labirinto.\"_ \n\n* * *\n\nPer risolvere questo esercizio, completa il codice usando anche il nuovo blocco  <xml><block type=\"comment\">\n\n<title name=\"TEXT\"> </title>\n</block></xml> per lasciarti qualche veloce promemoria. Questi possono aiutarti a ricordarti cosa hai fatto e perché!  \n  \n\nQuesti commenti sono solo per **te**, non influiscono in nessun modo sull'area di gioco."
-      comment_intro_maze_2018_2019: "_\"Sono confuso. Ricordami come uscire da questo labirinto.\"_ \n\n* * *\n\nPer risolvere questo esercizio, completa il codice usando anche il nuovo blocco  <xml><block type=\"comment\">\n\n<title name=\"TEXT\"> </title>\n</block></xml> per lasciarti qualche veloce promemoria. Questi possono aiutarti a ricordarti cosa hai fatto e perché!  \n  \n\nQuesti commenti sono solo per **te**, non influiscono in nessun modo sull'area di gioco."
+      comment_intro_maze_2018: "_\"Sono confuso. Ricordami come uscire da questo labirinto.\"_  \n\n* * *\n\nPer risolvere questo esercizio, completa il codice usando anche il nuovo blocco <xml><block type=\"comment\">\n    <title name=\"TEXT\"> </title>\n  </block></xml> per lasciarti qualche veloce promemoria. Questi possono aiutarti a ricordarti cosa hai fatto e perché!  \n\nQuesti commenti sono solo per **te**, non influiscono in nessun modo sull'area di gioco."
+      comment_intro_maze_2018_2019: "_\"Sono confuso. Ricordami come uscire da questo labirinto.\"_  \n\n* * *\n\nPer risolvere questo esercizio, completa il codice usando anche il nuovo blocco <xml><block type=\"comment\">\n    <title name=\"TEXT\"> </title>\n  </block></xml> per lasciarti qualche veloce promemoria. Questi possono aiutarti a ricordarti cosa hai fatto e perché!  \n\nQuesti commenti sono solo per **te**, non influiscono in nessun modo sull'area di gioco."
       conditionals_forvideo_harvester: Raccogli tutte le pannocchie e le lattughe, poi conquista la zucca finale.
       course1_artist_loops_challenge3: |-
         **Cip!**
@@ -3325,7 +3313,7 @@ it:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua!"_
 
         Sfrutta ciò che hai imparato per recuperare tutti i rottami metallici!
-      courseD_Frozen_nested1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_Frozen_nested1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.”_\n\nDisegna una piccola figura, larga tra **20 e 50** pixel.  Può avere la forma che preferisci.\n\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_Frozen_nested2: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Ora, ne disegniamo più di una."_
 
@@ -3667,19 +3655,19 @@ it:
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops7_2018: |-
         Usa ciò che hai imparato per fare questo disegno.
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops7_2019: |-
         Usa ciò che hai imparato per fare questo disegno.
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops8: |-
         Usa ciò che hai imparato nell'ultimo paio di esercizi per costruire dall'inizio quest'immagine.
 
@@ -3749,7 +3737,25 @@ it:
         -   Entrambe le forme hanno **lati di 50 pixel**.
         -   Gli _ottagoni_ si realizzano con angoli di **45 gradi**.
         -   I _triangoli_ si realizzano con angoli di **120 gradi**.
-      courseD_artist_project1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_nestedLoops_challenge2: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
+      courseD_artist_nestedLoops_challenge2_2018: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
+      courseD_artist_nestedLoops_challenge2_2019: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
+      courseD_artist_project1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.”_\n\nDisegna una piccola figura, larga tra **20 e 50** pixel.  Può avere la forma che preferisci.\n\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1_2018: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma."_
 
@@ -3766,7 +3772,7 @@ it:
         ![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)
         ![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)
         ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)
-      courseD_artist_project1_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.”_\n\nDisegna una piccola figura, larga tra **20 e 50** pixel.  Può avere la forma che preferisci.\n\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1a: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Proviamo qualcosa di nuovo. Questa volta, pattina a  zig-zag"_
 
@@ -3887,57 +3893,9 @@ it:
         Ecco un esempio di scale che usa un angolo di 76 gradi:
 
         ![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)
-      courseD_artist_project3: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trasformiamo la figura in un fiocco di neve."_
-
-        Ora usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.
-
-        Che fiocchi spettacolari che puoi realizzare!
-
-        <hr/>
-        Guarda questi esempi con diversi poligoni:
-        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)
-        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
-        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
-
-        Delle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:
-        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)
-        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)
-        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
-      courseD_artist_project3_2018: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trasformiamo la figura in un fiocco di neve."_
-
-        Ora usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.
-
-        Che fiocchi spettacolari che puoi realizzare!
-
-        <hr/>
-        Guarda questi esempi con diversi poligoni:
-        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)
-        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
-        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
-
-        Delle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:
-        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)
-        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)
-        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
-      courseD_artist_project3_2019: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trasformiamo la figura in un fiocco di neve."_
-
-        Ora usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.
-
-        Che fiocchi spettacolari che puoi realizzare!
-
-        <hr/>
-        Guarda questi esempi con diversi poligoni:
-        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)
-        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
-        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
-
-        Delle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:
-        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)
-        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)
-        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
+      courseD_artist_project3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Trasformiamo la figura in un fiocco di neve.\"_\n\nOra usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe fiocchi spettacolari che puoi realizzare!\n\n* * *\n\nGuarda questi esempi con diversi poligoni: \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Trasformiamo la figura in un fiocco di neve.\"_\n\nOra usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe fiocchi spettacolari che puoi realizzare!\n\n* * *\n\nGuarda questi esempi con diversi poligoni: \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Trasformiamo la figura in un fiocco di neve.\"_\n\nOra usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe fiocchi spettacolari che puoi realizzare!\n\n* * *\n\nGuarda questi esempi con diversi poligoni: \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3a: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Gira e trasforma la figura in un fiocco di neve."_
 
@@ -4050,30 +4008,30 @@ it:
       courseD_bee_conditionals2: |-
         Ancora più nuvole!
 
-        Prima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere _una_ dose di nettare.
+        Prima di prendere il nettare, controlla sotto ogni nuvola, per vedere se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere _una_ dose di nettare.
 
         Ricorda: le nuvole non nascondono sempre la stessa cosa!
       courseD_bee_conditionals2_2018: |-
         Ancora più nuvole!
 
-        Prima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere _una_ dose di nettare.
+        Prima di prendere il nettare, controlla sotto ogni nuvola, per vedere se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere _una_ dose di nettare.
 
         Ricorda: le nuvole non nascondono sempre la stessa cosa!
       courseD_bee_conditionals2_2019: |-
         Ancora più nuvole!
 
-        Prima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere _una_ dose di nettare.
+        Prima di prendere il nettare, controlla sotto ogni nuvola, per vedere se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere _una_ dose di nettare.
 
         Ricorda: le nuvole non nascondono sempre la stessa cosa!
       courseD_bee_conditionals2_test: |-
         Ancora più nuvole!
 
-        Prima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere _una_ dose di nettare.
+        Prima di prendere il nettare, controlla sotto ogni nuvola, per vedere se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere _una_ dose di nettare.
 
         Ricorda: le nuvole non nascondono sempre la stessa cosa!
-      courseD_bee_conditionals3: Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore. Se sotto ognuna di queste nuvole c'è un fiore, l'ape dovrà raccogliere _una dose_ di nettare.
-      courseD_bee_conditionals3_2018: Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore. Se sotto ognuna di queste nuvole c'è un fiore, l'ape dovrà raccogliere _una dose_ di nettare.
-      courseD_bee_conditionals3_2019: Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore. Se sotto ognuna di queste nuvole c'è un fiore, l'ape dovrà raccogliere _una dose_ di nettare.
+      courseD_bee_conditionals3: Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore. Per ogni casella, se sotto la nuvola c'è un fiore, l'ape deve raccogliere _una dose_ di nettare.
+      courseD_bee_conditionals3_2018: Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore. Per ogni casella, se sotto la nuvola c'è un fiore, l'ape deve raccogliere _una dose_ di nettare.
+      courseD_bee_conditionals3_2019: Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore. Per ogni casella, se sotto la nuvola c'è un fiore, l'ape deve raccogliere _una dose_ di nettare.
       courseD_bee_conditionals4: |-
         In questo esercizio, sappiamo che ogni fiore ha esattamente una dose di nettare, ma i fiori non sono distanziati in modo uniforme.
 
@@ -4099,17 +4057,17 @@ it:
 
         Alcune di queste nubi potrebbero nascondere dei favi. Controlla sotto ogni nuvola se c'è un favo! Se c'è, l'ape deve semplicemente fare _una_ dose di miele.
       courseD_bee_conditionals7: |-
-        D'ora in poi, a volte una nuvola può coprire un fiore e altre volte nasconde un favo!
+        D'ora in poi, a volte una nuvola può coprire un fiore e altre volte nascondere un favo!
 
-        Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: se c'è un fiore, l'ape deve raccogliere solo _una_ dose di nettare. E se c'è un favo, l'ape deve produrre _una_ sola dose di miele.
+        Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: se c'è un fiore, l'ape deve raccogliere _una_ sola dose di nettare. E se c'è un favo, l'ape deve produrre _una_ sola dose di miele.
       courseD_bee_conditionals7_2018: |-
-        D'ora in poi, a volte una nuvola può coprire un fiore e altre volte nasconde un favo!
+        D'ora in poi, a volte una nuvola può coprire un fiore e altre volte nascondere un favo!
 
-        Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: se c'è un fiore, l'ape deve raccogliere solo _una_ dose di nettare. E se c'è un favo, l'ape deve produrre _una_ sola dose di miele.
+        Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: se c'è un fiore, l'ape deve raccogliere _una_ sola dose di nettare. E se c'è un favo, l'ape deve produrre _una_ sola dose di miele.
       courseD_bee_conditionals7_2019: |-
-        D'ora in poi, a volte una nuvola può coprire un fiore e altre volte nasconde un favo!
+        D'ora in poi, a volte una nuvola può coprire un fiore e altre volte nascondere un favo!
 
-        Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: se c'è un fiore, l'ape deve raccogliere solo _una_ dose di nettare. E se c'è un favo, l'ape deve produrre _una_ sola dose di miele.
+        Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: se c'è un fiore, l'ape deve raccogliere _una_ sola dose di nettare. E se c'è un favo, l'ape deve produrre _una_ sola dose di miele.
       courseD_bee_conditionals8: |-
         **Sfida:** C'è sicuramente un fiore o un favo sotto ad ognuna di quelle nuvole!
 
@@ -4122,12 +4080,12 @@ it:
         **Sfida:** C'è sicuramente un fiore o un favo sotto ad ognuna di quelle nuvole!
 
         Se c'è un fiore, raccogli il nettare. In caso contrario, fai il miele perché c'è sicuramente un favo.
-      courseD_bee_conditionals9: Raccogli tutto il nettare o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo. Sotto ogni nuvola, ci sarà sempre solo una dose di nettare oppure una dose di miele.
-      courseD_bee_conditionals9_2018: Raccogli tutto il nettare o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo. Sotto ogni nuvola, ci sarà sempre solo una dose di nettare oppure una dose di miele.
-      courseD_bee_conditionals9_2019: Raccogli tutto il nettare o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo. Sotto ogni nuvola, ci sarà sempre solo una dose di nettare oppure una dose di miele.
-      courseD_bee_conditionals_challenge1: Raccogli tutto il nettare o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo.
-      courseD_bee_conditionals_challenge1_2018: Raccogli tutto il nettare o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo.
-      courseD_bee_conditionals_challenge1_2019: Raccogli tutto il nettare o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo.
+      courseD_bee_conditionals9: Raccogli tutto il nettare e fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo. Sotto ogni nuvola, ci sarà sempre solo una dose di nettare oppure una dose di miele.
+      courseD_bee_conditionals9_2018: Raccogli tutto il nettare e fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo. Sotto ogni nuvola, ci sarà sempre solo una dose di nettare oppure una dose di miele.
+      courseD_bee_conditionals9_2019: Raccogli tutto il nettare e fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo. Sotto ogni nuvola, ci sarà sempre solo una dose di nettare oppure una dose di miele.
+      courseD_bee_conditionals_challenge1: Raccogli tutto il nettare e fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla in ogni casella se c'è un fiore, un favo o nulla.
+      courseD_bee_conditionals_challenge1_2018: Raccogli tutto il nettare e fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla in ogni casella se c'è un fiore, un favo o nulla.
+      courseD_bee_conditionals_challenge1_2019: Raccogli tutto il nettare e fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla in ogni casella se c'è un fiore, un favo o nulla.
       courseD_bee_conditionals_challenge2: Raccogli tutto il nettare e fai tutto il miele. Puoi raccogliere tutto il nettare da un fiore usando il blocco `mentre nettare > 0`.
       courseD_bee_conditionals_challenge2_2018: Raccogli tutto il nettare e fai tutto il miele. Puoi raccogliere tutto il nettare da un fiore usando il blocco `mentre nettare > 0`.
       courseD_bee_conditionals_challenge2_2019: Raccogli tutto il nettare e fai tutto il miele. Puoi raccogliere tutto il nettare da un fiore usando il blocco `mentre nettare > 0`.
@@ -4688,9 +4646,9 @@ it:
       courseD_maze_ramp5a: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
       courseD_maze_ramp5a_2018: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
       courseD_maze_ramp5a_2019: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
-      courseD_maze_ramp5b: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il maialino in questo labirinto!"
-      courseD_maze_ramp5b_2018: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il maialino in questo labirinto!"
-      courseD_maze_ramp5b_2019: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5b: "**Sfida:** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5b_2018: "**Sfida:** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5b_2019: "**Sfida:** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
       courseD_maze_ramp5c: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5c_2018: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5c_2019: Aiuta l'uccellino a raggiungere il maialino.
