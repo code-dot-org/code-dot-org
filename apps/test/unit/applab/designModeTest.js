@@ -116,6 +116,10 @@ describe('onDuplicate screen', () => {
     designModeElement.appendChild(originalScreen);
   });
 
+  afterEach(() => {
+    document.body.removeChild(designModeElement);
+  });
+
   it('duplicates the background color of the screen', () => {
     designMode.updateProperty(originalScreen, colorProperty, color);
     var newScreen = designMode.onDuplicate(originalScreen);
