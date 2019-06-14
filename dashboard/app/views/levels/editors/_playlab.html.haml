@@ -5,10 +5,10 @@
 
 = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'playlab'}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#customGame"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#custom_game"}}
   Custom Game Type
 
-#customGame.collapse
+#custom_game.collapse
   = f.label :custom_game_type, 'Custom game type'
   %p Used to tell playlab we want to run some of our custom onTick logic.
   = f.select :custom_game_type, options_for_select(["", "Big Game", "Rocket Height", "Sam the Bat", "Ninja Cat"], @level.custom_game_type)
