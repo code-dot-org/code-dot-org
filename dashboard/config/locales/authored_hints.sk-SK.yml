@@ -6173,24 +6173,12 @@ sk-SK:
       courseF_bee_for4:
         courseF_bee_for4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide
           od 1 do 7 so zvyšovaním o 1.
-        courseF_bee_for4_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
-          a cyklus na pozbieranie nektáru.
-        courseF_bee_for4_c: Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom
-          cykle `opakuj`, aby si pozbieral nektár!
       courseF_bee_for4_2018:
         courseF_bee_for4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide
           od 1 do 7 so zvyšovaním o 1.
-        courseF_bee_for4_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
-          a cyklus na pozbieranie nektáru.
-        courseF_bee_for4_c: Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom
-          cykle `opakuj`, aby si pozbieral nektár!
       courseF_bee_for4_2019:
         courseF_bee_for4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide
           od 1 do 7 so zvyšovaním o 1.
-        courseF_bee_for4_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
-          a cyklus na pozbieranie nektáru.
-        courseF_bee_for4_c: Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom
-          cykle `opakuj`, aby si pozbieral nektár!
       courseF_bee_for5:
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
@@ -6203,42 +6191,6 @@ sk-SK:
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
           celú úlohu.
-      courseF_bee_for6:
-        courseF_bee_for6_a: Nezabudni použiť premennú `počítadlo` vo vnútri tvojho
-          cyklu `opakuj`.
-        courseF_bee_for6_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
-          a cyklus na pozbieranie nektáru.
-        courseF_bee_for6_c: Tvoj cyklus má počítať **od 5 do 1**.
-      courseF_bee_for6_2018:
-        courseF_bee_for6_a: Nezabudni použiť premennú `počítadlo` vo vnútri tvojho
-          cyklu `opakuj`.
-        courseF_bee_for6_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
-          a cyklus na pozbieranie nektáru.
-        courseF_bee_for6_c: Tvoj cyklus má počítať **od 5 do 1**.
-      courseF_bee_for6_2019:
-        courseF_bee_for6_a: Nezabudni použiť premennú `počítadlo` vo vnútri tvojho
-          cyklu `opakuj`.
-        courseF_bee_for6_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
-          a cyklus na pozbieranie nektáru.
-        courseF_bee_for6_c: Tvoj cyklus má počítať **od 5 do 1**.
-      courseF_bee_for7:
-        courseF_bee_for7_a: Tvoj cyklus `for` potrebuje počítať od 1 do 7 počítané
-          po 2.
-        courseF_bee_for7_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
-          a cyklus na pozbieranie nektáru.
-        courseF_bee_for7_c: Nezabudni použiť premennú `počítadlo` v tvojom cykle `opakuj`.
-      courseF_bee_for7_2018:
-        courseF_bee_for7_a: Tvoj cyklus `for` potrebuje počítať od 1 do 7 počítané
-          po 2.
-        courseF_bee_for7_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
-          a cyklus na pozbieranie nektáru.
-        courseF_bee_for7_c: Nezabudni použiť premennú `počítadlo` v tvojom cykle `opakuj`.
-      courseF_bee_for7_2019:
-        courseF_bee_for7_a: Tvoj cyklus `for` potrebuje počítať od 1 do 7 počítané
-          po 2.
-        courseF_bee_for7_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
-          a cyklus na pozbieranie nektáru.
-        courseF_bee_for7_c: Nezabudni použiť premennú `počítadlo` v tvojom cykle `opakuj`.
       courseF_bee_variables_3_2018:
         courseF_beevariables_3a: |-
           Môźeš použiť tento kód v tvojom programe, aby si odčítal jedna z premennej:

@@ -148,11 +148,3 @@ my:
           stages:
             Variables:
               name: Variables
-        csd2-pilot:
-          stages:
-            Lists:
-              name: စာရင်းများ
-        csd3-pilot:
-          stages:
-            Variables:
-              name: Variables

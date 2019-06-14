@@ -468,9 +468,9 @@ pt-BR:
       AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\\t<img
         src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
         AM.png\" style=\"height:150px\"> \n</div>\n\n**Objetivo:** Fazer a tela ficar
-        verde. \n\n**Como:** Arraste um bloco do `DefinirPropriedade()`. Use os menus
+        verde.\n\n**Como:** Arraste um bloco do `DefinirPropriedade()`. Use os menus
         suspensos para definir a tela `\"cor-de-fundo\"` para `\"verde\"`. Então pressione
-        \"Executar\".\n\n**Preso? Clique Aqui:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
+        \"Correr\".\n\n**Preso? Clique Aqui:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
       AppLab Intro 7 - Change Text 2: |-
         <div style="float:right">
         <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
@@ -492,7 +492,7 @@ pt-BR:
       AppLab Intro 7 - onEvent intro: |-
         <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
 
-        **Objetivo:** A tela irá iniciar com a cor azul. Adicione o código de modo que a tela fique verde quando você clica sob o o botão "Esverdear".
+        **Objetivo:** A tela irá iniciar com a cor azul. Adicione o código de modo que a tela fique verde quando você clica sob o o botão "Verdear" .
 
         **Como:** Insira o código dentro do `onEvent()` que define a `"cor-de-fundo"` to `"verde"`.
 
@@ -500,7 +500,7 @@ pt-BR:
       AppLab Intro 7 - onEvent twoButtons: |-
         <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
 
-        **Objetivo:** Ajude a terminar o aplicativo da lanterna. O botão "Ligar" já deixa a tela branca. Execute o aplicativo e tente você mesmo. Então, escreve um código de modo que o botão "Desligar" faça a tela ficar preta novamente.
+        **Objetivo:** Ajude a terminar o aplicativo da lanterna. O botão "On" já deixa a tela branca. Execute o aplicativo e tente você mesmo. Então, escreve um código de modo que o botão "Off" faça a tela ficar preta novamente.
 
         **Como:** Adicione o código dentro do `onEvent()` vazio que define a `"cor-de-fundo"` da tela para `"Preto"` e `"cor-de-texto"`do rótulo para `"branco"`.
 
@@ -513,25 +513,27 @@ pt-BR:
         no `onEvent()` e escolha um som da biblioteca. \n-   Adicione um `setProperty()`
         (fora do seu `onEvent()`) para alterar a propriedade `\"image\"` do botão.
         Escolha uma imagem usando a terceira lista suspensa.\n-   Add one more `setProperty()`
-        to change the button's `\"text\"`.\n\n**Preso? Clique aqui:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
+        to change the button's `\"text\"`.\n\n**Stuck? Click here:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
       AppLab Intro 7 - thisOrThatAddButton: |-
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
 
-        **Ojetivo:** Adicione um segundo botão na tela que diz "Direita!" com o `"id"` de `"BotaoDireita"`.
+        **Ojetivo:** Adicione um segundo botão na tela que diz "Correto!" com o `"id"` de `"corretoButton"`.
 
-        **Como:** No Modo Design, arraste um novo botão. Posicione-o e altere seu tamanho. Então, defina seu `"id"`, `"texto"`, `"cor de fundo"`, e `"tamanho da fonte"`.
+        **Como:** No Modo Design, arraste um novo botão. Posicione-o e altere seu temanho. Então, defina seu `"id"`, `"texto"`, `"cor de fundo"`, e `"tamanho da fonte"`.
 
         **Travou? Clique aqui:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
       AppLab Intro 7 - thisOrThatAddScreen: |-
         <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
 
-        **Objetivo:** Criar uma nova tela chamada `"telaDireita"`. Adicionar um rótulo que diz "Você foi para a direita!".
+        **Objetivo:** Criar uma nova tela chamada `"rightScreen"`. Adicionar um rótulo que diz "Você foi para a direita!".
 
-        **Como:** No Modo Design arraste um novo elemento de tela. Troque o `"id"` por `"telaDireita"`. Então arraste um rótulo para a tela e troque o texto para "Você foi para a direita!".
+        **Como:** No Modo Design arraste um novo elemento de tela. Troque o `"id"` por `"rightScreen"`. Então arraste um rótulo para a tela e troque o texto para "Você foi para a direita!".
 
         **Travado? Clique aqui:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
       AppLab Intro 7 - thisOrThatPersonalize: |-
-        <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ" target="_blank"><img src="https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18 PM.png" style="float:right;height:200px"></a><a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q" target="_blank"><img src="https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05 PM.png" style="float:right;height:200px"></a><a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg" target="_blank"><img src="https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40 PM.png" style="float:right;height:200px"></a>
+        <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ" target="_blank"><img src="https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18 PM.png" style="float:right;height:200px"></a>
+        <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q" target="_blank"><img src="https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05 PM.png" style="float:right;height:200px"></a>
+        <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg" target="_blank"><img src="https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40 PM.png" style="float:right;height:200px"></a>
 
         **Objetivo:** Construa seu próprio aplicativo estendendo este projeto. Então, pode "Compartilhar" com alguém!
 
@@ -539,17 +541,25 @@ pt-BR:
 
         <details>
 
-        <summary><b>Ideia de Escolha Sua Própria de Aventura</b></summary>
+        <summary>
 
-        Experimente isto <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg" target="_blank">Exemplo Aplicativo de Escolha Sua Própria de Aventura</a> então você pode ver como um funciona. Aqui estão algumas ideias para te ajudar a vir com sua própria história.
+        <b>Escolha Sua Própria Ideia de Aventuras</b>
+
+        </summary>
+
+        Experimente isto <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg" target="_blank">Exemplo Escolha Sua Própria Ideia de Aventuras</a> então você pode ver como um funciona. Aqui estão algumas ideias para te ajudar a vir com sua própria história.
 
         <li>Faça uma aventura sobre seu personagem preferido, real ou ficção.</li>
         <li>Faça uma aventura que conte a história do seu livro favorito, ou filme, ou sua própria criação.</li>
-        <li>Faça uma aventura que tem um monte de situação que tenham várias reviravoltas ou que tenham escolhas moralmente difíceis.</li>
+        <li>Faça uma aventura que tem um monte de situação que tenham várias reviravoltas ou que tenham escolhas morais difíceis.</li>
         <br>
         </details>
 
-        <details><summary><b>Ideias de Cartões Comemorativos</b></summary>
+        <details><summary>
+
+        <b>Ideias de Cartões Comemorativos</b>
+
+        </summary>
 
         Experimente isto <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q" target="_blank">Exemplo de Aplicativo de Cartões Comemorativos</a> então você pode ver como um funciona. Aqui estão algumas ideias para te ajudar a vir com seu próprio cartão.
 
@@ -559,7 +569,11 @@ pt-BR:
         <br>
         </details>
 
-        <details><summary><b>Ideias de Quiz de Personalidade</b></summary>
+        <details><summary>
+
+        <b>Ideias de Quiz de Personalidade</b>
+
+        </summary>
 
         Experimente isto <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ" target="_blank">Exemplos de Aplicativos de Quiz de Personalidade</a> então você pode ver como um funciona. Aqui estão algumas ideias para te ajudar a vir com seu próprio quiz.
 
@@ -571,9 +585,9 @@ pt-BR:
       AppLab Intro 7 - thisOrThatSetScreen: |-
         <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
 
-        **Objetivo:** A tela altera para `"telaDireita"` quando o usuário clica em `"BotaoDireita"`.
+        **Objetivo:** A tela altera para `"rightScreen"` quando o usuário clica em `"rightButton"`.
 
-        **Como:** No Modo Código adicione um novo `onEvent()` ao seu programa para o seu botão "Direito!". Adicione um bloco `definirTela()` dentro dele que muda as telas para `"telaDireita"`.
+        **Como:** No Modo Código adicione um novo `onEvent()` ao seu programa para o seu botão "Direito!". Adicione um bloco `setScreen()` dentro dele que muda as telas para `"rightScreen"`.
 
         **Travado? Clique aqui:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
       CDU U6 Playground Sound Board: |-
@@ -1336,52 +1350,6 @@ pt-BR:
         problemas. Este procedimento é também chamado de \"depurar\" o código.\n\n#
         Faça Isto\n\n-   Corrija os problemas com o código, para que a página web
         seja exibida corretamente\n-   Compare os erros que você corrigiu com um colega"
-      CSD U2 Heading Demo: |-
-        # Títulos
-
-        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
-        <details>
-
-        <summary><strong> Quais são os títulos? </strong> </summary>
-
-        Os cabeçalhos são os diferentes títulos de seção dimensionados em toda a página da web. Os cabeçalhos adicionam estrutura à sua página da web dividindo-a de modo que seja mais fácil para um usuário ler.
-
-        </details>
-        <details>
-        <summary><strong> Como faço para criar títulos de tamanhos diferentes?</strong> </summary>
-
-        Os títulos vêm em 6 tamanhos diferentes. Até agora você usou principalmente o maior deles: \\ <h1>. O número '1' na tag HTML designa que esse é o maior cabeçalho. O menor cabeçalho é \\ <h6>. Você também pode tentar as tags \\ <h2>, \\ <h3>, \\ <h4> e \\ <h5>, que ficam menores à medida que o número aumenta.
-
-        </h1>
-        </details>
-        <details>
-        <summary><strong> O que é HTML? </strong> </summary>
-
-        HTML significa Linguagem de marcação de hipertexto. O HTML é usado para adicionar estrutura ao conteúdo de uma página da web. HTML usa tags para especificar onde certas estruturas começam e terminam. Essas tags são conjuntos de caracteres não encontrados no idioma inglês, para que o conteúdo e a estrutura possam ser diferenciados.
-
-        </details>
-        <details>
-        <summary><strong> O que é um elemento HTML? </strong> </summary>
-
-        Um elemento HTML é uma parte de um site que é marcado por uma tag de início e às vezes é fechado com uma tag de finalização. O elemento também inclui o conteúdo dentro das tags. Por exemplo:
-        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
-
-        </details>
-        <details>
-        <summary><strong> O que é uma tag HTML? </strong> </summary>
-
-        Uma tag HTML é o conjunto especial de caracteres que informa à máquina onde está o início ou o fim de um elemento HTML e de que tipo é.
-
-        </details>
-        </div>
-
-        Até agora, você organizou seu conteúdo em parágrafos. Outra forma de HTML permite que você organize seu código usando **cabeçalhos**. Um título é um pequeno texto que fica no topo de uma seção de conteúdo, como um título.
-
-        Faça isso:
-
-        -   Encontre os cabeçalhos na página abaixo e use a Ferramenta Inspetor para ver o código que os faz.
-        -   Certifique-se de que você e seu parceiro concordam com o que as tags fazem.
-        -   Altere o código para que "Desenho" e "2 anos" correspondam aos cabeçalhos no restante da página.
       CSD U2 Heading Demo_2018: "# Títulos de seção\n\n<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\n<details>\n\n<summary>\n\n**O que são títulos de seção?**\n\n</summary>\nTítulos
@@ -1546,79 +1514,6 @@ pt-BR:
         do maior para o menor, e os textos indiquem o tamanho correto, como na figura
         abaixo.\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
         PM.png\" style=\"width:100px\" style=\"float:left\">"
-      CSD U2 Heading Test: |-
-        # Cabeçalhos e parágrafos
-
-        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
-        <details>
-
-        <summary><strong> O que é um elemento de parágrafo?</strong>
-        </summary>
-
-        Parágrafos são marcados por tags de abertura (`<p>`) e fechamento (`</p>`) também. Parágrafos em HTML podem ser de qualquer tamanho como um texto de uma palavra ou um grupo de frases. Todo o texto na sua página da web deve estar contido em um elemento HTML (títulos ou parágrafos). Os parágrafos agrupam conjuntos de sentenças e colocam um espaço entre o texto e o próximo grupo de texto.
-
-        </details>
-        <details>
-        <summary> <strong> Como faço para criar vários parágrafos? </strong>
-        </summary>
-
-        Parágrafos são marcados por tags de abertura (`<p>`) e fechamento (`</p>`). Para criar mais de um parágrafo, você desejará vários conjuntos de abertura e fechamento de tags `<p>`. Por exemplo
-
-        <pre>
-        &lt;p&gt;
-          Este é um parágrafo.
-        &lt;/p&gt;
-        &lt;p&gt;
-          Este é outro parágrafo.
-        &lt;/p&gt;
-        </pre>
-
-        </details>
-        <details>
-        <summary><strong>Quais são os cabeçalhos?</strong>
-        </summary>
-
-        Os cabeçalhos são os diferentes títulos de seção dimensionados em toda a página da web. Os cabeçalhos adicionam estrutura à sua página da web dividindo-a de modo que seja mais fácil para um usuário ler.
-
-        </details>
-        <details>
-        <summary><strong> Como faço cabeçalhos de diferentes tamanhos?</strong>
-        </summary>
-
-        Os títulos vêm em 6 tamanhos diferentes. Até agora você usou principalmente o maior \<h1>. O número 1 na tag HTML designa que esse é o maior cabeçalho. O menor cabeçalho é \<h6>. Você também pode tentar as tags \<h2>, \<h3>, \<h4> e \<h5>, que ficam menores à medida que o número aumenta.
-
-        </details>
-        <details>
-        <summary><strong> O que é HTML? </strong>
-        </summary>
-
-        HTML significa Linguagem de Marcação de Hipertexto. O HTML é usado para adicionar estrutura ao conteúdo de uma página da web. HTML usa tags para especificar onde certas estruturas começam e terminam. Essas tags são conjuntos de caracteres não encontrados no idioma inglês, para que o conteúdo e a estrutura possam ser diferenciados.
-
-        </details>
-        <details>
-        <summary> <strong> O que é um elemento HTML? </strong>
-        </summary>
-
-        Um elemento HTML é uma parte de um site que é marcado por uma tag de início e às vezes é fechado com uma tag de finalização. O elemento também inclui o conteúdo dentro das tags. Por exemplo:
-
-        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
-
-        </details>
-        <details>
-        <summary><strong>O que é uma tag HTML?</strong>
-        </summary>
-
-        Uma tag HTML é o conjunto especial de caracteres que informa à máquina onde está o início ou o fim de um elemento HTML e de que tipo é.
-
-        </details>
-        </div>
-
-        O autor desta página adicionou em um monte de conteúdo, mas não pensou em estrutura. Todo o texto é misturado.
-
-        Faça isso:
-
-        -   Examine o conteúdo com seu parceiro e decida o que você acha que deveria ser a melhor estrutura.
-        -   Use suas tags de cabeçalho e parágrafo para codificar a estrutura na página.
       CSD U2 Heading Test_2018: |-
         # Cabeçalhos e Parágrafos
 
@@ -1759,44 +1654,6 @@ pt-BR:
 
         -   Dê uma olhada no conteúdo com seu parceiro e decidam o que vocês acham que seria a melhor estrutura.
         -   Utilize suas tags cabeçalho e parágrafo para codificar a estrutura da página.
-      CSD U2 Image Tag 1: |-
-        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
-        <details>
-
-        <summary><strong>Como adiciono imagens?</strong></summary>
-
-        A tag `<img>` permite que você mostre imagens na sua página web. <br><br>
-
-        Exemplo:
-
-        <pre>&lt;img src="dog.png" alt="cão pulando"/&gt;</pre><br><br>
-
-        Para informar ao navegador qual arquivo usar, informações extras, chamadas de **atributo**, são adicionadas à tag \<img> dentro dos colchetes. O atributo `src` significa **origem** e informa o nome da imagem. Os nomes dos arquivos de imagem incluem extensões que informam ao computador com qual tipo de imagem eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
-
-        Além de ter o atributo src, os elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isso é importante caso a imagem não seja carregada ou para pessoas com problemas de visão. <br><br>
-
-        Uma tag `<img>` é um exemplo de uma tag **de fechamento automático** porque inicia e fecha em uma tag. Para marcar isso, colocamos o `/`, que geralmente aparece na tag de fechamento no final da tag de imagem.
-
-        </details>
-        <details>
-        <summary><strong> Por que uma tag de imagem não tem uma tag de fechamento? </strong></summary>
-
-        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que deva ser agrupado em tags. O conteúdo que aparece na tela é especificado através dos atributos das tags.
-
-        </details>
-        <details>
-        <summary><strong> O que é um atributo? </strong></summary>
-
-        Atributos são informações extras incluídas em uma tag. Atributos possuem nomes e valores. O nome informa que tipo de informação está sendo fornecido e, em seguida, o valor fornece as informações específicas para essa tag.
-
-        Por exemplo, as tags \<img> possuem dois atributos, src e alt. src especifica o nome do arquivo de imagem e alt informa ao navegador em texto legível oque é a imagem.
-
-        </details>
-        </div>
-
-        # Imagens
-
-        Uma página da web Cachorro X Gato foi iniciada para você. A imagem do cachorro já foi adicionada à página abaixo. Use uma tag de imagem para adicionar a imagem `cat.jpeg` à página abaixo do cabeçalho do gato.
       CSD U2 Info Page Final Touches: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
 
@@ -5907,60 +5764,6 @@ pt-BR:
         -   Encontre a propriedade "text-align" na tag parágrafo.
         -   Altere o alinhamento do parágrafo.
         -   Escolha entre "left", "right" e "center" (esquerda, direita e centro)
-      CSD U2 unordered list: |-
-        # Listas não ordenadas
-
-        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
-        <details>
-
-        <summary><strong>Quais são os dois tipos de listas?</strong>
-        </summary>
-        Existem dois tipos de listas em HTML, listas ordenadas e não ordenadas.
-        </details>
-        <details>
-        <summary><strong>O que é uma lista não ordenada?</strong>
-        </summary>
-
-        Uma lista não ordenada é apenas um conjunto de itens com marcadores.
-        <br /> <br /> Um elemento de lista não ordenado tem a tag \<ul>. Esta é uma abreviação para <strong>U</strong> não ordenada <strong>L</strong> lista. Cada item na lista é marcado por um elemento de item de lista \<li>. Esta é uma abreviação de <strong>L</strong>lista <strong>I</strong> O elemento item da lista é um elemento filho, o que significa que ele entra dentro de seu elemento pai, a lista não ordenada (\<ul>).
-
-        </details>
-
-        <details>
-        <summary><strong>Como faço uma lista não ordenada?</strong>
-        </summary>
-
-        Fazer uma lista não ordenada tem dois passos: fazer a lista e adicionar os itens da lista. Para criar a lista não ordenada, escreva as tags de lista não ordenadas `<ul></ul>`. Em seguida, adicione seus itens de lista **dentro** das tags de lista não ordenada. Para criar cada item da lista, use as tags de item de lista `<li> </li>` e escreva o item da lista dentro das tags.
-
-        Pode ser útil recuar suas tags  <li> para que fique claro que elas estão contidas na tag \<ul>.
-
-        </details>
-
-        <details>
-        <summary><strong>Me mostre funcionando</strong>
-        </summary>
-
-        <table border="1">
-        <tr>
-        <td>Exemplo</td>
-        <td>Resultado</td>
-        </tr>
-        <tr>
-        <td><pre> &lt;ul&gt; <br>   &lt;li&gt;Vermelho &lt;/li&gt; <br>   &lt;li&gt;Verde &lt;/li&gt; <br>   &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
-        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
-        </tr>
-        </table>
-
-        </details>
-        </div>
-
-        Esta página deve ter uma lista não ordenada, mas está faltando as tags da lista.
-
-        # Faça isso
-
-        -   Use as tags `<ul>` e `<li>` para estruturar o conteúdo em uma lista não ordenada como a figura abaixo.
-
-        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
       CSD U2 upload images: |-
         # Carregue Imagens
 
@@ -8385,30 +8188,6 @@ pt-BR:
         # Animação dos Peixes
 
         Usando o padrão do contador, faça com que todos os três peixes se movam para a direita. O peixe azul deve ser o mais rápido e o peixe verde deve ser o mais devagar.
-      CSD U3 Plotting Shapes Shape Lab: |-
-        # Desenhando Formas
-
-        Explore usando essa ferramenta que permite desenhar diferentes formas coloridas.
-
-        Certifique-se de clicar em "Executar" e tente ativar a grade para ajudar a posicionar as formas com precisão.
-
-        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59 PM.png>)
-      CSD U3 Plotting Shapes Shape Lab_2018: |-
-        # Desenhando Formas
-
-        Explore usando essa ferramenta que permite desenhar diferentes formas coloridas.
-
-        Certifique-se de clicar em "Executar" e tente ativar a grade para ajudar a posicionar as formas com precisão.
-
-        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59 PM.png>)
-      CSD U3 Plotting Shapes Shape Lab_2019: |-
-        # Desenhando Formas
-
-        Explore usando essa ferramenta que permite desenhar diferentes formas coloridas.
-
-        Certifique-se de clicar em "Executar" e tente ativar a grade para ajudar a posicionar as formas com precisão.
-
-        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59 PM.png>)
       CSD U3 Random random ellipse: |-
         # Números aleatórios
 
@@ -8520,42 +8299,6 @@ pt-BR:
         Alguém tentou usar o bloco `sprite.deslocar()` para fazer o **elefante empurra o hipopótamo**, mas existe um bug. Você pode mudar o código para que o elefante empurre o hipopótamo para fora da tela?
 
         -   Encontre a linha de código onde o bloco `sprite.deslocar()` é usado e corrija o erro.
-      CSD U3 fill: |-
-        <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19 PM.png" style="float:right;width:200px;">
-
-        # preencher (cor)
-
-        Você também pode fazer seus retângulos de cores diferentes com 'preencher'. Ele irá definir a cor para cada forma que vem depois disso no código.
-
-        # Faça isso
-
-        -   Veja o código que define a cor. ([Mostre-me onde] [0])
-        -   Mude a cor de azul para amarelo.
-        -   Adicione um novo quadrado arrastando um bloco `rect` para a área do código abaixo do comando preencher ([Mostre-me onde] [1]). O novo quadrado pode ir a qualquer local na tela que você quiser.
-      CSD U3 fill_2018: |-
-        <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19 PM.png" style="float:right;width:200px;">
-
-        # preencher (cor)
-
-        Você também pode fazer seus retângulos de cores diferentes com 'preencher'. Ele irá definir a cor para cada forma que vem depois disso no código.
-
-        # Faça isso
-
-        -   Veja o código que define a cor. ([Mostre-me onde] [0])
-        -   Mude a cor de azul para amarelo.
-        -   Adicione um novo quadrado arrastando um bloco `rect` para a área do código abaixo do comando preencher ([Mostre-me onde] [1]). O novo quadrado pode ir a qualquer local na tela que você quiser.
-      CSD U3 fill_2019: |-
-        <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19 PM.png" style="float:right;width:200px;">
-
-        # preencher (cor)
-
-        Você também pode fazer seus retângulos de cores diferentes com 'preencher'. Ele irá definir a cor para cada forma que vem depois disso no código.
-
-        # Faça isso
-
-        -   Veja o código que define a cor. ([Mostre-me onde] [0])
-        -   Mude a cor de azul para amarelo.
-        -   Adicione um novo quadrado arrastando um bloco `rect` para a área do código abaixo do comando preencher ([Mostre-me onde] [1]). O novo quadrado pode ir a qualquer local na tela que você quiser.
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema
         é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo
         coletados e de onde eles estão vindo.
@@ -8589,62 +8332,6 @@ pt-BR:
         # Faça isso
 
         Use o comando `.color()` para configurar cada um dos LEDs de cor para uma cor diferente.
-      CSD U6 arrays video: |-
-        ## Perguntas a Considerar
-
-        -   Quando um vetor pode ser mais útil do que uma variável?
-        -   Por que você sempre deve atribuir um vetor a uma variável?
-        -   Como você pode acessar os elementos em seu vetor?
-      CSD U6 for loop led color_2019: |-
-        # Acrescente Alguma Cor
-
-        Agora que você pode ligar e desligar os LEDs, é hora de acrescentar alguma cor.
-
-        # Faça Isto
-
-        Adicione tratadores de eventos a "button\_red" e "button\_green" que faz com que todos os LEDs tenham estas cores.
-      CSD U6 for loop led personalize_2019: |-
-        # Faça Você Mesmo
-
-        Pense em um novo botão que você gostaria neste projeto. Não esqueça sobre as outras opções com LEDs, tais como pulsar e piscar.
-
-        # Faça Isto
-
-        Acrescente um novo botão no projeto, e programe-o com um comportamento de sua escolha.
-      CSD U6 functions paramters video_2019: |-
-        ## Perguntas a Considerar
-
-        -   Como os parâmetros tornam as funções mais úteis?
-        -   Como você sabe quando você pode combinar várias funções em uma?
-      CSD U6 hardware software video_2019: |-
-        ## Perguntas a Considerar
-
-        -   Qual é a diferença entre hardware e software?
-        -   O que o sistema operacional de um computador faz?
-      CSD U6 params modify clouds_2019: |-
-        # Nuvens
-
-        Este programa faz as nuvens se moverem quando você assopra em um sensor de som, mas não está finalizado.
-
-        # Faça Isto
-
-        -   Crie uma nova função `moveCloud(name)` the irá mover qualquer nuvem.
-            -   (Dica: você irá usar praticamente o mesmo código que existe na função `moveCloud0`)
-        -   Chame sua nova função `moveCloud(name)` dentro do bloco do evento, uma vez para cada nome de nuvem.
-            -   (Dica: isto é similar à forma como a função `loopCloud(name)` é chamada várias vezes)
-      CSD U6 setProperty hidden 2_2019: |-
-        # Exibindo/Ocultando
-
-        Este aplicativo de alarme não tem muita utilidade se você não puder desligar o alarme depois que ele começa a tocar. Vamos resolver isto.
-
-        # Faça Isto
-
-        Crie um segundo evento para observar o "stopAlarmButton" ser clicado. Quando o evento for acionado:
-
-        -   Altere o texto de status para "DESLIGADO"
-        -   Oculte o "stopAlarmButton"
-
-        _Dica: "hidden" é uma propriedade booleana. Se nós usamos `falso` para exibir o botão, o que você deve usar para ocultá-lo novamente?_
       'CSD: Animating Sprite Movement_2019': |-
         ## Perguntas a considerar
 
@@ -8655,58 +8342,6 @@ pt-BR:
 
         -   Quais são as etapas para adicionar uma imagem a um sprite?
         -   Quais são as diferentes maneiras de obter uma imagem?
-      'CSD: For Loop_2019': |-
-        ## Perguntas a Considerar
-
-        -   O que são usados laços em programação?
-        -   Onde estão colocados os laços em seu código?
-      CSDU2 - Type Anything: |-
-        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
-
-        # Bem-vindo ao Laboratório Web!
-
-        A plataforma em que você está se chama Laboratório Web. Existem três partes principais da tela no Laboratório Web.
-
-        # Faça isso
-
-        -   Tente digitar algo na área de trabalho.
-        -   Pressione <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> para ver uma prévia!
-      CSDU2 - Type Anything_2018: |-
-        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
-
-        # Bem-vindo ao Laboratório Web!
-
-        A plataforma em que você está se chama Laboratório Web. Existem três partes principais da tela no Laboratório Web.
-
-        # Faça isso
-
-        -   Tente digitar algo na área de trabalho.
-        -   Pressione <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> para ver uma prévia!
-      CSDU2 - Type Anything_2019: |-
-        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
-
-        # Bem-vindo ao Laboratório Web!
-
-        A plataforma em que você está se chama Laboratório Web. Existem três partes principais da tela no Laboratório Web.
-
-        # Faça isso
-
-        -   Tente digitar algo na área de trabalho.
-        -   Pressione <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> para ver uma prévia!
-      CSDU4 Design Mode Video_2019: |-
-        ## Perguntas a Considerar
-
-        -   Onde no App Lab você pode desenhar a interface de usuário do seu aplicativo?
-        -   Quais são alguns tipos de elementos que você pode adicionar ao seu aplicativo?
-      CSDU6 making new arrays_2019: |-
-        # Criando Novos Vetores
-
-        Agora que você pode mudar vetores, é hora de você criar o seu.
-
-        # Faça Isto
-
-        -   Crie um novo vetor com as notas que você quiser. Elas podem estar em oitavas diferentes, associadas a um determinado tom, etc. Qualquer coisa que você quiser!
-        -   Faça sua cigarra tocar uma nota aleatória de seu vetor quando o botão **direito** for pressionado.
       Course 4 Artist 1: |-
         Me ajude a desenhar uma caixa.
         (Cada linha tem 200 pixels de comprimento)
@@ -8776,35 +8411,15 @@ pt-BR:
       Course 4 Artist 13: |-
         Ainda jogando?  Temos aqui uma tela em branco
         na qual você pode projetar o que quiser!
-      Course 4 Artist 2: |-
-        Você consegue usar o laço de repetição para desenhar o quadrado em cinza?
-        (Cada lado tem 300px de comprimento)
-      Course 4 Artist 3: |-
-        Tente entender o que acontece se você executar esse código (ou pressione "Executar" para testá-lo).
-
-        Então, repita-o várias vezes para completar o desenho.
-      Course 4 Artist 4: |-
-        Quantos graus há em um círculo?
-        Preencha o bloco de repetição com o número para criar um círculo colorido.
-      Course 4 Artist 5: "Desenhe a outra metade deste desenho para torná-lo simétrico.
-        \nOs triângulos são equilaterais e têm 50 pixels de comprimento.\n\nVocê pode
-        executar o programa várias vezes para descobrir quais blocos precisam ser
-        adicionados ao código."
       Course 4 Artist 6: |-
         Complete o código para desenhar esses três triângulos
         equiláteros.
-      Course 4 Artist 7: Agora aninhe este laço de repetição dentro de outro laço
-        de repetição para desenhar 10 triângulos.
       Course 4 Artist 8: |-
         Desenhe esse sol repetindo todo este bloco de código
         várias vezes.
       Course 4 Artist 8a: |-
         Lembra-se dessa forma? Agora vamos deixar
         você construí-la sem dar nenhum bloco inicial!
-      Course 4 Artist 9: Repita esse desenho 10 vezes e certifique-se de virar a cada
-        forma desenhada.
-      Course 4 Artist For Loops 1: Use um bloco de repetição para desenhar esse triângulo
-        que tem 50 pixels de largura.
       Course 4 Artist For Loops 4: |-
         Use um laço "para" para desenhar esses quadrados.
         Eles começam com 15 pixels de comprimento, o maior tem 300 pixels de comprimento, e cada quadrado
@@ -8813,62 +8428,10 @@ pt-BR:
       Course 4 Artist For Loops 6a: |-
         Faça três pequenas alterações no
         código do último nível para conseguir isso!
-      Course 4 Artist Vars 1: |-
-        Vamos desenhar um triângulo equilátero.
-
-        Ele deve ter exatamente 100 pixels de comprimento em cada lado.
-
-        <br/>
-      Course 4 Artist Vars 11: |-
-        Aqui está um código mais complicado usando os mesmo conceitos do desafio anterior - que valor você deve usar na variável `lados` para desenhar essa figura feita de quadrados?
-
-        <p style="font-size:small; padding: 15px 15px 15px 40px; background-color:#dcf3f3; border-radius:10px;">
-        \tApenas por diversão: tente usar outros números para ver o que acontece com o padrão.
-        </p>
-      Course 4 Artist Vars 12: |-
-        Vamos fazer a variável `lados` valer 5. À medida que adicionarmos lados ao algoritmo, o padrão fica maior.
-
-        Note que há outra variável chamada `comprimento`.
-        Agora podemos usar essa variável onde há um bloco de `avance`.
-
-        Para essa forma, faça a variável `comprimento` ser igual a 75.
-      Course 4 Artist Vars 2: Em vez de usar `avance por 150` o bloco `avance` está
-        referenciando uma variável chamada `comprimento`. Você consegue definir o
-        valor de `comprimento` para 150 para desenhar esse novo triângulo?
-      Course 4 Artist Vars 4: Agora eu quero fazer um retângulo que tem como altura
-        o dobro da sua largura. Nós temos uma variável chamada `largura` que precisa
-        ter o valer 100. Você consegue usar os blocos de matemática para completar
-        o código?
-      Course 4 Artist Vars 6: |-
-        Aqui está um código que pode desenhar qualquer polígono regular.
-
-        Há uma nova variável chamada `lados` e ela está configurada para 4.
-
-        Você consegue usar a variável `lados` (junto com o bloco de matemática) para virar o número certo de vezes independente de quantos lados o polígono tiver?
-      Course 4 Artist Vars 7: |-
-        Use o que você aprendeu no último desafio para criar esse hexágono usando a varável `lados`.
-
-        Percebe como você consegue desenhar um triângulo, um quadrado, um pentágono ou um octágono mudando apenas um número?
-      Course 4 Bee 1: |-
-        A abelha não sabe o que está atrás da nuvem!
-
-        Use um bloco de `se` para verificar se a flor está atrás da nuvem.
-
-        Pegue o nectar uma vez, **APENAS** se há uma flor.
-      Course 4 Bee 2: |-
-        Use o bloco de `se/então` para verificar cada objeto e ver se é uma flor ou uma colmeia.
-
-        Se for uma flor, colete o néctar... Senão, faça mel!
-      Course 4 Bee 3: |-
-        O objeto desconhecido é uma flor ou uma colmeia.
-
-        Desta vez, use o bloco de `se/então` para coletar nectar **se** o objeto for uma flor, **senão**, produzir mel (porque é uma colmeia).
       Course 4 Bee Params 1: |-
         Escreva uma sequência para coletar todo o
         néctar usando a função "obtenha 3 néctares", que vira, move-se para coletar o néctar e
         então retorna à posição original.
-      Course 4 Maze 4: Experimente usar o bloco de repetição para resolver este desafio
-        com menos blocos...
       Course 4 Play Lab Params 4: "Aqui temos uma função chamada \"patrulhe\".\n\\\r\n\\\r\nEdite-a
         para mover o gato 400 pixels para cima, e então 400 pixels para baixo."
       Course 4 Play Lab Params 8: |-
@@ -8986,50 +8549,12 @@ pt-BR:
         procure o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png).
         Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
         do tesouro.
-      Crack Random Substitution: |-
-        # Decifre uma cifra de substituição aleatória!
-
-        Essa versão da ferramenta te da uma informação sobre o texto encriptado e mais opções de como você pode tentar substituições diferentes.
-
-        ### Maneira diferentes de analisar texto
-
-        -   Brinque com algumas opções de classificação disponíveis na guia da cifra de substituição aleatória para obter visões diferentes na frequência de letras  no texto, bem como em um texto padrão em Inglês.
-            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
-
-        ### Maneiras diferentes de substituir
-
-        -   Para substituir uma letra você pode arrastar uma letra azul do alfabeto diretamente sobre a letra laranja que você quer trocar no texto cifrado original.
-            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
-
-        ### Brinque. Sempre brinque
-
-        -   Há outras maneiras de analisar e substituir caracteres que você encontra clicando nos botões e tentando qualquer coisa que você quiser.
-        -   Lembrete: Você consegue decifrar :)
-
-        Veja em quanto tempo você consegue decodificar a cifra! Este é um bom método de encriptar dados?
-
-        <img src="http://code.org/api/hour/finish_encryption.png">
-      Crack a Caesar Cipher: |-
-        # Desvende um Cifra de César
-
-        Esta ferramenta permite que você manipular texto e fazer uma Cifra de César. Você pode usá-la para encriptar ou decriptá-la.
-
-        # Faça assim
-
-        -   Carregue um \*_Mensagem de Amostra_ do menu suspenso de mensagens. Isso irá carregar uma mensagem que foi encriptada com uma Cifra de César.
-
-        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
-
-        -   Usando os botões na guia de substituição de César, você pode deslocar o alfabeto para frente ou para trás para tentar desembaralhar a mensagem.
-
-        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
-
-        Veja quando tempo demora para você desvendar a cifra! Este é um bom método para encriptar segredos?
-
-        <img src="http://code.org/api/hour/begin_encryption.png">
       Dance Party 1-validated: "\\*\\* Faça uma previsão: \\*\\* Aqui está um sprite
         chamado \"alien1\"!\n\nO que você acha que vai acontecer quando você clicar
         nele?  "
+      Dance Party 1-validated_2019: "\\*\\* Faça uma previsão: \\*\\* Aqui está um
+        sprite que se parece com um alien azul!\n\nO que você acha que vai acontecer
+        quando você clicar nele?  "
       Dance Party 2: "O alienígena estava orgulhoso de suas habilidades de dança em
         Marte, mas agora só pode se mover de um lado para o outro.\n\nVocê pode alterar
         o comportamento dentro do <xml> <block type=\"gamelab_addBehaviorSimple\"
@@ -9113,13 +8638,13 @@ pt-BR:
       Dance_Party_02: |-
         Faça esse alce entrar na dança!
 
-        Arraste o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho. Conecte o bloco abaixo do bloco <xml>\<block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"compasos"</title></block></xml>. O(a) dançarino(a) deve iniciar um novo movimento após o quarto compasso.
+        Arraste o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho. Conecte o bloco abaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O(a) dançarino(a) deve iniciar um novo movimento após o quarto compasso.
 
-        **Compassos** são usados para contar o tempo musical. Neste tutorial, cada compasso tem quatro batidas.
-      Dance_Party_03: "_Agora vamos curtir!_ \n\nAdicione um bloco <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"compassos\"</title></block></xml>
-        à sua área de trabalho. Faça o(a) dançarino(a) iniciar um novo movimento após
-        6 compassos."
+        Os **compassos** são usados para contar o tempo musical. Neste tutorial, cada compasso tem quatro batidas.
+      Dance_Party_03: |-
+        _Agora vamos curtir!_
+
+        Adicione um bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à sua área de trabalho. Faça o(a) dançarino(a) iniciar um novo movimento após seis compassos.
       Dance_Party_04: |-
         _Esta dança está precisando de brilho!_
 
@@ -9144,17 +8669,16 @@ pt-BR:
         <xml>
         <block type="Dancelab_startMapping">
 
-        <title name="SPRITE">right\\_pineapple</title>
+        <title name="SPRITE">right_pineapple</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
 
         Este programa utiliza o volume do "baixo" da música (os sons graves) para controlar a altura de um dançarino. Você pode fazer o outro dançarino responder à música também?
-      Dance_Party_11: "O bloco <xml><block type=\"Dancelab_whenKey\"></block></xml>
-        permite executar o código quando a seta para cima for selecionada. \n\nVocê
-        pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a)
-        ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure
-        novos blocos!"
+      Dance_Party_11: |-
+        O bloco <xml><block type="Dancelab_whenKey"></block></xml> permite executar o código quando a seta para cima for selecionada.
+
+        Você pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a) ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure novos blocos!
       Dance_Party_11_5: |-
         Veja este bloco:
 
@@ -9176,7 +8700,7 @@ pt-BR:
       Dance_Party_extras_battle: |-
         # Equipes de dança
 
-        Aqui está uma disputa de dança entre duas equipes. As teclas direcionais controlam um dos dançarinos, e as teclas "w, a, s, d" controlam o outro. Divirta-se em uma disputa de dança com um amigo e depois tente melhorar essa dança.
+        Aqui está uma disputa de dança entre duas equipes. As teclas de seta controlam um dos dançarinos, e as teclas "w, a, s, d" controlam o outro. Divirta-se em uma disputa de dança com um amigo e depois tente melhorar essa dança.
 
         -   Adicione mais teclas para controlar as danças
         -   Faça com que os dançarinos auxiliares também respondam quando as teclas são pressionadas
@@ -9204,7 +8728,7 @@ pt-BR:
 
         Esta dança usa eventos de "pico" para acionar o código quando diferentes partes da música ficam altas. Tente mexer com músicas diferentes para ver como eles mudam a dança.
       Dance_Party_extras_speed: |-
-        # Acelerar, Desacelerar
+        # Acelerar, retardar
 
         Esta dança final usa o bloco `definir velocidade` para controlar a rapidez com que cada dançarino se move. Tente experimentar diferentes velocidades durante diferentes pontos na música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
       Dance_Party_extras_visible: |-
@@ -9215,33 +8739,6 @@ pt-BR:
         -   Adicionar outro grupo de dançarinos
         -   Mostrar e ocultar dançarinos usando as teclas de seta
         -   Ocultar todos os dançarinos e alternar para um efeito de fundo estimulante
-      Fish Tank 2-validated_2019: |-
-        Vamos fazer um aquário!
-
-        Mude o sprite da bola de feno por qualquer peixe clicando no <xml><block type="gamelab_allSpritesWithAnimation" block-text="the sprite picker block"><title name="ANIMATION">"bola de feno"</title></block></xml>.
-
-        Lembre-se de atualizar a fantasia do sprite em <xml><block type="gamelab_addBehaviorSimple" block-text="the add behavior block"></block></xml>.
-      Fish Tank 3-validated_2019: |-
-        O peixe está ficando tonto!
-
-        Mude o comportamento do peixe para que ele nade para a esquerda e para a direita.
-      Fish Tank 4-validated_2019: |-
-        Nosso aquário precisa de água!
-
-        Use o bloco <xml><block type="gamelab_setBackground" inline="true" block-text="the set background color block">
-            <value name="COLOR">
-              <block type="colour_picker">
-                <title name="COLOUR">#0000ff</title>
-              </block>
-            </value>
-          </block></xml> para mudar a  cor do fundo. Nós recomendamos a cor azul!
-      Fish Tank 5-validated_2019: O peixe é aventureiro e quer conhecer novas criaturas
-        do mar. Adicione outro sprite no aquário. Esse sprite pode ter qualquer fantasia,
-        desde que seja diferente da que você usou para o peixe!
-      Fish Tank 6-validated_2019: |-
-        O que você quer que o novo amigo do seu peixe faça?
-
-        Adicione um comportamento e veja o que ele faz!
       Function intro Ryan: "A **função** chamada 'construir ponte' está em sua área
         de trabalho. Todos os códigos de que você precisa para atravessar o rio estão
         corretos! \\\r\n \\\r\nFixe o bloco verde pequeno duas vezes em sua área de
@@ -9302,10 +8799,6 @@ pt-BR:
         as coisas."
       K-1 Maze Loops 2: Use o bloco "repita" para me levar até o porco!
       K-1 Maze Loops 8: Use o laço "repita" para me levar até o porco.
-      MC HOC 2016 SCORE LEVEL: "Alguns jogos permitem que você mantenha sua pontuação.
-        Jogue pega-pega com esses gigantes de metal e use <xml> <block type=\"craft_addScore\">
-        \   <title name=\"SCORE\">1</title>  </block></xml> bloco para te dar um ponto
-        cada vez que você encostar neles.  \n\n  Faça 5 pontos para ganhar!"
       MC_HOC_2017_01_RETRY: "{currentPlayerName} está preso dentro da casa, mas o
         Agent está aqui para ajudar!  \\\r\n \\\r\n   \\\r\nFixe um bloco 'mover para
         a frente' no bloco 'ao rodar' na área de trabalho para levar o Agent até a
@@ -9421,8 +8914,6 @@ pt-BR:
       NEW Course 4 Artist Functions 9: |-
         Você consegue resolver isso adicionando
         apenas um bloco?
-      NEW Course 4 Artist Params 1: Vamos definir uma função para desenhar um quadrado
-        com lados de 50 pixels. Clique em "editar" para começar.
       NEW Course 4 Artist Params 2: Crie uma função `desenhar um triângulo` desde
         o início, para fazer um triângulo com lados de 50 pixels.
       NEW Course 4 Artist Params 4: |-
@@ -9437,9 +8928,6 @@ pt-BR:
       NEW Course 4 Artist Vars 12: |-
         Agora, recrie o algoritmo do último
         nível para criar um pentágono de lados 150.
-      NEW Course 4 Artist Vars 2: Arraste um bloco de número para o bloco `defina
-        o comprimento` e para o bloco `repita _ vezes` para desenhar um conjunto de
-        triângulos de 50 pixels.
       NEW Course 4 Artist Vars 4: "Vamos tentar de novo! \\\r\n\\\r\nVocê consegue\ndefinir
         a variável \"comprimento\" em 60 para fazer este design bacana com hexágonos?"
       NEW Course 4 Artist Vars 6: "Desenhe esse padrão de pentágonos com\nlados de
@@ -9463,97 +8951,6 @@ pt-BR:
         1\n\n**Instruções:**\n\n-   Você começa com a imagem 4x2 que Maddie estava
         criando, mas deixamos de fora os últimos dois quadrados. \n-   Termine a imagem
         descobrindo quais as duas cores que estão faltando e codifique elas."
-      Standalone_Artist_2: Desenhe este diamante com ângulos de 120 e 60 graus, e
-        com lados de 150 pixels de comprimento.
-      Standalone_Artist_3: Você pode desenhar este hexágono com lados de 100 pixels
-        e ângulos de 60 graus?
-      Standalone_Artist_4: Agora você pode brincar com um novo bloco, o laço. Ele
-        repetirá um conjunto de comandos. O que acontecerá se você fizer seis iterações
-        desses comandos?
-      Standalone_Artist_5: Quantas vezes você precisar iterar este diamante para desenhar
-        a flor?
-      Standalone_Artist_5.5: 'Observe como simplificamos o código do diamante, transformando-o
-        em um laço. Você pode fazer 12 iterações de toda a sequência para desenhar
-        a flor. Dica: você terá que virar 30 graus depois de iterar seu diamante para
-        não continuar desenhando o mesmo diamante todas as vezes.'
-      Standalone_Artist_6: 'Faça 6 iterações do código deste hexágono para criar o
-        desenho. Quantos graus você terá que virar de cada vez? Dica: divida o número
-        de graus de um círculo pelo número de iterações que fizer.'
-      Standalone_Artist_7: 'Uma função é mais uma ferramenta de programação para que
-        você não tenha que repetir as mesmas ações. Esta função desenha uma flor,
-        assim, você pode usá-la sempre que quiser fazer esse desenho. Use-a juntamente
-        com o novo bloco "pule" para desenhar essas flores. Dica: as flores são separadas
-        por 150 pixels'
-      Standalone_Artist_8: Esta é uma função chamada "Desenhe uma forma", que programamos
-        para desenhar hexágonos. Execute o código para ver o que ele faz e, em seguida,
-        tente usá-lo com a função para ver o que acontece. Você consegue fazer com
-        que ela desenhe um padrão de quadrados, triângulos ou octógonos?
-      Standalone_Artist_9: Agora vá em frente e faça a imagem que mais gostar! Você
-        tem até uma função vazia para usar para fazer o que quiser!
-      U4 Model Program 5_2019: |-
-        # Conecte os Outros Botões
-
-        Agora que você fez um botão funcionar, siga o mesmo padrão para todos os demais.
-
-        # Faça Isto
-
-        -   Para cada botâo, crie um evento que faz a ligação com a tela apropriada quando o botão é pressionado.
-        -   Rode sua aplicação e teste o funcionamento de todos os botões.
-      Virtual Pet 1_2019: |-
-        **Livre**: Uau! Olha esse animal da hora!
-
-        Enquanto você lê o código abaixo, pergunte-se:
-
-        -   Como você comanda o animal para ele se mover?
-        -   O que acontece quando o animal encosta no sorvete? E na pimenta?
-        -   Como a variável `energia` é usada? Como você pode verificar a o valor da `energia` atual do animal?
-
-        Execute o código e brinque com o animalzinho! Quando tiver acabado, clique em **Finalizar**.
-      Virtual Pet 2_2019: |-
-        Agora é a sua vez de criar seu próprio bichinho virtual! Comece mudando a aparência dele para algo que você goste.
-
-        1.  Clique na aba **Fantasias** no canto superior esquerdo da sua tela (próximo a **Código**).
-        2.  Edite a fantasia inicial, ou adicione uma nova que você ache legal.
-        3.  Mude a fantasia do sprite para a sua fantasia no código abaixo.
-        4.  Clique em **Executar** para ver o novo visual do seu bichinho!
-      'Widget: Text Compression': Procure por padrões (palavras ou frases repetidas)
-        no texto. Insira os padrões que você ver no dicionário à direta. A medida
-        que você insere mais coisas ao dicionário, o símbolo da entrada é inserido
-        no texto no lugar do padrão.
-      behaviors 1: |-
-        Tente adivinhar! Estude o código.
-
-        -   O sprite vai girar.
-        -   O sprite vai encolher.
-        -   O sprite vai se mover.
-        -   O sprite vai mudar de cor.
-      behaviors 2: |-
-        Faça o foguete voar para as estrelas!
-
-        -   Mude o comportamento do foguete para fazê-lo voar para cima.
-      behaviors 3: |-
-        Ajude o rover a ultrapassar o robô!
-
-        -   Edite o comportamento do sprite do rover (o mais de cima) para que ele se mova mais rápido que o robô.
-      behaviors 3a: |-
-        O bloco <xml><block type="sprite_parameter_get" block-text="this sprite"><title name="VAR">esse sprite</title></block></xml> deve ser usado em vez do bloco da `fantasia`. Dessa forma, o programa funcionará para qualquer sprite, independente da fantasia usada.
-
-        **Depure**: Faça com que todas as estrelas girem para o mesmo sentido!
-      behaviors 4: Tente adivinhar! Qual caminho o satélite fará para chegar no sistema
-        solar?
-      behaviors 5: |-
-        Escreve seu próprio comportamento.
-
-        -   Escreva um novo comportamento para este astronauta que o guie em direção a uma das quatro naves mostradas na tela.
-      behaviors 6: |-
-        Faça a bola rolar.
-
-        -   Crie um novo comportamento e use-o para fazer a bola rolar. Seu comportamento deve combinar duas ações diferentes.
-      behaviors 7: |-
-        Dirija para o horizonte!
-
-        -   Crie um novo comportamento e use-o para fazer o carro se mover para cima e diminuir de tamanho. Se você fizer certo, parecerá que o carro está dirigindo em direção ao horizonte.
-      behaviors free play: "**Livre**: Crie seu próprio cenário espacial!"
       course1_artist_loops_challenge3: |-
         -   -   Piu! \* \*
         -   "Pode me ajudar fazer duas casas de pássaro?" \*
@@ -9563,30 +8960,10 @@ pt-BR:
         e adicione blocos que estão faltando. Leve o pássaro até o porco!
       course1_maze_debugging_challenge2: Analise este nível. Estes são os blocos corretos,
         mas eles estão colocados na ordem errada!
-      course2_artist_nestedLoops_challenge2: |-
-        Você consegue descobrir como fazer uma desenho igual a esse?
-
-        -   O primeiro laço de repetição interno deve fazer um octágono.
-        -   O segundo laço de repetição interno deve fazer um hexágono.
-        -   O terceiro laço de repetição deve fazer um quadrado.
       course2_collector_prog_challenge1: Preste atenção! Você consegue coletar todas
         as **10** peças do tesouro?
-      course3_bee_debugging_challenge1: Veja como a abelha pega o nectar. Você consegue
-        usar o mesmo padrão para ajudar a abelha a fazer todo o mel?
-      course3_bee_functions_challenge2: Você está por conta própria neste desafio!
       course3_collector_debugging_challenge2: Você é um especialista em laços aninhados?
         Use o que você aprendeu até agora para coletar todo o tesouro!
-      course3_farmer_condLoops_challenge1: |-
-        As abóboras marcam o lugar onde você deveria virar. _Vire à direita nas abóboras._ Nos outros casos, continue indo para frente, mas lembre-se de coletar todos os alfaces ou milhos no caminho.
-
-        **Cada vegetal escondido possui apenas um milho ou um alface.**
-      course3_farmer_condLoops_challenge2: |-
-        _"É um labirinto de vegetais!"_
-
-        Vire à direita nas abóboras, vire à esquerda nos alfaces. Colha tudo para completar este nível.
-      course3_maze_debugging_challenge1: _"Eu só estou andando em círculos?"_
-      course3_maze_debugging_challenge2: _"Se eu virar com muita frequência, posso
-        ficar tonto! Me ajude a chegar no porco com apenas quatro comandos de `virar`."_
       course4_artist_fwp_challenge1: Execute este programa e faça alterações para
         ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e
         substitua-o por algo totalmente diferente)
@@ -10163,11 +9540,11 @@ pt-BR:
       courseB_collector_loops2: |-
         Mova Laurel para o tesouro, então use o bloco <xml><block type="collector_collect"/></xml> para coletá-lo.
 
-        Pegue todas as quatro pilhas para passar desse nível.
+        Pegue todas as quatro pilhas para passar esse nível.
       courseB_collector_loops2_2018: |-
         Mova Laurel para o tesouro, então use o bloco <xml><block type="collector_collect"/></xml> para coletá-lo.
 
-        Pegue todas as quatro pilhas para passar desse nível.
+        Pegue todas as quatro pilhas para passar esse nível.
       courseB_collector_loops2_2019: |-
         Mova Laurel para o tesouro, então use o bloco <xml><block type="collector_collect" block-text="get treasure"/></xml> para coletá-lo.
 
@@ -10278,93 +9655,12 @@ pt-BR:
         _"Pegue-o, BB-8!"_'
       courseB_starWars_prog4_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Pegue-o, BB-8!"_'
-      courseC19_playLab_EOC2: "Use blocos como \"eventos\" e \"ações\" para fazer
-        seu personagem se mover quando você pressionar as teclas do teclado. \n\nConduza
-        o personagem aos alvos para completar o desafio."
-      courseC19_playLab_EOC4: |-
-        Ter diversos personagens e fazê-los se mover é uma ótima forma de começar um jogo, mas precisamos de muito mais para isso parecer um jogo de verdade. Vamos adicionar um sistema de pontuação!
-
-        Use blocos de eventos como `quando o ator encosta` para mudar a pontuação ou ganhar o jogo. Faça 5 pontos ou ganhe o jogo para completar o desafio.
-      courseC19_playLab_EOC5: Bom trabalho! Você tem todos os componentes básicos
-        de um jogo. Agora use seu tempo para verificar se o jogo está funcionando
-        do jeito que você gostaria. Quando estiver tudo pronto, clique em "Finalizar"!
       courseC_PlayLab_events6_2019: Agora escreva um programa que faça Valfredo o
         Penguin se mover usando as teclas com as setas para cima / para baixo / à
         esquerda / à direita, para atingir todos os alvos!
-      courseC_PlayLab_eventsA_embed_2019: Vamos jogar um jogo. Marque 5 pontos quando
-        mover o Pinguim para o Polvo!
-      courseC_artist_loop1_2019: |-
-        _"Fantástico!"_
-
-        Vamos mudar o pincel para dar um pouco de estilo, utilizando o bloco <xml><block type="draw_line_style_pattern" block-text="set pattern"><title name="VALUE">DEFAULT</title></block></xml> antes da repetição começar.
-      courseC_artist_loops1a_2019: |-
-        **Jogo Livre:** Vamos construir algo maior, um passo de cada vez!
-
-        Coloque o artista no centro da área de jogo usando o bloco <xml><block type="jump_to" block-text="jump to the middle center position"><title name="VALUE">13</title></block></xml>, então use o bloco <xml><block type="sticker" block-text="draw sticker"><title name="VALUE">Castor</title></block></xml> para fazer algo aparecer.
-
-        * * *
-
-        Pressione "Finalizar" quando estiver satisfeito com o que você fez.
-
-        ![expandable](https://images.code.org/1435d3650553df44eba973572d409a50-image-1553096405891.png)
-        ![expandable](https://images.code.org/6912d2144b90aa7087fe854742d1e8b9-image-1553096425394.png)
-        ![expandable](https://images.code.org/8de9e1aa15fdfe30ffed763e0e1d6e04-image-1553096428531.png)
-      courseC_artist_loops1b_2019: |-
-        Mude a direção pra qual seu adesivo está virado, adicionando um comando `girar` ao seu código.
-
-        * * *
-
-        Pressione "Finalizar" quando estiver satisfeito com o que você fez.
-
-        ![expandable](https://images.code.org/30fe9d37758abd27055d9a6e5a890680-image-1553097358155.png)
-        ![expandable](https://images.code.org/61feed00662019b99ac774322231f084-image-1553097362176.png)
-        ![expandable](https://images.code.org/fd123bb703ea4c630218a12eb5994053-image-1553097354066.png)
-      courseC_artist_loops2a_2019: |-
-        Agora use uma repetição para fazer mais cópias do seu adesivo. Tente mudar os números nos blocos `girar` e `repetir` para criar padrões diferentes.
-
-        * * *
-
-        Pressione "Finalizar" quando estiver satisfeito com o que você fez.
-
-        ![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)
-        ![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)
-        ![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)
-      courseC_artist_loops3a_2019: "Muita diversão!  \n\nAgora adicione um segundo
-        adesivo bem em cima do primeiro para criar uma imagem como as mostradas abaixo.\n\n*
-        * *\n\nPressione \"Finalizar\" quando estiver satisfeito com o que você fez.\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)\n![expandable](https://images.code.org/dd0e0eee69d37493c5ba584164316a9f-image-1553098351969.png)\n![expandable](https://images.code.org/880908899d8e6ceac8a8ce1bd0bf47eb-image-1553098355311.png)"
-      courseC_artist_loops4a_2019: |-
-        Edite seu código para que você pule para frente entre os desenhos dos dois adesivos. Neste desafio, certifique-se de ter "pular para a posição central" dentro do seu laço de repetição, para que você fique no centro!
-
-        * * *
-
-        Pressione "Finalizar" quando você estiver feliz com o que fez.
-
-        [expandable] [0]
-        [expandable] [1]
-        [expandable] [2]
-        [expandable] [3]
-      courseC_artist_loops5b_2019: |-
-        O que acontece quando você `avança` e então `volta` 100, 200 ou 400 pixels em algum ponto dentro da repetição?
-
-        -   Tente usar o bloco `defina o padrão` antes de iniciar a repetição para fazer uma obra de arte!
-
-        * * *
-
-        [expandable] [0]
-        [expandable] [1]
-        [expandable] [2]
-      courseC_artist_loopsPrePre1a_2019: |-
-        O artista está no lugar errado!
-
-        Utilize o bloco <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para levar o artista para o centro da área.
-        Então, desenhe uma linha com 50 pixels de comprimento com o bloco <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
-      courseC_collector_prog2_2019: Mova Laurel para o tesouro, então use o bloco
-        <xml><block type="collector_collect" block-text="collect"/></xml> para coletá-lo.
       courseC_collector_prog9: _"Vamos pegar todo o tesouro!"_
       courseC_collector_prog9_2018: _"Vamos pegar todo o tesouro!"_
       courseC_collector_prog9_2019: _"Vamos pegar todo o tesouro!"_
-      courseC_data wizard: Execute o jogo. O mago fará os animais aparecerem. Conte
-        quantos animais são. O que você notou?
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2019: Colete todo os milhos e as abóboras.
@@ -10386,9 +9682,6 @@ pt-BR:
       courseC_harvester_loops9: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2019: Colete todo os milhos e as abóboras.
-      courseC_maze_programming2_2019: Arraste um bloco extra <xml><block type="maze_moveForward"
-        block-text="move forward"/></xml> para fora da caixa de ferramentas para concluir
-        seu código.
       courseC_maze_programming8: _" Mantenha a calma e ajude-me a encontrar o porco
         mal."_
       courseC_maze_programming8_2018: _" Mantenha a calma e ajude-me a encontrar o
@@ -10407,20 +9700,6 @@ pt-BR:
         porco está escondido, e o objetivo é encontrá-lo. '
       courseC_maze_programming_challenge1_2019: 'O pássaro precisa de sua ajuda! O
         porco está escondido, e o objetivo é encontrá-lo. '
-      courseD_artist_2_2018_2019: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Bom trabalho!”_
-
-        Depois do seu exágono, vire **60** graus á direita, e depois desenhe uma linha com **150** pixels de comprimento.
-
-        Finalize movendo a Elsa para o centro da área, utilizando o bloco <xml><block type="jump_to" block-text="jump to the middle center position"><title name="VALUE">middle center</title></block></xml>.
-      courseD_artist_5_2018_2019: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Tente mudar as formas ou comprimentos das linhas para fazer o seu próprio!"_
-
-        <br/>
-
-        **Inspiração:** Você pode mudar seu desenho como quiser, mas aqui está uma idiia:
-
-        -   Tente alterar os tipos de formas do centro do floco de neve com o do fim de cada linha!
       courseD_bee_conditionals3: Você só pode coletar nectar das flores, mas você
         pode verificar qualquer espaço para ver se há uma flor. Se existe uma flor
         embaixo de alguma das nuvens, a abelha precisará coletar o nectar _uma vez_.
@@ -10432,8 +9711,6 @@ pt-BR:
         você pode verificar qualquer espaço para ver se há uma flor. Se existe uma
         flor embaixo de alguma das nuvens, a abelha precisará coletar o nectar _uma
         vez_.
-      courseD_bee_debugging_challenge1: Veja como as abelhas conseguem o néctar. Você
-        pode usar o mesmo tipo de padrão para ajudar a abelha a fazer todo o mel?
       courseD_bee_nestedLoops8: "Colete todo o néctar de cada flor\ne produza mel
         na colmeia. \\\r\n\\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2018: "Colete todo o néctar de cada flor\ne produza
@@ -10450,13 +9727,6 @@ pt-BR:
       courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops1_2019: Ajude Scrat a atravessar o gelo escorregadio e chegar
         na noz!
-      courseD_iceage_loops2_2019: |-
-        Use um bloco de <xml><block type="maze_turn" block-text="turn left">
-            <title name="DIR">vire à esquerda</title>
-          </block></xml> para chegar na noz!
-      courseD_iceage_loops3_2019: Você consegue pegar a noz com apenas um bloco de
-        <xml><block type="maze_moveForward" block-text="avance"/></xml>? Tente usar
-        um laço de repetição!
       courseD_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops4_2019: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops6: Você consegue adicionar um laço para chegar até a noz?
@@ -10470,9 +9740,6 @@ pt-BR:
         o Scrat a chegar lá?
       courseD_iceage_loops9_2019: A noz está tão longe! Você pode usar laços para
         ajudar o Scrat a chegar lá?
-      courseD_maze_intro4_2019: _"Encontre o caminho que me leva até o porco."_
-      courseD_maze_intro5a_2019: Conte os espaços na grade com cuidado!
-      courseD_maze_intro5c_2019: Cuidado com o TNT! Ajude Red a chegar no porco.
       courseD_maze_nestedLoops4: "Leve-me até o girassol usando o menor número de
         blocos\npossível! \\\r\n\\\r\nUse um laço \"repita\" dentro de outro para
         diminuir\na quantidade de códigos que você precisa."
@@ -10482,13 +9749,6 @@ pt-BR:
       courseD_maze_nestedLoops4_2019: "Leve-me até o girassol usando o menor número
         de blocos\npossível! \\\r\n\\\r\nUse um laço \"repita\" dentro de outro para
         diminuir\na quantidade de códigos que você precisa."
-      courseD_maze_ramp3_2019: |-
-        Ajude o pássaro a chegar no porco. Há um bloco azul extra de "avance".
-
-        Jogue fora o bloco que está sobrando desconectando-o dos outros blocos e arrastando-o de volta para a caixa de ferramentas.
-      courseD_maze_ramp4_2019: _"Encontre o caminho que me leva até a noz."_
-      courseD_maze_ramp5a_2019: Conte os espaços na grade com cuidado!
-      courseD_maze_ramp5c_2019: Ajude Scrat a chegar até a noz.
       courseD_maze_ramp5d: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2018: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2019: Leve o pássaro até o porco.
@@ -10506,41 +9766,6 @@ pt-BR:
       courseD_maze_until7_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
       courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
-      courseE_aboutme_1: |-
-        ![](https://images.code.org/93e1c04857ff781bb5c4cc76b15ed563-image-1557179820861.png)_"Olá, mundo! Meu nome é Rikki, e aqui estão algumas coisas que eu gostaria de compartilhar sobre mim!"_
-
-        **Brincadeira Livre**: Rikki está usando o laboratório de sprites para criar um _cartaz interativo_ sobre ela para compartilhar na Internet.
-
-        Rikki deu permissão para você dar uma olhada no cartaz dela. Você pode até editar o código!
-
-        Brinque com o cartaz de Rikki e programe um pouco, após isso, clique em **Finalizar**.
-      courseE_aboutme_2: |-
-        ![](https://images.code.org/2bae4bc7c7d59fac0cd4b1370d3c4a11-image-1557179992653.png)_"Rikki aqui! Eu vou ajudar você a fazer um cartaz legal. Primeiro, clique na aba de Fantasias!"_
-
-        1.  Clique na aba **Fantasias** no canto superior esquerdo da tela (perto de **Programar**).
-        2.  Edite a fantasia inicial ou adicione outra que você gostar.
-        3.  No código abaixo, troque a fantasia do sprite.
-        4.  Clique em **Executar** para ver o novo visual do seu sprite!
-      courseE_aboutme_3: |-
-        ![](https://images.code.org/2bae4bc7c7d59fac0cd4b1370d3c4a11-image-1557179992653.png)_"Fale algo sobre você, e tenha certeza de que é SEGURO!"_
-
-        Use <xml><block type="gamelab_spriteClicked" block-text="o bloco de evento quando o sprite for clicado"></block></xml> e <xml><block type="gamelab_printText" block-text="o bloco de texto"></block></xml> (na categoria de blocos `Mundo`) para compartilhar informações sobre você quando o seu sprite for clicado!
-
-        **Tenha certeza de que as informações compartilhadas são SEGURAS.**
-
-        * * *
-
-        #### Exemplo de informações SEGURAS e PERIGOSAS
-
-        | SEGURO               | PERIGOSO           |
-        | -------------------- | ------------------ |
-        | nome                 | nome completo      |
-        | coisas favoritas     | endereço           |
-        | opiniões respeitosas | telefone ou e-mail |
-      courseE_aboutme_4: |-
-        ![](https://images.code.org/2bae4bc7c7d59fac0cd4b1370d3c4a11-image-1557179992653.png)_"Adicione mais sprites no seu cartaz! Não esqueça de adicionar fantasias a eles!"_
-
-        Adicione **pelo menos dois** outros sprites no seu cartaz. Dê a cada sprite uma fantasia única!
       courseE_bee_functions2: "As funções são blocos de código que realizam uma tarefa.
         \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       courseE_bee_functions3: "As funções são blocos de código que realizam\numa tarefa.
@@ -10556,10 +9781,6 @@ pt-BR:
       courseF_bee_for_challenge2_2019: |-
         Resolva este desafio com o menor número de blocos
         possível.
-      courseF_bee_variables_4_2019: |-
-        "Vamos continuar!"
-
-        Edite o código para funcionar neste desafio.
       coursea_maze_ramp1_2018: Para levar o pássaro até o porco, encaixe o <xml><block
         type="maze_moveEast"/></xml> bloco no final do <xml><block type="when_run"/></xml>
         bloco e aperte "▶ Executar"!
@@ -10606,8 +9827,8 @@ pt-BR:
         Crie um país das maravilhas de gelo.
       frozen perpendicular: |-
         Agora, vamos ver se podemos criar duas retas
-        que formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco "Vire"
-        e também o bloco "Mova".
+        que formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco "vire"
+        e também o bloco "mova".
       frozen snowflake branch: |-
         Tente usar o bloco "crie um floco de neve do tipo ramificado”
         para criar três ramificações, o que começa a parecer um floco de neve.
@@ -10641,25 +9862,9 @@ pt-BR:
         \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado."
       grade5_artist_variables_triangles1_2019: "Vamos desenhar um triângulo equilátero.
         \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado."
-      ramp_artist_loops4_2019: Você pode criar essa estrela repetindo a sequencia
-        de blocos `avance` e `vire à direita em 144 graus`.
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado com lados de
         200 pixels.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado com lados
         de 200 pixels.
       ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado com lados
         de 200 pixels.
-      simconfig: |-
-        # Mude e Preveja
-
-        Escolha uma das variáveis que controlam essa simulação para modificar e prever como isso mudará o resultado.
-
-        Depois de ter anotado sua previsão, execute a simulação 5 vezes e anote suas descobertas. A previsão foi parecida com o resultado?
-      simstarter: |-
-        # Coletando Dados
-
-        Execute a simulação 5 vezes. Cada vez, use o guia de atividade de coleta de dados para consultar:
-
-        -   Quantas maçãs o elefante pegou?
-        -   Quantas maçãs o hipopótamo pegou?
-        -   Quanto tempo levou para que todas as maçãs fossem pegas?
