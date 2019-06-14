@@ -1,7 +1,7 @@
-%legend.control-legend{data: {toggle: "collapse", target: "#dropletPalette"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#droplet_palette"}}
   Starting Block Palette (Droplet)
 
-#dropletPalette.collapse
+#droplet_palette.collapse
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :droplet_tooltips_disabled, description: "Hide droplet documentation tooltips"}
   .field
@@ -14,12 +14,12 @@
   = f.label :code_functions, 'Edit Droplet Palette'
   = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
 
-%legend.control-legend{data: {toggle: "collapse", target: "#starterCode"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#starter_code"}}
   Starter Code
 
 %p Javascript starter code. Starting code view: block/text.
 
-#starterCode.collapse
+#starter_code.collapse
   = f.label :start_blocks, 'Edit Starting JavaScript Program'
   .row
     .span8
