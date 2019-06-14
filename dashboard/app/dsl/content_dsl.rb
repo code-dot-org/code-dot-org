@@ -51,8 +51,8 @@ class ContentDSL < BaseDSL
       content3
       pre_title
     ).each do |property|
-      strings[property] = @hash[property] unless @hash[property].blank?
+      strings[@hash[property]] = @hash[property] unless @hash[property].blank?
     end
-    {@name => strings.stringify_keys}
+    {@name => strings}
   end
 end
