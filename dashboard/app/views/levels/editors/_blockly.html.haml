@@ -62,12 +62,6 @@
     %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
     = f.number_field :step_speed
 
-- if @level.is_a?(Dancelab)
-  .field
-    = f.label :default_song, 'Dance Lab Only - Default Song'
-    = f.select :default_song, options_for_select(@level.class.hoc_songs, @level.default_song)
-
-
 :ruby
   script_data = {
     pageOptions: {
