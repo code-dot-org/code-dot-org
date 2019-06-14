@@ -55,7 +55,7 @@ def restore_redacted_files
       if ['i18n/locales/original/dashboard/authored_hints.yml',
           'i18n/locales/original/dashboard/long_instructions.yml',
           'i18n/locales/original/dashboard/authored_hints.yml'].include? original_path
-        plugin = 'instructionblock'
+        plugin = 'blockly'
       end
       restore(original_path, translated_path, translated_path, plugin)
     end
