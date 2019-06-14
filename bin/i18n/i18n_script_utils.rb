@@ -4,6 +4,7 @@ require 'fileutils'
 require 'open3'
 require 'psych'
 require 'tempfile'
+require 'cgi'
 
 CODEORG_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_crowdin.yml")
 CODEORG_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_credentials.yml")
@@ -259,7 +260,8 @@ def get_level_url_key(script, level)
   script_name = script.name
   script_level = level.script_levels.find_by_script_id(script.id)
   if script_level.bonus
-    "https://studio.code.org/s/#{script_name}/stage/#{script_level.stage.relative_position}/extras?level_name=#{level.name}"
+    escaped_level_name = CGI.escape(level.name)
+    "https://studio.code.org/s/#{script_name}/stage/#{script_level.stage.relative_position}/extras?level_name=#{escaped_level_name}"
   else
     "https://studio.code.org/s/#{script_name}/stage/#{script_level.stage.relative_position}/puzzle/#{script_level.position}"
   end
@@ -271,7 +273,7 @@ def get_level_from_url(url)
   if matches[:level_info].starts_with?("extras")
     level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
     level_name = matches[:level_info].match(level_info_regex)[:level_name]
-    Level.find_by_name(level_name)
+    Level.find_by_name(CGI.unescape(level_name))
   else
     script = Script.find_by_name(matches[:script_name])
     stage = script.stages.find_by_relative_position(matches[:stage_pos])
