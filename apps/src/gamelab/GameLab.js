@@ -67,8 +67,8 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
-import {generateExpoApk} from '../util/exporter';
-import {projectChanged} from '../code-studio/initApp/project';
+import {expoInteractWithApk} from '../util/exporter';
+import project from '../code-studio/initApp/project';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -87,7 +87,7 @@ const validationLibraryName = 'ValidationSetup';
 const DRAW_LOOP_START = 'drawLoopStart';
 const DRAW_LOOP_MEASURE = 'drawLoop';
 
-const DEFAULT_PROJECT_PROPERTIES = {
+const DEFAULT_GENERATED_PROPERTIES = {
   export: {}
 };
 
@@ -113,7 +113,7 @@ var GameLab = function() {
   /** @private {JsInterpreterLogger} */
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
-  this.generatedProperties = DEFAULT_PROJECT_PROPERTIES;
+  this.generatedProperties = DEFAULT_GENERATED_PROPERTIES;
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -404,7 +404,7 @@ GameLab.prototype.init = function(config) {
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   this.generatedProperties = {
-    ...DEFAULT_PROJECT_PROPERTIES,
+    ...DEFAULT_GENERATED_PROPERTIES,
     ...config.initialGeneratedProperties
   };
 
@@ -442,41 +442,40 @@ GameLab.prototype.init = function(config) {
  * @param {Object} expoOpts
  */
 GameLab.prototype.exportApp = async function(expoOpts) {
-  // TODO: find another way to get this info that doesn't rely on globals.
-  const appName =
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
-  const {mode, md5SavedSources, expoSnackId, iconUri, splashImageUri} =
-    expoOpts || {};
-  if (mode === 'expoGenerateApk') {
-    const apkUri = await generateExpoApk(
-      {
+  const {mode} = expoOpts || {};
+  const appName = project.getCurrentName() || 'my-app';
+
+  switch (mode) {
+    case 'expoGenerateApk':
+    case 'expoCheckApkBuild':
+    case 'expoCancelApkBuild':
+      return expoInteractWithApk(
+        {
+          ...expoOpts,
+          appName
+        },
+        this.studioApp_.config,
+        this.setAndroidExportProps.bind(this)
+      );
+    default:
+      await this.whenAnimationsAreReady();
+      return this.exportAppWithAnimations(
         appName,
-        md5SavedSources,
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      },
-      this.studioApp_.config
-    );
-    // Spread the previous object so changes here will always fail shallow
-    // compare and trigger react prop changes
-    this.generatedProperties.export = {
-      ...this.generatedProperties.export,
-      android: {
-        md5ApkSavedSources: md5SavedSources,
-        snackId: expoSnackId,
-        apkUri
-      }
-    };
-    projectChanged();
-    return apkUri;
+        getStore().getState().animationList,
+        expoOpts
+      );
   }
-  await this.whenAnimationsAreReady();
-  return this.exportAppWithAnimations(
-    appName,
-    getStore().getState().animationList,
-    expoOpts
-  );
+};
+
+GameLab.prototype.setAndroidExportProps = function(props) {
+  // Spread the previous object so changes here will always fail shallow
+  // compare and trigger react prop changes
+  this.generatedProperties.export = {
+    ...this.generatedProperties.export,
+    android: props
+  };
+  project.projectChanged();
+  project.saveIfSourcesChanged();
 };
 
 /**

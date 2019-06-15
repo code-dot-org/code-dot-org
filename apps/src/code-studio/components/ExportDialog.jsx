@@ -12,6 +12,8 @@ import exportExpoIconPng from '../../templates/export/expo/icon.png';
 import SendToPhone from './SendToPhone';
 import project from '../initApp/project';
 
+const APK_BUILD_STATUS_CHECK_PERIOD = 60000;
+
 function recordExport(type) {
   firehoseClient.putRecord(
     {
@@ -218,10 +220,14 @@ class ExportDialog extends React.Component {
 
   componentDidUpdate(prevProps) {
     const {isOpen, md5SavedSources} = this.props;
-    const {md5ExportSavedSources} = this.state;
+    const {md5ExportSavedSources, apkUri} = this.state;
     if (isOpen && !prevProps.isOpen) {
       recordExport('open');
-      if (md5ExportSavedSources && md5SavedSources !== md5ExportSavedSources) {
+      const sourcesChanged =
+        md5ExportSavedSources && md5SavedSources !== md5ExportSavedSources;
+      const {apkUri: validPreviousApkUri} = this.getValidPreviousApkInfo();
+      const apkUriNowInvalid = apkUri && validPreviousApkUri !== apkUri;
+      if (sourcesChanged || apkUriNowInvalid) {
         // The project has changed since we last published within this dialog,
         // cancel any builds in progress and reset our export state, so we will
         // start all over again:
@@ -233,7 +239,19 @@ class ExportDialog extends React.Component {
   cancelIfGeneratingAndResetState() {
     const {screen, generatingApk} = this.state;
     if (screen === 'generating' && generatingApk) {
-      // TODO: Call snack-sdk turtle build cancel once available
+      if (this.waitTimerId) {
+        clearTimeout(this.waitTimerId);
+        this.waitTimerId = null;
+      }
+      const {exportApp, md5SavedSources} = this.props;
+      const {expoSnackId, apkBuildId} = this.state;
+
+      exportApp({
+        mode: 'expoCancelApkBuild',
+        md5SavedSources,
+        expoSnackId,
+        apkBuildId
+      });
     }
     this.resetExportState();
   }
@@ -352,41 +370,101 @@ class ExportDialog extends React.Component {
 
     this.setState({generatingApk: true});
     try {
-      const apkUri = await exportApp({
+      const apkBuildId = await exportApp({
         mode: 'expoGenerateApk',
         md5SavedSources,
         expoSnackId,
         iconUri,
         splashImageUri
       });
-      this.setState({
-        generatingApk: false,
-        apkError: null,
-        apkUri
-      });
+      this.setState({apkBuildId});
+      return this.waitForApkBuild(apkBuildId, expoSnackId);
     } catch (e) {
       this.setState({
         generatingApk: false,
-        apkError: 'Failed to create Android app. Please try again later.'
+        apkError: 'Failed to create Android app. Please try again later.',
+        apkUri: null,
+        apkBuildId: null
       });
     }
   }
 
-  generateApkAsNeeded() {
+  checkForApkBuild(apkBuildId, expoSnackId) {
+    const {exportApp, md5SavedSources} = this.props;
+
+    return exportApp({
+      mode: 'expoCheckApkBuild',
+      md5SavedSources,
+      expoSnackId,
+      apkBuildId
+    });
+  }
+
+  async waitForApkBuild(apkBuildId, expoSnackId) {
+    if (this.waitTimerId) {
+      clearTimeout(this.waitTimerId);
+    }
+
+    try {
+      const apkUri = await this.checkForApkBuild(apkBuildId, expoSnackId);
+      const {generatingApk} = this.state;
+      if (!generatingApk) {
+        // Build was canceled while we were checking on the status
+        return;
+      }
+      if (apkUri) {
+        this.setState({
+          generatingApk: false,
+          apkError: null,
+          apkUri
+        });
+      } else {
+        // Check status again...
+        // TODO: check for timeout
+        this.waitTimerId = setTimeout(async () => {
+          this.waitTimerId = null;
+          this.waitForApkBuild(apkBuildId, expoSnackId);
+        }, APK_BUILD_STATUS_CHECK_PERIOD);
+      }
+    } catch (e) {
+      this.setState({
+        generatingApk: false,
+        apkError: 'Failed to create Android app. Please try again later.',
+        apkUri: null,
+        apkBuildId: null
+      });
+    }
+  }
+
+  getValidPreviousApkInfo() {
     const {exportGeneratedProperties, md5SavedSources} = this.props;
     const {android = {}} = exportGeneratedProperties;
-    const {md5ApkSavedSources, apkUri} = android;
+    const {md5ApkSavedSources, ...apkInfo} = android;
 
-    if (
-      apkUri &&
-      md5ApkSavedSources &&
-      md5SavedSources === md5ApkSavedSources
-    ) {
+    if (md5ApkSavedSources && md5SavedSources === md5ApkSavedSources) {
+      return apkInfo;
+    }
+    return {};
+  }
+
+  generateApkAsNeeded() {
+    const {
+      apkUri,
+      apkBuildId,
+      snackId: expoSnackId
+    } = this.getValidPreviousApkInfo();
+    if (apkUri) {
+      this.setState({apkUri, apkBuildId, expoSnackId});
+    } else if (apkBuildId) {
       this.setState({
-        apkUri
+        generatingApk: true,
+        apkUri: null,
+        apkBuildId,
+        expoSnackId
       });
+      return this.waitForApkBuild(apkBuildId, expoSnackId);
     } else {
-      this.publishAndGenerateApk();
+      return this.publishAndGenerateApk();
     }
   }
 

@@ -197,6 +197,7 @@ describe('ExportDialog', () => {
           android: {
             md5ApkSavedSources: 'fakeHash',
             snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId',
             apkUri: 'fakeApkUri'
           }
         }}
@@ -224,6 +225,7 @@ describe('ExportDialog', () => {
           android: {
             md5ApkSavedSources: 'differentHash',
             snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId',
             apkUri: 'fakeApkUri'
           }
         }}
