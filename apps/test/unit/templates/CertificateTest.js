@@ -7,30 +7,35 @@ import responsive from '@cdo/apps/code-studio/responsiveRedux';
 
 describe('Certificate', () => {
   const store = createStore(combineReducers({responsive}));
+  let storedWindowDashboard;
+
+  beforeEach(() => {
+    storedWindowDashboard = window.dashboard;
+    window.dashboard = {
+      CODE_ORG_URL: 'https://code.org'
+    };
+  });
+
+  afterEach(() => {
+    window.dashboard = storedWindowDashboard;
+  });
 
   it('renders a Minecraft certificate for new Minecraft tutorials', () => {
     const wrapper = shallow(
       <Certificate tutorial="minecraft" isMinecraft={true} />,
       {context: {store}}
     ).dive();
-    expect(
-      wrapper
-        .find('img')
-        .html()
-        .includes('MC_Hour_Of_Code_Certificate')
+    expect(wrapper.find('img').html()).to.include(
+      'MC_Hour_Of_Code_Certificate'
     );
   });
 
   it('renders a Minecraft certificate for older Minecraft tutorials', () => {
-    const wrapper = shallow(
-      <Certificate type="minecraft" isMinecraft={true} />,
-      {context: {store}}
-    ).dive();
-    expect(
-      wrapper
-        .find('img')
-        .html()
-        .includes('MC_Hour_Of_Code_Certificate')
+    const wrapper = shallow(<Certificate isMinecraft={true} />, {
+      context: {store}
+    }).dive();
+    expect(wrapper.find('img').html()).to.include(
+      'MC_Hour_Of_Code_Certificate'
     );
   });
 
@@ -39,11 +44,6 @@ describe('Certificate', () => {
       <Certificate tutorial="frozen" isMinecraft={false} />,
       {context: {store}}
     ).dive();
-    expect(
-      wrapper
-        .find('img')
-        .html()
-        .includes('hour_of_code_certificate')
-    );
+    expect(wrapper.find('img').html()).to.include('hour_of_code_certificate');
   });
 });
