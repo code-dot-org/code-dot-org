@@ -97,7 +97,9 @@ class Certificate extends Component {
       dashboard.CODE_ORG_URL
     }/api/hour/certificate/${certificate}.jpg`;
     const blankCertificate =
-      blankCertificates[tutorial] || blankCertificates.hourOfCode;
+      blankCertificates[tutorial] ||
+      (isMinecraft && blankCertificates.minecraft) ||
+      blankCertificates.hourOfCode;
     const imgSrc = this.state.personalized
       ? personalizedCertificate
       : blankCertificate;
