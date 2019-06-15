@@ -1,12 +1,12 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levelbuilder_craft.js')}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#minecraftOptions"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#minecraft_options"}}
   Minecraft Options
 
 %p All settings specific to a minecraft type level.
 
-#minecraftOptions.collapse
+#minecraft_options.collapse
 
   .field
     = f.label :player_start_position, 'Player Start Position in format [x, y]'

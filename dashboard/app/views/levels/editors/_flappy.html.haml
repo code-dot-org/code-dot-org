@@ -1,9 +1,9 @@
-%legend.control-legend{data: {toggle: "collapse", target: "#flappyOptions"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#flappy_options"}}
   Flappy Options
 
 %p All the settings specific to a flappy type level.
 
-#flappyOptions.collapse
+#flappy_options.collapse
   .field
     = f.label :default_flap, 'Default Flap Amount'
     = f.select :default_flap, options_for_select(@level.class.flap_amounts, @level.default_flap || "NORMAL")
