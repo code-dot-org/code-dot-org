@@ -375,6 +375,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "/s/#{script_level.script.name}/stage/1/extras", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
+  test 'next_level_or_redirect_path_for_user returns to bubble choice activity page for BubbleChoice levels' do
+    script_level = create :script_level, levels: [create(:bubble_choice_level)]
+    assert_equal "/s/#{script_level.script.name}/stage/1/puzzle/1", script_level.next_level_or_redirect_path_for_user(nil)
+  end
+
   test 'end of stage' do
     script = Script.find_by_name('course1')
 

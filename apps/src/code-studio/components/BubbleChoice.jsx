@@ -43,7 +43,8 @@ export default class BubbleChoice extends React.Component {
         PropTypes.shape({
           id: PropTypes.number.isRequired,
           title: PropTypes.string.isRequired,
-          thumbnail_url: PropTypes.string
+          thumbnail_url: PropTypes.string,
+          url: PropTypes.string.isRequired
         })
       )
     })
@@ -69,7 +70,9 @@ export default class BubbleChoice extends React.Component {
               />
             )}
             <div style={styles.column}>
-              <span style={styles.title}>{sublevel.title}</span>
+              <a href={sublevel.url + location.search} style={styles.title}>
+                {sublevel.title}
+              </a>
             </div>
           </div>
         ))}

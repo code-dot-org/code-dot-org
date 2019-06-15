@@ -9,10 +9,10 @@
 
 = render partial: 'levels/editors/helper_libraries', locals: {f: f}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#dataTab"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#data_tab"}}
   Data Tab
 
-#dataTab.collapse
+#data_tab.collapse
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_view_data_button, description: "Hide Data Button"}
 
@@ -46,10 +46,10 @@
     :javascript
       levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
-%legend.control-legend{data: {toggle: "collapse", target: "#designMode"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#design_mode"}}
   Design Mode
 
-#designMode.collapse
+#design_mode.collapse
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :design_mode_at_start, description: "Start in Design Mode"}
   .field
@@ -70,16 +70,16 @@
     :javascript
       levelbuilder.initializeCodeMirror('level_start_html', 'html');
 
-%legend.control-legend{data: {toggle: "collapse", target: "#makerToolkit"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#maker_toolkit"}}
   Maker Toolkit
 
-#makerToolkit.collapse
+#maker_toolkit.collapse
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}
 
 %legend.control-legend{data: {toggle: "collapse", target: "#applab"}}
   App Lab Options
 
-%p Turtle settings. API settings. Conditions for level completion.
+%p App lab start Library. Turtle settings. API settings. Conditions for level completion.
 
 #applab.collapse
   .field
