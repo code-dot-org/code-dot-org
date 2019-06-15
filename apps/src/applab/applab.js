@@ -74,7 +74,7 @@ import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
-import {generateExpoApk} from '../util/exporter';
+import {expoInteractWithApk} from '../util/exporter';
 
 /**
  * Create a namespace for the application.
@@ -83,7 +83,7 @@ import {generateExpoApk} from '../util/exporter';
 const Applab = {};
 export default Applab;
 
-const DEFAULT_PROJECT_PROPERTIES = {
+const DEFAULT_GENERATED_PROPERTIES = {
   export: {}
 };
 
@@ -390,7 +390,7 @@ Applab.init = function(config) {
   thumbnailUtils.init();
 
   Applab.generatedProperties = {
-    ...DEFAULT_PROJECT_PROPERTIES,
+    ...DEFAULT_GENERATED_PROPERTIES,
     ...config.initialGeneratedProperties
   };
   config.getGeneratedProperties = getGeneratedProperties;
@@ -898,48 +898,51 @@ Applab.render = function() {
   );
 };
 
+/**
+ * Export the project for web or use within Expo.
+ * @param {Object} expoOpts
+ */
 Applab.exportApp = async function(expoOpts) {
-  Applab.runButtonClick();
-  var html = document.getElementById('divApplab').outerHTML;
-  studioApp().resetButtonClick();
-
-  // TODO: find another way to get this info that doesn't rely on globals.
   const appName = project.getCurrentName() || 'my-app';
 
-  const {mode, md5SavedSources, expoSnackId, iconUri, splashImageUri} =
-    expoOpts || {};
-  if (mode === 'expoGenerateApk') {
-    const apkUri = await generateExpoApk(
-      {
-        appName,
-        md5SavedSources,
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      },
-      studioApp().config
-    );
-    // Spread the previous object so changes here will always fail shallow
-    // compare and trigger react prop changes
-    Applab.generatedProperties.export = {
-      ...Applab.generatedProperties.export,
-      android: {
-        md5ApkSavedSources: md5SavedSources,
-        snackId: expoSnackId,
-        apkUri
-      }
-    };
-    project.projectChanged();
-    return apkUri;
-  }
+  const {mode} = expoOpts || {};
+  switch (mode) {
+    case 'expoGenerateApk':
+    case 'expoCheckApkBuild':
+    case 'expoCancelApkBuild':
+      return expoInteractWithApk(
+        {
+          ...expoOpts,
+          appName
+        },
+        studioApp().config,
+        Applab.setAndroidExportProps
+      );
+    default:
+      // Run, grab the html from divApplab, then reset:
+      Applab.runButtonClick();
+      var html = document.getElementById('divApplab').outerHTML;
+      studioApp().resetButtonClick();
 
-  return Exporter.exportApp(
-    appName,
-    studioApp().editor.getValue(),
-    html,
-    expoOpts,
-    studioApp().config
-  );
+      return Exporter.exportApp(
+        appName,
+        studioApp().editor.getValue(),
+        html,
+        expoOpts,
+        studioApp().config
+      );
+  }
+};
+
+Applab.setAndroidExportProps = function(props) {
+  // Spread the previous object so changes here will always fail shallow
+  // compare and trigger react prop changes
+  Applab.generatedProperties.export = {
+    ...Applab.generatedProperties.export,
+    android: props
+  };
+  project.projectChanged();
+  project.saveIfSourcesChanged();
 };
 
 /**
