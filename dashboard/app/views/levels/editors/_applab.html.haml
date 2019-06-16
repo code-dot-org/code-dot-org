@@ -9,7 +9,7 @@
 
 = render partial: 'levels/editors/helper_libraries', locals: {f: f}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#data_tab"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#data_tab"}}
   Data Tab
 
 #data_tab.collapse
@@ -46,7 +46,7 @@
     :javascript
       levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
-%legend.control-legend{data: {toggle: "collapse", target: "#design_mode"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#design_mode"}}
   Design Mode
 
 #design_mode.collapse
@@ -70,13 +70,13 @@
     :javascript
       levelbuilder.initializeCodeMirror('level_start_html', 'html');
 
-%legend.control-legend{data: {toggle: "collapse", target: "#maker_toolkit"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#maker_toolkit"}}
   Maker Toolkit
 
 #maker_toolkit.collapse
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#applab"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#applab"}}
   App Lab Options
 
 %p App lab start Library. Turtle settings. API settings. Conditions for level completion.

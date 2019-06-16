@@ -1,6 +1,6 @@
 = render partial: 'levels/editors/control_buttons', locals: {f: f}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#success"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#success"}}
   Success and Failure Conditions
 
 #success.collapse
@@ -21,7 +21,7 @@
     %p condition(s), which if true at any point, indicates the puzzle is complete (indicating failure if success condition not met)
     = f.text_area :failure_condition, rows: 4
 
-%legend.control-legend{data: {toggle: "collapse", target: "#bounce_options"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#bounce_options"}}
   Bounce Options
 
 %p Ball settings. Theme. Use flag goal.

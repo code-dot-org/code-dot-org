@@ -31,7 +31,7 @@
     %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
     = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
 
-%legend.control-legend{data: {toggle: "collapse", target: "#audit_log_info"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#audit_log_info"}}
   Audit Log
 
 %p A log of the people who most recently edited this level (up to the last 10 people)
@@ -43,7 +43,7 @@
   = render partial: 'levels/editors/sub_level_types', locals: {f: f}
 
 - if @level.is_a?(Weblab) || (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.respond_to?(:disable_sharing)
-  %legend.control-legend{data: {toggle: "collapse", target: "#share_and_remix"}}
+  %h1.control-legend{data: {toggle: "collapse", target: "#share_and_remix"}}
     Share and Remix Settings
 
   #share_and_remix.collapse
@@ -55,7 +55,7 @@
         = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_sharing, description: "Disable sharing"}
         %p If set, this level cannot be shared or saved to galleries even if it's free play.
 
-%legend.control-legend{data: {toggle: "collapse", target: "#concepts"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#concepts"}}
   Concepts
 
 #concepts.collapse
@@ -89,7 +89,7 @@
               %td
                 = select_tag "level[level_concept_difficulty_attributes][#{concept}]", options_for_select((1..LevelConceptDifficulty::MAXIMUM_CONCEPT_DIFFICULTY).to_a, difficulty), include_blank: true
 
-%legend.control-legend{data: {toggle: "collapse", target: "#reference"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#reference"}}
   Video & Reference Materials
 
 %p Video settings. Map reference. Reference Links.
@@ -126,7 +126,7 @@
           = text_area_tag 'level[reference_links]', @level.reference_links.join("\r\n"), rows: 6, class: "input-block-level", placeholder: 'Additional Reference Link'
 
 - if (@level.uses_droplet?) || @level.is_a?(Blockly)
-  %legend.control-legend{data: {toggle: "collapse", target: "#assets"}}
+  %h1.control-legend{data: {toggle: "collapse", target: "#assets"}}
     Preload Asset List
 
   #assets.collapse

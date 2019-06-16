@@ -5,7 +5,7 @@
 
 = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'playlab'}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#custom_game"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#custom_game"}}
   Custom Game Type
 
 #custom_game.collapse
@@ -13,7 +13,7 @@
   %p Used to tell playlab we want to run some of our custom onTick logic.
   = f.select :custom_game_type, options_for_select(["", "Big Game", "Rocket Height", "Sam the Bat", "Ninja Cat"], @level.custom_game_type)
 
-%legend.control-legend{data: {toggle: "collapse", target: "#background"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#background"}}
   Background Settings
 
 #background.collapse
@@ -25,7 +25,7 @@
     .field
       = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#success"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#success"}}
   Success and Failure Conditions
 
 #success.collapse
@@ -38,7 +38,7 @@
     %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately fails.
     = f.text_area :failure_condition, rows: 4
 
-%legend.control-legend{data: {toggle: "collapse", target: "#sprites"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#sprites"}}
   Sprite Settings
 
 #sprites.collapse
@@ -55,7 +55,7 @@
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :sprites_hidden_to_start, description: "Sprites hidden to start"}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#timeout"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#timeout"}}
   Timeout Settings
 
 #timeout.collapse
@@ -67,7 +67,7 @@
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :timeout_after_when_run, description: "Timeout after all blocks run"}
     %p When set, if the only event block that had children is when_run, and those commands are finished executing, don't wait for the timeout. If we have additional event blocks that DO have children, we keeping running until timeoutFailureTick or a success/failure condition is met
 
-%legend.control-legend{data: {toggle: "collapse", target: "#collision"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#collision"}}
   Collision Rules
 
 #collision.collapse

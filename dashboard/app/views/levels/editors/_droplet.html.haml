@@ -1,4 +1,4 @@
-%legend.control-legend{data: {toggle: "collapse", target: "#droplet_palette"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#droplet_palette"}}
   Starting Block Palette (Droplet)
 
 #droplet_palette.collapse
@@ -14,7 +14,7 @@
   = f.label :code_functions, 'Edit Droplet Palette'
   = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
 
-%legend.control-legend{data: {toggle: "collapse", target: "#starter_code"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#starter_code"}}
   Starter Code
 
 %p Javascript starter code. Starting code view: block/text.
