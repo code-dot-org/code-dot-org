@@ -21,17 +21,7 @@ describe('Certificate', () => {
   });
 
   it('renders a Minecraft certificate for new Minecraft tutorials', () => {
-    const wrapper = shallow(
-      <Certificate tutorial="minecraft" isMinecraft={true} />,
-      {context: {store}}
-    ).dive();
-    expect(wrapper.find('img').html()).to.include(
-      'MC_Hour_Of_Code_Certificate'
-    );
-  });
-
-  it('renders a Minecraft certificate for older Minecraft tutorials', () => {
-    const wrapper = shallow(<Certificate isMinecraft={true} />, {
+    const wrapper = shallow(<Certificate tutorial="minecraft" />, {
       context: {store}
     }).dive();
     expect(wrapper.find('img').html()).to.include(
@@ -40,10 +30,9 @@ describe('Certificate', () => {
   });
 
   it('renders a default certificate for all other tutorials', () => {
-    const wrapper = shallow(
-      <Certificate tutorial="frozen" isMinecraft={false} />,
-      {context: {store}}
-    ).dive();
+    const wrapper = shallow(<Certificate tutorial="frozen" />, {
+      context: {store}
+    }).dive();
     expect(wrapper.find('img').html()).to.include('hour_of_code_certificate');
   });
 });
