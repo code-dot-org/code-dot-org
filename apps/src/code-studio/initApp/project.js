@@ -85,7 +85,7 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
-var currentShareFailure = false;
+var currentShareFailure = '';
 var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
@@ -1425,9 +1425,6 @@ var projects = (module.exports = {
                 fetchAbuseScoreAndPrivacyViolations(this, function() {
                   deferred.resolve();
                 });
-                fetchShareFailure(this, function() {
-                  deferred.resolve();
-                });
               },
               queryParams('version'),
               sourcesApi
@@ -1449,9 +1446,6 @@ var projects = (module.exports = {
             () => {
               projects.showHeaderForProjectBacked();
               fetchAbuseScoreAndPrivacyViolations(this, function() {
-                deferred.resolve();
-              });
-              fetchShareFailure(this, function() {
                 deferred.resolve();
               });
             },
@@ -1626,7 +1620,7 @@ function fetchSharingDisabled(resolve) {
 }
 
 function fetchShareFailure(resolve) {
-  channels.fetch(current.id + '/share-failure', (err, data) => {
+  channels.fetch(current.id + '/share-failure', function(err, data) {
     currentShareFailure =
       data && data.share_failure && data.share_failure.content
         ? data.share_failure.content
@@ -1655,7 +1649,10 @@ function fetchPrivacyProfanityViolations(resolve) {
 }
 
 function fetchAbuseScoreAndPrivacyViolations(project, callback) {
-  const deferredCallsToMake = [new Promise(fetchAbuseScore)];
+  const deferredCallsToMake = [
+    new Promise(fetchAbuseScore),
+    new Promise(fetchShareFailure)
+  ];
 
   if (project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
