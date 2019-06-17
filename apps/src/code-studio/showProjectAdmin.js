@@ -90,18 +90,19 @@ export default project => {
       if (sharingDisabled) {
         $('.admin-sharing').show();
       }
-      if (!privateOrProfane) {
+      if (privateOrProfane) {
         $('.privacy-profanity').show();
         var textViolationEnglish = project.privacyProfanityDetailsEnglish();
-        $('.privacy-profanity-details').text(textViolationEnglish);
-        $('.privacy-profanity-details').show();
+        if (textViolationEnglish) {
+          $('.eng-flagged-text').text(textViolationEnglish);
+          $('.privacy-profanity-details-english').show();
+        }
         var textViolationsIntl = project.privacyProfanityDetailsIntl();
         var secondLanguage = project.privacyProfanitySecondLanguage();
         if (textViolationsIntl && secondLanguage) {
-          $('.intl-profanity-details').text(textViolationsIntl);
-          $('.intl-profanity-details').show();
-          $('.intl-profanity-language').text(secondLanguage);
-          $('.intl-profanity-language').show();
+          $('.intl-flagged-text').text(textViolationsIntl);
+          $('.intl-flagged-language').text(secondLanguage);
+          $('.privacy-profanity-details-intl').show();
         }
       }
       if (abusive) {
