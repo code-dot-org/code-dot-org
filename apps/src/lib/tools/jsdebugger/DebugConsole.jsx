@@ -19,6 +19,7 @@ import color from '../../../util/color';
 import Inspector from 'react-inspector';
 import {geoMercator, geoPath} from 'd3-geo';
 import {feature} from 'topojson-client';
+import experiments from '../../../util/experiments';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -79,6 +80,10 @@ const UNWATCH_COMMAND_PREFIX = '$unwatch ';
 // The JS console, by default, prints 'undefined' when there is no return value.
 // We don't want that functionality and therefore don't include 'undefined' in this list.
 const FALSY_VALUES = new Set([false, null, 0, '', NaN]);
+const RADIUS = 30;
+const WIDTH = 400;
+const HEIGHT = 400;
+
 /**
  * Set the cursor position to the end of the text content in a div element.
  * @see http://stackoverflow.com/a/6249440/5000129
@@ -254,8 +259,8 @@ export default connect(
     }
     projection() {
       return geoMercator()
-        .scale(60)
-        .translate([400 / 2, 400 / 2]);
+        .scale(RADIUS)
+        .translate([WIDTH / 2, HEIGHT / 2]);
     }
 
     async mercator() {
@@ -271,6 +276,7 @@ export default connect(
       let worldMap = await displayWorldMap();
       console.log('world2', worldMap);
 
+      // TODO: consult with product/design about color scheme
       return (
         <svg width={400} height={400}>
           <g className="countries">
@@ -288,6 +294,12 @@ export default connect(
         </svg>
       );
     }
+
+    // displayMapInConsole() {
+    //   if (experiments.isEnabled('react-inspector')) {
+    //     return <div>{this.state.mercator}</div>;
+    //   }
+    // }
 
     isValidOutput(rowValue) {
       if (rowValue.output) {
@@ -366,7 +378,9 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
-            <div>{this.state.mercator}</div>
+            <div>
+              {experiments.isEnabled('mercator') ? this.state.mercator : ''}
+            </div>
             {this.props.showReactInspector
               ? this.displayOutputToConsole()
               : this.props.logOutput}
