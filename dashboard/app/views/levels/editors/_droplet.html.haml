@@ -1,25 +1,23 @@
-%legend.control-legend{data: {toggle: "collapse", target: "#droplet_palette"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#dropletPalette"}}
   Starting Block Palette (Droplet)
 
-#droplet_palette.collapse
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :droplet_tooltips_disabled, description: "Hide droplet documentation tooltips"}
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :lock_zero_param_functions, description: "Don't allow parameters to be added to user-defined functions with no parameters"}
+#dropletPalette.collapse
+  = f.label :code_functions, 'Edit Droplet Palette'
+  = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
 
   .field
     = f.label :palette_category_at_start
     = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
 
-  = f.label :code_functions, 'Edit Droplet Palette'
-  = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
+  .field
+    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :droplet_tooltips_disabled, description: "Hide droplet documentation tooltips"}
+  .field
+    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :lock_zero_param_functions, description: "Don't allow parameters to be added to user-defined functions with no parameters"}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#starter_code"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#starterCode"}}
   Starter Code
 
-%p Javascript starter code. Starting code view: block/text.
-
-#starter_code.collapse
+#starterCode.collapse
   = f.label :start_blocks, 'Edit Starting JavaScript Program'
   .row
     .span8

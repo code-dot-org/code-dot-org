@@ -21,12 +21,12 @@
     %p condition(s), which if true at any point, indicates the puzzle is complete (indicating failure if success condition not met)
     = f.text_area :failure_condition, rows: 4
 
-%legend.control-legend{data: {toggle: "collapse", target: "#bounce_options"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#bounceOptions"}}
   Bounce Options
 
 %p Ball settings. Theme. Use flag goal.
 
-#bounce_options.collapse
+#bounceOptions.collapse
   .field
     = f.label :timeout_failiure_tick, 'Timeout Failure Tick'
     %p How many ticks before the game declares the level failed. Defaults to Infinity.

@@ -4,9 +4,6 @@
 .field
   = link_to 'Find documentation for levelbuilder and its processes here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Welcome-to-Levelbuilder', target: '_blank'
 
-// Allows levelbuilders to expand all the categories if they want to use command-f
-%button.expandcollapse Expand All
-
 %pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
@@ -99,18 +96,4 @@
         return "You have unsaved changes, are you sure you want to leave?";
       }
     }
-  });
-
-  $('.expandcollapse').click(function() {
-
-    $('.collapse').each(function(index) {
-        $(this).collapse("toggle");
-    });
-
-    if ($(this).html() == "Expand All") {
-        $(this).html("Collapse All");
-    }
-    else {
-        $(this).html("Expand All");
-    };
   });

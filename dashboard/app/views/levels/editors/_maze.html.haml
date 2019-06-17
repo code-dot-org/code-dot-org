@@ -1,9 +1,9 @@
-%legend.control-legend{data: {toggle: "collapse", target: "#maze_options"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#mazeOptions"}}
   Maze Options
 
 %p Start direction. Step mode. Random rotation of puzzle.
 
-#maze_options.collapse
+#mazeOptions.collapse
   .field
     = f.label :start_direction
     = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
