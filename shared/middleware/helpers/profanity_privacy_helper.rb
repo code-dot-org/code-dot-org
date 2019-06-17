@@ -18,12 +18,6 @@ def channel_policy_violation?(channel_id)
   profanity_privacy_violation?(BLOCKLY_SOURCE_FILENAME, body)
 end
 
-#
-# This method is designed to be an easy way for support staff or a dev to
-# figure out why sharing was automatically blocked for a particular project.
-# It's designed for use from dashboard-console, which is why it has no usages
-# within our repo.
-#
 # @example
 #   explain_share_failure 'kkbjvA8CUoWEAJ0inKpzTQ'
 #
