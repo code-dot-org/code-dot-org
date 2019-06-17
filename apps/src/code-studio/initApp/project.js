@@ -85,6 +85,7 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
+var currentShareFailure = false;
 var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
@@ -346,6 +347,10 @@ var projects = (module.exports = {
    */
   hasPrivacyProfanityViolation() {
     return currentHasPrivacyProfanityViolation;
+  },
+
+  privacyProfanityDetails() {
+    return currentShareFailure;
   },
 
   /**
@@ -1420,6 +1425,9 @@ var projects = (module.exports = {
                 fetchAbuseScoreAndPrivacyViolations(this, function() {
                   deferred.resolve();
                 });
+                fetchShareFailure(this, function() {
+                  deferred.resolve();
+                });
               },
               queryParams('version'),
               sourcesApi
@@ -1441,6 +1449,9 @@ var projects = (module.exports = {
             () => {
               projects.showHeaderForProjectBacked();
               fetchAbuseScoreAndPrivacyViolations(this, function() {
+                deferred.resolve();
+              });
+              fetchShareFailure(this, function() {
                 deferred.resolve();
               });
             },
@@ -1605,6 +1616,21 @@ function fetchAbuseScore(resolve) {
 function fetchSharingDisabled(resolve) {
   channels.fetch(current.id + '/sharing_disabled', function(err, data) {
     sharingDisabled = (data && data.sharing_disabled) || sharingDisabled;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+  });
+}
+
+function fetchShareFailure(resolve) {
+  channels.fetch(current.id + '/share-failure', (err, data) => {
+    currentShareFailure =
+      data && data.share_failure && data.share_failure.content
+        ? data.share_failure.content
+        : currentShareFailure;
     resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
