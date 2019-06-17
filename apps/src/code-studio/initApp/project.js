@@ -350,6 +350,13 @@ var projects = (module.exports = {
   },
 
   /**
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane.
+   */
+  privacyProfanityDetails() {
+    return currentShareFailure;
+  },
+
+  /**
    * @returns {boolean} true if project has been reported enough times to
    *   exceed our threshold
    */
