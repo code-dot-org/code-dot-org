@@ -107,33 +107,33 @@ describe('The JSDebugger redux duck', () => {
     });
   });
 
-  describe('the appendLog action with react-inspector flag turned off', () => {
-    it('will append strings to the log output', () => {
-      store.dispatch(actions.appendLog('foo'));
-      expect(selectors.getLogOutput(store.getState())).to.equal('foo');
-    });
-
-    it('will append rich objects to the log output', () => {
-      store.dispatch(actions.appendLog({foo: 'bar'}));
-      expect(selectors.getLogOutput(store.getState())).to.equal(
-        '{"foo":"bar"}'
-      );
-    });
-
-    it('will append multiple things to the log output, joined by newlines', () => {
-      store.dispatch(actions.appendLog({foo: 'bar'}));
-      store.dispatch(actions.appendLog('hello'));
-      expect(selectors.getLogOutput(store.getState())).to.equal(
-        '{"foo":"bar"}\nhello'
-      );
-    });
-
-    it('will also trigger the open action if the debugger is not already open', () => {
-      expect(selectors.isOpen(store.getState())).to.be.false;
-      store.dispatch(actions.appendLog('open sesame'));
-      expect(selectors.isOpen(store.getState())).to.be.true;
-    });
-  });
+  // describe('the appendLog action with react-inspector flag turned off', () => {
+  //   it('will append strings to the log output', () => {
+  //     store.dispatch(actions.appendLog('foo'));
+  //     expect(selectors.getLogOutput(store.getState())).to.equal('foo');
+  //   });
+  //
+  //   it('will append rich objects to the log output', () => {
+  //     store.dispatch(actions.appendLog({foo: 'bar'}));
+  //     expect(selectors.getLogOutput(store.getState())).to.equal(
+  //       '{"foo":"bar"}'
+  //     );
+  //   });
+  //
+  //   it('will append multiple things to the log output, joined by newlines', () => {
+  //     store.dispatch(actions.appendLog({foo: 'bar'}));
+  //     store.dispatch(actions.appendLog('hello'));
+  //     expect(selectors.getLogOutput(store.getState())).to.equal(
+  //       '{"foo":"bar"}\nhello'
+  //     );
+  //   });
+  //
+  //   it('will also trigger the open action if the debugger is not already open', () => {
+  //     expect(selectors.isOpen(store.getState())).to.be.false;
+  //     store.dispatch(actions.appendLog('open sesame'));
+  //     expect(selectors.isOpen(store.getState())).to.be.true;
+  //   });
+  // });
 
   describe('the appendLog action with react-inspector flag turned on', () => {
     beforeEach(() => {
@@ -294,9 +294,11 @@ describe('The JSDebugger redux duck', () => {
       });
 
       it('the interpreter will log execution warnings', () => {
-        expect(selectors.getLogOutput(state)).to.equal('');
+        expect(selectors.getLogOutput(state).toJS()).to.deep.equal([]);
         interpreter.onExecutionWarning.notifyObservers('ouch!', 10);
-        expect(selectors.getLogOutput(store.getState())).to.equal('ouch!');
+        expect(
+          selectors.getLogOutput(store.getState()).toJS()[0].output
+        ).to.equal('ouch!');
       });
 
       it("changes to the interpreter's next step will be mirrored", () => {
@@ -353,9 +355,11 @@ describe('The JSDebugger redux duck', () => {
         });
 
         it('will no longer log execution warnings', () => {
-          expect(selectors.getLogOutput(state)).to.equal('');
+          expect(selectors.getLogOutput(state).toJS()).to.deep.equal([]);
           interpreter.onExecutionWarning.notifyObservers('ouch!', 10);
-          expect(selectors.getLogOutput(store.getState())).to.equal('');
+          expect(selectors.getLogOutput(store.getState()).toJS()).to.deep.equal(
+            []
+          );
         });
 
         it('will no longer mirror changes to the interpreter state', () => {
