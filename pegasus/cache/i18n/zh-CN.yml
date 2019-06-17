@@ -1120,6 +1120,12 @@ zh-CN:
   coursed-2018_gradelevel: 8年级以上
   coursee-2018_gradelevel: 年龄 8-12
   coursef-2018_gradelevel: 年龄 9-13
+  coursea-2019_gradelevel: 年龄 4-7
+  courseb-2019_gradelevel: 年龄 5-8
+  coursec-2019_gradelevel: 年龄 6-10
+  coursed-2019_gradelevel: 8年级以上
+  coursee-2019_gradelevel: 年龄 8-12
+  coursef-2019_gradelevel: 年龄 9-13
   accelerated_gradelevel: 10-18 岁
   codeorg_platformtext: 最新的浏览器，智能手机，平板电脑
   codeintl_platformtext: 最新的浏览器，智能手机，平板电脑
@@ -1241,6 +1247,12 @@ zh-CN:
   coursed-2018_shortdescription_congrats: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
   coursee-2018_shortdescription_congrats: 在课程C&D中快速覆盖概念，然后继续使用函数。
   coursef-2018_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
+  coursea-2019_shortdescription_congrats: 为学前学生准备的计算机科学介绍
+  courseb-2019_shortdescription_congrats: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
+  coursec-2019_shortdescription_congrats: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
+  coursed-2019_shortdescription_congrats: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
+  coursee-2019_shortdescription_congrats: 在课程C&D中快速覆盖概念，然后继续使用函数。
+  coursef-2019_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
   codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   khan_longdescription: 在用代码创造有趣的图画的同时学习基础的JavaScript编程知识。独自完成或者和你的同学一起做！
