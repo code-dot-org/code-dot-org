@@ -53,4 +53,14 @@ YAML
       Cdo::Config.new.load_configuration(file.path)
     end
   end
+
+  def test_freeze
+    config = Cdo::Config.new
+    config.load_configuration(x: 'y')
+    config.x = 'z'
+    config.freeze
+    assert_equal 'z', config.x
+    assert_raises(RuntimeError) {config.x = 'a'}
+    assert_raises(ArgumentError) {config.y}
+  end
 end
