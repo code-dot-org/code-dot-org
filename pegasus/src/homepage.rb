@@ -413,7 +413,7 @@ class Homepage
   end
 
   def self.show_professional_learning_banner(request)
-    request.language == "en"
+    false
   end
 
   def self.get_dance_stars
