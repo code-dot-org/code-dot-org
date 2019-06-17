@@ -15,8 +15,7 @@ describe('showProjectAdmin', () => {
         getAbuseScore: sinon.stub(),
         exceedsAbuseThreshold: sinon.stub(),
         getSharingDisabled: sinon.stub(),
-        hasPrivacyProfanityViolation: sinon.stub(),
-        privacyProfanityDetails: sinon.stub()
+        hasPrivacyProfanityViolation: sinon.stub()
       };
 
       rootElement = document.createElement('div');
@@ -36,7 +35,6 @@ describe('showProjectAdmin', () => {
           </li>
           <li class="privacy-profanity" style="display: none">
             Private or profane text
-            <div class="privacy-profanity-details"></div>
           </li>
           <li class="abusive-image" style="display: none">
             Inappropriate image
@@ -175,7 +173,6 @@ describe('showProjectAdmin', () => {
             project.exceedsAbuseThreshold.returns(false);
             project.hasPrivacyProfanityViolation.returns(true);
             project.getSharingDisabled.returns(false);
-            project.privacyProfanityDetails.returns('fu');
           });
 
           it('shows sharing blocked message', () => {
@@ -189,7 +186,6 @@ describe('showProjectAdmin', () => {
             assertVisible('.blocked-reasons');
             assertHidden('.admin-sharing');
             assertVisible('.privacy-profanity');
-            assertVisible('.privacy-profanity-details');
             assertHidden('.abusive-image');
             assertHidden('.reported-abuse');
           });

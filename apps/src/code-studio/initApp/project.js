@@ -349,10 +349,6 @@ var projects = (module.exports = {
     return currentHasPrivacyProfanityViolation;
   },
 
-  privacyProfanityDetails() {
-    return currentShareFailure;
-  },
-
   /**
    * @returns {boolean} true if project has been reported enough times to
    *   exceed our threshold
