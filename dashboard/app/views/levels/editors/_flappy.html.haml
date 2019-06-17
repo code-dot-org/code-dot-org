@@ -1,48 +1,38 @@
-%legend.control-legend{data: {toggle: "collapse", target: "#flappy_options"}}
-  Flappy Options
+.field
+  = f.label :default_flap, 'Default Flap Amount'
+  = f.select :default_flap, options_for_select(@level.class.flap_amounts, @level.default_flap || "NORMAL")
+.field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :ground, description: "Include Ground?"}
+.field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :obstacles, description: "Include Obstacles?"}
+.field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :score, description: "Include Score?"}
+.field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :shareable, description: "Make Shareable?"}
 
-%p All the settings specific to a flappy type level.
+.field
+  = f.label :scale, 'Scalings'
+  = f.text_area :scale, rows: 4, placeholder: Flappy.default_scale
 
-#flappy_options.collapse
-  .field
-    = f.label :default_flap, 'Default Flap Amount'
-    = f.select :default_flap, options_for_select(@level.class.flap_amounts, @level.default_flap || "NORMAL")
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :ground, description: "Include Ground?"}
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :obstacles, description: "Include Obstacles?"}
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :score, description: "Include Score?"}
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :shareable, description: "Make Shareable?"}
+.field
+  = f.label :goal, 'Goal'
+  %ul
+    %li
+      %strong
+        goal.startX/startY:
+      start location of flag image
+    %li
+      %strong
+        goal.moving:
+      whether the goal stays in one spot or moves at level's speed
+  = f.text_area :goal, rows: 9, placeholder: Flappy.default_goal
 
-  .field
-    = f.label :scale, 'Scalings'
-    = f.text_area :scale, rows: 4, placeholder: Flappy.default_scale
+.field
+  = f.label :success_condition, "Success Condition"
+  %p condition(s), which if true at any point, indicate user has successfully completed the puzzle
+  = f.text_area :success_condition, rows: 4
 
-  .field
-    = f.label :goal, 'Goal'
-    %ul
-      %li
-        %strong
-          goal.startX/startY:
-        start location of flag image
-      %li
-        %strong
-          goal.moving:
-        whether the goal stays in one spot or moves at level's speed
-    = f.text_area :goal, rows: 9, placeholder: Flappy.default_goal
-
-%legend.control-legend{data: {toggle: "collapse", target: "#success"}}
-  Success and Failure Conditions
-
-#success.collapse
-  .field
-    = f.label :success_condition, "Success Condition"
-    %p condition(s), which if true at any point, indicate user has successfully completed the puzzle
-    = f.text_area :success_condition, rows: 4
-
-  .field
-    = f.label :failure_condition, "Failure Condition"
-    %p condition(s), which if true at any point, indicates the puzzle is complete (indicating failure if success condition not met)
-    = f.text_area :failure_condition, rows: 4
+.field
+  = f.label :failure_condition, "Failure Condition"
+  %p condition(s), which if true at any point, indicates the puzzle is complete (indicating failure if success condition not met)
+  = f.text_area :failure_condition, rows: 4
