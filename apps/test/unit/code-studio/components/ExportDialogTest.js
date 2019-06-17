@@ -223,8 +223,16 @@ describe('ExportDialog', () => {
     expect(exportApp).to.not.have.been.called;
   });
 
-  it('exportApp() will be called by generateApkAsNeeded() if exportGeneratedProperties does not contain matching apkUri', () => {
-    const exportApp = sinon.spy();
+  it('exportApp() will be called by generateApkAsNeeded() if exportGeneratedProperties does not contain matching apkUri', async () => {
+    const exportApp = sinon.stub();
+    exportApp.returns(Promise.resolve('fakeBuildId'));
+    const publishResult = Promise.resolve({
+      expoUri: 'uri',
+      expoSnackId: 'id',
+      iconUri: 'iconUri',
+      splashImageUri: 'splashUri'
+    });
+    exportApp.withArgs({mode: 'expoPublish'}).returns(publishResult);
     const wrapper = shallow(
       <ExportDialog
         i18n={{t: id => id}}
@@ -247,7 +255,7 @@ describe('ExportDialog', () => {
         isProjectLevel={false}
       />
     );
-    wrapper.instance().generateApkAsNeeded();
+    await wrapper.instance().publishAndGenerateApk();
     expect(exportApp).to.have.been.called;
   });
 });
