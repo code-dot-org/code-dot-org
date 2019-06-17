@@ -383,6 +383,7 @@ fr:
       district_dashboard: Tableau de bord du district
       label: Bonjour %{username}
       stats: Code Studio
+      my_projects: Mes projets
       settings: Mon compte
       logout: Déconnexion
       signin: Connexion
