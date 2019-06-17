@@ -45,7 +45,12 @@ describe('BubbleChoice', () => {
     const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
     const thumbnails = wrapper.find('img');
     assert.equal(1, thumbnails.length);
-    assert(thumbnails.at(0).node.src.includes(fakeSublevels[0].thumbnail_url));
+    assert(
+      thumbnails
+        .at(0)
+        .getDOMNode()
+        .src.includes(fakeSublevels[0].thumbnail_url)
+    );
   });
 
   it('renders a placeholder div if sublevel thumbnail is not present', () => {
