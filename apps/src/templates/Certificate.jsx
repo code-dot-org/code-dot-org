@@ -62,9 +62,10 @@ class Certificate extends Component {
     randomDonorTwitter: PropTypes.string,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     under13: PropTypes.bool,
-    isMinecraft: PropTypes.bool.isRequired,
     children: PropTypes.node
   };
+
+  isMinecraft = () => /mc|minecraft|hero|aquatic/.test(this.props.tutorial);
 
   personalizeCertificate(session) {
     $.ajax({
@@ -89,7 +90,6 @@ class Certificate extends Component {
       certificateId,
       randomDonorTwitter,
       under13,
-      isMinecraft,
       children
     } = this.props;
     const certificate = certificateId || 'blank';
@@ -98,7 +98,7 @@ class Certificate extends Component {
     }/api/hour/certificate/${certificate}.jpg`;
     const blankCertificate =
       blankCertificates[tutorial] ||
-      (isMinecraft && blankCertificates.minecraft) ||
+      (this.isMinecraft() && blankCertificates.minecraft) ||
       blankCertificates.hourOfCode;
     const imgSrc = this.state.personalized
       ? personalizedCertificate
@@ -125,7 +125,7 @@ class Certificate extends Component {
     });
 
     let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
-    if (isMinecraft && !this.state.personalized) {
+    if (this.isMinecraft() && !this.state.personalized) {
       // Correct the minecraft print url for non-personalized certificates.
       print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
     }
