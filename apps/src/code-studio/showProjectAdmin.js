@@ -90,11 +90,19 @@ export default project => {
       if (sharingDisabled) {
         $('.admin-sharing').show();
       }
-      if (privateOrProfane) {
+      if (!privateOrProfane) {
         $('.privacy-profanity').show();
-        var textViolation = project.privacyProfanityDetails();
-        $('.privacy-profanity-details').text(textViolation);
+        var textViolationEnglish = project.privacyProfanityDetailsEnglish();
+        $('.privacy-profanity-details').text(textViolationEnglish);
         $('.privacy-profanity-details').show();
+        var textViolationsIntl = project.privacyProfanityDetailsIntl();
+        var secondLanguage = project.privacyProfanitySecondLanguage();
+        if (textViolationsIntl && secondLanguage) {
+          $('.intl-profanity-details').text(textViolationsIntl);
+          $('.intl-profanity-details').show();
+          $('.intl-profanity-language').text(secondLanguage);
+          $('.intl-profanity-language').show();
+        }
       }
       if (abusive) {
         // The image moderation service sets the abuse score to 15 to
