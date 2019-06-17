@@ -8,9 +8,9 @@
 
 = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'dance'}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#default_song"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#defaultSong"}}
   Default Song
 
-#default_song.collapse
+#defaultSong.collapse
   = f.label :default_song, 'Default Song'
   = f.select :default_song, options_for_select(@level.class.hoc_songs, @level.default_song)

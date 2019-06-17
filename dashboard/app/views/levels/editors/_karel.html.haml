@@ -1,9 +1,9 @@
-%legend.control-legend{data: {toggle: "collapse", target: "#karel_options"}}
+%legend.control-legend{data: {toggle: "collapse", target: "#karelOptions"}}
   Collector Options
 
 %p Flower type. Nectar or honey goal. Minimum to collect. Animation speed.
 
-#karel_options.collapse
+#karelOptions.collapse
   .field
     = f.label :flower_type, 'Flower Type (bee only)'
     = f.select :flower_type, options_for_select(@level.class.flower_types, @level.flower_type)
