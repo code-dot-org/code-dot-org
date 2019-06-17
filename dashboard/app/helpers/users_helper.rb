@@ -263,7 +263,7 @@ module UsersHelper
     levels = {}
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
-        # if we have a contained level or sublevels, use that to represent progress
+        # if we have a contained level or BubbleChoice level, use that to represent progress
         level = Level.cache_find(level_id)
         contained_level_id = level.contained_levels.try(:first).try(:id)
         sublevel_id = level.is_a?(BubbleChoice) ? level.best_result_sublevel_id(user) : nil
