@@ -132,6 +132,6 @@ DSL
     create :user_level, user: student, level: @sublevel2, best_result: 100
     create :user_level, user: student, level: @sublevel1, best_result: 20
 
-    assert_equal @sublevel2.id, @bubble_choice.best_result_sublevel_id(student)
+    assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student)
   end
 end
