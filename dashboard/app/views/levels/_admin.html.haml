@@ -131,11 +131,13 @@
           This project is safe to share.
         .blocked{ style: 'display: none;' }
           This project is blocked from sharing.
+      %br
       %ul.blocked-reasons{ style: 'display: none;' }
         %li.admin-sharing{ style: 'display: none;' }
           Sharing is disabled
         %li.privacy-profanity{ style: 'display: none;' }
-          Private or profane text
+          Private or profane text:
+          .privacy-profanity-details
         %li.abusive-image{ style: 'display: none;' }
           Inappropriate image
         %li.reported-abuse{ style: 'display: none;' }
@@ -145,7 +147,7 @@
         Abuse score:
         %span.admin-abuse-score
         = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
-
+      %br
       .admin-report-abuse
         = link_to 'Report Abuse', '/report_abuse'
 
