@@ -12,16 +12,12 @@ module Cdo
     end
 
     def method_missing(key, *args)
-      msg = "Undefined #{self.class} reference: #{key}"
-      raise ArgumentError, msg, caller(1) if @frozen
-      # puts msg, caller(1) if @frozen
+      raise ArgumentError, "Undefined #{self.class} reference: #{key}", caller(1) if @frozen
       super
     end
 
     def modifiable?
-      msg = "can't modify frozen #{self.class}"
-      raise RuntimeError, msg, caller(2) if @frozen
-      # puts msg, caller(2) if @frozen
+      raise RuntimeError, "can't modify frozen #{self.class}", caller(2) if @frozen
       super
     end
 
