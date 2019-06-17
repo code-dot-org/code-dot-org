@@ -108,7 +108,7 @@ ruby
   # @param [User]
   # @return [Integer]
   def best_result_sublevel_id(user)
-    ul = user.user_levels.where(level: sublevels).order(best_result: :desc)
-    ul&.first&.level&.id
+    ul = user.user_levels.where(level: sublevels).max_by(&:best_result)
+    ul&.level&.id
   end
 end
