@@ -1,51 +1,49 @@
-= render partial: 'levels/editors/control_buttons', locals: {f: f}
+.field
+  = f.label :ball_direction, 'Ball Direction (in radians)'
+  = f.number_field :ball_direction, step: :any
 
-%legend.control-legend{data: {toggle: "collapse", target: "#success"}}
-  Success and Failure Conditions
+.field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'fail_on_ball_exit', description: "Fail on Ball Exit"}
 
-#success.collapse
-  .field
-    = f.label :success_condition, "Success Condition"
-    %p condition(s), which if true at any point, indicate user has successfully completed the puzzle
-    %p For both this and failure condition, you can reference several state values, including (but not limited to):
-    %ul
-      %li Bounce.playerScore
-      %li Bounce.opponentScore
-      %li Bounce.ballCount
-      %li Bounce.ballX
-      %li Bounce.ballY
-    = f.text_area :success_condition, rows: 4
+.field
+  = f.label :soft_buttons, 'Software Buttons'
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
+  = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
 
-  .field
-    = f.label :failure_condition, "Failure Condition"
-    %p condition(s), which if true at any point, indicates the puzzle is complete (indicating failure if success condition not met)
-    = f.text_area :failure_condition, rows: 4
+.field
+  = f.label :timeout_failiure_tick, 'Timeout Failure Tick'
+  %p How many ticks before the game declares the level failed. Defaults to Infinity.
+  = f.number_field :timeout_failure_tick
 
-%legend.control-legend{data: {toggle: "collapse", target: "#bounce_options"}}
-  Bounce Options
+.field
+  = f.label :success_condition, "Success Condition"
+  %p condition(s), which if true at any point, indicate user has successfully completed the puzzle
+  %p For both this and failure condition, you can reference several state values, including (but not limited to):
+  %ul
+    %li Bounce.playerScore
+    %li Bounce.opponentScore
+    %li Bounce.ballCount
+    %li Bounce.ballX
+    %li Bounce.ballY
+  = f.text_area :success_condition, rows: 4
 
-%p Ball settings. Theme. Use flag goal.
+.field
+  = f.label :failure_condition, "Failure Condition"
+  %p condition(s), which if true at any point, indicates the puzzle is complete (indicating failure if success condition not met)
+  = f.text_area :failure_condition, rows: 4
 
-#bounce_options.collapse
-  .field
-    = f.label :timeout_failiure_tick, 'Timeout Failure Tick'
-    %p How many ticks before the game declares the level failed. Defaults to Infinity.
-    = f.number_field :timeout_failure_tick
+.field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'use_flag_goal', description: "Use Flag Goal"}
 
-  .field
-    = f.label :ball_direction, 'Ball Direction (in radians)'
-    = f.number_field :ball_direction, step: :any
-
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'fail_on_ball_exit', description: "Fail on Ball Exit"}
-
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'use_flag_goal', description: "Use Flag Goal"}
-
-  .field
-    = f.label :theme, 'Theme'
-    %p
-      NOTE that not all themes are compatible with all skins. Specifically, the
-      bounce and basketball skins can only have retro or basketball themes, while
-      the sports skin can have any theme except retro.
-    = f.select :theme, options_for_select(Bounce.themes, @level.theme)
+.field
+  = f.label :theme, 'Theme'
+  %p
+    NOTE that not all themes are compatible with all skins. Specifically, the
+    bounce and basketball skins can only have retro or basketball themes, while
+    the sports skin can have any theme except retro.
+  = f.select :theme, options_for_select(Bounce.themes, @level.theme)
