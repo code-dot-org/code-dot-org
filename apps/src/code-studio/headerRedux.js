@@ -155,3 +155,7 @@ export const setShowTryAgainDialog = visible => ({
   type: SHOW_TRY_AGAIN_DIALOG,
   visible
 });
+
+export const retryProjectSave = () => {
+  return dispatch => dashboard.project.save();
+};

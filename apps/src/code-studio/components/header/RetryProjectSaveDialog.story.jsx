@@ -1,6 +1,7 @@
 import {UnconnectedRetryProjectSaveDialog as RetryProjectSaveDialog} from './RetryProjectSaveDialog';
 import React from 'react';
 import {projectUpdatedStatuses as statuses} from '../../headerRedux';
+import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   return storybook
@@ -13,6 +14,7 @@ export default storybook => {
           <RetryProjectSaveDialog
             isOpen={true}
             projectUpdatedStatus={statuses.error}
+            onTryAgain={action('try again')}
           />
         )
       },
@@ -23,6 +25,7 @@ export default storybook => {
           <RetryProjectSaveDialog
             isOpen={true}
             projectUpdatedStatus={statuses.saving}
+            onTryAgain={action('try again')}
           />
         )
       }

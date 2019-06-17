@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {projectUpdatedStatuses as statuses} from '../../headerRedux';
+import {
+  projectUpdatedStatuses as statuses,
+  retryProjectSave
+} from '../../headerRedux';
 import BaseDialog from '../../../templates/BaseDialog';
 import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
 import Button from '../../../templates/Button';
@@ -21,11 +24,14 @@ const styles = {
 export class UnconnectedRetryProjectSaveDialog extends Component {
   static propTypes = {
     projectUpdatedStatus: PropTypes.oneOf(Object.values(statuses)),
-    isOpen: PropTypes.bool
+    isOpen: PropTypes.bool,
+    onTryAgain: PropTypes.func.isRequired
   };
 
   handleClick = () => {
-    console.log('Try again button clicked');
+    if (this.props.projectUpdatedStatus !== statuses.saving) {
+      this.props.onTryAgain();
+    }
   };
 
   render() {
@@ -60,7 +66,14 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
   }
 }
 
-export default connect(state => ({
-  projectUpdatedStatus: state.header.projectUpdatedStatus,
-  isOpen: state.header.showTryAgainDialog
-}))(UnconnectedRetryProjectSaveDialog);
+export default connect(
+  state => ({
+    projectUpdatedStatus: state.header.projectUpdatedStatus,
+    isOpen: state.header.showTryAgainDialog
+  }),
+  dispatch => ({
+    onTryAgain() {
+      dispatch(retryProjectSave());
+    }
+  })
+)(UnconnectedRetryProjectSaveDialog);
