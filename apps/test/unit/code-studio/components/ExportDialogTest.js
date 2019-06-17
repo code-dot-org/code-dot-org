@@ -152,14 +152,16 @@ describe('ExportDialog', () => {
     });
   });
 
-  it('publishAndGenerateApk() method calls exportApp() twice with modes expoPublish and expoGenerateApk', async () => {
+  it('publishAndGenerateApk() method calls exportApp() thrice with modes expoPublish, expoGenerateApk, and expoCheckApkBuild', async () => {
+    const exportApp = sinon.stub();
+    exportApp.returns(Promise.resolve('fakeBuildId'));
     const publishResult = Promise.resolve({
       expoUri: 'uri',
       expoSnackId: 'id',
       iconUri: 'iconUri',
       splashImageUri: 'splashUri'
     });
-    const exportApp = sinon.stub().returns(publishResult);
+    exportApp.withArgs({mode: 'expoPublish'}).returns(publishResult);
     const wrapper = shallow(
       <ExportDialog
         i18n={{t: id => id}}
@@ -177,13 +179,19 @@ describe('ExportDialog', () => {
     );
     await wrapper.instance().publishAndGenerateApk();
     expect(exportApp)
-      .to.have.been.calledTwice.and.calledWith({mode: 'expoPublish'})
+      .to.have.been.calledThrice.and.calledWith({mode: 'expoPublish'})
       .and.calledWith({
         mode: 'expoGenerateApk',
         md5SavedSources: 'fakeHash',
         expoSnackId: 'id',
         iconUri: 'iconUri',
         splashImageUri: 'splashUri'
+      })
+      .and.calledWith({
+        mode: 'expoCheckApkBuild',
+        md5SavedSources: 'fakeHash',
+        expoSnackId: 'id',
+        apkBuildId: 'fakeBuildId'
       });
   });
 
