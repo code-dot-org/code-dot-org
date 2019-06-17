@@ -127,7 +127,7 @@ DSL
     refute_nil sublevel_summary.last[:url]
   end
 
-  test 'best_result_sublevel_id returns sublevel id with highest best_result for user' do
+  test 'best_result_sublevel_id returns sublevel with highest best_result for user' do
     student = create :student
     create :user_level, user: student, level: @sublevel2, best_result: 100
     create :user_level, user: student, level: @sublevel1, best_result: 20
