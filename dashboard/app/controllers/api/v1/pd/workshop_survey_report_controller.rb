@@ -119,8 +119,10 @@ module Api::V1::Pd
 
       return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
 
+      raise 'Action generic_survey_report should not be used for this workshop'
+    rescue => e
       Honeybadger.notify(
-        error_message: 'Action generic_survey_report should not be used for this workshop',
+        error_message: e.message,
         context: {
           workshop_id: @workshop.id,
           course: @workshop.course,
@@ -129,8 +131,13 @@ module Api::V1::Pd
       )
 
       render status: :bad_request, json: {
-        error: "Do not know how to process survey results for this workshop "\
-          "#{@workshop.course} #{@workshop.subject}"
+        errors: [
+          {
+            severity: Logger::Severity::ERROR,
+            message: "#{e.message}. Workshop id #{@workshop.id},"\
+              " course #{@workshop.course}, subject #{@workshop.subject}."
+          }
+        ]
       }
     end
 
