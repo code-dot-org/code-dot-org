@@ -1602,3 +1602,16 @@ fa:
           stages:
             Graph Paper Programming:
               name: برنامه نویسی روی کاغذ رسم شطرنجی
+        csd2-pilot:
+          stages:
+            Lists:
+              name: فهرست‌ها
+        csd3-pilot:
+          description_short: "برنامه نویسی"
+          stages:
+            Variables:
+              name: متغیرها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
