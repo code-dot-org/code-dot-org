@@ -1,20 +1,22 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {assert} from '../../../util/reconfiguredChai';
+import sinon from 'sinon';
+import {expect, assert} from '../../../util/reconfiguredChai';
 import BubbleChoice from '@cdo/apps/code-studio/components/BubbleChoice';
+import * as utils from '@cdo/apps/utils';
 
 const fakeSublevels = [
   {
     id: 1,
     title: 'Choice 1',
     thumbnail_url: 'some-fake.url/kittens.png',
-    url: '/s/script/stage/1/puzzle/1/sublevel/1'
+    url: '/s/script/stage/1/puzzle/2/sublevel/1'
   },
   {
     id: 2,
     title: 'Choice 2',
     thumbnail_url: null,
-    url: '/s/script/stage/1/puzzle/1/sublevel/2'
+    url: '/s/script/stage/1/puzzle/2/sublevel/2'
   }
 ];
 
@@ -22,7 +24,10 @@ const DEFAULT_PROPS = {
   level: {
     title: 'Bubble Choice',
     description: 'Choose one or more levels!',
-    sublevels: fakeSublevels
+    sublevels: fakeSublevels,
+    previous_level_url: '/s/script/stage/1/puzzle/1',
+    next_level_url: '/s/script/stage/1/puzzle/3',
+    script_url: '/s/script'
   }
 };
 
@@ -47,5 +52,58 @@ describe('BubbleChoice', () => {
     const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
     const placeholderThumbnails = wrapper.find('.placeholder');
     assert.equal(1, placeholderThumbnails.length);
+  });
+
+  describe('back and continue buttons', () => {
+    beforeEach(() => {
+      sinon.stub(utils, 'navigateToHref');
+    });
+
+    afterEach(() => {
+      utils.navigateToHref.restore();
+    });
+
+    it('redirect to previous/next levels', () => {
+      const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
+
+      assert.equal(2, wrapper.find('button').length);
+
+      const backButton = wrapper.find('button').at(0);
+      backButton.simulate('click');
+      expect(utils.navigateToHref).to.have.been.calledWith(
+        DEFAULT_PROPS.level.previous_level_url + window.location.search
+      );
+
+      const continueButton = wrapper.find('button').at(1);
+      assert.equal('Continue', continueButton.text());
+      continueButton.simulate('click');
+      expect(utils.navigateToHref).to.have.been.calledWith(
+        DEFAULT_PROPS.level.next_level_url + window.location.search
+      );
+    });
+
+    it('redirect to script page if no previous/next levels', () => {
+      const level = {
+        ...DEFAULT_PROPS.level,
+        previous_level_url: null,
+        next_level_url: null
+      };
+      const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
+
+      assert.equal(2, wrapper.find('button').length);
+
+      const backButton = wrapper.find('button').at(0);
+      backButton.simulate('click');
+      expect(utils.navigateToHref).to.have.been.calledWith(
+        DEFAULT_PROPS.level.script_url + window.location.search
+      );
+
+      const finishButton = wrapper.find('button').at(1);
+      assert.equal('Finish', finishButton.text());
+      finishButton.simulate('click');
+      expect(utils.navigateToHref).to.have.been.calledWith(
+        DEFAULT_PROPS.level.script_url + window.location.search
+      );
+    });
   });
 });
