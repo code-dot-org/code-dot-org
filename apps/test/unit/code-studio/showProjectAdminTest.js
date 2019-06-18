@@ -16,7 +16,9 @@ describe('showProjectAdmin', () => {
         exceedsAbuseThreshold: sinon.stub(),
         getSharingDisabled: sinon.stub(),
         hasPrivacyProfanityViolation: sinon.stub(),
-        privacyProfanityDetails: sinon.stub()
+        privacyProfanityDetailsEnglish: sinon.stub(),
+        privacyProfanityDetailsIntl: sinon.stub(),
+        privacyProfanitySecondLanguage: sinon.stub()
       };
 
       rootElement = document.createElement('div');
@@ -36,7 +38,16 @@ describe('showProjectAdmin', () => {
           </li>
           <li class="privacy-profanity" style="display: none">
             Private or profane text
-            <div class="privacy-profanity-details"></div>
+            <div class="privacy-profanity-details-english" style="display: none">
+              English:
+              <span class=".eng-flagged-text"></span>
+            </div>
+            <div class="privacy-profanity-details-intl" style="display: none">
+              Language:
+              <span class=".intl-flagged-language"></span>
+              Flagged content:
+              <span class=".intl-flagged-text"></span>
+            </div>
           </li>
           <li class="abusive-image" style="display: none">
             Inappropriate image
@@ -169,13 +180,13 @@ describe('showProjectAdmin', () => {
           });
         });
 
-        describe('text moderation flagged project', () => {
+        describe('text moderation flagged project - English', () => {
           beforeEach(() => {
             project.getAbuseScore.returns(0);
             project.exceedsAbuseThreshold.returns(false);
             project.hasPrivacyProfanityViolation.returns(true);
             project.getSharingDisabled.returns(false);
-            project.privacyProfanityDetails.returns('fu');
+            project.privacyProfanityDetailsEnglish.returns('fu');
           });
 
           it('shows sharing blocked message', () => {
@@ -189,7 +200,46 @@ describe('showProjectAdmin', () => {
             assertVisible('.blocked-reasons');
             assertHidden('.admin-sharing');
             assertVisible('.privacy-profanity');
-            assertVisible('.privacy-profanity-details');
+            assertVisible('.privacy-profanity-details-english');
+            assertHidden('.abusive-image');
+            assertHidden('.reported-abuse');
+          });
+
+          it('shows report abuse link', () => {
+            showProjectAdmin(project);
+            assertVisible('.admin-report-abuse');
+          });
+
+          it('does not show reset abuse control', () => {
+            showProjectAdmin(project);
+            assertHidden('.admin-abuse');
+            assertHidden('.admin-abuse-score');
+            assertHidden('.admin-abuse-reset');
+          });
+        });
+
+        describe('text moderation flagged project - Intl', () => {
+          beforeEach(() => {
+            project.getAbuseScore.returns(0);
+            project.exceedsAbuseThreshold.returns(false);
+            project.hasPrivacyProfanityViolation.returns(true);
+            project.getSharingDisabled.returns(false);
+            project.privacyProfanityDetailsIntl.returns('fu');
+            project.privacyProfanitySecondLanguage.returns('it');
+          });
+
+          it('shows sharing blocked message', () => {
+            showProjectAdmin(project);
+            assertVisible('.blocked');
+            assertHidden('.unblocked');
+          });
+
+          it('shows sharing blocked reasons, privacy or profanity', () => {
+            showProjectAdmin(project);
+            assertVisible('.blocked-reasons');
+            assertHidden('.admin-sharing');
+            assertVisible('.privacy-profanity');
+            assertVisible('.privacy-profanity-details-intl');
             assertHidden('.abusive-image');
             assertHidden('.reported-abuse');
           });
