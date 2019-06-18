@@ -5,7 +5,6 @@ import CommandHistory from './CommandHistory';
 import JSInterpreter from '../jsinterpreter/JSInterpreter';
 import watchedExpressions from '@cdo/apps/redux/watchedExpressions';
 import runState from '@cdo/apps/redux/runState';
-// import experiments from '../../../util/experiments';
 
 const WATCH_TIMER_PERIOD = 250;
 const INITIALIZE = 'jsdebugger/INITIALIZE';
@@ -244,7 +243,6 @@ export const actions = {
 // reducer
 
 function appendLogOutput(logOutput, output, type) {
-  // if (experiments.isEnabled('react-inspector')) {
   logOutput = logOutput || [];
   switch (type) {
     case APPEND_LOG:
@@ -253,17 +251,6 @@ function appendLogOutput(logOutput, output, type) {
     default:
       return logOutput;
   }
-  // } else {
-  //   if (logOutput.length > 0) {
-  //     logOutput += '\n';
-  //   }
-  //   if (typeof output !== 'string' && !(output instanceof String)) {
-  //     output = JSON.stringify(output);
-  //   }
-  //
-  //   logOutput += output;
-  //   return logOutput;
-  // }
 }
 
 function computeNewMaxLogLevel(prevMaxLogLevel, newLogLevel) {
