@@ -637,6 +637,7 @@
       CSPU5_U3 - Arrays - indexPractice_2019: Skriv innholdet i matrisen på skjermen i numerisk rekkefølge. (Klikk her for detaljerte instruksjoner)
       CSPU5_U3 - Loops - 4: Bruk feilsøksingskommandoer for å lage en liste over alle tallene som ble rullet før 6-tallet. (Klikk her for detaljerte instruksjoner)
       CSPU5_U3 - Loops - 4_2018: Bruk feilsøksingskommandoer for å lage en liste over alle tallene som ble rullet før 6-tallet. (Klikk her for detaljerte instruksjoner)
+      CSPU5_U3 - Loops - 4_2018pilot: Bruk feilsøksingskommandoer for å lage en liste over alle tallene som ble rullet før 6-tallet. (Klikk her for detaljerte instruksjoner)
       CSPU5_U3 - Loops - 4_2019: Bruk feilsøksingskommandoer for å lage en liste over alle tallene som ble rullet før 6-tallet. (Klikk her for detaljerte instruksjoner)
       Course 2 Bee Loops 1: 'Hei, jeg er en bie. Kan du hjelpe meg med å samle alle nektarene fra disse blomstene? '
       Course 2 Bee Loops 2: Kan du gjøre akkurat det samme på en enklere måte med en "gjenta"-løkke?
@@ -909,7 +910,7 @@
         \\r
 
         1.  Hold styr på hvor mange ganger Trollmannen er trykket på.\\r
-        2.  2\)
+        2.  2)
             Hvis Trollmannen er trykket på minst 10 ganger før Hund teller til 30 skal "øk"-variabelen økes med 1 og starte på nytt.\\r
         3.  Hvis Trollmannen ikke blir klikket på 10 ganger (eller mer) er spillet over.
       Course 4 Playlab For Loop Freeplay: 'Frilek: Bruk alt du har lært så langt til å lage et spill som inkludere en "for"-løkke!'
@@ -978,6 +979,7 @@
       Crack a Caesar Cipher: Instruksjoner
       Crack a Caesar Cipher_2018: Instruksjoner
       Crack a Caesar Cipher_2019: Instruksjoner
+      Dance Party Template 1_2019: Mal
       Dance Party Template 2_2019: Mal
       Dance_Party_05: Bruk en annen ny blokk for å få danseren til å bytte bevegelse hver 2. takt.
       Dance_Party_12: Ta på deg danseskoene! Lag din egen dans og del den med vennene dine.

@@ -9,9 +9,9 @@
     "long_instructions": "Watch this video to learn how this problem is solved by Amazon. As you watch think about what data is being collected and where it's coming from.",
     "instructions_important": "false",
     "display_name": "Collecting Information About Users",
-    "encrypted_teacher_markdown": "8xk8aU5ltTT48iZJ7k4qE9DZNw3Q0Pwqys4R7eobEOxxBXg5tpvRBwItUnHO\nR3SXu0cBsl5Tu/SrulITugD/K5yp0rPD9JPSC0XSc62UOcw3NCsLSuK+pXZx\noqsIN2fVj7lgsSoeoxOLNqz5TD5dgJjKB3AO1uD/TjINzoLs6+/Uwn3bnTF0\nlxFCFCv+CG/zpILM63CukwTbfp8Bpguy4zYwVVvjgco32CaZBilucAQVdGrg\nKz6tdKbdg6S4IBMC\n",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "teacher_markdown": "Check that students have answered the first two \"Nyle\" questions on their activity guide before showing this video. After the video, they should answer the third question."
   },
   "published": true,
   "notes": "",

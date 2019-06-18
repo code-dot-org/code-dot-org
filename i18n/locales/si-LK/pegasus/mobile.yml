@@ -792,8 +792,6 @@
   course2_name: "පාඨමාලාව 2"
   course3_name: "පාඨමාලාව 3"
   course4_name: "පාඨමාලාව 4"
-  accelerated_name: "කඩිනම් පාඨමාලා"
-  cspunit1_name: "ඒකක 1: ඩිජිටල් තොරතුරු"
   cspunit2_name: "පාඩම් අංක 2: අන්තර්ජාලය"
   cspunit3_name: "(පැරණි) 3 වන ඒකකය: ක්‍රමලේඛනය"
   cspunit4_name: "(පැරණි) 4 වෙනි ඒකකය: දත්ත"
@@ -889,6 +887,8 @@
   coursee-2017_gradelevel: වයස 8-12
   coursed-2018_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee-2018_gradelevel: වයස 8-12
+  coursed-2019_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee-2019_gradelevel: වයස 8-12
   accelerated_gradelevel: "වයස අවුරුදු 10-18"
   codeorg_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
   codeintl_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"

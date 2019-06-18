@@ -725,6 +725,7 @@ id:
         CSF_loops_AB: Loop
         csd_pair_programming: Pemrograman berpasangan
         csd_applab_parameters: Fungsi dengan parameter
+        csd_problem_solving_process: Proses Pemecahan Masalah
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

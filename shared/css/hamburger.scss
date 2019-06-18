@@ -16,6 +16,10 @@
     display: none;
   }
 
+  &.hide-mobile {
+    display: block;
+  }
+
   &.show-always {
     display: block;
   }
@@ -26,6 +30,10 @@
 
   .show-mobile {
     display: none;
+  }
+
+  .hide-mobile {
+    display: block;
   }
 
   .show-always {
@@ -199,9 +207,21 @@
     .show-mobile {
       display: block;
     }
-    #hamburger-contents, #help-contents {
+    &.hide-mobile {
+      display: none;
+    }
+    .hide-mobile {
+      display: none;
+    }
+    #hamburger-contents {
       font-size: 18px;
     }
+    #hamburger {
+      padding-left: 0;
+    }
+    #help-button {
+      display: none;
+    } 
   }
 }
 
@@ -262,12 +282,13 @@
 }
 
 #help-button {
-  padding-left: 20px;
+  padding-left: 15px;
   padding-top: 4px;
 
   #help-icon {
     padding: 9px 0 16px 0;
     font-size: 26px;
     color: $white;
+    height: 25px;
   }
 }

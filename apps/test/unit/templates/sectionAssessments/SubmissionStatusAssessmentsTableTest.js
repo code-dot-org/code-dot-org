@@ -52,7 +52,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
       />
     );
 
-    const checkMarkIcons = wrapper.find('#checkmark');
+    const checkMarkIcons = wrapper.find('.fa-check-circle');
     assert.equal(checkMarkIcons.length, 6);
   });
 

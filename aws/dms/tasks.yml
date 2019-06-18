@@ -13,6 +13,8 @@ cron-pii:
 - dashboard.peer_reviews
 - dashboard.circuit_playground_discount_applications
 - dashboard.circuit_playground_discount_codes
+- dashboard.survey_questions
+- dashboard.survey_answers
 cron:
 - dashboard.experiments
 - dashboard.authored_hint_view_requests

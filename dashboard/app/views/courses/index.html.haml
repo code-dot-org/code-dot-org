@@ -12,8 +12,6 @@
   courses_data[:studentscount] = students_count
   courses_data[:codeorgurlprefix] = CDO.code_org_url
   courses_data[:signedout] = @is_signed_out
-  courses_data[:initialtipsdismissed] = current_user ? current_user.ui_tip_dismissed_teacher_courses : nil
-  courses_data[:userid] = current_user.try(:id)
   courses_data[:modernelementarycoursesavailable] = @modern_elementary_courses_available
 
   @page_title = @is_teacher ? I18n.t('courses_page.title_teacher') : I18n.t('courses_page.title_student')

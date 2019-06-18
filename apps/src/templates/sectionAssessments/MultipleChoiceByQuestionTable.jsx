@@ -5,7 +5,7 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
+import PercentAnsweredCell from './PercentAnsweredCell';
 
 export const COLUMNS = {
   NAME: 0,
@@ -54,7 +54,7 @@ class MultipleChoiceByQuestionTable extends Component {
     {rowData, columnIndex, rowIndex, property}
   ) => {
     return (
-      <MultipleChoiceAnswerCell
+      <PercentAnsweredCell
         id={rowData.id}
         displayAnswer={answer}
         isCorrectAnswer={rowData.correct}

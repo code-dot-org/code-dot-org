@@ -1,20 +1,24 @@
 ---
-fa:
+fa-IR:
   data:
     block_categories:
       Actions: اقدامات
-      Loops: حلقه‌ها
-      Functions: توابع
+      Behaviors: عملکردها
       Color: رنگ
-      Math: ریاضی
-      Logic: منطق
-      Variables: متغیرها
+      Comment: دیدگاه
+      Comments: نظرات
       Conditionals: شرطی ها
+      Default: پیش‎فرض
       Events: رویدادها
+      Functions: توابع
+      Games/Score: بازی‌ها/امتیاز
+      Groups: گروه ها
+      Locations: موقعیت‌های مکانی
+      Logic: منطق
+      Loops: حلقه‌ها
+      Math: ریاضی
+      Numbers: اعداد
       Text: متن
-      Location: مکان
-      Start: شروع
-      Booleans: بولی ها
-      test: آزمایش
-      Name: نام
-      Function: تابع
+      Variables: متغیرها
+      'Variables ': 'متغیرها '
+      World: دنیا

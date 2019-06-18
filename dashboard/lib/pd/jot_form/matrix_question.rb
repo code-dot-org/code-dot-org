@@ -48,17 +48,39 @@ module Pd
       def get_value(answer)
         raise "Unable to process matrix answer: #{answer}" unless answer.is_a? Hash
 
-        # Matrix answer is a Hash of sub_question => string_answer
-        # Validate each answer and convert each key to sub_question_index
-        answer.reject {|_, v| v.blank?}.map do |sub_question, sub_answer|
+        # Matrix answer is a Hash of sub_question => string_answer.
+        # Validate each answer and convert each key to sub_question_index.
+        result = answer.reject {|_, v| v.blank?}.map do |sub_question, sub_answer|
           sub_question_index = sub_questions.index(sub_question)
-          raise "Unable to find sub-question '#{sub_question}' in matrix question #{id}" unless sub_question_index
+
+          # TODO: Log somewhere that our sub-questions no longer have matching
+          # text for this sub-answer.  This is likely because the text was
+          # changed in JotForm since the survey was submitted.
+          # Previously we raised an exception:
+          #   raise "Unable to find sub-question '#{sub_question}' in matrix question #{id}" unless sub_question_index
 
           raise "Unable to find '#{sub_answer}' in the options for matrix question #{id}" unless options.include? sub_answer
 
           # Return a 1-based value
           [sub_question_index, sub_answer]
         end.to_h
+
+        # At this point we have a result hash with keys as sub-question indexes and
+        # values as their matching sub-answers, such as
+        #   {0=>"Agree", 1=>"Agree", 2=>"Slightly Agree", 3=>"Slightly Agree"}
+        # or
+        #   {0=>"4", 1=>"4", 2=>"6"}
+        #
+        # However, in the case that we weren't able to find the sub-question,
+        # matching by text, in the corresponding Pd::SurveyQuestion (likely
+        # because its text was changed in JotForm since this answer was
+        # submitted), then we end up with a nil key like this:
+        #   {0=>"1", nil=>"3", 2=>"6", 3=>"1", 4=>"3"}
+        #
+        # It appears to be harmless, but to keep things tidy we will filter it
+        # out before returning results.
+
+        result.reject {|k, _| k.nil?}
       end
 
       def summarize

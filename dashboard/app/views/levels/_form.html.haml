@@ -38,7 +38,6 @@
     = render partial: 'levels/editors/evaluation_multi', locals: {f: f} if @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
     = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
-    = render partial: 'levels/editors/standalone_video', locals: {f: f} if @level.is_a? StandaloneVideo
     = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
     = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
     = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
@@ -47,6 +46,8 @@
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
     = render partial: 'levels/editors/public_key_cryptography', locals: {f: f} if @level.is_a? PublicKeyCryptography
     = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
+    // Note that many DSL levels also use this partial. See _dsl.html.haml
+    = render partial: 'levels/editors/teacher_only_markdown', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(ExternalLink) || @level.is_a?(Weblab) || @level.is_a?(CurriculumReference) || @level.is_a?(StandaloneVideo)
   .field
     = f.hidden_field :published
   .actions

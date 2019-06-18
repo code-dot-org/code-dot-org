@@ -1228,6 +1228,8 @@ ru:
             '"seaGrass"': морскую траву
             '"kelp"': водоросли
             '"polishedGranite"': полированный гранит
+      craft_placePrismarine:
+        text: положить призмарин
       craft_placeTorch:
         text: разместить фонарь
       craft_repeatUntilConduit:

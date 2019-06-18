@@ -1652,3 +1652,17 @@ lt:
           stages:
             Graph Paper Programming:
               name: Programavimas ant languoto popieriaus
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Sąrašai
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Kintamieji
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas

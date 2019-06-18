@@ -1,19 +1,18 @@
 ---
-hi:
+hi-IN:
   data:
     block_categories:
       Actions: क्रियाएँ
-      Loops: फंदे
-      Functions: कार्य
       Color: रंग
-      Math: गणित
-      Logic: तर्क
-      Variables: चर
       Conditionals: शर्तें
+      Dancers: नर्तकों
       Events: घटनाएँ
+      Functions: कार्य
+      Groups: समूह
+      Logic: तर्क
+      Loops: फंदे
+      Math: गणित
+      Numbers: नंबर
       Text: पाठ
-      Location: स्थान
-      Start: शुरू करें
-      test: परिक्षा
-      Name: नाम
-      Function: कार्य
+      Variables: चर
+      World: विश्व

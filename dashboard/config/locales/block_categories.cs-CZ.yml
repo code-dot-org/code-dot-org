@@ -1,24 +1,17 @@
 ---
-cs:
+cs-CZ:
   data:
     block_categories:
       Actions: Akce
-      Loops: Smyčky
-      Functions: Funkce
       Color: Barva
-      Math: Matematika
-      Logic: Logika
-      Variables: Proměnné
       Conditionals: Podmínky
-      Events: Události
-      Text: text
-      Location: Místo
-      numbers: čísla
-      Numbers: Čísla
       Dancers: Tanečníci
+      Events: Události
+      Functions: Funkce
       Groups: Skupiny
-      Start: Spustit
-      Booleans: Logické hodnoty
-      test: otestuj
-      Name: Jméno
-      Function: Funkce
+      Logic: Logika
+      Loops: Smyčky
+      Math: Matematika
+      Numbers: Čísla
+      Text: text
+      Variables: Proměnné

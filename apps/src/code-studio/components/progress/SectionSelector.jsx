@@ -44,6 +44,8 @@ class SectionSelector extends React.Component {
       'section_id',
       newSectionId === NO_SECTION ? undefined : newSectionId
     );
+    // If we have a user_id when we switch sections we should get rid of it
+    updateQueryParam('user_id', undefined);
     if (this.props.reloadOnChange) {
       reload();
     } else {

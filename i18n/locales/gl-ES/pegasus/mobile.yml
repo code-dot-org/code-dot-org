@@ -627,7 +627,6 @@
   course2_name: "Curso 2"
   course3_name: "Curso 3"
   course4_name: "Curso 4"
-  accelerated_name: "Curso acelerado"
   20-hour_name: Curso acelerado
   classicmaze_name: "Labirinto clásico"
   iceage_name: "Era do Xeo"
@@ -691,6 +690,7 @@
   coursee_gradelevel: "De 8 a 12 anos"
   coursee-2017_gradelevel: De 8 a 12 anos
   coursee-2018_gradelevel: De 8 a 12 anos
+  coursee-2019_gradelevel: De 8 a 12 anos
   accelerated_gradelevel: "Idades de 10 a 18 anos"
   codeorg_platformtext: "Navegadores Web modernos, smartphones, tablets"
   codeintl_platformtext: "Navegadores Web modernos, smartphones, tablets"

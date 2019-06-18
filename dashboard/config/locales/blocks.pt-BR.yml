@@ -200,7 +200,7 @@ pt-BR:
       Dancelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
-          {DO1} {DO2}
+          {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bater palmas
@@ -959,8 +959,12 @@ pt-BR:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': caverna
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galáxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grade
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco-íris
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ficção
+              científica
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': estrelas
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': debaixo
               d'água
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
@@ -1292,7 +1296,7 @@ pt-BR:
       Mikelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
-          {DO1} {DO2}
+          {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bater palmas

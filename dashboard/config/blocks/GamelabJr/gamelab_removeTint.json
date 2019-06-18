@@ -9,8 +9,10 @@
     "func": "removeTint",
     "blockText": "remove color from {THIS}",
     "args": [
-
-    ],
-    "methodCall": true
+      {
+        "name": "THIS",
+        "type": "Sprite"
+      }
+    ]
   }
 }

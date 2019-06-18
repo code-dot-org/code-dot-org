@@ -1995,7 +1995,7 @@ hy:
         \\r
 
         1.  Keep track of the number of times The Wizard is clicked.\\r
-        2.  2\)
+        2.  2)
             If The Wizard is clicked at least 10 times before Dog counts to 30, raise
             "increment" by 1 and start again.\\r
         3.  If The Wizard does not get clicked
@@ -2156,6 +2156,7 @@ hy:
       Crack a Caesar Cipher: Հրահանգներ
       Crack a Caesar Cipher_2018: Հրահանգներ
       Crack a Caesar Cipher_2019: Հրահանգներ
+      Dance Party Template 1_2019: Template
       Dance Party Template 2_2019: Template
       Food Fight!: "We've added one last function for\nyou. \\\\r\n\\\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\\\r\n\\\\r\nFor\nexample: \"player\\_score\" > 6\\\\r\n\\\\r\nPlay the game, and make it to level 3\nto move to the next puzzle. "
       Infinity_catch: |-

@@ -8,6 +8,7 @@ import {
 } from '../../assetManagement/assetPrefix';
 import SoundLibrary from './SoundLibrary';
 import i18n from '@cdo/locale';
+import Sounds from '../../Sounds';
 
 const audioExtension = '.mp3';
 const styles = {
@@ -55,7 +56,11 @@ export default class SoundPicker extends React.Component {
 
   setSoundMode = () => this.setState({mode: MODE.sounds});
 
-  setFileMode = () => this.setState({mode: MODE.files});
+  setFileMode = () => {
+    let sounds = Sounds.getSingleton();
+    sounds.stopAllAudio();
+    this.setState({mode: MODE.files});
+  };
 
   render() {
     const isFileMode = this.state.mode === MODE.files;

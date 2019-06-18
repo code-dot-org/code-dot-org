@@ -131,8 +131,6 @@ class User < ActiveRecord::Base
     ops_gender
     using_text_mode
     last_seen_school_info_interstitial
-    ui_tip_dismissed_homepage_header
-    ui_tip_dismissed_teacher_courses
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
@@ -299,7 +297,7 @@ class User < ActiveRecord::Base
 
   def update_and_add_users_school_infos
     last_school = user_school_infos.find_by(end_date: nil)
-    current_time = Time.now.utc
+    current_time = DateTime.now
     if last_school
       last_school.end_date = current_time
       last_school.save!
@@ -307,9 +305,7 @@ class User < ActiveRecord::Base
     UserSchoolInfo.create(
       user: self,
       school_info: school_info,
-      user_id: id,
-      start_date: current_time,
-      school_info_id: school_info_id,
+      start_date: last_school ? current_time : created_at,
       last_confirmation_date: current_time
     )
   end
@@ -317,6 +313,19 @@ class User < ActiveRecord::Base
   # Not deployed to everyone, so we don't require this for anybody, yet
   def school_info_optional?
     true # update if/when A/B test is done and accepted
+  end
+
+  # Most recently created user_school_info referring to a complete school_info entry
+  def last_complete_user_school_info
+    user_school_infos.
+      includes(:school_info).
+      select {|usi| usi.school_info.complete?}.
+      sort_by(&:created_at).
+      last
+  end
+
+  def last_complete_school_info
+    last_complete_user_school_info&.school_info
   end
 
   belongs_to :invited_by, polymorphic: true
@@ -439,8 +448,6 @@ class User < ActiveRecord::Base
   before_create :generate_secret_picture
 
   before_create :generate_secret_words
-
-  before_create :suppress_ui_tips_for_new_users
 
   before_create :update_default_share_setting
 
@@ -1471,13 +1478,6 @@ class User < ActiveRecord::Base
     Experiment.get_all_enabled(user: self).pluck(:name)
   end
 
-  def suppress_ui_tips_for_new_users
-    # New teachers don't need to see the UI tips for their home and course pages,
-    # so set them as already dismissed.
-    self.ui_tip_dismissed_homepage_header = true
-    self.ui_tip_dismissed_teacher_courses = true
-  end
-
   def advertised_scripts
     [
       Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
@@ -2101,6 +2101,10 @@ class User < ActiveRecord::Base
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
+  end
+
+  def show_school_info_confirmation_dialog?
+    SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(self)
   end
 
   def show_school_info_interstitial?

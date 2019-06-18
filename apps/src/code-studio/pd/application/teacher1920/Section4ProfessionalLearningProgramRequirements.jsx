@@ -273,21 +273,11 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
               this.renderAssignedWorkshopList()}
           </div>
           {this.radioButtonsFor('willingToTravel')}
-          We may offer online academic year workshops for those unable to travel
-          to their local academic year workshops. Important notes:
-          <ol>
-            <li>
-              The online option for academic year workshops is not guaranteed -
-              we are piloting this option now, and considering the effectiveness
-              of this method before rolling it out large-scale.
-            </li>
-            <li>
-              An online option for the five-day summer workshop does not
-              currently exist - all participants accepted to the Professional
-              Learning Program will need to commit to attending the five-day
-              summer workshop in-person.
-            </li>
-          </ol>
+          We offer a virtual academic year workshop track for those who are
+          unable to commit to traveling to in-person academic year workshops.
+          Please note that this option is only available for the academic year -
+          all participants in the Professional Learning Program must attend an
+          in-person five-day summer workshop.
           {this.radioButtonsFor('interestedInOnlineProgram')}
           {this.props.data.regionalPartnerId && (
             <div>

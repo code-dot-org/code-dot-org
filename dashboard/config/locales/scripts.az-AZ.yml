@@ -856,3 +856,23 @@ az:
           stages:
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
+        fit2019-novice:
+          stages:
+            Wrap Up:
+              name: Yekun
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Yekun
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Siyahılar
+        csd3-pilot:
+          stages:
+            Variables:
+              name: dəyişənlər
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar

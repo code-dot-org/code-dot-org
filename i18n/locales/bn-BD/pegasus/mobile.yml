@@ -741,7 +741,6 @@
   coursee_name: "কোর্স E"
   coursef-draft_name: কোর্স F
   coursef_name: "কোর্স F"
-  cspunit1_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
   cspunit2_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
   cspunit3_name: "সিএস এর মূলনীতি ইউনিট ৩"
   cspunit4_name: "(পুরাতন) ইউনিট ৪: তথ্য"
@@ -818,6 +817,8 @@
   coursee-2017_gradelevel: বয়স 8-12
   coursed-2018_gradelevel: গ্রেড ৮ +
   coursee-2018_gradelevel: বয়স 8-12
+  coursed-2019_gradelevel: গ্রেড ৮ +
+  coursee-2019_gradelevel: বয়স 8-12
   accelerated_gradelevel: "বয়স ১০-১৮"
   codeorg_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
   codeintl_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
