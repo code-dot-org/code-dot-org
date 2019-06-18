@@ -44,7 +44,6 @@ ci: <%=!!ENV['CI']%>
 ci_test: <%=unit_test || ci%>
 root_dir: <%=__dir__%>
 name: <%=`hostname`.strip%>
-stack_name: <%=env%>
 rack_env: :<%=env%>
 rack_envs:
   - :development
@@ -232,6 +231,11 @@ videos_url:                //videos.code.org
 memcached_endpoint:
 memcached_hosts:
 
+# Redis (ElastiCache)
+redis_primary:
+redis_read_addresses:
+redis_read_ports:
+
 # Netsim
 netsim_redis_groups:
 netsim_enable_metrics: false
@@ -410,7 +414,6 @@ channels_api_secret: <%=poste_secret%>
 bundler_use_sudo: <%=chef_managed%>
 
 daemon: <%=name == 'production-daemon'%>
-cdn_enabled: <%=chef_managed%>
 image_optim: <%=chef_managed && !ci_test%>
 
 # Referenced in CI config, but not sure if they are still used anywhere?
@@ -448,6 +451,25 @@ pledge_map_table_id:
 hoc_map_service_account_email:
 hoc_map_api_secret:
 hoc_map_api_key:
+
+#### Parameters related to CloudFormation-stack deployment
+stack_name: <%=env%>
+cdn_enabled: <%=chef_managed%>
+
+# Application-stack parameters.
+instance_type:
+branch:
+database_username:
+
+# Data-stack parameters.
+rds_host:
+rds_identifier:
+rds_username:
+rds_password:
+redshift_database:
+redshift_username:
+rds_backup_account:
+logs_bucket:
 
 ### Database configuration
 
