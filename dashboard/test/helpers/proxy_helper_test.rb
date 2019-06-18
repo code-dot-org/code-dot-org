@@ -49,28 +49,28 @@ class ProxyHelperTest < ActionView::TestCase
   end
 
   test '0.0.0.1 is not a public ip address' do
-    refute public_ip_address?(IPAddr('0.0.0.1'))
+    refute public_ip_address?(IPAddr.new('0.0.0.1'))
   end
 
   test '169.254.0.0 is not a public ip address' do
-    refute public_ip_address?(IPAddr('169.254.0.0'))
+    refute public_ip_address?(IPAddr.new('169.254.0.0'))
   end
 
   test '127.0.0.1 is not a public ip address' do
-    refute public_ip_address?(IPAddr('127.0.0.0'))
+    refute public_ip_address?(IPAddr.new('127.0.0.0'))
   end
 
   test '192.168.0.1 is not a public ip address' do
-    refute public_ip_address?(IPAddr('192.168.0.1'))
+    refute public_ip_address?(IPAddr.new('192.168.0.1'))
   end
 
   # OpenDNS server
   test '208.67.220.220 is a public ip address' do
-    assert public_ip_addres?(IPAddr('208.67.220.220'))
+    assert public_ip_addres?(IPAddr.new('208.67.220.220'))
   end
 
   # Google DNS server's IPv6 address
   test '2001:4860:4860::8888 is a public ip address' do
-    assert public_ip_address?(IPAddr('2001:4860:4860::8888'))
+    assert public_ip_address?(IPAddr.new('2001:4860:4860::8888'))
   end
 end
