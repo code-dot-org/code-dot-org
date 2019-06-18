@@ -66,6 +66,7 @@ class XhrProxyController < ApplicationController
     quandl.com
     quizlet.com
     rejseplanen.dk
+    maker.ifttt.com
     noaa.gov
     nuevaschool.ngrok.io
     nuevaschool2.ngrok.io

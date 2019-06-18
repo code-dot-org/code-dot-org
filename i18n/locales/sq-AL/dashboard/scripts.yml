@@ -1704,3 +1704,15 @@ sq:
           stages:
             Graph Paper Programming:
               name: Programimi Grafik me Letër
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Listat
+        csd3-pilot:
+          stages:
+            Variables:
+              name: variabla
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione

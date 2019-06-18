@@ -1942,3 +1942,18 @@ de:
           stages:
             Graph Paper Programming:
               name: Programmieren auf Millimeterpapier
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Listen
+        csd3-pilot:
+          description_short: Programmierung
+          stages:
+            Variables:
+              name: Variablen
+            Conditionals:
+              name: Bedingungen
+            Velocity:
+              name: Geschwindigkeit
+            Functions:
+              name: Funktionen
