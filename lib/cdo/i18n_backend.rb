@@ -92,6 +92,6 @@ end
 
 # Use custom i18n backend by enabling `CDO.i18n_key_value`.
 # Default false during testing and controlled roll-out.
-CDO.i18n_backend = CDO.with_default(false).i18n_key_value ?
+CDO_I18N_BACKEND = CDO.with_default(false).i18n_key_value ?
   Cdo::I18n::KeyValueCacheBackend.new :
   Cdo::I18n::SimpleBackend.new

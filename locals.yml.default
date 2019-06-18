@@ -1,4 +1,5 @@
 # Example configuration file set up with sensible defaults for local development.
+# See `config.yml.erb` for full list of available configuration options.
 
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.
