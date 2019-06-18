@@ -66,7 +66,7 @@ class ProxyHelperTest < ActionView::TestCase
 
   # OpenDNS server
   test '208.67.220.220 is a public ip address' do
-    assert public_ip_addres?(IPAddr.new('208.67.220.220'))
+    assert public_ip_address?(IPAddr.new('208.67.220.220'))
   end
 
   # Google DNS server's IPv6 address
