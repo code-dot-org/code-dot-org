@@ -1,5 +1,5 @@
 ---
-el:
+el-GR:
   data:
     display_name:
       CSD U2 Pair Programming Video: Προγραμματισμός κατά ζεύγη
@@ -56,7 +56,6 @@ el:
       CSD U3 Variables Map: Μεταβλητές
       CSD U3 Variables Map_2018: Μεταβλητές
       CSD U3 Variables Map_2019: Μεταβλητές
-      CSD U3 functions map: Συναρτήσεις
       CSD U6 for loop map: Βρόχοι Για
       CSD U6 for loop map_2018: Βρόχοι Για
       CSD U6 for loop map_2019: Βρόχοι Για
@@ -64,7 +63,6 @@ el:
       CSD U6 functions paramters video_2018: Συναρτήσεις με παραμέτρους
       CSD U6 functions paramters video_2019: Συναρτήσεις με παραμέτρους
       'CSD: For Loop_2018': Βρόχοι Για
-      'CSD: For Loop_2019': Βρόχοι Για
       CourseEF_video_IntroSpriteLab: Αυτό είναι το Εργαστήριο Χαρακτήρων
       CourseEF_video_IntroSpriteLab_2019: Αυτό είναι το Εργαστήριο Χαρακτήρων
       Dance_Party_extras_battle: Ομάδες Χορού
@@ -73,13 +71,7 @@ el:
       Dance_Party_extras_on_beat: Μπάσα, Μεσαία, και Πρίμα
       Dance_Party_extras_speed: Πιο γρήγορα, Πιο αργά
       Dance_Party_extras_visible: Πού θα πήγαιναν;
-      MC_HOC_2017_FP10x10: Ελεύθερο παιχνίδι
-      MC_HOC_2017_FP10x10_RE: Ελεύθερο παιχνίδι
-      Text Compression_2018: Συμπίεση κειμένου
-      Text Compression_2019: Συμπίεση κειμένου
       courseA_video_Stevie: Ο Στίβι και το Μεγάλο Πρότζεκτ
       courseA_video_Stevie_2018: Ο Στίβι και το Μεγάλο Πρότζεκτ
-      courseA_video_Stevie_2019: Ο Στίβι και το Μεγάλο Πρότζεκτ
       courseB_video_Unspotted: Μη εντοπισμένα bugs
       courseB_video_Unspotted_2018: Μη εντοπισμένα bugs
-      courseB_video_Unspotted_2019: Μη εντοπισμένα bugs

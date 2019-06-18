@@ -269,6 +269,7 @@ class ChannelsApi < Sinatra::Base
       language: language
     }.to_json
   end
+
   #
   #
   # GET /v3/channels/<channel-id>/sharing_disabled

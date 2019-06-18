@@ -1,3 +1,0 @@
-function objectSprite() {
-  return otherSprite;
-}

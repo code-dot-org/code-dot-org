@@ -1,9 +1,8 @@
 ---
-my:
+my-MM:
   data:
     function_names:
-      x: "×"
+      diamond: စိန်
       do something: တစ်ခုခုကို ပြုလုပ်ပါ
       jump: ခုန်ပါ
-      test: စမ်းသပ်မှု။
-      diamond: စိန်
+      x: "×"

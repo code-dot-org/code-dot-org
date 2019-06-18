@@ -38,9 +38,25 @@
     "step_speed": "50",
     "custom_game_type": "Ninja Cat",
     "disable_examples": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Ninjacat Demo B\",\r\n  \"callout_text\": \"Click `Run` to try out the game\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Ninjacat Demo B\",\r\n  \"callout_text\": \"Click `Run` to try out the game\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "examples_required": "false",
-    "maze_data": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "never_autoplay_video": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "default_num_example_blocks": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-06-11 18:24:48 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"callout_json\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2019-06-11 18:25:43 +0000\",\"changed\":[\"start_blocks\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2019-06-11 18:27:11 +0000\",\"changed\":[\"start_blocks\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2019-06-11 19:56:38 +0000\",\"changed\":[\"start_blocks\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2019-06-11 19:59:18 +0000\",\"changed\":[\"start_blocks\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>

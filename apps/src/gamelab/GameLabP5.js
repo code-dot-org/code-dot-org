@@ -2,6 +2,7 @@ import {getStore} from '../redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
+var Spritelab = require('./spritelab/Spritelab');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
@@ -73,6 +74,7 @@ GameLabP5.baseP5loadImage = null;
  * @param {!Function} options.onPreload callback to run during preload()
  * @param {!Function} options.onSetup callback to run during setup()
  * @param {!Function} options.onDraw callback to run during each draw()
+ * @param {boolean} options.spritelab Whether this is a spritelab instance
  */
 GameLabP5.prototype.init = function(options) {
   this.onExecutionStarting = options.onExecutionStarting;
@@ -130,14 +132,16 @@ GameLabP5.prototype.init = function(options) {
     return false;
   };
 
-  // Override p5.createSprite and p5.Group so we can override the methods that
-  // take callback parameters
-  window.p5.prototype.createSprite = gameLabSprite.createSprite;
-  var baseGroupConstructor = window.p5.prototype.Group;
-  window.p5.prototype.Group = gameLabGroup.Group.bind(
-    null,
-    baseGroupConstructor
-  );
+  if (!options.spritelab) {
+    // Override p5.createSprite and p5.Group so we can override the methods that
+    // take callback parameters
+    window.p5.prototype.createSprite = gameLabSprite.createSprite;
+    var baseGroupConstructor = window.p5.prototype.Group;
+    window.p5.prototype.Group = gameLabGroup.Group.bind(
+      null,
+      baseGroupConstructor
+    );
+  }
 
   window.p5.prototype.gamelabPreload = function() {
     this.p5decrementPreload = window.p5._getDecrementPreload.apply(
@@ -145,6 +149,10 @@ GameLabP5.prototype.init = function(options) {
       arguments
     );
   }.bind(this);
+
+  if (options.spritelab) {
+    this.spritelab = new Spritelab();
+  }
 };
 
 /**
@@ -152,6 +160,9 @@ GameLabP5.prototype.init = function(options) {
  */
 GameLabP5.prototype.resetExecution = function() {
   gameLabSprite.setCreateWithDebug(false);
+  if (this.spritelab) {
+    this.spritelab.reset();
+  }
 
   if (this.p5) {
     this.p5.remove();

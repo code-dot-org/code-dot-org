@@ -726,7 +726,6 @@
   course2_name: "2. tanfolyam"
   course3_name: "3. tanfolyam"
   course4_name: "4. tanfolyam"
-  accelerated_name: "Gyorsított tanfolyam"
   csp1-2017_name: '1. lecke: Az internet'
   csp2-2017_name: '2. fejezet: Digitális információ'
   csp1-2018_name: '1. lecke: Az internet'
@@ -809,6 +808,8 @@
   coursee-2017_gradelevel: 8-tól 12 éves korig
   coursed-2018_gradelevel: 8+ évfolyam
   coursee-2018_gradelevel: 8-tól 12 éves korig
+  coursed-2019_gradelevel: 8+ évfolyam
+  coursee-2019_gradelevel: 8-tól 12 éves korig
   accelerated_gradelevel: "10-től 18 éves korig"
   codeorg_platformtext: "Modern böngészők, okostelefonok, tabletek"
   codeintl_platformtext: "Modern böngészők, okostelefonok, tabletek"

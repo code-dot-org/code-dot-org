@@ -7,9 +7,154 @@ de:
         title: Titel
       Begin planning your project_2018:
         description here: hier die Beschreibung
+      Begin planning your project_2018_2019:
+        description here: hier die Beschreibung
+      CSD U2 Design Project:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 Design Project_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 Design Project_2018_2019:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L1 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L2 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L3 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L4 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L5 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L6 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 Lesson 6 Overview:
+        description here: hier die Beschreibung
+      CSD U2 expand project:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 expand project_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 expand project_2018_2019:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 project guide:
+        description here: hier die Beschreibung
+      CSD U2 project guide_2018:
+        description here: hier die Beschreibung
+      CSD U2 project guide_2018_2019:
+        description here: hier die Beschreibung
+      CSD U3 Card Examples_2018:
+        description here: hier die Beschreibung
+      CSD U3 Card Examples_2018_2019:
+        description here: hier die Beschreibung
+      CSD U3 combining rep:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U3 combining rep_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U3 combining rep_2018_2019:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U3 game intro:
+        description here: hier die Beschreibung
+      CSD U3 game intro_2018:
+        description here: hier die Beschreibung
+      CSD U3 game intro_2018_2019:
+        description here: hier die Beschreibung
+      CSD U3 platform intro:
+        description here: hier die Beschreibung
+      CSD U3 platform intro_2018:
+        description here: hier die Beschreibung
+      CSD U3 platform intro_2018_2019:
+        description here: hier die Beschreibung
+      CSD U5 Encryption 1:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 Encryption 1_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 Encryption 1_2018_2019:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 Encryption 2:
+        description here: hier die Beschreibung
+      CSD U5 Encryption 2_2018:
+        description here: hier die Beschreibung
+      CSD U5 Encryption 2_2018_2019:
+        description here: hier die Beschreibung
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 crosstab warmup:
+        description here: hier die Beschreibung
+      CSD U5 crosstab warmup_2018:
+        description here: hier die Beschreibung
+      CSD U5 crosstab warmup_2018_2019:
+        description here: hier die Beschreibung
+      CSD U5 data visualization:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 data visualization_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 data visualization_2018_2019:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 student record:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 student record_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 student record_2018_2019:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U6 LED create intro:
+        description here: hier die Beschreibung
+      CSD U6 LED create intro_2018:
+        description here: hier die Beschreibung
+      CSD U6 LED create intro_2018_2019:
+        description here: hier die Beschreibung
+      CSD U6 final intro:
+        description here: hier die Beschreibung
+      CSD U6 final intro_2018:
+        description here: hier die Beschreibung
+      CSD U6 final intro_2018_2019:
+        description here: hier die Beschreibung
+      Internet Simulator Setup:
+        description here: hier die Beschreibung
+      Internet Simulator Setup 2:
+        description here: hier die Beschreibung
+        title: Titel
+      Internet Simulator Setup 3:
+        description here: hier die Beschreibung
+      Multi-Screen Apps:
+        description here: hier die Beschreibung
+        title: Titel
+      New Challenge Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      OPD-K5 Stage3aGo:
+        description here: hier die Beschreibung
+        title: Titel
       Prepare for your presentation:
         description here: hier die Beschreibung
         title: Titel
+      'Technique: Frequency Analysis':
+        description here: hier die Beschreibung
+      Terminology Recap:
+        description here: hier die Beschreibung
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Weise die Tastenkombination
@@ -274,6 +419,12 @@ de:
       4-5 maze multi 1:
         Maze Multiple Choice: Labyrinth Multiple-Choice
         Which blocks solve the puzzle?: Welche Bausteine lösen die Aufgabe?
+      CSD U3 Boolean MC:
+        title: Titel
+      CSD U3 Boolean MC_2018:
+        title: Titel
+      CSD U3 Boolean MC_2018_2019:
+        title: Titel
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple-Choice
         Which blocks solve this puzzle?: Welche Bausteine lösen dieses Rätsel?
@@ -336,6 +487,10 @@ de:
         SOUTH: SOUTH (SÜD)
         SQUARE: SQUARE (QUADRAT)
         Which word is spelled?: Welches Wort wird geschrieben?
+      behaviors 1 predict:
+        Incorrect: Falsch
+      behaviors 4 predict:
+        Incorrect: Falsch
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -344,9 +499,15 @@ de:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
         I don't know: Ich weiß nicht
       courseC_multi_starWars_predict1_2018:
+        I don't know: Ich weiß nicht
+      courseC_multi_starWars_predict1_2018_2019:
         I don't know: Ich weiß nicht
       courseD_multi_artist_binary8_predict1:
         A: A
@@ -358,11 +519,20 @@ de:
         B: B
         C: C
         D: D
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        A: A
+        B: B
+        C: C
+        D: D
       courseD_multi_artist_nestedLoops9_predict1:
         A: A
         B: B
         C: C
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -383,6 +553,22 @@ de:
           a loop down.  This is all inside of another loop that happens twice. 4 times
           2 is 8!"
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

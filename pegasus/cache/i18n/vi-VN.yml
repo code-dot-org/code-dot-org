@@ -834,7 +834,6 @@ vi-VN:
   course3_name: Khóa học 3
   course4_name: Khóa học 4
   coursed-2018_name: Kịch bản khóa D mới
-  accelerated_name: Khóa học cấp tốc
   20-hour_name: Khóa học cấp tốc
   classicmaze_name: Mê cung cổ điển
   iceage_name: Kỉ băng hà
@@ -864,6 +863,7 @@ vi-VN:
   coursed_gradelevel: Lớp 8 +
   coursed-2017_gradelevel: Lớp 8 +
   coursed-2018_gradelevel: Lớp 8 +
+  coursed-2019_gradelevel: Lớp 8 +
   accelerated_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
   lightbotintl_platformtext: IOS, Android(hoặc trình duyệt web)
   codespark_platformtext: IOS, Android(hoặc trình duyệt web)

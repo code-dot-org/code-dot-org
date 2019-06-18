@@ -5,12 +5,15 @@ import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 
-var ABUSE_THRESHOLD = 15;
+const NUM_ERRORS_BEFORE_WARNING = 3;
+
+var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 var hasProjectChanged = false;
 
@@ -84,8 +87,8 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
-var currentShareFailureEnglish = false;
-var currentShareFailureIntl = false;
+var currentShareFailureEnglish = '';
+var currentShareFailureIntl = '';
 var intlLanguage = false;
 var isEditing = false;
 let initialSaveComplete = false;
@@ -350,14 +353,23 @@ var projects = (module.exports = {
     return currentHasPrivacyProfanityViolation;
   },
 
+  /**
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane in English.
+   */
   privacyProfanityDetailsEnglish() {
     return currentShareFailureEnglish;
   },
 
+  /**
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane in an language other than English.
+   */
   privacyProfanityDetailsIntl() {
     return currentShareFailureIntl;
   },
 
+  /**
+   * @returns {string} a 2-character language code if the content moderation service ran in a language other than English.
+   */
   privacyProfanitySecondLanguage() {
     return intlLanguage;
   },
@@ -960,6 +972,9 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
+              if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
+                header.showTryAgainDialog();
+              }
               return;
             }
           } else if (saveSourcesErrorCount > 0) {
@@ -1177,6 +1192,9 @@ var projects = (module.exports = {
         saveChannelErrorCount,
         err + ''
       );
+      if (saveChannelErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
+        header.showTryAgainDialog();
+      }
       return;
     } else if (saveChannelErrorCount) {
       // If the previous errors occurred due to network problems, we may not
@@ -1189,6 +1207,7 @@ var projects = (module.exports = {
       );
     }
     saveChannelErrorCount = 0;
+    header.hideTryAgainDialog();
 
     // The following race condition can lead to thumbnail URLs not being stored
     // in the project metadata:
@@ -1434,9 +1453,6 @@ var projects = (module.exports = {
                 fetchAbuseScoreAndPrivacyViolations(this, function() {
                   deferred.resolve();
                 });
-                fetchShareFailure(this, function() {
-                  deferred.resolve();
-                });
               },
               queryParams('version'),
               sourcesApi
@@ -1458,9 +1474,6 @@ var projects = (module.exports = {
             () => {
               projects.showHeaderForProjectBacked();
               fetchAbuseScoreAndPrivacyViolations(this, function() {
-                deferred.resolve();
-              });
-              fetchShareFailure(this, function() {
                 deferred.resolve();
               });
             },
@@ -1635,7 +1648,7 @@ function fetchSharingDisabled(resolve) {
 }
 
 function fetchShareFailure(resolve) {
-  channels.fetch(current.id + '/share-failure', (err, data) => {
+  channels.fetch(current.id + '/share-failure', function(err, data) {
     currentShareFailureEnglish =
       data && data.share_failure && data.share_failure.content
         ? data.share_failure.content
@@ -1669,7 +1682,10 @@ function fetchPrivacyProfanityViolations(resolve) {
 }
 
 function fetchAbuseScoreAndPrivacyViolations(project, callback) {
-  const deferredCallsToMake = [new Promise(fetchAbuseScore)];
+  const deferredCallsToMake = [
+    new Promise(fetchAbuseScore),
+    new Promise(fetchShareFailure)
+  ];
 
   if (project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));

@@ -3,6 +3,64 @@ ne:
     external:
       Begin planning your project:
         title: title
+      CSD U2 Design Project:
+        title: title
+      CSD U2 Design Project_2018:
+        title: title
+      CSD U2 Design Project_2018_2019:
+        title: title
+      CSD U2 L1 Overview:
+        title: title
+      CSD U2 L2 Overview:
+        title: title
+      CSD U2 L3 Overview:
+        title: title
+      CSD U2 L4 Overview:
+        title: title
+      CSD U2 L5 Overview:
+        title: title
+      CSD U2 L6 Overview:
+        title: title
+      CSD U2 expand project:
+        title: title
+      CSD U2 expand project_2018:
+        title: title
+      CSD U2 expand project_2018_2019:
+        title: title
+      CSD U3 combining rep:
+        title: title
+      CSD U3 combining rep_2018:
+        title: title
+      CSD U3 combining rep_2018_2019:
+        title: title
+      CSD U5 Encryption 1:
+        title: title
+      CSD U5 Encryption 1_2018:
+        title: title
+      CSD U5 Encryption 1_2018_2019:
+        title: title
+      CSD U5 L13 SFLP Interpreting Data:
+        title: title
+      CSD U5 data visualization:
+        title: title
+      CSD U5 data visualization_2018:
+        title: title
+      CSD U5 data visualization_2018_2019:
+        title: title
+      CSD U5 student record:
+        title: title
+      CSD U5 student record_2018:
+        title: title
+      CSD U5 student record_2018_2019:
+        title: title
+      Internet Simulator Setup 2:
+        title: title
+      Multi-Screen Apps:
+        title: title
+      New Challenge Introduction:
+        title: title
+      OPD-K5 Stage3aGo:
+        title: title
       Prepare for your presentation:
         title: title
     match:
@@ -193,6 +251,12 @@ ne:
       4-5 maze multi 1:
         Maze Multiple Choice: Maze Multiple Choice
         Which blocks solve the puzzle?: Which blocks solve the puzzle?
+      CSD U3 Boolean MC:
+        title: title
+      CSD U3 Boolean MC_2018:
+        title: title
+      CSD U3 Boolean MC_2018_2019:
+        title: title
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         Which blocks solve this puzzle?: Which blocks solve this puzzle?
@@ -244,11 +308,19 @@ ne:
       K-1 Word Search Multi 3:
         Multiple Choice: Multiple Choice
         Which word is spelled?: Which word is spelled?
+      behaviors 1 predict:
+        Incorrect: Incorrect
+      behaviors 4 predict:
+        Incorrect: Incorrect
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
         '4': '4'
       courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
         '12': '12'
         '15': '15'
         '4': '4'
@@ -261,6 +333,14 @@ ne:
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

@@ -1,3 +1,4 @@
+@no_mobile
 Feature: Prevent Report Abuse Spam
 
 # If someone has already reported abuse on a specific project, we hide the

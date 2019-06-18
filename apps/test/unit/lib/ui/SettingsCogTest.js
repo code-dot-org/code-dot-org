@@ -5,11 +5,9 @@ import sinon from 'sinon';
 import msg from '@cdo/locale';
 import {expect} from '../../../util/configuredChai';
 import SettingsCog, {ToggleMaker} from '@cdo/apps/lib/ui/SettingsCog';
-import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
 import * as assets from '@cdo/apps/code-studio/assets';
-import {getPortalContent} from '../../../util/reactTestUtils';
 
 describe('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {
@@ -19,21 +17,24 @@ describe('SettingsCog', () => {
 
   it('opens the menu when the cog is clicked', () => {
     const wrapper = mount(<SettingsCog />);
-    const cog = wrapper.find(FontAwesome).first();
-    const portal = wrapper.find(Portal).first();
+    var portal = wrapper.find(Portal).first();
     expect(portal).to.have.prop('isOpened', false);
-    cog.simulate('click');
+    wrapper.instance().open();
+    wrapper.update();
+    portal = wrapper.find(Portal).first();
     expect(portal).to.have.prop('isOpened', true);
   });
 
   it('can close the menu', () => {
     // (It turns out testing the portal auto-close is difficult)
     const wrapper = mount(<SettingsCog />);
-    const cog = wrapper.find(FontAwesome).first();
-    const menu = wrapper.find(Portal).first();
-    cog.simulate('click');
+    wrapper.instance().open();
+    wrapper.update();
+    var menu = wrapper.find(Portal).first();
     expect(menu).to.have.prop('isOpened', true);
     wrapper.instance().close();
+    wrapper.update();
+    menu = wrapper.find(Portal).first();
     expect(menu).to.have.prop('isOpened', false);
   });
 
@@ -45,18 +46,23 @@ describe('SettingsCog', () => {
     // Can probably remove this test if that bug gets fixed and our code
     // gets simplified.
     const wrapper = mount(<SettingsCog />);
-    const cog = wrapper.find(FontAwesome).first();
-    const menu = wrapper.find(Portal).first();
+    var cog = wrapper.find(FontAwesome).first();
+    var menu = wrapper.find(Portal).first();
     expect(wrapper).to.have.state('canOpen', true);
     expect(cog.prop('onClick')).to.be.a.function;
 
     // Open the menu
     cog.simulate('click');
+    wrapper.update();
+    cog = wrapper.find(FontAwesome).first();
     expect(wrapper).to.have.state('canOpen', false);
     expect(cog.prop('onClick')).to.be.undefined;
 
     // Close the menu
     wrapper.instance().close();
+    wrapper.update();
+    cog = wrapper.find(FontAwesome).first();
+    menu = wrapper.find(Portal).first();
     // This doesn't happen right away - that's our workaround, so we don't
     // re-open the menu in the same moment.
     expect(menu).to.have.prop('isOpened', false);
@@ -68,26 +74,22 @@ describe('SettingsCog', () => {
     }, 0);
   });
 
-  it('only shows manage assets when maker toggle is false', () => {
+  it('does not show maker toggle when "showMakerToggle" is false', () => {
     const wrapper = mount(<SettingsCog showMakerToggle={false} />);
-    const cog = wrapper.find(FontAwesome).first();
-    cog.simulate('click');
-    const menuWrapper = getPortalContent(wrapper);
-    const numMenuItems = menuWrapper.find(PopUpMenu.Item).length;
-    expect(numMenuItems).to.equal(1);
+    expect(wrapper.find(ToggleMaker)).to.have.lengthOf(0);
   });
 
   describe('menu items', () => {
-    let wrapper, portal, menuWrapper;
+    let wrapper, portal;
 
     beforeEach(() => {
       wrapper = mount(<SettingsCog showMakerToggle={true} />);
-      const cog = wrapper.find(FontAwesome).first();
       portal = wrapper.find(Portal).first();
       expect(portal).to.have.prop('isOpened', false);
-      cog.simulate('click');
+      wrapper.instance().open();
+      wrapper.update();
+      portal = wrapper.find(Portal).first();
       expect(portal).to.have.prop('isOpened', true);
-      menuWrapper = getPortalContent(wrapper);
     });
 
     describe('manage assets', () => {
@@ -99,29 +101,17 @@ describe('SettingsCog', () => {
         assets.showAssetManager.restore();
       });
 
-      it('is the first menu item', () => {
-        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first();
-        expect(firstMenuItem.text()).to.equal(msg.manageAssets());
-      });
-
       it('calls showAssetManager when clicked', () => {
-        const firstMenuItem = menuWrapper
-          .find(PopUpMenu.Item)
-          .first()
-          .children()
-          .first();
         expect(assets.showAssetManager).not.to.have.been.called;
-        firstMenuItem.simulate('click');
+        wrapper.instance().manageAssets();
+        wrapper.update();
         expect(assets.showAssetManager).to.have.been.calledOnce;
       });
 
       it('closes the menu when clicked', () => {
-        const firstMenuItem = menuWrapper
-          .find(PopUpMenu.Item)
-          .first()
-          .children()
-          .first();
-        firstMenuItem.simulate('click');
+        wrapper.instance().manageAssets();
+        wrapper.update();
+        portal = wrapper.find(Portal).first();
         expect(portal).to.have.prop('isOpened', false);
       });
     });
@@ -157,19 +147,14 @@ describe('SettingsCog', () => {
         expect(wrapper).to.be.blank;
       });
 
-      it('calls handleToggleMaker when clicked', () => {
+      it('asks for confirmation when clicked', () => {
         makerRedux.isAvailable.returns(true);
         makerRedux.isEnabled.returns(false);
-        const handleToggleMaker = sinon.spy();
-        const wrapper = mount(<ToggleMaker onClick={handleToggleMaker} />);
-        expect(wrapper.text()).to.equal(msg.enableMaker());
-
-        expect(handleToggleMaker).not.to.have.been.called;
-        wrapper
-          .children()
-          .first()
-          .simulate('click');
-        expect(handleToggleMaker).to.have.been.calledOnce;
+        var settings = mount(<SettingsCog showMakerToggle={true} />);
+        expect(settings.state().confirmingEnableMaker).to.be.false;
+        settings.instance().toggleMakerToolkit();
+        settings.update();
+        expect(settings.state().confirmingEnableMaker).to.be.true;
       });
     });
   });
