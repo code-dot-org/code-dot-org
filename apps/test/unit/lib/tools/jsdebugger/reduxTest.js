@@ -14,7 +14,6 @@ import {
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import Observer from '@cdo/apps/Observer';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('The JSDebugger redux duck', () => {
   let store, state, studioApp, interpreter;
@@ -107,50 +106,8 @@ describe('The JSDebugger redux duck', () => {
     });
   });
 
-  // describe('the appendLog action with react-inspector flag turned off', () => {
-  //   it('will append strings to the log output', () => {
-  //     store.dispatch(actions.appendLog('foo'));
-  //     expect(selectors.getLogOutput(store.getState())).to.equal('foo');
-  //   });
-  //
-  //   it('will append rich objects to the log output', () => {
-  //     store.dispatch(actions.appendLog({foo: 'bar'}));
-  //     expect(selectors.getLogOutput(store.getState())).to.equal(
-  //       '{"foo":"bar"}'
-  //     );
-  //   });
-  //
-  //   it('will append multiple things to the log output, joined by newlines', () => {
-  //     store.dispatch(actions.appendLog({foo: 'bar'}));
-  //     store.dispatch(actions.appendLog('hello'));
-  //     expect(selectors.getLogOutput(store.getState())).to.equal(
-  //       '{"foo":"bar"}\nhello'
-  //     );
-  //   });
-  //
-  //   it('will also trigger the open action if the debugger is not already open', () => {
-  //     expect(selectors.isOpen(store.getState())).to.be.false;
-  //     store.dispatch(actions.appendLog('open sesame'));
-  //     expect(selectors.isOpen(store.getState())).to.be.true;
-  //   });
-  // });
-
-  describe('the appendLog action with react-inspector flag turned on', () => {
-    beforeEach(() => {
-      sinon.stub(experiments, 'isEnabled').returns(true);
-      expect(experiments.isEnabled('react-inspector')).to.equal(true);
-    });
-
-    afterEach(() => {
-      experiments.isEnabled.restore();
-      restoreRedux();
-    });
-
+  describe('the appendLog action', () => {
     it('will append strings to the log output', () => {
-      // var reducer = reducers.jsdebugger;
-      //
-      // var tempstate = reducer(null, {});
-      // expect(tempstate.logOutput).to.deep.equal([]);
       store.dispatch(
         actions.appendLog({
           output: 'foo'
