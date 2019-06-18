@@ -1,7 +1,6 @@
 namespace :stack do
   task :environment do
     require_relative '../../deployment'
-    CDO.chef_local_mode = rack_env?(:adhoc) ? !ENV['CHEF_SERVER'] : false
     ENV['TEMPLATE'] ||= 'cloud_formation_stack.yml.erb'
     ENV['CDN_ENABLED'] ||= '1' unless rack_env?(:adhoc)
     ENV['DOMAIN'] ||= rack_env?(:adhoc) ? 'cdn-code.org' : 'code.org'
@@ -39,7 +38,6 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
         ENV['TEMPLATE'] ||= "#{stack}.yml.erb"
         ENV['STACK_NAME'] ||= 'lambda' if stack == :lambda
         ENV['STACK_NAME'] ||= "#{stack.upcase}#{"-#{rack_env}" if [:ami, :data].include? stack}"
-        CDO.chef_local_mode = true if rack_env? :adhoc
         require 'cdo/aws/cloud_formation'
       end
 

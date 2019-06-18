@@ -59,6 +59,7 @@ module GitUtils
   end
 
   def self.git_revision_short(project_directory=Dir.pwd)
+    return nil if project_directory.nil?
     # Cron jobs execute as root and may not be in the current project directory, preventing git commands from working.
     # Eventually other (or all) GitUtils methods may need to explicitly change to the project root, but currently
     # only this call to a GitUtils method is executed when a cron job runs:
