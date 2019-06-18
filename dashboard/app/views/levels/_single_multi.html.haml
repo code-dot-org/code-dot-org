@@ -21,7 +21,7 @@
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
 
   - localized_questions = level.localized_property(:questions)
-  - if localized_questions.count
+  - if localized_questions.any?
     .multi-question!= render_multi_or_match_content(localized_questions[0]["text"])
 
   - answers_class = 'answers ' + (question_content_blank ? 'question-content-blank' : '')
