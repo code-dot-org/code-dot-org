@@ -492,7 +492,7 @@
     "https://studio.code.org/s/pre-express-2019/stage/10/puzzle/9": {
       "courseB_artist_loops7_a": "This challenge uses **4** loops, one right after another!",
       "courseB_artist_loops7_b": "Notice that every loop makes a stair pattern that goes a different direction.\n\n[][0]",
-      "courseB_artist_loops7_c": "The loops should do this:\n\n-   Loop 1\n\n    -   Right\n    -   Down\n\n-   Loop 2\n\n    -   Right\n    -   Up\n\n-   Loop 3\n\n    -   Left\n    -   Up\n\n-   Loop 4\n    -   Left\n    -   Down"
+      "courseB_artist_loops7_c": "The loops should do this:\n\n-   Loop 1\n    -   Right\n    -   Down\n\n-   Loop 2\n    -   Right\n    -   Up\n\n-   Loop 3\n    -   Left\n    -   Up\n\n-   Loop 4\n    -   Left\n    -   Down"
     },
     "https://studio.code.org/s/pre-express-2019/stage/10/puzzle/10": {
       "courseB_artist_loops8_a": "How many times should you repeat the pattern to make the ladder?",

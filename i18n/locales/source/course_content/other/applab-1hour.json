@@ -12,7 +12,5 @@
     "https://studio.code.org/s/applab-1hour/stage/1/puzzle/15": "# Door Open\n\n<img src=\"https://images.code.org/3651f7d5306bdcfd2d9a3d9bb842626e-image-1491066778787.12.36 PM.png\" style=\"width:200px;float:right\">\n\nGetting close! Lets set up the door to get ready for opening it.\n\n# Do This\n\n-   Add image for the outdoors\n-   Give it a good ID (maybe _outside_)\n-   Hide the image for the outdoors (It will be shown when door opens)",
     "https://studio.code.org/s/applab-1hour/stage/1/puzzle/16": "# Door Open\n\n<img src=\"https://images.code.org/57407cb51f50e08ecddb8ce7d2d89157-image-1491065952915.58.58 PM.png\" style=\"width:200px;float:right\">\n\nOpen the door if they have the key!\n\n# Do This\n\n-   Add an `onEvent` block for clicking on the door\n-   Add an `if` statement inside the `onEvent` to check if the key position has moved to the bottom of the screen\n    -   Add an if statement\n    -   In the if statement add the `==`\n    -   On one side of the `==` put the x position you move the key to when it is clicked\n    -   On the other side add the `getXPosition()` block - The ID for that should be the ID of your key!\n-   Inside the `if` statement use `showElement` to show the hidden outdoors image if they got the key",
     "https://studio.code.org/s/applab-1hour/stage/1/puzzle/17": "# You've done it!\n\nYou made a room escape! Now its time to customize it. \n\nConsider:\n\n-   Add more style to the room\n-   Adding more things users can interact with in the room\n-   Try to make your secret code random\n-   Adding more rooms"
-  },
-  "authored_hints": null,
-  "short_instructions": null
+  }
 }

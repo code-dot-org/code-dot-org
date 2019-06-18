@@ -110,6 +110,7 @@ export default project => {
         // differentiate from manual reports.
         if (abuseScore === 15) {
           $('.abusive-image').show();
+          $('.image-mod-controls').show();
         } else {
           $('.reported-abuse').show();
         }

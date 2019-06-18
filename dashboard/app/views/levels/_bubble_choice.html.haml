@@ -1,0 +1,6 @@
+%div#bubble-choice
+
+- data = {}
+- data[:level] = @level.summarize(script_level: @script_level)
+
+%script{src: minifiable_asset_path('js/levels/_bubble_choice.js'), data: {bubblechoice: data.to_json}}
