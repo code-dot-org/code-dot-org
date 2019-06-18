@@ -933,6 +933,7 @@
   express-2018_name: Curso Express (2018)
   pre-express-2018_name: Curso Express para prelectores (2018)
   express-2019_name: Curso Express (2019)
+  pre-express-2019_name: Curso Express para prelectores (2019)
   cspunit2_name: "(anterior) Unidad 2: Internet"
   cspunit3_name: "(anterior) Unidad 3: Programación"
   cspunit4_name: "(anterior) Unidad 4: Datos"
@@ -1069,6 +1070,12 @@
   coursed-2018_gradelevel: Edades de 7 a 11 años
   coursee-2018_gradelevel: De 8 a 12 años
   coursef-2018_gradelevel: De 9 a 13 años
+  coursea-2019_gradelevel: De 4 a 7 años
+  courseb-2019_gradelevel: De 5 a 8 años
+  coursec-2019_gradelevel: Edades de 6 a 10 años
+  coursed-2019_gradelevel: Edades de 7 a 11 años
+  coursee-2019_gradelevel: De 8 a 12 años
+  coursef-2019_gradelevel: De 9 a 13 años
   accelerated_gradelevel: "De 10 a 18 años"
   codeorg_platformtext: "Navegadores modernos, teléfonos inteligentes, tabletas"
   codeintl_platformtext: "Navegadores modernos, teléfonos inteligentes, tabletas"
@@ -1189,6 +1196,12 @@
   coursed-2018_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2018_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos C y D, y luego avanza con funciones.
   coursef-2018_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
+  coursea-2019_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores.
+  courseb-2019_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores (similar al Curso A, pero con más variedad para estudiantes más avanzados).
+  coursec-2019_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
+  coursed-2019_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
+  coursee-2019_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos C y D, y luego avanza con funciones.
+  coursef-2019_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
   codeorg_longdescription: "Aprende los conceptos básicos de las ciencias de la computación mediante la programación del tipo arrastrar y soltar. Este tutorial autodirigido similar a un juego incluye videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs. Zombies. Aprende sobre bucles de repetición, condicionales y algoritmos básicos. Está disponible en 34 idiomas."
   codeintl_longdescription: "Aprende los conceptos básicos de las ciencias de la computación mediante la programación del tipo arrastrar y soltar. Este tutorial autodirigido similar a un juego incluye videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs. Zombies. Aprende sobre bucles de repetición, condicionales y algoritmos básicos. Está disponible en 34 idiomas."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n c&oacute;mo guiarse para llevar a cabo tareas espec&iacute;ficas sin discutirlas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
