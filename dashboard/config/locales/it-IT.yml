@@ -78,7 +78,7 @@ it:
   courses_page:
     title_student: Impara l'informatica
     title_teacher: Insegna l'informatica
-  unplugged_activity: Attività Tradizionale
+  unplugged_activity: Attività tradizionale
   of: di
   more: DI PIÙ
   less: DI MENO
@@ -766,7 +766,7 @@ it:
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
-    teacher: Vedi la soluzione
+    teacher: Vedi una soluzione
     teacher_no_solution: Smetti di vedere la soluzione
     auth_error: Non sei autorizzato a vedere la soluzione.
     submit: Aggiorna la posizione dell'Artista

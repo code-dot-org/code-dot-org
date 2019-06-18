@@ -519,8 +519,10 @@ es-MX:
         Which blocks solve the puzzle?: "¿Qué bloques resuelven el desafío?"
       CSD U3 Boolean MC:
         title: Título
+        true<br>false<br>true: verdadero<br>falso<br>verdadero
       CSD U3 Boolean MC_2018:
         title: Título
+        true<br>false<br>true: verdadero<br>falso<br>verdadero
       CSD U3 Boolean MC_2018_2019:
         title: Título
       K-1 Artist 1 Multi 1:

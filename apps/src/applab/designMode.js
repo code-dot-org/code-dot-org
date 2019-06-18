@@ -673,8 +673,23 @@ designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
 function duplicateScreen(element) {
   const sourceScreen = $(element);
   const sourceScreenId = elementUtils.getId(element);
-  const newScreen = designMode.createScreen();
-  designMode.changeScreen(newScreen);
+  const newScreenId = designMode.createScreen();
+  const newScreenElement = elementUtils.getPrefixedElementById(newScreenId);
+  const sourceElement = elementUtils.getPrefixedElementById(sourceScreenId);
+  const backgroundColor = 'backgroundColor';
+  designMode.updateProperty(
+    newScreenElement,
+    backgroundColor,
+    designMode.readProperty(sourceElement, backgroundColor)
+  );
+
+  const backgroundImage = 'screen-image';
+  const sourceImage = designMode.readProperty(sourceElement, backgroundImage);
+  if (sourceImage) {
+    designMode.updateProperty(newScreenElement, backgroundImage, sourceImage);
+  }
+
+  designMode.changeScreen(newScreenId);
 
   // Unwrap the draggable wrappers around the elements in the source screen:
   const madeUndraggable = makeUndraggable(sourceScreen.children());
@@ -699,12 +714,12 @@ function duplicateScreen(element) {
   };
   const alert = (
     <div style={styles}>
-      Duplicated <b>{sourceScreenId}</b> to <b>{newScreen}</b>
+      Duplicated <b>{sourceScreenId}</b> to <b>{newScreenId}</b>
     </div>
   );
   studioApp().displayPlayspaceNotification(alert);
 
-  return newScreen;
+  return newScreenId;
 }
 
 designMode.onCopyElementToScreen = function(element, destScreen) {

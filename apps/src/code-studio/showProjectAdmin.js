@@ -92,12 +92,16 @@ export default project => {
       }
       if (privateOrProfane) {
         $('.privacy-profanity').show();
+        var textViolation = project.privacyProfanityDetails();
+        $('.privacy-profanity-details').text(textViolation);
+        $('.privacy-profanity-details').show();
       }
       if (abusive) {
         // The image moderation service sets the abuse score to 15 to
         // differentiate from manual reports.
         if (abuseScore === 15) {
           $('.abusive-image').show();
+          $('.image-mod-controls').show();
         } else {
           $('.reported-abuse').show();
         }

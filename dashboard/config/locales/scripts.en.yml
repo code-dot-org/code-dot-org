@@ -10762,7 +10762,7 @@ en:
               description_student: Program Laurel the adventurer to collect treasure in an open cave.
               description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
             Loops in Artist:
-              name: Drawing Gardnes with Loops
+              name: Drawing Gardens with Loops
               description_student: Use patterns and loops to finish the images.
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
@@ -12042,6 +12042,8 @@ en:
               name: Practice PT Part 3
             Unit 4 Assessment:
               name: Unit 4 Assessment
+            Introduction to Apps:
+              name: Introduction to Apps
           title: 'Unit 3: Intro to App Development'
           description_audience: ''
           description_short: ''
@@ -12813,3 +12815,11 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+        csd-bugs:
+          stages:
+            Game Lab Bugs:
+              name: Game Lab Bugs
+          title: Example of Bugs for CSD Teachers
+          description_audience: ''
+          description_short: ''
+          description: ''

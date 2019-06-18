@@ -17,6 +17,10 @@ export const commands = {
     return spriteUtils.getBehaviorsForAnimation(animation);
   },
 
+  getBehaviorsForSpriteId(spriteId) {
+    return spriteUtils.getBehaviorsForSpriteId(spriteId);
+  },
+
   getSpriteIdsInUse() {
     return spriteUtils.getSpriteIdsInUse();
   }

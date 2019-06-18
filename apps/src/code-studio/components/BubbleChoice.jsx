@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import {navigateToHref} from '@cdo/apps/utils';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const THUMBNAIL_IMAGE_SIZE = 150;
@@ -31,6 +32,18 @@ const styles = {
     fontSize: 20,
     fontFamily: '"Gotham 5r"',
     color: color.teal
+  },
+  btnContainer: {
+    float: 'right'
+  },
+  btn: {
+    color: color.white,
+    backgroundColor: color.lighter_gray,
+    borderColor: color.lighter_gray
+  },
+  btnOrange: {
+    backgroundColor: color.orange,
+    borderColor: color.orange
   }
 };
 
@@ -39,14 +52,22 @@ export default class BubbleChoice extends React.Component {
     level: PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      previous_level_url: PropTypes.string,
+      next_level_url: PropTypes.string,
+      script_url: PropTypes.string,
       sublevels: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.number.isRequired,
           title: PropTypes.string.isRequired,
-          thumbnail_url: PropTypes.string
+          thumbnail_url: PropTypes.string,
+          url: PropTypes.string.isRequired
         })
       )
     })
+  };
+
+  goToUrl = url => {
+    navigateToHref(url + location.search);
   };
 
   render() {
@@ -69,10 +90,32 @@ export default class BubbleChoice extends React.Component {
               />
             )}
             <div style={styles.column}>
-              <span style={styles.title}>{sublevel.title}</span>
+              <a href={sublevel.url + location.search} style={styles.title}>
+                {sublevel.title}
+              </a>
             </div>
           </div>
         ))}
+        <div style={styles.btnContainer}>
+          <button
+            type="button"
+            onClick={() =>
+              this.goToUrl(level.previous_level_url || level.script_url)
+            }
+            style={styles.btn}
+          >
+            {i18n.back()}
+          </button>
+          <button
+            type="button"
+            onClick={() =>
+              this.goToUrl(level.next_level_url || level.script_url)
+            }
+            style={{...styles.btn, ...styles.btnOrange}}
+          >
+            {level.next_level_url ? i18n.continue() : i18n.finish()}
+          </button>
+        </div>
       </div>
     );
   }

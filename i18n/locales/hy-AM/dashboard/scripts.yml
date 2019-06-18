@@ -1572,3 +1572,16 @@ hy:
           stages:
             Graph Paper Programming:
               name: Գրաֆիկի Թուղթ Ծրագրավորում
+        csd2-pilot:
+          stages:
+            Lists:
+              name: ցուցակները
+        csd3-pilot:
+          description_short: "Programming"
+          stages:
+            Variables:
+              name: փոփոխականների
+            Conditionals:
+              name: conditionals
+            Functions:
+              name: գործառույթները
