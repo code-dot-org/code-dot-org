@@ -50,8 +50,6 @@ export default class Congrats extends Component {
         mc: 'pre2017Minecraft'
       }[tutorial] || 'other';
 
-    const isMinecraft = /mc|minecraft|hero|aquatic/.test(tutorial);
-
     return (
       <div style={styles.container}>
         <Certificate
@@ -59,7 +57,6 @@ export default class Congrats extends Component {
           certificateId={certificateId}
           randomDonorTwitter={randomDonorTwitter}
           under13={under13}
-          isMinecraft={isMinecraft}
         />
         {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
         <StudentsBeyondHoc
