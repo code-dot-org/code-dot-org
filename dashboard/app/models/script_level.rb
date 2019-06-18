@@ -403,10 +403,16 @@ class ScriptLevel < ActiveRecord::Base
   def summarize_for_teacher_panel(student)
     contained_levels = levels.map(&:contained_levels).flatten
     contained = contained_levels.any?
-    levels = contained ? contained_levels : [level]
+
+    levels = if bubble_choice?
+               [level.best_result_sublevel(student)]
+             elsif contained
+               contained_levels
+             else
+               [level]
+             end
 
     user_level = student.last_attempt_for_any(levels)
-
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
 

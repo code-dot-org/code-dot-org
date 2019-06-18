@@ -251,6 +251,26 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
+  # GET /v3/channels/<channel-id>/share-failure
+  #
+  # Get an indication of why a project can't be shared.
+  #
+  get %r{/v3/channels/([^/]+)/share-failure} do |id|
+    dont_cache
+    content_type :json
+    language = request.language
+
+    value = explain_share_failure(id)
+    intl_value = language != 'en' ?
+      explain_share_failure(id, language) : nil
+    {
+      share_failure: value,
+      intl_share_failure: intl_value,
+      language: language
+    }.to_json
+  end
+
+  #
   #
   # GET /v3/channels/<channel-id>/sharing_disabled
   #

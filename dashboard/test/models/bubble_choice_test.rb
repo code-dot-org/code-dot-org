@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class BubbleChoiceTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     create :game, name: 'BubbleChoice'
@@ -125,5 +127,13 @@ DSL
     assert_equal 2, sublevel_summary.length
     refute_nil sublevel_summary.first[:url]
     refute_nil sublevel_summary.last[:url]
+  end
+
+  test 'best_result_sublevel_id returns sublevel with highest best_result for user' do
+    student = create :student
+    create :user_level, user: student, level: @sublevel2, best_result: 100
+    create :user_level, user: student, level: @sublevel1, best_result: 20
+
+    assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student)
   end
 end
