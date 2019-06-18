@@ -5,17 +5,6 @@ SSL_HOSTNAME_MISMATCH_REGEX = /does not match the server certificate/
 
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
-  # https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml
-  PRIVATE_IPS = [
-    IPAddr.new('0.0.0.0/8'),
-    IPAddr.new('10.0.0.0/8'),
-    IPAddr.new('127.0.0.0/8'),
-    IPAddr.new('172.16.0.0/12'),
-    IPAddr.new('169.254.0.0/16'),
-    IPAddr.new('192.168.0.0/16'),
-    IPAddr.new('fd00::/8')
-  ].freeze
-
   DASHBOARD_IP_ADDRESS = IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname))
 
   def render_proxied_url(
@@ -171,6 +160,15 @@ module ProxyHelper
   # sometimes proxy to ourselves, which is an internal IP address on development / continuous integration environments).
   def allowed_ip_address?(hostname)
     host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
-    PRIVATE_IPS.none? {|private_ip| private_ip.include?(host_ip_address)} || host_ip_address == ProxyHelper.dashboard_ip_address
+    public_ip_address?(host_ip_address) || host_ip_address == ProxyHelper.dashboard_ip_address
+  end
+
+  def public_ip_address?(ip_address)
+    return (
+      !ip_address.link_local? &&
+      !ip_address.loopback? &&
+      !ip_address.private? &&
+      !IPAddr.new('0.0.0.0/8').include?(ip_address)
+    )
   end
 end
