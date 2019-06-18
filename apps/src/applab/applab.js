@@ -110,7 +110,10 @@ Applab.log = function(object, logLevel) {
   getStore().dispatch(
     jsDebugger.appendLog(
       experiments.isEnabled('react-inspector')
-        ? {output: object, fromConsoleLog: true}
+        ? {
+            output: logLevel === 'ERROR' ? {error: object} : object,
+            fromConsoleLog: true
+          }
         : object,
       logLevel
     )
