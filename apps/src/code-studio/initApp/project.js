@@ -11,6 +11,8 @@ import experiments from '@cdo/apps/util/experiments';
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 
+const NUM_ERRORS_BEFORE_WARNING = 3;
+
 var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 var hasProjectChanged = false;
@@ -85,6 +87,9 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
+var currentShareFailureEnglish = '';
+var currentShareFailureIntl = '';
+var intlLanguage = false;
 var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
@@ -346,6 +351,27 @@ var projects = (module.exports = {
    */
   hasPrivacyProfanityViolation() {
     return currentHasPrivacyProfanityViolation;
+  },
+
+  /**
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane in English.
+   */
+  privacyProfanityDetailsEnglish() {
+    return currentShareFailureEnglish;
+  },
+
+  /**
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane in an language other than English.
+   */
+  privacyProfanityDetailsIntl() {
+    return currentShareFailureIntl;
+  },
+
+  /**
+   * @returns {string} a 2-character language code if the content moderation service ran in a language other than English.
+   */
+  privacyProfanitySecondLanguage() {
+    return intlLanguage;
   },
 
   /**
@@ -946,6 +972,9 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
+              if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
+                header.showTryAgainDialog();
+              }
               return;
             }
           } else if (saveSourcesErrorCount > 0) {
@@ -1163,6 +1192,9 @@ var projects = (module.exports = {
         saveChannelErrorCount,
         err + ''
       );
+      if (saveChannelErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
+        header.showTryAgainDialog();
+      }
       return;
     } else if (saveChannelErrorCount) {
       // If the previous errors occurred due to network problems, we may not
@@ -1175,6 +1207,7 @@ var projects = (module.exports = {
       );
     }
     saveChannelErrorCount = 0;
+    header.hideTryAgainDialog();
 
     // The following race condition can lead to thumbnail URLs not being stored
     // in the project metadata:
@@ -1614,6 +1647,26 @@ function fetchSharingDisabled(resolve) {
   });
 }
 
+function fetchShareFailure(resolve) {
+  channels.fetch(current.id + '/share-failure', function(err, data) {
+    currentShareFailureEnglish =
+      data && data.share_failure && data.share_failure.content
+        ? data.share_failure.content
+        : currentShareFailureEnglish;
+    currentShareFailureIntl =
+      data && data.intl_share_failure && data.intl_share_failure.content
+        ? data.intl_share_failure.content
+        : currentShareFailureIntl;
+    intlLanguage = data && data.language ? data.language : intlLanguage;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+  });
+}
+
 function fetchPrivacyProfanityViolations(resolve) {
   channels.fetch(current.id + '/privacy-profanity', (err, data) => {
     // data.has_violation is 0 or true, coerce to a boolean
@@ -1629,7 +1682,10 @@ function fetchPrivacyProfanityViolations(resolve) {
 }
 
 function fetchAbuseScoreAndPrivacyViolations(project, callback) {
-  const deferredCallsToMake = [new Promise(fetchAbuseScore)];
+  const deferredCallsToMake = [
+    new Promise(fetchAbuseScore),
+    new Promise(fetchShareFailure)
+  ];
 
   if (project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));

@@ -1666,7 +1666,7 @@ tr-TR:
           PM.png) yalnızca bir tane kullanmanız gerekir .
         courseA_collector_loops_challenge2_a: |-
           Güney'e ilerlemeden önce patikada geriye gidebilirsin.
-           \!\[] (<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21> PM.png)
+           !\[] (<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21> PM.png)
       course1_collector_loops_challenge3:
         courseB_collector_loops_challenge1_b: "'Güney'e ilerle' ve 'hazine al' komutlarını
           dögü içinde tekrarlayarak başla. \n<xml>\n<block type=\"maze_moveSouth\"/><next>\n<block
@@ -6496,14 +6496,8 @@ tr-TR:
         courseD_bee_conditionals2_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
       courseD_bee_conditionals2_2019:
-        courseD_bee_conditionals2_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
-          Videoyu izleyin!
-        courseD_bee_conditionals2_b: Bu labirent boyunca ilerlemek için 'tekrarla'
-          veya 'yol olduğu süresince' bloklarını kullanabilirsiniz.
         courseD_bee_conditionals2_c: Petekleri kontrol etmenize gerek yok, bulutların
           altında sadece çiçekler veya boş alanlar var.
-        courseD_bee_conditionals2_hintVid2: Bu bulmacayı çözerken yardım almak için
-          bu videoyu izleyin.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
@@ -6525,15 +6519,8 @@ tr-TR:
         courseD_bee_conditionals3_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
       courseD_bee_conditionals3_2019:
-        courseD_bee_conditionals3_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
-          Videoyu izleyin!
-        courseD_bee_conditionals3_b: Arının ileriye gitmesini devam ettirmek için
-          'tekrarla' veya 'süresince' bloklarını kullanabilirsiniz. Hangisini isterseniz
-          onu kullanın!
         courseD_bee_conditionals3_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
-        courseD_bee_conditionals3_hintVid2: Bu bulmacayı çözerken yardım almak için
-          bu videoyu izleyin.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
@@ -6543,14 +6530,6 @@ tr-TR:
         courseD_bee_conditionals4_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
       courseD_bee_conditionals4_2018:
-        courseD_bee_conditionals4_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
-          Videoyu izleyin!
-        courseD_bee_conditionals4_c: '''Yol olduğu sürece'' <xml><block type="maze_untilBlocked"/></xml>
-          bloğu kullandığında ''İlerle'' ve bir çiçek var mı kontrol et. ''Eğer çiçek
-          var ise'' arı ne yapmalı?'
-        courseD_bee_conditionals4_hintVid2: Bu bulmacayı çözerken yardım almak için
-          bu videoyu izleyin.
-      courseD_bee_conditionals4_2019:
         courseD_bee_conditionals4_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
         courseD_bee_conditionals4_c: '''Yol olduğu sürece'' <xml><block type="maze_untilBlocked"/></xml>
@@ -6590,22 +6569,6 @@ tr-TR:
           nasıl kontrol edebilirim? Bir çiçek varsa ne yapıyorsun?"
         courseD_bee_conditionals5_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
-      courseD_bee_conditionals5_2019:
-        courseD_bee_conditionals5_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
-          Videoyu izleyin!
-        courseD_bee_conditionals5_a: Dikdörtgen yolun her tarafını ayrı bir yol olarak
-          düşün. "Tekrarla" bloğu içine "yol olduğu sürece" bloğu koy. Arının bütün
-          çiçekleri yoklaması gerekiyor, bunun için kaç tane yol gitmeksi gerekir?
-        courseD_bee_conditionals5_c: Bir üçgenin 3 kenarı vardır bu yüzden 'Tekrarla
-          3 kez ' döngüsü kullanman gerekir. Her tekrarda 'yol olduğu sürece' döngüsü
-          ile yol boyunca devam etmesi gerekir. Yola devam etmek için 'ilerle ' gerekir.
-          Yolda iken, arının çiçekleri denetlemesi gerekir. 'eğer çiçek ise', arı
-          'nektar almalı'.
-        courseD_bee_conditionals5_b: "'Yol olduğu süresince' bloğu içinde ilerle ve
-          bir çiçek varmı kontrol et blokları kullanmalısın. Bir çiçek olup olmadığını
-          nasıl kontrol edebilirim? Bir çiçek varsa ne yapıyorsun?"
-        courseD_bee_conditionals5_hintVid2: Bu bulmacayı çözerken yardım almak için
-          bu videoyu izleyin.
       courseD_bee_conditionals6:
         courseD_bee_conditionals6_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
@@ -6625,14 +6588,10 @@ tr-TR:
         courseD_bee_conditionals6_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
       courseD_bee_conditionals6_2019:
-        courseD_bee_conditionals6_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
-          Videoyu izleyin!
         courseD_bee_conditionals6_b: Bu durumda, bulutların altında çiçek var mı diye
           kontrol etmek zorunda değilsiniz.
         courseD_bee_conditionals6_c: Kodunu daha basit hale getirmek için kullanabileceğin
           bir döngü var mı?
-        courseD_bee_conditionals6_hintVid2: Bu bulmacayı çözerken yardım almak için
-          bu videoyu izleyin.
       courseD_bee_conditionals7:
         courseD_bee_conditionals7_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
@@ -6648,12 +6607,8 @@ tr-TR:
         courseD_bee_conditionals7_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
       courseD_bee_conditionals7_2019:
-        courseD_bee_conditionals7_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
-          Videoyu izleyin!
         courseD_bee_conditionals7_b: Eğer bulutun altında çiçek yoksa, petek olmalı;bu
           sebeple boş alan mı diye düşünmene gerek yok.
-        courseD_bee_conditionals7_hintVid2: Bu bulmacayı çözerken yardım almak için
-          bu videoyu izleyin.
       courseD_bee_conditionals8:
         courseD_bee_conditionals8_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
