@@ -63,6 +63,16 @@ class SoundListEntry extends React.Component {
     }
   }
 
+  componentDidMount() {
+    // Using the _isMounted pattern to prevent onEnded callbacks from soundsRegistry
+    // attempting to set state in this component after it's been unmounted
+    this._isMounted = true;
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+
   clickSoundControl = () => {
     if (this.state.isPlaying) {
       this.props.soundsRegistry.stopAllAudio();
@@ -81,7 +91,9 @@ class SoundListEntry extends React.Component {
       this.props.soundsRegistry.unmuteURLs();
       this.props.soundsRegistry.playURL(this.props.soundMetadata.sourceUrl, {
         onEnded: () => {
-          this.setState({isPlaying: false});
+          if (this._isMounted) {
+            this.setState({isPlaying: false});
+          }
           this.props.soundsRegistry.muteURLs();
         }
       });

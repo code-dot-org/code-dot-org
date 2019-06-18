@@ -67,7 +67,7 @@ const style = {
     boxShadow: 'none'
   },
   inspector: {
-    display: 'inline-block'
+    display: 'inline-flex'
   }
 };
 

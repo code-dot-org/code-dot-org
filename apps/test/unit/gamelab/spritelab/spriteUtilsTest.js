@@ -93,4 +93,119 @@ describe('Sprite Utils', () => {
       expect(spriteUtils.getSpriteArray('b')).to.have.members([sprite2]);
     });
   });
+
+  describe('Behaviors', () => {
+    it('Can add behaviors for a single sprite', () => {
+      const behaviorLog = [];
+      let sprite = createSprite();
+      spriteUtils.addSprite(sprite);
+      let behavior1 = {
+        func: () => behaviorLog.push('behavior 1 ran'),
+        name: 'behavior1'
+      };
+      let behavior2 = {
+        func: () => behaviorLog.push('behavior 2 ran'),
+        name: 'behavior2'
+      };
+      spriteUtils.addBehavior(sprite, behavior1);
+      spriteUtils.addBehavior(sprite, behavior2);
+      spriteUtils.runBehaviors();
+
+      expect(behaviorLog).to.deep.equal(['behavior 1 ran', 'behavior 2 ran']);
+    });
+
+    it('can add behaviors with multiple sprites', () => {
+      const behaviorLog = [];
+      let sprite1 = createSprite();
+      spriteUtils.addSprite(sprite1);
+      let sprite2 = createSprite();
+      spriteUtils.addSprite(sprite2);
+      let behavior = {
+        func: id => behaviorLog.push('behavior ran for sprite ' + id),
+        name: 'behavior'
+      };
+
+      spriteUtils.addBehavior(sprite1, behavior);
+      spriteUtils.addBehavior(sprite2, behavior);
+      spriteUtils.runBehaviors();
+
+      expect(behaviorLog).to.deep.equal([
+        'behavior ran for sprite 0',
+        'behavior ran for sprite 1'
+      ]);
+    });
+
+    it('can remove individual behaviors', () => {
+      const behaviorLog = [];
+      let sprite0 = createSprite();
+      spriteUtils.addSprite(sprite0);
+      let sprite1 = createSprite();
+      spriteUtils.addSprite(sprite1);
+      let behavior1 = {
+        func: id => behaviorLog.push('behavior 1 ran for sprite ' + id),
+        name: 'behavior1'
+      };
+      let behavior2 = {
+        func: id => behaviorLog.push('behavior 2 ran for sprite ' + id),
+        name: 'behavior2'
+      };
+
+      spriteUtils.addBehavior(sprite0, behavior1);
+      spriteUtils.addBehavior(sprite1, behavior1);
+      spriteUtils.addBehavior(sprite0, behavior2);
+      spriteUtils.addBehavior(sprite1, behavior2);
+      spriteUtils.runBehaviors();
+
+      spriteUtils.removeBehavior(sprite0, behavior1);
+      spriteUtils.removeBehavior(sprite1, behavior2);
+      spriteUtils.runBehaviors();
+
+      expect(behaviorLog).to.deep.equal([
+        // First tick:
+        'behavior 1 ran for sprite 0',
+        'behavior 1 ran for sprite 1',
+        'behavior 2 ran for sprite 0',
+        'behavior 2 ran for sprite 1',
+        // Second tick:
+        'behavior 1 ran for sprite 1',
+        'behavior 2 ran for sprite 0'
+      ]);
+    });
+
+    it('can remove all behaviors for a sprite', () => {
+      const behaviorLog = [];
+      let sprite0 = createSprite();
+      spriteUtils.addSprite(sprite0);
+      let sprite1 = createSprite();
+      spriteUtils.addSprite(sprite1);
+      let behavior1 = {
+        func: id => behaviorLog.push('behavior 1 ran for sprite ' + id),
+        name: 'behavior1'
+      };
+      let behavior2 = {
+        func: id => behaviorLog.push('behavior 2 ran for sprite ' + id),
+        name: 'behavior2'
+      };
+
+      spriteUtils.addBehavior(sprite0, behavior1);
+      spriteUtils.addBehavior(sprite1, behavior1);
+      spriteUtils.addBehavior(sprite0, behavior2);
+      spriteUtils.addBehavior(sprite1, behavior2);
+      spriteUtils.runBehaviors();
+
+      spriteUtils.removeAllBehaviors(sprite0);
+      spriteUtils.runBehaviors();
+
+      expect(behaviorLog).to.deep.equal([
+        // First tick:
+        'behavior 1 ran for sprite 0',
+        'behavior 1 ran for sprite 1',
+        'behavior 2 ran for sprite 0',
+        'behavior 2 ran for sprite 1',
+        // Second tick:
+        'behavior 1 ran for sprite 1',
+        'behavior 2 ran for sprite 1'
+      ]);
+    });
+  });
 });
