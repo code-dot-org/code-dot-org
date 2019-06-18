@@ -102,7 +102,8 @@ export default class SchoolInfoInterstitial extends React.Component {
       schoolName: existingSchoolInfo.school_name || '',
       schoolLocation: existingSchoolInfo.full_address || '',
       ncesSchoolId: initialNcesSchoolId,
-      showSchoolInfoUnknownError: false
+      showSchoolInfoUnknownError: false,
+      errors: {}
     };
   }
 
@@ -196,7 +197,51 @@ export default class SchoolInfoInterstitial extends React.Component {
     };
   }
 
+  validateNotBlank(field) {
+    // return true when the field is not blank
+    return !!(field && field.trim() !== '');
+  }
+
+  isBlank(field) {
+    // return true when field is blank
+    return !!(!field || field.trim() === '');
+  }
+
+  validateSubmission = () => {
+    const {
+      country,
+      schoolType,
+      schoolName,
+      schoolLocation,
+      ncesSchoolId
+    } = this.state;
+    this.setState(
+      {
+        errors: {
+          ...this.state.errors,
+          country: this.isBlank(country),
+          schoolType: this.isBlank(schoolType),
+          ncesSchoolId: this.isBlank(ncesSchoolId),
+          schoolName: ncesSchoolId === '-1' ? this.isBlank(schoolName) : false,
+          schoolLocation:
+            ncesSchoolId === '-1' ? this.isBlank(schoolLocation) : false
+        }
+      },
+      this.handleSchoolInfoSubmit
+    );
+  };
+
   handleSchoolInfoSubmit = () => {
+    const {errors} = this.state;
+    if (
+      errors.country ||
+      errors.schoolType ||
+      errors.ncesSchoolId ||
+      errors.schoolName ||
+      errors.schoolLocation
+    ) {
+      return;
+    }
     this.logEvent(FIREHOSE_EVENTS.SUBMIT, {
       attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
     });
@@ -292,7 +337,7 @@ export default class SchoolInfoInterstitial extends React.Component {
           </div>
           <div style={styles.bottom}>
             <Button
-              onClick={this.handleSchoolInfoSubmit}
+              onClick={this.validateSubmission}
               text={i18n.save()}
               color={Button.ButtonColor.orange}
             />
