@@ -11,6 +11,8 @@ import experiments from '@cdo/apps/util/experiments';
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 
+const NUM_ERRORS_BEFORE_WARNING = 3;
+
 var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 var hasProjectChanged = false;
@@ -946,6 +948,9 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
+              if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
+                header.showTryAgainDialog();
+              }
               return;
             }
           } else if (saveSourcesErrorCount > 0) {
@@ -1163,6 +1168,9 @@ var projects = (module.exports = {
         saveChannelErrorCount,
         err + ''
       );
+      if (saveChannelErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
+        header.showTryAgainDialog();
+      }
       return;
     } else if (saveChannelErrorCount) {
       // If the previous errors occurred due to network problems, we may not
@@ -1175,6 +1183,7 @@ var projects = (module.exports = {
       );
     }
     saveChannelErrorCount = 0;
+    header.hideTryAgainDialog();
 
     // The following race condition can lead to thumbnail URLs not being stored
     // in the project metadata:
