@@ -263,6 +263,11 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find(Button).simulate('click');
+      expect(server.requests.length).to.equal(0);
+      expect(wrapper.state('errors').country).to.equal(true);
+      expect(wrapper.state('errors').schoolType).to.equal(true);
+      expect(wrapper.state('errors').ncesSchoolId).to.equal(true);
+      /*
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -271,6 +276,7 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D='
         ].join('&')
       );
+      */
     });
 
     it('submits with only country=US', () => {
@@ -286,14 +292,18 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find(Button).simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D='
-        ].join('&')
-      );
+      expect(server.requests.length).to.equal(0);
+      expect(wrapper.state('errors').country).to.equal(false);
+      expect(wrapper.state('errors').schoolType).to.equal(true);
+      expect(wrapper.state('errors').ncesSchoolId).to.equal(true);
+      // expect(server.requests[0].requestBody).to.equal(
+      //   [
+      //     '_method=patch',
+      //     'auth_token=fake_auth_token',
+      //     'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+      //     'user%5Bschool_info_attributes%5D%5Bschool_type%5D='
+      //   ].join('&')
+      // );
     });
 
     it('submits with US and an NCES school type', () => {
@@ -310,15 +320,19 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find(Button).simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_id%5D='
-        ].join('&')
-      );
+      expect(server.requests.length).to.equal(0);
+      expect(wrapper.state('errors').country).to.equal(false);
+      expect(wrapper.state('errors').schoolType).to.equal(false);
+      expect(wrapper.state('errors').ncesSchoolId).to.equal(true);
+      // expect(server.requests[0].requestBody).to.equal(
+      //   [
+      //     '_method=patch',
+      //     'auth_token=fake_auth_token',
+      //     'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+      //     'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+      //     'user%5Bschool_info_attributes%5D%5Bschool_id%5D='
+      //   ].join('&')
+      // );
     });
 
     it('submits with US, NCES school type, and school id', () => {
@@ -362,16 +376,21 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find(Button).simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
-        ].join('&')
-      );
+      expect(wrapper.state('errors').country).to.equal(false);
+      expect(wrapper.state('errors').schoolType).to.equal(false);
+      expect(wrapper.state('errors').ncesSchoolId).to.equal(false);
+      expect(wrapper.state('errors').schoolName).to.equal(false);
+      expect(wrapper.state('errors').schoolLocation).to.equal(true);
+      // expect(server.requests[0].requestBody).to.equal(
+      //   [
+      //     '_method=patch',
+      //     'auth_token=fake_auth_token',
+      //     'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+      //     'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+      //     'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+      //     'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+      //   ].join('&')
+      // );
     });
 
     it('submits with US, NCES school type, name, address', () => {
