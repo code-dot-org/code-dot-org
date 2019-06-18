@@ -1,6 +1,12 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
-import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
+import {
+  ADAFRUIT_VID,
+  CIRCUIT_PLAYGROUND_EXPRESS_PID,
+  CIRCUIT_PLAYGROUND_PID,
+  ensureAppInstalled,
+  findPortWithViableDevice
+} from '../portScanning';
 import {
   isCodeOrgBrowser,
   isChrome,
@@ -51,7 +57,7 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectCorrectFirmware() {
-    this.boardController = new CircuitPlaygroundBoard(this.port);
+    this.boardController = new CircuitPlaygroundBoard(this.port.comName);
     return this.boardController.connectToFirmware();
   }
 
@@ -60,6 +66,21 @@ export default class SetupChecker {
    */
   detectComponentsInitialize() {
     return this.boardController.initializeComponents();
+  }
+
+  /**
+   * Placeholder function to detect device type
+   */
+  detectBoardType() {
+    if (parseInt(this.port.vendorId, 16) === ADAFRUIT_VID) {
+      if (parseInt(this.port.productId, 16) === CIRCUIT_PLAYGROUND_PID) {
+        console.log('Circuit Playground Classic');
+      } else if (
+        parseInt(this.port.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID
+      ) {
+        console.log('Circuit Playground Express');
+      }
+    }
   }
 
   /**
