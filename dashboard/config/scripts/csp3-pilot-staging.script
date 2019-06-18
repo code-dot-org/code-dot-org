@@ -2,12 +2,16 @@ family_name ''
 project_sharing true
 curriculum_umbrella 'CSP'
 
-stage 'Introduction to Apps'
-level 'CSP U3 Water Conservation Sample App', progression: 'Sample Apps'
-level 'CSP U3 Bird Quiz App', progression: 'Sample Apps'
-level 'CSP U3 Hamilton Township App', progression: 'Sample Apps'
-level 'CSP U3 Four Square App', progression: 'Sample Apps'
-level 'U1 L02 CYU MC', progression: 'Check Your Understanding'
-
-stage 'Unit 4 Assessment', lockable: true
-level 'CSP 20-21 Unit 4 Assessment', assessment: true
+stage 'Introduction to Apps', flex_category: 'REPLACE THIS'
+level 'CSP U3 Water Conservation Sample App', progression: 'App Exploration'
+level 'CSP U3 Bird Quiz App', progression: 'App Exploration'
+level 'CSP U3 Hamilton Township App', progression: 'App Exploration'
+level 'CSP U3 Four Square App', progression: 'App Exploration'
+level 'CSP U3 Monarch Butterfly App', progression: 'App Exploration'
+level 'How Computers Work part 1 CSP', progression: 'How Computers Work'
+level 'CSP U3 Water Conservation Sample App Investigate', progression: 'App Investigation'
+level 'CSP U3 Bird Quiz App Investigation', progression: 'App Investigation'
+level 'CSP U3 Hamilton Township App Investigation', progression: 'App Investigation'
+level 'CSP U3 Four Square App Investigation', progression: 'App Investigation'
+level 'CSP U3 Monarch Butterfly App Investigation', progression: 'App Investigation'
+level 'CSP U3 L1 Input Output Matching', progression: 'Check Your Understanding'
