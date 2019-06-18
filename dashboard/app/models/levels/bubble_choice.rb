@@ -103,4 +103,12 @@ ruby
 
     summary
   end
+
+  # Returns the sublevel id for a user that has the highest best_result.
+  # @param [User]
+  # @return [Integer]
+  def best_result_sublevel(user)
+    ul = user.user_levels.where(level: sublevels).max_by(&:best_result)
+    ul&.level
+  end
 end
