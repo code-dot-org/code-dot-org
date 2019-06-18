@@ -2,6 +2,8 @@ require 'test_helper'
 
 module Api::V1::Pd::Application
   class FacilitatorApplicationsControllerTest < ::ActionController::TestCase
+    self.use_transactional_test_case = true
+
     include Pd::Application::ActiveApplicationModels
     setup_all do
       @test_params = {

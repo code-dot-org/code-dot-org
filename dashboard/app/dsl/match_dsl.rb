@@ -19,12 +19,16 @@ class MatchDSL < ContentDSL
 
   def i18n_strings
     strings = super[@name]
-    %i(
-      questions
-      answers
-    ).each do |property|
-      strings[property] = @hash[property] unless @hash[property].blank?
+    @hash[:questions].each do |question|
+      text = question[:text]
+      strings[text] = text
     end
-    {@name => strings.deep_stringify_keys}
+    @hash[:answers].each do |answer|
+      text = answer[:text]
+      strings[text] = text
+      feedback = answer[:feedback]
+      strings[feedback] = feedback if feedback.present?
+    end
+    {@name => strings}
   end
 end

@@ -60,7 +60,7 @@
     "encrypted": "false",
     "tts_long_instructions_override": "These aliens are running wild!\r\n\r\nUse the sprite stops everything block to make each alien stop moving when it is clicked.",
     "project_template_level_name": "Dance Party Template 2_2019",
-     "validation_code": "if(World.frameCount > 180) {\r\n  var animations = getAnimationsInUse();\r\n  if (animations.indexOf(\"blue alien\") !== -1 &&\r\n      animations.indexOf(\"pink alien\") !== -1 &&\r\n      animations.indexOf(\"yellow alien\") !== -1 &&\r\n      animations.indexOf(\"bell\") !== -1 &&\r\n      getBehaviorsForAnimation(\"blue alien\") === 0 &&\r\n      getBehaviorsForAnimation(\"blue alien\") === 0 &&\r\n      getBehaviorsForAnimation(\"blue alien\") === 0) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}\r\n",
+     "validation_code": "if(World.frameCount > 180) {\r\n  var animations = getAnimationsInUse();\r\n  if (animations.indexOf(\"blue alien\") !== -1 &&\r\n      animations.indexOf(\"pink alien\") !== -1 &&\r\n      animations.indexOf(\"yellow alien\") !== -1 &&\r\n      animations.indexOf(\"bell\") !== -1 &&\r\n      getNumBehaviorsForAnimation(\"blue alien\") === 0 &&\r\n      getNumBehaviorsForAnimation(\"pink alien\") === 0 &&\r\n      getNumBehaviorsForAnimation(\"yellow alien\") === 0) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}\r\n",
     "soft_buttons": [
       "leftButton",
       "rightButton",

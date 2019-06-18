@@ -1,12 +1,5 @@
 # Test-only NewRelic::Agent API which records logging of events and metrics
 # without contacting the remote service.
-
-class CDOImpl
-  def newrelic_logging
-    true
-  end
-end
-
 module NewRelic
   module Agent
     def self.config
