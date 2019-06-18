@@ -1,45 +1,3 @@
-DROP VIEW if exists analysis_pii.regional_partner_stats_csp_csd_roster_view;
-
-CREATE VIEW analysis_pii.regional_partner_stats_csp_csd_roster_view
-AS
-SELECT regional_partner_id,
-             regional_partner_name,
-             school_year_trained,
-             first_name,
-             last_name,
-             studio_person_id,
-             3 as deep_dive_status, -- NA
-             email,
-             CASE
-               WHEN course = 'CS Principles' THEN 'CSP'
-               WHEN course = 'CS Discoveries' THEN 'CSD'
-             END AS course,
-             school_name,
-             students,
-             sections,
-             started::INTEGER,
-             completed::INTEGER,
-             script_most_progress::VARCHAR(10) AS most_students,
-             q1::INTEGER,
-             q2::INTEGER,
-             q3::INTEGER,
-             q4::INTEGER
-      FROM analysis_pii.regional_partner_stats_csp_csd_view
-      WHERE school_year_taught = school_year_trained OR school_year_taught is null
-      
-with no schema binding;
-
-GRANT ALL PRIVILEGES
-  ON analysis_pii.regional_partner_stats_csp_csd_roster_view
-  TO GROUP admin;
-
-GRANT SELECT
-  ON analysis_pii.regional_partner_stats_csp_csd_roster_view
-  TO GROUP reader, GROUP reader_pii;
-  
-select top 10 * from regional_partner_stats_csf_roster_view;
-
-
 -- CSF Roster Info
 CREATE OR REPLACE VIEW analysis_pii.regional_partner_stats_csf_roster_view
 AS
@@ -77,15 +35,15 @@ SELECT regional_partner_id,
           WHEN (days_to_start is not null) and (edd.user_id is null) then 0 -- definitely eligible
           WHEN edd.user_id is not null THEN 1 -- already done deep dive
           ELSE 2 -- unknown whether they have started
-          END) as deep_dive_status,
-       MAX(rps.email) email,
-       MAX(CASE WHEN csf_courses.csf_scripts IS NULL THEN 'CSF' ELSE concat ('CSF ',csf_courses.csf_scripts) END) AS course,
-       MAX(school_name) as school_name,
+          END::smallint) as deep_dive_status,
+       MAX(rps.email::varchar(128)) email,
+       MAX(CASE WHEN csf_courses.csf_scripts IS NULL THEN 'CSF' ELSE concat ('CSF ',csf_courses.csf_scripts) END::varchar(128)) AS course,
+       MAX(school_name::varchar(512)) as school_name,
        SUM(students_in_course) as students_in_course,
        SUM(sections_of_course) as sections_of_course,
-       MAX(started)::INTEGER as started,
-       MAX(completed)::INTEGER as completed,
-       MAX(stage_number_most_progress)::VARCHAR(10) AS most_students,
+       MAX(started::smallint) as started,
+       MAX(completed::smallint) as completed,
+       MAX(stage_number_most_progress::VARCHAR(10)) AS most_students,
        NULL::INTEGER AS q1,
        NULL::INTEGER AS q2,
        NULL::INTEGER AS q3,
@@ -116,3 +74,44 @@ GRANT SELECT
   ON analysis_pii.regional_partner_stats_csf_roster_view
   TO GROUP reader, GROUP reader_pii;
   
+-- 
+-- DROP VIEW if exists analysis_pii.regional_partner_stats_csp_csd_roster_view;
+-- 
+-- CREATE VIEW analysis_pii.regional_partner_stats_csp_csd_roster_view
+-- AS
+-- SELECT regional_partner_id,
+--              regional_partner_name,
+--              school_year_trained,
+--              first_name,
+--              last_name,
+--              studio_person_id,
+--              3 as deep_dive_status, -- NA
+--              email,
+--              CASE
+--                WHEN course = 'CS Principles' THEN 'CSP'
+--                WHEN course = 'CS Discoveries' THEN 'CSD'
+--              END AS course,
+--              school_name,
+--              students,
+--              sections,
+--              started::INTEGER,
+--              completed::INTEGER,
+--              script_most_progress::VARCHAR(10) AS most_students,
+--              q1::INTEGER,
+--              q2::INTEGER,
+--              q3::INTEGER,
+--              q4::INTEGER
+--       FROM analysis_pii.regional_partner_stats_csp_csd_view
+--       WHERE school_year_taught = school_year_trained OR school_year_taught is null
+--       
+-- with no schema binding;
+-- 
+-- GRANT ALL PRIVILEGES
+--   ON analysis_pii.regional_partner_stats_csp_csd_roster_view
+--   TO GROUP admin;
+-- 
+-- GRANT SELECT
+--   ON analysis_pii.regional_partner_stats_csp_csd_roster_view
+--   TO GROUP reader, GROUP reader_pii;
+-- 
+--   
