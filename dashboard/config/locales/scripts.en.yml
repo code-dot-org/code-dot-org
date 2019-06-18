@@ -12044,6 +12044,8 @@ en:
               name: Unit 4 Assessment
             Introduction to Apps:
               name: Introduction to Apps
+            Introduction to Design Mode:
+              name: Introduction to Design Mode
           title: 'Unit 3: Intro to App Development'
           description_audience: ''
           description_short: ''
@@ -12820,6 +12822,14 @@ en:
             Game Lab Bugs:
               name: Game Lab Bugs
           title: Example of Bugs for CSD Teachers
+          description_audience: ''
+          description_short: ''
+          description: ''
+        maddie-test:
+          stages:
+            stage 1:
+              name: stage 1
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

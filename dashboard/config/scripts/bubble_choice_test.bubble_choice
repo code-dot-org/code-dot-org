@@ -1,0 +1,8 @@
+name 'bubble-choice-test'
+title 'Bubble Choice!'
+description 'level description here'
+
+sublevels
+level 'CSD U3 drawing practice 1'
+level 'CSD U3 drawing practice 2'
+level 'CSD U3 drawing practice 3'
