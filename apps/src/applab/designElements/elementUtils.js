@@ -227,3 +227,56 @@ export function setDefaultBorderStyles(element, options = {}) {
     element.style.borderRadius = '0px';
   }
 }
+
+/**
+ * Parse a padding string and return the total horizontal padding and
+ * total vertical padding.
+ * @param {string} cssPaddingString value from element.style.padding
+ */
+export function calculatePadding(cssPaddingString) {
+  const paddingRegEx = /\s*?(\d*)(px)?\s*(\d*)?(px)?\s*(\d*)?(px)?\s*(\d*)?(px)?\s*?/i;
+  const paddingResult = paddingRegEx.exec(cssPaddingString);
+
+  const paddingValues = [
+    parseInt(paddingResult[1], 10),
+    parseInt(paddingResult[3], 10),
+    parseInt(paddingResult[5], 10),
+    parseInt(paddingResult[7], 10)
+  ];
+  for (
+    var validPaddingValues = 0;
+    validPaddingValues < paddingValues.length;
+    validPaddingValues++
+  ) {
+    if (isNaN(paddingValues[validPaddingValues])) {
+      break;
+    }
+  }
+
+  // See https://developer.mozilla.org/en-US/docs/Web/CSS/padding#Syntax
+  let horizontalPadding, verticalPadding;
+  switch (validPaddingValues) {
+    case 1:
+      horizontalPadding = verticalPadding = 2 * paddingValues[0];
+      break;
+    case 2:
+      verticalPadding = 2 * paddingValues[0];
+      horizontalPadding = 2 * paddingValues[1];
+      break;
+    case 3:
+      verticalPadding = paddingValues[0] + paddingValues[2];
+      horizontalPadding = 2 * paddingValues[1];
+      break;
+    case 4:
+      verticalPadding = paddingValues[0] + paddingValues[2];
+      horizontalPadding = paddingValues[1] + paddingValues[3];
+      break;
+    default:
+      horizontalPadding = verticalPadding = 0;
+      break;
+  }
+  return {
+    horizontalPadding,
+    verticalPadding
+  };
+}

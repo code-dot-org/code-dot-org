@@ -26,7 +26,6 @@
 class CurriculumReference < Level
   serialized_attrs %w(
     reference
-    teacher_markdown
   )
 
   validates :reference, format: {

@@ -974,7 +974,7 @@ module Api::V1::Pd
         "Please indicate which workshops you are able to attend.",
         "If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?",
         "How far would you be willing to travel to academic year workshops?",
-        "Are you interested in this online program for school year workshops?",
+        "Do you want to be considered for the virtual academic year workshop track?",
         "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
@@ -1124,17 +1124,16 @@ module Api::V1::Pd
 
       # create some applications to be included in fit_cohort
       create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :accepted
-      create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :waitlisted
+      create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :withdrawn
+      # no workshop
+      create FACILITATOR_APPLICATION_FACTORY, :locked, status: :accepted
 
-      #create some applications that won't be included in fit_cohort
+      # create some applications that won't be included in fit_cohort
       # not locked
       create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id, status: :accepted
 
-      # not accepted or waitlisted
-      create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id
-
-      # no workshop
-      create FACILITATOR_APPLICATION_FACTORY
+      # not accepted or withdrawn
+      create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id, status: :waitlisted
 
       sign_in @workshop_admin
 

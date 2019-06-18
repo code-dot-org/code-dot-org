@@ -327,9 +327,7 @@ module Pd::Application
     end
 
     def friendly_scholarship_status
-      if scholarship_status
-        Pd::ScholarshipInfoConstants::SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
-      end
+      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course)&.friendly_status_name
     end
 
     def allow_sending_principal_email?
@@ -558,7 +556,6 @@ module Pd::Application
 
       # Section 4
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
-      meets_minimum_criteria_scores[:willing_to_travel] = responses[:willing_to_travel] != options[:willing_to_travel].last ? YES : NO
 
       # Section 5
       bonus_points_scores[:race] = ((responses[:race] || []) & (options[:race].values_at(1, 2, 4, 5))).any? ? 2 : 0

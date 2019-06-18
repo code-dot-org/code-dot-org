@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class TeacherDashboardControllerTest < ActionController::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     @teacher = create :teacher
     @sections = create_list :section, 3, user: @teacher

@@ -5,6 +5,8 @@
  *
  */
 import $ from 'jquery';
+import cookies from 'js-cookie';
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
@@ -39,6 +41,7 @@ import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {actions, reducers} from './redux/applab';
 import {add as addWatcher} from '../redux/watchedExpressions';
+import {setApplabLibraries} from '../code-studio/components/applabLibraryRedux';
 import {changeScreen} from './redux/screens';
 import * as applabConstants from './constants';
 const {ApplabInterfaceMode} = applabConstants;
@@ -97,10 +100,21 @@ var jsInterpreterLogger = null;
  */
 Applab.log = function(object, logLevel) {
   if (jsInterpreterLogger) {
-    jsInterpreterLogger.log(object);
+    jsInterpreterLogger.log(
+      experiments.isEnabled('react-inspector')
+        ? {output: object, fromConsoleLog: true}
+        : object
+    );
   }
 
-  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  getStore().dispatch(
+    jsDebugger.appendLog(
+      experiments.isEnabled('react-inspector')
+        ? {output: object, fromConsoleLog: true}
+        : object,
+      logLevel
+    )
+  );
 };
 consoleApi.setLogMethod(Applab.log);
 
@@ -175,6 +189,7 @@ function shouldRenderFooter() {
 Applab.makeFooterMenuItems = function(isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
+      key: 'how-it-works',
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/view'),
       newWindow: true
@@ -185,6 +200,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
         link: '/projects/applab/new'
       },
     {
+      key: 'report-abuse',
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
@@ -200,6 +216,20 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
       newWindow: true
     }
   ].filter(item => item);
+
+  var userAlreadyReportedAbuse =
+    cookies.get('reported_abuse') &&
+    _.includes(
+      JSON.parse(cookies.get('reported_abuse')),
+      project.getCurrentId()
+    );
+
+  if (userAlreadyReportedAbuse) {
+    _.remove(footerMenuItems, function(menuItem) {
+      return menuItem.key === 'report-abuse';
+    });
+  }
+
   return footerMenuItems;
 };
 
@@ -293,6 +323,11 @@ Applab.getHtml = function() {
   return Applab.levelHtml;
 };
 
+Applab.getLibraries = function() {
+  var libraries = getStore().getState().applabLibrary.libraries;
+  return libraries.length ? libraries : undefined;
+};
+
 /**
  * Sets Applab.levelHtml as well as #designModeViz contents.
  * designModeViz is the source of truth for the app's HTML.
@@ -371,6 +406,8 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
+  config.getLibrary = getLibrary;
+  config.codeContainsError = codeContainsError;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -381,13 +418,9 @@ Applab.init = function(config) {
   if (config.level.editBlocks) {
     header.showLevelBuilderSaveButton(() => ({
       start_blocks: Applab.getCode(),
-      start_html: Applab.getHtml()
+      start_html: Applab.getHtml(),
+      start_libraries: Applab.getLibraries()
     }));
-  } else if (!config.channel) {
-    throw new Error(
-      'Cannot initialize App Lab without a channel id. ' +
-        'You may need to sign in to your code studio account first.'
-    );
   }
   Applab.channelId = config.channel;
   Applab.storage = initFirebaseStorage({
@@ -513,6 +546,7 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
+    getStore().dispatch(setApplabLibraries(config.level.startLibraries));
     Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
     Applab.storage.populateKeyValue(
       level.dataProperties,
@@ -543,11 +577,7 @@ Applab.init = function(config) {
 
   config.enableShowLinesCount = false;
 
-  // In Applab, we want our embedded levels to look the same as regular levels,
-  // just without the editor
-  config.centerEmbedded = false;
   config.wireframeShare = true;
-  config.responsiveEmbedded = true;
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
@@ -658,6 +688,50 @@ Applab.init = function(config) {
       config.dropletConfig,
       disabledMakerDropletConfig
     );
+  }
+
+  let customFunctions = level.codeFunctions
+    ? level.codeFunctions['customFunctions']
+    : undefined;
+  if (customFunctions) {
+    Object.keys(customFunctions).map(key => {
+      customFunctions[key]['func'] = key;
+      config.dropletConfig.blocks.push(customFunctions[key]);
+      level.codeFunctions[key] = null;
+    });
+  }
+
+  var librariesExist = level.libraries && level.libraries.length > 0;
+
+  if (
+    !librariesExist &&
+    level.startLibraries &&
+    level.startLibraries.length > 0
+  ) {
+    level.libraries = level.startLibraries;
+    librariesExist = true;
+  }
+
+  // Libraries should be added to redux whether the experiment is enabled or
+  // not. This prevents work from being lost if a levelbuilder toggles the
+  // experiment flag.
+  if (librariesExist) {
+    getStore().dispatch(setApplabLibraries(level.libraries));
+  }
+
+  if (experiments.isEnabled('student-libraries') && librariesExist) {
+    level.libraries.forEach(library => {
+      config.dropletConfig.additionalPredefValues.push(library.name);
+    });
+    let importedConfigs = level.libraries
+      .map(library => library.dropletConfig)
+      .reduce((a, b) => a.concat(b));
+    if (importedConfigs) {
+      Object.keys(importedConfigs).map(key => {
+        config.dropletConfig.blocks.push(importedConfigs[key]);
+        level.codeFunctions[importedConfigs[key].func] = null;
+      });
+    }
   }
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
@@ -1079,6 +1153,26 @@ Applab.onReportComplete = function(response) {
 };
 
 /**
+ * Generates a library from the functions in the project code
+ */
+function getLibrary() {
+  var temporaryInterpreter = new JSInterpreter({studioApp: studioApp()});
+  temporaryInterpreter.parse({code: studioApp().getCode()});
+  return temporaryInterpreter.getFunctionsAndParams(studioApp().getCode());
+}
+
+/**
+ * Returns true if a lint error (red gutter warning) exists in the code
+ */
+function codeContainsError() {
+  var errors = annotationList.getJSLintAnnotations().filter(annotation => {
+    return annotation.type === 'error';
+  });
+
+  return errors.length > 0;
+}
+
+/**
  * Execute the app
  */
 Applab.execute = function() {
@@ -1119,6 +1213,28 @@ Applab.execute = function() {
       jsInterpreterLogger.attachTo(Applab.JSInterpreter);
     }
     getStore().dispatch(jsDebugger.attach(Applab.JSInterpreter));
+
+    // Set up student-created libraries
+    if (experiments.isEnabled('student-libraries')) {
+      getStore()
+        .getState()
+        .applabLibrary.libraries.map(library => {
+          var functionNames = library.functionNames
+            .map(name => {
+              return name + ': ' + name;
+            })
+            .join(',');
+          var libraryClosure =
+            'var ' +
+            library.name +
+            ' = (function() {\n' +
+            library.source +
+            '\nreturn {' +
+            functionNames +
+            '};})();';
+          codeWhenRun = libraryClosure + codeWhenRun;
+        });
+    }
 
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({

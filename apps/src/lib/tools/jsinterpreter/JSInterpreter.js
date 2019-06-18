@@ -154,7 +154,7 @@ export default class JSInterpreter {
         'if(__jsCB){setCallbackRetVal(__jsCB.fn.apply(null,__jsCB.arguments || null));}}';
 
       CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = intFunc => {
-        return (...args) => {
+        let retFunc = (...args) => {
           if (this.initialized()) {
             this.eventQueue.push({
               fn: intFunc,
@@ -175,6 +175,10 @@ export default class JSInterpreter {
             }
           }
         };
+        if (intFunc && intFunc.node && intFunc.node.id) {
+          retFunc.funcName = intFunc.node.id.name;
+        }
+        return retFunc;
       };
     }
 
@@ -239,6 +243,29 @@ export default class JSInterpreter {
       this.executionError = err;
       this.handleError();
     }
+  }
+
+  /**
+   * Finds all functions within a section of code and returns on object
+   * representing them and their input parameters.
+   *
+   * @param {string} [code] - a string containing the code to be parsed for functions.
+   */
+  getFunctionsAndParams(code) {
+    this.parse({code: code});
+    var functions = this.interpreter.ast.body.filter(obj => {
+      return obj.type === 'FunctionDeclaration';
+    });
+
+    var functionsWithParms = functions.map(obj => {
+      var name = obj.id.name;
+      var params = obj.params.map(param => {
+        return param.name;
+      });
+      return {name: name, params: params};
+    });
+
+    return functionsWithParms;
   }
 
   /**

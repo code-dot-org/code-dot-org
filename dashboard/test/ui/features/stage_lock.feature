@@ -8,7 +8,6 @@ Scenario: Stage Locking Dialog
   When I open my eyes to test "stage locking"
   Then I sign in as "Teacher_bobby"
   Then I am on "http://studio.code.org/s/allthethings"
-  And I select the first section
   And I see no difference for "selected section"
   Then I open the stage lock dialog
   And I see no difference for "stage lock dialog"

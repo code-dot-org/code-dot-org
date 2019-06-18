@@ -98,7 +98,7 @@ module Pd
           able_to_attend_multiple: 'Your Regional Partner is hosting local summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend. Select all that apply.',
           travel_to_another_workshop: 'If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?',
           willing_to_travel: BASE_PAGE_LABELS[:section_4_summer_workshop][:willing_to_travel],
-          interested_in_online_program: 'Are you interested in this online program for school year workshops?',
+          interested_in_online_program: 'Do you want to be considered for the virtual academic year workshop track?',
           pay_fee: BASE_PAGE_LABELS[:section_4_summer_workshop][:pay_fee],
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
         },
@@ -266,7 +266,6 @@ module Pd
       cs_total_course_hours: YES_NO,
       plan_to_teach: YES_NO,
       committed: YES_NO,
-      willing_to_travel: YES_NO,
       principal_approval: YES_NO,
       principal_schedule_confirmed: YES_NO,
       principal_diversity_recruitment: YES_NO,
@@ -306,7 +305,6 @@ module Pd
         :cs_total_course_hours,
         :plan_to_teach,
         :committed,
-        :willing_to_travel,
         :principal_implementation
       ],
       criteria_score_questions_csp: [
@@ -315,7 +313,6 @@ module Pd
         :cs_total_course_hours,
         :plan_to_teach,
         :committed,
-        :willing_to_travel,
         :principal_implementation
       ]
     }

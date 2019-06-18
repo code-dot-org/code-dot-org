@@ -18,6 +18,7 @@ describe('Workshop Enrollment School Info', () => {
       <WorkshopEnrollmentSchoolInfo
         enrollments={[]}
         accountRequiredForAttendance={true}
+        scholarshipWorkshop={true}
         onDelete={() => {}}
         workshopCourse="CS Principles"
         workshopSubject="5-day Summer"
@@ -39,6 +40,7 @@ describe('Workshop Enrollment School Info', () => {
       <WorkshopEnrollmentSchoolInfo
         enrollments={[]}
         accountRequiredForAttendance={true}
+        scholarshipWorkshop={false}
         onDelete={() => {}}
         workshopCourse="CS Discoveries"
         workshopSubject="1-day Academic Year, Units 1 and 2"
@@ -52,6 +54,50 @@ describe('Workshop Enrollment School Info', () => {
       workshopEnrollmentSchoolInfo
         .find('th')
         .filterWhere(col => col.text().includes('Total Attendance'))
+    ).to.have.length(0);
+  });
+
+  it('shows Scholarship Teacher? column for scholarship workshop', () => {
+    let workshopEnrollmentSchoolInfo = shallow(
+      <WorkshopEnrollmentSchoolInfo
+        enrollments={[]}
+        accountRequiredForAttendance={true}
+        scholarshipWorkshop={true}
+        onDelete={() => {}}
+        workshopCourse="CS Principles"
+        workshopSubject="5-day Summer"
+        numSessions={5}
+        permissionList={new Permission(['ProgramManager'])}
+      />,
+      {context}
+    );
+
+    expect(
+      workshopEnrollmentSchoolInfo
+        .find('th')
+        .filterWhere(col => col.text().includes('Scholarship Teacher?'))
+    ).to.have.length(1);
+  });
+
+  it('does not show Scholarship Teacher? column for non-scholarship workshop', () => {
+    let workshopEnrollmentSchoolInfo = shallow(
+      <WorkshopEnrollmentSchoolInfo
+        enrollments={[]}
+        accountRequiredForAttendance={true}
+        scholarshipWorkshop={false}
+        onDelete={() => {}}
+        workshopCourse="CS Discoveries"
+        workshopSubject="1-day Academic Year, Units 1 and 2"
+        numSessions={5}
+        permissionList={new Permission(['ProgramManager'])}
+      />,
+      {context}
+    );
+
+    expect(
+      workshopEnrollmentSchoolInfo
+        .find('th')
+        .filterWhere(col => col.text().includes('Scholarship Teacher?'))
     ).to.have.length(0);
   });
 });

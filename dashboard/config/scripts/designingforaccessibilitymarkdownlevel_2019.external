@@ -1,14 +1,16 @@
 name 'DesigningForAccessibilityMarkdownLevel_2019'
-title 'Anton the Alien'
-description 'description here'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
 markdown <<MARKDOWN
-# The Right App
+# Designing for Accessibility
 
-* Everyone uses computers these days, especially smartphones. 
-* Smartphone applications, or "apps", help people do things like talk to friends, listen to music, shop, or just explore the web.
-* It is important for programmers to understand others' needs and design apps with them in mind!
+* In the world of computer science, **accessibility** is about creating technology for people with disabilities.
+* Disabilities include physical, auditory, visual, and many others.
+* Disabilities are diverse and impact people in different ways, including how they use technology like **smartphone apps**.
+* Designing apps that are accessible for people with disabilities makes those apps better for everyone else as well!
 
-![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

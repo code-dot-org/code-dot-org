@@ -133,8 +133,8 @@ module Pd::Application
         ],
         committed_to_diversity: [YES, NO, TEXT_FIELDS[:other_please_explain]],
         pay_fee: [
-          'Yes, my school or teacher will be able to pay the full program fee.',
-          'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a scholarship.',
+          'Yes, my school will be able to pay the full program fee.',
+          'No, my school will not be able to pay the program fee. We would like to be considered for a scholarship.',
           'Not applicable: there is no fee for the program for teachers in my region.',
           'Not applicable: there is no Regional Partner in my region.'
         ]

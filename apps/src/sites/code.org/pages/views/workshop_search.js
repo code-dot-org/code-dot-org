@@ -34,7 +34,13 @@ function initializeMap() {
 function loadWorkshops() {
   markerClusterer = new MarkerClusterer(gmap, [], markerCustererOptions);
 
-  $.get('/dashboardapi/v1/pd/k5workshops')
+  const deepDiveOnly = $('#properties').attr('data-deep-dive-only');
+  let url = '/dashboardapi/v1/pd/k5workshops';
+  if (deepDiveOnly !== undefined) {
+    url += '?deep_dive_only=1';
+  }
+
+  $.get(url)
     .done(function(data) {
       processPdWorkshops(data);
     })

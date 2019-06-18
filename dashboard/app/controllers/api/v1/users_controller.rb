@@ -55,15 +55,6 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     head :no_content
   end
 
-  # POST /api/v1/users/<user_id>/post_ui_tip_dismissed
-  def post_ui_tip_dismissed
-    property_name = "ui_tip_dismissed_" + params[:tip]
-    @user.send("#{property_name}=", true)
-    @user.save
-
-    render status: 200, json: {set: property_name}
-  end
-
   # POST /api/v1/users/<user_id>/postpone_census_banner
   def postpone_census_banner
     today = Date.today

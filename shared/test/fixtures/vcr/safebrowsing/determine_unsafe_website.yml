@@ -15,19 +15,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sat, 02 Mar 2019 01:01:10 GMT
+      - Fri, 10 May 2019 20:35:46 GMT
       Server:
       - ESF
       Cache-Control:
       - private
       X-Xss-Protection:
-      - 1; mode=block
+      - '0'
       X-Frame-Options:
       - SAMEORIGIN
       X-Content-Type-Options:
       - nosniff
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="44,43,39"
+      - quic=":443"; ma=2592000; v="46,44,43,39"
       Transfer-Encoding:
       - chunked
     body:
@@ -47,5 +47,5 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Sat, 02 Mar 2019 01:01:10 GMT
+  recorded_at: Fri, 10 May 2019 20:35:46 GMT
 recorded_with: VCR 3.0.3

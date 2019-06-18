@@ -45,4 +45,15 @@ class UserScript < ActiveRecord::Base
   def empty?
     started_at.nil? && assigned_at.nil?
   end
+
+  # Given a set of scripts, look up which of them a user has progress in, using a single query.
+  def self.lookup_hash(for_user, script_names)
+    filtered_progress = Set.new UserScript.
+      joins(:script).
+      where(user: for_user, scripts: {name: script_names}).
+      pluck(:name)
+    script_names.map do |name|
+      [name, filtered_progress.include?(name)]
+    end.to_h
+  end
 end
