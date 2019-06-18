@@ -57,7 +57,7 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
             color={Button.ButtonColor.orange}
             className="no-mc"
             isPending={isSavePending}
-            pendingText={'saving...'}
+            pendingText={i18n.retryProjectSavePending()}
             id="try-again-save-button"
           />
         </DialogFooter>

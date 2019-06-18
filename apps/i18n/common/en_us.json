@@ -1167,6 +1167,7 @@
   "retryProjectSaveDialogHeader": "Error saving your project",
   "retryProjectSaveDialogBody": "We can't save your project right now. Please check your internet connection and then click 'Try again' to keep working.",
   "retryProjectSaveDialogButton": "Try again",
+  "retryProjectSavePending": "saving...",
   "review": "Review",
   "reviewCode": "Review Code",
   "reviewDocuments": "Review documents",
