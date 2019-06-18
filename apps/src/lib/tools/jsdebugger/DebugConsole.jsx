@@ -180,12 +180,12 @@ export default connect(
             }
           } catch (err) {
             this.props.showReactInspector
-              ? this.appendLog({output: String(err)})
+              ? this.appendLog({output: {error: String(err)}})
               : this.appendLog('< ' + String(err));
           }
         } else {
           this.props.showReactInspector
-            ? this.appendLog({output: '(not running)'})
+            ? this.appendLog({output: {error: '(not running)'}})
             : this.appendLog('< (not running)');
         }
       } else if (e.keyCode === KeyCodes.UP) {
@@ -264,7 +264,12 @@ export default connect(
             return <div key={i}>&gt; {rowValue.input}</div>;
           } else if (this.isValidOutput(rowValue)) {
             if (rowValue.fromConsoleLog) {
+              if (rowValue.output.error) {
+                return <div key={i}>{rowValue.output.error}</div>;
+              }
               return <Inspector key={i} data={rowValue.output} />;
+            } else if (rowValue.output.error) {
+              return <div key={i}>&lt; {rowValue.output.error}</div>;
             } else {
               return (
                 <div key={i}>
