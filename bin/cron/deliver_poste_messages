@@ -7,6 +7,7 @@ require 'base64'
 require 'nokogiri'
 require src_dir 'forms'
 require src_dir 'abort_email_error'
+require 'honeybadger/ruby'
 
 BATCH_SIZE = 500_000
 MAX_THREAD_COUNT = 50
@@ -246,7 +247,16 @@ class Deliverer
   end
 
   def parse_addresses(string)
-    string.split(', ').map do |user_string|
+    # Split on the commas separating separate email addresses, but don't
+    # split when they're inside a pair of double-quotes.
+    # e.g. This will split
+    #        "\"friendly, name\" <name1@code.org>, \"other name\" <name2@code.org>"
+    #      into
+    #        ["\"friendly, name\" <name1@code.org>", " \"other name\" <name2@code.org>"]
+    #
+    # Adapted from https://stackoverflow.com/a/18893443.
+    # Note that this is still problematic when a single double-quote appears.
+    string.split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/).map do |user_string|
       if user_string.include? '<'
         user_string =~ /^([^<]*)<([^>]*)>$/
         {name: $1.strip, email: $2}
@@ -318,14 +328,23 @@ def main
       begin
         deliverer.send delivery
       rescue Net::SMTPSyntaxError, Net::SMTPFatalError => e
-        CDO.log.info "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        )
         deliverer.reset_connection
         sent_at = 0
       rescue AbortEmailError => e
-        CDO.log.info "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+        )
         sent_at = 0
       rescue => e
-        CDO.log.info "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        )
         raise
       end
 
