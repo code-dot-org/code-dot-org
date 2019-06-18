@@ -5,12 +5,12 @@
 
   help_items = HelpHeader.get_help_contents(options)
 
-#help-button{class: "hide-mobile"}
-  #help-contents{style: 'display: none'}
+.help_button{class: "hide-mobile", id: "help-button"}
+  .help_contents{style: 'display: none', id: "help-contents"}
     - help_items.each do |entry|
       %a.linktag{id: entry[:id], href: entry[:url]}=entry[:title]
 
-  %i#help-icon.clicktag{class: "fa fa-question-circle hide-mobile"}
+  %i.help_icon.clicktag{class: "fa fa-question-circle hide-mobile", id: "help-icon"}
     %span{style: "pointer-events: none"}
 
 

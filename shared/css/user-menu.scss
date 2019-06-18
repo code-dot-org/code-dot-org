@@ -1,6 +1,6 @@
 @import 'color';
 @import 'font';
-.user_menu, .create_menu, #help-button {
+.user_menu, .create_menu, .help_button {
   user-select: none;
   height: 38px;
 
@@ -21,7 +21,7 @@
     margin-top: -3px;
   }
 
-  .user_options, .create_options, #help-contents {
+  .user_options, .create_options, .help_contents {
     position: absolute;
     top: 55px;
     right: 55px;
@@ -76,12 +76,10 @@
     &.hide-responsive-menu {
       display: none;
     }
-
-
   }
 }
 
-#help-button {
+.help_button {
   padding-left: 15px;
   padding-top: 4px;
 
@@ -102,7 +100,7 @@
   z-index: 99;
   position: relative;
 
-  #help-icon {
+  .help_icon {
     padding: 9px 0 16px 0;
     font-size: 26px;
     color: $white;
@@ -113,7 +111,7 @@
     text-decoration: none;
   }
 
-  #help-contents {
+  .help_contents {
     z-index: 100001;
     text-align: left;
     white-space: nowrap;
@@ -164,5 +162,3 @@
     }
   }
 }
-
-
