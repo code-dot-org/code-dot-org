@@ -258,9 +258,16 @@ class ChannelsApi < Sinatra::Base
   get %r{/v3/channels/([^/]+)/share-failure} do |id|
     dont_cache
     content_type :json
+    language = request.language
 
     value = explain_share_failure(id)
-    {share_failure: value}.to_json
+    intl_value = language != 'en' ?
+      explain_share_failure(id, language) : nil
+    {
+      share_failure: value,
+      intl_share_failure: intl_value,
+      language: language
+    }.to_json
   end
 
   #

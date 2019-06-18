@@ -87,7 +87,9 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
-var currentShareFailure = '';
+var currentShareFailureEnglish = '';
+var currentShareFailureIntl = '';
+var intlLanguage = false;
 var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
@@ -352,10 +354,24 @@ var projects = (module.exports = {
   },
 
   /**
-   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane.
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane in English.
    */
-  privacyProfanityDetails() {
-    return currentShareFailure;
+  privacyProfanityDetailsEnglish() {
+    return currentShareFailureEnglish;
+  },
+
+  /**
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane in an language other than English.
+   */
+  privacyProfanityDetailsIntl() {
+    return currentShareFailureIntl;
+  },
+
+  /**
+   * @returns {string} a 2-character language code if the content moderation service ran in a language other than English.
+   */
+  privacyProfanitySecondLanguage() {
+    return intlLanguage;
   },
 
   /**
@@ -1633,10 +1649,15 @@ function fetchSharingDisabled(resolve) {
 
 function fetchShareFailure(resolve) {
   channels.fetch(current.id + '/share-failure', function(err, data) {
-    currentShareFailure =
+    currentShareFailureEnglish =
       data && data.share_failure && data.share_failure.content
         ? data.share_failure.content
-        : currentShareFailure;
+        : currentShareFailureEnglish;
+    currentShareFailureIntl =
+      data && data.intl_share_failure && data.intl_share_failure.content
+        ? data.intl_share_failure.content
+        : currentShareFailureIntl;
+    intlLanguage = data && data.language ? data.language : intlLanguage;
     resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't

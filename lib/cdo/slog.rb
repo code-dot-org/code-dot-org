@@ -29,7 +29,7 @@ module Slog
       @secret = params[:secret]
       @api_host = params[:api_host] || 'pull.logentries.com'
       @log_name = params[:log_name] || 'slog'
-      @hosts = params[:hosts] || CDO.hostnames_by_env(params[:env] || rack_env)
+      @hosts = params[:hosts]
       @log_keys = {}
     end
 
