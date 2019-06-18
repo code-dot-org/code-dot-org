@@ -216,17 +216,23 @@
     "encrypted_examples": "4tKoUm/mPfsFIRZYx3hyKRDbxdm+xwm3AlsrrsSh/1BlVzo08c4FAVyp8Lif\nnaninvCPXshYMczKBcNGtcZx9w==\n",
     "parent_level_id": 12395,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/maker-toolkit/data-and-change-events/",
       "/docs/concepts/maker-toolkit/analog-sensors/"
     ],
     "map_reference": "/docs/concepts/maker-toolkit/changing-sensor-scale/",
-    "mini_rubric": "false"
+    "mini_rubric": "true",
+    "encrypted": "false",
+    "rubric_key_concept": "Develop a program that responds to a variety of hardware input, including those the user does and doesn’t actively control.  Recognize the need for various types of input, both analog and digital, and represent the values of those inputs in various ways.",
+    "rubric_performance_level_1": "The program displays a wide range of colors in response to changes in light, temperature, and sound.  There is no unnecessary code in the program.",
+    "rubric_performance_level_2": "The program detects changes in light, temperature and sounds, and visibly changes color in response to at least one of these sensors.",
+    "rubric_performance_level_3": "The program changes color and uses at least of the three analog sensors to detect changes in the environment.",
+    "rubric_performance_level_4": "The program does use the analog sensors or does not change colors at all.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 23:01:06 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:10:46 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:18:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 23:00:47 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 03:05:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-20 23:01:06 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:10:46 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:18:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 23:00:47 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 03:05:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-29 05:11:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-29 05:57:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

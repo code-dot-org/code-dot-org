@@ -10,7 +10,9 @@
 %legend.control-legend.levelTypeHeader
   Game Lab Options
 
-= render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'gamelab'}
+// See gamelab_jr.html.haml for examples for Sprite Lab
+- if !@level.is_a?(GamelabJr)
+  = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'gamelab'}
 
 %legend.control-legend{data: {toggle: "collapse", target: "#debuggingTools"}}
   Debugging

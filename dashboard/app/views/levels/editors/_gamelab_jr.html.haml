@@ -1,5 +1,12 @@
 %legend.control-legend.levelTypeHeader
   Sprite Lab Options
+
+// Dance lab is a subset of GamelabJr aka Sprite Lab levels
+- if @level.is_a?(Dancelab)
+  = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'dance'}
+- elsif @level.is_a?(GamelabJr)
+  = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'spritelab'}
+
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
 

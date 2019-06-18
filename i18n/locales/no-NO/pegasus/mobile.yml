@@ -899,9 +899,6 @@
   coursee_name: "Kurs E"
   coursef-draft_name: Kurs F
   coursef_name: "Kurs F"
-  accelerated_name: "Framskyndet kurs"
-  pre-express_name: Hurtigprogram for de som ikke leser
-  cspunit1_name: "(gammel) Enhet 1: Digital informasjon"
   cspunit2_name: "(gammel) Enhet 2: Internett"
   cspunit3_name: "(gammel) Enhet 3: Programmering"
   cspunit4_name: "(gammel) Enhet 4: Data"
@@ -1030,6 +1027,12 @@
   coursed-2018_gradelevel: 8.+ klasse
   coursee-2018_gradelevel: Alder 8–12
   coursef-2018_gradelevel: Alder 9-13
+  coursea-2019_gradelevel: Alder 4-7
+  courseb-2019_gradelevel: Alder 5-8
+  coursec-2019_gradelevel: Alder 6-10
+  coursed-2019_gradelevel: 8.+ klasse
+  coursee-2019_gradelevel: Alder 8–12
+  coursef-2019_gradelevel: Alder 9-13
   accelerated_gradelevel: "Alder 10+ (etter kurs 3)"
   codeorg_platformtext: "Moderne nettlesere, smart-telefoner, nettbrett"
   codeintl_platformtext: "Moderne nettlesere, smart-telefoner, nettbrett"

@@ -1501,3 +1501,15 @@ gl:
           stages:
             Graph Paper Programming:
               name: Programación en Papel Cadriculado
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Listas
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións

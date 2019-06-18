@@ -1,5 +1,5 @@
 ---
-sv:
+sv-SE:
   data:
     display_name:
       CSD U2 Pair Programming Video: Par-programmering
@@ -50,7 +50,6 @@ sv:
       CSD U3 Variables Map: variabler
       CSD U3 Variables Map_2018: variabler
       CSD U3 Variables Map_2019: variabler
-      CSD U3 functions map: funktioner
       CSD U6 for loop map: "'För' loopar"
       CSD U6 for loop map_2018: "'För' loopar"
       CSD U6 for loop map_2019: "'För' loopar"
@@ -58,15 +57,9 @@ sv:
       CSD U6 functions paramters video_2018: Funktioner med parametrar
       CSD U6 functions paramters video_2019: Funktioner med parametrar
       'CSD: For Loop_2018': "'För' loopar"
-      'CSD: For Loop_2019': "'För' loopar"
       Dance_Party_extras_battle: Dansgrupper
       Dance_Party_extras_every_beat: Kvartsnoter
       Dance_Party_extras_layout: Komma in i formation
       Dance_Party_extras_on_beat: Bas, mellanregister och diskant
       Dance_Party_extras_speed: Öka takten, sakta ner
       Dance_Party_extras_visible: Vart tog de vägen?
-      MC_HOC_2017_FP10x10: Fri lek
-      MC_HOC_2017_FP10x10_RE: Fri lek
-      SG U3L07 More Subgoals: Dokumentation
-      Text Compression_2018: Text komprimering
-      Text Compression_2019: Text komprimering

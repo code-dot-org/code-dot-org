@@ -77,7 +77,8 @@ Scenario: Match levels within level group
   When I sign in as "Teacher_Lilian"
   And I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
   And I click selector ".show-handle .fa-chevron-left"
-  And I click selector ".section-student .name a" to load a new page
+  And I wait until element ".student-table" is visible
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
 
   Then match level 0 contains 3 unplaced answers
   And match level 0 contains 3 empty slots

@@ -1,4 +1,5 @@
 name 'GettingLoopy-Unplugged'
+video_key 'C1_getting_loopy'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
@@ -6,7 +7,4 @@ markdown <<MARKDOWN
 # Getting Loopy
 
 This lesson introduces the programming concept of loops through a dance activity.
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.youtube.com/embed/JoKTqHCni0M"  frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"n></iframe></div>
-
 MARKDOWN

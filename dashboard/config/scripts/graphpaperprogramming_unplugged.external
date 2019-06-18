@@ -1,9 +1,10 @@
 name 'GraphPaperProgramming-Unplugged'
+video_key 'C2_graph_paper'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
 markdown <<MARKDOWN
 # Graph Paper Programming
 
-Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
+Write algorithms that your classmates can use to draw pictures.
 MARKDOWN

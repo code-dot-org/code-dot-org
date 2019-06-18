@@ -1,5 +1,5 @@
 ---
-bg:
+bg-BG:
   data:
     display_name:
       CSD U2 Pair Programming Video: Програмиране по двойки
@@ -56,7 +56,6 @@ bg:
       CSD U3 Variables Map: Променливи
       CSD U3 Variables Map_2018: Променливи
       CSD U3 Variables Map_2019: Променливи
-      CSD U3 functions map: Функции
       CSD U6 for loop map: За циклите
       CSD U6 for loop map_2018: За циклите
       CSD U6 for loop map_2019: За циклите
@@ -64,14 +63,7 @@ bg:
       CSD U6 functions paramters video_2018: Функции с параметри
       CSD U6 functions paramters video_2019: Функции с параметри
       'CSD: For Loop_2018': За циклите
-      'CSD: For Loop_2019': За циклите
-      MC_HOC_2017_FP10x10: Свободна игра
-      MC_HOC_2017_FP10x10_RE: Свободна игра
-      Text Compression_2018: Компресия на текста
-      Text Compression_2019: Компресия на текста
       courseA_video_Stevie: Стив и Големият проект
       courseA_video_Stevie_2018: Стив и Големият проект
-      courseA_video_Stevie_2019: Стив и Големият проект
       courseB_video_Unspotted: Незабележивите бъгове
       courseB_video_Unspotted_2018: Незабележивите бъгове
-      courseB_video_Unspotted_2019: Незабележивите бъгове

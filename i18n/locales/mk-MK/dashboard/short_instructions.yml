@@ -2786,12 +2786,12 @@ mk:
         Here's a function for addition which
         takes two numbers and returns their sum. Use this Addition Block to add 3
 
-        -   6.
+        -   6\.
       Calc Circles of Eval .4: |-
         Here we've nested an Addition Block
         inside a Multiplication Block. Complete this code so it multiplies 3 by (4
 
-        -   1)
+        -   1\)
       Calc Circles of Eval 1 (copy 1): |-
         Convert this statement to \<some\_shape>
         of evaluation.
@@ -3821,7 +3821,7 @@ mk:
         \\r
 
         1.  Keep track of the number of times The Wizard is clicked.\\r
-        2.  2)
+        2.  2\)
             If The Wizard is clicked at least 10 times before Dog counts to 30, raise
             "increment" by 1 and start again.\\r
         3.  If The Wizard does not get clicked
@@ -6225,7 +6225,7 @@ mk:
       U3 - Loops - 10: |-
         Write a program that simulates the rolling of
         two dice. Roll the dice repeatedly until the sum of the dice is either 7 or
-        11.
+        11\.
       U3 - Loops - 11: |-
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

@@ -1,18 +1,14 @@
 ---
-ms:
+ms-MY:
   data:
     block_categories:
       Actions: Tindakan
-      Loops: Gelung
-      Functions: Fungsi
       Color: Warna
-      Math: Matematik
-      Logic: Logik
-      Variables: Pembolehubah
       Conditionals: Bersyarat
       Events: Acara-acara
+      Functions: Fungsi
+      Logic: Logik
+      Loops: Gelung
+      Math: Matematik
       Text: teks
-      Start: Mula
-      test: ujian
-      Name: Nama
-      Function: Fungsi
+      Variables: Pembolehubah

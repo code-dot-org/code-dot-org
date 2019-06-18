@@ -3703,6 +3703,44 @@ pt-BR:
       2:
         text: Meu nome é Maria, sou júnior na Universidade de Washington e sou engenheira
           amazônica do futuro.
+      3:
+        text: Eu amo ciência da computação porque ela incorpora resolução de problemas
+          e pensamento crítico e depois de colocar horas de trabalho em algo você
+          pode obter algo muito legal e gratificante.
+      4:
+        text: Até agora, você teve a chance de dançar com alguns tipos diferentes
+          de dançarinos e os programou para fazer diferentes tipos de movimentos de
+          dança. Mas como esses movimentos realmente funcionam?
+      5:
+        text: Cada movimento de dança é composto de uma série de imagens chamadas
+          frames. Cada frame é um pouco diferente do anterior. Quando o programa é
+          executado, o computador mostra um frame após o outro. Eles são mostrados
+          tão rápido que parece que a dançarina está se movendo. Este é o segredo
+          por trás de toda animação.
+      6:
+        text: Não só você pode mudar os movimentos da sua dançarina, como também pode
+          alterar as propriedades da dançarina. As propriedades descrevem coisas como
+          a posição da bailarina na tela, o tamanho da bailarina e a cor da bailarina.
+      7:
+        text: Para alterar as propriedades de um dançarino, você usará um bloco de
+          set. Vamos usar um bloco para fazer nossos dançarinos parecerem menores.
+          Primeiro, arraste o bloco definido para o seu programa. Em seguida, selecione
+          a dançarina que você gostaria de alterar e digite o tamanho que aparecerá
+          na tela.
+      8:
+        text: O tamanho total é 100. Se você escolher um número menor, o bailarino
+          será menor. Quanto menor a dançarina, mais longe ela fica. Esta é uma ótima
+          maneira de fazer dançarinos de backup.
+      9:
+        text: Usando o set block, você também pode alterar as dimensões, rotação,
+          posição e cor do bailarino. Ao brincar com essas propriedades, você pode
+          fazer todos os tipos de alterações e vinculá-las a diferentes partes da
+          música.
+      10:
+        text: Lembre-se, você só pode definir as propriedades de um dançarino que
+          já existe. Certifique-se de que o bloco definido vem depois do bloco "Criar
+          uma nova dançarina". Sinta-se à vontade para experimentar ser criativo e
+          se divertir.
     hoc_dance_congrats:
       1:
         text: 'Hora do Código | Festa da Dança: Que comece a Festa!'
@@ -3727,6 +3765,16 @@ pt-BR:
         text: No final do tutorial você pode compartilhar um link para sua criação
           com seus amigos. Exercite a sua imaginação e apenas se divirta!
     mc_2018_intro:
+      1:
+        text: Olá! Você chegou na hora certa. Bem-vindo ao Voyage Aquatic. Estou prestes
+          a embarcar em uma missão para encontrar tesouros subaquáticos escondidos
+          e estou muito feliz por ter sua ajuda. Quem sabe o que vamos encontrar ao
+          longo desses misteriosos canais? Estamos destinados a conhecer nosso primeiro
+          guia em algum lugar nesta doca.
+      2:
+        text: Bem vindos, aventureiros! Para completar o Voyage Aquatic, você precisará
+          resolver uma série de quebra-cabeças usando o código. Veja como isso funciona.
+          Sua tela é dividida em três partes principais.
       3:
         text: No lado esquerdo, você verá o mundo de Minecraft.
       4:
@@ -3738,6 +3786,13 @@ pt-BR:
       6:
         text: As instruções de cada nível estão no topo da página. Clique no sinal
           de mais para mudar entre instruções longas e curtas.
+      7:
+        text: Tente arrastar blocos da caixa de ferramentas para o espaço de trabalho,
+          empilhando-os e, em seguida, clique no botão Executar para executar seus
+          comandos.
+      8:
+        text: Você pode ter que tentar algumas vezes para acertar e alguns dos quebra-cabeças
+          têm mais de uma solução, então experimente para ver o que funciona.
       9:
         text: Se você quiser tentar novamente, clique no botão de resetar para voltar
           onde você começou.
@@ -3745,6 +3800,9 @@ pt-BR:
         text: Se você precisa excluir um comando, basta arrastar o bloco da sua área
           de trabalho de volta para a caixa de ferramentas. Lembre-se de clicar em
           "Executar" para ver o seu código em ação.
+      11:
+        text: Ok, chega de brincadeira companheiro aventureiro. Vamos começar a codificar
+          para encontrar algum tesouro submarino.
     mc_2018_closing:
       2:
         text: 'Squid: Parabéns!'

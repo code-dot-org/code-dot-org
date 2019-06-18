@@ -828,8 +828,6 @@
   course2_name: "Course 2"
   course3_name: "Course 3"
   course4_name: "Course 4"
-  accelerated_name: "Accelerated Course"
-  cspunit1_name: "(old) Unit 1: Digital Information"
   cspunit2_name: "(old) Unit 2: The Internet"
   cspunit3_name: "(old) Unit 3: Programming"
   cspunit4_name: "(old) Unit 4: Data"
@@ -924,6 +922,8 @@
   coursee-2017_gradelevel: Ages 8-12
   coursed-2018_gradelevel: Grade 8+
   coursee-2018_gradelevel: Ages 8-12
+  coursed-2019_gradelevel: Grade 8+
+  coursee-2019_gradelevel: Ages 8-12
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"

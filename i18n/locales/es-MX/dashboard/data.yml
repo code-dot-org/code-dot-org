@@ -506,8 +506,8 @@ es-MX:
         mc_2018_conditionals: 'Minecraft: condicionales en viaje acuático'
         mc_2018_closing: 'Minecraft: felicitaciones en viaje acuático'
         hoc_dance_warmup: Fiesta de baile - Calentamiento
-        hoc_dance_events: Fiesta de Baile - Eventos
-        hoc_dance_properties: Fiesta de Baile - Propiedades
+        hoc_dance_events: Fiesta de baile - Eventos
+        hoc_dance_properties: Fiesta de baile - Propiedades
         hoc_dance_congrats: Fiesta de baile - ¡Que comience la fiesta!
         c_and_c_great_to_create: Crear y jugar limpio es lo mejor
         c_and_c_digital_sharing: Colaboración digital
@@ -530,6 +530,10 @@ es-MX:
         csd_applab_parameters: Funciones con parámetros
         csd_applab_loops: Bucles en el Laboratorio de aplicaciones
         csd_problem_solving_process: El proceso de resolución de problemas
+        CSF_Going_Places_Safely: Mi barrio en línea
+        CSF_SpriteLab_Intro_v2: Presentamos el Laboratorio de sprites
+        CSF_Spritelab_MakeSprite_v2: Cómo crear un sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites en acción
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

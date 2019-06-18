@@ -1705,6 +1705,8 @@
               name: Internett
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Dansefest
         andrea-test:
           stages:
             'null':
@@ -1802,3 +1804,17 @@
           stages:
             Graph Paper Programming:
               name: Millimeterpapirprogrammering
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Lister
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner

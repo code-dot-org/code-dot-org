@@ -462,4 +462,98 @@ class SchoolInfoTest < ActiveSupport::TestCase
       end
     end
   end
+
+  test 'complete if all school info is provided' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_info.school_name = 'Primary School'
+    school_info.full_address = '123 Sesame Street'
+
+    assert_nil school_info.school_id
+    refute_nil school_info.school_name
+    refute_nil school_info.full_address
+    assert school_info.complete?
+  end
+
+  test 'complete if all school info but location is provided' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_info.school_name = 'Primary School'
+
+    assert_nil school_info.school_id
+    refute_nil school_info.school_name
+    assert_nil school_info.full_address
+
+    assert school_info.complete?
+  end
+
+  test 'complete if school is found by NCES id' do
+    school_info = SchoolInfo.new
+    school_info.school_id = 1
+
+    refute_nil school_info.school_id
+    assert school_info.complete?
+  end
+
+  test 'complete if school type is homeschool/after school/organization/other' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
+    assert school_info.complete?
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
+    assert school_info.complete?
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_ORGANIZATION
+    assert school_info.complete?
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_OTHER
+    assert school_info.complete?
+  end
+
+  test 'complete if country is not US' do
+    school_info = SchoolInfo.new
+    school_info.country = 'Canada'
+    assert school_info.complete?
+  end
+
+  test 'not complete without country' do
+    school_info = SchoolInfo.new
+    assert_nil school_info.country
+    refute school_info.complete?
+  end
+
+  test 'not complete if country is US but no school type is set' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    assert_nil school_info.school_type
+    refute school_info.complete?
+  end
+
+  test 'not complete if country is US and school type is public/private/charter but other information is missing' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
+    refute school_info.complete?
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PRIVATE
+    refute school_info.complete?
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_CHARTER
+    refute school_info.complete?
+  end
+
+  test 'not complete if name is entirely whitespace' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_info.school_name = 'Primary School'
+    assert school_info.complete?
+
+    school_info.school_name = '     '
+    refute school_info.complete?
+  end
 end

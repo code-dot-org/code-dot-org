@@ -1,29 +1,20 @@
 ---
-pt:
+pt-PT:
   data:
     function_names:
-      x: x
+      collect: recolha
+      diamond: diamante
+      do something: faz algo
       draw a circle: desenhar um círculo
-      draw a hexagon: desenhar um hexágono
       draw a flower: desenhar uma flor
-      draw a square: desenhar um quadrado
+      draw a hexagon: desenhar um hexágono
+      draw a house: desenhar uma casa
       draw a snowflake: desenhar um floco de neve
+      draw a square: desenhar um quadrado
+      draw a star: desenhar uma estrela
       draw a tree: desenhar uma árvore
       draw a triangle: desenhar um triângulo
-      draw a house: desenhar uma casa
-      draw a star: desenhar uma estrela
-      do something: faz algo
+      get nectar: recolher néctar
       jump: saltar
       set score: definir pontuação
-      get nectar: recolher néctar
-      test: teste
-      diamond: diamante
-      move: mover
-      move right: mover para a direita
-      move up: mover para cima
-      move down: mover para baixo
-      move left: mover para a esquerda
-      collect: recolha
-      turn left: virar à esquerda
-      move forward: segue em frente
-      turn right: virar à direita
+      x: x

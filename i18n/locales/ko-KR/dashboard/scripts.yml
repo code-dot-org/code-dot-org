@@ -1679,6 +1679,8 @@ ko:
               name: 인터넷
             Crowdsourcing:
               name: 클라우드소싱
+            Dance Party:
+              name: 댄스 파티
         andrea-test:
           stages:
             'null':
@@ -1774,3 +1776,18 @@ ko:
           stages:
             Graph Paper Programming:
               name: 모눈 종이 프로그래밍
+        csd2-pilot:
+          stages:
+            Lists:
+              name: 리스트
+        csd3-pilot:
+          description_short: "프로그래밍"
+          stages:
+            Variables:
+              name: 변수
+            Conditionals:
+              name: 조건
+            Velocity:
+              name: 속도
+            Functions:
+              name: 함수

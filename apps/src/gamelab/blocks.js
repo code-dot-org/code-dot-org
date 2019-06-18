@@ -153,7 +153,10 @@ const customInputTypes = {
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       let buttons;
-      if (getStore().getState().pageConstants.showAnimationMode) {
+      if (
+        getStore().getState().pageConstants &&
+        getStore().getState().pageConstants.showAnimationMode
+      ) {
         buttons = [
           {
             text: 'Draw',
@@ -180,6 +183,16 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return block.getTitleValue(arg.name);
+    }
+  },
+  spritePointer: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldImage('', 32, 32), inputConfig.name);
+    },
+    generateCode(block, arg) {
+      return `'${block.getTitleValue(arg.name)}'`;
     }
   },
   spritePicker: {

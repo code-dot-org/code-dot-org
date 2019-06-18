@@ -7,43 +7,61 @@ import responsive from '@cdo/apps/code-studio/responsiveRedux';
 
 describe('Certificate', () => {
   const store = createStore(combineReducers({responsive}));
+  let storedWindowDashboard;
 
-  it('renders a Minecraft certificate for new Minecraft tutorials', () => {
-    const wrapper = shallow(
-      <Certificate tutorial="minecraft" isMinecraft={true} />,
-      {context: {store}}
-    ).dive();
-    expect(
-      wrapper
-        .find('img')
-        .html()
-        .includes('MC_Hour_Of_Code_Certificate')
+  beforeEach(() => {
+    storedWindowDashboard = window.dashboard;
+    window.dashboard = {
+      CODE_ORG_URL: 'https://code.org'
+    };
+  });
+
+  afterEach(() => {
+    window.dashboard = storedWindowDashboard;
+  });
+
+  it('renders Minecraft certificate for Minecraft Adventurer', () => {
+    const wrapper = shallow(<Certificate tutorial="mc" />, {
+      context: {store}
+    }).dive();
+    expect(wrapper.find('img').html()).to.include(
+      'MC_Hour_Of_Code_Certificate'
     );
   });
 
-  it('renders a Minecraft certificate for older Minecraft tutorials', () => {
-    const wrapper = shallow(
-      <Certificate type="minecraft" isMinecraft={true} />,
-      {context: {store}}
-    ).dive();
-    expect(
-      wrapper
-        .find('img')
-        .html()
-        .includes('MC_Hour_Of_Code_Certificate')
+  it('renders Minecraft certificate for Minecraft Designer', () => {
+    const wrapper = shallow(<Certificate tutorial="minecraft" />, {
+      context: {store}
+    }).dive();
+    expect(wrapper.find('img').html()).to.include(
+      'MC_Hour_Of_Code_Certificate'
     );
   });
 
-  it('renders a default certificate for all other tutorials', () => {
-    const wrapper = shallow(
-      <Certificate tutorial="frozen" isMinecraft={false} />,
-      {context: {store}}
-    ).dive();
-    expect(
-      wrapper
-        .find('img')
-        .html()
-        .includes('hour_of_code_certificate')
+  it("renders unique certificate for Minecraft Hero's Journey", () => {
+    const wrapper = shallow(<Certificate tutorial="hero" />, {
+      context: {store}
+    }).dive();
+    expect(wrapper.find('img').html()).to.include(
+      'MC_Hour_Of_Code_Certificate_Hero'
     );
+  });
+
+  it('renders unique certificate for Minecraft Voyage Aquatic', () => {
+    const wrapper = shallow(<Certificate tutorial="aquatic" />, {
+      context: {store}
+    }).dive();
+    expect(wrapper.find('img').html()).to.include(
+      'MC_Hour_Of_Code_Certificate_Aquatic'
+    );
+  });
+
+  it('renders default certificate for all other tutorials', () => {
+    ['applab-intro', 'dance', 'flappy', 'frozen'].forEach(tutorial => {
+      const wrapper = shallow(<Certificate tutorial={tutorial} />, {
+        context: {store}
+      }).dive();
+      expect(wrapper.find('img').html()).to.include('hour_of_code_certificate');
+    });
   });
 });

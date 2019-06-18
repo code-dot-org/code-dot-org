@@ -244,6 +244,8 @@ es-MX:
         dance_party_11_5_groups: Busca aquí los bloques de "todos los patos"
       Eval Design Recipe .1_callout:
         edit_function: Haz clic aquí para editar tu función.
+      Fish Tank 3-validated_2019_callout:
+        spritelab_comment: Usa este bloque para dejarte notas a ti o al docente sobre cómo funciona tu código.
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: '¡Usa este menú desplegable para crear diferentes copos de nieve!'
       Frozen Project Toolbox (Old)_callout:
@@ -518,8 +520,6 @@ es-MX:
       courseA_artist_loops8_2019_callout:
         courseA_artist_loops8_1: '¿Sabias que puedes dibujar sobre una línea cuando lo necesites?'
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: '¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario.'
-      courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: '¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario.'
       courseA_collector_loops1_2019_callout:
         courseA_collector_loops1_1: '¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario.'

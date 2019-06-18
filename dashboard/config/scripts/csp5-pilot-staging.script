@@ -1,4 +1,5 @@
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Lists Explore', flex_category: 'csp_lists'
 level 'csp-20-21-u5-assess-lists', progression: 'Check Your Understanding', assessment: true
@@ -66,8 +67,8 @@ level 'U5 L09 Traversals Exit Ticket', progression: 'Check Your Understanding', 
 
 stage 'Traversals Investigate', flex_category: 'csp_traversals'
 level 'U5 Traversals Investigate Mile Tracker', progression: 'App Investigation'
-level 'U5 Traversals Investigate Word Guess', progression: 'App Investigation'
-level 'U5 Traversals Investigate Dog Finder', progression: 'App Investigation'
+level 'U5 Traversals Investigate Word Guess - clone', progression: 'App Investigation'
+level 'U5 Traversals Investigate Dog Finder - clone', progression: 'App Investigation'
 level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Code Investigation'
 level 'U5 Traversals Get List Explanation', progression: 'The getList() Block'
 level 'U5 Traversals Investigate Word Guess Modify', progression: 'Code Investigation'
@@ -109,3 +110,17 @@ level 'Student Late Spring Pilot Survey Mini PT', progression: 'Student Survey (
 
 stage 'Unit 5 Mini Assessment', lockable: true
 level 'CSP 20-21 Unit 5 Pilot Mini Assessment', assessment: true
+
+stage 'Libraries Explore', flex_category: 'csp_libraries'
+level 'U7 L04 Exit Ticket', progression: 'Check Your Understanding', assessment: true
+
+stage 'Libraries Investigate', flex_category: 'csp_libraries'
+level 'U7 Libraries Investigate Painting', progression: 'Code Investigation'
+level 'U7 Libraries List Math Library', progression: 'Code Investigation'
+level 'U7 Libraries Investigate Pig Latin', progression: 'Code Investigation'
+
+stage 'Student Survey (Libraries)', lockable: true
+level 'Student Late Spring Pilot Survey Libraries', progression: 'Student Survey (Libraries)', assessment: true
+
+stage 'Teacher Survey (Libraries)', lockable: true
+level 'Teacher Late Spring Pilot Survey Libraries', progression: 'Teacher Survey (Libraries)', assessment: true
