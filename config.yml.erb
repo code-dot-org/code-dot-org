@@ -157,6 +157,8 @@ slack_endpoint:
 slack_token:
 slack_log_room: <%=env%>
 hip_chat_logging: false
+# Logging endpoint used by broken link checker.
+slack_endpoint_broken_links:
 
 # Credentials/configuration for connecting to Firebase to use data blocks or data browser
 # in Applab.
@@ -412,9 +414,40 @@ cdn_enabled: <%=chef_managed%>
 image_optim: <%=chef_managed && !ci_test%>
 
 # Referenced in CI config, but not sure if they are still used anywhere?
+# TODO verify these are intentionally no longer used and remove references from CI config.
 build_shared_js:
 use_my_shared_js:
 build_blockly_core:
+
+# Referenced in Chef config, but not sure if they are still used anywhere?
+# TODO: verify these are intentionally no longer used and remove references from Chef config.
+build_blockly: false
+geocoder_read_replica_1:
+geocoder_read_replica_2:
+browserstack_username:
+browserstack_authkey:
+dashboard_powerschool_key:
+dashboard_powerschool_secret:
+x-dashboard_twitter_key:
+x-dashboard_twitter_secret:
+ga_service_account_email:
+ga_api_key:
+ga_api_secret:
+hipchat_secret:
+indiegogo_api_token:
+localize_blockly: true
+level_builder_port: 8082
+sendy_db_reader:
+sendy_db_writer:
+developers_channel_id:
+twilio_phone:
+level_sources_redis_url:
+discourse_sso_url:
+discourse_url:
+pledge_map_table_id:
+hoc_map_service_account_email:
+hoc_map_api_secret:
+hoc_map_api_key:
 
 ### Database configuration
 
