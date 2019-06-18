@@ -47,4 +47,4 @@ Scenario: Can render without a question
   Given I am on "http://studio.code.org/s/allthethings/stage/9/puzzle/4?noautoplay=true"
   When I rotate to landscape
   And element ".submitButton" is visible
-  then element ".multi-question" is not visible
+  Then element ".multi-question" is not visible
