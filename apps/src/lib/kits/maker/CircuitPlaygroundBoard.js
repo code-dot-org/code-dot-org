@@ -94,6 +94,20 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   /**
+   * Helper to detect the firmware (major and minor) version of the given playground
+   * @param playground
+   */
+  detectFirmwareVersion(playground) {
+    playground.queryFirmware(() => {
+      console.log(
+        playground.firmware.version.major +
+          '.' +
+          playground.firmware.version.minor
+      );
+    });
+  }
+
+  /**
    * Initialize a set of johnny-five component controllers.
    * Exposed as a separate step here for the sake of the setup page; generally
    * it'd be better to just call connect(), above.
