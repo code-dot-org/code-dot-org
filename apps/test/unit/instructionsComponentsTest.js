@@ -11,14 +11,12 @@ describe('instructions components', () => {
   describe('MarkdownInstructions', function() {
     it('standard case had top padding and no left margin', function() {
       const wrapper = mount(
-        <div>
-          <StatelessMarkdownInstructions
-            markdown="md"
-            markdownClassicMargins={false}
-            inTopPane={false}
-            noInstructionsWhenCollapsed={true}
-          />
-        </div>
+        <StatelessMarkdownInstructions
+          markdown="md"
+          markdownClassicMargins={false}
+          inTopPane={false}
+          noInstructionsWhenCollapsed={true}
+        />
       );
       var element = wrapper.find('.instructions-markdown').first();
       expect(element.props().style.paddingTop).to.equal(19);
@@ -29,13 +27,11 @@ describe('instructions components', () => {
 
     it('inTopPane has no top padding', function() {
       const wrapper = mount(
-        <div>
-          <StatelessMarkdownInstructions
-            markdown="md"
-            inTopPane={true}
-            noInstructionsWhenCollapsed={true}
-          />
-        </div>
+        <StatelessMarkdownInstructions
+          markdown="md"
+          inTopPane={true}
+          noInstructionsWhenCollapsed={true}
+        />
       );
       var element = wrapper.find('.instructions-markdown').first();
       expect(element.props().style.paddingTop).to.equal(0);
@@ -45,12 +41,10 @@ describe('instructions components', () => {
   describe('NonMarkdownInstructions', function() {
     it('can have just instructions', function() {
       const wrapper = mount(
-        <div>
-          <NonMarkdownInstructions
-            puzzleTitle="title"
-            shortInstructions="instructions"
-          />
-        </div>
+        <NonMarkdownInstructions
+          puzzleTitle="title"
+          shortInstructions="instructions"
+        />
       );
       var elements = wrapper
         .find(NonMarkdownInstructions)
@@ -64,13 +58,11 @@ describe('instructions components', () => {
 
     it('can have both instructions and instructions2', function() {
       const wrapper = mount(
-        <div>
-          <NonMarkdownInstructions
-            puzzleTitle="title"
-            shortInstructions="instructions"
-            instructions2="instructions2"
-          />
-        </div>
+        <NonMarkdownInstructions
+          puzzleTitle="title"
+          shortInstructions="instructions"
+          instructions2="instructions2"
+        />
       );
       var elements = wrapper
         .find(NonMarkdownInstructions)
