@@ -233,6 +233,7 @@ class FilesTest < FilesApiTestBase
 
     post_file_data(@api, filename, 'stub-contents', 'test/html')
     assert successful?
+    assert_equal escaped_filename, JSON.parse(last_response.body)['filename']
 
     @api.get_object(escaped_filename)
     assert successful?
@@ -242,6 +243,7 @@ class FilesTest < FilesApiTestBase
 
     post_file_data(@api, escaped_filename2, 'stub-contents-2', 'test/html')
     assert successful?
+    assert_equal escaped_filename2, JSON.parse(last_response.body)['filename']
 
     @api.get_object(escaped_filename2)
     assert successful?
@@ -492,6 +494,7 @@ class FilesTest < FilesApiTestBase
 
     post_file_data(@api, filename, 'stub-contents', 'test/html')
     assert successful?
+    assert_equal escaped_filename, JSON.parse(last_response.body)['filename']
 
     @api.get_object(escaped_filename)
     assert successful?
@@ -530,6 +533,7 @@ class FilesTest < FilesApiTestBase
 
     post_file_data(@api, filename, image_body, 'image/png')
     assert successful?
+    assert_equal escaped_filename, JSON.parse(last_response.body)['filename']
 
     @api.get_object(escaped_filename)
     assert successful?
@@ -595,7 +599,11 @@ class FilesTest < FilesApiTestBase
     sound_body = 'stub-sound-contents'
 
     post_file_data(src_api, image_filename, image_body, 'image/jpeg')
+    assert_equal image_filename, JSON.parse(last_response.body)['filename']
+
     post_file_data(src_api, sound_filename, sound_body, 'audio/mpeg')
+    assert_equal escaped_sound_filename, JSON.parse(last_response.body)['filename']
+
     src_api.patch_abuse(10)
 
     expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
