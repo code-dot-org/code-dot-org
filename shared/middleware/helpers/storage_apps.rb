@@ -334,6 +334,12 @@ class StorageApps
     []
   end
 
+  def self.get_abuse(channel_id)
+    _, storage_app_id = storage_decrypt_channel_id(channel_id)
+    project_info = PEGASUS_DB[:storage_apps].where(id: storage_app_id).first
+    project_info[:abuse_score]
+  end
+
   private
 
   #
