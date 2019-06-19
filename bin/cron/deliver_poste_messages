@@ -245,20 +245,37 @@ class Deliverer
     @templates[name] = Poste::Template.new IO.read(path), engine
   end
 
-  def parse_addresses(string)
-    string.split(', ').map do |user_string|
-      if user_string.include? '<'
-        user_string =~ /^([^<]*)<([^>]*)>$/
-        {name: $1.strip, email: $2}
-      else
-        {name: nil, email: user_string}
-      end
+  def parse_address_string(string)
+    # A comma without surrounding double-quotes isn't necessarily bad, since it
+    # might be like this:
+    #   friendly name, phd <email@code.org>
+    #
+    # Though in such a case, it should really be provided like this:
+    #   "friendly name, phd", <email@code.org>
+    #
+    # But we are alerting just in case a sender has attempted to provide multiple
+    # email addresses like this:
+    #   friendly name <email@code.org>, second person <email2@code.org>
+    #
+    # Because we deprecated support for this pattern, believing that we've never
+    # actually used it.
+    if /,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/ =~ string
+      Honeybadger.notify(
+        error_message: "Comma outside of surrounding double-quotes detected in address string: #{string}"
+      )
+    end
+
+    if string.include? '<'
+      string =~ /^([^<]*)<([^>]*)>$/
+      {name: $1.strip, email: $2}
+    else
+      {name: nil, email: string}
     end
   end
 
   def parse_address(address, defaults={})
     address = address.to_s.strip
-    return parse_addresses(address).first unless address.empty?
+    return parse_address_string(address) unless address.empty?
 
     # Student accounts don't have a stored email in contacts,
     # so we use the temporary email here when email doesn't exist.
@@ -318,14 +335,23 @@ def main
       begin
         deliverer.send delivery
       rescue Net::SMTPSyntaxError, Net::SMTPFatalError => e
-        CDO.log.info "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        )
         deliverer.reset_connection
         sent_at = 0
       rescue AbortEmailError => e
-        CDO.log.info "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+        )
         sent_at = 0
       rescue => e
-        CDO.log.info "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        )
         raise
       end
 
