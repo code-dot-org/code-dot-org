@@ -139,8 +139,8 @@ module Api::V1::Pd
         errors: [
           {
             severity: Logger::Severity::ERROR,
-            message: "#{e.message}. Workshop id #{@workshop.id},"\
-              " course #{@workshop.course}, subject #{@workshop.subject}."
+            message: "#{e.message}. Workshop id: #{@workshop.id},"\
+              " course: #{@workshop.course}, subject: #{@workshop.subject}."
           }
         ]
       }
