@@ -52,7 +52,11 @@ describe('instructions components', () => {
           />
         </div>
       );
-      var elements = dom.childAt(0).children();
+      var elements = dom
+        .find(NonMarkdownInstructions)
+        .find('div')
+        .first()
+        .children();
       expect(elements.length).to.equal(2);
       expect(elements.first())
         .text()
@@ -72,11 +76,15 @@ describe('instructions components', () => {
           />
         </div>
       );
-      var elements = dom.childAt(0).children();
+      var elements = dom
+        .find(NonMarkdownInstructions)
+        .find('div')
+        .first()
+        .children();
       expect(elements.length).to.equal(3);
-      expect(elements.get(0).textContent).to.equal('title');
-      expect(elements.get(1).textContent).to.equal('instructions');
-      expect(elements.get(2).textContent).to.equal('instructions2');
+      expect(elements.at(0).text()).to.equal('title');
+      expect(elements.at(1).text()).to.equal('instructions');
+      expect(elements.at(2).text()).to.equal('instructions2');
     });
   });
 });
