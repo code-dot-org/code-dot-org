@@ -113,14 +113,21 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/generic_survey_report
     def generic_survey_report
+      # Default HTTP status code to return to client if
+      # we encouter an exception processing this request.
+      error_status_code = :internal_server_error
+
       return local_workshop_daily_survey_report if @workshop.summer? ||
         ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) &&
         @workshop.workshop_starting_date > Date.new(2018, 8, 1))
 
       return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
 
+      error_status_code = :bad_request
+      raise 'Action generic_survey_report should not be used for this workshop'
+    rescue => e
       Honeybadger.notify(
-        error_message: 'Action generic_survey_report should not be used for this workshop',
+        error_message: e.message,
         context: {
           workshop_id: @workshop.id,
           course: @workshop.course,
@@ -128,9 +135,14 @@ module Api::V1::Pd
         }
       )
 
-      render status: :bad_request, json: {
-        error: "Do not know how to process survey results for this workshop "\
-          "#{@workshop.course} #{@workshop.subject}"
+      render status: error_status_code, json: {
+        errors: [
+          {
+            severity: Logger::Severity::ERROR,
+            message: "#{e.message}. Workshop id: #{@workshop.id},"\
+              " course: #{@workshop.course}, subject: #{@workshop.subject}."
+          }
+        ]
       }
     end
 
