@@ -405,7 +405,7 @@ class ScriptLevel < ActiveRecord::Base
     contained = contained_levels.any?
 
     levels = if bubble_choice?
-               [level.best_result_sublevel(student)]
+               [level.best_result_sublevel(student) || level]
              elsif contained
                contained_levels
              else
