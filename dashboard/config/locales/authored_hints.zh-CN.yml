@@ -1331,7 +1331,7 @@ zh-CN:
         Course_4_SCFL_1_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         Course_4_SCFL_1_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -1475,7 +1475,7 @@ zh-CN:
         Course_4_SCFL_1a_b: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1a_c: "`计数循环` 将帮助您执行相同的模式，但步骤数不断变化。请注意，所需步骤的数量从7开始，每次减1，直到 5。"
         Course_4_SCFL_1a_d: |-
           **解决方案：**
@@ -1560,7 +1560,7 @@ zh-CN:
         Course_4_SCFL_1b_b: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1b_c: |-
           **解决方案：**
 
@@ -1626,7 +1626,7 @@ zh-CN:
         Course_4_SCFL_2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_2_b: 请注意, 在`计数循环` 的每次迭代中，在你停止与目标互动后，都有3个点。
         Course_4_SCFL_2_c: 在`计数循环`的每次迭代中, 每个对象的数字都与 `counter`（计数器）变量有某种关联。
         Course_4_SCFL_2_d: |-
@@ -2677,7 +2677,7 @@ zh-CN:
         Course_4_SCV_4_c: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCV_4_d: |-
           \*\* 解决方案: \*\*
 
@@ -9876,11 +9876,8 @@ zh-CN:
         courseD_bee_conditionals2_c: 你不必查看蜂窝，在云层下只会有花朵或空白的空间。
         courseD_bee_conditionals2_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals2_2019:
-        courseD_bee_conditionals2_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals2_a: 有时那里有花，有时不会。如果您希望在两种情况下都能运行代码，请确保使用`如果`语句。
-        courseD_bee_conditionals2_b: 您可以使用`重复`循环或`当前面有路时`来通过这个迷宫。
         courseD_bee_conditionals2_c: 你不必查看蜂窝，在云层下只会有花朵或空白的空间。
-        courseD_bee_conditionals2_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals3_a: 一定要使用`如果`语句来检查每个空间，看看是否有花。
@@ -9894,11 +9891,8 @@ zh-CN:
         courseD_bee_conditionals3_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
         courseD_bee_conditionals3_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals3_2019:
-        courseD_bee_conditionals3_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals3_a: 一定要使用`如果`语句来检查每个空间，看看是否有花。
-        courseD_bee_conditionals3_b: 您可以使用`重复`循环或`当`循环来保持蜜蜂向前移动。用你喜欢的任何一个!
         courseD_bee_conditionals3_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
-        courseD_bee_conditionals3_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals4_a: 哪怕可以看到整条路径，仍然可以当作每个空间上面有朵云来处理。
@@ -9914,12 +9908,8 @@ zh-CN:
           蜜蜂该怎么办？
         courseD_bee_conditionals4_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals4_2019:
-        courseD_bee_conditionals4_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals4_a: 哪怕可以看到整条路径，仍然可以当作每个空间上面有朵云来处理。
         courseD_bee_conditionals4_b: '在循环中使用`如果`语句检查每个空间是否有花蜜。 '
-        courseD_bee_conditionals4_c: 使用 <xml><block type="maze_untilBlocked"/></xml>模块，您应该向前移动并找一朵花。如果有一朵花,
-          蜜蜂该怎么办？
-        courseD_bee_conditionals4_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals5_a: 把矩形路径的每一条边都看成是一个路径。在外部设置一个`重复`模块的嵌套循环, 并在`当前面有路时`的内部循环。如果蜜蜂需要在每朵花旁边嗡嗡叫，它要飞过多少条路径？
@@ -9929,14 +9919,6 @@ zh-CN:
           你会怎么做？
         courseD_bee_conditionals5_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals5_2018:
-        courseD_bee_conditionals5_hintVid1: 需要入门帮助吗？ 看视频!
-        courseD_bee_conditionals5_a: 把矩形路径的每一条边都看成是一个路径。在外部设置一个`重复`模块的嵌套循环, 并在`当前面有路时`的内部循环。如果蜜蜂需要在每朵花旁边嗡嗡叫，它要飞过多少条路径？
-        courseD_bee_conditionals5_c: 花是长方形的3条边，因此代码需要`重复3次`。在每一个重复时，`当前面有路时`，蜜蜂将需要继续沿着路径。要继续沿着这条路走下去,
-          蜜蜂将需要`向前移动`。在小路上, 蜜蜂需要寻找朵花。`如果有一朵花`, 蜜蜂应该`采花蜜`。
-        courseD_bee_conditionals5_b: 在`当前面有路时`模块的里面, 你需要往前走开寻找朵花。你如何检查哪里是否有一朵花？如果有一朵花,
-          你会怎么做？
-        courseD_bee_conditionals5_hintVid2: 观看此视频帮助解决这个难题。
-      courseD_bee_conditionals5_2019:
         courseD_bee_conditionals5_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals5_a: 把矩形路径的每一条边都看成是一个路径。在外部设置一个`重复`模块的嵌套循环, 并在`当前面有路时`的内部循环。如果蜜蜂需要在每朵花旁边嗡嗡叫，它要飞过多少条路径？
         courseD_bee_conditionals5_c: 花是长方形的3条边，因此代码需要`重复3次`。在每一个重复时，`当前面有路时`，蜜蜂将需要继续沿着路径。要继续沿着这条路走下去,
@@ -9957,11 +9939,9 @@ zh-CN:
         courseD_bee_conditionals6_c: 是否有一个循环可以用来使代码更简单？
         courseD_bee_conditionals6_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals6_2019:
-        courseD_bee_conditionals6_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals6_a: 请确保使用`如果`语句检查每个云下是否有蜂窝。
         courseD_bee_conditionals6_b: 在这种情况下, 你不需要查看云下的花蜜。
         courseD_bee_conditionals6_c: 是否有一个循环可以用来使代码更简单？
-        courseD_bee_conditionals6_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals7:
         courseD_bee_conditionals7_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals7_a: |-
@@ -9979,13 +9959,11 @@ zh-CN:
         courseD_bee_conditionals7_b: 如果云下没有一朵花, 那一定有一个蜂窝, 所以你不需要考虑存在一个空的空间的情况。
         courseD_bee_conditionals7_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals7_2019:
-        courseD_bee_conditionals7_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals7_a: |-
           \*\* 请记住: \*\* 这个关卡每次运行时都会改变。
 
           您需要使用条件模块 (`如果/否则`) 来通过此挑战。
         courseD_bee_conditionals7_b: 如果云下没有一朵花, 那一定有一个蜂窝, 所以你不需要考虑存在一个空的空间的情况。
-        courseD_bee_conditionals7_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals7_predict2:
         courseD_bee_conditionals7_a: |-
           \*\* 请记住: \*\* 这个关卡每次运行时都会改变。
@@ -14163,7 +14141,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -14306,7 +14284,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -14449,7 +14427,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。

@@ -1625,3 +1625,16 @@ pt:
           stages:
             Graph Paper Programming:
               name: Programação de papel milimetrico
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Listas
+        csd3-pilot:
+          description_short: Programação
+          stages:
+            Variables:
+              name: variáveis
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funções

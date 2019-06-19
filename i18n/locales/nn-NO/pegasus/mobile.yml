@@ -1048,6 +1048,12 @@
   coursed-2018_gradelevel: 8.+ klasse
   coursee-2018_gradelevel: Alder 8–12 år
   coursef-2018_gradelevel: Alder 9-13 år
+  coursea-2019_gradelevel: Alder 4-7 år
+  courseb-2019_gradelevel: Alder 5-8 år
+  coursec-2019_gradelevel: Alder 6-10 år
+  coursed-2019_gradelevel: 8.+ klasse
+  coursee-2019_gradelevel: Alder 8–12 år
+  coursef-2019_gradelevel: Alder 9-13 år
   accelerated_gradelevel: "Frå 10+ år (etter Kurs 3)"
   codeorg_platformtext: "Moderne nettlesarar, smarttelefonar, nettbrett"
   codeintl_platformtext: "Moderne nettlesarar, smarttelefonar, nettbrett"
@@ -1163,6 +1169,11 @@
   coursed-2018_shortdescription_congrats: Få eit raskt overblikk over konsepta frå kurs C, og gå videre med algoritmar, løkker i løkke, vilkår og meir.
   coursee-2018_shortdescription_congrats: Få eit raskt overblikk over konsepta frå kurs C og D, og gå videre med funksjonar.
   coursef-2018_shortdescription_congrats: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+  coursea-2019_shortdescription_congrats: Ein introduksjon til informatikk for dei som ikkje kan lese.
+  courseb-2019_shortdescription_congrats: Ein introduksjon til informatikk for dei som ikkje kan lese. (Lik Kurs A, men med meir variasjon for eldre elevar).
+  coursed-2019_shortdescription_congrats: Få eit raskt overblikk over konsepta frå kurs C, og gå videre med algoritmar, løkker i løkke, vilkår og meir.
+  coursee-2019_shortdescription_congrats: Få eit raskt overblikk over konsepta frå kurs C og D, og gå videre med funksjonar.
+  coursef-2019_shortdescription_congrats: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
   codeorg_longdescription: "Lær dei grunnlegjande konsepta for datavitksap med dra-og-slepp-programmering. Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande algoritmer. Tilgjengeleg på 34 språk."
   codeintl_longdescription: "Lær dei grunnlegjande konsepta for datavitksap med dra-og-slepp-programmering. Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande algoritmer. Tilgjengeleg på 34 språk."
   thinkersmithspanish_longdescription: "Ved å bruke et forhåndsdefinert \"Robot-språk\" vil finne ut hvordan de kan instruere hverandere til å utføre bestemte oppgaver uten å diskutere dem først. Denne leksjonen lærer barn sammenhengen mellom symboler og handlinger, i tillegg til uvurderlige ferdigheter i å finne feil."
