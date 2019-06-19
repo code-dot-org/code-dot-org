@@ -1,7 +1,8 @@
 @no_mobile
 Feature: Manage Assets
 
-  @no_safari_yosemite
+  # Skip on Safari and IE. MediaRecorder is not supported so we are removing the record button.
+  @no_safari_yosemite @no_ie
   Scenario: The manage assets dialog contains the option to record audio.
     Given I am a student
     And I start a new Game Lab project
