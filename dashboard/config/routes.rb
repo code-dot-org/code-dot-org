@@ -418,7 +418,6 @@ Dashboard::Application.routes.draw do
       # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
-      post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 
       post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
