@@ -15,3 +15,11 @@ level 'CSP U3 Hamilton Township App Investigation', progression: 'App Investigat
 level 'CSP U3 Four Square App Investigation', progression: 'App Investigation'
 level 'CSP U3 Monarch Butterfly App Investigation', progression: 'App Investigation'
 level 'CSP U3 L1 Input Output Matching', progression: 'Check Your Understanding'
+
+stage 'Introduction to Design Mode', flex_category: 'REPLACE THIS'
+level 'CSP U3 Hamilton Township Design Mode', progression: 'Design Mode Exploration'
+level 'CSP U3 L2 Design Mode Themes', progression: 'Design Mode Exploration'
+level 'CSP U3 L2 Design Mode ids', progression: 'Design Mode Exploration'
+level 'CSP U3 L2 Design Mode Colors', progression: 'Design Mode Exploration'
+level 'CSP U3 L2 Design Mode Images', progression: 'Design Mode Exploration'
+level 'CSP U3 L2 Copy an App', progression: 'Copy an App'

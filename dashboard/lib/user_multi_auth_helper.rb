@@ -1,3 +1,5 @@
+require 'cdo/honeybadger'
+
 module UserMultiAuthHelper
   def oauth_tokens_for_provider(provider)
     if migrated?
@@ -88,7 +90,12 @@ module UserMultiAuthHelper
     self.oauth_token = nil
     self.oauth_token_expiration = nil
     self.oauth_refresh_token = nil
-    save
+    unless save
+      Honeybadger.notify(
+        error_class: 'Failed to migrate user',
+        error_message: "User ID: #{id}. Error message(s): #{errors.full_messages.join(', ')}"
+      )
+    end
     reload
   end
 
