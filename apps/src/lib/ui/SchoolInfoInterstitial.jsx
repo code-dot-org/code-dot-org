@@ -208,13 +208,7 @@ export default class SchoolInfoInterstitial extends React.Component {
   }
 
   validateSubmission = () => {
-    const {
-      country,
-      schoolType,
-      schoolName,
-      schoolLocation,
-      ncesSchoolId
-    } = this.state;
+    const {country, schoolType, schoolName, ncesSchoolId} = this.state;
     this.setState(
       {
         errors: {
@@ -222,9 +216,7 @@ export default class SchoolInfoInterstitial extends React.Component {
           country: this.isBlank(country),
           schoolType: this.isBlank(schoolType),
           ncesSchoolId: this.isBlank(ncesSchoolId),
-          schoolName: ncesSchoolId === '-1' ? this.isBlank(schoolName) : false,
-          schoolLocation:
-            ncesSchoolId === '-1' ? this.isBlank(schoolLocation) : false
+          schoolName: ncesSchoolId === '-1' ? this.isBlank(schoolName) : false
         }
       },
       this.handleSchoolInfoSubmit
@@ -287,12 +279,16 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   onSchoolTypeChange = event => {
     const newType = event ? event.target.value : '';
-    this.setState({schoolType: newType});
+    this.setState({schoolType: newType, errors: {}});
   };
 
   onSchoolChange = (_, event) => {
     const newSchool = event ? event.value : '';
-    this.setState({ncesSchoolId: newSchool});
+    let errors = this.state.errors;
+    if (newSchool === '-1') {
+      errors = {};
+    }
+    this.setState({ncesSchoolId: newSchool, errors});
   };
 
   onSchoolNotFoundChange = (field, event) => {
@@ -303,6 +299,7 @@ export default class SchoolInfoInterstitial extends React.Component {
   };
 
   render() {
+    const showErrors = Object.keys(this.state.errors).length > 0;
     return (
       <BaseDialog
         useUpdatedStyles
@@ -331,7 +328,7 @@ export default class SchoolInfoInterstitial extends React.Component {
               schoolName={this.state.schoolName}
               schoolLocation={this.state.schoolLocation}
               useGoogleLocationSearch={true}
-              showErrors={true}
+              showErrors={showErrors}
               showRequiredIndicator={true}
             />
           </div>
