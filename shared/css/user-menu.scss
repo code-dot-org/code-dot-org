@@ -83,18 +83,13 @@
   padding-left: 15px;
   padding-top: 4px;
 
-  &.show-mobile {
-    display: none;
-  }
-  .show-mobile {
-    display: none;
-  }
-  &.show-always {
+  &.hide-mobile {
     display: block;
   }
-  .show-mobile {
-    display: none;
+  .hide-mobile {
+    display: block;
   }
+
   display: inline-block;
   float: left;
   z-index: 99;
@@ -128,6 +123,15 @@
       border-top: 1px solid $charcoal;
     }
   }
+
+  @media(max-width: 970px) {
+    &.hide-mobile {
+      display: none;
+    }
+    .hide-mobile {
+      display: none;
+    }
+                                                                                              }
 }
 
 .create_menu {
