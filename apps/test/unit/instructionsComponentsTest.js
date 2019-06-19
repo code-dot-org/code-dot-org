@@ -18,7 +18,7 @@ describe('instructions components', () => {
           noInstructionsWhenCollapsed={true}
         />
       );
-      var element = wrapper.find('.instructions-markdown').first();
+      const element = wrapper.find('.instructions-markdown').first();
       expect(element.props().style.paddingTop).to.equal(19);
       expect(element.props().style.marginBottom).to.equal(35);
       expect(element.props().style.marginLeft).to.equal(undefined);
@@ -33,7 +33,7 @@ describe('instructions components', () => {
           noInstructionsWhenCollapsed={true}
         />
       );
-      var element = wrapper.find('.instructions-markdown').first();
+      const element = wrapper.find('.instructions-markdown').first();
       expect(element.props().style.paddingTop).to.equal(0);
     });
   });
@@ -46,7 +46,7 @@ describe('instructions components', () => {
           shortInstructions="instructions"
         />
       );
-      var elements = wrapper
+      const elements = wrapper
         .find(NonMarkdownInstructions)
         .find('div')
         .first()
@@ -64,7 +64,7 @@ describe('instructions components', () => {
           instructions2="instructions2"
         />
       );
-      var elements = wrapper
+      const elements = wrapper
         .find(NonMarkdownInstructions)
         .find('div')
         .first()
