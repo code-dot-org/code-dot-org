@@ -1,4 +1,4 @@
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/reconfiguredChai';
 var testUtils = require('./../util/testUtils');
 import React from 'react';
 import {mount} from 'enzyme';
@@ -58,12 +58,8 @@ describe('instructions components', () => {
         .first()
         .children();
       expect(elements.length).to.equal(2);
-      expect(elements.first())
-        .text()
-        .to.equal('title');
-      expect(elements.last())
-        .text()
-        .to.equal('instructions');
+      expect(elements.first().text()).to.equal('title');
+      expect(elements.last().text()).to.equal('instructions');
     });
 
     it('can have both instructions and instructions2', function() {
