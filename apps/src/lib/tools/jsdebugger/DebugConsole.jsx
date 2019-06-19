@@ -17,6 +17,9 @@ import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
 import color from '../../../util/color';
 import Inspector from 'react-inspector';
+import {geoMercator, geoPath} from 'd3-geo';
+import {feature} from 'topojson-client';
+import experiments from '../../../util/experiments';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -77,6 +80,10 @@ const UNWATCH_COMMAND_PREFIX = '$unwatch ';
 // The JS console, by default, prints 'undefined' when there is no return value.
 // We don't want that functionality and therefore don't include 'undefined' in this list.
 const FALSY_VALUES = new Set([false, null, 0, '', NaN]);
+const RADIUS = 30;
+const WIDTH = 400;
+const HEIGHT = 400;
+
 /**
  * Set the cursor position to the end of the text content in a div element.
  * @see http://stackoverflow.com/a/6249440/5000129
@@ -140,6 +147,17 @@ export default connect(
       style: PropTypes.object,
       showReactInspector: PropTypes.bool
     };
+
+    state = {
+      mercator: ''
+    };
+
+    async componentDidMount() {
+      let value = await this.mercator();
+      this.setState({
+        mercator: value
+      });
+    }
 
     onInputKeyDown = e => {
       const input = e.target.value;
@@ -239,6 +257,49 @@ export default connect(
           return style.debugOutputBackgroundWarning;
       }
     }
+    projection() {
+      return geoMercator()
+        .scale(RADIUS)
+        .translate([WIDTH / 2, HEIGHT / 2]);
+    }
+
+    async mercator() {
+      let displayWorldMap = async function() {
+        const worldMapUrl = 'https://unpkg.com/world-atlas@1/world/110m.json';
+        let response = await fetch(worldMapUrl);
+
+        let worldData = await response.json();
+
+        return feature(worldData, worldData.objects.countries).features;
+      };
+
+      let worldMap = await displayWorldMap();
+      console.log('world2', worldMap);
+
+      // TODO: consult with product/design about color scheme
+      return (
+        <svg width={400} height={400}>
+          <g className="countries">
+            {worldMap.map((d, i) => (
+              <path
+                key={`path-${i}`}
+                d={geoPath().projection(this.projection())(d)}
+                className="country"
+                fill={'green'}
+                stroke="#FFFFFF"
+                strokeWidth={0.5}
+              />
+            ))}
+          </g>
+        </svg>
+      );
+    }
+
+    // displayMapInConsole() {
+    //   if (experiments.isEnabled('react-inspector')) {
+    //     return <div>{this.state.mercator}</div>;
+    //   }
+    // }
 
     isValidOutput(rowValue) {
       if (rowValue.output) {
@@ -317,6 +378,9 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
+            <div>
+              {experiments.isEnabled('mercator') ? this.state.mercator : ''}
+            </div>
             {this.props.showReactInspector
               ? this.displayOutputToConsole()
               : this.props.logOutput}
