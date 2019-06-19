@@ -47,7 +47,6 @@ describe('instructions components', () => {
         />
       );
       const elements = wrapper
-        .find(NonMarkdownInstructions)
         .find('div')
         .first()
         .children();
@@ -65,7 +64,6 @@ describe('instructions components', () => {
         />
       );
       const elements = wrapper
-        .find(NonMarkdownInstructions)
         .find('div')
         .first()
         .children();
