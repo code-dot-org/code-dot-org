@@ -209,29 +209,46 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   validateSubmission = () => {
     const {country, schoolType, schoolName, ncesSchoolId} = this.state;
-    this.setState(
-      {
-        errors: {
-          ...this.state.errors,
-          country: this.isBlank(country),
-          schoolType: this.isBlank(schoolType),
-          ncesSchoolId: this.isBlank(ncesSchoolId),
-          schoolName: ncesSchoolId === '-1' ? this.isBlank(schoolName) : false
-        }
-      },
-      this.handleSchoolInfoSubmit
-    );
+    let errors = {};
+    let isValid = true;
+
+    if (this.isBlank(country)) {
+      errors.country = true;
+      isValid = false;
+      console.log('Country is not valid');
+    }
+
+    if (this.isBlank(ncesSchoolId)) {
+      errors.ncesSchoolId = true;
+      isValid = false;
+      console.log('ncesschoolid is not valid');
+    }
+
+    if (this.isBlank(schoolName)) {
+      errors.schoolName = true;
+      isValid = false;
+      console.log('schoolName is not valid');
+    }
+
+    if (this.isBlank(schoolType)) {
+      errors.schoolType = true;
+      isValid = false;
+      console.log('schooltype is not valid');
+    }
+
+    return {
+      errors,
+      isValid
+    };
   };
 
   handleSchoolInfoSubmit = () => {
-    const {errors} = this.state;
-    if (
-      errors.country ||
-      errors.schoolType ||
-      errors.ncesSchoolId ||
-      errors.schoolName ||
-      errors.schoolLocation
-    ) {
+    console.log('do you get here?');
+    const {errors, isValid} = this.validateSubmission();
+    this.setState({
+      errors
+    });
+    if (!isValid) {
       return;
     }
     this.logEvent(FIREHOSE_EVENTS.SUBMIT, {
@@ -334,7 +351,7 @@ export default class SchoolInfoInterstitial extends React.Component {
           </div>
           <div style={styles.bottom}>
             <Button
-              onClick={this.validateSubmission}
+              onClick={this.handleSchoolInfoSubmit}
               text={i18n.save()}
               color={Button.ButtonColor.orange}
             />

@@ -24,7 +24,19 @@ describe('SchoolInfoInterstitial', () => {
   afterEach(() => firehoseClient.putRecord.restore());
 
   it('renders an uncloseable dialog with school info inputs and a save button', () => {
-    const wrapper = shallow(<SchoolInfoInterstitial {...MINIMUM_PROPS} />);
+    const wrapper = shallow(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {
+            school_id: '123',
+            country: 'United States',
+            school_type: 'public'
+          }
+        }}
+      />
+    );
     expect(wrapper).to.containMatchingElement(
       <BaseDialog>
         <div>
@@ -267,16 +279,6 @@ describe('SchoolInfoInterstitial', () => {
       expect(wrapper.state('errors').country).to.equal(true);
       expect(wrapper.state('errors').schoolType).to.equal(true);
       expect(wrapper.state('errors').ncesSchoolId).to.equal(true);
-      /*
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D='
-        ].join('&')
-      );
-      */
     });
 
     it('submits with only country=US', () => {
@@ -293,17 +295,9 @@ describe('SchoolInfoInterstitial', () => {
       );
       wrapper.find(Button).simulate('click');
       expect(server.requests.length).to.equal(0);
-      expect(wrapper.state('errors').country).to.equal(false);
+      expect(wrapper.state('errors')).to.not.have.property('country');
       expect(wrapper.state('errors').schoolType).to.equal(true);
       expect(wrapper.state('errors').ncesSchoolId).to.equal(true);
-      // expect(server.requests[0].requestBody).to.equal(
-      //   [
-      //     '_method=patch',
-      //     'auth_token=fake_auth_token',
-      //     'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-      //     'user%5Bschool_info_attributes%5D%5Bschool_type%5D='
-      //   ].join('&')
-      // );
     });
 
     it('submits with US and an NCES school type', () => {
@@ -321,21 +315,11 @@ describe('SchoolInfoInterstitial', () => {
       );
       wrapper.find(Button).simulate('click');
       expect(server.requests.length).to.equal(0);
-      expect(wrapper.state('errors').country).to.equal(false);
-      expect(wrapper.state('errors').schoolType).to.equal(false);
-      expect(wrapper.state('errors').ncesSchoolId).to.equal(true);
-      // expect(server.requests[0].requestBody).to.equal(
-      //   [
-      //     '_method=patch',
-      //     'auth_token=fake_auth_token',
-      //     'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-      //     'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-      //     'user%5Bschool_info_attributes%5D%5Bschool_id%5D='
-      //   ].join('&')
-      // );
+      expect(wrapper.state('errors')).to.not.have.property('country');
+      expect(wrapper.state('errors')).to.not.have.property('school_type');
     });
 
-    it('submits with US, NCES school type, and school id', () => {
+    it('submits with US, NCES school type, and school id from dropdown', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -639,7 +623,19 @@ describe('SchoolInfoInterstitial', () => {
     it('closes the dialog on successful submission', () => {
       const onClose = sinon.spy();
       const wrapper = shallow(
-        <SchoolInfoInterstitial {...MINIMUM_PROPS} onClose={onClose} />
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'United States',
+              school_type: 'public',
+              school_name: 'Test School',
+              full_address: '12222 SE Sunnyside Ln'
+            }
+          }}
+          onClose={onClose}
+        />
       );
       wrapper.find(Button).simulate('click');
       expect(onClose).not.to.have.been.called;
@@ -651,7 +647,19 @@ describe('SchoolInfoInterstitial', () => {
     it('shows an error message on first failed submission', () => {
       const onClose = sinon.spy();
       const wrapper = shallow(
-        <SchoolInfoInterstitial {...MINIMUM_PROPS} onClose={onClose} />
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'United States',
+              school_type: 'public',
+              school_name: 'Test School',
+              full_address: '12222 SE Sunnyside Ln'
+            }
+          }}
+          onClose={onClose}
+        />
       );
       wrapper.find(Button).simulate('click');
       server.requests[0].respond(404, {}, '');
@@ -664,7 +672,19 @@ describe('SchoolInfoInterstitial', () => {
     it('closes the dialog on a second failed submission', () => {
       const onClose = sinon.spy();
       const wrapper = shallow(
-        <SchoolInfoInterstitial {...MINIMUM_PROPS} onClose={onClose} />
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'United States',
+              school_type: 'public',
+              school_name: 'Test School',
+              full_address: '12222 SE Sunnyside Ln'
+            }
+          }}
+          onClose={onClose}
+        />
       );
       wrapper.find(Button).simulate('click');
       server.requests[0].respond(404, {}, '');
