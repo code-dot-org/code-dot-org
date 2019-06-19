@@ -10,7 +10,7 @@ describe('instructions components', () => {
 
   describe('MarkdownInstructions', function() {
     it('standard case had top padding and no left margin', function() {
-      var dom = mount(
+      const wrapper = mount(
         <div>
           <StatelessMarkdownInstructions
             markdown="md"
@@ -20,7 +20,7 @@ describe('instructions components', () => {
           />
         </div>
       );
-      var element = dom.find('.instructions-markdown').first();
+      var element = wrapper.find('.instructions-markdown').first();
       expect(element.props().style.paddingTop).to.equal(19);
       expect(element.props().style.marginBottom).to.equal(35);
       expect(element.props().style.marginLeft).to.equal(undefined);
@@ -28,7 +28,7 @@ describe('instructions components', () => {
     });
 
     it('inTopPane has no top padding', function() {
-      var dom = mount(
+      const wrapper = mount(
         <div>
           <StatelessMarkdownInstructions
             markdown="md"
@@ -37,14 +37,14 @@ describe('instructions components', () => {
           />
         </div>
       );
-      var element = dom.find('.instructions-markdown').first();
+      var element = wrapper.find('.instructions-markdown').first();
       expect(element.props().style.paddingTop).to.equal(0);
     });
   });
 
   describe('NonMarkdownInstructions', function() {
     it('can have just instructions', function() {
-      var dom = mount(
+      const wrapper = mount(
         <div>
           <NonMarkdownInstructions
             puzzleTitle="title"
@@ -52,7 +52,7 @@ describe('instructions components', () => {
           />
         </div>
       );
-      var elements = dom
+      var elements = wrapper
         .find(NonMarkdownInstructions)
         .find('div')
         .first()
@@ -63,7 +63,7 @@ describe('instructions components', () => {
     });
 
     it('can have both instructions and instructions2', function() {
-      var dom = mount(
+      const wrapper = mount(
         <div>
           <NonMarkdownInstructions
             puzzleTitle="title"
@@ -72,7 +72,7 @@ describe('instructions components', () => {
           />
         </div>
       );
-      var elements = dom
+      var elements = wrapper
         .find(NonMarkdownInstructions)
         .find('div')
         .first()
