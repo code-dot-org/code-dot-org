@@ -503,7 +503,6 @@ Dashboard::Application.routes.draw do
 
     delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
-    get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
 
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
