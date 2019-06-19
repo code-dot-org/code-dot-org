@@ -3,6 +3,19 @@ import React from 'react';
 import $ from 'jquery';
 import Spinner from '../../../components/spinner';
 import Results from './results';
+import color from '@cdo/apps/util/color';
+
+const styles = {
+  errorBox: {
+    margin: 15
+  },
+  errorDetailsBox: {
+    backgroundColor: color.lightest_gray,
+    padding: 20,
+    maxWidth: 550,
+    marginTop: 20
+  }
+};
 
 export class ResultsLoader extends React.Component {
   static propTypes = {
@@ -49,14 +62,20 @@ export class ResultsLoader extends React.Component {
 
   renderErrors() {
     return (
-      <div id="error_list">
-        Sorry we couldn't process this request. Server encountered the following
-        error(s):
-        <ul>
-          {this.state.errors.map((error, index) => (
-            <li key={index}>{error.message}</li>
-          ))}
-        </ul>
+      <div id="error_list" style={styles.errorBox}>
+        <h1>An error occurred</h1>
+        <p>
+          Unfortunately this request could not be processed. Our team has been
+          notified.
+        </p>
+        <div style={styles.errorDetailsBox}>
+          Error details:
+          <ul>
+            {this.state.errors.map((error, index) => (
+              <li key={index}>{error.message}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }
