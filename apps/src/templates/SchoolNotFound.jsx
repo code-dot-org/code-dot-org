@@ -111,7 +111,8 @@ export default class SchoolNotFound extends Component {
       return false;
     }
 
-    if (this.props.useGoogleLocationSearch && this.locationSearchRef) {
+    // if (this.props.useGoogleLocationSearch && this.locationSearchRef) {
+    if (this.props.useGoogleLocationSearch) {
       return this.isFieldValid(this.locationSearchRef.value());
     } else {
       return (
@@ -122,7 +123,7 @@ export default class SchoolNotFound extends Component {
     }
   }
 
-  renderLabel(text) {
+  renderLabel(text, isRequired = true) {
     const {singleLineLayout, showRequiredIndicators} = this.props;
     const questionStyle = {
       ...styles.question,
@@ -131,7 +132,9 @@ export default class SchoolNotFound extends Component {
     return (
       <div style={questionStyle}>
         {text}
-        {showRequiredIndicators && <span style={styles.asterisk}> *</span>}
+        {showRequiredIndicators && isRequired && (
+          <span style={styles.asterisk}> *</span>
+        )}
       </div>
     );
   }
@@ -259,7 +262,7 @@ export default class SchoolNotFound extends Component {
         {this.props.useGoogleLocationSearch && (
           <div style={fieldStyle}>
             <label style={labelStyle}>
-              {this.renderLabel(i18n.schoolCityTown())}
+              {this.renderLabel(i18n.schoolCityTown(), false)}
               <GoogleSchoolLocationSearchField
                 ref={el => (this.locationSearchRef = el)}
                 name={this.props.fieldNames.googleLocation}
