@@ -1295,12 +1295,22 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal user_level.level_source.data, 'Panda'
   end
 
-  test "milestone updates assessment activities for assessment script levels" do
+  test "milestone updates assessment activities for multi assessments" do
     post :milestone, params: @milestone_params
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: @script_level.id, script_id: @script_level.script.id)
 
     assessment_script_level = create :script_level, assessment: true
     post :milestone, params: @milestone_params.merge(script_level_id: assessment_script_level.id)
-    refute_nil AssessmentActivity.find_by(user_id: @user, level_id: assessment_script_level.level.id, script_id: assessment_script_level.script.id)
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: assessment_script_level.level.id, script_id: assessment_script_level.script.id)
+
+    multi_level = create :multi
+
+    multi_sl = create :script_level, levels: [multi_level]
+    post :milestone, params: @milestone_params.merge(script_level_id: multi_sl.id)
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sl.level.id, script_id: multi_sl.script.id)
+
+    assessment_multi_sl = create :script_level, levels: [multi_level], assessment: true
+    post :milestone, params: @milestone_params.merge(script_level_id: assessment_multi_sl.id)
+    refute_nil AssessmentActivity.find_by(user_id: @user, level_id: assessment_multi_sl.level.id, script_id: assessment_multi_sl.script.id)
   end
 end

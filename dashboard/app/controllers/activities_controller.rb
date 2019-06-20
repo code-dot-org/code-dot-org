@@ -207,7 +207,7 @@ class ActivitiesController < ApplicationController
             pairing_user_ids: pairing_user_ids
           )
         end
-      if @script_level.assessment
+      if @script_level.assessment && @level.is_a?(Multi)
         AssessmentActivity.create(
           user_id: current_user.id,
           level_id: @level.id,
