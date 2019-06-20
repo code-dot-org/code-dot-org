@@ -4,6 +4,64 @@ si:
     external:
       Begin planning your project:
         title: මාතෘකාව
+      CSD U2 Design Project:
+        title: මාතෘකාව
+      CSD U2 Design Project_2018:
+        title: මාතෘකාව
+      CSD U2 Design Project_2018_2019:
+        title: මාතෘකාව
+      CSD U2 L1 Overview:
+        title: මාතෘකාව
+      CSD U2 L2 Overview:
+        title: මාතෘකාව
+      CSD U2 L3 Overview:
+        title: මාතෘකාව
+      CSD U2 L4 Overview:
+        title: මාතෘකාව
+      CSD U2 L5 Overview:
+        title: මාතෘකාව
+      CSD U2 L6 Overview:
+        title: මාතෘකාව
+      CSD U2 expand project:
+        title: මාතෘකාව
+      CSD U2 expand project_2018:
+        title: මාතෘකාව
+      CSD U2 expand project_2018_2019:
+        title: මාතෘකාව
+      CSD U3 combining rep:
+        title: මාතෘකාව
+      CSD U3 combining rep_2018:
+        title: මාතෘකාව
+      CSD U3 combining rep_2018_2019:
+        title: මාතෘකාව
+      CSD U5 Encryption 1:
+        title: මාතෘකාව
+      CSD U5 Encryption 1_2018:
+        title: මාතෘකාව
+      CSD U5 Encryption 1_2018_2019:
+        title: මාතෘකාව
+      CSD U5 L13 SFLP Interpreting Data:
+        title: මාතෘකාව
+      CSD U5 data visualization:
+        title: මාතෘකාව
+      CSD U5 data visualization_2018:
+        title: මාතෘකාව
+      CSD U5 data visualization_2018_2019:
+        title: මාතෘකාව
+      CSD U5 student record:
+        title: මාතෘකාව
+      CSD U5 student record_2018:
+        title: මාතෘකාව
+      CSD U5 student record_2018_2019:
+        title: මාතෘකාව
+      Internet Simulator Setup 2:
+        title: මාතෘකාව
+      Multi-Screen Apps:
+        title: මාතෘකාව
+      New Challenge Introduction:
+        title: මාතෘකාව
+      OPD-K5 Stage3aGo:
+        title: මාතෘකාව
       Prepare for your presentation:
         title: මාතෘකාව
     match:
@@ -253,6 +311,12 @@ si:
       4-5 maze multi 1:
         Maze Multiple Choice: වංකගිරියේ විවිධ තේරීම්
         Which blocks solve the puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+      CSD U3 Boolean MC:
+        title: මාතෘකාව
+      CSD U3 Boolean MC_2018:
+        title: මාතෘකාව
+      CSD U3 Boolean MC_2018_2019:
+        title: මාතෘකාව
       K-1 Artist 1 Multi 1:
         Multiple Choice: බහුවරණ
         Which blocks solve this puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
@@ -313,11 +377,19 @@ si:
       K-1 Word Search Multi 3:
         Multiple Choice: බහුවරණ
         Which word is spelled?: කුමන වචනය අක්ෂර වින්‍යාසය දක්වයිද?
+      behaviors 1 predict:
+        Incorrect: වැරදියි
+      behaviors 4 predict:
+        Incorrect: වැරදියි
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
         '4': '4'
       courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
         '12': '12'
         '15': '15'
         '4': '4'
@@ -338,6 +410,22 @@ si:
           a loop down.  This is all inside of another loop that happens twice. 4 times
           2 is 8!"
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

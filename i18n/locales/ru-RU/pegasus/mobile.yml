@@ -888,10 +888,6 @@
   coursed-2017_name: Курс D (2017)
   coursee-2017_name: Курс E (2017)
   coursef-2017_name: Курс F (2017)
-  accelerated_name: "Ускоренный курс"
-  express_name: "Экспресс-курс"
-  express-2017_name: Экспресс-курс (2017)
-  cspunit1_name: "Урок 1: Цифровая информация"
   cspunit2_name: "Урок 2: Интернет"
   cspunit3_name: "Урок 3: Программирование"
   cspunit4_name: "Урок 4: Данные"
@@ -1015,6 +1011,12 @@
   coursed-2018_gradelevel: Класс 8 и выше
   coursee-2018_gradelevel: Возраст 8-12
   coursef-2018_gradelevel: Возраст 9-13
+  coursea-2019_gradelevel: Возраст 4-7
+  courseb-2019_gradelevel: Возраст 5-8
+  coursec-2019_gradelevel: Возраст 6-10
+  coursed-2019_gradelevel: Класс 8 и выше
+  coursee-2019_gradelevel: Возраст 8-12
+  coursef-2019_gradelevel: Возраст 9-13
   accelerated_gradelevel: "Возраст 10-18 лет"
   codeorg_platformtext: "Современные браузеры, смартфоны, планшеты"
   codeintl_platformtext: "Современные браузеры, смартфоны, планшеты"

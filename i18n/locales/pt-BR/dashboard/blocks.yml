@@ -200,7 +200,7 @@ pt-BR:
       Dancelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
-          {DO1} {DO2}
+          {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bater palmas
@@ -1293,7 +1293,7 @@ pt-BR:
       Mikelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
-          {DO1} {DO2}
+          {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bater palmas

@@ -249,6 +249,8 @@ Dashboard::Application.routes.draw do
         member do
           # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+          # /s/xxx/stage/yyy/puzzle/zzz/sublevel/sss
+          get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
         end
       end
     end
@@ -609,9 +611,7 @@ Dashboard::Application.routes.draw do
 
       patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
-      patch 'user_school_infos/:id/update_end_date', to: 'user_school_infos#update_end_date'
-
-      patch 'user_school_infos/:id/update_school_info_id', to: 'user_school_infos#update_school_info_id'
+      patch 'user_school_infos', to: 'user_school_infos#update'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 

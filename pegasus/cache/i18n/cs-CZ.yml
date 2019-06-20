@@ -1135,8 +1135,6 @@ cs-CZ:
   coursee_name: Kurz E
   coursef-draft_name: Kurz F
   coursef_name: Kurz F
-  accelerated_name: Zrychlený kurz
-  cspunit1_name: '1. lekce: Digitální informace'
   cspunit2_name: '2. lekce: Internet'
   cspunit3_name: '3. lekce: Programování'
   cspunit4_name: '4. lekce: Data'
@@ -1244,6 +1242,8 @@ cs-CZ:
   coursee-2017_gradelevel: Věk 8-12
   coursed-2018_gradelevel: Známky 8+
   coursee-2018_gradelevel: Věk 8-12
+  coursed-2019_gradelevel: Známky 8+
+  coursee-2019_gradelevel: Věk 8-12
   accelerated_gradelevel: Stáří 10-13
   codeorg_platformtext: Moderní prohlížeče, smartphony, tablety
   codeintl_platformtext: Moderní prohlížeče, smartphony, tablety

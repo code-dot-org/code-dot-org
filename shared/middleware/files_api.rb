@@ -227,7 +227,7 @@ class FilesApi < Sinatra::Base
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
+    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
@@ -431,7 +431,8 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
-    put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
+    filename = BucketHelper.replace_unsafe_chars(file[:filename])
+    put_file('assets', encrypted_channel_id, filename, file[:tempfile].read)
   end
 
   # POST /v3/copy-assets/<channel-id>?src_channel=<src-channel-id>&src_files=<src-filenames-json>
@@ -683,7 +684,8 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
-    files_put_file(encrypted_channel_id, file[:filename], file[:tempfile].read)
+    filename = BucketHelper.replace_unsafe_chars(file[:filename])
+    files_put_file(encrypted_channel_id, filename, file[:tempfile].read)
   end
 
   #

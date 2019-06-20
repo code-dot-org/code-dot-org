@@ -113,14 +113,21 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/generic_survey_report
     def generic_survey_report
+      # Default HTTP status code to return to client if
+      # we encouter an exception processing this request.
+      error_status_code = :internal_server_error
+
       return local_workshop_daily_survey_report if @workshop.summer? ||
         ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) &&
         @workshop.workshop_starting_date > Date.new(2018, 8, 1))
 
       return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
 
+      error_status_code = :bad_request
+      raise 'Action generic_survey_report should not be used for this workshop'
+    rescue => e
       Honeybadger.notify(
-        error_message: 'Action generic_survey_report should not be used for this workshop',
+        error_message: e.message,
         context: {
           workshop_id: @workshop.id,
           course: @workshop.course,
@@ -128,9 +135,14 @@ module Api::V1::Pd
         }
       )
 
-      render status: :bad_request, json: {
-        error: "Do not know how to process survey results for this workshop "\
-          "#{@workshop.course} #{@workshop.subject}"
+      render status: error_status_code, json: {
+        errors: [
+          {
+            severity: Logger::Severity::ERROR,
+            message: "#{e.message}. Workshop id: #{@workshop.id},"\
+              " course: #{@workshop.course}, subject: #{@workshop.subject}."
+          }
+        ]
       }
     end
 
@@ -155,7 +167,7 @@ module Api::V1::Pd
       joiner = Pd::SurveyPipeline::DailySurveyJoiner
 
       # Mapper + Reducers
-      group_config = [:workshop_id, :form_id, :name, :type, :answer_type]
+      group_config = [:workshop_id, :form_id, :facilitator_id, :name, :type, :answer_type]
 
       is_single_select_answer = lambda {|hash| hash.dig(:answer_type) == 'singleSelect'}
       is_free_format_question = lambda {|hash| ['textbox', 'textarea'].include?(hash[:type])}
@@ -197,7 +209,11 @@ module Api::V1::Pd
         summary_data += mapper.map_reduce joined_data
       end
 
-      render json: decorator.decorate(summary_data: summary_data, parsed_data: parsed_data)
+      render json: decorator.decorate(
+        summary_data: summary_data,
+        parsed_data: parsed_data,
+        current_user: current_user
+      )
     end
 
     # We want to filter facilitator-specific responses if the user is a facilitator and

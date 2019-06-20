@@ -24,7 +24,7 @@ commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
 ami = commit[0..4]
 
 frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
-database = @database = [:staging, :test].include?(rack_env) || ENV['DATABASE']
+database = @database = [:staging, :test, :levelbuilder].include?(rack_env) || ENV['DATABASE']
 load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
 
 unless dry_run
@@ -627,7 +627,11 @@ Resources:
                 Action: rds:CopyDBClusterSnapshot
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:<%=CDO.db_cluster_id%>*"
               - Effect: Allow
-                Action: rds:ModifyDBClusterSnapshotAttribute
+                Action:
+                  - rds:ModifyDBClusterSnapshotAttribute
+                  - rds:CopyDBClusterSnapshot
+                  - rds:DeleteDBClusterSnapshot
+                  - rds:DescribeDBClusterSnapshotAttributes
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:temp-snapshot*"
               - Effect: Allow
                 Action:

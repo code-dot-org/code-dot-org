@@ -10,6 +10,10 @@ ku:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -27,6 +31,22 @@ ku:
           a loop down.  This is all inside of another loop that happens twice. 4 times
           2 is 8!"
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'

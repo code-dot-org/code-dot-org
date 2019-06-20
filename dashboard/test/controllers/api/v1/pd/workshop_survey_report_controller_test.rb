@@ -208,15 +208,17 @@ module Api::V1::Pd
     end
 
     test 'facilitators cannot see results for other types of workshops' do
-      workshop = create :pd_workshop, facilitators: [@facilitator]
+      workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101,
+        facilitators: [@facilitator]
       sign_in @facilitator
 
       get :generic_survey_report, params: {workshop_id: workshop.id}
+      result = JSON.parse(@response.body)
+
       assert_response :bad_request
-      assert_equal(
-        {'error' => "Do not know how to process survey results for this workshop"\
-          " #{workshop.course} #{workshop.subject}"},
-        JSON.parse(@response.body)
+      assert result['errors']&.present?
+      assert result['errors'].first["message"]&.start_with?(
+        'Action generic_survey_report should not be used for this workshop'
       )
     end
 

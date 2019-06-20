@@ -840,8 +840,6 @@
   course2_name: "Курс 2"
   course3_name: "Курс 3"
   course4_name: "Курс 4"
-  accelerated_name: "Ускорен курс"
-  cspunit1_name: "(стар) Урок 1: Цифрова информация"
   cspunit2_name: "(стар) Раздел 2: Интернет"
   cspunit3_name: "(стар) Раздел 3: програмиране"
   cspunit4_name: "(стар) Раздел 4: данни"
@@ -940,6 +938,8 @@
   coursee-2017_gradelevel: Възраст 8-12
   coursed-2018_gradelevel: Клас 8 +
   coursee-2018_gradelevel: Възраст 8-12
+  coursed-2019_gradelevel: Клас 8 +
+  coursee-2019_gradelevel: Възраст 8-12
   accelerated_gradelevel: "Възраст 10 + (след курс 3)"
   codeorg_platformtext: "Съвременни браузъри, смартфони, таблети"
   codeintl_platformtext: "Съвременни браузъри, смартфони, таблети"

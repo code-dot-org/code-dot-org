@@ -915,10 +915,6 @@
   coursee_name: "Cúrsa E"
   coursef-draft_name: Cúrsa F
   coursef_name: "Cúrsa F"
-  accelerated_name: "Cúrsa Luathaithe"
-  express_name: "Luaschúrsa"
-  pre-express_name: Luaschúrsa do Réamhléitheoirí
-  cspunit1_name: "Aonad 1: Faisnéis dhigiteach"
   cspunit2_name: "Aonad 2: An tIdirlíon"
   cspunit3_name: "Aonad 3: Ríomhchlárú"
   cspunit4_name: "Aonad 4: Sonraí"
@@ -1048,6 +1044,12 @@
   coursed-2018_gradelevel: Aois 13+
   coursee-2018_gradelevel: Aois 8-12
   coursef-2018_gradelevel: Aois 9-13
+  coursea-2019_gradelevel: Aois 4-7
+  courseb-2019_gradelevel: Aois 5-8
+  coursec-2019_gradelevel: Aois 6-10
+  coursed-2019_gradelevel: Aois 13+
+  coursee-2019_gradelevel: Aois 8-12
+  coursef-2019_gradelevel: Aois 9-13
   accelerated_gradelevel: "Aois 10-18"
   codeorg_platformtext: "Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid"
   codeintl_platformtext: "Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid"
@@ -1161,6 +1163,10 @@
   coursec-2018_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
   coursed-2018_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh, ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus tuilleadh.
   coursef-2018_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
+  coursea-2019_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  coursec-2019_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
+  coursed-2019_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh, ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus tuilleadh.
+  coursef-2019_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
   codeorg_longdescription: "Foghlaim buntús na ríomheolaíochta trí ríomhchlárú \"tarraingt is scaoileadh\". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí. Ar fáil i 34 teanga."
   codeintl_longdescription: "Foghlaim buntús na ríomheolaíochta trí ríomhchlárú \"tarraingt is scaoileadh\". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí. Ar fáil i 34 teanga."
   khan_longdescription: "Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript agus déan líníochtaí taitneamhacha le do chód. Déan as do stuaim féin é, nó in éineacht le do rang!"

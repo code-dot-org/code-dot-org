@@ -763,7 +763,6 @@
   course2_name: "Kurs 2"
   course3_name: "Kurs 3"
   course4_name: "Kurs 4"
-  accelerated_name: "Beschleunigter Kurs"
   csd5_name: 'Lektion 5: Daten und Gesellschaft'
   csd5-2017_name: 'Lektion 5: Daten und Gesellschaft'
   csd5-2018_name: 'Lektion 5: Daten und Gesellschaft'
@@ -855,6 +854,8 @@
   coursee-2017_gradelevel: Alter 8-12
   coursed-2018_gradelevel: Ab 8. Klasse
   coursee-2018_gradelevel: Alter 8-12
+  coursed-2019_gradelevel: Ab 8. Klasse
+  coursee-2019_gradelevel: Alter 8-12
   accelerated_gradelevel: "Alter: 10-18"
   codeorg_platformtext: "Moderne Browser, Smartphones, Tablets"
   codeintl_platformtext: "Moderne Browser, Smartphones, Tablets"

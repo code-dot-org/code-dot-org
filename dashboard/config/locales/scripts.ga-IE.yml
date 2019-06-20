@@ -1783,3 +1783,18 @@ ga:
           stages:
             Graph Paper Programming:
               name: Ríomhchlárú ar Ghrafpháipéar
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Liostaí
+        csd3-pilot:
+          description_short: Códáil
+          stages:
+            Variables:
+              name: Athróga
+            Conditionals:
+              name: Coinníollacha
+            Velocity:
+              name: Treoluas
+            Functions:
+              name: Feidhmeanna
