@@ -91,7 +91,7 @@ class RegistrationsController < Devise::RegistrationsController
       if retries > 0
         Honeybadger.notify(
           error_class: 'User creation required multiple attempts',
-          error_message: "attempt ##{retries} failed with exception: #{exception}"
+          error_message: "retry ##{retries} failed with exception: #{exception}"
         )
       end
       super
