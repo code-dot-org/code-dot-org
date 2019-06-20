@@ -60,6 +60,7 @@ export default class SchoolNotFound extends Component {
     schoolZip: PropTypes.string,
     schoolType: PropTypes.string,
     schoolLocation: PropTypes.string,
+    country: PropTypes.string,
     controlSchoolLocation: PropTypes.bool,
     fieldNames: PropTypes.object,
     showErrorMsg: PropTypes.bool,
@@ -112,7 +113,7 @@ export default class SchoolNotFound extends Component {
     }
 
     if (this.props.useGoogleLocationSearch && this.locationSearchRef) {
-    // if (this.props.useGoogleLocationSearch) {
+      // if (this.props.useGoogleLocationSearch) {
       return this.isFieldValid(this.locationSearchRef.value());
     } else {
       return (
@@ -159,6 +160,9 @@ export default class SchoolNotFound extends Component {
       <div style={styles.errors}>{i18n.schoolInfoRequired()}</div>
     );
 
+    const isUs = this.props.country
+      ? this.props.country === 'United States'
+      : false;
     return (
       <div>
         {!singleLineLayout && (
@@ -171,7 +175,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolName !== OMIT_FIELD && (
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                {this.renderLabel(this.props.schoolNameLabel)}
+                {this.renderLabel(this.props.schoolNameLabel, !!isUs)}
                 <input
                   id="school_name"
                   type="text"

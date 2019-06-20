@@ -127,6 +127,7 @@ export default class SchoolInfoInputs extends Component {
         <SchoolTypeDropdown
           value={this.props.schoolType}
           fieldName={this.props.fieldNames.schoolType}
+          country={this.props.country}
           onChange={this.props.onSchoolTypeChange}
           showErrorMsg={this.props.showErrors}
           showRequiredIndicator={this.props.showRequiredIndicator}
@@ -156,6 +157,7 @@ export default class SchoolInfoInputs extends Component {
             }
             schoolZip={isUS ? this.props.schoolZip : SchoolNotFound.OMIT_FIELD}
             schoolLocation={this.props.schoolLocation}
+            country={this.props.country}
             controlSchoolLocation={true}
             fieldNames={this.props.fieldNames}
             showErrorMsg={this.props.showErrors}
