@@ -742,13 +742,16 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params, session = nil)
-    omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
-
-    unless omniauth_user
-      omniauth_user = create do |user|
-        initialize_new_oauth_user(user, auth, params)
+    # Make sure no matching user account can be created by another thread
+    # between trying to find the user and creating a new one
+    transaction do
+      omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
+      unless omniauth_user
+        omniauth_user = create do |user|
+          initialize_new_oauth_user(user, auth, params)
+        end
+        SignUpTracking.log_sign_up_result(omniauth_user, session)
       end
-      SignUpTracking.log_sign_up_result(omniauth_user, session)
     end
 
     omniauth_user.update_oauth_credential_tokens(auth)
