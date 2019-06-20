@@ -220,21 +220,23 @@ class ExportDialog extends React.Component {
 
   componentDidUpdate(prevProps) {
     const {isOpen, md5SavedSources} = this.props;
-    const {md5ExportSavedSources, apkUri} = this.state;
+    const {md5PublishSavedSources} = this.state;
     if (isOpen && !prevProps.isOpen) {
       recordExport('open');
-      this.cancelIfPreexistingApkBuild();
-      const sourcesChanged =
-        md5ExportSavedSources && md5SavedSources !== md5ExportSavedSources;
-      const {apkUri: validPreviousApkUri} = this.getValidPreviousApkInfo();
-      const apkUriNowInvalid = apkUri && validPreviousApkUri !== apkUri;
-      if (sourcesChanged || apkUriNowInvalid) {
+      const md5ApkSavedSources = this.getMd5ApkSavedSources();
+      const sourcesChangedSinceExport =
+        md5ApkSavedSources && md5SavedSources !== md5ApkSavedSources;
+      const sourcesChangedThisInstance =
+        md5PublishSavedSources && md5SavedSources !== md5PublishSavedSources;
+      if (sourcesChangedSinceExport) {
+        // Also cancel a build that may have started before this page was reloaded:
+        this.cancelIfPreexistingApkBuild();
+      }
+      if (sourcesChangedThisInstance) {
         // The project has changed since we last published within this dialog,
         // cancel any builds in progress and reset our export state, so we will
         // start all over again:
         this.cancelIfGeneratingAndResetState();
-        // Also cancel a build that may have started before this page was reloaded:
-        this.cancelIfPreexistingApkBuild();
       }
     }
   }
@@ -261,7 +263,17 @@ class ExportDialog extends React.Component {
         apkBuildId
       });
     }
+    // If we are publishing to expo (state.exporting is true), we don't need
+    // to cancel, just resetting our state is good enough.
     this.resetExportState();
+  }
+
+  getMd5ApkSavedSources() {
+    const {exportGeneratedProperties = {}} = this.props;
+    const {android = {}} = exportGeneratedProperties;
+    const {md5ApkSavedSources} = android;
+
+    return md5ApkSavedSources;
   }
 
   //
@@ -280,8 +292,8 @@ class ExportDialog extends React.Component {
       const {exportApp} = this.props;
       exportApp({
         mode: 'expoCancelApkBuild',
-        md5ApkSavedSources,
-        snackId,
+        md5SavedSources: md5ApkSavedSources,
+        expoSnackId: snackId,
         apkBuildId
       });
     }
@@ -295,7 +307,7 @@ class ExportDialog extends React.Component {
       expoUri: undefined,
       expoSnackId: undefined,
       iconUri: undefined,
-      md5ExportSavedSources: undefined,
+      md5PublishSavedSources: undefined,
       splashImageUri: undefined,
       showSendToPhone: false,
       apkUri: undefined,
@@ -347,12 +359,19 @@ class ExportDialog extends React.Component {
     const {exportApp, md5SavedSources} = this.props;
     this.setState({
       exporting: true,
-      md5ExportSavedSources: md5SavedSources
+      md5PublishSavedSources: md5SavedSources
     });
     try {
       const exportResult = await exportApp({
         mode: 'expoPublish'
       });
+      const {exporting} = this.state;
+      if (!exporting) {
+        // The user has canceled (resetExportState() was called)
+        // Simply return an empty object and don't modify state
+        // or return the exportResult:
+        return {};
+      }
       this.setState({
         exporting: false,
         exportError: null,
@@ -362,7 +381,7 @@ class ExportDialog extends React.Component {
     } catch (e) {
       this.setState({
         exporting: false,
-        md5ExportSavedSources: null,
+        md5PublishSavedSources: null,
         expoUri: null,
         expoSnackId: null,
         exportError: 'Failed to create app. Please try again later.'
@@ -688,16 +707,14 @@ class ExportDialog extends React.Component {
     );
   }
 
+  isGenerating() {
+    const {screen, exporting, generatingApk} = this.state;
+    return screen === 'generating' && (exporting || generatingApk);
+  }
+
   renderGeneratingPage() {
-    const {
-      exporting,
-      generatingApk,
-      showSendToPhone,
-      exportError,
-      apkError,
-      apkUri = ''
-    } = this.state;
-    const waiting = exporting || generatingApk;
+    const {showSendToPhone, exportError, apkError, apkUri = ''} = this.state;
+    const waiting = this.isGenerating();
     const error = exportError || apkError;
     const {appType} = this.props;
     const titleText = waiting
@@ -814,6 +831,7 @@ class ExportDialog extends React.Component {
       enabled: actionEnabled
     } = this.getActionButtonInfo();
     const backVisible = screen !== 'intro';
+    const cancelVisible = this.isGenerating();
     const backEnabled = this.backButtonEnabled();
     const showShareWarning = !canShareSocial;
     return (
@@ -867,13 +885,15 @@ class ExportDialog extends React.Component {
                 )}
                 {this.renderMainContent()}
                 <div style={styles.buttonRow}>
-                  <button
-                    type="button"
-                    style={styles.cancelButton}
-                    onClick={this.onCancelButton}
-                  >
-                    Cancel
-                  </button>
+                  {cancelVisible && (
+                    <button
+                      type="button"
+                      style={styles.cancelButton}
+                      onClick={this.onCancelButton}
+                    >
+                      Cancel Package Creation
+                    </button>
+                  )}
                   {backVisible && (
                     <button
                       type="button"
