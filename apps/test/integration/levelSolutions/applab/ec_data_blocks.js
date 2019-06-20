@@ -27,7 +27,7 @@ export default {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'record created with id: 1 name: Alice age: 7'
+          '"record created with id: 1 name: Alice age: 7"'
         );
         return true;
       },
@@ -57,7 +57,7 @@ export default {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'record created with id: 1 name: Alice age: 7'
+          '"record created with id: 1 name: Alice age: 7"'
         );
         return true;
       },
