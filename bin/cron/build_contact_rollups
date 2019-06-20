@@ -7,7 +7,6 @@ require 'cdo/pardot'
 require 'cdo/chat_client'
 require 'cdo/only_one'
 require 'cdo/log_collector'
-require 'aws-sdk-rds'
 require 'honeybadger/ruby'
 
 CHAT_CHANNEL = "cron-daily".freeze
