@@ -1,3 +1,5 @@
+var extraArgs = null;
+
 function draw() {
   executeDrawLoopAndCallbacks();
 }
