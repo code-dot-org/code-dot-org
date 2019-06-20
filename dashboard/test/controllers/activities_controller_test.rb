@@ -1310,7 +1310,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sl.level.id, script_id: multi_sl.script.id)
 
     assessment_multi_sl = create :script_level, levels: [multi_level], assessment: true
-    post :milestone, params: @milestone_params.merge(script_level_id: assessment_multi_sl.id)
+    milestone_params = @milestone_params.merge(
+      script_level_id: assessment_multi_sl.id, program: '0'
+    )
+    post :milestone, params: milestone_params
     assessment_activity = AssessmentActivity.find_by(
       user_id: @user,
       level_id: assessment_multi_sl.level.id,
@@ -1319,6 +1322,19 @@ class ActivitiesControllerTest < ActionController::TestCase
     refute_nil assessment_activity
     assert_equal @milestone_params[:attempt].to_i, assessment_activity.attempt
     assert_equal @milestone_params[:testResult].to_i, assessment_activity.test_result
+
+    # allow multiple entries to be created
+
+    post :milestone, params: milestone_params.merge(attempt: '2', program: '4')
+    post :milestone, params: milestone_params.merge(attempt: '3', program: '5')
+    assessment_activities = AssessmentActivity.where(
+      user_id: @user,
+      level_id: assessment_multi_sl.level.id,
+      script_id: assessment_multi_sl.script.id
+    ).all
+    assert_equal [1, 2, 3], assessment_activities.map(&:attempt)
+    answers = assessment_activities.map {|aa| LevelSource.find(aa.level_source_id)&.data}
+    assert_equal ['0', '4', '5'], answers
 
     # make sure that we don't create an AssessmentActivity when the multi level
     # is updated within an assessment level group.
