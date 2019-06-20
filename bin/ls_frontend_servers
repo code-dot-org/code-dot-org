@@ -11,8 +11,8 @@
 
 require 'optparse'
 ENV['RAILS_ENV'] = 'production'
+ENV['CDO_CHEF_MANAGED'] = true
 require_relative '../deployment'
-CDO.chef_managed = true
 CDO.log.level = Logger::WARN
 
 if __FILE__ == $0

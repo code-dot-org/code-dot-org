@@ -7,9 +7,9 @@ require 'json'
 require 'aws-sdk-rds'
 
 class ContactRollups
-  # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
+  # Production database has a global max query execution timeout setting. This 30 minute setting can be used
   # to override the timeout for a specific session or query.
-  MAX_EXECUTION_TIME = 1_200_000
+  MAX_EXECUTION_TIME = 1_800_000
   MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
 
   DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
@@ -138,31 +138,32 @@ class ContactRollups
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
   CENSUS_FORM_NAME = "Census".freeze
 
-  def self.build_contact_rollups
+  def self.build_contact_rollups(log_collector)
     start = Time.now
 
-    initialize_connections_to_database_clone
+    log_collector.time!('initialize_connections_to_database_clone') {initialize_connections_to_database_clone}
 
     @@pegasus_clone_db_writer.run "SET SQL_SAFE_UPDATES = 0"
     # set READ UNCOMMITTED transaction isolation level on both read connections to avoid taking locks
     # on tables we are reading from during what can be multi-minute operations
     @@dashboard_clone_db_reader.run "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
     ActiveRecord::Base.connection.execute "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
-    create_destination_table
-    insert_from_pegasus_forms
-    insert_from_dashboard_contacts
-    insert_from_dashboard_pd_enrollments
-    insert_from_dashboard_census_submissions
-    update_geo_from_school_data
-    update_unsubscribe_info
-    update_roles
-    update_grades_taught
-    update_ages_taught
-    update_district
-    update_school
-    update_courses_facilitated
-    update_professional_learning_enrollment
-    update_professional_learning_attendance
+
+    log_collector.time!('create_destination_table') {create_destination_table}
+    log_collector.time!('insert_from_pegasus_forms') {insert_from_pegasus_forms}
+    log_collector.time!('insert_from_dashboard_contacts') {insert_from_dashboard_contacts}
+    log_collector.time!('insert_from_dashboard_pd_enrollments') {insert_from_dashboard_pd_enrollments}
+    log_collector.time!('insert_from_dashboard_census_submissions') {insert_from_dashboard_census_submissions}
+    log_collector.time!('update_geo_from_school_data') {update_geo_from_school_data}
+    log_collector.time!('update_unsubscribe_info') {update_unsubscribe_info}
+    log_collector.time!('update_roles') {update_roles}
+    log_collector.time!('update_grades_taught') {update_grades_taught}
+    log_collector.time!('update_ages_taught') {update_ages_taught}
+    log_collector.time!('update_district') {update_district}
+    log_collector.time!('update_school') {update_school}
+    log_collector.time!('update_courses_facilitated') {update_courses_facilitated}
+    log_collector.time!('update_professional_learning_enrollment') {update_professional_learning_enrollment}
+    log_collector.time!('update_professional_learning_attendance') {update_professional_learning_attendance}
 
     # record contacts' interactions with us based on forms
     FORM_INFOS.each do |form_info|
@@ -171,21 +172,23 @@ class ContactRollups
 
     # parse all forms that collect user-reported address/location or other data of interest
     FORM_KINDS_WITH_DATA.each do |kind|
-      update_data_from_forms(kind)
+      log_collector.time!("update_data_from_forms kind=#{kind}") {update_data_from_forms(kind)}
     end
 
     # Add contacts to the Teacher role based on form responses
-    update_teachers_from_forms
-    update_teachers_from_census_submissions
+    log_collector.time!('update_teachers_from_forms') {update_teachers_from_forms}
+    log_collector.time!('update_teachers_from_census_submissions') {update_teachers_from_census_submissions}
 
     # Set opt_in based on information collected in Dashboard Email Preference.
-    update_email_preferences
+    log_collector.time!('update_email_preferences') {update_email_preferences}
 
     count = @@pegasus_clone_db_reader["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
+
+    log_collector.info("#{count} records created in contact_rollups_daily table")
   end
 
-  def self.sync_contact_rollups_to_main
+  def self.sync_contact_rollups_to_main(log_collector)
     log("#{Time.now} Starting")
 
     num_inserts = 0
@@ -277,6 +280,7 @@ class ContactRollups
     end
 
     log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
+    log_collector.info("#{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
   end
 
   def self.create_destination_table
@@ -1082,8 +1086,10 @@ class ContactRollups
       attempts += 1
       sleep delay
     end
-    raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster" \
-      " #{DATABASE_CLUSTER_CLONE_ID} deletion to complete.  Current cluster status - #{cluster_state}"
-    )
+    unless cluster_state == 'deleted'
+      raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster" \
+        " #{DATABASE_CLUSTER_CLONE_ID} deletion to complete.  Current cluster status - #{cluster_state}"
+      )
+    end
   end
 end

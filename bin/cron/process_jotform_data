@@ -8,15 +8,19 @@ TIME_NOW = DateTime.now.strftime('%F %T').freeze
 JOTFORM_SURVEY_RESPONSE_CLASSES = [
   Pd::WorkshopDailySurvey,
   Pd::WorkshopFacilitatorDailySurvey,
-  Pd::PostCourseSurvey
-]
+  Pd::PostCourseSurvey,
+  Pd::MiscSurvey
+].freeze
 
 # @param unsanitized [String, nil] the unsanitized string
 # @returns [String, nil] the sanitized version of the string, with newlines stripped and double
 #   quotations escaped. Returns nil on nil input.
 def sanitize_string_for_db(unsanitized)
   return nil if unsanitized.nil?
-  unsanitized.gsub(/[\r\n\\]+/, '').gsub(/"/, '\"')
+  # 1 gets rid of new lines
+  # 2 puts escape character in front of double quotes
+  # 3 removes HTML and replaces with underscore
+  unsanitized.gsub(/[\r\n\\]+/, '').gsub(/"/, '\"').gsub(/<[^>]*>/, '_')
 end
 
 def insert_survey_answers(survey_answers)
@@ -123,7 +127,7 @@ def main
       survey_answers = []
       submissions.each do |submission|
         # skipping blank submissions
-        if submission.answers == "{}"
+        if submission.answers == "{}" || submission.user_id.nil?
           next
         end
         answers = submission.form_data_hash

@@ -19,20 +19,20 @@ describe('SignInOrAgeDialog', () => {
     const wrapper = shallow(
       <SignInOrAgeDialog {...defaultProps} signedIn={true} />
     );
-    assert.equal(wrapper.getNode(), null);
+    assert.equal(wrapper.children().length, 0);
   });
 
   it('renders null if script does not require 13+', () => {
     const wrapper = shallow(
       <SignInOrAgeDialog {...defaultProps} age13Required={false} />
     );
-    assert.equal(wrapper.getNode(), null);
+    assert.equal(wrapper.children().length, 0);
   });
 
   it('renders null if seen before', () => {
     sessionStorage.setItem('anon_over13', true);
     const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
-    assert.equal(wrapper.getNode(), null);
+    assert.equal(wrapper.children().length, 0);
   });
 
   it('renders a dialog otherwise', () => {

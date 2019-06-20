@@ -646,7 +646,7 @@ pt-BR:
   sports_athlete_Harrison: Harrison Barnes, medalhista de ouro olímpico e campeão
     da NBA, Dallas Mavericks
   watch_inspirational_videos: Antes de começar, assista a um desses vídeos inspiradores
-  video_title_cs_is_everything: Ciência da computação está mudando tudo
+  video_title_cs_is_everything: Ciência da Computação está Mudando Tudo
   video_title_inspire_girl: Inspire uma garota
   video_title_cs_intro: Introdução à ciência da computação
   video_title_schools_dont_teach: O que a maioria das escolas não ensina
@@ -1284,13 +1284,13 @@ pt-BR:
   coursed-2018_name: Curso D (2018)
   coursee-2018_name: Curso E (2018)
   coursef-2018_name: Curso F (2018)
-  accelerated_name: Curso acelerado
-  express_name: Curso Expresso
-  pre-express_name: Curso Expresso de Pré-Leitor
-  express-2017_name: Curso Expresso (2017)
-  pre-express-2017_name: Curso Expresso de Pré-Leitor (2017)
+  coursea-2019_name: Curso A (2019)
+  courseb-2019_name: Curso B (2019)
+  coursec-2019_name: Curso C (2019)
+  coursed-2019_name: Curso D (2019)
+  coursee-2019_name: Curso E (2019)
   pre-express-2018_name: Curso Expresso de Pré-Leitor (2018)
-  cspunit1_name: "(antigo) Unidade 1: Informação digital"
+  express-2019_name: Curso Expresso (2019)
   cspunit2_name: "(antigo) Unidade 2: A Internet"
   cspunit3_name: "(antigo) Unidade 3: Programação"
   cspunit4_name: "(antigo) Unidade 4: Dados"
@@ -1435,6 +1435,12 @@ pt-BR:
   coursed-2018_gradelevel: Alunos a partir do 8º ano
   coursee-2018_gradelevel: De 8 a 12 anos
   coursef-2018_gradelevel: 'Idade: de 9 a 13 anos'
+  coursea-2019_gradelevel: 'Idade: de 4 a 7 anos'
+  courseb-2019_gradelevel: 'Idade: de 5 a 8 anos'
+  coursec-2019_gradelevel: 'Idade: de 6 a 10 anos'
+  coursed-2019_gradelevel: Alunos a partir do 8º ano
+  coursee-2019_gradelevel: De 8 a 12 anos
+  coursef-2019_gradelevel: 'Idade: de 9 a 13 anos'
   accelerated_gradelevel: 10-18 anos de idade
   codeorg_platformtext: Navegadores modernos, smartphones, tablets
   codeintl_platformtext: Navegadores modernos, smartphones, tablets
@@ -1604,6 +1610,18 @@ pt-BR:
   coursee-2018_shortdescription_congrats: Rapidamente cobrem conceitos de curso C
     e D e vai mais longe com funções.
   coursef-2018_shortdescription_congrats: Aprenda todos os conceitos Fundamentais
+    da Ciência da Computação e crie sua própria arte, história ou jogo.
+  coursea-2019_shortdescription_congrats: Uma introdução à ciência da computação para
+    pré-leitores.
+  courseb-2019_shortdescription_congrats: Uma introdução à ciência da computação para
+    pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais
+    velhos.)
+  coursed-2019_shortdescription_congrats: Abrange rapidamente conceitos do Curso C
+    e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito
+    mais.
+  coursee-2019_shortdescription_congrats: Rapidamente cobrem conceitos de curso C
+    e D e vai mais longe com funções.
+  coursef-2019_shortdescription_congrats: Aprenda todos os conceitos Fundamentais
     da Ciência da Computação e crie sua própria arte, história ou jogo.
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
@@ -2339,7 +2357,7 @@ pt-BR:
   hoc2018_mc_video_5min: 5 min
   hoc2018_mc_video_title_steph_curry: Hora de código com Steph Curry
   hoc2018_mc_video_title_sports: Esforce-se. Qualquer um pode aprender.
-  hoc2018_mc_video_title_cs_is_everything: Ciência da computação está mudando tudo
+  hoc2018_mc_video_title_cs_is_everything: Ciência da Computação está Mudando Tudo
   hoc2018_mc_video_title_inspire_girl: Inspire uma garota
   hoc2018_mc_video_title_cs_intro: Introdução à ciência da computação
   hoc2018_mc_video_title_schools_dont_teach: O que a maioria das escolas não ensina
