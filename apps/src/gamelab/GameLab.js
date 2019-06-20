@@ -69,6 +69,7 @@ import MobileControls from './MobileControls';
 import Exporter from './Exporter';
 import {expoInteractWithApk} from '../util/exporter';
 import project from '../code-studio/initApp/project';
+import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -87,9 +88,7 @@ const validationLibraryName = 'ValidationSetup';
 const DRAW_LOOP_START = 'drawLoopStart';
 const DRAW_LOOP_MEASURE = 'drawLoop';
 
-const DEFAULT_GENERATED_PROPERTIES = {
-  export: {}
-};
+const DEFAULT_GENERATED_PROPERTIES = {};
 
 /**
  * An instantiable GameLab class
@@ -407,6 +406,9 @@ GameLab.prototype.init = function(config) {
     ...DEFAULT_GENERATED_PROPERTIES,
     ...config.initialGeneratedProperties
   };
+  getStore().dispatch(
+    setExportGeneratedProperties(this.generatedProperties.export)
+  );
 
   // Pre-register all audio preloads with our Sounds API, which will load
   // them into memory so they can play immediately:
@@ -476,6 +478,9 @@ GameLab.prototype.setAndroidExportProps = function(props) {
   };
   project.projectChanged();
   project.saveIfSourcesChanged();
+  getStore().dispatch(
+    setExportGeneratedProperties(this.generatedProperties.export)
+  );
 };
 
 /**

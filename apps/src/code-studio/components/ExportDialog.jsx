@@ -201,7 +201,7 @@ class ExportDialog extends React.Component {
       t: PropTypes.func.isRequired
     }).isRequired,
     exportApp: PropTypes.func.isRequired,
-    exportGeneratedProperties: PropTypes.object.isRequired,
+    exportGeneratedProperties: PropTypes.object,
     md5SavedSources: PropTypes.string.isRequired,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
@@ -437,7 +437,7 @@ class ExportDialog extends React.Component {
   }
 
   getValidPreviousApkInfo() {
-    const {exportGeneratedProperties, md5SavedSources} = this.props;
+    const {exportGeneratedProperties = {}, md5SavedSources} = this.props;
     const {android = {}} = exportGeneratedProperties;
     const {md5ApkSavedSources, ...apkInfo} = android;
 
@@ -935,6 +935,7 @@ export default connect(
   state => ({
     exportApp: state.pageConstants.exportApp,
     isOpen: state.exportDialog.isOpen,
+    exportGeneratedProperties: state.exportDialog.exportGeneratedProperties,
     signInState: state.progress.signInState
   }),
   dispatch => ({

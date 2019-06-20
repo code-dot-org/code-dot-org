@@ -19,8 +19,6 @@ export function exportProject() {
     }
 
     const appType = project.getStandaloneApp();
-    const {export: exportGeneratedProperties = {}} =
-      project.getGeneratedProperties() || {};
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = pageConstants.is13Plus || !pageConstants.isSignedIn;
 
@@ -33,7 +31,6 @@ export function exportProject() {
           isAbusive={project.exceedsAbuseThreshold()}
           channelId={project.getCurrentId()}
           appType={appType}
-          exportGeneratedProperties={exportGeneratedProperties}
           canShareSocial={canShareSocial}
           userSharingDisabled={appOptions.userSharingDisabled}
         />
