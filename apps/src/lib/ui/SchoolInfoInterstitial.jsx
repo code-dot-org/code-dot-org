@@ -218,16 +218,27 @@ export default class SchoolInfoInterstitial extends React.Component {
       console.log('Country is not valid');
     }
 
-    if (this.isBlank(ncesSchoolId)) {
+    if (schoolType === 'public' || 'private' || 'charter') {
       errors.ncesSchoolId = true;
       isValid = false;
       console.log('ncesschoolid is not valid');
     }
 
-    if (this.isBlank(schoolName)) {
+    // if (this.isBlank(ncesSchoolId)) {
+    //   errors.ncesSchoolId = true;
+    //   isValid = false;
+    //   console.log('ncesschoolid is not valid');
+    // }
+
+    // if (ncesSchoolId === '-1' && this.isBlank(schoolName)) {
+    //   errors.schoolName = true;
+    //   isValid = false;
+    //   console.log('schoolName is not valid');
+    // }
+
+    if (this.isBlank(ncesSchoolId) && this.isBlank(schoolName)) {
       errors.schoolName = true;
       isValid = false;
-      console.log('schoolName is not valid');
     }
 
     if (this.isBlank(schoolType)) {
