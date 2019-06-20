@@ -1294,4 +1294,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     # panda_panda contains a panda emoji, ensure that it's gone
     assert_equal user_level.level_source.data, 'Panda'
   end
+
+  test "milestone updates assessment activities for assessment script levels" do
+    post :milestone, params: @milestone_params
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: @script_level.id, script_id: @script_level.script.id)
+
+    assessment_script_level = create :script_level, assessment: true
+    post :milestone, params: @milestone_params.merge(script_level_id: assessment_script_level.id)
+    refute_nil AssessmentActivity.find_by(user_id: @user, level_id: assessment_script_level.level.id, script_id: assessment_script_level.script.id)
+  end
 end
