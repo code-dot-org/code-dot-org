@@ -58,6 +58,13 @@ export default class AddAssetButtonRow extends React.Component {
   };
 
   render() {
+    let shouldShowRecordButton = !this.props.hideAudioRecording;
+    if (
+      navigator.userAgent.indexOf('Firefox') === -1 &&
+      navigator.userAgent.indexOf('Chrome') === -1
+    ) {
+      shouldShowRecordButton = false;
+    }
     return (
       <div style={assetButtonStyles.buttonRow}>
         <AssetUploader
@@ -68,7 +75,7 @@ export default class AddAssetButtonRow extends React.Component {
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
-        {!this.props.hideAudioRecording && (
+        {shouldShowRecordButton && (
           <RecordButton
             onSelectRecord={this.props.onSelectRecord}
             disabled={!this.props.uploadsEnabled || this.props.recordDisabled}
