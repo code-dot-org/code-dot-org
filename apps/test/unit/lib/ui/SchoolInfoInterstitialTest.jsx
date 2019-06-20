@@ -41,7 +41,7 @@ describe('SchoolInfoInterstitial', () => {
               schoolName={''}
               schoolLocation={''}
               useGoogleLocationSearch={true}
-              showErrors={true}
+              showErrors={false}
               showRequiredIndicator={true}
               onCountryChange={wrapper.instance().onCountryChange}
               onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
@@ -265,7 +265,6 @@ describe('SchoolInfoInterstitial', () => {
       wrapper.find(Button).simulate('click');
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors').country).to.equal(true);
-      expect(wrapper.state('errors').schoolType).to.equal(true);
     });
 
     it('submits with only country=US', () => {
@@ -386,7 +385,7 @@ describe('SchoolInfoInterstitial', () => {
       );
     });
 
-    it.only('submits with US and non-NCES school type', () => {
+    it('submits with US and non-NCES school type', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -394,7 +393,7 @@ describe('SchoolInfoInterstitial', () => {
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
               country: 'United States',
-              school_type: 'other'
+              school_type: 'organization'
             }
           }}
         />

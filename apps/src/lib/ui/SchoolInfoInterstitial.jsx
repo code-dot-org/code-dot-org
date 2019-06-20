@@ -197,11 +197,6 @@ export default class SchoolInfoInterstitial extends React.Component {
     };
   }
 
-  validateNotBlank(field) {
-    // return true when the field is not blank
-    return !!(field && field.trim() !== '');
-  }
-
   isBlank(field) {
     // return true when field is blank
     return !!(!field || field.trim() === '');
@@ -209,6 +204,7 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   validateSubmission = () => {
     const {country, schoolType, schoolName, ncesSchoolId} = this.state;
+    console.log(country, 'country');
     let errors = {};
     let isValid = true;
 
@@ -216,37 +212,29 @@ export default class SchoolInfoInterstitial extends React.Component {
       errors.country = true;
       isValid = false;
       console.log('Country is not valid');
+    } else {
+      if (this.isBlank(schoolType)) {
+        errors.schoolType = true;
+        isValid = false;
+      } else {
+        if (country === 'United States') {
+          const ncesSchoolType = ['public', 'private', 'charter'];
+          if (ncesSchoolType.includes(schoolType)) {
+            if (this.isBlank(ncesSchoolId)) {
+              errors.ncesSchoolId = true;
+              isValid = false;
+              console.log('ncesschoolid is not valid');
+            }
+
+            if (ncesSchoolId === '-1' && this.isBlank(schoolName)) {
+              errors.schoolName = true;
+              isValid = false;
+              console.log('schoolName is not valid');
+            }
+          }
+        }
+      }
     }
-
-    if (schoolType === 'public' || 'private' || 'charter') {
-      errors.ncesSchoolId = true;
-      isValid = false;
-      console.log('ncesschoolid is not valid');
-    }
-
-    // if (this.isBlank(ncesSchoolId)) {
-    //   errors.ncesSchoolId = true;
-    //   isValid = false;
-    //   console.log('ncesschoolid is not valid');
-    // }
-
-    // if (ncesSchoolId === '-1' && this.isBlank(schoolName)) {
-    //   errors.schoolName = true;
-    //   isValid = false;
-    //   console.log('schoolName is not valid');
-    // }
-
-    if (this.isBlank(ncesSchoolId) && this.isBlank(schoolName)) {
-      errors.schoolName = true;
-      isValid = false;
-    }
-
-    if (this.isBlank(schoolType)) {
-      errors.schoolType = true;
-      isValid = false;
-      console.log('schooltype is not valid');
-    }
-
     return {
       errors,
       isValid
@@ -302,7 +290,7 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   onCountryChange = (_, event) => {
     const newCountry = event ? event.value : '';
-    this.setState({country: newCountry});
+    this.setState({country: newCountry, errors: {}});
   };
 
   onSchoolTypeChange = event => {
@@ -312,6 +300,8 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   onSchoolChange = (_, event) => {
     const newSchool = event ? event.value : '';
+    // clear error state if the user can't find school
+    console.log(newSchool, 'newSchool');
     let errors = this.state.errors;
     if (newSchool === '-1') {
       errors = {};
@@ -328,6 +318,9 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   render() {
     const showErrors = Object.keys(this.state.errors).length > 0;
+    console.log(showErrors, 'showerrors');
+    console.log(this.state.errors);
+    // by default error is set to false
     return (
       <BaseDialog
         useUpdatedStyles
