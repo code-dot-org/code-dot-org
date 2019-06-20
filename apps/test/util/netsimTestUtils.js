@@ -1,4 +1,4 @@
-import {assert} from './configuredChai';
+import {assert} from 'chai';
 
 var utils = require('@cdo/apps/utils');
 var _ = require('lodash');
