@@ -1319,5 +1319,17 @@ class ActivitiesControllerTest < ActionController::TestCase
     refute_nil assessment_activity
     assert_equal @milestone_params[:attempt].to_i, assessment_activity.attempt
     assert_equal @milestone_params[:testResult].to_i, assessment_activity.test_result
+
+    # make sure that we don't create an AssessmentActivity when the multi level
+    # is updated within an assessment level group.
+
+    multi_sublevel = create :multi
+    level_group = create :level_group, name: 'assessment-level-group'
+    script_level = create :script_level, levels: [level_group], assessment: true
+    post :milestone, params: @milestone_params.merge(
+      script_level_id: script_level.id,
+      level_id: multi_sublevel.id
+    )
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sublevel.id)
   end
 end
