@@ -207,6 +207,16 @@ class ActivitiesController < ApplicationController
             pairing_user_ids: pairing_user_ids
           )
         end
+      if @script_level.assessment
+        AssessmentActivity.create(
+          user_id: current_user.id,
+          level_id: @level.id,
+          script_id: @script_level.script.id,
+          level_source_id: @level_source&.id,
+          test_result: test_result,
+          attempt: params[:attempt]
+        )
+      end
     end
 
     passed = ActivityConstants.passing?(test_result)
