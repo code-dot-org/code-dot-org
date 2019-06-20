@@ -1,4 +1,4 @@
-import {assert} from '../util/configuredChai';
+import {assert} from 'chai';
 var testUtils = require('./../util/testUtils');
 
 import instructions, {
