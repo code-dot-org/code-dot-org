@@ -24,19 +24,7 @@ describe('SchoolInfoInterstitial', () => {
   afterEach(() => firehoseClient.putRecord.restore());
 
   it('renders an uncloseable dialog with school info inputs and a save button', () => {
-    const wrapper = shallow(
-      <SchoolInfoInterstitial
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {
-            school_id: '123',
-            country: 'United States',
-            school_type: 'public'
-          }
-        }}
-      />
-    );
+    const wrapper = shallow(<SchoolInfoInterstitial {...MINIMUM_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <BaseDialog>
         <div>
@@ -278,7 +266,6 @@ describe('SchoolInfoInterstitial', () => {
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors').country).to.equal(true);
       expect(wrapper.state('errors').schoolType).to.equal(true);
-      expect(wrapper.state('errors').ncesSchoolId).to.equal(true);
     });
 
     it('submits with only country=US', () => {
@@ -297,7 +284,6 @@ describe('SchoolInfoInterstitial', () => {
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors')).to.not.have.property('country');
       expect(wrapper.state('errors').schoolType).to.equal(true);
-      expect(wrapper.state('errors').ncesSchoolId).to.equal(true);
     });
 
     it('submits with US and an NCES school type', () => {
@@ -360,21 +346,16 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find(Button).simulate('click');
-      expect(wrapper.state('errors').country).to.equal(false);
-      expect(wrapper.state('errors').schoolType).to.equal(false);
-      expect(wrapper.state('errors').ncesSchoolId).to.equal(false);
-      expect(wrapper.state('errors').schoolName).to.equal(false);
-      expect(wrapper.state('errors').schoolLocation).to.equal(true);
-      // expect(server.requests[0].requestBody).to.equal(
-      //   [
-      //     '_method=patch',
-      //     'auth_token=fake_auth_token',
-      //     'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-      //     'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-      //     'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-      //     'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
-      //   ].join('&')
-      // );
+      expect(server.requests[0].requestBody).to.equal(
+        [
+          '_method=patch',
+          'auth_token=fake_auth_token',
+          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+        ].join('&')
+      );
     });
 
     it('submits with US, NCES school type, name, address', () => {
@@ -405,7 +386,7 @@ describe('SchoolInfoInterstitial', () => {
       );
     });
 
-    it('submits with US and non-NCES school type', () => {
+    it.only('submits with US and non-NCES school type', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -413,7 +394,7 @@ describe('SchoolInfoInterstitial', () => {
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
               country: 'United States',
-              school_type: 'organization'
+              school_type: 'other'
             }
           }}
         />
