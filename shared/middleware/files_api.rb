@@ -431,7 +431,8 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
-    put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
+    filename = BucketHelper.replace_unsafe_chars(file[:filename])
+    put_file('assets', encrypted_channel_id, filename, file[:tempfile].read)
   end
 
   # POST /v3/copy-assets/<channel-id>?src_channel=<src-channel-id>&src_files=<src-filenames-json>
@@ -683,7 +684,8 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
-    files_put_file(encrypted_channel_id, file[:filename], file[:tempfile].read)
+    filename = BucketHelper.replace_unsafe_chars(file[:filename])
+    files_put_file(encrypted_channel_id, filename, file[:tempfile].read)
   end
 
   #
