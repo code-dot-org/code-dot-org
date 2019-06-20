@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Notification from '@cdo/apps/templates/Notification';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
 export default class StudentFeedbackNotification extends Component {
@@ -16,11 +16,12 @@ export default class StudentFeedbackNotification extends Component {
 
     return (
       <Notification
-        type="feedback"
+        type={NotificationType.feedback}
         notice={i18n.feedbackNotification()}
         details={notificationDetails}
         buttonText={i18n.feedbackNotificationButton()}
         buttonLink="/"
+        dismissible={false}
       />
     );
   }
