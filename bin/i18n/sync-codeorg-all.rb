@@ -87,6 +87,13 @@ def create_in_up_pr
 
   git_add_and_commit(
     [
+      "i18n/locales/source/course_content"
+    ],
+    "course content i18n sync"
+  )
+
+  git_add_and_commit(
+    [
       "i18n/locales/source/pegasus",
     ],
     "pegasus i18n sync"
