@@ -684,7 +684,8 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
-    files_put_file(encrypted_channel_id, file[:filename], file[:tempfile].read)
+    filename = BucketHelper.replace_unsafe_chars(file[:filename])
+    files_put_file(encrypted_channel_id, filename, file[:tempfile].read)
   end
 
   #
