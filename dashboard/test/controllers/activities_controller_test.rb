@@ -1311,6 +1311,13 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assessment_multi_sl = create :script_level, levels: [multi_level], assessment: true
     post :milestone, params: @milestone_params.merge(script_level_id: assessment_multi_sl.id)
-    refute_nil AssessmentActivity.find_by(user_id: @user, level_id: assessment_multi_sl.level.id, script_id: assessment_multi_sl.script.id)
+    assessment_activity = AssessmentActivity.find_by(
+      user_id: @user,
+      level_id: assessment_multi_sl.level.id,
+      script_id: assessment_multi_sl.script.id
+    )
+    refute_nil assessment_activity
+    assert_equal @milestone_params[:attempt].to_i, assessment_activity.attempt
+    assert_equal @milestone_params[:testResult].to_i, assessment_activity.test_result
   end
 end
