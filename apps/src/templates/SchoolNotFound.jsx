@@ -163,6 +163,8 @@ export default class SchoolNotFound extends Component {
     const isUs = this.props.country
       ? this.props.country === 'United States'
       : false;
+    console.log(isUs, this.props.country, '----');
+
     return (
       <div>
         {!singleLineLayout && (
@@ -190,7 +192,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolType !== OMIT_FIELD && (
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                {this.renderLabel(i18n.schoolType())}
+                {this.renderLabel(i18n.schoolType(), !!isUs)}
                 <select
                   id="school_type"
                   name={this.props.fieldNames.schoolType}
