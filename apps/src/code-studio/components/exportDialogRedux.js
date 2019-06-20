@@ -2,25 +2,35 @@
 
 const SHOW_EXPORT_DIALOG = 'exportDialog/SHOW_EXPORT_DIALOG';
 const HIDE_EXPORT_DIALOG = 'exportDialog/HIDE_EXPORT_DIALOG';
+const SET_EXPORT_GENERATED_PROPERTIES =
+  'exportDialog/SET_EXPORT_GENERATED_PROPERTIES';
 
 // Reducer
 
 const initialState = {
-  isOpen: false
+  isOpen: false,
+  exportGeneratedProperties: {}
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_EXPORT_DIALOG:
       return {
-        ...state,
         ...initialState,
+        ...state,
         isOpen: true
       };
     case HIDE_EXPORT_DIALOG:
       return {
+        ...initialState,
         ...state,
-        ...initialState
+        isOpen: false
+      };
+    case SET_EXPORT_GENERATED_PROPERTIES:
+      return {
+        ...initialState,
+        ...state,
+        exportGeneratedProperties: action.exportGeneratedProperties
       };
     default:
       return state;
@@ -35,4 +45,16 @@ export function showExportDialog() {
 
 export function hideExportDialog() {
   return {type: HIDE_EXPORT_DIALOG};
+}
+
+/**
+ * Set the generated properties
+ * @param {object} exportGeneratedProperties
+ * @returns {{type: string, exportGeneratedProperties: object}}
+ */
+export function setExportGeneratedProperties(exportGeneratedProperties) {
+  return {
+    type: SET_EXPORT_GENERATED_PROPERTIES,
+    exportGeneratedProperties
+  };
 }

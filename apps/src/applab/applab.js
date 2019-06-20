@@ -75,6 +75,7 @@ import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
 import {expoInteractWithApk} from '../util/exporter';
+import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 
 /**
  * Create a namespace for the application.
@@ -83,9 +84,7 @@ import {expoInteractWithApk} from '../util/exporter';
 const Applab = {};
 export default Applab;
 
-const DEFAULT_GENERATED_PROPERTIES = {
-  export: {}
-};
+const DEFAULT_GENERATED_PROPERTIES = {};
 
 /**
  * @type {JsInterpreterLogger} observes the interpreter and logs to console
@@ -393,6 +392,9 @@ Applab.init = function(config) {
     ...DEFAULT_GENERATED_PROPERTIES,
     ...config.initialGeneratedProperties
   };
+  getStore().dispatch(
+    setExportGeneratedProperties(Applab.generatedProperties.export)
+  );
   config.getGeneratedProperties = getGeneratedProperties;
 
   // replace studioApp methods with our own
@@ -943,6 +945,9 @@ Applab.setAndroidExportProps = function(props) {
   };
   project.projectChanged();
   project.saveIfSourcesChanged();
+  getStore().dispatch(
+    setExportGeneratedProperties(Applab.generatedProperties.export)
+  );
 };
 
 /**
