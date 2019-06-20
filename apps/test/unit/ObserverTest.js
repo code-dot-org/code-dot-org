@@ -1,4 +1,4 @@
-import {assert} from '../util/configuredChai';
+import {assert} from 'chai';
 
 describe('Observer', function() {
   var Observer = require('@cdo/apps/Observer');
