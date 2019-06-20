@@ -597,8 +597,6 @@ describe('entry tests', () => {
 
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/regional_partner_program_registration/new':
-      './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
     'pd/workshop_survey/new':
       './src/sites/studio/pages/pd/workshop_survey/new.js',
     'pd/pre_workshop_survey/new':
