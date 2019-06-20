@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {assert} from '../../util/reconfiguredChai';
 import FilterHeader from '@cdo/apps/tutorialExplorer/filterHeader';
 import BackButton from '@cdo/apps/tutorialExplorer/backButton';
 import i18n from '@cdo/tutorialExplorer/locale';
@@ -27,13 +27,17 @@ describe('FilterHeader', () => {
     const wrapper = shallow(
       <FilterHeader {...DEFAULT_PROPS} mobileLayout={true} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}</span>
+    assert(
+      wrapper.containsMatchingElement(
+        <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}</span>
+      )
     );
-    expect(wrapper).to.containMatchingElement(
-      <button type="button" onClick={FAKE_SHOW_MODAL_FILTERS}>
-        {i18n.filterHeaderShowFilters()}
-      </button>
+    assert(
+      wrapper.containsMatchingElement(
+        <button type="button" onClick={FAKE_SHOW_MODAL_FILTERS}>
+          {i18n.filterHeaderShowFilters()}
+        </button>
+      )
     );
   });
 
@@ -45,13 +49,17 @@ describe('FilterHeader', () => {
         showingModalFilters={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}</span>
+    assert(
+      wrapper.containsMatchingElement(
+        <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}</span>
+      )
     );
-    expect(wrapper).to.containMatchingElement(
-      <button type="button" onClick={FAKE_HIDE_MODAL_FILTERS}>
-        {i18n.filterHeaderHideFilters()}
-      </button>
+    assert(
+      wrapper.containsMatchingElement(
+        <button type="button" onClick={FAKE_HIDE_MODAL_FILTERS}>
+          {i18n.filterHeaderHideFilters()}
+        </button>
+      )
     );
   });
 
@@ -59,7 +67,7 @@ describe('FilterHeader', () => {
     const wrapper = shallow(
       <FilterHeader {...DEFAULT_PROPS} backButton={true} />
     );
-    expect(wrapper).to.containMatchingElement(<BackButton />);
+    assert(wrapper.containsMatchingElement(<BackButton />));
   });
 
   it('pluralizes result summary correctly', () => {
@@ -70,8 +78,10 @@ describe('FilterHeader', () => {
         filteredTutorialsCount={0}
       />
     );
-    expect(noResults).to.containMatchingElement(
-      <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 0})}</span>
+    assert(
+      noResults.containsMatchingElement(
+        <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 0})}</span>
+      )
     );
 
     const oneResult = shallow(
@@ -81,8 +91,10 @@ describe('FilterHeader', () => {
         mobileLayout={true}
       />
     );
-    expect(oneResult).to.containMatchingElement(
-      <span>{i18n.filterHeaderTutorialCountSingle()}</span>
+    assert(
+      oneResult.containsMatchingElement(
+        <span>{i18n.filterHeaderTutorialCountSingle()}</span>
+      )
     );
 
     const twoResults = shallow(
@@ -92,8 +104,10 @@ describe('FilterHeader', () => {
         mobileLayout={true}
       />
     );
-    expect(twoResults).to.containMatchingElement(
-      <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 2})}</span>
+    assert(
+      twoResults.containsMatchingElement(
+        <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 2})}</span>
+      )
     );
   });
 });
