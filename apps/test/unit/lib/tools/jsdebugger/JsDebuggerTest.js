@@ -5,6 +5,7 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/configuredChai';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import {createMouseEvent} from '../../../../util/testUtils.js';
 import {
   getStore,
   registerReducers,
@@ -78,7 +79,7 @@ describe('The JSDebugger component', () => {
   });
 
   it('initially has the height of 120px', () => {
-    expect(debugAreaEl().props().style.height).to.equal(120);
+    expect(debugAreaEl().instance().style.height).to.equal('120px');
   });
 
   describe('The header', () => {
@@ -103,7 +104,7 @@ describe('The JSDebugger component', () => {
     });
 
     it('will collapse the debugger by setting the height in the css', () => {
-      expect(debugAreaEl().props().style.height).to.equal(30);
+      expect(debugAreaEl().instance().style.height).to.equal('30px');
     });
 
     it('will call the onSlideShut prop', () => {
@@ -126,7 +127,7 @@ describe('The JSDebugger component', () => {
       });
 
       it('will expand the debugger by setting the height in the css', () => {
-        expect(debugAreaEl().props().style.height).to.equal(120);
+        expect(debugAreaEl().instance().style.height).to.equal('120px');
       });
 
       it('will call the onSlideOpen prop', () => {
@@ -140,10 +141,10 @@ describe('The JSDebugger component', () => {
         });
 
         it('will make closing and opening the debugger return to the same height', () => {
-          expect(debugAreaEl().props().style.height).to.equal(350);
+          expect(debugAreaEl().instance().style.height).to.equal('350px');
           jsDebugger.instance().slideToggle();
           jsDebugger.update();
-          expect(debugAreaEl().props().style.height).to.equal(30);
+          expect(debugAreaEl().instance().style.height).to.equal('30px');
           jsDebugger.instance().slideToggle();
           jsDebugger.update();
         });
@@ -179,20 +180,20 @@ describe('The JSDebugger component', () => {
 
       describe('when the mouse is moved', () => {
         it('changes the height of the debugger', () => {
-          moveMouse(0, 100);
+          document.body.dispatchEvent(createMouseEvent('touchmove', 0, 100));
           jsDebugger.update();
-          expect(debugAreaEl().props().style.height).to.equal(200);
+          expect(debugAreaEl().instance().style.height).to.equal('200px');
         });
 
         it('and will do so multiple times', () => {
-          moveMouse(0, 120);
+          document.body.dispatchEvent(createMouseEvent('touchmove', 0, 120));
           jsDebugger.update();
-          expect(debugAreaEl().props().style.height).to.equal(180);
+          expect(debugAreaEl().instance().style.height).to.equal('180px');
         });
 
         describe('when the mouse is unpressed', () => {
           beforeEach(() => {
-            moveMouse(0, 120);
+            document.body.dispatchEvent(createMouseEvent('touchmove', 0, 120));
             addEventSpy
               .withArgs('touchend')
               .args.forEach(args => args[1](new CustomEvent('touchend')));
@@ -230,7 +231,7 @@ describe('The JSDebugger component', () => {
 
       describe('when the mouse is moved', () => {
         beforeEach(() => {
-          moveMouse(-300, 0);
+          document.body.dispatchEvent(createMouseEvent('touchmove', -300, 0));
           jsDebugger.update();
         });
 
@@ -243,13 +244,13 @@ describe('The JSDebugger component', () => {
         });
 
         it('and will do so multiple times', () => {
-          moveMouse(-320, 0);
+          document.body.dispatchEvent(createMouseEvent('touchmove', -320, 0));
           expect(debugConsole().instance().style.right).to.equal('320px');
         });
 
         describe('when the mouse is unpressed', () => {
           beforeEach(() => {
-            moveMouse(-320, 0);
+            document.body.dispatchEvent(createMouseEvent('touchmove', -320, 0));
             addEventSpy
               .withArgs('touchend')
               .args.forEach(args => args[1](new CustomEvent('touchend')));
@@ -264,28 +265,6 @@ describe('The JSDebugger component', () => {
     });
   });
 });
-
-function moveMouse(xTarget, yTarget) {
-  const event = document.createEvent('MouseEvents');
-  event.initMouseEvent(
-    'touchmove',
-    true,
-    true,
-    window,
-    0,
-    xTarget,
-    yTarget,
-    xTarget,
-    yTarget,
-    false,
-    false,
-    false,
-    false,
-    0,
-    null
-  );
-  document.body.dispatchEvent(event);
-}
 
 /**
  * Safe-spies on document.body.addEventListener and on
