@@ -108,6 +108,11 @@ export default class SchoolInfoInputs extends Component {
     const askForName = SCHOOL_TYPES_HAVING_NAMES.includes(
       this.props.schoolType
     );
+    let isNcesSchool = false;
+    const ncesSchoolType = ['public', 'private', 'charter'];
+    if (ncesSchoolType.includes(this.props.schoolType)) {
+      isNcesSchool = true;
+    }
     const schoolNameLabel = ['afterschool', 'organization'].includes(
       this.props.schoolType
     )
@@ -124,6 +129,7 @@ export default class SchoolInfoInputs extends Component {
           showRequiredIndicator={this.props.showRequiredIndicator}
           singleLineLayout
         />
+
         <SchoolTypeDropdown
           value={this.props.schoolType}
           fieldName={this.props.fieldNames.schoolType}
@@ -147,6 +153,7 @@ export default class SchoolInfoInputs extends Component {
           <SchoolNotFound
             ref={this.bindSchoolNotFound}
             onChange={this.props.onSchoolNotFoundChange}
+            isNcesSchool={isNcesSchool}
             schoolName={
               askForName ? this.props.schoolName : SchoolNotFound.OMIT_FIELD
             }

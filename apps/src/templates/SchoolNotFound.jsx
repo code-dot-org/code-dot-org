@@ -64,6 +64,7 @@ export default class SchoolNotFound extends Component {
     controlSchoolLocation: PropTypes.bool,
     fieldNames: PropTypes.object,
     showErrorMsg: PropTypes.bool,
+    isNcesSchool: PropTypes.bool,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicators: PropTypes.bool,
     schoolNameLabel: PropTypes.string,
@@ -160,10 +161,15 @@ export default class SchoolNotFound extends Component {
       <div style={styles.errors}>{i18n.schoolInfoRequired()}</div>
     );
 
-    const isUs = this.props.country
-      ? this.props.country === 'United States'
-      : false;
-
+    let countryIsNotUS = false;
+    if (this.props.country && this.props.country === 'United States') {
+      countryIsNotUS = true;
+    }
+    let isRequired = countryIsNotUS;
+    console.log(this.props.isNcesSchool, 'its a nces school');
+    if (!this.props.isNcesSchool) {
+      isRequired = false;
+    }
     return (
       <div>
         {!singleLineLayout && (
@@ -176,7 +182,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolName !== OMIT_FIELD && (
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                {this.renderLabel(this.props.schoolNameLabel, !!isUs)}
+                {this.renderLabel(this.props.schoolNameLabel, isRequired)}
                 <input
                   id="school_name"
                   type="text"
@@ -191,7 +197,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolType !== OMIT_FIELD && (
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                {this.renderLabel(i18n.schoolType(), !!isUs)}
+                {this.renderLabel(i18n.schoolType(), countryIsNotUS)}
                 <select
                   id="school_type"
                   name={this.props.fieldNames.schoolType}
