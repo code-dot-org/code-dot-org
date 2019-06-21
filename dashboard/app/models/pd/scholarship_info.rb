@@ -43,4 +43,9 @@ class Pd::ScholarshipInfo < ActiveRecord::Base
       Pd::ScholarshipInfo.new(user: user, application_year: application_year, course: course)
     scholarship_info.update(scholarship_status: scholarship_status)
   end
+
+  # Display string for the scholarship status, like "Yes, Code.org"
+  def friendly_status_name
+    SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
+  end
 end

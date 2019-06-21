@@ -1,5 +1,5 @@
 ---
-eu:
+eu-ES:
   data:
     display_name:
       CSD U2 Pair Programming Video: Bikoteka programatzen
@@ -53,7 +53,6 @@ eu:
       CSD U3 Variables Map: Aldagaiak
       CSD U3 Variables Map_2018: Aldagaiak
       CSD U3 Variables Map_2019: Aldagaiak
-      CSD U3 functions map: Funtzioak
       CSD U6 for loop map: For begiztak
       CSD U6 for loop map_2018: For begiztak
       CSD U6 for loop map_2019: For begiztak
@@ -61,9 +60,5 @@ eu:
       CSD U6 functions paramters video_2018: Parametrodun funtzioak
       CSD U6 functions paramters video_2019: Parametrodun funtzioak
       'CSD: For Loop_2018': For begiztak
-      'CSD: For Loop_2019': For begiztak
-      MC_HOC_2017_FP10x10: Joku askea
-      MC_HOC_2017_FP10x10_RE: Joku askea
       courseA_video_Stevie: Stevie eta Big Proiektua
       courseA_video_Stevie_2018: Stevie eta Big Proiektua
-      courseA_video_Stevie_2019: Stevie eta Big Proiektua

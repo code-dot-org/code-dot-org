@@ -7,18 +7,13 @@ const DEFAULT_PROPS = {
   tooltipId: 'id',
   icon: 'desktop',
   text: 'Level Name',
-  includeAssessmentIcon: false,
-  inMiniRubricExperiment: false
+  includeAssessmentIcon: false
 };
 
 describe('TooltipWithIcon', () => {
-  it('includes the check-circle icon if level is an assessment - in experiment', () => {
+  it('includes the check-circle icon if level is an assessment', () => {
     const wrapper = shallow(
-      <TooltipWithIcon
-        {...DEFAULT_PROPS}
-        includeAssessmentIcon={true}
-        inMiniRubricExperiment={true}
-      />
+      <TooltipWithIcon {...DEFAULT_PROPS} includeAssessmentIcon={true} />
     );
     expect(
       wrapper
@@ -28,19 +23,7 @@ describe('TooltipWithIcon', () => {
     ).to.equal('check-circle');
   });
 
-  it('does not include the check-circle icon if level is not an assessment - in experiment', () => {
-    const wrapper = shallow(
-      <TooltipWithIcon {...DEFAULT_PROPS} inMiniRubricExperiment={true} />
-    );
-    expect(
-      wrapper
-        .find('FontAwesome')
-        .first()
-        .props().icon
-    ).not.to.equal('check-circle');
-  });
-
-  it('does not include the check-circle icon if NOT in experiment', () => {
+  it('does not include the check-circle icon if level is not an assessment', () => {
     const wrapper = shallow(<TooltipWithIcon {...DEFAULT_PROPS} />);
     expect(
       wrapper

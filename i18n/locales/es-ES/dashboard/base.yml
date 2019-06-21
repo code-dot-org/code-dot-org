@@ -68,7 +68,6 @@ es:
   of: "de"
   more: "MÁS"
   less: "MENOS"
-  beta: "beta"
   try_hoc: "Prueba la Hora del Code, haz clic aquí >> "
   try_k8intro: "Prueba nuestro curso de Introducción a la informática K-8 (15-25 horas)"
   k8intro: "Curso de Introducción a las Ciencias de la Computación K-8 (15-25 horas)"
@@ -806,18 +805,10 @@ es:
     create: "Crear proyecto"
     create_a_project: 'Crear un nuevo proyecto:'
     new: "Crear nuevo"
-    rename: "Cambiar nombre"
-    save: "Guardar"
-    import: "Importar"
-    share_link_import_bad_link_header: "El enlace compartido no ha sido reconocido"
-    share_link_import_bad_link_body: "No hemos podido importar el enlace compartido. Asegúrate de que estás utilizando un enlace de un rompecabezas de Minecraft: Agent, y de que has copiado el enlace al completo."
-    share_link_import_error_header: "Algo salió mal."
-    share_link_import_error_body: "Ha habido un problema al importar ese enlace compartido. Por favor, vuelve a intentarlo."
     exit: "Volver al curso"
     project_gallery: "Proyectos"
     publish: "Publicar"
     unpublish: "No publicar"
-    share: "Compartir"
     share_title: Compartir tu proyecto
     share_copy_link: "Copiar el enlace:"
     share_embed_description: "Puedes pegar el código escondido en una página HTML para mostrar el proyecto en una página web."
@@ -834,8 +825,6 @@ es:
     saved: "Guardado"
     not_saved: "No guardado"
     view_all: 'Ver Mis proyectos'
-    remix: 'Remezclar'
-    click_to_remix: "¡Haz clic en 'Remezclar' para obtener tu propia versión!"
     edit_project: 'Editar proyecto'
     sharing_disabled: "Lo sentimos, este proyecto no está disponible para compartirse. Si este es tu proyecto o el proyecto de uno de tus estudiantes, por favor <a href='https://studio.code.org/users/sign_in'>inicia sesión</a> a tu cuenta para ver el proyecto."
     abuse:

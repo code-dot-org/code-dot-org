@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {assert, expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 import FilterGroupSortBy from '@cdo/apps/tutorialExplorer/filterGroupSortBy';
@@ -21,15 +21,17 @@ describe('FilterGroupSortBy', () => {
         defaultSortBy={TutorialsSortByOptions.displayweight}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <select>
-        <option value="displayweight">
-          {i18n.filterSortByDisplayWeight()}
-        </option>
-        <option value="popularityrank">
-          {i18n.filterSortByPopularityRank()}
-        </option>
-      </select>
+    assert(
+      wrapper.containsMatchingElement(
+        <select>
+          <option value="displayweight">
+            {i18n.filterSortByDisplayWeight()}
+          </option>
+          <option value="popularityrank">
+            {i18n.filterSortByPopularityRank()}
+          </option>
+        </select>
+      )
     );
   });
 

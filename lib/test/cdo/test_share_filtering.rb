@@ -66,6 +66,72 @@ class ShareFilteringTest < Minitest::Test
     )
   end
 
+  def test_profanity_with_italian_edge_case
+    # "fu" is a past-tense "to be" in Italian, but should be blocked
+    # as profanity in English.  WebPurify doesn't support this, so we
+    # have custom filtering that takes locale into account for this word.
+    program = generate_program('My Custom Profanity', 'fu')
+    innocent_program = generate_program('My Innocent Program', 'funny tofu')
+
+    # Stub WebPurify because we expect our custom blocking to handle this case.
+    WebPurify.stubs(:find_potential_profanity).returns(nil)
+
+    # Blocked in English
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'fu'),
+      ShareFiltering.find_share_failure(program, 'en')
+    )
+
+    # But the innocent program is fine
+    assert_nil(
+      ShareFiltering.find_share_failure(innocent_program, 'en')
+    )
+
+    # Blocked in Spanish
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'fu'),
+      ShareFiltering.find_share_failure(program, 'es')
+    )
+
+    # Allowed in Italian
+    assert_nil(
+      ShareFiltering.find_share_failure(program, 'it')
+    )
+  end
+
+  def test_profanity_with_swedish_edge_case
+    # "fick" means "got" in Swedish, but should be blocked
+    # as profanity in English.  WebPurify doesn't support this, so we
+    # have custom filtering that takes locale into account for this word.
+    questionable_program = generate_program('My Custom Profanity', 'fick')
+    innocent_program = generate_program('My Innocent Program', 'fickle')
+
+    # Stub WebPurify because we expect our custom blocking to handle this case.
+    WebPurify.stubs(:find_potential_profanity).returns(nil)
+
+    # Blocked in English
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'fick'),
+      ShareFiltering.find_share_failure(questionable_program, 'en')
+    )
+
+    # But the innocent program is fine
+    assert_nil(
+      ShareFiltering.find_share_failure(innocent_program, 'en')
+    )
+
+    # Blocked in Italian
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'fick'),
+      ShareFiltering.find_share_failure(questionable_program, 'it')
+    )
+
+    # Allowed in Swedish
+    assert_nil(
+      ShareFiltering.find_share_failure(questionable_program, 'sv')
+    )
+  end
+
   def test_find_share_failure_for_non_playlab
     program = '<xml><block type=\"controls_repeat\">'\
       '<title name=\"TIMES\">4</title><statement name=\"DO\">'\

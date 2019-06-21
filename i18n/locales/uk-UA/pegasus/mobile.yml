@@ -902,8 +902,6 @@
   coursee_name: "Курс Ґ"
   coursef-draft_name: Курс Д
   coursef_name: "Курс Д"
-  accelerated_name: "Прискорений курс"
-  cspunit1_name: "Розділ 1: Цифрова інформація"
   cspunit2_name: "Розділ 2: Інтернет"
   cspunit3_name: "Розділ 3: Програмування"
   cspunit4_name: "Розділ 4: Дані"
@@ -1011,6 +1009,8 @@
   coursee-2017_gradelevel: Вік 8-12
   coursed-2018_gradelevel: 8+ класи
   coursee-2018_gradelevel: Вік 8-12
+  coursed-2019_gradelevel: 8+ класи
+  coursee-2019_gradelevel: Вік 8-12
   accelerated_gradelevel: "Вік 10-18"
   codeorg_platformtext: "Сучасні браузери, смартфони, планшети"
   codeintl_platformtext: "Сучасні браузери, смартфони, планшети"

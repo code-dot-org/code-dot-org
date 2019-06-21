@@ -1195,13 +1195,7 @@ nn-NO:
   coursed-2017_name: Kurs D (2017)
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
-  accelerated_name: Framskunda kurs
-  express_name: Ekspresskurs
-  pre-express_name: Programmeringskurs før ein kan lese
-  express-2017_name: Ekspresskurs (2017)
-  pre-express-2017_name: Ekspresskurs før ein kan lese (2017)
   pre-express-2018_name: Ekspresskurs før ein kan lese (2018)
-  cspunit1_name: "(gammel) Eining 1: Digital informasjon"
   cspunit2_name: "(gammel) Eining 2: Internett"
   cspunit3_name: "(gammel) Eining 3: Programmering"
   cspunit4_name: "(gammel) Eining 4: Data"
@@ -1337,6 +1331,12 @@ nn-NO:
   coursed-2018_gradelevel: 8.+ klasse
   coursee-2018_gradelevel: Alder 8–12 år
   coursef-2018_gradelevel: Alder 9-13 år
+  coursea-2019_gradelevel: Alder 4-7 år
+  courseb-2019_gradelevel: Alder 5-8 år
+  coursec-2019_gradelevel: Alder 6-10 år
+  coursed-2019_gradelevel: 8.+ klasse
+  coursee-2019_gradelevel: Alder 8–12 år
+  coursef-2019_gradelevel: Alder 9-13 år
   accelerated_gradelevel: Frå 10+ år (etter Kurs 3)
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
   codeintl_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
@@ -1495,6 +1495,16 @@ nn-NO:
   coursee-2018_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
     kurs C og D, og gå videre med funksjonar.
   coursef-2018_shortdescription_congrats: Lær alle konspta i grunnleggande informatikk
+    og skap din eigen kunst, historie eller spel.
+  coursea-2019_shortdescription_congrats: Ein introduksjon til informatikk for dei
+    som ikkje kan lese.
+  courseb-2019_shortdescription_congrats: Ein introduksjon til informatikk for dei
+    som ikkje kan lese. (Lik Kurs A, men med meir variasjon for eldre elevar).
+  coursed-2019_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
+    kurs C, og gå videre med algoritmar, løkker i løkke, vilkår og meir.
+  coursee-2019_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
+    kurs C og D, og gå videre med funksjonar.
+  coursef-2019_shortdescription_congrats: Lær alle konspta i grunnleggande informatikk
     og skap din eigen kunst, historie eller spel.
   codeorg_longdescription: Lær dei grunnlegjande konsepta for datavitksap med dra-og-slepp-programmering.
     Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark

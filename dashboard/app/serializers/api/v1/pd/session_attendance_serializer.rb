@@ -17,7 +17,9 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
         enrollment_id: enrollment.id,
         user_id: id_or_nil(enrollment.user),
         verified_teacher_account: !!enrollment.user.try(:verified_teacher?),
-        attended: attended?(enrollment)
+        attended: attended?(enrollment),
+        cdo_scholarship: enrollment.scholarship_status == Pd::ScholarshipInfoConstants::YES_CDO,
+        other_scholarship: enrollment.scholarship_status == Pd::ScholarshipInfoConstants::YES_OTHER
       }
     end
   end

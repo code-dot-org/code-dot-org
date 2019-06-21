@@ -94,7 +94,8 @@ class InlineAudio extends React.Component {
     // Provided by redux
     // To Log TTS usage
     puzzleNumber: PropTypes.number,
-    userId: PropTypes.number
+    userId: PropTypes.number,
+    isOnCSFPuzzle: PropTypes.bool
   };
 
   state = {
@@ -163,16 +164,16 @@ class InlineAudio extends React.Component {
   getAudioSrc() {
     if (this.props.src) {
       return this.props.src;
+    } else if (this.props.message) {
+      const voice = VOICES[this.props.locale];
+      const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
+
+      const message = this.props.message.replace('"???"', 'the question marks');
+      const hash = MD5(message).toString();
+      const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
+
+      return `${TTS_URL}/${voicePath}/${contentPath}`;
     }
-
-    const voice = VOICES[this.props.locale];
-    const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
-
-    const message = this.props.message.replace('"???"', 'the question marks');
-    const hash = MD5(message).toString();
-    const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
-
-    return `${TTS_URL}/${voicePath}/${contentPath}`;
   }
 
   toggleAudio = () => {
@@ -190,7 +191,8 @@ class InlineAudio extends React.Component {
       data_json: JSON.stringify({
         userId: this.props.userId,
         puzzleNumber: this.props.puzzleNumber,
-        src: this.props.src
+        src: this.props.src,
+        csfStyleInstructions: this.props.isOnCSFPuzzle
       })
     });
   }
@@ -268,6 +270,7 @@ export default connect(function propsFromStore(state) {
       state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
     locale: state.pageConstants.locale,
     userId: state.pageConstants.userId,
-    puzzleNumber: state.pageConstants.puzzleNumber
+    puzzleNumber: state.pageConstants.puzzleNumber,
+    isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed
   };
 })(StatelessInlineAudio);

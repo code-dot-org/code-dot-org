@@ -504,20 +504,26 @@ describe('entry tests', () => {
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
+    'levels/_bubble_choice':
+      './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     schoolInfo: './src/sites/studio/pages/schoolInfo.js',
+    schoolInfoConfirmationDialog:
+      './src/sites/studio/pages/schoolInfoConfirmationDialog.js',
     schoolInfoInterstitial:
       './src/sites/studio/pages/schoolInfoInterstitial.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
+    'shared/_header_progress':
+      './src/sites/studio/pages/shared/_header_progress.js',
     signup: './src/sites/studio/pages/signup.js',
     raceInterstitial: './src/sites/studio/pages/raceInterstitial.js',
+    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'maker/home': './src/sites/studio/pages/maker/home.js',
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
@@ -591,10 +597,6 @@ describe('entry tests', () => {
 
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/facilitator_program_registration/new':
-      './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
-    'pd/regional_partner_program_registration/new':
-      './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
     'pd/workshop_survey/new':
       './src/sites/studio/pages/pd/workshop_survey/new.js',
     'pd/pre_workshop_survey/new':

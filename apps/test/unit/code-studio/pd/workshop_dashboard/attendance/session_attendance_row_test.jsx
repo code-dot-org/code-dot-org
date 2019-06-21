@@ -18,11 +18,14 @@ const DEFAULT_PROPS = {
     enrollment_id: 47564,
     user_id: 101,
     verified_teacher_account: false,
-    attended: false
+    attended: false,
+    cdo_scholarship: true,
+    other_scholarship: false
   },
   onSaving: () => {},
   onSaved: () => {},
   accountRequiredForAttendance: false,
+  scholarshipWorkshop: false,
   displayYesNoAttendance: false
 };
 
@@ -66,31 +69,6 @@ describe('SessionAttendanceRow', () => {
           <td>
             <div>
               <i className="fa fa-check-square-o" />
-            </div>
-          </td>
-        </tr>
-      )
-    ).to.be.ok;
-  });
-
-  it('renders extra column when account is required for attendance', () => {
-    const wrapper = shallow(
-      <SessionAttendanceRow
-        {...DEFAULT_PROPS}
-        accountRequiredForAttendance={true}
-      />
-    );
-    expect(
-      wrapper.containsMatchingElement(
-        <tr>
-          <td>{FAKE_FIRST_NAME}</td>
-          <td>{FAKE_LAST_NAME}</td>
-          <td>{FAKE_EMAIL}</td>
-          <td>Yes</td>
-          <td>No</td>
-          <td>
-            <div>
-              <i className="fa fa-square-o" />
             </div>
           </td>
         </tr>

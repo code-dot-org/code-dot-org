@@ -301,7 +301,7 @@ export default class EnrollForm extends React.Component {
       <div>
         What grades are you teaching this year? (Select all that apply)
         <span className="form-required-field"> *</span>
-        <p>This workshop is intended for teachers for Grades K-5.</p>
+        <p>This workshop is intended for teachers of grades K-5.</p>
       </div>
     );
     const coursesPlannedLabel = (

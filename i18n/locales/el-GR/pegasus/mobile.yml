@@ -835,7 +835,6 @@
   course2_name: "Μάθημα 2"
   course3_name: "Μάθημα 3"
   course4_name: "Μάθημα 4"
-  accelerated_name: "Επιταχυνόμενη πορεία μάθησης"
   cspunit3_name: "Αρχές CS - Ενότητα 3"
   cspassessment_name: "Πλήρης εξέταση - 50 ερωτήσεις"
   cspexam1-mWU7ilDYM9_name: Εξέταση Μέρος 1 -25 ερωτήσεις
@@ -933,6 +932,11 @@
   coursed-2018_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2018_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2018_gradelevel: Τάξεις Α' Λυκείου +
+  coursea-2019_gradelevel: Τάξεις Ε' Δημοτικού +
+  coursec-2019_gradelevel: Τάξεις Α' Γυμνασίου +
+  coursed-2019_gradelevel: Τάξεις Β' Γυμνασίου +
+  coursee-2019_gradelevel: Τάξεις Γ' Γυμνασίου +
+  coursef-2019_gradelevel: Τάξεις Α' Λυκείου +
   accelerated_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
   codeorg_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
   codeintl_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"

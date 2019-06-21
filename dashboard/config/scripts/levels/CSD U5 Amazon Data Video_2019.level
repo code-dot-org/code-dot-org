@@ -14,11 +14,11 @@
     "parent_level_id": 12959,
     "name_suffix": "_2019",
     "encrypted": "false",
-    "teacher_markdown": "Check that students have answered the first two \"Nyle\" questions on their activity guide before showing this video. After the video, they should answer the third question."
+    "teacher_markdown": "Check that students have answered the first two \"Nyle\" questions on their activity guide before showing this video. After the video, they should answer the third question: How does Amazon solve the problem of advertising products only to those people who are likely to buy them?"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-25 22:42:09 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-19 18:14:42 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-25 22:42:09 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-19 18:14:42 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-30 05:02:06 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
