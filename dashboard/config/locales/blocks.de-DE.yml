@@ -740,7 +740,7 @@ de:
             '"y"': y
             '"z"': z
       gamelab_makeNewSpriteAnon:
-        text: erstelle neuen {ANIMATION\_NAME} Sprite in {LOCATION}
+        text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1046,9 +1046,9 @@ de:
         text: "erstelle neuen Sprite genannt {NAME} \n mit Kostüm {COSTUME} \n in
           {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: erstelle neuen {ANIMATION\_NAME} Sprite in {LOCATION}
+        text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab erstelle neuen {ANIMATION\_NAME} Sprite in {LOCATION}
+        text: aalab erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           erstelle neue Sprite Gruppe genannt {VAR}
