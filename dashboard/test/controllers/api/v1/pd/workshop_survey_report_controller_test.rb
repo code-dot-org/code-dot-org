@@ -278,8 +278,8 @@ module Api::V1::Pd
       get :generic_survey_report, params: {workshop_id: csf_201_ws.id}
       result = JSON.parse(@response.body).slice(*expected_result.keys)
 
-      assert_equal expected_result, result
       assert_response :success
+      assert_equal expected_result, result
     end
 
     test 'generic_survey_report: CSF101 workshop cannot invoke this action' do

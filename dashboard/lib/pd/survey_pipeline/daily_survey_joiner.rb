@@ -1,9 +1,26 @@
-require_relative 'transformer.rb'
 require 'xxhash'
 
 module Pd::SurveyPipeline
-  class DailySurveyJoiner < TransformerBase
+  class DailySurveyJoiner < SurveyPipelineWorker
     include Pd::JotForm::Constants
+
+    REQUIRED_INPUT_KEYS = [:questions, :submissions]
+    OUTPUT_KEYS = [:question_answer_joined]
+
+    # TODO: summary, explain input param, raise.
+    def self.process_data(context)
+      missing_keys = REQUIRED_INPUT_KEYS - context.keys
+      raise "Missing required input key(s) in #{self.class.name}: #{missing_keys}" if missing_keys.present?
+
+      results = transform_data context.slice(*REQUIRED_INPUT_KEYS)
+
+      OUTPUT_KEYS.each do |key|
+        context[key] ||= []
+        context[key] += results[key]
+      end
+
+      context
+    end
 
     # Join questions and submissions data, modify and flatten the results
     # so they can be summarized later.
@@ -21,13 +38,13 @@ module Pd::SurveyPipeline
     #
     # @see DailySurveyParser class, parse_survey and parse_submissions functions
     # for detailed structures of input params.
+    #
     def self.transform_data(questions:, submissions:)
-      raise 'Invalid input parameter' unless questions && submissions
-
       results = []
 
       submissions.each_pair do |form_id, form_submissions|
         # Bad data, couldn't find this form_id. Ignore instead of raising exception.
+        # TODO: capture non-fatal error
         next unless questions[form_id]
 
         form_submissions.each_pair do |submission_id, submission_content|
@@ -39,6 +56,7 @@ module Pd::SurveyPipeline
             question = questions[form_id][qid]
             # Bad data, couldn't find this (form_id, qid) combination in questions list.
             # Ignore instead of raising exception.
+            # TODO: capture non-fatal error
             next unless question
 
             # Ignore empty answer and hidden question
@@ -75,7 +93,7 @@ module Pd::SurveyPipeline
         end
       end
 
-      results
+      {question_answer_joined: results}
     end
 
     # Compute a descendant key based on original value and sub_value digest.

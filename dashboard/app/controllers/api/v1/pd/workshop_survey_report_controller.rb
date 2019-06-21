@@ -159,19 +159,17 @@ module Api::V1::Pd
     end
 
     def create_csf_survey_report
-      # Retriever
-      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new workshop_ids: [@workshop.id]
+      context = {
+        current_user: current_user,
+        filters: {workshop_ids: @workshop.id}
+      }
 
-      # Transformers
-      parser = Pd::SurveyPipeline::DailySurveyParser
-      joiner = Pd::SurveyPipeline::DailySurveyJoiner
-
-      # Mapper + Reducers
       group_config = [:workshop_id, :form_id, :facilitator_id, :name, :type, :answer_type]
 
       is_single_select_answer = lambda {|hash| hash.dig(:answer_type) == 'singleSelect'}
       is_free_format_question = lambda {|hash| ['textbox', 'textarea'].include?(hash[:type])}
       is_number_question = lambda {|hash| hash[:type] == 'number'}
+
       map_config = [
         {condition: is_single_select_answer, field: :answer,
         reducers: [Pd::SurveyPipeline::HistogramReducer]},
@@ -181,39 +179,25 @@ module Api::V1::Pd
         reducers: [Pd::SurveyPipeline::AvgReducer]},
       ]
 
-      mapper = Pd::SurveyPipeline::GenericMapper.new(
-        group_config: group_config, map_config: map_config
-      )
+      workers = [
+        Pd::SurveyPipeline::DailySurveyRetriever,
+        Pd::SurveyPipeline::DailySurveyParser,
+        Pd::SurveyPipeline::DailySurveyJoiner,
+        Pd::SurveyPipeline::GenericMapper.new(
+          group_config: group_config, map_config: map_config
+        ),
+        Pd::SurveyPipeline::DailySurveyDecorator
+      ]
 
-      # Decorator
-      decorator = Pd::SurveyPipeline::DailySurveyDecorator
+      create_generic_survey_report context, workers
 
-      create_generic_survey_report(
-        retriever: retriever,
-        parser: parser,
-        joiner: joiner,
-        mappers: [mapper],
-        decorator: decorator
-      )
+      render json: context[:decorated_summaries]
     end
 
-    def create_generic_survey_report(retriever:, parser:, joiner:, mappers:, decorator:)
-      retrieved_data = retriever.retrieve_data
-
-      parsed_data = parser.transform_data retrieved_data
-
-      joined_data = joiner.transform_data parsed_data
-
-      summary_data = []
-      mappers.each do |mapper|
-        summary_data += mapper.map_reduce joined_data
+    def create_generic_survey_report(context, workers)
+      workers&.each do |w|
+        w.process_data context
       end
-
-      render json: decorator.decorate(
-        summary_data: summary_data,
-        parsed_data: parsed_data,
-        current_user: current_user
-      )
     end
 
     # We want to filter facilitator-specific responses if the user is a facilitator and
