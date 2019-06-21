@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190521215856) do
+ActiveRecord::Schema.define(version: 20190621225806) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -24,8 +24,9 @@ ActiveRecord::Schema.define(version: 20190521215856) do
     t.integer  "test_result"
     t.integer  "level_source_id"
     t.integer  "lines",           default: 0, null: false
+    t.integer  "script_id"
     t.index ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
-    t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
+    t.index ["user_id", "level_id", "script_id"], name: "index_activities_on_user_id_and_level_id_and_script_id", using: :btree
   end
 
   create_table "ap_cs_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

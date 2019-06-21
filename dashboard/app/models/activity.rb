@@ -14,11 +14,12 @@
 #  test_result     :integer
 #  level_source_id :integer
 #  lines           :integer          default(0), not null
+#  script_id       :integer
 #
 # Indexes
 #
-#  index_activities_on_level_source_id       (level_source_id)
-#  index_activities_on_user_id_and_level_id  (user_id,level_id)
+#  index_activities_on_level_source_id                     (level_source_id)
+#  index_activities_on_user_id_and_level_id_and_script_id  (user_id,level_id,script_id)
 #
 
 require 'cdo/activity_constants'
