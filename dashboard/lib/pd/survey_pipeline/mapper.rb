@@ -29,11 +29,15 @@ module Pd::SurveyPipeline
     #
     # @return [Array<Hash>] an array of summarization results. Each hash contains
     #   all fields in group_config, reducer name and reducer result.
-    def map_reduce(data)
-      return unless data.is_a? Enumerable
+    def map_reduce(context)
+      raise "Missing required input key" unless context.key?(:joined_question_answer)
 
-      groups = group_data data
-      map_to_reducers groups
+      groups = group_data context[:joined_question_answer]
+
+      context[:summaries] ||= []
+      context[:summaries] += map_to_reducers(groups)
+
+      context
     end
 
     # Break data into groups using groupping configuration.

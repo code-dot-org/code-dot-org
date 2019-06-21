@@ -25,8 +25,7 @@ module Pd::SurveyPipeline
       form_id = "91405279991164".to_i
       form_name = 'Facilitator'
 
-      parsed_data = {}
-      parsed_data[:questions] = {
+      parsed_questions = {
         form_id => {
           '1' => {type: 'radio', name: 'importance', text: 'CS is important?', order: 1,
             options: ['Disagree', 'Neutral', 'Agree'],
@@ -36,7 +35,7 @@ module Pd::SurveyPipeline
         }
       }
 
-      parsed_data[:submissions] = {
+      parsed_submissions = {
         form_id => {
           1 => {workshop_id: @workshop.id, user_id: 1, facilitator_id: @facilitators.first.id,
             answers: {'1' => 'Agree', '2' => 'Feedback 1'}},
@@ -66,8 +65,8 @@ module Pd::SurveyPipeline
           form_name => {
             general: {},
             facilitator: {
-              'importance' => parsed_data[:questions][form_id]['1'].except(:name),
-              'feedback' => parsed_data[:questions][form_id]['2'].except(:name),
+              'importance' => parsed_questions[form_id]['1'].except(:name),
+              'feedback' => parsed_questions[form_id]['2'].except(:name),
             }
           }
         },
@@ -78,7 +77,7 @@ module Pd::SurveyPipeline
             facilitator: {
               'importance' => {
                 @facilitators.first.name => {'Agree': 2},
-                @facilitators.last.name => {'Neutral': 1, 'Disagree': 1}
+                @facilitators.last.name => {'Neutral': 1, 'Dis  agree': 1}
               },
               'feedback' => {
                 @facilitators.first.name => ['Feedback 1', 'Feedback 2'],
@@ -93,19 +92,23 @@ module Pd::SurveyPipeline
         facilitator_response_counts: {}
       }
 
-      result = DailySurveyDecorator.decorate summary_data: summary_data,
-        parsed_data: parsed_data,
+      context = {
+        summaries: summary_data,
+        parsed_questions: parsed_questions,
+        parsed_submissions: parsed_submissions,
         current_user: @workshop_admin
+      }
 
-      assert_equal expected_result, result
+      DailySurveyDecorator.decorate context
+
+      assert_equal expected_result, context[:decorated_summaries]
     end
 
     test 'decorate general survey results' do
       form_id = "90066184161150".to_i
       form_name = 'Pre Workshop'
 
-      parsed_data = {}
-      parsed_data[:questions] = {
+      parsed_questions = {
         form_id => {
           '1' => {type: 'radio', name: 'importance', text: 'CS is important?', order: 1,
             options: ['Disagree', 'Neutral', 'Agree'],
@@ -115,7 +118,7 @@ module Pd::SurveyPipeline
         }
       }
 
-      parsed_data[:submissions] = {
+      parsed_submissions = {
         form_id => {
           1 => {workshop_id: @workshop.id, user_id: 1, answers: {'1' => 'Agree', '2' => 'Feedback 1'}},
           2 => {workshop_id: @workshop.id, user_id: 2, answers: {'1' => 'Agree', '2' => 'Feedback 2'}},
@@ -136,8 +139,8 @@ module Pd::SurveyPipeline
         questions: {
           form_name => {
             general: {
-              'importance' => parsed_data[:questions][form_id]['1'].except(:name),
-              'feedback' => parsed_data[:questions][form_id]['2'].except(:name),
+              'importance' => parsed_questions[form_id]['1'].except(:name),
+              'feedback' => parsed_questions[form_id]['2'].except(:name),
             },
             facilitator: {}
           }
@@ -158,11 +161,16 @@ module Pd::SurveyPipeline
         facilitator_response_counts: {}
       }
 
-      result = DailySurveyDecorator.decorate summary_data: summary_data,
-        parsed_data: parsed_data,
+      context = {
+        summaries: summary_data,
+        parsed_questions: parsed_questions,
+        parsed_submissions: parsed_submissions,
         current_user: @workshop_admin
+      }
 
-      assert_equal expected_result, result
+      DailySurveyDecorator.decorate context
+
+      assert_equal expected_result, context[:decorated_summaries]
     end
 
     test 'index questions by form ids and question names' do

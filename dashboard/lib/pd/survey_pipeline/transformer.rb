@@ -1,6 +1,6 @@
 module Pd::SurveyPipeline
   class TransformerBase
-    def transform_data(*)
+    def self.transform_data(*)
       raise 'Must override in derived class'
     end
   end

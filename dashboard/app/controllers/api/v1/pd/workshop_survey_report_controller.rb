@@ -140,7 +140,8 @@ module Api::V1::Pd
           {
             severity: Logger::Severity::ERROR,
             message: "#{e.message}. Workshop id: #{@workshop.id},"\
-              " course: #{@workshop.course}, subject: #{@workshop.subject}."
+              " course: #{@workshop.course}, subject: #{@workshop.subject}.",
+            stacktrace: e.backtrace.join("\n")
           }
         ]
       }
@@ -159,12 +160,17 @@ module Api::V1::Pd
     end
 
     def create_csf_survey_report
+      context = {
+        current_user: current_user,
+        filters: {workshop_ids: @workshop.id}
+      }
+
       # Retriever
-      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new workshop_ids: [@workshop.id]
+      Pd::SurveyPipeline::DailySurveyRetriever.retrieve_data context
 
       # Transformers
-      parser = Pd::SurveyPipeline::DailySurveyParser
-      joiner = Pd::SurveyPipeline::DailySurveyJoiner
+      Pd::SurveyPipeline::DailySurveyParser.transform_data context
+      Pd::SurveyPipeline::DailySurveyJoiner.transform_data context
 
       # Mapper + Reducers
       group_config = [:workshop_id, :form_id, :facilitator_id, :name, :type, :answer_type]
@@ -185,36 +191,40 @@ module Api::V1::Pd
         group_config: group_config, map_config: map_config
       )
 
+      mapper.map_reduce context
+
       # Decorator
-      decorator = Pd::SurveyPipeline::DailySurveyDecorator
+      Pd::SurveyPipeline::DailySurveyDecorator.decorate context
 
-      create_generic_survey_report(
-        retriever: retriever,
-        parser: parser,
-        joiner: joiner,
-        mappers: [mapper],
-        decorator: decorator
-      )
+      render json: context[:decorated_summaries]
+
+      # create_generic_survey_report(
+      #   retriever: retriever,
+      #   parser: parser,
+      #   joiner: joiner,
+      #   mappers: [mapper],
+      #   decorator: decorator
+      # )
     end
 
-    def create_generic_survey_report(retriever:, parser:, joiner:, mappers:, decorator:)
-      retrieved_data = retriever.retrieve_data
+    # def create_generic_survey_report(retriever:, parser:, joiner:, mappers:, decorator:)
+    #   retrieved_data = retriever.retrieve_data
 
-      parsed_data = parser.transform_data retrieved_data
+    #   parsed_data = parser.transform_data retrieved_data
 
-      joined_data = joiner.transform_data parsed_data
+    #   joined_data = joiner.transform_data parsed_data
 
-      summary_data = []
-      mappers.each do |mapper|
-        summary_data += mapper.map_reduce joined_data
-      end
+    #   summary_data = []
+    #   mappers.each do |mapper|
+    #     summary_data += mapper.map_reduce joined_data
+    #   end
 
-      render json: decorator.decorate(
-        summary_data: summary_data,
-        parsed_data: parsed_data,
-        current_user: current_user
-      )
-    end
+    #   render json: decorator.decorate(
+    #     summary_data: summary_data,
+    #     parsed_data: parsed_data,
+    #     current_user: current_user
+    #   )
+    # end
 
     # We want to filter facilitator-specific responses if the user is a facilitator and
     # NOT a workshop admin, workshop organizer, or program manager - the filter is the user's name.

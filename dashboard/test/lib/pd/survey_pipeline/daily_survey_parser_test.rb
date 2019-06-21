@@ -15,7 +15,7 @@ module Pd::SurveyPipeline
       teacher = create :teacher
       day = 0
 
-      @ws_survey = create :pd_survey_question, form_id: @ws_form_id,
+      @ws_survey_questions = create :pd_survey_question, form_id: @ws_form_id,
         questions: '['\
           '{"id": 1, "type": "number", "name": "overallRating", "text": "Overall rating"},'\
           '{"id": 2, "type": "dropdown", "name": "selectOption", "text": "Select one of the options",'\
@@ -32,7 +32,30 @@ module Pd::SurveyPipeline
           '{"Sub question 1": "Option 1", "Sub question 2": "Option 2", "Sub question 3": "Option 3"}}'
     end
 
-    test 'can parse survey' do
+    test 'raise if missing input keys' do
+      context = {}
+
+      exception = assert_raises RuntimeError do
+        DailySurveyParser.transform_data context
+      end
+
+      assert exception.message.start_with?('Missing required input key')
+    end
+
+    test 'produce output keys' do
+      context = {
+        survey_questions: [@ws_survey_questions],
+        workshop_submissions: [@ws_submission],
+        facilitator_submissions: []
+      }
+
+      DailySurveyParser.transform_data(context)
+
+      assert context[:questions].present?
+      assert context[:submissions].present?
+    end
+
+    test 'can parse questions' do
       expected_result = {
         @ws_form_id => {
           '1' => {type: 'number', name: 'overallRating', text: 'Overall rating',
@@ -51,7 +74,7 @@ module Pd::SurveyPipeline
         }
       }
 
-      result = DailySurveyParser.parse_survey([@ws_survey])
+      result = DailySurveyParser.parse_questions([@ws_survey_questions])
 
       assert_equal expected_result, result
     end

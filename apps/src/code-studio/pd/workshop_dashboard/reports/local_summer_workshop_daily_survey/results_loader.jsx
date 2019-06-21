@@ -7,7 +7,8 @@ import color from '@cdo/apps/util/color';
 
 const styles = {
   errorContainer: {
-    margin: 15
+    marginTop: 15,
+    marginLeft: 15
   },
   errorDetailsBox: {
     backgroundColor: color.lightest_gray,

@@ -20,6 +20,16 @@ module Pd::SurveyPipeline
       }
     end
 
+    test 'raise if missing input keys' do
+      context = {}
+
+      exception = assert_raises RuntimeError do
+        DailySurveyJoiner.transform_data context
+      end
+
+      assert exception.message.start_with?('Missing required input key')
+    end
+
     test 'join submission and non-matrix questions' do
       # Set up questions for 1 form
       question_content = {
@@ -52,9 +62,10 @@ module Pd::SurveyPipeline
         submission_no_content.merge(question_content['Q3']).merge(qid: 'Q3', answer: 'Like it')
       ]
 
-      result = DailySurveyJoiner.transform_data questions: questions, submissions: submissions
+      context = {questions: questions, submissions: submissions}
+      DailySurveyJoiner.transform_data context
 
-      assert_equal expected_result, result
+      assert_equal expected_result, context[:joined_question_answer]
     end
 
     test 'join submission and matrix questions' do
@@ -105,9 +116,10 @@ module Pd::SurveyPipeline
           )
       end
 
-      result = DailySurveyJoiner.transform_data questions: questions, submissions: submissions
+      context = {questions: questions, submissions: submissions}
+      DailySurveyJoiner.transform_data context
 
-      assert_equal expected_result, result
+      assert_equal expected_result, context[:joined_question_answer]
     end
   end
 end

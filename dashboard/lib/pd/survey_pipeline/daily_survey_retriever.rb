@@ -4,19 +4,25 @@ module Pd::SurveyPipeline
   class DailySurveyRetriever < RetrieverBase
     attr_reader :workshop_ids, :form_ids
 
-    # Set filters for this retriever.
-    # @param workshop_ids [Array<Integer>] array of selected workshop ids
-    # @param form_ids [Array<Integer>] array of selected form ids
-    def initialize(workshop_ids: nil, form_ids: nil)
-      @workshop_ids = workshop_ids
-      @form_ids = form_ids
-    end
+    # TODO: explain input param, raise.
 
     # Retrieve data from Pd::SurveyQuestion, Pd::WorkshopDailySurvey
     # and Pd::WorkshopFacilitatorDailySurvey.
+    #
+    # @param context [Hash{:filters}]
+    #
     # @return [Hash{:survey_questions, :workshop_submissions, :facilitator_submissions => Array}]
     #   contains arrays of questions and submissions.
-    def retrieve_data
+    #
+    # @raise
+    #
+    # @note This function modifies content of input parameter.
+    def self.retrieve_data(context)
+      raise "Missing required input key :filters" unless context.key?(:filters)
+
+      workshop_ids = context.dig(:filters, :workshop_ids)
+      form_ids = context.dig(:filters, :form_ids)
+
       # Build where clause from filter values
       submission_filter = {}
       submission_filter[:pd_workshop_id] = workshop_ids if workshop_ids.present?
@@ -33,11 +39,16 @@ module Pd::SurveyPipeline
       questions = form_ids_with_submissions.empty? ? []
         : Pd::SurveyQuestion.where(form_id: form_ids_with_submissions)
 
-      {
-        survey_questions: questions,
-        workshop_submissions: ws_submissions,
-        facilitator_submissions: facilitator_submissions
-      }
+      # Create output keys if not exist
+      context[:survey_questions] ||= []
+      context[:workshop_submissions] ||= []
+      context[:facilitator_submissions] ||= []
+
+      context[:survey_questions] += questions
+      context[:workshop_submissions] += ws_submissions
+      context[:facilitator_submissions] += facilitator_submissions
+
+      context
     end
   end
 end

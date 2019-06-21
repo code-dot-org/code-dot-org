@@ -21,13 +21,20 @@ module Pd::SurveyPipeline
     #
     # @see DailySurveyParser class, parse_survey and parse_submissions functions
     # for detailed structures of input params.
-    def self.transform_data(questions:, submissions:)
-      raise 'Invalid input parameter' unless questions && submissions
+    def self.transform_data(context)
+      # TODO: review this. This is checking content of the keys instead of just existence of the keys
+      questions = context[:questions]
+      submissions = context[:submissions]
+      raise 'Missing required input key(s)' unless questions && submissions
+
+      # Create output key if not exist
+      context[:joined_question_answer] ||= []
 
       results = []
 
       submissions.each_pair do |form_id, form_submissions|
         # Bad data, couldn't find this form_id. Ignore instead of raising exception.
+        # TODO: capture non-fatal error
         next unless questions[form_id]
 
         form_submissions.each_pair do |submission_id, submission_content|
@@ -39,6 +46,7 @@ module Pd::SurveyPipeline
             question = questions[form_id][qid]
             # Bad data, couldn't find this (form_id, qid) combination in questions list.
             # Ignore instead of raising exception.
+            # TODO: capture non-fatal error
             next unless question
 
             # Ignore empty answer and hidden question
@@ -75,7 +83,8 @@ module Pd::SurveyPipeline
         end
       end
 
-      results
+      context[:joined_question_answer] += results
+      context
     end
 
     # Compute a descendant key based on original value and sub_value digest.

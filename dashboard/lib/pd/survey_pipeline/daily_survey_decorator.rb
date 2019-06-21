@@ -25,8 +25,21 @@ module Pd::SurveyPipeline
     # @current_user [User] user making survey report request.
     #
     # @return [Hash] data returned to client to render.
-    def self.decorate(summary_data:, parsed_data:, current_user:)
-      return unless summary_data && parsed_data
+    def self.decorate(context)
+      # TODO: update to parsed_questions|submissions
+      required_input_keys = [:summaries, :questions, :submissions, :current_user]
+      missing_keys = required_input_keys - context.keys
+
+      raise "Missing required input key(s) #{missing_keys}" if missing_keys.present?
+
+      # Create output key if not exists
+      context[:decorated_summaries] ||= {}
+
+      # TODO: update to parsed_questions|submissions
+      summary_data = context[:summaries]
+      parsed_questions = context[:questions]
+      parsed_submissions = context[:submissions]
+      current_user = context[:current_user]
 
       result = {
         course_name: nil,
@@ -38,7 +51,7 @@ module Pd::SurveyPipeline
         facilitator_response_counts: {}
       }
 
-      question_by_names = index_question_by_names(parsed_data[:questions])
+      question_by_names = index_question_by_names(parsed_questions)
 
       # Populate entries for result[:this_workshop] and result[:questions]
       summary_data.each do |summary|
@@ -56,7 +69,7 @@ module Pd::SurveyPipeline
         # Create top structures if not already created
         result[:course_name] ||= Pd::Workshop.find_by_id(workshop_id)&.course
         result[:this_workshop][form_name] ||= {
-          response_count: parsed_data[:submissions][form_id].size,
+          response_count: parsed_submissions[form_id].size,
           general: {},
           facilitator: {}
         }
@@ -94,7 +107,9 @@ module Pd::SurveyPipeline
         end
       end
 
-      result
+      context[:decorated_summaries].merge! result
+
+      context
     end
 
     def self.data_visible_to_user?(user, data)

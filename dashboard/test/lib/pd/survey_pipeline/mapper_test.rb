@@ -17,6 +17,9 @@ module Pd::SurveyPipeline
         {a: 1, b: 1, c: 1}
       ]
 
+      # TODO: test main `map_reduce` function
+      @context = {joined_question_answer: @data}
+
       @groups = {
         {odd: true} => [{odd: true, val: 1}, {odd: true, val: 3}, {odd: true, val: 5}],
         {odd: false} => [{odd: false, val: 2}, {odd: false, val: 4}]
