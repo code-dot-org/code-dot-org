@@ -343,6 +343,17 @@ def main
   workers.each(&:join)
 
   remaining_count = POSTE_DB[:poste_deliveries].where(sent_at: nil).count
+  abandon_count = POSTE_DB[:poste_deliveries].where(sent_at: 0).count
+  sent_count = POSTE_DB[:poste_deliveries].where(Sequel.lit('sent_at >= ?', started_at)).count
+
+  if CDO.newrelic_logging
+    # How many emails we sent on _this run_ of the cronjob
+    NewRelic::Agent.record_metric("Custom/Poste/Sent", sent_count)
+    # How many total abandoned emails we have
+    NewRelic::Agent.record_metric("Custom/Poste/Abandoned", abandon_count)
+    # How many emails are still queued for send on subsequent runs
+    NewRelic::Agent.record_metric("Custom/Poste/Queued", remaining_count)
+  end
 
   elapsed_seconds = ((Time.now - started_at) * 100.0).to_i / 100.0
 
