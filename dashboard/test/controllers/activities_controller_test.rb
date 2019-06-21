@@ -510,16 +510,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with image" do
-    _test_logged_in_milestone_with_image(async_activity_writes: false)
-  end
-
-  test "logged in milestone with image and async writes" do
-    _test_logged_in_milestone_with_image(async_activity_writes: true)
-  end
-
-  def _test_logged_in_milestone_with_image(async_activity_writes:)
-    Gatekeeper.set('async_activity_writes', value: async_activity_writes)
-
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
@@ -529,8 +519,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     original_activity_count = Activity.count
     original_user_level_count = UserLevel.count
 
-    expected_created_classes = async_activity_writes ? [LevelSource, LevelSourceImage] :
-        [LevelSource, UserLevel, LevelSourceImage]
+    expected_created_classes = [LevelSource, UserLevel, LevelSourceImage]
 
     assert_creates(*expected_created_classes) do
       assert_does_not_create(GalleryActivity) do
@@ -539,18 +528,6 @@ class ActivitiesControllerTest < ActionController::TestCase
             params: @milestone_params.merge(image: Base64.encode64(@good_image))
         end
       end
-    end
-    if async_activity_writes
-      # Activity count etc. shouldn't have changed yet.
-      assert_equal original_activity_count, Activity.count
-      assert_nil UserLevel.where(
-        user_id: @user,
-        level_id: @script_level.level_id,
-        script_id: @script_level.script_id
-      ).first
-      assert_equal original_user_level_count, UserLevel.count
-
-      @fake_queue.handle_pending_messages
     end
     assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count

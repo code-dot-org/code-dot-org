@@ -163,13 +163,8 @@ class ActivitiesController < ApplicationController
       level_source_id: @level_source.try(:id)
     }
 
-    # Save the activity and user_level synchronously if the level might be saved
-    # to the gallery (for which the activity.id and user_level.id is required).
-    # This is true for levels auto-saved to the gallery, free play levels, and
-    # "impressive" levels.
-    synchronous_save = solved &&
-        (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
-            @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
+    # Save the activity and user_level synchronously.
+    synchronous_save = true
 
     allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
     if allow_activity_writes
