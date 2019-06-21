@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedExportDialog as ExportDialog} from '@cdo/apps/code-studio/components/ExportDialog';
@@ -152,7 +152,7 @@ describe('ExportDialog', () => {
     });
   });
 
-  it('publishAndGenerateApk() method calls exportApp() thrice with modes expoPublish, expoGenerateApk, and expoCheckApkBuild', async () => {
+  it('generateApkAsNeeded() method calls exportApp() thrice with modes expoPublish, expoGenerateApk, and expoCheckApkBuild', async () => {
     const exportApp = sinon.stub();
     exportApp.returns(Promise.resolve('fakeBuildId'));
     const publishResult = Promise.resolve({
@@ -177,7 +177,7 @@ describe('ExportDialog', () => {
         isProjectLevel={false}
       />
     );
-    await wrapper.instance().publishAndGenerateApk();
+    await wrapper.instance().generateApkAsNeeded();
     expect(exportApp)
       .to.have.been.calledThrice.and.calledWith({mode: 'expoPublish'})
       .and.calledWith({
@@ -195,7 +195,7 @@ describe('ExportDialog', () => {
       });
   });
 
-  it('exportApp() not called by generateApkAsNeeded() if exportGeneratedProperties contains matching apkUri', () => {
+  it('exportApp() not called by generateApkAsNeeded() if the sources have not changed since the last build', () => {
     const exportApp = sinon.spy();
     const wrapper = shallow(
       <ExportDialog
@@ -223,7 +223,7 @@ describe('ExportDialog', () => {
     expect(exportApp).to.not.have.been.called;
   });
 
-  it('exportApp() will be called by generateApkAsNeeded() if exportGeneratedProperties does not contain matching apkUri', async () => {
+  it('exportApp() will be called by generateApkAsNeeded() if the sources have changed since the last build', async () => {
     const exportApp = sinon.stub();
     exportApp.returns(Promise.resolve('fakeBuildId'));
     const publishResult = Promise.resolve({
@@ -255,7 +255,130 @@ describe('ExportDialog', () => {
         isProjectLevel={false}
       />
     );
-    await wrapper.instance().publishAndGenerateApk();
+    await wrapper.instance().generateApkAsNeeded();
     expect(exportApp).to.have.been.called;
+  });
+
+  it('An incomplete preexisting build will not be canceled when the dialog is opened if the sources are unchanged', () => {
+    const exportApp = sinon.stub();
+    const wrapper = mount(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={exportApp}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'fakeHash',
+            snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={false}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.setProps({isOpen: true});
+
+    expect(exportApp).to.not.have.been.called;
+  });
+
+  it('An incomplete preexisting build will be resumed within generateApkAsNeeded when the sources are unchanged', () => {
+    const exportApp = sinon.stub();
+    const wrapper = shallow(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={exportApp}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'fakeHash',
+            snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={true}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.instance().generateApkAsNeeded();
+
+    expect(exportApp).to.have.been.calledWith({
+      mode: 'expoCheckApkBuild',
+      md5SavedSources: 'fakeHash',
+      expoSnackId: 'fakeSnackId',
+      apkBuildId: 'fakeBuildId'
+    });
+  });
+
+  it('An incomplete preexisting build will be canceled when the dialog is opened if the sources hash has changed', () => {
+    const exportApp = sinon.stub();
+    const wrapper = mount(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={exportApp}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'differentHash',
+            snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={false}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.setProps({isOpen: true});
+
+    expect(exportApp).to.have.been.calledWith({
+      mode: 'expoCancelApkBuild',
+      md5SavedSources: 'differentHash',
+      expoSnackId: 'fakeSnackId',
+      apkBuildId: 'fakeBuildId'
+    });
+  });
+
+  it('A complete preexisting build will not be canceled when the dialog is opened if the sources hash has changed', () => {
+    const exportApp = sinon.stub();
+    const wrapper = mount(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={exportApp}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'differentHash',
+            snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId',
+            apkUri: 'fakeApkUri'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={false}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.setProps({isOpen: true});
+
+    expect(exportApp).to.not.have.been.called;
   });
 });
