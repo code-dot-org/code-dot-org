@@ -1818,7 +1818,7 @@ class User < ActiveRecord::Base
 
     if pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
-        navigator_user_level = User.track_level_progress_sync(
+        navigator_user_level, _ = User.track_level_progress_sync(
           user_id: navigator_user_id,
           level_id: level_id,
           script_id: script_id,
@@ -1844,7 +1844,7 @@ class User < ActiveRecord::Base
     if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
       User.track_proficiency(user_id, script_id, level_id)
     end
-    user_level
+    [user_level, new_level_completed]
   end
 
   def self.handle_async_op(op)
