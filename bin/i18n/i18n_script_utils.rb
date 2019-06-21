@@ -101,8 +101,7 @@ def redact_course_content(source, dest, original, *plugins)
     file.write(JSON.pretty_generate(data))
   end
 
-  args = ['bin/i18n/node_modules/.bin/redact',
-          '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
+  args = ['bin/i18n/node_modules/.bin/redact']
   args.push('-p ' + plugins) unless plugins.empty?
 
   stdout, _status = Open3.capture2(
@@ -132,8 +131,7 @@ def redact(source, dest, *plugins)
       YAML.load_file(source)
     end
 
-  args = ['bin/i18n/node_modules/.bin/redact',
-          '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
+  args = ['bin/i18n/node_modules/.bin/redact']
   args.push('-p ' + plugins) unless plugins.empty?
 
   stdout, _status = Open3.capture2(
@@ -186,8 +184,7 @@ def restore(source, redacted, dest, *plugins)
   source_json.flush
   redacted_json.flush
 
-  args = ['bin/i18n/node_modules/.bin/restore',
-          '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
+  args = ['bin/i18n/node_modules/.bin/restore']
   plugins = plugins_to_arg(plugins)
   args.push('-p ' + plugins) unless plugins.empty?
 
@@ -233,8 +230,7 @@ def restore_course_content(source, redacted, dest, *plugins)
   source_json.flush
   redacted_json.flush
 
-  args = ['bin/i18n/node_modules/.bin/restore',
-          '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
+  args = ['bin/i18n/node_modules/.bin/restore']
   plugins = plugins_to_arg(plugins)
   args.push('-p ' + plugins) unless plugins.empty?
 
