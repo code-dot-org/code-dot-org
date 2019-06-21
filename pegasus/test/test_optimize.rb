@@ -64,15 +64,6 @@ class OptimizeTest < Minitest::Test
     assert_equal 61, Magick::ImageList.new.from_blob(last_response.body).length
   end
 
-  def test_skip_large_image
-    original_image_size = 945_764
-    large_image_path = '/images/affiliate-images/27459.jpg'
-
-    get(large_image_path)
-    assert_equal original_image_size, last_response.content_length
-    refute_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
-  end
-
   def test_gatekeeper_disable
     Gatekeeper.set 'optimize', value: false
     assert_equal Gatekeeper.allows('optimize'), false
