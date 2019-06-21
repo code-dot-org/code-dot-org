@@ -133,7 +133,6 @@ export default class SchoolInfoInputs extends Component {
           showRequiredIndicator={this.props.showRequiredIndicator}
           singleLineLayout
         />
-
         <SchoolTypeDropdown
           value={this.props.schoolType}
           fieldName={this.props.fieldNames.schoolType}
