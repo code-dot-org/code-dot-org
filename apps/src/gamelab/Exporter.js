@@ -414,8 +414,9 @@ export default {
     };
 
     await session.sendCodeAsync(files);
-    // TODO: avoid calling internal method on snack-sdk once the sendCodeAsync()
-    // method can be called without a debounce
+    // NOTE: We are waiting on a snack-sdk change that will make sendCodeAsync() actually
+    // send the code right away (currently, the method is debounced). Until then, we must
+    // call an internal method to ensure the code is saved:
     await session._publishNotDebouncedAsync();
     const saveResult = await session.saveAsync();
     const expoUri = `exp://expo.io/${saveResult.id}`;
