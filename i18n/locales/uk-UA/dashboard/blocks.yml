@@ -488,20 +488,6 @@ uk:
             '2': високі тони
       Dancelab_whenSetup:
         text: налаштування
-      gamelab_changeColor:
-        text: змінити {COLOR} {METHOD} на {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': відтінок
-            '"tone"': тон
-            '"shade"': відтінок
-      gamelab_changeColorBy:
-        text: змінити {COLOR} {METHOD} на {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': відтінок
-            '"saturation"': насиченість
-            '"brightness"': яскравість
       gamelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -546,29 +532,11 @@ uk:
             '"right"': праворуч
             '"space"': космос
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': рамка
-            '"inner"': внутрішній квадрат
-            '"circle"': коло
-            '"grid"': сітка
-            '"row"': ряд
-            '"column"': колона
-            '"x"': хрестик
-            '"plus"': плюс
-            '"random"': випадковий
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": випадковий
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': праворуч
             '"left"': ліворуч
-      gamelab_mixColors:
-        text: змішати {COLOR1} та {COLOR2}
       gamelab_randColor:
         text: випадковий колір
       gamelab_randomColor:
@@ -585,20 +553,6 @@ uk:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': веселка
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': підводний
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
-      gamelab_setPosition:
-        text: перемістити {THIS} у позицію {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": верхній лівий кут
-            "{x: 200, y: 50}": зверху посередині
-            "{x: 350, y: 50}": верхній правий кут
-            "{x: 50, y: 200}": зліва посередині
-            "{x: 200, y: 200}": посередині
-            "{x: 350, y: 200}": справа посередині
-            "{x: 50, y: 350}": нижній лівий кут
-            "{x: 200, y: 350}": внизу посередині
-            "{x: 350, y: 350}": нижній правий кут
-            '"random"': випадковий
       gamelab_setProp:
         options:
           PROPERTY:
@@ -614,34 +568,11 @@ uk:
             '"scale"': розмір
             '"width"': ширина
             '"height"': висота
-      gamelab_setup:
-        text: налаштування
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': коли
             '"while"': поки
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': коли
-            '"while"': поки
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-            '"direction"': напрямок руху
-            '"tint"': відтінок
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-            '"direction"': напрямок руху
-            '"tint"': відтінок
       gamelab_turn:
         options:
           DIRECTION:
@@ -663,11 +594,6 @@ uk:
             "'down'": вниз
             "'left'": ліворуч
             "'right'": праворуч
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': коли
-            '"while"': поки
       gamelab_whileKey:
         options:
           KEY:
