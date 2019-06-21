@@ -578,7 +578,6 @@ pt-BR:
   pdf_download: 'Baixar PDF'
   download_coming_soon: 'Atividade disponível para download em breve.'
   video_coming_soon: 'Vídeo em breve!'
-  not_started: 'O aluno ainda não praticou este nível.'
   share_code:
     title: "Clique em 'Executar' para ver meu programa em ação"
     bounce_og_title: "Veja meu jogo de Pingue-pongue"
