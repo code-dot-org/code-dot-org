@@ -1,15 +1,15 @@
 %div{style: 'position:absolute; top:5px; right:5px', id: 'share_privacy_policy'}
   %label
     Share this notice with parents:
-  %a{class:'share-on-remind', href:'https://www.remind.com/v1/share?url=code.org/privacy/student-privacy&referer=code.org&text=Code.org%20Student%20Privacy%20Policy', target:'_blank'}
-  %a{class: 'email-button', href: "mailto:?to=&body=Dear%20parents%2C%0A%0ASoftware%20and%20technology%20are%20everywhere%20-%20in%20our%20computers%2C%20in%20our%20pockets%2C%20in%20our%20cars%2C%20and%20used%20in%20banking%2C%20communications%2C%20entertainment%2C%20transportation%2C%20and%20science.%20But%20very%20few%20kids%20are%20learning%20how%20to%20actually%20create%20technology%20-%20games%2C%20apps%20and%20programs.%20%0A%0AThis%20year%20we%E2%80%99re%20proud%20to%20be%20teaching%20computer%20science%20in%20our%20classroom%20using%20Code.org%E2%80%99s%20online%20learning%20platform%20and%20curriculum.%20They%20take%20student%20privacy%20very%20seriously%20and%20have%20earned%20one%20of%20the%20highest%20privacy%20ratings%20from%20Common%20Sense%20Media.%20%20You%20can%20read%20their%20privacy%20notice%20%3Ca%20href%3Dhttps%3A%2F%2Fcode.org%2Fprivacy%2Fstudent-privacy%3Ehere%3C%2Fa%3E.%0A%0AI%E2%80%99d%20encourage%20you%20to%20ask%20your%20student%20about%20what%20they%20are%20learning%20and%20have%20them%20show%20you%20the%20programs%20or%20games%20they%20create%20this%20year.%20%0A%0AThanks%2C%0A,&subject=Code.org%20and%20your%20child%27s%20privacy", target:'_blank'}
+  %a{class:'share-on-remind', href:'https://www.remind.com/v1/share?url=code.org/privacy/student-privacy&referer=code.org&text=Code.org%20Student%20Privacy%20Policy', target:'_blank', id: 'share_on_remind'}
+  %a{class: 'email-button', href: "mailto:?to=&body=Dear%20parents%2C%0A%0ASoftware%20and%20technology%20are%20everywhere%20-%20in%20our%20computers%2C%20in%20our%20pockets%2C%20in%20our%20cars%2C%20and%20used%20in%20banking%2C%20communications%2C%20entertainment%2C%20transportation%2C%20and%20science.%20But%20very%20few%20kids%20are%20learning%20how%20to%20actually%20create%20technology%20-%20games%2C%20apps%20and%20programs.%20%0A%0AThis%20year%20we%E2%80%99re%20proud%20to%20be%20teaching%20computer%20science%20in%20our%20classroom%20using%20Code.org%E2%80%99s%20online%20learning%20platform%20and%20curriculum.%20They%20take%20student%20privacy%20very%20seriously%20and%20have%20earned%20one%20of%20the%20highest%20privacy%20ratings%20from%20Common%20Sense%20Media.%20%20You%20can%20read%20their%20privacy%20notice%20%3Ca%20href%3Dhttps%3A%2F%2Fcode.org%2Fprivacy%2Fstudent-privacy%3Ehere%3C%2Fa%3E.%0A%0AI%E2%80%99d%20encourage%20you%20to%20ask%20your%20student%20about%20what%20they%20are%20learning%20and%20have%20them%20show%20you%20the%20programs%20or%20games%20they%20create%20this%20year.%20%0A%0AThanks%2C%0A,&subject=Code.org%20and%20your%20child%27s%20privacy", target:'_blank', id: 'email_button'}
     %i.fa.fa-envelope{"aria-hidden": "true"}
     Email
-  %a{class: 'print-button', href: "javascript:window.print()"}
+  %a{class: 'print-button', href: "javascript:window.print()", id: 'print_button'}
     %i.fa.fa-print{"aria-hidden": "true"}
     Print
 
-%script{type: "module", src: "/js/share_privacy.js"}
+%script{src: minifiable_asset_path("js/code.org/views/share_privacy.js")}
 
 %body
   :css
