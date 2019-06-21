@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from 'chai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var Packet = require('@cdo/apps/netsim/Packet');
 

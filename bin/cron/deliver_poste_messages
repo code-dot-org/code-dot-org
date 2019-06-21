@@ -2,6 +2,7 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'retryable'
 require 'cdo/only_one'
+require 'cdo/parse_email_address_string'
 require 'cdo/poste'
 require 'base64'
 require 'nokogiri'
@@ -245,20 +246,9 @@ class Deliverer
     @templates[name] = Poste::Template.new IO.read(path), engine
   end
 
-  def parse_addresses(string)
-    string.split(', ').map do |user_string|
-      if user_string.include? '<'
-        user_string =~ /^([^<]*)<([^>]*)>$/
-        {name: $1.strip, email: $2}
-      else
-        {name: nil, email: user_string}
-      end
-    end
-  end
-
   def parse_address(address, defaults={})
     address = address.to_s.strip
-    return parse_addresses(address).first unless address.empty?
+    return parse_email_address_string(address) unless address.empty?
 
     # Student accounts don't have a stored email in contacts,
     # so we use the temporary email here when email doesn't exist.
@@ -318,14 +308,23 @@ def main
       begin
         deliverer.send delivery
       rescue Net::SMTPSyntaxError, Net::SMTPFatalError => e
-        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        )
         deliverer.reset_connection
         sent_at = 0
       rescue AbortEmailError => e
-        puts "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+        )
         sent_at = 0
       rescue => e
-        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        )
         raise
       end
 

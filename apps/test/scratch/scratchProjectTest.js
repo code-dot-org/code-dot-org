@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import * as testUtils from '../util/testUtils';
-import {assert} from '../util/configuredChai';
+import {assert} from 'chai';
 import loadScratch from '@cdo/apps/sites/studio/pages/init/loadScratch';
 import {__TestInterface} from '@cdo/apps/scratch/scratch';
 
@@ -266,6 +266,9 @@ describe('scratch', function() {
   testUtils.setExternalGlobals();
   sinon.stub(console, 'log');
 
+  // Skip test because no current scratch levels in use and was
+  // breaking the move of CSF instructions into tabs for just this
+  // level type
   it('Scratch movement test', function(done) {
     loadScratch({
       containerId: 'app',

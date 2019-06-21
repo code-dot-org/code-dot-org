@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -450,6 +450,58 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
           'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+        ].join('&')
+      );
+    });
+
+    it('does not send a name for "homeschool" school type', () => {
+      const wrapper = shallow(
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'United States',
+              school_type: 'homeschool',
+              school_name: 'Test School'
+            }
+          }}
+        />
+      );
+      wrapper.find(Button).simulate('click');
+      expect(server.requests[0].requestBody).to.equal(
+        [
+          '_method=patch',
+          'auth_token=fake_auth_token',
+          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=homeschool',
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+        ].join('&')
+      );
+    });
+
+    it('does not send a name for "other" school type', () => {
+      const wrapper = shallow(
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'United States',
+              school_type: 'other',
+              school_name: 'Test School'
+            }
+          }}
+        />
+      );
+      wrapper.find(Button).simulate('click');
+      expect(server.requests[0].requestBody).to.equal(
+        [
+          '_method=patch',
+          'auth_token=fake_auth_token',
+          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=other',
           'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
         ].join('&')
       );

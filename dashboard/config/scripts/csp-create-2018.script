@@ -11,6 +11,7 @@ family_name 'csp-create'
 version_year '2018'
 is_stable true
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Create PT Prep - Reviewing the Task', flex_category: 'csp_ap_3'
 level 'CSP CreateL01 SFLP', named: true

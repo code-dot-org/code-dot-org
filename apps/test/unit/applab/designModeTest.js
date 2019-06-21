@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import {themeOptions, DEFAULT_THEME_INDEX} from '@cdo/apps/applab/constants';
 import designMode from '@cdo/apps/applab/designMode';
 import {getPrefixedElementById} from '@cdo/apps/applab/designElements/elementUtils';
@@ -102,6 +102,51 @@ describe('makeUrlProtocolRelative', () => {
     ].forEach(({input, expected}) => {
       expect(makeUrlProtocolRelative(input)).to.equal(expected);
     });
+  });
+});
+
+describe('onDuplicate screen', () => {
+  let designModeElement, originalScreen;
+  const colorProperty = 'backgroundColor';
+  const imageProperty = 'screen-image';
+  const color = 'rgb(0, 0, 255)';
+  const image = 'image.png';
+  beforeEach(() => {
+    designModeElement = document.createElement('div');
+    designModeElement.setAttribute('id', 'designModeViz');
+    document.body.appendChild(designModeElement);
+
+    originalScreen = elementLibrary.createElement('SCREEN', 0, 0);
+    designModeElement.appendChild(originalScreen);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(designModeElement);
+  });
+
+  it('duplicates the background color of the screen', () => {
+    designMode.updateProperty(originalScreen, colorProperty, color);
+    var newScreen = designMode.onDuplicate(originalScreen);
+    expect(designMode.readProperty(newScreen, colorProperty)).to.equal(color);
+  });
+
+  it('duplicates the background image of the screen', () => {
+    designMode.updateProperty(originalScreen, imageProperty, image);
+    var newScreen = designMode.onDuplicate(originalScreen);
+    expect(designMode.readProperty(newScreen, imageProperty)).to.equal(image);
+  });
+
+  it('duplicates background color and image of the screen', () => {
+    designMode.updateProperty(originalScreen, imageProperty, image);
+    designMode.updateProperty(originalScreen, colorProperty, color);
+    var newScreen = designMode.onDuplicate(originalScreen);
+    expect(designMode.readProperty(newScreen, colorProperty)).to.equal(color);
+    expect(designMode.readProperty(newScreen, imageProperty)).to.equal(image);
+  });
+
+  it('does not duplicate the background image when none is set', () => {
+    var newScreen = designMode.onDuplicate(originalScreen);
+    expect(designMode.readProperty(newScreen, imageProperty)).to.be.null;
   });
 });
 

@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import ReactDOM from 'react-dom';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from 'chai';
 import initPage from '@cdo/apps/sites/studio/pages/levelbuilder_edit_script';
 
 describe('the level builder page init script', () => {
@@ -21,7 +21,9 @@ describe('the level builder page init script', () => {
       },
       beta: false,
       levelKeyList: [],
-      locales: [['English', 'en-US'], ['French', 'fr-FR']]
+      locales: [['English', 'en-US'], ['French', 'fr-FR']],
+      script_families: ['coursea', 'csd1'],
+      version_year_options: ['2017', '2018']
     });
   });
 

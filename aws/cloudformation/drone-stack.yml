@@ -15,7 +15,7 @@ Parameters:
   NumWorkers:
     Type: Number
     Description: Initial number of drone workers (also the number of concurrent builds which can run)
-    Default: 2
+    Default: 10
   ECSAMI:
     Description: AMI ID
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
@@ -347,49 +347,3 @@ Resources:
       PlacementConstraints:
         - 
           Type: distinctInstance
-
-  DroneWorkerBusinessHoursStartScheduledAction:
-    Type: AWS::AutoScaling::ScheduledAction
-    Properties:
-      AutoScalingGroupName: !Ref DroneWorkerEcsInstanceAsg
-      MaxSize: 10
-      MinSize: 10
-      # 13:00 UTC every day of week Monday-Friday
-      Recurrence: 0 13 * * MON-FRI
-
-  DroneWorkerBusinessHoursEndScheduledAction:
-    Type: AWS::AutoScaling::ScheduledAction
-    Properties:
-      AutoScalingGroupName: !Ref DroneWorkerEcsInstanceAsg
-      MaxSize: 1
-      MinSize: 1
-      # 4:00 UTC every day
-      Recurrence: 0 4 * * *
-
-  DroneWorkerScalableTarget:
-    Type: AWS::ApplicationAutoScaling::ScalableTarget
-    Properties:
-      MaxCapacity: 10
-      MinCapacity: 1
-      ResourceId:
-        !Sub
-          - "service/${DroneWorkerECSCluster}/${ServiceName}"
-          - {ServiceName: !GetAtt DroneWorkerEcsService.Name}
-      RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling"
-      ScalableDimension: ecs:service:DesiredCount
-      ScheduledActions: 
-        -
-          ScalableTargetAction:
-            MinCapacity: 10
-            MaxCapacity: 10
-          # 13:00 UTC every day of week Monday-Friday - see https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions
-          Schedule: cron(0 13 ? * MON-FRI *)
-          ScheduledActionName: BusinessHoursStart
-        -
-          ScalableTargetAction:
-            MinCapacity: 1
-            MaxCapacity: 1
-          # 4:00 UTC every day - see https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions
-          Schedule: cron(0 4 * * ? *)
-          ScheduledActionName: BusinessHoursEnd
-      ServiceNamespace: ecs

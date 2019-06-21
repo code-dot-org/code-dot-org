@@ -6,8 +6,11 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursee/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course E!", "link"=>"https://curriculum.code.org/csf-19/coursee", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursee'
 version_year '2019'
+is_stable true
+curriculum_umbrella 'CSF'
 
 stage 'Sequencing in the Maze', flex_category: 'ramp_up'
 level 'courseD_video_ramp1_2019', progression: 'Maze Intro: Programming with Blocks'

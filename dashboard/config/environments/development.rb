@@ -62,10 +62,6 @@ Dashboard::Application.configure do
   # significantly speeds up server startup time
   config.skip_script_preload = true
 
-  # Disable this for developers by default, it won't make much sense because we
-  # have our own db.
-  CDO.disable_s3_image_uploads = true
-
   # Set to :debug to see everything in the log.
   config.log_level = :debug
 
