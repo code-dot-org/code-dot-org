@@ -295,7 +295,7 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   onSchoolChange = (_, event) => {
     const newSchool = event ? event.value : '';
-    // clear error state if the user can't find the school
+    // clear error state if school is not found in dropdown
     let errors = this.state.errors;
     if (newSchool === '-1') {
       errors = {};

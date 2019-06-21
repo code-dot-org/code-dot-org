@@ -161,15 +161,18 @@ export default class SchoolNotFound extends Component {
       <div style={styles.errors}>{i18n.schoolInfoRequired()}</div>
     );
 
+    // Check if country selected is US or non-US.  This new check
+    // is used to decide which fields in the school info interstitial
+    // form should be required.
     let countryIsNotUS = false;
     if (this.props.country && this.props.country === 'United States') {
       countryIsNotUS = true;
     }
     let isRequired = countryIsNotUS;
-    console.log(this.props.isNcesSchool, 'its a nces school');
     if (!this.props.isNcesSchool) {
       isRequired = false;
     }
+
     return (
       <div>
         {!singleLineLayout && (
