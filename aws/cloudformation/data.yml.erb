@@ -120,6 +120,28 @@ Resources:
       TableMappings: !Sub |
         <%= table_mappings.to_json %>
 <% end -%>
+  DMSS3Role:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: DMSS3Role
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: {Service: [dms.amazonaws.com]}
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: DMSRolePolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:PutObject'
+                  - 's3:DeleteObject'
+                  - 's3:PutObjectTagging'
+                  - 's3:ListBucket'
+                Resource: 'arn:aws:s3:::cdo-activities-archive*'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
   PrimaryDBParameters:
     Type: AWS::RDS::DBParameterGroup
     Properties:
