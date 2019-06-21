@@ -110,5 +110,31 @@ describe('BubbleChoice', () => {
         DEFAULT_PROPS.level.script_url + window.location.search
       );
     });
+
+    it('hides back button if no previous level or script url', () => {
+      const level = {
+        ...DEFAULT_PROPS.level,
+        previous_level_url: null,
+        script_url: null
+      };
+      const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
+      const buttons = wrapper.find('button');
+
+      assert.equal(1, buttons.length);
+      assert.notEqual('Back', buttons.at(0).text());
+    });
+
+    it('hides continue button if no next level or script url', () => {
+      const level = {
+        ...DEFAULT_PROPS.level,
+        next_level_url: null,
+        script_url: null
+      };
+      const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
+      const buttons = wrapper.find('button');
+
+      assert.equal(1, buttons.length);
+      assert(!['Finish', 'Continue'].includes(buttons.at(0).text()));
+    });
   });
 });
