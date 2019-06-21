@@ -163,39 +163,20 @@ class ActivitiesController < ApplicationController
       level_source_id: @level_source.try(:id)
     }
 
-    # Save the activity and user_level synchronously.
-    synchronous_save = true
-
     allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
     if allow_activity_writes
-      @activity =
-        if synchronous_save
-          Activity.new(attributes).tap(&:atomic_save!)
-        else
-          Activity.create_async!(attributes)
-        end
+      @activity = Activity.new(attributes).tap(&:atomic_save!)
     end
     if @script_level
-      if synchronous_save
-        @user_level, @new_level_completed = User.track_level_progress_sync(
-          user_id: current_user.id,
-          level_id: @level.id,
-          script_id: @script_level.script_id,
-          new_result: test_result,
-          submitted: params[:submitted] == 'true',
-          level_source_id: @level_source.try(:id),
-          pairing_user_ids: pairing_user_ids,
-        )
-      else
-        @new_level_completed = current_user.track_level_progress_async(
-          script_level: @script_level,
-          new_result: test_result,
-          submitted: params[:submitted] == "true",
-          level_source_id: @level_source.try(:id),
-          level: @level,
-          pairing_user_ids: pairing_user_ids
-        )
-      end
+      @user_level, @new_level_completed = User.track_level_progress_sync(
+        user_id: current_user.id,
+        level_id: @level.id,
+        script_id: @script_level.script_id,
+        new_result: test_result,
+        submitted: params[:submitted] == 'true',
+        level_source_id: @level_source.try(:id),
+        pairing_user_ids: pairing_user_ids,
+      )
     end
 
     passed = ActivityConstants.passing?(test_result)
