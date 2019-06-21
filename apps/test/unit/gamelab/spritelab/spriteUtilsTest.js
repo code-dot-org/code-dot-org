@@ -1,5 +1,6 @@
 /* global p5 */
 import {expect} from '../../../util/reconfiguredChai';
+import {stub} from 'sinon';
 import createGameLabP5 from '../../../util/gamelab/TestableGameLabP5';
 import * as spriteUtils from '@cdo/apps/gamelab/spritelab/spriteUtils';
 
@@ -206,6 +207,224 @@ describe('Sprite Utils', () => {
         'behavior 1 ran for sprite 1',
         'behavior 2 ran for sprite 1'
       ]);
+    });
+  });
+
+  describe('Events', () => {
+    it('Can run key events', () => {
+      const keyWentDownStub = stub(gameLabP5.p5, 'keyWentDown').returns(true);
+      const keyDownStub = stub(gameLabP5.p5, 'keyDown').returns(true);
+      const eventLog = [];
+      spriteUtils.addEvent('whenpress', {key: 'up'}, () =>
+        eventLog.push('when up press ran')
+      );
+      spriteUtils.addEvent('whilepress', {key: 'down'}, () =>
+        eventLog.push('while down press ran')
+      );
+
+      spriteUtils.runEvents(gameLabP5.p5);
+
+      expect(eventLog).to.deep.equal([
+        'when up press ran',
+        'while down press ran'
+      ]);
+
+      keyWentDownStub.restore();
+      keyDownStub.restore();
+    });
+
+    describe('Click events', () => {
+      let eventLog, mouseWentDownStub, mouseIsOverStub, mousePressedOverStub;
+      beforeEach(function() {
+        eventLog = [];
+        mouseWentDownStub = stub(gameLabP5.p5, 'mouseWentDown');
+        mouseIsOverStub = stub(gameLabP5.p5, 'mouseIsOver');
+        mousePressedOverStub = stub(gameLabP5.p5, 'mousePressedOver');
+      });
+      afterEach(function() {
+        mouseWentDownStub.restore();
+        mouseIsOverStub.restore();
+        mousePressedOverStub.restore();
+      });
+      it('works with individual sprites', () => {
+        mouseWentDownStub.returns(true);
+        mouseIsOverStub.returns(true);
+        mousePressedOverStub.returns(true);
+        let id = spriteUtils.addSprite(createSprite());
+        spriteUtils.addEvent('whenclick', {sprite: id}, () =>
+          eventLog.push('when click ran')
+        );
+        spriteUtils.addEvent('whileclick', {sprite: id}, () =>
+          eventLog.push('while click ran')
+        );
+
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['when click ran', 'while click ran']);
+      });
+
+      it('works with animation groups', () => {
+        mouseWentDownStub.returns(true);
+
+        let sprite1 = createSprite();
+        let sprite2 = createSprite();
+        let sprite3 = createSprite();
+        sprite1.addAnimation('a', animation);
+        sprite2.addAnimation('b', animation);
+        sprite3.addAnimation('a', animation);
+        let id1 = spriteUtils.addSprite(sprite1);
+        spriteUtils.addSprite(sprite2);
+        spriteUtils.addSprite(sprite3);
+
+        mouseIsOverStub.withArgs(sprite1).returns(true);
+        mouseIsOverStub.withArgs(sprite2).returns(true);
+        mouseIsOverStub.withArgs(sprite3).returns(false);
+
+        spriteUtils.addEvent('whenclick', {sprite: 'a'}, extraArgs =>
+          eventLog.push(extraArgs.sprite + ' was clicked')
+        );
+
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal([id1 + ' was clicked']);
+      });
+    });
+
+    describe('Collision Events', () => {
+      let eventLog, sprite, spriteId, target, targetId, overlapStub;
+      beforeEach(function() {
+        eventLog = [];
+        sprite = createSprite();
+        spriteId = spriteUtils.addSprite(sprite);
+        target = createSprite();
+        targetId = spriteUtils.addSprite(target);
+        overlapStub = stub(sprite, 'overlap');
+      });
+
+      afterEach(function() {
+        overlapStub.restore();
+      });
+
+      it('Can run collision events with individual sprites', () => {
+        overlapStub.onCall(0).returns(true);
+        overlapStub.onCall(1).returns(true);
+        spriteUtils.addEvent(
+          'whentouch',
+          {
+            sprite1: spriteId,
+            sprite2: targetId
+          },
+          () => eventLog.push('when touch ran')
+        );
+
+        spriteUtils.addEvent(
+          'whiletouch',
+          {
+            sprite1: spriteId,
+            sprite2: targetId
+          },
+          () => eventLog.push('while touch ran')
+        );
+
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['when touch ran', 'while touch ran']);
+      });
+
+      it('Can run collision events with animation groups', () => {
+        let sprite1 = createSprite();
+        let sprite2 = createSprite();
+        let sprite3 = createSprite();
+        sprite1.addAnimation('a', animation);
+        sprite2.addAnimation('b', animation);
+        sprite3.addAnimation('a', animation);
+        spriteUtils.addSprite(sprite1);
+        spriteUtils.addSprite(sprite2);
+        spriteUtils.addSprite(sprite3);
+
+        spriteUtils.addEvent(
+          'whentouch',
+          {
+            sprite1: 'a',
+            sprite2: 'b'
+          },
+          () => eventLog.push('when touch ran')
+        );
+
+        spriteUtils.addEvent(
+          'whiletouch',
+          {
+            sprite1: 'a',
+            sprite2: 'b'
+          },
+          () => eventLog.push('while touch ran')
+        );
+
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['when touch ran', 'while touch ran']);
+      });
+
+      it('while touching continues to call the callback', () => {
+        overlapStub.onCall(0).returns(true);
+        overlapStub.onCall(1).returns(true);
+        spriteUtils.addEvent(
+          'whiletouch',
+          {
+            sprite1: spriteId,
+            sprite2: targetId
+          },
+          () => eventLog.push('while touch ran')
+        );
+        // First tick- expect the callback to be called
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['while touch ran']);
+
+        // Second tick- expect the callback to be called again
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['while touch ran', 'while touch ran']);
+      });
+
+      it('when touching does not continue to call the callback', () => {
+        overlapStub.onCall(0).returns(true);
+        overlapStub.onCall(1).returns(true);
+        spriteUtils.addEvent(
+          'whentouch',
+          {
+            sprite1: spriteId,
+            sprite2: targetId
+          },
+          () => eventLog.push('when touch ran')
+        );
+        // First tick- expect the callback to be called
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['when touch ran']);
+
+        // Second tick- expect the callback not to be called again
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['when touch ran']);
+      });
+
+      it('when touching calls the callback again if the sprites stop and start touching', () => {
+        overlapStub.onCall(0).returns(true);
+        overlapStub.onCall(1).returns(false);
+        overlapStub.onCall(2).returns(true);
+        spriteUtils.addEvent(
+          'whentouch',
+          {
+            sprite1: spriteId,
+            sprite2: targetId
+          },
+          () => eventLog.push('when touch ran')
+        );
+        // First tick- expect the callback to be called
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['when touch ran']);
+
+        // Second tick- expect the callback not to be called (overlap returns false)
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['when touch ran']);
+
+        // Third tick- expect the callback to be called again
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['when touch ran', 'when touch ran']);
+      });
     });
   });
 });
