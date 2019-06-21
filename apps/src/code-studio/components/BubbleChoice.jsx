@@ -18,7 +18,8 @@ const styles = {
     marginBottom: MARGIN
   },
   thumbnail: {
-    width: THUMBNAIL_IMAGE_SIZE
+    width: THUMBNAIL_IMAGE_SIZE,
+    height: THUMBNAIL_IMAGE_SIZE
   },
   placeholderThumbnail: {
     width: THUMBNAIL_IMAGE_SIZE,
