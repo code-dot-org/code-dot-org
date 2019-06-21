@@ -1745,38 +1745,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Asynchronously enqueues an operation to update the level progress.
-  # @return [Boolean] whether a new level has been completed.
-  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairing_user_ids:)
-    level_id = level.id
-    script_id = script_level.script_id
-    old_user_level = UserLevel.where(
-      user_id: id,
-      level_id: level_id,
-      script_id: script_id
-    ).first
-
-    async_op = {
-      'model' => 'User',
-      'action' => 'track_level_progress',
-      'user_id' => id,
-      'level_id' => level_id,
-      'script_id' => script_id,
-      'new_result' => new_result,
-      'level_source_id' => level_source_id,
-      'submitted' => submitted,
-      'pairing_user_ids' => pairing_user_ids
-    }
-    if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
-      User.progress_queue.enqueue(async_op.to_json)
-    else
-      User.handle_async_op(async_op)
-    end
-
-    old_result = old_user_level.try(:best_result)
-    !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(new_result)
-  end
-
   # The synchronous handler for the track_level_progress helper.
   # @return [UserLevel]
   def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
