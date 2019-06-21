@@ -41,24 +41,4 @@ class Activity < ActiveRecord::Base
   def finished?
     ActivityConstants.finished? test_result
   end
-
-  # Handle an async operation created by create_async! (and other async operations we might add
-  # in the future).
-  # @param [Hash] op A has describing the operation
-  def self.handle_async_op(op)
-    raise 'Model must be Activity' if op['model'] != 'Activity'
-
-    case op['action']
-      when 'create'
-        attributes = op['attributes']
-        attributes[:updated_at] = Time.now
-        Activity.new(attributes).tap(&:atomic_save!)
-      else
-        raise "Unknown action #{op['action']} in #{async_json}"
-    end
-  end
-
-  def self.progress_queue
-    AsyncProgressHandler.progress_queue
-  end
 end
