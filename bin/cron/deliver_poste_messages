@@ -355,13 +355,10 @@ def main
     NewRelic::Agent.record_metric("Custom/Poste/Queued", remaining_count)
   end
 
-  elapsed_seconds = ((Time.now - started_at) * 100.0).to_i / 100.0
-
-  unless queue_count == 0 && remaining_count == 0
+  unless queue_count == 0 && remaining_count == 0 && rack_env?(:development)
+    elapsed_seconds = ((Time.now - started_at) * 100.0).to_i / 100.0
     message = "#{queue_count} email(s) sent in #{elapsed_seconds} seconds using #{worker_count} threads, #{remaining_count} still queued."
-    if rack_env?(:development)
-      puts message
-    end
+    puts message
   end
 end
 
