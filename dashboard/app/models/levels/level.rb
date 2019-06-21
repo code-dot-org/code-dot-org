@@ -62,6 +62,7 @@ class Level < ActiveRecord::Base
     hint_prompt_attempts_threshold
     short_instructions
     long_instructions
+    long_instructions_format
     rubric_key_concept
     rubric_performance_level_1
     rubric_performance_level_2
@@ -71,6 +72,15 @@ class Level < ActiveRecord::Base
     encrypted
     teacher_markdown
   )
+
+  def long_instructions_dsl_properties
+    case long_instructions_format
+    when "multi"
+      Multi.parse(long_instructions, "").first[:properties].deep_stringify_keys
+    else
+      {}
+    end
+  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name

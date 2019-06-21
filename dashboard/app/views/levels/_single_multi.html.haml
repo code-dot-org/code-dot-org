@@ -1,5 +1,7 @@
 -# inhibit brakeman warning about unescaped model attribute - comes from static data in database, level.properties does not contain XSS attacks
-- data = brakeman_no_warn(level.properties)
+- props = level.is_a?(DSLDefined) ? level.properties : level.long_instructions_dsl_properties
+- data = brakeman_no_warn(props)
+- puts data
 - data['answers'] ||= []
 - contained_mode = local_assigns.fetch :contained_mode, false
 - app = 'multi'
