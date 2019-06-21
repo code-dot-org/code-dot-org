@@ -34,9 +34,6 @@ const styles = {
     fontFamily: '"Gotham 5r"',
     color: color.teal
   },
-  btnContainer: {
-    float: 'right'
-  },
   btn: {
     color: color.white,
     backgroundColor: color.lighter_gray,
@@ -71,15 +68,43 @@ export default class BubbleChoice extends React.Component {
     navigateToHref(url + location.search);
   };
 
-  render() {
+  renderButtons = () => {
     const {level} = this.props;
     const backButtonUrl = level.previous_level_url || level.script_url;
     const continueButtonUrl = level.next_level_url || level.script_url;
 
     return (
       <div>
+        {backButtonUrl && (
+          <button
+            type="button"
+            onClick={() => this.goToUrl(backButtonUrl)}
+            style={styles.btn}
+          >
+            {i18n.back()}
+          </button>
+        )}
+        {continueButtonUrl && (
+          <button
+            type="button"
+            onClick={() => this.goToUrl(continueButtonUrl)}
+            style={{...styles.btn, ...styles.btnOrange}}
+          >
+            {level.next_level_url ? i18n.continue() : i18n.finish()}
+          </button>
+        )}
+      </div>
+    );
+  };
+
+  render() {
+    const {level} = this.props;
+
+    return (
+      <div>
         <h1>{level.title}</h1>
         <UnsafeRenderedMarkdown markdown={level.description} />
+        {this.renderButtons()}
         <h2 style={styles.h2}>{i18n.chooseActivity()}</h2>
         {level.sublevels.map(sublevel => (
           <div key={sublevel.id} style={styles.row}>
@@ -99,26 +124,7 @@ export default class BubbleChoice extends React.Component {
             </div>
           </div>
         ))}
-        <div style={styles.btnContainer}>
-          {backButtonUrl && (
-            <button
-              type="button"
-              onClick={() => this.goToUrl(backButtonUrl)}
-              style={styles.btn}
-            >
-              {i18n.back()}
-            </button>
-          )}
-          {continueButtonUrl && (
-            <button
-              type="button"
-              onClick={() => this.goToUrl(continueButtonUrl)}
-              style={{...styles.btn, ...styles.btnOrange}}
-            >
-              {level.next_level_url ? i18n.continue() : i18n.finish()}
-            </button>
-          )}
-        </div>
+        {this.renderButtons()}
       </div>
     );
   }
