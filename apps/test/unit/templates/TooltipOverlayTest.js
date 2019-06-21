@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from 'chai';
 import {mount, shallow} from 'enzyme';
 import React from 'react';
 import TooltipOverlay, {
