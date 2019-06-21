@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class BubbleChoiceTest < ActiveSupport::TestCase
+  include Rails.application.routes.url_helpers
   self.use_transactional_test_case = true
 
   setup_all do
@@ -88,8 +89,18 @@ DSL
       title: @bubble_choice.title,
       description: @bubble_choice.description,
       sublevels: [
-        {id: @sublevel1.id, title: @sublevel1.display_name, thumbnail_url: @sublevel1.thumbnail_url},
-        {id: @sublevel2.id, title: @sublevel2.name, thumbnail_url: nil}
+        {
+          id: @sublevel1.id,
+          title: @sublevel1.display_name,
+          thumbnail_url: @sublevel1.thumbnail_url,
+          url: level_url(@sublevel1.id)
+        },
+        {
+          id: @sublevel2.id,
+          title: @sublevel2.name,
+          thumbnail_url: nil,
+          url: level_url(@sublevel2.id)
+        }
       ]
     }
 
@@ -115,8 +126,18 @@ DSL
   test 'summarize_sublevels' do
     sublevel_summary = @bubble_choice.summarize_sublevels
     expected_summary = [
-      {id: @sublevel1.id, title: @sublevel1.display_name, thumbnail_url: @sublevel1.thumbnail_url},
-      {id: @sublevel2.id, title: @sublevel2.name, thumbnail_url: nil}
+      {
+        id: @sublevel1.id,
+        title: @sublevel1.display_name,
+        thumbnail_url: @sublevel1.thumbnail_url,
+        url: level_url(@sublevel1.id)
+      },
+      {
+        id: @sublevel2.id,
+        title: @sublevel2.name,
+        thumbnail_url: nil,
+        url: level_url(@sublevel2.id)
+      }
     ]
 
     assert_equal expected_summary, sublevel_summary

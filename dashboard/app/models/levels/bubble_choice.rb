@@ -94,9 +94,11 @@ ruby
         thumbnail_url: level.try(:thumbnail_url)
       }
 
-      if script_level
-        level_info[:url] = build_script_level_url(script_level, {sublevel_position: index + 1})
-      end
+      level_info[:url] = if script_level
+                           build_script_level_url(script_level, {sublevel_position: index + 1})
+                         else
+                           level_url(level.id)
+                         end
 
       summary << level_info
     end
