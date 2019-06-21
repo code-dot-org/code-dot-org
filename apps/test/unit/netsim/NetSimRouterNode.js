@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from 'chai';
 import {assertOwnProperty} from '../../util/assertions';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var _ = require('lodash');

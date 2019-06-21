@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from 'chai';
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 
 // Simple console that only has 'log' method

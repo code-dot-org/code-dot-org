@@ -1,4 +1,4 @@
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from 'chai';
 import scriptSelection, {
   setValidScripts,
   setScriptId,

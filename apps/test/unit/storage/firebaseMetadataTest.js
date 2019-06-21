@@ -1,4 +1,4 @@
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from 'chai';
 import {
   addColumnName,
   deleteColumnName,
