@@ -114,7 +114,6 @@ export default class SchoolNotFound extends Component {
     }
 
     if (this.props.useGoogleLocationSearch && this.locationSearchRef) {
-      // if (this.props.useGoogleLocationSearch) {
       return this.isFieldValid(this.locationSearchRef.value());
     } else {
       return (
