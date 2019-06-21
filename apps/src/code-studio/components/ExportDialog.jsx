@@ -401,8 +401,9 @@ class ExportDialog extends React.Component {
 
   async publishAndGenerateApk() {
     const {exportApp, md5SavedSources} = this.props;
+    const {apkUri} = this.state;
 
-    if (this.state.apkUri) {
+    if (apkUri) {
       // We have already have generated an APK
       return;
     }
@@ -414,7 +415,8 @@ class ExportDialog extends React.Component {
     } = await this.publishExpoExport();
 
     if (!expoSnackId) {
-      // We failed to generate a snackId
+      // We failed to generate a snackId, simply return
+      // (publishExpoExport() will have set exportError in state as needed)
       return;
     }
 
@@ -468,7 +470,7 @@ class ExportDialog extends React.Component {
         });
       } else {
         // Check status again...
-        // TODO: check for timeout
+        // NOTE: we don't timeout automatically
         this.waitTimerId = setTimeout(async () => {
           this.waitTimerId = null;
           this.waitForApkBuild(apkBuildId, expoSnackId);
@@ -484,6 +486,10 @@ class ExportDialog extends React.Component {
     }
   }
 
+  //
+  // Return properties related to the last saved APK build as long as the
+  // project's md5SavedSources hash matches
+  //
   getValidPreviousApkInfo() {
     const {exportGeneratedProperties = {}, md5SavedSources} = this.props;
     const {android = {}} = exportGeneratedProperties;
@@ -502,8 +508,10 @@ class ExportDialog extends React.Component {
       snackId: expoSnackId
     } = this.getValidPreviousApkInfo();
     if (apkUri) {
+      // The previous build completed, no need to generate a new one:
       this.setState({apkUri, apkBuildId, expoSnackId});
     } else if (apkBuildId) {
+      // The previous build was in progress, resume monitoring that build:
       this.setState({
         generatingApk: true,
         apkUri: null,
@@ -512,6 +520,8 @@ class ExportDialog extends React.Component {
       });
       return this.waitForApkBuild(apkBuildId, expoSnackId);
     } else {
+      // There is no previous build that matches the current sources,
+      // so publish and generate a new build:
       return this.publishAndGenerateApk();
     }
   }
@@ -601,24 +611,6 @@ class ExportDialog extends React.Component {
             opening the Code.org website. If you make changes to your app after
             you export, you will need to export it again.
           </p>
-          {/*<p style={styles.p}>
-            The first step is to install the Expo app on your mobile device so
-            you can test your project within the Expo app.
-          </p>
-          <button
-            type="button"
-            style={styles.iosAppStoreButton}
-            onClick={this.onInstallExpoIOS}
-          >
-            iOS Expo App
-          </button>
-          <button
-            type="button"
-            style={styles.androidGooglePlayButton}
-            onClick={this.onInstallExpoAndroid}
-          >
-            Android Expo App
-          </button>*/}
         </div>
       </div>
     );
