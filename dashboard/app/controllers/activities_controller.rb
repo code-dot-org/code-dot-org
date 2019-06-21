@@ -109,11 +109,6 @@ class ActivitiesController < ApplicationController
                     client_state.lines
                   end
 
-    milestone_response_user_level = nil
-    if @new_level_completed.is_a? UserLevel
-      milestone_response_user_level = @new_level_completed
-    end
-
     render json: milestone_response(
       script_level: @script_level,
       level: @level,
@@ -124,7 +119,7 @@ class ActivitiesController < ApplicationController
       activity: @activity,
       new_level_completed: @new_level_completed,
       share_failure: share_failure,
-      user_level: milestone_response_user_level
+      user_level: @user_level
     )
 
     if solved
@@ -186,27 +181,26 @@ class ActivitiesController < ApplicationController
         end
     end
     if @script_level
-      @new_level_completed =
-        if synchronous_save
-          User.track_level_progress_sync(
-            user_id: current_user.id,
-            level_id: @level.id,
-            script_id: @script_level.script_id,
-            new_result: test_result,
-            submitted: params[:submitted] == 'true',
-            level_source_id: @level_source.try(:id),
-            pairing_user_ids: pairing_user_ids,
-          )
-        else
-          current_user.track_level_progress_async(
-            script_level: @script_level,
-            new_result: test_result,
-            submitted: params[:submitted] == "true",
-            level_source_id: @level_source.try(:id),
-            level: @level,
-            pairing_user_ids: pairing_user_ids
-          )
-        end
+      if synchronous_save
+        @user_level, @new_level_completed = User.track_level_progress_sync(
+          user_id: current_user.id,
+          level_id: @level.id,
+          script_id: @script_level.script_id,
+          new_result: test_result,
+          submitted: params[:submitted] == 'true',
+          level_source_id: @level_source.try(:id),
+          pairing_user_ids: pairing_user_ids,
+        )
+      else
+        @new_level_completed = current_user.track_level_progress_async(
+          script_level: @script_level,
+          new_result: test_result,
+          submitted: params[:submitted] == "true",
+          level_source_id: @level_source.try(:id),
+          level: @level,
+          pairing_user_ids: pairing_user_ids
+        )
+      end
     end
 
     passed = ActivityConstants.passing?(test_result)
@@ -221,7 +215,7 @@ class ActivitiesController < ApplicationController
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(
         user: current_user,
-        user_level_id: @new_level_completed.try(:id),
+        user_level_id: @user_level.try(:id),
         level_source_id: @level_source_image.level_source_id,
         autosaved: true
       )
