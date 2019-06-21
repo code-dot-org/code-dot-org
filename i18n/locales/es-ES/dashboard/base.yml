@@ -572,7 +572,6 @@ es:
   pdf_download: 'Descargar PDF'
   download_coming_soon: 'Actividad descargable próximamente.'
   video_coming_soon: '¡Vídeo próximamente!'
-  not_started: 'El alumno no ha intentado este nivel.'
   share_code:
     title: "Haz clic en \"Ejecutar\" para ver el programa en acción"
     bounce_og_title: "Revisa mi juego Bounce"
