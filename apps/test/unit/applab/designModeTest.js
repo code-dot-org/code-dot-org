@@ -488,7 +488,7 @@ describe('setProperty and read Property', () => {
         expect(screen.style.backgroundColor).to.equal('rgb(171, 205, 239)');
       });
 
-      it("will not change a customization, but will change it later if the value matches an intermediate theme's default", () => {
+      it("will not change a customization, and will not change it later if the value matches an intermediate theme's default", () => {
         setExistingHTML(`
           <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(255, 255, 255);">
           </div>
@@ -507,10 +507,11 @@ describe('setProperty and read Property', () => {
         expect(screen.style.backgroundColor).to.equal('rgb(197, 226, 85)');
 
         // Change theme to area51, verify that the screen now has an updated data-theme attribute
-        // and the background color for that theme (even though it had been customized once):
+        // and the background color is still unchanged (even though it had matched the watermelon
+        // theme's default background color):
         designMode.changeThemeForScreen(screen, 'area51');
         expect(screen.getAttribute('data-theme')).to.equal('area51');
-        expect(screen.style.backgroundColor).to.equal('rgb(54, 47, 73)');
+        expect(screen.style.backgroundColor).to.equal('rgb(197, 226, 85)');
       });
     });
 

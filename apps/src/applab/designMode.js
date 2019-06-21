@@ -632,6 +632,12 @@ designMode.changeThemeForElement = function(
   // Start a new batched set of updateProperty() calls:
   batchChangeId++;
   for (const propName in themeValues) {
+    const dataModifiedAttributeName = `data-mod-${propName}`;
+    if (element.getAttribute(dataModifiedAttributeName)) {
+      // This property was explicitly modified prior to an earlier theme
+      // change, so we will not update it here:
+      continue;
+    }
     const propTheme = themeValues[propName];
     const prevDefault = propTheme[prevThemeValue];
     const newDefault = propTheme[themeValue];
@@ -662,6 +668,11 @@ designMode.changeThemeForElement = function(
         batchChangeId
       );
       modifiedProperty = true;
+    } else {
+      // Since this property doesn't match the expected default value for the
+      // previous theme, mark the element as explicitly modified so the
+      // customization survives subsequent theme changes:
+      element.setAttribute(dataModifiedAttributeName, 1);
     }
   }
   if (modifiedProperty) {
