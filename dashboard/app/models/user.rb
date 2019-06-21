@@ -1815,24 +1815,6 @@ class User < ActiveRecord::Base
     [user_level, new_level_completed]
   end
 
-  def self.handle_async_op(op)
-    raise 'Model must be User' if op['model'] != 'User'
-    case op['action']
-      when 'track_level_progress'
-        User.track_level_progress_sync(
-          user_id: op['user_id'],
-          level_id: op['level_id'],
-          script_id: op['script_id'],
-          new_result: op['new_result'],
-          submitted: op['submitted'],
-          level_source_id: op['level_source_id'],
-          pairing_user_ids: op['pairing_user_ids']
-        )
-      else
-        raise "Unknown action in #{op}"
-    end
-  end
-
   # This method is called when a section the user belongs to is assigned to
   # a script. We find or create a new UserScript entry, and set assigned_at
   # if not already set.
@@ -1887,10 +1869,6 @@ class User < ActiveRecord::Base
 
   def has_ever_signed_in?
     current_sign_in_at.present?
-  end
-
-  def self.progress_queue
-    AsyncProgressHandler.progress_queue
   end
 
   def migrated?
