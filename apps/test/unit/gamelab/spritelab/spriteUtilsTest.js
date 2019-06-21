@@ -296,7 +296,6 @@ describe('Sprite Utils', () => {
         spriteId = spriteUtils.addSprite(sprite);
         target = createSprite();
         targetId = spriteUtils.addSprite(target);
-
         overlapStub = stub(sprite, 'overlap');
       });
 
