@@ -163,7 +163,6 @@ export default class SchoolNotFound extends Component {
     const isUs = this.props.country
       ? this.props.country === 'United States'
       : false;
-    console.log(isUs, this.props.country, '----');
 
     return (
       <div>
