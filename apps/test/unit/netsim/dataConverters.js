@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from 'chai';
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 
 describe('DataConverters', function() {
