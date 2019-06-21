@@ -295,7 +295,7 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   onSchoolChange = (_, event) => {
     const newSchool = event ? event.value : '';
-    // Clear error state if the user can't find school
+    // clear error state if the user can't find the school
     let errors = this.state.errors;
     if (newSchool === '-1') {
       errors = {};
@@ -306,13 +306,13 @@ export default class SchoolInfoInterstitial extends React.Component {
   onSchoolNotFoundChange = (field, event) => {
     let newValue = event ? event.target.value : '';
     this.setState({
-      [field]: newValue
+      [field]: newValue,
+      errors: {}
     });
   };
 
   render() {
     const showErrors = Object.keys(this.state.errors).length > 0;
-    // By default error is set to false
     return (
       <BaseDialog
         useUpdatedStyles
