@@ -1423,9 +1423,9 @@ es-ES:
         "▶ Ejecutar"!
       courseB_iceage_loops11: "¡Ayuda a Scrat a conseguir la bellota!"
       courseB_iceage_loops11_2019: "¡Ayuda a Scrat a conseguir la bellota!"
-      courseB_starWars_prog1: '"Ve a tomar el pedazo de metal, BB-8"'
-      courseB_starWars_prog1_2018: '"Ve a tomar el pedazo de metal, BB-8"'
-      courseB_starWars_prog1_2019: '"Ve a tomar el pedazo de metal, BB-8"'
+      courseB_starWars_prog1: '"Ve a coger la chatarra, BB-8"'
+      courseB_starWars_prog1_2018: '"Ve a coger la chatarra, BB-8"'
+      courseB_starWars_prog1_2019: '"Ve a coger la chatarra, BB-8"'
       courseC_PlayLab_events3: "¿Puedes escribir un programa para hacer que el perro
         se mueva hasta el gato?"
       courseC_PlayLab_events3_2018: "¿Puedes escribir un programa para hacer que el
@@ -1442,6 +1442,24 @@ es-ES:
         Pista: Los 3 lados tienen la misma longitud."
       courseC_artist_prog5_2019: "¡Esta casa necesita un techo! Dibuja el triángulo.
         Pista: Los 3 lados tienen la misma longitud."
+      courseC_artist_prog8: |-
+        Una tarjeta de identificación más. Esta es un triángulo para Pi.
+        (Cada lado mide 150 píxeles)
+      courseC_artist_prog8_2018: |-
+        Una tarjeta de identificación más. Esta es un triángulo para Pi.
+        (Cada lado mide 150 píxeles)
+      courseC_artist_prog8_2019: |-
+        Una tarjeta de identificación más. Esta es un triángulo para Pi.
+        (Cada lado mide 150 píxeles)
+      courseC_collector_prog8: _"¡Sigue trabajando así de bien! Ayúdame a recoger
+        todo el tesoro."_
+      courseC_collector_prog8_2018: _"¡Sigue trabajando así de bien! Ayúdame a recoger
+        todo el tesoro."_
+      courseC_collector_prog8_2019: _"¡Sigue trabajando así de bien! Ayúdame a recoger
+        todo el tesoro."_
+      courseC_collector_prog9: _"¡Consigamos todo el tesoro!"_
+      courseC_collector_prog9_2018: _"¡Consigamos todo el tesoro!"_
+      courseC_collector_prog9_2019: _"¡Consigamos todo el tesoro!"_
       courseC_maze_debugging2: Usa tus habilidades de depuración para que Scrat consiga
         la bellota.
       courseC_maze_debugging2_2018: Usa tus habilidades de depuración para que Scrat
@@ -1492,6 +1510,18 @@ es-ES:
         tú quieras!"_
       courseC_maze_programming9_2019: _"Ahora, ¡ayúdame a acorralar al cerdo como
         tú quieras!"_
+      courseC_starWars_loops10: "¡Lo estás haciendo genial! ¡Sigue así!"
+      courseC_starWars_loops10_2018: "¡Lo estás haciendo genial! ¡Sigue así!"
+      courseC_starWars_loops10_2019: "¡Lo estás haciendo genial! ¡Sigue así!"
+      courseC_starWars_loops10_predict2: "¡Lo estás haciendo genial! ¡Sigue así!"
+      courseC_starWars_loops10_predict2_2018: "¡Lo estás haciendo genial! ¡Sigue así!"
+      courseC_starWars_loops10_predict2_2019: "¡Lo estás haciendo genial! ¡Sigue así!"
+      courseC_starWars_loops11: "¡Ya casi lo tienes! ¡Esta vez, elige el camino que
+        quieras!"
+      courseC_starWars_loops11_2018: "¡Ya casi lo tienes! ¡Esta vez, elige el camino
+        que quieras!"
+      courseC_starWars_loops11_2019: "¡Ya casi lo tienes! ¡Esta vez, elige el camino
+        que quieras!"
       courseD_artist_binary1: "Binario es una forma de representar información mediante
         sólo dos opciones.  Aquí, vamos a usar las opciones \"apagado\" (representado
         por el número 0) y \"encendido\" (representado por el número 1).  \\\r \\\r
@@ -1558,6 +1588,9 @@ es-ES:
         miel en cada panel. Utiliza un bucle anidado. '
       courseD_bee_nestedLoops8_2019: 'Recolecta todo el néctar de cada flor y haz
         miel en cada panel. Utiliza un bucle anidado. '
+      courseD_collector_ramp10: Ayuda a Laurel a recoger todo el tesoro.
+      courseD_collector_ramp8: Ayuda a Laurel a recoger todo el tesoro.
+      courseD_collector_ramp9: Ayuda a Laurel a recoger todo el tesoro.
       courseD_harvester_nested_loops_challenge1: '"¡Necesito ayuda en la granja Ayúdame
         a cosechar este maíz usando sólo los bloques de tu caja de herramientas!"'
       courseD_harvester_nested_loops_challenge1_2018: '"¡Necesito ayuda en la granja
@@ -1742,6 +1775,15 @@ es-ES:
       frozen square snowflake: ¿Puedes dibujar un copo de nieve utilizando el bloque
         "Repetir" para dibujar un cuadrado 10 veces y el bloque "Girar" para girar
         36 grados entre cada cuadrado?
+      grade2_collector_10: "¡Ya casi lo tienes! ¡Recoge tantas joyas como puedas para
+        completar el nivel!"
+      grade2_collector_10_2018: "¡Ya casi lo tienes! ¡Recoge tantas joyas como puedas
+        para completar el nivel!"
+      grade2_collector_10_2019: "¡Ya casi lo tienes! ¡Recoge tantas joyas como puedas
+        para completar el nivel!"
+      grade2_collector_A: Ayuda a Laurel a recoger todo el tesoro.
+      grade2_collector_A_2018: Ayuda a Laurel a recoger todo el tesoro.
+      grade2_collector_A_2019: Ayuda a Laurel a recoger todo el tesoro.
       grade5_artist_binary11: 'Juego Libre: Aquí tiene un lienzo de alta resolución
         para dibujar - 16 bits por 16 bits!'
       grade5_artist_binary4: "¿Puede dibujar este molde enlazando una secuencia binaria

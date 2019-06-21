@@ -14107,6 +14107,10 @@ fil:
                 proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
                 na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
+            Intellectual Property:
+              name: Intelektwal na Pag-aari
+            Images:
+              name: Mga Larawan
         csd3-pilot:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib
             na sining, at mga laro sa Game Lab."
@@ -14508,3 +14512,7 @@ fil:
                 estudyante ay magbabahagi ng kanilang nakumpletong mga laro sa kanilang
                 mga kamag-aral. Ang proyektong ito ay tatagal ng ilang klase at maaring
                 aabot kahit saan hanggang sa 3-5 na oras ng klase.
+        maddie-test:
+          stages:
+            new stage:
+              name: bagong yugto

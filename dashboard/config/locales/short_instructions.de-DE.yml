@@ -1353,6 +1353,10 @@ de-DE:
       Underground Mining Coal_2019: Du wirst die wertvollsten Rohstoffe unter der
         Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln
         und baue mindestens 2 Kohleblöcke ab.
+      'Widget: Text Compression': Suche im Text nach Mustern (Worte oder Sätze die
+        sich wiederholen). Trage die Muster die du findest in das Wörterbuch rechts
+        ein. Wenn du einen Eintrag in das Wörterbuch machst, wird das Symbol des Eintrags
+        die Muster im Text ersetzen.
       bounce_1: Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein und drücke
         „Ausführen“. Bewege den Schläger mit dem Linkspfeil, um das Ziel zu erreichen.
       bounce_10: Jetzt ist oben ein Tor. Hänge die Bausteine „Punkt erzielen“ und

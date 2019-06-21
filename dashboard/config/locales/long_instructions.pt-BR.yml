@@ -468,7 +468,7 @@ pt-BR:
       AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\\t<img
         src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
         AM.png\" style=\"height:150px\"> \n</div>\n\n**Objetivo:** Fazer a tela ficar
-        verde. \n\n**Como:** Arraste um bloco do `DefinirPropriedade()`. Use os menus
+        verde. \n\n**Como:** Arraste um bloco `DefinirPropriedade()`. Use os menus
         suspensos para definir a tela `\"cor-de-fundo\"` para `\"verde\"`. Então pressione
         \"Executar\".\n\n**Preso? Clique Aqui:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
       AppLab Intro 7 - Change Text 2: |-
@@ -1797,6 +1797,49 @@ pt-BR:
         # Imagens
 
         Uma página da web Cachorro X Gato foi iniciada para você. A imagem do cachorro já foi adicionada à página abaixo. Use uma tag de imagem para adicionar a imagem `cat.jpeg` à página abaixo do cabeçalho do gato.
+      CSD U2 Image Tag Debug: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary> <strong> Como adiciono imagens? </strong>
+        </summary>
+
+        A tag `<img>` permite que você mostre imagens na sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cachorro pulando"/&gt;</pre><br><br>
+
+        Para informar ao navegador qual arquivo usar, informações extras, chamadas de **atributo**, são adicionadas à tag \<img> dentro dos colchetes. O atributo `src` significa **fonte** e informa o nome da imagem. Os nomes dos arquivos de imagem incluem extensões que informam ao computador com qual tipo de imagem eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além de ter o atributo src, os elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isso é importante caso a imagem não seja carregada ou para pessoas com problemas de visão. <br><br>
+
+        Uma tag `<img>` é um exemplo de uma tag **de fechamento automático** porque inicia e fecha em uma tag. Para marcar isso, colocamos o `/`, que geralmente aparece na tag de fechamento no final da tag de imagem.
+
+        </details>
+        <details>
+        <summary> <strong> Por que uma tag de imagem não tem uma tag de fechamento? </strong>
+        </summary>
+
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que deva ser agrupado em tags. O conteúdo que aparece na tela é especificado através dos atributos das tags.
+
+        </details>
+        <details>
+        <summary> <strong> O que é um atributo? </strong>
+        </summary>
+
+        Atributos são informações extras incluídas em uma tag. Atributos possuem nomes e valores. O nome informa que tipo de informação está sendo fornecido e, em seguida, o valor fornece as informações específicas para essa tag.
+
+        Por exemplo, as tags \<img> possuem dois atributos, src e alt. src especifica o nome do arquivo de imagem e alt informa ao navegador em texto legível qual é a imagem.
+
+        </details>
+        </div>
+
+        # Os detalhes importam
+
+        O atributo `src` precisa apontar para o _exato_nome do arquivo da imagem que você deseja usar. Isso significa que você precisa prestar atenção à ortografia, ao uso de letras maiúsculas e à extensão do arquivo. Cada uma das três imagens nesta página está quebrada devido a um atributo `src` inadequado. Usando o menu de arquivos para referência, corrija cada uma das tags de imagem.
+
+        _Nota: mesmo que as imagens não estejam sendo carregadas corretamente, nosso site ainda está mostrando um texto descritivo do que deveria estar lá porque usamos os atributos `alt`. Legal!_
       CSD U2 Info Page Final Touches: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
 
@@ -5961,6 +6004,34 @@ pt-BR:
         -   Use as tags `<ul>` e `<li>` para estruturar o conteúdo em uma lista não ordenada como a figura abaixo.
 
         ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
+      CSD U2 unordered list_2018: "# Listas não ordenadas\n\n<div style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>Quais são os dois tipos de
+        listas?</strong>\n</summary>\nHá dois tipos de listas em HTML, as listas ordenadas
+        e não ordenadas. \n\n</details>\n<details>\n<summary>\n<strong>O que é uma
+        lista não ordenada?</strong>\n</summary>\n\nUma lista não ordenada é apenas
+        uma conjutos de items com marcadores.\n<br /><br />Um elemento de lista não
+        ordenada tem como tag \\<ul> . Sendo uma abreviação para <strong>Lista Não
+        Ordenada</strong> em inglês. Cada item na lista é marcado por um elemento
+        de item de lista \\<li>. Sendo uma abreviação para <strong>L</strong>ista
+        de <strong>I</strong>tens.  O item da lista é um elemento filho, o que significa
+        que está contida dentro de uma elemento pai, uma lista não ordenada(\\<ul>).\n\n</details>\n\n<details>\n<summary>\n<strong>Como
+        faço uma lista não ordenada?</strong>\n</summary>\n\nPara fazer uma lista
+        não ordenada existem apenas dois passos: fazer a lista e adicionar os itens
+        da lista. Para criar a lista não ordenada, escreva as tags de lista não ordenadas
+        `<ul> </ ul>`. Em seguida, adicione seus itens de lista \\*\\* dentro \\*\\*
+        das tags de lista não ordenada. Para criar cada item da lista, use as tags
+        de item de lista `<li> </ li>` e escreva o item da lista dentro das tags.\n<br
+        /><br />\nPode ser útil indentar suas tags \\\\ <li> para que fique claro
+        que elas estão contidas na tag \\\\ <ul>.\n\n</details>\n\n<details>\n<summary>\n<strong>Me
+        mostra um pouco de código.</strong>\n</summary>\n\n<table border=\"1\">\n<tr>\n<td>Exemplo</td>\n<td>Resultado</td>\n</tr>\n<tr>\n<td><pre>
+        &lt;ul&gt; <br>   &lt;li&gt;Vermelho &lt;/li&gt; <br>   &lt;li&gt;Verde &lt;/li&gt;
+        <br>   &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>\n<td><img src=\"https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32
+        PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n</details>\n</div>\n\nEsta
+        página deve ter uma lista não ordenada, mas está faltando as tags da lista.\n\n#
+        Faça você mesmo\n\n-   Use as tags `<ul>` e `<li>` para estruturar o conteúdo
+        em uma lista não ordenada como na figura abaixo.\n\n![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04
+        PM.png>)"
       CSD U2 upload images: |-
         # Carregue Imagens
 
@@ -6362,7 +6433,7 @@ pt-BR:
 
         -   Na Aba de Animação há animações para cada uma de suas figuras. Verifique quais são elas.
         -   No seu código, defina para cada figura a animação apropriada. **Por enquanto utilize as animações fornecidas** mas adiante você poderá alterá-las.
-        -   Avance para [Level 4](/s/csd3/stage/20/puzzle/4) se você precisar de ajudar ao lembrar como se faz isto.
+        -   Avance para [Level 4](/s/csd3-2017/stage/20/puzzle/4) se você precisar de ajudar ao lembrar como se faz isto.
       CSD U3 AnimationsMulti defender animate cake enemies_2018: |-
         # Iniciando: Definindo Animações
 
@@ -7491,28 +7562,6 @@ pt-BR:
 
         -   Use uma **declaração if** e duas funções separadas para desenhar seus planos de fundo
         -   Então escreva suas funções fora do laço de desenho. Você decide o que é um plano de fundo "simples" ou "maluco". Divirta-se!
-      CSD U3 Functions Add Change Background_2018: |-
-        # Troque o Plano de Fundo com a Pontuação
-
-        Ao pegar 10 moedas é hora de celebrar. Você deveria mudar o plano de fundo para algo divertido.
-
-        <img src="https://images.code.org/943c67e59502334fc65a25e690076bdb-image-1475030156530.33.54 PM.png" style="float:right; height:100px">
-
-        # Faça Isso
-
-        -   Use uma **declaração if** e duas funções separadas para desenhar seus planos de fundo
-        -   Então escreva suas funções fora do laço de desenho. Você decide o que é um plano de fundo "simples" ou "maluco". Divirta-se!
-      CSD U3 Functions Add Change Background_2019: |-
-        # Troque o Plano de Fundo com a Pontuação
-
-        Ao pegar 10 moedas é hora de celebrar. Você deveria mudar o plano de fundo para algo divertido.
-
-        <img src="https://images.code.org/943c67e59502334fc65a25e690076bdb-image-1475030156530.33.54 PM.png" style="float:right; height:100px">
-
-        # Faça Isso
-
-        -   Use uma **declaração if** e duas funções separadas para desenhar seus planos de fundo
-        -   Então escreva suas funções fora do laço de desenho. Você decide o que é um plano de fundo "simples" ou "maluco". Divirta-se!
       CSD U3 Functions Add IsTouching: |-
         # Pegue a Moeda, Aumente a Pontuação
 
@@ -8409,6 +8458,147 @@ pt-BR:
         Certifique-se de clicar em "Executar" e tente ativar a grade para ajudar a posicionar as formas com precisão.
 
         ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59 PM.png>)
+      CSD U3 Random Debug Cloud: |-
+        <img src="https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50 PM.png" style="float:right;height:150px">
+
+        # Depurar - Usando 4 Parâmetros
+
+        Agora que a grama está funcionando, vamos adicionar uma nuvem ao céu. Infelizmente, parece um pouco engraçado agora.
+
+        # Faça isso
+
+        -   Depure este programa para tornar a nuvem mais larga do que alta, como na imagem.
+        -   Dica: você precisará alterar dois parâmetros. Quais definem a largura e a altura da sua nuvem?
+
+        _Desafio: O sol não está exatamente no mesmo lugar da foto. Você pode mudar as coordenadas do sol para que a imagem combine completamente?_
+      CSD U3 Random Debug Grass: |-
+        <img src="https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45 PM.png" style="float:right;height:150px">
+
+        # Depurar - Usando 4 Parâmetros
+
+        Este programa usa a versão de quatro parâmetros de `reta()` e `elipse()` para desenhar uma cena simples.
+
+        # Faça isso
+
+        -   Depure este programa e corrija o erro para que a grama se estenda por todo o fundo.
+        -   Dica: você só precisa alterar um número. Qual parâmetro faz seu retângulo (a grama) mais amplo?
+      CSD U3 Random Ellipse Behind: |-
+        <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10 PM.png" style="float:right;height:150px">
+
+        # Faça isso
+
+        -   Escreva o código que faz uma elipse laranja atrás da elipse verde.
+        -   Não se preocupe com o tamanho exato, desde que a elipse verde esteja totalmente dentro da laranja.
+      CSD U3 Random Taller Rectangle: |-
+        <img src="https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10 PM.png" style="float:right;height:150px; border: 1px solid #CCC">
+
+        # Tamanho do retângulo
+
+        Esses blocos `rect` possuem mais dois parâmetros que você pode usar para controlar o tamanho. Observe que o bloco `noStroke ()` desativa o traço (borda) das formas.
+
+        # Faça isso
+
+        -   Olhe o código e tente descobrir como as duas últimas entradas em `rect` funcionam.
+        -   Altere os números no segundo `rect` para tornar o retângulo vermelho maior que o azul.
+      CSD U3 Random Taller Rectangle_2018: |-
+        <img src="https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10 PM.png" style="float:right;height:150px; border: 1px solid #CCC">
+
+        # Tamanho do retângulo
+
+        Esses blocos `rect` possuem mais dois parâmetros que você pode usar para controlar o tamanho. Observe que o bloco `noStroke ()` desativa o traço (borda) das formas.
+
+        # Faça isso
+
+        -   Olhe o código e tente descobrir como as duas últimas entradas em `rect` funcionam.
+        -   Altere os números no segundo `rect` para tornar o retângulo vermelho maior que o azul.
+      CSD U3 Random Taller Rectangle_2019: |-
+        <img src="https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10 PM.png" style="float:right;height:150px; border: 1px solid #CCC">
+
+        # Tamanho do retângulo
+
+        Esses blocos `rect` possuem mais dois parâmetros que você pode usar para controlar o tamanho. Observe que o bloco `noStroke ()` desativa o traço (borda) das formas.
+
+        # Faça isso
+
+        -   Olhe o código e tente descobrir como as duas últimas entradas em `rect` funcionam.
+        -   Altere os números no segundo `rect` para tornar o retângulo vermelho maior que o azul.
+      CSD U3 Random background: |-
+        # Fundo
+
+        Às vezes você vai querer preencher a tela inteira com uma cor. Para isso, você pode usar `fundo`. Abrange tudo na tela com a cor que você escolhe.
+
+        # Faça isso
+
+        -   Execute o código para ver o \`trabalho em segundo plano.
+        -   Mude o fundo de amarelo para laranja.
+
+        _Desafio: Há um quadrado roxo que é coberto pelo fundo. Você pode mudar a ordem do código para poder ver os quadrados roxo e azul?_
+      CSD U3 Random background2: |-
+        <img src="https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04 PM.png" style="float:right;height:150px">
+
+        # Fundo
+
+        `fundo()` vai desenhar em cima de tudo que já está no seu desenho, então é importante pensar na ordem do seu código.
+
+        # Faça isso
+
+        -   Use `fundo()` para criar um fundo "preto" atrás do círculo verde.
+      CSD U3 Random background2_2018: |-
+        <img src="https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04 PM.png" style="float:right;height:150px">
+
+        # Fundo
+
+        `fundo()` vai desenhar em cima de tudo que já está no seu desenho, então é importante pensar na ordem do seu código.
+
+        # Faça isso
+
+        -   Use `fundo()` para criar um fundo "preto" atrás do círculo verde.
+      CSD U3 Random background2_2019: |-
+        <img src="https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04 PM.png" style="float:right;height:150px">
+
+        # Fundo
+
+        `fundo()` vai desenhar em cima de tudo que já está no seu desenho, então é importante pensar na ordem do seu código.
+
+        # Faça isso
+
+        -   Use `fundo()` para criar um fundo "preto" atrás do círculo verde.
+      CSD U3 Random background_2018: |-
+        # Fundo
+
+        Às vezes você vai querer preencher a tela inteira com uma cor. Para isso, você pode usar `fundo`. Abrange tudo na tela com a cor que você escolhe.
+
+        # Faça isso
+
+        -   Execute o código para ver o \`trabalho em segundo plano.
+        -   Mude o fundo de amarelo para laranja.
+
+        _Desafio: Há um quadrado roxo que é coberto pelo fundo. Você pode mudar a ordem do código para poder ver os quadrados roxo e azul?_
+      CSD U3 Random background_2019: |-
+        # Fundo
+
+        Às vezes você vai querer preencher a tela inteira com uma cor. Para isso, você pode usar `fundo`. Abrange tudo na tela com a cor que você escolhe.
+
+        # Faça isso
+
+        -   Execute o código para ver o \`trabalho em segundo plano.
+        -   Mude o fundo de amarelo para laranja.
+
+        _Desafio: Há um quadrado roxo que é coberto pelo fundo. Você pode mudar a ordem do código para poder ver os quadrados roxo e azul?_
+      CSD U3 Random rainbow snake: |-
+        <img src="https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14 PM.png" style="float:right;height:150px">
+
+        # Cobra Arco-Íris
+
+        Este programa desenha uma raça muito rara de cobra arco-íris. Para fazer a cobra desenhar de forma diferente toda vez que você precisar usar números aleatórios.
+
+        # Faça isso
+
+        -   Execute o programa várias vezes para ver como funciona o código inicial.
+        -   Adicione pelo menos três novos círculos coloridos diferentes à sua cobra arco-íris.
+        -   Use `numeroAleatório()` para fazer o resto do corpo da cobra se mover para cima e para baixo como os três primeiros.
+
+        _Desafio: Você pode tornar o tamanho de alguns círculos aleatórios também?_
       CSD U3 Random random ellipse: |-
         # Números aleatórios
 
@@ -8418,6 +8608,17 @@ pt-BR:
 
         -   Execute o programa várias vezes para ver como funciona.
         -   Altere os números dentro de `numeroAleatorio` e execute o código novamente algumas vezes para ver o que muda.
+      CSD U3 Random random ellipse2: |-
+        <img src="https://images.code.org/ff3be801c7e634d49584aac103df292a-image-1491334428729.33.18 PM.png" style="float:right;height:150px">
+
+        # Números aleatórios
+
+        Esse é mesmo sol da última vez. No momento, apenas a coordenada x é aleatória, mas você também pode tornar a coordenada y aleatória.
+
+        # Faça isso
+
+        -   Use `numeroAleatório()` para o parâmetro Y da elipse, de forma que o círculo também seja desenhado em uma posição Y aleatória.
+        -   Enquanto seu círculo estiver aparecendo em posições aleatórias X e Y, você pode seguir em frente.
       CSD U3 Random random ellipse_2018: |-
         # Números aleatórios
 
@@ -8460,12 +8661,222 @@ pt-BR:
         ## Esboce-o
 
         Antes de prosseguir, tire um segundo para esboçar uma cena que você gostaria de fazer no final desta lição. Considere as formas simples que você usou no passado, sprites para seus personagens e qualquer texto que você gostaria na tela. Depois de esboçar uma ideia, você aprenderá sobre `texto` e como compor uma cena.
+      CSD U3 Sprites scene challenge: |-
+        # Desafio: Estenda sua cena
+
+        _Consulte seu professor antes de iniciar este desafio._
+
+        Agora que você terminou sua cena, considere adicionar ou criar outra.
+      CSD U3 Sprites scene challenge_2018: |-
+        # Desafio: Estenda sua cena
+
+        _Consulte seu professor antes de iniciar este desafio._
+
+        Agora que você terminou sua cena, considere adicionar ou criar outra.
+      CSD U3 Sprites scene challenge_2019: |-
+        # Desafio: Estenda sua cena
+
+        _Consulte seu professor antes de iniciar este desafio._
+
+        Agora que você terminou sua cena, considere adicionar ou criar outra.
+      CSD U3 Sprites scene drawing: |-
+        # Crie sua cena - Desenhando
+
+        Você vai começar a criar uma cena própria. Se ainda não o fez, tire um minuto para esboçar uma foto da sua cena (considere o uso de papel milimetrado). Depois de ter uma ideia e um plano para sua cena, comece a desenhar o plano de fundo.
+
+        # Faça isso
+
+        -   Use um comando `planoDeFundo()` para preencher a tela com uma cor.
+        -   Adicione quaisquer comandos de forma necessários para desenhar os elementos não-sprite de sua cena.
+      CSD U3 Sprites scene drawing_2018: |-
+        # Crie sua cena - Desenhando
+
+        Você vai começar a criar uma cena própria. Se ainda não o fez, tire um minuto para esboçar uma foto da sua cena (considere o uso de papel milimetrado). Depois de ter uma ideia e um plano para sua cena, comece a desenhar o plano de fundo.
+
+        # Faça isso
+
+        -   Use um comando `planoDeFundo()` para preencher a tela com uma cor.
+        -   Adicione quaisquer comandos de forma necessários para desenhar os elementos não-sprite de sua cena.
+      CSD U3 Sprites scene drawing_2019: |-
+        # Crie sua cena - Desenhando
+
+        Você vai começar a criar uma cena própria. Se ainda não o fez, tire um minuto para esboçar uma foto da sua cena (considere o uso de papel milimetrado). Depois de ter uma ideia e um plano para sua cena, comece a desenhar o plano de fundo.
+
+        # Faça isso
+
+        -   Use um comando `planoDeFundo()` para preencher a tela com uma cor.
+        -   Adicione quaisquer comandos de forma necessários para desenhar os elementos não-sprite de sua cena.
+      CSD U3 Sprites scene text: |-
+        # Crie sua cena - texto
+
+        A última parte da sua cena é adicionar texto.
+
+        # Faça isso
+
+        -   Adicione um comando `texto()` para cada linha separada de texto.
+        -   Se necessário, use `preencher()` e `tamanhoDoTexto()` para alterar a aparência do seu texto.
+
+        _Dica: A maioria das cenas tem o texto em cima de todo o resto, o que requer que seus comandos `texto()` sejam as últimas linhas do seu programa. Se, no entanto, você quiser que o texto seja colocado em camadas com outros elementos, considere alterar a ordem._
+      CSD U3 Sprites scene text_2018: |-
+        # Crie sua cena - texto
+
+        A última parte da sua cena é adicionar texto.
+
+        # Faça isso
+
+        -   Adicione um comando `texto()` para cada linha separada de texto.
+        -   Se necessário, use `preencher()` e `tamanhoDoTexto()` para alterar a aparência do seu texto.
+
+        _Dica: A maioria das cenas tem o texto em cima de todo o resto, o que requer que seus comandos `texto()` sejam as últimas linhas do seu programa. Se, no entanto, você quiser que o texto seja colocado em camadas com outros elementos, considere alterar a ordem._
+      CSD U3 Sprites scene text_2019: |-
+        # Crie sua cena - texto
+
+        A última parte da sua cena é adicionar texto.
+
+        # Faça isso
+
+        -   Adicione um comando `texto()` para cada linha separada de texto.
+        -   Se necessário, use `preencher()` e `tamanhoDoTexto()` para alterar a aparência do seu texto.
+
+        _Dica: A maioria das cenas tem o texto em cima de todo o resto, o que requer que seus comandos `texto()` sejam as últimas linhas do seu programa. Se, no entanto, você quiser que o texto seja colocado em camadas com outros elementos, considere alterar a ordem._
       CSD U3 Sprites text: |-
         # Adicionando texto
 
         Você pode colocar o texto em qualquer lugar que quiser na tela usando `texto`. Altere o texto exibido no código fornecido e adicione um segundo `texto` para escrever em uma parte diferente da tela.
 
         _Dica: O tamanho do texto padrão é bem pequeno, mas você pode usar o bloco `tamanhoDoTexto` para mudar isso. Você também pode usar `preencher` para mudar a cor do seu texto._
+      CSD U3 Variables Challenge: |-
+        # Desafio: Atualizando Variáveis
+
+        _Consulte seu professor antes de abordar este nível de desafio._
+
+        Até agora só atribuímos um valor a uma variável uma vez, mas você sabia que pode atualizar uma variável durante um programa? Leia o programa de exemplo que fornecemos, execute-o algumas vezes para entender como ele funciona e tente modificar o programa para desenhar uma das seguintes imagens.
+
+        <img src="https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png" style="width:150px; border: 1px solid grey; margin:20px;">
+        <img src="https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png" style="width:150px; border: 1px solid grey; margin:20px;">
+        <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png" style="width:150px; border: 1px solid grey; margin:20px;">
+      CSD U3 Variables Challenge_2018: |-
+        # Desafio: Atualizando Variáveis
+
+        _Consulte seu professor antes de abordar este nível de desafio._
+
+        Até agora só atribuímos um valor a uma variável uma vez, mas você sabia que pode atualizar uma variável durante um programa? Leia o programa de exemplo que fornecemos, execute-o algumas vezes para entender como ele funciona e tente modificar o programa para desenhar uma das seguintes imagens.
+
+        <img src="https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png" style="width:150px; border: 1px solid grey; margin:20px;">
+        <img src="https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png" style="width:150px; border: 1px solid grey; margin:20px;">
+        <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png" style="width:150px; border: 1px solid grey; margin:20px;">
+      CSD U3 Variables Challenge_2019: |-
+        # Desafio: Atualizando Variáveis
+
+        _Consulte seu professor antes de abordar este nível de desafio._
+
+        Até agora só atribuímos um valor a uma variável uma vez, mas você sabia que pode atualizar uma variável durante um programa? Leia o programa de exemplo que fornecemos, execute-o algumas vezes para entender como ele funciona e tente modificar o programa para desenhar uma das seguintes imagens.
+
+        <img src="https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png" style="width:150px; border: 1px solid grey; margin:20px;">
+        <img src="https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png" style="width:150px; border: 1px solid grey; margin:20px;">
+        <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png" style="width:150px; border: 1px solid grey; margin:20px;">
+      CSD U3 Variables Draw Challenge: |-
+        # Desafio: desenhar uma imagem
+
+        _Consulte seu professor antes de abordar este nível de desafio._
+
+        Usando variáveis, desenhe uma imagem em que muitos dos itens dependam de uma variável comum para tamanho ou posicionamento. Por exemplo, desenhe um rosto com variáveis controlando o tamanho e/ou a colocação de ambos os olhos, orelhas e narinas. Depois de ter seu desenho concluído, tente alterar os valores de suas variáveis para garantir que toda a imagem seja alterada.
+      CSD U3 Variables Draw Challenge_2018: |-
+        # Desafio: desenhar uma imagem
+
+        _Consulte seu professor antes de abordar este nível de desafio._
+
+        Usando variáveis, desenhe uma imagem em que muitos dos itens dependam de uma variável comum para tamanho ou posicionamento. Por exemplo, desenhe um rosto com variáveis controlando o tamanho e/ou a colocação de ambos os olhos, orelhas e narinas. Depois de ter seu desenho concluído, tente alterar os valores de suas variáveis para garantir que toda a imagem seja alterada.
+      CSD U3 Variables Draw Challenge_2019: |-
+        # Desafio: desenhar uma imagem
+
+        _Consulte seu professor antes de abordar este nível de desafio._
+
+        Usando variáveis, desenhe uma imagem em que muitos dos itens dependam de uma variável comum para tamanho ou posicionamento. Por exemplo, desenhe um rosto com variáveis controlando o tamanho e/ou a colocação de ambos os olhos, orelhas e narinas. Depois de ter seu desenho concluído, tente alterar os valores de suas variáveis para garantir que toda a imagem seja alterada.
+      CSD U3 Variables Draw Poppy: |-
+        # Usando uma Variável Muitas Vezes
+
+        Este programa tem apenas uma variável chamada `tamanhoPetala` mas usa 8 vezes diferentes. Isso torna fácil fazer rapidamente muitas alterações na forma como sua imagem é desenhada.
+
+        # Faça isso
+
+        -   Altere o número atribuído a "tamanhoPetala" para que as pétalas vermelhas se toquem.
+        -   Tente encontrar o tamanho que faz mais sentido. Compare sua resposta com alguém ao seu redor.
+      CSD U3 Variables Draw Poppy_2018: |-
+        # Usando uma Variável Muitas Vezes
+
+        Este programa tem apenas uma variável chamada `tamanhoPetala` mas usa 8 vezes diferentes. Isso torna fácil fazer rapidamente muitas alterações na forma como sua imagem é desenhada.
+
+        # Faça isso
+
+        -   Altere o número atribuído a "tamanhoPetala" para que as pétalas vermelhas se toquem.
+        -   Tente encontrar o tamanho que faz mais sentido. Compare sua resposta com alguém ao seu redor.
+      CSD U3 Variables Draw Poppy_2019: |-
+        # Usando uma Variável Muitas Vezes
+
+        Este programa tem apenas uma variável chamada `tamanhoPetala` mas usa 8 vezes diferentes. Isso torna fácil fazer rapidamente muitas alterações na forma como sua imagem é desenhada.
+
+        # Faça isso
+
+        -   Altere o número atribuído a "tamanhoPetala" para que as pétalas vermelhas se toquem.
+        -   Tente encontrar o tamanho que faz mais sentido. Compare sua resposta com alguém ao seu redor.
+      CSD U3 Variables Predict Where X: |-
+        # Usando variáveis
+
+        Neste programa, a variável `xPosicao` é usada para armazenar a coordenada x do círculo.
+
+        # Faça isso
+
+        -   Execute o programa para ver como funciona.
+        -   Altere o número armazenado na variável ([Mostre onde](#triggercallout=code_triggered)) e execute o código novamente.
+      CSD U3 Variables Predict Where X_2018: |-
+        # Usando variáveis
+
+        Neste programa, a variável `xPosicao` é usada para armazenar a coordenada x do círculo.
+
+        # Faça isso
+
+        -   Execute o programa para ver como funciona.
+        -   Altere o número armazenado na variável ([Mostre onde](#triggercallout=code_triggered)) e execute o código novamente.
+      CSD U3 Variables Predict Where X_2019: |-
+        # Usando variáveis
+
+        Neste programa, a variável `xPosicao` é usada para armazenar a coordenada x do círculo.
+
+        # Faça isso
+
+        -   Execute o programa para ver como funciona.
+        -   Altere o número armazenado na variável ([Mostre onde](#triggercallout=code_triggered)) e execute o código novamente.
+      CSD U3 Variables change circle size: |-
+        <img src="https://images.code.org/acc7f5763a9ca1c17647f7dd9711c9f5-image-1490977696189.28.01 AM.png" style="float:right; height:150px">
+
+        # Depurar: usando variáveis
+
+        Este programa usa a variável tamanhoCirculo para controlar a largura e a altura de um círculo. Se você tornar o círculo grande o suficiente, ele preencherá a tela inteira, como na imagem à direita.
+
+        # Faça isso
+
+        -   Altere o valor atribuído a "tamanhoCirculo" para que o círculo ocupe toda a tela.
+      CSD U3 Variables change circle size_2018: |-
+        <img src="https://images.code.org/acc7f5763a9ca1c17647f7dd9711c9f5-image-1490977696189.28.01 AM.png" style="float:right; height:150px">
+
+        # Depurar: usando variáveis
+
+        Este programa usa a variável tamanhoCirculo para controlar a largura e a altura de um círculo. Se você tornar o círculo grande o suficiente, ele preencherá a tela inteira, como na imagem à direita.
+
+        # Faça isso
+
+        -   Altere o valor atribuído a "tamanhoCirculo" para que o círculo ocupe toda a tela.
+      CSD U3 Variables change circle size_2019: |-
+        <img src="https://images.code.org/acc7f5763a9ca1c17647f7dd9711c9f5-image-1490977696189.28.01 AM.png" style="float:right; height:150px">
+
+        # Depurar: usando variáveis
+
+        Este programa usa a variável tamanhoCirculo para controlar a largura e a altura de um círculo. Se você tornar o círculo grande o suficiente, ele preencherá a tela inteira, como na imagem à direita.
+
+        # Faça isso
+
+        -   Altere o valor atribuído a "tamanhoCirculo" para que o círculo ocupe toda a tela.
       CSD U3 abstraction make it your own: |-
         # Faça o seu próprio
 
@@ -8490,6 +8901,51 @@ pt-BR:
         # Faça isso
 
         Faça pelo menos uma melhoria no jogo que o torne seu. Esteja preparado para compartilhar suas alterações e melhorias com seu colega de classe.
+      CSD U3 challenge face: |-
+        <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png" style="float: right; max-width: 200px; border: 1px solid grey">
+
+        # Desafio: rosto
+
+        _Verifique com seu professor antes de iniciar qualquer um dos desafios._
+
+        Escreva um programa que use `reta`,`elipse` e `preencher` para criar o rosto à direita. As cores usadas são "azul claro", "vermelho" e "verde claro".
+        Quando terminar, adicione seus próprios toques pessoais à imagem.
+      CSD U3 challenge face_2018: |-
+        <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png" style="float: right; max-width: 200px; border: 1px solid grey">
+
+        # Desafio: rosto
+
+        _Verifique com seu professor antes de iniciar qualquer um dos desafios._
+
+        Escreva um programa que use `reta`,`elipse` e `preencher` para criar o rosto à direita. As cores usadas são "azul claro", "vermelho" e "verde claro".
+        Quando terminar, adicione seus próprios toques pessoais à imagem.
+      CSD U3 challenge face_2019: |-
+        <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png" style="float: right; max-width: 200px; border: 1px solid grey">
+
+        # Desafio: rosto
+
+        _Verifique com seu professor antes de iniciar qualquer um dos desafios._
+
+        Escreva um programa que use `reta`,`elipse` e `preencher` para criar o rosto à direita. As cores usadas são "azul claro", "vermelho" e "verde claro".
+        Quando terminar, adicione seus próprios toques pessoais à imagem.
+      CSD U3 challenge new shape: |-
+        <img src="https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png" style="float: right; max-width: 200px; border: 1px solid grey">
+
+        _Verifique com seu professor antes de iniciar qualquer um dos desafios._
+
+        Usando apenas os comandos `reta` e`elipse`, você pode desenhar uma nova forma, como este triângulo feito de círculos?
+      CSD U3 challenge new shape_2018: |-
+        <img src="https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png" style="float: right; max-width: 200px; border: 1px solid grey">
+
+        _Verifique com seu professor antes de iniciar qualquer um dos desafios._
+
+        Usando apenas os comandos `reta` e`elipse`, você pode desenhar uma nova forma, como este triângulo feito de círculos?
+      CSD U3 challenge new shape_2019: |-
+        <img src="https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png" style="float: right; max-width: 200px; border: 1px solid grey">
+
+        _Verifique com seu professor antes de iniciar qualquer um dos desafios._
+
+        Usando apenas os comandos `reta` e`elipse`, você pode desenhar uma nova forma, como este triângulo feito de círculos?
       CSD U3 collisions displace intro: |-
         # Deslocar
 
@@ -8520,6 +8976,75 @@ pt-BR:
         Alguém tentou usar o bloco `sprite.deslocar()` para fazer o **elefante empurra o hipopótamo**, mas existe um bug. Você pode mudar o código para que o elefante empurre o hipopótamo para fora da tela?
 
         -   Encontre a linha de código onde o bloco `sprite.deslocar()` é usado e corrija o erro.
+      CSD U3 debug: |-
+        <img src="https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50 AM.png" style="float:right;width:150px;">
+
+        # Depurando
+
+        Muitas vezes, o código não funciona na primeira vez que é executado, e os programadores precisam depurá-lo. O código abaixo deve fazer a imagem ficar à direita, mas o programador ficou confuso sobre a ordem que código deve estar e como colocar um quadrado no lugar certo na tela.
+
+        # Faça isso
+
+        -   Veja o código na área de trabalho.
+        -   Altere o código para que a imagem fique à direita.
+                 \- (Você precisará mover uma linha de código E alterar as coordenadas do quadrado.)
+      CSD U3 debug_2018: |-
+        <img src="https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50 AM.png" style="float:right;width:150px;">
+
+        # Depurando
+
+        Muitas vezes, o código não funciona na primeira vez que é executado, e os programadores precisam depurá-lo. O código abaixo deve fazer a imagem ficar à direita, mas o programador ficou confuso sobre a ordem que código deve estar e como colocar um quadrado no lugar certo na tela.
+
+        # Faça isso
+
+        -   Veja o código na área de trabalho.
+        -   Altere o código para que a imagem fique à direita.
+                 \- (Você precisará mover uma linha de código E alterar as coordenadas do quadrado.)
+      CSD U3 debug_2019: |-
+        <img src="https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50 AM.png" style="float:right;width:150px;">
+
+        # Depurando
+
+        Muitas vezes, o código não funciona na primeira vez que é executado, e os programadores precisam depurá-lo. O código abaixo deve fazer a imagem ficar à direita, mas o programador ficou confuso sobre a ordem que código deve estar e como colocar um quadrado no lugar certo na tela.
+
+        # Faça isso
+
+        -   Veja o código na área de trabalho.
+        -   Altere o código para que a imagem fique à direita.
+                 \- (Você precisará mover uma linha de código E alterar as coordenadas do quadrado.)
+      CSD U3 ellipse: |-
+        <img src="https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44 PM.png" style="float:right;width:150px;">
+
+        # elipse
+
+        Você pode usar `elipse` para fazer um círculo.
+
+        # Faça isso
+
+        -   Olhe o código que faz a elipse.
+        -   Adicione uma nova elipse de uma cor diferente.
+      CSD U3 ellipse_2018: |-
+        <img src="https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44 PM.png" style="float:right;width:150px;">
+
+        # elipse
+
+        Você pode usar `elipse` para fazer um círculo.
+
+        # Faça isso
+
+        -   Olhe o código que faz a elipse.
+        -   Adicione uma nova elipse de uma cor diferente.
+      CSD U3 ellipse_2019: |-
+        <img src="https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44 PM.png" style="float:right;width:150px;">
+
+        # elipse
+
+        Você pode usar `elipse` para fazer um círculo.
+
+        # Faça isso
+
+        -   Olhe o código que faz a elipse.
+        -   Adicione uma nova elipse de uma cor diferente.
       CSD U3 fill: |-
         <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19 PM.png" style="float:right;width:200px;">
 
@@ -8556,6 +9081,178 @@ pt-BR:
         -   Veja o código que define a cor. ([Mostre-me onde] [0])
         -   Mude a cor de azul para amarelo.
         -   Adicione um novo quadrado arrastando um bloco `rect` para a área do código abaixo do comando preencher ([Mostre-me onde] [1]). O novo quadrado pode ir a qualquer local na tela que você quiser.
+      CSD U3 picture: |-
+        # Desafio: desenhar uma imagem
+
+        _Verifique com seu professor antes de iniciar qualquer um dos desafios._
+
+        Na lição anterior, você e seu colega criaram várias imagens interessantes. Veja se você pode recriar uma delas usando o código.
+      CSD U3 picture_2018: |-
+        # Desafio: desenhar uma imagem
+
+        _Verifique com seu professor antes de iniciar qualquer um dos desafios._
+
+        Na lição anterior, você e seu colega criaram várias imagens interessantes. Veja se você pode recriar uma delas usando o código.
+      CSD U3 picture_2019: |-
+        # Desafio: desenhar uma imagem
+
+        _Verifique com seu professor antes de iniciar qualquer um dos desafios._
+
+        Na lição anterior, você e seu colega criaram várias imagens interessantes. Veja se você pode recriar uma delas usando o código.
+      CSD U3 rect: |-
+        # Explore o Laboratório de Jogos
+
+        Bem-vindo ao Laboratório de Jogos, onde você pode criar animações e jogos interativos!
+
+        Você já praticou o básico, colocar formas em uma grade. No Laboratório de Jogos, você fará o mesmo com a área de exibição à esquerda.
+
+        # Faça isso
+
+        -   Olhe para a linha de código na área de trabalho abaixo destas instruções ([Mostrar onde] [0]) e discuta com seu colega onde você acha que a forma será desenhada na grade.
+        -   Clique em <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> para executar o programa e ver o que acontece. ([Mostrar onde] [1])
+        -   Altere os números dentro do bloco e tente executar o programa novamente.
+        -   Tente colocar o retângulo perto do canto inferior direito da tela.
+      CSD U3 sequence: |-
+        <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
+
+        # Ordem importa
+
+        No Laboratório de Jogos a ordem que seu código está importa. Novas formas são desenhadas em cima das que vieram antes, cobrindo as formas que são desenhadas primeiro. Você pode ver a diferença quando você usa mais de uma cor em seu código.
+
+        # Faça isso
+
+        -   Veja o código que desenha os dois retângulos. O primeiro é desenhado em vermelho e o segundo é desenhado em azul.
+        -   Altere a cor do retângulo vermelho para verde.
+        -   Altere a ordem do código para que o retângulo verde apareça no topo.
+      CSD U3 sequence_2018: |-
+        <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
+
+        # Ordem importa
+
+        No Laboratório de Jogos a ordem que seu código está importa. Novas formas são desenhadas em cima das que vieram antes, cobrindo as formas que são desenhadas primeiro. Você pode ver a diferença quando você usa mais de uma cor em seu código.
+
+        # Faça isso
+
+        -   Veja o código que desenha os dois retângulos. O primeiro é desenhado em vermelho e o segundo é desenhado em azul.
+        -   Altere a cor do retângulo vermelho para verde.
+        -   Altere a ordem do código para que o retângulo verde apareça no topo.
+      CSD U3 sequence_2019: |-
+        <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
+
+        # Ordem importa
+
+        No Laboratório de Jogos a ordem que seu código está importa. Novas formas são desenhadas em cima das que vieram antes, cobrindo as formas que são desenhadas primeiro. Você pode ver a diferença quando você usa mais de uma cor em seu código.
+
+        # Faça isso
+
+        -   Veja o código que desenha os dois retângulos. O primeiro é desenhado em vermelho e o segundo é desenhado em azul.
+        -   Altere a cor do retângulo vermelho para verde.
+        -   Altere a ordem do código para que o retângulo verde apareça no topo.
+      CSD U5 Amazon Data Video: Assista este vídeo para aprender como esse problema
+        é resolvido pela Amazon. Enquanto assiste, pense em quais dados estão sendo
+        coletados e de onde eles estão vindo.
+      CSD U5 Amazon Data Video_2018: Assista este vídeo para aprender como esse problema
+        é resolvido pela Amazon. Enquanto assiste, pense em quais dados estão sendo
+        coletados e de onde eles estão vindo.
+      CSD U5 Amazon Data Video_2019: Assista este vídeo para aprender como esse problema
+        é resolvido pela Amazon. Enquanto assiste, pense em quais dados estão sendo
+        coletados e de onde eles estão vindo.
+      CSD U5 Netflix Data Video: Assista este vídeo para aprender como esse problema
+        é resolvido pela Netflix. Enquanto assiste, pense em quais dados estão sendo
+        coletados e de onde eles estão vindo.
+      CSD U5 Netflix Data Video_2018: Assista este vídeo para aprender como esse problema
+        é resolvido pela Netflix. Enquanto assiste, pense em quais dados estão sendo
+        coletados e de onde eles estão vindo.
+      CSD U5 Netflix Data Video_2019: Assista este vídeo para aprender como esse problema
+        é resolvido pela Netflix. Enquanto assiste, pense em quais dados estão sendo
+        coletados e de onde eles estão vindo.
+      CSD U5 Pizza: |-
+        # Festa da Pizza
+
+        Os dados da festa da pizza foram colocados em um aplicativo para você e as respostas de outra classe foram adicionadas. Como este é um aplicativo, podemos automatizar a criação do gráfico de barras a partir dos dados fornecidos.
+
+        # Faça isso
+
+        -   Clique em "Executar" para ver a lista de respostas que as classes deram.
+        -   Discuta com um parceiro como você acha que o gráfico desses dados será.
+        -   Clique em "Mostrar gráfico" para ver por si mesmo.
+
+        # Versão da planilha
+
+        Os dados da festa da pizza também foram colocados em uma planilha para você, se você quiser usá-la. Para usar a planilha, você precisará fazer sua própria cópia.
+
+        -   Este link fará com que você tenha sua própria cópia dos dados "Opções de Sabores de Pizza": [Pizza Topping Choices](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)
+        -   Você também pode baixar uma versão CSV do arquivo [here](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
+      CSD U5 Pizza 2: |-
+        # Festa da Pizza
+
+        Quando as pessoas trabalham com dados, elas sabem desconsiderar respostas que não fazem sentido e que algumas respostas, como "pimentas", "pimmentas" e "pimentas verdes", na verdade significam a mesma coisa. Os computadores não sabem como fazer isso, então temos que limpar os dados antes que o computador possa usá-los.
+
+        Esta versão do aplicativo tem uma segunda coluna para os dados serem limpos.
+
+        ## Faça isso
+
+        -   Clique em "Executar" para ver a nova lista de respostas a serem limpas.
+        -   Clique em cada resposta que precisa ser limpa e corrija-a para que o computador faça o gráfico corretamente. (Você pode querer excluir algumas respostas completamente.)
+        -   Quando terminar, clique em "Mostrar gráfico" para ver o novo gráfico de respostas limpas.
+      CSD U5 Pizza 2_2018: |-
+        # Festa da Pizza
+
+        Quando as pessoas trabalham com dados, elas sabem desconsiderar respostas que não fazem sentido e que algumas respostas, como "pimentas", "pimmentas" e "pimentas verdes", na verdade significam a mesma coisa. Os computadores não sabem como fazer isso, então temos que limpar os dados antes que o computador possa usá-los.
+
+        Esta versão do aplicativo tem uma segunda coluna para os dados serem limpos.
+
+        ## Faça isso
+
+        -   Clique em "Executar" para ver a nova lista de respostas a serem limpas.
+        -   Clique em cada resposta que precisa ser limpa e corrija-a para que o computador faça o gráfico corretamente. (Você pode querer excluir algumas respostas completamente.)
+        -   Quando terminar, clique em "Mostrar gráfico" para ver o novo gráfico de respostas limpas.
+      CSD U5 Pizza 2_2019: |-
+        # Festa da Pizza
+
+        Quando as pessoas trabalham com dados, elas sabem desconsiderar respostas que não fazem sentido e que algumas respostas, como "pimentas", "pimmentas" e "pimentas verdes", na verdade significam a mesma coisa. Os computadores não sabem como fazer isso, então temos que limpar os dados antes que o computador possa usá-los.
+
+        Esta versão do aplicativo tem uma segunda coluna para os dados serem limpos.
+
+        ## Faça isso
+
+        -   Clique em "Executar" para ver a nova lista de respostas a serem limpas.
+        -   Clique em cada resposta que precisa ser limpa e corrija-a para que o computador faça o gráfico corretamente. (Você pode querer excluir algumas respostas completamente.)
+        -   Quando terminar, clique em "Mostrar gráfico" para ver o novo gráfico de respostas limpas.
+      CSD U5 Pizza_2018: |-
+        # Festa da Pizza
+
+        Os dados da festa da pizza foram colocados em um aplicativo para você e as respostas de outra classe foram adicionadas. Como este é um aplicativo, podemos automatizar a criação do gráfico de barras a partir dos dados fornecidos.
+
+        # Faça isso
+
+        -   Clique em "Executar" para ver a lista de respostas que as classes deram.
+        -   Discuta com um parceiro como você acha que o gráfico desses dados será.
+        -   Clique em "Mostrar gráfico" para ver por si mesmo.
+
+        # Versão da planilha
+
+        Os dados da festa da pizza também foram colocados em uma planilha para você, se você quiser usá-la. Para usar a planilha, você precisará fazer sua própria cópia.
+
+        -   Este link fará com que você tenha sua própria cópia dos dados "Opções de Sabores de Pizza": [Pizza Topping Choices](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)
+        -   Você também pode baixar uma versão CSV do arquivo [here](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
+      CSD U5 Pizza_2019: |-
+        # Festa da Pizza
+
+        Os dados da festa da pizza foram colocados em um aplicativo para você e as respostas de outra classe foram adicionadas. Como este é um aplicativo, podemos automatizar a criação do gráfico de barras a partir dos dados fornecidos.
+
+        # Faça isso
+
+        -   Clique em "Executar" para ver a lista de respostas que as classes deram.
+        -   Discuta com um parceiro como você acha que o gráfico desses dados será.
+        -   Clique em "Mostrar gráfico" para ver por si mesmo.
+
+        # Versão da planilha
+
+        Os dados da festa da pizza também foram colocados em uma planilha para você, se você quiser usá-la. Para usar a planilha, você precisará fazer sua própria cópia.
+
+        -   Este link fará com que você tenha sua própria cópia dos dados "Opções de Sabores de Pizza": [Pizza Topping Choices](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)
+        -   Você também pode baixar uma versão CSV do arquivo [here](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema
         é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo
         coletados e de onde eles estão vindo.
@@ -8565,6 +9262,332 @@ pt-BR:
       CSD U5 Waze Data Video_2019: Assista este vídeo para aprender como esse problema
         é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo
         coletados e de onde eles estão vindo.
+      CSD U5 binary 1: |-
+        # Número de 5 bits
+
+        Quando você só tinha quatro bits, o maior número que você poderia fazer era quinze. Agora você terá a chance de trabalhar com mais bits para obter números mais altos.
+
+        Nesta atividade, os pontos são substituídos por números, mas você ainda soma tudo o que está sendo mostrado para ver o número que o código binário representa. O bit mais à esquerda ainda não tem um número, então você terá que dar um.
+
+        # Faça isso
+
+        -   Clique nos bits para ligá-los e desligá-los, e veja os diferentes números que você pode fazer.
+        -   Com o seu parceiro, discuta o padrão nos números. Decida o número que você acha que deve ir na caixa mais à esquerda.
+        -   Clique em "Editar" para alterar o valor do bit mais à esquerda.
+        -   Depois de decidir o valor, tente fazer os seguintes números: 16, 27, 31
+      CSD U5 binary 1_2018: |-
+        # Número de 5 bits
+
+        Quando você só tinha quatro bits, o maior número que você poderia fazer era quinze. Agora você terá a chance de trabalhar com mais bits para obter números mais altos.
+
+        Nesta atividade, os pontos são substituídos por números, mas você ainda soma tudo o que está sendo mostrado para ver o número que o código binário representa. O bit mais à esquerda ainda não tem um número, então você terá que dar um.
+
+        # Faça isso
+
+        -   Clique nos bits para ligá-los e desligá-los, e veja os diferentes números que você pode fazer.
+        -   Com o seu parceiro, discuta o padrão nos números. Decida o número que você acha que deve ir na caixa mais à esquerda.
+        -   Clique em "Editar" para alterar o valor do bit mais à esquerda.
+        -   Depois de decidir o valor, tente fazer os seguintes números: 16, 27, 31
+      CSD U5 binary 1_2019: |-
+        # Número de 5 bits
+
+        Quando você só tinha quatro bits, o maior número que você poderia fazer era quinze. Agora você terá a chance de trabalhar com mais bits para obter números mais altos.
+
+        Nesta atividade, os pontos são substituídos por números, mas você ainda soma tudo o que está sendo mostrado para ver o número que o código binário representa. O bit mais à esquerda ainda não tem um número, então você terá que dar um.
+
+        # Faça isso
+
+        -   Clique nos bits para ligá-los e desligá-los, e veja os diferentes números que você pode fazer.
+        -   Com o seu parceiro, discuta o padrão nos números. Decida o número que você acha que deve ir na caixa mais à esquerda.
+        -   Clique em "Editar" para alterar o valor do bit mais à esquerda.
+        -   Depois de decidir o valor, tente fazer os seguintes números: 16, 27, 31
+      CSD U5 binary 2: |-
+        # Número de 6 bits
+
+        Este widget ajuda você a calcular números binários de 6 bits.
+
+        # Faça isso
+
+        -   Com o seu parceiro, responda às seguintes perguntas:
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+      CSD U5 binary 2_2018: |-
+        # Número de 6 bits
+
+        Este widget ajuda você a calcular números binários de 6 bits.
+
+        # Faça isso
+
+        -   Com o seu parceiro, responda às seguintes perguntas:
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+      CSD U5 binary 2_2019: |-
+        # Número de 6 bits
+
+        Este widget ajuda você a calcular números binários de 6 bits.
+
+        # Faça isso
+
+        -   Com o seu parceiro, responda às seguintes perguntas:
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+      CSD U5 binary 4-new: |-
+        # Decodificando vários números
+
+        Aqui está uma ferramenta que pode calcular números de 4, 5 ou 6 bits. Você pode usá-lo para encontrar os dois recordes mundiais codificados na seqüência binária abaixo.
+
+        \[] [0]
+
+        1.  O maior número de pessoas levantadas e atiradas em dois minutos. (4 bits)
+        2.  A maioria das bebidas enlatadas abertas por um papagaio em um minuto. (6 bits)
+
+        # Faça isso
+
+        -   Decodifique os dois números da string binária.
+      CSD U5 binary 4-new_2018: |-
+        # Decodificando vários números
+
+        Aqui está uma ferramenta que pode calcular números de 4, 5 ou 6 bits. Você pode usá-lo para encontrar os dois recordes mundiais codificados na seqüência binária abaixo.
+
+        \[] [0]
+
+        1.  O maior número de pessoas levantadas e atiradas em dois minutos. (4 bits)
+        2.  A maioria das bebidas enlatadas abertas por um papagaio em um minuto. (6 bits)
+
+        # Faça isso
+
+        -   Decodifique os dois números da string binária.
+      CSD U5 binary 4-new_2019: |-
+        # Decodificando vários números
+
+        Aqui está uma ferramenta que pode calcular números de 4, 5 ou 6 bits. Você pode usá-lo para encontrar os dois recordes mundiais codificados na seqüência binária abaixo.
+
+        \[] [0]
+
+        1.  O maior número de pessoas levantadas e atiradas em dois minutos. (4 bits)
+        2.  A maioria das bebidas enlatadas abertas por um papagaio em um minuto. (6 bits)
+
+        # Faça isso
+
+        -   Decodifique os dois números da string binária.
+      CSD U5 binary 5-new: |-
+        # Decodificando vários números
+
+        Aqui está uma ferramenta que pode calcular números de até oito bits. Você pode usá-lo para encontrar os valores dos dois recordes mundiais abaixo.
+
+        Não se esqueça de garantir que o bit "1" seja sempre o mais adequado. Se você tiver bits extras no lado esquerdo da ferramenta, mantenha-os desativados.
+
+        \[] [0]
+
+        1.  Cauda mais longa em um cachorro (em polegadas) (5 bits)
+        2.  A maioria das colheres balançadas no rosto de alguém (5 bits)
+
+        # Faça isso
+
+        -   Decodifique os dois números de uma string binária.
+      CSD U5 binary 6-new: |-
+        # Decodificando vários números
+
+        Aqui está uma nova string de bits. Desta vez, você não sabe o comprimento de bit dos dois números. Tente decodificar os números sem saber o comprimento do bit.
+
+        \[] [0]
+
+        1.  Maior sino de vento, em pés (bits)
+        2.  A seta mais distante disparada pelos pés de alguém (em pés) (? Bits)
+
+        # Faça isso
+
+        -   Tente decodificar os dois números da string binária.
+        -   Discuta com seu parceiro por que você não sabe ao certo se sua resposta está correta.
+      CSD U5 binary 6-new_2018: |-
+        # Decodificando vários números
+
+        Aqui está uma nova string de bits. Desta vez, você não sabe o comprimento de bit dos dois números. Tente decodificar os números sem saber o comprimento do bit.
+
+        \[] [0]
+
+        1.  Maior sino de vento, em pés (bits)
+        2.  A seta mais distante disparada pelos pés de alguém (em pés) (? Bits)
+
+        # Faça isso
+
+        -   Tente decodificar os dois números da string binária.
+        -   Discuta com seu parceiro por que você não sabe ao certo se sua resposta está correta.
+      CSD U5 binary 6-new_2019: |-
+        # Decodificando vários números
+
+        Aqui está uma nova string de bits. Desta vez, você não sabe o comprimento de bit dos dois números. Tente decodificar os números sem saber o comprimento do bit.
+
+        \[] [0]
+
+        1.  Maior sino de vento, em pés (bits)
+        2.  A seta mais distante disparada pelos pés de alguém (em pés) (? Bits)
+
+        # Faça isso
+
+        -   Tente decodificar os dois números da string binária.
+        -   Discuta com seu parceiro por que você não sabe ao certo se sua resposta está correta.
+      CSD U5 binary 7-new: |-
+        # Comprimento de Bit
+
+        Se você não souber quantos bits compõe cada número, não será possível decodificar uma sequência de números.
+
+        Por exemplo, a sequência binária a seguir pode ser decodificada de várias maneiras diferentes.
+
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46 PM.png>)
+
+        Se você dividir a string assim, a string será 10, 84.
+
+        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01 PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08 PM.png>)
+
+        Se você dividir assim, a string terá 42, 20.
+
+        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13 PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19 PM.png>)
+
+        Para resolver esse problema, as pessoas concordam com um tamanho fixo para cada número. A string a seguir usa os mesmos dois números, mas cada número ocupa exatamente oito bits, não importando quantos bits realmente precisem.
+
+        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26 PM.png>)
+
+        # Faça isso
+
+        -   Use o widget binário para decodificar a string que usa números de oito bits.
+        -   Verifique sua resposta com um parceiro para ver se obteve a mesma resposta.
+      CSD U5 binary 7-new_2018: |-
+        # Comprimento de Bit
+
+        Se você não souber quantos bits compõe cada número, não será possível decodificar uma sequência de números.
+
+        Por exemplo, a sequência binária a seguir pode ser decodificada de várias maneiras diferentes.
+
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46 PM.png>)
+
+        Se você dividir a string assim, a string será 10, 84.
+
+        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01 PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08 PM.png>)
+
+        Se você dividir assim, a string terá 42, 20.
+
+        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13 PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19 PM.png>)
+
+        Para resolver esse problema, as pessoas concordam com um tamanho fixo para cada número. A string a seguir usa os mesmos dois números, mas cada número ocupa exatamente oito bits, não importando quantos bits realmente precisem.
+
+        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26 PM.png>)
+
+        # Faça isso
+
+        -   Use o widget binário para decodificar a string que usa números de oito bits.
+        -   Verifique sua resposta com um parceiro para ver se obteve a mesma resposta.
+      CSD U5 binary 7-new_2019: |-
+        # Comprimento de Bit
+
+        Se você não souber quantos bits compõe cada número, não será possível decodificar uma sequência de números.
+
+        Por exemplo, a sequência binária a seguir pode ser decodificada de várias maneiras diferentes.
+
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46 PM.png>)
+
+        Se você dividir a string assim, a string será 10, 84.
+
+        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01 PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08 PM.png>)
+
+        Se você dividir assim, a string terá 42, 20.
+
+        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13 PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19 PM.png>)
+
+        Para resolver esse problema, as pessoas concordam com um tamanho fixo para cada número. A string a seguir usa os mesmos dois números, mas cada número ocupa exatamente oito bits, não importando quantos bits realmente precisem.
+
+        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26 PM.png>)
+
+        # Faça isso
+
+        -   Use o widget binário para decodificar a string que usa números de oito bits.
+        -   Verifique sua resposta com um parceiro para ver se obteve a mesma resposta.
+      CSD U5 binary video_2019: |-
+        ## Questões a se considerar
+
+        -   Porque todos os tipos de dados em um computador são armazenados como números?
+        -   Se tudo é armazenado como números, como você acha que o computador sabe a diferença entre números, letras, imagens e sons?
+      CSD U5 black white images pixelation: |-
+        # Faça isso
+
+        Complete a forma "X" digitando 0s e 1s. Você sempre pode clicar em "Formato legível" se quiser limpar seu trabalho.
+      CSD U5 black white images pixelation 2: |-
+        # Faça isso
+
+        Use o widget de pixelação para desenhar um rosto sorridente
+
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png>)
+      CSD U5 black white images pixelation 2_2018: |-
+        # Faça isso
+
+        Use o widget de pixelação para desenhar um rosto sorridente
+
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png>)
+      CSD U5 black white images pixelation 2_2019: |-
+        # Faça isso
+
+        Use o widget de pixelação para desenhar um rosto sorridente
+
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png>)
+      CSD U5 black white images pixelation 3: |-
+        # Faça isso
+
+        Os controles deslizantes de largura e altura estão configurados incorretamente para essa imagem, para que não pareçam nada. Altere-os até encontrar a imagem.
+
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17 PM.png>)
+      CSD U5 black white images pixelation 3_2018: |-
+        # Faça isso
+
+        Os controles deslizantes de largura e altura estão configurados incorretamente para essa imagem, para que não pareçam nada. Altere-os até encontrar a imagem.
+
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17 PM.png>)
+      CSD U5 black white images pixelation 3_2019: |-
+        # Faça isso
+
+        Os controles deslizantes de largura e altura estão configurados incorretamente para essa imagem, para que não pareçam nada. Altere-os até encontrar a imagem.
+
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17 PM.png>)
+      CSD U5 black white images pixelation 4: |-
+        # Faça isso
+
+        Adicione as sobrancelhas a esse rosto sorridente. Lembre-se de usar o "Formato legível" se você ficar preso.
+
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png>)
+      CSD U5 black white images pixelation 4_2018: |-
+        # Faça isso
+
+        Adicione as sobrancelhas a esse rosto sorridente. Lembre-se de usar o "Formato legível" se você ficar preso.
+
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png>)
+      CSD U5 black white images pixelation 4_2019: |-
+        # Faça isso
+
+        Adicione as sobrancelhas a esse rosto sorridente. Lembre-se de usar o "Formato legível" se você ficar preso.
+
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png>)
+      CSD U5 black white images pixelation 5: |-
+        # Faça isso
+
+        Agora é sua vez. Desenhe o que quiser no widget de pixelação. Sinta-se à vontade para alterar a largura e a altura da sua imagem, se desejar.
+      CSD U5 black white images pixelation 5_2018: |-
+        # Faça isso
+
+        Agora é sua vez. Desenhe o que quiser no widget de pixelação. Sinta-se à vontade para alterar a largura e a altura da sua imagem, se desejar.
+      CSD U5 black white images pixelation 5_2019: |-
+        # Faça isso
+
+        Agora é sua vez. Desenhe o que quiser no widget de pixelação. Sinta-se à vontade para alterar a largura e a altura da sua imagem, se desejar.
+      CSD U5 black white images pixelation_2018: |-
+        # Faça isso
+
+        Complete a forma "X" digitando 0s e 1s. Você sempre pode clicar em "Formato legível" se quiser limpar seu trabalho.
+      CSD U5 black white images pixelation_2019: |-
+        # Faça isso
+
+        Complete a forma "X" digitando 0s e 1s. Você sempre pode clicar em "Formato legível" se quiser limpar seu trabalho.
+      CSD U6 Catch the Mouse: Previsão Integrada
+      CSD U6 Catch the Mouse_2018: Previsão Integrada
+      CSD U6 Catch the Mouse_2019: Previsão Integrada
       CSD U6 LEDs color: |-
         # Adicionando alguma cor
 
@@ -8592,13 +9615,13 @@ pt-BR:
       CSD U6 arrays video: |-
         ## Perguntas a Considerar
 
-        -   Quando um vetor pode ser mais útil do que uma variável?
-        -   Por que você sempre deve atribuir um vetor a uma variável?
-        -   Como você pode acessar os elementos em seu vetor?
+        -   Quando uma matriz pode ser mais útil do que uma variável?
+        -   Por que você sempre deve atribuir uma matriz a uma variável?
+        -   Como você pode acessar os elementos em sua matriz?
       CSD U6 for loop led color_2019: |-
-        # Acrescente Alguma Cor
+        # Acrescente Cor
 
-        Agora que você pode ligar e desligar os LEDs, é hora de acrescentar alguma cor.
+        Agora que você pode ligar e desligar os LEDs, é hora de acrescentar cores.
 
         # Faça Isto
 
@@ -8615,12 +9638,15 @@ pt-BR:
         ## Perguntas a Considerar
 
         -   Como os parâmetros tornam as funções mais úteis?
-        -   Como você sabe quando você pode combinar várias funções em uma?
+        -   Como você sabe a hora em que você pode combinar várias funções em uma só?
       CSD U6 hardware software video_2019: |-
         ## Perguntas a Considerar
 
         -   Qual é a diferença entre hardware e software?
         -   O que o sistema operacional de um computador faz?
+      CSD U6 interval: Prever nível
+      CSD U6 interval_2018: Prever nível
+      CSD U6 interval_2019: Prever nível
       CSD U6 params modify clouds_2019: |-
         # Nuvens
 
@@ -8629,9 +9655,51 @@ pt-BR:
         # Faça Isto
 
         -   Crie uma nova função `moveCloud(name)` the irá mover qualquer nuvem.
-            -   (Dica: você irá usar praticamente o mesmo código que existe na função `moveCloud0`)
+        -   (Dica: você irá usar praticamente o mesmo código que existe na função `moveCloud0`)
         -   Chame sua nova função `moveCloud(name)` dentro do bloco do evento, uma vez para cada nome de nuvem.
-            -   (Dica: isto é similar à forma como a função `loopCloud(name)` é chamada várias vezes)
+        -   (Dica: isto é similar à forma como a função `loopCloud(name)` é chamada várias vezes)
+      CSD U6 predict LED button: Previsão Integrada
+      CSD U6 predict LED button_2018: Previsão Integrada
+      CSD U6 predict LED button_2019: Previsão Integrada
+      CSD U6 setProperty Text: |-
+        # Alterando o texto
+
+        O bloco `definirPropriedade` pode ser usado para alterar muitas coisas sobre seus elementos de design, incluindo o texto que eles contêm.
+
+        # Faça isso
+
+        -   Arraste um bloco `definirPropriedade`
+        -   Para o primeiro parâmetro, selecione "nome" (o id do elemento)
+        -   Para o segundo parâmetro, selecione "texto" (a propriedade que você deseja definir)
+        -   Para o terceiro parâmetro, escreva seu nome entre aspas (o valor a ser definido)
+
+        _Nota: removemos a guia "Modo de design" agora para que você possa praticar o trabalho com `definirPropriedade`, mas ela voltará mais tarde assim que criar seus próprios aplicativos._
+      CSD U6 setProperty Text_2018: |-
+        # Alterando o texto
+
+        O bloco `definirPropriedade` pode ser usado para alterar muitas coisas sobre seus elementos de design, incluindo o texto que eles contêm.
+
+        # Faça isso
+
+        -   Arraste um bloco `definirPropriedade`
+        -   Para o primeiro parâmetro, selecione "nome" (o id do elemento)
+        -   Para o segundo parâmetro, selecione "texto" (a propriedade que você deseja definir)
+        -   Para o terceiro parâmetro, escreva seu nome entre aspas (o valor a ser definido)
+
+        _Nota: removemos a guia "Modo de design" agora para que você possa praticar o trabalho com `definirPropriedade`, mas ela voltará mais tarde assim que criar seus próprios aplicativos._
+      CSD U6 setProperty Text_2019: |-
+        # Alterando o texto
+
+        O bloco `definirPropriedade` pode ser usado para alterar muitas coisas sobre seus elementos de design, incluindo o texto que eles contêm.
+
+        # Faça isso
+
+        -   Arraste um bloco `definirPropriedade`
+        -   Para o primeiro parâmetro, selecione "nome" (o id do elemento)
+        -   Para o segundo parâmetro, selecione "texto" (a propriedade que você deseja definir)
+        -   Para o terceiro parâmetro, escreva seu nome entre aspas (o valor a ser definido)
+
+        _Nota: removemos a guia "Modo de design" agora para que você possa praticar o trabalho com `definirPropriedade`, mas ela voltará mais tarde assim que criar seus próprios aplicativos._
       CSD U6 setProperty hidden 2_2019: |-
         # Exibindo/Ocultando
 
@@ -8645,6 +9713,59 @@ pt-BR:
         -   Oculte o "stopAlarmButton"
 
         _Dica: "hidden" é uma propriedade booleana. Se nós usamos `falso` para exibir o botão, o que você deve usar para ocultá-lo novamente?_
+      CSD U6 setProperty xy: |-
+        # Alterando a posição
+
+        Todo elemento de design (exceto a tela) possui uma propriedade "x" e "y" que controla sua posição.
+
+        # Faça isso
+
+        <div markdown="1" style="float:right">
+
+        ![expandable](https://images.code.org/3a67642609071cf6766c296b8ca5a68e-image-1526944857178.png)
+
+        </div>
+
+        Usando o bloco `definirPropriedade`, mova "vermelho\\ \_botao"para que corresponda à imagem à direita. (Clique na imagem para ver o tamanho total)
+
+        _Nota: removemos a guia "Modo de design" por enquanto para que você possa praticar o trabalho com setProperty, mas ela voltará mais tarde assim que criar aplicativos próprios._
+      CSD U6 setProperty xy_2018: |-
+        # Alterando a posição
+
+        Todo elemento de design (exceto a tela) possui uma propriedade "x" e "y" que controla sua posição.
+
+        # Faça isso
+
+        <div markdown="1" style="float:right">
+
+        ![expandable](https://images.code.org/3a67642609071cf6766c296b8ca5a68e-image-1526944857178.png)
+
+        </div>
+
+        Usando o bloco `definirPropriedade`, mova "vermelho\\ \_botao"para que corresponda à imagem à direita. (Clique na imagem para ver o tamanho total)
+
+        _Nota: removemos a guia "Modo de design" por enquanto para que você possa praticar o trabalho com setProperty, mas ela voltará mais tarde assim que criar aplicativos próprios._
+      CSD U6 setProperty xy_2019: |-
+        # Alterando a posição
+
+        Todo elemento de design (exceto a tela) possui uma propriedade "x" e "y" que controla sua posição.
+
+        # Faça isso
+
+        <div markdown="1" style="float:right">
+
+        ![expandable](https://images.code.org/3a67642609071cf6766c296b8ca5a68e-image-1526944857178.png)
+
+        </div>
+
+        Usando o bloco `definirPropriedade`, mova "vermelho\\ \_botao"para que corresponda à imagem à direita. (Clique na imagem para ver o tamanho total)
+
+        _Nota: removemos a guia "Modo de design" por enquanto para que você possa praticar o trabalho com setProperty, mas ela voltará mais tarde assim que criar aplicativos próprios._
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## Questões para pensar
+
+        -   O que fez os computadores serem maquinas diferentes das que vieram antes deles?
+        -   Pense em algo que você faz no computador. Que tipo de entrada, saída, armazenamento e processamento estão acontecendo?
       'CSD: Animating Sprite Movement_2019': |-
         ## Perguntas a considerar
 
@@ -8658,8 +9779,8 @@ pt-BR:
       'CSD: For Loop_2019': |-
         ## Perguntas a Considerar
 
-        -   O que são usados laços em programação?
-        -   Onde estão colocados os laços em seu código?
+        -   Para que os laços são usados em programação?
+        -   Onde os Laços são colocados em seu código?
       CSDU2 - Type Anything: |-
         <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
 
@@ -8698,15 +9819,49 @@ pt-BR:
 
         -   Onde no App Lab você pode desenhar a interface de usuário do seu aplicativo?
         -   Quais são alguns tipos de elementos que você pode adicionar ao seu aplicativo?
-      CSDU6 making new arrays_2019: |-
-        # Criando Novos Vetores
+      CSDU4 Project Import_2018: |-
+        # De voltar ao seu aplicativo
 
-        Agora que você pode mudar vetores, é hora de você criar o seu.
+        Agora que você já praticou a importação de telas, é hora de começar a trabalhar no aplicativo da sua equipe.
+
+        # Faça isso
+
+        Cada membro da sua equipe criará sua própria cópia do aplicativo, com todas as telas dos membros da equipe importadas. Essa será sua cópia do aplicativo e a cópia na qual você começará a adicionar o código no próximo lição. (Não se esqueça de que você também precisará importar sua própria tela para este projeto.)
+
+        -   Colete todas as URLs de compartilhamento das páginas da sua equipe, \*\* incluindo as suas \*\*
+                \- Cada membro da equipe pode encontrar a URL de compartilhamento para sua própria tela voltando ao último nível da lição anterior ou encontrando a tela em seu [projects directory](/projects)
+        -   Importar cada uma das telas, uma de cada vez
+                \- Se você encontrar um erro de ID em uma das telas, discuta o problema com o criador(a) da tela para que ela possa ser corrigida e importada
+        -   Excluir o padrão "tela1"
+        -   Defina a tela principal como o padrão
+
+        Não se preocupe em adicionar qualquer código neste momento; nós vamos chegar a isso no próximo nível.
+      CSDU4 Project Import_2019: |-
+        # De voltar ao seu aplicativo
+
+        Agora que você já praticou a importação de telas, é hora de começar a trabalhar no aplicativo da sua equipe.
+
+        # Faça isso
+
+        Cada membro da sua equipe criará sua própria cópia do aplicativo, com todas as telas dos membros da equipe importadas. Essa será sua cópia do aplicativo e a cópia na qual você começará a adicionar o código no próximo lição. (Não se esqueça de que você também precisará importar sua própria tela para este projeto.)
+
+        -   Colete todas as URLs de compartilhamento das páginas da sua equipe, \*\* incluindo as suas \*\*
+                \- Cada membro da equipe pode encontrar a URL de compartilhamento para sua própria tela voltando ao último nível da lição anterior ou encontrando a tela em seu [projects directory](/projects)
+        -   Importar cada uma das telas, uma de cada vez
+                \- Se você encontrar um erro de ID em uma das telas, discuta o problema com o criador(a) da tela para que ela possa ser corrigida e importada
+        -   Excluir o padrão "tela1"
+        -   Defina a tela principal como o padrão
+
+        Não se preocupe em adicionar qualquer código neste momento; nós vamos chegar a isso no próximo nível.
+      CSDU6 making new arrays_2019: |-
+        # Criando Novas Matrizes
+
+        Agora que você pode mudar matrizes, é hora de você criar a sua.
 
         # Faça Isto
 
-        -   Crie um novo vetor com as notas que você quiser. Elas podem estar em oitavas diferentes, associadas a um determinado tom, etc. Qualquer coisa que você quiser!
-        -   Faça sua cigarra tocar uma nota aleatória de seu vetor quando o botão **direito** for pressionado.
+        -   Crie uma nova matriz com as notas que você quiser. Elas podem estar em oitavas diferentes, associadas a um determinado tom, etc. Qualquer coisa que você quiser!
+        -   Faça sua cigarra tocar uma nota aleatória de sua matriz quando o botão **direito** for pressionado.
       Course 4 Artist 1: |-
         Me ajude a desenhar uma caixa.
         (Cada linha tem 200 pixels de comprimento)
@@ -8779,6 +9934,10 @@ pt-BR:
       Course 4 Artist 2: |-
         Você consegue usar o laço de repetição para desenhar o quadrado em cinza?
         (Cada lado tem 300px de comprimento)
+      Course 4 Artist 20: |-
+        Ainda jogando?
+
+        Aqui está uma tela em branco, onde você criar qualquer coisa que quiser!
       Course 4 Artist 3: |-
         Tente entender o que acontece se você executar esse código (ou pressione "Executar" para testá-lo).
 
@@ -8813,6 +9972,10 @@ pt-BR:
       Course 4 Artist For Loops 6a: |-
         Faça três pequenas alterações no
         código do último nível para conseguir isso!
+      Course 4 Artist Inspire: "<img src=\"https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png\"
+        width=\"250px\"/>\n\n**Inspiração para Atividade Livre:** Você já aprendeu
+        tudo o que precisa saber para criar um padrão como esse! Se esta figura te
+        inspira, tente criar algo parecido. Se não, crie alguma coisa própria. "
       Course 4 Artist Vars 1: |-
         Vamos desenhar um triângulo equilátero.
 
@@ -8832,6 +9995,16 @@ pt-BR:
         Agora podemos usar essa variável onde há um bloco de `avance`.
 
         Para essa forma, faça a variável `comprimento` ser igual a 75.
+      Course 4 Artist Vars 13: |-
+        Quando uma forma tem muitos lados, cada lado precisa ser menor se você quiser que todo o padrão caiba na tela.
+
+        Vamos recriar o algorítmo para este padrão incrível, mas ao invés de definir manualmente a variável `comprimento`, vamos usar um bloco de matemática que contenha em seu interior a variável `lados`, para ter certeza que cada forma seja ajustada corretamente.
+
+        O perímetro de cada polígono é de 300 pixels.
+      Course 4 Artist Vars 14: |-
+        **Livre**: Veja isto! Agora seu algorítmo está aninhado em um laço adicional. Experimente alterar os valores de suas 2 variáveis para desenhar padrões legais.
+
+        Para conseguir ainda mais efeito, experimente brincar com cores! Use cores aleatórias dentro de laços para ver como isso muda seu design.
       Course 4 Artist Vars 2: Em vez de usar `avance por 150` o bloco `avance` está
         referenciando uma variável chamada `comprimento`. Você consegue definir o
         valor de `comprimento` para 150 para desenhar esse novo triângulo?
@@ -8849,6 +10022,9 @@ pt-BR:
         Use o que você aprendeu no último desafio para criar esse hexágono usando a varável `lados`.
 
         Percebe como você consegue desenhar um triângulo, um quadrado, um pentágono ou um octágono mudando apenas um número?
+      Course 4 Artist Vars 8: "**Livre:** Experimente com o número de lados que esta
+        figura tem. Você consegue alterar o algorítmo para que o tamanho total da
+        figura permaneça igual, independentemente de quantos lados ela tiver? "
       Course 4 Bee 1: |-
         A abelha não sabe o que está atrás da nuvem!
 
@@ -8874,10 +10050,39 @@ pt-BR:
       Course 4 Play Lab Params 8: |-
         Use o bloco "quando o personagem tocar"
         para enviar o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.
+      Course 4 Play Lab Vars 1: |-
+        Desta vez você não precisa escrever nenhum código, somente clicar em `Executar` para jogar!
+
+        Neste jogo, você é o cão que está tentando coletar mais bandeiras que o gato. Use a seta para baixo para controlar o cão. Pressione `Terminar` quando você quiser parar de jogar.
       Course 4 Play Lab Vars 2: |-
         A corrida do último desafio não foi
         muito justa! Altere a variável "velocidade\_cão" para garantir que você possa coletar mais
         bandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!
+      Course 4 Play Lab Vars 3: |-
+        Aqui está um novo tipo de jogo!
+
+        Você não precisa mudar nada neste nível.
+
+        **Orientações:** Use as setas à esquerda e à direita para se mover, e seta para cima para pular. Veja se você consegue coletar todas as bandeiras.
+      Course 4 Play Lab Vars 4: 'Agora estamos usando uma variável denominada `altura`
+        para controlar o quão alto o cão consegue pular. Atualize a variável `altura`
+        para que o cão possa saltar alto o suficiente para alcançar as bandeiras. '
+      Course 4 Play Lab Vars 6: |-
+        Neste nosso jogo, como deveríamos ganhar pontos?
+
+        1.  Adicione 1 à sua variável `pontos` a cada vez que o Cão atinge o Gato com um pedaço de torta.
+
+        2.  Use o evento `quando ator 2 toca em algo` para atualizar sua pontuação. Você pode incrementar sua variável definindo `pontos = pontos + 1.`
+
+        3.  Obtenha uma pontuação de 10 para passar de nível.
+
+        **Nota:** Use a seta à direita para arremessar a torta!
+      Course 4 Play Lab Vars 7: |-
+        Legal, agora vamos garantirque este jogo não seja muito fácil de jogar!
+
+        Sempre que o Cão (ator 1) for atingido por um sanduíche pelo Gato (ator 2), você deverá perder um ponto.
+
+        Comece com 10 pontos para que não seja muito difícil. Deixe sua pontuação cair de 10 para 0 para passar de nível.
       Course 4 Play Labs For Loops 1: |-
         Vamos fazer o cão falar todos
         os números de 1 a 100. Use um laço "para" e o bloco "contador" para que ele fale o
@@ -8899,9 +10104,9 @@ pt-BR:
       CourseD_Dance_Party_02: |-
         Faça esse alce entrar na dança!
 
-        Arraste o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho. Conecte o bloco abaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O(a) dançarino(a) deve iniciar um novo movimento após o quarto compasso.
+        Arraste o bloco <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho. Conecte-o abaixo do bloco de evento<xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"compasos"</title></block></xml>. O(a) dançarino(a) deve iniciar um novo movimento após o quarto compasso.
 
-        Os **compassos** são usados para contar o tempo musical. Neste tutorial, cada compasso tem quatro batidas.
+        **Compassos** são usados para contar o tempo musical. Neste tutorial, cada compasso tem quatro batidas.
       CourseD_Dance_Party_03: |-
         _Agora vamos curtir!_
 
@@ -8928,9 +10133,9 @@ pt-BR:
       CourseD_Dance_Party_10: |-
         Agora sabemos como alterar as propriedades de um(a) dançarino(a). Nós também podemos fazer com que as mesmas propriedades respondam automaticamente à música usando este bloco:
         <xml>
-        <block type="Dancelab_startMapping">
+        <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
 
-        <title name="SPRITE">right_pineapple</title>
+        <title name="SPRITE">right\_unicorn</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
@@ -9113,7 +10318,7 @@ pt-BR:
       Dance_Party_02: |-
         Faça esse alce entrar na dança!
 
-        Arraste o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho. Conecte o bloco abaixo do bloco <xml>\<block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"compasos"</title></block></xml>. O(a) dançarino(a) deve iniciar um novo movimento após o quarto compasso.
+        Arraste o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho. Conecte o bloco abaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"compasos"</title></block></xml>. O(a) dançarino(a) deve iniciar um novo movimento após o quarto compasso.
 
         **Compassos** são usados para contar o tempo musical. Neste tutorial, cada compasso tem quatro batidas.
       Dance_Party_03: "_Agora vamos curtir!_ \n\nAdicione um bloco <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -9144,7 +10349,7 @@ pt-BR:
         <xml>
         <block type="Dancelab_startMapping">
 
-        <title name="SPRITE">right\\_pineapple</title>
+        <title name="SPRITE">right\_pineapple</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
@@ -9215,6 +10420,19 @@ pt-BR:
         -   Adicionar outro grupo de dançarinos
         -   Mostrar e ocultar dançarinos usando as teclas de seta
         -   Ocultar todos os dançarinos e alternar para um efeito de fundo estimulante
+      Final Personal Website: |-
+        # Site pessoal
+
+        É isso! Você está trabalhando em seu site pessoal para toda a unidade. Dê os toques finais e envie para seu professor! Lembre-se de usar o processo de solução de problemas como seu guia na preparação do produto final.
+
+        # Faça isso
+
+        -   Definir: Leia a rubrica para saber o que é esperado
+        -   Plano: Decida o que você ainda precisa trabalhar e coloque essas coisas em ordem de prioridade
+        -   Experimente: implemente suas melhorias no seu site pessoal.
+        -   Refletir: obtenha feedback de um colega de turma e decida sobre o feedback desse feedback.
+
+        Não se esqueça de fazer uma captura de tela da sua home page e salvá-la em algum lugar do seu computador para que você possa encontrá-la depois (_Precisa de ajuda sobre como capturar a imagem? Confira esta <a href = "http: //www.take-a -screenshot.org/">site </a>._)
       Fish Tank 2-validated_2019: |-
         Vamos fazer um aquário!
 
@@ -9252,6 +10470,67 @@ pt-BR:
         estão corretos! \\\r\n \\\r\nFixe o bloco verde pequeno duas vezes em sua
         área de trabalho para corrigir o caminho e levar o jogador {currentPlayerName}
         até a Tocha de Redstone [redstone_torch]."
+      Gamelab StartScreen Check State: |-
+        # Verificando o estado do jogo
+
+        Agora que você tem seu estado de jogo armazenado em uma variável, você pode verificá-lo para determinar o que deve ser exibido. Isso deve acontecer dentro do laço de repetição de desenho, já que é algo que vai mudar conforme o programa está sendo executado. O programa deve verificar se o jogo está no estado "jogando" e somente executar o programa se estiver. Podemos nos preocupar com os outros estados mais tarde.
+
+        ## Faça isso
+
+        -   Dentro do laço de repetição de desenho, adicione uma condicional (declaração `if`).
+        -   Para a condição, verifique se `estadoDoJogo == "jogando"`.
+        -   Mova o resto do código do laço de repetição de desenho dentro da instrução `if`, então ele só roda se o jogo estiver com o estado "jogando ".
+        -   Execute o programa. Nada deve acontecer porque o jogo ainda está no estado "começando".
+        -   Volte para onde você definiu o valor da sua variável `estadoDoJogo` e mude de "começando" para "jogando".
+        -   Execute o jogo novamente, e ele deve jogar normalmente, porque agora está no estado "jogando".
+        -   Altere o valor da variável de volta para "starting".
+      Gamelab StartScreen Check States: |-
+        # Verifique todos os estados
+
+        Neste momento, o único estado com o qual seu programa pode lidar é "jogando", mas você pode adicionar mais condicionais para dar considerar os outros três estados.
+
+        ## Faça isso
+
+        -   Dentro do laço de repetição de desenho, adicione mais três declarações `if` que verificam se há `estadoDoJogo == "começando"` ,`estadoDoJogo == "vencido"`e`estadoDoJogo == "perdido"`, respectivamente.
+        -   Dentro de cada declaração `if`, adicione um código que irá desenhar o texto na tela, para que você possa ver os resultados dos diferentes estados. Você também pode querer usar o `drawSprites` para poder ver a imagem de fundo e os sprites do jogador, mas certifique-se de estar desenhando o texto em cima dos sprites.
+        -   Verifique seu código executando o programa nos diferentes estados. (Não se preocupe em torná-los perfeitos ainda, apenas certifique-se de que os condicionais estão funcionando como deveriam.)
+
+        Para manter o controle de seu código, você pode achar útil criar uma função para cada uma das diferentes exibições de texto e, em seguida, chamar essas funções dentro das condicionais.
+      Gamelab StartScreen Intro: |-
+        # Telas inicial e final
+
+        Este tutorial ensinará como fazer telas de início e fim no Game Lab, bem como reiniciar o jogo a partir da tela final.
+
+        Clique em executar para jogar o jogo à esquerda. Siga as instruções na tela inicial para jogar. Quando o jogo terminar, siga as instruções na tela final para reiniciar o jogo.
+
+        Na próxima bolha, você verá o código para o jogo e começará a adicionar suas próprias telas de início e fim.
+
+        ## Tela inicial
+
+        A tela inicial é a tela introdutória que aparece antes do usuário começar a jogar. Geralmente tem o título do jogo e algumas instruções básicas para jogar. Também pode incluir o desenvolvedor do jogo.
+
+        ## End Screen
+
+        A tela final aparece depois que o usuário ganhou ou perdeu o jogo. Por vezes, inclui a pontuação final, classificações de jogadores ou outras informações. Também pode ter uma opção para jogar o jogo novamente.
+      Gamelab StartScreen State: |-
+        Variável de estado do jogo #
+
+        Nosso jogo de exemplo teve quatro cenários diferentes (ou \*\* estados \*\*) que precisamos acompanhar para exibir a tela certa: "começando", "jogando", "vencido" e "perdido". O primeiro passo para adicionar uma tela inicial ou final ao jogo é criar uma variável para acompanhar qualquer alteração no estado do jogo.
+
+        ## Faça isso
+
+        -   Declare uma variável chamada `estadoDoJogo` no início do programa. (Um bom lugar para fazer isso seria perto de onde "pontuação" e "vidas" são declarados.
+        -   Defina o valor inicial da sua variável `estadoDoJogo` como "começando"
+
+        (Como você ainda não está usando essa variável, verá um triângulo de aviso ao lado da linha onde ela está declarada. Isso também não afetará a execução do programa.)
+      Gamelab StartScreen base code: |-
+        # Código do jogo
+
+        Este é o código do jogo sem as telas inicial e final. A função `estadoDoJogo` (chamada na linha 43 e definida na linha 208) verifica se o usuário ganhou ou perdeu, mas apenas adiciona uma mensagem de texto à tela. A jogabilidade também continua mesmo após o término do jogo.
+
+        ## Faça isso
+
+        Leia o código, especialmente o código antes do laço de repetição de desenho (linhas 1-24), dentro do laço de repetição de desenho (linhas 27-43) e dentro da função `estadoDoJogo` (linhas 209-224). Tudo bem se você não entender tudo no jogo, mas você deve ver que o código antes do laço de repetição de desenhar configura os sprites, e o código dentro do laço de de repetição de desenhar controla a jogabilidade.
       HOC 2018 Level_1: Você precisa de suprimentos para a viagem adiante. Colete
         um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         de um **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -9447,6 +10726,97 @@ pt-BR:
         em todos os lugares corretos. \\\r\n\\\r\nVocê percebeu que só precisa\ndefinir
         o valor de \"comprimento\" uma vez, e o código usa o valor correto em todos
         os lugares?"
+      NetSim Standalone Automatic DNS: |-
+        # Serviço de Domínio de Nomes (DNS)
+
+        Nesta versão do Simulador de Internet, um Sistema de Domínio de Nomes (DNS) é fornecido para você e conhece os endereços IP de todos os computadores conectados. Você só pode ver os nomes de host de outros computadores conectados.
+        \[] [0]
+
+        O endereço do DNS é sempre \\ <yourRouterNumber> .15. Envie uma mensagem com o protocolo `GET [hostname]`, por exemplo `GET Bob2`, para o DNS para obter o endereço de outro aluno. Você pode acompanhar as respostas na seção Anotações na guia DNS.
+        \[] [1]
+
+        Seu professor fornecerá instruções mais específicas para essa atividade.
+      NetSim Standalone Broadcast: |-
+        # Mensagens em larga escala(Broadcast) no Simulador de Internet
+
+        Nesta versão do Simulator de Internet, você pode se conectar a até cinco pessoas em uma sala. Quando você envia mensagens na sala, todos as recebem. Quais são alguns dos desafios deste sistema e como você pode resolvê-los?
+
+        Seu professor fornecerá instruções mais específicas para essa atividade.
+      NetSim Standalone Classroom Routers: |-
+        # Mensagens de roteamento
+
+        Nesta versão do Simulador de Internet, todos se conectam a um roteador e possuem um endereço específico. Para enviar mensagens, você precisa endereçar sua mensagem para o endereço específico do destinatário e o roteador cuidará de entregá-la ao computador certo. Se houver outros roteadores criados na sua turma, peça o endereço de um de seus colegas e envie-lhes uma mensagem! Veja o Log do Roteador para ver o caminho que as mensagens percorreram pela rede.
+
+        Seu professor fornecerá instruções mais específicas para essa atividade.
+      NetSim Standalone Freeplay: |-
+        # Prática Livre do Simulador de Internet
+
+        Nesta versão do Simulador de Internet, a maioria das opções está ativada e é configurável. As mensagens podem ser enviadas para qualquer roteador dentro da classe, e as mensagens seguirão caminhos diferentes para chegar ao seu destino.
+
+        Seu professor fornecerá instruções mais específicas para essa atividade.
+      NetSim Standalone Manual DNS: |-
+        # Introdução ao DNS
+
+        Nesta versão do simulador você não pode ver os endereços dos outros alunos. Em vez disso, um de vocês deve atuar como um serviço de nomes, para ajudar a compartilhar endereços uns com os outros. Na aba DNS, na coluna da esquerda, uma pessoa pode assumir o papel de DNS.
+
+        Seu professor fornecerá instruções mais específicas para essa atividade.
+      NetSim Standalone Packets TCP: |-
+        # Pacotes e Criando uma Internet Confiável
+
+        As mensagens na Internet podem percorrer muitos caminhos para chegar ao seu destino e, às vezes, ao longo do caminho, a mensagem é descartada. Nesta versão do Simulador de Internet:
+
+        -   Há 10% de chance de um pacote ser descartado
+        -   Vários pacotes podem tomar caminhos diferentes para o destino
+        -   O tamanho máximo padrão do pacote é definido como 6 caracteres adicionais
+
+        Seu professor fornecerá instruções mais específicas para essa atividade.
+      NetSim Standalone SendAB: |-
+        # Enviando bits com o Simulador de Internet
+
+        Você e seu parceiro compartilham um único fio que só pode estar no estado A ou B. Você pode definir o fio para qualquer estado a qualquer momento e pode ler o estado do fio a qualquer momento. Você consegue descobrir uma maneira de se comunicar efetivamente apenas com esse sistema?
+
+        Seu professor fornecerá instruções mais específicas para essa atividade.
+      NetSim Standalone Sending Numbers: |-
+        # Enviando números com o Simulador de Internet
+
+        Você e seu parceiro agora podem enviar mensagens de forma confiável sem coordenação extra! Enquanto você está sempre enviando bits para de um lado para o outro, você também pode representar esses bits como números decimais. Que tipos de informação você pode representar com este sistema?
+
+        Seu professor fornecerá instruções mais específicas para essa atividade.
+      NetSim Standalone Sending Numbers Ascii: |-
+        # Enviando texto com o Simulador de Internet
+
+        Agora que você transmitiu as informações representadas como números decimais, é possível mapear esses números para caracteres de texto para enviar informações com base em texto de um lado para o outro. Com um protocolo baseado em texto, você pode facilmente representar e comunicar todos os tipos de informações.
+
+        Seu professor fornecerá instruções mais específicas para essa atividade.
+      OPD-K5 Closing: |-
+        > \*\* Se você gostou deste curso, inscreva-se em um workshop em pessoa: \*\*
+        >
+        > [Inscreva-se agora](http://code.org/professional-development-workshops) para continuar aprendendo ciência da computação e sua pedagogia. As oficinas gratuitas em pessoa são um lugar valioso para colaborar e interagir com outros educadores apaixonados em sua área.
+      OPD-K5 EventsVid: |-
+        Assista a este vídeo que define "eventos" e mostra como eles funcionam nos Fundamentos da Ciência da Computação. Depois, você tentará alguns quebra-cabeças que exigem que você desenvolva "eventos".
+
+        > Um evento é uma linha de código que diz ao seu computador para "escutar" que algo aconteça e, em seguida, realizar uma ação. Por exemplo, em páginas da Web, você geralmente pode exibir um menu suspenso ao passar pela barra de navegação com o mouse. A "rolagem do mouse" é um "evento" que aciona uma ação.
+      OPD-K5 FirstProgram: Assista ao vídeo abaixo, que explica o primeiro programa
+        que os jovens estudantes desenvolverão no [Curso A] [0]. Na próxima página,
+        você poderá desenvolver um programa parecido!
+      OPD-K5 LessonPlanning: |-
+        Até agora, você foi apresentado a alguns de nossos planos de aulas desconectados. No entanto, existem planos de aula para todas as lições Fundamentos da Ciência da Computação - conectadas e on-line. Você pode encontrar a lista completa de planos de aula para cada curso abaixo:
+        <br/>
+        <br/>
+        [Planos de aula do curso A](https://curriculum.code.org/csf-18/coursea/)<br/>
+        [Planos de aula do curso B](https://curriculum.code.org/csf-18/courseb/)<br/>
+        [Planos de aula do curso C](https://curriculum.code.org/csf-18/coursec/)<br/>
+        [Planos de aula do curso D](https://curriculum.code.org/csf-18/coursed/)<br/>
+        [Planos de aula do curso E](https://curriculum.code.org/csf-18/coursee/)<br/>
+        [Planos de aula do curso F](https://curriculum.code.org/csf-18/coursef/)<br/>
+
+        No entanto, você pode querer adaptar essas lições ou criar as suas próprias! O vídeo abaixo explica a estrutura das lições de Fundamentos da Ciência da Computação, mas também fornece dicas, caso você queira desenvolver suas próprias lições.
+      OPD-K5 RepeatBlock: Assista ao vídeo abaixo, que explica como os loops funcionam
+        e introduz o bloco "Repetir" nos Fundamentos da Ciência da Computação.
+      OPD-K5 WhatIsCS: Você já se perguntou "Especificamente, o que é ciência da computação?"
+        Ou, "Por que alguns programas de computador são escritos com palavras e alguns
+        são escritos usando imagens?" Se sim, assista a este vídeo; é uma ótima introdução
+        ao campo da ciência da computação.
       Overworld Move to Sheep: Adicione um segundo comando "andar à frente" para chegar
         à ovelha.
       Overworld Move to Sheep_2019: Adicione um segundo comando "andar à frente" para
@@ -9490,6 +10860,26 @@ pt-BR:
         que ela desenhe um padrão de quadrados, triângulos ou octógonos?
       Standalone_Artist_9: Agora vá em frente e faça a imagem que mais gostar! Você
         tem até uma função vazia para usar para fazer o que quiser!
+      U4 Model Program 1_2018: |-
+        # Adicionando uma nova tela
+
+        Para completar seu aplicativo, você precisará de mais do que apenas uma tela inicial. Cada cartão que você criou em seu protótipo de papel é representado por uma "tela" no App Lab. Para criar mais telas, basta clicar no menu na parte superior da tela do aplicativo e selecionar "Nova tela ..."
+
+        <img src="https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png" style="width: 200px">
+
+        # Faça isso
+
+        -   \*\* Crie uma nova tela \*\* e forneça o ID "sobre".
+      U4 Model Program 1_2019: |-
+        # Adicionando uma nova tela
+
+        Para completar seu aplicativo, você precisará de mais do que apenas uma tela inicial. Cada cartão que você criou em seu protótipo de papel é representado por uma "tela" no App Lab. Para criar mais telas, basta clicar no menu na parte superior da tela do aplicativo e selecionar "Nova tela ..."
+
+        <img src="https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png" style="width: 200px">
+
+        # Faça isso
+
+        -   \*\* Crie uma nova tela \*\* e forneça o ID "sobre".
       U4 Model Program 5_2019: |-
         # Conecte os Outros Botões
 
@@ -9499,6 +10889,23 @@ pt-BR:
 
         -   Para cada botâo, crie um evento que faz a ligação com a tela apropriada quando o botão é pressionado.
         -   Rode sua aplicação e teste o funcionamento de todos os botões.
+      Vigenere: |-
+        # Criptografar e descriptografar uma mensagem com a criptografia Vigenère
+
+        Trata-se de uma versão interativa da codificação Vigenère que  mostra a animação da criptografia e da descriptografia conforme ela está acontecendo, considerando um fragmento de texto para criptografar ou descriptografar e a chave.
+
+        # Faça isso
+
+        ### Criptografar uma mensagem
+
+        Clique em Etapa várias vezes e veja o que está acontecendo. Preste atenção em:
+
+        -   Como o texto cifrado está sendo produzido
+        -   O que acontece quando você chega ao último caractere da chave
+        -   Depois de percorrer alguns caracteres, clique em Reproduzir para assistir ao resto da animação
+        -   Clique em Reiniciar e reproduza a animação novamente. Você pode usar o controle deslizante de velocidade para acelerá-lo ou desacelerá-lo
+
+        \[] [0]
       Virtual Pet 1_2019: |-
         **Livre**: Uau! Olha esse animal da hora!
 
@@ -9516,6 +10923,44 @@ pt-BR:
         2.  Edite a fantasia inicial, ou adicione uma nova que você ache legal.
         3.  Mude a fantasia do sprite para a sua fantasia no código abaixo.
         4.  Clique em **Executar** para ver o novo visual do seu bichinho!
+      Virtual Pet 3_2019: |-
+        Crie eventos para fazer seu pet se mover com comandos!
+
+        Comece usando <xml><block type="gamelab_keyPressed" block-text="bloco de eventos enquanto a seta para cima estiver pressionada"><title name="CONDITION">"enquanto"</title><title name="KEY">"sobe"</title></block></xml> juntamente com <xml><block type="gamelab_moveInDirection" block-text="bloco de ação do movimento"><title name="DIRECTION">"Norte"</title></block></xml> para fazer seu pet se mover ao Norte **enquanto** a seta para cima estiver pressionada.
+
+        Repita a descrição acima para as outras três direções (Sul, Oeste, Leste) e teclas de setas (para baixo, para a esquerda, para a direita)!
+      Virtual Pet 4_2019: |-
+        Vamos fazer alguns alimentos que se movem!
+
+        1.  Adicione **duas** figuras ao seu mundo.
+        2.  Faça uma figura parecer algo que seu pet **goste** de comer, e um a outra parecer algo que ele **não goste** de comer.
+        3.  Faça cada figura de alimento iniciar o comportamento de **movimentação** assim que ele aparecer.
+      Virtual Pet 5_2019: |-
+        Use <xml><block type="gamelab_checkTouching" block-text="bloco quando estiver em contato"></block></xml> com <xml><block type="gamelab_jumpTo" block-text="bloco para saltar de lugar"></block></xml> para **simular** "comer" no seu mundo virtual!
+
+        1.  Crie um evento que faz uma de suas figuras de alimento pular para um lugar aleatório quando seu pet encosta nele.
+        2.  Repita o procedimento acima para a outra figura de alimento.
+      Virtual Pet 6_2019: |-
+        Use <xml><block type="variables_set" block-text="bloco de definição de variável"><title name="VAR">energia</title></block></xml> junto com <xml><block type="math_change" block-text="bloco para alteração de variável"><title name="VAR">energia</title></block></xml> para fazer com que comer alimentos afete a energia do teu pet! Quanto mais energia ele tiver, mais rápido ele se move!
+
+        1.  Defina a variável `energia` para 5 quando o programa é iniciado.
+        2.  Quando seu pet comer um alimento que ele **goste**, adicione 1 em `energia`.
+        3.  Quando seu pet comer um alimento que ele **não goste**, retorne a `energia` de volta a 5.
+        4.  Mude cada evento das teclas de setas para que o seu pet agora se mova `energia` pixels, ao invés de um número específico.
+      Virtual Pet 7_2019: "Você pode verificar o valor de `energia` do seu pet com
+        <xml><block type=\"gamelab_printText\" block-text=\"bloco de exibição\"></block></xml>,
+        um novo bloco encontrado na categoria `Mundo`!\n\nCrie um evento que faz o
+        valor de `energia` ser exibido quando a figura do pet é clicada. "
+      Virtual Pet 8_2019: |-
+        **Bônus:** Seu pet virtual está _VIRTUALMENTE INCRÌVEL!_
+
+        O que mais você poe fazer? Tente estas ideias:
+
+        -   Altere o fundo para um cor ou uma imagem.
+        -   Mostre mais mensagens! Tente escrever _"Nham! Energia aumentada!"_ quanto o pet come um alimento que ele gosta, ou _"Ugh! Energia reiniciada!"_ quanto ele come algo que ele não gosta.
+        -   Adicione uma outra figura que interaja com seu pet de uma outra forma. Que tal a figura de um **brinquedo**?
+        -   Adicione uma outra variável que pode afetar seu pet ou o mundo. O que poderiam `felicidade` ou `idade` fazer?
+        -   Experimente com comportamentos! Tente editar o comportamento de **movimentação** para atrasar ou apressar a velocidade das figuras de alimentos (dica: a "velocidade" atual é 5...).
       'Widget: Text Compression': Procure por padrões (palavras ou frases repetidas)
         no texto. Insira os padrões que você ver no dicionário à direta. A medida
         que você insere mais coisas ao dicionário, o símbolo da entrada é inserido
@@ -9571,6 +11016,12 @@ pt-BR:
         -   O terceiro laço de repetição deve fazer um quadrado.
       course2_collector_prog_challenge1: Preste atenção! Você consegue coletar todas
         as **10** peças do tesouro?
+      course2_harvester_loops_challenge1: Colete todo o milho.
+      course2_harvester_loops_challenge2: Colete todos os alfaces. Evite as árvores
+        e os campos!
+      course2_maze_programming_challenge2: |-
+        Algumas vezes existe mais de uma forma de solucionar um problema.
+        Algumas vezes é mais fácil ir para trás do que ir para frente!
       course3_bee_debugging_challenge1: Veja como a abelha pega o nectar. Você consegue
         usar o mesmo padrão para ajudar a abelha a fazer todo o mel?
       course3_bee_functions_challenge2: Você está por conta própria neste desafio!
@@ -9590,6 +11041,8 @@ pt-BR:
       course4_artist_fwp_challenge1: Execute este programa e faça alterações para
         ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e
         substitua-o por algo totalmente diferente)
+      course4_artist_variables_challenge1: Voce consegue criar uma variável `comprimento`
+        e usá-la para criar este padrão?
       courseA_artist_loops10: |-
         ## Hora de voltar à terra. Me ajude a colocar pedras para que eu não caia na água!
 
@@ -9889,14 +11342,14 @@ pt-BR:
       courseA_harvester_seq1_2019: Ajude a colheitadeira a pegar a espiga de milho!
       courseA_harvester_seq2: 'Use <xml><block type="maze_moveWest"/></xml> \* \*
         três \* vezes para levar a colhedora até o milho! '
-      courseA_harvester_seq2_2019: 'Use <xml><block type="maze_moveWest"/></xml> \*
-        \* três \* vezes para levar a colhedora até o milho! '
+      courseA_harvester_seq2_2019: 'Use o bloco <xml><block type="maze_moveWest"/></xml>
+        \* \* três \*\* vezes para levar a colhedora até o milho! '
       courseA_harvester_seq3: Use <xml><block type="maze_moveNorth"/></xml> **três**
         vezes para levar a colheitadeira até o milho! Não se esqueça de pegar o milho
         no final.
-      courseA_harvester_seq3_2019: Use <xml><block type="maze_moveNorth"/></xml> **três**
-        vezes para levar a colheitadeira até o milho! Não se esqueça de pegar o milho
-        no final.
+      courseA_harvester_seq3_2019: Use o bloco <xml><block type="maze_moveWest"/></xml>
+        \* \* três \*\* vezes para levar a colhedora até o milho! Não se esqueça de
+        pegar o milho no final.
       courseA_harvester_seq4: Adicione _um_ bloco para ajudar a colheitadeira a pegar
         o milho.
       courseA_harvester_seq4_2019: Adicione _um_ bloco para ajudar a colheitadeira
@@ -9919,9 +11372,9 @@ pt-BR:
       courseA_maze_ramp2_2018: Anexe os dois <xml> <block type="maze_moveEast"/></xml>
         blocos <xml><block type="when_run"/></xml> para terminar seu código, em seguida,
         clique em "Executar ▶".
-      courseA_maze_ramp2_2019: Anexe os dois <xml> <block type="maze_moveEast"/></xml>
-        blocos <xml><block type="when_run"/></xml> para terminar seu código, em seguida,
-        clique em "Executar ▶".
+      courseA_maze_ramp2_2019: Anexe os dois blocos <xml><block type="maze_moveEast"
+        block-text="move east"/></xml> ao <xml><block type="when_run" block-text="when
+        run"/></xml> para terminar seu código, em seguida, clique em "Executar ▶".
       courseA_maze_ramp3a_2018: Pegue um <xml><block type="maze_moveNorth"/></xml>
         da caixa de ferramentas e adicione-o no final dos outros blocos para finalizar
         o código, e então clique em "▶ Executar".
@@ -10132,6 +11585,39 @@ pt-BR:
         aos outros blocos para terminar este código?
       courseB_Scrat_ramp5a_2018: Tente este sozinho!
       courseB_Scrat_ramp5a_2019: Tente este sozinho!
+      courseB_artist_loops10: |-
+        Use o que você aprendeu para desenhar uma figura do que acha que o artista viu quando chegou em casa.
+
+        * * *
+
+        ### Ideias
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops10_2018: |-
+        Use o que você aprendeu para desenhar uma figura do que acha que o artista viu quando chegou em casa.
+
+        * * *
+
+        ### Ideias
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops10_2019: |-
+        Use o que você aprendeu para desenhar uma figura do que acha que o artista viu quando chegou em casa.
+
+        * * *
+
+        ### Ideias
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseB_artist_loops6: Atrás dos arbustos há uma bela videira cheia de flores.
         Você consegue escalar a videira e ver até aonde vai?
       courseB_artist_loops6_2018: Atrás dos arbustos há uma bela videira cheia de
@@ -10236,6 +11722,25 @@ pt-BR:
         Você consegue encontrar um caminho antes de ficar sem blocos?
       courseB_maze_seq_challenge1_2019: Você só tem quatro de cada bloco de movimento.
         Você consegue encontrar um caminho antes de ficar sem blocos?
+      courseB_playLab_events1: "Esse jogo se chama \"Brincando de Laboratório\". \n\nVeja
+        se consegue descobrir o que cada bloco faz."
+      courseB_playLab_events1_2018: "Esse jogo se chama \"Brincando de Laboratório\".
+        \n\nVeja se consegue descobrir o que cada bloco faz."
+      courseB_playLab_events1_2019: "Esse jogo se chama \"Brincando de Laboratório\".
+        \n\nVeja se consegue descobrir o que cada bloco faz."
+      courseB_playlab_events3: Use um evento para fazer Daisy o Dragão mudar para
+        um humor aleatório ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
+        quando você clicar nela.
+      courseB_playlab_events3_2018: Use um evento para fazer Daisy o Dragão mudar
+        para um humor aleatório ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
+        quando você clicar nela.
+      courseB_playlab_events3_2019: Use um evento para fazer Daisy o Dragão mudar
+        para um humor aleatório ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
+        quando você clicar nela.
+      courseB_playlab_events4: |-
+        Hora do Cavaleiro!
+
+        Adicione um evento para fazer o cavaleiro se mover em direção ao dragão quando a seta esquerda é pressionada.
       courseB_playlab_events6: |-
         Ajude o seu cavaleiro a pegar todas as bandeiras!
 
@@ -10248,10 +11753,55 @@ pt-BR:
         Ajude o seu cavaleiro a pegar todas as bandeiras!
 
         Para fazer isso, você precisará adicionar eventos que ajudem o cavaleiro a mover-se para cima, para baixo, para esquerda e para a direita.
+      courseB_playlab_events7: |-
+        Vamos fazer esse jogo mais divertido fazendo o cavaleiro sumir em seu caminho para pagar as bandeiras e encontrar ao dragão!
+
+        Toque uma música quando eles colidirem para trazer uma sensação mais realista.
+
+        Visite todos os objetivos, e então corra em direção ao dragão para passar de nível.
+      courseB_playlab_events_challenge1: "É hora da Grande Corrida Animal! Faça os
+        animais se moverem para baixo quando você pressionar `▼`. \n\nQuem irá se
+        mover mais rápido?"
+      courseB_playlab_events_challenge1_2018: "É hora da Grande Corrida Animal! Faça
+        os animais se moverem para baixo quando você pressionar `▼`. \n\nQuem irá
+        se mover mais rápido?"
+      courseB_playlab_events_challenge1_2019: "É hora da Grande Corrida Animal! Faça
+        os animais se moverem para baixo quando você pressionar `▼`. \n\nQuem irá
+        se mover mais rápido?"
+      courseB_playlab_events_challenge2: |-
+        Vamos fazer os animais sumirem quando você clicar neles.
+        Tente brincar com o cachorro agora, depois ajude outros animais a entrarem na brincadeira.
+        Você também pode adicionar sons e marcar pontos para criar um jogo de Marcadores Animais!
+
+        ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+      courseB_playlab_events_challenge2_2018: |-
+        Vamos fazer os animais sumirem quando você clicar neles.
+        Tente brincar com o cachorro agora, depois ajude outros animais a entrarem na brincadeira.
+        Você também pode adicionar sons e marcar pontos para criar um jogo de Marcadores Animais!
+
+        ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+      courseB_playlab_events_challenge2_2019: |-
+        Vamos fazer os animais sumirem quando você clicar neles.
+        Tente brincar com o cachorro agora, depois ajude outros animais a entrarem na brincadeira.
+        Você também pode adicionar sons e marcar pontos para criar um jogo de Marcadores Animais!
+
+        ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
       courseB_starWars_prog1: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Vá pegar a sucata, BB-8!"_
 
         Cuidado com as paredes e caixas. A sucata se parece com isso: ![foto de sucata](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseB_starWars_prog10: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Consegue pega-los?"_'
+      courseB_starWars_prog10_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Consegue pega-los?"_'
+      courseB_starWars_prog10_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Consegue pega-los?"_'
+      courseB_starWars_prog11: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Continue!"_'
+      courseB_starWars_prog11_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Continue!"_'
+      courseB_starWars_prog11_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Continue!"_'
       courseB_starWars_prog1_2018: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Vá pegar a sucata, BB-8!"_
 
@@ -10278,6 +11828,36 @@ pt-BR:
         _"Pegue-o, BB-8!"_'
       courseB_starWars_prog4_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Pegue-o, BB-8!"_'
+      courseB_starWars_prog5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Consegue pega-los?"_'
+      courseB_starWars_prog5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Consegue pega-los?"_'
+      courseB_starWars_prog5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Consegue pega-los?"_'
+      courseB_starWars_prog6: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Você consegue!"_'
+      courseB_starWars_prog6_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Você consegue!"_'
+      courseB_starWars_prog6_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Você consegue!"_'
+      courseB_starWars_prog7: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Vai, pega!"_'
+      courseB_starWars_prog7_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Vai, pega!"_'
+      courseB_starWars_prog7_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Vai, pega!"_'
+      courseB_starWars_prog8: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Continue assim, BB-8.\"_ \n\n**Desafio**: Junte toda a sucata."
+      courseB_starWars_prog8_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Continue assim, BB-8.\"_ \n\n**Desafio**: Junte toda a sucata."
+      courseB_starWars_prog8_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Continue assim, BB-8.\"_ \n\n**Desafio**: Junte toda a sucata."
+      courseB_starWars_prog9: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Você consegue!"_'
+      courseB_starWars_prog9_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Você consegue!"_'
+      courseB_starWars_prog9_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Você consegue!"_'
       courseC19_playLab_EOC2: "Use blocos como \"eventos\" e \"ações\" para fazer
         seu personagem se mover quando você pressionar as teclas do teclado. \n\nConduza
         o personagem aos alvos para completar o desafio."
@@ -10293,10 +11873,10 @@ pt-BR:
         esquerda / à direita, para atingir todos os alvos!
       courseC_PlayLab_eventsA_embed_2019: Vamos jogar um jogo. Marque 5 pontos quando
         mover o Pinguim para o Polvo!
-      courseC_artist_loop1_2019: |-
-        _"Fantástico!"_
-
-        Vamos mudar o pincel para dar um pouco de estilo, utilizando o bloco <xml><block type="draw_line_style_pattern" block-text="set pattern"><title name="VALUE">DEFAULT</title></block></xml> antes da repetição começar.
+      courseC_artist_loop1_2019: "_\"Fantástico!\"_ \n\nVamos adicionar um pouco de
+        estilo, mudando o pincel utilizando o bloco <xml><block type=\"draw_line_style_pattern\"
+        block-text=\"set pattern\"> <title name=\"VALUE\">DEFAULT</title></block></xml>
+        antes do laço começar."
       courseC_artist_loops1a_2019: |-
         **Jogo Livre:** Vamos construir algo maior, um passo de cada vez!
 
@@ -10319,6 +11899,10 @@ pt-BR:
         ![expandable](https://images.code.org/30fe9d37758abd27055d9a6e5a890680-image-1553097358155.png)
         ![expandable](https://images.code.org/61feed00662019b99ac774322231f084-image-1553097362176.png)
         ![expandable](https://images.code.org/fd123bb703ea4c630218a12eb5994053-image-1553097354066.png)
+      courseC_artist_loops2a: Agora, use um laço para girar o pássaro ao redor 12
+        vezes com um giro de 30 graus.
+      courseC_artist_loops2a_2018: Agora, use um laço para girar o pássaro ao redor
+        12 vezes com um giro de 30 graus.
       courseC_artist_loops2a_2019: |-
         Agora use uma repetição para fazer mais cópias do seu adesivo. Tente mudar os números nos blocos `girar` e `repetir` para criar padrões diferentes.
 
@@ -10339,10 +11923,10 @@ pt-BR:
 
         Pressione "Finalizar" quando você estiver feliz com o que fez.
 
-        [expandable] [0]
-        [expandable] [1]
-        [expandable] [2]
-        [expandable] [3]
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+        ![expandable](https://images.code.org/5774170704916cfddcf2e98c2c01d718-image-1553099207939.png)
+        ![expandable](https://images.code.org/9b016314df4aed5165c76282bab0cea1-image-1553099212229.png)
+        ![expandable](https://images.code.org/2cf50b8e9ae75803f15908304c22a10b-image-1553099215987.png)
       courseC_artist_loops5b_2019: |-
         O que acontece quando você `avança` e então `volta` 100, 200 ou 400 pixels em algum ponto dentro da repetição?
 
@@ -10353,24 +11937,51 @@ pt-BR:
         [expandable] [0]
         [expandable] [1]
         [expandable] [2]
-      courseC_artist_loopsPrePre1a_2019: |-
-        O artista está no lugar errado!
-
-        Utilize o bloco <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para levar o artista para o centro da área.
-        Então, desenhe uma linha com 50 pixels de comprimento com o bloco <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
+      courseC_artist_loopsPrePre1a_2019: "O artista está no lugar errado!\n\nUtilize
+        o bloco <xml><block type=\"jump_to_xy\" id=\"callMe\" block-text=\"jump to
+        200 over 200 down\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>
+        para levar o artista para o centro da área.  \nEntão, desenhe uma linha com
+        50 pixels de comprimento com o bloco <xml><block type=\"draw_move_by_constant\"
+        block-text=\"move forward\"><title name=\"DIR\">Avance</title><title name=\"VALUE\">50</title></block></xml>."
       courseC_collector_prog2_2019: Mova Laurel para o tesouro, então use o bloco
         <xml><block type="collector_collect" block-text="collect"/></xml> para coletá-lo.
+      courseC_collector_prog8: _"Continue fazendo um bom trabalho! Me ajude a coletar
+        todo o tesouro."_
+      courseC_collector_prog8_2018: _"Continue fazendo um bom trabalho! Me ajude a
+        coletar todo o tesouro."_
+      courseC_collector_prog8_2019: _"Continue fazendo um bom trabalho! Me ajude a
+        coletar todo o tesouro."_
       courseC_collector_prog9: _"Vamos pegar todo o tesouro!"_
       courseC_collector_prog9_2018: _"Vamos pegar todo o tesouro!"_
       courseC_collector_prog9_2019: _"Vamos pegar todo o tesouro!"_
       courseC_data wizard: Execute o jogo. O mago fará os animais aparecerem. Conte
         quantos animais são. O que você notou?
+      courseC_flappy_events7: Em seguida, tente trocar a cena conectando outro bloco
+        ao bloco de "quando o jogo começa".
+      courseC_flappy_events7_2018: Em seguida, tente trocar a cena conectando outro
+        bloco ao bloco de "quando o jogo começa".
+      courseC_flappy_events7_2019: Em seguida, tente trocar a cena conectando outro
+        bloco ao bloco de "quando o jogo começa".
+      courseC_flappy_events9: Para misturar um pouco, ao invés de terminar o jogo
+        quando o Flappy bater em um obstáculo, tente definir a pontuação para 0.
+      courseC_flappy_events9_2018: Para misturar um pouco, ao invés de terminar o
+        jogo quando o Flappy bater em um obstáculo, tente definir a pontuação para
+        0.
+      courseC_flappy_events9_2019: Para misturar um pouco, ao invés de terminar o
+        jogo quando o Flappy bater em um obstáculo, tente definir a pontuação para
+        0.
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11_2019: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops2: Você consegue combinar dois laços diferentes para
+        se mover até às abóboras, e coletar todas elas?
+      courseC_harvester_loops2_2018: Você consegue combinar dois laços diferentes
+        para se mover até às abóboras, e coletar todas elas?
+      courseC_harvester_loops2_2019: Você consegue combinar dois laços diferentes
+        para se mover até às abóboras, e coletar todas elas?
       courseC_harvester_loops3: Colete todas as abóboras.
       courseC_harvester_loops3_2018: Colete todas as abóboras.
       courseC_harvester_loops3_2019: Colete todas as abóboras.
@@ -10386,6 +11997,18 @@ pt-BR:
       courseC_harvester_loops9: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2019: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops_challenge2: Colete todos os alfaces. Evite as árvores
+        e os campos!
+      courseC_harvester_loops_challenge2_2018: Colete todos os alfaces. Evite as árvores
+        e os campos!
+      courseC_harvester_loops_challenge2_2019: Colete todos os alfaces. Evite as árvores
+        e os campos!
+      courseC_maze_programming1: Neste quebra-cabeça, arraste todos os blocos juntos
+        e clique em "Executar" para ver o que acontece!
+      courseC_maze_programming1_2018: Neste quebra-cabeça, arraste todos os blocos
+        juntos e clique em "Executar" para ver o que acontece!
+      courseC_maze_programming1_2019: Neste quebra-cabeça, arraste todos os blocos
+        juntos e clique em "Executar" para ver o que acontece!
       courseC_maze_programming2_2019: Arraste um bloco extra <xml><block type="maze_moveForward"
         block-text="move forward"/></xml> para fora da caixa de ferramentas para concluir
         seu código.
@@ -10401,24 +12024,39 @@ pt-BR:
         o porco mal."_
       courseC_maze_programming8_predict1_2019: _" Mantenha a calma e ajude-me a encontrar
         o porco mal."_
+      courseC_maze_programming9: _"Agora, me ajude a espiar o porco do jeito que você
+        achar melhor!"_
+      courseC_maze_programming9_2018: _"Agora, me ajude a espiar o porco do jeito
+        que você achar melhor!"_
+      courseC_maze_programming9_2019: _"Agora, me ajude a espiar o porco do jeito
+        que você achar melhor!"_
       courseC_maze_programming_challenge1: 'O pássaro precisa de sua ajuda! O porco
         está escondido, e o objetivo é encontrá-lo. '
       courseC_maze_programming_challenge1_2018: 'O pássaro precisa de sua ajuda! O
         porco está escondido, e o objetivo é encontrá-lo. '
       courseC_maze_programming_challenge1_2019: 'O pássaro precisa de sua ajuda! O
         porco está escondido, e o objetivo é encontrá-lo. '
-      courseD_artist_2_2018_2019: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Bom trabalho!”_
-
-        Depois do seu exágono, vire **60** graus á direita, e depois desenhe uma linha com **150** pixels de comprimento.
-
-        Finalize movendo a Elsa para o centro da área, utilizando o bloco <xml><block type="jump_to" block-text="jump to the middle center position"><title name="VALUE">middle center</title></block></xml>.
+      courseC_maze_programming_challenge2: |-
+        Algumas vezes existe mais de uma forma de solucionar um problema.
+        Algumas vezes é mais fácil ir para trás do que ir para frente!
+      courseC_maze_programming_challenge2_2018: |-
+        Algumas vezes existe mais de uma forma de solucionar um problema.
+        Algumas vezes é mais fácil ir para trás do que ir para frente!
+      courseC_maze_programming_challenge2_2019: |-
+        Algumas vezes existe mais de uma forma de solucionar um problema.
+        Algumas vezes é mais fácil ir para trás do que ir para frente!
+      courseD_artist_2_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Bom trabalho!”_\n\nDepois do seu exágono, vire **60** graus á direita, e
+        depois desenhe uma linha com **150** pixels de comprimento.   \n\nFinalize
+        movendo a Elsa para o centro da área, utilizando o bloco <xml><block type=\"jump_to\"
+        block-text=\"jump to the middle center position\"><title name=\"VALUE\">middle
+        center</title></block></xml>."
       courseD_artist_5_2018_2019: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Tente mudar as formas ou comprimentos das linhas para fazer o seu próprio!"_
 
         <br/>
 
-        **Inspiração:** Você pode mudar seu desenho como quiser, mas aqui está uma idiia:
+        **Inspiração:** Você pode mudar seu desenho como quiser, mas aqui está uma ideia:
 
         -   Tente alterar os tipos de formas do centro do floco de neve com o do fim de cada linha!
       courseD_bee_conditionals3: Você só pode coletar nectar das flores, mas você
@@ -10505,6 +12143,8 @@ pt-BR:
       courseD_maze_until7_2018: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until7_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
+      courseD_scrat_ramp1: Neste quebra-cabeça, arraste todos os blocos juntos e clique
+        em "Executar" para ver o que acontece!
       courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
       courseE_aboutme_1: |-
         ![](https://images.code.org/93e1c04857ff781bb5c4cc76b15ed563-image-1557179820861.png)_"Olá, mundo! Meu nome é Rikki, e aqui estão algumas coisas que eu gostaria de compartilhar sobre mim!"_
@@ -10541,6 +12181,17 @@ pt-BR:
         ![](https://images.code.org/2bae4bc7c7d59fac0cd4b1370d3c4a11-image-1557179992653.png)_"Adicione mais sprites no seu cartaz! Não esqueça de adicionar fantasias a eles!"_
 
         Adicione **pelo menos dois** outros sprites no seu cartaz. Dê a cada sprite uma fantasia única!
+      courseE_aboutme_5: |-
+        ![](https://images.code.org/0c3ec1da3493c3e10f5ec714ef1670e3-image-1557185359875.png) _"Diga para todo o Mundo sobre você através do seu novos sprites!"_
+
+        Faça os seus outros sprites mostrarem informações quando são clicados. Tenha certeza de que o que você está compartilhando é SEGURO!
+      courseE_aboutme_6: "![](https://images.code.org/4e9c4465463d0c061b2b47b23d5817ca-image-1557185863600.png)
+        _\"Wow! Seu poster é quase tão legal quando o meu! Quase. \U0001F609\"_\n\nDe
+        quem é esse mundo?! É seu! \n\nEntão, continue! Aqui tem algumas ideias para
+        fazer o seu poster ficar ainda melhor:\n\n-   Adicione um plano de fundo!
+        Escolha um plano de fundo que combine com o seu poster.\n-   Adicione comportamentos!
+        Faça cada um dos seus sprites reagir de maneira diferente quando são clicados.\n-
+        \  Adicione mais eventos! Use os outros blocos na categoria `Eventos`."
       courseE_bee_functions2: "As funções são blocos de código que realizam uma tarefa.
         \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       courseE_bee_functions3: "As funções são blocos de código que realizam\numa tarefa.
@@ -10641,6 +12292,45 @@ pt-BR:
         \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado."
       grade5_artist_variables_triangles1_2019: "Vamos desenhar um triângulo equilátero.
         \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado."
+      grade5_pixelation: |-
+        # Faça a sua própria imagem de qualquer tamanho
+
+        ![](https://images.code.org/01c15fed4f1a2c6c3af531edc35e736e-image-1439596066108.png)
+        ![](https://images.code.org/24efcaa184d1fc852f37c32911b3b87c-image-1439596070178.png)
+        ![](https://images.code.org/c9a5d0fd5ba445b7f6b5744e08b50e49-image-1439596071878.png)
+        ![](https://images.code.org/f14e1b8dd722b0ca5bc54fa96b34f2eb-image-1439596074236.png)
+        ![](https://images.code.org/fe938c0c16453b9d461b4023098079df-image-1439596075744.png)
+        ![](https://images.code.org/02c88a7da51289b2f2d1f64bd8c97b28-image-1439596077514.png)
+        ![](https://images.code.org/309e3157dcfd91956181007f483f8e58-image-1439596079084.png)
+
+        **Instruções:**
+
+        -   Codifique uma imagem de qualquer coisa que goste usando `binário`.
+        -   A linguagem binaria é representado por `0` e `1` apenas.
+        -   Você provavelmente irá querer desenhar e planejar com um papel quadriculado primeiro.
+        -   Descreva algo, talvez seu nome, suas iniciais, um ícone ou logotipo qualquer.
+        -   Seja criativo! A imagem não precisa ser um quadro perfeito, pode ser um quadrado longo e estreito.
+      mike3bit: |-
+        # Cores de 3 bits
+
+        **Instruções:**
+
+        -   Nos podemos ajuda-lo com uma imagem 4x2 que Maddie estava criando, mas deixamos alguns poucos pixels de fora.
+        -   Termine a image descobrindo que cores estão faltando e codificando-as.
+      mike3bitbird: "# Cores de 3 bits\n\nAqui está um exemplo de uma imagem feita
+        com cores de 3 bits. Tente modifica-la para ver como funciona. \n\n_Se quiser
+        iniciar novamente, pressione \"Recomeçar\"._"
+      mike3bitfreeplay: |-
+        # Cores de 3 bits
+
+        Você tem mais ultima chance de experimentar e praticar sua criatividade com a ferramenta de pixelização. Faça algo incrível e compartilhe com seus colegas de classe!
+
+        -   _Dica:_ Você pode copiar e colar o valor do pixel para utiliza-lo repetidamente.
+      mike3bitmario: "# Cores de 3 bits\n\n**Desafio:** \n\nUm programador binário
+        desleixado digitou um digito a mais de 0 ou 1 em algum lugar da imagem. Esse
+        digito extra está causando um erro no Mario!\n\nDelete o bit extra para fazer
+        o Mario voltar ao normal!\n\n![](<https://images.code.org/8b7c17ba204a1a4d33e1bd6de7f01d76-image-1477306657312.54.57
+        AM.png>)"
       ramp_artist_loops4_2019: Você pode criar essa estrela repetindo a sequencia
         de blocos `avance` e `vire à direita em 144 graus`.
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado com lados de
