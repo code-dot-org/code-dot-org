@@ -1,22 +1,43 @@
-require_relative 'retriever.rb'
-
 module Pd::SurveyPipeline
-  class DailySurveyRetriever < RetrieverBase
-    attr_reader :workshop_ids, :form_ids
+  class DailySurveyRetriever < SurveyPipelineWorker
+    REQUIRED_INPUT_KEYS = [:filters]
+    OUTPUT_KEYS = [:survey_questions, :workshop_submissions, :facilitator_submissions]
 
-    # Set filters for this retriever.
-    # @param workshop_ids [Array<Integer>] array of selected workshop ids
-    # @param form_ids [Array<Integer>] array of selected form ids
-    def initialize(workshop_ids: nil, form_ids: nil)
-      @workshop_ids = workshop_ids
-      @form_ids = form_ids
+    # TODO: summary, explain input param, raise.
+    # @param context [Hash]
+    # @return the same context
+    # @raise
+    #
+    # @note This function modifies content of input parameter.
+    #
+    def self.process_data(context)
+      missing_keys = REQUIRED_INPUT_KEYS - context.keys
+      # TODO: raise ArgumentError and write test
+      raise "Missing required input key(s) in #{self.class.name}: #{missing_keys}" if missing_keys.present?
+
+      results = retrieve_data context.slice(*REQUIRED_INPUT_KEYS)
+
+      OUTPUT_KEYS.each do |key|
+        context[key] ||= []
+        context[key] += results[key]
+      end
+
+      context
     end
 
     # Retrieve data from Pd::SurveyQuestion, Pd::WorkshopDailySurvey
     # and Pd::WorkshopFacilitatorDailySurvey.
+    #
+    # @param filters [Hash{:workshop_ids, :form_ids => Array<Integer>}] contains array of selected
+    #   workshop ids form ids.
+    #
     # @return [Hash{:survey_questions, :workshop_submissions, :facilitator_submissions => Array}]
     #   contains arrays of questions and submissions.
-    def retrieve_data
+    #
+    def self.retrieve_data(filters:)
+      workshop_ids = filters[:workshop_ids]
+      form_ids = filters[:form_ids]
+
       # Build where clause from filter values
       submission_filter = {}
       submission_filter[:pd_workshop_id] = workshop_ids if workshop_ids.present?

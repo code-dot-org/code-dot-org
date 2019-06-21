@@ -23,6 +23,8 @@ module Pd::SurveyPipeline
       }
     end
 
+    # TODO: test main `map_reduce` function. It doesn't even run
+
     test 'group data using no key' do
       # Empty group config returns 1 group with all data
       summary = group_and_summarize([])

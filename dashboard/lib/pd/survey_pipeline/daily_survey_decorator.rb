@@ -1,7 +1,5 @@
-require_relative 'decorator.rb'
-
 module Pd::SurveyPipeline
-  class DailySurveyDecorator < DecoratorBase
+  class DailySurveyDecorator < SurveyPipelineWorker
     FORM_IDS_TO_NAMES = {
       "90066184161150".to_i => {
         full_name: 'CS Fundamentals Deep Dive Pre-survey',
@@ -17,6 +15,24 @@ module Pd::SurveyPipeline
       }
     }
 
+    REQUIRED_INPUT_KEYS = [:summaries, :questions, :submissions, :current_user]
+    OPTIONAL_INPUT_KEYS = [:errors]
+    OUTPUT_KEYS = [:decorated_summaries]
+
+    def self.process_data(context)
+      missing_keys = REQUIRED_INPUT_KEYS - context.keys
+      raise "Missing required input key(s) in #{self.class.name}: #{missing_keys}" if missing_keys.present?
+
+      results = decorate context.slice(*(REQUIRED_INPUT_KEYS + OPTIONAL_INPUT_KEYS))
+
+      OUTPUT_KEYS.each do |key|
+        context[key] ||= {}
+        context[key].merge! results[key]
+      end
+
+      context
+    end
+
     # Combine summary data and parsed data into a format that UI client will understand.
     #
     # @param summary_data [Array<Hash>] an array of summary results.
@@ -25,8 +41,12 @@ module Pd::SurveyPipeline
     # @current_user [User] user making survey report request.
     #
     # @return [Hash] data returned to client to render.
-    def self.decorate(summary_data:, parsed_data:, current_user:)
-      return unless summary_data && parsed_data
+    #
+    def self.decorate(summaries:, questions:, submissions:, current_user:, errors: [])
+      # TODO: update to parsed_questions|submissions
+      summary_data = summaries
+      parsed_questions = questions
+      parsed_submissions = submissions
 
       result = {
         course_name: nil,
@@ -35,10 +55,11 @@ module Pd::SurveyPipeline
         all_my_workshops: {},
         facilitators: {},
         facilitator_averages: {},
-        facilitator_response_counts: {}
+        facilitator_response_counts: {},
+        errors: errors
       }
 
-      question_by_names = index_question_by_names(parsed_data[:questions])
+      question_by_names = index_question_by_names(parsed_questions)
 
       # Populate entries for result[:this_workshop] and result[:questions]
       summary_data.each do |summary|
@@ -56,7 +77,7 @@ module Pd::SurveyPipeline
         # Create top structures if not already created
         result[:course_name] ||= Pd::Workshop.find_by_id(workshop_id)&.course
         result[:this_workshop][form_name] ||= {
-          response_count: parsed_data[:submissions][form_id].size,
+          response_count: parsed_submissions[form_id].size,
           general: {},
           facilitator: {}
         }
@@ -69,6 +90,7 @@ module Pd::SurveyPipeline
         # Format for facilicator-specific result:
         # Hash{form_name => {response_count => number,
         #   facilitator => {question_name => {factilitator_name => summary_result}}}}
+        #
         if summary[:facilitator_id]
           facilitator_name = User.find_by_id(summary[:facilitator_id])&.name ||
             summary[:facilitator_id].to_s
@@ -86,6 +108,7 @@ module Pd::SurveyPipeline
         #
         # Facilitator question format:
         # Hash{form_name => {facilitator => {question_name => question_content}}}
+        #
         q_content = question_by_names.dig(form_id, q_name)
         if summary[:facilitator_id]
           result[:questions][form_name][:facilitator][q_name] ||= q_content
@@ -94,7 +117,8 @@ module Pd::SurveyPipeline
         end
       end
 
-      result
+      # TODO: note the explicit input and output keys
+      {decorated_summaries: result}
     end
 
     def self.data_visible_to_user?(user, data)
@@ -122,6 +146,7 @@ module Pd::SurveyPipeline
     #   @see DailySurveyParser parse_survey function to see how questions data is created.
     #
     # @return [Hash{form_id => {question_name => question_content}}]
+    #
     def self.index_question_by_names(questions)
       q_indexes = {}
       questions&.each do |form_id, form_questions|
