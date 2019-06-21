@@ -1,4 +1,4 @@
-import {expect} from '../../../util/configuredChai';
+import {expect} from 'chai';
 
 import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
 
