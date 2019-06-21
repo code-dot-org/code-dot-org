@@ -73,6 +73,8 @@ export default class BubbleChoice extends React.Component {
 
   render() {
     const {level} = this.props;
+    const backButtonUrl = level.previous_level_url || level.script_url;
+    const continueButtonUrl = level.next_level_url || level.script_url;
 
     return (
       <div>
@@ -98,24 +100,24 @@ export default class BubbleChoice extends React.Component {
           </div>
         ))}
         <div style={styles.btnContainer}>
-          <button
-            type="button"
-            onClick={() =>
-              this.goToUrl(level.previous_level_url || level.script_url)
-            }
-            style={styles.btn}
-          >
-            {i18n.back()}
-          </button>
-          <button
-            type="button"
-            onClick={() =>
-              this.goToUrl(level.next_level_url || level.script_url)
-            }
-            style={{...styles.btn, ...styles.btnOrange}}
-          >
-            {level.next_level_url ? i18n.continue() : i18n.finish()}
-          </button>
+          {backButtonUrl && (
+            <button
+              type="button"
+              onClick={() => this.goToUrl(backButtonUrl)}
+              style={styles.btn}
+            >
+              {i18n.back()}
+            </button>
+          )}
+          {continueButtonUrl && (
+            <button
+              type="button"
+              onClick={() => this.goToUrl(continueButtonUrl)}
+              style={{...styles.btn, ...styles.btnOrange}}
+            >
+              {level.next_level_url ? i18n.continue() : i18n.finish()}
+            </button>
+          )}
         </div>
       </div>
     );
