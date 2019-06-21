@@ -1,3 +1,7 @@
+/*
+ * Contains firehose tracking for buttons on the student privacy page.
+ */
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 $(document).ready(function() {
