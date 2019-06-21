@@ -807,7 +807,6 @@ it:
   pdf_download: Scarica il PDF
   download_coming_soon: La descrizione di questa attività è in corso di preparazione.
   video_coming_soon: Il video è in corso di preparazione!
-  not_started: Lo studente non ha provato questo esercizio.
   share_code:
     title: Clicca su "Esegui" per vedere il mio programma in azione
     bounce_og_title: Prova la mia versione del Ping-Pong
@@ -1220,7 +1219,7 @@ it:
     csf_nested_loops: Cicli annidati
     csf_functions: Funzioni
     csf_variables: Variabili
-    csf_for_loops: Cicli con Contatore
+    csf_for_loops: Cicli con contatore
     csf_internet: Internet
     csf_warmup: Riscaldamento
     csd1_1: 'Capitolo 1: il Problem Solving'
