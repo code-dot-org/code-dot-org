@@ -108,6 +108,10 @@ export default class SchoolInfoInputs extends Component {
     const askForName = SCHOOL_TYPES_HAVING_NAMES.includes(
       this.props.schoolType
     );
+
+    // Added condition to show required field indicator(asterisk)
+    // only when type is NCES. If non-US or US, non-NCES school,
+    // type field is not required (asterisk is not shown).
     let isNcesSchool = false;
     const ncesSchoolType = ['public', 'private', 'charter'];
     if (ncesSchoolType.includes(this.props.schoolType)) {
