@@ -32,16 +32,6 @@ module Pd::SurveyPipeline
           '{"Sub question 1": "Option 1", "Sub question 2": "Option 2", "Sub question 3": "Option 3"}}'
     end
 
-    test 'raise if missing input keys' do
-      context = {}
-
-      exception = assert_raises RuntimeError do
-        DailySurveyParser.process_data context
-      end
-
-      assert exception.message.start_with?('Missing required input key')
-    end
-
     test 'produce output keys' do
       context = {
         survey_questions: [@ws_survey_questions],
@@ -51,8 +41,8 @@ module Pd::SurveyPipeline
 
       DailySurveyParser.process_data context
 
-      assert context[:questions].present?
-      assert context[:submissions].present?
+      assert context[:parsed_questions].present?
+      assert context[:parsed_submissions].present?
     end
 
     test 'can parse questions' do

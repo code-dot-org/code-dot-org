@@ -3,17 +3,15 @@ module Pd::SurveyPipeline
     REQUIRED_INPUT_KEYS = [:filters]
     OUTPUT_KEYS = [:survey_questions, :workshop_submissions, :facilitator_submissions]
 
-    # TODO: summary, explain input param, raise.
-    # @param context [Hash]
-    # @return the same context
-    # @raise
+    # @param context [Hash] contains necessary input for this worker to process.
+    #   Results are added back to the context object.
     #
-    # @note This function modifies content of input parameter.
+    # @return [Hash] the same context object.
+    #
+    # @raise [RuntimeError] if required input keys are missing.
     #
     def self.process_data(context)
-      missing_keys = REQUIRED_INPUT_KEYS - context.keys
-      # TODO: raise ArgumentError and write test
-      raise "Missing required input key(s) in #{self.class.name}: #{missing_keys}" if missing_keys.present?
+      check_required_input_keys REQUIRED_INPUT_KEYS, context
 
       results = retrieve_data context.slice(*REQUIRED_INPUT_KEYS)
 

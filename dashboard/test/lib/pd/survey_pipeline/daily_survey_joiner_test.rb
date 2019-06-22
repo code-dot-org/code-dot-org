@@ -52,7 +52,7 @@ module Pd::SurveyPipeline
         submission_no_content.merge(question_content['Q3']).merge(qid: 'Q3', answer: 'Like it')
       ]
 
-      context = {questions: questions, submissions: submissions}
+      context = {parsed_questions: questions, parsed_submissions: submissions}
       DailySurveyJoiner.process_data context
 
       assert_equal expected_result, context[:question_answer_joined]
@@ -106,7 +106,7 @@ module Pd::SurveyPipeline
           )
       end
 
-      context = {questions: questions, submissions: submissions}
+      context = {parsed_questions: questions, parsed_submissions: submissions}
       DailySurveyJoiner.process_data context
 
       assert_equal expected_result, context[:question_answer_joined]
