@@ -578,6 +578,50 @@ designMode.readProperty = function(element, name) {
   }
 };
 
+designMode.onRestoreThemeDefaults = function(element) {
+  const currentThemeValue = elementLibrary.getCurrentTheme(
+    designMode.activeScreen()
+  );
+  const themeValues = elementLibrary.getThemeValues(element);
+  let modifiedProperty = false;
+  // Start a new batched set of updateProperty() calls:
+  batchChangeId++;
+  for (const propName in themeValues) {
+    const dataModifiedAttributeName = `data-mod-${propName}`;
+    const propTheme = themeValues[propName];
+    const currentDefault = propTheme[currentThemeValue];
+    const currentPropValue = designMode.readProperty(element, propName);
+    const {type} = propTheme;
+    //
+    // Update properties to the theme default
+    //
+    let propNeedsUpdate;
+    if (type === 'color') {
+      propNeedsUpdate =
+        new RGBColor(currentPropValue).toHex() ===
+        new RGBColor(currentDefault).toHex();
+    } else {
+      propNeedsUpdate = currentPropValue !== currentDefault;
+    }
+    if (propNeedsUpdate) {
+      designMode.updateProperty(
+        element,
+        propName,
+        currentDefault,
+        null,
+        batchChangeId
+      );
+      modifiedProperty = true;
+    }
+    // Since we're resetting to the default theme value, in all cases,
+    // remove the attribute marking the element as explicitly modified:
+    element.removeAttribute(dataModifiedAttributeName);
+  }
+  if (modifiedProperty) {
+    designMode.renderDesignWorkspace(element);
+  }
+};
+
 designMode.onDuplicate = function(element, prevThemeName, event) {
   let isScreen = $(element).hasClass('screen');
   if (isScreen) {
@@ -1530,6 +1574,10 @@ designMode.renderDesignWorkspace = function(element) {
     onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
     onDuplicate: designMode.onDuplicate.bind(this, element, null),
+    onRestoreThemeDefaults: designMode.onRestoreThemeDefaults.bind(
+      this,
+      element
+    ),
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleVersionHistory: Applab.handleVersionHistory,

@@ -8,6 +8,7 @@ import DeleteElementButton from './designElements/DeleteElementButton';
 import ElementSelect from './ElementSelect';
 import DuplicateElementButton from './designElements/DuplicateElementButton';
 import CopyElementToScreenButton from './designElements/CopyElementToScreenButton';
+import RestoreThemeDefaultsButton from './designElements/RestoreThemeDefaultsButton';
 
 let nextKey = 0;
 
@@ -20,6 +21,7 @@ export default class DesignProperties extends React.Component {
     onChangeElement: PropTypes.func.isRequired,
     onDepthChange: PropTypes.func.isRequired,
     onDuplicate: PropTypes.func.isRequired,
+    onRestoreThemeDefaults: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired,
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired
@@ -225,6 +227,9 @@ export default class DesignProperties extends React.Component {
                 )}
                 <DuplicateElementButton
                   handleDuplicate={this.props.onDuplicate}
+                />
+                <RestoreThemeDefaultsButton
+                  handleRestore={this.props.onRestoreThemeDefaults}
                 />
                 {!onlyOneScreen && !isScreen && (
                   <CopyElementToScreenButton
