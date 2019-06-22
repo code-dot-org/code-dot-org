@@ -28,9 +28,10 @@ import experiments from '../../../util/experiments';
  *
  * @param {five.Board} board - the johnny-five board object that needs new
  *        components initialized.
+ * @param {boolean} expressBoard - True if the board is a Circuit Playground Express
  * @returns {Promise.<Object.<String, Object>>} board components
  */
-export function createCircuitPlaygroundComponents(board) {
+export function createCircuitPlaygroundComponents(board, expressBoard) {
   // Must initialize sound sensor BEFORE left button, otherwise left button
   // will not respond to input.  This has something to do with them sharing
   // pin 4 on the board.
@@ -58,7 +59,7 @@ export function createCircuitPlaygroundComponents(board) {
 
       tempSensor,
 
-      accelerometer: initializeAccelerometer(board),
+      accelerometer: initializeAccelerometer(board, expressBoard),
 
       buttonL: new Button({board, pin: 4}),
 
@@ -244,7 +245,7 @@ function initializeThermometer(board) {
   });
 }
 
-function initializeAccelerometer(board) {
+function initializeAccelerometer(board, expressBoard) {
   const accelerometer = new five.Accelerometer({
     board,
     controller: PlaygroundIO.Accelerometer
@@ -252,13 +253,26 @@ function initializeAccelerometer(board) {
   accelerometer.start = function() {
     accelerometer.io.sysexCommand([CP_COMMAND, CP_ACCEL_STREAM_ON]);
   };
-  accelerometer.getOrientation = function(orientationType) {
+  accelerometer.getOrientation = function(
+    orientationType,
+    express = expressBoard
+  ) {
     if (undefined === orientationType) {
       return [
         accelerometer.getOrientation('x'),
         accelerometer.getOrientation('y'),
         accelerometer.getOrientation('z')
       ];
+    }
+
+    // Accelerometer on the express board is rotated 90 degrees from classic board.
+    // Conditional ensures consistent output of 'pitch'/'roll' across both boards
+    if (express) {
+      if (orientationType === 'pitch') {
+        return accelerometer['roll'];
+      } else if (orientationType === 'roll') {
+        return -1 * accelerometer['pitch'];
+      }
     }
     return accelerometer[orientationType];
   };

@@ -21,7 +21,13 @@ import {
 } from './PlaygroundConstants';
 import Button from './Button';
 import Led from './Led';
-import {isNodeSerialAvailable} from './portScanning';
+import {
+  isNodeSerialAvailable,
+  ADAFRUIT_VID,
+  CIRCUIT_PLAYGROUND_EXPRESS_PID,
+  CIRCUIT_PLAYGROUND_PID,
+  findPortWithViableDevice
+} from './portScanning';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -31,6 +37,12 @@ const SERIAL_BAUD = 57600;
 
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
 const pinMapping = {A0: 12, A1: 6, A2: 9, A3: 10, A4: 3, A5: 2, A6: 0, A7: 1};
+
+export const BOARD_TYPE = {
+  CLASSIC: 'classic',
+  EXPRESS: 'express',
+  OTHER: 'other'
+};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using
@@ -56,6 +68,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
+
+    /** @private {string} a board identifier, e.g. "classic" */
+    this.boardType_ = BOARD_TYPE.OTHER;
   }
 
   /**
@@ -65,6 +80,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   connect() {
     return Promise.resolve()
       .then(() => this.connectToFirmware())
+      .then(() => this.detectBoardType())
       .then(() => this.initializeComponents())
       .then(() => this.initializeEventForwarding());
   }
@@ -108,6 +124,27 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   /**
+   * Detects the type of board plugged into the serial port
+   */
+  detectBoardType() {
+    return findPortWithViableDevice().then(port => {
+      if (
+        parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
+        parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_PID
+      ) {
+        this.boardType_ = BOARD_TYPE.CLASSIC;
+      } else if (
+        parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
+        parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID
+      ) {
+        this.boardType_ = BOARD_TYPE.EXPRESS;
+      } else {
+        this.boardType_ = BOARD_TYPE.OTHER;
+      }
+    });
+  }
+
+  /**
    * Initialize a set of johnny-five component controllers.
    * Exposed as a separate step here for the sake of the setup page; generally
    * it'd be better to just call connect(), above.
@@ -120,16 +157,16 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         'Cannot initialize components: Not connected to board firmware.'
       );
     }
-
-    return createCircuitPlaygroundComponents(this.fiveBoard_).then(
-      components => {
-        this.prewiredComponents_ = {
-          board: this.fiveBoard_,
-          ...components,
-          ...J5_CONSTANTS
-        };
-      }
-    );
+    return createCircuitPlaygroundComponents(
+      this.fiveBoard_,
+      this.boardType_ === BOARD_TYPE.EXPRESS
+    ).then(components => {
+      this.prewiredComponents_ = {
+        board: this.fiveBoard_,
+        ...components,
+        ...J5_CONSTANTS
+      };
+    });
   }
 
   /**
