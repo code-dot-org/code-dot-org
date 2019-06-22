@@ -150,6 +150,15 @@ DSL
     refute_nil sublevel_summary.last[:url]
   end
 
+  test 'summarize_sublevels with user_id' do
+    student = create :student
+    create :user_level, user: student, level: @sublevel1, best_result: ActivityConstants::BEST_PASS_RESULT
+    sublevel_summary = @bubble_choice.summarize_sublevels(user_id: student.id)
+    assert_equal 2, sublevel_summary.length
+    assert sublevel_summary.first[:perfect]
+    assert_nil sublevel_summary.last[:perfect]
+  end
+
   test 'best_result_sublevel_id returns sublevel with highest best_result for user' do
     student = create :student
     create :user_level, user: student, level: @sublevel2, best_result: 100
