@@ -155,6 +155,7 @@ class ActivitiesController < ApplicationController
     attributes = {
       user: current_user,
       level: @level,
+      script: @script_level&.script,
       action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
       test_result: test_result,
       attempt: params[:attempt].to_i,
