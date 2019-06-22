@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const THUMBNAIL_IMAGE_SIZE = 150;
@@ -25,6 +26,17 @@ const styles = {
     width: THUMBNAIL_IMAGE_SIZE,
     height: THUMBNAIL_IMAGE_SIZE,
     backgroundColor: color.lighter_gray
+  },
+  thumbnailOverlay: {
+    position: 'absolute',
+    width: THUMBNAIL_IMAGE_SIZE,
+    height: THUMBNAIL_IMAGE_SIZE,
+    backgroundColor: 'rgba(0, 255, 0, 0.3)'
+  },
+  check: {
+    fontSize: THUMBNAIL_IMAGE_SIZE,
+    color: '#fff',
+    opacity: 0.8
   },
   column: {
     marginLeft: MARGIN * 2
@@ -58,7 +70,8 @@ export default class BubbleChoice extends React.Component {
           id: PropTypes.number.isRequired,
           title: PropTypes.string.isRequired,
           thumbnail_url: PropTypes.string,
-          url: PropTypes.string.isRequired
+          url: PropTypes.string.isRequired,
+          perfect: PropTypes.bool
         })
       )
     })
@@ -108,6 +121,11 @@ export default class BubbleChoice extends React.Component {
         <h2 style={styles.h2}>{i18n.chooseActivity()}</h2>
         {level.sublevels.map(sublevel => (
           <div key={sublevel.id} style={styles.row}>
+            {sublevel.perfect && (
+              <div style={styles.thumbnailOverlay}>
+                <FontAwesome icon="check" style={styles.check} />
+              </div>
+            )}
             {/* Render a square-shaped placeholder if we don't have a thumbnail. */}
             {sublevel.thumbnail_url ? (
               <img src={sublevel.thumbnail_url} style={styles.thumbnail} />
