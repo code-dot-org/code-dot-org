@@ -164,7 +164,13 @@ class ActivitiesController < ApplicationController
       level_source_id: @level_source.try(:id)
     }
 
-    allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
+    is_multi_assessment = false
+    if @script_level
+      is_sublevel = !@script_level.levels.include?(@level)
+      is_multi_assessment = @script_level.assessment && @level.is_a?(Multi) && !is_sublevel
+    end
+    allow_activity_writes = is_multi_assessment ||
+      Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
     if allow_activity_writes
       @activity = Activity.new(attributes).tap(&:atomic_save!)
     end
