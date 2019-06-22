@@ -15,13 +15,19 @@ module Pd::SurveyPipeline
       }
     }
 
-    REQUIRED_INPUT_KEYS = [:summaries, :questions, :submissions, :current_user]
+    REQUIRED_INPUT_KEYS = [:summaries, :parsed_questions, :parsed_submissions, :current_user]
     OPTIONAL_INPUT_KEYS = [:errors]
     OUTPUT_KEYS = [:decorated_summaries]
 
+    # @param context [Hash] contains necessary input for this worker to process.
+    #   Results are added back to the context object.
+    #
+    # @return [Hash] the same context object.
+    #
+    # @raise [RuntimeError] if required input keys are missing.
+    #
     def self.process_data(context)
-      missing_keys = REQUIRED_INPUT_KEYS - context.keys
-      raise "Missing required input key(s) in #{self.class.name}: #{missing_keys}" if missing_keys.present?
+      check_required_input_keys REQUIRED_INPUT_KEYS, context
 
       results = decorate context.slice(*(REQUIRED_INPUT_KEYS + OPTIONAL_INPUT_KEYS))
 
@@ -35,19 +41,15 @@ module Pd::SurveyPipeline
 
     # Combine summary data and parsed data into a format that UI client will understand.
     #
-    # @param summary_data [Array<Hash>] an array of summary results.
-    # @param parsed_data [Hash{:questions, :submissions => Hash}}] parsed questions and
-    #   submissions we got from the previous step DailySurveyParser.
-    # @current_user [User] user making survey report request.
+    # @param summaries [Array<Hash>] an array of summary results.
+    # @param parsed_questions [Hash] question data get from DailySurveyParser.
+    # @param parsed_submissions [Hash] submission data get from DailySurveyParser.
+    # @param current_user [User] user making survey report request.
+    # @param errors [Array] non-fatal errors encounterd when calculating survey summaries.
     #
-    # @return [Hash] data returned to client to render.
+    # @return [Hash] data returned to client.
     #
-    def self.decorate(summaries:, questions:, submissions:, current_user:, errors: [])
-      # TODO: update to parsed_questions|submissions
-      summary_data = summaries
-      parsed_questions = questions
-      parsed_submissions = submissions
-
+    def self.decorate(summaries:, parsed_questions:, parsed_submissions:, current_user:, errors: [])
       result = {
         course_name: nil,
         questions: {},
@@ -62,7 +64,7 @@ module Pd::SurveyPipeline
       question_by_names = index_question_by_names(parsed_questions)
 
       # Populate entries for result[:this_workshop] and result[:questions]
-      summary_data.each do |summary|
+      summaries.each do |summary|
         # Only process summarization for specific workshops and forms.
         form_id = summary[:form_id]
         workshop_id = summary[:workshop_id]
@@ -117,7 +119,6 @@ module Pd::SurveyPipeline
         end
       end
 
-      # TODO: note the explicit input and output keys
       {decorated_summaries: result}
     end
 

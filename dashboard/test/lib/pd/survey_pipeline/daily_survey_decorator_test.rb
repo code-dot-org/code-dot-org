@@ -95,8 +95,8 @@ module Pd::SurveyPipeline
 
       context = {
         summaries: summary_data,
-        questions: parsed_questions,
-        submissions: parsed_submissions,
+        parsed_questions: parsed_questions,
+        parsed_submissions: parsed_submissions,
         current_user: @workshop_admin
       }
 
@@ -165,8 +165,8 @@ module Pd::SurveyPipeline
 
       context = {
         summaries: summary_data,
-        questions: parsed_questions,
-        submissions: parsed_submissions,
+        parsed_questions: parsed_questions,
+        parsed_submissions: parsed_submissions,
         current_user: @workshop_admin
       }
 

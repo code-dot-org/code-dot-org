@@ -7,10 +7,15 @@ module Pd::SurveyPipeline
     REQUIRED_INPUT_KEYS = [:questions, :submissions]
     OUTPUT_KEYS = [:question_answer_joined]
 
-    # TODO: summary, explain input param, raise.
+    # @param context [Hash] contains necessary input for this worker to process.
+    #   Results are added back to the context object.
+    #
+    # @return [Hash] the same context object.
+    #
+    # @raise [RuntimeError] if required input keys are missing.
+    #
     def self.process_data(context)
-      missing_keys = REQUIRED_INPUT_KEYS - context.keys
-      raise "Missing required input key(s) in #{self.class.name}: #{missing_keys}" if missing_keys.present?
+      check_required_input_keys REQUIRED_INPUT_KEYS, context
 
       results = transform_data context.slice(*REQUIRED_INPUT_KEYS)
 
@@ -26,12 +31,12 @@ module Pd::SurveyPipeline
     # so they can be summarized later.
     #
     # @param questions [Hash{form_id => {question_id => question_content}}]
-    # @param answers [Hash{form_id => {submission_id => submission_content}}]
+    # @param submissions [Hash{form_id => {submission_id => submission_content}}]
     #
-    # @return [Array<Hash>]
-    #   Hash has following keys: form_id, submission_id,
+    # @return [Hash{:question_answer_joined => Array<Hash>}]
+    #   Each hash in value array has following keys: form_id, submission_id,
     #   user_id, pd_session_id, pd_workshop_id, day, facilitator_id, answer,
-    #   qid, type, name, text, order, hidden, options, max_value, parent
+    #   qid, type, name, text, order, hidden, options, max_value, parent.
     #
     # @note This method could change input data such as adding sub questions into
     # question list.

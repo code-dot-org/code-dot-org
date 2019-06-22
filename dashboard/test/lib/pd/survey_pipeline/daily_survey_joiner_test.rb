@@ -20,17 +20,6 @@ module Pd::SurveyPipeline
       }
     end
 
-    test 'raise if missing input keys' do
-      context = {}
-
-      # TODO: check class name in error message is correct and enough to find where the issue is
-      exception = assert_raises RuntimeError do
-        DailySurveyJoiner.process_data context
-      end
-
-      assert exception.message.start_with?('Missing required input key')
-    end
-
     test 'join submission and non-matrix questions' do
       # Set up questions for 1 form
       question_content = {
