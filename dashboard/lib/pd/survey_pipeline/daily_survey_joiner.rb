@@ -4,7 +4,7 @@ module Pd::SurveyPipeline
   class DailySurveyJoiner < SurveyPipelineWorker
     include Pd::JotForm::Constants
 
-    REQUIRED_INPUT_KEYS = [:questions, :submissions]
+    REQUIRED_INPUT_KEYS = [:parsed_questions, :parsed_submissions]
     OUTPUT_KEYS = [:question_answer_joined]
 
     # @param context [Hash] contains necessary input for this worker to process.
@@ -30,8 +30,8 @@ module Pd::SurveyPipeline
     # Join questions and submissions data, modify and flatten the results
     # so they can be summarized later.
     #
-    # @param questions [Hash{form_id => {question_id => question_content}}]
-    # @param submissions [Hash{form_id => {submission_id => submission_content}}]
+    # @param parsed_questions [Hash{form_id => {question_id => question_content}}]
+    # @param parsed_submissions [Hash{form_id => {submission_id => submission_content}}]
     #
     # @return [Hash{:question_answer_joined => Array<Hash>}]
     #   Each hash in value array has following keys: form_id, submission_id,
@@ -44,13 +44,13 @@ module Pd::SurveyPipeline
     # @see DailySurveyParser class, parse_survey and parse_submissions functions
     # for detailed structures of input params.
     #
-    def self.transform_data(questions:, submissions:)
+    def self.transform_data(parsed_questions:, parsed_submissions:)
       results = []
 
-      submissions.each_pair do |form_id, form_submissions|
+      parsed_submissions.each_pair do |form_id, form_submissions|
         # Bad data, couldn't find this form_id. Ignore instead of raising exception.
         # TODO: capture non-fatal error
-        next unless questions[form_id]
+        next unless parsed_questions[form_id]
 
         form_submissions.each_pair do |submission_id, submission_content|
           shared_submission_info = submission_content.
@@ -58,7 +58,7 @@ module Pd::SurveyPipeline
             except(:answers)
 
           submission_content[:answers]&.each do |qid, ans|
-            question = questions[form_id][qid]
+            question = parsed_questions[form_id][qid]
             # Bad data, couldn't find this (form_id, qid) combination in questions list.
             # Ignore instead of raising exception.
             # TODO: capture non-fatal error
@@ -82,7 +82,7 @@ module Pd::SurveyPipeline
                   answer_type: ANSWER_SINGLE_SELECT,
                   max_value: question[:options]&.length, parent: question[:name]
                 )
-                questions[form_id][new_qid] = new_question
+                parsed_questions[form_id][new_qid] = new_question
 
                 # Create flatten question-answer record
                 results << shared_submission_info.

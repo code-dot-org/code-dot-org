@@ -3,12 +3,17 @@ module Pd::SurveyPipeline
     include Pd::JotForm::Constants
 
     REQUIRED_INPUT_KEYS = [:survey_questions, :workshop_submissions, :facilitator_submissions]
-    OUTPUT_KEYS = [:questions, :submissions]
+    OUTPUT_KEYS = [:parsed_questions, :parsed_submissions]
 
-    # TODO: summary, explain input param, raise.
+    # @param context [Hash] contains necessary input for this worker to process.
+    #   Results are added back to the context object.
+    #
+    # @return [Hash] the same context object.
+    #
+    # @raise [RuntimeError] if required input keys are missing.
+    #
     def self.process_data(context)
-      missing_keys = REQUIRED_INPUT_KEYS - context.keys
-      raise "Missing required input key(s) in #{self.class.name}: #{missing_keys}" if missing_keys.present?
+      check_required_input_keys REQUIRED_INPUT_KEYS, context
 
       results = transform_data context.slice(*REQUIRED_INPUT_KEYS)
 
@@ -33,8 +38,8 @@ module Pd::SurveyPipeline
       facilitator_submissions = parse_submissions(facilitator_submissions)
 
       {
-        questions: parse_questions(survey_questions),
-        submissions: workshop_submissions.merge(facilitator_submissions)
+        parsed_questions: parse_questions(survey_questions),
+        parsed_submissions: workshop_submissions.merge(facilitator_submissions)
       }
     end
 
