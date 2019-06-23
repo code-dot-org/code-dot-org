@@ -124,7 +124,9 @@ export default class SchoolNotFound extends Component {
     }
   }
 
-  renderLabel(text, isRequired = true) {
+  // isLabelRequired is a check to display an asterisk next to the
+  // required field name.
+  renderLabel(text, isLabelRequired = true) {
     const {singleLineLayout, showRequiredIndicators} = this.props;
     const questionStyle = {
       ...styles.question,
@@ -133,7 +135,7 @@ export default class SchoolNotFound extends Component {
     return (
       <div style={questionStyle}>
         {text}
-        {showRequiredIndicators && isRequired && (
+        {showRequiredIndicators && isLabelRequired && (
           <span style={styles.asterisk}> *</span>
         )}
       </div>
@@ -163,13 +165,16 @@ export default class SchoolNotFound extends Component {
     // Check if country selected is US or non-US.  This new check
     // is used to decide which fields in the school info interstitial
     // form should be required.
-    let countryIsNotUS = false;
+    let countryIsUS = false;
     if (this.props.country && this.props.country === 'United States') {
-      countryIsNotUS = true;
+      countryIsUS = true;
     }
-    let isRequired = countryIsNotUS;
+
+    // An asterisk is not displayed next to the field name if
+    // school type is non-nces school
+    let isLabelRequired = countryIsUS;
     if (!this.props.isNcesSchool) {
-      isRequired = false;
+      isLabelRequired = false;
     }
 
     return (
@@ -184,7 +189,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolName !== OMIT_FIELD && (
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                {this.renderLabel(this.props.schoolNameLabel, isRequired)}
+                {this.renderLabel(this.props.schoolNameLabel, isLabelRequired)}
                 <input
                   id="school_name"
                   type="text"
@@ -199,7 +204,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolType !== OMIT_FIELD && (
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                {this.renderLabel(i18n.schoolType(), countryIsNotUS)}
+                {this.renderLabel(i18n.schoolType(), countryIsUS)}
                 <select
                   id="school_type"
                   name={this.props.fieldNames.schoolType}
