@@ -59,9 +59,9 @@ export default class SchoolTypeDropdown extends Component {
       <div style={styles.errors}>{i18n.censusRequiredSelect()}</div>
     );
 
-    let countryIsNotUS = false;
+    let countryIsUS = false;
     if (this.props.country && this.props.country === 'United States') {
-      countryIsNotUS = true;
+      countryIsUS = true;
     }
 
     return (
@@ -69,7 +69,7 @@ export default class SchoolTypeDropdown extends Component {
         <div style={styles.singleLineContainerStyles}>
           <div style={styles.singleLineLayoutStyles}>
             {i18n.signupFormSchoolType()}
-            {this.props.showRequiredIndicator && countryIsNotUS && (
+            {this.props.showRequiredIndicator && countryIsUS && (
               <span style={styles.asterisk}> *</span>
             )}
           </div>
