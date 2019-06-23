@@ -20,7 +20,7 @@ export default class StudentFeedbackNotification extends Component {
         notice={i18n.feedbackNotification()}
         details={notificationDetails}
         buttonText={i18n.feedbackNotificationButton()}
-        buttonLink="/"
+        buttonLink={this.props.linkToFeedbackOverview}
         dismissible={false}
       />
     );
