@@ -1,4 +1,4 @@
-/* global Applab */
+/* global Applab, dashboard */
 import $ from 'jquery';
 import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';
@@ -23,6 +23,7 @@ import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 import {getStore} from '../redux';
 import {applabObjectFitImages} from './applabObjectFitImages';
+import firehoseClient from '../lib/util/firehose';
 
 var designMode = {};
 export default designMode;
@@ -577,6 +578,9 @@ designMode.readProperty = function(element, name) {
   }
 };
 
+const FIREHOSE_STUDY = 'applab';
+const FIREHOSE_GROUP = 'design_mode';
+
 designMode.onDuplicate = function(element, event) {
   let isScreen = $(element).hasClass('screen');
   if (isScreen) {
@@ -584,6 +588,17 @@ designMode.onDuplicate = function(element, event) {
     return elementUtils.getPrefixedElementById(newScreenId);
   }
 
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: FIREHOSE_GROUP,
+    event: 'duplicate_element',
+    project_id: dashboard.project.getCurrentId(),
+    data_json: JSON.stringify({
+      elementId: element.id,
+      elementTag: element.tagName,
+      elementClass: element.className
+    })
+  });
   var duplicateElement = $(element).clone(true)[0];
   var dupLeft = parseInt(element.style.left, 10) + 10;
   var dupTop = parseInt(element.style.top, 10) + 10;
@@ -671,6 +686,16 @@ designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
 };
 
 function duplicateScreen(element) {
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: FIREHOSE_GROUP,
+    event: 'duplicate_screen',
+    project_id: dashboard.project.getCurrentId(),
+    data_json: JSON.stringify({
+      elementId: element.id
+    })
+  });
+
   const sourceScreen = $(element);
   const sourceScreenId = elementUtils.getId(element);
   const newScreenId = designMode.createScreen();
@@ -723,6 +748,19 @@ function duplicateScreen(element) {
 }
 
 designMode.onCopyElementToScreen = function(element, destScreen) {
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: FIREHOSE_GROUP,
+    event: 'copy_to_screen',
+    project_id: dashboard.project.getCurrentId(),
+    data_json: JSON.stringify({
+      elementId: element.id,
+      elementTag: element.tagName,
+      elementClass: element.className,
+      destinationScreen: destScreen
+    })
+  });
+
   const sourceElement = $(element);
   designMode.changeScreen(destScreen);
 
@@ -758,6 +796,17 @@ designMode.onDeletePropertiesButton = function(element, event) {
 };
 
 function deleteElement(element) {
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: FIREHOSE_GROUP,
+    event: 'delete_element',
+    project_id: dashboard.project.getCurrentId(),
+    data_json: JSON.stringify({
+      elementId: element.id,
+      elementTag: element.tagName,
+      elementClass: element.className
+    })
+  });
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
     element = element.parentNode;
