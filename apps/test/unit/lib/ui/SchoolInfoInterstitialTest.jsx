@@ -252,7 +252,7 @@ describe('SchoolInfoInterstitial', () => {
       server.restore();
     });
 
-    it('submits with no info', () => {
+    it('does not submit form with no info', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -267,7 +267,7 @@ describe('SchoolInfoInterstitial', () => {
       expect(wrapper.state('errors').country).to.equal(true);
     });
 
-    it('submits with only country=US', () => {
+    it('does not submit form with only country=US', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -285,7 +285,7 @@ describe('SchoolInfoInterstitial', () => {
       expect(wrapper.state('errors').schoolType).to.equal(true);
     });
 
-    it('submits with US and an NCES school type', () => {
+    it('does not submit form with US and an NCES school type', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
