@@ -98,14 +98,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
         serialPort
       );
-      if (experiments.isEnabled('detect-board')) {
-        this.detectFirmwareVersion(playground);
-      }
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
+        if (experiments.isEnabled('detect-board')) {
+          this.detectFirmwareVersion(playground);
+        }
         resolve();
       });
       board.on('error', reject);
