@@ -2121,6 +2121,8 @@ bs:
           stages:
             Lists:
               name: Liste
+            Images:
+              name: Slike
         csd3-pilot:
           stages:
             Variables:

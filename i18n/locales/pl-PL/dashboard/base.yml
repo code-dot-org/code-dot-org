@@ -546,7 +546,6 @@ pl:
   pdf_download: 'Pobierz PDF'
   download_coming_soon: 'Już wkrótce aktywności  do pobrania.'
   video_coming_soon: 'Wkrótce wideo!'
-  not_started: 'Uczeń nie próbował na tym poziomie.'
   share_code:
     title: "Kliknij \"Uruchom\", aby zobaczyć mój program w akcji"
     bounce_og_title: "Sprawdź moją grę w odbijanie"

@@ -5558,6 +5558,10 @@ ka:
               name: RGB ფერები და კლასები
             Project - Personal Portfolio Website:
               name: პროექტი - პირადი პორტფოლიოს ვებ-საიტი
+            Intellectual Property:
+              name: ინტელექტუალური ქონება
+            Images:
+              name: სურათები
         csd3-pilot:
           description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
           stages:
@@ -5599,3 +5603,7 @@ ka:
               name: თამაშის დიზაინის პროცესის გამოყენება
             Project - Design a Game:
               name: პროექტი - შექმენით თამაშის დიზაინი
+        maddie-test:
+          stages:
+            new stage:
+              name: ახალი დონე

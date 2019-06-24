@@ -593,6 +593,13 @@ th-TH:
           ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
 
           น้องๆ อาจจะออกแบบเองหรือคลิก ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) เพื่อดูไอเดียก็ได้
+      course1_artist_loops_challenge2:
+        harvey_tictactoe: คุณสามารถใช้บล็อก `กระโดด` เพื่อเคลื่อนที่ไปยังพื้นที่อื่น
+      course1_artist_loops_challenge3:
+        courseA_artist_loops_challenge2_a: 'บล็อกพวกนี้: <xml>  <block type="simple_move_up_left"/></xml>
+          จะทำให้ศิลปินเดินตามทางลาดเอียงได้นะ!'
+        courseA_artist_loops_challenge2_b: เมื่อสร้างบ้านนกหลังแรกเสร็จแล้ว `กระโดด`เพื่อไปยังหลังถัดไปเลย!
+        courseA_artist_loops_challenge2_c: คุณต้องการบล็อกเยอะมากอยู่ในลูปเพื่อการท้าทายนี้
       course1_collector_loops_challenge1:
         courseA_collector_loops_challenge1_a: ลองเปลี่ยนจำนวนตัวเลขในแต่ละลูปดู ถ้ามีบางอย่างที่ดูแล้วไม่น่าจะถูกต้อง
         courseA_collector_loops_challenge1_b: คุณไม่จำเป็นต้องใช้ ลูป ถ้าคุณแค่ทำบางอย่างแค่เพียงครั้งเดียวเท่านั้น
@@ -605,11 +612,96 @@ th-TH:
           คุณสามารถเดินกลับไปบนเส้นทางเดิมได้ ก่อนที่จะเดินลงไปทางทิศใต้
 
           ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
+      course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_b: |-
+          เริ่มต้นโดยการวนลูปคำสั่ง `เคลื่อนไปทางใต้` และ `เก็บสมบัติ`
+
+          <xml>
+            <block type="maze_moveSouth"/><next>
+            <block type="collector_collect"/></next>
+            </xml>
+        courseB_collector_loops_challenge1_a: |-
+          รูปแบบที่อยู่ทางด้านทิศเหนือจะแตกต่างจากรูปแบบที่อยู่ทางด้านทิศใต้อยู่เล็กน้อย
+
+          <xml>
+            <block type="collector_collect"/><next>
+            <block type="maze_moveNorth"/></next>next>
+            </xml>
+        courseB_collector_loops_challenge1_c: "เคลื่อนไปทางทิศตะวันออกสองครั้งในแต่ละเส้นทาง\n\n<xml>\n
+          \ <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n
+          \ </xml>\n\nคุณสามารถทำสิ่งนี้ได้โดยใช้บล็อกเพียงแค่ 14 บล็อกเท่านั้น คลิกหาคำใบ้อีกครั้งเพื่อดูเฉลยวิธีการแก้ปัญหา "
+      course1_collector_loops_challenge4:
+        courseB_collector_loops_challenge2_a: ถ้าทำอะไรพลาดไป อย่ากลัวที่จะเริ่มต้นใหม่
+          อย่ายอมแพ้นะ!
+        courseB_collector_loops_challenge2_b: |-
+          ถ้าคุณทำตามรูปแบบนี้ซ้ำหลายรอบ ลอเรลจะไม่เดินชนกำแพงที่อยู่ด้านล่างของถ้ำเลย!
+
+          <xml><block type="maze_moveEast">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveWest">
+                                  <next>
+                                    <block type="maze_moveSouth"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block></xml>
+        courseB_collector_loops_challenge2_c: ลองใช้บล็อก `ทำซ้ำ` เพื่อเก็บกองสมบัติกองสุดท้ายให้หมดดูสิ!
+        courseB_collector_loops_challenge2_d: |-
+          ลองใช้วิธีนี้สิ:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="3-10">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveWest">
+                                  <next>
+                                    <block type="maze_moveSouth"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="3-10">6</title>
+                      <statement name="DO">
+                        <block type="collector_collect"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      course1_maze_debugging_challenge1:
+        courseA_maze_seq_challenge1_a: บางเส้นทางอาจจะพาไปโดนระเบิด TNT เข้าให้ถ้าคุณเคลื่อนที่ไกลเกินไป
       course1_maze_debugging_challenge2:
         courseB_maze_seq_challenge2_a: ไม่มีความจำเป็นสำหรับคุณในการแก้ปริศนานี้ ที่จะต้องเพิ่มบล็อกใหม่เข้าไปหรือลบบล็อกที่มีอยู่ในพื้่นที่ทำงานออก
         courseB_maze_seq_challenge2_b: จัดวางบล็อกเหล่านี้ใหม่และเลือกใช้เส้นทางที่พาดไปตรงกลาง
       course1_maze_seq_challenge1:
         courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างใช้นิ้วของคุณ จำไว้ว่าต้องไม่นับรวมเอาที่ที่คุณเริ่มต้น!
+      course1_maze_seq_challenge2:
+        courseB_maze_seq_challenge1_b: ควรเริ่มจากเดินไปทางตะวันตกก่อน
       course1_playlab_events_challenge1:
         courseA_playlab_events_challenge1_a: "ให้แวดเดิล เจ้านกเพนกวินปรากฎตัวเมื่อคุณคลิกที่รอบิน
           เจ้านกสีแดง\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
@@ -1736,6 +1828,69 @@ th-TH:
         courseB_collector_loops4_b: เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ
       courseB_collector_loops4_2019:
         courseB_collector_loops4_b: เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ
+      courseB_collector_loops_challenge2:
+        courseB_collector_loops_challenge2_a: ถ้าทำอะไรพลาดไป อย่ากลัวที่จะเริ่มต้นใหม่
+          อย่ายอมแพ้นะ!
+        courseB_collector_loops_challenge2_b: |-
+          ถ้าคุณทำตามรูปแบบนี้ซ้ำหลายรอบ ลอเรลจะไม่เดินชนกำแพงที่อยู่ด้านล่างของถ้ำเลย!
+
+          <xml><block type="maze_moveEast">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveWest">
+                                  <next>
+                                    <block type="maze_moveSouth"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block></xml>
+        courseB_collector_loops_challenge2_c: ลองใช้บล็อก `ทำซ้ำ` เพื่อเก็บกองสมบัติกองสุดท้ายให้หมดดูสิ!
+        courseB_collector_loops_challenge2_d: |-
+          ลองใช้วิธีนี้สิ:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="3-10">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveWest">
+                                  <next>
+                                    <block type="maze_moveSouth"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="3-10">6</title>
+                      <statement name="DO">
+                        <block type="collector_collect"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseB_iceage_loops1:
         courseB_iceage_loops1_a: ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!
         courseB_iceage_loops1_b: |-

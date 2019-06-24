@@ -45,7 +45,7 @@ pt-BR:
       CSD LEDs Map: 'Circuit Playground: LEDs'
       CSD LEDs Map_2018: 'Circuit Playground: LEDs'
       CSD LEDs Map_2019: 'Circuit Playground: LEDs'
-      CSD Problem Solving Process Video: 'Vídeo: Processo de resolução de problemas'
+      CSD Problem Solving Process Video: 'Vídeo: Processo de Resolução de Problemas'
       CSD Set Scale Map: Alterando a escala do Sensor
       CSD Set Scale Map_2018: Alterando a escala do Sensor
       CSD Set Scale Map_2019: Alterando a escala do Sensor
@@ -305,6 +305,9 @@ pt-BR:
       CSD U3 platform sample1: Amostra de Jogo de plataforma
       CSD U3 platform sample1_2018: Amostra de Jogo de plataforma
       CSD U3 platform sample1_2019: Amostra de Jogo de plataforma
+      CSD U3 platform sample2: Saltador de avião
+      CSD U3 platform sample2_2018: Saltador de avião
+      CSD U3 platform sample2_2019: Saltador de avião
       CSD U3 platform sample3: Coelho Saltador
       CSD U3 platform sample3_2018: Coelho Saltador
       CSD U3 platform sample3_2019: Coelho Saltador
@@ -420,7 +423,7 @@ pt-BR:
       CSD U5 Amazon Data Video: Coletando Informações sobre Usuários
       CSD U5 Amazon Data Video_2018: Coletando Informações sobre Usuários
       CSD U5 Amazon Data Video_2019: Coletando Informações sobre Usuários
-      CSD U5 Netflix Data Video_2019: Como Netflix usa dados
+      CSD U5 Netflix Data Video_2019: Como a Netflix usa dados
       CSD U5 Waze Data Video: Coletando Informações sobre Usuários
       CSD U5 Waze Data Video_2018: Coletando Informações sobre Usuários
       CSD U5 Waze Data Video_2019: Coletando Informações sobre Usuários
@@ -488,7 +491,7 @@ pt-BR:
       CSD U6 arrays intro: Introdução a Arrays
       CSD U6 arrays intro_2018: Introdução a Arrays
       CSD U6 arrays intro_2019: Vetores
-      CSD U6 arrays video: 'Vídeo: Introdução a Vetores'
+      CSD U6 arrays video: 'Vídeo: Introdução a Matrizes'
       CSD U6 challenge motorcycle_2018: 'Desafio: Motocicleta'
       CSD U6 challenge motorcycle_2019: 'Desafio: Motocicleta'
       CSD U6 circuit LED map: Circuitos e LEDs
@@ -618,7 +621,7 @@ pt-BR:
       'CSD: Drawing in Game Lab 2_2019': 'Vídeo: Desenho no laboratório de jogo -
         parte 2'
       'CSD: For Loop_2018': Laços para
-      'CSD: For Loop_2019': 'Vídeo: Laços For'
+      'CSD: For Loop_2019': 'Vídeo: Laços Para'
       'CSD: Introduction to the Draw Loop': 'Vídeo: Introdução ao laço Draw'
       'CSD: Introduction to the Draw Loop_2018': 'Vídeo: Introdução ao laço Draw'
       'CSD: Introduction to the Draw Loop_2019': 'Vídeo: Introdução ao laço Draw'
