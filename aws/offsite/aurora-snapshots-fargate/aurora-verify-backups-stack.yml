@@ -104,8 +104,15 @@ Resources:
             Name: DB_INSTANCE_ID
             Value: aurora-verify-backups-instance
           -
+            Name: DB_SNAPSHOT_IDENTIFIER_PREFIX
+            Value: production
+          -
             Name: DB_SUBNET_GROUP_NAME
             Value: !ImportValue VPC-DBSubnetGroup
+          -
+            Name: REGION
+            Value: !Ref AWS::Region
+
 
   CloudwatchLogsGroup:
     Type: AWS::Logs::LogGroup
