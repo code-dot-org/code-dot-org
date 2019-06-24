@@ -27,7 +27,7 @@ describe('Sprite Lab Text Console', () => {
     });
 
     afterEach(() => {
-      clock.restore;
+      clock.restore();
     });
 
     it('opens', () => {
