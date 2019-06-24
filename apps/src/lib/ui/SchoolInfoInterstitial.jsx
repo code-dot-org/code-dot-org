@@ -39,6 +39,15 @@ const styles = {
   },
   error: {
     color: color.red
+  },
+  button: {
+    marginLeft: 7,
+    marginRight: 7,
+    marginTop: 15,
+    marginBottom: 15
+  },
+  buttonDiv: {
+    textAlign: 'center'
   }
 };
 
@@ -292,6 +301,8 @@ export default class SchoolInfoInterstitial extends React.Component {
       });
   };
 
+  dismissSchoolInfoForm = () => {};
+
   onCountryChange = (_, event) => {
     const newCountry = event ? event.value : '';
     this.setState({country: newCountry, errors: {}});
@@ -356,7 +367,16 @@ export default class SchoolInfoInterstitial extends React.Component {
           </div>
           <div style={styles.bottom}>
             <Button
+              onClick={this.dismissSchoolInfoForm}
+              style={styles.button}
+              color="gray"
+              size="large"
+              text="Dismiss"
+            />
+            <Button
               onClick={this.handleSchoolInfoSubmit}
+              style={styles.button}
+              size="large"
               text={i18n.save()}
               color={Button.ButtonColor.orange}
             />
