@@ -488,7 +488,6 @@ fi:
   pdf_download: 'Lataa PDF'
   download_coming_soon: 'Ladattavia aktiviteetteja tulossa pian.'
   video_coming_soon: 'Video tulossa pian!'
-  not_started: 'Opiskelija ei ole yrittänyt tätä tasoa.'
   share_code:
     title: "Napsauta 'Aja' nähdäksesi ohjelmani toiminnassa"
     bounce_og_title: "Tutustu Bounce-peliini"

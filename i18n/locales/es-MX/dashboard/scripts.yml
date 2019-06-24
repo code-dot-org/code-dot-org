@@ -10811,6 +10811,13 @@ es-MX:
           description_audience: Facilitadores aprendices de 6-12 en período de formación
           description_short: 'Materiales de reflexión para facilitadores aprendices de 2019 en período de formación '
           description: Este es el conjunto de reflexiones para facilitadores aprendices de Code.org en período de formación durante el taller de verano de 5 días. Aquí encontrarás indicaciones de reflexión para cada día de tu taller presencial de verano de 5 días. Estas preguntas serán la base del trabajo que hacemos en el Taller de Formación para Facilitadores
+        csd-sample-online:
+          stages:
+            What is a Computer? - sample progression:
+              name: '¿Qué es una computadora?: ejemplo de progresión'
+            Problem Solving Process - sample activities:
+              name: 'Proceso de resolución de problemas: ejemplo de actividades'
+          title: Ejemplo de actividades en línea de Descubrimientos de Ciencias de la Computación
         csd1-pilot:
           title: CSD Unidad 1 - La resolución de problemas y la computación ('19-'20)
           description: "La unidad sobre la resolución de problemas y la computación es una introducción muy interactiva y colaborativa al campo de las ciencias de la computación, enmarcada dentro de una búsqueda más amplia orientada a resolver problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de desafíos y escenarios del mundo real. A continuación, aprenderás cómo las computadoras toman, generan, almacenan y procesan información para ayudar a las personas a resolver problemas. La unidad concluye con un proyecto en el que diseñas una aplicación que ayuda a resolver un problema de tu elección.\\r\n"
@@ -10917,6 +10924,10 @@ es-MX:
               name: Prueba posterior al proyecto
             CS Discoveries Post Course survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+            Intellectual Property:
+              name: Propiedad intelectual
+            Images:
+              name: Imágenes
         csd3-pilot:
           title: CSD Unidad 3 - Animaciones y juegos ('19-'20)
           description: " En la Unidad 3, desarrollarás tu experiencia de programación a medida que programes animaciones, arte interactivo y juegos en el Laboratorio de juegos. La unidad comienza con formas simples y, a partir de los mismos conceptos de programación y el proceso de diseño que usan los científicos informáticos a diario, añade juegos más sofisticados basados en sprites. En el proyecto final, desarrollarás un programa personalizado e interactivo."
@@ -11017,3 +11028,7 @@ es-MX:
               name: Prueba posterior al proyecto
             CS Discoveries Post Course survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+        maddie-test:
+          stages:
+            new stage:
+              name: nueva etapa

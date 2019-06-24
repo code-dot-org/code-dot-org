@@ -222,14 +222,6 @@ ga:
             '"space"': spás
             '"x"': x
             '"y"': y
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': randamach
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": randamach
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -250,10 +242,6 @@ ga:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': faoi
               uisce
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': geimhreadh
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': randamach
       gamelab_setProp:
         options:
           PROPERTY:
@@ -270,23 +258,6 @@ ga:
           CONDITION:
             '"when"': nuair
             '"while"': chomh fada is atá
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': nuair
-            '"while"': chomh fada is atá
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
       gamelab_turn:
         options:
           DIRECTION:
@@ -307,11 +278,6 @@ ga:
             "'down'": ag an mbun
             "'left'": ar chlé
             "'right'": ar dheis
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': nuair
-            '"while"': chomh fada is atá
       gamelab_whileKey:
         options:
           KEY:

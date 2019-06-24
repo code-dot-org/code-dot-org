@@ -224,14 +224,6 @@ fil:
             '"right"': kanan
             '"space"': space
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': nang hindi pinipili
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": nang hindi pinipili
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -251,10 +243,6 @@ fil:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sa
               ilalim ng tubig
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': nang hindi pinipili
       gamelab_setProp:
         options:
           PROPERTY:
@@ -271,23 +259,6 @@ fil:
           CONDITION:
             '"when"': kelan
             '"while"': habang
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': kelan
-            '"while"': habang
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
       gamelab_turn:
         options:
           DIRECTION:
@@ -308,11 +279,6 @@ fil:
             "'down'": baba
             "'left'": kaliwa
             "'right'": kanan
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': kelan
-            '"while"': habang
       gamelab_whileKey:
         options:
           KEY:

@@ -338,9 +338,9 @@ it:
         C4_bee_conditional: 'Ape: Istruzioni Condizionali'
         C4_variables_artist: 'Artista: Variabili'
         C4_variables_playlab: 'Laboratorio: Variabili'
-        C4_for_loops: Cicli con Contatore
-        C4_for_loops_bee: Cicli con Contatore
-        C4_for_loops_no_bee: Cicli con Contatore
+        C4_for_loops: Cicli con contatore
+        C4_for_loops_bee: Cicli con contatore
+        C4_for_loops_no_bee: Cicli con contatore
         C4_math_artist: Programmare l'artista usando la matematica
         C4_function_edit: Modifica di funzioni
         C4_function_create: Creazione di funzioni
@@ -349,7 +349,7 @@ it:
         C4_unplugged_algorithms: Algoritmi per il Tangram
         C4_unplugged_madlibs: Mad-Libs
         C4_unplugged_variables: Variabili e buste
-        C4_unplugged_forloops: Cicli con Contatore
+        C4_unplugged_forloops: Cicli con contatore
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Cicli con l'artista
