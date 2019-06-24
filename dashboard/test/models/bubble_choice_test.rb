@@ -8,7 +8,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     create :game, name: 'BubbleChoice'
 
-    @sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png'
+    @sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
     @sublevel2 = create :level, name: 'choice_2'
     sublevels = [@sublevel1, @sublevel2]
     @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', title: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
@@ -88,20 +88,7 @@ DSL
     expected_summary = {
       title: @bubble_choice.title,
       description: @bubble_choice.description,
-      sublevels: [
-        {
-          id: @sublevel1.id,
-          title: @sublevel1.display_name,
-          thumbnail_url: @sublevel1.thumbnail_url,
-          url: level_url(@sublevel1.id)
-        },
-        {
-          id: @sublevel2.id,
-          title: @sublevel2.name,
-          thumbnail_url: nil,
-          url: level_url(@sublevel2.id)
-        }
-      ]
+      sublevels: @bubble_choice.summarize_sublevels
     }
 
     assert_equal expected_summary, summary
@@ -129,12 +116,14 @@ DSL
       {
         id: @sublevel1.id,
         title: @sublevel1.display_name,
+        description: @sublevel1.bubble_choice_description,
         thumbnail_url: @sublevel1.thumbnail_url,
         url: level_url(@sublevel1.id)
       },
       {
         id: @sublevel2.id,
         title: @sublevel2.name,
+        description: @sublevel2.bubble_choice_description,
         thumbnail_url: nil,
         url: level_url(@sublevel2.id)
       }
