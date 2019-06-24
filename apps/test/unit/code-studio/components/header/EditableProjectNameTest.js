@@ -57,7 +57,7 @@ describe('EditableProjectName', () => {
 
     // Modifying the input and clicking save will update the name
     const renameSpy = sinon.spy(window.dashboard.project, 'rename');
-    wrapper.find('.project_name').get(0).value = 'New Name';
+    wrapper.find('.project_name').getDOMNode().value = 'New Name';
     wrapper.find('.project_save').simulate('click');
     expect(renameSpy.calledOnce).to.be.true;
     expect(renameSpy.calledWith('New Name')).to.be.true;
