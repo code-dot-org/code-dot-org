@@ -78,6 +78,7 @@ class ScriptOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
+    verificationCheckComplete: PropTypes.bool,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
@@ -144,7 +145,11 @@ class ScriptOverviewHeader extends Component {
 
     // Checks if the non-verified teacher announcement should be shown
     if (currentView === 'Teacher') {
-      if (!this.props.isVerifiedTeacher && this.props.hasVerifiedResources) {
+      if (
+        this.props.verificationCheckComplete &&
+        !this.props.isVerifiedTeacher &&
+        this.props.hasVerifiedResources
+      ) {
         currentAnnouncements.push({
           notice: i18n.verifiedResourcesNotice(),
           details: i18n.verifiedResourcesDetails(),
@@ -277,5 +282,6 @@ export default connect(state => ({
   isSignedIn: state.progress.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
+  verificationCheckComplete: state.verifiedTeacher.verificationCheckComplete
 }))(ScriptOverviewHeader);
