@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-#FROM node:10.15
 
 RUN apt-get update && \
     apt-get install -y \
