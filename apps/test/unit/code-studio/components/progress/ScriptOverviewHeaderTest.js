@@ -5,6 +5,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 import {VisibilityType} from '../../../../../src/code-studio/scriptAnnouncementsRedux';
 import {UnconnectedScriptOverviewHeader as ScriptOverviewHeader} from '@cdo/apps/code-studio/components/progress/ScriptOverviewHeader';
+import i18n from '@cdo/locale';
 
 const defaultProps = {
   plcHeaderProps: undefined,
@@ -92,12 +93,17 @@ describe('ScriptOverviewHeader', () => {
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
+        verificationCheckComplete={true}
       />,
       {disableLifecycleMethods: true}
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
       1
+    );
+    assert.equal(
+      wrapper.find('ScriptAnnouncements').props().announcements[0].notice,
+      i18n.verifiedResourcesNotice()
     );
   });
 
@@ -137,6 +143,7 @@ describe('ScriptOverviewHeader', () => {
         S
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
+        verificationCheckComplete={true}
         announcements={[fakeTeacherAnnouncement]}
       />,
       {disableLifecycleMethods: true}
@@ -153,6 +160,7 @@ describe('ScriptOverviewHeader', () => {
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
+        verificationCheckComplete={true}
         announcements={[
           fakeTeacherAnnouncement,
           fakeTeacherAndStudentAnnouncement
