@@ -57,12 +57,14 @@ ruby
   # Summarizes the level.
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels,
   # previous/next levels, and script will be included in the summary.
+  # @param [Integer] user_id. Optional. If provided, the "perfect" field will be calculated
+  # in the sublevel summary.
   # @return [Hash]
-  def summarize(script_level: nil)
+  def summarize(script_level: nil, user_id: nil)
     summary = {
       title: title,
       description: description,
-      sublevels: summarize_sublevels(script_level: script_level)
+      sublevels: summarize_sublevels(script_level: script_level, user_id: user_id)
     }
 
     if script_level
@@ -84,8 +86,9 @@ ruby
   # Summarizes the level's sublevels.
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels
   # will be included in the summary.
+  # @param [Integer] user_id. Optional. If provided, "perfect" field will be calculated for sublevels.
   # @return [Hash[]]
-  def summarize_sublevels(script_level: nil)
+  def summarize_sublevels(script_level: nil, user_id: nil)
     summary = []
     sublevels.each_with_index do |level, index|
       level_info = {
@@ -94,8 +97,12 @@ ruby
         thumbnail_url: level.try(:thumbnail_url)
       }
 
-      if script_level
-        level_info[:url] = build_script_level_url(script_level, {sublevel_position: index + 1})
+      level_info[:url] = script_level ?
+        build_script_level_url(script_level, {sublevel_position: index + 1}) :
+        level_url(level.id)
+
+      if user_id
+        level_info[:perfect] = UserLevel.find_by(level: level, user_id: user_id)&.perfect?
       end
 
       summary << level_info
