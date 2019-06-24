@@ -157,7 +157,6 @@ export default connect(
           );
         } else if (this.props.isAttached) {
           try {
-            // if (this.props.showReactInspector) {
             // parentheses prevent the object from being interpreted as a block rather than as an object
             let result = this.props.evalInCurrentScope(
               input[0] === '{' && input[input.length - 1] === '}'
@@ -171,10 +170,6 @@ export default connect(
               output: result,
               undefinedInput: input === 'undefined' ? true : false
             });
-            // } else {
-            //   const result = this.props.evalInCurrentScope(input);
-            //   this.appendLog('< ' + String(result));
-            // }
           } catch (err) {
             this.appendLog({output: String(err)});
           }
