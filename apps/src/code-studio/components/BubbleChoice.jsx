@@ -35,7 +35,7 @@ const styles = {
   },
   check: {
     fontSize: THUMBNAIL_IMAGE_SIZE,
-    color: '#fff',
+    color: color.white,
     opacity: 0.8
   },
   column: {
