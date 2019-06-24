@@ -35,7 +35,7 @@ describe('The DebugConsole component', () => {
 
   const debugOutput = () => root.find('#debug-output');
   const debugInput = () => root.find('#debug-input');
-  const debugInputText = () => debugInput().get(0).value;
+  const debugInputText = () => debugInput().instance().value;
 
   it('renders a debug output div', () => {
     expect(debugOutput()).to.exist;
@@ -47,14 +47,15 @@ describe('The DebugConsole component', () => {
 
   function typeKey(keyCode) {
     debugInput().simulate('keydown', {
-      target: debugInput().get(0),
+      target: debugInput().instance(),
       keyCode: keyCode
     });
   }
+
   function type(text) {
     for (let i = 0; i < text.length; i++) {
-      debugInput().get(0).value += text[i];
-      typeKey(text[i]);
+      debugInput().instance().value += text[i];
+      typeKey(text[i].charCodeAt(0));
     }
   }
 
@@ -191,7 +192,7 @@ describe('The DebugConsole component', () => {
     beforeEach(() => {
       submit('1+1');
       selection = '';
-      inputEl = debugInput().get(0);
+      inputEl = debugInput().instance();
       sinon.spy(inputEl, 'focus');
       sinon.stub(window, 'getSelection').callsFake(() => selection);
     });
@@ -202,13 +203,13 @@ describe('The DebugConsole component', () => {
     });
 
     it('clicking the debug output window without selecting text will refocus the input', () => {
-      debugOutput().simulate('mouseup', {target: debugOutput().get(0)});
+      debugOutput().simulate('mouseup', {target: debugOutput().instance()});
       expect(inputEl.focus).to.have.been.called;
     });
 
     it('but if you selected some text, the input will not be refocused', () => {
       selection = 'some selected text';
-      debugOutput().simulate('mouseup', {target: debugOutput().get(0)});
+      debugOutput().simulate('mouseup', {target: debugOutput().instance()});
       expect(inputEl.focus).not.to.have.been.called;
     });
   });
@@ -216,13 +217,13 @@ describe('The DebugConsole component', () => {
   describe('debug output highlighting behavior', () => {
     it('normal debug output will not change background color', () => {
       getStore().dispatch(actions.appendLog('test normal text'));
-      expect(debugOutput().get(0).style.backgroundColor).to.equal('');
+      expect(debugOutput().instance().style.backgroundColor).to.equal('');
     });
 
     it('warning debug output will change background color to lightest yellow', () => {
       getStore().dispatch(actions.appendLog('test normal text'));
       getStore().dispatch(actions.appendLog('test warning text', 'WARNING'));
-      expect(debugOutput().get(0).style.backgroundColor).to.equal(
+      expect(debugOutput().instance().style.backgroundColor).to.equal(
         'rgb(255, 247, 223)'
       );
     });
@@ -231,7 +232,7 @@ describe('The DebugConsole component', () => {
       getStore().dispatch(actions.appendLog('test normal text'));
       getStore().dispatch(actions.appendLog('test warning text', 'WARNING'));
       getStore().dispatch(actions.appendLog('test error text', 'ERROR'));
-      expect(debugOutput().get(0).style.backgroundColor).to.equal(
+      expect(debugOutput().instance().style.backgroundColor).to.equal(
         'rgb(255, 204, 204)'
       );
     });
