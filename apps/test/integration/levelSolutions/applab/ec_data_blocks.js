@@ -92,10 +92,7 @@ export default {
       customValidator(assert) {
         // Verify that onRecordEvent was called with the correct data
         const debugOutput = document.getElementById('debug-output');
-        assert.equal(
-          debugOutput.textContent,
-          'create 2\n' + 'update 1\n' + 'delete 1'
-        );
+        assert.equal(debugOutput.textContent, '"create 2""update 1""delete 1"');
         return true;
       },
       expected: {
@@ -132,7 +129,7 @@ export default {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'create 1\n' + 'create 2\n' + 'update 1\n' + 'delete 1'
+          '"create 1"' + '"create 2"' + '"update 1"' + '"delete 1"'
         );
         return true;
       },
@@ -173,7 +170,7 @@ export default {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'create 2\n' + 'update 1\n' + 'delete 1'
+          '"create 2"' + '"update 1"' + '"delete 1"'
         );
         return true;
       },
@@ -239,7 +236,7 @@ export default {
         // Error text includes line number
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
-          String(debugOutput.textContent).startsWith('WARNING: Line: 6:'),
+          String(debugOutput.textContent).startsWith('"WARNING: Line: 6:'),
           true,
           `log message contains warning with line number: ${
             debugOutput.textContent
