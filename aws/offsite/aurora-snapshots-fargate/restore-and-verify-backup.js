@@ -1,26 +1,16 @@
 const AWS = require("aws-sdk");
 const mysqlPromise = require("promise-mysql");
 
-/*
+const DB_CLUSTER_ID = process.env.DB_CLUSTER_ID;
+const DB_INSTANCE_ID = process.env.DB_INSTANCE_ID;
 const DB_SNAPSHOT_IDENTIFIER_PREFIX = process.env.DB_SNAPSHOT_IDENTIFIER_PREFIX;
 const DB_SUBNET_GROUP_NAME = process.env.DB_SUBNET_GROUP_NAME;
-const DB_INSTANCE_CLASS = process.env.DB_INSTANCE_CLASS;
-const DB_ENGINE = process.env.DB_ENGINE;
-*/
+const REGION = process.env.REGION;
 
-const DB_SNAPSHOT_IDENTIFIER_PREFIX = "production";
-const DB_SUBNET_GROUP_NAME = "vpc-dbsubnetgroup-bsykspubr80k";
 const DB_INSTANCE_CLASS = "db.t3.medium";
 const DB_ENGINE = "aurora-mysql";
 const DB_NAME = "dashboard_production";
 const NEW_PASSWORD = "asdfasdf";
-const REGION = "us-east-1";
-/*
-const DB_CLUSTER_ID = "verification-cluster";
-const DB_INSTANCE_ID = "verification-instance";
-*/
-const DB_CLUSTER_ID = process.env.DB_CLUSTER_ID;
-const DB_INSTANCE_ID = process.env.DB_INSTANCE_ID;
 
 const restoreLatestSnapshot = async (rds, clusterId, instanceId) => {
   // Ignore snapshots with "retain" in the name or any automated snapshots
