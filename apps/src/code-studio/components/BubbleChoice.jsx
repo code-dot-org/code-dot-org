@@ -46,6 +46,9 @@ const styles = {
     fontFamily: '"Gotham 5r"',
     color: color.teal
   },
+  description: {
+    marginTop: MARGIN
+  },
   btn: {
     color: color.white,
     backgroundColor: color.lighter_gray,
@@ -69,6 +72,7 @@ export default class BubbleChoice extends React.Component {
         PropTypes.shape({
           id: PropTypes.number.isRequired,
           title: PropTypes.string.isRequired,
+          description: PropTypes.string,
           thumbnail_url: PropTypes.string,
           url: PropTypes.string.isRequired,
           perfect: PropTypes.bool
@@ -139,6 +143,9 @@ export default class BubbleChoice extends React.Component {
               <a href={sublevel.url + location.search} style={styles.title}>
                 {sublevel.title}
               </a>
+              {sublevel.description && (
+                <div style={styles.description}>{sublevel.description}</div>
+              )}
             </div>
           </div>
         ))}
