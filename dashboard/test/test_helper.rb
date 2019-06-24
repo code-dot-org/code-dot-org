@@ -34,7 +34,9 @@ ENV["RACK_ENV"] = "test"
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
-CDO.rack_env = :test if defined? CDO
+require 'mocha/mini_test'
+
+CDO.stubs(:rack_env).returns(:test) if defined? CDO
 Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
@@ -46,8 +48,6 @@ Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.can
 Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
 
 require 'rails/test_help'
-
-require 'mocha/mini_test'
 
 # Raise exceptions instead of rendering exception templates.
 Dashboard::Application.config.action_dispatch.show_exceptions = false

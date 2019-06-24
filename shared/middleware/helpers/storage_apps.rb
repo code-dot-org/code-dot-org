@@ -132,15 +132,6 @@ class StorageApps
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
   end
 
-  def get_abuse(channel_id)
-    _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
-
-    row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
-    raise NotFound, "channel `#{channel_id}` not found" unless row
-
-    row[:abuse_score]
-  end
-
   # Determine if the current user can view the project
   def get_sharing_disabled(channel_id, current_user_id)
     owner_storage_id, storage_app_id = storage_decrypt_channel_id(channel_id)
@@ -332,6 +323,12 @@ class StorageApps
     end
   rescue
     []
+  end
+
+  def self.get_abuse(channel_id)
+    _, storage_app_id = storage_decrypt_channel_id(channel_id)
+    project_info = PEGASUS_DB[:storage_apps].where(id: storage_app_id).first
+    project_info[:abuse_score]
   end
 
   private

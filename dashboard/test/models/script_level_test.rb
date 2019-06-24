@@ -112,22 +112,31 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sublevel2 = create :level, name: 'choice_2'
     bubble_choice = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
     script_level = create :script_level, levels: [bubble_choice]
-    ul = create :user_level, user: student, level: sublevel1, best_result: 100
 
     expected_summary = {
       contained: false,
       submitLevel: false,
-      paired: false,
+      paired: nil,
       driver: nil,
       navigator: nil,
       isConceptLevel: false,
       user_id: student.id,
-      passed: true,
-      status: LEVEL_STATUS.perfect,
+      passed: false,
+      status: LEVEL_STATUS.not_tried,
       levelNumber: script_level.position,
       assessment: nil,
       bonus: nil
     }
+
+    # With no progress
+    summary = script_level.summarize_for_teacher_panel(student)
+    assert_equal expected_summary, summary
+
+    # With progress on a BubbleChoice sublevel
+    ul = create :user_level, user: student, level: sublevel1, best_result: 100
+    expected_summary[:paired] = false
+    expected_summary[:passed] = true
+    expected_summary[:status] = LEVEL_STATUS.perfect
     expected_summary.merge!(ul.attributes)
     summary = script_level.summarize_for_teacher_panel(student)
     assert_equal expected_summary, summary
