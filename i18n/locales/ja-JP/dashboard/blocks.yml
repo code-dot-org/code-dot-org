@@ -583,18 +583,6 @@ ja:
             '2': トレブル
       Dancelab_whenSetup:
         text: セットアップ
-      gamelab_changeColor:
-        text: "{COLOR} {METHOD} を {AMOUNT} 変更 "
-        options:
-          METHOD:
-            '"tint"': 色合い
-      gamelab_changeColorBy:
-        text: "{COLOR} {METHOD} を {AMOUNT} 変更 "
-        options:
-          METHOD:
-            '"hue"': 色相
-            '"saturation"': 彩度
-            '"brightness"': 明るさ
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
@@ -638,29 +626,11 @@ ja:
             '"space"': うちゅう
             '"x"': x
             '"y"': 'y'
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': 境界
-            '"inner"': 四角の中
-            '"circle"': 円
-            '"grid"': グリッド
-            '"row"': 行
-            '"column"': 列
-            '"x"': 十字
-            '"plus"': プラス
-            '"random"': ランダム に
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": ランダム に
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': 右 に
             '"left"': 左 に
-      gamelab_mixColors:
-        text: "{COLOR1} と {COLOR2} をまぜる"
       gamelab_randColor:
         text: てきとうな色
       gamelab_randomColor:
@@ -677,20 +647,6 @@ ja:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': にじ
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': みずのなか
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ふゆ
-      gamelab_setPosition:
-        text: "{THIS} を {POSITION} の位置に移動"
-        options:
-          POSITION:
-            "{x: 50, y: 50}": 左上
-            "{x: 200, y: 50}": 中央上
-            "{x: 350, y: 50}": 右上
-            "{x: 50, y: 200}": 中央左
-            "{x: 200, y: 200}": 中央
-            "{x: 350, y: 200}": 中央右
-            "{x: 50, y: 350}": 左下
-            "{x: 200, y: 350}": 中央下
-            "{x: 350, y: 350}": 右下
-            '"random"': ランダム に
       gamelab_setProp:
         options:
           PROPERTY:
@@ -707,34 +663,11 @@ ja:
             '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
-      gamelab_setup:
-        text: セットアップ
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': 大きさ
-            '"x"': x 位置
-            '"y"': y 位置
-            '"direction"': 動きの方向
-            '"tint"': 色合い
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': 大きさ
-            '"x"': x 位置
-            '"y"': y 位置
-            '"direction"': 動きの方向
-            '"tint"': 色合い
       gamelab_turn:
         options:
           DIRECTION:
@@ -756,11 +689,6 @@ ja:
             "'down'": 下 に
             "'left'": 左 に
             "'right'": 右 に
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
       gamelab_whileKey:
         options:
           KEY:

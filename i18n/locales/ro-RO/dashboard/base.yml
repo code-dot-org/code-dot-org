@@ -574,7 +574,6 @@ ro:
   pdf_download: 'Descarcă PDF'
   download_coming_soon: 'Activitatea se va putea descărca curând.'
   video_coming_soon: 'Video disponibil în scurt timp!'
-  not_started: 'Studentul nu a încercat acest nivel.'
   share_code:
     title: "Fă clic pe 'Rulează' pentru a-mi vedea programul în acţiune"
     bounce_og_title: "Aruncă-ți o privire asupra jocului meu Bounce"

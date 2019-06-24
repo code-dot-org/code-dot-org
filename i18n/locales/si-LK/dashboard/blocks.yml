@@ -170,14 +170,6 @@ si:
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': අහඹු
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": අහඹු
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -196,10 +188,6 @@ si:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': දේදුන්න
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': දිය යට
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ශීත ඍතුව
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': අහඹු
       gamelab_setProp:
         options:
           PROPERTY:
@@ -214,19 +202,6 @@ si:
           CONDITION:
             '"when"': විට
             '"while"': while
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': විට
-            '"while"': while
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
       gamelab_turn:
         options:
           DIRECTION:
@@ -247,11 +222,6 @@ si:
             "'down'": යට
             "'left'": වම
             "'right'": දකුණ
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': විට
-            '"while"': while
       gamelab_whileKey:
         options:
           KEY:

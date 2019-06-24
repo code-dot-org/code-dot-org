@@ -2,9 +2,11 @@
 id-ID:
   data:
     display_name:
+      CSD Problem Solving Process Video: 'Video: proses Pemecahan Masalah'
       CSD U2 Pair Programming Video: Pemrograman berpasangan
       CSD U2 Pair Programming Video_2018: Pemrograman berpasangan
       CSD U2 Pair Programming Video_2019: Pemrograman berpasangan
+      CSD U2 publish video: Penerbitan Website Anda
       CSD U3 Animation Tab Map: Tab Animasi
       CSD U3 Animation Tab Map_2018: Tab Animasi
       CSD U3 Animation Tab Map_2019: Tab Animasi
@@ -70,3 +72,7 @@ id-ID:
       'CSD: For Loop_2018': Untuk Pengulangan
       Making Music_2018: Membuat musik
       Making Music_2019: Membuat musik
+      'Video: Intro to CSS Part 2_2018': 'Video: Pendahuluan untuk CSS Bagian 2'
+      'Video: Intro to CSS Part 2_2019': 'Video: Pendahuluan untuk CSS Bagian 2'
+      'Video: Intro to CSS_2018': 'Video: Pendahuluan untuk CSS'
+      'Video: Intro to CSS_2019': 'Video: Pendahuluan untuk CSS'

@@ -187,6 +187,9 @@ pt-BR:
         dance_callout_11_b: Novo bloco!
       Dance_Party_11_5:
         dance_party_11_5_groups: Olhe aqui para blocos "todos os patos"
+      Fish Tank 3-validated_2019:
+        spritelab_comment: Use este bloco para deixar anotações, para você mesmo ou
+          para seu professor, de como seu código funciona.
       Function intro Ryan:
         Function_intro_Ryan_1: Esta breve instrução diz ao computador para executar
           um GRANDE pedaço de código com o mesmo nome no espaço de trabalho.
@@ -312,6 +315,8 @@ pt-BR:
       behaviors 3a:
         behavior_callout: Por que este comportamento não está funcionando para a estrela
           do meio?
+        star2_callout: Remova este bloco de fantasia e use o bloco "esta figura" em
+          seu lugar.
         this_sprite_callout: Testando
       behaviors 4:
         behaviors_edit: Clique aqui para ver como funciona esse comportamento.

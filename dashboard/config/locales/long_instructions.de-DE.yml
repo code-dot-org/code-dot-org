@@ -471,19 +471,11 @@ de-DE:
         Mit dem Block <xml><block type="Dancelab_whenKey"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.
 
         Sie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!
-      Dance_Party_11_5: |-
-        Schauen Sie sich diesen Block an:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"ENTE"</title>
-        <title name="LAYOUT">"Kreis"</title>
-        </block></xml>
-
-        Jetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!
-
-        Verwenden Sie einige der "alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt.
+      Dance_Party_11_5: "Schau dir diesen Block an:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"ENTE\"</title>\n
+        \   <title name=\"LAYOUT\">\"Kreis\"</title>\n  </block></xml>\n  \nNun kannst
+        du mehrere Tänzer auf einmal erstellen!\n\nVersuche die \"Alle Enten\"-Blöcke
+        zu nutzen, um Code zu erstellen, welcher die Enten zusammen tanzen lässt."
       Dance_Party_11b: Es ist Zeit für einen Tanz-Wettbewerb! Die Katze dabt, wenn
         Sie die linke Pfeiltaste drücken. Lassen Sie den Roboter "droppen", indem
         Sie die rechte Pfeiltaste drücken.
@@ -686,6 +678,10 @@ de-DE:
         Schafen zu gelangen.
       Overworld Move to Sheep_2019: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
         zu den Schafen zu gelangen.
+      'Widget: Text Compression': Suche im Text nach Mustern (Worte oder Sätze die
+        sich wiederholen). Trage die Muster die du findest in das Wörterbuch rechts
+        ein. Wenn du einen Eintrag in das Wörterbuch machst, wird das Symbol des Eintrags
+        die Muster im Text ersetzen.
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)

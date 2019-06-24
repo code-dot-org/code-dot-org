@@ -3403,6 +3403,8 @@ fr:
                 on their process. To cap off the unit, they will share their projects
                 and also a overview of the process they took to get to that final
                 design.\r\n"
+            Intellectual Property:
+              name: Propriété intellectuelle
         csd3-pilot:
           description_short: Programmation
           stages:
