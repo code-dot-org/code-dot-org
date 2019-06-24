@@ -571,7 +571,6 @@ is:
   pdf_download: 'Hala niður PDF'
   download_coming_soon: 'Niðurhal verkefnis verður brátt tiltækt.'
   video_coming_soon: 'Myndskeið á leiðinni!'
-  not_started: 'Nemandinn hefur ekki reynt við þetta borð.'
   share_code:
     title: "Smelltu á \"Keyra\" til að prófa forritið mitt"
     bounce_og_title: "Kíktu á skoppleikinn minn"

@@ -616,6 +616,15 @@ es-MX:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
+      courseC_maze_programming5:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseC_maze_programming5_2018:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseC_maze_programming5_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
       courseC_maze_programming7:
         courseC_maze_programming7_1: "¡Este es tu primer súper desafío! Estos están
           hechos difíciles a propósito y pueden implicar varios intentos."
@@ -691,6 +700,9 @@ es-MX:
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
+      courseD_maze_intro5a_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
@@ -730,6 +742,24 @@ es-MX:
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
+      courseD_maze_ramp5:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5_2018:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5a:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5a_2018:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5a_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
           veces como lo indiques, luego continúa ejecutando el resto del programa.
@@ -756,6 +786,9 @@ es-MX:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
+      courseD_scrat_ramp5:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
       courseD_scrat_ramp6:
         courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
           veces como lo indiques, luego continúa ejecutando el resto del programa.

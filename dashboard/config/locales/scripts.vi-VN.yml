@@ -5541,6 +5541,8 @@ vi:
                 văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách
                 CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người
                 áp dụng kiến thức mới này cho các trang web cá nhân của họ.
+            Intellectual Property:
+              name: Sở hữu trí tuệ
         csd3-pilot:
           description_short: Lập trình
           stages:
@@ -5640,3 +5642,7 @@ vi:
               name: Sử dụng quy trình thiết kế trò chơi
             Project - Design a Game:
               name: Dự án - thiết kế một trò chơi
+        maddie-test:
+          stages:
+            new stage:
+              name: giai đoạn mới
