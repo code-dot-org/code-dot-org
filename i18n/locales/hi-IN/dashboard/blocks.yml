@@ -629,18 +629,6 @@ hi:
             '2': ऊंची ध्वनि
       Dancelab_whenSetup:
         text: सेटअप
-      gamelab_changeColor:
-        text: "{COLOR} {METHOD} को {AMOUNT} में बदलें"
-        options:
-          METHOD:
-            '"tint"': रंगत
-      gamelab_changeColorBy:
-        text: "{COLOR} {METHOD} को {AMOUNT} में बदलें"
-        options:
-          METHOD:
-            '"hue"': रंगत
-            '"saturation"': संतृप्तीकरण
-            '"brightness"': चमक
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
         options:
@@ -697,29 +685,11 @@ hi:
             '"v"': v
             '"w"': w
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': बॉर्डर
-            '"inner"': अंदर वर्ग
-            '"circle"': गोला
-            '"grid"': ग्रिड
-            '"row"': पंक्ति
-            '"column"': कॉलम
-            '"x"': आड़ा-तिरछा
-            '"plus"': जोड़
-            '"random"': यादृच्छिक
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": यादृच्छिक
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': सही
             '"left"': बाएं
-      gamelab_mixColors:
-        text: "{COLOR1} और {COLOR2} को मिलाएं"
       gamelab_randColor:
         text: यादृच्छिक रंग
       gamelab_randomColor:
@@ -736,20 +706,6 @@ hi:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': इंद्रधनुष
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': पानी के नीचे
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': सर्दी का मोसम
-      gamelab_setPosition:
-        text: "{THIS} को {POSITION} पोजीशन में मूव करें"
-        options:
-          POSITION:
-            "{x: 50, y: 50}": ऊपर बाएं
-            "{x: 200, y: 50}": ऊपर बीच में
-            "{x: 350, y: 50}": ऊपर दाएं
-            "{x: 50, y: 200}": बीच मे बाएं
-            "{x: 200, y: 200}": बीच में
-            "{x: 350, y: 200}": बीच में दाएं
-            "{x: 50, y: 350}": नीचे बाएं
-            "{x: 200, y: 350}": नीचे बीच में
-            "{x: 350, y: 350}": नीचे दाएं
-            '"random"': यादृच्छिक
       gamelab_setProp:
         options:
           PROPERTY:
@@ -763,30 +719,11 @@ hi:
             '"scale"': आकार
             '"width"': चौड़ाई
             '"height"': ऊँचाई
-      gamelab_setup:
-        text: सेटअप
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': कब
             '"while"': जबकि
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': कब
-            '"while"': जबकि
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': आकार
-            '"direction"': गतिविधि की दिशा
-            '"tint"': रंगत
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': आकार
-            '"direction"': गतिविधि की दिशा
-            '"tint"': रंगत
       gamelab_turn:
         options:
           DIRECTION:
@@ -812,11 +749,6 @@ hi:
             "'down'": नीचे
             "'left'": बाएं
             "'right'": सही
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': कब
-            '"while"': जबकि
       gamelab_whileKey:
         options:
           KEY:

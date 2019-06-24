@@ -236,7 +236,7 @@ he:
       no_teacher: "לא נמצא משתמש רשום ע״י ״%{teacher_email_or_code}״.\nאנא בקש מהם להירשם כאן ונסה להוסיף אותם שנית"
       section_not_found: "לא היתה אפשרות למצוא את קוד הקבוצה '%{section_code}'."
       blank_code: "אנא הזן קוד הקבוצה"
-      cant_join_own_section: "מצטערים, לא תוכל להצטרף לתוך קבוצה משלך."
+      cant_join_own_section: "מצטערים, לא תוכל להצטרף לתוך קבוצה שלך."
       provider_managed_section: "קבוצה זו מנוהלת ע\"י ספק חיצוני אחר ולא ניתן להצטרף אליו באופן ישיר. אנא בקש מהמורה שלך להוסיף אותך דרך %{provider} ושיסנכרן את הקבוצה מחדש."
     mail:
       student_disassociated:
@@ -540,7 +540,6 @@ he:
   pdf_download: 'הורדת PDF'
   download_coming_soon: 'פעילות להורדה בקרוב.'
   video_coming_soon: 'וידאו בקרוב!'
-  not_started: 'התלמיד לא ניגש לבצע את השלב הזה.'
   share_code:
     title: "לחץ'ריצה' כדי לראות את התקדמותי בזמן פעולה"
     bounce_og_title: "תראה את המשחק קפיצה שלי"
