@@ -110,9 +110,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       });
       board.on('error', reject);
       playground.on('error', reject);
-      if (experiments.isEnabled('detect-board')) {
-        this.detectFirmwareVersion(playground);
-      }
     });
   }
 
