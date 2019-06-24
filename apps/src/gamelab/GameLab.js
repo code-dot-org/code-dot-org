@@ -758,6 +758,7 @@ GameLab.prototype.rerunSetupCode = function() {
   ) {
     return;
   }
+  getStore().dispatch(clearConsole());
   Sounds.getSingleton().muteURLs();
   this.gameLabP5.p5.allSprites.removeSprites();
   if (this.gameLabP5.spritelab) {

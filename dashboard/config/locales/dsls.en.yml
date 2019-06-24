@@ -1615,8 +1615,8 @@ en:
         I don't know.: I don't know.
         Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
         Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
-        ? 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
-        : 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
+        ? 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever be *one* honeycomb or *one* flower behind each cloud.'
+        : 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever be *one* honeycomb or *one* flower behind each cloud.'
         The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
         The bee will get nectar at each flower and honey at each honeycomb.: The bee will get nectar at each flower and honey at each honeycomb.
         The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
