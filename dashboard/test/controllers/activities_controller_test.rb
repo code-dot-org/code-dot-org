@@ -1224,7 +1224,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal user_level.level_source.data, 'Panda'
   end
 
-  test "milestone updates assessment activities for multi assessments" do
+  test "milestone updates activities for multi assessments" do
     Gatekeeper.set('activities', value: false)
 
     post :milestone, params: @milestone_params
@@ -1245,26 +1245,26 @@ class ActivitiesControllerTest < ActionController::TestCase
       script_level_id: assessment_multi_sl.id, program: '0'
     )
     post :milestone, params: milestone_params
-    assessment_activity = Activity.find_by(
+    activity = Activity.find_by(
       user_id: @user,
       level_id: assessment_multi_sl.level.id,
       script_id: assessment_multi_sl.script.id
     )
-    refute_nil assessment_activity
-    assert_equal @milestone_params[:attempt].to_i, assessment_activity.attempt
-    assert_equal @milestone_params[:testResult].to_i, assessment_activity.test_result
+    refute_nil activity
+    assert_equal @milestone_params[:attempt].to_i, activity.attempt
+    assert_equal @milestone_params[:testResult].to_i, activity.test_result
 
     # allow multiple entries to be created
 
     post :milestone, params: milestone_params.merge(attempt: '2', program: '4')
     post :milestone, params: milestone_params.merge(attempt: '3', program: '5')
-    assessment_activities = Activity.where(
+    activities = Activity.where(
       user_id: @user,
       level_id: assessment_multi_sl.level.id,
       script_id: assessment_multi_sl.script.id
     ).all
-    assert_equal [1, 2, 3], assessment_activities.map(&:attempt)
-    answers = assessment_activities.map {|aa| LevelSource.find(aa.level_source_id)&.data}
+    assert_equal [1, 2, 3], activities.map(&:attempt)
+    answers = activities.map {|aa| LevelSource.find(aa.level_source_id)&.data}
     assert_equal ['0', '4', '5'], answers
 
     # make sure that we don't create an Activity when the multi level
