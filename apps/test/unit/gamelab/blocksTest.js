@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from 'chai';
 import {sprites} from '@cdo/apps/gamelab/blocks';
 import {
   registerReducers,

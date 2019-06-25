@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from 'chai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';

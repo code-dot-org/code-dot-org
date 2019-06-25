@@ -8,7 +8,7 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
-      "GameLabJr"
+      "NativeSpriteLab"
     ],
     "embed": "false",
     "instructions_important": "false",

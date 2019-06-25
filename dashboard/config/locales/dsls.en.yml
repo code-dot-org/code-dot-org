@@ -2281,21 +2281,16 @@ en:
         questions:
         - text: 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        answers:
-        - text: The bee will get nectar at each flower and honey at each honeycomb.
-          correct: true
-          feedback: Correct!
-        - text: The bee will try to get nectar from both flowers and honeycomb.
-          correct: false
-          feedback: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
-        - text: The bee will try to get honey from both flowers and honeycomb.
-          correct: false
-          feedback: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
-        - text: I don't know.
-          correct: false
-          feedback: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
-        questions:
-        - text: 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever be *one* honeycomb or *one* flower behind each cloud.'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        ? 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever be *one* honeycomb or *one* flower behind each cloud.'
+        : 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever be *one* honeycomb or *one* flower behind each cloud.'
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        The bee will get nectar at each flower and honey at each honeycomb.: The bee will get nectar at each flower and honey at each honeycomb.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: The bee will move forward and get nectar only one time.
