@@ -355,8 +355,9 @@ es-MX:
           más de dos pasos.
         4-5_Maze_5_b: Puedes usar más de un loop "repetir" en un rompecabezas.
       4-5 Maze 6:
-        4-5_Maze_6_a: "Intenta trazar un camino con tu dedo.  \n¿Es el camino más
-          corto que puedes encontrar?"
+        4-5_Maze_6_a: |-
+          Intenta trazar un camino con tu dedo.\
+          ¿Es el camino más corto que puedes encontrar?
       4-5 Maze 7:
         4-5_Maze_7_a: |-
           **¿Quieres que tu código sea lo más reducido posible?**
@@ -2656,11 +2657,12 @@ es-MX:
           </block>
           </xml>
       Course 4 SCV 2:
-        Course_4_SCV_2_a: "La imagen completa se compone de 10 de estas \"flores\":
-          \ \n! \\[] (Https\\://images.code.org/bac2a606dfa59c00409294499540267d-
-          imagen -1469641972385.png)\n\n... que se hicieron de 10 de estos decágonos:
-          \ \n! \\[] (<https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4->
-          image -1469642051512.png)"
+        Course_4_SCV_2_a: |-
+          La imagen completa se compone de 10 de estas "flores":\
+          ! \[] (Https\://images.code.org/bac2a606dfa59c00409294499540267d- imagen -1469641972385.png)
+
+          ... que se hicieron de 10 de estos decágonos:\
+          ! \[] (<https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-> image -1469642051512.png)
         Course_4_SCV_2_b: 'Este diseño utiliza loops anidados (tres profundos). Todos
           los loops se ejecutan "lados" veces. '
         Course_4_SCV_2_c: El artista gira a la izquierda cuando crea cada decágono,
@@ -5439,20 +5441,26 @@ es-MX:
         courseA_artist_loops8_a: Intenta ejecutar el código para ver lo que se ha
           escrito para ti.
         courseA_artist_loops8_b: "¿Cómo enlazarías el código que se te ha dado?"
-        courseA_artist_loops8_c: "¿Qué hace el código?  \n¿Qué se supone que haga?
-          \ \n¿Qué te dice eso?"
+        courseA_artist_loops8_c: |-
+          ¿Qué hace el código?\
+          ¿Qué se supone que haga?\
+          ¿Qué te dice eso?
       courseA_artist_loops8_2018:
         courseA_artist_loops8_a: Intenta ejecutar el código para ver lo que se ha
           escrito para ti.
         courseA_artist_loops8_b: "¿Cómo enlazarías el código que se te ha dado?"
-        courseA_artist_loops8_c: "¿Qué hace el código?  \n¿Qué se supone que haga?
-          \ \n¿Qué te dice eso?"
+        courseA_artist_loops8_c: |-
+          ¿Qué hace el código?\
+          ¿Qué se supone que haga?\
+          ¿Qué te dice eso?
       courseA_artist_loops8_2019:
         courseA_artist_loops8_a: Intenta ejecutar el código para ver lo que se ha
           escrito para ti.
         courseA_artist_loops8_b: "¿Cómo enlazarías el código que se te ha dado?"
-        courseA_artist_loops8_c: "¿Qué hace el código?  \n¿Qué se supone que haga?
-          \ \n¿Qué te dice eso?"
+        courseA_artist_loops8_c: |-
+          ¿Qué hace el código?\
+          ¿Qué se supone que haga?\
+          ¿Qué te dice eso?
       courseA_artist_loops9:
         courseA_artist_loops9_a: Agrega otro bloque al código que te dan para dibujar
           el resto de las escaleras.
@@ -9474,8 +9482,10 @@ es-MX:
           de girar 90 grados en las esquinas.
       courseC_artist_prog7:
         courseC_artist_prog7_a: Cada ángulo es 45 ó 90 grados.
-        courseC_artist_prog7_b: "¿Funciona en el primer paso?  \n¿Qué tal el segundo?
-          \ \n¿Dónde va mal?"
+        courseC_artist_prog7_b: |-
+          ¿Funciona en el primer paso?\
+          ¿Qué tal el segundo?\
+          ¿Dónde va mal?
         courseC_artist_prog7_c: "¡Puedes usar el menú desplegable en los bloques girar
           para ver qué ángulo necesitas!"
         courseC_artist_prog7_d: "Tendrás que: \n\n-   avanzar \n-   girar 45 grados
@@ -9486,8 +9496,10 @@ es-MX:
           aún no has resuelto el desafío."
       courseC_artist_prog7_2018:
         courseC_artist_prog7_a: Cada ángulo es 45 ó 90 grados.
-        courseC_artist_prog7_b: "¿Funciona en el primer paso?  \n¿Qué tal el segundo?
-          \ \n¿Dónde va mal?"
+        courseC_artist_prog7_b: |-
+          ¿Funciona en el primer paso?\
+          ¿Qué tal el segundo?\
+          ¿Dónde va mal?
         courseC_artist_prog7_c: "¡Puedes usar el menú desplegable en los bloques girar
           para ver qué ángulo necesitas!"
         courseC_artist_prog7_d: "Tendrás que: \n\n-   avanzar \n-   girar 45 grados
@@ -9498,8 +9510,10 @@ es-MX:
           aún no has resuelto el desafío."
       courseC_artist_prog7_2019:
         courseC_artist_prog7_a: Cada ángulo es 45 ó 90 grados.
-        courseC_artist_prog7_b: "¿Funciona en el primer paso?  \n¿Qué tal el segundo?
-          \ \n¿Dónde va mal?"
+        courseC_artist_prog7_b: |-
+          ¿Funciona en el primer paso?\
+          ¿Qué tal el segundo?\
+          ¿Dónde va mal?
         courseC_artist_prog7_c: "¡Puedes usar el menú desplegable en los bloques girar
           para ver qué ángulo necesitas!"
         courseC_artist_prog7_d: "Tendrás que: \n\n-   avanzar \n-   girar 45 grados
@@ -10497,27 +10511,27 @@ es-MX:
         courseC_starWars_loops10_a: "¿Este patrón no te parece una escalera gigante?
           Intenta usar lo que aprendiste de los desafíos anteriores para lograr todos
           los giros."
-        courseC_starWars_loops10_b: "Si deseas utilizar menos código, puedes poner
-          un loop de 'repetir' dentro de otro.  \nEsto se llama un \\*\\* loop anidado
-          \\*\\*."
+        courseC_starWars_loops10_b: |-
+          Si deseas utilizar menos código, puedes poner un loop de 'repetir' dentro de otro.\
+          Esto se llama un \*\* loop anidado \*\*.
         courseC_starWars_loops10_c: "¡No tengas miedo de cometer un error! Ejecuta
           el código para ver qué sucede, incluso si aún no has resuelto el desafío."
       courseC_starWars_loops10_2018:
         courseC_starWars_loops10_a: "¿Este patrón no te parece una escalera gigante?
           Intenta usar lo que aprendiste de los desafíos anteriores para lograr todos
           los giros."
-        courseC_starWars_loops10_b: "Si deseas utilizar menos código, puedes poner
-          un loop de 'repetir' dentro de otro.  \nEsto se llama un \\*\\* loop anidado
-          \\*\\*."
+        courseC_starWars_loops10_b: |-
+          Si deseas utilizar menos código, puedes poner un loop de 'repetir' dentro de otro.\
+          Esto se llama un \*\* loop anidado \*\*.
         courseC_starWars_loops10_c: "¡No tengas miedo de cometer un error! Ejecuta
           el código para ver qué sucede, incluso si aún no has resuelto el desafío."
       courseC_starWars_loops10_2019:
         courseC_starWars_loops10_a: "¿Este patrón no te parece una escalera gigante?
           Intenta usar lo que aprendiste de los desafíos anteriores para lograr todos
           los giros."
-        courseC_starWars_loops10_b: "Si deseas utilizar menos código, puedes poner
-          un loop de 'repetir' dentro de otro.  \nEsto se llama un \\*\\* loop anidado
-          \\*\\*."
+        courseC_starWars_loops10_b: |-
+          Si deseas utilizar menos código, puedes poner un loop de 'repetir' dentro de otro.\
+          Esto se llama un \*\* loop anidado \*\*.
         courseC_starWars_loops10_c: "¡No tengas miedo de cometer un error! Ejecuta
           el código para ver qué sucede, incluso si aún no has resuelto el desafío."
       courseC_starWars_loops1_2018:
@@ -10574,21 +10588,21 @@ es-MX:
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Intenta escribir todos los movimientos en un papel
           y busca un patrón.
-        courseC_starWars_loops6_b: "Si deseas utilizar menos código, puedes poner
-          un loop de 'repetir' dentro de otro.  \nEsto se llama un \\*\\* loop anidado
-          \\*\\*."
+        courseC_starWars_loops6_b: |-
+          Si deseas utilizar menos código, puedes poner un loop de 'repetir' dentro de otro.\
+          Esto se llama un \*\* loop anidado \*\*.
       courseC_starWars_loops6_2018:
         courseC_starWars_loops6_a: Intenta escribir todos los movimientos en un papel
           y busca un patrón.
-        courseC_starWars_loops6_b: "Si deseas utilizar menos código, puedes poner
-          un loop de 'repetir' dentro de otro.  \nEsto se llama un \\*\\* loop anidado
-          \\*\\*."
+        courseC_starWars_loops6_b: |-
+          Si deseas utilizar menos código, puedes poner un loop de 'repetir' dentro de otro.\
+          Esto se llama un \*\* loop anidado \*\*.
       courseC_starWars_loops6_2019:
         courseC_starWars_loops6_a: Intenta escribir todos los movimientos en un papel
           y busca un patrón.
-        courseC_starWars_loops6_b: "Si deseas utilizar menos código, puedes poner
-          un loop de 'repetir' dentro de otro.  \nEsto se llama un \\*\\* loop anidado
-          \\*\\*."
+        courseC_starWars_loops6_b: |-
+          Si deseas utilizar menos código, puedes poner un loop de 'repetir' dentro de otro.\
+          Esto se llama un \*\* loop anidado \*\*.
       courseC_starWars_loops7:
         courseC_starWars_loops7_a: "¡Este patrón parece más difícil de lo que es!
           Comienza con un simple escalón. ¿Eso cubre toda la chatarra?"

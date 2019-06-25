@@ -411,7 +411,7 @@ es-MX:
       4-5 Maze 7: Estimada persona. Yo zombie. Debe...llegar...al girasol.
       4-5 Maze 8: Utiliza el bloque "repeat" para llevar al zombie hasta el girasol.
         (¡Evadiendo a los chompers!)
-      4-5 Maze 9: "Ahora tenemos un nuevo bloque llamado `repetir hasta`.  \nNos permitirá
+      4-5 Maze 9: "Ahora tenemos un nuevo bloque llamado `repetir hasta`.\\\nNos permitirá
         repetir comandos hasta que el zombie llegue hasta el girasol. \n\nUsa el nuevo
         bloque `repetir hasta` para resolver este desafío con la menor cantidad de
         comandos posible."
