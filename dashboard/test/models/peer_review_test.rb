@@ -525,7 +525,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   def track_progress(level_source_id, user = @user, script_level = @script_level)
     # this is what creates the peer review objects
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: user.id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
