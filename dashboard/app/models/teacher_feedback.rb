@@ -47,6 +47,14 @@ class TeacherFeedback < ApplicationRecord
     )
   end
 
+  def self.get_all_feedback_for_student(student_id)
+    find(
+      where(
+        student_id: student_id
+      )
+    )
+  end
+
   def self.latest_per_teacher
     #Only select feedback from teachers who lead sections in which the student is still enrolled
     find(
