@@ -207,7 +207,7 @@ sk-SK:
         med v plástoch. \n\nPoužite vnorenú slučku. "
       4-5 Bee Nested Loops Assessment 1: "**Hodnotenie:** Pozbierajte všetok nektár
         a spravte všetok med pomocou slučiek."
-      4-5 Maze 9: "Teraz tu máme nový blok `opakuj pokiaľ neplatí`.  \nToto nám umožní
+      4-5 Maze 9: "Teraz tu máme nový blok `opakuj pokiaľ neplatí`.\\\nToto nám umožní
         opakovať príkazy až kým sa zombík nedostane k slnečnici.  \n\nPouži nový blok
         \"opakuj pokiaľ neplatí\" pre vyriešenie tejto úlohy s čo najmenším možným
         počtom príkazov."
@@ -250,8 +250,151 @@ sk-SK:
         \ \n\nDostaňte ma ku kope a odstráňte všetku hlinu, potom ma posuňte k jame
         a celú ju zasypte."
       4-5 While Loops 4: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných
-        hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude
+        hliny treba na zasypanie tejto jamy.\\\nViete napísať program, ktorý bude
         zasypávať jamu až kým nebude zem vyrovnaná?  "
+      CSD U3 Diagonal Movement_2018: |-
+        <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
+        # Pohyb po diagonále
+
+        Zmena `x`a `y`atribútov postavy vie docieliť jej posun rovno hore a dole alebo vpravo a vľavo. Ak chceš aby sa posúvala po diagonále, je potrebné zmeniť obe tieto hodnoty.
+
+        Tento program momentálne pohybuje myškou po obrazovke rovno dole. Vieš ho zmeniť tak, aby sa hýbala diagonálne po obrazovke tak, ako na obrázku vpravo?
+
+        \_Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku
+      CSD U3 Diagonal Movement_2019: |-
+        <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
+        # Pohyb po diagonále
+
+        Zmena `x`a `y`atribútov postavy vie docieliť jej posun rovno hore a dole alebo vpravo a vľavo. Ak chceš aby sa posúvala po diagonále, je potrebné zmeniť obe tieto hodnoty.
+
+        Tento program momentálne pohybuje myškou po obrazovke rovno dole. Vieš ho zmeniť tak, aby sa hýbala diagonálne po obrazovke tak, ako na obrázku vpravo?
+
+        \_Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku
+      CSD U3 Drawing Squares to Corners_2018: "# Umiestni štvorce do rohov\n\nDôležitým
+        pre používanie Game Lab je pochopiť umiestňovanie tvarov. Nezabudni, že kedykoľvek
+        môžeš zapnúť zobrazenie mriežky alebo zistiť x a y súradnice pomocou kurzoru
+        tvojej myši.\n\n# Urob toto\n\n•\tUmiestni dva obdĺžniky presne do rohov mriežky,
+        tak ako je na obrázku vpravo.<img src=\"https://images.code.org/716209ce879925f89bf661f337946509-image-1529019186051.32.48
+        PM.png\" style=\"float:right;width:150px\">."
+      CSD U3 Drawing Squares to Corners_2019: "# Umiestni štvorce do rohov\n\nDôležitým
+        pre používanie Game Lab je pochopiť umiestňovanie tvarov. Nezabudni, že kedykoľvek
+        môžeš zapnúť zobrazenie mriežky alebo zistiť x a y súradnice pomocou kurzoru
+        tvojej myši.\n\n# Urob toto\n\n•\tUmiestni dva obdĺžniky presne do rohov mriežky,
+        tak ako je na obrázku vpravo.<img src=\"https://images.code.org/716209ce879925f89bf661f337946509-image-1529019186051.32.48
+        PM.png\" style=\"float:right;width:150px\">."
+      CSD U3 Random Debug Cloud_2018: |-
+        # Oprava chýb - Použitie 4 parametrov
+
+        Keď už je tráva nakreslená správne, pridaj na oblohu oblak. Momentálne tento obrázok vyzerá trochu smiešne.
+
+        # Urob toto
+
+        -   Oprav tento program tak, aby bol oblak viac široký ako dlhý – presne tak, ako je nakreslené na obrázku.
+        -   Nápoveda: Musíš zmeniť dva parametre. Ktorými z nich sa nastavuje šírka a výška oblaku <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png" style="float:right;height:150px">?
+      CSD U3 Random Debug Cloud_2018_2019: |-
+        # Oprava chýb - Použitie 4 parametrov
+
+        Keď už je tráva nakreslená správne, pridaj na oblohu oblak. Momentálne tento obrázok vyzerá trochu smiešne.
+
+        # Urob toto
+
+        -   Oprav tento program tak, aby bol oblak viac široký ako dlhý – presne tak, ako je nakreslené na obrázku.
+        -   Nápoveda: Musíš zmeniť dva parametre. Ktorými z nich sa nastavuje šírka a výška oblaku <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png" style="float:right;height:150px">?
+      CSD U3 Random Debug Grass_2018: |-
+        <img src="https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37 PM.png" style="float:right;height:150px">
+
+        # Oprava chýb - Použitie 4 parametrov
+
+        Tento program používa bloky `rect()` (štvoruholník) a `ellipse()` (elipsa) vo verzii so štyrmi parametrami pre nakreslenie jednoduchého obrázku.
+
+        # Urob toto
+
+        -   Oprav tento program tak, aby sa tráva rozprestierala po celej spodnej časti obrázka.
+        -   Nápoveda: Stačí zmeniť iba jedno číslo. Ktorý parameter urobí obdĺžnik (trávu) širším?
+      CSD U3 Random Debug Grass_2019: |-
+        <img src="https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37 PM.png" style="float:right;height:150px">
+
+        # Oprava chýb - Použitie 4 parametrov
+
+        Tento program používa bloky `rect()` (štvoruholník) a `ellipse()` (elipsa) vo verzii so štyrmi parametrami pre nakreslenie jednoduchého obrázku.
+
+        # Urob toto
+
+        -   Oprav tento program tak, aby sa tráva rozprestierala po celej spodnej časti obrázka.
+        -   Nápoveda: Stačí zmeniť iba jedno číslo. Ktorý parameter urobí obdĺžnik (trávu) širším?
+      CSD U3 Random Ellipse Behind_2018: "# Urob toto\n\n•\tNapíš kód, ktorý vytvorí
+        oranžovú elipsu za zelenou elipsou.\n•\tNemusíš riešiť presnú veľkosť elíps,
+        pokiaľ bude splnené, že zelená elipsa je celá vo vnútri oranžovej. "
+      CSD U3 Random Ellipse Behind_2018_2019: "# Urob toto\n\n•\tNapíš kód, ktorý
+        vytvorí oranžovú elipsu za zelenou elipsou.\n•\tNemusíš riešiť presnú veľkosť
+        elíps, pokiaľ bude splnené, že zelená elipsa je celá vo vnútri oranžovej. "
+      CSD U3 Random rainbow snake_2018: |-
+        <img src="https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58 PM.png" style="float:right;height:150px">
+        # Dúhový had
+
+        Tento program nakreslí veľmi jedinečný druh dúhového hada. Pre nakreslenie vždy iného hada musíš použiť náhodné čísla.
+
+        # Urob toto
+
+        -   Spusti program niekoľkokrát, aby si videl/a, ako funguje predtým, ako ho začneš upravovať.
+        -   K dúhovému hadovi pridaj aspoň tri rôzne farebné kruhy.
+        -   Použi blok `randomNumber()` (náhodné číslo) pre posun zvyšku tela hada hore alebo dole tak, ako pri posledných troch kruhoch.
+
+        Výzva: Vieš náhodnou urobiť aj veľkosť kruhov
+      CSD U3 Random random ellipse2_2018: "<img src=\"https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40
+        PM.png\" style=\"float:right;height:150px\">\n# Náhodné čísla\n\nTu máme rovnaké
+        slnko ako naposledy. V tomto momente je náhodná len súradnica x. Náhodnou
+        však môžeš urobiť aj súradnicu y.\n\n# Urob toto\n\n-   Použi blok `randomNumber()`
+        (náhodné číslo) pre parameter Y elipsy tak, aby bol kruh nakreslený aj v náhodnej
+        výške.\n-   Keď sa kruh nakreslí na náhodnej súradnici, môžeš pokračovať ďalej. "
+      CSD U3 Random random ellipse2_2018_2019: "<img src=\"https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40
+        PM.png\" style=\"float:right;height:150px\">\n# Náhodné čísla\n\nTu máme rovnaké
+        slnko ako naposledy. V tomto momente je náhodná len súradnica x. Náhodnou
+        však môžeš urobiť aj súradnicu y.\n\n# Urob toto\n\n-   Použi blok `randomNumber()`
+        (náhodné číslo) pre parameter Y elipsy tak, aby bol kruh nakreslený aj v náhodnej
+        výške.\n-   Keď sa kruh nakreslí na náhodnej súradnici, môžeš pokračovať ďalej. "
+      CSD U3 Scene Example_2018: |-
+        # Zostavy postáv
+
+        Kombináciou tvarov, postáv a textu môžeš vytvárať jednoduché zostavy, príbehy alebo komiks. Náš príklad je pomerne jednoduchý, ale ty môžeš kombinovať toľko postáv a tvarov, koľko chceš, aby si vytvtoril/a rôzne komplexné obrázky.
+
+        ## Načrtni si svoj obrázok
+
+        Predtým ako začneš, venuj chvíľku načrtnutiu obrázku, ktorý by si chcel/a vytvoriť. Môžeš použiť jednoduché tvary, ktoré si použil/a v minulosti, rovnako ako rozličné postavy a text. Keď si svoj nápad načrtneš, naučíme ťa, ako používať blok `text`a ako zostaviť svoj obrázok.
+      CSD U3 Sprites text_2018: "# Pridávanie textu\n\nText môžeš pridať kdekoľvek
+        na obrazovke použitím príkazu `text`. \n\n# Urob toto\n\n-   Zmeň zobrazený
+        text v kóde\n-   Pridaj ďalší text na inú časť obrazovky.\n\n\\_Tip: Základná
+        veľkosť textu je pomerne malá, ale môžeš použiť blok  `textSize` (veľkosť
+        textu) na jej zmenu. Môžeš tiež použiť blok `fill` (vyplň) na zmenu jeho farby"
+      CSD U3 Sprites text_2019: "# Pridávanie textu\n\nText môžeš pridať kdekoľvek
+        na obrazovke použitím príkazu `text`. \n\n# Urob toto\n\n-   Zmeň zobrazený
+        text v kóde\n-   Pridaj ďalší text na inú časť obrazovky.\n\n\\_Tip: Základná
+        veľkosť textu je pomerne malá, ale môžeš použiť blok  `textSize` (veľkosť
+        textu) na jej zmenu. Môžeš tiež použiť blok `fill` (vyplň) na zmenu jeho farby"
+      CSD U3 rect_2018: |-
+        # Preskúmaj Game Lab
+
+        Vitaj v Game Labe, kde môžeš vytvárať interaktívne animácie a hry!
+        Už si si precvičil/a základy vytvárania tvarov v mriežke. V Game Labe budeš robiť to isté použitím ľavej časti obrazovky.
+
+        # Urob toto
+
+        -   Pozri sa na riadok kódu v pracovnom priestore pod týmito pokynmi (ukáž mi kde [0] ) a porozprávaj sa  so svojím kamarátom, kde v mriežke bude nakreslený tvar.
+        -   Kliknutím <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> spusti program a sleduj, čo sa stane.
+        -   Zmeň čísla vnútri bloku a skús spustiť program znova.
+        -   Skús umiestniť obdĺžnik v blízkosti pravého dolného rohu obrazovky.
+      CSD U3 rect_2019: |-
+        # Preskúmaj Game Lab
+
+        Vitaj v Game Labe, kde môžeš vytvárať interaktívne animácie a hry!
+        Už si si precvičil/a základy vytvárania tvarov v mriežke. V Game Labe budeš robiť to isté použitím ľavej časti obrazovky.
+
+        # Urob toto
+
+        -   Pozri sa na riadok kódu v pracovnom priestore pod týmito pokynmi (ukáž mi kde [0] ) a porozprávaj sa  so svojím kamarátom, kde v mriežke bude nakreslený tvar.
+        -   Kliknutím <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> spusti program a sleduj, čo sa stane.
+        -   Zmeň čísla vnútri bloku a skús spustiť program znova.
+        -   Skús umiestniť obdĺžnik v blízkosti pravého dolného rohu obrazovky.
       Course 4 Artist Binary 1: |-
         Tu máme funkciu, ktorá vezme reťazec binárnych 1 a 0 a spracováva ich z ľava do prava, z hore dolu.
         Pokiaľ Umelec natrafí na 1, štvorec vymaľuje, pokiaľ na 0, tak štvorec nechá tak.
@@ -1109,14 +1252,6 @@ sk-SK:
         * * *
 
         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
-      courseC_artist_loops6a_2019: |-
-        Pridaj aj tretiu nálepku, kdekoľvek v cykle chceš! Ako to teraz vyzerá?
-
-        -   Ak to cheš mať pestrejšie, nastav si iný vzor!
-
-        * * *
-
-        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops7a: |-
         Vyskúšaj zmeniť cyklus `opakovať`, aby sa spustil rozdielny počet krát. Ako veľmi sa musíš otočiť, aby si skončil tam, kde si začal, teda prešiel plný kruh?
 
@@ -1130,18 +1265,6 @@ sk-SK:
 
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops7a_2018: |-
-        Vyskúšaj zmeniť cyklus `opakovať`, aby sa spustil rozdielny počet krát. Ako veľmi sa musíš otočiť, aby si skončil tam, kde si začal, teda prešiel plný kruh?
-
-        -   Vyskúšaj zmeniť to, koľko krát sa otočíš
-        -   Vyskúšaj sa otočiť 6 krát o 60 stupňov
-        -   Vyskúšaj sa otočiť 18 krát o 20 stupňov
-
-        * * *
-
-        Tento obrázok potrebuje piráta, nindžu a žirafu. Cyklus sa opakuje 18 krát s 20 stupňovými otočeniami.
-
-        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
-      courseC_artist_loops7a_2019: |-
         Vyskúšaj zmeniť cyklus `opakovať`, aby sa spustil rozdielny počet krát. Ako veľmi sa musíš otočiť, aby si skončil tam, kde si začal, teda prešiel plný kruh?
 
         -   Vyskúšaj zmeniť to, koľko krát sa otočíš
@@ -1189,21 +1312,19 @@ sk-SK:
         Teraz vlož tento kód do opakovacieho bloku a nastav ho na **6** opakovaní.
 
         -   Všimni si, že na koniec cyklu sme pridali otočenie o 60 stupňov, vďaka čomu  pri 6 opakovaniach urobíme kompletnú otočku.
-      courseC_artist_loopsPrePre1a: "Použi blok <xml><block type=\"jump_to_xy\" id=\"callMe\"><title
-        name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> aby
-        sa umelec dostal do stredu.  \nPotom nakresli 50 pixelovú čiaru s blokom <xml><block
-        type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title
-        name=\"VALUE\">50</title></block></xml>."
-      courseC_artist_loopsPrePre1a_2018: "### Umelec je na zlom mieste!\n\nPouži blok
-        <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title
-        name=\"YPOS\">200</title></block></xml> aby sa umelec dostal do stredu.  \nPotom
-        nakresli 50 pixelovú čiaru s blokom <xml><block type=\"draw_move_by_constant\"><title
-        name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
-      courseC_artist_loopsPrePre1a_2019: "### Umelec je na zlom mieste!\n\nPouži blok
-        <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title
-        name=\"YPOS\">200</title></block></xml> aby sa umelec dostal do stredu.  \nPotom
-        nakresli 50 pixelovú čiaru s blokom <xml><block type=\"draw_move_by_constant\"><title
-        name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
+      courseC_artist_loopsPrePre1a: |-
+        Použi blok <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> aby sa umelec dostal do stredu.\
+        Potom nakresli 50 pixelovú čiaru s blokom <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
+      courseC_artist_loopsPrePre1a_2018: |-
+        ### Umelec je na zlom mieste!
+
+        Použi blok <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> aby sa umelec dostal do stredu.\
+        Potom nakresli 50 pixelovú čiaru s blokom <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
+      courseC_artist_loopsPrePre1a_2019: |-
+        ### Umelec je na zlom mieste!
+
+        Použi blok <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> aby sa umelec dostal do stredu.\
+        Potom nakresli 50 pixelovú čiaru s blokom <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_prog1: |-
         _"Ahoj, ja som umelec. Pomocou kódu dokážem nakresliť takmer všetko."_
 
@@ -1985,24 +2106,27 @@ sk-SK:
         -   Prvý vnorený cyklus by mal vykresliť osemuholník.
         -   Druhý vnorený cyklus by mal vykresliť šesťuholník.
         -   Tretí vnorený cyklus by mal vykresliť štvorec.
-      courseD_artist_project1a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak.\"_\n\n<img
-        src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
-        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nNakresli
-        schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre
-        pravú i ľavú otočku používaš rovnaký uhol.  \n(Neskôr uvidíš prečo.)"
-      courseD_artist_project1a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak.\"_\n\n<img
-        src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
-        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nNakresli
-        schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre
-        pravú i ľavú otočku používaš rovnaký uhol.  \n(Neskôr uvidíš prečo.)"
-      courseD_artist_project1a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak.\"_\n\n<img
-        src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
-        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nNakresli
-        schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre
-        pravú i ľavú otočku používaš rovnaký uhol.  \n(Neskôr uvidíš prečo.)"
+      courseD_artist_project1a: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak."_
+
+        <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" style="float: left; margin: 0 15px 15px 0;" />
+
+        Nakresli schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre pravú i ľavú otočku používaš rovnaký uhol.\
+        (Neskôr uvidíš prečo.)
+      courseD_artist_project1a_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak."_
+
+        <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" style="float: left; margin: 0 15px 15px 0;" />
+
+        Nakresli schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre pravú i ľavú otočku používaš rovnaký uhol.\
+        (Neskôr uvidíš prečo.)
+      courseD_artist_project1a_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak."_
+
+        <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" style="float: left; margin: 0 15px 15px 0;" />
+
+        Nakresli schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre pravú i ľavú otočku používaš rovnaký uhol.\
+        (Neskôr uvidíš prečo.)
       courseD_artist_project2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“A teraz si nakreslime viac rovnakých tvarov.”_\n\nVezmi svoj tvar a nakresli
         ho dva alebo tri razy, medzi nimi skoč dopredu o niekoľko pixlov.  \n\n-   Ak
@@ -2048,24 +2172,60 @@ sk-SK:
         svoj kód do cyklu. Nechaj Elsu kresliť, urob otočku o 180 stupňov, zase nechaj
         Elsu kresliť a znovu otočka o 180 stupňov.\n\n<hr/>\n\nTakto vyzerajú schody
         pri použití uhla 76 stupňov:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
-      courseD_artist_project3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Poďme z toho vytvoriť snehovú vločku.\"_\n\nPo nakreslení radu tvarov skoč
-        s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a
-        otoč ju, aby ďalší rad tvarov nakreslila iným smerom.\n\nAké úžasné snehové
-        vločky vieš vytvoriť!\n\n* * *\n\nPozri si tieto príklady s polygónmi:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstraktné
-        tvary môžu vytvoriť snehovú vločku podobnú na niektorú z týchto:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
-      courseD_artist_project3_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Poďme z toho vytvoriť snehovú vločku.\"_\n\nPo nakreslení radu tvarov skoč
-        s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a
-        otoč ju, aby ďalší rad tvarov nakreslila iným smerom.\n\nAké úžasné snehové
-        vločky vieš vytvoriť!\n\n* * *\n\nPozri si tieto príklady s polygónmi:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstraktné
-        tvary môžu vytvoriť snehovú vločku podobnú na niektorú z týchto:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
-      courseD_artist_project3_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Poďme z toho vytvoriť snehovú vločku.\"_\n\nPo nakreslení radu tvarov skoč
-        s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a
-        otoč ju, aby ďalší rad tvarov nakreslila iným smerom.\n\nAké úžasné snehové
-        vločky vieš vytvoriť!\n\n* * *\n\nPozri si tieto príklady s polygónmi:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstraktné
-        tvary môžu vytvoriť snehovú vločku podobnú na niektorú z týchto:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Poďme z toho vytvoriť snehovú vločku."_
+
+        Po nakreslení radu tvarov skoč s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a otoč ju, aby ďalší rad tvarov nakreslila iným smerom.
+
+        Aké úžasné snehové vločky vieš vytvoriť!
+
+        * * *
+
+        Pozri si tieto príklady s polygónmi:\
+        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)
+        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
+        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
+
+        Abstraktné tvary môžu vytvoriť snehovú vločku podobnú na niektorú z týchto:\
+        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)
+        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)
+        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
+      courseD_artist_project3_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Poďme z toho vytvoriť snehovú vločku."_
+
+        Po nakreslení radu tvarov skoč s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a otoč ju, aby ďalší rad tvarov nakreslila iným smerom.
+
+        Aké úžasné snehové vločky vieš vytvoriť!
+
+        * * *
+
+        Pozri si tieto príklady s polygónmi:\
+        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)
+        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
+        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
+
+        Abstraktné tvary môžu vytvoriť snehovú vločku podobnú na niektorú z týchto:\
+        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)
+        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)
+        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
+      courseD_artist_project3_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Poďme z toho vytvoriť snehovú vločku."_
+
+        Po nakreslení radu tvarov skoč s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a otoč ju, aby ďalší rad tvarov nakreslila iným smerom.
+
+        Aké úžasné snehové vločky vieš vytvoriť!
+
+        * * *
+
+        Pozri si tieto príklady s polygónmi:\
+        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)
+        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
+        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
+
+        Abstraktné tvary môžu vytvoriť snehovú vločku podobnú na niektorú z týchto:\
+        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)
+        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)
+        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
       courseD_artist_project3a: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trochu sa zatočme a vyrobme si opäť snehovú vločku."_
 
@@ -2736,25 +2896,25 @@ sk-SK:
         Použi blok `pokiaľ tam je šalát` a daj ho do bloku pre cyklus `opakuj`!
       courseE_farmer_ramp12b_2019: Teraz záhradníčka potrebuje pozbierať všetok šalát.
         Použi blok `pokiaľ tam je šalát` a daj ho do bloku pre cyklus `opakuj`!
-      courseE_farmer_ramp12c_2018: "Šalát je tento raz až na konci cestičky.  \nChoď
+      courseE_farmer_ramp12c_2018: "Šalát je tento raz až na konci cestičky.\\\nChoď
         po cestičke **pokiaľ neplatí**, že si na políčku s hlávkou šalátu, potom pokračuj
         a zbieraj šalát **pokiaľ** tam nejaký je.  "
-      courseE_farmer_ramp12c_2019: "Šalát je tento raz až na konci cestičky.  \nChoď
+      courseE_farmer_ramp12c_2019: "Šalát je tento raz až na konci cestičky.\\\nChoď
         po cestičke **pokiaľ neplatí**, že si na políčku s hlávkou šalátu, potom pokračuj
         a zbieraj šalát **pokiaľ** tam nejaký je.  "
-      courseE_farmer_ramp12d_2018: "Šalát je rozptýlený po celej záhrade.  \nChoď
+      courseE_farmer_ramp12d_2018: "Šalát je rozptýlený po celej záhrade.\\\nChoď
         po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
         a zbieraj šalát **pokiaľ** tam nejaký je.  "
-      courseE_farmer_ramp12d_2019: "Šalát je rozptýlený po celej záhrade.  \nChoď
+      courseE_farmer_ramp12d_2019: "Šalát je rozptýlený po celej záhrade.\\\nChoď
         po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
         a zbieraj šalát **pokiaľ** tam nejaký je.  "
-      courseE_farmer_ramp12e: "Šalát je rozptýlený po celej záhrade.  \nChoď po cestičke
+      courseE_farmer_ramp12e: "Šalát je rozptýlený po celej záhrade.\\\nChoď po cestičke
         **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj a zbieraj šalát
         **pokiaľ** tam nejaký je.  "
-      courseE_farmer_ramp12e_2018: "Šalát je rozptýlený po celej záhrade.  \nChoď
+      courseE_farmer_ramp12e_2018: "Šalát je rozptýlený po celej záhrade.\\\nChoď
         po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
         a zbieraj šalát **pokiaľ** tam nejaký je.  "
-      courseE_farmer_ramp12e_2019: "Šalát je rozptýlený po celej záhrade.  \nChoď
+      courseE_farmer_ramp12e_2019: "Šalát je rozptýlený po celej záhrade.\\\nChoď
         po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
         a zbieraj šalát **pokiaľ** tam nejaký je.  "
       courseE_farmer_ramp12f_2018: "**Výzva**: jediný spôsob ako pozbierať celú úrodu

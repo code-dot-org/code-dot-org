@@ -296,7 +296,7 @@ sk-SK:
       4-5 Artist 7: Tento pravouhlý trojuholník má uhly 30, 60 a 90 stupňov. Dĺžka
         šikmej strany (dĺžka prepony) je 200 pixelov. Dokončite kresbu.
       4-5 Artist 8: "Stredová čiara na tomto futbalovom ihrisku je kolmá na jeho postranné
-        čiary.  \nTento obdĺžnik ma obvod dokopy 800 pixelov a je 240 pixelov dlhý.
+        čiary.\\\nTento obdĺžnik ma obvod dokopy 800 pixelov a je 240 pixelov dlhý.
         Ako široký je obdĺžnik?  \n\nNakreslite postranné čiary a stredovú čiaru."
       4-5 Artist 9: Nakreslite pravú polovicu tohto obrázku, aby bol dizajn symetrický.
         Trojuholníky sú rovnostranné a majú strany dlhé 50 pixelov.
@@ -404,9 +404,10 @@ sk-SK:
       4-5 Maze 6: Dostaňte ma k slnečnici použitím čo najmenšieho možného počtu blokov!
       4-5 Maze 7: Dostaňte zombíka rýchlo k slnečnici! Viete vyriešiť túto úlohu s
         menej ako 11 blokmi?
-      4-5 Maze 8: "Dostaňte zombíka k slnečnici použitím čo najmenšieho počtu blokov.
-        \ \n(Vyhnite sa chomperom!)"
-      4-5 Maze 9: "Teraz tu máme nový blok `opakuj pokiaľ neplatí`.  \nToto nám umožní
+      4-5 Maze 8: |-
+        Dostaňte zombíka k slnečnici použitím čo najmenšieho počtu blokov.\
+        (Vyhnite sa chomperom!)
+      4-5 Maze 9: "Teraz tu máme nový blok `opakuj pokiaľ neplatí`.\\\nToto nám umožní
         opakovať príkazy až kým sa zombík nedostane k slnečnici.  \n\nPouži nový blok
         \"opakuj pokiaľ neplatí\" pre vyriešenie tejto úlohy s čo najmenším možným
         počtom príkazov."
@@ -451,7 +452,7 @@ sk-SK:
         \ \n\nDostaňte ma ku kope a odstráňte všetku hlinu, potom ma posuňte k jame
         a celú ju zasypte."
       4-5 While Loops 4: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných
-        hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude
+        hliny treba na zasypanie tejto jamy.\\\nViete napísať program, ktorý bude
         zasypávať jamu až kým nebude zem vyrovnaná?  "
       4-5 While Loops 8: " Toto je veľmi hlboká jama a veľmi veľká kopa hliny. Koľko
         lopát plných hliny musíte presunúť, aby ste zem zarovnali?"

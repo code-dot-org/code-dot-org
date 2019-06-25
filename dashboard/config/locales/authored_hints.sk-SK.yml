@@ -45,11 +45,15 @@ sk-SK:
       2-3 Artist Functions 3:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Potrebujete pomôcť s uhlami?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potrebujete pomôcť s uhlami?\
+          **360/12 = 30**
         2-3_Artist_Nested_Loops_3_b: Nezabudni vložiť všetok šedý kód, spolu s blokom
           na otočenie do vnútra cyklu.
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Potrebujete pomôcť s uhlami?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potrebujete pomôcť s uhlami?\
+          **360/12 = 30**
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: "Skoč z vrchného štvorca na začiatok ďalšieho
           pomocou bloku `skoč dopredu`. \n\nAk má každý štvorec 20 pixelov a štvorce
