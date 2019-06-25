@@ -94,6 +94,7 @@ ruby
       level_info = {
         id: level.id,
         title: level.display_name || level.name,
+        description: level.try(:bubble_choice_description),
         thumbnail_url: level.try(:thumbnail_url)
       }
 
