@@ -563,18 +563,6 @@ vi:
             '2': âm cao
       Dancelab_whenSetup:
         text: thiết lập
-      gamelab_changeColor:
-        text: thay đổi {COLOR} {METHOD} thành {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': sắc thái
-      gamelab_changeColorBy:
-        text: thay đổi {COLOR} {METHOD} thành {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': sắc màu
-            '"saturation"': độ bão hòa
-            '"brightness"': độ sáng
       gamelab_changePropBy:
         text: thay đổi {PROPERTY} {SPRITE} theo {VAL}
         options:
@@ -618,28 +606,11 @@ vi:
             '"right"': phải
             '"space"': vũ trụ
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': đường biên
-            '"inner"': hình vuông bên trong
-            '"circle"': vòng tròn
-            '"grid"': lưới
-            '"row"': hàng
-            '"column"': cột
-            '"plus"': cộng
-            '"random"': ngẫu nhiên
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": ngẫu nhiên
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': phải
             '"left"': trái
-      gamelab_mixColors:
-        text: trộn {COLOR1} và {COLOR2}
       gamelab_randColor:
         text: màu ngẫu nhiên
       gamelab_randomColor:
@@ -662,20 +633,6 @@ vi:
               nước
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': mùa
               đông
-      gamelab_setPosition:
-        text: di chuyển {THIS} đến vị trí {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": trên trái
-            "{x: 200, y: 50}": trên trung tâm
-            "{x: 350, y: 50}": trên phải
-            "{x: 50, y: 200}": trung tâm trái
-            "{x: 200, y: 200}": giữa
-            "{x: 350, y: 200}": trung tâm phải
-            "{x: 50, y: 350}": dưới trái
-            "{x: 200, y: 350}": dưới trung tâm
-            "{x: 350, y: 350}": dưới phải
-            '"random"': ngẫu nhiên
       gamelab_setProp:
         options:
           PROPERTY:
@@ -692,34 +649,11 @@ vi:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-      gamelab_setup:
-        text: thiết lập
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': Khi nào
             '"while"': Lặp khi
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': Khi nào
-            '"while"': Lặp khi
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': kích cỡ
-            '"x"': hoành độ
-            '"y"': tung độ
-            '"direction"': phương hướng chuyển động
-            '"tint"': sắc thái
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': kích cỡ
-            '"x"': hoành độ
-            '"y"': tung độ
-            '"direction"': phương hướng chuyển động
-            '"tint"': sắc thái
       gamelab_turn:
         options:
           DIRECTION:
@@ -741,11 +675,6 @@ vi:
             "'down'": xuống
             "'left'": trái
             "'right'": phải
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': Khi nào
-            '"while"': Lặp khi
       gamelab_whileKey:
         options:
           KEY:

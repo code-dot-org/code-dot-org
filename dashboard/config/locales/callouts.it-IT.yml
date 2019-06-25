@@ -394,19 +394,19 @@ it-IT:
         made_of_stone: Questi blocchi sono fatti di pietra. Puoi muoverli, ma non
           puoi cancellarli!
       courseA_playLab_events4:
-        courseA_playlab_events4_callout1: Questa è una chiamata
+        courseA_playlab_events4_callout1: Questa è una nota
       courseA_playLab_events4_2018:
-        courseA_playlab_events4_callout1: Questa è una chiamata
+        courseA_playlab_events4_callout1: Questa è una nota
       courseA_playLab_events4_2019:
-        courseA_playlab_events4_callout1: Questa è una chiamata
+        courseA_playlab_events4_callout1: Questa è una nota
       courseA_playLab_events5:
-        courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento
+        courseA_playLab_events5_1: Clicca qui per cambiare la direzione dell'evento
           freccia.
       courseA_playLab_events5_2018:
-        courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento
+        courseA_playLab_events5_1: Clicca qui per cambiare la direzione dell'evento
           freccia.
       courseA_playLab_events5_2019:
-        courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento
+        courseA_playLab_events5_1: Clicca qui per cambiare la direzione dell'evento
           freccia.
       courseA_playLab_events6:
         courseA_playLab_events6_1: Questo ti permette di scegliere un suono "casuale",
@@ -898,3 +898,15 @@ it-IT:
       frozen square snowflake:
         replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
           numero
+      grade5_artist_variables_triangles1:
+        grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
+          introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
+          presi e spostati da un blocco all''altro!'
+      grade5_artist_variables_triangles1_2018:
+        grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
+          introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
+          presi e spostati da un blocco all''altro!'
+      grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
+          introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
+          presi e spostati da un blocco all''altro!'

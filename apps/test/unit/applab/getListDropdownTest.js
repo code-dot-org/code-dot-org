@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from 'chai';
 
 var getListDropdown = require('@cdo/apps/applab/getListDropdown');
 

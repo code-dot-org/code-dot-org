@@ -1308,6 +1308,102 @@ es-ES:
         ¿Necesitas una idea? Intenta hacer un diseño como este.
 
         ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+      courseC_artist_prog1: |-
+        _"Hola, soy un artista. Puedes escribir código para hacerme dibujar casi cualquier cosa."_
+        ¡Juega con los bloques en la caja de herramientas para ver qué es lo que hacen!
+      courseC_artist_prog1_2018: |-
+        _"Hola, soy un artista. Puedes escribir código para hacerme dibujar casi cualquier cosa."_
+        ¡Juega con los bloques en la caja de herramientas para ver qué es lo que hacen!
+      courseC_artist_prog1_2019: |-
+        _"Hola, soy un artista. Puedes escribir código para hacerme dibujar casi cualquier cosa."_
+        ¡Juega con los bloques en la caja de herramientas para ver qué es lo que hacen!
+      courseC_artist_prog2: |-
+        \-"¡Hagamos una jaula para mi monstruo mascota!"\_
+        Arrastra los bloques al espacio de trabajo para hacer que el artista pinte sobre las líneas grises del dibujo. (Cada línea tiene 100 pixels de largo)
+      courseC_artist_prog2_2018: |-
+        \-"¡Hagamos una jaula para mi monstruo mascota!"\_
+        Arrastra los bloques al espacio de trabajo para hacer que el artista pinte sobre las líneas grises del dibujo. (Cada línea tiene 100 pixels de largo)
+      courseC_artist_prog2_2019: |-
+        \-"¡Hagamos una jaula para mi monstruo mascota!"\_
+        Arrastra los bloques al espacio de trabajo para hacer que el artista pinte sobre las líneas grises del dibujo. (Cada línea tiene 100 pixels de largo)
+      courseC_artist_prog3: |-
+        _"¡Esta nave espacial necesita una ventana!"_
+
+        Cada lado del cuadrado tiene 100 pixeles y todos los ángulos son de 90 grados.
+      courseC_artist_prog3_2018: |-
+        _"¡Esta nave espacial necesita una ventana!"_
+
+        Cada lado del cuadrado tiene 100 pixeles y todos los ángulos son de 90 grados.
+      courseC_artist_prog3_2019: |-
+        _"¡Esta nave espacial necesita una ventana!"_
+
+        Cada lado del cuadrado tiene 100 pixeles y todos los ángulos son de 90 grados.
+      courseC_artist_prog4: |-
+        _"¡Oh, no! La mascota extraterrestre de Slarla ha echado a volar! ¡Ayudemos a la astronauta!"_
+
+        Termina el cohete de Starla para que pueda ir a por su mascota.
+        (Cada lado del triángulo tiene 100 pixels de largo y los ángulos por fuera tienen 120 grados.)
+      courseC_artist_prog4_2018: |-
+        _"¡Oh, no! La mascota extraterrestre de Slarla ha echado a volar! ¡Ayudemos a la astronauta!"_
+
+        Termina el cohete de Starla para que pueda ir a por su mascota.
+        (Cada lado del triángulo tiene 100 pixels de largo y los ángulos por fuera tienen 120 grados.)
+      courseC_artist_prog4_2019: |-
+        _"¡Oh, no! La mascota extraterrestre de Slarla ha echado a volar! ¡Ayudemos a la astronauta!"_
+
+        Termina el cohete de Starla para que pueda ir a por su mascota.
+        (Cada lado del triángulo tiene 100 pixels de largo y los ángulos por fuera tienen 120 grados.)
+      courseC_artist_prog5: |-
+        _"¡Tal vez debamos hacer una tarjeta de identificación para cada una de nuestras mascotas por si se pierden!"_
+
+        Termina esta tarjeta dibujando un rectángulo alrededor del borde.
+        (Los lados largos miden 200 pixeles y cada uno de los cortos mide 100 pixeles)
+      courseC_artist_prog5_2018: |-
+        _"¡Tal vez debamos hacer una tarjeta de identificación para cada una de nuestras mascotas por si se pierden!"_
+
+        Termina esta tarjeta dibujando un rectángulo alrededor del borde.
+        (Los lados largos miden 200 pixeles y cada uno de los cortos mide 100 pixeles)
+      courseC_artist_prog5_2019: |-
+        _"¡Tal vez debamos hacer una tarjeta de identificación para cada una de nuestras mascotas por si se pierden!"_
+
+        Termina esta tarjeta dibujando un rectángulo alrededor del borde.
+        (Los lados largos miden 200 pixeles y cada uno de los cortos mide 100 pixeles)
+      courseC_artist_prog6: |-
+        _"¡Ahora una tarjeta de identificación para Belle!"_
+
+        Dibuja este rombo con lados de 200 píxeles.
+      courseC_artist_prog6_2018: |-
+        _"¡Ahora una tarjeta de identificación para Belle!"_
+
+        Dibuja este cuadrado con lados de 200 píxeles.
+      courseC_artist_prog6_2019: |-
+        _"¡Ahora una tarjeta de identificación para Belle!"_
+
+        Dibuja este cuadrado con lados de 200 píxeles.
+      courseC_artist_prog7: |-
+        **Desafío:** ¡Esta tarjeta de identificación es especial!
+
+        ¿Puedes descubrir como dibujar el borde?
+        (El lado largo mide 150 píxels y cada uno de los cortos mide 75 píxels.)
+      courseC_artist_prog7_2018: |-
+        **Desafío:** ¡Esta tarjeta de identificación es especial!
+
+        ¿Puedes descubrir como dibujar el borde?
+        (El lado largo mide 150 píxels y cada uno de los cortos mide 75 píxels.)
+      courseC_artist_prog7_2019: |-
+        **Desafío:** ¡Esta tarjeta de identificación es especial!
+
+        ¿Puedes descubrir como dibujar el borde?
+        (El lado largo mide 150 píxels y cada uno de los cortos mide 75 píxels.)
+      courseC_artist_prog8: |-
+        Una tarjeta de identificación más. Esta es un triángulo para Pi.
+        (Cada lado mide 150 píxeles)
+      courseC_artist_prog8_2018: |-
+        Una tarjeta de identificación más. Esta es un triángulo para Pi.
+        (Cada lado mide 150 píxeles)
+      courseC_artist_prog8_2019: |-
+        Una tarjeta de identificación más. Esta es un triángulo para Pi.
+        (Cada lado mide 150 píxeles)
       courseC_collector_prog1: |-
         **_Juego libre_** ¡Esta es Laurel, la aventurera! Haz que se mueva y consigue tantas joyas como puedas. ¡Usa el bloque 'junta' para recoger las joyas!
 
@@ -1326,6 +1422,72 @@ es-ES:
         type="collector_collect"/></xml> para cogerla.
       courseC_collector_prog2_2019: Lleva a Laurel a la joya, luego, usa el bloque
         <xml><block type="collector_collect"/></xml> para cogerla.
+      courseC_collector_prog3: |-
+        _"¡El orden importa!"_
+        Los bloques que necesitas ya están en el espacio de trabajo, pero no están conectados.
+        Ordena los bloques para recoger el tesoro y resolver el puzle.
+      courseC_collector_prog3_2018: |-
+        _"¡El orden importa!"_
+        Los bloques que necesitas ya están en el espacio de trabajo, pero no están conectados.
+        Ordena los bloques para recoger el tesoro y resolver el puzle.
+      courseC_collector_prog3_2019: |-
+        _"¡El orden importa!"_
+        Los bloques que necesitas ya están en el espacio de trabajo, pero no están conectados.
+        Ordena los bloques para recoger el tesoro y resolver el puzle.
+      courseC_collector_prog4: |-
+        _"¡El orden importa!"_
+        Los bloques que necesitas ya están en el espacio de trabajo, pero no están conectados.
+        Ordena los bloques para recoger todas las joyas y solucionar el puzle.
+      courseC_collector_prog4_2018: |-
+        _"¡El orden importa!"_
+        Los bloques que necesitas ya están en el espacio de trabajo, pero no están conectados.
+        Ordena los bloques para recoger todas las joyas y solucionar el puzle.
+      courseC_collector_prog4_2019: |-
+        _"¡El orden importa!"_
+        Los bloques que necesitas ya están en el espacio de trabajo, pero no están conectados.
+        Ordena los bloques para recoger todas las joyas y solucionar el puzle.
+      courseC_collector_prog5: |-
+        \-"¡Ayúdame a recoger cada pieza del tesoro!"\_
+        Esos bloques están desordenados. ¿Puedes arreglarlo?
+      courseC_collector_prog5_2018: |-
+        \-"¡Ayúdame a recoger cada pieza del tesoro!"\_
+        Esos bloques están desordenados. ¿Puedes arreglarlo?
+      courseC_collector_prog5_2019: |-
+        \-"¡Ayúdame a recoger cada pieza del tesoro!"\_
+        Esos bloques están desordenados. ¿Puedes arreglarlo?
+      courseC_collector_prog6: |-
+        _"¡Ayúdame a recoger todo el tesoro!"_
+        Estos bloques están desordenados. Ordénalos para recoger todo el tesoro.
+      courseC_collector_prog6_2018: |-
+        _"¡Ayúdame a recoger todo el tesoro!"_
+        Estos bloques están desordenados. Ordénalos para recoger todo el tesoro.
+      courseC_collector_prog6_2019: |-
+        _"¡Ayúdame a recoger todo el tesoro!"_
+        Estos bloques están desordenados. Ordénalos para recoger todo el tesoro.
+      courseC_collector_prog7: |-
+        **Desafío:**_"¿Qué está pasando?"_
+
+        Aunque pongamos estos bloques en el orden correcto, todavía falta algo.
+        Utiliza los bloques de la caja de herramientas para recoger todo el tesoro.
+      courseC_collector_prog7_2018: |-
+        **Desafío:**_"¿Qué está pasando?"_
+
+        Aunque pongamos estos bloques en el orden correcto, todavía falta algo.
+        Utiliza los bloques de la caja de herramientas para recoger todo el tesoro.
+      courseC_collector_prog7_2019: |-
+        **Desafío:**_"¿Qué está pasando?"_
+
+        Aunque pongamos estos bloques en el orden correcto, todavía falta algo.
+        Utiliza los bloques de la caja de herramientas para recoger todo el tesoro.
+      courseC_collector_prog8: _"¡Sigue trabajando así de bien! Ayúdame a recoger
+        todo el tesoro."_
+      courseC_collector_prog8_2018: _"¡Sigue trabajando así de bien! Ayúdame a recoger
+        todo el tesoro."_
+      courseC_collector_prog8_2019: _"¡Sigue trabajando así de bien! Ayúdame a recoger
+        todo el tesoro."_
+      courseC_collector_prog9: _"¡Consigamos todo el tesoro!"_
+      courseC_collector_prog9_2018: _"¡Consigamos todo el tesoro!"_
+      courseC_collector_prog9_2019: _"¡Consigamos todo el tesoro!"_
       courseC_maze_debugging1: |-
         ¡ El código no está del todo bien!
 
@@ -1439,6 +1601,99 @@ es-ES:
         tú quieras!"_
       courseC_maze_programming9_2019: _"Ahora, ¡ayúdame a acorralar al cerdo como
         tú quieras!"_
+      courseC_starWars_loops1: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Ve a por la chatarra, BB-8!\"_ \nUsa cinco bloques iguales para coger la
+        chatarra. La chatarra brilla así: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops11: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Sigue así, BB-8!\"_ \n\n¡Ya casi lo tienes! ¡Esta vez, elige el camino
+        que quieras!"
+      courseC_starWars_loops11_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Sigue así, BB-8!\"_ \n\n¡Ya casi lo tienes! ¡Esta vez, elige el camino
+        que quieras!"
+      courseC_starWars_loops11_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Sigue así, BB-8!\"_ \n\n¡Ya casi lo tienes! ¡Esta vez, elige el camino
+        que quieras!"
+      courseC_starWars_loops1_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Ve a por la chatarra, BB-8!\"_ \nUsa cinco bloques iguales para coger la
+        chatarra. La chatarra brilla así: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops1_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Ve a por la chatarra, BB-8!\"_ \nUsa cinco bloques iguales para coger la
+        chatarra. La chatarra brilla así: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops2: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Ve BB-8!\"_ \n\nPara conseguir toda la chatarra, prueba a hacer un bucle
+        que use sólo un bloque dentro de un bloque `repetir`."
+      courseC_starWars_loops2_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Ve BB-8!\"_ \n\nPara conseguir toda la chatarra, prueba a hacer un bucle
+        que use sólo un bloque dentro de un bloque `repetir`."
+      courseC_starWars_loops2_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Ve BB-8!\"_ \n\nPara conseguir toda la chatarra, prueba a hacer un bucle
+        que use sólo un bloque dentro de un bloque `repetir`."
+      courseC_starWars_loops4: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        En este puzle, dos bloques `repetir` te ayudarán a llevar a BB-8 a toda la chatarra con el menor número de bloques
+      courseC_starWars_loops4_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        En este puzle, dos bloques `repetir` te ayudarán a llevar a BB-8 a toda la chatarra con el menor número de bloques
+      courseC_starWars_loops4_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        En este puzle, dos bloques `repetir` te ayudarán a llevar a BB-8 a toda la chatarra con el menor número de bloques
+      courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Ve BB-8!"_'
+      courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Ve BB-8!"_'
+      courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Ve BB-8!"_'
+      courseC_starWars_loops6: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes conseguirlo todo?"_
+
+        ¡Los bucles funcionan también con más de un bloque dentro! ¿Puedes meter en un bucle esta secuencia?
+      courseC_starWars_loops6_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes conseguirlo todo?"_
+
+        ¡Los bucles funcionan también con más de un bloque dentro! ¿Puedes meter en un bucle esta secuencia?
+      courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes conseguirlo todo?"_
+
+        ¡Los bucles funcionan también con más de un bloque dentro! ¿Puedes meter en un bucle esta secuencia?
+      courseC_starWars_loops7: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
+
+        ¿Puedes intentar conseguir toda la chatarra sólo con un bucle? Prueba a programarlo todo y luego encuentra el código repetido para meterlo en un bucle.
+      courseC_starWars_loops7_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
+
+        ¿Puedes intentar conseguir toda la chatarra sólo con un bucle? Prueba a programarlo todo y luego encuentra el código repetido para meterlo en un bucle.
+      courseC_starWars_loops7_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
+
+        ¿Puedes intentar conseguir toda la chatarra sólo con un bucle? Prueba a programarlo todo y luego encuentra el código repetido para meterlo en un bucle.
+      courseC_starWars_loops8: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        **Desafío:** Combina ideas de los últimos puzles para completar este nivel.
+      courseC_starWars_loops8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        **Desafío:** Combina ideas de los últimos puzles para completar este nivel.
+      courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        **Desafío:** Combina ideas de los últimos puzles para completar este nivel.
+      courseC_starWars_loops9: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Sigue así!"_
+
+        ¡Usa lo que has aprendido para recoger toda la chatarra!
+      courseC_starWars_loops9_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Sigue así!"_
+
+        ¡Usa lo que has aprendido para recoger toda la chatarra!
+      courseC_starWars_loops9_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Sigue así!"_
+
+        ¡Usa lo que has aprendido para recoger toda la chatarra!
       courseD_bee_nestedLoops1a: |-
         "Va a ser genial!"
 
@@ -1642,6 +1897,21 @@ es-ES:
       frozen square snowflake: ¿Puedes dibujar un copo de nieve utilizando el bloque
         "Repetir" para dibujar un cuadrado 10 veces y el bloque "Girar" para girar
         36 grados entre cada cuadrado?
+      grade2_collector_10: |-
+        ¡Ya casi lo tienes!
+
+        ¡Recoge tantas joyas como puedas para completar el nivel!
+      grade2_collector_10_2018: |-
+        ¡Ya casi lo tienes!
+
+        ¡Recoge tantas joyas como puedas para completar el nivel!
+      grade2_collector_10_2019: |-
+        ¡Ya casi lo tienes!
+
+        ¡Recoge tantas joyas como puedas para completar el nivel!
+      grade2_collector_A: Ayuda a Laurel a recoger todo el tesoro.
+      grade2_collector_A_2018: Ayuda a Laurel a recoger todo el tesoro.
+      grade2_collector_A_2019: Ayuda a Laurel a recoger todo el tesoro.
       ramp_artist_loops1: "¡Qué día más maravilloso! \n\nAyuda al artista a cubrir
         sus flores antes del invierno moviéndose 60 píxeles hacia delante."
       ramp_artist_loops1_2018: "¡Qué día más maravilloso! \n\nAyuda al artista a cubrir

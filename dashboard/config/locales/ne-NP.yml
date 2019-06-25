@@ -510,7 +510,6 @@ ne:
   pdf_download: Download PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
-  not_started: The student has not attempted this level.
   share_code:
     title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game

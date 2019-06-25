@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from 'chai';
 import textResponses, {
   setTextResponses,
   startLoadingResponses,

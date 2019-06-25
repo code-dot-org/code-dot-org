@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from 'chai';
 import stats, {
   setCompletedLevelCount
 } from '@cdo/apps/templates/teacherDashboard/statsRedux';

@@ -458,6 +458,7 @@ lv-LV:
   dashboard_sections_print_secrets: Tad jūs varat izdrukāt lapiņas, kas satur informāciju
     par kontiem, kas individuāli tiek izdalīti taviem skolēniem.
   dashboard_sections_switch_section: 'Pārslēgt sadaļu:'
+  dashboard_sections_close: Aizvērt
   dashboard_students_add_multiple: 'Ieraksti vai iekopē savu skolēnu vārdus, vienu
     katrā rindā:'
   dashboard_students_new_section: Tu izveidoji jaunu sadaļu! Tagad pievieno skolēnus,

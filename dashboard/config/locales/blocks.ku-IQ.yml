@@ -81,14 +81,6 @@ ku:
           VAL:
             'true': ڕاست
             'false': هەڵە
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': هەڕەمەکی
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": هەڕەمەکی
       gamelab_randColor:
         text: رەنگێکی هەڕەمەکی
       gamelab_randomColor:
@@ -101,10 +93,6 @@ ku:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': بیابان
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': پەلكەزێرینە
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ژێرئاو
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': هەڕەمەکی
       Mikelab_randomColor:
         text: رەنگێکی هەڕەمەکی
       Mikelab_setBG:
