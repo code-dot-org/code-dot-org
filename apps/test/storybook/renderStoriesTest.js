@@ -7,7 +7,7 @@ import {
 } from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 import $ from 'jquery';
-import Adapter from 'enzyme-adapter-react-15.4';
+import Adapter from 'enzyme-adapter-react-15';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 
