@@ -45,6 +45,16 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     end
   end
 
+  # POST /teacher_feedbacks
+  def create
+    @teacher_feedback.teacher_id = current_user.id
+    if @teacher_feedback.save
+      render json: @teacher_feedback, serializer: Api::V1::TeacherFeedbackSerializer, status: :created
+    else
+      head :bad_request
+    end
+  end
+
   # POST /teacher_feedbacks/:id/increment_visit_count
   #
   # Records metrics for student viewing teacher feedback.
