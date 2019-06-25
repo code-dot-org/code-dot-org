@@ -118,11 +118,10 @@ def redact_course_content(source, dest, original, *plugins)
   end
 end
 
-def redact(source, dest, *plugins)
+def redact(source, dest, plugins=[], format='md')
   return unless File.exist? source
   FileUtils.mkdir_p File.dirname(dest)
 
-  plugins = plugins_to_arg(plugins)
   data =
     if File.extname(source) == '.json'
       f = File.open(source, 'r')
@@ -132,7 +131,8 @@ def redact(source, dest, *plugins)
     end
 
   args = ['bin/i18n/node_modules/.bin/redact']
-  args.push('-p ' + plugins) unless plugins.empty?
+  args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
+  args.push("-f #{format}")
 
   stdout, _status = Open3.capture2(
     args.join(" "),
@@ -148,7 +148,7 @@ def redact(source, dest, *plugins)
   end
 end
 
-def restore(source, redacted, dest, *plugins)
+def restore(source, redacted, dest, plugins=[], format='md')
   return unless File.exist?(source)
   return unless File.exist?(redacted)
   is_json = File.extname(source) == '.json'
@@ -185,11 +185,11 @@ def restore(source, redacted, dest, *plugins)
   redacted_json.flush
 
   args = ['bin/i18n/node_modules/.bin/restore']
-  plugins = plugins_to_arg(plugins)
-  args.push('-p ' + plugins) unless plugins.empty?
-
+  args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
+  args.push("-f #{format}")
   args.push("-s #{source_json.path}")
   args.push("-r #{redacted_json.path}")
+
   stdout, _status = Open3.capture2(
     args.join(" ")
   )

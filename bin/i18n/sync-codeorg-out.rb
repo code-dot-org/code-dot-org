@@ -47,14 +47,13 @@ def restore_redacted_files
 
     Dir.glob("i18n/locales/original/**/*.*").each do |original_path|
       translated_path = original_path.sub("original", locale)
-      plugin = nil
-      if original_path == 'i18n/locales/original/dashboard/blocks.yml'
-        plugin = 'blockfield'
-      end
+
       if original_path.include? "course_content"
-        restore_course_content(original_path, translated_path, translated_path, plugin)
+        restore_course_content(original_path, translated_path, translated_path)
+      elsif original_path == 'i18n/locales/original/dashboard/blocks.yml'
+        restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
       else
-        restore(original_path, translated_path, translated_path, plugin)
+        restore(original_path, translated_path, translated_path)
       end
     end
   end
