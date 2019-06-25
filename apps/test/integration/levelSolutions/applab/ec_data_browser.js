@@ -165,7 +165,7 @@ module.exports = {
       customValidator: function(assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, 'created record\ncreated key');
+        assert.equal(debugOutput.textContent, '"created record""created key"');
         return true;
       },
       expected: {
@@ -442,7 +442,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'created record 1\ncreated record 2'
+          '"created record 1""created record 2"'
         );
         return true;
       },
@@ -565,9 +565,9 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'created record\n' +
-            'record updated: {"newName":"Alice","age":7,"male":false,"id":1}\n' +
-            'record updated: {"newName":"Alice","age":7,"id":1}'
+          '"created record"' +
+            '"record updated: {"newName":"Alice","age":7,"male":false,"id":1}"' +
+            '"record updated: {"newName":"Alice","age":7,"id":1}"'
         );
         return true;
       },
@@ -674,10 +674,10 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'created record 1\n' +
-            'created record 2\n' +
-            'deleted record 1\n' +
-            'deleted record 2'
+          '"created record 1"' +
+            '"created record 2"' +
+            '"deleted record 1"' +
+            '"deleted record 2"'
         );
         return true;
       },
@@ -703,7 +703,7 @@ module.exports = {
         onRecordEvent('mytable', function(record, eventType) {
           if (eventType === 'create') {
             console.log('created record ' + record.id);
-          } 
+          }
         });`,
 
       runBeforeClick: function(assert) {
@@ -732,7 +732,7 @@ module.exports = {
           setTimeout(() => {
             tableLink = dataOverview.find('a:contains(mytable)');
             assert.equal(tableLink.is(':visible'), true, 'table link exists');
-            assert.equal(debugOutput.textContent, 'created record 1'); //
+            assert.equal(debugOutput.textContent, '"created record 1"'); //
             ReactTestUtils.Simulate.click(tableLink[0]);
 
             // view mytable
@@ -779,7 +779,7 @@ module.exports = {
                 );
                 assert.equal(
                   debugOutput.textContent,
-                  'created record 1\ncreated record 2'
+                  '"created record 1""created record 2"'
                 );
 
                 // back to overview
@@ -791,7 +791,7 @@ module.exports = {
                 assert.equal(recordRow.length, 2, 'two table rows in mytable');
                 assert.equal(
                   debugOutput.textContent,
-                  'created record 1\ncreated record 2'
+                  '"created record 1""created record 2"'
                 );
 
                 // create record 3
@@ -805,7 +805,7 @@ module.exports = {
                   );
                   assert.equal(
                     debugOutput.textContent,
-                    'created record 1\ncreated record 2\ncreated record 3'
+                    '"created record 1""created record 2""created record 3"'
                   );
 
                   Applab.onPuzzleComplete();
@@ -820,7 +820,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'created record 1\ncreated record 2\ncreated record 3'
+          '"created record 1""created record 2""created record 3"'
         );
         return true;
       },
