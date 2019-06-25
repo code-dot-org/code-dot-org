@@ -170,13 +170,15 @@ fil-PH:
         2-3_Artist_Nested_Loops_1_a: Tandaan na gawin ang lahat ng mga abong mga bloke
           sa loob ng iyong loop.
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Nangangailangan ng tulong sa mga anggulo?  \n**360/12
-          = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Nangangailangan ng tulong sa mga anggulo?\
+          **360/12 = 30**
         2-3_Artist_Nested_Loops_3_b: Tandaang ilagay ang lahat ng mga kulay abo na
           code at iyong pagliko na bloke sa loob ng isang loop.
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Nangangailangan ng tulong sa mga anggulo?  \n**360/12
-          = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Nangangailangan ng tulong sa mga anggulo?\
+          **360/12 = 30**
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: "Subukang gumamit ng `jump forward` na bloke
           para makuha mula sa taas ng isang parisukat sa lugar kung saan nagsimula
@@ -562,10 +564,12 @@ fil-PH:
           ang iyong galawa, siguradohin na ikaw ay gumagamit sa `counter` bilang distansya
           mo.
       Course 4 Artist For Loops 4:
-        Course_4_Artist_For_Loops_4_a: "**Ano ang pinakamaliit na numero na kakailanganin
-          mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat
-          beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan
-          ang mga puwang ng `for` na loop."
+        Course_4_Artist_For_Loops_4_a: |-
+          **Ano ang pinakamaliit na numero na kakailanganin mo?\
+          Ano ang pinakamalaking numero?\
+          Gaano kalaki ang paglaki as bawat beses?**
+
+          Iyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop.
       Course 4 Artist For Loops Challenge:
         Course_4_Artist_For_Loops_Challenge_a: Ang pinakamalaking hugis ay mayroong
           19 na gilid. Ang pinakamaliit ay mayroong dalawa lang.
@@ -4649,20 +4653,26 @@ fil-PH:
         courseA_artist_loops8_a: Subukang patakbuhin ang code para makita kung ana
           ang naisulat para sa iyo.
         courseA_artist_loops8_b: Paano mo i-loop ang iyong code na ibinigay sa iyo?
-        courseA_artist_loops8_c: "Ano ang ginagawa ng code?  \nAno ang dapat gawin
-          nito?  \nAno ang sinabi nito sa iyo?"
+        courseA_artist_loops8_c: |-
+          Ano ang ginagawa ng code?\
+          Ano ang dapat gawin nito?\
+          Ano ang sinabi nito sa iyo?
       courseA_artist_loops8_2018:
         courseA_artist_loops8_a: Subukang patakbuhin ang code para makita kung ana
           ang naisulat para sa iyo.
         courseA_artist_loops8_b: Paano mo i-loop ang iyong code na ibinigay sa iyo?
-        courseA_artist_loops8_c: "Ano ang ginagawa ng code?  \nAno ang dapat gawin
-          nito?  \nAno ang sinabi nito sa iyo?"
+        courseA_artist_loops8_c: |-
+          Ano ang ginagawa ng code?\
+          Ano ang dapat gawin nito?\
+          Ano ang sinabi nito sa iyo?
       courseA_artist_loops8_2019:
         courseA_artist_loops8_a: Subukang patakbuhin ang code para makita kung ana
           ang naisulat para sa iyo.
         courseA_artist_loops8_b: Paano mo i-loop ang iyong code na ibinigay sa iyo?
-        courseA_artist_loops8_c: "Ano ang ginagawa ng code?  \nAno ang dapat gawin
-          nito?  \nAno ang sinabi nito sa iyo?"
+        courseA_artist_loops8_c: |-
+          Ano ang ginagawa ng code?\
+          Ano ang dapat gawin nito?\
+          Ano ang sinabi nito sa iyo?
       courseA_artist_loops9:
         courseA_artist_loops9_a: Magdagdag ng isa pang bloke sa iyong code na ibinigay
           sa iyo iguhit ang natitirang mga hagdanan.
@@ -5955,20 +5965,26 @@ fil-PH:
           ng ilang mga bloke, pagkatapos ay subukan ito. Magdagdag pa, pagkatapos
           ay subukan ito ulit. Maya-maya, makakarating ka rin doon!"
       courseF_artist_for4:
-        courseF_artist_for4_a: "**Ano ang pinakamaliit na numero na kakailanganin
-          mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat
-          beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan
-          ang mga puwang ng `for` na loop."
+        courseF_artist_for4_a: |-
+          **Ano ang pinakamaliit na numero na kakailanganin mo?\
+          Ano ang pinakamalaking numero?\
+          Gaano kalaki ang paglaki as bawat beses?**
+
+          Iyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop.
       courseF_artist_for4_2018:
-        courseF_artist_for4_a: "**Ano ang pinakamaliit na numero na kakailanganin
-          mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat
-          beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan
-          ang mga puwang ng `for` na loop."
+        courseF_artist_for4_a: |-
+          **Ano ang pinakamaliit na numero na kakailanganin mo?\
+          Ano ang pinakamalaking numero?\
+          Gaano kalaki ang paglaki as bawat beses?**
+
+          Iyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop.
       courseF_artist_for4_2019:
-        courseF_artist_for4_a: "**Ano ang pinakamaliit na numero na kakailanganin
-          mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat
-          beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan
-          ang mga puwang ng `for` na loop."
+        courseF_artist_for4_a: |-
+          **Ano ang pinakamaliit na numero na kakailanganin mo?\
+          Ano ang pinakamalaking numero?\
+          Gaano kalaki ang paglaki as bawat beses?**
+
+          Iyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop.
       courseF_artist_for_challenge1:
         courseF_artist_for_challenge1_a: Ang `pen width` ay 1. Ang unang parisukat
           ay mayroong 50 pixel na mga gilid, at bawat parisukay ay mas malapad nang
