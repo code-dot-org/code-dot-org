@@ -169,11 +169,15 @@ cs-CZ:
         2-3_Artist_Nested_Loops_1_a: Nezapomeňte vložit všechny šedé bloky dovnitř
           vaší smyčky.
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Potřebujete pomoc s úhly?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potřebujete pomoc s úhly?\
+          **360/12 = 30**
         2-3_Artist_Nested_Loops_3_b: Nezapomeňte dovnitř smyčky vložit celý šedý kód
           a bloky měnící směr.
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Potřebujete pomoc s úhly?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potřebujete pomoc s úhly?\
+          **360/12 = 30**
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: |-
           Zkuste použít blok \`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
