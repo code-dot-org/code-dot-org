@@ -4,13 +4,15 @@
   "description": "",
   "main": "restore-and-verify-backup.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "latest",
     "promise-mysql": "latest"
+  },
+  "devDependencies": {
+    "mocha": "latest"
   }
 }
-

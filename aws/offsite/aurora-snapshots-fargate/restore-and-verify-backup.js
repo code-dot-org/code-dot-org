@@ -36,6 +36,7 @@ const restoreLatestSnapshot = async (rds, clusterId, instanceId) => {
   };
 
   const describeResult = await rds.describeDBClusterSnapshots({}).promise();
+
   const mostRecentSnapshot = getMostRecentSnapshot(
     describeResult.DBClusterSnapshots
   );
@@ -156,3 +157,7 @@ const main = async () => {
 if (require.main === module) {
   main();
 }
+
+module.exports = {
+  restoreLatestSnapshot
+};
