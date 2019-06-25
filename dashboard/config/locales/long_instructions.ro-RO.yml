@@ -466,18 +466,28 @@ ro-RO:
       K-1 Bee Loops 5: Foloseşte buclele pentru a lua nectarul şi mierea!
       K-1 Bee Loops 6: Folosește buclele pentru a colecta nectarul, mierea şi pentru
         mutări!
-      K-1 Maze Loops 10: "Du-mă la porc!  \nFolosind bucla `repetă` (repeat) vei face
-        această sarcină mai ușoară."
+      K-1 Maze Loops 10: |-
+        Du-mă la porc!\
+        Folosind bucla `repetă` (repeat) vei face această sarcină mai ușoară.
       K-1 Maze Loops 11: Du-mă la porc! Foloseşte bucla repetă.
       K-1 Maze Loops 12: Du-mă la porc! Foloseşte bucla repetă.
       K-1 Maze Loops 2: Foloseşte bucla repetă pentru a mă duce la porc!
-      K-1 Maze Loops 3: "Du-mă la porc!  \nFi sigur că utilizezi bucle `repetă` (repeat)."
-      K-1 Maze Loops 5: "Du-mă la porc!  \nFi sigur că utilizezi bucle `repetă` (repeat)."
-      K-1 Maze Loops 6: "Du-mă la porc!  \nFi sigur că utilizezi bucle `repetă` (repeat)."
-      K-1 Maze Loops 7: "Du-mă la porc!  \nFi sigur că utilizezi bucle `repetă` (repeat)."
+      K-1 Maze Loops 3: |-
+        Du-mă la porc!\
+        Fi sigur că utilizezi bucle `repetă` (repeat).
+      K-1 Maze Loops 5: |-
+        Du-mă la porc!\
+        Fi sigur că utilizezi bucle `repetă` (repeat).
+      K-1 Maze Loops 6: |-
+        Du-mă la porc!\
+        Fi sigur că utilizezi bucle `repetă` (repeat).
+      K-1 Maze Loops 7: |-
+        Du-mă la porc!\
+        Fi sigur că utilizezi bucle `repetă` (repeat).
       K-1 Maze Loops 8: Du-mă la porc! Foloseşte bucla repetă.
-      K-1 Maze Loops Assessment 1: "Uite cât de multe am învățat!  \nFolosește o buclă
-        `repetă` (repeat) pentru a mă duce la porc!"
+      K-1 Maze Loops Assessment 1: |-
+        Uite cât de multe am învățat!\
+        Folosește o buclă `repetă` (repeat) pentru a mă duce la porc!
       NEW Course 4 Artist Functions 12: Foloseştei funcţia "draw a line of squares"
         din ultimul puzzle pentru a desena acest model
       NEW Course 4 Artist Functions 3: |-

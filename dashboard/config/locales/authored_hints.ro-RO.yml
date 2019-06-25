@@ -47,7 +47,7 @@ ro-RO:
           de 10 pixeli \*mai larg \*...deci asigurați-vă că \*\* adăugați \*\* 10
           la orice număr schimbați.
         2-3_Artist_Debugging_10_b: "\\*\\* Încercare şi eroare este perfect în regulă
-          aici! \\*\\* \nÎncepeți prin schimbarea unui număr la un moment dat.  \nCare
+          aici! \\*\\* \nÎncepeți prin schimbarea unui număr la un moment dat.\\\nCare
           numere fac ce? \nDacă vă pierdeți prea tare, faceţi doar clic pe \"Începe
           din nou\" şi codul dvs. va fi resetat."
       2-3 Artist Debugging 2:
@@ -412,8 +412,9 @@ ro-RO:
           aveți nevoie să "mutați înainte" cu mai mult de doi pași.
         4-5_Maze_5_b: Puteți folosi mai mult de o buclă `repetă` într-un puzzle.
       4-5 Maze 6:
-        4-5_Maze_6_a: "Încercați să trasați o cale cu degetul.  \nEste aceasta cea
-          mai scurtă cale pe care o puteți găsi?"
+        4-5_Maze_6_a: |-
+          Încercați să trasați o cale cu degetul.\
+          Este aceasta cea mai scurtă cale pe care o puteți găsi?
       4-5 Maze 7:
         4-5_Maze_7_a: "**Vreți să faceți codul dvs. cât mai mic posibil?** \n\nCăutați
           modele în blocurile dvs. Vedeți ceva care se repetă? Încercați să puneți
