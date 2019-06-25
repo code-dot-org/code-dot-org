@@ -582,6 +582,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/views/share_privacy':
+      './src/sites/code.org/pages/views/share_privacy.js',
     'code.org/views/theme_common_head_after':
       './src/sites/code.org/pages/views/theme_common_head_after.js',
     'code.org/views/workshop_search':
