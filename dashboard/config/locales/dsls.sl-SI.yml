@@ -745,83 +745,15 @@ sl:
         - 
         - 
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_debugging8_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_debugging8_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_debugging8_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_programming8_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_programming8_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_maze_programming8_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        '12': '12'
+        '15': '15'
+        '4': '4'
       courseC_multi_starWars_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
+        I don't know: Ne vem
       courseC_multi_starWars_predict1_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
+        I don't know: Ne vem
       courseC_multi_starWars_predict1_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseC_multi_starWars_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_starWars_predict2_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseC_multi_starWars_predict2_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        I don't know: Ne vem
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -946,320 +878,32 @@ sl:
         - 
         - 
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_collector_debugging10_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_condLoops9_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_condLoops9_predict1_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_ramp13:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_farmer_while10_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_farmer_while10_predict2_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_farmer_while10_predict2_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_farmer_while4_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_while4_predict1_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_farmer_while4_predict1_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseD_multi_maze_until10_predict2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseD_multi_maze_until10_predict2_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseD_multi_maze_until10_predict2_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseD_multi_maze_until2_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_maze_until2_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_maze_until2_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseD_multi_scrat_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseE_multi_bee_functions_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseE_multi_farmer_functions11_predict:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      courseE_multi_farmer_functions11_predict_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_functions11_predict_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
       courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_prediction_artistFunction1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      courseE_prediction_artistFunction1_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      courseE_prediction_artistFunction1_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      courseF_bee_variables_8a_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_bee_variables_8a_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_artist_for10_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseF_multi_artist_for10_predict1_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseF_multi_artist_for10_predict1_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseF_multi_artist_fwp2_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_variables3a_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_variables3a_predict1_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_variables3a_predict1_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_bee_conditionals1_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_bee_conditionals7_predict2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_bee_for3_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_bee_for3_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_bee_for3_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_bee_fwp9_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseF_multi_playlab_variables4c_predictive1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-      coursee_prediction_artistfunction2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      coursee_prediction_artistfunction2_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      coursee_prediction_artistfunction2_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      grade2_multi_collector_A_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      grade2_multi_collector_A_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      grade2_multi_collector_A_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        I don't know: Ne vem
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."

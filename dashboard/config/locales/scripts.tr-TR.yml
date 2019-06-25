@@ -12367,6 +12367,10 @@ tr:
                 ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak
                 ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış
                 katacaklardır.\r\n"
+            Intellectual Property:
+              name: Fikri Mülkiyet
+            Images:
+              name: Görüntüler
         csd3-pilot:
           description_short: Programlama
           stages:
@@ -12702,3 +12706,7 @@ tr:
                 içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf
                 arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
                 ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+        maddie-test:
+          stages:
+            new stage:
+              name: yeni kademe

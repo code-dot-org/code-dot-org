@@ -318,9 +318,8 @@ img.video_thumbnail {
     }
   }
 
-  .user_menu, .create_menu {
+  .user_menu, .create_menu, .help_button {
     margin-top: 6px;
-
     .create_button, .display_name, .pairing_name {
       html[dir=rtl] & {
         float: right;
@@ -334,7 +333,7 @@ img.video_thumbnail {
       padding-top: 3px;
     }
 
-    .user_options {
+    .user_options, .help_contents {
       font-size: 14px;
       line-height: 20px;
     }
@@ -360,7 +359,8 @@ img.video_thumbnail {
     padding-left: 20px;
   }
 
-  #help-button {
+  .help_button {
+    margin-top: 0;
     padding-top: 4px;
     padding-left: 20px;
   }
@@ -652,7 +652,7 @@ $small-footer-standard-width: 400px;
   display: inline-block;
 }
 
-.user_options {
+.user_options, .help_contents {
   display: none;
   a:link {
     color: $black;

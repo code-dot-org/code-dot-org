@@ -6015,9 +6015,9 @@ pt-BR:
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
           os passos em voz alta. '
       courseA_harvester_loops2_2019:
-        courseA_harvester_loops2_a: "Seu código terá **quatro** blocos 'mover para
-          oeste'\n<xml><block type=\"maze_moveWest\"/></xml> e **quatro** blocos  <xml>
-          'pegar milho' <block type=\"harvester_corn\"/>. "
+        courseA_harvester_loops2_a: "Seu código terá **quatro** blocos `mover para
+          oeste`\n\n<xml><block type=\"maze_moveWest\"/></xml> \n\ne **quatro** blocos
+          \ blocos <xml>\n`pegar milho`\n<block type=\"harvester_corn\"/>\n</xml>. "
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
           os passos em voz alta. '
       courseA_harvester_loops3:
@@ -6342,8 +6342,10 @@ pt-BR:
           o seu dedo para traçar seu caminho do pássaro até o porco.
         courseA_maze_seq13_b: Não tenha medo de cometer um erro! Tente adicionar blocos
           e executar o código para ver o que vai acontecer.
-        courseA_maze_seq13_c: Estes <xml><block type="maze_moveNorth"/></xml><xml><block
-          type="maze_moveEast"/></xml> blocos irão te ajudar a se aproximar do porco.
+        courseA_maze_seq13_c: |-
+          Estes blocos <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml> irão te ajudar a se aproximar do porco.
       courseA_maze_seq1_2018:
         courseA_maze_seq1_a: |-
           Se você estiver tendo problemas para fazer o pássaro se mover, certifique-se de que os blocos estejam conectados no lugar em baixo de <xml>
@@ -11636,6 +11638,13 @@ pt-BR:
           se há uma flor? O que fazer se houver uma flor?
         courseD_bee_conditionals5_hintVid2: Assista este vídeo para obter ajuda de
           como resolver este quebra-cabeça.
+      courseD_bee_conditionals5_2019:
+        courseD_bee_conditionals5_a: Se você usar um bloco `se na flor`, você consegue
+          resolver utilizando um laço de repetição aninhado. Escreva um programa para
+          os caminhos esquerdos e inferiores, e repita tudo duas vezes!
+        courseD_bee_conditionals5_c: Para continuar o caminho, a abelha precisa `avançar`.
+          Conforme se move, a mesma precisa verificar por uma flor. `Se há uma flor`,
+          a abelha deve `coletar o nectar`.
       courseD_bee_conditionals6:
         courseD_bee_conditionals6_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!

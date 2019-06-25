@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect} from '../util/configuredChai';
+import {expect} from 'chai';
 
 import * as utils from '@cdo/apps/utils';
 import AuthoredHints from '@cdo/apps/authoredHints';
