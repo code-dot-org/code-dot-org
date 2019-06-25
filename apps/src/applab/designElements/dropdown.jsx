@@ -14,10 +14,8 @@ import BorderProperties from './BorderProperties';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
-import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
 import elementLibrary from './library';
 import RGBColor from 'rgbcolor';
-import experiments from '../../util/experiments';
 
 class DropdownProperties extends React.Component {
   static propTypes = {
@@ -294,19 +292,11 @@ export default {
     element.style.width = '200px';
     element.style.height = '30px';
     element.style.margin = '0';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.fontFamily = fontFamilyStyles[0];
-      element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = themeColor.dropdownText.classic;
-      element.style.backgroundImage = svgArrowUrl(
-        new RGBColor(element.style.color).toHex()
-      );
-      element.style.backgroundColor = themeColor.dropdownBackground.classic;
-      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-    }
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     const option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
@@ -330,11 +320,9 @@ export default {
         new RGBColor(element.style.color).toHex()
       );
     }
-    if (experiments.isEnabled('applabThemes')) {
-      // Set the padding for older projects that didn't set it on create:
-      if (element.style.padding === '') {
-        element.style.padding = CLASSIC_DROPDOWN_PADDING;
-      }
+    // Set the padding for older projects that didn't set it on create:
+    if (element.style.padding === '') {
+      element.style.padding = CLASSIC_DROPDOWN_PADDING;
     }
 
     // In the future we may want to trigger this on focus events as well.
