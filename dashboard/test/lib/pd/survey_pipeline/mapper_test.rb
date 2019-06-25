@@ -28,7 +28,7 @@ module Pd::SurveyPipeline
       always_true = lambda {|_| true}
       map_config = [{condition: always_true, field: :c, reducers: [Pd::SurveyPipeline::AvgReducer]}]
 
-      # Average value of field :c in @data, groupped by field :a and :b
+      # Average value of field :c in @data, grouped by field :a and :b
       expected_avg = 0.5
 
       context = {question_answer_joined: @data}
