@@ -168,7 +168,7 @@ class ActivitiesController < ApplicationController
       @activity = Activity.new(attributes).tap(&:atomic_save!)
     end
     if @script_level
-      @user_level, @new_level_completed = User.track_level_progress_sync(
+      @user_level, @new_level_completed = User.track_level_progress(
         user_id: current_user.id,
         level_id: @level.id,
         script_id: @script_level.script_id,

@@ -15,7 +15,7 @@ class UserScriptTest < ActiveSupport::TestCase
   end
 
   def complete_level(script_level, result = 100)
-    User.track_level_progress_sync(user_id: @user.id, script_id: script_level.script.id, new_result: result, submitted: false, level_source_id: nil, level_id: script_level.oldest_active_level.id)
+    User.track_level_progress(user_id: @user.id, script_id: script_level.script.id, new_result: result, submitted: false, level_source_id: nil, level_id: script_level.oldest_active_level.id)
   end
 
   def complete_all_levels
