@@ -6,7 +6,7 @@
 
 set -xe
 
-ulimit -n 8192
+ulimit -n 4096
 
 export CI=true
 export CIRCLECI=true
