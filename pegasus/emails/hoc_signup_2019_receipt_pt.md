@@ -7,7 +7,7 @@ litmus_tracking_id: "5g5lyi1a"
   <% codedotorg = CDO.canonical_hostname('code.org') %>
 
 # Obrigado por se inscrever para organizar um evento da Hora do Código!
-Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode mudar suas vidas, no período de 7 a 13 de outubro. Entraremos em contato para falar sobre novos tutoriais e outras atualizações. Então, o que você pode fazer agora?
+Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode mudar suas vidas, no período de 9 a 15 de dezembro. Entraremos em contato para falar sobre novos tutoriais e outras atualizações. Então, o que você pode fazer agora?
 
 ## 1. Encontre um voluntário para ajudá-lo no evento.
 [Busque em nosso mapa de voluntários](https://<%= codedotorg %>/volunteer/local) voluntários que possam visitar sua sala de aula ou fazer um chat de vídeo remotamente para inspirar seus alunos, falando sobre a imensidão de possibilidades que a Ciência da Computação proporciona.
