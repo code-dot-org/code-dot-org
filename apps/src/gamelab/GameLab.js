@@ -1110,6 +1110,7 @@ GameLab.prototype.onP5ExecutionStarting = function() {
 GameLab.prototype.onP5Preload = function() {
   Promise.all([
     this.preloadAnimations_(this.level.pauseAnimationsByDefault),
+    this.preloadBackgrounds_(),
     this.runPreloadEventHandler_()
   ]).then(() => {
     this.gameLabP5.notifyPreloadPhaseComplete();
@@ -1123,6 +1124,14 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function() {
     !this.level.helperLibraries.some(name => name === validationLibraryName)
   ) {
     this.level.helperLibraries.unshift(validationLibraryName);
+  }
+};
+
+GameLab.prototype.preloadBackgrounds_ = function() {
+  if (!this.isSpritelab) {
+    return Promise.resolve();
+  } else {
+    return this.gameLabP5.preloadBackgrounds();
   }
 };
 
