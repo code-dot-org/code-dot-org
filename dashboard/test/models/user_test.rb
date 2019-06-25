@@ -3281,14 +3281,34 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
   end
 
+  test 'managing_own_credentials? is true for users with email logins' do
+    user = create :user
+    assert user.managing_own_credentials?
+  end
+
+  test 'managing_own_credentials? is true for students with email logins' do
+    user = create :student
+    assert user.managing_own_credentials?
+  end
+
+  test 'managing_own_credentials? is false for users with oauth logins' do
+    user = create :user, :sso_provider
+    refute user.managing_own_credentials?
+  end
+
+  test 'managing_own_credentials? is false for students with sponsored logins' do
+    user = create :student_in_picture_section
+    refute user.managing_own_credentials?
+  end
+
   test 'password_required? is false if user is not creating their own account' do
-    user = build :user
+    user = create :user
     user.expects(:managing_own_credentials?).returns(false)
     refute user.password_required?
   end
 
   test 'password_required? is true for new users with no encrypted password' do
-    user = build :user, encrypted_password: nil
+    user = create :user, encrypted_password: nil
     user.expects(:managing_own_credentials?).returns(true)
     assert user.encrypted_password.nil?
     assert user.password_required?

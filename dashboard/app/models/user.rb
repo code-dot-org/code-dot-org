@@ -821,7 +821,17 @@ class User < ActiveRecord::Base
   end
 
   def managing_own_credentials?
-    provider.blank? || (provider == User::PROVIDER_MANUAL)
+    if provider.blank?
+      true
+    elsif provider == User::PROVIDER_MANUAL
+      true
+    elsif provider == User::PROVIDER_MIGRATED
+      authentication_options.any? do |ao|
+        ao.credential_type == AuthenticationOption::EMAIL
+      end
+    else
+      false
+    end
   end
 
   def password_required?
