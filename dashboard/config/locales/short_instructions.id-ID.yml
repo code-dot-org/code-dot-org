@@ -1042,14 +1042,40 @@ id-ID:
       Course 4 SCV 6: Klik disini untuk melihat petunjuk lagi.
       Crack Random Substitution: instruksi
       Crack a Caesar Cipher: instruksi
+      Dance_Party_extras_battle: Kru menari ( klik"lainnya" untuk rincian)
+      Dance_Party_extras_every_beat: Seperempat not ( klik" lainnya" untuk rincian)
+      Dance_Party_extras_layout: Ayo masuk formasi (klik"Lainnya" untuk rincian)
+      Dance_Party_extras_on_beat: Suara rendah, pertengahan, tinggi(klik"Lainnya"untuk
+        rincian)
+      Dance_Party_extras_speed: Mempercepatnya, Memperlambat Down (Klik “Lainnya”
+        untuk rincian)
+      Dance_Party_extras_visible: Kemana mereka pergi? (Klik "lainnya" untuk rincian)
       FoodFight: Ini adalah contoh sebuah permainan yang dapat Anda buat di play lab.
       Function intro Ryan: Gunakan fungsi `bangun jembatan` dua kali untuk membuat
         jalur menuju obor.
       Function intro Ryan_2019: Gunakan fungsi `bangun jembatan` dua kali untuk membuat
         jalur menuju obor.
+      HOC 2018 Level_12: Rancang lingkungan bawah airmu, terserah padamu!
       Infinity_catch: Apakah kamu bisa membuat Elsa ("aktor 2") menyusul Anna dengan
         menggunakan tombol panah?
       Infinity_finale: Buat apapun yang Anda suka dan bagikanlah!
+      Infinity_move_collide: Hiro adalah"aktor1". Gerakkan dia tepat ke Baymax, dan
+        mainkan sebuah suara saat mereka bersentuhan.
+      Infinity_move_directions: Baymax adalah"aktor 2"tambahkan blok bergerak dan
+        kemudian gerakkan Baymax menggunakan panah. Buat dia menyentuh dua karakter
+        lain.
+      Infinity_move_right: Hiro adalah"aktor 1". Gunakan blok bergerak untuk memindahkan
+        hiro tepat menyentuh Baymax.
+      Infinity_repeat: Gunakan sebuah blok"pengulangan selamanya"untuk membuat Ana
+        naik dan turun 400 piksel.
+      Infinity_say: Buat Ana berkata"Hi there." Dengan menggunakan Say blok.
+      Infinity_shoot: Baymax adalah"aktor 2". Buat Baymax membuang sebuah roket pada
+        Hiro.
+      Infinity_shoot_directions: Hiro adalah"aktor 3". Buat Hiro melemparkan proyektil
+        pada tiap karakter dari empat karakter. jeda sedetik setiap lemparan.
+      Infinity_touch_score: Buatlah skor Anna sebuah poin saat dia menyentuh kepingan
+        salju. Kemudian klik'Lari'dan bawa dia menyentuh kepingan salju satu persatu
+        sekali.
       K-1 Artist Loops 1: Gambar garis ini dengan menggerakkan ke timur 4 kali.
       K-1 Artist Loops 2: Sekarang, gambar garis yang sama dengan menggunakan putaran.
       K-1 Artist Loops 3: Dapatkah anda putar blok ini untuk menggambar 6 garis?
@@ -1129,6 +1155,38 @@ id-ID:
         Gambarlah garis putus-putus dengan menggunakan baik blok melompat maupun
         menggambar
       K-1 maze debug 1: Ubah kode untuk membawa saya ke babi!
+      MC HOC 2016 Level 10: Waktunya anda membuat minecraft sendiri! Mahluk bertelur
+        dan kemudian buat mereka melakukan apapun yang anda mau. Bersenang senanglah!
+      MC HOC 2016 Level 2-2: Ayam beku. Letakkan blok'bergerak' dan 'berbelok' dalam
+        slot 'ketika bertelur'agar bergerak.
+      MC HOC 2016 Level 3: Bagus, ayamnya bergerak! Tapi kemudian berhenti. Di dalam
+        permainan, ayam berjalan selamanya. Gunakan sebuah pengulangan'lakukan selamanya'agar
+        ayam tetap bergerak.
+      MC HOC 2016 Level 4: |-
+        Sekarang ayam terlihat bergerak aneh dengan cara yang sama.
+        Permainan menggunakan gerakan acak untuk membuatnya tampak nyata. Buat ayam berubah acak.
+      MC HOC 2016 Level 5: Sapi sapi ini tersesat! Tuntun mereka ke rumput dengan
+        blok'gerakan maju selangkah'dalam pengulangan'lakukan selamanya'.
+      MC HOC 2016 Level 6: Sekarang anda membuat zombi. Gunakan blok'bertelur untuk
+        membuat 3 zombi saat mulai malam. Buat mereka bergerak kearahmu. Bertahan
+        sampai pagi.
+      MC HOC 2016 Level 8: Jalan bagi domba anda ditutup oleh dinding batu. Beruntungnya
+        ada sebuah Creeper di sini. Creeper meledak setelah anda menyentuhnya. Buat
+        Creeper meledakkan dinding sehingga anda bisa meraih domba!
+      MC HOC 2016 New Drop: Dalam minecraft, domba menjatuhkan kapas. Letakkan blok
+        'jatuh' di'saat digunakan'kemudian berjalan dan menggunakan domba untuk menjatuhkan
+        aebuah item.
+      MC HOC 2016 New Spawn: Sekarang anda bisa mengisi dunia dengan apapun yang anda
+        mau! Tempatkan blok'bertelur'di bawah'ketika berlari'untuk menelurkan benda
+        benda saat permainan mulai.
+      MC HOC 2016 New Walk: Mari kita mengeksplor dunia kita! Bergerak dengan anak
+        panah, dan tekan space bar atau ketuk papan permainan untuk menggunakan item.
+        Gunakan pintu untuk masuk ke dalam rumah.
+      MC HOC 2016 SCORE LEVEL: Beberapa permainan membiarkan anda menyimpan skor.
+        Mainkan tag dengan Iron Golem dan gunakan blok'tambah 1untuk skor'untuk memberi
+        anda poin saat men-tagnya. Raih lima poin untuk menang!
+      MC HOC 2016 Village Test: Oh tidak! Zombi telah menjebak anda di dalam. Code
+        Iron Golem untuk mengejar dan memukul zombi!
       MC_HOC_2017_01_RETRY: Bawa Agent ke pelat tekanan, lalu tekan "Jalankan" dan
         gunakan tombol panah untuk memindahkan pemain ke luar rumah untuk mengambil
         peti.
@@ -1244,11 +1302,36 @@ id-ID:
       Pixelation - Lesson 15 - Complete 3-bit color: "Kami \nmemulainya dengan gambar
         4x2 yang dibuat Maddie, tapi kami telah meninggalkan dua kotak terakhir. Selesaikan
         gambar dengan mencari\ndua warna yang hilang dan menulis kode mereka."
+      Standalone_Artist_1: Selamat datang seniman!marilah kita membuat segiempat sederhana
+        blok'belok kanan' dan blok'maju'. Setiap sisi harus sebesar 100 pixel.
+      Standalone_Artist_2: Gambarlah berlian dengan sudut120 dan 60 derajat dan sisi
+        sepanjang 150 pixel.
+      Standalone_Artist_3: Bisakah anda menggambar hexagon ini dengan 100 pixel dan
+        60 derajat?
+      Standalone_Artist_4: Sekarang anda sudah mendapatkan blok baru untuk bermain,
+        pengulangan. Ini akan mengulangi seperangkat perintah. Apa yang terjadi jika
+        anda mengulang perintah 6 kali?
+      Standalone_Artist_5: Berapa kali Anda perlu loop (mengulangi) berlian untuk
+        menggambar bunga?
+      Standalone_Artist_5.5: 'Perhatikan bagaimana kami disederhanakan kode berlian
+        dengan mengubahnya menjadi sebuah pengulangan. Anda bisa mengulang seluruh
+        urutan sebanyak 12 kali untuk menggambar bunga. Petunjuk: anda perlu merubah
+        30 derajat setelah anda mengulang berlian sehingga anda tidak perlu menggambar
+        berlian yang sama.'
+      Standalone_Artist_6: 'Ulangi kode segienam ini 6 kali untuk membuat rancangan.
+        Berapa derajat yang anda perlukan untuk berubah setiap waktu? Petunjuk: bagilah
+        jumlah derajat dalam sebuah lingkaran dengan jumlah waktu pengulangan.'
+      Standalone_Artist_7: Fungsi adalah alat pemrograman untuk membantu anda menghindari
+        pengulangan. Fungsi ini menggambar sebuah bunga, jadi anda bisa menggunakannya
+        setiap saat anda ingin menggambar bunga. Gunakan ini dan blok melompat baru
+        untuk menggambar bunga bunga tersebut. Bunga bunga ini 150 pixel terpisah
       Standalone_Artist_8: Berikut adalah fungsi yang disebut "Menggambar bentuk"
         yang kami sudah diprogram menggambar segienam. Jalankan kodenya untuk melihat
         apa yang dilakukan dan kemudian bereksperimen dengan fungsi untuk melihat
         apa yang terjadi. Dapatkah Anda membuatnya untuk menggambar pola segiempat,
         segitiga atau segidelapan?
+      Standalone_Artist_9: Sekarang buatlah gambar apapun yang anda suka! Anda bahkan
+        punya fungsi kosong yang anda dapat isi dengan apapun yang anda sukai!
       Underground Avoiding Lava: Lava bersembunyi di bawah beberapa balok ini yang
         harus kamu tutup sebelum bergerak maju. Perintah "jika" akan berguna di sini.
         Tambahkan perintah "bergerak maju" di tempat yang tepat untuk menambang balok
@@ -1274,6 +1357,10 @@ id-ID:
       Underground Mining Coal_2019: Kamu akan menemukan sumber daya paling berharga
         di bawah tanah, tapi di sana bisa jadi gelap. Tempatkan setidaknya 2 obor
         dan tambang setidaknya 2 batu bara.
+      'Widget: Text Compression': Perhatikan pola (pengulangan kata atau frase) dalam
+        teks.Masukkan pola yang anda lihat ke dalam kamus dengan benar. Ketika anda
+        mengetik entri kedalam kamus,simbol untuk entri dimasukkan kedalam teks di
+        tempat pola tersebut.
       bounce_1: Tempatkan satu blok ke blok "Jika anak panah kiri" dan tekan "Jalankan
         Program". Gerakkan menggunakan tombol panah kiri untuk mencapai target.
       bounce_10: Ada sebuah target di atas. Tempelkan blok "Skor poin" dan blok "Skor
@@ -1284,6 +1371,10 @@ id-ID:
         dan "skor lawan point" blok "ketika bola di tujuan" dan "ketika bola mengenai
         tangan" blok untuk membuat game. Lihat berapa banyak poin yang anda dapat
         mencetak sebelum lawan skor dua kali.
+      bounce_10_sports: Sekarang ada tujuan diatas! Melampirkan blok "poin skor"dan
+        poin skor lawan"ketila bola masuk"dan blok "ketika bola menyentuh tangan"untuk
+        membuat sebuah permainan. Lihat berapa poin yang anda dapat sebelum lawan
+        anda mendapat poin dua kali lipat!
       bounce_11: Anda sekarang dapat menempatkan blok-blok kepada blok "ketika permainan
         dimulai". Anda harus menempelkan blok "luncuran bola baru" lebih dari satu
         tempat. Lalu cobalah mengubah adegan atau kecepatan kayuh dan bola dan untuk
@@ -1544,5 +1635,15 @@ id-ID:
         menggambar - 16 piksel kali 16 piksel!\\\r \n\\\r\nLihat apa yang terjadi
         jika kita\nberkreasi dengan bit?"
       k-1 maze 1: Dapatkah Anda membuat saya pindah ke Barat untuk mendapatkan babi?
+      scrat 16: Acorn! Acorn! Acorn! gunakan sebuah blok"if" untuk membawa saya kesana
+        dengan sedikit jumlah blok.
+      scrat 17: Ok! mari kita coba lagi latihan itu-ini tidak terlalu berbeda, tetapi
+        waspada temboknya!
+      scrat 18: Block"if-else"(jika tidak) memeriksa sebuah kondisi, lalu melakukan
+        sesuatu Atau hal lain. Untuk membawa saya ke biji pohon ek coba gunakan blok
+        baru ini.
       scrat 19: Cobalah sekali lagi praktekkan blok "jika tidak" (if-else), bisakah
         Anda mendapatkannya jawaban yang benar pada percobaan pertama?
+      scrat 20: Dapatkah anda menambahkan hanya 3 blok untuk membantu saya menyelesaikan
+        labirin yang lebih rumit? Jika anda melakukannya dengan benar, saya bisa berjalan
+        di jalan melingkar berapapun panjangnya. Cepat! esnya mencair!

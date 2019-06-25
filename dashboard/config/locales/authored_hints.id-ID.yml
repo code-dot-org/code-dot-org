@@ -865,8 +865,8 @@ id-ID:
           membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa
           kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka.
       Course 4 SCV 2:
-        Course_4_SCV_2_a: "Lengkapilah gambar dari 10 bunga ini: \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)
-          \ \nyang terdiri dari 10 dekagons ini: \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
+        Course_4_SCV_2_a: "Lengkapilah gambar dari 10 bunga ini: \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\\\nyang
+          terdiri dari 10 dekagons ini: \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
         Course_4_SCV_2_b: 'Desain ini menggunakan loop bersarang (tiga deep). Semua
           loop menjalankan `sisi` kali. '
         Course_4_SCV_2_c: Seniman berubah ke kiri saat membuat setiap decagon, tapi
@@ -3599,9 +3599,9 @@ id-ID:
         courseC_starWars_loops10_a: Tidak pola ini terlihat seperti sebuah raksasa
           set dari anak tangga? Lihat apakah Anda bisa menggunakan apa yang Anda pelajari
           dari puzzle sebelumnya untuk mendapatkan semua belokan.
-        courseC_starWars_loops10_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops10_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
         courseC_starWars_loops10_c: Jangan takut untuk membuat kesalahan! Jalankan
           kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki
           itu.
@@ -3609,9 +3609,9 @@ id-ID:
         courseC_starWars_loops10_a: Tidak pola ini terlihat seperti sebuah raksasa
           set dari anak tangga? Lihat apakah Anda bisa menggunakan apa yang Anda pelajari
           dari puzzle sebelumnya untuk mendapatkan semua belokan.
-        courseC_starWars_loops10_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops10_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
         courseC_starWars_loops10_c: Jangan takut untuk membuat kesalahan! Jalankan
           kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki
           itu.
@@ -3619,9 +3619,9 @@ id-ID:
         courseC_starWars_loops10_a: Tidak pola ini terlihat seperti sebuah raksasa
           set dari anak tangga? Lihat apakah Anda bisa menggunakan apa yang Anda pelajari
           dari puzzle sebelumnya untuk mendapatkan semua belokan.
-        courseC_starWars_loops10_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops10_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
         courseC_starWars_loops10_c: Jangan takut untuk membuat kesalahan! Jalankan
           kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki
           itu.
@@ -3686,21 +3686,21 @@ id-ID:
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Mencoba menulis semua bergerak di atas sebuah kertas
           dan mencari sebuah pola.
-        courseC_starWars_loops6_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops6_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
       courseC_starWars_loops6_2018:
         courseC_starWars_loops6_a: Mencoba menulis semua bergerak di atas sebuah kertas
           dan mencari sebuah pola.
-        courseC_starWars_loops6_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops6_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
       courseC_starWars_loops6_2019:
         courseC_starWars_loops6_a: Mencoba menulis semua bergerak di atas sebuah kertas
           dan mencari sebuah pola.
-        courseC_starWars_loops6_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops6_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
       courseC_starWars_loops7:
         courseC_starWars_loops7_a: Pola ini terlihat lebih keras dari itu! Mulailah
           dengan sebuah langkah tangga sederhana. Apakah itu mencakup semua logam

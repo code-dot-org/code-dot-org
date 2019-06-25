@@ -440,11 +440,108 @@ id-ID:
       4-5 While Loops 4: "Wow, lihat itu! \\\r\n\\\r\nSaya tidak tahu berapa banyak
         \nsekop tanah yang dibutuhkan lubang ini. \\\r \nDapatkah Anda menulis sebuah
         program yang \nterus menggunakan `isi` blok sampai tanah merata?  "
+      AppLab Intro 7 - Change Screen Color: |-
+        <div style="float:right">
+         <img src="https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54 AM.png" style="height:150px">
+
+        **Tujuan:**Membuat layar hijau.
+
+        **Bagaimana:**bawa dalam sebuah blok 'setproperty()'.Gunakan dropdown "warna latar layar"ke "hijau".Lalu pukul "Lari".
+
+        **Macet?klik disini:**![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)
+      AppLab Intro 7 - Change Text 2: |-
+        <div style="float:right">
+        <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
+        </div>
+
+        **Tujuan:**Membuat teks lebih besar dan biru" '
+
+        **Bagaimana:**Anda membutuhkan dua baris kode.Beri' "label1' "sebuah' "ukuran-font" 'dari '80'dan ' "warna-teks" 'dari ' "biru" '.
+
+        **Macet? klik disini:**![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab Intro 7 - onEvent intro: |-
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
+
+        **Tujuan**Layar mulai biru.Tambahkan kode sehingga layar kembali hijau saat anda klik tombol "Green-ify".
+
+        **Bagaimana**Tambahkan kode di dalam ' onEvent()'yang mengatur layar' "background-color" ' ke' "hijau" '.
+
+        **Macet?Klik disini:**![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+      AppLab Intro 7 - onEvent twoButtons: |-
+        <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
+
+        **Tujuan**Membantu menyelesaikan aplikasi flashlight.Tombol"On" sudah berubah putih.Jalankan aplikasi dan cobalah.Kemudian tulis kode sehingga tombol"Off"membuat layar kembali hitam.
+
+        **Bagaimana**Tambahkan kode di dalam 'onEvent()'kosong yang mengatur' "background-color" 'dari layar ke' "hitam" 'dan' "warna-teks" 'dari label ke ' "putih" '.
+
+        **Macet?Klik disini:**![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
+      AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
+        AM.png\" style=\"float:right;height:200px\">\n\n**Tujuan.**Papan suara hampir
+        selesai!Jalankan untuk tahu cara kerjanya.Kemudian tambahkan sebuah gambar,teks,dan
+        suara pada tombol terakhir.\n\n**Bagaimana**\n\n\\-Tambahkan 'onEvent ' dan
+        atur\" id \"pada ' \"button4\" '.Geser sebuah' playsound'() ke \n dalam onEvent()
+        dan pilih suara dari perpustakaan.\n\\-Tambahkan sebuah 'setProperty'() (di
+        luar 'onEvent()')untuk merubah properti tombol \"gambar\".Pilih sebuah gambar
+        menggunakan dropdown ketiga.\n\\-Tambahkan sekali lagi'setProperti'() untuk
+        merubah tombol\"teks\".\n\n**Macet?klik disini:**![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
+      AppLab Intro 7 - thisOrThatAddButton: |-
+        <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
+
+        **Tujuan.**Tambahkan tombol kedua ke layar sambil berkata"Right!"dengan sebuah' "id" ' dari '"rightButton" '.
+
+        **Bagaimana.**Dalam mode desain bawa tombol baru.Posisikan dan ukur ulang.Kemudian atur' "id" ',' "teks" ',' "warna latar" ',dan ' "ukuran font" '.
+
+        **Macet?Klik disini:**![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 7 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Tujuan.**Buat sebuah layar baru yang disebut ' "rightScreen" '.Tambahkan sebuah label teks sambil berkata"kamu kearah yang benar"!".
+
+        **Bagaiman.**Dalam mode desain bawa sebuah elemen layar.Ubahlah' " id" ' ke ' "rightScreen" '.Kemudian bawa sebuah label ke dalam layar dan ubah teks menjadi "kamu kearah yang benar".
+
+        **Macet?klik disini:**![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
+      AppLab Intro 7 - thisOrThatSetScreen: |-
+        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
+
+        **Tujuan.**Layar beralih ke ' "rightScreen" 'saat pengguna meng-klik ' "rightButton" '.
+
+        **Bagaimana.**Dalam mode kode tambahkan ' onEvent() ' baru ke dalam program anda untuk tombol "Right".Tambahkan sebuah blok 'setScreen()' untuk beralih layar ke ' "rightScreen" '.
+
+        **Macet?Klik disini.**![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
       CSD Problem Solving Process Video: |-
         ## Pertanyaan untuk dipertimbangkan
 
         -   Bagaimana anda mengikuti proses pemecahan masalah pada pelajaran terakhir?
         -   Bagaimana anda bisa menggunakan proses ini pada sebuah masalah dalam hidup keseharian anda?
+      CSD U2 HTML Adding Paragraphs: |-
+        # Tambahkan Teks pada Badan
+
+        Ketika anda mulai berbagai proyek Web Lab, ini secara otomatis akan menambahkan tag '\<!DOCTYPE>',<html><head>, dan <body> pada proyek anda. Ketika anda menambahkan konten pada proyek anda, anda akan membutuhkannya diantara tag <body> dan </body> karena seharusnya adalah bagian dari badan halaman web anda.
+
+        # Lakukan Ini
+
+        \-Tulis tiga kalimat terpisah tentang topik apa saja yang anda sukai dibadan tag halaman web anda
+        \-Tekan "Refresh dan Save" jika anda tidak melihat perubahan di area preview
+        \-Bandingkan kerja anda dengan yang lain. Pastikan anda menempatkan kode ditempat yang sama.
+      CSD U2 HTML Adding Paragraphs pt 2: "<div style=\"float: right; height: 250px;
+        <summary>width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\"> \n<details>\n\n<summary>\n\n**Apa elemen dari sebuah paragrap?**\n\n</summary>\n\nParagrap
+        ditandai dengan tag pembukaan ('<p>') dan penutupan ('</p>').Paragrap dalam
+        HTML bisa berapapun panjang teksnya dari satu kata menjadi banyak kalimat.
+        Kelompok paragrap bersama mengatur kalimat dan meletakkan beberapa ruang diantara
+        kelompok teks tersebut dan kelompok teks berikutnya.\n\n</details>\n<details>\n<summary>\n\n**Bagaimana
+        saya membuat paragrap ganda?**\n\n</summary>\n\nBerikut sebuah contoh dari
+        beberapa tag paragraph dalam sebuah baris. Kode ini akan ditempatkan didalam
+        halaman web anda.\n\n<p> Ini adalah sebuah paragrap.Ini memiliki dua kalimat.</p>\n<p>
+        Ini adalah paragrap yang lain.</p>\n\n</details>\n</div>\n\n# Menggunakan
+        tag paragrap\n\nTag '<p>' '</p>' atau tag \"paragrap\"  mulai dan selesai
+        diletakkan disekitar teks untuk mengindikasikan bahwa itu adalah bagian dari
+        sebuah paragrap. Penempatan teks diantara  tag paragrap mulai dan selesai
+        membiarkan komputer tahu bahwa hal tersebut harus ditampilkan secara berbeda,
+        biasanya hanya memberi jarak dari teks yang lain.\n\n# Lakukan Ini\n\n\\-Tempatkan
+        teks yang baru saja anda tulis dibagian dalam minimal dua paragrap terpisah
+        disekitarnya itu dengan tag '<p>' dan '</p>'\n\\-Bandingkan hasilnya dengan
+        yang lain. Apa yang berubah tentang cara teks anda ditampilkan? "
       CSD U2 HTML Adding Paragraphs pt 2_2018: "<div style=\"float: right; height:
         250px; <summary>width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\"> \n<details>\n\n<summary>\n\n**Apa elemen dari sebuah paragrap?**\n\n</summary>\n\nParagrap
@@ -464,6 +561,189 @@ id-ID:
         teks yang baru saja anda tulis dibagian dalam minimal dua paragrap terpisah
         disekitarnya itu dengan tag '<p>' dan '</p>'\n\\-Bandingkan hasilnya dengan
         yang lain. Apa yang berubah tentang cara teks anda ditampilkan?"
+      CSD U2 HTML Adding Paragraphs_2018: |-
+        # Tambahkan Teks pada Badan
+
+        Ketika anda mulai berbagai proyek Web Lab, ini secara otomatis akan menambahkan tag '\<!DOCTYPE>',<html><head>, dan <body> pada proyek anda. Ketika anda menambahkan konten pada proyek anda, anda akan membutuhkannya diantara tag <body> dan </body> karena seharusnya adalah bagian dari badan halaman web anda.
+
+        # Lakukan Ini
+
+        \-Tulis tiga kalimat terpisah tentang topik apa saja yang anda sukai dibadan tag halaman web anda
+        \-Tekan "Refresh dan Save" jika anda tidak melihat perubahan di area preview
+        \-Bandingkan kerja anda dengan yang lain. Pastikan anda menempatkan kode ditempat yang sama.
+      CSD U2 HTML Adding Paragraphs_2019: |-
+        # Tambahkan Teks pada Badan
+
+        Ketika anda mulai berbagai proyek Web Lab, ini secara otomatis akan menambahkan tag '\<!DOCTYPE>',<html><head>, dan <body> pada proyek anda. Ketika anda menambahkan konten pada proyek anda, anda akan membutuhkannya diantara tag <body> dan </body> karena seharusnya adalah bagian dari badan halaman web anda.
+
+        # Lakukan Ini
+
+        \-Tulis tiga kalimat terpisah tentang topik apa saja yang anda sukai dibadan tag halaman web anda
+        \-Tekan "Refresh dan Save" jika anda tidak melihat perubahan di area preview
+        \-Bandingkan kerja anda dengan yang lain. Pastikan anda menempatkan kode ditempat yang sama.
+      CSD U2 HTML Debug Paragraphs: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Apakah
+        elemen paragrap?</strong>\n</summary>\n Paragrap ditandai dengan tag pembukaan(
+        '<p>' )dan penutupan('</p>'). Paragrap dalam HTML bisa jadi berapapun panjangnya
+        teks dari sebuah kata menjadi banyak kalimat. Kelompok paragrap bersama menyusun
+        kalimat dan meletakkan beberapa ruang diantara kelompok teks dengan kelompok
+        teks berikutnya.\n</details>\n<details>\n<summary>\n<strong> Mengapa HTML
+        terlihat bekerja \nbahkan ketika rusak</strong>\n\n</summary>\nHTML dibaca
+        oleh peramban web anda untuk menghasilkan halaman web. Karena orang sering
+        melakukan sedikit kesalahan saat menulis halaman web mereka, peramban diprogram
+        untuk membuat tebakan terbaik pada apa yang anda harap untuk dilakukan. Terkadang
+        peramban yang berbeda bahkan diprogram untuk membuat tebakan yang berbeda!.
+        Satu satunya cara untuk memastikan kode anda seperti yang diharapkan adalah
+        pastikan anda selalu menggunakan tag secara benar.\n</details>\n<details>\n<summary>\n<strong>
+        Mengapa kode  kadang berubah pink?</strong>\n</summary>\n\nWeb Lab diprogram
+        secara otomatis mendeteksi beberapa kesalahan dalam HTML. Ketika ada peringatan
+        sebuah kesalahan, ini mengubah kode itu pink. Kesalahan mungkin dalam warna
+        pink, atau mungkin disuatu tempat sebelum kode pink. Anda perlu berhati hati
+        menemukan kesalahan.\n\n</details>\n</div>\n\n# Debug: Memperbaiki Tag Rusak\n\nWeb
+        sederhana memiliki masalah yang melindungi konten dari ditampilkan secara
+        benar. Identifikasi dan perbaiki masalah. Latihan ini disebut \"debugging\"
+        kode anda.\n\n# Lakukan ini\n\n-   Perbaiki kode rusak sehingga halaman web
+        tampil dengan benar\n-   Bandingkan masalah yang anda perbaiki dengan yang
+        lain"
+      CSD U2 Heading Demo_2018: |-
+        # Heading
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        **Apa itu Heading?**
+
+        </summary>
+        Heading adalah bagian judul yang berbeda ukuran sepanjang halaman web. Heading menambahkan struktur di halaman web anda dengan memisahkannya sehingga pengguna lebih mudah membaca.
+        </details>
+        <details>
+
+        **Bagaimana Saya Membuat Heading Berbeda Ukuran?**
+
+        </summary>
+        Heading tersedia dalam 6 ukuran berbeda. Sejauh ini terutama anda menggunakan yang paling besar: &lt;h1&gt;. Nomor '1' dalam desain tag HTML adalah  heading yang paling besar.
+        Heading yang terkecil adalah &lt;h6&gt;. Anda juga bisa mencoba tag &lt;h2&gt;,&lt;h3&gt;, &lt;h4&gt;, dan &lt;h5&, yang semakin kecil karena jumlahnya yang semakin besar.
+        </h1>
+        </details>
+        <details>
+        <summary>
+
+        \*\* Apa  HTML Itu?\*\*
+
+        </summary>
+        HTML adalah singkatan dari Hypertext Markup Language. HTML digunakan untuk menambah struktur konten pada sebuah halaman web. HTML menggunakan tag untuk menentukan dimana beberapa struktur mulai dan selesai. Tag tag tersebut diset dalam karakter yang tidak ditemukan dalam bahasa inggris sehingga konten dan strukturnya bisa jadi berbeda.
+        </details>
+        <details>
+        <summary>
+
+        **Apakah Elemen Sebuah HTML?**
+
+        </summary>
+        Sebuah elemen HTML adalah bagian dari website yang ditandai dengan tag mulai dan terkadang ditutup dengan tag selesai.Elemen juga termasuk konten didalam tag. Contohnya:
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+        </details>
+        <details>
+        <summary>
+
+        \*\* Apa Tag HTML Itu?\*\*
+
+        </summary>
+        Sebuah tag HTML adalah set khusus dari karakter yang memberitahu mesin dimana sebuah elemen HTML mulai dan selesai dan apa jenisnya.
+
+        </details>
+        </div>
+
+        Sejauh ini,anda sudah mengelola konten ke dalam paragrap. Cara lain HTML mengizinkan anda mengelola kode adalah dengan menggunakan **heading**. Sebuah heading adalah teks singkat yang ada dibagian atas konten,seperti sebuah judul.
+
+        Lakukan Ini
+
+        \-Carilah heading di halaman web bagian bawah dan gunakan Inspector Tool melihat kode yang membuatnya.
+        \-Pastikan anda dan teman anda setuju pada tag apa yang dilakukan.
+        \-Ubah kode sehingga "Drawing" dan "2 years" sesuai dengan heading di akhir halaman.
+      CSD U2 Heading Test_2018: |-
+        # Heading dan Paragrap
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong> apa elemen paragrap itu? </strong></summary>
+
+        Paragrap ditandai dengan  tag pembukaan ('<p>') dan penutupan ('</p>') juga. Paragrap dalam HTML bisa berapapun panjangnya teks  dari sebuah kata. Seluruh teks dalam halaman web anda harus terkandung dalam sebuah elemenHTML (heading atau paragrap). Kelompok paragrap bersama menyusun kalimat dan memberi beberapa jarak antara kelompok teks dan kelompok teks berikutnya.
+
+        </details>
+        <details>
+        <summary>
+
+        <strong> Bagaimana saya membuat paragrap ganda?</strong>
+
+        </summary>
+        Paragrap ditandai dengan tag pembukaan ('<p>') dan penutupan('</p>') juga.Untuk membuat lebih dari satu paragrap anda akan menginginkan penyusun ganda dari tag pembukaan dan penutupan. Contohnya:
+        <pre>
+        &lt;p&gt;
+        Ini adalah sebuah paragrap
+        &lt;/p&gt;
+        &lt;p&gt;
+        Ini adalah paragrap yang lain
+        &lt;/p&gt;
+
+        </pre>
+        </details>
+        <details>
+        <summary>
+        </strong> Apakah heading itu? <strong>
+        </summary>
+        Heading adalah bagian judul yang berbeda ukuran sepanjang halaman web. Heading menambahkan struktur pada halaman web anda dengan memisahkannya sehingga pengguna lebih mudah membaca.
+        </details>
+        <details>
+        <summary>
+        <strong> Bagaimana saya membuat ukuran heading berbeda? </strong>
+        </summary>
+        Heading tersedia dalam 6ukuran berbeda. Hingga kini terutama anda menggunakan ukuran paling besar &lt;h1&gt;.Angka 1dalam tag HTML adalah heading paling besar.Heading terkecil adalah &lt;h6&gt;.Anda juga bisa mencoba tag &lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,dan&lt;h5&gt;, yang semakin kecil karena angka semakin besar.
+        </details>
+        <details>
+        <summary>
+        <strong> Apakah HTML itu? </strong>
+        </summary>
+        HTML singkatan dari Hypertext Markup Language. HTML digunakan untuk menambah struktur pada konten dari sebuah halaman web. HTML menggunakan tag untuk menentukan dimana struktur mulai dan selesai.Tag tersebut disusun dalam karakter yang tidak ditemukan dalam bahasa inggris sehingga konten dan struktur bisa berbeda.
+        </details>
+        <details>
+        <summary>
+        <strong> Apa Elemen HTML? </strong>
+        </summary>
+        Sebuah elemen HTML adalah bagian dari website yang ditandai dengan sebuah tag mulai dan kadang ditutup dengan tag selesai. Elemennya juga termasuk konten di dalam tag. Contoh:
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+        </details>
+        <details>
+        <summary>
+        <strong> Apa tag HTML?</strong>
+        </summary>
+        Sebuah tag HTML adalah set khusus dari karakter yang memberitahu mesin dimana mulai dan selesai dari elemen HTML dan apa jenisnya.
+        </details>
+        </div>
+
+        Lakukan Ini:
+        \-Periksa konten dengan teman anda dan putuskan struktur yang terbaik menurut anda
+        \-Gunakan tag heading dan paragrap untuk kode struktur menuju halaman.
+      CSD U2 Inspector Warm Up: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+        <summary><strong> Bagaimana saya menggunakan inspektor Tool? </strong>
+
+        </summary>
+        Inspektor Tool adalah cara yang bagus untuk belajar lebih tentang kode yang tidak biasa di Web Lab. Untuk ke Inspektor Tool,klik<img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px">.Anda akan tahu bahwasanya Inspektor Tool yang membuat tombol berubah putih dan berkata "Inspektor: On". Sekali anda menghidupkan Inspektor Tool anda bisa menunggu diarea preview dan Web Lab akan menyoroti kode yang dibuat adalah bagian tampilan halaman.
+
+        </details>
+        </div>
+
+        # Eksplor HTML
+
+        Halaman web ini ditulis dalam HTML, bahasa web. Anda akan belajar lebih tentang cara kerjanya,tapi pertama tama eksplor dengan Inspektor Tool.
+
+        # Lakukan Ini
+
+        -   klik tip"bagaimana saya menggunakan Inspektor Tool?", dengan benar bagaimana saya menggunakan Inspektor Tool.
+            \-Ikuti perintah di halaman web untuk memeriksa halaman web dan diskusikan dengan teman bagaimana ini bekerja.
       CSD U2 Inspector Warm Up_2018: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"><strong>
         <summary>
@@ -514,11 +794,11 @@ id-ID:
         Animasi.\\\r\n-   Membuat sprite dan menetapkan gambar.\\\r\n-   M\n-   Tetapkan\n
         \   hingga gambar loop untuk gambar latar belakang dan sprite anda."
       CSD U5 black white images pixelation 2: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U6 game project finish: "# Menyelesaikan Sentuhan dan Pengujian\\\r\n\n\\\r\nDi\nPoin
         ini anda harus memiliki sebagian besar program di tempat Anda. Sekarang anda
         perlu untuk\nMenambahkan dengan menyelesaikan sentuhan yang diperlukan dan
@@ -548,6 +828,39 @@ id-ID:
 
         -   Apa yang membuat komputer berbeda dari mesin mesin yang ada sebelumnya?
         -   Pikirkan sesuatu yang anda lakukan pada computer,  jenis input, output, penyimpanan, dan proses  apa yang sedang terjadi?
+      CSDU2 - Type Anything: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Selamat datang di Web Lab
+
+        Platform yang anda masuki disebut Web Lab. Ada tiga bagian utama pada layar Web Lab.
+
+        # Lakukan Ini
+
+        \-Coba ketik sesuatu di workspace.
+        \-Tekan<img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> untuk melihat area preview!
+      CSDU2 - Type Anything_2018: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Selamat datang di Web Lab
+
+        Platform yang anda masuki disebut Web Lab. Ada tiga bagian utama pada layar Web Lab.
+
+        # Lakukan Ini
+
+        \-Coba ketik sesuatu di workspace.
+        \-Tekan<img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> untuk melihat area preview!
+      CSDU2 - Type Anything_2019: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Selamat datang di Web Lab
+
+        Platform yang anda masuki disebut Web Lab. Ada tiga bagian utama pada layar Web Lab.
+
+        # Lakukan Ini
+
+        \-Coba ketik sesuatu di workspace.
+        \-Tekan<img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> untuk melihat area preview!
       Course 4 Artist 13: |-
         Masih bermain? Ini ada kanvas kosong di mana
         Anda dapat mendesain apa saja yang Anda inginkan!
@@ -586,6 +899,125 @@ id-ID:
         variabel counter setiap kali loop dijalankan.
       Course 4 Playlab For Loops 5b: Sesuaikan rentang waktu pada loop `for` tersebut
         supaya dua karakter berakhir di tempat yang sama persis.
+      Crack Random Substitution: |-
+        # Membuka sebuah sandi substitusi acak
+
+        Versi alat ini memberikan anda informasi lebih tentang teks terenkripsi dan banyak opsi untuk bagaimana mencoba membuat subtitusi yang berbeda.
+
+        ### Cara berbeda untuk menganalisis teks
+
+        \-Bermain dengan beberapa macam opsi yang tersedia di tab sandi subtitusi acak untuk mendapatkan view berbeda pada frekuensi huruf dalam input teks sebaik standar teks Inggris.
+
+        ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        ### Cara berbeda untuk substitusi
+
+        \-Untuk subtitusi sebuah huruf anda bisa menarik sebuah huruf biru dari alpabet secara langsung dibawah huruf oranye yang ingin anda ubah di chipertext asli.
+
+        ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        ### Bermain.Selalu bermain
+
+        \-Ada cara lain untuk menganalisa dan mensubtitusi karakter yang dapat anda temukan dengan meng-klik tombol dan mencoba apapun yang anda suka.
+        \-Ingat anda tidak bisa membukanya:)
+
+        Perhatikan berapa lama waktu yang dibutuhkan untuk memecahkan sandi!Apakah ini metode yang bagus untuk mengenkripsi data rahasia?
+
+        <img src="http://code.org/api/hour/finish_encryption.png">
+      Crack a Caesar Cipher: |-
+        # Memecahkan sebuah sandi Caesar!
+
+        Alat ini membiarkan anda bermain dengan teks dan sandi caesar.Anda bisa menggunakan ini untuk mengenkripsi atau mendekripsinya.
+
+        # Lakukan ini
+
+        Muat sebuah**contoh pesan**dari pesan dropdown.Ini akan memuat sebuah pesan yang telah dienkripsi oleh sebuah sandi caesar.
+
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        \-Meggunakan tombol tab subtitusi caesar anda bisa menggeser alpabet kedepan atau kebelakang untuk mencoba menguraikan pesan.
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        Perhatikan berapa lama anda bisa memecahkan sandinya!Apakah ini metode yang bagus dalam mengenkripsi data rahasia?.
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance_Party_02: |-
+        Ayo kita ini rusa besar menari!
+
+        Keluarkan <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer<title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">titel</title><title name="DIR">1</title></block></xml> blok ke atas ruang kerja.Sambungkan di bawah<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">" ukuran" </title></block></xml>blok. Penarimu harus mulai gerakan baru setelah langkah keempat.
+
+        **Ukuran**digunakan untuk menghitung waktu dalam musik.Di dalam tutorial ini,ukurannya adalah empat ketukan.
+      Dance_Party_03: "\\_Sekarang kami sedang grooving! \\_ \n\nTambahkan blok <xml><block
+        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"ukur\"</title></block></xml>
+        ke ruang kerja Anda. Buat penari memulai langkah baru setelah 6 langkah."
+      Dance_Party_10: |-
+        Sekarang kita tahu bagaimana mengubah properti penari. kita juga bisa membuat properti yang sama secara otomatis respon ke musik menggunakan blok ini:<xml>
+        <block type="Dancelab_startMapping">
+
+        <title
+         name="SPRITE">right \_unicorn</title>
+        <title name="PROPERTY">" scale"<title name="RANGE"></title> "bass"</title>
+        </block></xml>
+
+        Program ini menggunakan musik volume "bass" (suara randah) untuk mengontrol tinggi seorang penari. Bisakah kamu membuat penari lain merespon musik juga?
+      Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> memungkinkan
+        Anda menjalankan kode ketika panah atas ditekan. \n\nAnda dapat mengubah gerakan
+        menari, mengubah properti penari, atau melakukan gerakan cepat hanya sekali.
+        Jadilah kreatif dan cari blok baru!"
+      Dance_Party_11_5: |-
+        Cek blok ini:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">'BEBEK'</title><title name="LAYOUT">"lingkaran"</xml></block></xml>
+
+        Sekarang kamu bisa membuat banyak penari sekaligus!
+        Coba gunakan beberapa blok "semua bebek" untuk menulis kode yang membuat semua bebek menari bersama.
+      Dance_Party_extras_battle: |-
+        # Kru Tari
+
+        Inilah tarian antara dua kru.Tombol panah mengontrol seorang penari dan kunci"w,a,s,d"mengontrol penari yang lain.Menarilah dengan seorang teman dan coba perbaiki tarian itu.
+
+        \-Tambahkan lebih banyak tombol untuk untuk mengontrol tarian.
+        \-Buatlah penari cadangan yang juga merespon saat tombol ditekan.
+        \-Ganti penari setiap 4 langkah dengan mengatur visibilitas mereka
+      Dance_Party_extras_every_beat: |-
+        # Seperempat Not
+
+        Sebagian besar tarian kami menggunakan semua ukuran, tapi setiap ukuran dibuat 4 seperempat not. Tarian ini menggunakan'setiap 0,25 ukuran'membuat penari bertepuk tangan setiap seperempat not.
+
+        Tarian ini juga menggunakan sebuah blok_kondisional_ untuk mengontrol blok'setiap0,25ukuran' dapat mengubah tarian.
+
+        \-Mencoba dengan durasi not yang lain(seperti 0,5 untuk setengah not atau0,125 untuk not kedelapan).
+        \-Tambahkan beberapa tindakan'setelah ukuran'
+        \-Ganti 'ukuran' dengan'detik'dan coba atur waktu tarian dengan cara tersebut.
+      Dance_Party_extras_layout: |-
+        # Ayo Masuk Formasi!
+
+        Lihat tarian ini yang menggunakan blok `layout` untuk mengubah formasi penari cadangan 'sepanjang tarian. Cobalah salah satu dari ide-ide ini untuk memperluasnya:
+
+        -   Buat grup penari kedua dalam tata letak yang berbeda
+        -   Ubah tata letak saat tombol ditekan
+        -   Ubah properti ketika penari mengubah formasi
+      Dance_Party_extras_on_beat: |-
+        # Suara rendah, menengah, dan tinggi
+
+        Tarian ini menggunakan acara"puncak"untuk memicu kode saat bagian bagian musik bersuara keras.
+        Cobalah bermain dengan lagu berbeda untuk melihat bagaimana mereka mengubah tarian.
+      Dance_Party_extras_speed: |-
+        # Mempercepat, Memperlambat
+
+        Tarian terakhir menggunakan blok'pengaturan kecepatan'untuk mengontrol seberapa cepat setiap penari bersetiap. Cobalah bereksperimen dengan kecepatan berbeda selama berbeda titik dalam lagu. Bebaslah bermain main dalam tarian ini, atau kembali kesalah satu tarian untuk membuatnya lebih keren.
+      Dance_Party_extras_visible: |-
+        # kemana mereka pergi?
+
+        Tarian ini memperlihatkan dan menyembunyikan dua kelompok penari berbeda. Lihat, dan kemudian coba tambahkan bakat anda sendiri.
+
+        \-Tambahkan kelompok penari lain
+        \-Perlihatkan dan lainunyikan penari memnggunakan tombol panah
+        \-Sembunyikan semua penari dan beralih ke efek latar belakang yang menarik
       Function intro Ryan: "**Fungsi** bernama `bangun jembatan` ada di ruang kerjamu.
         \ Semua kode yang kamu butuhkan untuk menyeberangi sungai sudah tersedia!
         \\\r\n \\\r\nPosisikan blok hijau kecil dua kali ke ruang kerjamu untuk memperbaiki
@@ -594,6 +1026,8 @@ id-ID:
         kerjamu.  Semua kode yang kamu butuhkan untuk menyeberangi sungai sudah tersedia!
         \\\r\n \\\r\nPosisikan blok hijau kecil dua kali ke ruang kerjamu untuk memperbaiki
         jalur dan bawa {currentPlayerName} ke Obor Batu Merah [redstone_torch]."
+      HOC 2018 Level_12: Selamat! Dunia air terbuka menunggumu.Bangun sebuah batu
+        karang! Sebuah gunung! Kapal karam! Terserah padamu
       Intro to Web Lab - Part 1_2019: "## Pertanyaan untuk dipertimbangkan:\n\n-   Apa
         perbedaan  bagian bagian dari Web \n    Lab, dan apa fungsinya?"
       Intro to Web Lab - Part 2_2019: |-
@@ -611,6 +1045,9 @@ id-ID:
       K-1 Bee Loops 6: Gunakan perulangan untuk mendapatkan nektar, madu, dan untuk
         bergerak!
       K-1 Maze Loops 2: Menggunakan blok 'ulangi' untuk mendapatkan saya ke babi!
+      MC HOC 2016 SCORE LEVEL: |-
+        Beberapa permainan membiarkan anda meyimpan skor. Mainkan tag dengan Iron Golem dan gunakan blok <xml><block type="craft_addScore"><title name="SCORE">1</title>
+        </block></xml>untuk memberimu sebuah poin saat anda men-tagnya!
       MC_HOC_2017_01_RETRY: "{currentPlayerName} terjebak di dalam rumah, namun Agent
         siap membantu!   \\\r\n \\\r\n   \\\r\nPosisikan blok `pindah maju` ke blok
         `ketika dijalankan` di ruang kerja untuk membawa Agent ke pelat tekanan [PressurePlate_Up],
@@ -697,6 +1134,37 @@ id-ID:
         domba
       Overworld Move to Sheep_2019: Tambahkan perintah "bergerak maju" kedua untuk
         mencapai domba
+      Standalone_Artist_2: Gambarlah berlian dengan sudut120 dan 60 derajat dan sisi
+        sepanjang 150 pixel.
+      Standalone_Artist_3: Bisakah anda menggambar hexagon ini dengan 100 pixel dan
+        60 derajat?
+      Standalone_Artist_4: Sekarang anda sudah mendapatkan blok baru untuk bermain,
+        pengulangan. Ini akan mengulangi seperangkat perintah. Apa yang terjadi jika
+        anda mengulang perintah 6 kali?
+      Standalone_Artist_5: Berapa kali Anda perlu loop (mengulangi) berlian untuk
+        menggambar bunga?
+      Standalone_Artist_5.5: 'Perhatikan bagaimana kami disederhanakan kode berlian
+        dengan mengubahnya menjadi sebuah pengulangan. Anda bisa mengulang seluruh
+        urutan sebanyak 12 kali untuk menggambar bunga. Petunjuk: anda perlu merubah
+        30 derajat setelah anda mengulang berlian sehingga anda tidak perlu menggambar
+        berlian yang sama.'
+      Standalone_Artist_6: 'Ulangi kode segienam ini 6 kali untuk membuat rancangan.
+        Berapa derajat yang anda perlukan untuk berubah setiap waktu? Petunjuk: bagilah
+        jumlah derajat dalam sebuah lingkaran dengan jumlah waktu pengulangan.'
+      Standalone_Artist_7: Fungsi adalah alat pemrograman untuk membantu anda menghindari
+        pengulangan. Fungsi ini menggambar sebuah bunga, jadi anda bisa menggunakannya
+        setiap saat anda ingin menggambar bunga. Gunakan ini dan blok melompat baru
+        untuk menggambar bunga bunga tersebut. Bunga bunga ini 150 pixel terpisah
+      Standalone_Artist_8: Berikut adalah fungsi yang disebut'menggambar bentuk'yang
+        sudah kami program untuk menggambar segienam. Jalankan kode untuk mengetahui
+        apa fungsinya dan bereksperimen untuk melihat apa yang terjadi. Dapatkah anda
+        membuatnya untuk menggambar sebuah pola dari segiempat, segitiga, atau segidelapan?
+      Standalone_Artist_9: Sekarang buatlah gambar apapun yang anda suka! Anda bahkan
+        punya fungsi kosong yang anda dapat isi dengan apapun yang anda sukai!
+      'Widget: Text Compression': Perhatikan pola (pengulangan kata atau frase) dalam
+        teks.Masukkan pola yang anda lihat ke dalam kamus dengan benar. Ketika anda
+        mengetik entri kedalam kamus,simbol untuk entri dimasukkan kedalam teks di
+        tempat pola tersebut.
       course4_artist_fwp_challenge1: Cobalah jalankan program ini, dan buatlah perubahan
         untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus
         dan ganti dengan komposisi yang berbeda)
