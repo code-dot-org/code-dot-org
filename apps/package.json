@@ -163,7 +163,7 @@
     "radium": "~0.18.1",
     "raw-loader": "^0.5.1",
     "react": "~15.6",
-    "react-addons-test-utils": "~15.6.0",
+    "react-addons-test-utils": "~15.6",
     "react-bootstrap": "0.30.1",
     "react-color": "^2.11.7",
     "react-datepicker": "1.6.0",
