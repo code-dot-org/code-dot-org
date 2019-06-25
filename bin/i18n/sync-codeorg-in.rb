@@ -34,16 +34,12 @@ def sanitize(string)
   return string.gsub(/\r(\n)?/, "\n")
 end
 
-def redact_translated_data(path, plugins = nil)
-  source = "i18n/locales/source/#{path}"
-  backup = "i18n/locales/original/#{path}"
-  FileUtils.mkdir_p(File.dirname(backup))
-  FileUtils.cp(source, backup)
-  redact(source, source, plugins)
-end
-
 def redact_block_content
-  redact_translated_data('dashboard/blocks.yml', 'blockfield')
+  source = "i18n/locales/source/dashboard/blocks.yml"
+  original = "i18n/locales/original/dashboard/blocks.yml"
+  FileUtils.mkdir_p(File.dirname(original))
+  FileUtils.cp(source, original)
+  redact(original, source, ['blockfield'], 'txt')
 end
 
 def get_dsl_i18n_strings(level)
