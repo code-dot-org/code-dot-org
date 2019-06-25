@@ -6,6 +6,8 @@
 
 set -xe
 
+ulimit -n 8192
+
 export CI=true
 export CIRCLECI=true
 export RAILS_ENV=test
