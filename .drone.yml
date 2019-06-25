@@ -141,8 +141,6 @@ steps:
 
 - name: ui-tests
   image: wintercdo/code-dot-org:0.7
-  # privileged is needed to increase the ulimit to the SauceConnect-recommended > 8000.
-  privileged: true
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
@@ -196,6 +194,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 9c6411cf0d2e4d62dec86755b5a3a6052d188b9276b43ba714b293e28b9ecd6e
+hmac: 6b7e7814aa5e4affe72e051161413e62d24dc552d6a2c85aabed23d134fd8cc3
 
 ...
