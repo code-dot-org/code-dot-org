@@ -289,7 +289,7 @@ pt-BR:
         comprimento do lado inclinado (comprimento da hipotenusa) é de 200 pixels.
         \n\nComplete o desenho."
       4-5 Artist 8: "A linha do meio-campo em um campo de futebol é _perpendicular_
-        às linhas laterais.  \nEste retângulo tem um perímetro de 800 pixels no total,
+        às linhas laterais.\\\nEste retângulo tem um perímetro de 800 pixels no total,
         e 240 pixels de comprimento. Qual é sua altura?  \n\nDesenhe as bordas e a
         linha do meio-campo."
       4-5 Artist 9: "Desenhe a metade da direita desta imagem de forma que o desenho
@@ -8976,6 +8976,17 @@ pt-BR:
         Alguém tentou usar o bloco `sprite.deslocar()` para fazer o **elefante empurra o hipopótamo**, mas existe um bug. Você pode mudar o código para que o elefante empurre o hipopótamo para fora da tela?
 
         -   Encontre a linha de código onde o bloco `sprite.deslocar()` é usado e corrija o erro.
+      CSD U3 collisions types_2019: |-
+        # Tipos de Colisão
+
+        Existem quatro tipos de colisão que são usados no Game Lab: `displace` (deslocar), `colide` (colidir), `bounce` (pular), e `bounceOff` (pular para fora). Estes blocos irão causar um determinado tipo de interação entre a _figura_ e o seu _alvo_.
+
+        # Faça Isto
+
+        Escolha o melhor bloco para reproduzir a bola de basquete pulando no chão. ( [Mostre-me onde](#triggercallout=code_triggered) )
+        \*Dica: Você pode experimentar com diferentes blocos, ou ler mais sobre eles na aba "Ajuda e Dicas". [//]\: # (<https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png>)
+
+        [//]: # "https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png"
       CSD U3 debug: |-
         <img src="https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50 AM.png" style="float:right;width:150px;">
 
@@ -9081,6 +9092,14 @@ pt-BR:
         -   Veja o código que define a cor. ([Mostre-me onde] [0])
         -   Mude a cor de azul para amarelo.
         -   Adicione um novo quadrado arrastando um bloco `rect` para a área do código abaixo do comando preencher ([Mostre-me onde] [1]). O novo quadrado pode ir a qualquer local na tela que você quiser.
+      CSD U3 function video: |-
+        ## Perguntas a considerar
+
+        -   Pense em uma situação em que uma função poderia ter ajudado você a escrever um programa.
+            -   Que código teria feito parte da **definição** da função?
+            -   Quando você teria **chamado** a função?
+            -   Que nome você teria dado a ela?
+      CSD U3 if else predict: Nível de Predição, veja o nível incluso para instruções.
       CSD U3 picture: |-
         # Desafio: desenhar uma imagem
 
@@ -9099,6 +9118,31 @@ pt-BR:
         _Verifique com seu professor antes de iniciar qualquer um dos desafios._
 
         Na lição anterior, você e seu colega criaram várias imagens interessantes. Veja se você pode recriar uma delas usando o código.
+      CSD U3 platform background2_2019: |-
+        # Escolhendo seu Fundo de Tela
+
+        Agora que você tem sua variável de pontuação, você pode usá-la para escolher o fundo de tela correto para o seu jogo. Você pode ver um exemplo de troca do fundo de tela baseada na sua pontuação em [Lição 19 Nível 12](../../19/puzzle/12)
+
+        # Faça Isto
+
+        -   Dentro do laço de desenho, use uma declaração `if` e suas duas funções de fundo de tela para desenhar seu fundo de acordo com seu nível de pontos.
+        -   Teste seu código, alterando a pontuação inicial para 100, e depois rodando o programa para ver se o fundo muda.
+
+        _Desafio: Se você tiver um terceiro fundo, você pode clicar o sinal de mais na parte inferior do bloco `if`. Um outro espaço irá surgir para a função de seu terceiro fundo de tela, assim como um local para verificar novamente a pontuação._
+      CSD U3 platform player2_2019: "# Controles de Usuário\n\nA seguir, você deverá
+        adicionar controles de usuário para que você possa movimentar seu jogador.
+        Seu jogador precisa se mover à esquerda quando a seta à esquerda for pressionada,
+        à direita quando a seta à direita for pressionada, e pular quando a barra
+        de espaços for pressionada.\n\n# Faça Isto\n\n-   Crie uma nova função `controlPlayer`
+        na área de \"funções\" do seu código.\n-   Dentro da função `controlPlayer`,
+        use os blocos `if`, `keyDown`, e `sprite.x` para fazer seu jogador se mover
+        à esquerda e à esquerda conforme as teclas das setas. Veja exemplos em <a
+        href=\"../../12/puzzle/7\" target=\"_blank\"> Lição 12 Quebra-cabeça 7 </a>.
+        \n-   Dentro da função `controlPlayer`, use os blocos `if`, `keyDown`, e `velocityY`
+        para fazer seu jogador pular quando a seta para cima for pressionada. Veja
+        um exemplo em <a href=\"../../15/puzzle/11\" target=\"_blank\">Lição 15 Quebra-cabeça</a>.\n-
+        \  Chame a função `controlPlayer` dentro do laço de desenho.\n-   Rode o jogo
+        e teste seu código."
       CSD U3 rect: |-
         # Explore o Laboratório de Jogos
 
@@ -9385,6 +9429,38 @@ pt-BR:
         # Faça isso
 
         -   Decodifique os dois números de uma string binária.
+      CSD U5 binary 5-new_2018: |-
+        # Decodificando vários números
+
+        Aqui está um widget que pode calcular números de até oito bits. Você pode usá-lo para encontrar os valores dos dois recordes mundiais abaixo.
+
+        Não se esqueça de garantir que o bit "1" seja sempre o mais adequado. Se você tiver bits extras no lado esquerdo do widget, mantenha-os desativados.
+
+        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14 PM.png>)
+
+        1.  Cauda mais longa em um cachorro (em polegadas) (5 bits)
+        2.  O maior número de colheres balançando no rosto de alguém (5 bits)
+
+        # Faça isso
+
+        -   Decodifique os dois números de uma string binária.
+                 \- Dica: você precisará ler os números em ordem, com a primeira resposta usando os primeiros cinco bits, e a segunda resposta usando os cinco bits depois disso.
+      CSD U5 binary 5-new_2019: |-
+        # Decodificando vários números
+
+        Aqui está um widget que pode calcular números de até oito bits. Você pode usá-lo para encontrar os valores dos dois recordes mundiais abaixo.
+
+        Não se esqueça de garantir que o bit "1" seja sempre o mais adequado. Se você tiver bits extras no lado esquerdo do widget, mantenha-os desativados.
+
+        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14 PM.png>)
+
+        1.  Cauda mais longa em um cachorro (em polegadas) (5 bits)
+        2.  O maior número de colheres balançando no rosto de alguém (5 bits)
+
+        # Faça isso
+
+        -   Decodifique os dois números de uma string binária.
+                 \- Dica: você precisará ler os números em ordem, com a primeira resposta usando os primeiros cinco bits, e a segunda resposta usando os cinco bits depois disso.
       CSD U5 binary 6-new: |-
         # Decodificando vários números
 
@@ -9776,11 +9852,35 @@ pt-BR:
 
         -   Quais são as etapas para adicionar uma imagem a um sprite?
         -   Quais são as diferentes maneiras de obter uma imagem?
+      'CSD: Drawing in Game Lab 1_2019': |-
+        ## Perguntas a Considerar
+
+        -   Onde você pode encontrar mais informações sobre como usar os blocos?
+        -   Qual é uma vantagem de usar blocos?
+      'CSD: Drawing in Game Lab 2_2019': |-
+        ## Perguntas a Considerar
+
+        -   Qual é a diferença entre stroke e fill?
       'CSD: For Loop_2019': |-
         ## Perguntas a Considerar
 
         -   Para que os laços são usados em programação?
         -   Onde os Laços são colocados em seu código?
+      'CSD: Introduction to the Draw Loop_2019': |-
+        ## Perguntas a Considerar
+
+        -   O que faz a função draw?
+      'CSD: Sprite Velocity_2019': |-
+        ## Perguntas a Considerar
+
+        -   Por que você iria querer usar um bloco de velocidade ao invés de um padrão de contagem?
+        -   Dê um exemplo de um padrão de contagem e como você poderia usar um bloco de velocidade ao invés dele.
+      'CSD: Sprites in Game Lab_2019': |-
+        ## Perguntas a Considerar
+
+        -   O que é um sprite?
+        -   O que são propriedades?
+        -   Que problema os sprites resolvem?
       CSDU2 - Type Anything: |-
         <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
 
@@ -9853,6 +9953,60 @@ pt-BR:
         -   Defina a tela principal como o padrão
 
         Não se preocupe em adicionar qualquer código neste momento; nós vamos chegar a isso no próximo nível.
+      CSDU4 Quiz App Demo: |-
+        # Me Teste
+
+        Um aplicativo de teste pode ser usado para ensinar ou ajudar a reforçar as informações importantes para o tópico escolhido.
+
+        Em sua forma mais básica, um aplicativo de teste é composto de uma tela para cada pergunta com dois ou mais botões para respostas de múltipla escolha. Cada botão é vinculado a uma página que confirma que você estava correto(a) ou fornece informações sobre o motivo de você estar errado.
+
+        Aplicativos de teste mais avançados podem incluir recursos como:
+
+        -   Diferentes tipos de perguntas (como correspondência, resposta livre ou até mesmo jogos interativos)
+        -   Perguntas em ordem aleatória
+        -   Mudar as perguntas com base no seu desempenho
+        -   Fornecer uma pontuação final
+        -   Incorporar material de estudo
+
+        # Funcionalidade ausente nesse protótipo
+
+        -   As perguntas não são realmente verificadas quanto à exatidão
+      CSDU4 Quiz App Demo_2018: |-
+        # Me Teste
+
+        Um aplicativo de teste pode ser usado para ensinar ou ajudar a reforçar as informações importantes para o tópico escolhido.
+
+        Em sua forma mais básica, um aplicativo de teste é composto de uma tela para cada pergunta com dois ou mais botões para respostas de múltipla escolha. Cada botão é vinculado a uma página que confirma que você estava correto(a) ou fornece informações sobre o motivo de você estar errado.
+
+        Aplicativos de teste mais avançados podem incluir recursos como:
+
+        -   Diferentes tipos de perguntas (como correspondência, resposta livre ou até mesmo jogos interativos)
+        -   Perguntas em ordem aleatória
+        -   Mudar as perguntas com base no seu desempenho
+        -   Fornecer uma pontuação final
+        -   Incorporar material de estudo
+
+        # Funcionalidade ausente nesse protótipo
+
+        -   As perguntas não são realmente verificadas quanto à exatidão
+      CSDU4 Quiz App Demo_2019: |-
+        # Me Teste
+
+        Um aplicativo de teste pode ser usado para ensinar ou ajudar a reforçar as informações importantes para o tópico escolhido.
+
+        Em sua forma mais básica, um aplicativo de teste é composto de uma tela para cada pergunta com dois ou mais botões para respostas de múltipla escolha. Cada botão é vinculado a uma página que confirma que você estava correto(a) ou fornece informações sobre o motivo de você estar errado.
+
+        Aplicativos de teste mais avançados podem incluir recursos como:
+
+        -   Diferentes tipos de perguntas (como correspondência, resposta livre ou até mesmo jogos interativos)
+        -   Perguntas em ordem aleatória
+        -   Mudar as perguntas com base no seu desempenho
+        -   Fornecer uma pontuação final
+        -   Incorporar material de estudo
+
+        # Funcionalidade ausente nesse protótipo
+
+        -   As perguntas não são realmente verificadas quanto à exatidão
       CSDU6 making new arrays_2019: |-
         # Criando Novas Matrizes
 
@@ -9964,6 +10118,17 @@ pt-BR:
         forma desenhada.
       Course 4 Artist For Loops 1: Use um bloco de repetição para desenhar esse triângulo
         que tem 50 pixels de largura.
+      Course 4 Artist For Loops 14: "Se você girar um pouco a mais ou a menos do que
+        você normalmente faria com uma forma, isto cria um efeito legal. \n\nTente
+        usar um pouco do código do último nível, mas girando 89 graus para criar esta
+        espiral quadrada retorcida."
+      Course 4 Artist For Loops 2: |-
+        Eu coloquei o código para desenhar um triângulo dentro de um laço `for` que conta de 50 a 100, de 10 em 10.
+
+        **NOTA:** Tenha certeza que você tenha visto o código _antes_ de clicar em "Executar".
+      Course 4 Artist For Loops 3: Use o último quebra-cabeças como uma referência
+        para resolver este. O menor triângulo possui lados de 20 pixels, o maior tem
+        lados de 200 pixels, e cada triângulo possui 20 pixels a mais do que o anterior.
       Course 4 Artist For Loops 4: |-
         Use um laço "para" para desenhar esses quadrados.
         Eles começam com 15 pixels de comprimento, o maior tem 300 pixels de comprimento, e cada quadrado
@@ -9972,6 +10137,9 @@ pt-BR:
       Course 4 Artist For Loops 6a: |-
         Faça três pequenas alterações no
         código do último nível para conseguir isso!
+      Course 4 Artist For Loops 8: "Somente uma pequena alteração de código da última
+        imagem é capaz de criar este desenho. Você consegue descobrir qual é esta
+        alteração?\n\nDica: Você precisa remover algo!  "
       Course 4 Artist Inspire: "<img src=\"https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png\"
         width=\"250px\"/>\n\n**Inspiração para Atividade Livre:** Você já aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se esta figura te
@@ -10083,6 +10251,14 @@ pt-BR:
         Sempre que o Cão (ator 1) for atingido por um sanduíche pelo Gato (ator 2), você deverá perder um ponto.
 
         Comece com 10 pontos para que não seja muito difícil. Deixe sua pontuação cair de 10 para 0 para passar de nível.
+      Course 4 Play Lab Vars 9: "Tempo livre! Aqui estão todas as variáveis que mexemos
+        até agora neste estágio, bem como algumas variáveis a mais caso você queira.
+        \n\nPerceba que agora temos tantos blocos em nossa caixa de ferramentas, que
+        eles precisam ser organizados! Aqui, nós colocamos cada peça em uma categoria
+        adequada. Tire algum tempo para explorar tudo que está disponível. Quando
+        você tiver terminado a investigação, crie um jogo ou história usando repetições,
+        variáveis, e eventos.\n\n_Dica: role a tela para baixo para ver todos os comandos
+        no espaço de trabalho._"
       Course 4 Play Labs For Loops 1: |-
         Vamos fazer o cão falar todos
         os números de 1 a 100. Use um laço "para" e o bloco "contador" para que ele fale o
@@ -10561,6 +10737,12 @@ pt-BR:
         o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png).
         Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
         do tesouro.
+      Introduction to Variables - Part 1_2019: |-
+        ## Perguntas a Considerar
+
+        -   O que as variáveis costumam fazer?
+        -   Como você cria uma variável e atribui um valor a ela?
+        -   O que pode ser armazenado em uma variável?
       K-1 Bee Loops 2: |-
         Use um laço "repita" para mover e então coletar o néctar e
         produzir mel!
@@ -10726,6 +10908,38 @@ pt-BR:
         em todos os lugares corretos. \\\r\n\\\r\nVocê percebeu que só precisa\ndefinir
         o valor de \"comprimento\" uma vez, e o código usa o valor correto em todos
         os lugares?"
+      NEW Course 4 Bee For Loops 10a: |-
+        Pronto para um desafio? Pegue o que você aprendeu sobre laços e tente resolver este problema.
+
+        Lembre-se: Você pode ter que fazer várias tentativas até descobrir todas as etapas.
+      NEW Course 4 Bee For Loops 2: |-
+        Adicione o código necessário para assegurar que a abelha coleta todo o néctar.
+
+        Veja quanto código você precisa para este quebra-cabeças!
+        (Nós iremos aprender uma maneira mais simples no próximo desafio.)
+      NEW Course 4 Bee For Loops 3: 'Ah, o laço `for` torna isso muito mais fácil!
+        Todo o código que você precisa está aqui, dê uma olhada em como ele é feito
+        e clique em `Executar` para ver como funciona. '
+      NEW Course 4 Bee For Loops 4: 'Substitua o ??? no laço `for` pela quantidade
+        máxima de néctar que a abelha precisa coletar. '
+      NEW Course 4 Bee For Loops 4 4: Agora nós precisamos `mover para frente` `contador`
+        vezes, e depois `pegar néctar` `contador` vezes. Você consegue usar dois laços
+        `repita` para solucionar este desafio?
+      NEW Course 4 Bee For Loops 5: Você também pode usar um laço `for` para contar
+        para trás. Experimente coletar este néctar contando regressivamente de 5 para
+        1, de 1 em 1.
+      NEW Course 4 Bee For Loops 6: |-
+        O último número no seu laço `for` é chamado de `incremento`. A cada vez que o laço é executado, a variável de contagem é alterada conforme o incremento.
+
+        Experimente coletando estas flores usando um incremento de 2.
+      NEW Course 4 Bee For Loops 7: |-
+        Agora, vamos combinar a variável `contador` com um bloco matemático! Como você pode usar a variável `contador` para navegar este jardim com o menor número possível de blocos?
+
+        O que você precisa fazer para coletar 3, 6, 9, 12, 15 néctares desta vez? O segredo está na variável `contador`!
+
+        Lembre-se: Se seu laço está contando para cima, o incremento é adicionado à variável `contador` a cada ciclo.
+      NEW Course 4 Bee For Loops 8: "Você conseguiu! \n\nQual deve ser o valor do
+        incremento para que sejam coletados 3, 6, 9, 12, 15 néctares?"
       NetSim Standalone Automatic DNS: |-
         # Serviço de Domínio de Nomes (DNS)
 
@@ -11043,6 +11257,8 @@ pt-BR:
         substitua-o por algo totalmente diferente)
       course4_artist_variables_challenge1: Voce consegue criar uma variável `comprimento`
         e usá-la para criar este padrão?
+      course4_bee_for_challenge1: Use este laço for para coletar todo o néctar. Existem
+        algumas ações que você vai `repetir 'contador' vezes`.
       courseA_artist_loops10: |-
         ## Hora de voltar à terra. Me ajude a colocar pedras para que eu não caia na água!
 
@@ -11236,12 +11452,15 @@ pt-BR:
         -   -   Jogo gratuito: \* \* Esta é a Laurel, a Aventureira! Mova-a e o maior número de tesouros que conseguir.
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
-      courseA_collector_loops12: "_\"Eureka! Colete o máximo de tesouros que puder!\"_
-        \ \n(Você não tem que pegar todos.)"
-      courseA_collector_loops12_2018: "_\"Eureka! Colete o máximo de tesouros que
-        puder!\"_  \n(Você não tem que pegar todos.)"
-      courseA_collector_loops12_2019: "_\"Eureka! Colete o máximo de tesouros que
-        puder!\"_  \n(Você não tem que pegar todos.)"
+      courseA_collector_loops12: |-
+        _"Eureka! Colete o máximo de tesouros que puder!"_\
+        (Você não tem que pegar todos.)
+      courseA_collector_loops12_2018: |-
+        _"Eureka! Colete o máximo de tesouros que puder!"_\
+        (Você não tem que pegar todos.)
+      courseA_collector_loops12_2019: |-
+        _"Eureka! Colete o máximo de tesouros que puder!"_\
+        (Você não tem que pegar todos.)
       courseA_collector_loops1_2018: |-
         -   -   Jogo gratuito: \* \* Esta é a Laurel, a Aventureira! Mova-a e o maior número de tesouros que conseguir.
 
@@ -11937,12 +12156,11 @@ pt-BR:
         [expandable] [0]
         [expandable] [1]
         [expandable] [2]
-      courseC_artist_loopsPrePre1a_2019: "O artista está no lugar errado!\n\nUtilize
-        o bloco <xml><block type=\"jump_to_xy\" id=\"callMe\" block-text=\"jump to
-        200 over 200 down\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>
-        para levar o artista para o centro da área.  \nEntão, desenhe uma linha com
-        50 pixels de comprimento com o bloco <xml><block type=\"draw_move_by_constant\"
-        block-text=\"move forward\"><title name=\"DIR\">Avance</title><title name=\"VALUE\">50</title></block></xml>."
+      courseC_artist_loopsPrePre1a_2019: |-
+        O artista está no lugar errado!
+
+        Utilize o bloco <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para levar o artista para o centro da área.\
+        Então, desenhe uma linha com 50 pixels de comprimento com o bloco <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">Avance</title><title name="VALUE">50</title></block></xml>.
       courseC_collector_prog2_2019: Mova Laurel para o tesouro, então use o bloco
         <xml><block type="collector_collect" block-text="collect"/></xml> para coletá-lo.
       courseC_collector_prog8: _"Continue fazendo um bom trabalho! Me ajude a coletar
@@ -12217,6 +12435,30 @@ pt-BR:
       coursea_maze_ramp1_2019: Para levar o pássaro até o porco, encaixe o <xml><block
         type="maze_moveEast"/></xml> bloco no final do <xml><block type="when_run"/></xml>
         bloco e aperte "▶ Executar"!
+      csd U3 conditional statements video_2019: |-
+        ## Perguntas a Considerar
+
+        -   Quando você usaria uma declaração if?
+      csd u5 recommender sample: |-
+        # App de Exemplo
+
+        Aqui está um exemplo de um aplicativo que usa dados para ajudar o usuário a resolver um problema. Com um parceiro, utilize o aplicativo algumas vezes para ver como ele funciona.
+
+        Discuta as seguintes perguntas com seu parceiro:
+
+        -   Que escolha o aplicativo ajuda o usuário a fazer?
+        -   Quais dados são usados para fazer essa recomendação?
+        -   Como você acha que os criadores do aplicativo decidiram sobre o algoritmo usado para fazer a escolha?
+      csd u5 recommender sample_2019: |-
+        # App de Exemplo
+
+        Aqui está um exemplo de um aplicativo que usa dados para ajudar o usuário a resolver um problema. Com um parceiro, utilize o aplicativo algumas vezes para ver como ele funciona.
+
+        Discuta as seguintes perguntas com seu parceiro:
+
+        -   Que escolha o aplicativo ajuda o usuário a fazer?
+        -   Quais dados são usados para fazer essa recomendação?
+        -   Como você acha que os criadores do aplicativo decidiram sobre o algoritmo usado para fazer a escolha?
       frozen circle: |-
         Um círculo é uma forma especial. Você pode descobrir
         que número usar para substituir os pontos de interrogação para desenhar um círculo?

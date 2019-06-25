@@ -233,14 +233,16 @@ pt-BR:
         2-3_Bee_Functions_6_a: Você não precisa usar um loop com uma função. Tente
           mover, usando a função, e então, mover-se e usar a função novamente.
       2-3 Bee Functions 8:
-        2-3_Bee_Functions_8_a: "Se o quebra-cabeça parece desafiador, tente construir
-          sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione
-          mais alguns e experimente novamente.  \nEm breve, você terá sua função!\n
-          ! [a] \\(<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
+        2-3_Bee_Functions_8_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
+           ! [a] \(<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)
       2-3 Bee Functions 9:
-        2-3_Bee_Functions_8_a: "Se o quebra-cabeça parece desafiador, tente construir
-          sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione
-          mais alguns e experimente novamente.  \nEm breve, você terá sua função!"
+        2-3_Bee_Functions_8_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
         2-3_Bee_Functions_8_b: "Lembre-se de construir o seu código dentro do bloco
           de função verde. \n! [a] \\(<https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif>)"
       2-3 Bee Loops 2:
@@ -2770,7 +2772,7 @@ pt-BR:
           </xml>
       Course 4 SCV 2:
         Course_4_SCV_2_a: "A imagem completa é feita de 10 destas \"flores\": \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n...que
-          são feitas de 10 destes decágonos:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
+          são feitas de 10 destes decágonos:\\\n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
         Course_4_SCV_2_b: 'Este projeto usa laços aninhados (três profundos). Todos
           os laços percorrem ''sides'' vezes. '
         Course_4_SCV_2_c: O artista vira à esquerda quando cria cada decágono, mas
@@ -4702,17 +4704,17 @@ pt-BR:
           -   Faça mel três vezes
           -   Mova para trás
       course3_bee_functions_challenge1:
-        courseE_bee_functions_challenge1_a: "Se o quebra-cabeça parece desafiador,
-          tente construir sua função aos poucos.\nAdicione alguns blocos e os experimente.
-          Adicione mais alguns e experimente novamente.  \nEm breve, você terá sua
-          função!"
+        courseE_bee_functions_challenge1_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
         courseE_bee_functions_challenge1_b: Lembre-se de construir seu código dentro
           do bloco de função verde.
       course3_bee_functions_challenge2:
-        courseE_bee_functions_challenge1_a: "Se o quebra-cabeça parece desafiador,
-          tente construir sua função aos poucos.\nAdicione alguns blocos e os experimente.
-          Adicione mais alguns e experimente novamente.  \nEm breve, você terá sua
-          função!"
+        courseE_bee_functions_challenge1_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
         courseE_bee_functions_challenge1_b: Lembre-se de construir seu código dentro
           do bloco de função verde.
       course3_bee_functions_challenge3:
@@ -14146,16 +14148,18 @@ pt-BR:
           -   mover para trás
           -   volte para a direção que a abelha começou
       courseE_bee_functions6:
-        courseE_bee_functions6_a: "Se o quebra-cabeça parece desafiador, tente construir
-          sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione
-          mais alguns e experimente novamente.  \nEm breve, você terá sua função!\n
-          ! [a] \\(<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
+        courseE_bee_functions6_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
+           ! [a] \(<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)
         courseE_bee_functions6_b: Isso pode ajudar neste caso a se mover dentro da
           função, mas nem todos os seus blocos `mover` precisam estar lá.
       courseE_bee_functions7:
-        courseE_bee_functions7_a: "Se o quebra-cabeça parece desafiador, tente construir
-          sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione
-          mais alguns e experimente novamente.  \nEm breve, você terá sua função!"
+        courseE_bee_functions7_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
         courseE_bee_functions7_b: "Lembre-se de construir o seu código dentro do bloco
           de função verde. \n! [a] \\(<https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif>)"
         courseE_bee_functions7_c: Esta função deve virar a abelha para guiá-lo pelo
@@ -14176,17 +14180,17 @@ pt-BR:
         courseE_bee_functions9_b: Embora você saiba quanto néctar algumas das flores,
           um laço `enquanto` pode fazer uma função funcionar para todos eles.
       courseE_bee_functions_challenge1:
-        courseE_bee_functions_challenge1_a: "Se o quebra-cabeça parece desafiador,
-          tente construir sua função aos poucos.\nAdicione alguns blocos e os experimente.
-          Adicione mais alguns e experimente novamente.  \nEm breve, você terá sua
-          função!"
+        courseE_bee_functions_challenge1_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
         courseE_bee_functions_challenge1_b: Lembre-se de construir seu código dentro
           do bloco de função verde.
       courseE_bee_functions_challenge2:
-        courseE_bee_functions_challenge1_a: "Se o quebra-cabeça parece desafiador,
-          tente construir sua função aos poucos.\nAdicione alguns blocos e os experimente.
-          Adicione mais alguns e experimente novamente.  \nEm breve, você terá sua
-          função!"
+        courseE_bee_functions_challenge1_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
         courseE_bee_functions_challenge1_b: Lembre-se de construir seu código dentro
           do bloco de função verde.
       courseE_farmer_concept1:
@@ -16689,14 +16693,23 @@ pt-BR:
           laranja, **3** quadrados verdes, e **1** bloco azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
           Hint Drawing.png>) \n\nComo os números se relacionam?"
       courseF_bee_for11:
-        courseF_bee_for11_a: "Quanto menos 12 é do que 15?  \nQuanto menos 9 é do
-          que 12?\n\nVocê vê um padrão?"
+        courseF_bee_for11_a: |-
+          Quanto menos 12 é do que 15?\
+          Quanto menos 9 é do que 12?
+
+          Você vê um padrão?
       courseF_bee_for11_2018:
-        courseF_bee_for11_a: "Quanto menos 12 é do que 15?  \nQuanto menos 9 é do
-          que 12?\n\nVocê vê um padrão?"
+        courseF_bee_for11_a: |-
+          Quanto menos 12 é do que 15?\
+          Quanto menos 9 é do que 12?
+
+          Você vê um padrão?
       courseF_bee_for11_2019:
-        courseF_bee_for11_a: "Quanto menos 12 é do que 15?  \nQuanto menos 9 é do
-          que 12?\n\nVocê vê um padrão?"
+        courseF_bee_for11_a: |-
+          Quanto menos 12 é do que 15?\
+          Quanto menos 9 é do que 12?
+
+          Você vê um padrão?
       courseF_bee_for1_2018:
         courseF_bee_for1_a: Arraste um bloco de número roxo para o espaço em branco
           no laço `repita` para dizer quantas vezes deve repetir.
@@ -17308,10 +17321,11 @@ pt-BR:
         courseF_bee_functions5a_c: Dentro do seu laço `while` certifique-se de avançar
           e então use sua função para verificar por um caminho.
       courseF_bee_functions6:
-        courseF_bee_functions6_a: "Se o quebra-cabeça parece desafiador, tente construir
-          sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione
-          mais alguns e experimente novamente.  \nEm breve, você terá sua função!\n
-          ! [a] \\(<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
+        courseF_bee_functions6_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
+           ! [a] \(<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)
         courseF_bee_functions6_b: Sua função deve verificar se há uma flor ou uma
           colméia, obter néctar ou fazer mel, então virar.
         courseF_bee_functions6_c: Já que você está virando dentro da sua função, você
@@ -17322,15 +17336,17 @@ pt-BR:
         courseF_bee_functions7_b: Tente desenhar um caminho através deste labirinto
           com seu dedo. Onde a abelha terá que tomar uma decisão?
       courseF_bee_functions8a:
-        courseF_bee_functions8a_a: "Se o quebra-cabeça parece desafiador, tente construir
-          sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione
-          mais alguns e experimente novamente.  \nEm breve, você terá sua função!"
+        courseF_bee_functions8a_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
         courseF_bee_functions8a_b: Lembre-se de construir seu código dentro do editor
           de função.
       courseF_bee_functionsPre7:
-        courseF_bee_functions7_a: "Se o quebra-cabeça parece desafiador, tente construir
-          sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione
-          mais alguns e experimente novamente.  \nEm breve, você terá sua função!"
+        courseF_bee_functions7_a: |-
+          Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
+          Em breve, você terá sua função!
         courseF_bee_functions7_b: |-
           Lembre-se de construir seu código dentro do bloco de função verde.
 
