@@ -122,13 +122,15 @@ pl-PL:
         2-3_Artist_Nested_Loops_1_a: Pamiętaj, aby umieścić wszystkie szare bloki
           kodu wewnątrz swojej pętli.
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Potrzebujesz pomocy z obliczania kątów?  \n\\*\\*
-          360/12 = 30 \\*\\*"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potrzebujesz pomocy z obliczania kątów?\
+          \*\* 360/12 = 30 \*\*
         2-3_Artist_Nested_Loops_3_b: Pamiętaj, aby umieścić wszystkie szare bloki
           kodu i twój ruch wewnątrz pętli.
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Potrzebujesz pomocy z obliczania kątów?  \n\\*\\*
-          360/12 = 30 \\*\\*"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potrzebujesz pomocy z obliczania kątów?\
+          \*\* 360/12 = 30 \*\*
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
           o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
@@ -341,12 +343,15 @@ pl-PL:
           przodu ' więcej niż dwa kroki.
         4-5_Maze_5_b: Można użyć więcej niż jednej pętli 'powtórz' w tym labiryncie.
       4-5 Maze 6:
-        4-5_Maze_6_a: "Jeśli masz kłopot, wskaż sobie palcem drogę.  \nCzy jest to
-          najkrótsza droga, którą można znaleźć?"
+        4-5_Maze_6_a: |-
+          Jeśli masz kłopot, wskaż sobie palcem drogę.\
+          Czy jest to najkrótsza droga, którą można znaleźć?
       4-5 Maze 7:
-        4-5_Maze_7_a: "\\*\\* Chcesz otrzymać kod tak mały, jak może być? \\*\\*\n\nSzukaj
-          powtarzających się elementów w bloków. Czy widzisz co się powtarza?  \nZamiast
-          powtarzać, zrób pętlę!"
+        4-5_Maze_7_a: |-
+          \*\* Chcesz otrzymać kod tak mały, jak może być? \*\*
+
+          Szukaj powtarzających się elementów w bloków. Czy widzisz co się powtarza?\
+          Zamiast powtarzać, zrób pętlę!
       4-5 Nested Loops 12:
         4-5_Nested_Loops_12_a: "\\*\\* 360 / 36 =? \\*\\*"
       4-5 Nested Loops 6:
