@@ -128,11 +128,15 @@ nn-NO:
         2-3_Artist_Nested_Loops_1_a: Hugs å putte alle dei grå blokkene inne i løkka
           di.
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Treng du hjelp med vinklane?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Treng du hjelp med vinklane?\
+          **360/12 = 30**
         2-3_Artist_Nested_Loops_3_b: Hugs å putte all den grå koden og snu-blokka
           inn i ei løkke.
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Treng du hjelp med vinklane?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Treng du hjelp med vinklane?\
+          **360/12 = 30**
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: "Prøv å bruke \"hopp framover\"-blokka for å
           komme fra toppen av eit kvadrat til staden der du vil begynne neste. \n\nDersom
@@ -2716,9 +2720,12 @@ nn-NO:
           blir koden enklere fordi du kan bruke en løkke som bruker denne koden flere
           ganger, istedet for å lage en ny kopi for hver gang.
       Course 4 SCV 2:
-        Course_4_SCV_2_a: "Det ferdige bildet er laget av 10 av disse \"blomstene\":
-          \ \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n...som
-          er laget av 10 av disse tikantene:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
+        Course_4_SCV_2_a: |-
+          Det ferdige bildet er laget av 10 av disse "blomstene":\
+          ![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)
+
+          ...som er laget av 10 av disse tikantene:\
+          ![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)
         Course_4_SCV_2_b: 'Dette designet bruker løkke-i-løkke (tre i dybden). Alle
           løkkene kjører "side"-ganger. '
         Course_4_SCV_2_c: Kunstneren svinger til venstre når for hver decagon han
