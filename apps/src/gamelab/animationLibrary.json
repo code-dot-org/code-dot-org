@@ -1301,6 +1301,186 @@
         "y": 300
       }
     },
+    "category_backgrounds/background_cave": {
+      "name": "cave",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2019-06-25 18:39:40 UTC",
+      "pngLastModified": "2019-06-25 18:39:40 UTC",
+      "version": "xQipuvePUXSq06jZsTlobJR8.Q7ZvgTC",
+      "sourceUrl": "/api/v1/animation-library/xQipuvePUXSq06jZsTlobJR8.Q7ZvgTC/category_backgrounds/background_cave.png",
+      "sourceSize": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    "category_backgrounds/background_court": {
+      "name": "court",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2019-06-25 18:39:40 UTC",
+      "pngLastModified": "2019-06-25 18:39:42 UTC",
+      "version": "ybx_l2OXs2ZrM2C8p9Texf7sEvpKvY0T",
+      "sourceUrl": "/api/v1/animation-library/ybx_l2OXs2ZrM2C8p9Texf7sEvpKvY0T/category_backgrounds/background_court.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
+    "category_backgrounds/background_desert": {
+      "name": "desert",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2019-06-25 18:39:40 UTC",
+      "pngLastModified": "2019-06-25 18:39:41 UTC",
+      "version": "lXCJiemM_ybjwK6SzMVp07qqEC.lumSD",
+      "sourceUrl": "/api/v1/animation-library/lXCJiemM_ybjwK6SzMVp07qqEC.lumSD/category_backgrounds/background_desert.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
+    "category_backgrounds/background_grid": {
+      "name": "grid",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2019-06-25 18:39:41 UTC",
+      "pngLastModified": "2019-06-25 18:39:41 UTC",
+      "version": "E.uBGDJX3M_UR0wJ0XSCT4rm43eHbVXL",
+      "sourceUrl": "/api/v1/animation-library/E.uBGDJX3M_UR0wJ0XSCT4rm43eHbVXL/category_backgrounds/background_grid.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
+    "category_backgrounds/background_rainbow": {
+      "name": "rainbow",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2019-06-25 18:39:41 UTC",
+      "pngLastModified": "2019-06-25 18:39:42 UTC",
+      "version": "QhGjRWwM9QmHltn3tJojhlSD_Im9Ubsu",
+      "sourceUrl": "/api/v1/animation-library/QhGjRWwM9QmHltn3tJojhlSD_Im9Ubsu/category_backgrounds/background_rainbow.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
+    "category_backgrounds/background_santa": {
+      "name": "santa",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2019-06-25 18:39:41 UTC",
+      "pngLastModified": "2019-06-25 18:39:42 UTC",
+      "version": "9HfWWIAEPsb37dxbPayqZeE1qKKsmG5S",
+      "sourceUrl": "/api/v1/animation-library/9HfWWIAEPsb37dxbPayqZeE1qKKsmG5S/category_backgrounds/background_santa.png",
+      "sourceSize": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    "category_backgrounds/background_scifi": {
+      "name": "sci_fi",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2019-06-25 18:39:42 UTC",
+      "pngLastModified": "2019-06-25 18:39:43 UTC",
+      "version": "AkZ46QubAbBWZCmJO7D7hW3xCENr_80h",
+      "sourceUrl": "/api/v1/animation-library/AkZ46QubAbBWZCmJO7D7hW3xCENr_80h/category_backgrounds/background_scifi.png",
+      "sourceSize": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    "category_backgrounds/background_space": {
+      "name": "space",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2019-06-25 18:39:42 UTC",
+      "pngLastModified": "2019-06-25 18:39:43 UTC",
+      "version": "8O2IYyEUlJ8FNRemqZEf0FXfKmbUIxiF",
+      "sourceUrl": "/api/v1/animation-library/8O2IYyEUlJ8FNRemqZEf0FXfKmbUIxiF/category_backgrounds/background_space.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
+    "category_backgrounds/background_underwater": {
+      "name": "underwater",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2019-06-25 18:39:43 UTC",
+      "pngLastModified": "2019-06-25 18:39:43 UTC",
+      "version": "Uc3U0ENCf9gcYmAADOJ9wD9KMfxXbbic",
+      "sourceUrl": "/api/v1/animation-library/Uc3U0ENCf9gcYmAADOJ9wD9KMfxXbbic/category_backgrounds/background_underwater.png",
+      "sourceSize": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    "category_backgrounds/background_winter": {
+      "name": "winter",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2019-06-25 18:39:43 UTC",
+      "pngLastModified": "2019-06-25 18:39:44 UTC",
+      "version": "eamej9mDjbAXDV1GcRKy2hadPAdeB5Og",
+      "sourceUrl": "/api/v1/animation-library/eamej9mDjbAXDV1GcRKy2hadPAdeB5Og/category_backgrounds/background_winter.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
     "category_backgrounds/city": {
       "name": "city",
       "frameCount": 1,
@@ -17414,6 +17594,16 @@
       "category_animals/zebra"
     ],
     "category_backgrounds": [
+      "category_backgrounds/background_cave",
+      "category_backgrounds/background_court",
+      "category_backgrounds/background_desert",
+      "category_backgrounds/background_grid",
+      "category_backgrounds/background_rainbow",
+      "category_backgrounds/background_santa",
+      "category_backgrounds/background_scifi",
+      "category_backgrounds/background_space",
+      "category_backgrounds/background_underwater",
+      "category_backgrounds/background_winter",
       "category_backgrounds/city",
       "category_backgrounds/continuous_grass",
       "category_backgrounds/desert_road",
@@ -18265,6 +18455,9 @@
       "category_vehicles/playerShip3_orange",
       "category_vehicles/playerShip3_red"
     ],
+    "cave": [
+      "category_backgrounds/background_cave"
+    ],
     "cd": [
       "category_generic_items/cd"
     ],
@@ -18797,6 +18990,9 @@
     "cotton_tan": [
       "category_environment/cotton_tan"
     ],
+    "court": [
+      "category_backgrounds/background_court"
+    ],
     "cow": [
       "category_animals/cow"
     ],
@@ -18873,6 +19069,9 @@
     ],
     "dalmatian": [
       "category_animals/dalmatian"
+    ],
+    "desert": [
+      "category_backgrounds/background_desert"
     ],
     "desert_road": [
       "category_backgrounds/desert_road"
@@ -19890,6 +20089,9 @@
     ],
     "greystone_sand": [
       "category_environment/greystone_sand"
+    ],
+    "grid": [
+      "category_backgrounds/background_grid"
     ],
     "ground_cake": [
       "category_environment/ground_cake"
@@ -22229,6 +22431,9 @@
     "radish": [
       "category_food/radish"
     ],
+    "rainbow": [
+      "category_backgrounds/background_rainbow"
+    ],
     "recorder": [
       "category_music/recorder"
     ],
@@ -22304,12 +22509,18 @@
       "category_generic_items/sander",
       "category_tools/sander"
     ],
+    "santa": [
+      "category_backgrounds/background_santa"
+    ],
     "saw": [
       "category_generic_items/saw",
       "category_tools/saw"
     ],
     "saxophone": [
       "category_music/saxophone"
+    ],
+    "sci_fi": [
+      "category_backgrounds/background_scifi"
     ],
     "screw": [
       "category_generic_items/screw",
@@ -22430,6 +22641,9 @@
     ],
     "soda": [
       "category_food/soda"
+    ],
+    "space": [
+      "category_backgrounds/background_space"
     ],
     "spatula": [
       "category_generic_items/spatula",
@@ -23164,6 +23378,9 @@
     "underground": [
       "category_backgrounds/underground"
     ],
+    "underwater": [
+      "category_backgrounds/background_underwater"
+    ],
     "utensils": [
       "category_tools/arrow",
       "category_tools/axe_bronze",
@@ -23337,6 +23554,9 @@
     ],
     "wing_bot": [
       "category_characters/wing_bot"
+    ],
+    "winter": [
+      "category_backgrounds/background_winter"
     ],
     "woman": [
       "category_characters/kid_1",
