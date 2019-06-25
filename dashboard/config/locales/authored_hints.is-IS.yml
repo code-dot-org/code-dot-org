@@ -1277,8 +1277,12 @@ is-IS:
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       Course 4 SCV 2:
-        Course_4_SCV_2_a: "Fullgerð myndin er mynduð úr 10 svona \"blómum\":  \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n...sem
-          aftur eru mynduð úr 10 svona tíhliðungum:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
+        Course_4_SCV_2_a: |-
+          Fullgerð myndin er mynduð úr 10 svona "blómum":\
+          ![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)
+
+          ...sem aftur eru mynduð úr 10 svona tíhliðungum:\
+          ![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)
         Course_4_SCV_2_b: 'Þessi hönnun notar faldaðar lykkjur (þrjár á dýpt). Allar
           lykkjur keyra `hliðar` sinnum. '
         Course_4_SCV_2_c: Listamaðurinn snýr til vinstri við gerð hvers tíhliðungs,
@@ -8335,22 +8339,25 @@ is-IS:
       courseC_starWars_loops10:
         courseC_starWars_loops10_a: Minnir þetta mynstur ekki á stórar tröppur? Gáðu
           hvort þú getir notað það sem þú lærðir í fyrri þrautum til að ná öllum snúningunum.
-        courseC_starWars_loops10_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops10_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
         courseC_starWars_loops10_c: Ekki óttast að gera mistök! Keyrðu kóðann til
           að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
       courseC_starWars_loops10_2018:
         courseC_starWars_loops10_a: Minnir þetta mynstur ekki á stórar tröppur? Gáðu
           hvort þú getir notað það sem þú lærðir í fyrri þrautum til að ná öllum snúningunum.
-        courseC_starWars_loops10_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops10_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
         courseC_starWars_loops10_c: Ekki óttast að gera mistök! Keyrðu kóðann til
           að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
       courseC_starWars_loops10_2019:
         courseC_starWars_loops10_a: Minnir þetta mynstur ekki á stórar tröppur? Gáðu
           hvort þú getir notað það sem þú lærðir í fyrri þrautum til að ná öllum snúningunum.
-        courseC_starWars_loops10_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops10_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
         courseC_starWars_loops10_c: Ekki óttast að gera mistök! Keyrðu kóðann til
           að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
       courseC_starWars_loops1_2018:
@@ -8412,18 +8419,21 @@ is-IS:
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Prófaðu að skrifa hreyfingarnar á blað og leita
           svo að endurtekningum.
-        courseC_starWars_loops6_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops6_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
       courseC_starWars_loops6_2018:
         courseC_starWars_loops6_a: Prófaðu að skrifa hreyfingarnar á blað og leita
           svo að endurtekningum.
-        courseC_starWars_loops6_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops6_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
       courseC_starWars_loops6_2019:
         courseC_starWars_loops6_a: Prófaðu að skrifa hreyfingarnar á blað og leita
           svo að endurtekningum.
-        courseC_starWars_loops6_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops6_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
       courseC_starWars_loops7:
         courseC_starWars_loops7_a: Þetta mynstur virðist flóknara en það er í raun!
           Prófaðu fyrst einfalt tröppumynstur. Nær það öllum málminum?
