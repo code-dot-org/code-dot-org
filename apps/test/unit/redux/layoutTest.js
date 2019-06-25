@@ -1,5 +1,5 @@
 import reducer, * as layout from '@cdo/apps/redux/layout';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/configuredChai';
 
 describe('layout redux module', () => {
   it('has expected default state', () => {
