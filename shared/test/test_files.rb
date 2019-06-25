@@ -225,14 +225,15 @@ class FilesTest < FilesApiTestBase
 
   def test_escaping_insensitivity
     filename = @api.randomize_filename('has space.html')
-    escaped_filename = URI.escape(filename)
+    escaped_filename = filename.tr(' ', '-')
     filename2 = @api.randomize_filename('another has spaces.html')
-    escaped_filename2 = URI.escape(filename2)
+    escaped_filename2 = filename2.tr(' ', '-')
     delete_all_file_versions(filename, escaped_filename, filename2, escaped_filename2)
     delete_all_manifest_versions
 
     post_file_data(@api, filename, 'stub-contents', 'test/html')
     assert successful?
+    assert_equal escaped_filename, JSON.parse(last_response.body)['filename']
 
     @api.get_object(escaped_filename)
     assert successful?
@@ -242,6 +243,7 @@ class FilesTest < FilesApiTestBase
 
     post_file_data(@api, escaped_filename2, 'stub-contents-2', 'test/html')
     assert successful?
+    assert_equal escaped_filename2, JSON.parse(last_response.body)['filename']
 
     @api.get_object(escaped_filename2)
     assert successful?
@@ -484,20 +486,21 @@ class FilesTest < FilesApiTestBase
 
   def test_rename_mixed_case
     filename = @api.randomize_filename('Mixed Case With Spaces.html')
-    escaped_filename = URI.escape(filename)
+    escaped_filename = filename.tr(' ', '-')
     filename2 = @api.randomize_filename('Another Mixed Case Spaces Name.html')
-    escaped_filename2 = URI.escape(filename2)
+    escaped_filename2 = filename2.tr(' ', '-')
     delete_all_file_versions(filename, filename2)
     delete_all_manifest_versions
 
     post_file_data(@api, filename, 'stub-contents', 'test/html')
     assert successful?
+    assert_equal escaped_filename, JSON.parse(last_response.body)['filename']
 
     @api.get_object(escaped_filename)
     assert successful?
     assert_equal 'stub-contents', last_response.body
 
-    @api.rename_object(filename, escaped_filename2)
+    @api.rename_object(escaped_filename, escaped_filename2)
     assert successful?
 
     @api.get_object(escaped_filename2)
@@ -520,9 +523,9 @@ class FilesTest < FilesApiTestBase
 
   def test_rename_case_only
     filename = @api.randomize_filename('Mixed Case With Spaces.png')
-    escaped_filename = URI.escape(filename)
+    escaped_filename = filename.tr(' ', '-')
     filename2 = filename.sub 'Mixed Case', 'mixeD casE'
-    escaped_filename2 = URI.escape(filename2)
+    escaped_filename2 = filename2.tr(' ', '-')
     delete_all_file_versions filename, filename2
     delete_all_manifest_versions
 
@@ -530,6 +533,7 @@ class FilesTest < FilesApiTestBase
 
     post_file_data(@api, filename, image_body, 'image/png')
     assert successful?
+    assert_equal escaped_filename, JSON.parse(last_response.body)['filename']
 
     @api.get_object(escaped_filename)
     assert successful?
@@ -542,12 +546,12 @@ class FilesTest < FilesApiTestBase
     get "v3/files/#{@channel_id}"
     response_before_rename = JSON.parse(last_response.body)
     # There should be only one file with filename, category, and size matching our expectations
-    expected_image_info = {'filename' => filename, 'category' => 'image', 'size' => image_body.length}
+    expected_image_info = {'filename' => escaped_filename, 'category' => 'image', 'size' => image_body.length}
     file_infos = response_before_rename['files']
     assert_equal(1, file_infos.length)
     assert_fileinfo_equal(expected_image_info, file_infos[0])
 
-    @api.rename_object(filename, escaped_filename2)
+    @api.rename_object(escaped_filename, escaped_filename2)
     assert successful?
 
     @api.get_object(escaped_filename)
@@ -561,7 +565,7 @@ class FilesTest < FilesApiTestBase
     get "v3/files/#{@channel_id}"
     response_after_rename = JSON.parse(last_response.body)
     # There should be only one file with the new filename, category, and size matching our expectations
-    expected_image_info_after_rename = {'filename' => filename2, 'category' => 'image', 'size' => image_body.length}
+    expected_image_info_after_rename = {'filename' => escaped_filename2, 'category' => 'image', 'size' => image_body.length}
     file_infos_after_rename = response_after_rename['files']
     assert_equal(1, file_infos_after_rename.length)
     assert_fileinfo_equal(expected_image_info_after_rename, file_infos_after_rename[0])
@@ -591,14 +595,19 @@ class FilesTest < FilesApiTestBase
     image_body = 'stub-image-contents'
 
     sound_filename = @api.randomize_filename('Woof Woof.mp3')
+    escaped_sound_filename = sound_filename.tr(' ', '-')
     sound_body = 'stub-sound-contents'
 
     post_file_data(src_api, image_filename, image_body, 'image/jpeg')
+    assert_equal image_filename, JSON.parse(last_response.body)['filename']
+
     post_file_data(src_api, sound_filename, sound_body, 'audio/mpeg')
+    assert_equal escaped_sound_filename, JSON.parse(last_response.body)['filename']
+
     src_api.patch_abuse(10)
 
     expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
-    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    expected_sound_info = {'filename' =>  escaped_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(copy_all(@channel_id, dest_channel_id))
     dest_file_infos = dest_api.list_objects["files"]
@@ -612,13 +621,13 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_equal image_body, last_response.body
 
-    dest_api.get_object(URI.escape(sound_filename))
+    dest_api.get_object(escaped_sound_filename)
     assert successful?
     assert_equal sound_body, last_response.body
 
     # abuse score didn't carry over
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(image_filename.downcase))
-    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(sound_filename.downcase))
+    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, escaped_sound_filename.downcase)
 
     assert_newrelic_metrics %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
@@ -628,10 +637,10 @@ class FilesTest < FilesApiTestBase
     )
 
     src_api.delete_object(URI.escape(image_filename))
-    src_api.delete_object(URI.escape(sound_filename))
+    src_api.delete_object(URI.escape(escaped_sound_filename))
     delete_all_manifest_versions
     dest_api.delete_object(URI.escape(image_filename))
-    dest_api.delete_object(URI.escape(sound_filename))
+    dest_api.delete_object(URI.escape(escaped_sound_filename))
     delete_channel(dest_channel_id)
   end
 

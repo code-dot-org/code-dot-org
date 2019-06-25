@@ -758,6 +758,7 @@ GameLab.prototype.rerunSetupCode = function() {
   ) {
     return;
   }
+  getStore().dispatch(clearConsole());
   Sounds.getSingleton().muteURLs();
   this.gameLabP5.p5.allSprites.removeSprites();
   if (this.gameLabP5.spritelab) {
@@ -769,7 +770,10 @@ GameLab.prototype.rerunSetupCode = function() {
   this.gameLabP5.p5.redraw();
 };
 
-GameLab.prototype.onPuzzleComplete = function(submit, testResult) {
+GameLab.prototype.onPuzzleComplete = function(submit, testResult, message) {
+  if (message && msg[message]) {
+    this.message = msg[message]();
+  }
   if (this.executionError) {
     this.result = ResultType.ERROR;
   } else {
@@ -1311,10 +1315,12 @@ GameLab.prototype.runValidationCode = function() {
             (function () {
               validationState = null;
               validationResult = null;
+              validationMessage = null;
               ${this.level.validationCode}
               return {
                 state: validationState,
-                result: validationResult
+                result: validationResult,
+                message: validationMessage
               };
             })();
           `)
@@ -1322,8 +1328,10 @@ GameLab.prototype.runValidationCode = function() {
       if (validationResult.state === 'succeeded') {
         const testResult = validationResult.result || TestResults.ALL_PASS;
         this.onPuzzleComplete(false, testResult);
-      } else if (validationResult === 'failed') {
-        // TODO(ram): Show failure feedback
+      } else if (validationResult.state === 'failed') {
+        const testResult = validationResult.result;
+        const failureMessage = validationResult.message;
+        this.onPuzzleComplete(false, testResult, failureMessage);
       }
     } catch (e) {
       // If validation code errors, assume it was neither a success nor failure
