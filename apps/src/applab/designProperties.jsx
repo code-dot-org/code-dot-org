@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
 import color from '../util/color';
+import experiments from '../util/experiments';
 import elementLibrary from './designElements/library';
 import DeleteElementButton from './designElements/DeleteElementButton';
 import ElementSelect from './ElementSelect';
@@ -49,6 +50,8 @@ export default class DesignProperties extends React.Component {
       key = nextKey++;
       $(this.props.element).data('key', key);
     }
+
+    const themesEnabled = experiments.isEnabled('applabThemes');
 
     const elementType = elementLibrary.getElementType(this.props.element);
     const PropertyComponent = elementLibrary.getElementPropertyTab(elementType);
@@ -228,9 +231,11 @@ export default class DesignProperties extends React.Component {
                 <DuplicateElementButton
                   handleDuplicate={this.props.onDuplicate}
                 />
-                <RestoreThemeDefaultsButton
-                  handleRestore={this.props.onRestoreThemeDefaults}
-                />
+                {themesEnabled && (
+                  <RestoreThemeDefaultsButton
+                    handleRestore={this.props.onRestoreThemeDefaults}
+                  />
+                )}
                 {!onlyOneScreen && !isScreen && (
                   <CopyElementToScreenButton
                     handleCopyElementToScreen={this.props.onCopyElementToScreen}
