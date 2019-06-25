@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import AddPasswordForm, {
   SAVING_STATE,
   SUCCESS_STATE,

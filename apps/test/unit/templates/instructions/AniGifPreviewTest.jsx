@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import {ImagePreview} from '@cdo/apps/templates/instructions/AniGifPreview';
 
 describe('ImagePreview', () => {
