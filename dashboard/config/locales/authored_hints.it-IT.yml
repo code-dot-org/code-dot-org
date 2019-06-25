@@ -512,10 +512,11 @@ it-IT:
           con counter`, devi rappresentare la distanza con la variabile `counter`
           (<i>contatore</i>).
       Course 4 Artist For Loops 4:
-        Course_4_Artist_For_Loops_4_a: "Ecco le domande cui rispondere per trovare
-          i valori da inserire al posto dei `???`:  \n**Qual è il valore più piccolo
-          che serve?  \nQual è il più grande?  \nQual è l'incremento necessario ad
-          ogni ripetizione?**"
+        Course_4_Artist_For_Loops_4_a: |-
+          Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:\
+          **Qual è il valore più piccolo che serve?\
+          Qual è il più grande?\
+          Qual è l'incremento necessario ad ogni ripetizione?**
       Course 4 Artist For Loops Challenge:
         Course_4_Artist_For_Loops_Challenge_a: Il poligono più grande ha 19 lati.
         Course_4_Artist_For_Loops_Challenge_b: Tutti i poligoni sono incompleti, ossia
@@ -4659,22 +4660,28 @@ it-IT:
           stato scritto per te.
         courseA_artist_loops8_b: Come inseriresti in un ciclo il codice che ti è stato
           dato?
-        courseA_artist_loops8_c: "Cosa fa il codice?  \nChe cosa dovrebbe fare?  \nChe
-          cosa ti suggerisce questo?"
+        courseA_artist_loops8_c: |-
+          Cosa fa il codice?\
+          Che cosa dovrebbe fare?\
+          Che cosa ti suggerisce questo?
       courseA_artist_loops8_2018:
         courseA_artist_loops8_a: Prova ad eseguire il codice per capire cosa è già
           stato scritto per te.
         courseA_artist_loops8_b: Come inseriresti in un ciclo il codice che ti è stato
           dato?
-        courseA_artist_loops8_c: "Cosa fa il codice?  \nChe cosa dovrebbe fare?  \nChe
-          cosa ti suggerisce questo?"
+        courseA_artist_loops8_c: |-
+          Cosa fa il codice?\
+          Che cosa dovrebbe fare?\
+          Che cosa ti suggerisce questo?
       courseA_artist_loops8_2019:
         courseA_artist_loops8_a: Prova ad eseguire il codice per capire cosa è già
           stato scritto per te.
         courseA_artist_loops8_b: Come inseriresti in un ciclo il codice che ti è stato
           dato?
-        courseA_artist_loops8_c: "Cosa fa il codice?  \nChe cosa dovrebbe fare?  \nChe
-          cosa ti suggerisce questo?"
+        courseA_artist_loops8_c: |-
+          Cosa fa il codice?\
+          Che cosa dovrebbe fare?\
+          Che cosa ti suggerisce questo?
       courseA_artist_loops9:
         courseA_artist_loops9_a: Per disegnare il resto della scala, aggiungi un blocco
           al programma che trovi già scritto.
@@ -14162,27 +14169,33 @@ it-IT:
           ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto
           l'esercizio.
       courseF_artist_for4:
-        courseF_artist_for4_a: "Ecco le domande cui rispondere per trovare i valori
-          da inserire al posto dei `???`:  \n**Qual è il valore più piccolo che serve?
-          \ \nQual è il più grande?  \nQual è l'incremento necessario ad ogni ripetizione?**"
+        courseF_artist_for4_a: |-
+          Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:\
+          **Qual è il valore più piccolo che serve?\
+          Qual è il più grande?\
+          Qual è l'incremento necessario ad ogni ripetizione?**
         courseF_artist_for4_b: Il programma sarà molto simile a quello del precedente
           esercizio, ma questa volta ricordati di disegnare un quadrato!
         courseF_artist_for4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
           ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto
           l'esercizio.
       courseF_artist_for4_2018:
-        courseF_artist_for4_a: "Ecco le domande cui rispondere per trovare i valori
-          da inserire al posto dei `???`:  \n**Qual è il valore più piccolo che serve?
-          \ \nQual è il più grande?  \nQual è l'incremento necessario ad ogni ripetizione?**"
+        courseF_artist_for4_a: |-
+          Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:\
+          **Qual è il valore più piccolo che serve?\
+          Qual è il più grande?\
+          Qual è l'incremento necessario ad ogni ripetizione?**
         courseF_artist_for4_b: Il programma sarà molto simile a quello del precedente
           esercizio, ma questa volta ricordati di disegnare un quadrato!
         courseF_artist_for4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
           ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto
           l'esercizio.
       courseF_artist_for4_2019:
-        courseF_artist_for4_a: "Ecco le domande cui rispondere per trovare i valori
-          da inserire al posto dei `???`:  \n**Qual è il valore più piccolo che serve?
-          \ \nQual è il più grande?  \nQual è l'incremento necessario ad ogni ripetizione?**"
+        courseF_artist_for4_a: |-
+          Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:\
+          **Qual è il valore più piccolo che serve?\
+          Qual è il più grande?\
+          Qual è l'incremento necessario ad ogni ripetizione?**
         courseF_artist_for4_b: Il programma sarà molto simile a quello del precedente
           esercizio, ma questa volta ricordati di disegnare un quadrato!
         courseF_artist_for4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
@@ -15904,14 +15917,23 @@ it-IT:
         courseF_bee_for10_d: Devi usare 2 blocchi `ripeti ... volte` e uno di questi
           deve usare un blocco con operazioni matematiche.
       courseF_bee_for11:
-        courseF_bee_for11_a: "Di quanto 12 è inferiore a 15?  \nDi quanto 9 è inferiore
-          a 12?\n\nRiesci a individuare lo schema?"
+        courseF_bee_for11_a: |-
+          Di quanto 12 è inferiore a 15?\
+          Di quanto 9 è inferiore a 12?
+
+          Riesci a individuare lo schema?
       courseF_bee_for11_2018:
-        courseF_bee_for11_a: "Di quanto 12 è inferiore a 15?  \nDi quanto 9 è inferiore
-          a 12?\n\nRiesci a individuare lo schema?"
+        courseF_bee_for11_a: |-
+          Di quanto 12 è inferiore a 15?\
+          Di quanto 9 è inferiore a 12?
+
+          Riesci a individuare lo schema?
       courseF_bee_for11_2019:
-        courseF_bee_for11_a: "Di quanto 12 è inferiore a 15?  \nDi quanto 9 è inferiore
-          a 12?\n\nRiesci a individuare lo schema?"
+        courseF_bee_for11_a: |-
+          Di quanto 12 è inferiore a 15?\
+          Di quanto 9 è inferiore a 12?
+
+          Riesci a individuare lo schema?
       courseF_bee_for1_2018:
         courseF_bee_for1_a: Trascina un blocco numerico viola nello spazio vuoto del
           ciclo `ripeti ... volte` per indicare quante volte deve essere ripetuto.

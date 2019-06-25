@@ -708,11 +708,13 @@ it-IT:
         fai di solito, puoi ottenere un effetto diverso. Per creare questa spirale
         quadrata avvitata, prova ad usare il codice del precedente esercizio ruotando
         di 89 gradi, invece di 90 gradi.
-      Course 4 Artist For Loops 2: "In questo esercizio il codice per disegnare un
-        triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100
-        con _passo_ di 10.  \n\n**Attenzione**: assicurati di aver guardato bene il
-        codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\"
-        target=\"_blank\">Video doppiato in italiano</a>"
+      Course 4 Artist For Loops 2: |-
+        In questo esercizio il codice per disegnare un triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100 con _passo_ di 10.\
+        \
+        \
+        **Attenzione**: assicurati di aver guardato bene il codice _prima_ di cliccare su "Esegui".
+
+        <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO" target="_blank">Video doppiato in italiano</a>
       Course 4 Artist For Loops 3: Per disegnare questa figura usa come riferimento
         il codice del precedente esercizio. Il triangolo più piccolo ha i lati di
         20 pixel, il triangolo più grande ha i lati di 200 pixel ed ogni triangolo,
@@ -815,13 +817,13 @@ it-IT:
       Course 4 Bee Params 5: Partiamo da zero! Riesci a creare una nuova funzione
         chiamata `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) che usa un nuovo
         parametro chiamato `direction` (<i>direzione </i>)?
-      Course 4 Bee Params 6: "In questo esercizio, sui fiori si trovano quantità differenti
-        di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe
-        bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n\nModifica
-        la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un
-        nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica
-        la quantità di nettare da raccogliere.\n\nProbabilmente sarà meglio cambiare
-        anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri."
+      Course 4 Bee Params 6: |-
+        In questo esercizio, sui fiori si trovano quantità differenti di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe bello se potessimo raccogliere tutto il nettare con una sola funzione?\
+        \
+        \
+        Modifica la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica la quantità di nettare da raccogliere.
+
+        Probabilmente sarà meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri.
       Course 4 Bee Params 7: Usa la nuova funzione `get many nectar` (<i>prendi molte
         dosi di nettare</i>) per raccogliere tutto il nettare.
       Course 4 Bee Params 8: |-
@@ -2891,13 +2893,6 @@ it-IT:
             * * *
 
         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
-      courseC_artist_loops6a_2019: |-
-        Aggiungi un terzo adesivo dove preferisci all'interno del ciclo! Come ti sembra adesso?
-
-        -   Per avere ancora più varietà, cambia anche lo schema del pennello!
-            * * *
-
-        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops7a: |-
         Prova a modificare il ciclo `ripeti ... volte` in modo che venga eseguito un differente numero di volte. Di quanto devi far girare l'artista per continuare a compiere un giro completo?
 
@@ -2909,16 +2904,6 @@ it-IT:
 
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops7a_2018: |-
-        Prova a modificare il ciclo `ripeti ... volte` in modo che venga eseguito un differente numero di volte. Di quanto devi far girare l'artista per continuare a compiere un giro completo?
-
-        -   Prova a cambiare il numero di rotazioni
-        -   Prova curve di 60 gradi per 6 volte
-        -   Prova curve di 20 gradi per 18 volte
-            * * *
-            Questa immagine usa un pirata, un ninja e una giraffa. Il ciclo si ripete 18 volte con curve di 20 gradi ciascuna.
-
-        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
-      courseC_artist_loops7a_2019: |-
         Prova a modificare il ciclo `ripeti ... volte` in modo che venga eseguito un differente numero di volte. Di quanto devi far girare l'artista per continuare a compiere un giro completo?
 
         -   Prova a cambiare il numero di rotazioni
@@ -4129,24 +4114,21 @@ it-IT:
         girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe
         fiocchi spettacolari che puoi realizzare!\n\n* * *\n\nGuarda questi esempi
         con diversi poligoni: \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle
-        forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:
-        \ \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+        forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:\\\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Trasformiamo la figura in un fiocco di neve.\"_\n\nOra usa il blocco `salta
         a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla
         girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe
         fiocchi spettacolari che puoi realizzare!\n\n* * *\n\nGuarda questi esempi
         con diversi poligoni: \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle
-        forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:
-        \ \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+        forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:\\\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Trasformiamo la figura in un fiocco di neve.\"_\n\nOra usa il blocco `salta
         a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla
         girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe
         fiocchi spettacolari che puoi realizzare!\n\n* * *\n\nGuarda questi esempi
         con diversi poligoni: \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle
-        forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:
-        \ \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+        forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:\\\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3a: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Gira e trasforma la figura in un fiocco di neve."_
 
@@ -5733,18 +5715,15 @@ it-IT:
         modifiche al codice del precedente esercizio!
       courseF_artist_for7_2019: Per ottenere questo disegno bastano solo tre piccole
         modifiche al codice del precedente esercizio!
-      courseF_artist_for9: "**Ispirazione:** Usa il contatore all'interno del blocco
-        `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente
-        sbiadito.  \n(Questo schema con esagono è stato creato usando un angolo di
-        60 gradi.)"
-      courseF_artist_for9_2018: "**Ispirazione:** Usa il contatore all'interno del
-        blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente
-        sbiadito.  \n(Questo schema con esagono è stato creato usando un angolo di
-        60 gradi.)"
-      courseF_artist_for9_2019: "**Ispirazione:** Usa il contatore all'interno del
-        blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente
-        sbiadito.  \n(Questo schema con esagono è stato creato usando un angolo di
-        60 gradi.)"
+      courseF_artist_for9: |-
+        **Ispirazione:** Usa il contatore all'interno del blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente sbiadito.\
+        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
+      courseF_artist_for9_2018: |-
+        **Ispirazione:** Usa il contatore all'interno del blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente sbiadito.\
+        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
+      courseF_artist_for9_2019: |-
+        **Ispirazione:** Usa il contatore all'interno del blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente sbiadito.\
+        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
       courseF_artist_for_challenge1: |-
         Riesci a ricreare questo disegno?
 
