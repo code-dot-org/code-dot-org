@@ -1,4 +1,4 @@
-/* global Applab, dashboard */
+/* global Applab */
 import $ from 'jquery';
 import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';
@@ -24,6 +24,7 @@ import * as screens from './redux/screens';
 import {getStore} from '../redux';
 import {applabObjectFitImages} from './applabObjectFitImages';
 import firehoseClient from '../lib/util/firehose';
+import project from '../code-studio/initApp/project';
 
 var designMode = {};
 export default designMode;
@@ -637,7 +638,7 @@ designMode.onDuplicate = function(element, prevThemeName, event) {
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
     event: 'duplicate_element',
-    project_id: dashboard.project.getCurrentId(),
+    project_id: project.getCurrentId(),
     data_json: JSON.stringify({
       elementId: element.id,
       elementTag: element.tagName,
@@ -772,7 +773,7 @@ function duplicateScreen(element) {
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
     event: 'duplicate_screen',
-    project_id: dashboard.project.getCurrentId(),
+    project_id: project.getCurrentId(),
     data_json: JSON.stringify({
       elementId: element.id
     })
@@ -834,7 +835,7 @@ designMode.onCopyElementToScreen = function(element, destScreen) {
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
     event: 'copy_to_screen',
-    project_id: dashboard.project.getCurrentId(),
+    project_id: project.getCurrentId(),
     data_json: JSON.stringify({
       elementId: element.id,
       elementTag: element.tagName,
@@ -890,7 +891,7 @@ function deleteElement(element) {
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
     event: 'delete_element',
-    project_id: dashboard.project.getCurrentId(),
+    project_id: project.getCurrentId(),
     data_json: JSON.stringify({
       elementId: element.id,
       elementTag: element.tagName,
