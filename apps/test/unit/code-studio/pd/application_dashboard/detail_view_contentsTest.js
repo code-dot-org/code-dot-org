@@ -209,7 +209,7 @@ describe('DetailViewContents', () => {
         expect(detailView.find('button#admin-edit')).to.have.length(2);
       });
 
-      it('Edit redirects to edit page', () => {
+      it.skip('Edit redirects to edit page', () => {
         const detailView = mountDetailView(applicationType, {
           isWorkshopAdmin: true
         });
@@ -229,7 +229,7 @@ describe('DetailViewContents', () => {
         mockRouter.verify();
       });
 
-      it('Has Delete Application menu item', () => {
+      it.skip('Has Delete Application menu item', () => {
         const detailView = mountDetailView(applicationType, {
           isWorkshopAdmin: true
         });
@@ -245,7 +245,7 @@ describe('DetailViewContents', () => {
         expect(deleteApplicationMenuitem).to.have.length(1);
       });
 
-      it('Has Delete FiT Weekend Registration menu item if there is a FiT weekend registration', () => {
+      it.skip('Has Delete FiT Weekend Registration menu item if there is a FiT weekend registration', () => {
         const overrides = {
           isWorkshopAdmin: true,
           applicationData: {registered_fit_weekend: true}
@@ -263,7 +263,7 @@ describe('DetailViewContents', () => {
         expect(deleteFitWeekendRegistrationMenuitem).to.have.length(1);
       });
 
-      it('Does not have delete registration menu items if there are not registrations', () => {
+      it.skip('Does not have delete registration menu items if there are not registrations', () => {
         const detailView = mountDetailView(applicationType, {
           isWorkshopAdmin: true
         });
@@ -396,7 +396,7 @@ describe('DetailViewContents', () => {
     });
 
     for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
-      it(`is required in order to set application status to ${applicationStatus}`, () => {
+      it.skip(`is required in order to set application status to ${applicationStatus}`, () => {
         expect(isModalShowing()).to.be.false;
         expect(getScholarshipStatus()).to.be.null;
         expect(getApplicationStatus()).to.equal('unreviewed');
