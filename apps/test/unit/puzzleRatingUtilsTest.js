@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 
 var puzzleRatingUtils = require('@cdo/apps/puzzleRatingUtils');
 
