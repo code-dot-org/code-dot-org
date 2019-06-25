@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../util/reconfiguredChai';
 import {
   fixFirebaseKey,
   validateFirebaseKey

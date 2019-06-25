@@ -1,7 +1,7 @@
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import {shallow} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import {UnconnectedFinishDialog as FinishDialog} from '@cdo/apps/templates/FinishDialog';
 
 describe('FinishDialog', () => {
