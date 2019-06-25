@@ -1890,6 +1890,10 @@ de:
               name: Bedingungen mit Karten
             Building a Foundation:
               name: Grundlagen aufbauen
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Bibliotheken
         express-2018-vn:
           stages:
             Graph Paper Programming:

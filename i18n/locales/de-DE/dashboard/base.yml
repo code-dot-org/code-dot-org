@@ -239,6 +239,10 @@ de:
     updated: '%{model} wurde erfolgreich aktualisiert.'
     destroyed: '%{model} wurde erfolgreich gelöscht.'
     access_denied: 'Du hast keinen Zugriff auf dieses %{model}.'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "Die E-Mail-Adresse die du angegeben hast ist nicht die passende Adresse für dieses Konto"
   nav:
     header:
       finished_hoc: "Ich habe meine Programmierstunde beendet."
@@ -370,6 +374,7 @@ de:
     no_password_because_sponsored: 'Wende dich an deinen Lehrer um dich um dein Passwort zu kümmern.'
     create_personal_login: 'Erstelle ein persönliches Login'
     create_personal_login_info: 'Wenn du dein Code.org Konto auch nach dem Ende des laufenden Schuljahres weiterverwenden möchtest, kannst du unten dein eigenes Login-Konto erstellen.'
+    enter_new_login_info: 'Gib deine neuen Login-Informationen ein'
     update: "Konto aktualisieren"
     account_successfully_updated: "Konto erfolgreich aktualisiert."
   user_level:
@@ -811,8 +816,10 @@ de:
     csp_variables: 'Variablen'
     csp_conditionals: 'Bedingungen'
     csp_functions: 'Funktionen'
+    csp_project: 'Projekt'
     csp_lists: 'Listen'
     csp_loops: 'Schleifen'
+    csp_libraries: 'Bibliotheken'
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: "Sie verlassen jetzt die Code.org Website. Bitte beachten Sie, dass dieser\nLink eine Website öffnet, für deren Inhalt wir nicht verantwortlich sind."
@@ -873,10 +880,14 @@ de:
     mac: 'Mac OS X'
   locked_stage: 'Der Inhalt dieser Stufe ist gegenwärtig nicht sichtbar, weil sie noch gesperrt ist. Dein Lehrer wird diese Stufe entsperren, sobald es Zeit ist daran zu arbeiten oder um deine Antworten zu überprüfen.'
   hidden_stage: "Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei welcher Lektion Du sein solltest!"
+  return_unit_overview: 'Gehe zur Übersicht der Einheit'
   return_course_overview: 'Gehe zur Übersicht'
+  view_all_units: 'Alle Einheiten anzeigen'
   view_teacher_guide: 'Lehrer-Leitfaden anzeigen'
   pd:
     form_labels:
+      first_name: 'Vorname'
+      last_name: 'Nachname'
       email: 'E-Mail'
       school_name: 'Schulname'
       school_city: 'Stadt der Schule'
@@ -886,11 +897,20 @@ de:
         male: 'Männlich'
         female: 'Weiblich'
         none: 'Möchte ich nicht beantworten'
+      school_country:
+        canada: 'Kanada'
+        chile: 'Chile'
+        israel: 'Israel'
+        malaysia: 'Malaysien'
+        mexico: 'Mexiko'
+        thailand: 'Thailand'
       subjects:
         cs: 'Informatik'
         math: 'Mathematik'
         science: 'Wissenschaft'
         la: 'Sprachkunst'
+        music: 'Musik'
+        art: 'Kunst'
       resources:
         kodable: 'Kodable'
       robotics:
