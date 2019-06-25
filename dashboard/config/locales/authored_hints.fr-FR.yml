@@ -163,13 +163,15 @@ fr-FR:
         2-3_Artist_Nested_Loops_1_a: N'oublie pas de mettre tous les blocs gris dans
           ta boucle.
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Besoin d’aide avec les angles ?  \n**360 ÷ 12
-          = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Besoin d’aide avec les angles ?\
+          **360 ÷ 12 = 30**
         2-3_Artist_Nested_Loops_3_b: N'oublie pas de mettre tout le code en gris et
           le code de ton virage à l'intérieur d'une boucle.
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Besoin d’aide avec les angles ?  \n**360 ÷ 12
-          = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Besoin d’aide avec les angles ?\
+          **360 ÷ 12 = 30**
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: "Essaie d'utiliser le bloc ˋsauter en avantˋ
           pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant.
@@ -531,10 +533,12 @@ fr-FR:
         Course_4_Artist_For_Loops_3_a: Pour que la boucle ˋpour`entraine ton mouvement,
           assure-toi d’utiliser le ˋcompte` comme distance.
       Course 4 Artist For Loops 4:
-        Course_4_Artist_For_Loops_4_a: "**Quel est le plus petit nombre dont tu auras
-          besoin ?  \nQuel est le plus grand nombre ?  \nDe combien est l’augmentation
-          à chaque fois ?**\n\nCe sont les questions que tu dois te poser pour remplir
-          les blancs de la boucle `pour`."
+        Course_4_Artist_For_Loops_4_a: |-
+          **Quel est le plus petit nombre dont tu auras besoin ?\
+          Quel est le plus grand nombre ?\
+          De combien est l’augmentation à chaque fois ?**
+
+          Ce sont les questions que tu dois te poser pour remplir les blancs de la boucle `pour`.
       Course 4 Artist For Loops Challenge:
         Course_4_Artist_For_Loops_Challenge_a: La plus grande forme a 19 côtés. La
           plus petite n’en a que deux.
@@ -2946,8 +2950,12 @@ fr-FR:
           </block>
           </xml>
       Course 4 SCV 2:
-        Course_4_SCV_2_a: "L’image entière est faite de 10 de ces « fleurs » :  \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n...qui
-          sont faites de 10 de ces décagones :  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
+        Course_4_SCV_2_a: |-
+          L’image entière est faite de 10 de ces « fleurs » :\
+          ![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)
+
+          ...qui sont faites de 10 de ces décagones :\
+          ![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)
         Course_4_SCV_2_b: 'Ce dessin utilise des boucles imbriquées (trois de profondeur).
           Toutes les boucles s’exécutent ˋcôtés\` fois. '
         Course_4_SCV_2_c: L’artiste tourne à gauche en créant chaque décagone, mais
@@ -10221,20 +10229,26 @@ fr-FR:
         courseE_farmer_ramp15_c: Les pousses cachent différentes quantités soit de
           maïs soit de salade à récupérer en allant vers la citrouille.
       courseF_artist_for4:
-        courseF_artist_for4_a: "**Quel est le plus petit nombre dont tu auras besoin
-          ?  \nQuel est le plus grand nombre ?  \nDe combien est l’augmentation à
-          chaque fois ?**\n\nCe sont les questions que tu dois te poser pour remplir
-          les blancs de la boucle `pour`."
+        courseF_artist_for4_a: |-
+          **Quel est le plus petit nombre dont tu auras besoin ?\
+          Quel est le plus grand nombre ?\
+          De combien est l’augmentation à chaque fois ?**
+
+          Ce sont les questions que tu dois te poser pour remplir les blancs de la boucle `pour`.
       courseF_artist_for4_2018:
-        courseF_artist_for4_a: "**Quel est le plus petit nombre dont tu auras besoin
-          ?  \nQuel est le plus grand nombre ?  \nDe combien est l’augmentation à
-          chaque fois ?**\n\nCe sont les questions que tu dois te poser pour remplir
-          les blancs de la boucle `pour`."
+        courseF_artist_for4_a: |-
+          **Quel est le plus petit nombre dont tu auras besoin ?\
+          Quel est le plus grand nombre ?\
+          De combien est l’augmentation à chaque fois ?**
+
+          Ce sont les questions que tu dois te poser pour remplir les blancs de la boucle `pour`.
       courseF_artist_for4_2019:
-        courseF_artist_for4_a: "**Quel est le plus petit nombre dont tu auras besoin
-          ?  \nQuel est le plus grand nombre ?  \nDe combien est l’augmentation à
-          chaque fois ?**\n\nCe sont les questions que tu dois te poser pour remplir
-          les blancs de la boucle `pour`."
+        courseF_artist_for4_a: |-
+          **Quel est le plus petit nombre dont tu auras besoin ?\
+          Quel est le plus grand nombre ?\
+          De combien est l’augmentation à chaque fois ?**
+
+          Ce sont les questions que tu dois te poser pour remplir les blancs de la boucle `pour`.
       courseF_artist_for_challenge1:
         courseF_artist_for_challenge1_a: La ˋlargeur du pinceauˋ est 1. Le premier
           carré a des côtés de 50 pixels, et chaque carré est 50 pixels plus large
