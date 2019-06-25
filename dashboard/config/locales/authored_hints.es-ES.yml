@@ -4714,20 +4714,26 @@ es-ES:
         courseA_artist_loops8_a: Intenta ejecutar el código para ver lo que ha sido
           escrito para ti.
         courseA_artist_loops8_b: "¿Cómo repetirías el código que te han dado?"
-        courseA_artist_loops8_c: "¿Qué hace el código?  \n¿Qué se supone que debe
-          hacer?  \n¿Qué te dice eso?"
+        courseA_artist_loops8_c: |-
+          ¿Qué hace el código?\
+          ¿Qué se supone que debe hacer?\
+          ¿Qué te dice eso?
       courseA_artist_loops8_2018:
         courseA_artist_loops8_a: Intenta ejecutar el código para ver lo que ha sido
           escrito para ti.
         courseA_artist_loops8_b: "¿Cómo repetirías el código que te han dado?"
-        courseA_artist_loops8_c: "¿Qué hace el código?  \n¿Qué se supone que debe
-          hacer?  \n¿Qué te dice eso?"
+        courseA_artist_loops8_c: |-
+          ¿Qué hace el código?\
+          ¿Qué se supone que debe hacer?\
+          ¿Qué te dice eso?
       courseA_artist_loops8_2019:
         courseA_artist_loops8_a: Intenta ejecutar el código para ver lo que ha sido
           escrito para ti.
         courseA_artist_loops8_b: "¿Cómo repetirías el código que te han dado?"
-        courseA_artist_loops8_c: "¿Qué hace el código?  \n¿Qué se supone que debe
-          hacer?  \n¿Qué te dice eso?"
+        courseA_artist_loops8_c: |-
+          ¿Qué hace el código?\
+          ¿Qué se supone que debe hacer?\
+          ¿Qué te dice eso?
       courseA_artist_loops9:
         courseA_artist_loops9_a: Añade otro bloque al código que se te da, para poder
           dibujar el resto de las escaleras.

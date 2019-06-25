@@ -1686,7 +1686,7 @@ es-ES:
       courseF_playlab_variables_challenge2: "¡Ahora para un juego de Tocar! Este juego
         usará variables para hacer un seguimiento de los puntos. Tocar al Gato para
         obtener 2 puntos.\nTocar del Pingüino para obtener 3 puntos. ¡Obtén exactamente
-        10 puntos para ganar!\\\r  \nPero ten cuidado,\n cuando el Gato y el Pingüino
+        10 puntos para ganar!\\\r\\\nPero ten cuidado,\n cuando el Gato y el Pingüino
         se tocan entre sí, te quitan puntos.\\\r\n\\\r\nAgrega los bloques necesarios
         para hacer que este juego funcione de la manera en que se te explicó. ¿Cómo
         lograrás que el Perro se mueva en todas las direcciones con las teclas de

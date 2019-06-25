@@ -1253,6 +1253,10 @@ es-ES:
         y luego un bloque (<https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png>). ¡Finalmente, ejecuta el programa presionando en "Run"!
       courseB_iceage_loops11: "¡Ayuda a Scrat a conseguir la bellota!"
       courseB_iceage_loops11_2019: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseC_artist_loop1: |-
+        ¡Fantástico!
+
+        Añadamos algo de estilo cambiando el pincel, usando el bloque `establecer patrón` antes de que nuestro bucle se ejecute.
       courseC_artist_loops1a: |-
         **Juego libre**  ¡Construye algo más grande,usando un paso cada vez! Puedes hacer cualquier cosa que quieras pero te vamos a enseñar cómo hacer algo como esto!
 
@@ -1266,19 +1270,31 @@ es-ES:
       courseC_artist_loops3a: |-
         ¡Más diversión!
 
-        Ahora añade una calcomania de murciélago después del pájora para hacer una imagen parecida a la de abajo.
+        Ahora añade una calcomania de murciélago después del pájaro para hacer una imagen parecida a la de abajo.
 
         ![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops3a_2018: |-
         ¡Más diversión!
 
-        Ahora añade una calcomania de murciélago después del pájora para hacer una imagen parecida a la de abajo.
+        Ahora añade una calcomania de murciélago después del pájaro para hacer una imagen parecida a la de abajo.
 
         ![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops4a: |-
         Añade un bloque a tu código para que el artista salte hacia adelante 75 píxeles entre marcar el pájaro y el murciélago. En este rompecabezas, asegúrate que has `ir a 200 sobre 200 abajo` dentro del bucle, para permanecer en el centro.
 
         ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+      courseC_artist_loops5a: |-
+        ¿Qué pasa cuando sustituyes una o las dos calcomanías por una criatura diferente?
+
+        -   -   -   ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2018: |-
+        ¿Qué pasa cuando sustituyes una o las dos calcomanías por una criatura diferente?
+
+        -   -   -   ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2019: |-
+        ¿Qué pasa cuando sustituyes una o las dos calcomanías por una criatura diferente?
+
+        -   -   -   ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5b: |-
         ¿Qué ocurre cuando te mueves hacia delante y luego hacia atrás 100, 200 o 400 píxeles en algún lugar dentro del bucle? Prueba a usar el bloque `dibujar calcamonia`antes de empezar tu bucle para hacer una obra de arte.
 
@@ -1287,6 +1303,46 @@ es-ES:
         ¿Qué ocurre cuando te mueves hacia delante y luego hacia atrás 100, 200 o 400 píxeles en algún lugar dentro del bucle? Prueba a usar el bloque `dibujar calcamonia`antes de empezar tu bucle para hacer una obra de arte.
 
         \_\_\_ ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
+      courseC_artist_loops6a: |-
+        ¡Añade una tercera calcomanía en el lugar del bucle que tú quieras! ¿Cómo se ve ahora?
+
+        -   ¡Modifica el patrón de tu pincel para mayor variedad!
+
+        * * *
+
+         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+      courseC_artist_loops6a_2018: |-
+        ¡Añade una tercera calcomanía en el lugar del bucle que tú quieras! ¿Cómo se ve ahora?
+
+        -   ¡Modifica el patrón de tu pincel para mayor variedad!
+
+        * * *
+
+         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+      courseC_artist_loops7a: |-
+        Prueba a cambiar el bucle `repetir` para que se ejecute un número diferente de veces. ¿Cuanto tienes que girar para completar un círculo?
+
+        -   Prueba a cambiar cuantas veces giras
+            -   Prueba con un giro de 60 grados 6 veces
+            -   Prueba con un giro de 20 grados 18 veces
+
+        * * *
+
+        Esta imagen usa un pirata, un ninja y una jirafa. Se repiten18 veces con un giro de 20 grados.
+
+         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+      courseC_artist_loops7a_2018: |-
+        Prueba a cambiar el bucle `repetir` para que se ejecute un número diferente de veces. ¿Cuanto tienes que girar para completar un círculo?
+
+        -   Prueba a cambiar cuantas veces giras
+            -   Prueba con un giro de 60 grados 6 veces
+            -   Prueba con un giro de 20 grados 18 veces
+
+        * * *
+
+        Esta imagen usa un pirata, un ninja y una jirafa. Se repiten18 veces con un giro de 20 grados.
+
+         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a: |-
         Ahora haz algo por ti mismo. ¿Qué ocurre cuando haces dos círculos separados de diferentes calcamonías?
 
@@ -1308,6 +1364,23 @@ es-ES:
         ¿Necesitas una idea? Intenta hacer un diseño como este.
 
         ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+      courseC_artist_loopsPre1a: |-
+        Ahora, pon este código en un bloque `repeat` y repitelo **6** veces.
+
+        -   Date cuenta de que hemos añadido un giro de 60 grados al final del código para conseguir una rotación completa.
+      courseC_artist_loopsPre1a_2018: |-
+        Ahora, pon este código en un bloque `repeat` y repitelo **6** veces.
+
+        -   Date cuenta de que hemos añadido un giro de 60 grados al final del código para conseguir una rotación completa.
+      courseC_artist_loopsPre1a_2019: |-
+        Ahora, pon este código en un bloque `repeat` y repitelo **6** veces.
+
+        -   Date cuenta de que hemos añadido un giro de 60 grados al final del código para conseguir una rotación completa.
+      courseC_artist_loopsPrePre1a: Usa el bloque <xml><block type="jump_to_xy" id="callMe"><title
+        name="XPOS">200</title><title name="YPOS">200</title></block></xml> para llevar
+        al artista al centro del escenario. Después, dibuja una línea de 50 píxeles
+        con el bloque  <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title
+        name="VALUE">50</title></block></xml>.
       courseC_artist_prog1: |-
         _"Hola, soy un artista. Puedes escribir código para hacerme dibujar casi cualquier cosa."_
         ¡Juega con los bloques en la caja de herramientas para ver qué es lo que hacen!
