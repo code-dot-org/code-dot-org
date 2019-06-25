@@ -42,8 +42,8 @@ tr-TR:
         2-3_Artist_Debugging_10_a: Unutmayın, kontrol panelini 10 piksel daha _geniş_
           istiyorsunuz bu yüzden her değiştirdiğiniz sayıya 10 **eklemeyi** unutmayın.
         2-3_Artist_Debugging_10_b: "\\*\\* Burada deneme yanılma serbest! \\*\\* \nHer
-          defasında bir sayıyı değiştirerek başla.  \nHangi numaralar ne yapıyor?
-          \ \nİpin ucu kaçarsa, \"baştan başla\"  tuşu ile kodunuzu sıfırlayabilirsiniz."
+          defasında bir sayıyı değiştirerek başla.\\\nHangi numaralar ne yapıyor?\\\nİpin
+          ucu kaçarsa, \"baştan başla\"  tuşu ile kodunuzu sıfırlayabilirsiniz."
       2-3 Artist Debugging 2:
         2-3_Artist_Debugging_2_a: 'İpucu: Her bıyık 75 piksel uzunluğundadır.'
       2-3 Artist Debugging 3:
@@ -285,10 +285,10 @@ tr-TR:
       4-5 Artist 8:
         4-5_Artist_8_a: "Uzun kenarlar 240 piksel uzunluğundadır.  Yani 2 Kısa taraf
           toplamı : \\*\\* 800-240 - 240 = 320 \\*\\*  \\*\\*\n 320/2  kaç eder\\*\\*? "
-        4-5_Artist_8_b: "Bu görüntü 2 şekilde yapılabilir!   -\n\\-Bir kenarı çakışan
-          İki dikdörtgen çiz: \\*\\* 120 \\*\\* uzunlukta ve \\*\\* 160 \\*\\* yükseklikte,
-          \ \n-Bir dikdörtgen çiz \\*\\* 240 \\*\\* uzunlukta ve \\*\\* 160 \\*\\*
-          yükseklikte, sonra  ortaya bir satır ekleyin."
+        4-5_Artist_8_b: |-
+          Bu görüntü 2 şekilde yapılabilir!   -
+          \-Bir kenarı çakışan İki dikdörtgen çiz: \*\* 120 \*\* uzunlukta ve \*\* 160 \*\* yükseklikte,\
+          -Bir dikdörtgen çiz \*\* 240 \*\* uzunlukta ve \*\* 160 \*\* yükseklikte, sonra  ortaya bir satır ekleyin.
       4-5 Artist 9:
         4-5_Artist_9_a: 'Bir eşkenar üçgenin tüm kenarları ve açıları eşittir. '
         4-5_Artist_9_b: Aynı boyutta üç üçgen çizmek gerekir. Her birinin ardından
@@ -312,13 +312,13 @@ tr-TR:
           Şimdi sanatçı her bir baklava şeklini bitirdiğinde olması gereken yönün terine bakıyor.
           Doğru yöne bakması için kaç derece dönmesi gerekiyor?
       4-5 Bee Conditionals 4:
-        remember_quantum: "\\*\\* Dikkat: \\*\\* Bu bulmaca her çalıştırdığınızda
-          değişir.  \nBu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer'
-          veya ' Eğer/Değilse') gerekiyor."
+        remember_quantum: |-
+          \*\* Dikkat: \*\* Bu bulmaca her çalıştırdığınızda değişir.\
+          Bu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer' veya ' Eğer/Değilse') gerekiyor.
       4-5 Bee Conditionals 5:
-        remember_quantum: "\\*\\* Dikkat: \\*\\* Bu bulmaca her çalıştırdığınızda
-          değişir.  \nBu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer'
-          veya ' Eğer/Değilse') gerekiyor."
+        remember_quantum: |-
+          \*\* Dikkat: \*\* Bu bulmaca her çalıştırdığınızda değişir.\
+          Bu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer' veya ' Eğer/Değilse') gerekiyor.
       4-5 Bee Conditionals 6:
         4-5 Bee Conditionals 6_a: Bu bulmacayı yalnızca çalışma alanındaki bloklarla  çözebilirsiniz.  Hangi
           sırayla olmalı?
@@ -457,9 +457,9 @@ tr-TR:
         Course_4_Artist_For_Loops_3_a: Şununla say döngüsünün sizi ilerletmesini istiyorsan,
           'sayaç' değişkenini uzaklık olarak kullan.
       Course 4 Artist For Loops 4:
-        Course_4_Artist_For_Loops_4_a: "\\*\\* İhtiyacınız olacak en küçük sayı nedir?
-          \ \nEn büyük sayı nedir?  \nHer defasında artış ne kadar? \\*\\* \n'Şununla
-          say döngüsü' için boşlukları doldururken sorman gereken sorular bunlardır."
+        Course_4_Artist_For_Loops_4_a: "\\*\\* İhtiyacınız olacak en küçük sayı nedir?\\\nEn
+          büyük sayı nedir?\\\nHer defasında artış ne kadar? \\*\\* \n'Şununla say
+          döngüsü' için boşlukları doldururken sorman gereken sorular bunlardır."
       Course 4 Artist For Loops Challenge:
         Course_4_Artist_For_Loops_Challenge_a: En büyük şeklin 19 yüzü vardır. En
           küçük olanı sadece iki.
@@ -1469,10 +1469,9 @@ tr-TR:
         brush_width: Fırça kalınlığını 1 yap ve başka bir hamle yapmadan rengini maviye
           ayarla.
         double_loop: "'Tekrarla' bloğu içine 'for döngüsü' koymayı dene."
-        specifics: "'For döngüsü' altı 'taç yaprağın' her biri için 3 ten 17 ye kadar
-          sayıyor ve sonraki şekle geçmeden önce sadece tek sayıda kenarı olan çokgenler
-          çiziyor.  \n'alfa\\_ayarla' bloğu sayaç değeri arttıkça bölme işlemini kullanarak
-          rengin soluklaşmasını sağlıyor."
+        specifics: |-
+          'For döngüsü' altı 'taç yaprağın' her biri için 3 ten 17 ye kadar sayıyor ve sonraki şekle geçmeden önce sadece tek sayıda kenarı olan çokgenler çiziyor.\
+          'alfa\_ayarla' bloğu sayaç değeri arttıkça bölme işlemini kullanarak rengin soluklaşmasını sağlıyor.
         after: Her "taç yaprak" ile işiniz bittiğinde, 60 derece dönmeden önce 20
           piksel 'ilerle' komutu kullandığınızdan emin olun.
         solution: "\\*\\* Çözüm \\*\\*! [Çözüm Bloklarının resmi] \\(<https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png>)"
@@ -6199,17 +6198,17 @@ tr-TR:
           \  bir Altıgen çiz \n-   ileri 50 piksel atla \n-   sağa 45 derece dön"
       courseD_artist_nestedLoops9:
         courseD_artist_nestedLoops9_c: "İki tane iç içe döngü kullanın: \n\n-   8
-          defa tekrarla \n-   kare çiz  \n    -ileri 50 piksel atla \n-   45 derece
+          defa tekrarla \n-   kare çiz\\\n    -ileri 50 piksel atla \n-   45 derece
           sağa dön \n-   8 kez tekrarla \n-   Üçgen çiz\n-   ileri 50 piksel atla\n-
           \  45 derece sağa dön"
       courseD_artist_nestedLoops9_2018:
         courseD_artist_nestedLoops9_c: "İki tane iç içe döngü kullanın: \n\n-   8
-          defa tekrarla \n-   kare çiz  \n    -ileri 50 piksel atla \n-   45 derece
+          defa tekrarla \n-   kare çiz\\\n    -ileri 50 piksel atla \n-   45 derece
           sağa dön \n-   8 kez tekrarla \n-   Üçgen çiz\n-   ileri 50 piksel atla\n-
           \  45 derece sağa dön"
       courseD_artist_nestedLoops9_2019:
         courseD_artist_nestedLoops9_c: "İki tane iç içe döngü kullanın: \n\n-   8
-          defa tekrarla \n-   kare çiz  \n    -ileri 50 piksel atla \n-   45 derece
+          defa tekrarla \n-   kare çiz\\\n    -ileri 50 piksel atla \n-   45 derece
           sağa dön \n-   8 kez tekrarla \n-   Üçgen çiz\n-   ileri 50 piksel atla\n-
           \  45 derece sağa dön"
       courseD_artist_nestedLoops_challenge1:
@@ -6612,9 +6611,9 @@ tr-TR:
       courseD_bee_conditionals8:
         courseD_bee_conditionals8_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
-        courseD_bee_conditionals8_a: "\\*\\* Dikkat: \\*\\* Bu bulmaca her çalıştırdığınızda
-          değişir.  \nBu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer'
-          veya ' Eğer/Değilse') gerekiyor."
+        courseD_bee_conditionals8_a: |-
+          \*\* Dikkat: \*\* Bu bulmaca her çalıştırdığınızda değişir.\
+          Bu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer' veya ' Eğer/Değilse') gerekiyor.
         courseD_bee_conditionals8_c: Yolculuğun her yolun sonunda bittiğinden nasıl
           emin olabilirsin, ne kadar uzun olursa olsun?
         courseD_bee_conditionals8_d: "Her ne kadar tam önünde bir bulut olsa da, ilk
@@ -6625,9 +6624,9 @@ tr-TR:
       courseD_bee_conditionals8_2018:
         courseD_bee_conditionals8_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
-        courseD_bee_conditionals8_a: "\\*\\* Dikkat: \\*\\* Bu bulmaca her çalıştırdığınızda
-          değişir.  \nBu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer'
-          veya ' Eğer/Değilse') gerekiyor."
+        courseD_bee_conditionals8_a: |-
+          \*\* Dikkat: \*\* Bu bulmaca her çalıştırdığınızda değişir.\
+          Bu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer' veya ' Eğer/Değilse') gerekiyor.
         courseD_bee_conditionals8_c: Yolculuğun her yolun sonunda bittiğinden nasıl
           emin olabilirsin, ne kadar uzun olursa olsun?
         courseD_bee_conditionals8_d: "Her ne kadar tam önünde bir bulut olsa da, ilk
@@ -6636,9 +6635,9 @@ tr-TR:
         courseD_bee_conditionals8_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
       courseD_bee_conditionals8_2019:
-        courseD_bee_conditionals8_a: "\\*\\* Dikkat: \\*\\* Bu bulmaca her çalıştırdığınızda
-          değişir.  \nBu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer'
-          veya ' Eğer/Değilse') gerekiyor."
+        courseD_bee_conditionals8_a: |-
+          \*\* Dikkat: \*\* Bu bulmaca her çalıştırdığınızda değişir.\
+          Bu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer' veya ' Eğer/Değilse') gerekiyor.
       courseD_bee_conditionals_challenge1:
         courseD_bee_conditionals_challenge1_a: Herhangi bir ağaca vurmadan her çiçeğe
           ve peteklere ulaşan bir yol bulabilir misin? En iyi yol bir spiraldir.
@@ -8418,24 +8417,24 @@ tr-TR:
         courseF_artist_for3_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseF_artist_for4:
-        courseF_artist_for4_a: "\\*\\* İhtiyacınız olacak en küçük sayı nedir?  \nEn
-          büyük sayı nedir?  \nHer defasında artış ne kadar? \\*\\* \n'Şununla say
+        courseF_artist_for4_a: "\\*\\* İhtiyacınız olacak en küçük sayı nedir?\\\nEn
+          büyük sayı nedir?\\\nHer defasında artış ne kadar? \\*\\* \n'Şununla say
           döngüsü' için boşlukları doldururken sorman gereken sorular bunlardır."
         courseF_artist_for4_b: Kodunuz en son bulmacada yazdığınıza çok benziyor,
           fakat bu sefer bir dörtgen çizmeyi unutmayın!
         courseF_artist_for4_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseF_artist_for4_2018:
-        courseF_artist_for4_a: "\\*\\* İhtiyacınız olacak en küçük sayı nedir?  \nEn
-          büyük sayı nedir?  \nHer defasında artış ne kadar? \\*\\* \n'Şununla say
+        courseF_artist_for4_a: "\\*\\* İhtiyacınız olacak en küçük sayı nedir?\\\nEn
+          büyük sayı nedir?\\\nHer defasında artış ne kadar? \\*\\* \n'Şununla say
           döngüsü' için boşlukları doldururken sorman gereken sorular bunlardır."
         courseF_artist_for4_b: Kodunuz en son bulmacada yazdığınıza çok benziyor,
           fakat bu sefer bir dörtgen çizmeyi unutmayın!
         courseF_artist_for4_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseF_artist_for4_2019:
-        courseF_artist_for4_a: "\\*\\* İhtiyacınız olacak en küçük sayı nedir?  \nEn
-          büyük sayı nedir?  \nHer defasında artış ne kadar? \\*\\* \n'Şununla say
+        courseF_artist_for4_a: "\\*\\* İhtiyacınız olacak en küçük sayı nedir?\\\nEn
+          büyük sayı nedir?\\\nHer defasında artış ne kadar? \\*\\* \n'Şununla say
           döngüsü' için boşlukları doldururken sorman gereken sorular bunlardır."
         courseF_artist_for4_b: Kodunuz en son bulmacada yazdığınıza çok benziyor,
           fakat bu sefer bir dörtgen çizmeyi unutmayın!
@@ -9872,9 +9871,9 @@ tr-TR:
           ihtiyacı var. Yoldayken, arının bir çiçek araması gerekiyor. Bir çiçek varsa
           arı ne yapmalı?
       courseF_bee_conditionals8:
-        courseF_bee_conditionals8_a: "\\*\\* Dikkat: \\*\\* Bu bulmaca her çalıştırdığınızda
-          değişir.  \nBu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer'
-          veya ' Eğer/Değilse') gerekiyor."
+        courseF_bee_conditionals8_a: |-
+          \*\* Dikkat: \*\* Bu bulmaca her çalıştırdığınızda değişir.\
+          Bu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer' veya ' Eğer/Değilse') gerekiyor.
         courseF_bee_conditionals8_c: "'ilerde yol süresince' karesi kullansan ve son
           kez ilk çiçeğini toplasan ne olur?"
       courseF_bee_for1:
