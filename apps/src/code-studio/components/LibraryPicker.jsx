@@ -6,7 +6,6 @@ import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
 import {addApplabLibrary} from './applabLibraryRedux';
 import {connect} from 'react-redux';
 import project from '../initApp/project';
-import firehoseClient from '../../lib/util/firehose';
 
 const styles = {
   root: {
@@ -91,16 +90,6 @@ class LibraryPicker extends React.Component {
     libraryPilot.fetch(
       this.state.libraryId + '/library.json',
       (error, data) => {
-        firehoseClient.putRecord({
-          study: 'library_pilot',
-          study_group: 'pilot',
-          event: 'import_library',
-          data_json: JSON.stringify({
-            importedLibrary: this.state.libraryId,
-            projectId: project.getCurrentId()
-          })
-        });
-
         if (error) {
           this.setState({
             displayError: true,
