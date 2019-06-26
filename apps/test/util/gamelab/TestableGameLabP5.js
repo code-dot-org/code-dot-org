@@ -1,7 +1,7 @@
 /** @file Helper to load a configured GameLabP5 object for tests */
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
-import {expect} from 'chai';
+import {expect} from '../configuredChai';
 import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
 import {injectJSInterpreter as injectJSInterpreterToSprite} from '@cdo/apps/gamelab/GameLabSprite';
 import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/gamelab/GameLabGroup';
