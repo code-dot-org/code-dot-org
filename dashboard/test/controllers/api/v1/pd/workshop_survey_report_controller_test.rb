@@ -320,6 +320,16 @@ module Api::V1::Pd
       assert_response :success
     end
 
+    # test 'expriment: it runs' do
+    #   # create workshop w/ facilitators
+    #   # create facilitator surveys
+
+    #   get :experiment_survey_report, params: {workshop_id: new_academic_ws.id}
+    #   p response.body
+
+    #   assert_response :success
+    # end
+
     private
 
     def assert_workshop_survey_report_facilitator_query(user:, expected_facilitator_name_filter:)
