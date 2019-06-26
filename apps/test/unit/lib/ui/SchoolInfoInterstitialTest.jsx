@@ -82,11 +82,13 @@ describe('SchoolInfoInterstitial', () => {
     );
     const wrapperInstance = wrapper.instance();
     sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
+    wrapper.setState({});
     wrapper
       .find(Button)
       .first()
       .simulate('click');
 
+    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
     expect(wrapper.state('isOpen')).to.be.false;
   });
 
