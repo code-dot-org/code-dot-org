@@ -10,6 +10,7 @@ import ElementSelect from './ElementSelect';
 import DuplicateElementButton from './designElements/DuplicateElementButton';
 import CopyElementToScreenButton from './designElements/CopyElementToScreenButton';
 import RestoreThemeDefaultsButton from './designElements/RestoreThemeDefaultsButton';
+import designMode from './designMode';
 
 let nextKey = 0;
 
@@ -52,6 +53,9 @@ export default class DesignProperties extends React.Component {
     }
 
     const themesEnabled = experiments.isEnabled('applabThemes');
+    const hasCustomizedThemeProps = designMode.hasCustomizedThemeProperties(
+      this.props.element
+    );
 
     const elementType = elementLibrary.getElementType(this.props.element);
     const PropertyComponent = elementLibrary.getElementPropertyTab(elementType);
@@ -231,7 +235,7 @@ export default class DesignProperties extends React.Component {
                 <DuplicateElementButton
                   handleDuplicate={this.props.onDuplicate}
                 />
-                {themesEnabled && (
+                {themesEnabled && hasCustomizedThemeProps && (
                   <RestoreThemeDefaultsButton
                     handleRestore={this.props.onRestoreThemeDefaults}
                   />

@@ -27,7 +27,7 @@ class RestoreThemeDefaultsButton extends React.Component {
         style={[commonStyles.button, styles.restoreButton]}
         onClick={handleRestore}
       >
-        Restore Theme Defaults
+        Apply Theme
       </button>
     );
   }
