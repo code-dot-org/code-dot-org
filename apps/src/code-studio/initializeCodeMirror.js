@@ -75,7 +75,24 @@ function initializeCodeMirror(target, mode, options = {}) {
       updatePreview = editor => {
         ReactDOM.render(
           React.createElement(UnsafeRenderedMarkdown, {
-            markdown: editor.getValue()
+            markdown: editor.getValue(),
+            onError: function(report) {
+              console.log(report);
+              const errors = document.getElementById(
+                'level_long_instructions_errors'
+              );
+              const messages = report.map(function(message) {
+                return message.message;
+              });
+              if (messages.length) {
+                errors.innerHTML =
+                  '<p class="alert alert-danger">' +
+                  messages.join('</p><p class="alert alert-danger">') +
+                  '</p>';
+              } else {
+                errors.innerHTML = '';
+              }
+            }
           }),
           previewElement
         );

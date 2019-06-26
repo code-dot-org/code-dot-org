@@ -14,6 +14,16 @@ import expandableImages from './plugins/expandableImages';
 import externalLinks from './plugins/externalLinks';
 import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 
+import unified from 'unified';
+import remarkRetext from 'remark-retext';
+import retextEnglish from 'retext-english';
+import retextEquality from 'retext-equality';
+import retextProfanities from 'retext-profanities';
+import retextReadability from 'retext-readability';
+import retextSimplify from 'retext-simplify';
+
+//import report from 'vfile-reporter';
+
 // create custom sanitization schema as per
 // https://github.com/syntax-tree/hast-util-sanitize#schema
 // to support our custom syntaxes
@@ -49,6 +59,17 @@ const markdownToReact = Parser.create()
   .getParser()
   // include custom plugins
   .use([xmlAsTopLevelBlock, expandableImages, details])
+  .use(
+    remarkRetext,
+    unified()
+      .use(retextEnglish)
+      .use([
+        retextEquality,
+        retextProfanities,
+        retextReadability,
+        retextSimplify
+      ])
+  )
   // convert markdown to an HTML Abstract Syntax Tree (HAST)
   .use(remarkRehype, {
     // include any raw HTML in the markdown as raw HTML nodes in the HAST
@@ -73,6 +94,7 @@ const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {
 export default class UnsafeRenderedMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
+    onError: PropTypes.func,
     openExternalLinksInNewTab: PropTypes.bool
   };
 
@@ -81,7 +103,11 @@ export default class UnsafeRenderedMarkdown extends React.Component {
       ? markdownToReactExternalLinks
       : markdownToReact;
 
-    const rendered = parser.processSync(this.props.markdown).contents;
+    const vfile = parser.processSync(this.props.markdown);
+    if (this.props.onError) {
+      this.props.onError(vfile.messages);
+    }
+    const rendered = vfile.contents;
 
     // rehype-react will only wrap the compiled markdown in a <div> tag
     // if it needs to (ie, if there would otherwise be multiple elements
