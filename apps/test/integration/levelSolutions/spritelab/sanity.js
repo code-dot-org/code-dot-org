@@ -21,7 +21,7 @@ const levelDef = {
     }
   ],
   validationCode:
-    'if (World.background_color === "#ff0000") { levelSuccess(); } else { levelSuccess(3); }'
+    'if (getBackground() === "#ff0000") { levelSuccess(); } else { levelSuccess(3); }'
 };
 
 export default {
