@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import {
   getStore,
   registerReducers,
