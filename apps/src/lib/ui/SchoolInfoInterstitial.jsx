@@ -109,7 +109,8 @@ export default class SchoolInfoInterstitial extends React.Component {
       schoolLocation: existingSchoolInfo.full_address || '',
       ncesSchoolId: initialNcesSchoolId,
       showSchoolInfoUnknownError: false,
-      errors: {}
+      errors: {},
+      isOpen: true
     };
   }
 
@@ -298,7 +299,9 @@ export default class SchoolInfoInterstitial extends React.Component {
       });
   };
 
-  dismissSchoolInfoForm = () => {};
+  dismissSchoolInfoForm = () => {
+    this.setState({isOpen: false});
+  };
 
   onCountryChange = (_, event) => {
     const newCountry = event ? event.value : '';
@@ -333,7 +336,7 @@ export default class SchoolInfoInterstitial extends React.Component {
     return (
       <BaseDialog
         useUpdatedStyles
-        isOpen={true}
+        isOpen={this.state.isOpen}
         handleClose={this.props.onClose}
         uncloseable
       >
