@@ -68,6 +68,7 @@ describe('CircuitPlaygroundBoard', () => {
 
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
+    ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
   });
 
   afterEach(() => {
@@ -75,6 +76,7 @@ describe('CircuitPlaygroundBoard', () => {
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
     EventEmitter.prototype.once.restore();
+    ChromeSerialPort.stub.reset();
   });
 
   itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
@@ -498,10 +500,8 @@ describe('CircuitPlaygroundBoard', () => {
 
   describe(`detectBoardType()`, () => {
     it('sets the type of board detected for Classic boards', () => {
-      ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
       return board.detectBoardType().then(() => {
         expect(board.boardType_).to.equal(BOARD_TYPE.CLASSIC);
-        ChromeSerialPort.stub.reset();
       });
     });
 
@@ -509,7 +509,6 @@ describe('CircuitPlaygroundBoard', () => {
       ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_EXPRESS_PORTS);
       return board.detectBoardType().then(() => {
         expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
-        ChromeSerialPort.stub.reset();
       });
     });
 
@@ -517,7 +516,6 @@ describe('CircuitPlaygroundBoard', () => {
       ChromeSerialPort.stub.setDeviceList(FLORA_PORTS);
       return board.detectBoardType().then(() => {
         expect(board.boardType_).to.equal(BOARD_TYPE.OTHER);
-        ChromeSerialPort.stub.reset();
       });
     });
   });
