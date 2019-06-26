@@ -324,8 +324,7 @@ Applab.getHtml = function() {
 };
 
 Applab.getLibraries = function() {
-  var libraries = getStore().getState().applabLibrary.libraries;
-  return libraries.length ? libraries : undefined;
+  return getStore().getState().applabLibrary.libraries;
 };
 
 /**
