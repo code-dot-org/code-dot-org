@@ -529,8 +529,7 @@ export var blocks = [
       0: () => getAssetDropdown('dataset'),
       1: ['true', 'false'] // () => populateColumns()
     },
-    nativeIsAsync: true,
-    type: 'value'
+    nativeIsAsync: true
   },
   {
     func: 'startWebRequest',
