@@ -26,12 +26,9 @@ const styles = {
   },
   linkBox: {
     cursor: 'auto',
-    width: '450px',
+    width: '600px',
     height: '32px',
     marginBottom: 0
-  },
-  error: {
-    color: color.red
   }
 };
 
@@ -43,16 +40,11 @@ class LibraryPicker extends React.Component {
   };
 
   state = {
-    libraryId: '',
-    displayError: false,
-    loading: false
+    libraryId: ''
   };
 
   changeLibraryId = event => {
-    this.setState({
-      libraryId: event.target.value,
-      displayError: false
-    });
+    this.setState({libraryId: event.target.value});
   };
 
   select = event => event.target.select();
@@ -64,11 +56,6 @@ class LibraryPicker extends React.Component {
           Paste in the library link for a project to add its functions in your
           toolbox.
         </p>
-        {this.state.displayError && (
-          <p style={{...styles.text, ...styles.error}}>
-            We couldn't find that library ID. Try a different ID.
-          </p>
-        )}
         <input
           type="text"
           onClick={this.select}
@@ -81,40 +68,14 @@ class LibraryPicker extends React.Component {
   }
 
   addLibrary = () => {
-    if (this.state.loading) {
-      return;
-    }
-
-    this.setState({loading: true});
-    var libraryPilot = clientApi.create('/v3/librarypilot', () => {});
-    libraryPilot.fetch(
-      this.state.libraryId + '/library.json',
-      (error, data) => {
-        if (error) {
-          this.setState({
-            displayError: true,
-            loading: false
-          });
-          console.log('failed to add library with message:\n' + error);
-          return;
-        }
-
-        this.props.addLibrary(data);
-        project.addLibrary(data);
-      }
-    );
-
-    console.log('Finished add operation!');
+    var libraryPilot = clientApi.create('/v3/librarypilot');
+    libraryPilot.fetch(this.state.libraryId + '/library.json', (foo, data) => {
+      this.props.addLibrary(data);
+      project.addLibrary(data);
+    });
+    console.log('Added your library!');
+    this.props.onClose();
   };
-
-  componentDidUpdate(prevProps) {
-    if (!prevProps.isOpen && this.props.isOpen) {
-      this.setState({
-        displayError: false,
-        loading: false
-      });
-    }
-  }
 
   render() {
     return (
@@ -131,7 +92,6 @@ class LibraryPicker extends React.Component {
             style={styles.addButton}
             type="button"
           >
-            {this.state.loading && <i className="fa fa-spinner fa-spin" />}
             Add
           </button>
         </div>
