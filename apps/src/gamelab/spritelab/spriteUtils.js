@@ -65,7 +65,7 @@ export function getAnimationsInUse() {
  * @param {string} animation
  * @return {number} Number of behaviors associated with the specified animation.
  */
-export function getBehaviorsForAnimation(animation) {
+export function getNumBehaviorsForAnimation(animation) {
   let numBehaviors = 0;
   behaviors.forEach(behavior => {
     if (behavior.sprite.getAnimationLabel() === animation) {
@@ -79,7 +79,7 @@ export function getBehaviorsForAnimation(animation) {
  * @param {number} spriteId
  * @return {number} Number of behaviors associated with the specified sprite
  */
-export function getBehaviorsForSpriteId(spriteId) {
+export function getNumBehaviorsForSpriteId(spriteId) {
   let numBehaviors = 0;
   behaviors.forEach(behavior => {
     if (behavior.sprite.id === spriteId) {

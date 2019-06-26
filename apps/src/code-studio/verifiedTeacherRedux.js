@@ -10,7 +10,8 @@ const initialState = {
   isVerified: false,
   // True if a page (course/script) has resources that are only available to
   // verified teachers
-  hasVerifiedResources: false
+  hasVerifiedResources: false,
+  verficationCheckComplete: false
 };
 
 export default function verifiedTeacher(state = initialState, action) {
@@ -28,5 +29,8 @@ export default function verifiedTeacher(state = initialState, action) {
     };
   }
 
-  return state;
+  return {
+    ...state,
+    verificationCheckComplete: true
+  };
 }

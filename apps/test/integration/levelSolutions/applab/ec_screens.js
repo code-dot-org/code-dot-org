@@ -96,16 +96,17 @@ module.exports = {
           'expected default screen property row container'
         );
 
-        //Default button and delete button should not show up
+        // Default button and delete button should not show up,
+        // Only the color picker button
         assert.equal(
           $('#propertyRowContainer button').length,
           1,
           'expected 1 button'
         );
         assert.equal(
-          $('#propertyRowContainer button').attr('class'),
-          'rainbow-gradient',
-          'should be color picker'
+          $("#propertyRowContainer button:contains('Delete')").length,
+          0,
+          'None should say Delete'
         );
 
         // add a completion on timeout since this is a freeplay level
@@ -295,11 +296,9 @@ module.exports = {
           'There should be two buttons'
         );
         assert.equal(
-          $('#design-properties button')
-            .last()
-            .attr('class'),
-          'rainbow-gradient',
-          'Last button is color picker'
+          $("#design-properties button:contains('Delete')").length,
+          0,
+          'None should say Delete'
         );
 
         // Change name

@@ -385,9 +385,7 @@ module Pd::WorkshopSurveyResultsHelper
         ),
         facilitator: get_summary_for_form(
           Pd::WorkshopFacilitatorDailySurvey.form_id(workshop.subject),
-          workshop,
-          # the facilitator effectiveness questions are on the day 5 survey and hidden otherwise
-          show_hidden_questions: day == 5
+          workshop
         )
       }
     end
