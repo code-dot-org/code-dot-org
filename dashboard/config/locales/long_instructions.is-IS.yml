@@ -390,6 +390,11 @@ is-IS:
         mörg skóflufylli af mold þarf. \\\r\nGetur þú skrifað forrit sem notar `fylla`
         kubbinn þar til hún er sléttfull?  "
       Alien Defender: "**Hugmynd að verkefni:** Búðu til Defender leik í Leikjasmiðjunni!"
+      CSD Problem Solving Process Video: |-
+        ## Spurningar til að hugleiða
+
+        -   Hvernig notaðir þú ferlið við að leysa þrautir í síðustu kennslustund?
+        -   Hvernig gætir þú notað þetta ferli til að leysa vandamál í þínu daglega lífi?
       CSD U2 CSS explore CSS: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"markdown="1">
         <details>
@@ -1058,6 +1063,35 @@ is-IS:
 
         -   Lagaðu bilaða kóðann svo að vefsíðan birtist rétt
         -   Berðu þær villur sem þú lagaðir saman við þær hjá öðrum
+      CSD U2 Heading Demo_2019: "# Fyrirsagnir\n\n<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary><strong>Hvað
+        eru fyrirsagnir?</strong>\n\n</summary>\nFyrirsagnir (headings) eru misstórar
+        yfirskriftir sem skipta vefsíðu í kafla eða hluta. Fyrirsagnir sýna hvernig
+        efni vefsíðu er skipulagt í smærri bútum svo það sé auðveldara að lesa hana.\n</details>\n<details>\n<summary><strong>Hvernig
+        eru mismunandi stórar fyrirsagnir gerðar?</strong>\n\n</summary>\nFyrirsagnir
+        koma í 6 stærðum. Hingað til hefur þú aðallega notað þá stærstu: &lt;h1&gt;.
+        Talan '1' í HTML taginu gefur til kynna að þetta sé stærsta fyrirsögnin. Minnsta
+        fyrirsögnin er &lt;h6&gt;. Þú getur líka prófað &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        og &lt;h5&gt; tögin, sem verða smærri eftir því sem talan stækkar.\n</details>\n<details>\n<summary><strong>Hvað
+        er HTML?</strong>\n\n</summary>\nHTML er skammstöfun fyrir Hypertext Markup
+        Language. HTML er notað til að skipuleggja efni vefsíðu. HTML notar tög (tags)
+        til að segja til um hvar tiltekinn hluti efnisins byrjar og hvar hann endar.
+        Þessi tög eru tákn sem ekki eru notuð í venjulegum texta svo að hægt sé að
+        aðgreina hvað er efni og hvað er skipulag. \n</details>\n<details>\n<summary><strong>Hvað
+        er HTML eining?</strong>\n\n</summary>\nHTML eining (element) er hluti vefsíðu
+        sem er afmarkaður með upphafstagi og (yfirleitt) endatagi. Einingin inniheldur
+        líka efnið á milli taganna. Til dæmis: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n</details>\n<details>\n<summary><strong>Hvað er HTML
+        tag?</strong>\n\n</summary>\n\nHTML tag (tag) er sérstakt tákn sem segir tölvunni
+        hvar HTML eining byrjar og endar og hvers konar eining það er.\n\n</details>\n</div>\n\nHingað
+        hefur þú skipulagt efnið í efnisgreinum (paragraphs).  En með HTML getur þú
+        líka skipulagt efnið með því að nota  **fyrirsagnir**.  Fyrirsögn (heading)
+        er stuttur texti sem hafður fyrir ofan hluta eða kafla af efninu. Annað heiti
+        væri 'yfirskrift'.\n\n# Gerðu þetta:\n\n-   Finndu fyrirsagnirnar í vefsíðunni
+        hér fyrir neðan og notaðu Inspector Tool tækið til að sjá kóðann sem býr þær
+        til.\n-   Gættu þess að þú og félagi þinn séuð sammála um hvað þessi tög gera.\n-
+        \  Breyttu kóðanum svo að \"Drawing\" og \"2 years\" passi við aðrar fyrirsagnir
+        á síðunni."
       CSD U2 Info Page Final Touches: "<div style=\"float: right;\nheight: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n<h2>\r\nGátlisti\r\n</h2>\r\n\r\n<input\ntype=\"checkbox\"
         style=\"float: left\"><span style=\"display: block; margin-left:\n20px; margin-bottom:
@@ -1151,6 +1185,11 @@ is-IS:
         nota ég Inspector Tool?\" hægra megin til að læra að nota greiningartækið.\n-
         \  Fylgdu leiðbeiningunum á síðunni og kannaðu gerð hennar og ræddu við félaga
         hvernig hún virkar."
+      CSD U2 Pair Programming Video_2019: |-
+        ## Spurningar til að hugleiða
+
+        -   Af hverju heldurðu að fólk sem vinnur við forritun noti félagaforritun?
+        -   Hvernig heldur þú að félagaforritun muni hjálpa þér að forrita betur?
       CSD U2 Project Start: |-
         # Byrjað á verkefninu
 
@@ -2036,17 +2075,17 @@ is-IS:
         félaga þinn að hjálpa þér að finna hugsanleg vandamál með vefinn þinn.\\\r"
       CSD U2 project share: "# Deildu verkefninu\\\r\n\n\\\r\nÞað er kominn tími til
         að deila verkefninu með restinni af heiminum!\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\n-
-        \  Smelltu á \n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        \  Smelltu á \n    !\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) hnappinn efst á þessari síðu.\\\r\n-   Afritaðu vefslóðina sem
         þú færð og sendu hana í tölvupósti til þeirra sem mega sjá síðuna.\\\r\n    \\\r"
       CSD U2 project share_2018: "# Deildu verkefninu\\\r\n\n\\\r\nÞað er kominn tími
         til að deila verkefninu með restinni af heiminum!\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\n-
-        \  Smelltu á \n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        \  Smelltu á \n    !\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) hnappinn efst á þessari síðu.\\\r\n-   Afritaðu vefslóðina sem
         þú færð og sendu hana í tölvupósti til þeirra sem mega sjá síðuna.\\\r\n    \\\r"
       CSD U2 project share_2019: "# Deildu verkefninu\\\r\n\n\\\r\nÞað er kominn tími
         til að deila verkefninu með restinni af heiminum!\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\n-
-        \  Smelltu á \n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        \  Smelltu á \n    !\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) hnappinn efst á þessari síðu.\\\r\n-   Afritaðu vefslóðina sem
         þú færð og sendu hana í tölvupósti til þeirra sem mega sjá síðuna.\\\r\n    \\\r"
       CSD U2 upload images: "# Hlaða upp myndum\n\nNæst þarft þú að hlaða myndunum
@@ -2415,213 +2454,213 @@ is-IS:
         áhugaverðara."
       CSD U3 L11 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L11 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L11 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L12 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L12 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L12 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L13 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L13 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L13 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L15 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L15 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L15 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L16 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L16 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L16 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L17 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L17 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L17 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L18 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L18 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L18 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L19 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L19 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L19 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L3 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L3 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L3 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L4 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L4 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L4 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L5 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L5 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L5 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L6 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L6 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L6 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L7 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L7 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L7 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L9 Freeplay: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur lært
         til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt
-        á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L9 Freeplay_2018: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 L9 Freeplay_2019: "# Frjáls æfing\\\r\n\n\\\r\nNotaðu það sem þú hefur
         lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú
-        smellt á  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ til að senda vini sköpunarverkið eða á ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        smellt á  !\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ til að senda vini sköpunarverkið eða á !\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         til að senda það í Verkefnagalleríið þitt."
       CSD U3 Mouse Input Bee 1: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\\r\n\\\r\n\n#
         Mouse X og Y\\\r\n\n\\\r\nEin af einföldustu aðferðunum við að lesa inntak
@@ -3685,28 +3724,28 @@ is-IS:
         \"X\" formið með því að skrifa stafina 0 og 1. Þú getur alltaf smellt á \"Læsilegt
         snið\" ef þú vilt hreinsa til."
       CSD U5 black white images pixelation 2: "# Gerðu þetta\\\r\n\n\\\r\nNotaðu græjuna
-        fyrir dílamynstur til að teikna broskall\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        fyrir dílamynstur til að teikna broskall\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# Gerðu þetta\\\r\n\n\\\r\nNotaðu
-        græjuna fyrir dílamynstur til að teikna broskall\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        græjuna fyrir dílamynstur til að teikna broskall\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# Gerðu þetta\\\r\n\n\\\r\nNotaðu
-        græjuna fyrir dílamynstur til að teikna broskall\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        græjuna fyrir dílamynstur til að teikna broskall\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 3: "# Gerðu þetta\\\r\n\n\\\r\nSleðarnir
         fyrir breidd og hæð eru ranglega stilltir fyrir þessa mynd svo að hún er hvorki
-        fugl né fiskur. Breyttu þeim þangað til þú finnur myndina.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        fugl né fiskur. Breyttu þeim þangað til þú finnur myndina.\\\r\n\\\r\n!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 3_2018: "# Gerðu þetta\\\r\n\n\\\r\nSleðarnir
         fyrir breidd og hæð eru ranglega stilltir fyrir þessa mynd svo að hún er hvorki
-        fugl né fiskur. Breyttu þeim þangað til þú finnur myndina.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        fugl né fiskur. Breyttu þeim þangað til þú finnur myndina.\\\r\n\\\r\n!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 3_2019: "# Gerðu þetta\\\r\n\n\\\r\nSleðarnir
         fyrir breidd og hæð eru ranglega stilltir fyrir þessa mynd svo að hún er hvorki
-        fugl né fiskur. Breyttu þeim þangað til þú finnur myndina.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        fugl né fiskur. Breyttu þeim þangað til þú finnur myndina.\\\r\n\\\r\n!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 4: "# Gerðu þetta\\\r\n\n\\\r\nBættu augabrúnum
-        á þennan broskall. Mundu að nota \"Readable Format\" ef þú kemst ekki áleiðis.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        á þennan broskall. Mundu að nota \"Readable Format\" ef þú kemst ekki áleiðis.\\\r\n\\\r\n!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 4_2018: "# Gerðu þetta\\\r\n\n\\\r\nBættu
         augabrúnum á þennan broskall. Mundu að nota \"Readable Format\" ef þú kemst
-        ekki áleiðis.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        ekki áleiðis.\\\r\n\\\r\n!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 4_2019: "# Gerðu þetta\\\r\n\n\\\r\nBættu
         augabrúnum á þennan broskall. Mundu að nota \"Readable Format\" ef þú kemst
-        ekki áleiðis.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        ekki áleiðis.\\\r\n\\\r\n!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 5: "# Gerðu þetta\\\r\n\n\\\r\nNú er komið
         að þér. Teiknaðu hvað sem þú vilt í dílamynstursgræjunni. Breyttu hæð og breidd
         myndarinnar eins og þér sýnist."
@@ -3812,6 +3851,11 @@ is-IS:
       CSD U6 light pattern challenge_2019: "# Áskorun: Fleiri mynstur\\\r\n\n\\\r\nBættu
         nokkrum mynstrum í appið þitt. Bættu við mynstri frá félaga ef þú vilt. Gættu
         þess að setja hvert mynstur í sitt eigið fall."
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## Spurningar til að hugsa um
+
+        -   Hvað var það sem gerði tölvur ólíkar þeim vélum sem komu áður?
+        -   Hugsaðu þér eitthvað sem þú gerir í tölvu. Hvers konar inntak, úttak, geymsla og úrvinnsla fer fram?
       CSDU6 - final project 1: "# Hönnun notendaviðmóts\\\r\n\n\\\r\nÁður en þú byrjar
         að fást við kóða fyrir forritið, skaltu byrja á að stilla upp notendaviðmótinu.\nGefðu
         hverri einingu, sem þú setur í hönnunina, auðkenni (\"id\") sem sýnir hvað
@@ -4077,9 +4121,9 @@ is-IS:
       Course 4 Bee Params 5: Byrjum frá grunni. Getur þú búið til nýtt fall `sækja
         5 safa` með stika fyrir stefnu?
       Course 4 Bee Params 6: "Væri ekki ljúft ef við gætum safnað öllum þessum blómasafa
-        með einu falli?  \n  \n  \nPrófaðu að bæta nýjum stika `magn` við fallið til
-        að stjórna hve miklum safa á að safna. Þú vilt ábyggilega líka gefa fallinu
-        annað heiti!"
+        með einu falli?  \n\nPrófaðu að bæta nýjum stika `magn` við fallið til að
+        stjórna hve miklum safa á að safna. Þú vilt ábyggilega líka gefa fallinu annað
+        heiti!"
       Course 4 Bee Params 7: "Prófaðu að nota nýja fallið þitt til að safna öllum
         þessum safa.\\\r\n\\\r\n<br/>\\\r"
       Course 4 Bee Params 8: "**Áskorun:** Nú er komið hunang til að fást við líka!
@@ -4317,8 +4361,6 @@ is-IS:
         með vinum þínum.
       Dance Party 1-validated: "**Spáðu hvað mun gerast:** Hér er vera sem heitir
         `alien1`! \n\nHvað heldur þú að muni gerast þegar þú smellir á hana?  "
-      Dance Party 1-validated_2019: "**Spáðu hvað mun gerast:** Hér er vera sem heitir
-        `alien1`! \n\nHvað heldur þú að muni gerast þegar þú smellir á hana?  "
       Dance Party 2: "Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún
         bara fært sig til hliðanna. \n\nGeturðu breytt hegðuninni í <xml> <block type=\"gamelab_addBehaviorSimple\"
         inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n
@@ -4492,6 +4534,15 @@ is-IS:
         Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!
 
         Ef þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.
+      Intro to Web Lab - Part 1_2019: |-
+        ## Spurning til að hugleiða:
+
+        -   Hverjir eru mismunandi hlutar Vefsmiðjunnar og til hvers eru þeir notaðir?
+      Intro to Web Lab - Part 2_2019: |-
+        ## Spurningar til að hugleiða
+
+        -   Af hverju eru HTML tög gagnleg?
+        -   Hvað gerir efnisgreinartagið p?
       K-1 Bee Loops 2: Notaðu `endurtaka` lykkju til að hreyfast og sæktu svo blómasafann
         og búðu til hunang!
       K-1 Bee Loops 3: Notaðu þrjár `endurtaka` lykkjur til að sækja blómasafann og
@@ -4709,8 +4760,8 @@ is-IS:
         fundinn"
       Room Escape Workshop - 3: "# Fela leynikóðann\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png\"\nstyle=\"width:400px;float:right\">\\\r\n\\\r\n\n1.
         \ Smelltu (í hönnunarstöðu) á hvíta ferninginn \"CODE\". Breyttu honum svo
-        hann sýni leynikóða sem þú ákveður\\\r\n2.  2\\.\n    Dragðu myndina niður
-        til að fela leynikóðann\\\r\n    \\\r\n    ![](<>)"
+        hann sýni leynikóða sem þú ákveður\\\r\n2.  2.\n    Dragðu myndina niður til
+        að fela leynikóðann\\\r\n    \\\r\n    ![](<>)"
       Room Escape Workshop - 3-2: "# Færa mynd\\\r\n\n\\\r\nBúðu nú svo um hnútana
         að notandinn geti fundið leynikóðann með því að smella á myndina. Þegar smellt
         er á myndina ætti hún að færast upp og frá.\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\n\\\r\n\\*\nDragðu

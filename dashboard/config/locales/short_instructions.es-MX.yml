@@ -1029,7 +1029,6 @@ es-MX:
       Crack Random Substitution: Instrucciones
       Crack a Caesar Cipher: Instrucciones
       Dance Party 1-validated: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
-      Dance Party 1-validated_2019: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       Dance Party 2: Cambia el comportamiento dentro del bloque `___ comienza ___`
         para hacer que el extraterrestre comience a dar vueltas.
       Dance Party 2_2019: Cambia el comportamiento dentro del bloque `spring comienza`
@@ -1084,16 +1083,16 @@ es-MX:
       Dance_Party_12: |-
         ¡Vamos baila! Crea tu propio baile para compartir con tus
         amigos.
-      Dance_Party_extras_battle: Grupos de Baile (Haz clic en "Más" para obtener más
-        detalles)
-      Dance_Party_extras_every_beat: Negras (Haz clic en "Más" para obtener más detalles)
-      Dance_Party_extras_layout: ¡Vamos a entrar en formato! (Haz clic en "Más" para
+      Dance_Party_extras_battle: Equipos de baile (haz clic en "Más" para obtener
+        más detalles)
+      Dance_Party_extras_every_beat: Negras (haz clic en "Más" para obtener más detalles)
+      Dance_Party_extras_layout: ¡Vamos a organizarnos! (haz clic en "Más" para obtener
+        más detalles)
+      Dance_Party_extras_on_beat: Graves, medios y agudos (haz clic en "Más" para
         obtener más detalles)
-      Dance_Party_extras_on_beat: Bass, Mid y Treble (Haz clic en "Más" para obtener
+      Dance_Party_extras_speed: Más rápido, más lento (haz clic en "Más" para obtener
         más detalles)
-      Dance_Party_extras_speed: Aceléralo, Atrásalo (Haz clic en "Más" para obtener
-        más detalles)
-      Dance_Party_extras_visible: ¿Dónde habrá ido? (Haz clic en "Más" para obtener
+      Dance_Party_extras_visible: ¿Dónde habrán ido? (haz clic en "Más" para obtener
         más detalles)
       Find the Wizard: Construye lo que quieras. ¡Este es un ejemplo de un juego de
         adivinación de números!
@@ -1278,9 +1277,9 @@ es-MX:
         y haz que hagan lo que tú quieras. ¡Diviértete!"
       MC HOC 2016 Level 2-2: La gallina está quieta. Para lograr que se mueva, debes
         colocar los bloques "mover" y "girar" en el espacio "cuando se genera".
-      MC HOC 2016 Level 3: ¡Perfecto! ¡La gallina se movió! Pero luego se detuvo.
-        En los videojuegos, las gallinas están en movimiento constante. Usa un bucle
-        "hacer siempre" para que las gallinas no dejen de moverse.
+      MC HOC 2016 Level 3: "¡Genial! ¡La gallina se movió! Pero luego se detuvo. En
+        los juegos, las gallinas están en movimiento constante. Usa un bucle `hacer
+        siempre` para que las gallinas no dejen de moverse."
       MC HOC 2016 Level 4: Ahora se ven raras moviéndose todas iguales. Para darle
         autenticidad a las cosas, los videojuegos usan movimientos aleatorios. Puedes
         hacer que las gallinas "giren al azar".
@@ -1568,10 +1567,33 @@ es-MX:
       Standalone_Artist_1: "¡Bienvenido a Artista! En primer lugar, vamos a intentar
         hacer un simple cuadrado usando el bloque vuelta derecha y el bloque mover
         hacia adelante. Cada lado debe tener 100 píxeles de largo."
+      Standalone_Artist_2: Dibuja este diamante con ángulos de 120 y 60 grados, y
+        lados de 150 pixeles de largo.
+      Standalone_Artist_3: "¿Puedes dibujar este hexágono con lados de 100 pixeles
+        y ángulos de 60 grados?"
+      Standalone_Artist_4: 'Ahora tienes un nuevo bloque para jugar: el bucle. Este
+        bloque repetirá un conjunto de comandos. ¿Qué ocurre si repites estos comandos
+        6 veces?'
+      Standalone_Artist_5: "¿Cuántas veces necesitas repetir este diamante para dibujar
+        la flor?"
+      Standalone_Artist_5.5: 'Observa que convertimos el código del diamante en un
+        bucle para hacerlo más simple. Puedes repetir toda la secuencia 12 veces para
+        dibujar la flor. Te damos una pista: necesitas girar 30 grados después de
+        repetir el diamante, para no seguir dibujando sobre el mismo.'
+      Standalone_Artist_6: 'Repite este código del hexágono 6 veces para crear el
+        diseño. ¿Cuántos grados debes girar cada vez? Te damos una pista: divide el
+        número de grados de un círculo por el número de veces que se repite el bucle.'
+      Standalone_Artist_7: 'La función es otra herramienta de programación que te
+        ayuda a no repetirte. Esta función dibuja una flor, así que la puedes utilizar
+        cada vez que quieras dibujar una. Utiliza esto y el nuevo bloque de salto
+        para dibujar estas flores. Te damos una pista: hay 150 pixeles de espacio
+        entre cada flor'
       Standalone_Artist_8: Aquí hay una función llamada "Dibuja una figura" que hemos
         programado para dibujar hexágonos. Ejecuta el código para ver lo que hace
         y luego experimenta con la función para ver qué pasa. ¿Puedes hacer que dibuje
         un patrón de cuadrados, triángulos u octágonos?
+      Standalone_Artist_9: "¡Ahora haz cualquier imagen que te guste! ¡Incluso tienes
+        una función vacía que puedes usar para hacer lo que quieras!"
       U4 Model Design 1: 'Usa el Modo Diseño para agregar un botón rojo grande a tu
         pantalla. (Haz clic para ver las instrucciones completas). '
       U4 Model Design 1_2018: 'Usa el Modo Diseño para agregar un botón rojo grande
@@ -1619,6 +1641,10 @@ es-MX:
       Virtual Pet 8_2019: "**Juego libre:**¿Qué más puedes lograr que tu mascota haga?
         ¡Prueba lo que quieras!"
       Virtual Pet Freeplay: 'Juego libre: ¿Qué más puedes lograr que tu jirafa haga? '
+      'Widget: Text Compression': Busca patrones (palabras o frases repetidas) en
+        el texto. Ingresa los patrones que ves en el diccionario de la derecha. A
+        medida que escribes entradas en el diccionario, el símbolo de la entrada reemplaza
+        el patrón en el texto.
       behaviors 1: "¡Haz una predicción!"
       behaviors 2: Vuela el cohete hasta las estrellas.
       behaviors 3: Ayuda al explorador a superar al robot.
@@ -1635,47 +1661,48 @@ es-MX:
         punto" y "anotar punto del oponente" a los bloques "cuando pelota alcanza
         la meta" y "cuando pelota pasa de largo" para crear un juego. Prueba cuantos
         puntos puedes anotar antes de que tu oponente anote dos veces.
-      bounce_10_basketball: 'Ahora hay un arco arriba. Une los bloques "anotar punto"
-        y "anotar punto de oponente" a los bloques "cuando pelota está en arco" y
-        "cuando pelota falla mano" para hacer un juego. Mira cuántos puntos puedes
-        anotar antes de que tu oponente anote dos veces. '
-      bounce_10_sports: 'Ahora hay un arco arriba. Une los bloques "anotar punto"
-        y "anotar punto de oponente" a los bloques "cuando pelota está en arco" y
-        "cuando pelota falla mano" para hacer un juego. Mira cuántos puntos puedes
-        anotar antes de que tu oponente anote dos veces. '
+      bounce_10_basketball: ¡Ahora hay una meta arriba! Añade los bloques "anotar
+        punto" y "anotar punto de oponente" a los bloques "cuando pelota entre en
+        meta" y "cuando pelota falla mano" para crear un juego. Mira cuántos puntos
+        puedes anotar antes de que tu oponente anote dos veces.
+      bounce_10_sports: ¡Ahora hay una meta arriba! Añade los bloques "anotar punto"
+        y "anotar punto de oponente" a los bloques "cuando pelota entre a meta" y
+        "cuando pelota falla mano" para crear un juego. ¡Mira cuántos puntos puedes
+        anotar antes de que tu oponente anote dos veces!
       bounce_11: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que
         colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También,
         trata de cambiar la escena o la velocidad de la paleta y la pelota y ver cuántos
         puntos puedes anotar antes de que tu oponente anote dos veces.
-      bounce_11_basketball: Ahora puedes unir bloques al bloque "cuando ejecute".
-        Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar.
-        También, trata de cambiar la escena o la velocidad de la mano y la pelota
-        y ver cuántos puntos puedes anotar antes de que tu oponente anote dos veces.
-      bounce_11_sports: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes
-        que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También,
-        trata de cambiar la escena o la velocidad de la mano y la pelota y ver cuántos
-        puntos puedes anotar antes de que tu oponente anote dos veces.
+      bounce_11_basketball: Ahora puedes añadir bloques al bloque "cuando ejecute".
+        Tienes que añadir el nuevo bloque "lanzar pelota nueva" en más de un lugar.
+        También, ¡trata de cambiar la escena o la velocidad de la mano y la pelota,
+        y ver cuántos puntos puedes anotar antes de que tu oponente anote dos veces!
+      bounce_11_sports: Ahora puedes añadir bloques al bloque "cuando ejecute". Tienes
+        que añadir el nuevo bloque "lanzar pelota nueva" en más de un lugar. También,
+        ¡trata de cambiar la escena o la velocidad de la mano y la pelota, y ver cuántos
+        puntos puedes anotar antes de que tu oponente anote dos veces!
       bounce_12: Crea tu propio juego "Rebote". Puedes cambiar todos los efectos visuales
         y las reglas. Cuando estés listo, haz clic en Terminar para que tus amigos
         prueben tu juego en sus teléfonos.
       bounce_12_basketball: Crea tu propio juego de baloncesto. Puedes cambiar todas
-        las reglas. Cuando hayas terminado, haz clic en Finalizar para permitir a
-        tus amigos/as probar el juego en sus teléfonos.
-      bounce_12_sports: 'Crea tu propio juego. Ahora estás al mando: puedes cambiar
-        todas las reglas y mezclar deportes. ¡Puedes ser creativo! Cuando estés listo,
-        haz clic en "Terminar" para que tus amigos prueben tu juego en sus teléfonos.'
-      bounce_1_basketball: Une un bloque al bloque "cuando flecha izquierda" y presiona
-        "Ejecutar". Mueve la mano usando la flecha izquierda para alcanzar el objetivo
+        las reglas. Cuando hayas terminado, haz clic en Finalizar. Así, tus amigos
+        podrán probar el juego en sus teléfonos.
+      bounce_12_sports: '¡Crea tu propio juego! Ahora estás al mando: puedes cambiar
+        todas las reglas y combinar deportes. ¡Despliega toda tu creatividad! Cuando
+        estés listo, haz clic en "Finalizar" para que tus amigos prueben tu juego
+        en sus teléfonos.'
+      bounce_1_basketball: Añade un bloque al bloque "cuando flecha izquierda" y presiona
+        "Ejecutar". Mueve la mano con la flecha izquierda para alcanzar el objetivo
         final.
       bounce_1_sports: ¡Llega a la bandera! Agrega un bloque al bloque "cuando flecha
         izquierda" y presiona "Ejecutar" para mover al jugador hasta la bandera.
       bounce_2: Une un bloque a los bloques "cuándo flecha derecha" y "cuándo flecha
         izquierda". Mueve la paleta para alcanzar ambos objetivos finales.
-      bounce_2_basketball: Une un bloque a los bloques "cuando flecha derecha" y "cuando
-        flecha izquierda". Mueve la mano para alcanzar los 2 objetivos finales.
-      bounce_2_sports: ¡Ahora hay dos banderas! Coloca un bloque en los bloques "cuando
-        flecha izquierda" y "cuando flecha derecha" para hacer que los jugadores se
-        muevan en dos direcciones.
+      bounce_2_basketball: Añade un bloque a los bloques "cuando flecha derecha" y
+        "cuando flecha izquierda". Mueve la mano para alcanzar los dos objetivos finales.
+      bounce_2_sports: ¡Ahora hay dos banderas! Añade un bloque a los bloques "cuando
+        flecha izquierda" y "cuando flecha derecha" para que los jugadores se muevan
+        en dos direcciones.
       bounce_3: Ahora intenta algo similar con el bloque "cuándo flecha arriba". Mueve
         la paleta hacia el objetivo final en la parte superior.
       bounce_4: Esta vez tienes que añadir cuatro bloques. Mueve la paleta a los cuatro
@@ -1683,24 +1710,23 @@ es-MX:
       bounce_5: Vamos a lanzar una pelota hacia la paleta. Une un bloque al bloque
         "cuando la pelota golpea la paleta" para asegurar que la pelota alcance el
         objetivo final.
-      bounce_5_basketball: Lanzaremos una pelota hacia la mano. Añade un bloque al
-        bloque "cuando la bola golpee mano" para asegurar que la pelota llegue a la
-        bandera.
-      bounce_5_sports: La pastilla de hockey se deslizará hacia el jugador. Coloca
-        un bloque en el bloque "cuando la pelota golpea al jugador" para golpear la
-        bandera.
+      bounce_5_basketball: Vamos a lanzar una pelota hacia la mano. Añade un bloque
+        al bloque "cuando la pelota toque la mano" para asegurarte de que la pelota
+        llegue hasta la bandera.
+      bounce_5_sports: ¡El disco de hockey se deslizará hacia el jugador! Añade un
+        bloque al bloque "cuando la pelota toque al jugador" para tocar la bandera.
       bounce_6: Ahora el objetivo final está en la parte superior. Tienes que unir
         bloques a ambos bloques de "cuando la pelota choca" para resolver este desafío.
-      bounce_6_basketball: Ahora la bandera está en la parte superior. Necesitas añadir
-        bloques a ambos bloques "cuando la bola golpee" para resolver este acertijo.
-      bounce_6_sports: Ahora la bandera está en la parte superior. Necesitas añadir
-        bloques a ambos bloques "cuando la bola golpee" para resolver este acertijo.
+      bounce_6_basketball: Ahora la bandera está en la parte superior. Deberás añadir
+        bloques a ambos bloques "cuando la bola toque" para resolver este desafío.
+      bounce_6_sports: Ahora la bandera está en la parte superior. Deberás añadir
+        bloques a ambos bloques "cuando la bola toque" para resolver este desafío.
       bounce_7: Une bloques a cada uno de los bloques "cuando". Rebota la pelota hasta
         que alcance el objetivo final.
-      bounce_7_basketball: Coloca bloques cada uno de lo bloques "cuando". Bota la
+      bounce_7_basketball: Añade bloques a cada uno de los bloques "cuando". Rebota
+        la pelota hasta que toque la bandera.
+      bounce_7_sports: Añade bloques a cada uno de los bloques "cuando". Rebota la
         pelota hasta que toque la bandera.
-      bounce_7_sports: Coloca bloques cada uno de lo bloques "cuando". Bota la pelota
-        hasta que toque la bandera.
       comment_intro_maze_2018: Usa el nuevo bloque `comentar` para dejarte recordatorios
         rápidos.
       course1_artist_loops_challenge1: |-
@@ -4594,8 +4620,9 @@ es-MX:
       flappy_2: Ahora hemos agregado el suelo. Adjunta un bloque al bloque "cuando
         golpee el suelo". Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy golpee
         el suelo.
-      flappy_3: El bloque "cuando ejecute" te permite ejecutar el código cuando tu
-        juego inicie. Intenta establecer la velocidad del nivel y el aleteo al objetivo.
+      flappy_3: El bloque "cuando se ejecuta" te permite ejecutar el código una vez
+        que se inicia tu juego. Intenta establecer la velocidad del nivel y el aleteo
+        hacia el objetivo.
       flappy_4: Flappy volará entre los obstáculos a menos que escribas el código
         que lo hará estrellarse. Adjunta un bloque al bloque "cuando golpea un obstáculo".
         Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy se estrelle en el primer
@@ -4603,13 +4630,13 @@ es-MX:
       flappy_5: Ahora agreguemos el marcador, y contaremos los puntos cuando Flappy
         pase los obstáculos. Agrega al bloque "cuando pase un obstáculo", y entonces
         anota un punto cuando Flappy vuele entre el primer conjunto de tubos.
-      flappy_6: Ve si puedes anotar un punto haciendo que Flappy aletee más rápido
-        o más lento.
-      flappy_7: A continuación, trata de cambiar el fondo adjuntando otro bloque al
-        bloque "cuando ejecute".
-      flappy_8: Puedes poner elementos visuales en cualquier momento, no sólo cuando
-        comience el juego. Intenta establecer una escena AL AZAR cuando sucedan otros
-        eventos, por ejemplo, al superar un obstáculo.
+      flappy_6: Mira si puedes anotar un punto luego de hacer que Flappy aletee más
+        rápido o más lento.
+      flappy_7: Luego, añade otro bloque al bloque "cuando se ejecuta" para cambiar
+        la escena.
+      flappy_8: Puedes definir los elementos visuales en cualquier momento, y no sólo
+        cuando comienza el juego. Intenta establecer una escena AL AZAR si suceden
+        otros eventos, tales como superar un obstáculo.
       flappy_9: Para mezclar las cosas, al chocar con un obstáculo, en vez de terminar
         el juego, intente ajustar el marcador de nuevo a 0.
       frozen circle: Un círculo es una figura especial. ¿Puedes adivinar qué número
@@ -4689,8 +4716,8 @@ es-MX:
       iceage_click_hello: "¿Puedes ayudar a Sid a llamar a sus amigos cuando hagas
         clic en él? "
       iceage_free_play: "¡Llegó el momento de crear tu propio juego o historia! "
-      iceage_hello1: Ayuda a Sid a decir "¡Hola!" arrastrando el bloque `decir` y
-        conectándolo al final del evento`Cuando ejecuta`.
+      iceage_hello1: Arrastra el bloque `decir` y conéctalo al final del evento `cuando
+        ejecuta` para ayudar a Sid a decir "¡Hola!".
       iceage_hello2: Usa el bloque `actor ___ dice` dos veces para que Manny y Sid
         se saluden.
       iceage_move_events: "¡Escribe el código para ayudar a Scrat a llegar hasta las
@@ -4709,27 +4736,24 @@ es-MX:
       iceage_warn_ice_age: Cambia la escena a un fondo con hielo y configura la velocidad
         de Sid (actor 1) en rápido.
       k-1 maze 1: "¿Me llevarías al Oeste para agarrar al cerdo? "
-      ramp_artist_loops1: |-
-        Avanza 60 píxeles para completar este
-        puzzle.
-      ramp_artist_loops1_2018: |-
-        Avanza 60 píxeles para completar este
-        puzzle.
-      ramp_artist_loops1_2019: |-
-        Avanza 60 píxeles para completar este
-        puzzle.
+      ramp_artist_loops1: Avanza 60 pixeles para completar este desafío.
+      ramp_artist_loops1_2018: Avanza 60 pixeles para completar este desafío.
+      ramp_artist_loops1_2019: Avanza 60 pixeles para completar este desafío.
       ramp_artist_loops2: Avanza cinco veces y crea esta línea de color.
       ramp_artist_loops2_2018: Avanza cinco veces y crea esta línea de color.
       ramp_artist_loops2_2019: Avanza cinco veces y crea esta línea de color.
-      ramp_artist_loops3: Usa un bucle 'repetir' para dibujar cinco guiones de colores.
-      ramp_artist_loops3_2018: Usa un bucle 'repetir' para dibujar cinco guiones de
+      ramp_artist_loops3: Usa un bucle `repetir` para dibujar cinco guiones de colores.
+      ramp_artist_loops3_2018: Usa un bucle `repetir` para dibujar cinco guiones de
         colores.
-      ramp_artist_loops3_2019: Usa un bucle 'repetir' para dibujar cinco guiones de
+      ramp_artist_loops3_2019: Usa un bucle `repetir` para dibujar cinco guiones de
         colores.
       ramp_artist_loops4: "¿Qué sucede cuando agregas giros a la derecha de 72 grados
         luego de todo lo demás dentro de tu loop?"
       ramp_artist_loops4_2018: "¿Qué sucede cuando agregas giros a la derecha de 72
         grados luego de todo lo demás dentro de tu loop?"
+      ramp_artist_loops5: Usa bucles para dibujar esta escalera.
+      ramp_artist_loops5_2018: Usa bucles para dibujar esta escalera.
+      ramp_artist_loops5_2019: Usa bucles para dibujar esta escalera.
       ramp_artist_loops6: Edita tu bucle para dibujar esta escalera.
       ramp_artist_loops6_2018: Edita tu bucle para dibujar esta escalera.
       ramp_artist_loops6_2019: Edita tu bucle para dibujar esta escalera.
@@ -4738,12 +4762,14 @@ es-MX:
         loops!"
       ramp_artist_loops7_2019: "¡Busca un patrón y haz este código más corto usando
         loops!"
-      ramp_artist_loops8: Busca un patrón y acorta este código usando bucles.
-      ramp_artist_loops8_2018: Busca un patrón y acorta este código usando bucles.
-      ramp_artist_loops8_2019: Busca un patrón y acorta este código usando bucles.
-      ramp_artist_loops9: Resuelve este puzzle dibujando un cuadrado.
-      ramp_artist_loops9_2018: Resuelve este puzzle dibujando un cuadrado.
-      ramp_artist_loops9_2019: Resuelve este puzzle dibujando un cuadrado.
+      ramp_artist_loops8: Busca un patrón y acorta este código a través de los bucles.
+      ramp_artist_loops8_2018: Busca un patrón y acorta este código a través de los
+        bucles.
+      ramp_artist_loops8_2019: Busca un patrón y acorta este código a través de los
+        bucles.
+      ramp_artist_loops9: Dibuja un cuadrado para resolver este desafío.
+      ramp_artist_loops9_2018: Dibuja un cuadrado para resolver este desafío.
+      ramp_artist_loops9_2019: Dibuja un cuadrado para resolver este desafío.
       scrat 16: ¡Bellota! ¡Bellota! ¡Bellota! Utiliza un bloque "si" para llevarme
         hasta allí con el menor número de bloques.
       scrat 17: Ok, vamos a hacerlo de nuevo para practicar - éste no es muy diferente,

@@ -502,14 +502,22 @@ cs-CZ:
       HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       K-1 Bee Loops 2: Používej cyklus k pohybu a pak dostaneš nektar a vyrobíš med!
-      K-1 Bee Loops 3: Používej cykly, abys dostal nektar a udělal med!
+      K-1 Bee Loops 3: Používej tři opakovací cykly, abys dostal nektar a udělal med!
       K-1 Bee Loops 4: Použij cykly, abys dostal nektar, udělal med a pohyboval!
       K-1 Bee Loops 5: Použij cykly, aby dostal nektar a med!
-      K-1 Bee Loops 6: Použij cykly, abys dostal nektar, zlato a k pohybu!
+      K-1 Bee Loops 6: Použij cykly, abys dostal nektar, med a k pohybu!
+      K-1 Maze Loops 10: "Dostaň mě k prasátku!\\\rPoužití cyklu 'opakuj' to hodně
+        zjednoduší."
       K-1 Maze Loops 11: Dostaň mne k prasátku! Použij opakovací cykly.
       K-1 Maze Loops 12: Dostaň mne k prasátku! Použij opakovací cykly.
       K-1 Maze Loops 2: Použij Opakovací blok, abys mne dostal k prasátku!
+      K-1 Maze Loops 3: Dostaň mě k prasátku! Určitě použij 'opakuj'.
+      K-1 Maze Loops 5: Dostaň mě k prasátku! Určitě použij 'opakuj'.
+      K-1 Maze Loops 6: Dostaň mě k prasátku! Určitě použij 'opakuj'.
+      K-1 Maze Loops 7: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 8: Dostaň mne k prasátku! Použij opakovací cykly.
+      K-1 Maze Loops Assessment 1: "Podívej na vše, co jsme se naučili!\\\rPoužij
+        cyklus 'Opakuj' abys mě dostal k prasátku!"
       MC_HOC_2017_01_RETRY: "Hráč {currentPlayerName} je uvězněn v domě, ale na pomoc
         mu přišel agent!   \\\r\n \\\r\n   \\\r\nPřichyťte v pracovním prostoru blok
         „pohyb vpřed“ k bloku „při spuštění“, abyste agenta přesunuli na nášlapnou
@@ -599,6 +607,10 @@ cs-CZ:
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout
         vpřed".
+      course1_artist_loops_challenge2: Jdem si hrát. Nakresli tolik X kolik chceš!
+        Uděláš tři v řadě?
+      course1_maze_seq_challenge2: V každém směru se můžeš posunout pouze čtyřikrát.
+        Dokážeš najít cestu než ti dojdou bloky?
       course2_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen
         med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj
         každé místečko, jestli je tam květina nebo plástev.

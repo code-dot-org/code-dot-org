@@ -49,14 +49,19 @@ es-MX:
         description here: descripción aquí
         title: Título
       CSD U2 project guide:
+        Your Personal Website: Tu sitio web personal
         description here: descripción aquí
       CSD U2 project guide_2018:
+        Your Personal Website: Tu sitio web personal
         description here: descripción aquí
       CSD U2 project guide_2018_2019:
+        Your Personal Website: Tu sitio web personal
         description here: descripción aquí
       CSD U3 Card Examples_2018:
+        Making an Interactive Card: Crear una tarjeta interactiva
         description here: descripción aquí
       CSD U3 Card Examples_2018_2019:
+        Making an Interactive Card: Crear una tarjeta interactiva
         description here: descripción aquí
       CSD U3 combining rep:
         description here: descripción aquí
@@ -68,16 +73,22 @@ es-MX:
         description here: descripción aquí
         title: Título
       CSD U3 game intro:
+        Create Your Own Game: Crea tu propio juego
         description here: descripción aquí
       CSD U3 game intro_2018:
+        Create Your Own Game: Crea tu propio juego
         description here: descripción aquí
       CSD U3 game intro_2018_2019:
+        Create Your Own Game: Crea tu propio juego
         description here: descripción aquí
       CSD U3 platform intro:
+        Build a Platform Jumper: Crea un salto de plataformas
         description here: descripción aquí
       CSD U3 platform intro_2018:
+        Build a Platform Jumper: Crea un salto de plataformas
         description here: descripción aquí
       CSD U3 platform intro_2018_2019:
+        Build a Platform Jumper: Crea un salto de plataformas
         description here: descripción aquí
       CSD U5 Encryption 1:
         description here: descripción aquí
@@ -89,19 +100,25 @@ es-MX:
         description here: descripción aquí
         title: Título
       CSD U5 Encryption 2:
+        Decoding Binary Strings: Decodificar cadenas binarias
         description here: descripción aquí
       CSD U5 Encryption 2_2018:
+        Decoding Binary Strings: Decodificar cadenas binarias
         description here: descripción aquí
       CSD U5 Encryption 2_2018_2019:
+        Decoding Binary Strings: Decodificar cadenas binarias
         description here: descripción aquí
       CSD U5 L13 SFLP Interpreting Data:
         description here: descripción aquí
         title: Título
       CSD U5 crosstab warmup:
+        Pizza Survey: Encuesta sobre pizza
         description here: descripción aquí
       CSD U5 crosstab warmup_2018:
+        Pizza Survey: Encuesta sobre pizza
         description here: descripción aquí
       CSD U5 crosstab warmup_2018_2019:
+        Pizza Survey: Encuesta sobre pizza
         description here: descripción aquí
       CSD U5 data visualization:
         description here: descripción aquí
@@ -122,10 +139,13 @@ es-MX:
         description here: descripción aquí
         title: Título
       CSD U6 LED create intro:
+        Make an App Using the LED: Crear una aplicación mediante el LED
         description here: descripción aquí
       CSD U6 LED create intro_2018:
+        Make an App Using the LED: Crear una aplicación mediante el LED
         description here: descripción aquí
       CSD U6 LED create intro_2018_2019:
+        Make an App Using the LED: Crear una aplicación mediante el LED
         description here: descripción aquí
       CSD U6 final intro:
         description here: descripción aquí
@@ -134,11 +154,13 @@ es-MX:
       CSD U6 final intro_2018_2019:
         description here: descripción aquí
       Internet Simulator Setup:
+        Internet Simulator Setup: Configuración del simulador de Internet
         description here: descripción aquí
       Internet Simulator Setup 2:
         description here: descripción aquí
         title: Título
       Internet Simulator Setup 3:
+        Internet Simulator Setup 3: Configuración del simulador de Internet 3
         description here: descripción aquí
       Multi-Screen Apps:
         description here: descripción aquí
@@ -155,8 +177,10 @@ es-MX:
       Prepare for your presentation_2018:
         Prepare for yur presentation: Prepárate para tu presentación
       'Technique: Frequency Analysis':
+        How to crack a substitution cipher: Cómo descifrar un cifrado de sustitución
         description here: descripción aquí
       Terminology Recap:
+        That was easy, what's next?: Eso fue sencillo. ¿Qué sigue?
         description here: descripción aquí
       courseD_external_binary1:
         Binary Drawing: Dibujo binario
@@ -262,6 +286,148 @@ es-MX:
         Instructions: Instrucciones
         Match the puzzles to the blocks: Haz coincidir los desafíos con los bloques
         Maze Match: Partida del Laberinto
+      CSD U2 image debug match:
+        "<img src=\"https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png\">": <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png">
+        "<img src=\"https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png\">": <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png">
+        "<img src=\"https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png\">": <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png">
+        "<img src=\"https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png\">": <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png">
+        "<img src=\"https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png\">": <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png">
+        Match the buggy HTML code with the description of its bug.: Haz coincidir el código HTML con errores con la descripción de su error.
+        The `src` and `alt` attributes are switched: Los atributos `src` y `alt` están cambiados
+        The `src` attribute is spelled incorrectly.: El atributo `src` está mal escrito.
+        The image address is not given as a `src` attribute: La dirección de la imagen no se da como un atributo `src`
+        The the file extension (.jpg) is missing from the image address: La dirección de la imagen no incluye la extensión de archivo (.jpg)
+        There is a space in the file name: Hay un espacio en el nombre del archivo
+      CSD U2 lists match:
+        Lists Quick Check: Verificación rápida de las listas
+        Match the list to the code that makes it.: Haz coincidir la lista con el código que la crea.
+        "https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png": https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png
+        "https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png": https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png
+        "https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38 AM.png": https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38 AM.png
+        "https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png": https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png
+        "https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32 AM.png": https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32 AM.png
+        "https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png": https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png
+        "https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png": https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png
+        "https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png": https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png
+        "https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png": https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png
+        "https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png": https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png
+      CSD U2 lists match_2018:
+        Lists Quick Check: Verificación rápida de las listas
+        Match the list to the code that makes it.: Haz coincidir la lista con el código que la crea.
+        "https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png": https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png
+        "https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png": https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png
+        "https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38 AM.png": https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38 AM.png
+        "https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png": https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png
+        "https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32 AM.png": https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32 AM.png
+        "https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png": https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png
+        "https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png": https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png
+        "https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png": https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png
+        "https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png": https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png
+        "https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png": https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png
+      CSD U2 lists match_2018_2019:
+        Lists Quick Check: Verificación rápida de las listas
+        Match the list to the code that makes it.: Haz coincidir la lista con el código que la crea.
+        "https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png": https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png
+        "https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png": https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png
+        "https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38 AM.png": https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38 AM.png
+        "https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png": https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png
+        "https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32 AM.png": https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32 AM.png
+        "https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png": https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png
+        "https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png": https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png
+        "https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png": https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png
+        "https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png": https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png
+        "https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png": https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png
+      CSD U3 - conditionals - Matching:
+        Is the dog sprite's rotation less than the cat sprite's rotation?: '¿La rotación del sprite del perro es menor a la rotación del sprite del gato?'
+        Is the dog sprite's scale greater than the cat sprite's scale?: '¿La escala del sprite del perro es menor a la escala del sprite del gato?'
+        Is the dog sprite's x equal to the cat sprite's x?: '¿La x del sprite del perro es igual a la x del sprite del gato?'
+        Is the dog sprite's x greater than the cat sprite's x?: '¿La x del sprite del perro es mayor a la x del sprite del gato?'
+        Is the dog sprite's x less than the cat sprite's x?: '¿La x del sprite del perro es menor a la x del sprite del gato?'
+        Match the boolean expression to the English description.: Haz coincidir la expresión booleana con la descripción en español.
+        'Matching: Comparison Operators': 'Coincidencia: operadores de comparación'
+        dog.rotation &lt; cat.rotation: rotación.perro &lt; rotación.gato
+        dog.scale &gt; cat.scale: escala.perro &gt; escala.gato
+        dog.x &gt; cat.x: x.perro &gt; x.gato
+        dog.x &lt; cat.x: x.perro &lt; x.gato
+        dog.x == cat.x: x.perro == x.gato
+      CSD U3 - conditionals - Matching_2018:
+        Is the dog sprite's rotation less than the cat sprite's rotation?: '¿La rotación del sprite del perro es menor a la rotación del sprite del gato?'
+        Is the dog sprite's scale greater than the cat sprite's scale?: '¿La escala del sprite del perro es menor a la escala del sprite del gato?'
+        Is the dog sprite's x equal to the cat sprite's x?: '¿La x del sprite del perro es igual a la x del sprite del gato?'
+        Is the dog sprite's x greater than the cat sprite's x?: '¿La x del sprite del perro es mayor a la x del sprite del gato?'
+        Is the dog sprite's x less than the cat sprite's x?: '¿La x del sprite del perro es menor a la x del sprite del gato?'
+        Match the boolean expression to the English description.: Haz coincidir la expresión booleana con la descripción en español.
+        'Matching: Comparison Operators': 'Coincidencia: operadores de comparación'
+        dog.rotation &lt; cat.rotation: rotación.perro &lt; rotación.gato
+        dog.scale &gt; cat.scale: escala.perro &gt; escala.gato
+        dog.x &gt; cat.x: x.perro &gt; x.gato
+        dog.x &lt; cat.x: x.perro &lt; x.gato
+        dog.x == cat.x: x.perro == x.gato
+      CSD U3 - conditionals - Matching_2018_2019:
+        Is the dog sprite's rotation less than the cat sprite's rotation?: '¿La rotación del sprite del perro es menor a la rotación del sprite del gato?'
+        Is the dog sprite's scale greater than the cat sprite's scale?: '¿La escala del sprite del perro es menor a la escala del sprite del gato?'
+        Is the dog sprite's x equal to the cat sprite's x?: '¿La x del sprite del perro es igual a la x del sprite del gato?'
+        Is the dog sprite's x greater than the cat sprite's x?: '¿La x del sprite del perro es mayor a la x del sprite del gato?'
+        Is the dog sprite's x less than the cat sprite's x?: '¿La x del sprite del perro es menor a la x del sprite del gato?'
+        Match the boolean expression to the English description.: Haz coincidir la expresión booleana con la descripción en español.
+        'Matching: Comparison Operators': 'Coincidencia: operadores de comparación'
+        dog.rotation &lt; cat.rotation: rotación.perro &lt; rotación.gato
+        dog.scale &gt; cat.scale: escala.perro &gt; escala.gato
+        dog.x &gt; cat.x: x.perro &gt; x.gato
+        dog.x &lt; cat.x: x.perro &lt; x.gato
+        dog.x == cat.x: x.perro == x.gato
+      CSD U3 Keypress Matching:
+        Is true only once when the key is pressed.: Solo se cumple una vez cuando se presiona la tecla.
+        Is true only once when the key is released.: Solo se cumple una vez cuando se suelta la tecla.
+        Is true the whole time the key is pressed or held down.: Solo se cumple durante el tiempo en que se presiona o mantiene presionada la tecla.
+        0: '? Haz coincidir el bloque de pulsación de tecla con la descripción de cómo funciona. No dudes en volver a la burbuja anterior si necesitas experimentar con ellos.'
+        1: ': Haz coincidir el bloque de pulsación de tecla con la descripción de cómo funciona. No dudes en volver a la burbuja anterior si necesitas experimentar con ellos.'
+        'Matching: Responding to Keypresses': 'Coincidencia: reacción a la pulsación de teclas'
+        keyDown(): keyDown()
+        keyWentDown(): keyWentDown()
+        keyWentUp(): keyWentUp()
+      CSD U3 Keypress Matching_2018:
+        Is true only once when the key is pressed.: Solo se cumple una vez cuando se presiona la tecla.
+        Is true only once when the key is released.: Solo se cumple una vez cuando se suelta la tecla.
+        Is true the whole time the key is pressed or held down.: Solo se cumple durante el tiempo en que se presiona o mantiene presionada la tecla.
+        0: '? Haz coincidir el bloque de pulsación de tecla con la descripción de cómo funciona. No dudes en volver a la burbuja anterior si necesitas experimentar con ellos.'
+        1: ': Haz coincidir el bloque de pulsación de tecla con la descripción de cómo funciona. No dudes en volver a la burbuja anterior si necesitas experimentar con ellos.'
+        'Matching: Responding to Keypresses': 'Coincidencia: reacción a la pulsación de teclas'
+        keyDown(): keyDown()
+        keyWentDown(): keyWentDown()
+        keyWentUp(): keyWentUp()
+      CSD U3 Keypress Matching_2018_2019:
+        Is true only once when the key is pressed.: Solo se cumple una vez cuando se presiona la tecla.
+        Is true only once when the key is released.: Solo se cumple una vez cuando se suelta la tecla.
+        Is true the whole time the key is pressed or held down.: Solo se cumple durante el tiempo en que se presiona o mantiene presionada la tecla.
+        0: '? Haz coincidir el bloque de pulsación de tecla con la descripción de cómo funciona. No dudes en volver a la burbuja anterior si necesitas experimentar con ellos.'
+        1: ': Haz coincidir el bloque de pulsación de tecla con la descripción de cómo funciona. No dudes en volver a la burbuja anterior si necesitas experimentar con ellos.'
+        'Matching: Responding to Keypresses': 'Coincidencia: reacción a la pulsación de teclas'
+        keyDown(): keyDown()
+        keyWentDown(): keyWentDown()
+        keyWentUp(): keyWentUp()
+      CSD U3 drawSprites placement match:
+        "<img src=\"https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34 AM.png\">": <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34 AM.png">
+        "<img src=\"https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09 AM.png\">": <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09 AM.png">
+        "<img src=\"https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21 AM.png\">": <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21 AM.png">
+        "<img src=\"https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28 AM.png\">": <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28 AM.png">
+        "<img src=\"https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00 AM.png\">": <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00 AM.png">
+        "<img src=\"https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png\">": <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png">
+        "<img src=\"https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12 AM.png\">": <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12 AM.png">
+        "<img width=\"300px\" src=\"https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png\">": <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png">
+        Match the code to the image that it will produce.: Haz coincidir el código con la imagen que genera.
+        drawSprites: dibujarSprites
+      CSD U3 drawSprites placement match_2019:
+        "<img src=\"https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34 AM.png\">": <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34 AM.png">
+        "<img src=\"https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09 AM.png\">": <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09 AM.png">
+        "<img src=\"https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21 AM.png\">": <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21 AM.png">
+        "<img src=\"https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28 AM.png\">": <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28 AM.png">
+        "<img src=\"https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00 AM.png\">": <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00 AM.png">
+        "<img src=\"https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png\">": <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png">
+        "<img src=\"https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12 AM.png\">": <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12 AM.png">
+        "<img width=\"300px\" src=\"https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png\">": <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png">
+        Match the code to the image that it will produce.: Haz coincidir el código con la imagen que genera.
+        drawSprites: dibujarSprites
       K-1 Artist 2 Match 2:
         Match the shapes based on type.: Haz coincidir las figuras según su tipo.
         Matching: Coincidencia
@@ -416,12 +582,171 @@ es-MX:
       4-5 maze multi 1:
         Maze Multiple Choice: Laberinto - Opción múltiple
         Which blocks solve the puzzle?: '¿Qué bloques resuelven el desafío?'
+      CSD Header Size MC:
+        Headings Quick Check: Verificación rápida de títulos
+        Look at the code below and predict how the headings will be displayed.  Choose from one of the options on the right.: Mira el código a continuación y predice cómo se mostrarán los títulos. Elige entre una de las opciones de la derecha.
+        "https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png": https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png
+        "https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png": https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png
+        "https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png": https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png
+        "https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png": https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png
+      CSD Header Size MC_2018:
+        Headings Quick Check: Verificación rápida de títulos
+        Look at the code below and predict how the headings will be displayed.  Choose from one of the options on the right.: Mira el código a continuación y predice cómo se mostrarán los títulos. Elige entre una de las opciones de la derecha.
+        "https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png": https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png
+        "https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png": https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png
+        "https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png": https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png
+        "https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png": https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png
+      CSD Header Size MC_2018_2019:
+        Headings Quick Check: Verificación rápida de títulos
+        Look at the code below and predict how the headings will be displayed.  Choose from one of the options on the right.: Mira el código a continuación y predice cómo se mostrarán los títulos. Elige entre una de las opciones de la derecha.
+        "https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png": https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png
+        "https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png": https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png
+        "https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png": https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png
+        "https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png": https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png
       CSD U3 Boolean MC:
+        "  0<br>200<br>100": "  0<br>200<br>100"
+        "  false<br>true<br>false": "  falso<br>verdadero<br>falso"
+        "  true<br>error<br>true": "  verdadero<br>error<br>verdadero"
+        Which result will be printed in the console by this program?: '¿Qué resultado se imprimirá en la consola con este programa?'
         title: Título
+        true<br>false<br>true: verdadero<br>falso<br>verdadero
       CSD U3 Boolean MC_2018:
+        "  0<br>200<br>100": "  0<br>200<br>100"
+        "  false<br>true<br>false": "  falso<br>verdadero<br>falso"
+        "  true<br>error<br>true": "  verdadero<br>error<br>verdadero"
+        Which result will be printed in the console by this program?: '¿Qué resultado se imprimirá en la consola con este programa?'
         title: Título
+        true<br>false<br>true: verdadero<br>falso<br>verdadero
       CSD U3 Boolean MC_2018_2019:
+        "  0<br>200<br>100": "  0<br>200<br>100"
+        "  false<br>true<br>false": "  falso<br>verdadero<br>falso"
+        "  true<br>error<br>true": "  verdadero<br>error<br>verdadero"
+        Which result will be printed in the console by this program?: '¿Qué resultado se imprimirá en la consola con este programa?'
         title: Título
+        true<br>false<br>true: verdadero<br>falso<br>verdadero
+      CSD U3 Functions Prediction define first:
+        Both squares will be drawn. You can create functions anywhere you like in your code.: Se dibujarán ambos cuadrados. Puedes crear funciones en cualquier parte de tu código.
+        0: '? Puedes crear funciones en cualquier parte de tu código. ¡Aunque es una buena idea agruparlas en la parte inferior para que estén organizadas!'
+        1: ': Puedes crear funciones en cualquier parte de tu código. ¡Aunque es una buena idea agruparlas en la parte inferior para que estén organizadas!'
+        Neither square will be drawn. There is an error in the code.: No se dibujará ningún cuadrado. Hay un error en el código.
+        The green square will be drawn but the red one will not You cannot call functions before they are created.: Se dibujará el cuadrado verde, pero no el rojo. No puedes llamar funciones antes de que sean creadas.
+        The red square will be drawn but the green one will not. You cannot call functions after they are created.: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones después de que se crean.
+      CSD U3 Functions Prediction define first_2018:
+        Both squares will be drawn. You can create functions anywhere you like in your code.: Se dibujarán ambos cuadrados. Puedes crear funciones en cualquier parte de tu código.
+        0: '? Puedes crear funciones en cualquier parte de tu código. ¡Aunque es una buena idea agruparlas en la parte inferior para que estén organizadas!'
+        1: ': Puedes crear funciones en cualquier parte de tu código. ¡Aunque es una buena idea agruparlas en la parte inferior para que estén organizadas!'
+        Neither square will be drawn. There is an error in the code.: No se dibujará ningún cuadrado. Hay un error en el código.
+        The green square will be drawn but the red one will not You cannot call functions before they are created.: Se dibujará el cuadrado verde, pero no el rojo. No puedes llamar funciones antes de que sean creadas.
+        The red square will be drawn but the green one will not. You cannot call functions after they are created.: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones después de que se crean.
+      CSD U3 Functions Prediction define first_2018_2019:
+        Both squares will be drawn. You can create functions anywhere you like in your code.: Se dibujarán ambos cuadrados. Puedes crear funciones en cualquier parte de tu código.
+        0: '? Puedes crear funciones en cualquier parte de tu código. ¡Aunque es una buena idea agruparlas en la parte inferior para que estén organizadas!'
+        1: ': Puedes crear funciones en cualquier parte de tu código. ¡Aunque es una buena idea agruparlas en la parte inferior para que estén organizadas!'
+        Neither square will be drawn. There is an error in the code.: No se dibujará ningún cuadrado. Hay un error en el código.
+        The green square will be drawn but the red one will not You cannot call functions before they are created.: Se dibujará el cuadrado verde, pero no el rojo. No puedes llamar funciones antes de que sean creadas.
+        The red square will be drawn but the green one will not. You cannot call functions after they are created.: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones después de que se crean.
+      CSD U3 Sprite Movement Predict Multi:
+        "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>"
+        Read this program and predict which of the following animations will be produced.: Lee este programa y predice cuál de las siguientes animaciones se producirá.
+      CSD U3 Sprite Movement Predict Multi_2018:
+        "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>"
+        Read this program and predict which of the following animations will be produced.: Lee este programa y predice cuál de las siguientes animaciones se producirá.
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>"
+        Read this program and predict which of the following animations will be produced.: Lee este programa y predice cuál de las siguientes animaciones se producirá.
+      CSD U3 Sprites intro predict multi:
+        "? '<img src=\"https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png\" style=\"width":
+          150px; border: 1px solid">'
+        0: ': ''<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'''
+        "? '<img src=\"https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png\" style=\"width":
+          150px; border: 1px solid">'
+        1: ': ''<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'''
+        "? '<img src=\"https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png\" style=\"width":
+          150px; border: 1px solid">'
+        2: ': ''<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'''
+        "? '<img src=\"https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png\" style=\"width":
+          150px; border: 1px solid">'
+        3: ': ''<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'''
+        When run, where will the sprite <code>mySprite</code> be located?: '¿Dónde estará el sprite <code>miSprite</code> una vez que se ejecute?'
+      CSD U3 Sprites intro predict multi_2018:
+        "? '<img src=\"https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png\" style=\"width":
+          150px; border: 1px solid">'
+        0: ': ''<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'''
+        "? '<img src=\"https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png\" style=\"width":
+          150px; border: 1px solid">'
+        1: ': ''<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'''
+        "? '<img src=\"https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png\" style=\"width":
+          150px; border: 1px solid">'
+        2: ': ''<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'''
+        "? '<img src=\"https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png\" style=\"width":
+          150px; border: 1px solid">'
+        3: ': ''<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'''
+        When run, where will the sprite <code>mySprite</code> be located?: '¿Dónde estará el sprite <code>miSprite</code> una vez que se ejecute?'
+      CSD U3 Sprites intro predict multi_2018_2019:
+        "? '<img src=\"https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png\" style=\"width":
+          150px; border: 1px solid">'
+        0: ': ''<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'''
+        "? '<img src=\"https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png\" style=\"width":
+          150px; border: 1px solid">'
+        1: ': ''<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'''
+        "? '<img src=\"https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png\" style=\"width":
+          150px; border: 1px solid">'
+        2: ': ''<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'''
+        "? '<img src=\"https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png\" style=\"width":
+          150px; border: 1px solid">'
+        3: ': ''<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'''
+        When run, where will the sprite <code>mySprite</code> be located?: '¿Dónde estará el sprite <code>miSprite</code> una vez que se ejecute?'
+      CSD U6 array multi:
+        "<img src=\"https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png\" width=\"200px\" />": <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png" width="200px" />
+        "<img src=\"https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png\" width=\"200px\"": <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px"
+        "<img src=\"https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png\" width=\"200px\" />": <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png" width="200px" />
+        "<img src=\"https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png\" width=\"200px\" />": <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />
+        Using Arrays: Uso de arreglos
+        What will App Lab display when the code on the left is run?: '¿Qué mostrará el Laboratorio de aplicaciones cuando se ejecute el código de la izquierda?'
+      CSD U6 array multi_2018:
+        "<img src=\"https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png\" width=\"200px\" />": <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png" width="200px" />
+        "<img src=\"https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png\" width=\"200px\"": <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px"
+        "<img src=\"https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png\" width=\"200px\" />": <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png" width="200px" />
+        "<img src=\"https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png\" width=\"200px\" />": <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />
+        Using Arrays: Uso de arreglos
+        What will App Lab display when the code on the left is run?: '¿Qué mostrará el Laboratorio de aplicaciones cuando se ejecute el código de la izquierda?'
+      CSD U6 array multi_2018_2019:
+        "<img src=\"https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png\" width=\"200px\" />": <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png" width="200px" />
+        "<img src=\"https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png\" width=\"200px\"": <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px"
+        "<img src=\"https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png\" width=\"200px\" />": <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png" width="200px" />
+        "<img src=\"https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png\" width=\"200px\" />": <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />
+        Using Arrays: Uso de arreglos
+        What will App Lab display when the code on the left is run?: '¿Qué mostrará el Laboratorio de aplicaciones cuando se ejecute el código de la izquierda?'
+      CSD U6 setProperty predict multi:
+        '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">'
+        Make a Prediction: Haz una predicción
+        Read the code and predict what this app will look like when run.: Lee el código y predice cómo se verá esta aplicación cuando se ejecute.
+      CSD U6 setProperty predict multi_2018:
+        '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">'
+        Make a Prediction: Haz una predicción
+        Read the code and predict what this app will look like when run.: Lee el código y predice cómo se verá esta aplicación cuando se ejecute.
+      CSD U6 setProperty predict multi_2018_2019:
+        '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">'
+        Make a Prediction: Haz una predicción
+        Read the code and predict what this app will look like when run.: Lee el código y predice cómo se verá esta aplicación cuando se ejecute.
       K-1 Artist 1 Multi 1:
         Multiple Choice: Opción múltiple
         Which blocks solve this puzzle?: '¿Qué bloques resuelven este desafío?'
@@ -477,13 +802,24 @@ es-MX:
         SQUARE: CUADRADO
         Which word is spelled?: '¿Qué palabra se forma?'
       behaviors 1 predict:
+        Click the "edit" button to see how the `mystery behavior` works. Study the code inside, then make a prediction.: Haz clic en el botón "editar" para ver cómo funciona el `comportamiento misterioso`. Estudia el código que está dentro y, luego, haz una predicción.
         Correct!: '¡Correcto!'
         Incorrect: Incorrecto
         Incorrect.: Incorrecto.
+        The sprite will change colors.: El sprite cambiará los colores.
+        The sprite will move.: El sprite se moverá.
+        The sprite will shrink.: El sprite se encogerá.
+        The sprite will spin: El sprite girará
       behaviors 4 predict:
         Correct!: '¡Correcto!'
+        Diagonally: En diagonal
+        Down, then left: Abajo y a la izquierda
         Incorrect: Incorrecto
         Incorrect.: Incorrecto.
+        'Incorrect. ': 'Incorrecto. '
+        Left then down: A la izquierda y abajo
+        Make a prediction. Which way will the satellite move towards the galaxy?: Haz una predicción. ¿En qué dirección se moverá el satélite hacia la galaxia?
+        Zig zag: Zigzag
       courseC_multi_artist_prog6_predict1:
         Correct!: '¡Correcto!'
         I don't know.: No lo sé.

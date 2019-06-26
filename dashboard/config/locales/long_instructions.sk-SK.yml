@@ -320,8 +320,6 @@ sk-SK:
         môžeš zdieľať s kamarátmi.
       Dance Party 1-validated: "**Skús predvídať:** Tu je postavička s menom `alien1`!
         \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
-      Dance Party 1-validated_2019: "**Skús predvídať:** Tu je postavička s menom
-        `alien1`! \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
       Dance Party 2: "Mimozemšťan bol hrdý na jeho tanečné schopnosti na Marse, ale
         teraz sa vie hýbať iba zo strany na stranu.\n\nVieš zmeniť správanie v bloku
         <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value
@@ -563,6 +561,14 @@ sk-SK:
         s ním tento svet."
       MC_HOC_2017_FP20x20_2019: "**Voľná hra:** Teraz je to na tebe! Nakóduj agenta
         a preskúmaj s ním tento svet."
+      NEW Course 4 Bee For Loops 5: "`Cyklus for` môžeš použiť aj na odpočítavanie.
+        Skús pozbierať nektár odpočítavaním od 5 do 1."
+      NEW Course 4 Bee For Loops 6: |-
+        Posledné číslo v tvojom cykle for sa nazýva `prírastok`. Zakaždým, keď cyklus prebehne, tak sa premenná počítadlo zmení o hodnotu  prírastku.
+
+        Skús pozbierať tieto kvety s použitím prírastku 2.
+      NEW Course 4 Bee For Loops 8: "Máš to! \n\nAký by mal byť tvoj prírastok, aby
+        si pozbieral 3, 6, 9, 12, 15 nektárov?"
       Overworld Move to Sheep: Pohni sa ešte o jeden krok dopredu, aby si sa dostal
         ku ovci.
       Overworld Move to Sheep_2019: Pohni sa ešte o jeden krok dopredu, aby si sa
@@ -620,8 +626,8 @@ sk-SK:
         na spodok ostatných blokov, aby si dokončíl tento kód?
       courseA_maze_ramp4a_2019: Dokážeš prísť na to, ktorý blok potrebuješ pridať
         na spodok ostatných blokov, aby si dokončíl tento kód?
-      courseA_maze_ramp5a_2018: Vyskúšaj vyriešiť celú túto úlohu sám!
-      courseA_maze_ramp5a_2019: Vyskúšaj vyriešiť celú túto úlohu sám!
+      courseA_maze_ramp5a_2018: Skús túto úlohu vyriešiť bez pomoci!
+      courseA_maze_ramp5a_2019: Skús túto úlohu vyriešiť bez pomoci!
       courseB_Scrat_ramp1_2018: Aby si dostal Scrata k žaluďu, pripoj blok <xml><block
         type="maze_moveEast"/></xml> na spodok bloku <xml><block type="when_run"/></xml>,
         potom stlač "▶ Spustiť"!
@@ -652,8 +658,8 @@ sk-SK:
         na spodok ostatných blokov, aby si dokončíl tento kód?
       courseB_Scrat_ramp4a_2019: Dokážeš prísť na to, ktorý blok potrebuješ pridať
         na spodok ostatných blokov, aby si dokončíl tento kód?
-      courseB_Scrat_ramp5a_2018: Vyskúšaj vyriešiť celú túto úlohu sám!
-      courseB_Scrat_ramp5a_2019: Vyskúšaj vyriešiť celú túto úlohu sám!
+      courseB_Scrat_ramp5a_2018: Skús túto úlohu vyriešiť bez pomoci!
+      courseB_Scrat_ramp5a_2019: Skús túto úlohu vyriešiť bez pomoci!
       courseB_artist_loops10: |-
         Použi, čo si sa naučil, a nakresli obrázok toho, čo si myslíš, že umelec uvidel, keď prišiel domov.
 
@@ -2952,6 +2958,48 @@ sk-SK:
         Napíš kód, ktorý pomôže včele pozbierať všetok nektár.
 
         Potrebuješ veľa blokov pre túto výzvu, ale v ďalšej úlohe sa naučíme jednoduchší spôsob.
+      courseF_bee_for6: |-
+        Cyklus `for` môžeš použiť aj na odpočítavanie.
+
+        Skús pozbierať nektár odpočítavaním od **5** do **1** počítané po **1**.
+      courseF_bee_for6_2018: |-
+        Cyklus `for` môžeš použiť aj na odpočítavanie.
+
+        Skús pozbierať nektár odpočítavaním od **5** do **1** počítané po **1**.
+      courseF_bee_for6_2019: |-
+        Cyklus `for` môžeš použiť aj na odpočítavanie.
+
+        Skús pozbierať nektár odpočítavaním od **5** do **1** počítané po **1**.
+      courseF_bee_for7: |-
+        Posledné číslo v tvojom cykle `for` sa nazýva **"prírastok"**. Zakaždým, keď cyklus prebehne, tak sa premenná počítadlo zmení o hodnotu  **prírastku**.
+
+        Skús pozbierať tieto kvety s použitím **prírastku** 2.
+      courseF_bee_for7_2018: |-
+        Posledné číslo v tvojom cykle `for` sa nazýva **"prírastok"**. Zakaždým, keď cyklus prebehne, tak sa premenná počítadlo zmení o hodnotu  **prírastku**.
+
+        Skús pozbierať tieto kvety s použitím **prírastku** 2.
+      courseF_bee_for7_2019: |-
+        Posledné číslo v tvojom cykle `for` sa nazýva **"prírastok"**. Zakaždým, keď cyklus prebehne, tak sa premenná počítadlo zmení o hodnotu  **prírastku**.
+
+        Skús pozbierať tieto kvety s použitím **prírastku** 2.
+      courseF_bee_for8: "Máš to! \n\nAký by mal byť tvoj **prírastok**, aby si pozbieral
+        3, 6, 9, 12, 15 nektárov?"
+      courseF_bee_for8_2018: "Máš to! \n\nAký by mal byť tvoj **prírastok**, aby si
+        pozbieral 3, 6, 9, 12, 15 nektárov?"
+      courseF_bee_for8_2019: "Máš to! \n\nAký by mal byť tvoj **prírastok**, aby si
+        pozbieral 3, 6, 9, 12, 15 nektárov?"
+      courseF_bee_for9: |-
+        Teraz skombinujme premennú `počítadlo` s `matematickým` blokom!
+
+        Ako môžeš použíť premennú `počítadlo` na prejdenie cez túto záhradu s najmenším počtom blokov?
+      courseF_bee_for9_2018: |-
+        Teraz skombinujme premennú `počítadlo` s `matematickým` blokom!
+
+        Ako môžeš použíť premennú `počítadlo` na prejdenie cez túto záhradu s najmenším počtom blokov?
+      courseF_bee_for9_2019: |-
+        Teraz skombinujme premennú `počítadlo` s `matematickým` blokom!
+
+        Ako môžeš použíť premennú `počítadlo` na prejdenie cez túto záhradu s najmenším počtom blokov?
       courseF_bee_for_challenge2: Vyrieš túto úlohu použitím čo najmenšieho možného
         počtu blokov.
       courseF_bee_for_challenge2_2018: Vyrieš túto úlohu použitím čo najmenšieho možného

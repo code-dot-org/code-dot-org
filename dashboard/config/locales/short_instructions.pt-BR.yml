@@ -844,6 +844,8 @@ pt-BR:
       Course 4 Artist 8a: |-
         Lembra-se dessa forma? Agora vamos deixar
         você construí-la sem dar nenhum bloco inicial!
+      Course 4 Artist 9: Repita esse desenho 10 vezes e certifique-se de virar a cada
+        forma desenhada.
       Course 4 Artist Binary 1: "Temos aqui uma função que recebe uma string\nbinária
         de 1's e 0's e instrui o artista a mover-se da esquerda para\na direita, de
         cima para baixo. O artista vai preencher os quadrados nos quais vir um 1 e
@@ -879,6 +881,8 @@ pt-BR:
         grade de \"pixels\" pela qual você pode andar e criar\ndesigns virando em
         certos quadrados. Você consegue fazer o artista desenhar\n\"01010101\" em
         binário na primeira fileira?"
+      Course 4 Artist For Loops 1: Use um bloco de repetição para desenhar esse triângulo
+        que tem 50 pixels de largura.
       Course 4 Artist For Loops 11: "Você se lembra de quando usamos\numa variável
         para controlar o número de lados de uma forma em uma fase anterior? Faremos\na
         mesma coisa com a variável \"contador\" agora. Esse padrão começa\ncom um
@@ -1240,8 +1244,6 @@ pt-BR:
       Crack a Caesar Cipher: Instruções
       Dance Party 1-validated: 'O que acha que vai acontecer quando você clicar no
         alienígena?  '
-      Dance Party 1-validated_2019: 'O que acha que vai acontecer quando você clicar
-        no alienígena?  '
       Dance Party 2: Mude o comportamento dentro do bloco `___ começa ___` para fazer
         o alienígena iniciar girando.
       Dance Party 2_2019: Mude o comportamento dentro do bloco `comece sprite` para
@@ -1307,7 +1309,7 @@ pt-BR:
       Find the Wizard: Construa o que você quiser. Este é um exemplo de um jogo de
         adivinhação de números!
       Fish Tank 2-validated: Mude Dusty (o amaranto) para um peixe.
-      Fish Tank 2-validated_2019: Mude Dusty (o amaranto) para um peixe.
+      Fish Tank 2-validated_2019: Troque a bola de feno por qualquer tipo de peixe!
       Fish Tank 3-validated: Mude o comportamento do peixe de modo que ele consiga
         nadar ao redor do tanque.
       Fish Tank 3-validated_2019: Mude o comportamento do peixe de modo que ele consiga
@@ -1316,6 +1318,9 @@ pt-BR:
         de fundo azul.
       Fish Tank 4-validated_2019: Use o bloco `definir cor de fundo` para definir
         o plano de fundo azul.
+      Fish Tank 5-validated_2019: O peixe é aventureiro e quer conhecer novas criaturas
+        do mar. Adicione outro sprite no aquário. Esse sprite pode ter qualquer fantasia,
+        desde que seja diferente da que você usou para o peixe!
       Fish Tank 6-validated: Adicione um comportamento o novo amigo do peixe.
       Fish Tank 6-validated_2019: Adicione um comportamento o novo amigo do peixe.
       Fish Tank 7-validated: Use alguns novos blocos da caixa de ferramentas para
@@ -1644,6 +1649,8 @@ pt-BR:
       NEW Course 4 Artist Functions 9: |-
         Você consegue resolver isso adicionando
         apenas um bloco?
+      NEW Course 4 Artist Params 1: Vamos definir uma função para desenhar um quadrado
+        com lados de 50 pixels. Clique em "editar" para começar.
       NEW Course 4 Artist Params 10: "Crie um bloco de função \"desenhe\num hexágono\"
         com um parâmetro \"comprimento\". Esse hexágono tem lados de 100 pixels\nde
         comprimento. "
@@ -1873,11 +1880,34 @@ pt-BR:
         Bem-vindo ao Artista! Primeiro, vamos tentar
         fazer um quadrado simples usando os blocos "vire à direita" e "avance".
         Cada lado deve medir 100 pixels.
+      Standalone_Artist_2: Desenhe este diamante com ângulos de 120 e 60 graus, e
+        com lados de 150 pixels de comprimento.
+      Standalone_Artist_3: Você pode desenhar este hexágono com lados de 100 pixels
+        e ângulos de 60 graus?
+      Standalone_Artist_4: Agora você pode brincar com um novo bloco, o laço. Ele
+        repetirá um conjunto de comandos. O que acontecerá se você fizer seis iterações
+        desses comandos?
+      Standalone_Artist_5: Quantas vezes você precisar iterar este diamante para desenhar
+        a flor?
+      Standalone_Artist_5.5: 'Observe como simplificamos o código do diamante, transformando-o
+        em um laço. Você pode fazer 12 iterações de toda a sequência para desenhar
+        a flor. Dica: você terá que virar 30 graus depois de iterar seu diamante para
+        não continuar desenhando o mesmo diamante todas as vezes.'
+      Standalone_Artist_6: 'Faça 6 iterações do código deste hexágono para criar o
+        desenho. Quantos graus você terá que virar de cada vez? Dica: divida o número
+        de graus de um círculo pelo número de iterações que fizer.'
+      Standalone_Artist_7: 'Uma função é mais uma ferramenta de programação para que
+        você não tenha que repetir as mesmas ações. Esta função desenha uma flor,
+        assim, você pode usá-la sempre que quiser fazer esse desenho. Use-a juntamente
+        com o novo bloco "pule" para desenhar essas flores. Dica: as flores são separadas
+        por 150 pixels'
       Standalone_Artist_8: |-
         Temos aqui uma função chamada "Desenhe uma forma",
         que programamos para desenhar hexágonos. Execute o código para ver o que ele faz e,
         em seguida, tente usá-lo com a função para ver o que acontece. Você consegue fazer
         com que ela desenhe um padrão de quadrados, triângulos ou octógonos?
+      Standalone_Artist_9: Agora vá em frente e faça a imagem que mais gostar! Você
+        tem até uma função vazia para usar para fazer o que quiser!
       U4 Model Design 1: Adicione um grande botão vermelho na sua tela usando o Modo
         de Design. (Clique para ver as instruções completas)
       U4 Model Design 1_2018: Adicione um grande botão vermelho na sua tela usando
@@ -1914,8 +1944,19 @@ pt-BR:
       Virtual Pet 8_2019: "**Jogo Livre:** O que mais você pode fazer seu animal de
         estimação fazer? Experimente o que quiser!"
       Virtual Pet Freeplay: 'Jogo livre: O que mais você pode fazer sua girafa fazer? '
+      'Widget: Text Compression': Procure por padrões (palavras ou frases repetidas)
+        no texto. Insira os padrões que você vê no dicionário à direta. A medida que
+        você insere mais coisas no dicionário, o símbolo da entrada é inserido no
+        texto no lugar do padrão.
       behaviors 1: Faça uma predição!
+      behaviors 2: Faça o foguete voar para as estrelas!
+      behaviors 3: Ajude o rover a ultrapassar o robô!
+      behaviors 3a: 'Depure: Faça com que todas as estrelas girem para o mesmo sentido!'
       behaviors 4: Faça uma predição!
+      behaviors 5: Mova o astronauta na diagonal.
+      behaviors 6: Faça a bola rolar.
+      behaviors 7: Dirija para o horizonte!
+      behaviors free play: 'Livre: Crie seu próprio cenário espacial!'
       bounce_1: Conecte um bloco ao bloco "quando clicar na seta para a esquerda"
         e clique em "Executar". Mova a raquete usando a seta para a esquerda para
         alcançar o objetivo final.
@@ -2031,17 +2072,27 @@ pt-BR:
         as _10_ peças do tesouro?
       course2_collector_prog_challenge2: Há 20 peças de tesouro para serem encontradas.
         Colete pelo menos metade para finalizar este desafio!
+      course2_harvester_loops_challenge1: Colete todo o milho.
+      course2_harvester_loops_challenge2: Colete todos os alfaces. Evite as árvores
+        e os campos!
       course2_maze_loops_challenge1: 'Agora Scrat quer tentar usar as repetições para
         achar sua noz! '
+      course2_maze_programming_challenge2: |-
+        Algumas vezes existe mais de uma forma de solucionar um problema.
+        Algumas vezes é mais fácil ir para trás do que ir para frente!
       course3_artist_functions_challenge2: Tente esse código para ver como funciona,
         então faça um programa do seu jeito!
+      course3_bee_debugging_challenge1: Veja como a abelha pega o nectar. Você consegue
+        usar o mesmo padrão para ajudar a abelha a fazer todo o mel?
       course3_bee_functions_challenge1: Você está por conta própria nesse desafio.
         Isso pode ser mais difícil do que parece!
+      course3_bee_functions_challenge2: Você está por conta própria neste desafio!
       course3_collector_debugging_challenge2: Você é um especialista em laços aninhados?
         Use o que você aprendeu até agora para coletar todo o tesouro!
       course3_farmer_condLoops_challenge1: Vire à direita nas abóboras. Colete tudo
         para completar o nível. Cada cultura oculta tem apenas um milho ou alface.
       course3_farmer_condLoops_challenge2: Colete tudo para completar o nível.
+      course3_maze_debugging_challenge1: _"Eu só estou andando em círculos?"_
       course3_maze_debugging_challenge2: '-   "Se eu virar muitas vezes, fico tonto!
         Me ajude a alcançar a noz com apenas quatro comandos ''virar''." \*'
       course3_playLab_challenge1: "Algo deve acontecer quando tiver pontos suficientes,
@@ -2849,6 +2900,8 @@ pt-BR:
         Adicione blocos ao evento \`quando correr ' para alterar a cena de fundo e a velocidade do Waddles, o Pinguim.
 
         Jogue e mova o Waddles com as setas até você marcar ponto.
+      courseC_PlayLab_eventsA_embed_2019: Vamos jogar um jogo. Marque 5 pontos quando
+        mover o Pinguim para o Polvo!
       courseC_PlayLab_eventsFP: Crie sua própria estória. Quando terminar, clique
         em "Concluir" para compartilhar com seus amigos. Veja ideias para estórias
         nas dicas.
@@ -2878,6 +2931,15 @@ pt-BR:
         seguida, desenhe um pássaro usando um adesivo.
       courseC_artist_loops1a_2019: Leve o artista para o centro da área de jogo, em
         seguida, desenhe um pássaro usando um adesivo.
+      courseC_artist_loops1b_2019: 'Mude a direção pra qual seu adesivo está virado,
+        adicionando um comando `girar` ao seu código. '
+      courseC_artist_loops2a: Agora, use um laço para girar o pássaro ao redor 12
+        vezes com um giro de 30 graus.
+      courseC_artist_loops2a_2018: Agora, use um laço para girar o pássaro ao redor
+        12 vezes com um giro de 30 graus.
+      courseC_artist_loops2a_2019: Agora, use uma repetição para fazer mais cópias
+        do seu adesivo. Tente alterar os números nos blocos girar e repetir para criar
+        padrões diferentes.
       courseC_artist_loops3a: Agora adicione um morcego!
       courseC_artist_loops3a_2018: Agora adicione um morcego!
       courseC_artist_loops3a_2019: Agora adicione um morcego!
@@ -2899,6 +2961,9 @@ pt-BR:
       courseC_artist_loops8a: Agora tente algo você mesmo!
       courseC_artist_loops8a_2018: Agora tente algo você mesmo!
       courseC_artist_loops8a_2019: Agora tente algo você mesmo!
+      courseC_artist_loopsPre1a: Hora de girar aquela linha ao redor!
+      courseC_artist_loopsPre1a_2018: Hora de girar aquela linha ao redor!
+      courseC_artist_loopsPre1a_2019: Hora de girar aquela linha ao redor!
       courseC_artist_loopsPrePre1a: Coloque o artista no centro da área do jogo e
         desenhe uma linha.
       courseC_artist_loopsPrePre1a_2018: Coloque o artista no centro da área do jogo
@@ -2976,6 +3041,12 @@ pt-BR:
         todo o tesouro.
       courseC_collector_prog7_2019: Use blocos da caixa de ferramenta para coletar
         todo o tesouro.
+      courseC_collector_prog8: _"Continue fazendo um bom trabalho! Me ajude a coletar
+        todo o tesouro."_
+      courseC_collector_prog8_2018: _"Continue fazendo um bom trabalho! Me ajude a
+        coletar todo o tesouro."_
+      courseC_collector_prog8_2019: _"Continue fazendo um bom trabalho! Me ajude a
+        coletar todo o tesouro."_
       courseC_collector_prog9: _"Vamos pegar todo o tesouro!"_
       courseC_collector_prog9_2018: _"Vamos pegar todo o tesouro!"_
       courseC_collector_prog9_2019: _"Vamos pegar todo o tesouro!"_
@@ -3014,6 +3085,21 @@ pt-BR:
       courseC_flappy_events2_2019: Tente adicionar um bloco que defina o nível da
         velocidade quando o botão "Executar" for pressionado. Jogue o jogo e bata
         as asas até o alvo para continuar.
+      courseC_flappy_events3: |-
+        Conecte outro bloco de "fim de jogo" no evento de "quando acerta o chão".
+        Rode o jogo para fazer o pássaro bater no chão e continue.
+      courseC_flappy_events3_2018: |-
+        Conecte outro bloco de "fim de jogo" no evento de "quando acerta o chão".
+        Rode o jogo para fazer o pássaro bater no chão e continue.
+      courseC_flappy_events3_2019: |-
+        Conecte outro bloco de "fim de jogo" no evento de "quando acerta o chão".
+        Rode o jogo para fazer o pássaro bater no chão e continue.
+      courseC_flappy_events4: Conecte outro bloco no bloco de "quando acerta um obstáculo",
+        então o jogo termina quando Flappy bater no primeiro cano.
+      courseC_flappy_events4_2018: Conecte outro bloco no bloco de "quando acerta
+        um obstáculo", então o jogo termina quando Flappy bater no primeiro cano.
+      courseC_flappy_events4_2019: Conecte outro bloco no bloco de "quando acerta
+        um obstáculo", então o jogo termina quando Flappy bater no primeiro cano.
       courseC_flappy_events5: Adicione um bloco ao evento `quando passar um obstáculo`,
         então pressione "Executar" para marcar um ponto ao fazer Flappy voar através
         do primeiro conjunto de tubos.
@@ -3029,12 +3115,26 @@ pt-BR:
         de fazer o passarinho bater as asas cada vez que você clica.
       courseC_flappy_events6_2019: Veja se você ainda pode marcar um ponto depois
         de fazer o passarinho bater as asas cada vez que você clica.
+      courseC_flappy_events7: Em seguida, tente trocar a cena conectando outro bloco
+        ao bloco de "quando o jogo começa".
+      courseC_flappy_events7_2018: Em seguida, tente trocar a cena conectando outro
+        bloco ao bloco de "quando o jogo começa".
+      courseC_flappy_events7_2019: Em seguida, tente trocar a cena conectando outro
+        bloco ao bloco de "quando o jogo começa".
       courseC_flappy_events8: Tente definir uma cena **aleatória** quando outros eventos
         acontecerem...por exemplo, ao passar um obstáculo.
       courseC_flappy_events8_2018: Tente definir uma cena **aleatória** quando outros
         eventos acontecerem...por exemplo, ao passar um obstáculo.
       courseC_flappy_events8_2019: Tente definir uma cena **aleatória** quando outros
         eventos acontecerem...por exemplo, ao passar um obstáculo.
+      courseC_flappy_events9: Para misturar um pouco, ao invés de terminar o jogo
+        quando o Flappy bater em um obstáculo, tente definir a pontuação para 0.
+      courseC_flappy_events9_2018: Para misturar um pouco, ao invés de terminar o
+        jogo quando o Flappy bater em um obstáculo, tente definir a pontuação para
+        0.
+      courseC_flappy_events9_2019: Para misturar um pouco, ao invés de terminar o
+        jogo quando o Flappy bater em um obstáculo, tente definir a pontuação para
+        0.
       courseC_harvester_loops1: Use laços para pegar todas as abóboras.
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2018: Colete todo os milhos e as abóboras.
@@ -3044,6 +3144,12 @@ pt-BR:
       courseC_harvester_loops11_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops1_2018: Use laços para pegar todas as abóboras.
       courseC_harvester_loops1_2019: Use laços para pegar todas as abóboras.
+      courseC_harvester_loops2: Você consegue combinar dois laços diferentes para
+        se mover até às abóboras, e coletar todas elas?
+      courseC_harvester_loops2_2018: Você consegue combinar dois laços diferentes
+        para se mover até às abóboras, e coletar todas elas?
+      courseC_harvester_loops2_2019: Você consegue combinar dois laços diferentes
+        para se mover até às abóboras, e coletar todas elas?
       courseC_harvester_loops3: Colete todas as abóboras.
       courseC_harvester_loops3_2018: Colete todas as abóboras.
       courseC_harvester_loops3_2019: Colete todas as abóboras.
@@ -3065,6 +3171,15 @@ pt-BR:
       courseC_harvester_loops9: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2019: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops_challenge1a: Colete todo o milho.
+      courseC_harvester_loops_challenge1a_2018: Colete todo o milho.
+      courseC_harvester_loops_challenge1a_2019: Colete todo o milho.
+      courseC_harvester_loops_challenge2: Colete todos os alfaces. Evite as árvores
+        e os campos!
+      courseC_harvester_loops_challenge2_2018: Colete todos os alfaces. Evite as árvores
+        e os campos!
+      courseC_harvester_loops_challenge2_2019: Colete todos os alfaces. Evite as árvores
+        e os campos!
       courseC_maze_debugging1: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseC_maze_debugging1_2018: Corrija o código para levar Scrat até a noz.
       courseC_maze_debugging1_2019: Corrija o código para levar Scrat até a noz.
@@ -3117,6 +3232,18 @@ pt-BR:
         para achar sua noz! '
       courseC_maze_loops_challenge1a_2019: 'Agora Scrat quer tentar usar as repetições
         para achar sua noz! '
+      courseC_maze_programming1: Neste quebra-cabeça, arraste todos os blocos juntos
+        e clique em "Executar" para ver o que acontece!
+      courseC_maze_programming1_2018: Neste quebra-cabeça, arraste todos os blocos
+        juntos e clique em "Executar" para ver o que acontece!
+      courseC_maze_programming1_2019: Neste quebra-cabeça, arraste todos os blocos
+        juntos e clique em "Executar" para ver o que acontece!
+      courseC_maze_programming2: Arraste um bloco "avançar" para fora da caixa de
+        ferramentas quando você terminar seu código.
+      courseC_maze_programming2_2018: Arraste um bloco "avançar" para fora da caixa
+        de ferramentas quando você terminar seu código.
+      courseC_maze_programming2_2019: Arraste um bloco "avançar" para fora da caixa
+        de ferramentas quando você terminar seu código.
       courseC_maze_programming3: Há um bloco extra que vai fazer com que o pássaro
         caia. Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseC_maze_programming3_2018: Há um bloco extra que vai fazer com que o pássaro
@@ -3153,12 +3280,27 @@ pt-BR:
         o porco mal."_
       courseC_maze_programming8_predict1_2019: _" Mantenha a calma e ajude-me a encontrar
         o porco mal."_
+      courseC_maze_programming9: _"Agora, me ajude a espiar o porco do jeito que você
+        achar melhor!"_
+      courseC_maze_programming9_2018: _"Agora, me ajude a espiar o porco do jeito
+        que você achar melhor!"_
+      courseC_maze_programming9_2019: _"Agora, me ajude a espiar o porco do jeito
+        que você achar melhor!"_
       courseC_maze_programming_challenge1: 'O porco está se escondendo, e o objetivo
         é encontrá-lo. '
       courseC_maze_programming_challenge1_2018: 'O porco está se escondendo, e o objetivo
         é encontrá-lo. '
       courseC_maze_programming_challenge1_2019: 'O porco está se escondendo, e o objetivo
         é encontrá-lo. '
+      courseC_maze_programming_challenge2: |-
+        Algumas vezes existe mais de uma forma de solucionar um problema.
+        Algumas vezes é mais fácil ir para trás do que ir para frente!
+      courseC_maze_programming_challenge2_2018: |-
+        Algumas vezes existe mais de uma forma de solucionar um problema.
+        Algumas vezes é mais fácil ir para trás do que ir para frente!
+      courseC_maze_programming_challenge2_2019: |-
+        Algumas vezes existe mais de uma forma de solucionar um problema.
+        Algumas vezes é mais fácil ir para trás do que ir para frente!
       courseC_starWars_loops1: O BB-8 vai pegar qualquer sucata de metal ao longo
         do caminho por onde ele se move. Use 5 do mesmo bloco para fazer o BB-8 pegar
         toda a sucata de metal na área de jogo.
@@ -3506,6 +3648,8 @@ pt-BR:
         mel.
       courseD_bee_conditionals_challenge2_2019: Colete todo o néctar e faça todo o
         mel.
+      courseD_bee_debugging_challenge1: Veja como as abelhas conseguem o néctar. Você
+        pode usar o mesmo tipo de padrão para ajudar a abelha a fazer todo o mel?
       courseD_bee_nestedLoops1: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops1_2018: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops1_2019: Ajude a abelha a coletar todo o nectar.
@@ -3750,6 +3894,8 @@ pt-BR:
       courseD_iceage_loops9_2019: A noz está tão longe! Você pode usar laços para
         ajudar o Scrat a chegar lá?
       courseD_maze_intro4_2019: Ajude Red a alcançar o porco.
+      courseD_maze_intro5a_2019: Conte os espaços na grade com cuidado!
+      courseD_maze_intro5c_2019: Cuidado com o TNT! Ajude Red a chegar no porco.
       courseD_maze_nestedLoops3: Leve o zumbi até o girassol usando o menor número
         de blocos possível.
       courseD_maze_nestedLoops3_2018: Leve o zumbi até o girassol usando o menor número
@@ -3784,12 +3930,16 @@ pt-BR:
         Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseD_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia.
         Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
+      courseD_maze_ramp3_2019: Jogue fora o bloco de "avance" que está sobrando.
       courseD_maze_ramp4: Evite a(s) TNT(s) ou penas irão voar!
       courseD_maze_ramp4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseD_maze_ramp4_2019: Evite a(s) TNT(s) ou penas irão voar!
       courseD_maze_ramp5: Desvie da TNT.
       courseD_maze_ramp5_2018: Desvie da TNT.
       courseD_maze_ramp5_2019: Desvie da TNT.
+      courseD_maze_ramp5a_2019: Conte os espaços na grade com cuidado!
+      courseD_maze_ramp5c_2019: Cuidado com o gelo quebrado! Ajude Scrat a chegar
+        na noz.
       courseD_maze_ramp5d: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2018: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2019: Leve o pássaro até o porco.
@@ -3817,6 +3967,8 @@ pt-BR:
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
       courseD_scrat_predict1: Este código inclui um novo bloco. O que você acha que
         aconteceria se você pressionar o bloco "Executar"?
+      courseD_scrat_ramp1: Neste quebra-cabeça, arraste todos os blocos juntos e clique
+        em "Executar" para ver o que acontece!
       courseD_scrat_ramp3: Há um bloco extra que vai fazer com que o pássaro caia.
         Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseD_scrat_ramp4: Evite a(s) TNT(s) ou penas irão voar!
@@ -3826,6 +3978,8 @@ pt-BR:
       courseD_scrat_ramp7: Use o que você aprendeu para levar o pássaro para o porco!
       courseD_video_repeatUntil: Ajude o fazendeiro a percorrer corretamente o caminho
         para coletar toda a alface.
+      courseE_aboutme_6: Continue! Adicione mais elementos no seu cartaz para torna-lo
+        ainda melhor.
       courseE_artist_concept1: 'Recrie esta imagem. '
       courseE_artist_concept1_2018: 'Recrie esta imagem. '
       courseE_artist_concept4: Recrie este desenho.
@@ -4388,8 +4542,8 @@ pt-BR:
         reta.
       frozen perpendicular: |-
         Agora, vamos ver se podemos criar duas retas
-        que formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco "vire"
-        e também o bloco "mova".
+        que formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco "Vire"
+        e também o bloco "Mova".
       frozen snowflake branch: |-
         Tente usar o bloco "crie um floco de neve do tipo ramificado”
         para criar três ramificações, o que começa a parecer um floco de neve.
@@ -4437,6 +4591,8 @@ pt-BR:
       grade5_artist_binary9: "Temos aqui uma tela de maior\nresolução para desenhar
         - 16 pixels por 16 pixels!\\\r\n\\\r\nVocê viu o que acontece quando\ncomeçamos
         ser criativos com os bits?"
+      grade5_pixelation: Codifique uma imagem de qualquer coisa que goste usando binário.
+        A linguagem binaria será representada apenas pelos dígitos '0' e '1'.
       iceage_click_hello: 'Você pode ajudar Sid a ligar para os amigos dele quando
         você clica nele? '
       iceage_free_play: 'Hora de criar seu próprio jogo ou história! '
@@ -4458,6 +4614,16 @@ pt-BR:
       mike3bit: Vamos começar com você com a imagem 4x2 que Maddie estava criando,
         más deixamos de fora alguns pixels. Termine a imagem descobrindo quais estão
         faltando e os codifique.
+      mike3bitbird: Esse é um exemplo de uma imagem feita por cores de 3 bits. Tente
+        modifica-la para entender como funciona. Se quiser reiniciar a imagem, pressione
+        'Recomeçar'.
+      mike3bitfreeplay: Faça alguma coisa incrível e compartilhe com o seus colegas
+        de trabalho! Você pode copiar e colar o valor de um pixel para usa-lo repetidamente.
+      mike3bitmario: Um programador binário desleixado digitou um digito a mais de
+        0 ou 1 em algum lugar da imagem. Esse digito extra está causando um erro no
+        Mario!
+      ramp_artist_loops4_2019: Crie esse padrão de estrela repetindo a sequencia de
+        blocos "avance" e "vire à direita em 144 graus".
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado.

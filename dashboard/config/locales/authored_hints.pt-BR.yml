@@ -6015,9 +6015,9 @@ pt-BR:
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
           os passos em voz alta. '
       courseA_harvester_loops2_2019:
-        courseA_harvester_loops2_a: "Seu código terá **quatro** blocos 'mover para
-          oeste'\n<xml><block type=\"maze_moveWest\"/></xml> e **quatro** blocos  <xml>
-          'pegar milho' <block type=\"harvester_corn\"/>. "
+        courseA_harvester_loops2_a: "Seu código terá **quatro** blocos `mover para
+          oeste`\n\n<xml><block type=\"maze_moveWest\"/></xml> \n\ne **quatro** blocos
+          \ blocos <xml>\n`pegar milho`\n<block type=\"harvester_corn\"/>\n</xml>. "
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
           os passos em voz alta. '
       courseA_harvester_loops3:
@@ -6342,8 +6342,10 @@ pt-BR:
           o seu dedo para traçar seu caminho do pássaro até o porco.
         courseA_maze_seq13_b: Não tenha medo de cometer um erro! Tente adicionar blocos
           e executar o código para ver o que vai acontecer.
-        courseA_maze_seq13_c: Estes <xml><block type="maze_moveNorth"/></xml><xml><block
-          type="maze_moveEast"/></xml> blocos irão te ajudar a se aproximar do porco.
+        courseA_maze_seq13_c: |-
+          Estes blocos <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml> irão te ajudar a se aproximar do porco.
       courseA_maze_seq1_2018:
         courseA_maze_seq1_a: |-
           Se você estiver tendo problemas para fazer o pássaro se mover, certifique-se de que os blocos estejam conectados no lugar em baixo de <xml>
@@ -11535,17 +11537,11 @@ pt-BR:
         courseD_bee_conditionals2_hintVid2: Assista este vídeo para obter ajuda de
           como resolver este quebra-cabeça.
       courseD_bee_conditionals2_2019:
-        courseD_bee_conditionals2_hintVid1: Precisa de ajuda para começar? Assista
-          o vídeo!
         courseD_bee_conditionals2_a: Às vezes uma flor vai estar lá, outras vezes
           não. Se você quiser que seu código seja executado em ambos os casos, certifique-se
           de usar uma instrução `se`.
-        courseD_bee_conditionals2_b: Você pode usar um laço `repetir` ou`enquanto
-          caminho pela frente` para percorrer este labirinto.
         courseD_bee_conditionals2_c: Você não precisa verificar se há favos de mel,
           só haverá flores ou espaços em branco sob as nuvens.
-        courseD_bee_conditionals2_hintVid2: Assista este vídeo para obter ajuda de
-          como resolver este quebra-cabeça.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!
@@ -11571,17 +11567,11 @@ pt-BR:
         courseD_bee_conditionals3_hintVid2: Assista este vídeo para obter ajuda de
           como resolver este quebra-cabeça.
       courseD_bee_conditionals3_2019:
-        courseD_bee_conditionals3_hintVid1: Precisa de ajuda para começar? Assista
-          o vídeo!
         courseD_bee_conditionals3_a: Certifique-se de usar uma instrução 'if' para
           verificar cada espaço para ver se ele tem uma flor ou nada.
-        courseD_bee_conditionals3_b: Você pode usar um laço `repita` ou `enquanto`
-          para manter a abelha se movendo para frente. Use o que você quiser!
         courseD_bee_conditionals3_c: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
-        courseD_bee_conditionals3_hintVid2: Assista este vídeo para obter ajuda de
-          como resolver este quebra-cabeça.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!
@@ -11607,17 +11597,10 @@ pt-BR:
         courseD_bee_conditionals4_hintVid2: Assista este vídeo para obter ajuda de
           como resolver este quebra-cabeça.
       courseD_bee_conditionals4_2019:
-        courseD_bee_conditionals4_hintVid1: Precisa de ajuda para começar? Assista
-          o vídeo!
         courseD_bee_conditionals4_a: Você ainda pode tratar cada espaço como se houvesse
           uma nuvem sobre ele, mesmo que você possa ver todo o caminho.
         courseD_bee_conditionals4_b: Use uma instrução `se` dentro do seu laço para
           checar cada espaço por néctar.
-        courseD_bee_conditionals4_c: Usando o bloco <xml><block type="maze_untilBlocked"/></xml>,
-          você deve seguir em frente e verificar se há uma flor. Se houver uma flor,
-          o que a abelha deve fazer?
-        courseD_bee_conditionals4_hintVid2: Assista este vídeo para obter ajuda de
-          como resolver este quebra-cabeça.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!
@@ -11656,23 +11639,12 @@ pt-BR:
         courseD_bee_conditionals5_hintVid2: Assista este vídeo para obter ajuda de
           como resolver este quebra-cabeça.
       courseD_bee_conditionals5_2019:
-        courseD_bee_conditionals5_hintVid1: Precisa de ajuda para começar? Assista
-          o vídeo!
-        courseD_bee_conditionals5_a: Pense em todos os lados de um caminho retangular
-          como um caminho por si só. Configure um laço aninhado com um bloco `repita`
-          do lado de fora e um laço `enquanto  houver um caminho à frente` do lado
-          de dentro. Quantos caminhos a abelha precisa zumbir se a abelha precisar
-          zumbir em todos os lados com uma flor?
-        courseD_bee_conditionals5_c: Existem 3 lados do retângulo com flores, então
-          o código precisa 'repetir 3 vezes'. Em cada repetição, a abelha precisará
-          continuar ao longo do caminho, "enquanto caminho à frente". Para continuar
-          no caminho, a abelha precisará "avançar". Durante o caminho, a abelha precisa
-          verificar se há uma flor. "se houver uma flor", a abelha deve "pegar néctar".
-        courseD_bee_conditionals5_b: Dentro do bloco 'enquanto houver caminho em frente'
-          você precisará seguir em frente e procurar uma flor. Como você verificar
-          se há uma flor? O que fazer se houver uma flor?
-        courseD_bee_conditionals5_hintVid2: Assista este vídeo para obter ajuda de
-          como resolver este quebra-cabeça.
+        courseD_bee_conditionals5_a: Se você usar um bloco `se na flor`, você consegue
+          resolver utilizando um laço de repetição aninhado. Escreva um programa para
+          os caminhos esquerdos e inferiores, e repita tudo duas vezes!
+        courseD_bee_conditionals5_c: Para continuar o caminho, a abelha precisa `avançar`.
+          Conforme se move, a mesma precisa verificar por uma flor. `Se há uma flor`,
+          a abelha deve `coletar o nectar`.
       courseD_bee_conditionals6:
         courseD_bee_conditionals6_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!
@@ -11696,16 +11668,12 @@ pt-BR:
         courseD_bee_conditionals6_hintVid2: Assista este vídeo para obter ajuda de
           como resolver este quebra-cabeça.
       courseD_bee_conditionals6_2019:
-        courseD_bee_conditionals6_hintVid1: Precisa de ajuda para começar? Assista
-          o vídeo!
         courseD_bee_conditionals6_a: Certifique-se de usar uma instrução 'se' para
           procurar por uma colméia abaixo de cada nuvem.
         courseD_bee_conditionals6_b: Neste caso, você não precisa procurar flores
           sob as nuvens.
         courseD_bee_conditionals6_c: Existe um laço que você pode usar para tornar
           seu código mais simples?
-        courseD_bee_conditionals6_hintVid2: Assista este vídeo para obter ajuda de
-          como resolver este quebra-cabeça.
       courseD_bee_conditionals7:
         courseD_bee_conditionals7_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!
@@ -11727,15 +11695,11 @@ pt-BR:
         courseD_bee_conditionals7_hintVid2: Assista este vídeo para obter ajuda de
           como resolver este quebra-cabeça.
       courseD_bee_conditionals7_2019:
-        courseD_bee_conditionals7_hintVid1: Precisa de ajuda para começar? Assista
-          o vídeo!
         courseD_bee_conditionals7_a: "**Lembre-se:** Este quebra-cabeça muda cada
           vez que ele é executado. \n\nVocê vai querer usar um bloco condicional (`se/senão`)
           para resolver o desafio."
         courseD_bee_conditionals7_b: Se não houver uma flor sob a nuvem, deve haver
           uma colméia, então você não precisa pensar no caso de ter um espaço vazio.
-        courseD_bee_conditionals7_hintVid2: Assista este vídeo para obter ajuda de
-          como resolver este quebra-cabeça.
       courseD_bee_conditionals7_predict2:
         courseD_bee_conditionals7_a: "**Lembre-se:** Este quebra-cabeça muda cada
           vez que ele é executado. \n\nVocê vai querer usar um bloco condicional (`se/senão`)

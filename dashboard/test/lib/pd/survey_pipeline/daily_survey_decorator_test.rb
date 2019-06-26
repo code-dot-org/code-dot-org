@@ -5,6 +5,7 @@ module Pd::SurveyPipeline
   class DailySurveyParserTest < ActiveSupport::TestCase
     include Pd::WorkshopConstants
 
+    self.use_transactional_test_case = true
     setup_all do
       @facilitators = create_list :facilitator, 2
       @workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
@@ -102,7 +103,6 @@ module Pd::SurveyPipeline
     test 'decorate general survey results' do
       form_id = "90066184161150".to_i
       form_name = 'Pre Workshop'
-      @workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201
 
       parsed_data = {}
       parsed_data[:questions] = {

@@ -984,12 +984,12 @@ it-IT:
         <br><i>Nota: Il codice diventa più semplice se usi le funzioni con parametri.</i><br>
         <img src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png"
         width="300px"/>
-      Course 4 SCFL 1: "<b>Super Sfida sui cicli con contatore:</b> Risolvi questo
-        esercizio usando il minor numero di blocchi possibile."
+      Course 4 SCFL 1: Risolvi questo esercizio usando il minor numero possibile di
+        blocchi.
       Course 4 SCFL 1a: Clicca qui per vedere i suggerimenti.
       Course 4 SCFL 1b: Clicca qui per vedere i suggerimenti.
-      Course 4 SCFL 2: "<b>Super Sfida sui cicli con contatore:</b> Risolvi questo
-        esercizio usando il minor numero di blocchi possibile."
+      Course 4 SCFL 2: Risolvi questo esercizio usando il minor numero possibile di
+        blocchi.
       Course 4 SCFL 3: Riesci a ricreare questo disegno?
       Course 4 SCFL 4: Riesci a ricreare questo disegno?
       Course 4 SCFL 6: Riesci a ricreare questo disegno usando un solo ciclo?
@@ -1015,10 +1015,8 @@ it-IT:
         - Come puoi muovere il cane (personaggio 1) in tutte le direzioni utilizzando i tasti freccia?<br>
         - Come puoi aggiungere punti quando il cane tocca il gatto (personaggio 2) o il pinguino (personaggio 3)?<br>
         - Come puoi togliere un punto quando il gatto ed il pinguino si toccano?</b>
-      Course 4 SCV 4: "<b>Super Sfida sulle variabili:</b> risolvi questo esercizio
-        con il minore numero possibile di blocchi!"
-      Course 4 SCV 5: "<b>Super Sfida sulle variabili:</b> risolvi questo esercizio
-        con il minore numero possibile di blocchi!"
+      Course 4 SCV 4: Risolvi questo esercizio con il minore numero possibile di blocchi.
+      Course 4 SCV 5: Risolvi questo esercizio con il minore numero possibile di blocchi.
       Course 4 SCV 6: |-
         <img src="https://images.code.org/85f0b27009edd86eff78692004b9ed52-image-1444712655590.02.32.png"
         width="250px"/><br>
@@ -1063,8 +1061,9 @@ it-IT:
         per raggiungere il tesoro.
       Crack Random Substitution: Istruzioni
       Crack a Caesar Cipher: Istruzioni
-      Dance Party 2: Cambia il comportamento nel blocco `___begins___` (_inizia_)
-        per fare in modo che all'inizio l'alieno gironzoli qua e là.
+      Dance Party 1-validated: 'Cosa pensi che succederà quando cliccherai sull''alieno?  '
+      Dance Party 2: Cambia il comportamento nel blocco `il personaggio ... inizia`
+        per fare in modo che l'alieno gironzoli qua e là.
       Dance Party 2_2019: Cambia il comportamento nel blocco `___begins___` (_inizia_)
         per fare in modo che all'inizio l'alieno gironzoli qua e là.
       Dance Party 3: Crea un nuovo personaggio chiamato `alien2`.  Fagli fare un passo
@@ -1079,13 +1078,13 @@ it-IT:
         si clicca su di esso.
       Dance Party 5_2019: Aggiungi del codice per cambiare il colore di ogni alieno
         quando si clicca su di esso.
-      Dance Party 6: Usa il blocco `stops everything` (_ferma tutto_) per fermare
-        ogni alieno quando viene cliccato.
-      Dance Party 6_2019: Usa il blocco `stops everything` (_ferma tutto_) per fermare
-        ogni alieno quando viene cliccato.
-      Dance Party 7: Aggiungi un nuovo personaggio chiamato 'myBell' (_la mia campanella_)
+      Dance Party 6: Usa il blocco `... interrompe tutto` per fermare ogni alieno
+        quando viene cliccato.
+      Dance Party 6_2019: Usa il blocco `... interrompe tutto` per fermare ogni alieno
+        quando viene cliccato.
+      Dance Party 7: Aggiungi un nuovo personaggio chiamato `myBell` (_la mia campanella_)
         che fa fare a tutti gli alieni la sua stessa danza quando viene cliccata.
-      Dance Party 7_2019: Aggiungi un nuovo personaggio chiamato 'myBell' (_la mia
+      Dance Party 7_2019: Aggiungi un nuovo personaggio chiamato `myBell` (_la mia
         campanella_) che fa fare a tutti gli alieni la sua stessa danza quando viene
         cliccata.
       Dance Party Freeplay: Ora crea la tua discoteca aliena!
@@ -1137,10 +1136,10 @@ it-IT:
       Fish Tank 3-validated_2019: Modifica il comportamento del pesce in modo che
         nuoti da una parta all'altra dell'acquario (cerca il blocco giusto tra i tanti
         presenti nella cassetta degli attrezzi).
-      Fish Tank 4-validated: Usa il blocco `set background color` (_imposta colore
-        sfondo_) per impostare lo sfondo blu.
-      Fish Tank 4-validated_2019: Usa il blocco `set background color` (_imposta colore
-        sfondo_) per impostare lo sfondo blu.
+      Fish Tank 4-validated: Usa il blocco `imposta il colore dello sfondo` per impostare
+        lo sfondo blu.
+      Fish Tank 4-validated_2019: Usa il blocco `imposta il colore dello sfondo` per
+        impostare lo sfondo blu.
       Fish Tank 5-validated: Il nostro pesce si sente un po' solo. Aggiungi un altro
         personaggio nell'acquario.
       Fish Tank 5-validated_2019: Il nostro pesce si sente un po' solo. Aggiungi un
@@ -1581,9 +1580,8 @@ it-IT:
       NEW Course 4 Bee For Loops 7: |-
         Cosa devi fare in questo esercizio per raccogliere 3, 6, 9, 12, 15 dosi di nettare mentre ti sposti nel giardino? Il segreto è nella variabile `counter` (<i>contatore</i>)! Combina la variabile `counter` e un blocco matematico per spostarti e contemporaneamente raccogliere la giusta quantità di nettare.<br>
         Ricordati che se il ciclo deve contare "a crescere" il valore del passo deve corrispondere ad un incremento (quindi un numero positivo).
-      NEW Course 4 Bee For Loops 8: Questo codice è da completare! Quale deve essere
-        il <i>passo</i> in questo ciclo con contatore per raccogliere 3, 6, 9, 12,
-        15 dosi di nettare?
+      NEW Course 4 Bee For Loops 8: E ora andiamo oltre! Quale deve essere il _passo_
+        in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
       NEW Course 4 Bee For Loops 9: Se il <i>ciclo con contatore</i> deve contare
         all'indietro, ad ogni ripetizione il valore del <i>passo</i> deve far diminuire
         il valore del contatore. Quale deve essere quindi il valore del <i>passo</i>
@@ -1706,6 +1704,8 @@ it-IT:
         buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Underground Mining Coal_2019: Nel sottosuolo trovi le risorse più preziose,
         ma è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
+      Virtual Pet 1: Cosa pensi che succederà se cliccherai su "Esegui" e poi cliccherai
+        su di lei?
       Virtual Pet 2: Crea un **evento** in modo che quando la giraffa Geraldine tocca
         la pozzanghera, il suo colore diventi marrone.
       Virtual Pet 3: Aggiungi sullo schermo un nuovo personaggio Sapone. Puoi crearlo
@@ -2489,6 +2489,12 @@ it-IT:
         fino alla ghianda.'
       courseB_maze_seq9_2019: 'Sfida: aggira il ghiaccio rotto per far arrivare Scrat
         fino alla ghianda.'
+      courseB_maze_seq_challenge1: Riesci a trovare un percorso prima di terminare
+        tutti i blocchi a disposizione?
+      courseB_maze_seq_challenge1_2018: Riesci a trovare un percorso prima di terminare
+        tutti i blocchi a disposizione?
+      courseB_maze_seq_challenge1_2019: Riesci a trovare un percorso prima di terminare
+        tutti i blocchi a disposizione?
       courseB_maze_seq_challenge2: Correggi questo esercizio. Ci sono già tutti i
         blocchi giusti, ma sono nell'ordine sbagliato!
       courseB_maze_seq_challenge2_2018: Correggi questo esercizio. Ci sono già tutti
@@ -4282,8 +4288,8 @@ it-IT:
         quindi gioca fino a raggiungere una di queste due condizioni.
       courseE_playLab_scaffold6: Hai finito! Ora puoi giocare con il tuo videogioco
         o condividerlo con i tuoi amici e compagni di classe!
-      courseF_artist_for1: Fai esperimenti con il ciclo `ripeti con counter` e gioca
-        con la variabile 'counter'.
+      courseF_artist_for1: Fai esperimenti con il _ciclo con contatore_ e gioca con
+        la variabile `counter` (_contatore_).
       courseF_artist_for10: 'Tempo di giocare: Prova ad usare la variabile `counter`
         (_contatore_) con altri elementi grafici per creare immagini magiche come
         questa.'
@@ -4293,10 +4299,10 @@ it-IT:
       courseF_artist_for10_2019: 'Tempo di giocare: Prova ad usare la variabile `counter`
         (_contatore_) con altri elementi grafici per creare immagini magiche come
         questa.'
-      courseF_artist_for1_2018: Fai esperimenti con il ciclo `ripeti con counter`
-        e gioca con la variabile 'counter'.
-      courseF_artist_for1_2019: Fai esperimenti con il ciclo `ripeti con counter`
-        e gioca con la variabile 'counter'.
+      courseF_artist_for1_2018: Fai esperimenti con il _ciclo con contatore_ e gioca
+        con la variabile `counter` (_contatore_).
+      courseF_artist_for1_2019: Fai esperimenti con il _ciclo con contatore_ e gioca
+        con la variabile `counter` (_contatore_).
       courseF_artist_for2: Crea questa pila di triangoli, i lati misurano da 50 a
         100 pixel.
       courseF_artist_for2_2018: Crea questa pila di triangoli, i lati misurano da
@@ -4415,16 +4421,16 @@ it-IT:
       courseF_artist_variables7_2019: 'Disegna un triangolo con lati di 150 pixel. '
       courseF_artist_variables8: Ricostruisci il codice del triangolo dall'esercizio
         precedente, ma questa volta usa il blocco `imposta length a` per reimpostare
-        il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine
-        di ogni interazione del ciclo.
+        il valore della variabile `length` (_lunghezza_) a `length+10` alla fine di
+        ogni iterazione del ciclo.
       courseF_artist_variables8_2018: Ricostruisci il codice del triangolo dall'esercizio
         precedente, ma questa volta usa il blocco `imposta length a` per reimpostare
-        il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine
-        di ogni interazione del ciclo.
+        il valore della variabile `length` (_lunghezza_) a `length+10` alla fine di
+        ogni iterazione del ciclo.
       courseF_artist_variables8_2019: Ricostruisci il codice del triangolo dall'esercizio
         precedente, ma questa volta usa il blocco `imposta length a` per reimpostare
-        il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine
-        di ogni interazione del ciclo.
+        il valore della variabile `length` (_lunghezza_) a `length+10` alla fine di
+        ogni iterazione del ciclo.
       courseF_artist_variables9: Guarda cosa succede quando ripeti il codice dell'esercizio
         precedente 30 volte invece di 3! Per aggiungere un tocco di fantasia, sentiti
         libero di creare linee di qualsiasi colore o schema.
@@ -4464,6 +4470,12 @@ it-IT:
         fai il miele perché c'è sicuramente un favo.
       courseF_bee_for1: Raccogli il nettare da ogni fiore usando il minor numero possibile
         di blocchi.
+      courseF_bee_for10: "**Sfida:** Usa ciò che hai imparato sui _cicli con contatore_
+        e cerca di risolvere questo problema. "
+      courseF_bee_for10_2018: "**Sfida:** Usa ciò che hai imparato sui _cicli con
+        contatore_ e cerca di risolvere questo problema. "
+      courseF_bee_for10_2019: "**Sfida:** Usa ciò che hai imparato sui _cicli con
+        contatore_ e cerca di risolvere questo problema. "
       courseF_bee_for11: Come devi impostare il passo per fare in modo che l'ape raccolga
         15, poi 12, poi 9, 6 e 3 dosi di nettare?
       courseF_bee_for11_2018: Come devi impostare il passo per fare in modo che l'ape
@@ -4501,30 +4513,30 @@ it-IT:
         un passo di 2.
       courseF_bee_for7_2019: Prova a raccogliere il nettare da questi fiori usando
         un passo di 2.
-      courseF_bee_for8: Questo codice è da completare! Quale deve essere il <i>passo</i>
-        in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
-      courseF_bee_for8_2018: Questo codice è da completare! Quale deve essere il <i>passo</i>
-        in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
-      courseF_bee_for8_2019: Questo codice è da completare! Quale deve essere il <i>passo</i>
-        in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
+      courseF_bee_for8: E ora andiamo oltre! Quale deve essere il _passo_ in questo
+        ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
+      courseF_bee_for8_2018: E ora andiamo oltre! Quale deve essere il _passo_ in
+        questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
+      courseF_bee_for8_2019: E ora andiamo oltre! Quale deve essere il _passo_ in
+        questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
       courseF_bee_for9: Usa la variabile `counter` (_contatore_) per muoverti in questo
         giardino usando il minor numero possibile di blocchi.
       courseF_bee_for9_2018: Usa la variabile `counter` (_contatore_) per muoverti
         in questo giardino usando il minor numero possibile di blocchi.
       courseF_bee_for9_2019: Usa la variabile `counter` (_contatore_) per muoverti
         in questo giardino usando il minor numero possibile di blocchi.
-      courseF_bee_for_challenge1: 'Usa questo ciclo `ripeti con counter` per raccogliere
+      courseF_bee_for_challenge1: 'Usa questo _ciclo con contatore_ per raccogliere
         tutto il nettare. '
-      courseF_bee_for_challenge1_2018: 'Usa questo ciclo `ripeti con counter` per
-        raccogliere tutto il nettare. '
-      courseF_bee_for_challenge1_2019: 'Usa questo ciclo `ripeti con counter` per
-        raccogliere tutto il nettare. '
-      courseF_bee_for_challenge2: "<b>Super Sfida sui cicli con contatore:</b> Risolvi
-        questo esercizio usando il minor numero di blocchi possibile."
-      courseF_bee_for_challenge2_2018: "<b>Super Sfida sui cicli con contatore:</b>
-        Risolvi questo esercizio usando il minor numero di blocchi possibile."
-      courseF_bee_for_challenge2_2019: "<b>Super Sfida sui cicli con contatore:</b>
-        Risolvi questo esercizio usando il minor numero di blocchi possibile."
+      courseF_bee_for_challenge1_2018: 'Usa questo _ciclo con contatore_ per raccogliere
+        tutto il nettare. '
+      courseF_bee_for_challenge1_2019: 'Usa questo _ciclo con contatore_ per raccogliere
+        tutto il nettare. '
+      courseF_bee_for_challenge2: Risolvi questo esercizio usando il minor numero
+        possibile di blocchi.
+      courseF_bee_for_challenge2_2018: Risolvi questo esercizio usando il minor numero
+        possibile di blocchi.
+      courseF_bee_for_challenge2_2019: Risolvi questo esercizio usando il minor numero
+        possibile di blocchi.
       courseF_bee_functions4: |-
         La funzione "vai a prendere il nettare" (<i>move and get nectar</i>) sposta l'ape sul fiore, raccoglie il nettare e fa tornare l'ape dove si trovava.<br><br>
         Usa questa funzione per raccogliere tutto il nettare.
@@ -4555,6 +4567,10 @@ it-IT:
         per risolverlo?
       courseF_bee_variables_7_2019: Questo esercizio è un po' diverso. Cosa devi fare
         per risolverlo?
+      courseF_bee_variables_8_2018: Quante dosi di nettare raccoglierà l'ape da questo
+        fiore?
+      courseF_bee_variables_8_2019: Quante dosi di nettare raccoglierà l'ape da questo
+        fiore?
       coursea_maze_ramp1_2018: Per risolvere questo esercizio, aggancia insieme i
         due blocchi e clicca su "▶ Esegui"!
       coursea_maze_ramp1_2019: Per risolvere questo esercizio, aggancia insieme i

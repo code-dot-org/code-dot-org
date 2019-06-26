@@ -462,6 +462,8 @@ fr-FR:
   homepage_slot_text_link_donate: Faire un don
   homepage_slot_text_link_shop: T-shirts, chapeaux, & plus
   homepage_slot_text_link_administrators: Amener l'informatique dans votre école
+  homepage_gallery_header: Plus de %{project_count} millions de projets créés sur
+    Code.org
   homepage_header_donors: Code.org remercie tout ceux qui l'ont soutenu
   homepage_donors_seall: Tout afficher
   homepage_donors_donate: Faire un don
@@ -1282,6 +1284,7 @@ fr-FR:
   coursee-2017_name: Cours E (2017)
   coursef-2017_name: Cours F (2017)
   pre-express-2018_name: Cours rapide pour les primo-lecteurs (2018)
+  pre-express-2019_name: Cours rapide pour les primo-lecteurs (2019)
   cspunit2_name: Principes de l'informatique, unité 2
   cspunit3_name: Principes de l'informatique, unité 3
   cspunit4_name: Principes de l'informatique, unité 4
@@ -1417,6 +1420,12 @@ fr-FR:
   coursed-2018_gradelevel: 4ème ou plus
   coursee-2018_gradelevel: De 8 à 12 ans
   coursef-2018_gradelevel: Seconde ou plus
+  coursea-2019_gradelevel: CM2 ou plus
+  courseb-2019_gradelevel: 6ème ou plus
+  coursec-2019_gradelevel: 5ème ou plus
+  coursed-2019_gradelevel: 4ème ou plus
+  coursee-2019_gradelevel: De 8 à 12 ans
+  coursef-2019_gradelevel: Seconde ou plus
   accelerated_gradelevel: De 10 à 18 ans
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
@@ -1597,6 +1606,20 @@ fr-FR:
   coursee-2018_shortdescription_congrats: Voyez rapidement les notions des cours C
     et D, et allez plus loin avec les fonctions.
   coursef-2018_shortdescription_congrats: Apprenez toutes les notions fondamentales
+    de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
+  coursea-2019_shortdescription_congrats: Une introduction à l’informatique pour les
+    primo-lecteurs.
+  courseb-2019_shortdescription_congrats: Une introduction à l'informatique pour les
+    primo-lecteurs. (Semblable au cours A, mais avec plus de variété pour les étudiants
+    plus âgés.)
+  coursec-2019_shortdescription_congrats: Apprendre les rudiments de l’informatique
+    et de créer vos propres œuvres d’art, vos histoires et vos jeux.
+  coursed-2019_shortdescription_congrats: Voyez rapidement les notions du cours C,
+    puis allez plus loin avec les algorithmes, boucles imbriquées, instructions conditionnelles
+    et plus encore.
+  coursee-2019_shortdescription_congrats: Voyez rapidement les notions des cours C
+    et D, et allez plus loin avec les fonctions.
+  coursef-2019_shortdescription_congrats: Apprenez toutes les notions fondamentales
     de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
   codeorg_longdescription: Apprends les concepts de base de l'informatique avec la
     programmation, en glissant et en déposant. Il s'agit d'un didacticiel ludique
@@ -2180,6 +2203,7 @@ fr-FR:
   full_course_category_name: Cours complets
   user_header_label: Bonjour %{username}
   user_header_team: Équipe
+  user_header_my_projects: Mes projets
   user_header_settings: Mon compte
   user_header_logout: Déconnexion
   user_header_signin: Connexion
@@ -2378,6 +2402,7 @@ fr-FR:
     avec la programmation.
   hoc2018_mc_journey: Voyage à travers Minecraft avec la programmation.
   hoc2018_dance_party_main_heading: Fête dansante
+  hoc2018_dance_party_landing_title: Danse
   hoc2018_dance_party_subheading: Aider à traduire Soirée Dansante
   hoc2018_dance_create_your_own_dance_title: Créez votre propre soirée dansante
   hoc2018_dance_party_box_title: Fête dansante
@@ -2459,3 +2484,6 @@ fr-FR:
     l’adresse web et réessayez, ou retournez à notre page d’accueil.
   page_not_found_button: Retourner à la page d’accueil
   hoc2018_mc_with_microsoft: En partenariat avec
+  hoc2018_mc_thank_microsoft: Nous remercions Microsoft du soutien accordé à notre
+    vision et mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique
+    et les compétences nécessaires pour réussir au XXIe siècle.

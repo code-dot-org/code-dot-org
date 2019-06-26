@@ -603,6 +603,9 @@ it-IT:
         **Come:** In Modalità Codice aggiungi un nuovo blocco `onEvent()` al tuo programma relativo al pulsante "Right!" (_destra_). Poi aggiungi al suo interno un blocco `setScreen()` che permetta di commutare alla schermata `"rightScreen"`.
 
         **Sei bloccato? Clicca qui:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      CSD U6 iter predict bubbles: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      CSD U6 iter predict bubbles_2018: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      CSD U6 iter predict bubbles_2019: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"
         width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Tempo di giocare:**
         \ Ecco il codice per una figura interessante.   \n\nChe cosa succede se la
@@ -707,8 +710,8 @@ it-IT:
         di 89 gradi, invece di 90 gradi.
       Course 4 Artist For Loops 2: "In questo esercizio il codice per disegnare un
         triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100
-        con _passo_ di 10.  \n  \n  \n**Attenzione**: assicurati di aver guardato
-        bene il codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\"
+        con _passo_ di 10.  \n\n**Attenzione**: assicurati di aver guardato bene il
+        codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\"
         target=\"_blank\">Video doppiato in italiano</a>"
       Course 4 Artist For Loops 3: Per disegnare questa figura usa come riferimento
         il codice del precedente esercizio. Il triangolo più piccolo ha i lati di
@@ -814,12 +817,11 @@ it-IT:
         parametro chiamato `direction` (<i>direzione </i>)?
       Course 4 Bee Params 6: "In questo esercizio, sui fiori si trovano quantità differenti
         di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe
-        bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n
-        \ \n  \nModifica la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>)
-        aggiungendo un nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>),
-        che specifica la quantità di nettare da raccogliere.\n\nProbabilmente sarà
-        meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il nome
-        anche ai parametri."
+        bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n\nModifica
+        la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un
+        nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica
+        la quantità di nettare da raccogliere.\n\nProbabilmente sarà meglio cambiare
+        anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri."
       Course 4 Bee Params 7: Usa la nuova funzione `get many nectar` (<i>prendi molte
         dosi di nettare</i>) per raccogliere tutto il nettare.
       Course 4 Bee Params 8: |-
@@ -1110,9 +1112,7 @@ it-IT:
         ! Usa i coralli rossi e blu come punti di riferimento per raggiungere il **forziere**
         del tesoro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Dance Party 1-validated: "**Fai una previsione:** Ecco un personaggio chiamato
-        `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
-      Dance Party 1-validated_2019: "**Fai una previsione:** Ecco un personaggio chiamato
-        `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
+        `alien1`! \n\nCosa pensi accadrà quando ci cliccherai sopra?  "
       Dance Party 2: "L'alieno era orgoglioso delle sue capacità di ballo su Marte,
         ma ora può spostarsi solo da un lato all'altro.\n\nPuoi modificare il comportamento
         all'interno del blocco <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n
@@ -1129,9 +1129,8 @@ it-IT:
         un passo di danza diverso ogni volta che ci clicchi sopra."
       Dance Party 3_2019: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli
         fare un passo di danza diverso ogni volta che ci clicchi sopra."
-      Dance Party 4: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci ad
-        posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo
-        aliena!"
+      Dance Party 4: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci a posizionare
+        tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
       Dance Party 4_2019: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci
         ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo
         aliena!"
@@ -1268,8 +1267,6 @@ it-IT:
         -   Nascondi tutti i ballerini e passa a un emozionante effetto di sfondo
       Fish Tank 1-validated: "**Fai una previsione**: Che cosa pensi accadrà quando
         eseguirai questo codice?"
-      Fish Tank 1-validated_2019: "**Fai una previsione**: Che cosa pensi accadrà
-        quando eseguirai questo codice?"
       Fish Tank 2-validated: "Facciamo un acquario!  \n\nTrasforma Dusty (il cespuglio
         rotolante) in un pesce."
       Fish Tank 2-validated_2019: "Facciamo un acquario!  \n\nTrasforma Dusty (il
@@ -1431,10 +1428,10 @@ it-IT:
         Programma l'Agente per ricostruire il ponte usando il blocco  <xml> <block type="craft_placeBlock">     <title name="TYPE"> </title>   </block></xml> in modo che {currentPlayerName} possa raggiungere la **pala** [diamond_shovel].
       MC_HOC_2017_06_Cole: "Un altro fiume, ma questo è molto più largo! \n\nCorreggi
         questo codice per aiutare l'Agente a costruire un ponte in modo che {currentPlayerName}
-        possa raggiungere il **piccone** [diamond_pickaxe]. "
+        possa raggiungere la **piccozza** [diamond_pickaxe]. "
       MC_HOC_2017_06_Cole_2019: "Un altro fiume, ma questo è molto più largo! \n\nCorreggi
         questo codice per aiutare l'Agente a costruire un ponte in modo che {currentPlayerName}
-        possa raggiungere il **piccone** [diamond_pickaxe]. "
+        possa raggiungere la **piccozza** [diamond_pickaxe]. "
       MC_HOC_2017_07_Cole: "C'è del ghiaccio che blocca il percorso!  \\\r\n \\\r\nLa
         funzione `libera il passaggio` può aiutarti a rimuovere il ghiaccio e far
         arrivare {currentPlayerName} fino al vagonetto [minecart_normal]! "
@@ -1837,12 +1834,18 @@ it-IT:
         ## È ora di tornare a terra. Aiutami a posizionare le pietre così non cado in acqua!
 
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
-      courseA_artist_loops11: "## Aiutami a costruire i gradini per vedere la barca
-        che salpa.\\\r\n\n\\\r \n![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)"
-      courseA_artist_loops11_2018: "## Aiutami a costruire i gradini per vedere la
-        barca che salpa.\\\r\n\n\\\r \n![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)"
-      courseA_artist_loops11_2019: "## Aiutami a costruire i gradini per vedere la
-        barca che salpa.\\\r\n\n\\\r \n![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)"
+      courseA_artist_loops11: |-
+        ## Aiutami a costruire i gradini per vedere la barca che salpa.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2018: |-
+        ## Aiutami a costruire i gradini per vedere la barca che salpa.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2019: |-
+        ## Aiutami a costruire i gradini per vedere la barca che salpa.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops12: |-
         L'artista ha visto qualcosa di divertente al largo. Disegna ciò che pensi abbia visto. Quando sei soddisfatto, premi "Termina" per completare la lezione.
 
@@ -1901,18 +1904,15 @@ it-IT:
 
         ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4: |-
-        Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
+        Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2018: |-
-        Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
+        Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2019: |-
-        Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
+        Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5: |-
@@ -1963,12 +1963,18 @@ it-IT:
         ## Ci serve una scala per salire sulla barca.
 
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
-      courseA_artist_loops9: "**Sfida:** la scaletta per scendere al molo è rotta,
-        aiutami a ripararla.\\\r \n\\\r \n![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
-      courseA_artist_loops9_2018: "**Sfida:** la scaletta per scendere al molo è rotta,
-        aiutami a ripararla.\\\r \n\\\r \n![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
-      courseA_artist_loops9_2019: "**Sfida:** la scaletta per scendere al molo è rotta,
-        aiutami a ripararla.\\\r \n\\\r \n![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
+      courseA_artist_loops9: |-
+        ## **Sfida:** La scaletta per scendere al molo è rotta, aiutami a ripararla.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2018: |-
+        ## **Sfida:** La scaletta per scendere al molo è rotta, aiutami a ripararla.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2019: |-
+        ## **Sfida:** La scaletta per scendere al molo è rotta, aiutami a ripararla.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops_challenge1: |-
         Puoi usare un ciclo per disegnare molte linee di seguito.
 
@@ -2107,14 +2113,8 @@ it-IT:
         Riesci ad individuare il percorso?
       courseA_harvester_seq11: Prova da solo! Raccogli tutte le pannocchie.
       courseA_harvester_seq11_2019: Prova da solo! Raccogli tutte le pannocchie.
-      courseA_harvester_seq12: |-
-        _Grazie dell'aiuto!_
-
-        Raccogli tutte le pannocchie.
-      courseA_harvester_seq12_2019: |-
-        _Grazie dell'aiuto!_
-
-        Raccogli tutte le pannocchie.
+      courseA_harvester_seq12: "_Grazie dell'aiuto!_ \n\nRaccogli tutte le pannocchie."
+      courseA_harvester_seq12_2019: "_Grazie dell'aiuto!_ \n\nRaccogli tutte le pannocchie."
       courseA_harvester_seq13: Aiuta la contadina a raccogliere le pannocchie!
       courseA_harvester_seq13_2019: Aiuta la contadina a raccogliere le pannocchie!
       courseA_harvester_seq1_2019: Aiuta la contadina a raccogliere la pannocchia!
@@ -2262,13 +2262,11 @@ it-IT:
 
         Fai arrivare il cane alla bandierina per completare l'esercizio!
       courseA_playLab_events3_2019: |-
-        Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">
+        Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move" block-text="move dog west">
             <title name="SPRITE">1</title>
-            <title
-        name="DIR">8</title>
-          </block></xml> al blocco evento <xml><block type="studio_whenArrow">
-            <title
-        name="VALUE">left</title>
+            <title name="DIR">8</title>
+          </block></xml> al blocco evento <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
           </block></xml> che si trova già nell'area di lavoro.
 
         Fai arrivare il cane alla bandierina per completare l'esercizio!
@@ -2551,6 +2549,14 @@ it-IT:
         È il momento del cavaliere!
 
         Aggiungi un evento per fare in modo che il cavaliere vada verso il drago quando clicchi sulla freccia sinistra.
+      courseB_playlab_events5_2018: |-
+        Ora aggiungi un evento per fare in modo che il cavaliere si allontani dal drago quando premi la freccia destra.
+
+        Sposta il cavaliere a destra per completare l'esercizio.
+      courseB_playlab_events5_2019: |-
+        Ora aggiungi un evento per fare in modo che il cavaliere si allontani dal drago quando premi la freccia destra.
+
+        Sposta il cavaliere a destra per completare l'esercizio.
       courseB_playlab_events6: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
 
@@ -4319,6 +4325,14 @@ it-IT:
         D'ora in poi, a volte una nuvola può coprire un fiore e altre volte nascondere un favo!
 
         Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: se c'è un fiore, l'ape deve raccogliere _una_ sola dose di nettare. E se c'è un favo, l'ape deve produrre _una_ sola dose di miele.
+      courseD_bee_conditionals7_predict2_2018: |-
+        A volte una nuvola può coprire un fiore e altre volte nascondere un favo!
+
+        Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: ci sarà sempre solo _un_ fiore o _una_ dose di miele.
+      courseD_bee_conditionals7_predict2_2019: |-
+        A volte una nuvola può coprire un fiore e altre volte nascondere un favo!
+
+        Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: ci sarà sempre solo _un_ fiore o _una_ dose di miele.
       courseD_bee_conditionals8: |-
         **Sfida:** C'è sicuramente un fiore o un favo sotto ad ognuna di quelle nuvole!
 
@@ -5219,16 +5233,16 @@ it-IT:
 
         -   Le finestre del piano di sopra distano 50 pixel una dall'altra.
         -   Le finestre del piano terra si trovano 100 pixel al di sotto delle precedenti.
-      courseE_artist_functions7_2018: "Disegnare singolarmente tutte queste finestra
+      courseE_artist_functions7_2018: "Disegnare singolarmente tutte queste finestre
         sarebbe una noia!  \n\nProvare a risolvere questo esercizio creando la funzione
-        'disegna una finestra' e richiamandola cinque volte. Fai attenzione alla porta!\n\n*
+        `disegna una finestra` e richiamandola cinque volte. Fai attenzione alla porta!\n\n*
         * *\n\n-   Ogni finestra è composta da quattro riquadri da **25** pixel di
         lato.\n-   Le finestre del piano di sopra si disegnano facendo un salto di
         **100** pixel tra una e l'altra.  \n-   Quelle del piano terra si raggiungono
         facendo un salto di **150** pixel dal piano di sopra."
-      courseE_artist_functions7_2019: "Disegnare singolarmente tutte queste finestra
+      courseE_artist_functions7_2019: "Disegnare singolarmente tutte queste finestre
         sarebbe una noia!  \n\nProvare a risolvere questo esercizio creando la funzione
-        'disegna una finestra' e richiamandola cinque volte. Fai attenzione alla porta!\n\n*
+        `disegna una finestra` e richiamandola cinque volte. Fai attenzione alla porta!\n\n*
         * *\n\n-   Ogni finestra è composta da quattro riquadri da **25** pixel di
         lato.\n-   Le finestre del piano di sopra si disegnano facendo un salto di
         **100** pixel tra una e l'altra.  \n-   Quelle del piano terra si raggiungono
@@ -5274,12 +5288,12 @@ it-IT:
         **Sfida:** Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
 
         -   Ogni triangolo ha i lati lunghi **50 pixel**.
-        -   Per disegnare un rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi.
+        -   Per disegnare un rombo, dovrai alternare svolte a **60 gradi con svolte a 120 gradi**.
       courseE_artist_functions9_2019: |-
         **Sfida:** Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
 
         -   Ogni triangolo ha i lati lunghi **50 pixel**.
-        -   Per disegnare un rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi.
+        -   Per disegnare un rombo, dovrai alternare svolte a **60 gradi con svolte a 120 gradi**.
       courseE_artist_functionsProj_2018: |-
         **Ispirazione:** Usa ciò che hai imparato per creare quello che vuoi!
 
@@ -5647,9 +5661,9 @@ it-IT:
         Ora dedica un po' di tempo a controllare che il gioco funzioni proprio come desideravi. Aggiungi un modo per vincere e perdere, quindi gioca fino a raggiungere una di queste due condizioni.
       courseE_playLab_scaffold6: Hai finito! Ora puoi giocare con il tuo videogioco
         o condividerlo con i tuoi amici e compagni di classe!
-      courseF_artist_for1: "**Tempo di giocare:** Sperimenta con il ciclo `ripeti
-        con counter` e la variabile `countrer` (_contatore_).  \n\nTrascina qualche
-        blocco e vedi cosa succede.  "
+      courseF_artist_for1: "**Tempo di giocare:** Sperimenta con il _ciclo con contatore_
+        e la variabile `countrer` (_contatore_).  \n\nTrascina qualche blocco e vedi
+        cosa succede.    "
       courseF_artist_for10: |-
         **Tempo di giocare:** Prova ad usare la variabile `counter` (_contatore_) con altri elementi grafici per creare immagini magiche come questa.
 
@@ -5662,21 +5676,21 @@ it-IT:
         **Tempo di giocare:** Prova ad usare la variabile `counter` (_contatore_) con altri elementi grafici per creare immagini magiche come questa.
 
         ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
-      courseF_artist_for1_2018: "**Tempo di giocare:** Sperimenta con il ciclo `ripeti
-        con counter` e la variabile `countrer` (_contatore_).  \n\nTrascina qualche
-        blocco e vedi cosa succede.  "
-      courseF_artist_for1_2019: "**Tempo di giocare:** Sperimenta con il ciclo `ripeti
-        con counter` e la variabile `countrer` (_contatore_).  \n\nTrascina qualche
-        blocco e vedi cosa succede.  "
-      courseF_artist_for2: Usa un ciclo `ripeti ... volte` all'interno di un il ciclo
-        `ripeti con counter` per creare questa pila di triangoli, i cui lati misurano
-        da 50 a 100 pixel.
+      courseF_artist_for1_2018: "**Tempo di giocare:** Sperimenta con il _ciclo con
+        contatore_ e la variabile `countrer` (_contatore_).  \n\nTrascina qualche
+        blocco e vedi cosa succede.    "
+      courseF_artist_for1_2019: "**Tempo di giocare:** Sperimenta con il _ciclo con
+        contatore_ e la variabile `countrer` (_contatore_).  \n\nTrascina qualche
+        blocco e vedi cosa succede.    "
+      courseF_artist_for2: Usa un ciclo `ripeti ... volte` all'interno di un _ciclo
+        con contatore_ per creare questa pila di triangoli, i cui lati misurano da
+        50 a 100 pixel.
       courseF_artist_for2_2018: Usa un ciclo `ripeti ... volte` all'interno di un
-        il ciclo `ripeti con counter` per creare questa pila di triangoli, i cui lati
-        misurano da 50 a 100 pixel.
+        _ciclo con contatore_ per creare questa pila di triangoli, i cui lati misurano
+        da 50 a 100 pixel.
       courseF_artist_for2_2019: Usa un ciclo `ripeti ... volte` all'interno di un
-        il ciclo `ripeti con counter` per creare questa pila di triangoli, i cui lati
-        misurano da 50 a 100 pixel.
+        _ciclo con contatore_ per creare questa pila di triangoli, i cui lati misurano
+        da 50 a 100 pixel.
       courseF_artist_for3: Crea questi triangoli i cui lati misurano da 20 a 200 pixel
         e ogni triangolo è largo 20 pixel più del precedente.
       courseF_artist_for3_2018: Crea questi triangoli i cui lati misurano da 20 a
@@ -5720,14 +5734,17 @@ it-IT:
       courseF_artist_for7_2019: Per ottenere questo disegno bastano solo tre piccole
         modifiche al codice del precedente esercizio!
       courseF_artist_for9: "**Ispirazione:** Usa il contatore all'interno del blocco
-        `set alpha` per ottenere qualcosa come questo centro sbiadito.  \n(Questo
-        schema con esagono è stato creato usando un angolo di 60 gradi.)"
+        `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente
+        sbiadito.  \n(Questo schema con esagono è stato creato usando un angolo di
+        60 gradi.)"
       courseF_artist_for9_2018: "**Ispirazione:** Usa il contatore all'interno del
-        blocco `set alpha` per ottenere qualcosa come questo centro sbiadito.  \n(Questo
-        schema con esagono è stato creato usando un angolo di 60 gradi.)"
+        blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente
+        sbiadito.  \n(Questo schema con esagono è stato creato usando un angolo di
+        60 gradi.)"
       courseF_artist_for9_2019: "**Ispirazione:** Usa il contatore all'interno del
-        blocco `set alpha` per ottenere qualcosa come questo centro sbiadito.  \n(Questo
-        schema con esagono è stato creato usando un angolo di 60 gradi.)"
+        blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente
+        sbiadito.  \n(Questo schema con esagono è stato creato usando un angolo di
+        60 gradi.)"
       courseF_artist_for_challenge1: |-
         Riesci a ricreare questo disegno?
 
@@ -5824,7 +5841,7 @@ it-IT:
         \n\nAssicurati di usare la variabile `length` (_lunghezza_) e un ciclo `ripeti
         ... volte`."
       courseF_artist_variables8: |-
-        Ricostruisci il codice del triangolo dall'esercizio precedente, ma questa volta usa il blocco `imposta length a` per reimpostare il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine di ogni interazione del ciclo.
+        Ricostruisci il codice del triangolo dall'esercizio precedente, ma questa volta usa il blocco `imposta length a` per reimpostare il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine di ogni iterazione del ciclo.
 
         <xml>
         <block type="variables_set" inline="false">
@@ -5849,7 +5866,7 @@ it-IT:
 
         La lunghezza del primo lato del triangolo è di 150 pixel.
       courseF_artist_variables8_2018: |-
-        Ricostruisci il codice del triangolo dall'esercizio precedente, ma questa volta usa il blocco `imposta length a` per reimpostare il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine di ogni interazione del ciclo.
+        Ricostruisci il codice del triangolo dall'esercizio precedente, ma questa volta usa il blocco `imposta length a` per reimpostare il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine di ogni iterazione del ciclo.
 
         <xml>
         <block type="variables_set" inline="false">
@@ -5874,7 +5891,7 @@ it-IT:
 
         La lunghezza del primo lato del triangolo è di 150 pixel.
       courseF_artist_variables8_2019: |-
-        Ricostruisci il codice del triangolo dall'esercizio precedente, ma questa volta usa il blocco `imposta length a` per reimpostare il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine di ogni interazione del ciclo.
+        Ricostruisci il codice del triangolo dall'esercizio precedente, ma questa volta usa il blocco `imposta length a` per reimpostare il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine di ogni iterazione del ciclo.
 
         <xml>
         <block type="variables_set" inline="false">
@@ -5925,11 +5942,11 @@ it-IT:
       courseF_artist_variablesFP_2019: "**Tempo di giocare:** Usa ciò che hai imparato
         e crea il tuo disegno. \n\nCome puoi usare le variabili con quadrati, pentagoni
         o esagoni?"
-      courseF_artist_variables_challenge1: Questa è un sfida! Riesci a creare una
+      courseF_artist_variables_challenge1: Questa è una sfida! Riesci a creare una
         variabile `length` (_lunghezza_) e usarla per creare questo schema?
-      courseF_artist_variables_challenge1_2018: Questa è un sfida! Riesci a creare
+      courseF_artist_variables_challenge1_2018: Questa è una sfida! Riesci a creare
         una variabile `length` (_lunghezza_) e usarla per creare questo schema?
-      courseF_artist_variables_challenge1_2019: Questa è un sfida! Riesci a creare
+      courseF_artist_variables_challenge1_2019: Questa è una sfida! Riesci a creare
         una variabile `length` (_lunghezza_) e usarla per creare questo schema?
       courseF_artist_variables_challenge2: |-
         <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png" width="250px"/>
@@ -5952,14 +5969,14 @@ it-IT:
 
         Raccogli tutto il nettare usando il minor numero possibile di blocchi.
       courseF_bee_for10: "**Sfida:** Usa ciò che hai imparato sui _cicli con contatore_
-        e cerca si risolvere questo problema. \n\nRicordati: molto probabilmente avrai
+        e cerca di risolvere questo problema. \n\nRicordati: molto probabilmente avrai
         bisogno di più tentativi prima di riuscire a capire tutti i passaggi necessari."
       courseF_bee_for10_2018: "**Sfida:** Usa ciò che hai imparato sui _cicli con
-        contatore_ e cerca si risolvere questo problema. \n\nRicordati: molto probabilmente
+        contatore_ e cerca di risolvere questo problema. \n\nRicordati: molto probabilmente
         avrai bisogno di più tentativi prima di riuscire a capire tutti i passaggi
         necessari."
       courseF_bee_for10_2019: "**Sfida:** Usa ciò che hai imparato sui _cicli con
-        contatore_ e cerca si risolvere questo problema. \n\nRicordati: molto probabilmente
+        contatore_ e cerca di risolvere questo problema. \n\nRicordati: molto probabilmente
         avrai bisogno di più tentativi prima di riuscire a capire tutti i passaggi
         necessari."
       courseF_bee_for11: "Se il tuo ciclo deve contare alla rovescia (perché il valore
@@ -5989,57 +6006,66 @@ it-IT:
         Scrivi il codice per aiutare l'ape a raccogliere tutto il nettare.
 
         Dovrai usare molti blocchi in questa sfida, ma imparerai un metodo più semplice nel prossimo esercizio.
-      courseF_bee_for6: "Puoi usare un ciclo `ripeti con counter` anche per contare
+      courseF_bee_for6: "Puoi usare un _ciclo con contatore_ anche per contare alla
+        rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da **5**
+        a **1** a passi di **1**."
+      courseF_bee_for6_2018: "Puoi usare un _ciclo con contatore_ anche per contare
         alla rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da
         **5** a **1** a passi di **1**."
-      courseF_bee_for6_2018: "Puoi usare un ciclo `ripeti con counter` anche per contare
-        alla rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da
-        **5** a **1** a passi di **1**."
-      courseF_bee_for6_2019: "Puoi usare un ciclo `ripeti con counter` anche per contare
+      courseF_bee_for6_2019: "Puoi usare un _ciclo con contatore_ anche per contare
         alla rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da
         **5** a **1** a passi di **1**."
       courseF_bee_for7: |-
-        L'ultimo numero del  ciclo `ripeti con counter` viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
+        L'ultimo numero del  _ciclo con contatore_ viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
 
         Prova a raccogliere questi fiori usando un  **"passo"** di 2.
       courseF_bee_for7_2018: |-
-        L'ultimo numero del  ciclo `ripeti con counter` viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
+        L'ultimo numero del  _ciclo con contatore_ viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
 
         Prova a raccogliere questi fiori usando un  **"passo"** di 2.
       courseF_bee_for7_2019: |-
-        L'ultimo numero del  ciclo `ripeti con counter` viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
+        L'ultimo numero del  _ciclo con contatore_ viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
 
         Prova a raccogliere questi fiori usando un  **"passo"** di 2.
       courseF_bee_for8: |-
-        Questo codice è da completare!
+        E ora andiamo oltre!
 
         Quale deve essere il **passo** in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
       courseF_bee_for8_2018: |-
-        Questo codice è da completare!
+        E ora andiamo oltre!
 
         Quale deve essere il **passo** in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
       courseF_bee_for8_2019: |-
-        Questo codice è da completare!
+        E ora andiamo oltre!
 
         Quale deve essere il **passo** in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
+      courseF_bee_for9: "Ora combina l'uso della variabile `counter` (contatore) un
+        blocco matematico! \n\nCome puoi utilizzare la variabile `counter` (contatore)
+        per muoverti in questo giardino usando il minor numero possibile di blocchi?"
+      courseF_bee_for9_2018: "Ora combina l'uso della variabile `counter` (contatore)
+        un blocco matematico! \n\nCome puoi utilizzare la variabile `counter` (contatore)
+        per muoverti in questo giardino usando il minor numero possibile di blocchi?"
+      courseF_bee_for9_2019: "Ora combina l'uso della variabile `counter` (contatore)
+        un blocco matematico! \n\nCome puoi utilizzare la variabile `counter` (contatore)
+        per muoverti in questo giardino usando il minor numero possibile di blocchi?"
       courseF_bee_for_challenge1: |-
-        Usa questo ciclo `ripeti con counter` per raccogliere tutto il nettare.
+        Usa questo ciclo _ciclo con contatore_ per raccogliere tutto il nettare.
 
         Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
       courseF_bee_for_challenge1_2018: |-
-        Usa questo ciclo `ripeti con counter` per raccogliere tutto il nettare.
+        Usa questo ciclo _ciclo con contatore_ per raccogliere tutto il nettare.
 
         Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
       courseF_bee_for_challenge1_2019: |-
-        Usa questo ciclo `ripeti con counter` per raccogliere tutto il nettare.
+        Usa questo ciclo _ciclo con contatore_ per raccogliere tutto il nettare.
 
         Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
-      courseF_bee_for_challenge2: "<b>Super Sfida sulle variabili:</b> risolvi questo
-        esercizio con il minore numero possibile di blocchi!"
-      courseF_bee_for_challenge2_2018: "<b>Super Sfida sulle variabili:</b> risolvi
-        questo esercizio con il minore numero possibile di blocchi!"
-      courseF_bee_for_challenge2_2019: "<b>Super Sfida sulle variabili:</b> risolvi
-        questo esercizio con il minore numero possibile di blocchi!"
+      courseF_bee_for_challenge2: Risolvi questo esercizio con il minore numero possibile
+        di blocchi.
+      courseF_bee_for_challenge2_2018: Risolvi questo esercizio con il minore numero
+        possibile di blocchi.
+      courseF_bee_for_challenge2_2019: Risolvi questo esercizio con il minore numero
+        possibile di blocchi.
       courseF_bee_variables_3_2018: |-
         _"Che giardino fantastico!"_
 

@@ -170,14 +170,6 @@ fa:
             '"right"': سمت راست
             '"space"': فضا
             '"x"': طول (x)
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': در هم
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": در هم
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -198,10 +190,6 @@ fa:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': زیر
               آب
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': زمستان
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': در هم
       gamelab_setProp:
         options:
           PROPERTY:
@@ -216,19 +204,6 @@ fa:
           CONDITION:
             '"when"': وقتی
             '"while"': '"while"'
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': وقتی
-            '"while"': '"while"'
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
       gamelab_turn:
         options:
           DIRECTION:
@@ -249,11 +224,6 @@ fa:
             "'down'": پایین
             "'left'": سمت چپ
             "'right'": سمت راست
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': وقتی
-            '"while"': '"while"'
       gamelab_whileKey:
         options:
           KEY:
