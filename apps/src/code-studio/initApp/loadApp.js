@@ -472,9 +472,6 @@ const sourceHandler = {
   getLevelHtml() {
     return window.Applab && Applab.getHtml();
   },
-  getLibrary() {
-    return getAppOptions().getLibrary();
-  },
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },

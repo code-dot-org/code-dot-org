@@ -19,7 +19,6 @@ import PublishDialog from '../../templates/projects/publishDialog/PublishDialog'
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import PublishLibraryDialog from './PublishLibraryDialog';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -499,7 +498,6 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
-        <PublishLibraryDialog />
       </div>
     );
   }
