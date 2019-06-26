@@ -636,6 +636,34 @@ designMode.onDuplicate = function(element, prevThemeName, event) {
   return duplicateElement;
 };
 
+designMode.hasCustomizedThemeProperties = function(element) {
+  const currentThemeValue = elementLibrary.getCurrentTheme(
+    designMode.activeScreen()
+  );
+  const themeValues = elementLibrary.getThemeValues(element);
+
+  for (const propName in themeValues) {
+    const propTheme = themeValues[propName];
+    const currentDefault = propTheme[currentThemeValue];
+    const currentPropValue = designMode.readProperty(element, propName);
+    const {type} = propTheme;
+    //
+    // Compare properties against the theme default
+    //
+    if (type === 'color') {
+      if (
+        new RGBColor(currentPropValue).toHex() !==
+        new RGBColor(currentDefault).toHex()
+      ) {
+        return true;
+      }
+    } else if (currentPropValue !== currentDefault) {
+      return true;
+    }
+  }
+  return false;
+};
+
 var batchChangeId = 1;
 
 designMode.onRestoreThemeDefaults = function(element) {
