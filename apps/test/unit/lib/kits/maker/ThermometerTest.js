@@ -1,5 +1,5 @@
 /** @file Test the Thermometer controller wrapping playground-io Thermometer */
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import Thermometer from '@cdo/apps/lib/kits/maker/Thermometer';
 import Playground from 'playground-io';

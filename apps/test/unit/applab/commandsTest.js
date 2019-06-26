@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
 import {rgb, setSelectionRange, openUrl} from '@cdo/apps/applab/commands';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';

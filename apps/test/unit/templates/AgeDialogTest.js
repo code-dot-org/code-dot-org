@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 import React from 'react';
 import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
 import {shallow} from 'enzyme';

@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
 import React from 'react';
 import {shallow} from 'enzyme';

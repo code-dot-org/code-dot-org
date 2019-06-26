@@ -1,4 +1,4 @@
-import {assert, expect} from 'chai';
+import {assert, expect} from '../../../util/configuredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';

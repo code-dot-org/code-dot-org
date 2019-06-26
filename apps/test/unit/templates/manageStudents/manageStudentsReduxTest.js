@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../../util/configuredChai';
 import manageStudents, {
   setLoginType,
   setStudents,
