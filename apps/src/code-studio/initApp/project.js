@@ -1088,20 +1088,15 @@ var projects = (module.exports = {
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
-        const libraries =
-          this.sourceHandler.getLevelLibraries &&
-          this.sourceHandler.getLevelLibraries();
-        var sourceAndHtml = {
+        const libraries = this.sourceHandler.getLevelLibraries();
+        callback({
           source,
           html,
           animations,
           makerAPIsEnabled,
-          selectedSong
-        };
-        if (libraries) {
-          sourceAndHtml['libraries'] = libraries;
-        }
-        callback(sourceAndHtml);
+          selectedSong,
+          libraries
+        });
       })
     );
   },
