@@ -55,14 +55,14 @@ module.exports = {
       customValidator: function(assert) {
         var debugOutput = document.getElementById('debug-output');
 
-        expect(debugOutput.textContent).to.contain('text: newtext\n');
-        expect(debugOutput.textContent).to.contain('text-color: red\n');
-        expect(debugOutput.textContent).to.contain('background-color: green\n');
-        expect(debugOutput.textContent).to.contain('font-size: 21\n');
+        expect(debugOutput.textContent).to.contain('"text: newtext"');
+        expect(debugOutput.textContent).to.contain('"text-color: red"');
+        expect(debugOutput.textContent).to.contain('"background-color: green"');
+        expect(debugOutput.textContent).to.contain('"font-size: 21"');
         expect(debugOutput.textContent).to.match(
-          /image: .*facebook_purple.png\n/
+          /"image: .*facebook_purple.png"/
         );
-        expect(debugOutput.textContent).to.contain('icon-color: blue');
+        expect(debugOutput.textContent).to.contain('"icon-color: blue"');
 
         return true;
       },
@@ -113,12 +113,12 @@ module.exports = {
       customValidator: function(assert) {
         var debugOutput = document.getElementById('debug-output');
 
-        expect(debugOutput.textContent).to.contain('text: newtext\n');
-        expect(debugOutput.textContent).to.contain('text-color: red\n');
-        expect(debugOutput.textContent).to.contain('background-color: green\n');
-        expect(debugOutput.textContent).to.contain('font-size: 21\n');
+        expect(debugOutput.textContent).to.contain('text: newtext');
+        expect(debugOutput.textContent).to.contain('text-color: red');
+        expect(debugOutput.textContent).to.contain('background-color: green');
+        expect(debugOutput.textContent).to.contain('font-size: 21');
         expect(debugOutput.textContent).to.match(
-          /image: .*facebook_purple.png\n/
+          /"image: .*facebook_purple.png"/
         );
         expect(debugOutput.textContent).to.contain('icon-color: blue');
 
@@ -140,13 +140,13 @@ module.exports = {
         '</div></div>',
       xml: `
         var unescapedImage = 'ñ#?( "\\'.jpg';
-        
+
         setProperty("image1", "image", unescapedImage);
         console.log('image1 image: ' + getProperty("image1", "image"));
-        
+
         setProperty("button1", "image", unescapedImage);
         console.log('button1 image: ' + getProperty("button1", "image"));
-        
+
         setProperty("screen1", "image", unescapedImage);
         console.log('screen1 image: ' + getProperty("screen1", "image"));
 `,
@@ -206,7 +206,7 @@ module.exports = {
       },
       customValidator: function(assert) {
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, 'placeholder: placeholdertext');
+        assert.equal(debugOutput.textContent, '"placeholder: placeholdertext"');
         return true;
       },
       expected: {
@@ -244,10 +244,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          `value: 51
-min: 1
-max: 101
-step: 3`
+          `"value: 51""min: 1""max: 101""step: 3"`
         );
         return true;
       },
@@ -302,12 +299,12 @@ step: 3`
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
 
-        expect(debugOutput.textContent).to.contain('width: 11\n');
-        expect(debugOutput.textContent).to.contain('height: 12\n');
-        expect(debugOutput.textContent).to.contain('x: 13\n');
-        expect(debugOutput.textContent).to.contain('y: 14\n');
+        expect(debugOutput.textContent).to.contain('width: 11');
+        expect(debugOutput.textContent).to.contain('height: 12');
+        expect(debugOutput.textContent).to.contain('x: 13');
+        expect(debugOutput.textContent).to.contain('y: 14');
         expect(debugOutput.textContent).to.match(
-          /picture: .*facebook_purple.png\n/
+          /"picture: .*facebook_purple.png"/
         );
         expect(debugOutput.textContent).to.contain('hidden: true');
         expect(debugOutput.textContent).to.contain('icon-color: blue');
@@ -366,12 +363,12 @@ step: 3`
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
 
-        expect(debugOutput.textContent).to.contain('width: 11\n');
-        expect(debugOutput.textContent).to.contain('height: 12\n');
-        expect(debugOutput.textContent).to.contain('x: 13\n');
-        expect(debugOutput.textContent).to.contain('y: 14\n');
+        expect(debugOutput.textContent).to.contain('width: 11');
+        expect(debugOutput.textContent).to.contain('height: 12');
+        expect(debugOutput.textContent).to.contain('x: 13');
+        expect(debugOutput.textContent).to.contain('y: 14');
         expect(debugOutput.textContent).to.match(
-          /picture: .*facebook_purple.png\n/
+          /"picture: .*facebook_purple.png"/
         );
         expect(debugOutput.textContent).to.contain('hidden: true');
         expect(debugOutput.textContent).to.contain('icon-color: blue');
@@ -423,7 +420,7 @@ step: 3`
       },
       customValidator: function(assert) {
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, 'options: one,two,three');
+        assert.equal(debugOutput.textContent, '"options: one,two,three"');
         return true;
       },
       expected: {
@@ -472,7 +469,7 @@ step: 3`
       },
       customValidator: function(assert) {
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, 'options: one,two,three');
+        assert.equal(debugOutput.textContent, '"options: one,two,three"');
         return true;
       },
       expected: {
@@ -506,7 +503,7 @@ step: 3`
       },
       customValidator: function(assert) {
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, 'width: 12\nheight: 13');
+        assert.equal(debugOutput.textContent, '"width: 12""height: 13"');
         return true;
       },
       expected: {
@@ -544,7 +541,7 @@ step: 3`
       },
       customValidator: function(assert) {
         var debugOutput = document.getElementById('debug-output');
-        expect(debugOutput.textContent).to.match(/image: .*flappy_promo.png\n/);
+        expect(debugOutput.textContent).to.match(/"image: .*flappy_promo.png"/);
         expect(debugOutput.textContent).to.contain('icon-color: blue');
         return true;
       },
@@ -578,7 +575,7 @@ step: 3`
       customValidator: function(assert) {
         var debugOutput = document.getElementById('debug-output');
         expect(debugOutput.textContent).to.match(
-          /picture: .*flappy_promo.png$/
+          /"picture: .*flappy_promo.png"/
         );
         return true;
       },
@@ -609,7 +606,10 @@ step: 3`
       },
       customValidator: function(assert) {
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, 'group-id: gid1\nchecked: true');
+        assert.equal(
+          debugOutput.textContent,
+          '"group-id: gid1""checked: true"'
+        );
         return true;
       },
       expected: {
@@ -643,7 +643,7 @@ step: 3`
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'readonly: false\nreadonly: false\nreadonly: true\ntext-align: right'
+          '"readonly: false""readonly: false""readonly: true""text-align: right"'
         );
         return true;
       },
@@ -672,7 +672,7 @@ step: 3`
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'ERROR: Line: 1: There is no property named "cant_set_this" for element "my_image". Make sure you choose a property from the dropdown.'
+          '"ERROR: Line: 1: There is no property named "cant_set_this" for element "my_image". Make sure you choose a property from the dropdown."'
         );
         return true;
       },
@@ -701,7 +701,7 @@ step: 3`
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'WARNING: Line: 1: setProperty() value parameter value (true) is not a boolean.'
+          '"WARNING: Line: 1: setProperty() value parameter value (true) is not a boolean."'
         );
         return true;
       },
