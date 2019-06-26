@@ -39,7 +39,8 @@ class SchoolInfo < ActiveRecord::Base
 
   VALIDATION_TYPES = [
     VALIDATION_FULL = 'full'.freeze,
-    VALIDATION_NONE = 'none'.freeze
+    VALIDATION_NONE = 'none'.freeze,
+    VALIDATION_COMPLETE = 'complete'.freeze
   ].freeze
 
   belongs_to :school_district
@@ -133,6 +134,7 @@ class SchoolInfo < ActiveRecord::Base
   validate :validate_with_country
   validate :validate_without_country
   validate :validate_zip
+  validate :validate_complete
 
   def usa?
     ['US', 'USA', 'United States'].include? country
@@ -269,6 +271,13 @@ class SchoolInfo < ActiveRecord::Base
     end
 
     errors.add(:school_district, "is required")
+  end
+
+  def validate_complete
+    return if validation_type != VALIDATION_COMPLETE || complete?
+
+    errors.add(:country, "is required") if country.nil?
+    errors.add(:school_name, "can not be blank") if school_name.blank?
   end
 
   def effective_school_district_name
