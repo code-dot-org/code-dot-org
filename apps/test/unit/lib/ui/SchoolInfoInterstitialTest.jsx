@@ -82,6 +82,10 @@ describe('SchoolInfoInterstitial', () => {
     );
     const wrapperInstance = wrapper.instance();
     sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
+    // TODO: Add explanation for the use of .setState()
+    // Wrapper.setState() is used to force a re-render of the school info interstitial.
+    // because .update() is not working for shallow rendering.
+    // .setState()
     wrapper.setState({});
     wrapper
       .find(Button)
