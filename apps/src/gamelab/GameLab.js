@@ -206,8 +206,10 @@ GameLab.prototype.init = function(config) {
     throw new Error('GameLab requires a StudioApp');
   }
 
+  this.isSpritelab = this.studioApp_.isUsingBlockly();
+
   this.skin = config.skin;
-  if (this.studioApp_.isUsingBlockly()) {
+  if (this.isSpritelab) {
     const MEDIA_URL = '/blockly/media/spritelab/';
     this.skin.smallStaticAvatar = MEDIA_URL + 'avatar.png';
     this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
@@ -265,7 +267,7 @@ GameLab.prototype.init = function(config) {
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
     onDraw: this.onP5Draw.bind(this),
-    spritelab: this.studioApp_.isUsingBlockly()
+    spritelab: this.isSpritelab
   });
 
   config.afterClearPuzzle = function() {
@@ -296,7 +298,7 @@ GameLab.prototype.init = function(config) {
   // Display CSF-style instructions when using Blockly. Otherwise provide a way
   // for us to have top pane instructions disabled by default, but able to turn
   // them on.
-  config.noInstructionsWhenCollapsed = !this.studioApp_.isUsingBlockly();
+  config.noInstructionsWhenCollapsed = !this.isSpritelab;
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
@@ -391,7 +393,7 @@ GameLab.prototype.init = function(config) {
     showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame:
-      config.level.allAnimationsSingleFrame || this.studioApp_.isUsingBlockly(),
+      config.level.allAnimationsSingleFrame || this.isSpritelab,
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
@@ -609,7 +611,7 @@ GameLab.prototype.afterInject_ = function(config) {
     getStore().getState().pageConstants.isShareView
   );
 
-  if (this.studioApp_.isUsingBlockly()) {
+  if (this.isSpritelab) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords(
@@ -761,7 +763,7 @@ GameLab.prototype.rerunSetupCode = function() {
   getStore().dispatch(clearConsole());
   Sounds.getSingleton().muteURLs();
   this.gameLabP5.p5.allSprites.removeSprites();
-  if (this.gameLabP5.spritelab) {
+  if (this.isSpritelab) {
     this.gameLabP5.spritelab.reset();
   }
   this.JSInterpreter.deinitialize();
@@ -915,7 +917,7 @@ GameLab.prototype.execute = function(shouldLoop = true) {
   this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (
-    this.studioApp_.isUsingBlockly() &&
+    this.isSpritelab &&
     (this.studioApp_.hasUnwantedExtraTopBlocks() ||
       this.studioApp_.hasDuplicateVariablesInForLoops())
   ) {
@@ -962,7 +964,7 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
       );
     }
 
-    if (this.gameLabP5.spritelab) {
+    if (this.isSpritelab) {
       const spritelabCommands = this.gameLabP5.spritelab.commands;
       for (const command in spritelabCommands) {
         this.JSInterpreter.createGlobalProperty(

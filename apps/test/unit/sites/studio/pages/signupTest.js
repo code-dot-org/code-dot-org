@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import {setSchoolInfoFormData} from '@cdo/apps/sites/studio/pages/signup';
 
 describe('registration', () => {
