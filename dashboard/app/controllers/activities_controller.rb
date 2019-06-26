@@ -166,6 +166,8 @@ class ActivitiesController < ApplicationController
 
     is_multi_assessment = false
     if @script_level
+      # Make sure we don't log when @script_level is a multi-page assessment
+      # and @level is a multi level.
       is_sublevel = !@script_level.levels.include?(@level)
       is_multi_assessment = @script_level.assessment && @level.is_a?(Multi) && !is_sublevel
     end
