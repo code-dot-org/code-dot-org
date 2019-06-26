@@ -1,9 +1,9 @@
-import GameLabJr from '@cdo/interpreted/GameLabJr.interpreted.js';
+import NativeSpriteLab from '@cdo/interpreted/NativeSpriteLab.interpreted.js';
 import ValidationSetup from '@cdo/interpreted/ValidationSetup.interpreted.js';
 import {TestResults} from '@cdo/apps/constants';
 
 const levelDef = {
-  helperLibraries: ['GameLabJr'],
+  helperLibraries: ['NativeSpriteLab'],
   sharedBlocks: [
     {
       name: 'gamelab_setBackground',
@@ -30,7 +30,7 @@ export default {
   levelDefinition: levelDef,
   tests: [
     {
-      libraries: {GameLabJr, ValidationSetup},
+      libraries: {NativeSpriteLab, ValidationSetup},
       description: 'Sprite Lab fail',
       xml: `
         <xml>
@@ -42,7 +42,7 @@ export default {
       }
     },
     {
-      libraries: {GameLabJr, ValidationSetup},
+      libraries: {NativeSpriteLab, ValidationSetup},
       description: 'Sprite Lab pass',
       xml: `
         <xml>
