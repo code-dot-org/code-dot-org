@@ -28,6 +28,7 @@ level 'CSD U2 HTML Debug Paragraphs_pilot', progression: 'Using HTML Tags'
 stage 'Headings', flex_category: 'csd2_1'
 level 'CSD U2L04 TFMD_pilot', named: true
 level 'CSD U2 Pair Programming Video_pilot', named: true
+level 'CSD U2 Heading debug', progression: 'Headings'
 level 'CSD U2 Heading Demo_pilot', progression: 'Headings'
 level 'CSD U2 Heading Sizes_pilot', progression: 'Headings'
 level 'CSD Header Size MC_2018_2019_pilot', progression: 'Headings', assessment: true
