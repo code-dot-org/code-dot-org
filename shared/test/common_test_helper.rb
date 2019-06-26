@@ -39,16 +39,8 @@ VCR.configure do |c|
   end
 end
 
-# Truncate database tables to ensure repeatable tests.
 PEGASUS_TEST_TABLES = %w(storage_apps user_storage_ids).freeze
-PEGASUS_TEST_TABLES.each do |table|
-  PEGASUS_DB[table.to_sym].truncate
-end.freeze
-
 DASHBOARD_TEST_TABLES = %w(channel_tokens).freeze
-DASHBOARD_TEST_TABLES.each do |table|
-  DASHBOARD_DB[table.to_sym].truncate
-end.freeze
 
 module SetupTest
   def around(&block)
@@ -79,6 +71,14 @@ module SetupTest
     # Therefore, remove the commit-specific part of this path only in unit tests.
     CDO.stubs(sources_s3_directory: 'sources_test')
     CDO.stubs(newrelic_logging: true)
+
+    # Truncate database tables before each test case to ensure repeatable tests.
+    PEGASUS_TEST_TABLES.each do |table|
+      PEGASUS_DB[table.to_sym].truncate
+    end
+    DASHBOARD_TEST_TABLES.each do |table|
+      DASHBOARD_DB[table.to_sym].truncate
+    end
 
     VCR.use_cassette(cassette_name, record: record_mode) do
       PEGASUS_DB.transaction(rollback: :always) do
