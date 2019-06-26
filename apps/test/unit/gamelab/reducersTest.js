@@ -5,7 +5,7 @@ var {
 } = require('@cdo/apps/gamelab/textConsoleModule');
 var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 var _ = require('lodash');
 var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants')
   .GameLabInterfaceMode;
