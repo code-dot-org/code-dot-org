@@ -4,13 +4,11 @@ const SHOW_LIBRARY_SHARE_DIALOG =
 const HIDE_LIBRARY_SHARE_DIALOG =
   'libraryShareDialog/HIDE_LIBRARY_SHARE_DIALOG';
 const SET_LIBRARY_NAME = 'libraryShareDialog/SET_LIBRARY_NAME';
-const SET_LIBRARY_SOURCE = 'libraryShareDialog/SET_LIBRARY_SOURCE';
 
 const initialState = {
-  libraryFunctions: [],
+  libraryFunctions: {},
   isOpen: false,
-  libraryName: '',
-  librarySource: ''
+  libraryName: ''
 };
 
 export default function reducer(state, action) {
@@ -39,12 +37,6 @@ export default function reducer(state, action) {
         ...state,
         libraryName: action.libraryName
       };
-    case SET_LIBRARY_SOURCE:
-      return {
-        ...initialState,
-        ...state,
-        librarySource: action.librarySource
-      };
     default:
       return {
         ...initialState,
@@ -72,12 +64,5 @@ export function setLibraryName(name) {
   return {
     type: SET_LIBRARY_NAME,
     libraryName: name
-  };
-}
-
-export function setLibrarySource(source) {
-  return {
-    type: SET_LIBRARY_SOURCE,
-    librarySource: source
   };
 }

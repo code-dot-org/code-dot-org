@@ -127,8 +127,7 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
-    selectedSong: data.selectedSong,
-    libraries: data.libraries
+    selectedSong: data.selectedSong
   };
 }
 
@@ -571,10 +570,6 @@ var projects = (module.exports = {
 
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
-      }
-
-      if (currentSources.libraries) {
-        sourceHandler.setInitialLevelLibraries(currentSources.libraries);
       }
 
       if (isEditing) {
@@ -1088,15 +1083,7 @@ var projects = (module.exports = {
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
-        const libraries = this.sourceHandler.getLevelLibraries();
-        callback({
-          source,
-          html,
-          animations,
-          makerAPIsEnabled,
-          selectedSong,
-          libraries
-        });
+        callback({source, html, animations, makerAPIsEnabled, selectedSong});
       })
     );
   },
@@ -1117,23 +1104,6 @@ var projects = (module.exports = {
           {
             ...sourceAndHtml,
             makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled
-          },
-          () => {
-            resolve();
-            utils.reload();
-          }
-        );
-      });
-    });
-  },
-
-  addLibrary(data) {
-    return new Promise(resolve => {
-      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-        this.saveSourceAndHtml_(
-          {
-            ...sourceAndHtml,
-            libraries: [data]
           },
           () => {
             resolve();
