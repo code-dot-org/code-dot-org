@@ -87,7 +87,6 @@ describe('SchoolInfoInterstitial', () => {
       .first()
       .simulate('click');
 
-    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
     expect(wrapper.state('isOpen')).to.be.false;
   });
 

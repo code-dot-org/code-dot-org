@@ -299,12 +299,7 @@ export default class SchoolInfoInterstitial extends React.Component {
       });
   };
 
-  random = () => {
-    console.log('====>Randome method called');
-  }
-
   dismissSchoolInfoForm = () => {
-    console.log('======>I have been clicked');
     this.setState({isOpen: false});
   };
 
@@ -372,7 +367,7 @@ export default class SchoolInfoInterstitial extends React.Component {
           </div>
           <div style={styles.bottom}>
             <Button
-              onClick={() => this.dismissSchoolInfoForm()}
+              onClick={this.dismissSchoolInfoForm}
               style={styles.button}
               color="gray"
               size="large"
