@@ -1103,11 +1103,13 @@ zh-TW:
         - text: 我不知道。
           correct: false
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        Correct!: 正確！
-        I don't know.: 我不知道。
-        0: ': ''Look carefully at the code below.  What do you think will happen after
-          you click "Run"? Remember: there will only ever be *one* honeycomb or *one*
-          flower behind each cloud.'''
+        answers:
+        - correct: true
+          feedback: 正確！
+        - 
+        - 
+        - text: 我不知道。
+          correct: false
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - 

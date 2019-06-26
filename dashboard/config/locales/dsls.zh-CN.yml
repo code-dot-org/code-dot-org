@@ -1282,17 +1282,44 @@ zh-CN:
           correct: false
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
       courseD_multi_bee_conditionals7_predict2:
-        I don't know.: 我不知道.
-        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        answers:
+        - text: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+          correct: true
+        - text: 蜜蜂会从花朵和蜂窝中获取花粉。
+          correct: false
+          feedback: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
+          correct: false
+          feedback: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 我不知道.
+          correct: false
+          feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
       courseD_multi_bee_conditionals7_predict2_2018:
-        I don't know.: 我不知道.
-        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        answers:
+        - text: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+          correct: true
+        - text: 蜜蜂会从花朵和蜂窝中获取花粉。
+          correct: false
+          feedback: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
+          correct: false
+          feedback: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 我不知道.
+          correct: false
+          feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        I don't know.: 我不知道.
-        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        answers:
+        - text: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+          correct: true
+        - text: 蜜蜂会从花朵和蜂窝中获取花粉。
+          correct: false
+          feedback: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
+          correct: false
+          feedback: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 我不知道.
+          correct: false
+          feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: 蜜蜂会向前移动, 只能得到1个花蜜。

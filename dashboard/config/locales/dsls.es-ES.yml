@@ -863,6 +863,9 @@ es:
         - 
         - text: No lo se.
           correct: false
+        questions:
+        - text: Mira cuidadosamente el código. ¿Cúantas calabazas recogerá el granjero
+            cuando hagas click en "Ejecutar"?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - 
@@ -870,6 +873,9 @@ es:
         - 
         - text: No lo se.
           correct: false
+        questions:
+        - text: Mira cuidadosamente el código. ¿Cúantas calabazas recogerá el granjero
+            cuando hagas click en "Ejecutar"?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - 
@@ -877,6 +883,9 @@ es:
         - 
         - text: No lo se.
           correct: false
+        questions:
+        - text: Mira cuidadosamente el código. ¿Cúantas calabazas recogerá el granjero
+            cuando hagas click en "Ejecutar"?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: El programa no fallará. Scrat conseguirá la bellota.
@@ -1090,10 +1099,12 @@ es:
         - text: No lo se.
           correct: false
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        I don't know.: No lo se.
-        0: ': ''Look carefully at the code below.  What do you think will happen after
-          you click "Run"? Remember: there will only ever be *one* honeycomb or *one*
-          flower behind each cloud.'''
+        answers:
+        - correct: true
+        - 
+        - 
+        - text: No lo se.
+          correct: false
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: La abeja se moverá y obtendrá el néctar sólo una vez.
