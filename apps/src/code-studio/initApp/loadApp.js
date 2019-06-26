@@ -475,9 +475,6 @@ const sourceHandler = {
   getLibrary() {
     return getAppOptions().getLibrary();
   },
-  codeContainsError() {
-    return getAppOptions().codeContainsError();
-  },
   setInitialLevelLibraries(libraries) {
     getAppOptions().level.libraries = libraries;
   },

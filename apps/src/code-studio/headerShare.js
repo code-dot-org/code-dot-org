@@ -10,8 +10,7 @@ import {showShareDialog} from './components/shareDialogRedux';
 import {
   setLibraryFunctions,
   setLibraryName,
-  setLibrarySource,
-  setContainsError
+  setLibrarySource
 } from './components/libraryShareDialogRedux';
 import {AllPublishableProjectTypes} from '../util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
@@ -23,8 +22,6 @@ export function shareProject(shareUrl) {
       getStore().dispatch(
         setLibraryFunctions(dashboard.project.getLibraryFromApp())
       );
-      var containsError = dashboard.project.containsError();
-      getStore().dispatch(setContainsError(containsError));
 
       // strip whitespace and non alphanumeric characters (underscores are preserved)
       var projectName = dashboard.project
