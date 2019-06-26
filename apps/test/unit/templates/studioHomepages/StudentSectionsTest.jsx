@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import {sections} from './fakeSectionUtils';
 import i18n from '@cdo/locale';
 import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';

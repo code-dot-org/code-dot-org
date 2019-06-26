@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 import {setExternalGlobals} from '../util/testUtils';
 import experiments from '@cdo/apps/util/experiments';
 import sinon from 'sinon';
