@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import sinon from 'sinon';
 import {
   UnconnectedVisualizationResizeBar as VisualizationResizeBar,

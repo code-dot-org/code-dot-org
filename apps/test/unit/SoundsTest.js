@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../util/configuredChai';
 import Sounds from '@cdo/apps/Sounds';
 import sinon from 'sinon';
 
