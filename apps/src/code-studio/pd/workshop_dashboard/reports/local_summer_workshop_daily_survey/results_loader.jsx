@@ -6,8 +6,9 @@ import Results from './results';
 import color from '@cdo/apps/util/color';
 
 const styles = {
-  errorBox: {
-    margin: 15
+  errorContainer: {
+    marginTop: 15,
+    marginLeft: 15
   },
   errorDetailsBox: {
     backgroundColor: color.lightest_gray,
@@ -62,7 +63,7 @@ export class ResultsLoader extends React.Component {
 
   renderErrors() {
     return (
-      <div id="error_list" style={styles.errorBox}>
+      <div id="error_list" style={styles.errorContainer}>
         <h1>An error occurred</h1>
         <p>
           Unfortunately this request could not be processed. Our team has been
