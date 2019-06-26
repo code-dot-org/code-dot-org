@@ -13,7 +13,7 @@ module.exports = {
         setTimeout(function() {
           console.log('done');
         }, 5);
-        
+
         var key = setTimeout(function() {
           console.log('do not expect this');
         }, 4);
@@ -25,7 +25,7 @@ module.exports = {
       },
       function validateResult(assert) {
         const debugOutput = document.getElementById('debug-output').textContent;
-        assert.equal(debugOutput, 'done');
+        assert.equal(debugOutput, '"done"');
       }
     ),
 
@@ -37,7 +37,7 @@ module.exports = {
           console.log('interval ' + i);
           i++;
         }, 5);
-        
+
         var key = setInterval(function() {
           console.log('do not expect this');
         }, 4);
@@ -64,7 +64,7 @@ module.exports = {
           console.log('timedLoop ' + i);
           i++;
         });
-        
+
         var key = timedLoop(4, function() {
           console.log('do not expect this');
         });
