@@ -24,13 +24,31 @@ export default class DatasetPicker extends React.Component {
     assetChosen: PropTypes.func.isRequired
   };
 
+  importCsvFromUrl = (name, url) => {
+    var request = new XMLHttpRequest();
+    request.open('GET', url, true);
+    request.responseType = 'text';
+    request.onload = function() {
+      FirebaseStorage.importCsv(
+        name,
+        request.response,
+        () => console.log('importCsv onSuccess'),
+        () => console.log('importCsv onError')
+      );
+    };
+    request.onerror = function() {
+      console.log('onerror');
+    };
+    request.send();
+  };
+
   chooseAsset = (name, url) => {
-    FirebaseStorage.importDataset(
+    FirebaseStorage.createTable(
       name,
-      url,
-      () => console.log('importDataset onSuccess'),
-      () => console.log('importDataset onError')
+      () => console.log('createTable onSuccess'),
+      () => console.log('createTable onError')
     );
+    this.importCsvFromUrl(name, url);
     this.props.assetChosen(name);
   };
 
