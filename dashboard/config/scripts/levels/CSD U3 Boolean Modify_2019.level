@@ -97,11 +97,12 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "guMigREZXugi7mEs1Xs9VGBNrKByEg5QNWZxLiXfAltx8PJMyh2CjGHodIGs\n+YigK4cbNdeRXYuCzeTez2d7mA==\n"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 17:42:06 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:17:58 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 01:04:33 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-09-19 01:05:49 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-04-01 06:06:13 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 17:42:06 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:17:58 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 01:04:33 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-09-19 01:05:49 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-04-01 06:06:13 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-25 22:36:53 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
