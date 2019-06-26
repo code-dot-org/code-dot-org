@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/configuredChai';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -23,7 +23,7 @@ describe('SchoolInfoInterstitial', () => {
   beforeEach(() => sinon.stub(firehoseClient, 'putRecord'));
   afterEach(() => firehoseClient.putRecord.restore());
 
-  it('renders an uncloseable dialog with school info inputs and a save button', () => {
+  it('renders an uncloseable dialog with school info inputs, a dismiss button and a save button', () => {
     const wrapper = shallow(<SchoolInfoInterstitial {...MINIMUM_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <BaseDialog>
@@ -51,8 +51,18 @@ describe('SchoolInfoInterstitial', () => {
           </div>
           <div>
             <Button
+              text={i18n.dismiss()}
+              onClick={wrapper
+                .find(Button)
+                .first()
+                .prop('onClick')}
+            />
+            <Button
               text={i18n.save()}
-              onClick={wrapper.find(Button).prop('onClick')}
+              onClick={wrapper
+                .find(Button)
+                .last()
+                .prop('onClick')}
             />
           </div>
         </div>
@@ -262,7 +272,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors').country).to.equal(true);
     });
@@ -279,7 +292,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors')).to.not.have.property('country');
       expect(wrapper.state('errors').schoolType).to.equal(true);
@@ -298,7 +314,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors')).to.not.have.property('country');
       expect(wrapper.state('errors')).to.not.have.property('school_type');
@@ -318,7 +337,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       // No need to send anything but ID if it's available...
       // All other info will be backfilled from records on the server.
       expect(server.requests[0].requestBody).to.equal(
@@ -344,7 +366,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -372,7 +397,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -398,7 +426,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -425,7 +456,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -452,7 +486,11 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -478,7 +516,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -505,7 +546,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -531,7 +575,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -558,7 +605,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -587,7 +637,10 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -617,7 +670,10 @@ describe('SchoolInfoInterstitial', () => {
           onClose={onClose}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       expect(onClose).not.to.have.been.called;
 
       server.requests[0].respond(204, {}, '');
@@ -641,7 +697,10 @@ describe('SchoolInfoInterstitial', () => {
           onClose={onClose}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       server.requests[0].respond(404, {}, '');
       expect(onClose).not.to.have.been.called;
       expect(wrapper).to.containMatchingElement(
@@ -666,11 +725,17 @@ describe('SchoolInfoInterstitial', () => {
           onClose={onClose}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       server.requests[0].respond(404, {}, '');
       expect(onClose).not.to.have.been.called;
 
-      wrapper.find(Button).simulate('click');
+      wrapper
+        .find(Button)
+        .last()
+        .simulate('click');
       server.requests[1].respond(404, {}, '');
       expect(onClose).to.have.been.calledOnce;
     });
