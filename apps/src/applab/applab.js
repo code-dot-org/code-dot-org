@@ -400,7 +400,6 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
-  config.getLibrary = getLibrary;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -1109,15 +1108,6 @@ Applab.onReportComplete = function(response) {
   studioApp().onReportComplete(response);
   displayFeedback();
 };
-
-/**
- * Generates a library from the functions in the project code
- */
-function getLibrary() {
-  var temporaryInterpreter = new JSInterpreter({studioApp: studioApp()});
-  temporaryInterpreter.parse({code: studioApp().getCode()});
-  return temporaryInterpreter.getFunctionsAndParams(studioApp().getCode());
-}
 
 /**
  * Execute the app
