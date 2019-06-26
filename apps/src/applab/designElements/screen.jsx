@@ -210,21 +210,15 @@ export default {
     }
   },
   readProperty: function(element, name) {
-    switch (name) {
-      case 'theme':
-        return element.getAttribute('data-theme');
-      default:
-        throw `unknown property name ${name}`;
+    if (name === 'theme') {
+      return element.getAttribute('data-theme');
     }
+    throw `unknown property name ${name}`;
   },
   onPropertyChange: function(element, name, value) {
-    switch (name) {
-      case 'theme': {
-        designMode.changeThemeForScreen(element, value);
-        return true;
-      }
-      default:
-        break;
+    if (name === 'theme') {
+      designMode.changeThemeForScreen(element, value);
+      return true;
     }
     return false;
   }
