@@ -10,7 +10,9 @@ export const commands = {
   },
 
   keyPressed(condition, key, callback) {
-    spriteUtils.addEvent(condition + 'press', {key: key}, callback);
+    if (condition === 'when' || condition === 'while') {
+      spriteUtils.addEvent(condition + 'press', {key: key}, callback);
+    }
   },
 
   spriteClicked(condition, spriteId, callback) {
