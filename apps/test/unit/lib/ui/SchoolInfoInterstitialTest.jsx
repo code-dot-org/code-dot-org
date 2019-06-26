@@ -70,6 +70,31 @@ describe('SchoolInfoInterstitial', () => {
     );
   });
 
+  it('closes the dialog when the dismiss button is clicked', () => {
+    const wrapper = shallow(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {}
+        }}
+      />
+    );
+    const wrapperInstance = wrapper.instance();
+    const random = sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
+    const random2 = sinon.spy(wrapperInstance, 'random');
+    wrapperInstance.random();
+    expect(random2.calledOnce).to.equal(true);
+    wrapper
+      .find(Button)
+      .first()
+      .simulate('click');
+    console.log('This is the spy:: ', wrapperInstance.dismissSchoolInfoForm);
+    // expect(random.calledOnce).to.equal(true);
+    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
+    expect(wrapper.state('isOpen')).to.be.false;
+  });
+
   it('passes empty school info if created with no existing school info', () => {
     const wrapper = shallow(
       <SchoolInfoInterstitial
