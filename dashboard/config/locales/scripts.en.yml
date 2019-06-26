@@ -11792,6 +11792,8 @@ en:
           stages:
             new stage:
               name: new stage
+            Number Systems:
+              name: Number Systems
           title: CSP Unit 1 Pilot
           description_audience: ''
           description_short: ''

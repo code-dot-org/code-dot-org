@@ -1,6 +1,6 @@
 /** @file Tests for NetSimLogPanel */
 import $ from 'jquery';
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 import {KeyCodes} from '@cdo/apps/constants';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimSendPanel = require('@cdo/apps/netsim/NetSimSendPanel');

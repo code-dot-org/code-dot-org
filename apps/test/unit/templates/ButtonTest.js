@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import Button from '@cdo/apps/templates/Button';
