@@ -10,7 +10,7 @@ module Pd::SurveyPipeline
   end
 
   class AvgReducer < ReducerBase
-    # @param values Array<string> array of numbers in string format
+    # @param values [Array<string>] array of numbers in string format
     # @return [float] average of the input values
     # @raise [ArgumentError] if string not convertible to float
     def self.reduce(values)
@@ -20,7 +20,7 @@ module Pd::SurveyPipeline
   end
 
   class HistogramReducer < ReducerBase
-    # @param values Array<string> array of strings
+    # @param values [Array<string>] array of strings
     # @return [Hash{string => number}] count number of occurences of each string
     def self.reduce(values)
       return unless values.is_a? Enumerable
@@ -30,8 +30,8 @@ module Pd::SurveyPipeline
 
   class NoOpReducer < ReducerBase
     # Do nothing. Used to compile list of free-format answers.
-    # @param Array<string>
-    # @return Array<string> the same input it receives.
+    # @param [Array<string>]
+    # @return [Array<string>] the same input it receives.
     def self.reduce(values)
       values
     end

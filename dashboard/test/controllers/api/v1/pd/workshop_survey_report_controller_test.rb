@@ -320,15 +320,17 @@ module Api::V1::Pd
       assert_response :success
     end
 
-    # test 'expriment: it runs' do
-    #   # create workshop w/ facilitators
-    #   # create facilitator surveys
+    test 'expriment: it runs' do
+      # create workshop w/ facilitators
+      csf_201_ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1,
+        facilitators: create_list(:facilitator, 2)
 
-    #   get :experiment_survey_report, params: {workshop_id: new_academic_ws.id}
-    #   p response.body
+      sign_in @admin
+      get :experiment_survey_report, params: {workshop_id: csf_201_ws.id}
+      p response.body
 
-    #   assert_response :success
-    # end
+      assert_response :success
+    end
 
     private
 
