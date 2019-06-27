@@ -94,7 +94,7 @@ module Pd
       # Download new responses from JotForm
       # @param [form_id] (optional) specify a form id. Otherwise use all forms
       def sync_from_jotform(form_id = nil)
-        form_ids = form_id ? [form_id] : all_form_ids
+        form_ids = form_id ? [form_id] : all_form_ids.uniq
         _sync_from_jotform form_ids
       end
 
@@ -140,8 +140,11 @@ module Pd
                 # Store message and first line of backtrace for context
                 errors_per_form[form_id][submission_id] = "#{e.message}, #{e.backtrace.first}"
                 batch_error_count += 1
+
+                # TODO: save to a list. Have another job to pick up these failed submissions sync. Ignore the one that are not in production
               end
 
+              # TODO: always update last succesful submission id
               # As long as we have encountered no errors for this form, increase the last submission id
               questions.update!(last_submission_id: submission_id) unless errors_per_form.key?(form_id)
             end
