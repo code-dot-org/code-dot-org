@@ -1,11 +1,17 @@
 import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
-import { chooseLevelType, chooseLevel, addVariant, setActiveVariant, setField } from './editorRedux';
+import {
+  chooseLevelType,
+  chooseLevel,
+  addVariant,
+  setActiveVariant,
+  setField
+} from './editorRedux';
 
 const styles = {
   checkbox: {
@@ -50,7 +56,7 @@ const styles = {
 };
 
 const ArrowRenderer = ({onMouseDown}) => {
-  return <i className="fa fa-chevron-down" onMouseDown={onMouseDown}/>;
+  return <i className="fa fa-chevron-down" onMouseDown={onMouseDown} />;
 };
 ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
@@ -81,15 +87,26 @@ const LevelTokenDetails = React.createClass({
   },
 
   containsLegacyLevel() {
-    return this.props.level.ids.some(id => /^blockly:/.test(this.props.levelKeyList[id]));
+    return this.props.level.ids.some(id =>
+      /^blockly:/.test(this.props.levelKeyList[id])
+    );
   },
 
   handleLevelTypeSelected({value}) {
-    this.props.chooseLevelType(this.props.stagePosition, this.props.level.position, value);
+    this.props.chooseLevelType(
+      this.props.stagePosition,
+      this.props.level.position,
+      value
+    );
   },
 
   handleLevelSelected(index, {value}) {
-    this.props.chooseLevel(this.props.stagePosition, this.props.level.position, index, value);
+    this.props.chooseLevel(
+      this.props.stagePosition,
+      this.props.level.position,
+      index,
+      value
+    );
   },
 
   handleAddVariant() {
@@ -97,13 +114,19 @@ const LevelTokenDetails = React.createClass({
   },
 
   handleActiveVariantChanged(id) {
-    this.props.setActiveVariant(this.props.stagePosition, this.props.level.position, id);
+    this.props.setActiveVariant(
+      this.props.stagePosition,
+      this.props.level.position,
+      id
+    );
   },
 
   handleFieldChange(field) {
     const ref = this[`${field}Input`];
     if (ref) {
-      this.props.setField(this.props.stagePosition, this.props.level.position, {[field]: ref.value});
+      this.props.setField(this.props.stagePosition, this.props.level.position, {
+        [field]: ref.value
+      });
     }
   },
 
@@ -121,14 +144,14 @@ const LevelTokenDetails = React.createClass({
           arrowRenderer={ArrowRenderer}
           style={styles.levelTypeSelect}
         />
-        {this.containsLegacyLevel() &&
+        {this.containsLegacyLevel() && (
           <div>
             <span style={styles.levelFieldLabel}>Skin</span>
             <input
               defaultValue={this.props.level.skin}
               type="text"
               style={styles.textInput}
-              ref={skinInput => this.skinInput = skinInput}
+              ref={skinInput => (this.skinInput = skinInput)}
               onChange={this.handleFieldChange.bind(this, 'skin')}
             />
             <div style={{float: 'right'}}>
@@ -137,17 +160,19 @@ const LevelTokenDetails = React.createClass({
                 defaultValue={this.props.level.videoKey}
                 type="text"
                 style={styles.textInput}
-                ref={videoKeyInput => this.videoKeyInput = videoKeyInput}
+                ref={videoKeyInput => (this.videoKeyInput = videoKeyInput)}
                 onChange={this.handleFieldChange.bind(this, 'videoKey')}
               />
             </div>
-            <div style={{clear: 'both'}}></div>
+            <div style={{clear: 'both'}} />
             <span style={styles.levelFieldLabel}>Difficulty</span>
             <input
               defaultValue={this.props.level.conceptDifficulty}
               type="text"
               style={styles.textInput}
-              ref={conceptDifficultyInput => this.conceptDifficultyInput = conceptDifficultyInput}
+              ref={conceptDifficultyInput =>
+                (this.conceptDifficultyInput = conceptDifficultyInput)
+              }
               onChange={this.handleFieldChange.bind(this, 'conceptDifficulty')}
             />
             <div style={{float: 'right'}}>
@@ -156,15 +181,15 @@ const LevelTokenDetails = React.createClass({
                 defaultValue={this.props.level.concepts}
                 type="text"
                 style={Object.assign({}, styles.textInput, {width: 320})}
-                ref={conceptsInput => this.conceptsInput = conceptsInput}
+                ref={conceptsInput => (this.conceptsInput = conceptsInput)}
                 onChange={this.handleFieldChange.bind(this, 'concepts')}
               />
             </div>
           </div>
-        }
-        {this.props.level.ids.map((id, index) =>
+        )}
+        {this.props.level.ids.map((id, index) => (
           <div key={id}>
-            {this.props.level.ids.length > 1 &&
+            {this.props.level.ids.length > 1 && (
               <div>
                 <hr style={styles.divider} />
                 <span style={styles.levelFieldLabel}>Active</span>
@@ -173,10 +198,12 @@ const LevelTokenDetails = React.createClass({
                   onChange={this.handleActiveVariantChanged.bind(this, id)}
                   defaultChecked={id === this.props.level.activeId}
                   style={styles.checkbox}
-                  name={`radio-${this.props.stagePosition}-${this.props.level.position}`}
+                  name={`radio-${this.props.stagePosition}-${
+                    this.props.level.position
+                  }`}
                 />
               </div>
-            }
+            )}
             <VirtualizedSelect
               options={this.levelKeyOptions}
               value={id}
@@ -185,14 +212,14 @@ const LevelTokenDetails = React.createClass({
               arrowRenderer={ArrowRenderer}
             />
           </div>
-        )}
+        ))}
         {/* We don't currently support editing progression names here, but do
-          * show the current progression if we have one. */}
-        {this.props.level.progression &&
+         * show the current progression if we have one. */}
+        {this.props.level.progression && (
           <div style={styles.progression}>
             Progression Name: {this.props.level.progression}
           </div>
-        }
+        )}
         <hr style={styles.divider} />
         <button
           onMouseDown={this.handleAddVariant}
@@ -208,22 +235,25 @@ const LevelTokenDetails = React.createClass({
   }
 });
 
-export default connect(state => ({
-  levelKeyList: state.levelKeyList
-}), dispatch => ({
-  chooseLevelType(stage, level, value) {
-    dispatch(chooseLevelType(stage, level, value));
-  },
-  chooseLevel(stage, level, variant, value) {
-    dispatch(chooseLevel(stage, level, variant, value));
-  },
-  addVariant(stage, level) {
-    dispatch(addVariant(stage, level));
-  },
-  setActiveVariant(stage, level, id) {
-    dispatch(setActiveVariant(stage, level, id));
-  },
-  setField(stage, level, modifier) {
-    dispatch(setField(stage, level, modifier));
-  }
-}))(LevelTokenDetails);
+export default connect(
+  state => ({
+    levelKeyList: state.levelKeyList
+  }),
+  dispatch => ({
+    chooseLevelType(stage, level, value) {
+      dispatch(chooseLevelType(stage, level, value));
+    },
+    chooseLevel(stage, level, variant, value) {
+      dispatch(chooseLevel(stage, level, variant, value));
+    },
+    addVariant(stage, level) {
+      dispatch(addVariant(stage, level));
+    },
+    setActiveVariant(stage, level, id) {
+      dispatch(setActiveVariant(stage, level, id));
+    },
+    setField(stage, level, modifier) {
+      dispatch(setField(stage, level, modifier));
+    }
+  })
+)(LevelTokenDetails);
