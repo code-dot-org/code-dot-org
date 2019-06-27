@@ -137,7 +137,7 @@ class SchoolInfoTest < ActiveSupport::TestCase
 
   test 'auto upgrade validation type without other overwritting does not notify' do
     Honeybadger.expects(:notify).never
-    school_info = build :school_info_with_public_school_only, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build :school_info_with_public_school_only, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end
 
@@ -280,14 +280,14 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # US homeschool
 
   test 'US homeschool succeeds' do
-    school_info = build :school_info_us_homeschool, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build :school_info_us_homeschool, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   # US after school
 
   test 'US after school succeeds' do
-    school_info = build :school_info_us_after_school, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build :school_info_us_after_school, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end
 
