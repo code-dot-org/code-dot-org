@@ -5,6 +5,8 @@ import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
 import StudentSections from './StudentSections';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
+import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import experiments from '@cdo/apps/util/experiments';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
@@ -33,6 +35,12 @@ export default class StudentHomepage extends Component {
       <div>
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
+        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && (
+          <StudentFeedbackNotification
+            numFeedbackLevels="2"
+            linkToFeedbackOverview="/"
+          />
+        )}
         <RecentCourses
           courses={courses}
           topCourse={topCourse}

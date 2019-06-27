@@ -9,11 +9,8 @@ class ContractMatchDSL < ContentDSL
 
   def i18n_strings
     strings = super[@name]
+    strings['answers'] = @hash[:answers] unless @hash[:answers].empty?
 
-    @hash[:answers].each do |answer|
-      strings[answer] = answer
-    end
-
-    {@name => strings}
+    {@name => strings.deep_stringify_keys}
   end
 end
