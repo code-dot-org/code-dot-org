@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import LegendSelector from './LegendSelector';
@@ -39,6 +40,7 @@ const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP'];
  */
 export default class ScriptEditor extends React.Component {
   static propTypes = {
+    beta: PropTypes.bool,
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
@@ -454,7 +456,10 @@ export default class ScriptEditor extends React.Component {
           />
         </div>
         <h2>Stages and Levels</h2>
-        <div>
+        {this.props.beta ?
+          <FlexGroup /> :
+          <div>
+            <a href="?beta=true">Try the beta Script Editor (will reload the page without saving)</a>
           <textarea
             id="script_text"
             name="script_text"
@@ -464,6 +469,7 @@ export default class ScriptEditor extends React.Component {
             ref={textArea => (this.scriptTextArea = textArea)}
           />
         </div>
+        }
         <button
           className="btn btn-primary"
           type="submit"
