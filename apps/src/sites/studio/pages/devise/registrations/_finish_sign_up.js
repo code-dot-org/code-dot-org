@@ -38,7 +38,17 @@ $(document).ready(() => {
     renderSchoolInfo();
   }
 
+  let alreadySubmitted = false;
   $('.finish-signup').submit(function() {
+    // prevent multiple submission. We want to do this to defend against
+    // attempting to create multiple accounts, and it's valid to simply disable
+    // after the first attempt here since this form is submitted via HTML and
+    // will therefore initiate a page load after submission.
+    if (alreadySubmitted) {
+      return false;
+    }
+
+    alreadySubmitted = true;
     // Clean up school data and set age for teachers.
     if (getUserType() === 'teacher') {
       cleanSchoolInfo();

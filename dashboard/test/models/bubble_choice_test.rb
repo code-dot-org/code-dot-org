@@ -1,13 +1,14 @@
 require 'test_helper'
 
 class BubbleChoiceTest < ActiveSupport::TestCase
+  include Rails.application.routes.url_helpers
   self.use_transactional_test_case = true
 
   setup_all do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     create :game, name: 'BubbleChoice'
 
-    @sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png'
+    @sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
     @sublevel2 = create :level, name: 'choice_2'
     sublevels = [@sublevel1, @sublevel2]
     @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', title: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
@@ -87,10 +88,7 @@ DSL
     expected_summary = {
       title: @bubble_choice.title,
       description: @bubble_choice.description,
-      sublevels: [
-        {id: @sublevel1.id, title: @sublevel1.display_name, thumbnail_url: @sublevel1.thumbnail_url},
-        {id: @sublevel2.id, title: @sublevel2.name, thumbnail_url: nil}
-      ]
+      sublevels: @bubble_choice.summarize_sublevels
     }
 
     assert_equal expected_summary, summary
@@ -115,8 +113,20 @@ DSL
   test 'summarize_sublevels' do
     sublevel_summary = @bubble_choice.summarize_sublevels
     expected_summary = [
-      {id: @sublevel1.id, title: @sublevel1.display_name, thumbnail_url: @sublevel1.thumbnail_url},
-      {id: @sublevel2.id, title: @sublevel2.name, thumbnail_url: nil}
+      {
+        id: @sublevel1.id,
+        title: @sublevel1.display_name,
+        description: @sublevel1.bubble_choice_description,
+        thumbnail_url: @sublevel1.thumbnail_url,
+        url: level_url(@sublevel1.id)
+      },
+      {
+        id: @sublevel2.id,
+        title: @sublevel2.name,
+        description: @sublevel2.bubble_choice_description,
+        thumbnail_url: nil,
+        url: level_url(@sublevel2.id)
+      }
     ]
 
     assert_equal expected_summary, sublevel_summary
@@ -127,6 +137,15 @@ DSL
     assert_equal 2, sublevel_summary.length
     refute_nil sublevel_summary.first[:url]
     refute_nil sublevel_summary.last[:url]
+  end
+
+  test 'summarize_sublevels with user_id' do
+    student = create :student
+    create :user_level, user: student, level: @sublevel1, best_result: ActivityConstants::BEST_PASS_RESULT
+    sublevel_summary = @bubble_choice.summarize_sublevels(user_id: student.id)
+    assert_equal 2, sublevel_summary.length
+    assert sublevel_summary.first[:perfect]
+    assert_nil sublevel_summary.last[:perfect]
   end
 
   test 'best_result_sublevel_id returns sublevel with highest best_result for user' do

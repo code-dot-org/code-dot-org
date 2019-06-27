@@ -13,10 +13,8 @@ import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
 import designMode from '../designMode';
-import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
 import themeColor from '../themeColor';
 import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {
@@ -298,19 +296,11 @@ export default {
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
     element.style.height = '100px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.fontFamily = fontFamilyStyles[0];
-      element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = themeColor.textArea.classic;
-      element.style.backgroundColor = themeColor.textAreaBackground.classic;
-      elementUtils.setDefaultBorderStyles(element, {
-        forceDefaults: true,
-        textInput: true
-      });
-    }
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     $(element).addClass('textArea');
 
@@ -324,11 +314,9 @@ export default {
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
     // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
-    if (experiments.isEnabled('applabThemes')) {
-      // Set the padding for older projects that didn't set it on create:
-      if (element.style.padding === '') {
-        element.style.padding = CLASSIC_TEXT_AREA_PADDING;
-      }
+    // Set the padding for older projects that didn't set it on create:
+    if (element.style.padding === '') {
+      element.style.padding = CLASSIC_TEXT_AREA_PADDING;
     }
 
     $(element).addClass('textArea');
