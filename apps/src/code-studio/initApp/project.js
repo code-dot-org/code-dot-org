@@ -11,6 +11,8 @@ import experiments from '@cdo/apps/util/experiments';
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 
+const NUM_ERRORS_BEFORE_WARNING = 3;
+
 var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 var hasProjectChanged = false;
@@ -85,6 +87,9 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
+var currentShareFailureEnglish = '';
+var currentShareFailureIntl = '';
+var intlLanguage = false;
 var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
@@ -122,8 +127,7 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
-    selectedSong: data.selectedSong,
-    libraries: data.libraries
+    selectedSong: data.selectedSong
   };
 }
 
@@ -349,6 +353,27 @@ var projects = (module.exports = {
   },
 
   /**
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane in English.
+   */
+  privacyProfanityDetailsEnglish() {
+    return currentShareFailureEnglish;
+  },
+
+  /**
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane in an language other than English.
+   */
+  privacyProfanityDetailsIntl() {
+    return currentShareFailureIntl;
+  },
+
+  /**
+   * @returns {string} a 2-character language code if the content moderation service ran in a language other than English.
+   */
+  privacyProfanitySecondLanguage() {
+    return intlLanguage;
+  },
+
+  /**
    * @returns {boolean} true if project has been reported enough times to
    *   exceed our threshold
    */
@@ -545,10 +570,6 @@ var projects = (module.exports = {
 
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
-      }
-
-      if (currentSources.libraries) {
-        sourceHandler.setInitialLevelLibraries(currentSources.libraries);
       }
 
       if (isEditing) {
@@ -946,6 +967,9 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
+              if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
+                header.showTryAgainDialog();
+              }
               return;
             }
           } else if (saveSourcesErrorCount > 0) {
@@ -1040,20 +1064,6 @@ var projects = (module.exports = {
   },
 
   /**
-   * Asks the sourceHandler for the list of functions in an app
-   */
-  getLibraryFromApp() {
-    return this.sourceHandler.getLibrary();
-  },
-
-  /**
-   * Asks the sourceHandler whether the code contains an error (red gutter warning)
-   */
-  containsError() {
-    return this.sourceHandler.codeContainsError();
-  },
-
-  /**
    * Ask the configured sourceHandler for the latest project save data and
    * pass it to the provided callback.
    * @param {function} callback
@@ -1066,20 +1076,7 @@ var projects = (module.exports = {
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
-        const libraries =
-          this.sourceHandler.getLevelLibraries &&
-          this.sourceHandler.getLevelLibraries();
-        var sourceAndHtml = {
-          source,
-          html,
-          animations,
-          makerAPIsEnabled,
-          selectedSong
-        };
-        if (libraries) {
-          sourceAndHtml['libraries'] = libraries;
-        }
-        callback(sourceAndHtml);
+        callback({source, html, animations, makerAPIsEnabled, selectedSong});
       })
     );
   },
@@ -1100,23 +1097,6 @@ var projects = (module.exports = {
           {
             ...sourceAndHtml,
             makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled
-          },
-          () => {
-            resolve();
-            utils.reload();
-          }
-        );
-      });
-    });
-  },
-
-  addLibrary(data) {
-    return new Promise(resolve => {
-      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-        this.saveSourceAndHtml_(
-          {
-            ...sourceAndHtml,
-            libraries: [data]
           },
           () => {
             resolve();
@@ -1163,6 +1143,9 @@ var projects = (module.exports = {
         saveChannelErrorCount,
         err + ''
       );
+      if (saveChannelErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
+        header.showTryAgainDialog();
+      }
       return;
     } else if (saveChannelErrorCount) {
       // If the previous errors occurred due to network problems, we may not
@@ -1175,6 +1158,7 @@ var projects = (module.exports = {
       );
     }
     saveChannelErrorCount = 0;
+    header.hideTryAgainDialog();
 
     // The following race condition can lead to thumbnail URLs not being stored
     // in the project metadata:
@@ -1614,6 +1598,26 @@ function fetchSharingDisabled(resolve) {
   });
 }
 
+function fetchShareFailure(resolve) {
+  channels.fetch(current.id + '/share-failure', function(err, data) {
+    currentShareFailureEnglish =
+      data && data.share_failure && data.share_failure.content
+        ? data.share_failure.content
+        : currentShareFailureEnglish;
+    currentShareFailureIntl =
+      data && data.intl_share_failure && data.intl_share_failure.content
+        ? data.intl_share_failure.content
+        : currentShareFailureIntl;
+    intlLanguage = data && data.language ? data.language : intlLanguage;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+  });
+}
+
 function fetchPrivacyProfanityViolations(resolve) {
   channels.fetch(current.id + '/privacy-profanity', (err, data) => {
     // data.has_violation is 0 or true, coerce to a boolean
@@ -1629,7 +1633,10 @@ function fetchPrivacyProfanityViolations(resolve) {
 }
 
 function fetchAbuseScoreAndPrivacyViolations(project, callback) {
-  const deferredCallsToMake = [new Promise(fetchAbuseScore)];
+  const deferredCallsToMake = [
+    new Promise(fetchAbuseScore),
+    new Promise(fetchShareFailure)
+  ];
 
   if (project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));

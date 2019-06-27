@@ -390,8 +390,8 @@ es-MX:
         Course_4_Artist_12_b: 'La forma de la unidad es casi la misma que en el último
           acertijo, excepto que el medio hexágono es un poco más grande. '
         Course_4_Artist_12_c: "1.  Las primeras tres líneas tienen 60 píxeles de largo
-          y necesitas girar 60 grados.\n     2\\) Las siguientes dos líneas tienen
-          80 píxeles de largo y necesitas girar 120 grados "
+          y necesitas girar 60 grados.\n     2) Las siguientes dos líneas tienen 80
+          píxeles de largo y necesitas girar 120 grados "
         Course_4_Artist_12_d: |-
           **Solución:**
 
@@ -10615,40 +10615,40 @@ es-MX:
           partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!
         course_starWars_loops8_b: Piensa en la primera parte de este problema como
           un problema del escalón. ¿Cómo resolviste eso antes?
-        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n\\!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
+        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
       courseC_starWars_loops8_2018:
         course_starWars_loops8_a: Trata de pensar sobre este problema en pequeñas
           partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!
         course_starWars_loops8_b: Piensa en la primera parte de este problema como
           un problema del escalón. ¿Cómo resolviste eso antes?
-        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n\\!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
+        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
       courseC_starWars_loops8_2019:
         course_starWars_loops8_a: Trata de pensar sobre este problema en pequeñas
           partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!
         course_starWars_loops8_b: Piensa en la primera parte de este problema como
           un problema del escalón. ¿Cómo resolviste eso antes?
-        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n\\!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
+        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n!\\[] (<https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png>)"
       courseC_starWars_loops9:
         course_starWars_loops9_b: Puedes poner más de un bloque dentro de un loop
           'repetir'.
         course_starWars_loops9_c: |-
           No necesitas girar a la izquierda para resolver este rompecabezas . Todos tus giros pueden ser hacia la derecha.
 
-          \!\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
+          !\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
       courseC_starWars_loops9_2018:
         course_starWars_loops9_b: Puedes poner más de un bloque dentro de un loop
           'repetir'.
         course_starWars_loops9_c: |-
           No necesitas girar a la izquierda para resolver este rompecabezas . Todos tus giros pueden ser hacia la derecha.
 
-          \!\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
+          !\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
       courseC_starWars_loops9_2019:
         course_starWars_loops9_b: Puedes poner más de un bloque dentro de un loop
           'repetir'.
         course_starWars_loops9_c: |-
           No necesitas girar a la izquierda para resolver este rompecabezas . Todos tus giros pueden ser hacia la derecha.
 
-          \!\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
+          !\[] (<https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png>)
       courseC_video_angles2:
         courseF_artist_ramp10_a: No olvide girar 60 grados después de cada triángulo.
           ¿Qué ciclo necesitas para poner esa instrucción adentro?
@@ -10865,7 +10865,7 @@ es-MX:
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_a: "Deberás dibujar un total de 6 triángulos.
           Después de terminar cada triángulo, gíra 60 grados y muévete para comenzar
-          el siguiente triángulo. \n\n\\!\\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)"
+          el siguiente triángulo. \n\n!\\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)"
         courseD_artist_nestedLoops1a_b: Si creas tu triángulo con un loop, el artista
           debe estar mirando hacia la misma dirección desde que comenzó. Esto hará
           que los giros en 60 grados sean mucho más fáciles.
@@ -10885,7 +10885,7 @@ es-MX:
       courseD_artist_nestedLoops1a_2019:
         courseD_artist_nestedLoops1a_a: "Deberás dibujar un total de 6 triángulos.
           Después de terminar cada triángulo, gíra 60 grados y muévete para comenzar
-          el siguiente triángulo. \n\n\\!\\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)"
+          el siguiente triángulo. \n\n!\\[] (<https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif>)"
         courseD_artist_nestedLoops1a_b: Si creas tu triángulo con un loop, el artista
           debe estar mirando hacia la misma dirección desde que comenzó. Esto hará
           que los giros en 60 grados sean mucho más fáciles.
@@ -11386,17 +11386,11 @@ es-MX:
         courseD_bee_conditionals2_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals2_2019:
-        courseD_bee_conditionals2_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
-          vídeo!"
         courseD_bee_conditionals2_a: Algunas veces una flor estará allí, otras no.  Si
           quieres que tu código se ejecute en ambos casos, asegúrate de utilizar una
           afirmación  `si`.
-        courseD_bee_conditionals2_b: Puedes usar un loop 'repetir' o un 'mientras
-          camino por delante' para moverse a través de este laberinto.
         courseD_bee_conditionals2_c: No tienes buscar panales, solo habrá flores o
           espacios en blanco debajo de las nubes.
-        courseD_bee_conditionals2_hintVid2: Mire este vídeo para ayudar a resolver
-          este desafío.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
           vídeo!"
@@ -11422,17 +11416,11 @@ es-MX:
         courseD_bee_conditionals3_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals3_2019:
-        courseD_bee_conditionals3_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
-          vídeo!"
         courseD_bee_conditionals3_a: Asegúrate de usar una afirmación 'si' para verificar
           cada espacio para ver sí tiene una flor o nada.
-        courseD_bee_conditionals3_b: Puedes utilizar un loop 'repetir' o un loop 'mientras'
-          para que la abeja se mantenga en movimiento. ¡Usa el que más te guste!
         courseD_bee_conditionals3_c: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún
           no has resuelto el desafío."
-        courseD_bee_conditionals3_hintVid2: Mire este vídeo para ayudar a resolver
-          este desafío.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
           vídeo!"
@@ -11458,17 +11446,10 @@ es-MX:
         courseD_bee_conditionals4_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals4_2019:
-        courseD_bee_conditionals4_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
-          vídeo!"
         courseD_bee_conditionals4_a: Todavía puedes tratar cada espacio como si hubiera
           una nube sobre él, aunque puedas ver todo el camino.
         courseD_bee_conditionals4_b: 'Usa una afirmación \`si'' dentro de tu loop
           para comprobar si hay néctar en cada espacio. '
-        courseD_bee_conditionals4_c: Usando un bloque <xml><block type="maze_untilBlocked"/></xml>,
-          debes avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería
-          hacer la abeja?
-        courseD_bee_conditionals4_hintVid2: Mire este vídeo para ayudar a resolver
-          este desafío.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
           vídeo!"
@@ -11489,25 +11470,6 @@ es-MX:
         courseD_bee_conditionals5_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals5_2018:
-        courseD_bee_conditionals5_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
-          vídeo!"
-        courseD_bee_conditionals5_a: Piensa en cada lado de la ruta rectangular como
-          un camino en sí mismo. Configura un loop anidado con un bloque `repetir`
-          en el exterior y un ciclo`cuando hay un camino por delante` en el interior.
-          ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer
-          cada lado con una flor?
-        courseD_bee_conditionals5_c: Hay 3 lados del rectángulo con flores, por lo
-          que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá
-          continuar por el camino, "mientras haya un camino por delante". Para continuar
-          por el camino, la abeja deberá 'avanzar'. Mientras que en el camino, la
-          abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`obtener
-          néctar`.
-        courseD_bee_conditionals5_b: En el interior del bloque`mientras que hay un
-          camino adelante` tendrás que seguir adelante y comprobar si hay una flor.
-          ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?
-        courseD_bee_conditionals5_hintVid2: Mire este vídeo para ayudar a resolver
-          este desafío.
-      courseD_bee_conditionals5_2019:
         courseD_bee_conditionals5_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
           vídeo!"
         courseD_bee_conditionals5_a: Piensa en cada lado de la ruta rectangular como
@@ -11549,16 +11511,12 @@ es-MX:
         courseD_bee_conditionals6_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals6_2019:
-        courseD_bee_conditionals6_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
-          vídeo!"
         courseD_bee_conditionals6_a: Asegúrate de utilizar una afirmación \`si' para
           comprobar si hay panales debajo de cada nube.
         courseD_bee_conditionals6_b: En este caso, no necesitas verificar si hay flores
           debajo de las nubes.
         courseD_bee_conditionals6_c: "¿Hay algún loop que puedas usar para simplificar
           tu código?"
-        courseD_bee_conditionals6_hintVid2: Mire este vídeo para ayudar a resolver
-          este desafío.
       courseD_bee_conditionals7:
         courseD_bee_conditionals7_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
           vídeo!"
@@ -11580,15 +11538,11 @@ es-MX:
         courseD_bee_conditionals7_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals7_2019:
-        courseD_bee_conditionals7_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
-          vídeo!"
         courseD_bee_conditionals7_a: "\\*\\* Recuerda: \\*\\* Este desafío cambia
           cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  (
           `si' o 'si / si no`) para resolver el desafío."
         courseD_bee_conditionals7_b: Si no hay una flor debajo de la nube, debe haber
           un panal, por lo que no necesitas pensar en el caso que sea un espacio vacío.
-        courseD_bee_conditionals7_hintVid2: Mire este vídeo para ayudar a resolver
-          este desafío.
       courseD_bee_conditionals7_predict2:
         courseD_bee_conditionals7_a: "\\*\\* Recuerda: \\*\\* Este desafío cambia
           cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  (
@@ -11614,7 +11568,7 @@ es-MX:
           cada camino, sin importar qué tan largo sea el camino?"
         courseD_bee_conditionals8_d: "Aunque hay una nube justo frente a ti, no tienes
           que visitarla primero. Intenta comenzar con la nube en la parte inferior
-          derecha del cuadrado. \n\n\\!\\[] (<https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png>)"
+          derecha del cuadrado. \n\n!\\[] (<https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png>)"
         courseD_bee_conditionals8_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals8_2018:
@@ -11630,7 +11584,7 @@ es-MX:
           cada camino, sin importar qué tan largo sea el camino?"
         courseD_bee_conditionals8_d: "Aunque hay una nube justo frente a ti, no tienes
           que visitarla primero. Intenta comenzar con la nube en la parte inferior
-          derecha del cuadrado. \n\n\\!\\[] (<https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png>)"
+          derecha del cuadrado. \n\n!\\[] (<https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png>)"
         courseD_bee_conditionals8_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals8_2019:
@@ -12052,7 +12006,7 @@ es-MX:
           en la cabeza.
       courseD_collector_debugging_challenge2:
         courseD_collector_debugging_challenge2_a: "Comienza recogiendo solo **dos**
-          gemas de cada una de las primeras **dos** pilas . \n\n\\!\\[] (<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04>
+          gemas de cada una de las primeras **dos** pilas . \n\n!\\[] (<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04>
           SOY copy.png) Usa estos bloques .\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
           type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
@@ -12475,17 +12429,17 @@ es-MX:
           programa.
       courseD_farmer_condLoops7:
         courseD_farmer_condLoops7_a: "Ten en cuenta que el camino más fácil para llegar
-          a todos los cultivos sigue siendo una espiral. \n\n\\!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
+          a todos los cultivos sigue siendo una espiral. \n\n!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
         courseD_farmer_condLoops7_b: Intenta usar `cuando camino adelante` para mantener
           a la cosechadora moviéndose el número correcto de pasos.
       courseD_farmer_condLoops7_2018:
         courseD_farmer_condLoops7_a: "Ten en cuenta que el camino más fácil para llegar
-          a todos los cultivos sigue siendo una espiral. \n\n\\!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
+          a todos los cultivos sigue siendo una espiral. \n\n!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
         courseD_farmer_condLoops7_b: Intenta usar `cuando camino adelante` para mantener
           a la cosechadora moviéndose el número correcto de pasos.
       courseD_farmer_condLoops7_2019:
         courseD_farmer_condLoops7_a: "Ten en cuenta que el camino más fácil para llegar
-          a todos los cultivos sigue siendo una espiral. \n\n\\!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
+          a todos los cultivos sigue siendo una espiral. \n\n!\\[] (<https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png>)"
         courseD_farmer_condLoops7_b: Intenta usar `cuando camino adelante` para mantener
           a la cosechadora moviéndose el número correcto de pasos.
       courseD_farmer_condLoops_challenge1:
@@ -15604,6 +15558,10 @@ es-MX:
           final de cada repetición. '
         courseF_artist_fwp_challenge1_e: Tanto el color de cada octágono como el ancho
           del lápiz están controlados por la variable \`contador '.
+        courseF_artist_fwp_challenge1_f: |-
+          **Solución:**
+
+          ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_variables10:
         courseF_artist_variables10_a: "¡Diviértete con este nivel! Mira lo que pueden
           hacer pequeños cambios a tu código."

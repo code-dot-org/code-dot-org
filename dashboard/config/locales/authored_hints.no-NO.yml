@@ -264,7 +264,7 @@ no-NO:
       4-5 Artist 8:
         4-5_Artist_8_a: "Langsiden er 240 piksler.  Det betyr at 2 kortsidene må totalt
           være:\n\n\\*\\* 800-240 - 240 = 320 \\*\\*\n\nhva er \\*\\* 320/2 \\*\\*? "
-        4-5_Artist_8_b: "Dette bildet kan gjøres 2 måter! \n\n \\-Tegn to rektangler
+        4-5_Artist_8_b: "Dette bildet kan gjøres 2 måter! \n\n -Tegn to rektangler
           som \\*\\* 120 \\*\\* lange og \\*\\* 160 \\*\\* høye, med en overlappende
           side\n\n-   Tegn et rektangel som \\*\\* 240 \\*\\* lang og \\*\\* 160 \\*\\*
           høye, deretter legg til en linje i midten."
@@ -3347,10 +3347,6 @@ no-NO:
         courseD_bee_conditionals4_c: Ved å bruke blokken <xml><block type="maze_untilBlocked"/></xml>
           går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst,
           hva skal bien gjøre?
-      courseD_bee_conditionals4_2019:
-        courseD_bee_conditionals4_c: Ved å bruke blokken <xml><block type="maze_untilBlocked"/></xml>
-          går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst,
-          hva skal bien gjøre?
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_a: Tenk på hver side av den rektangulære veien som
           en vei i seg selv. Sett opp en løkke i løkke med en "gjenta"-blokk og en
@@ -3365,19 +3361,6 @@ no-NO:
           må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du
           om det finnes en blomst? Hva gjør du om det finnes en blomst?
       courseD_bee_conditionals5_2018:
-        courseD_bee_conditionals5_a: Tenk på hver side av den rektangulære veien som
-          en vei i seg selv. Sett opp en løkke i løkke med en "gjenta"-blokk og en
-          "så lenge det finnes vei foran"-blokk på innsiden. Hvor mange veier må bien
-          fly ned hvis bien må innom hver side som har en blomst?
-        courseD_bee_conditionals5_c: Det er 3 av rektangelets sider som har blomster,
-          så koden trenger en `gjenta 3 ganger`-blokk. Ved hver gjentakelse må bien
-          fortsette langs veien, `så lenge det finnes vei foran`. For å fortsette
-          langs veien må bien `gå fremover`. Så lenge bien er på veien må den sjekke
-          om det finnes en blomst. Hvis det er en blomst der må bien `få nektar`.
-        courseD_bee_conditionals5_b: Inni "så lenge det finnes vei foran"-blokken
-          må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du
-          om det finnes en blomst? Hva gjør du om det finnes en blomst?
-      courseD_bee_conditionals5_2019:
         courseD_bee_conditionals5_a: Tenk på hver side av den rektangulære veien som
           en vei i seg selv. Sett opp en løkke i løkke med en "gjenta"-blokk og en
           "så lenge det finnes vei foran"-blokk på innsiden. Hvor mange veier må bien

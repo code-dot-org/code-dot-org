@@ -1,4 +1,5 @@
 require 'cdo/firehose'
+require 'cdo/honeybadger'
 
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
@@ -86,7 +87,13 @@ class RegistrationsController < Devise::RegistrationsController
   # POST /users
   #
   def create
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
+      if retries > 0
+        Honeybadger.notify(
+          error_class: 'User creation required multiple attempts',
+          error_message: "retry ##{retries} failed with exception: #{exception}"
+        )
+      end
       super
     end
 

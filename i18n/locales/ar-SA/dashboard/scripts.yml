@@ -1538,3 +1538,16 @@ ar:
           stages:
             Graph Paper Programming:
               name: برمجة ورقة الرسم البياني
+        csd2-pilot:
+          stages:
+            Lists:
+              name: القوائم
+        csd3-pilot:
+          description_short: "البرمجة"
+          stages:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Functions:
+              name: دوال

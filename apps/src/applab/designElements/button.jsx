@@ -12,15 +12,10 @@ import EnumPropertyRow from './EnumPropertyRow';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
 import themeColor from '../themeColor';
-import {
-  ICON_PREFIX_REGEX,
-  defaultFontSizeStyle,
-  fontFamilyStyles
-} from '../constants';
+import {ICON_PREFIX_REGEX} from '../constants';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class ButtonProperties extends React.Component {
   static propTypes = {
@@ -202,6 +197,14 @@ class ButtonEvents extends React.Component {
   }
 }
 
+// Initial button size when fontSize is 14 or smaller is 80x30 (classic theme)
+// Initial button size when fontSize is 15 or greater is 100x40 (new themes)
+const MAX_SMALL_FONT_SIZE = 14;
+const DEFAULT_BUTTON_WIDTH = '100px';
+const DEFAULT_BUTTON_WIDTH_SMALL = '80px';
+const DEFAULT_BUTTON_HEIGHT = '40px';
+const DEFAULT_BUTTON_HEIGHT_SMALL = '30px';
+
 export default {
   PropertyTab: ButtonProperties,
   EventTab: ButtonEvents,
@@ -288,26 +291,22 @@ export default {
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
     element.style.margin = '0px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      const currentTheme = elementLibrary.getCurrentTheme(
-        designMode.activeScreen()
-      );
-      const fontSize = this.themeValues.fontSize[currentTheme];
-      // Initial button size when fontSize is 14 or smaller is 80x30 (classic theme)
-      // Initial button size when fontSize is 15 or greater is 100x40 (new themes)
-      element.style.height = fontSize <= 14 ? '30px' : '40px';
-      element.style.width = fontSize <= 14 ? '80px' : '100px';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.height = '30px';
-      element.style.width = '80px';
-      element.style.fontFamily = fontFamilyStyles[0];
-      element.style.fontSize = defaultFontSizeStyle;
-      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-      element.style.color = themeColor.buttonText.classic;
-      element.style.backgroundColor = themeColor.buttonBackground.classic;
-    }
+    element.style.borderStyle = 'solid';
+    const currentTheme = elementLibrary.getCurrentTheme(
+      designMode.activeScreen()
+    );
+    const fontSize = this.themeValues.fontSize[currentTheme];
+    const fontIsSmall = fontSize <= MAX_SMALL_FONT_SIZE;
+    element.style.height = fontIsSmall
+      ? DEFAULT_BUTTON_HEIGHT_SMALL
+      : DEFAULT_BUTTON_HEIGHT;
+    element.style.width = fontIsSmall
+      ? DEFAULT_BUTTON_WIDTH_SMALL
+      : DEFAULT_BUTTON_WIDTH;
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     return element;
   },

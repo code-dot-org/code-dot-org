@@ -440,6 +440,55 @@ id-ID:
       4-5 While Loops 4: "Wow, lihat itu! \\\r\n\\\r\nSaya tidak tahu berapa banyak
         \nsekop tanah yang dibutuhkan lubang ini. \\\r \nDapatkah Anda menulis sebuah
         program yang \nterus menggunakan `isi` blok sampai tanah merata?  "
+      CSD Problem Solving Process Video: |-
+        ## Pertanyaan untuk dipertimbangkan
+
+        -   Bagaimana anda mengikuti proses pemecahan masalah pada pelajaran terakhir?
+        -   Bagaimana anda bisa menggunakan proses ini pada sebuah masalah dalam hidup keseharian anda?
+      CSD U2 HTML Adding Paragraphs pt 2_2018: "<div style=\"float: right; height:
+        250px; <summary>width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\"> \n<details>\n\n<summary>\n\n**Apa elemen dari sebuah paragrap?**\n\n</summary>\n\nParagrap
+        ditandai dengan tag pembukaan ('<p>') dan penutupan ('</p>').Paragrap dalam
+        HTML bisa berapapun panjang teksnya dari satu kata menjadi banyak kalimat.
+        Kelompok paragrap bersama mengatur kalimat dan meletakkan beberapa ruang diantara
+        kelompok teks tersebut dan kelompok teks berikutnya.\n\n</details>\n<details>\n<summary>\n\n**Bagaimana
+        saya membuat paragrap ganda?**\n\n</summary>\n\nBerikut sebuah contoh dari
+        beberapa tag paragraph dalam sebuah baris. Kode ini akan ditempatkan didalam
+        halaman web anda.\n\n<p> Ini adalah sebuah paragrap.Ini memiliki dua kalimat.</p>\n<p>
+        Ini adalah paragrap yang lain.</p>\n\n</details>\n</div>\n\n# Menggunakan
+        tag paragrap\n\nTag '<p>' '</p>' atau tag \"paragrap\"  mulai dan selesai
+        diletakkan disekitar teks untuk mengindikasikan bahwa itu adalah bagian dari
+        sebuah paragrap. Penempatan teks diantara  tag paragrap mulai dan selesai
+        membiarkan komputer tahu bahwa hal tersebut harus ditampilkan secara berbeda,
+        biasanya hanya memberi jarak dari teks yang lain.\n\n# Lakukan Ini\n\n\\-Tempatkan
+        teks yang baru saja anda tulis dibagian dalam minimal dua paragrap terpisah
+        disekitarnya itu dengan tag '<p>' dan '</p>'\n\\-Bandingkan hasilnya dengan
+        yang lain. Apa yang berubah tentang cara teks anda ditampilkan?"
+      CSD U2 Inspector Warm Up_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"><strong>
+        <summary>
+        <strong><span> bagaimana saya menggunakan alat inspektor </span></strong>
+        </summary>
+
+        Inspektor Tool adalah cara yang bagus untuk belajar lebih tentang kode yang tidak biasa di Web Lab.Untuk ke Inspektor Tool,klik<img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px"> Anda akan tahu bahwa Inspektor Tool adalah yang menyebabkan tombol menjadi putih dan berkata "Inspektor: On".
+        Sekali anda menghidupkan Inspektor Tool,anda bisa menunggu di area preview dan Web Lab akan menyoroti kode yang dibuat adalah bagian dari tampilan halaman.
+
+        </details>
+        </div>
+
+        # Memeriksa HTML
+
+        Halaman web ini ditulis dalam HTML, bahasa web. Anda akan belajar lebih tentang bagaimana ini bekerja, tapi pertama tama periksa ini dengan Inspektor Tool.
+
+        # Lakukan Ini
+
+        -   Klik Tip " Bagaimana saya menggunakan Inspektor Tool?" dengan benar untuk belajar bagaimana menggunakan Inspektor Tool.
+        -   Ikuti instruksi di halaman web untuk memeriksa halaman web dan diskusikan dengan teman bagaimana ini bekerja.
+      CSD U2 Pair Programming Video_2019: |-
+        ## Pertanyaan untuk dipertimbangkan
+
+        -   Mengapa anda berfikir programer profesional menggunakan programming ganda?
+        -   Bagaimana menurut anda bahwa programming ganda akan membantu anda untuk program yang lebih baik?
       CSD U3 Movement Your Own 1: "# Membuat sebuah animasi untuk anda\n\nsendiri\\\r\n\\\r\nMenggunakan
         pola counter dan dan bersifat sprite, membuat animasi milikmu semuanya. Anda
         mungkin mempertimbangkan pada gambar untuk membangun statis yang telah anda
@@ -465,11 +514,11 @@ id-ID:
         Animasi.\\\r\n-   Membuat sprite dan menetapkan gambar.\\\r\n-   M\n-   Tetapkan\n
         \   hingga gambar loop untuk gambar latar belakang dan sprite anda."
       CSD U5 black white images pixelation 2: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U6 game project finish: "# Menyelesaikan Sentuhan dan Pengujian\\\r\n\n\\\r\nDi\nPoin
         ini anda harus memiliki sebagian besar program di tempat Anda. Sekarang anda
         perlu untuk\nMenambahkan dengan menyelesaikan sentuhan yang diperlukan dan
@@ -494,6 +543,11 @@ id-ID:
       CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## Pertanyaan untuk di pikirkan
+
+        -   Apa yang membuat komputer berbeda dari mesin mesin yang ada sebelumnya?
+        -   Pikirkan sesuatu yang anda lakukan pada computer,  jenis input, output, penyimpanan, dan proses  apa yang sedang terjadi?
       Course 4 Artist 13: |-
         Masih bermain? Ini ada kanvas kosong di mana
         Anda dapat mendesain apa saja yang Anda inginkan!
@@ -540,6 +594,13 @@ id-ID:
         kerjamu.  Semua kode yang kamu butuhkan untuk menyeberangi sungai sudah tersedia!
         \\\r\n \\\r\nPosisikan blok hijau kecil dua kali ke ruang kerjamu untuk memperbaiki
         jalur dan bawa {currentPlayerName} ke Obor Batu Merah [redstone_torch]."
+      Intro to Web Lab - Part 1_2019: "## Pertanyaan untuk dipertimbangkan:\n\n-   Apa
+        perbedaan  bagian bagian dari Web \n    Lab, dan apa fungsinya?"
+      Intro to Web Lab - Part 2_2019: |-
+        ## Pertanyaan untuk dipertimbangkan
+
+        -   Mengapa tags HTML  berguna?
+        -   Apa yang tag paragrap lakukan?
       K-1 Bee Loops 2: Gunakan sebuah perulangan untuk bergerak dan kemudian mendapatkan
         nektar dan membuat madu!
       K-1 Bee Loops 3: Gunakan beberapa perulangan untuk mendapatkan nektar dan membuat

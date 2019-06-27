@@ -256,7 +256,7 @@ it:
             Binary:
               name: Binario
             For Loops:
-              name: Cicli con Contatore
+              name: Cicli con contatore
             Functions and Functions with Parameters:
               name: Funzioni e Funzioni con Parametri
             Intro:
@@ -1147,7 +1147,7 @@ it:
             Events:
               name: Eventi
             For Loops:
-              name: Cicli con Contatore
+              name: Cicli con contatore
             Functions:
               name: Funzioni
             Functions with Parameters:
@@ -1472,7 +1472,7 @@ it:
             Lists:
               name: Liste
             For Loops:
-              name: Cicli con Contatore
+              name: Cicli con contatore
             Map:
               name: Mappa
             Functions with Parameters:
@@ -1508,7 +1508,7 @@ it:
             Lists:
               name: Liste
             For Loops:
-              name: Cicli con Contatore
+              name: Cicli con contatore
             Functions with Parameters:
               name: Funzioni con parametri
             Functions with Parameters_:
@@ -2460,7 +2460,7 @@ it:
             Lists:
               name: Liste
             For Loops:
-              name: Cicli con Contatore
+              name: Cicli con contatore
         csd3-1819draft:
           stages:
             Drawing in Game Lab:
@@ -3940,3 +3940,27 @@ it:
               name: Programmazione nel labirinto
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
+        csd1-pilot:
+          stages:
+            Intro to Problem Solving:
+              description_student: 'La classe lavora in gruppi per progettare barche di "carta stagnola" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. '
+        csd2-pilot:
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
+          stages:
+            Lists:
+              name: Liste
+        csd3-pilot:
+          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          stages:
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Variables:
+              name: Variabili
+            Sprites:
+              name: Personaggi
+            Conditionals:
+              name: Istruzioni condizionali
+            Velocity:
+              name: Velocità
+            Functions:
+              name: Funzioni

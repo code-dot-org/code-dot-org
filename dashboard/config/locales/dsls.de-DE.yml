@@ -855,21 +855,30 @@ de:
         - 
       courseC_multi_harvester_loops11_predict1:
         answers:
-        - 
-        - correct: true
-        - 
+        - text: '4'
+          correct: false
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: false
         - 
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
-        - 
-        - correct: true
-        - 
+        - text: '4'
+          correct: false
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: false
         - 
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
-        - 
-        - correct: true
-        - 
+        - text: '4'
+          correct: false
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: false
         - 
       courseC_multi_maze_debugging8_predict1:
         answers:
@@ -1059,21 +1068,30 @@ de:
         - 
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
-        - 
-        - correct: true
-        - 
+        - text: '4'
+          correct: false
+        - text: '8'
+          correct: true
+        - text: '12'
+          correct: false
         - 
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
-        - 
-        - correct: true
-        - 
+        - text: '4'
+          correct: false
+        - text: '8'
+          correct: true
+        - text: '12'
+          correct: false
         - 
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
-        - 
-        - correct: true
-        - 
+        - text: '4'
+          correct: false
+        - text: '8'
+          correct: true
+        - text: '12'
+          correct: false
         - 
       courseD_multi_collector_debugging10_predict1:
         answers:

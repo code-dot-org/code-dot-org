@@ -863,6 +863,9 @@ es:
         - 
         - text: No lo se.
           correct: false
+        questions:
+        - text: Mira cuidadosamente el código. ¿Cúantas calabazas recogerá el granjero
+            cuando hagas click en "Ejecutar"?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - 
@@ -870,6 +873,9 @@ es:
         - 
         - text: No lo se.
           correct: false
+        questions:
+        - text: Mira cuidadosamente el código. ¿Cúantas calabazas recogerá el granjero
+            cuando hagas click en "Ejecutar"?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - 
@@ -877,6 +883,9 @@ es:
         - 
         - text: No lo se.
           correct: false
+        questions:
+        - text: Mira cuidadosamente el código. ¿Cúantas calabazas recogerá el granjero
+            cuando hagas click en "Ejecutar"?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: El programa no fallará. Scrat conseguirá la bellota.

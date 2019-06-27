@@ -306,8 +306,8 @@ lv-LV:
         pretinieks nopelna divtik.
       bounce_10_basketball: Tagad augšā ir grozs! Pievieno "gūt punktu" un "ieskaitīt
         punktu pretiniekam" blokus pie blokiem "bumba grozā" un "kad bumba netrāpa
-        rokai", lai izveidotu spēli. Mēģini iegūt cik vien dauz punktus vari, kamēr
-        pretinieks nav ieguvis divus punktus.
+        rokai", lai izveidotu spēli. Mēģini iegūt cik vien daudz punktus vari, pirms
+        pretinieks guvis divus punktus.
       bounce_10_sports: Tagad augšā ir grozs! Pievieno "gūt punktu" un "ieskaitīt
         punktu pretiniekam" blokus pie blokiem "bumba grozā" un "kad bumba netrāpa
         rokai", lai izveidotu spēli. Mēģini iegūt cik vien dauz punktus vari, kamēr
@@ -330,11 +330,11 @@ lv-LV:
         pielāgot izskatu. Kad pabeigts, spied "Pabeigt" un aicini draugus spēlēt tavu
         spēli.
       bounce_1_basketball: Pievieno bloku pie "kad kreisā bultiņa" un spied "Palaist".
-        Parvieto roku pa kreisi izmantojot kreiso bultiņu kamēr sasniegsi karodziņu.
+        Pārvieto roku pa kreisi izmantojot kreiso bultiņu kamēr sasniegsi karodziņu.
       bounce_2: Pievieno bloku pie "kad labā bulta" un "kad kreisā bulta" blokiem.
         Parvieto dēlīti ar labo bultu lai sasniegtu abus mērķus.
       bounce_2_basketball: Pievieno blokus pie "kad kreisā bultiņa" un "kad labā bultiņa",
-        spied "Palaist". Parvieto roku pa kreisi un pa labi kamēr sasniegsi abus karodziņus.
+        spied "Palaist". Pārvieto roku līdz sasniegsi abus karodziņus.
       bounce_3: Tagad izmēģini ko līdzīgu ar "kad bulta uz augšu" bloku. Pārvieto
         dēlīti, lai sasniegtu augšējo mērķi.
       bounce_4: Šoreiz tev vajag pievienot četrus blokus. Pārvieto airi uz visiem
@@ -342,7 +342,7 @@ lv-LV:
       bounce_5: Liksim, lai bumba lido lejā dēlīša virzienā. Pievieno bloku pie "kad
         bumba atsit dēlīti", lai nodrošinātu, ka bumba sasniedz mērķi.
       bounce_5_basketball: Kad bumba sasniedz roku tai jāatsitas. Pievieno bloku pie
-        "kad bumba atsitas pret roku" tā lai atsitoties bumba sasniegtu karodziņu.
+        "kad bumba atsitas pret roku" tā, lai atsitoties bumba sasniegtu karodziņu.
       bounce_6: Tagad gala mērķis ir augšā. Tev vajag pievienot blokus abiem "kad
         bumba trāpa" blokiem, lai atrisinātu šo puzli.
       bounce_6_basketball: Tagad karodziņš ir augšā. Tev vajag pievienot blokus abiem

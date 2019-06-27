@@ -791,19 +791,22 @@ sl:
         - 
         - 
         - correct: true
-        - 
+        - text: Ne vem
+          correct: false
       courseC_multi_starWars_predict1_2018:
         answers:
         - 
         - 
         - correct: true
-        - 
+        - text: Ne vem
+          correct: false
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - 
         - 
         - correct: true
-        - 
+        - text: Ne vem
+          correct: false
       courseC_multi_starWars_predict2:
         answers:
         - 
@@ -1094,7 +1097,8 @@ sl:
         - 
         - 
         - correct: true
-        - 
+        - text: Ne vem
+          correct: false
       courseE_multi_farmer_predict2:
         answers:
         - 

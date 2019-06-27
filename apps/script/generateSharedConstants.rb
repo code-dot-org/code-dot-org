@@ -79,6 +79,7 @@ def main
     CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
     ALLOWED_WEB_REQUEST_HEADERS
     ABUSE_CONSTANTS
+    ERROR_SEVERITY_LEVELS
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")

@@ -1,3 +1,4 @@
+require 'csv'
 require 'cdo/chat_client'
 require 'cdo/google_drive'
 

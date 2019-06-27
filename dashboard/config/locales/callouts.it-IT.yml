@@ -182,11 +182,11 @@ it-IT:
         Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo
           blocco di ripetizione
       InspirationalArtwork:
-        InspirationalArtwork_1: Prova ad usare il nuovo blocco `comment` sotto questa
-          etichetta, per inserire dei commenti all'interno del tuo programma!
+        InspirationalArtwork_1: Prova ad usare il nuovo blocco `commento` in questa
+          categoria, per inserire dei commenti all'interno del tuo programma!
       InspirationalArtwork_2018:
-        InspirationalArtwork_1: Prova ad usare il nuovo blocco `comment` sotto questa
-          etichetta, per inserire dei commenti all'interno del tuo programma!
+        InspirationalArtwork_1: Prova ad usare il nuovo blocco `commento` in questa
+          categoria, per inserire dei commenti all'interno del tuo programma!
       MC HOC 2016 Level 2-2:
         craft2_run_button_callout: Quando sei pronto, clicca su "Esegui" per provare
           il tuo programma.
@@ -261,11 +261,11 @@ it-IT:
       Overworld Place Wall_2019:
         craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
       Robot Doodle:
-        4-5_Artist_Patterns_Free_Play_2: Prova ad usare il nuovo blocco `comment`
-          sotto questa etichetta, per inserire dei commenti all'interno del tuo programma!
+        4-5_Artist_Patterns_Free_Play_2: Prova ad usare il nuovo blocco `commento`
+          in questa categoria, per inserire dei commenti all'interno del tuo programma!
       Robot Doodle_2018:
-        4-5_Artist_Patterns_Free_Play_2: Prova ad usare il nuovo blocco `comment`
-          sotto questa etichetta, per inserire dei commenti all'interno del tuo programma!
+        4-5_Artist_Patterns_Free_Play_2: Prova ad usare il nuovo blocco `commento`
+          in questa categoria, per inserire dei commenti all'interno del tuo programma!
       Underground Avoiding Lava:
         craft_callout_moveforward: Questo codice controlla se c'è lava, sai aggiungere
           un comando per andare avanti?
@@ -394,19 +394,19 @@ it-IT:
         made_of_stone: Questi blocchi sono fatti di pietra. Puoi muoverli, ma non
           puoi cancellarli!
       courseA_playLab_events4:
-        courseA_playlab_events4_callout1: Questa è una chiamata
+        courseA_playlab_events4_callout1: Questa è una nota
       courseA_playLab_events4_2018:
-        courseA_playlab_events4_callout1: Questa è una chiamata
+        courseA_playlab_events4_callout1: Questa è una nota
       courseA_playLab_events4_2019:
-        courseA_playlab_events4_callout1: Questa è una chiamata
+        courseA_playlab_events4_callout1: Questa è una nota
       courseA_playLab_events5:
-        courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento
+        courseA_playLab_events5_1: Clicca qui per cambiare la direzione dell'evento
           freccia.
       courseA_playLab_events5_2018:
-        courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento
+        courseA_playLab_events5_1: Clicca qui per cambiare la direzione dell'evento
           freccia.
       courseA_playLab_events5_2019:
-        courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento
+        courseA_playLab_events5_1: Clicca qui per cambiare la direzione dell'evento
           freccia.
       courseA_playLab_events6:
         courseA_playLab_events6_1: Questo ti permette di scegliere un suono "casuale",
@@ -898,3 +898,15 @@ it-IT:
       frozen square snowflake:
         replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
           numero
+      grade5_artist_variables_triangles1:
+        grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
+          introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
+          presi e spostati da un blocco all''altro!'
+      grade5_artist_variables_triangles1_2018:
+        grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
+          introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
+          presi e spostati da un blocco all''altro!'
+      grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
+          introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
+          presi e spostati da un blocco all''altro!'

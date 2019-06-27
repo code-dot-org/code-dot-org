@@ -546,7 +546,6 @@ sk-SK:
       Crack Random Substitution: Inštrukcie
       Crack a Caesar Cipher: Inštrukcie
       Dance Party 1-validated: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
-      Dance Party 1-validated_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party 2: Zmeň správanie v bloku `___ začne ___` tak, aby sa mimozemšťan
         začal točiť dokola.
       Dance Party 2_2019: Zmeň správanie v bloku `___ začne ___` tak, aby sa mimozemšťan
@@ -711,6 +710,14 @@ sk-SK:
       MC_HOC_2017_FP20x20_2019: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       NEW Course 4 Bee For Loops 1: Použite slučku pre pozbieranie nektáru z každej
         kvetinky.
+      NEW Course 4 Bee For Loops 5: '"Cyklus for" môžeš použiť aj na odpočítavanie.
+        Skús pozbierať nektár odpočítavaním od 5 do 1 počítané po 1.'
+      NEW Course 4 Bee For Loops 6: |-
+        Posledné číslo v tvojom cykle for sa nazýva "prírastok". Zakaždým, keď cyklus prebehne, tak sa premenná počítadlo zmení o hodnotu prírastku.
+
+        Skús pozbierať tieto kvety s použitím prírastku 2.
+      NEW Course 4 Bee For Loops 8: Máš to! Aký by mal byť tvoj prírastok, aby si
+        pozbieral 3, 6, 9, 12, 15 nektárov?
       Overworld Avoid Monsters: |-
         Naraziť do Creepera nie je dobrý nápad.
         Opatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova.
@@ -867,6 +874,9 @@ sk-SK:
       courseA_maze_seq12: 'Dostaň to prasiatko! '
       courseA_maze_seq12_2018: 'Dostaň to prasiatko! '
       courseA_maze_seq12_2019: 'Dostaň to prasiatko! '
+      courseA_maze_seq13: Dostaň sa ku prasiatku akoukoľvek cestou!
+      courseA_maze_seq13_2018: Dostaň sa ku prasiatku akoukoľvek cestou!
+      courseA_maze_seq13_2019: Dostaň sa ku prasiatku akoukoľvek cestou!
       courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
@@ -891,8 +901,8 @@ sk-SK:
         na spodok ostatných blokov, aby si dokončíl tento kód?
       courseB_Scrat_ramp4a_2019: Dokážeš prísť na to, ktorý blok potrebuješ pridať
         na spodok ostatných blokov, aby si dokončíl tento kód?
-      courseB_Scrat_ramp5a_2018: Vyskúšaj vyriešiť celú túto úlohu sám!
-      courseB_Scrat_ramp5a_2019: Vyskúšaj vyriešiť celú túto úlohu sám!
+      courseB_Scrat_ramp5a_2018: Skús túto úlohu vyriešiť bez pomoci!
+      courseB_Scrat_ramp5a_2019: Skús túto úlohu vyriešiť bez pomoci!
       courseB_artist_loops1: Toto je nový typ úlohy nazývaný "Umelec". V tomto leveli
         sa trochu pohraj a nakresli niečo zábavné.
       courseB_artist_loops10: Použi, čo si sa naučil, a nakresli obrázok toho, čo
@@ -1998,6 +2008,10 @@ sk-SK:
       courseD_bounce_events12s_2019: A teraz si vytvor tvoju vlastnú hru! Môžeš zmeniť
         jej vzhľad aj vymyslieť vlastné pravidlá. Keď skončíš, klikni na "Dokončiť",
         nech si ju môžu vyskúšať aj kamaráti na svojich mobiloch.
+      courseD_bounce_events1s_2018: Pripoj blok k udalosti `keď šípka vľavo`a stlač
+        "Spustiť", potom šípkou posuň hráča ku košu.
+      courseD_bounce_events1s_2019: Pripoj blok k udalosti `keď šípka vľavo`a stlač
+        "Spustiť", potom šípkou posuň hráča ku košu.
       courseD_bounce_events2s_2018: Teraz pripoj blok ku udalosti `keď šípka vpravo`,
         aby sa ruka mohla dostať ku obom košom.
       courseD_bounce_events2s_2019: Teraz pripoj blok ku udalosti `keď šípka vpravo`,
@@ -2448,6 +2462,29 @@ sk-SK:
       courseF_bee_for4: Pomôž včele pozbierať všetok nektár.
       courseF_bee_for4_2018: Pomôž včele pozbierať všetok nektár.
       courseF_bee_for4_2019: Pomôž včele pozbierať všetok nektár.
+      courseF_bee_for5: Na vyriešenie tejto úlohy použi premennú `počítadlo` dvakrát.
+      courseF_bee_for5_2018: Na vyriešenie tejto úlohy použi premennú `počítadlo`
+        dvakrát.
+      courseF_bee_for5_2019: Na vyriešenie tejto úlohy použi premennú `počítadlo`
+        dvakrát.
+      courseF_bee_for6: Skús pozbierať nektár odpočítavaním od 5 do 1.
+      courseF_bee_for6_2018: Skús pozbierať nektár odpočítavaním od 5 do 1.
+      courseF_bee_for6_2019: Skús pozbierať nektár odpočítavaním od 5 do 1.
+      courseF_bee_for7: Skús pozbierať tieto kvety s použitím prírastku 2.
+      courseF_bee_for7_2018: Skús pozbierať tieto kvety s použitím prírastku 2.
+      courseF_bee_for7_2019: Skús pozbierať tieto kvety s použitím prírastku 2.
+      courseF_bee_for8: Máš to! Aký by mal byť tvoj prírastok, aby si pozbieral 3,
+        6, 9, 12, 15 nektárov?
+      courseF_bee_for8_2018: Máš to! Aký by mal byť tvoj prírastok, aby si pozbieral
+        3, 6, 9, 12, 15 nektárov?
+      courseF_bee_for8_2019: Máš to! Aký by mal byť tvoj prírastok, aby si pozbieral
+        3, 6, 9, 12, 15 nektárov?
+      courseF_bee_for9: Použí premennú `počítadlo` na prejdenie cez túto záhradu s
+        najmenším počtom blokov.
+      courseF_bee_for9_2018: Použí premennú `počítadlo` na prejdenie cez túto záhradu
+        s najmenším počtom blokov.
+      courseF_bee_for9_2019: Použí premennú `počítadlo` na prejdenie cez túto záhradu
+        s najmenším počtom blokov.
       courseF_bee_functions4: Funkcia "move and get nectar" prikáže včele otočiť sa,
         zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok
         nektár.

@@ -414,6 +414,11 @@ sk-SK:
           aby si mohol objavovať svet!
       NEW Course 4 Artist Params inspire:
         double_loop: Skús vložiť cyklus "for" dovnútra cyklu "opakuj".
+      NEW Course 4 Bee For Loops 8:
+        NEW_Course_4_Bee_For_Loops_8_a: |-
+          Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.
+
+          Koľko potrebuješ zakaždým pridať, aby si sa dostal k ďalšiemu množstvu nektárov?
       Overworld House Frame Chosen:
         mc_6_b: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
           keď si ešte nevyriešil celú úlohu.
@@ -884,6 +889,21 @@ sk-SK:
           Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveWest"> <next> <block type="maze_moveWest"> </block> </next> </block> </next> </block> </xml>
+      courseA_playLab_events5:
+        courseA_playLab_events5_b: |-
+          Po kliknutí na obrázok si môžeš vybrať, ktorú klávesu (aký smer šípky) bude tento blok ovládať.
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_b: |-
+          Po kliknutí na obrázok si môžeš vybrať, ktorú klávesu (aký smer šípky) bude tento blok ovládať.
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_b: |-
+          Po kliknutí na obrázok si môžeš vybrať, ktorú klávesu (aký smer šípky) bude tento blok ovládať.
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseB_Scrat_ramp1_2018:
         '1': Ak Scrat nerobí to, čo chceš, tak sa uisti, či sú oba bloky správne pripojené
           a potom znovu klikni "Spustiť".
@@ -3766,8 +3786,8 @@ sk-SK:
           a ten druhý opakuje príkaz `zbieraj tekvica`.
       courseC_harvester_loops3:
         courseC_harvester_loops3_a: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
+          úlohu.
         courseC_harvester_loops3_b: Pri prvých tekviciach môžeš použiť kód, kotrý
           je veľmi podobný tomu z minulej úlohy. Ktorým smerom sa potom potrebuješ
           otočiť?
@@ -3775,8 +3795,8 @@ sk-SK:
           cyklus do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
       courseC_harvester_loops3_2018:
         courseC_harvester_loops3_a: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
+          úlohu.
         courseC_harvester_loops3_b: Pri prvých tekviciach môžeš použiť kód, kotrý
           je veľmi podobný tomu z minulej úlohy. Ktorým smerom sa potom potrebuješ
           otočiť?
@@ -3784,8 +3804,8 @@ sk-SK:
           cyklus do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
       courseC_harvester_loops3_2019:
         courseC_harvester_loops3_a: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
+          úlohu.
         courseC_harvester_loops3_b: Pri prvých tekviciach môžeš použiť kód, kotrý
           je veľmi podobný tomu z minulej úlohy. Ktorým smerom sa potom potrebuješ
           otočiť?
@@ -4554,6 +4574,12 @@ sk-SK:
           Na vyriešenie tejto úlohy sa nemusíš otočiť vľavo. Všetky tvoje otočenia môžu byť vpravo.
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseD_artist_binary_challenge2_2018:
+        courseD_artist_binary_challenge2_a: V pôvodnom kóde je potrebné opraviť len
+          pár riadkov.
+      courseD_artist_binary_challenge2_2019:
+        courseD_artist_binary_challenge2_a: V pôvodnom kóde je potrebné opraviť len
+          pár riadkov.
       courseD_artist_nestedLoops1:
         courseD_artist_nestedLoops1_a: Najjednoduchší spôsob, ako nakresliť obrázok
           je posúvať sa dopredu a otáčať sa vpravo.
@@ -4925,16 +4951,16 @@ sk-SK:
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
+          úlohu.
       courseD_bee_conditionals3_2018:
         courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
+          úlohu.
       courseD_bee_conditionals3_2019:
         courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
+          úlohu.
       courseD_bee_conditionals_challenge1:
         courseD_bee_conditionals_challenge1_a: Nájdeš cestu, ktorou sa dostaneš ku
           všetkým kvetom a plástom bez toho, aby si narazil do stromu? Najlepšou cestou
@@ -5841,12 +5867,11 @@ sk-SK:
           celú úlohu.
       courseD_video_repeatUntil:
         courseE_farmer_ramp12c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseE_artist_functions6:
         grade4_artist_functions_windows0_c: Neboj sa urobiť chybu! Pokús sa pridať
-          bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš,
-          že máš vyriešenú celú úlohu.
+          bloky a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil
+          celú úlohu.
       courseE_artist_ramp8_2:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
@@ -5858,36 +5883,30 @@ sk-SK:
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
       courseE_farmer_functions4b:
         courseE_farmer_functions4b_a: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
+          úlohu.
       courseE_farmer_functions5c:
         courseE_farmer_functions5c_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
+          úlohu.
       courseF_artist_for3:
         courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_for3_2018:
         courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_for3_2019:
         courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_for4:
         courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_for4_2018:
         courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_for4_2019:
         courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_artist_variables10:
         courseF_artist_variables10_a: Zabav sa v tomto leveli! Sleduj, čo dokážu spraviť
           malé zmeny v tvojom kóde.
@@ -6173,24 +6192,111 @@ sk-SK:
       courseF_bee_for4:
         courseF_bee_for4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide
           od 1 do 7 so zvyšovaním o 1.
+        courseF_bee_for4_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for4_c: Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom
+          cykle `opakuj`, aby si pozbieral nektár!
       courseF_bee_for4_2018:
         courseF_bee_for4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide
           od 1 do 7 so zvyšovaním o 1.
+        courseF_bee_for4_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for4_c: Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom
+          cykle `opakuj`, aby si pozbieral nektár!
       courseF_bee_for4_2019:
         courseF_bee_for4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide
           od 1 do 7 so zvyšovaním o 1.
+        courseF_bee_for4_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for4_c: Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom
+          cykle `opakuj`, aby si pozbieral nektár!
       courseF_bee_for5:
+        courseF_bee_for5_a: Tentokrát tvoj blok `posuň sa dopredu` a tvoj blok `získaj
+          nektár` potrebujú byť v samostatných cykloch `opakuj` a obidva v rovnakom
+          cykle `for`.
+        courseF_bee_for5_b: Použi premennú `počítadlo` v každom cykle tak, aby včela
+          prešla rôzne vzdialenosti medzi každými kvetmi.
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_bee_for5_2018:
+        courseF_bee_for5_a: Tentokrát tvoj blok `posuň sa dopredu` a tvoj blok `získaj
+          nektár` potrebujú byť v samostatných cykloch `opakuj` a obidva v rovnakom
+          cykle `for`.
+        courseF_bee_for5_b: Použi premennú `počítadlo` v každom cykle tak, aby včela
+          prešla rôzne vzdialenosti medzi každými kvetmi.
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseF_bee_for5_2019:
+        courseF_bee_for5_a: Tentokrát tvoj blok `posuň sa dopredu` a tvoj blok `získaj
+          nektár` potrebujú byť v samostatných cykloch `opakuj` a obidva v rovnakom
+          cykle `for`.
+        courseF_bee_for5_b: Použi premennú `počítadlo` v každom cykle tak, aby včela
+          prešla rôzne vzdialenosti medzi každými kvetmi.
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+      courseF_bee_for6:
+        courseF_bee_for6_a: Nezabudni použiť premennú `počítadlo` vo vnútri tvojho
+          cyklu `opakuj`.
+        courseF_bee_for6_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for6_c: Tvoj cyklus má počítať **od 5 do 1**.
+      courseF_bee_for6_2018:
+        courseF_bee_for6_a: Nezabudni použiť premennú `počítadlo` vo vnútri tvojho
+          cyklu `opakuj`.
+        courseF_bee_for6_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for6_c: Tvoj cyklus má počítať **od 5 do 1**.
+      courseF_bee_for6_2019:
+        courseF_bee_for6_a: Nezabudni použiť premennú `počítadlo` vo vnútri tvojho
+          cyklu `opakuj`.
+        courseF_bee_for6_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for6_c: Tvoj cyklus má počítať **od 5 do 1**.
+      courseF_bee_for7:
+        courseF_bee_for7_a: Tvoj cyklus `for` potrebuje počítať od 1 do 7 počítané
+          po 2.
+        courseF_bee_for7_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for7_c: Nezabudni použiť premennú `počítadlo` v tvojom cykle `opakuj`.
+      courseF_bee_for7_2018:
+        courseF_bee_for7_a: Tvoj cyklus `for` potrebuje počítať od 1 do 7 počítané
+          po 2.
+        courseF_bee_for7_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for7_c: Nezabudni použiť premennú `počítadlo` v tvojom cykle `opakuj`.
+      courseF_bee_for7_2019:
+        courseF_bee_for7_a: Tvoj cyklus `for` potrebuje počítať od 1 do 7 počítané
+          po 2.
+        courseF_bee_for7_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for7_c: Nezabudni použiť premennú `počítadlo` v tvojom cykle `opakuj`.
+      courseF_bee_for8:
+        courseF_bee_for8_a: |-
+          Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.
+
+          Koľko potrebuješ zakaždým pridať, aby si sa dostal k ďalšiemu množstvu nektárov?
+        courseF_bee_for8_b: V tejto úlohe sa potrebuješ pohybovať schodiskovým vzorom,
+          aby si sa dostal ku kvetom.
+        courseF_bee_for8_c: Tvoj cyklus bude počítať _od 3 do 15_ s nejakým prírastkom.
+          Aký to bude?
+      courseF_bee_for8_2018:
+        courseF_bee_for8_a: |-
+          Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.
+
+          Koľko potrebuješ zakaždým pridať, aby si sa dostal k ďalšiemu množstvu nektárov?
+        courseF_bee_for8_b: V tejto úlohe sa potrebuješ pohybovať schodiskovým vzorom,
+          aby si sa dostal ku kvetom.
+        courseF_bee_for8_c: Tvoj cyklus bude počítať _od 3 do 15_ s nejakým prírastkom.
+          Aký to bude?
+      courseF_bee_for8_2019:
+        courseF_bee_for8_a: |-
+          Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.
+
+          Koľko potrebuješ zakaždým pridať, aby si sa dostal k ďalšiemu množstvu nektárov?
+        courseF_bee_for8_b: V tejto úlohe sa potrebuješ pohybovať schodiskovým vzorom,
+          aby si sa dostal ku kvetom.
+        courseF_bee_for8_c: Tvoj cyklus bude počítať _od 3 do 15_ s nejakým prírastkom.
+          Aký to bude?
       courseF_bee_variables_3_2018:
         courseF_beevariables_3a: |-
           Môźeš použiť tento kód v tvojom programe, aby si odčítal jedna z premennej:
