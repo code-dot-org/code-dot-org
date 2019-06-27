@@ -10521,6 +10521,8 @@ en:
               name: andrea-test-stage3
             Deeper Learning Overview:
               name: Deeper Learning Overview
+            andrea-test-stage4:
+              name: andrea-test-stage4
           title: andrea-test
           description_audience: 6-12 Facilitators-in-Training
           description_short: this is to test my skills in making a course
@@ -12054,6 +12056,8 @@ en:
               name: 'Project: Designing an App, pt. 2'
             Programs Investigate:
               name: Programs Investigate
+            Programs Practice:
+              name: Programs Practice
           title: 'Unit 3: Intro to App Development'
           description_audience: ''
           description_short: ''
