@@ -26,8 +26,7 @@ import {
   isNodeSerialAvailable,
   ADAFRUIT_VID,
   CIRCUIT_PLAYGROUND_EXPRESS_PID,
-  CIRCUIT_PLAYGROUND_PID,
-  findPortWithViableDevice
+  CIRCUIT_PLAYGROUND_PID
 } from './portScanning';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
@@ -52,11 +51,11 @@ export const BOARD_TYPE = {
  * @implements MakerBoard
  */
 export default class CircuitPlaygroundBoard extends EventEmitter {
-  constructor(portName) {
+  constructor(port) {
     super();
 
     /** @private {string} a port identifier, e.g. "/dev/ttyACM0" */
-    this.portName_ = portName;
+    this.port_ = port;
 
     /** @private {SerialPort} serial port controller */
     this.serialPort_ = null;
@@ -81,7 +80,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   connect() {
     return Promise.resolve()
       .then(() => this.connectToFirmware())
-      .then(() => this.detectBoardType())
       .then(() => this.initializeComponents())
       .then(() => this.initializeEventForwarding());
   }
@@ -93,8 +91,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise}
    */
   connectToFirmware() {
+    this.detectBoardType();
     return new Promise((resolve, reject) => {
-      const serialPort = CircuitPlaygroundBoard.openSerialPort(this.portName_);
+      const name = this.port_ ? this.port_.name : undefined;
+      const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
       const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
         serialPort
       );
@@ -131,21 +131,24 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * Detects the type of board plugged into the serial port
    */
   detectBoardType() {
-    return findPortWithViableDevice().then(port => {
-      if (
-        parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
-        parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_PID
-      ) {
-        this.boardType_ = BOARD_TYPE.CLASSIC;
-      } else if (
-        parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
-        parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID
-      ) {
-        this.boardType_ = BOARD_TYPE.EXPRESS;
-      } else {
-        this.boardType_ = BOARD_TYPE.OTHER;
-      }
-    });
+    const vendorId =
+      this.port_ && this.port_.vendorId
+        ? parseInt(this.port_.vendorId, 16)
+        : null;
+    const productId =
+      this.port_ && this.port_.productId
+        ? parseInt(this.port_.productId, 16)
+        : null;
+    if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
+      this.boardType_ = BOARD_TYPE.CLASSIC;
+    } else if (
+      vendorId === ADAFRUIT_VID &&
+      productId === CIRCUIT_PLAYGROUND_EXPRESS_PID
+    ) {
+      this.boardType_ = BOARD_TYPE.EXPRESS;
+    } else {
+      this.boardType_ = BOARD_TYPE.OTHER;
+    }
   }
 
   /**
