@@ -1,6 +1,13 @@
+import clientState from '@cdo/apps/code-studio/clientState.js';
+
 const script = document.querySelector('script[data-section]');
 const sectionData = JSON.parse(script.dataset['section']);
-const {loginType, loginTypeWord, loginTypePicture, pairingAllowed} = sectionData;
+const {
+  loginType,
+  loginTypeWord,
+  loginTypePicture,
+  pairingAllowed
+} = sectionData;
 
 $(function() {
   // Select name.
@@ -9,10 +16,10 @@ $(function() {
     $(this).addClass('selected');
     $('input#user_id').val($(this).attr('id'));
 
-    if (loginType == loginTypeWord) {
+    if (loginType === loginTypeWord) {
       // Clear the password.
-      $('#secret_words').val("");
-    } else if (loginType == loginTypePicture) {
+      $('#secret_words').val('');
+    } else if (loginType === loginTypePicture) {
       // Deselect picture.
       $('ul.pictures li').removeClass('selected');
     }
@@ -23,9 +30,10 @@ $(function() {
     // Hide the pairing checkbox
     $('#pairing_checkbox').hide();
 
-
     // Reveal the secret section...
-    $('#secret').hide().slideDown();
+    $('#secret')
+      .hide()
+      .slideDown();
 
     // ...and simultaneously fade in the login button.
     $('#login_button').fadeIn();
@@ -57,5 +65,5 @@ $(function() {
     $('#login_button').prop('disabled', false);
   });
 
-  $(".section-user-sign-in").on("submit", dashboard.clientState.reset);
+  $('.section-user-sign-in').on('submit', clientState.reset);
 });
