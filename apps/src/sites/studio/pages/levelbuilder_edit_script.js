@@ -13,27 +13,31 @@ import {valueOr} from '@cdo/apps/utils';
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
   const stageLevelData = scriptEditorData.stageLevelData;
-  const stages = (scriptData.stages || []).filter(stage => stage.id).map(stage => ({
-    position: stage.position,
-    flex_category: stage.flex_category,
-    lockable: stage.lockable,
-    name: stage.name,
-    // Only include the first level of an assessment (uid ending with "_0").
-    levels: stage.levels.filter(level => !level.uid || /_0$/.test(level.uid)).map(level => ({
-      position: level.position,
-      activeId: level.activeId,
-      ids: level.ids.slice(),
-      kind: level.kind,
-      skin: level.skin,
-      videoKey: level.videoKey,
-      concepts: level.concepts,
-      conceptDifficulty: level.conceptDifficulty,
-      progression: level.progression
-    }))
-  }));
+  const stages = (scriptData.stages || [])
+    .filter(stage => stage.id)
+    .map(stage => ({
+      position: stage.position,
+      flex_category: stage.flex_category,
+      lockable: stage.lockable,
+      name: stage.name,
+      // Only include the first level of an assessment (uid ending with "_0").
+      levels: stage.levels
+        .filter(level => !level.uid || /_0$/.test(level.uid))
+        .map(level => ({
+          position: level.position,
+          activeId: level.activeId,
+          ids: level.ids.slice(),
+          kind: level.kind,
+          skin: level.skin,
+          videoKey: level.videoKey,
+          concepts: level.concepts,
+          conceptDifficulty: level.conceptDifficulty,
+          progression: level.progression
+        }))
+    }));
   const locales = scriptEditorData.locales;
 
-  registerReducers({isRtl});
+  registerReducers({...reducers, isRtl});
   const store = getStore();
   store.dispatch(init(stages, scriptEditorData.levelKeyList));
 

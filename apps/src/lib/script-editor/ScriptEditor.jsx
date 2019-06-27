@@ -456,20 +456,23 @@ export default class ScriptEditor extends React.Component {
           />
         </div>
         <h2>Stages and Levels</h2>
-        {this.props.beta ?
-          <FlexGroup /> :
+        {this.props.beta ? (
+          <FlexGroup />
+        ) : (
           <div>
-            <a href="?beta=true">Try the beta Script Editor (will reload the page without saving)</a>
-          <textarea
-            id="script_text"
-            name="script_text"
-            rows={textAreaRows}
-            style={styles.input}
-            defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
-            ref={textArea => (this.scriptTextArea = textArea)}
-          />
-        </div>
-        }
+            <a href="?beta=true">
+              Try the beta Script Editor (will reload the page without saving)
+            </a>
+            <textarea
+              id="script_text"
+              name="script_text"
+              rows={textAreaRows}
+              style={styles.input}
+              defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
+              ref={textArea => (this.scriptTextArea = textArea)}
+            />
+          </div>
+        )}
         <button
           className="btn btn-primary"
           type="submit"

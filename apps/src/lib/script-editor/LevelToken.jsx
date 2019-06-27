@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
-import { Motion, spring } from 'react-motion';
+import {connect} from 'react-redux';
+import {Motion, spring} from 'react-motion';
 import color from '../../util/color';
-import { borderRadius, levelTokenMargin } from './constants';
+import {borderRadius, levelTokenMargin} from './constants';
 import LevelTokenDetails from './LevelTokenDetails';
-import { toggleExpand, removeLevel } from './editorRedux';
+import {toggleExpand, removeLevel} from './editorRedux';
 
 const styles = {
   levelToken: {
@@ -77,7 +77,10 @@ const LevelToken = React.createClass({
   },
 
   toggleExpand() {
-    this.props.toggleExpand(this.props.stagePosition, this.props.level.position);
+    this.props.toggleExpand(
+      this.props.stagePosition,
+      this.props.level.position
+    );
   },
 
   handleRemove() {
@@ -88,20 +91,26 @@ const LevelToken = React.createClass({
     const springConfig = {stiffness: 1000, damping: 80};
     return (
       <Motion
-        style={this.props.drag ? {
-          y: this.props.dragging ? this.props.delta : 0,
-          scale: spring(1.02, springConfig),
-          shadow: spring(5, springConfig)
-        } : {
-          y: this.props.dragging ? spring(this.props.delta, springConfig) : 0,
-          scale: 1,
-          shadow: 0
-        }} key={this.props.level.position}
+        style={
+          this.props.drag
+            ? {
+                y: this.props.dragging ? this.props.delta : 0,
+                scale: spring(1.02, springConfig),
+                shadow: spring(5, springConfig)
+              }
+            : {
+                y: this.props.dragging
+                  ? spring(this.props.delta, springConfig)
+                  : 0,
+                scale: 1,
+                shadow: 0
+              }
+        }
+        key={this.props.level.position}
       >
-        {
-          // Use react-motion to interpolate the following values and create
-          // smooth transitions.
-          ({y, scale, shadow}) =>
+        {// Use react-motion to interpolate the following values and create
+        // smooth transitions.
+        ({y, scale, shadow}) => (
           <div
             style={Object.assign({}, styles.levelToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
@@ -110,39 +119,42 @@ const LevelToken = React.createClass({
             })}
           >
             <div style={styles.reorder} onMouseDown={this.handleDragStart}>
-              <i className="fa fa-arrows-v"/>
+              <i className="fa fa-arrows-v" />
             </div>
             <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
               {this.props.levelKeyList[this.props.level.activeId]}
-              {this.props.level.ids.length > 1 &&
-              <span style={styles.variants}>
-                {this.props.level.ids.length} variants
-              </span>
-              }
+              {this.props.level.ids.length > 1 && (
+                <span style={styles.variants}>
+                  {this.props.level.ids.length} variants
+                </span>
+              )}
             </span>
             <div style={styles.remove} onMouseDown={this.handleRemove}>
-              <i className="fa fa-times"/>
+              <i className="fa fa-times" />
             </div>
-            {this.props.level.expand &&
-            <LevelTokenDetails
-              level={this.props.level}
-              stagePosition={this.props.stagePosition}
-            />
-            }
+            {this.props.level.expand && (
+              <LevelTokenDetails
+                level={this.props.level}
+                stagePosition={this.props.stagePosition}
+              />
+            )}
           </div>
-        }
+        )}
       </Motion>
     );
   }
 });
 
-export default connect(state => ({
-  levelKeyList: state.levelKeyList
-}), dispatch => ({
-  toggleExpand(stage, level) {
-    dispatch(toggleExpand(stage, level));
-  },
-  removeLevel(stage, level) {
-    dispatch(removeLevel(stage, level));
-  }
-}))(LevelToken);
+export default connect(
+  state => ({
+    levelKeyList: state.levelKeyList
+  }),
+  dispatch => ({
+    toggleExpand(stage, level) {
+      dispatch(toggleExpand(stage, level));
+    },
+    removeLevel(stage, level) {
+      dispatch(removeLevel(stage, level));
+    }
+  })
+)(LevelToken);

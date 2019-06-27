@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
-import { connect } from 'react-redux';
-import { borderRadius, levelTokenMargin, ControlTypes } from './constants';
+import {connect} from 'react-redux';
+import {borderRadius, levelTokenMargin, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import LevelToken from './LevelToken';
-import { reorderLevel, addLevel, setStageLockable } from './editorRedux';
+import {reorderLevel, addLevel, setStageLockable} from './editorRedux';
 
 const styles = {
   checkbox: {
@@ -84,21 +84,26 @@ const StageCard = React.createClass({
     const delta = pageY - this.state.initialPageY;
     const dragPosition = this.metrics[this.state.drag].top + scrollDelta;
     let newPosition = this.state.drag;
-    const currentPositions = this.state.startingPositions.map((midpoint, index) => {
-      const position = index + 1;
-      if (position === this.state.drag) {
-        return delta;
+    const currentPositions = this.state.startingPositions.map(
+      (midpoint, index) => {
+        const position = index + 1;
+        if (position === this.state.drag) {
+          return delta;
+        }
+        if (position < this.state.drag && dragPosition < midpoint) {
+          newPosition--;
+          return this.state.dragHeight;
+        }
+        if (
+          position > this.state.drag &&
+          dragPosition + this.state.dragHeight > midpoint
+        ) {
+          newPosition++;
+          return -this.state.dragHeight;
+        }
+        return 0;
       }
-      if (position < this.state.drag && dragPosition < midpoint) {
-        newPosition--;
-        return this.state.dragHeight;
-      }
-      if (position > this.state.drag && dragPosition + this.state.dragHeight > midpoint) {
-        newPosition++;
-        return -this.state.dragHeight;
-      }
-      return 0;
-    });
+    );
     this.setState({currentPositions, newPosition});
   },
 
@@ -121,7 +126,10 @@ const StageCard = React.createClass({
   },
 
   handleLockableChanged() {
-    this.props.setStageLockable(this.props.stage.position, this.refs.lockable.checked);
+    this.props.setStageLockable(
+      this.props.stage.position,
+      this.refs.lockable.checked
+    );
   },
 
   preventSelect(e) {
@@ -150,11 +158,13 @@ const StageCard = React.createClass({
             />
           </div>
         </div>
-        {this.props.stage.levels.map(level =>
+        {this.props.stage.levels.map(level => (
           <LevelToken
             ref={levelToken => {
               if (levelToken) {
-                const metrics = ReactDOM.findDOMNode(levelToken).getBoundingClientRect();
+                const metrics = ReactDOM.findDOMNode(
+                  levelToken
+                ).getBoundingClientRect();
                 this.metrics[level.position] = metrics;
               }
             }}
@@ -166,7 +176,7 @@ const StageCard = React.createClass({
             delta={this.state.currentPositions[level.position - 1] || 0}
             handleDragStart={this.handleDragStart}
           />
-        )}
+        ))}
         <button
           onMouseDown={this.handleAddLevel}
           className="btn"
@@ -181,14 +191,17 @@ const StageCard = React.createClass({
   }
 });
 
-export default connect(state => ({}), dispatch => ({
-  reorderLevel(stage, originalPosition, newPosition) {
-    dispatch(reorderLevel(stage, originalPosition, newPosition));
-  },
-  addLevel(stage) {
-    dispatch(addLevel(stage));
-  },
-  setStageLockable(stage, lockable) {
-    dispatch(setStageLockable(stage, lockable));
-  }
-}))(StageCard);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    reorderLevel(stage, originalPosition, newPosition) {
+      dispatch(reorderLevel(stage, originalPosition, newPosition));
+    },
+    addLevel(stage) {
+      dispatch(addLevel(stage));
+    },
+    setStageLockable(stage, lockable) {
+      dispatch(setStageLockable(stage, lockable));
+    }
+  })
+)(StageCard);

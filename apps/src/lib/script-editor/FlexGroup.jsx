@@ -1,12 +1,12 @@
 import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import _ from 'lodash';
 import color from '../../util/color';
-import { borderRadius, ControlTypes } from './constants';
+import {borderRadius, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
-import { NEW_LEVEL_ID, addStage, addGroup } from './editorRedux';
-import { LevelKind } from '@cdo/apps/util/sharedConstants';
+import {NEW_LEVEL_ID, addStage, addGroup} from './editorRedux';
+import {LevelKind} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   groupHeader: {
@@ -51,7 +51,10 @@ const FlexGroup = React.createClass({
   },
 
   handleAddGroup() {
-    this.props.addGroup(prompt('Enter new stage name'), prompt('Enter new group name'));
+    this.props.addGroup(
+      prompt('Enter new stage name'),
+      prompt('Enter new group name')
+    );
   },
 
   handleAddStage(position) {
@@ -111,7 +114,10 @@ const FlexGroup = React.createClass({
         s.push(`level_concept_difficulty '${level.conceptDifficulty}'`);
       }
     }
-    let l = `${this.normalizeLevelKind(level.kind)} '${key.replace(/'/, "\\'")}'`;
+    let l = `${this.normalizeLevelKind(level.kind)} '${key.replace(
+      /'/,
+      "\\'"
+    )}'`;
     if (active === false) {
       l += ', active: false';
     }
@@ -129,17 +135,22 @@ const FlexGroup = React.createClass({
    * @return {string}
    */
   normalizeLevelKind(kind) {
-    return (!kind || kind === LevelKind.puzzle || kind === LevelKind.unplugged) ? LevelKind.level : kind;
+    return !kind || kind === LevelKind.puzzle || kind === LevelKind.unplugged
+      ? LevelKind.level
+      : kind;
   },
 
   render() {
-    const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Default'));
+    const groups = _.groupBy(
+      this.props.stages,
+      stage => stage.flex_category || 'Default'
+    );
     let count = 0;
     let afterStage = 1;
 
     return (
       <div>
-        {_.map(groups, (stages, group) =>
+        {_.map(groups, (stages, group) => (
           <div key={group}>
             <div style={styles.groupHeader}>
               Group {++count}: {group}
@@ -171,7 +182,7 @@ const FlexGroup = React.createClass({
               </button>
             </div>
           </div>
-        )}
+        ))}
         <button
           onMouseDown={this.handleAddGroup}
           className="btn"
@@ -191,14 +202,17 @@ const FlexGroup = React.createClass({
   }
 });
 
-export default connect(state => ({
-  levelKeyList: state.levelKeyList,
-  stages: state.stages
-}), dispatch => ({
-  addGroup(stageName, groupName) {
-    dispatch(addGroup(stageName, groupName));
-  },
-  addStage(position, stageName) {
-    dispatch(addStage(position, stageName));
-  }
-}))(FlexGroup);
+export default connect(
+  state => ({
+    levelKeyList: state.levelKeyList,
+    stages: state.stages
+  }),
+  dispatch => ({
+    addGroup(stageName, groupName) {
+      dispatch(addGroup(stageName, groupName));
+    },
+    addStage(position, stageName) {
+      dispatch(addStage(position, stageName));
+    }
+  })
+)(FlexGroup);

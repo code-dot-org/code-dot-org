@@ -21,7 +21,7 @@ const SET_STAGE_LOCKABLE = 'scriptEditor/SET_STAGE_LOCKABLE';
 export const init = (stages, levelKeyList) => ({
   type: INIT,
   stages,
-  levelKeyList,
+  levelKeyList
 });
 
 export const addGroup = (stageName, groupName) => ({
@@ -90,7 +90,7 @@ export const reorderLevel = (stage, originalPosition, newPosition) => ({
   newPosition
 });
 
-export const addLevel = (stage) => ({
+export const addLevel = stage => ({
   type: ADD_LEVEL,
   stage
 });
@@ -107,12 +107,12 @@ export const moveStage = (position, direction) => ({
   direction
 });
 
-export const removeGroup = (position) => ({
+export const removeGroup = position => ({
   type: REMOVE_GROUP,
   position
 });
 
-export const removeStage = (position) => ({
+export const removeStage = position => ({
   type: REMOVE_STAGE,
   position
 });
@@ -131,7 +131,7 @@ function updatePositions(node) {
 
 export const NEW_LEVEL_ID = -1;
 
-function stages(state=[], action) {
+function stages(state = [], action) {
   let newState = _.cloneDeep(state);
 
   switch (action.type) {
@@ -175,7 +175,9 @@ function stages(state=[], action) {
       break;
     }
     case ADD_VARIANT: {
-      newState[action.stage - 1].levels[action.level - 1].ids.push(NEW_LEVEL_ID);
+      newState[action.stage - 1].levels[action.level - 1].ids.push(
+        NEW_LEVEL_ID
+      );
       break;
     }
     case SET_ACTIVE_VARIANT: {
@@ -184,7 +186,8 @@ function stages(state=[], action) {
     }
     case SET_FIELD: {
       const type = Object.keys(action.modifier)[0];
-      newState[action.stage - 1].levels[action.level - 1][type] = action.modifier[type];
+      newState[action.stage - 1].levels[action.level - 1][type] =
+        action.modifier[type];
       break;
     }
     case REMOVE_GROUP: {
@@ -232,16 +235,21 @@ function stages(state=[], action) {
       let count = categories.filter(c => c === groupName).length;
       const swap = newState.splice(start, count);
       categories = newState.map(s => s.flex_category);
-      const swappedGroupName = newState[action.direction === 'up' ? index - 1 : index].flex_category;
+      const swappedGroupName =
+        newState[action.direction === 'up' ? index - 1 : index].flex_category;
       start = categories.indexOf(swappedGroupName);
       count = categories.filter(c => c === swappedGroupName).length;
-      newState.splice(action.direction === 'up' ? start : start + count, 0, ...swap);
+      newState.splice(
+        action.direction === 'up' ? start : start + count,
+        0,
+        ...swap
+      );
       updatePositions(newState);
       break;
     }
     case MOVE_STAGE: {
       const index = action.position - 1;
-      const swap = (action.direction === 'up' ? index - 1 : index + 1);
+      const swap = action.direction === 'up' ? index - 1 : index + 1;
       const temp = newState[index];
       newState[index] = newState[swap];
       newState[swap] = temp;
@@ -256,7 +264,7 @@ function stages(state=[], action) {
   return newState;
 }
 
-function levelKeyList(state=[], action) {
+function levelKeyList(state = [], action) {
   switch (action.type) {
     case INIT:
       return action.levelKeyList;
@@ -266,5 +274,5 @@ function levelKeyList(state=[], action) {
 
 export default {
   stages,
-  levelKeyList,
+  levelKeyList
 };
