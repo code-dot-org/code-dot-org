@@ -208,7 +208,7 @@ def redact_level_content
     end
 
     stdout, _status = Open3.capture2(
-      'bin/i18n/node_modules/.bin/redact -c bin/i18n/plugins/nonCommonmarkLinebreak.js',
+      'bin/i18n/node_modules/.bin/redact',
       stdin_data: JSON.generate(redactable_data)
     )
     redacted_data = JSON.parse(stdout)

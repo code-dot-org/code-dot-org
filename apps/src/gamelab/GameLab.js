@@ -206,8 +206,10 @@ GameLab.prototype.init = function(config) {
     throw new Error('GameLab requires a StudioApp');
   }
 
+  this.isSpritelab = this.studioApp_.isUsingBlockly();
+
   this.skin = config.skin;
-  if (this.studioApp_.isUsingBlockly()) {
+  if (this.isSpritelab) {
     const MEDIA_URL = '/blockly/media/spritelab/';
     this.skin.smallStaticAvatar = MEDIA_URL + 'avatar.png';
     this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
@@ -265,7 +267,7 @@ GameLab.prototype.init = function(config) {
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
     onDraw: this.onP5Draw.bind(this),
-    spritelab: this.studioApp_.isUsingBlockly()
+    spritelab: this.isSpritelab
   });
 
   config.afterClearPuzzle = function() {
@@ -296,7 +298,7 @@ GameLab.prototype.init = function(config) {
   // Display CSF-style instructions when using Blockly. Otherwise provide a way
   // for us to have top pane instructions disabled by default, but able to turn
   // them on.
-  config.noInstructionsWhenCollapsed = !this.studioApp_.isUsingBlockly();
+  config.noInstructionsWhenCollapsed = !this.isSpritelab;
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
@@ -323,6 +325,10 @@ GameLab.prototype.init = function(config) {
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
+    // remove 'setup' from unusedConfig so that we can show a warning for redefining it.
+    if (config.unusedConfig.indexOf('setup') !== -1) {
+      config.unusedConfig.splice(config.unusedConfig.indexOf('setup'), 1);
+    }
 
     // Ignore user's code on embedded levels, so that changes made
     // to starting code by levelbuilders will be shown.
@@ -387,7 +393,7 @@ GameLab.prototype.init = function(config) {
     showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame:
-      config.level.allAnimationsSingleFrame || this.studioApp_.isUsingBlockly(),
+      config.level.allAnimationsSingleFrame || this.isSpritelab,
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
@@ -605,7 +611,7 @@ GameLab.prototype.afterInject_ = function(config) {
     getStore().getState().pageConstants.isShareView
   );
 
-  if (this.studioApp_.isUsingBlockly()) {
+  if (this.isSpritelab) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords(
@@ -754,9 +760,10 @@ GameLab.prototype.rerunSetupCode = function() {
   ) {
     return;
   }
+  getStore().dispatch(clearConsole());
   Sounds.getSingleton().muteURLs();
   this.gameLabP5.p5.allSprites.removeSprites();
-  if (this.gameLabP5.spritelab) {
+  if (this.isSpritelab) {
     this.gameLabP5.spritelab.reset();
   }
   this.JSInterpreter.deinitialize();
@@ -765,7 +772,10 @@ GameLab.prototype.rerunSetupCode = function() {
   this.gameLabP5.p5.redraw();
 };
 
-GameLab.prototype.onPuzzleComplete = function(submit, testResult) {
+GameLab.prototype.onPuzzleComplete = function(submit, testResult, message) {
+  if (message && msg[message]) {
+    this.message = msg[message]();
+  }
   if (this.executionError) {
     this.result = ResultType.ERROR;
   } else {
@@ -907,7 +917,7 @@ GameLab.prototype.execute = function(shouldLoop = true) {
   this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (
-    this.studioApp_.isUsingBlockly() &&
+    this.isSpritelab &&
     (this.studioApp_.hasUnwantedExtraTopBlocks() ||
       this.studioApp_.hasDuplicateVariablesInForLoops())
   ) {
@@ -954,7 +964,7 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
       );
     }
 
-    if (this.gameLabP5.spritelab) {
+    if (this.isSpritelab) {
       const spritelabCommands = this.gameLabP5.spritelab.commands;
       for (const command in spritelabCommands) {
         this.JSInterpreter.createGlobalProperty(
@@ -1307,10 +1317,12 @@ GameLab.prototype.runValidationCode = function() {
             (function () {
               validationState = null;
               validationResult = null;
+              validationMessage = null;
               ${this.level.validationCode}
               return {
                 state: validationState,
-                result: validationResult
+                result: validationResult,
+                message: validationMessage
               };
             })();
           `)
@@ -1318,8 +1330,10 @@ GameLab.prototype.runValidationCode = function() {
       if (validationResult.state === 'succeeded') {
         const testResult = validationResult.result || TestResults.ALL_PASS;
         this.onPuzzleComplete(false, testResult);
-      } else if (validationResult === 'failed') {
-        // TODO(ram): Show failure feedback
+      } else if (validationResult.state === 'failed') {
+        const testResult = validationResult.result;
+        const failureMessage = validationResult.message;
+        this.onPuzzleComplete(false, testResult, failureMessage);
       }
     } catch (e) {
       // If validation code errors, assume it was neither a success nor failure

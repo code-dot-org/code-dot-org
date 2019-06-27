@@ -249,6 +249,8 @@ Dashboard::Application.routes.draw do
         member do
           # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+          # /s/xxx/stage/yyy/puzzle/zzz/sublevel/sss
+          get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
         end
       end
     end
@@ -416,9 +418,6 @@ Dashboard::Application.routes.draw do
       # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
-      post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
-      post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
-
       post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
@@ -500,9 +499,6 @@ Dashboard::Application.routes.draw do
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#new'
 
     delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
-
-    get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
-    get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
 
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'

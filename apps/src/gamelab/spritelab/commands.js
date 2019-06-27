@@ -209,8 +209,12 @@ export const commands = {
     return validationCommands.getBackground();
   },
 
-  getBehaviorsForAnimation(animation) {
-    return validationCommands.getBehaviorsForAnimation(animation);
+  getNumBehaviorsForAnimation(animation) {
+    return validationCommands.getNumBehaviorsForAnimation(animation);
+  },
+
+  getNumBehaviorsForSpriteId(spriteId) {
+    return validationCommands.getNumBehaviorsForSpriteId(spriteId);
   },
 
   getSpriteIdsInUse() {

@@ -24,6 +24,8 @@
 #
 
 class BubbleChoice < DSLDefined
+  include LevelsHelper
+  include Rails.application.routes.url_helpers
   include SerializedProperties
 
   serialized_attrs %w(
@@ -48,19 +50,73 @@ ruby
     Level.where(name: properties['sublevels']).sort_by {|l| properties['sublevels'].index(l.name)}
   end
 
-  def summarize
-    sublevel_summary = sublevels.map do |level|
-      {
-        id: level.id,
-        title: level.display_name || level.name,
-        thumbnail_url: level.try(:thumbnail_url)
-      }
-    end
+  def sublevel_at(index)
+    sublevels[index]
+  end
 
-    {
+  # Summarizes the level.
+  # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels,
+  # previous/next levels, and script will be included in the summary.
+  # @param [Integer] user_id. Optional. If provided, the "perfect" field will be calculated
+  # in the sublevel summary.
+  # @return [Hash]
+  def summarize(script_level: nil, user_id: nil)
+    summary = {
       title: title,
       description: description,
-      sublevels: sublevel_summary
+      sublevels: summarize_sublevels(script_level: script_level, user_id: user_id)
     }
+
+    if script_level
+      previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
+      next_level_url = script_level.next_level ? build_script_level_url(script_level.next_level) : nil
+
+      summary.merge!(
+        {
+          previous_level_url: previous_level_url,
+          next_level_url: next_level_url,
+          script_url: script_url(script_level.script)
+        }
+      )
+    end
+
+    summary
+  end
+
+  # Summarizes the level's sublevels.
+  # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels
+  # will be included in the summary.
+  # @param [Integer] user_id. Optional. If provided, "perfect" field will be calculated for sublevels.
+  # @return [Hash[]]
+  def summarize_sublevels(script_level: nil, user_id: nil)
+    summary = []
+    sublevels.each_with_index do |level, index|
+      level_info = {
+        id: level.id,
+        title: level.display_name || level.name,
+        description: level.try(:bubble_choice_description),
+        thumbnail_url: level.try(:thumbnail_url)
+      }
+
+      level_info[:url] = script_level ?
+        build_script_level_url(script_level, {sublevel_position: index + 1}) :
+        level_url(level.id)
+
+      if user_id
+        level_info[:perfect] = UserLevel.find_by(level: level, user_id: user_id)&.perfect?
+      end
+
+      summary << level_info
+    end
+
+    summary
+  end
+
+  # Returns the sublevel id for a user that has the highest best_result.
+  # @param [User]
+  # @return [Integer]
+  def best_result_sublevel(user)
+    ul = user.user_levels.where(level: sublevels).max_by(&:best_result)
+    ul&.level
   end
 end
