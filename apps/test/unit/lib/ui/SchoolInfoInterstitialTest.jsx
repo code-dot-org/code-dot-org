@@ -90,7 +90,7 @@ describe('SchoolInfoInterstitial', () => {
      * called to fail.  However, the second assertion that checks if the modal was closed will pass.
      * The typical approach to solve this is to trigger a force update that also triggers a re-render or the
      * component and consequently, the click event listener is re-set with the spied method.
-     * However, forcing a re-render using "wrapper.instance().update()" does not work.
+     * However, forcing a re-render using "wrapper.update()" does not work.
      * Using wrapper.setState({}) forces a re-render of the component. setState triggers a re-render of the
      * component and since an empty object is passed there is no change to the current state.
      */
@@ -99,7 +99,6 @@ describe('SchoolInfoInterstitial', () => {
       .find(Button)
       .first()
       .simulate('click');
-
     expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
     expect(wrapper.state('isOpen')).to.be.false;
   });
