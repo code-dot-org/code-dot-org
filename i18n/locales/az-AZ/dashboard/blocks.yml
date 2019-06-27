@@ -218,14 +218,6 @@ az:
             '"space"': kosmos
             '"x"': x
             '"y"': 'y'
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': təsadüfi
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": təsadüfi
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -244,10 +236,6 @@ az:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': göy qurşağı
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': suyun altı
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': qış
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': təsadüfi
       gamelab_setProp:
         options:
           PROPERTY:
@@ -262,19 +250,6 @@ az:
           CONDITION:
             '"when"': nə zaman
             '"while"': hələ ki,
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': nə zaman
-            '"while"': hələ ki,
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ölçü
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': ölçü
       gamelab_turn:
         options:
           DIRECTION:
@@ -295,11 +270,6 @@ az:
             "'down'": aşağı
             "'left'": sola
             "'right'": sağa
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': nə zaman
-            '"while"': hələ ki,
       gamelab_whileKey:
         options:
           KEY:

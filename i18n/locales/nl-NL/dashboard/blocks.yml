@@ -554,15 +554,6 @@ nl:
             '"9"': '9'
       Dancelab_whenPeak:
         text: als {RANGE} piek
-      gamelab_changeColor:
-        text: verander {COLOR} {METHOD} met {AMOUNT}
-      gamelab_changeColorBy:
-        text: verander {COLOR} {METHOD} met {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': tint
-            '"saturation"': verzadiging
-            '"brightness"': helderheid
       gamelab_changePropBy:
         text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
@@ -614,28 +605,11 @@ nl:
             '"w"': w
             '"x"': x
             '"y"': 'y'
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': grens
-            '"inner"': binnenkant vierkant
-            '"circle"': cirkel
-            '"grid"': raster
-            '"row"': rij
-            '"column"': kolom
-            '"x"': kriskras
-            '"random"': willekeurig
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": willekeurig
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': rechts
             '"left"': links
-      gamelab_mixColors:
-        text: Meng {COLOR1} en {COLOR2}
       gamelab_randColor:
         text: willekeurige kleur
       gamelab_randomColor:
@@ -652,20 +626,6 @@ nl:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regenboog
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': onder water
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
-      gamelab_setPosition:
-        text: verplaats {THIS} naar de positie {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": linksboven
-            "{x: 200, y: 50}": boven in het midden
-            "{x: 350, y: 50}": rechtsboven
-            "{x: 50, y: 200}": links in het midden
-            "{x: 200, y: 200}": midden
-            "{x: 350, y: 200}": rechts in het midden
-            "{x: 50, y: 350}": linksonder
-            "{x: 200, y: 350}": onder in het midden
-            "{x: 350, y: 350}": rechtsonder
-            '"random"': willekeurig
       gamelab_setProp:
         options:
           PROPERTY:
@@ -686,28 +646,6 @@ nl:
           CONDITION:
             '"when"': wanneer
             '"while"': terwijl
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': wanneer
-            '"while"': terwijl
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-            '"direction"': bewegingsrichting
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-            '"direction"': bewegingsrichting
-          OP:
-            '"="': "="
-            '">"': ">"
       gamelab_turn:
         options:
           DIRECTION:
@@ -733,11 +671,6 @@ nl:
             "'down'": omlaag
             "'left'": links
             "'right'": rechts
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': wanneer
-            '"while"': terwijl
       gamelab_whileKey:
         options:
           KEY:

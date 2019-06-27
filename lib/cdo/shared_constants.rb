@@ -273,6 +273,7 @@ module SharedConstants
       "toUpperCase": null,
       "toLowerCase": null,
       "declareAssign_list_abd": null,
+      "declareAssign_list_123": null,
       "accessListItem": null,
       "listLength": null,
       "insertItem": null,
@@ -560,4 +561,16 @@ module SharedConstants
   JSON
 
   ALLOWED_WEB_REQUEST_HEADERS = HttpCache::ALLOWED_WEB_REQUEST_HEADERS
+
+  # Subset of Ruby Logger::Severity constants.
+  # https://github.com/ruby/ruby/blob/trunk/lib/logger.rb
+  # We don't use 2 irrelevant severity levels DEBUG (0) and INFO (1).
+  ERROR_SEVERITY_LEVELS = {
+    # A warning.
+    WARN: 2,
+    # A handleable error condition.
+    ERROR: 3,
+    # An unhandleable error that results in a program crash.
+    FATAL: 4
+  }.freeze
 end

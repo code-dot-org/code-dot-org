@@ -678,18 +678,6 @@ pl:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
-      gamelab_changeColor:
-        text: zmień {COLOR} {METHOD} o {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': odcień
-      gamelab_changeColorBy:
-        text: zmień {COLOR} {METHOD} o {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': zabarwienie
-            '"saturation"': nasycenie
-            '"brightness"': jasność
       gamelab_changePropBy:
         text: zamień {SPRITE} {PROPERTY} przez {VAL}
         options:
@@ -709,8 +697,6 @@ pl:
           VAL:
             'true': prawda
             'false': fałsz
-      gamelab_eval:
-        text: oceń {CODE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -764,29 +750,11 @@ pl:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': brzeg
-            '"inner"': wewnątrz kwadratu
-            '"circle"': koło
-            '"grid"': siatka
-            '"row"': rząd
-            '"column"': kolumna
-            '"x"': krzyż
-            '"plus"': plus
-            '"random"': losowy
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": losowy
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': w prawo
             '"left"': w lewo
-      gamelab_mixColors:
-        text: zmieszaj {COLOR1} z {COLOR2}
       gamelab_randColor:
         text: losowy kolor
       gamelab_randomColor:
@@ -803,20 +771,6 @@ pl:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': tęcza
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': podwodny
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
-      gamelab_setPosition:
-        text: przenieś {THIS} do położenia {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": górny lewy róg
-            "{x: 200, y: 50}": środek u góry
-            "{x: 350, y: 50}": górny prawy róg
-            "{x: 50, y: 200}": na środku z lewej
-            "{x: 200, y: 200}": środek
-            "{x: 350, y: 200}": na środku z prawej
-            "{x: 50, y: 350}": dolny lewy róg
-            "{x: 200, y: 350}": środek na dole
-            "{x: 350, y: 350}": dolny prawy róg
-            '"random"': losowy
       gamelab_setProp:
         options:
           PROPERTY:
@@ -833,34 +787,11 @@ pl:
             '"scale"': rozmiar
             '"width"': szerokość
             '"height"': wysokość
-      gamelab_setup:
-        text: układ
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': kiedy
             '"while"': dopóki
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': kiedy
-            '"while"': dopóki
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-            '"direction"': kierunku ruchu
-            '"tint"': odcień
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-            '"direction"': kierunku ruchu
-            '"tint"': odcień
       gamelab_turn:
         options:
           DIRECTION:
@@ -886,11 +817,6 @@ pl:
             "'down'": do dołu
             "'left'": w lewo
             "'right'": w prawo
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': kiedy
-            '"while"': dopóki
       gamelab_whileKey:
         options:
           KEY:

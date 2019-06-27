@@ -44,7 +44,6 @@ ci: <%=!!ENV['CI']%>
 ci_test: <%=unit_test || ci%>
 root_dir: <%=__dir__%>
 name: <%=`hostname`.strip%>
-stack_name: <%=env%>
 rack_env: :<%=env%>
 rack_envs:
   - :development
@@ -232,6 +231,11 @@ videos_url:                //videos.code.org
 memcached_endpoint:
 memcached_hosts:
 
+# Redis (ElastiCache)
+redis_primary:
+redis_read_addresses:
+redis_read_ports:
+
 # Netsim
 netsim_redis_groups:
 netsim_enable_metrics: false
@@ -375,7 +379,7 @@ proxy: false # If true, generated URLs will not include explicit port numbers in
 # Run dashboard-server with the level editing interface enabled (for admins)
 levelbuilder_mode:
 
-default_hoc_mode:   post-hoc # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_mode:   pre-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''       # overridden by 'hoc_launch' DCDO param, except in :test
 
 localize_apps: false
@@ -410,7 +414,6 @@ channels_api_secret: <%=poste_secret%>
 bundler_use_sudo: <%=chef_managed%>
 
 daemon: <%=name == 'production-daemon'%>
-cdn_enabled: <%=chef_managed%>
 image_optim: <%=chef_managed && !ci_test%>
 
 # Referenced in CI config, but not sure if they are still used anywhere?
@@ -449,6 +452,25 @@ hoc_map_service_account_email:
 hoc_map_api_secret:
 hoc_map_api_key:
 
+#### Parameters related to CloudFormation-stack deployment
+stack_name: <%=env%>
+cdn_enabled: <%=chef_managed%>
+
+# Application-stack parameters.
+instance_type:
+branch:
+database_username:
+
+# Data-stack parameters.
+rds_host:
+rds_identifier:
+rds_username:
+rds_password:
+redshift_database:
+redshift_username:
+rds_backup_account:
+logs_bucket:
+
 ### Database configuration
 
 redshift_host:
@@ -457,6 +479,8 @@ redshift_password:
 devinternal_db_writer:
 
 db_cluster_id:
+db_admin:
+reporting_db_admin:
 
 db_writer: 'mysql://root@localhost/'
 reporting_db_writer: 'mysql://root@localhost/'
