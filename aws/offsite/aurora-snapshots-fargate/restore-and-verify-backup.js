@@ -1,3 +1,16 @@
+/* Script for verifying that our daily backups of our database are working.
+ * Does the following:
+ *
+ * 1). Find the latest aurora snapshot created by our backup cron job:
+ * https://github.com/code-dot-org/code-dot-org/blob/staging/bin/cron/push_latest_aurora_backup_to_secondary_account
+ * 2). Restore an Aurora cluster from that snapshot
+ * 3). Reset the admin user password (to avoid using the production password)
+ * 4). Make a basic query to verify data is successfully restored (count number of users)
+ * 5). Delete cluster
+ *
+ * Intended to be run once a day on our offsite account.
+ */
+
 const AWS = require("aws-sdk");
 const mysqlPromise = require("promise-mysql");
 
@@ -80,9 +93,6 @@ const changePassword = async (rds, clusterId, newPassword) => {
       ApplyImmediately: true
     })
     .promise();
-
-  // Sleep for 30 seconds to wait for password change to take effect.
-  await sleepMs(30000);
 };
 
 const verifyDb = async (rds, instanceId, password) => {
@@ -138,11 +148,17 @@ const main = async () => {
   const rds = new AWS.RDS({ region: REGION });
 
   try {
-    console.log("starting restore");
+    console.log("Starting restore of database from latest snapshot");
+
     await restoreLatestSnapshot(rds, DB_CLUSTER_ID, DB_INSTANCE_ID);
-    console.log("restored");
+    console.log("Database restored and available");
+
+    // change the password so we don't need production password to query DB
     await changePassword(rds, DB_CLUSTER_ID, NEW_PASSWORD);
-    console.log("password changed");
+    console.log("Successfully changed password");
+    // Sleep for 30 seconds to wait for password change to take effect
+    await sleepMs(30000);
+
     await verifyDb(rds, DB_INSTANCE_ID, NEW_PASSWORD);
     console.log("verified");
   } catch (error) {
@@ -158,6 +174,14 @@ if (require.main === module) {
   main();
 }
 
+// exports are for unit testing only
 module.exports = {
-  restoreLatestSnapshot
+  restoreLatestSnapshot,
+  changePassword,
+  verifyDb,
+  deleteCluster,
+  main,
+  DB_INSTANCE_CLASS,
+  DB_ENGINE,
+  DB_NAME
 };
