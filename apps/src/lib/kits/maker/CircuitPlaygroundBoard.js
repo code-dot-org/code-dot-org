@@ -5,6 +5,7 @@ import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import ChromeSerialPort from 'chrome-serialport';
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
+import experiments from '@cdo/apps/util/experiments';
 import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
@@ -21,7 +22,13 @@ import {
 } from './PlaygroundConstants';
 import Button from './Button';
 import Led from './Led';
-import {isNodeSerialAvailable} from './portScanning';
+import {
+  isNodeSerialAvailable,
+  ADAFRUIT_VID,
+  CIRCUIT_PLAYGROUND_EXPRESS_PID,
+  CIRCUIT_PLAYGROUND_PID,
+  findPortWithViableDevice
+} from './portScanning';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -31,6 +38,12 @@ const SERIAL_BAUD = 57600;
 
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
 const pinMapping = {A0: 12, A1: 6, A2: 9, A3: 10, A4: 3, A5: 2, A6: 0, A7: 1};
+
+export const BOARD_TYPE = {
+  CLASSIC: 'classic',
+  EXPRESS: 'express',
+  OTHER: 'other'
+};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using
@@ -56,6 +69,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
+
+    /** @private {string} a board identifier, e.g. "classic" */
+    this.boardType_ = BOARD_TYPE.OTHER;
   }
 
   /**
@@ -65,6 +81,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   connect() {
     return Promise.resolve()
       .then(() => this.connectToFirmware())
+      .then(() => this.detectBoardType())
       .then(() => this.initializeComponents())
       .then(() => this.initializeEventForwarding());
   }
@@ -86,10 +103,48 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
+        if (experiments.isEnabled('detect-board')) {
+          this.detectFirmwareVersion(playground);
+        }
         resolve();
       });
       board.on('error', reject);
       playground.on('error', reject);
+    });
+  }
+
+  /**
+   * Helper to detect the firmware (major and minor) version of the given playground
+   * @param playground
+   */
+  detectFirmwareVersion(playground) {
+    playground.queryFirmware(() => {
+      console.log(
+        playground.firmware.version.major +
+          '.' +
+          playground.firmware.version.minor
+      );
+    });
+  }
+
+  /**
+   * Detects the type of board plugged into the serial port
+   */
+  detectBoardType() {
+    return findPortWithViableDevice().then(port => {
+      if (
+        parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
+        parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_PID
+      ) {
+        this.boardType_ = BOARD_TYPE.CLASSIC;
+      } else if (
+        parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
+        parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID
+      ) {
+        this.boardType_ = BOARD_TYPE.EXPRESS;
+      } else {
+        this.boardType_ = BOARD_TYPE.OTHER;
+      }
     });
   }
 
