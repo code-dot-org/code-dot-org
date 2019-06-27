@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import PromptIcon from '@cdo/apps/templates/instructions/PromptIcon';
 
 const TEST_SRC_URL = 'example.jpg';

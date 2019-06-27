@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/configuredChai';
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
 
 const TEST_GROUP_NAME = 'Mansfield Park';
@@ -21,15 +21,13 @@ describe('FilterChoice', () => {
     const wrapper = shallow(
       <FilterChoice {...DEFAULT_PROPS} selected={false} />
     );
-    assert(
-      wrapper.containsMatchingElement(
-        <div>
-          <label>
-            <input type="checkbox" checked={false} />
-            {TEST_TEXT}
-          </label>
-        </div>
-      )
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <label>
+          <input type="checkbox" checked={false} />
+          {TEST_TEXT}
+        </label>
+      </div>
     );
   });
 
@@ -37,15 +35,13 @@ describe('FilterChoice', () => {
     const wrapper = shallow(
       <FilterChoice {...DEFAULT_PROPS} selected={true} />
     );
-    assert(
-      wrapper.containsMatchingElement(
-        <div>
-          <label>
-            <input type="checkbox" checked={true} />
-            {TEST_TEXT}
-          </label>
-        </div>
-      )
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <label>
+          <input type="checkbox" checked={true} />
+          {TEST_TEXT}
+        </label>
+      </div>
     );
   });
 
@@ -53,15 +49,13 @@ describe('FilterChoice', () => {
     const wrapper = shallow(
       <FilterChoice {...DEFAULT_PROPS} selected={false} singleEntry={true} />
     );
-    assert(
-      wrapper.containsMatchingElement(
-        <div>
-          <label>
-            <input type="radio" checked={false} />
-            {TEST_TEXT}
-          </label>
-        </div>
-      )
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <label>
+          <input type="radio" checked={false} />
+          {TEST_TEXT}
+        </label>
+      </div>
     );
   });
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {spy} from 'sinon';
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import NetSimLogBrowser from '@cdo/apps/netsim/NetSimLogBrowser';
 import i18n from '@cdo/netsim/locale';
 
