@@ -28,13 +28,13 @@ level 'CSD U2 HTML Debug Paragraphs_pilot', progression: 'Using HTML Tags'
 stage 'Headings', flex_category: 'csd2_1'
 level 'CSD U2L04 TFMD_pilot', named: true
 level 'CSD U2 Pair Programming Video_pilot', named: true
+level 'CSD U2 Heading debug', progression: 'Headings'
 level 'CSD U2 Heading Demo_pilot', progression: 'Headings'
 level 'CSD U2 Heading Sizes_pilot', progression: 'Headings'
+level 'CSD Web Headings practice', progression: 'Headings'
 level 'CSD Header Size MC_2018_2019_pilot', progression: 'Headings', assessment: true
 level 'CSD U2 Heading Test_pilot', progression: 'Headings', assessment: true
-level 'CSD U2 PSP Programming_2018_2019_pilot', named: true
-level 'CSD U2 Design Project_2018_2019_pilot', progression: 'Your Personal Website'
-level 'CSD U2 Project Start_pilot', progression: 'Your Personal Website'
+level 'CSD Web Headings challenge', named: true
 
 stage 'Digital Footprint', flex_category: 'csd2_1'
 level 'CSD U2L05 TFMD_pilot', named: true
@@ -46,12 +46,10 @@ level 'CSD U2 CSS explore CSS_pilot', named: true
 level 'Video: Intro to CSS_pilot', named: true
 level 'CSD U2 text style h1_pilot', progression: 'Styling Text'
 level 'CSD U2 text style h3_pilot', progression: 'Styling Text', assessment: true
-level 'CSD U2 Style Sheet Map_pilot', named: true
 level 'CSD U2 text style size_pilot', progression: 'Fonts and Style'
 level 'CSD U2 text style font family_pilot', progression: 'Fonts and Style'
 level 'CSD U2 text style decoration_pilot', progression: 'Fonts and Style'
 level 'CSD U2 text style text align_pilot', progression: 'Fonts and Style'
-level 'CSD U2 Text Properties Map_pilot', named: true
 level 'Video: Intro to CSS Part 2_pilot', named: true
 level 'CSD U2 add file_pilot', progression: 'Styling your Website'
 level 'CSD U2 text style freeplay_pilot', progression: 'Styling your Website'
