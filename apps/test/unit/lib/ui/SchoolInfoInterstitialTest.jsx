@@ -82,10 +82,18 @@ describe('SchoolInfoInterstitial', () => {
     );
     const wrapperInstance = wrapper.instance();
     sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
-    // TODO: Add explanation for the use of .setState()
-    // Wrapper.setState() is used to force a re-render of the school info interstitial.
-    // because .update() is not working for shallow rendering.
-    // .setState()
+    /**
+     * When you shallow render a component, the render method of that component is called.
+     * The onClick is already bound to the original, so if you do not re-render the component, spying on the
+     * component will fail.  Thus, the original dissmissSchoolInfoForm function is called and the spied function
+     * will not be called. This will cause the assertion that checks if the dismissSchoolInfoForm function was
+     * called to fail.  However, the second assertion that checks if the modal was closed will pass.
+     * The typical approach to solve this is to trigger a force update that also triggers a re-render or the
+     * component and consequently, the click event listener is re-set with the spied method.
+     * However, forcing a re-render using "wrapper.instance().update()" does not work.
+     * Using wrapper.setState({}) forces a re-render of the component. setState triggers a re-render of the
+     * component and since an empty object is passed there is no change to the current state.
+     */
     wrapper.setState({});
     wrapper
       .find(Button)
