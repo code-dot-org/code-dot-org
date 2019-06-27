@@ -13,6 +13,7 @@
     "promise-mysql": "latest"
   },
   "devDependencies": {
-    "mocha": "latest"
+    "mocha": "latest",
+    "sinon": "latest"
   }
 }
