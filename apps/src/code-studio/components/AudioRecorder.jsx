@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../../templates/Button';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {assetButtonStyles} from './AddAssetButtonRow';
 import {AudioErrorType} from './AssetManager';
@@ -17,6 +18,10 @@ const styles = {
   recordingIcon: {
     color: 'red',
     margin: 5
+  },
+  warning: {
+    textAlign: 'left',
+    color: color.red
   }
 };
 
@@ -150,39 +155,42 @@ export default class AudioRecorder extends React.Component {
 
   render() {
     return (
-      <div style={styles.buttonRow}>
-        <input
-          type="text"
-          placeholder={i18n.soundName()}
-          onChange={this.onNameChange}
-          value={this.state.audioName}
-        />
-        {this.state.recording && (
-          <span style={assetButtonStyles.button}>
-            <i style={styles.recordingIcon} className="fa fa-circle" />
-            {i18n.recording()}
+      <div>
+        <div style={styles.buttonRow}>
+          <input
+            type="text"
+            placeholder={i18n.soundName()}
+            onChange={this.onNameChange}
+            value={this.state.audioName}
+          />
+          {this.state.recording && (
+            <span style={assetButtonStyles.button}>
+              <i style={styles.recordingIcon} className="fa fa-circle" />
+              {i18n.recording()}
+            </span>
+          )}
+          <span>
+            <Button
+              onClick={this.toggleRecord}
+              id="start-stop-record"
+              style={assetButtonStyles.button}
+              color={Button.ButtonColor.blue}
+              icon={this.state.recording ? 'stop' : 'circle'}
+              text={this.state.recording ? i18n.stop() : i18n.record()}
+              size="large"
+              disabled={this.state.audioName.length === 0}
+            />
+            <Button
+              onClick={this.onCancel}
+              id="cancel-record"
+              style={assetButtonStyles.button}
+              color={Button.ButtonColor.gray}
+              text={i18n.cancel()}
+              size="large"
+            />
           </span>
-        )}
-        <span>
-          <Button
-            onClick={this.toggleRecord}
-            id="start-stop-record"
-            style={assetButtonStyles.button}
-            color={Button.ButtonColor.blue}
-            icon={this.state.recording ? 'stop' : 'circle'}
-            text={this.state.recording ? i18n.stop() : i18n.record()}
-            size="large"
-            disabled={this.state.audioName.length === 0}
-          />
-          <Button
-            onClick={this.onCancel}
-            id="cancel-record"
-            style={assetButtonStyles.button}
-            color={Button.ButtonColor.gray}
-            text={i18n.cancel()}
-            size="large"
-          />
-        </span>
+        </div>
+        <div style={styles.warning}>{i18n.recordedSoundsBrowserWarning()}</div>
       </div>
     );
   }

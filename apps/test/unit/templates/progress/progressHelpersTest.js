@@ -264,14 +264,16 @@ describe('progressHelpers', () => {
     });
 
     it('summarizes all completed levels', () => {
-      const levels = fakeLevels(4).map(level => ({
-        ...level,
-        status: LevelStatus.perfect
-      }));
+      const levels = fakeLevels(3);
+      levels[0].status = LevelStatus.perfect;
+      levels[1].status = LevelStatus.submitted;
+      levels[2].status = LevelStatus.readonly;
+
       const summarizedStage = summarizeProgressInStage(levels);
-      assert.equal(summarizedStage.total, 4);
+      assert.equal(summarizedStage.total, 3);
       assert.equal(summarizedStage.incomplete, 0);
-      assert.equal(summarizedStage.completed, 4);
+      assert.equal(summarizedStage.completed, 3);
+      assert.equal(summarizedStage.attempted, 0);
     });
 
     it('summarizes all attempted levels', () => {

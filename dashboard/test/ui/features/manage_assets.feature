@@ -1,13 +1,22 @@
 @no_mobile
 Feature: Manage Assets
 
-  Scenario: The manage assets dialog contains the option to record audio.
+  @no_safari @no_ie
+  Scenario: The manage assets dialog contains the option to record audio on Chrome and Firefox.
     Given I am a student
     And I start a new Game Lab project
     And I wait for the page to fully load
     And I open the Manage Assets dialog
     Then I click selector "#record-asset" once I see it
     And I wait until element ".modal-content" contains text "Your computer is not set-up to record audio."
+    
+  @no_chrome @no_firefox
+  Scenario: The manage assets dialog contains the option to record audio on Safari or IE.
+    Given I am a student
+    And I start a new Game Lab project
+    And I wait for the page to fully load
+    And I open the Manage Assets dialog
+    Then I wait until element "#record-asset" is not visible
 
   Scenario: The manage assets dialog displays the audio preview, and toggles between play and pause button.
     Given I am a student
