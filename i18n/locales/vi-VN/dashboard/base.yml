@@ -548,7 +548,6 @@ vi:
   pdf_download: 'Tải phiên bản PDF'
   download_coming_soon: 'Tải về các hoạt động sắp diễn ra.'
   video_coming_soon: 'Video sắp tới!'
-  not_started: 'Học sinh chưa cố gắng cấp độ này.'
   share_code:
     title: "Nhấp vào 'Chạy' để xem chương trình của tôi trực tiếp"
     bounce_og_title: "Hãy xem thử trò chơi Bounce của tôi"

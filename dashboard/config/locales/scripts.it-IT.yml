@@ -290,7 +290,7 @@ it:
             Binary:
               name: Binario
             For Loops:
-              name: Cicli con Contatore
+              name: Cicli con contatore
             Functions and Functions with Parameters:
               name: Funzioni e Funzioni con Parametri
             Intro:
@@ -1226,7 +1226,7 @@ it:
             Events:
               name: Eventi
             For Loops:
-              name: Cicli con Contatore
+              name: Cicli con contatore
             Functions:
               name: Funzioni
             Functions with Parameters:
@@ -1566,7 +1566,7 @@ it:
             Lists:
               name: Liste
             For Loops:
-              name: Cicli con Contatore
+              name: Cicli con contatore
             Map:
               name: Mappa
             Functions with Parameters:
@@ -1602,7 +1602,7 @@ it:
             Lists:
               name: Liste
             For Loops:
-              name: Cicli con Contatore
+              name: Cicli con contatore
             Functions with Parameters:
               name: Funzioni con parametri
             Functions with Parameters_:
@@ -2906,7 +2906,7 @@ it:
             Lists:
               name: Liste
             For Loops:
-              name: Cicli con Contatore
+              name: Cicli con contatore
         csd3-1819draft:
           stages:
             Drawing in Game Lab:

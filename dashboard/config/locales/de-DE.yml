@@ -19,6 +19,7 @@ de:
       messages:
         blank: ist erforderlich
         blank_plural: ist erforderlich
+        invalid: ist ungültig
         invalid_plural: sind ungültig
     attributes:
       user:
@@ -67,6 +68,7 @@ de:
   courses: Kurse
   courses_page:
     title_student: Mit Code Studio lernen
+    title_teacher: Unterrichte Informatik
   unplugged_activity: Aktivität ohne Computer
   of: von
   more: MEHR
@@ -361,6 +363,7 @@ de:
       starwarsblocks: Star Wars (Bausteine)
       starwarsblocks_hour: Star Wars (Bausteine)
       weblab: Web Lab
+      view_all: Alle Projekte anzeigen...
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: Dein Fortschritt
@@ -394,6 +397,7 @@ de:
       example: Lösungsbeispiel
       example_with_number: Lösungsbeispiel %{solution_number}
       submitted_on: 'Eingereicht am:'
+      last_updated: 'Letztes Update:'
       unsubmit: Zurücknehmen
       worked_with: Bearbeitet mit
       update_lock_settings: Aktualisiere Sperreinstellungen hier.
@@ -419,6 +423,8 @@ de:
     create_personal_login_info: Wenn du dein Code.org Konto auch nach dem Ende des
       laufenden Schuljahres weiterverwenden möchtest, kannst du unten dein eigenes
       Login-Konto erstellen.
+    update: Konto aktualisieren
+    account_successfully_updated: Konto erfolgreich aktualisiert.
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -687,7 +693,6 @@ de:
   pdf_download: PDF herunterladen
   download_coming_soon: 'Demnächst: Aktivitäten zum Herunterladen.'
   video_coming_soon: 'Demnächst: Video!'
-  not_started: Der Schüler hat diese Stufe nicht versucht.
   share_code:
     title: Klicke auf "Ausführen", um das Programm in Aktion zu sehen
     bounce_og_title: Schau dir mein Bounce-Spiel an
@@ -800,6 +805,7 @@ de:
       title: Bedingungen
     widgets:
       title: Widgets
+      audience: Ab 14 Jahren
       cta: Lerne wie
   gallery:
     students_drew_these_with_code: Schüler haben diese Bilder mit Code gezeichnet!
@@ -976,6 +982,8 @@ de:
     new: Neu erstellen
     exit: Zurück zum Kurs
     project_gallery: Projekte
+    publish: Veröffentlichen
+    unpublish: Veröffentlichung rückgängig machen
     share_title: Teile Dein Projekt
     share_copy_link: 'Kopiere den Link:'
     share_embed_description: Sie können den embed code in eine HTML Seite einfügen,
@@ -1063,6 +1071,7 @@ de:
     csf_variables: Variablen
     csf_for_loops: '"Zähle mit"-Schleifen'
     csf_internet: Internet
+    cspSurvey: Umfrage
     csp2_1_2018: 'Einheit 2: Digitale Informationen'
     csp_variables: Variablen
     csp_conditionals: Bedingungen

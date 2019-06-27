@@ -170,14 +170,6 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': насумичан
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": насумичан
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -197,10 +189,6 @@ sr:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Под
               водом
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Зима
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': насумичан
       gamelab_setProp:
         options:
           PROPERTY:
@@ -215,19 +203,6 @@ sr:
           CONDITION:
             '"when"': када
             '"while"': док је
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': када
-            '"while"': док је
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': величина
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': величина
       gamelab_turn:
         options:
           DIRECTION:
@@ -248,11 +223,6 @@ sr:
             "'down'": доле
             "'left'": лево
             "'right'": десно
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': када
-            '"while"': док је
       gamelab_whileKey:
         options:
           KEY:

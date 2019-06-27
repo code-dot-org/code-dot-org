@@ -3,6 +3,7 @@ it-IT:
   data:
     block_categories:
       Actions: Azioni
+      Advanced: Avanzate
       Behaviors: Comportamenti
       Brushes: Pennelli
       Color: Colore

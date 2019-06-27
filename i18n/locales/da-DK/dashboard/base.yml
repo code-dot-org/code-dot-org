@@ -481,7 +481,6 @@ da:
   pdf_download: 'Download PDF'
   download_coming_soon: 'Aktiviter til download kommer snart.'
   video_coming_soon: 'Video kommer snart!'
-  not_started: 'Den studerende har ikke forsøgt dette niveau.'
   share_code:
     title: "Klik på 'Kør' for at se min program i aktion"
     bounce_og_title: "Tjek mit flappy spil"

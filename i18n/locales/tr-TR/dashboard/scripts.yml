@@ -8290,6 +8290,10 @@ tr:
               name: 'Proje: Kişisel portföy Web sitesi'
               description_student: Birimin son birkaç gününde, sınıf kişisel web sitelerini tamamlar, geribildirim almak için akranları ile beraber çalışır, metnin gözden geçirilmesi ve sitede son rötuşlar yapılmasını sağlar. Birimi kapatmak için herkes projelerini ve projelerinin nasıl geliştirildiğini paylaşır.
               description_teacher: "Öğrenciler, Kişisel Web Sitesi'nde çalışan ünite boyunca çok zaman harcadılar. Son birkaç gün içinde öğrenciler web sitelerini tamamlarlar. Geri bildirim almak, web sitelerine son rötuşlar yapmak, öyküyü gözden geçirmek ve süreçlerini yansıtmak için akranları ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış katacaklardır.\\r\n"
+            Intellectual Property:
+              name: Fikri Mülkiyet
+            Images:
+              name: Görüntüler
         csd3-pilot:
           description_short: "Programlama"
           stages:
@@ -8384,3 +8388,7 @@ tr:
               name: Proje - Bir oyun tasarla
               description_student: Sınıf, önceki iki dersteki proje rehberi kullanarak orjinal oyunlar planlar ve oluşturur. Bireysel veya çiftler halinde çalışarak sınıf, oyunları planlar, geliştirir ve geri bildirim verir. Akran geri bildirimini dahil edildikten sonra, sınıf tamamlanmış oyunları paylaşır.
               description_teacher: Öğrenciler, projelerini yönlendirmek için önceki iki dersin proje rehberini kullanarak kendi oyunlarını planlayacak ve inşa edecektir. Bireysel ya da çift olarak çalışarak, öğrenciler ilham kaynağı olarak örnek oyun seti alarak, kurmak istedikleri oyun türüne karar verecekler. Ardından, oyunun davranışını açıklayacak ve oluşturmaları gereken değişkenleri, hareketli nesneleri ve işlevleri kapsam altına alacakları boş bir proje kılavuzu tamamlayacaklardır. Code Studio'da, bir dizi seviye, onlara bu planı uygulamak için kullanabilecekleri genel bir sıra üzerinde bilgi ister. Süreç boyunca, öğrenciler akran incelemesi için projelerini paylaşacak ve oyunun bitiminde geri bildirim içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+        maddie-test:
+          stages:
+            new stage:
+              name: yeni kademe
