@@ -160,6 +160,12 @@ export default {
     }
     // Unknown elements are expected. Return null because we don't know type.
     if (allowUnknown) {
+      console.warn(
+        'Project contains an element with an unknown type' +
+          `\nType: ${element.tagName}` +
+          `\nId: ${element.id}` +
+          `\nClass: ${element.className}`
+      );
       return null;
     }
     throw new Error('unknown element type');
@@ -203,9 +209,13 @@ export default {
    * Code to be called after deserializing element, allowing us to attach any
    * necessary event handlers.
    */
-  onDeserialize: function(element, updateProperty) {
-    var elementType = this.getElementType(element);
-    if (elements[elementType] && elements[elementType].onDeserialize) {
+  onDeserialize: function(element, updateProperty, skipIfUnknown) {
+    var elementType = this.getElementType(element, skipIfUnknown);
+    if (
+      elementType &&
+      elements[elementType] &&
+      elements[elementType].onDeserialize
+    ) {
       elements[elementType].onDeserialize(element, updateProperty);
     }
   },
