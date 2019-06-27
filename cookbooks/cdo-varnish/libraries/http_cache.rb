@@ -198,16 +198,6 @@ class HttpCache
             cookies: 'none'
           },
           {
-            path: '/api/v1/animation-library/*',
-            headers: [],
-            cookies: 'none'
-          },
-          {
-            path: '/api/v1/dataset-library/*',
-            headers: [],
-            cookies: 'none'
-          },
-          {
             path: '/api/v1/sound-library/*',
             headers: [],
             cookies: 'none'
