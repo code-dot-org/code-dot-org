@@ -51,7 +51,7 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectCorrectFirmware() {
-    this.boardController = new CircuitPlaygroundBoard(this.port);
+    this.boardController = new CircuitPlaygroundBoard(this.port.comName);
     return this.boardController.connectToFirmware();
   }
 
