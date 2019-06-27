@@ -25,7 +25,8 @@ describe('maker/portScanning.js', function() {
     it('resolves with a port if a viable device is found', () => {
       ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
       return findPortWithViableDevice().then(port => {
-        expect(port).to.equal('COM5');
+        expect(port.comName).to.equal('COM5');
+        expect(port.productId).to.equal('0x8011');
       });
     });
 
@@ -34,7 +35,9 @@ describe('maker/portScanning.js', function() {
       findPortWithViableDevice()
         .then(port => {
           done(
-            new Error('Expected promise to reject, but it resolved to ' + port)
+            new Error(
+              'Expected promise to reject, but it resolved to ' + port.comName
+            )
           );
         })
         .catch(err => {
@@ -54,7 +57,8 @@ describe('maker/portScanning.js', function() {
     it(`allows the Circuit Playground Express`, () => {
       ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_EXPRESS_PORTS);
       return findPortWithViableDevice().then(port => {
-        expect(port).to.equal('COM5');
+        expect(port.comName).to.equal('COM5');
+        expect(port.productId).to.equal('8018');
       });
     });
   });
