@@ -61,6 +61,8 @@
       // Enable the login button.
       $('#login_button').prop('disabled', false);
     });
+
+    $(".section-user-sign-in").on("submit", dashboard.clientState.reset);
   });
 
 #signinsection
@@ -81,7 +83,7 @@
   = precede '*' do
     != t('signinsection.student_privacy', student_privacy_blog: 'http://teacherblog.code.org/post/156768797364/privacy-concern-with-using-student-full-names')
 
-  = form_tag log_in_section_path(id: @section.code) do
+  = form_tag(log_in_section_path(id: @section.code), class: 'section-user-sign-in') do
     = hidden_field_tag :secret_picture_id
     = hidden_field_tag :user_id
 
