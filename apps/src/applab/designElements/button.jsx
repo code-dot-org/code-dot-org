@@ -296,11 +296,11 @@ export default {
       designMode.activeScreen()
     );
     const fontSize = this.themeValues.fontSize[currentTheme];
-    const small = fontSize <= MAX_SMALL_FONT_SIZE;
-    element.style.height = small
+    const fontIsSmall = fontSize <= MAX_SMALL_FONT_SIZE;
+    element.style.height = fontIsSmall
       ? DEFAULT_BUTTON_HEIGHT_SMALL
       : DEFAULT_BUTTON_HEIGHT;
-    element.style.width = small
+    element.style.width = fontIsSmall
       ? DEFAULT_BUTTON_WIDTH_SMALL
       : DEFAULT_BUTTON_WIDTH;
     elementLibrary.setAllPropertiesToCurrentTheme(

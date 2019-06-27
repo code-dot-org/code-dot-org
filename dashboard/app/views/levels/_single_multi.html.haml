@@ -20,9 +20,9 @@
 
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
 
-  - if data['questions']
-    - question_text = render_multi_or_match_content(data['questions'][0]['text'], level)
-    .multi-question!= question_text
+  - localized_questions = level.localized_property(:questions)
+  - if localized_questions.any?
+    .multi-question!= render_multi_or_match_content(localized_questions[0]["text"])
 
   - answers_class = 'answers ' + (question_content_blank ? 'question-content-blank' : '')
 
@@ -62,6 +62,7 @@
 
     .mainblock
       %form#voteform{onsubmit: 'return false;'}
+        - localized_answers = level.localized_property(:answers)
         - data['answers'].each_with_index do |answer, i|
           -# When LevelGroup-hosted, with students (or teachers doing PD), set all answers false before rendering page.
           - correct = include_multi_answers?(standalone) ? answer['correct'] : false
@@ -78,7 +79,7 @@
                 ="#{multi_answer_characters[i]}. "
                 &nbsp;
             %label.item-label{style: "height: #{height}"}
-              != render_multi_or_match_content(answer['text'], level)
+              != render_multi_or_match_content(localized_answers[i]['text'])
           - if use_tight_layout && !force_wrap_layout
             %br/
 
