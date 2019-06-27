@@ -526,7 +526,7 @@ export var blocks = [
     category: 'Data',
     params: ['tableName', 'columnName'],
     dropdown: {
-      0: () => getAssetDropdown('dataset'),
+      0: () => getAssetDropdown('image'),
       1: ['true', 'false'] // () => populateColumns()
     },
     nativeIsAsync: true
