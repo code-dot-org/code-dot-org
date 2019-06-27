@@ -1,16 +1,3 @@
-# as student:
-# complete a level
-# go to BubbleChoice page
-# make sure green checkmark is there
-# go to script overview
-# make sure bubble is green
-
-# as teacher:
-# create section with student
-# student completes level
-# go to script overview page, check bubble
-# go to BubbleChoice page, check bubble and teacher panel
-
 Feature: BubbleChoice
   Scenario: Viewing BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
@@ -33,3 +20,22 @@ Feature: BubbleChoice
     And element ".uitest-bubble-choice:eq(0) i.fa-check" is visible
 
     And I sign out
+
+    # View student's BubbleChoice progress as a teacher
+    When I sign in as "Teacher_Alice"
+
+    # View progress from script overview page
+    Given I am on "http://studio.code.org/s/allthethings"
+    And I wait until element ".teacher-panel" is visible
+    When I click selector ".teacher-panel table td:contains(Alice)" once I see it to load a new page
+    And I wait until element "td:contains(Bubble Choice)" is visible
+    Then I verify progress for stage 40 level 1 is "perfect"
+
+    # View progress from BubbleChoice activity page
+    Given I am on "http://studio.code.org/s/allthethings/stage/40/puzzle/1"
+    And I wait until element ".teacher-panel" is visible
+    # Teacher has not completed level, so make sure it is not shown as complete
+    And element ".uitest-bubble-choice:eq(0) i.fa-check" is not visible
+    When I click selector ".teacher-panel table td:contains(Alice)" once I see it to load a new page
+    And I wait until element ".uitest-bubble-choice:eq(0)" is visible
+    And element ".uitest-bubble-choice:eq(0) i.fa-check" is visible
