@@ -166,7 +166,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     }
     return createCircuitPlaygroundComponents(
       this.fiveBoard_,
-      this.boardType_ === BOARD_TYPE.EXPRESS
+      this.boardType_
     ).then(components => {
       this.prewiredComponents_ = {
         board: this.fiveBoard_,
