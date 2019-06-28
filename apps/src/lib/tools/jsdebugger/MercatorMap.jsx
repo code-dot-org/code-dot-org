@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {geoMercator, geoPath} from 'd3-geo';
 import {feature} from 'topojson-client';
@@ -7,6 +8,10 @@ const MAP_WIDTH = 400;
 const MAP_HEIGHT = 400;
 
 class MercatorMap extends React.Component {
+  static propTypes = {
+    data: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
+  };
+
   state = {
     mercator: ''
   };
