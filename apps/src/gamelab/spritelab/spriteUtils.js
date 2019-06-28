@@ -143,44 +143,47 @@ function whilePressEvent(inputEvent, p5Inst) {
 
 function whenTouchEvent(inputEvent) {
   if (inputEvent.previous === undefined) {
-    inputEvent.previous = [];
+    inputEvent.previous = {};
   }
+  let getFired = function(map, spriteId, targetId) {
+    if (map && map[spriteId] && map[spriteId][targetId]) {
+      return map[spriteId][targetId].firedOnce;
+    }
+  };
+  let setFired = function(map, spriteId, targetId, fired) {
+    if (!map[spriteId]) {
+      map[spriteId] = {};
+    }
+    if (!map[spriteId][targetId]) {
+      map[spriteId][targetId] = {};
+    }
+    map[spriteId][targetId].firedOnce = fired;
+  };
   let sprites = getSpriteArray(inputEvent.args.sprite1);
   let targets = getSpriteArray(inputEvent.args.sprite2);
-  let pairwiseChecks = [];
+  let callbackArgList = [];
+  let newCollisionMap = {};
   sprites.forEach(sprite => {
     targets.forEach(target => {
+      let firedOnce = getFired(inputEvent.previous, sprite.id, target.id);
       if (sprite.overlap(target)) {
-        pairwiseChecks.push({
-          sprite: sprite.id,
-          target: target.id,
-          overlap: true,
-          firedOnce: inputEvent.previous.some(
-            x => x.sprite === sprite.id && x.target === target.id && x.firedOnce
-          )
-        });
+        if (!firedOnce) {
+          // Sprites are overlapping, and we haven't fired yet for this collision,
+          // so we should fire the callback
+          callbackArgList.push({sprite: sprite.id, target: target.id});
+          firedOnce = true;
+        }
+      } else {
+        // Sprites are not overlapping (anymore), so we should make sure firedOnce is
+        // set to false, so that if the sprites overlap again, we will fire the callback.
+        // This is required to handle the case where sprites start touching, stop touching, and start
+        // touching again- we want the callback to fire two times.
+        firedOnce = false;
       }
+      setFired(newCollisionMap, sprite.id, target.id, firedOnce);
     });
   });
-
-  let callbackArgList = [];
-  pairwiseChecks.forEach(result => {
-    if (result.overlap && !result.firedOnce) {
-      // Sprites are overlapping, and we haven't fired yet for this collision,
-      // so we should fire the callback
-      callbackArgList.push({sprite: result.sprite, target: result.target});
-      result.firedOnce = true;
-    }
-    if (!result.overlap) {
-      // Sprites are not overlapping (anymore), so we should make sure firedOnce is
-      // set to false, so that if the sprites overlap again, we will fire the callback.
-      // This is required to handle the case where sprites start touching, stop touching, and start
-      // touching again- we want the callback to fire two times.
-      result.firedOnce = false;
-    }
-  });
-
-  inputEvent.previous = pairwiseChecks;
+  inputEvent.previous = newCollisionMap;
   return callbackArgList;
 }
 
