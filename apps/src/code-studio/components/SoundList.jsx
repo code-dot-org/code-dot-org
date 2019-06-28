@@ -6,7 +6,7 @@ import soundLibrary from '../soundLibrary.json';
 
 const styles = {
   root: {
-    height: 330,
+    height: 315,
     overflowY: 'scroll',
     clear: 'both'
   }
