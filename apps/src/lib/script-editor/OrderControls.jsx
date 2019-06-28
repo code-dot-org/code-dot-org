@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {ControlTypes} from './constants';
 import {moveGroup, moveStage, removeGroup, removeStage} from './editorRedux';
@@ -13,30 +14,30 @@ const styles = {
   }
 };
 
-const OrderControls = React.createClass({
-  propTypes: {
+class OrderControls extends Component {
+  static propTypes = {
     move: PropTypes.func.isRequired,
     remove: PropTypes.func.isRequired,
     type: PropTypes.oneOf(Object.keys(ControlTypes)).isRequired,
     position: PropTypes.number.isRequired,
     total: PropTypes.number.isRequired
-  },
+  };
 
-  handleMoveUp() {
+  handleMoveUp = () => {
     if (this.props.position !== 1) {
       this.props.move(this.props.type, this.props.position, 'up');
     }
-  },
+  };
 
-  handleMoveDown() {
+  handleMoveDown = () => {
     if (this.props.position !== this.props.total) {
       this.props.move(this.props.type, this.props.position, 'down');
     }
-  },
+  };
 
-  handleRemove() {
+  handleRemove = () => {
     this.props.remove(this.props.type, this.props.position);
-  },
+  };
 
   render() {
     return (
@@ -59,7 +60,7 @@ const OrderControls = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(
   state => ({}),
