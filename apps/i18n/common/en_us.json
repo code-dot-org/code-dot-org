@@ -1143,6 +1143,8 @@
   "redirectRejectExplanation": "This app is trying to open a website that appears to be unsafe.",
   "redirectRejectTitle": "Navigation to Unsafe Site Detected",
   "redirectTitle": "You are leaving this app",
+  "redirectUnsupportedTitle": "Navigation Type Unsupported",
+  "redirectUnsupportedExplanation": "Mailto: links are not supported in App Lab. Please try using a different URL",
   "reloadPage": "Reload Page",
   "relockStage": "Re-lock stage",
   "relockStageInstructions": "\"Re-lock stage\" to prevent sharing of answers with other classes/schools.",
