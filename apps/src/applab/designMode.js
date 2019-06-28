@@ -1166,7 +1166,12 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   );
   var children = $(levelDom).children();
   children.each(function() {
-    designMode.parseScreenFromLevelHtml(this, allowDragging, prefix, true);
+    designMode.parseScreenFromLevelHtml(
+      this,
+      allowDragging,
+      prefix,
+      true /* skipUnknownElements */
+    );
   });
   children.appendTo(rootEl);
 };

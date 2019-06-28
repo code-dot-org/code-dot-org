@@ -158,17 +158,18 @@ export default {
             return ElementType.TEXT_INPUT;
         }
     }
+    let errorMessage =
+      'Project contains an element with an unknown type' +
+      `\nType: ${element.tagName}` +
+      `\nId: ${element.id}` +
+      `\nClass: ${element.className}`;
     // Unknown elements are expected. Return null because we don't know type.
     if (allowUnknown) {
-      console.warn(
-        'Project contains an element with an unknown type' +
-          `\nType: ${element.tagName}` +
-          `\nId: ${element.id}` +
-          `\nClass: ${element.className}`
-      );
+      console.warn(errorMessage);
       return null;
     }
-    throw new Error('unknown element type');
+    // TODO: Gracefully handle errors from malformed design mode elements
+    throw new Error(errorMessage);
   },
 
   /**
