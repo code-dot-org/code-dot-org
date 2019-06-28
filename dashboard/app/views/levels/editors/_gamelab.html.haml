@@ -64,19 +64,6 @@
   = boolean_check_box f, :hide_view_data_button
   = f.label 'Hide View Data Button'
 
-.field
-  = f.label 'Immediately show the results of setup code changes in the playspace?'
-  :ruby
-    selector = f.select :auto_run_setup, options_for_select([
-      ['No', nil],
-      ['Yes, run the draw loop once', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_loop],
-      ['Yes, call drawSprites()', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_sprites],
-      ['Yes, run some other JavaScript', SharedConstants::GAMELAB_AUTORUN_OPTIONS.custom],
-    ], selected: @level.auto_run_setup)
-  = selector
-  = f.label 'Custom setup code'
-  = f.text_field :custom_setup_code
-
 - if @level.is_a?(GamelabJr)
   .field
     = f.label :block_pools
