@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
 import i18n from '@cdo/locale';
@@ -53,16 +53,12 @@ describe('SchoolInfoInterstitial', () => {
             <Button
               text={i18n.dismiss()}
               onClick={wrapper
-                .find(Button)
-                .first()
+                .find('Button[id="dismiss-button"]')
                 .prop('onClick')}
             />
             <Button
               text={i18n.save()}
-              onClick={wrapper
-                .find(Button)
-                .last()
-                .prop('onClick')}
+              onClick={wrapper.find('Button[id="save-button"]').prop('onClick')}
             />
           </div>
         </div>
@@ -71,7 +67,7 @@ describe('SchoolInfoInterstitial', () => {
   });
 
   it('closes the school info interstitial modal when the dismiss button is clicked', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <SchoolInfoInterstitial
         {...MINIMUM_PROPS}
         scriptData={{
@@ -94,11 +90,8 @@ describe('SchoolInfoInterstitial', () => {
      * Using wrapper.setState({}) forces a re-render of the component. setState triggers a re-render of the
      * component and since an empty object is passed there is no change to the current state.
      */
-    wrapper.setState({});
-    wrapper
-      .find(Button)
-      .first()
-      .simulate('click');
+    wrapper.instance().forceUpdate();
+    wrapper.find('Button[id="dismiss-button"]').simulate('click');
     expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
     expect(wrapper.state('isOpen')).to.be.false;
   });
@@ -305,10 +298,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors').country).to.equal(true);
     });
@@ -325,10 +315,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors')).to.not.have.property('country');
       expect(wrapper.state('errors').schoolType).to.equal(true);
@@ -347,10 +334,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors')).to.not.have.property('country');
       expect(wrapper.state('errors')).to.not.have.property('school_type');
@@ -370,10 +354,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       // No need to send anything but ID if it's available...
       // All other info will be backfilled from records on the server.
       expect(server.requests[0].requestBody).to.equal(
@@ -399,10 +380,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -430,10 +408,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -459,10 +434,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -489,10 +461,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -519,11 +488,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -549,10 +514,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -579,10 +541,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -608,10 +567,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -638,10 +594,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -670,10 +623,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -703,10 +653,7 @@ describe('SchoolInfoInterstitial', () => {
           onClose={onClose}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(onClose).not.to.have.been.called;
 
       server.requests[0].respond(204, {}, '');
@@ -730,10 +677,7 @@ describe('SchoolInfoInterstitial', () => {
           onClose={onClose}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       server.requests[0].respond(404, {}, '');
       expect(onClose).not.to.have.been.called;
       expect(wrapper).to.containMatchingElement(
@@ -758,17 +702,11 @@ describe('SchoolInfoInterstitial', () => {
           onClose={onClose}
         />
       );
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       server.requests[0].respond(404, {}, '');
       expect(onClose).not.to.have.been.called;
 
-      wrapper
-        .find(Button)
-        .last()
-        .simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       server.requests[1].respond(404, {}, '');
       expect(onClose).to.have.been.calledOnce;
     });
