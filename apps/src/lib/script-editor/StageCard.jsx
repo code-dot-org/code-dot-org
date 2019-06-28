@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import {borderRadius, levelTokenMargin, ControlTypes} from './constants';
@@ -35,33 +36,31 @@ const styles = {
   }
 };
 
-const StageCard = React.createClass({
-  propTypes: {
+class StageCard extends Component {
+  static propTypes = {
     reorderLevel: PropTypes.func.isRequired,
     addLevel: PropTypes.func.isRequired,
     setStageLockable: PropTypes.func.isRequired,
     stagesCount: PropTypes.number.isRequired,
     stage: PropTypes.object.isRequired
-  },
+  };
 
   /**
    * To be populated with the bounding client rect of each level token element.
    */
-  metrics: {},
+  metrics = {};
 
-  getInitialState() {
-    return {
-      currentPositions: [],
-      drag: null,
-      dragHeight: null,
-      initialPageY: null,
-      initialScroll: null,
-      newPosition: null,
-      startingPositions: null
-    };
-  },
+  state = {
+    currentPositions: [],
+    drag: null,
+    dragHeight: null,
+    initialPageY: null,
+    initialScroll: null,
+    newPosition: null,
+    startingPositions: null
+  };
 
-  handleDragStart(position, {pageY}) {
+  handleDragStart = (position, {pageY}) => {
     const startingPositions = this.props.stage.levels.map(level => {
       const metrics = this.metrics[level.position];
       return metrics.top + metrics.height / 2;
@@ -77,9 +76,9 @@ const StageCard = React.createClass({
     window.addEventListener('selectstart', this.preventSelect);
     window.addEventListener('mousemove', this.handleDrag);
     window.addEventListener('mouseup', this.handleDragStop);
-  },
+  };
 
-  handleDrag({pageY}) {
+  handleDrag = ({pageY}) => {
     const scrollDelta = document.body.scrollTop - this.state.initialScroll;
     const delta = pageY - this.state.initialPageY;
     const dragPosition = this.metrics[this.state.drag].top + scrollDelta;
@@ -105,9 +104,9 @@ const StageCard = React.createClass({
       }
     );
     this.setState({currentPositions, newPosition});
-  },
+  };
 
-  handleDragStop() {
+  handleDragStop = () => {
     if (this.state.drag !== this.state.newPosition) {
       this.props.reorderLevel(
         this.props.stage.position,
@@ -119,22 +118,22 @@ const StageCard = React.createClass({
     window.removeEventListener('selectstart', this.preventSelect);
     window.removeEventListener('mousemove', this.handleDrag);
     window.removeEventListener('mouseup', this.handleDragStop);
-  },
+  };
 
-  handleAddLevel() {
+  handleAddLevel = () => {
     this.props.addLevel(this.props.stage.position);
-  },
+  };
 
-  handleLockableChanged() {
+  handleLockableChanged = () => {
     this.props.setStageLockable(
       this.props.stage.position,
       this.refs.lockable.checked
     );
-  },
+  };
 
   preventSelect(e) {
     e.preventDefault();
-  },
+  }
 
   render() {
     return (
@@ -189,7 +188,7 @@ const StageCard = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(
   state => ({}),
