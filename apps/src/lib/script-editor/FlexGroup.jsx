@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import color from '../../util/color';
@@ -42,31 +43,31 @@ const styles = {
   }
 };
 
-const FlexGroup = React.createClass({
-  propTypes: {
+class FlexGroup extends Component {
+  static propTypes = {
     addGroup: PropTypes.func.isRequired,
     addStage: PropTypes.func.isRequired,
     stages: PropTypes.array.isRequired,
     levelKeyList: PropTypes.array.isRequired
-  },
+  };
 
-  handleAddGroup() {
+  handleAddGroup = () => {
     this.props.addGroup(
       prompt('Enter new stage name'),
       prompt('Enter new group name')
     );
-  },
+  };
 
-  handleAddStage(position) {
+  handleAddStage = position => {
     this.props.addStage(position, prompt('Enter new stage name'));
-  },
+  };
 
   /**
    * Generate the ScriptDSL format.
    * @param stages
    * @return {string}
    */
-  serializeStages(stages) {
+  serializeStages = stages => {
     let s = [];
     stages.forEach(stage => {
       let t = `stage '${stage.name}'`;
@@ -91,7 +92,7 @@ const FlexGroup = React.createClass({
       s.push('');
     });
     return s.join('\n');
-  },
+  };
 
   serializeLevel(id, level, active) {
     if (id === NEW_LEVEL_ID) {
@@ -126,7 +127,7 @@ const FlexGroup = React.createClass({
     }
     s.push(l);
     return s;
-  },
+  }
 
   /**
    * Levels with kind "puzzle" and "unplugged" are special cases of "level", for
@@ -138,7 +139,7 @@ const FlexGroup = React.createClass({
     return !kind || kind === LevelKind.puzzle || kind === LevelKind.unplugged
       ? LevelKind.level
       : kind;
-  },
+  }
 
   render() {
     const groups = _.groupBy(
@@ -200,7 +201,7 @@ const FlexGroup = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(
   state => ({
