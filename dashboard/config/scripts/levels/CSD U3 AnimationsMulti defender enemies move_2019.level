@@ -36,7 +36,7 @@
     "all_animations_single_frame": "false",
     "project_template_level_name": "CSD U3 AnimationsMulti defender template_2019",
     "start_in_animation_tab": "false",
-    "encrypted_examples": "fdKuUx3p8Cm3NEDzZiUPUvZUr4xiBjSlQ8L6qdCZphEuDWWnIaVXSq0UN8o7\n844C\n",
+    "encrypted_examples": "6OQ96SWNobjs1ZnGmQlu660YLAMMB3WZZdLAr32yy+LgjrFIumbys1YJlmua\nuYFnps2pVD49QChrw4fTYQkASg==\n",
     "instructions_important": "false",
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
@@ -44,7 +44,6 @@
     "expand_debugger": "false",
     "parent_level_id": 11399,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/sprites/",
       "/docs/concepts/game-lab/sprites/sprite-properties/",
@@ -52,11 +51,13 @@
       "/docs/concepts/game-lab/animation-tab/",
       "/docs/concepts/game-lab/animation-tab/editing-images/"
     ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "Need to add gif of what it should look like.",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 20:40:50 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 23:28:37 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 20:40:50 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 23:28:37 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-27 23:41:56 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
