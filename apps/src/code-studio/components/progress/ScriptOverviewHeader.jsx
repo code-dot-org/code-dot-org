@@ -22,6 +22,8 @@ import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import experiments from '@cdo/apps/util/experiments';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -85,7 +87,8 @@ class ScriptOverviewHeader extends Component {
     versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
-    locale: PropTypes.string
+    locale: PropTypes.string,
+    studentId: PropTypes.number
   };
 
   componentDidMount() {
@@ -175,7 +178,8 @@ class ScriptOverviewHeader extends Component {
       showRedirectWarning,
       versions,
       showHiddenUnitWarning,
-      courseName
+      courseName,
+      studentId
     } = this.props;
 
     const displayVersionWarning =
@@ -214,6 +218,13 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         )}
+        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) &&
+          studentId && (
+            <StudentFeedbackNotification
+              studentId={studentId}
+              linkToFeedbackOverview="/"
+            />
+          )}
         {displayVersionWarning && (
           <Notification
             type={NotificationType.warning}
