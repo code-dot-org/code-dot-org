@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
@@ -60,8 +61,8 @@ const ArrowRenderer = ({onMouseDown}) => {
 };
 ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
-const LevelTokenDetails = React.createClass({
-  propTypes: {
+class LevelTokenDetails extends Component {
+  static propTypes = {
     levelKeyList: PropTypes.object.isRequired,
     chooseLevelType: PropTypes.func.isRequired,
     chooseLevel: PropTypes.func.isRequired,
@@ -70,65 +71,65 @@ const LevelTokenDetails = React.createClass({
     setField: PropTypes.func.isRequired,
     level: PropTypes.object.isRequired,
     stagePosition: PropTypes.number.isRequired
-  },
+  };
 
-  levelKindOptions: [
+  levelKindOptions = [
     {label: 'Puzzle', value: 'puzzle'},
     {label: 'Assessment', value: 'assessment'},
     {label: 'Named Level', value: 'named_level'},
     {label: 'Unplugged', value: 'unplugged'}
-  ],
+  ];
 
   componentWillMount() {
     this.levelKeyOptions = _.map(this.props.levelKeyList, (label, value) => ({
       label,
       value: +value
     }));
-  },
+  }
 
   containsLegacyLevel() {
     return this.props.level.ids.some(id =>
       /^blockly:/.test(this.props.levelKeyList[id])
     );
-  },
+  }
 
-  handleLevelTypeSelected({value}) {
+  handleLevelTypeSelected = ({value}) => {
     this.props.chooseLevelType(
       this.props.stagePosition,
       this.props.level.position,
       value
     );
-  },
+  };
 
-  handleLevelSelected(index, {value}) {
+  handleLevelSelected = (index, {value}) => {
     this.props.chooseLevel(
       this.props.stagePosition,
       this.props.level.position,
       index,
       value
     );
-  },
+  };
 
-  handleAddVariant() {
+  handleAddVariant = () => {
     this.props.addVariant(this.props.stagePosition, this.props.level.position);
-  },
+  };
 
-  handleActiveVariantChanged(id) {
+  handleActiveVariantChanged = id => {
     this.props.setActiveVariant(
       this.props.stagePosition,
       this.props.level.position,
       id
     );
-  },
+  };
 
-  handleFieldChange(field) {
+  handleFieldChange = field => {
     const ref = this[`${field}Input`];
     if (ref) {
       this.props.setField(this.props.stagePosition, this.props.level.position, {
         [field]: ref.value
       });
     }
-  },
+  };
 
   render() {
     return (
@@ -233,7 +234,7 @@ const LevelTokenDetails = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(
   state => ({
