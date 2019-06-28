@@ -17,6 +17,7 @@ import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
 import color from '../../../util/color';
 import Inspector from 'react-inspector';
+import MercatorMap from './MercatorMap';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -317,6 +318,9 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
+            <div>
+              <MercatorMap />
+            </div>
             {this.props.showReactInspector
               ? this.displayOutputToConsole()
               : this.props.logOutput}
