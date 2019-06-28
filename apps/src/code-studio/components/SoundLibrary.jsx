@@ -72,7 +72,7 @@ const styles = {
     float: 'left',
     marginBottom: 20,
     overflowY: 'scroll',
-    height: 350
+    height: 320
   },
   allCategoriesText: {
     fontSize: 16,
