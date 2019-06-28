@@ -631,11 +631,11 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      resources :teacher_feedbacks, only: [:create] do
+      resources :teacher_feedbacks, only: [:index, :create] do
         collection do
           get 'get_feedback_from_teacher'
           get 'get_feedbacks'
-          get 'get_feedbacks_all'
+          get 'count'
         end
         member do
           post 'increment_visit_count'
