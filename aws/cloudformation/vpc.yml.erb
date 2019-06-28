@@ -204,6 +204,11 @@ Resources:
           FromPort: 3306
           ToPort: 3306
           DestinationSecurityGroupId: {Ref: FrontendSecurityGroup}
+        - Description: S3 outbound access (us-east-1 Prefix List)
+          IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          DestinationPrefixListId: pl-63a5400a
   DBSecurityGroupEgress:
     Type: AWS::EC2::SecurityGroupEgress
     Properties:

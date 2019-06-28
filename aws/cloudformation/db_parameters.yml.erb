@@ -171,6 +171,9 @@ AuroraCluster:
   # Reduces durability for better performance.
   innodb_flush_log_at_trx_commit: 0
 
+  # IAM role ARN used to select data into AWS S3.
+  aurora_select_into_s3_role: {'Fn::GetAtt': [AuroraS3Role, Arn]}
+
 # System variables for the Aurora DB writer.
 AuroraWriter:
   # Enable Performance Schema.
