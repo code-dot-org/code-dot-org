@@ -1,10 +1,11 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 
+require 'cdo/google_drive'
+require 'cgi'
 require 'fileutils'
 require 'open3'
 require 'psych'
 require 'tempfile'
-require 'cgi'
 
 CODEORG_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_crowdin.yml")
 CODEORG_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_credentials.yml")
@@ -84,6 +85,22 @@ def run_bash_script(location)
   run_standalone_script("bash #{location}")
 end
 
+def report_malformed_restoration(key, translation)
+  @malformed_restorations ||= Hash.new
+  @malformed_restorations[key] = translation
+end
+
+def upload_malformed_restorations(locale)
+  return if @malformed_restorations.blank?
+  data = []
+  data << ["key", "translation"]
+  @malformed_restorations.each do |k, v|
+    data << [k, v]
+  end
+  Google::Drive.new.add_sheet_to_spreadsheet(data, "i18n_bad_translations", locale)
+  @malformed_restorations = nil
+end
+
 def plugins_to_arg(plugins)
   plugins.map {|name| "bin/i18n/plugins/#{name}.js" if name}.join(',')
 end
@@ -148,6 +165,14 @@ def redact(source, dest, *plugins)
   end
 end
 
+def contains_malformed_link_or_image(translation)
+  malformed_redaction_regex = /\[.*\]\s+\[[0-9]+\]/
+  malformed_markdown_regex = /\[.*\]\s+\(.+\)/
+  non_malformed_redaction = (translation =~ malformed_redaction_regex).nil?
+  non_malformed_translation = (translation =~ malformed_markdown_regex).nil?
+  return !(non_malformed_redaction && non_malformed_translation)
+end
+
 def restore(source, redacted, dest, *plugins)
   return unless File.exist?(source)
   return unless File.exist?(redacted)
@@ -207,6 +232,16 @@ def restore(source, redacted, dest, *plugins)
 
   source_json.close
   redacted_json.close
+end
+
+def recursively_find_malformed_links_images(hash, key_str="")
+  hash.each do |key, val|
+    if val.is_a?(Hash)
+      recursively_find_malformed_links_images(val, "#{key_str}.#{key}")
+    else
+      report_malformed_restoration("#{key_str}.#{+key}", val) if contains_malformed_link_or_image(val)
+    end
+  end
 end
 
 def restore_course_content(source, redacted, dest, *plugins)
