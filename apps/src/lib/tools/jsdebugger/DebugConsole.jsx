@@ -256,6 +256,30 @@ export default connect(
       return false;
     }
 
+    displayMap(output) {
+      if (output.constructor === Array) {
+        for (let i = 0; i < output.length; i++) {
+          if (
+            !(output[i].lat || output[i].lat === 0) ||
+            !(-90 <= output[i].lat && output[i].lat <= 90) ||
+            !(output[i].long || output[i].long === 0) ||
+            !(-180 <= output[i].long && output[i].long <= 180) ||
+            !(Object.keys(output[i]).length === 2)
+          ) {
+            return false;
+          }
+        }
+
+        return true;
+      } else if (output.constructor === Object) {
+        let keys = Object.keys(output);
+
+        return (
+          keys.includes('lat') && keys.includes('long') && keys.length === 2
+        );
+      }
+    }
+
     displayOutputToConsole() {
       if (this.props.logOutput.size > 0) {
         return this.props.logOutput.map((rowValue, i) => {
@@ -266,7 +290,10 @@ export default connect(
             return <div key={i}>&gt; {rowValue.input}</div>;
           } else if (this.isValidOutput(rowValue)) {
             if (rowValue.fromConsoleLog) {
-              if (experiments.isEnabled('mercator')) {
+              if (
+                experiments.isEnabled('mercator') &&
+                this.displayMap(rowValue.output)
+              ) {
                 return (
                   <MercatorMap
                     key={rowValue.output.lat}
