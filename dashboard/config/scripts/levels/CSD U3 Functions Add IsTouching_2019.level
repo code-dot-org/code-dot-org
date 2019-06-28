@@ -39,7 +39,7 @@
     "project_template_level_name": "CSD U3 Functions bunny template_2019",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
-    "encrypted_examples": "HNJm11iOU1U2AfRYmhOleJME81pXLSIqX4AoRBLuK5feBtCys+LEI4LGFefS\nbX8S\n",
+    "encrypted_examples": "k3qNXcDYV2O5xEJpuc70HwFhZzYBX63JcpY7T+UyUCq323Tjpbl3YCxcIMAC\nhj34Afdb0M3tyuA4BHZC0nlSNg==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -59,7 +59,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 20:38:58 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-01 18:44:07 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 22:59:05 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:16:32 +0000\",\"changed\":[\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 20:38:58 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-01 18:44:07 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 22:59:05 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:16:32 +0000\",\"changed\":[\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-27 23:04:38 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

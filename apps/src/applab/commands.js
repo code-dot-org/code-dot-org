@@ -22,7 +22,7 @@ import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
-import {actions} from './redux/applab';
+import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {getStore} from '../redux';
 import $ from 'jquery';
 
@@ -1572,12 +1572,16 @@ function filterUrl(urlToCheck) {
     data: JSON.stringify({url: urlToCheck})
   })
     .success(data => {
-      let approved = data['approved'];
-      getStore().dispatch(actions.addRedirectNotice(approved, urlToCheck));
+      let response = data['approved']
+        ? REDIRECT_RESPONSE.APPROVED
+        : REDIRECT_RESPONSE.REJECTED;
+      getStore().dispatch(actions.addRedirectNotice(response, urlToCheck));
     })
     .fail((jqXhr, status) => {
       // When this query fails, default to the dialog that allows the user to choose
-      getStore().dispatch(actions.addRedirectNotice(true, urlToCheck));
+      getStore().dispatch(
+        actions.addRedirectNotice(REDIRECT_RESPONSE.APPROVED, urlToCheck)
+      );
     });
 }
 
@@ -1602,6 +1606,10 @@ applabCommands.openUrl = function(opts) {
         // If url doesn't have a protocol, add one
         window.open('https://' + opts.url);
       }
+    } else if (hostname.startsWith('mailto')) {
+      getStore().dispatch(
+        actions.addRedirectNotice(REDIRECT_RESPONSE.UNSUPPORTED, opts.url)
+      );
     } else {
       filterUrl(opts.url);
     }
