@@ -24,6 +24,8 @@ import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shape
 import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
+import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   main: {
@@ -78,7 +80,8 @@ export default class CourseOverview extends Component {
     showVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
     redirectToCourseUrl: PropTypes.string,
-    showAssignButton: PropTypes.bool
+    showAssignButton: PropTypes.bool,
+    studentId: PropTypes.number
   };
 
   constructor(props) {
@@ -143,7 +146,8 @@ export default class CourseOverview extends Component {
       showVersionWarning,
       showRedirectWarning,
       redirectToCourseUrl,
-      showAssignButton
+      showAssignButton,
+      studentId
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -183,6 +187,13 @@ export default class CourseOverview extends Component {
             redirectButtonText={i18n.goToAssignedVersion()}
           />
         )}
+        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) &&
+          studentId && (
+            <StudentFeedbackNotification
+              studentId={studentId}
+              linkToFeedbackOverview="/"
+            />
+          )}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <Notification
             type={NotificationType.warning}
