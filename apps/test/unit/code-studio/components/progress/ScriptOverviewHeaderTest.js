@@ -92,13 +92,11 @@ describe('ScriptOverviewHeader', () => {
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
+        verificationCheckComplete={true}
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      1
-    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
   it('displays old teacher announcement for teacher', () => {
@@ -137,14 +135,16 @@ describe('ScriptOverviewHeader', () => {
         S
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
+        verificationCheckComplete={true}
         announcements={[fakeTeacherAnnouncement]}
       />,
       {disableLifecycleMethods: true}
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
-      2
+      1
     );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
   it('has non-verified and provided teacher announcements if necessary', () => {
@@ -153,6 +153,7 @@ describe('ScriptOverviewHeader', () => {
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
+        verificationCheckComplete={true}
         announcements={[
           fakeTeacherAnnouncement,
           fakeTeacherAndStudentAnnouncement
@@ -162,8 +163,9 @@ describe('ScriptOverviewHeader', () => {
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
-      3
+      2
     );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
   it('has only teacher announcements', () => {

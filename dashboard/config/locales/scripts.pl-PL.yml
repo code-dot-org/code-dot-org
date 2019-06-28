@@ -4796,6 +4796,10 @@ pl:
               name: Kolory RGB i klasy
             Project - Personal Portfolio Website:
               name: Projekt - Własna strona portfolio
+            Intellectual Property:
+              name: Własność intelektualna
+            Images:
+              name: Obrazki
         csd3-pilot:
           description_short: Programowanie
           stages:
@@ -4831,3 +4835,7 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+        maddie-test:
+          stages:
+            new stage:
+              name: nowy etap

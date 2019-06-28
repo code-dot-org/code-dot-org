@@ -2966,6 +2966,8 @@ fr:
               description_teacher: Dans cette leçon, les élèves apprennent d’abord comment définir des couleurs personnalisées en utilisant leurs valeurs RVB (rouge, vert, bleu). Ils appliquent ensuite ces couleurs à une nouvelle page web Quatre saisons, qui utilise des classes CSS. Les classes CSS permettent aux développeurs web de traiter des groupes d’éléments qu’il veulent styliser différemment d’autres éléments du même type. En utilisant les classes, les élèves ajoutent plus de styles à la page web Quatre saisons, puis les utilisent pour styliser leurs sites web personnels.
             Project - Personal Portfolio Website:
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
+            Intellectual Property:
+              name: Propriété intellectuelle
         csd3-pilot:
           description_short: "Programmation"
           stages:

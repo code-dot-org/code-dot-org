@@ -636,18 +636,6 @@ bs:
             '2': trebl
       Dancelab_whenSetup:
         text: postavka
-      gamelab_changeColor:
-        text: izmjeni {COLOR} {METHOD} za {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': nijanse
-      gamelab_changeColorBy:
-        text: izmjeni {COLOR} {METHOD} za {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': nijansa
-            '"saturation"': zasićenje
-            '"brightness"': osvjetljenost
       gamelab_changePropBy:
         text: izmjeni {SPRITE} {PROPERTY} za {VAL}
         options:
@@ -705,29 +693,11 @@ bs:
             '"w"': w
             '"x"': x
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': ivica
-            '"inner"': unutar kvadrata
-            '"circle"': krug
-            '"grid"': mreža
-            '"row"': red
-            '"column"': kolona
-            '"x"': unakrsno
-            '"plus"': plus
-            '"random"': slučajno odabran
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": slučajno odabran
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': desno
             '"left"': lijevo
-      gamelab_mixColors:
-        text: miks {COLOR1} i {COLOR2}
       gamelab_randColor:
         text: nasumična boja
       gamelab_randomColor:
@@ -745,20 +715,6 @@ bs:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod
               vodom
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
-      gamelab_setPosition:
-        text: pomjeri {THIS} na {POSITION} poziciju
-        options:
-          POSITION:
-            "{x: 50, y: 50}": gornja lijeva
-            "{x: 200, y: 50}": gornja centralna
-            "{x: 350, y: 50}": donja desna
-            "{x: 50, y: 200}": centralna lijeva
-            "{x: 200, y: 200}": centralna
-            "{x: 350, y: 200}": centralna desna
-            "{x: 50, y: 350}": donja lijeva
-            "{x: 200, y: 350}": donja centralna
-            "{x: 350, y: 350}": donja desna
-            '"random"': slučajno odabran
       gamelab_setProp:
         options:
           PROPERTY:
@@ -772,30 +728,11 @@ bs:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-      gamelab_setup:
-        text: postavka
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': kada
             '"while"': dok
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': veličina
-            '"direction"': smijer kretanja
-            '"tint"': nijanse
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': veličina
-            '"direction"': smijer kretanja
-            '"tint"': nijanse
       gamelab_turn:
         options:
           DIRECTION:
@@ -821,11 +758,6 @@ bs:
             "'down'": dolje
             "'left'": lijevo
             "'right'": desno
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
       gamelab_whileKey:
         options:
           KEY:

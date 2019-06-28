@@ -127,14 +127,6 @@ ta:
           KEY:
             '"space"': வெளி
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": தொடர்பின்றி எடுக்கப்பட்ட
       gamelab_randColor:
         text: ஏதாவது ஒரு நிறம்
       gamelab_randomColor:
@@ -147,10 +139,6 @@ ta:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': வானவில்
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': நீருக்கடியில்
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': குளிர்காலம்
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -160,20 +148,10 @@ ta:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': எப்போது
-            '"while"': எப்பொழுது
       gamelab_whenKey:
         options:
           KEY:
             '"space"': வெளி
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': எப்போது
-            '"while"': எப்பொழுது
       gamelab_whileKey:
         options:
           KEY:

@@ -2036,6 +2036,8 @@ sv:
           stages:
             Lists:
               name: Listor
+            Images:
+              name: Bilder
         csd3-pilot:
           stages:
             Variables:

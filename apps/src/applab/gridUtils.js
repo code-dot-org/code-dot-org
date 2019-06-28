@@ -28,8 +28,8 @@ export function scaledDropPoint(draggedElement) {
   const xScale = boundingRect.width / div.offsetWidth;
   const yScale = boundingRect.height / div.offsetHeight;
 
-  let left = (draggedOffset.left - $(div).offset().left) / xScale;
-  let top = (draggedOffset.top - $(div).offset().top) / yScale;
+  let left = Math.round((draggedOffset.left - $(div).offset().left) / xScale);
+  let top = Math.round((draggedOffset.top - $(div).offset().top) / yScale);
 
   // snap top-left corner to nearest location in the grid
   left = snapToGridSize(left);

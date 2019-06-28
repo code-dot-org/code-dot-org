@@ -5,6 +5,12 @@ import screens from './screens';
 import {reducers as jsDebuggerReducers} from '../../lib/tools/jsdebugger/redux';
 import {reducer as maker} from '../../lib/kits/maker/redux';
 
+export const REDIRECT_RESPONSE = {
+  APPROVED: 'approved',
+  REJECTED: 'rejected',
+  UNSUPPORTED: 'unsupported'
+};
+
 // Selectors
 
 // Actions
@@ -31,14 +37,14 @@ function changeInterfaceMode(interfaceMode) {
 
 /**
  * Add a redirect notice to our stack
- * @param {bool} approved
+ * @param {string} response
  * @param {string} url
  * @returns {{type: string, approved: bool, url: string}}
  */
-function addRedirectNotice(approved, url) {
+function addRedirectNotice(response, url) {
   return {
     type: ADD_REDIRECT_NOTICE,
-    approved: approved,
+    response: response,
     url: url
   };
 }
@@ -80,7 +86,7 @@ function redirectDisplay(state, action) {
       // Add a redirect notice to our stack of notices
       return [
         {
-          approved: action.approved,
+          response: action.response,
           url: action.url
         }
       ].concat(state);

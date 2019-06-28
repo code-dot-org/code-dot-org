@@ -170,14 +170,6 @@ hy:
             '"right"': ճիշտ
             '"space"': տարածություն
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': կամայական
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": կամայական
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -196,10 +188,6 @@ hy:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ծիածան
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Ստորջրյա
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Ձմեռ
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': կամայական
       gamelab_setProp:
         options:
           PROPERTY:
@@ -214,19 +202,6 @@ hy:
           CONDITION:
             '"when"': երբ
             '"while"': ժամանակ
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': չափ
       gamelab_turn:
         options:
           DIRECTION:
@@ -247,11 +222,6 @@ hy:
             "'down'": ներքեւ
             "'left'": ձախ
             "'right'": ճիշտ
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
       gamelab_whileKey:
         options:
           KEY:

@@ -8511,6 +8511,10 @@ fil:
               name: Proyekto - Personal na Portfolio na Website
               description_student: Sa huling iilang mga araw sa yunit, ang klase ay magtatapos sa kanilang mga personal na website, nagtatrabaho kasama ang kanilang mga kasamahan para makakuha ng feedback, pagrepasu sa rubric, at paglagay nang panghuling mga detalye sa site. Para tapusin ang yunit, ang lahat ay magbabahagi sa kanilang mga proyekto at kung paano nila ito nagawa.
               description_teacher: "Ang mga estudyante ay gumugol ng maraming oras sa buong yunit sa pagtatrabaho ng kanilang Personal na Website. Sa huling ilang mga araw, ang mga estudyante ay magtatapos sa kanilang mga website. Sila ay magtatrabaho kasama ang kanilang mga kasamahan para makakuha ng feedback, maglalagay ng mga panghuling detalye sa mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga proyekto at pati na rin ang isang pangkalahatang ideya sa proseso na ginawa nila para makuha ang pangwakas na disenyo.\\r\n"
+            Intellectual Property:
+              name: Intelektwal na Pag-aari
+            Images:
+              name: Mga Larawan
         csd3-pilot:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib na sining, at mga laro sa Game Lab."
           stages:
@@ -8605,3 +8609,7 @@ fil:
               name: Proyekto - Pagdisenyo ng Laro
               description_student: Ang klase ay gagawa ng plano at bubuo ng mga orihinal na laro gamit ang gabay ng proyekto mula sa nakaraang dalawang aralin. Habang nagtatrabaho ng isa o may kasama, ang klase ay magpaplano, magde-develop, at magbigay ng puna sa mga laro. Pagkatapos ilakip ang puna ng mga kasamahan, ang klase ay magbabahagi sa nakompletong mga laro.
               description_teacher: Ang mga estudyante ay magpaplano at bubuo ng kanilang sariling laro gamit ang gabay ng proyekto mula sa nakaraang dalawang aralin para gabayan sila sa kanilang proyekto. Habang nagtatrabaho nang mag-isa o may kasama, ang mga estudyante ay unang magdesisyon kung anong uri ng laro ang gusto nilang gawin, habang kumukuha ng inspirasyon sa isang grupo ng mga halimbawang mga laro. Sila ay kukumpleto sa isang blankong gabay sa proyekto kung saan ilalarawan nila ang paggalaw ng laro at ihanda ang mga variables, mga sprites, at mga functions na kailangan nilang gawin. Sa Code Studio, isang serye ng mga antas ay nag-prompt sa kanila sa isang pangkalahatang pagkasunod-sunod na maaari nilang gamitin para ipatupad ang planong ito. Sa kalagitnaan ng proseso, ang mga estudyante ay magbabahagi sa kanilang mga proyekto para repasuhin ng mga kasamahan at kanilang isama ang mga puna habang tinatapos nila ang kanilang laro. Sa bandang huli ng aralin, ang mga estudyante ay magbabahagi ng kanilang nakumpletong mga laro sa kanilang mga kamag-aral. Ang proyektong ito ay tatagal ng ilang klase at maaring aabot kahit saan hanggang sa 3-5 na oras ng klase.
+        maddie-test:
+          stages:
+            new stage:
+              name: bagong yugto
