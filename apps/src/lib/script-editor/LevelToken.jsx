@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {Motion, spring} from 'react-motion';
 import color from '../../util/color';
@@ -59,8 +60,8 @@ const styles = {
 /**
  * Component for editing puzzle dots with one or more level variants.
  */
-const LevelToken = React.createClass({
-  propTypes: {
+class LevelToken extends Component {
+  static propTypes = {
     levelKeyList: PropTypes.object.isRequired,
     toggleExpand: PropTypes.func.isRequired,
     removeLevel: PropTypes.func.isRequired,
@@ -70,22 +71,22 @@ const LevelToken = React.createClass({
     drag: PropTypes.bool.isRequired,
     delta: PropTypes.number,
     handleDragStart: PropTypes.func.isRequired
-  },
+  };
 
-  handleDragStart(e) {
+  handleDragStart = e => {
     this.props.handleDragStart(this.props.level.position, e);
-  },
+  };
 
-  toggleExpand() {
+  toggleExpand = () => {
     this.props.toggleExpand(
       this.props.stagePosition,
       this.props.level.position
     );
-  },
+  };
 
-  handleRemove() {
+  handleRemove = () => {
     this.props.removeLevel(this.props.stagePosition, this.props.level.position);
-  },
+  };
 
   render() {
     const springConfig = {stiffness: 1000, damping: 80};
@@ -143,7 +144,7 @@ const LevelToken = React.createClass({
       </Motion>
     );
   }
-});
+}
 
 export default connect(
   state => ({
