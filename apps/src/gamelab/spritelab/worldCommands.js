@@ -20,11 +20,9 @@ export const commands = {
   },
 
   setBackgroundImage(img) {
-    if (this._predefinedBackgrounds[img]) {
-      let backgroundImage = this._predefinedBackgrounds[img];
-      backgroundImage.name = img;
-      spriteUtils.background = backgroundImage;
-    }
+    let backgroundImage = this.loadImage(img);
+    backgroundImage.name = img;
+    spriteUtils.background = backgroundImage;
   },
 
   showTitleScreen(title, subtitle) {
