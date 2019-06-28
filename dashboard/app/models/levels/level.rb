@@ -70,6 +70,7 @@ class Level < ActiveRecord::Base
     mini_rubric
     encrypted
     teacher_markdown
+    bubble_choice_description
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
