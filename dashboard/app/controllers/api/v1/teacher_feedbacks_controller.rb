@@ -37,7 +37,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
 
   # Use student_id to lookup feedback from any teacher who has provided feedback to that
   # student on any level
-  def get_feedbacks_all
+  def index
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
 
@@ -48,14 +48,17 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     render json: @all_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
   end
 
-  # POST /teacher_feedbacks
-  def create
-    @teacher_feedback.teacher_id = current_user.id
-    if @teacher_feedback.save
-      render json: @teacher_feedback, serializer: Api::V1::TeacherFeedbackSerializer, status: :created
-    else
-      head :bad_request
-    end
+  # Use student_id to determine how many feedback entries from any teacher
+  # for any level are associated with the given student
+  def count
+    # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
+    headers['csrf-token'] = form_authenticity_token
+
+    @all_feedbacks_count = TeacherFeedback.where(
+      student_id: params.require(:student_id)
+    ).length
+
+    render json: @all_feedbacks_count, each_serializer: Api::V1::TeacherFeedbackSerializer
   end
 
   # POST /teacher_feedbacks

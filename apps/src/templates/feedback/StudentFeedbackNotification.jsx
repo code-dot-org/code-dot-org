@@ -20,12 +20,12 @@ export default class StudentFeedbackNotification extends Component {
     const {studentId} = this.props;
 
     $.ajax({
-      url: `/api/v1/teacher_feedbacks/get_feedbacks_all?student_id=${studentId}`,
+      url: `/api/v1/teacher_feedbacks/count?student_id=${studentId}`,
       method: 'GET',
       dataType: 'json'
     }).done(data => {
       this.setState({
-        numFeedbackLevels: data.length
+        numFeedbackLevels: data
       });
     });
   }
