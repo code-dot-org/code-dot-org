@@ -18,6 +18,7 @@ import {actions, selectors} from './redux';
 import color from '../../../util/color';
 import Inspector from 'react-inspector';
 import MercatorMap from './MercatorMap';
+import experiments from '../../../util/experiments';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -265,6 +266,14 @@ export default connect(
             return <div key={i}>&gt; {rowValue.input}</div>;
           } else if (this.isValidOutput(rowValue)) {
             if (rowValue.fromConsoleLog) {
+              if (experiments.isEnabled('mercator')) {
+                return (
+                  <MercatorMap
+                    key={rowValue.output.lat}
+                    data={rowValue.output}
+                  />
+                );
+              }
               return <Inspector key={i} data={rowValue.output} />;
             } else {
               return (
@@ -318,9 +327,6 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
-            <div>
-              <MercatorMap />
-            </div>
             {this.props.showReactInspector
               ? this.displayOutputToConsole()
               : this.props.logOutput}
