@@ -85,20 +85,25 @@ def run_bash_script(location)
   run_standalone_script("bash #{location}")
 end
 
-def report_malformed_restoration(key, translation)
-  @malformed_restorations ||= Hash.new
-  @malformed_restorations[key] = translation
+def report_malformed_restoration(key, translation, file_name)
+  @malformed_restorations ||= [["Key", "File Name", "Translation"]]
+  @malformed_restorations << [key, file_name, translation]
 end
 
 def upload_malformed_restorations(locale)
   return if @malformed_restorations.blank?
-  data = []
-  data << ["key", "translation"]
-  @malformed_restorations.each do |k, v|
-    data << [k, v]
-  end
-  Google::Drive.new.add_sheet_to_spreadsheet(data, "i18n_bad_translations", locale)
+  Google::Drive.new.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
   @malformed_restorations = nil
+end
+
+def recursively_find_malformed_links_images(hash, key_str, file_name)
+  hash.each do |key, val|
+    if val.is_a?(Hash)
+      recursively_find_malformed_links_images(val, "#{key_str}.#{key}", file_name)
+    else
+      report_malformed_restoration("#{key_str}.#{+key}", val, file_name) if contains_malformed_link_or_image(val)
+    end
+  end
 end
 
 def plugins_to_arg(plugins)
@@ -232,16 +237,6 @@ def restore(source, redacted, dest, *plugins)
 
   source_json.close
   redacted_json.close
-end
-
-def recursively_find_malformed_links_images(hash, key_str="")
-  hash.each do |key, val|
-    if val.is_a?(Hash)
-      recursively_find_malformed_links_images(val, "#{key_str}.#{key}")
-    else
-      report_malformed_restoration("#{key_str}.#{+key}", val) if contains_malformed_link_or_image(val)
-    end
-  end
 end
 
 def restore_course_content(source, redacted, dest, *plugins)

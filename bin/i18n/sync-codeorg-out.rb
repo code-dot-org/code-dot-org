@@ -48,7 +48,10 @@ def find_malformed_links_images(locale, file_path)
     end
 
   return unless data&.values&.first&.length
-  recursively_find_malformed_links_images(data, locale)
+  crowdin_file_path_match = file_path.match(/i18n\/locales\/[a-z]+\-[A-Z]+\/(.+)/)
+  if crowdin_file_path_match
+    recursively_find_malformed_links_images(data, locale, crowdin_file_path_match[1])
+  end
 end
 
 def restore_redacted_files
