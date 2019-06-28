@@ -19,7 +19,7 @@ module Pd::SurveyPipeline
 
       OUTPUT_KEYS.each do |key|
         context[key] ||= {}
-        context[key].merge! results[key]
+        context[key].deep_merge! results[key]
       end
 
       context

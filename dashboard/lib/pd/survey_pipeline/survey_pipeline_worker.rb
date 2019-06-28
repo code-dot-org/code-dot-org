@@ -1,6 +1,7 @@
 module Pd::SurveyPipeline
   class SurveyPipelineWorker
     def self.process_data(*)
+      # TODO: add the input parser and output merger here
       raise 'Must override in derived class'
     end
 

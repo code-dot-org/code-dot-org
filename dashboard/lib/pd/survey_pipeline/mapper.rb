@@ -69,10 +69,11 @@ module Pd::SurveyPipeline
         # Apply matched reducers on each group.
         # Add only non-empty result to the final summary.
         map_config.each do |condition:, field:, reducers:|
-          next unless condition&.call(group_key)
+          next if condition && !condition.call(group_key)
 
           reducers.each do |reducer|
-            reducer_result = reducer.reduce group_records.pluck(field)
+            # TODO: use compact or not? How to handle nil?
+            reducer_result = reducer.reduce group_records.pluck(field).compact
 
             next unless reducer_result.present?
             summaries << group_key.merge({reducer: reducer.name, reducer_result: reducer_result})
