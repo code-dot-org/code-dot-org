@@ -142,15 +142,15 @@ function whilePressEvent(inputEvent, p5Inst) {
 }
 
 function whenTouchEvent(inputEvent) {
-  if (inputEvent.previous === undefined) {
-    inputEvent.previous = {};
-  }
   let getFired = function(map, spriteId, targetId) {
     if (map && map[spriteId] && map[spriteId][targetId]) {
       return map[spriteId][targetId].firedOnce;
     }
   };
   let setFired = function(map, spriteId, targetId, fired) {
+    if (!map) {
+      map = {};
+    }
     if (!map[spriteId]) {
       map[spriteId] = {};
     }
@@ -162,10 +162,13 @@ function whenTouchEvent(inputEvent) {
   let sprites = getSpriteArray(inputEvent.args.sprite1);
   let targets = getSpriteArray(inputEvent.args.sprite2);
   let callbackArgList = [];
-  let newCollisionMap = {};
+  let previousCollisions = inputEvent.previous;
+
+  // We need to clear out previous, so that events get re-triggered when sprite animations change
+  inputEvent.previous = {};
   sprites.forEach(sprite => {
     targets.forEach(target => {
-      let firedOnce = getFired(inputEvent.previous, sprite.id, target.id);
+      let firedOnce = getFired(previousCollisions, sprite.id, target.id);
       if (sprite.overlap(target)) {
         if (!firedOnce) {
           // Sprites are overlapping, and we haven't fired yet for this collision,
@@ -180,10 +183,9 @@ function whenTouchEvent(inputEvent) {
         // touching again- we want the callback to fire two times.
         firedOnce = false;
       }
-      setFired(newCollisionMap, sprite.id, target.id, firedOnce);
+      setFired(inputEvent.previous, sprite.id, target.id, firedOnce);
     });
   });
-  inputEvent.previous = newCollisionMap;
   return callbackArgList;
 }
 

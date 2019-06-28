@@ -3,6 +3,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import {stub} from 'sinon';
 import createGameLabP5 from '../../../util/gamelab/TestableGameLabP5';
 import * as spriteUtils from '@cdo/apps/gamelab/spritelab/spriteUtils';
+import {commands as spriteCommands} from '@cdo/apps/gamelab/spritelab/spriteCommands';
 
 describe('Sprite Utils', () => {
   let gameLabP5, createSprite, animation;
@@ -532,6 +533,32 @@ describe('Sprite Utils', () => {
           'while: 1, 2',
           'while: 1, 3'
         ]);
+      });
+
+      it('Calls the callback if costume group changes', () => {
+        gameLabP5.p5._predefinedSpriteAnimations = {b: animation, c: animation};
+        // 'a' sprite overlapping 'b' sprite
+        overlapStub1.withArgs(target1).returns(true);
+        spriteUtils.addEvent(
+          'whentouch',
+          {sprite1: 'a', sprite2: 'b'},
+          extraArgs =>
+            eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
+        );
+        spriteUtils.runEvents(gameLabP5.p5);
+        expect(eventLog).to.deep.equal(['when: 0, 2']);
+
+        // 'b' sprite changes to 'c' sprite
+        spriteCommands.setAnimation(2, 'c');
+        spriteUtils.runEvents(gameLabP5.p5);
+        // Event does not fire
+        expect(eventLog).to.deep.equal(['when: 0, 2']);
+
+        // 'c' sprite changes back to 'b' sprite
+        spriteCommands.setAnimation(2, 'b');
+        spriteUtils.runEvents(gameLabP5.p5);
+        // Event does fire again
+        expect(eventLog).to.deep.equal(['when: 0, 2', 'when: 0, 2']);
       });
 
       it('Collision events with the same costume group work', () => {
