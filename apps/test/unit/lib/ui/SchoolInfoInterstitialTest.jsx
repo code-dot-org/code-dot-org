@@ -84,11 +84,13 @@ describe('SchoolInfoInterstitial', () => {
      * component will fail.  Thus, the original dissmissSchoolInfoForm function is called and the spied function
      * will not be called. This will cause the assertion that checks if the dismissSchoolInfoForm function was
      * called to fail.  However, the second assertion that checks if the modal was closed will pass.
-     * The typical approach to solve this is to trigger a force update that also triggers a re-render or the
+     * The typical approach to solve this is to trigger a force update that also triggers a re-render of the
      * component and consequently, the click event listener is re-set with the spied method.
      * However, forcing a re-render using "wrapper.update()" does not work.
      * Using wrapper.setState({}) forces a re-render of the component. setState triggers a re-render of the
-     * component and since an empty object is passed there is no change to the current state.
+     * component and since an empty object is passed there is no change to the current state.  This is a hacky
+     * way of handling the re-render.  The test was updated to use mount() and the component was re-rendered by
+     * forcing an update on the instance of the wrapper.
      */
     wrapper.instance().forceUpdate();
     wrapper.find('Button[id="dismiss-button"]').simulate('click');
