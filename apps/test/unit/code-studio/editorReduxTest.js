@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import {combineReducers} from 'redux';
 import reducers, {
   reorderLevel,
@@ -10,30 +10,40 @@ import reducers, {
 
 const initialState = {
   levelKeyList: {},
-  stages: [{
-    id: 100,
-    name: 'A',
-    levels: [{
-      ids: [1],
-      activeId: 1
-    }, {
-      ids: [4],
-      activeId: 4
-    }, {
-      ids: [5],
-      activeId: 5
-    }, {
-      ids: [6],
-      activeId: 6
-    }]
-  }, {
-    name: 'B',
-    id: 101,
-    levels: [{
-      ids: [2, 3],
-      activeId: 3
-    }]
-  }]
+  stages: [
+    {
+      id: 100,
+      name: 'A',
+      levels: [
+        {
+          ids: [1],
+          activeId: 1
+        },
+        {
+          ids: [4],
+          activeId: 4
+        },
+        {
+          ids: [5],
+          activeId: 5
+        },
+        {
+          ids: [6],
+          activeId: 6
+        }
+      ]
+    },
+    {
+      name: 'B',
+      id: 101,
+      levels: [
+        {
+          ids: [2, 3],
+          activeId: 3
+        }
+      ]
+    }
+  ]
 };
 
 const reducer = combineReducers(reducers);
@@ -44,7 +54,10 @@ describe('editorRedux reducer tests', () => {
     assert.deepEqual(nextState[0].levels.map(l => l.activeId), [5, 1, 4, 6]);
   });
   it('add group', () => {
-    const nextState = reducer(initialState, addGroup('New Stage 1', 'New Group')).stages;
+    const nextState = reducer(
+      initialState,
+      addGroup('New Stage 1', 'New Group')
+    ).stages;
     assert.equal(nextState[nextState.length - 1].name, 'New Stage 1');
   });
   it('add stage', () => {
