@@ -14,9 +14,8 @@ Feature: BubbleChoice
     And I click selector ".submitButton"
 
     # Make sure you are taken back to the BubbleChoice activity page with progress
-    And I wait until element "h1:contains(Bubble Choice: All the Choices)" is visible
-    And check that the url contains "/s/allthethings/stage/40/puzzle/1"
     And I wait until element ".uitest-bubble-choice:eq(0)" is visible
+    And check that the url contains "/s/allthethings/stage/40/puzzle/1"
     And element ".uitest-bubble-choice:eq(0) i.fa-check" is visible
 
     And I sign out
