@@ -9,13 +9,13 @@ module Pd::SurveyPipeline
     self.use_transactional_test_case = true
 
     setup_all do
-      @ws_form_id = 11_000_000_000_000
+      @ws_form_id = "11000000000000".to_i
 
       ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1
       teacher = create :teacher
       day = 0
 
-      @ws_survey = create :pd_survey_question, form_id: @ws_form_id,
+      @ws_survey_questions = create :pd_survey_question, form_id: @ws_form_id,
         questions: '['\
           '{"id": 1, "type": "number", "name": "overallRating", "text": "Overall rating"},'\
           '{"id": 2, "type": "dropdown", "name": "selectOption", "text": "Select one of the options",'\
@@ -32,7 +32,20 @@ module Pd::SurveyPipeline
           '{"Sub question 1": "Option 1", "Sub question 2": "Option 2", "Sub question 3": "Option 3"}}'
     end
 
-    test 'can parse survey' do
+    test 'produce output keys' do
+      context = {
+        survey_questions: [@ws_survey_questions],
+        workshop_submissions: [@ws_submission],
+        facilitator_submissions: []
+      }
+
+      DailySurveyParser.process_data context
+
+      assert context[:parsed_questions].present?
+      assert context[:parsed_submissions].present?
+    end
+
+    test 'can parse questions' do
       expected_result = {
         @ws_form_id => {
           '1' => {type: 'number', name: 'overallRating', text: 'Overall rating',
@@ -51,7 +64,7 @@ module Pd::SurveyPipeline
         }
       }
 
-      result = DailySurveyParser.parse_survey([@ws_survey])
+      result = DailySurveyParser.parse_questions([@ws_survey_questions])
 
       assert_equal expected_result, result
     end

@@ -338,4 +338,72 @@ describe('themes: ', () => {
       ).to.equal('rgb(226, 240, 170)');
     });
   });
+
+  describe('onRestoreThemeDefaults', () => {
+    let updatePropertySpy;
+    beforeEach(() => {
+      updatePropertySpy = sinon.spy(designMode, 'updateProperty');
+    });
+
+    afterEach(() => {
+      updatePropertySpy.restore();
+    });
+
+    it('onRestoreThemeDefaults will not call updateProperty if properties already match theme defaults', () => {
+      setExistingHTML(`
+        <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(255, 255, 255);">
+        </div>
+      `);
+
+      designMode.onRestoreThemeDefaults(getPrefixedElementById('screen1'));
+
+      expect(updatePropertySpy).to.not.have.been.called;
+    });
+
+    it('onRestoreThemeDefaults will restore background color to theme default if it does match', () => {
+      setExistingHTML(`
+        <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(0, 0, 0);">
+        </div>
+      `);
+
+      const screen = getPrefixedElementById('screen1');
+
+      designMode.onRestoreThemeDefaults(screen);
+
+      expect(updatePropertySpy).to.have.been.called;
+      expect(screen.style.backgroundColor).to.equal('rgb(255, 255, 255)');
+    });
+
+    it('onRestoreThemeDefaults will remove data-mod attribute when properties are restored', () => {
+      setExistingHTML(`
+        <div class="screen" id="design_screen1" data-theme="default" data-mod-backgroundcolor="1" style="background-color: rgb(0, 0, 0);">
+        </div>
+      `);
+
+      const screen = getPrefixedElementById('screen1');
+
+      expect(screen.getAttribute('data-mod-backgroundcolor')).to.equal('1');
+
+      designMode.onRestoreThemeDefaults(screen);
+
+      expect(updatePropertySpy).to.have.been.called;
+      expect(screen.getAttribute('data-mod-backgroundcolor')).to.be.null;
+    });
+
+    it('onRestoreThemeDefaults will remove data-mod attribute even when properties do not need to be changed', () => {
+      setExistingHTML(`
+        <div class="screen" id="design_screen1" data-theme="default" data-mod-backgroundcolor="1" style="background-color: rgb(255, 255, 255);">
+        </div>
+      `);
+
+      const screen = getPrefixedElementById('screen1');
+
+      expect(screen.getAttribute('data-mod-backgroundcolor')).to.equal('1');
+
+      designMode.onRestoreThemeDefaults(screen);
+
+      expect(updatePropertySpy).to.not.have.been.called;
+      expect(screen.getAttribute('data-mod-backgroundcolor')).to.be.null;
+    });
+  });
 });
