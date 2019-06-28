@@ -13,7 +13,8 @@ class MercatorMap extends React.Component {
   };
 
   state = {
-    mercator: ''
+    mercator: '',
+    data: this.props.data
   };
 
   async componentDidMount() {
@@ -26,6 +27,34 @@ class MercatorMap extends React.Component {
   projection = geoMercator()
     .scale(PROJECTION_RADIUS)
     .translate([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
+
+  displayLocation() {
+    if (this.state.data.constructor === Array) {
+      return this.state.data.map((location, i) => {
+        return (
+          <circle
+            fill={'red'}
+            r={3}
+            transform={`translate(${this.projection([
+              location.long,
+              location.lat
+            ])})`}
+          />
+        );
+      });
+    } else {
+      return (
+        <circle
+          fill={'red'}
+          r={5}
+          transform={`translate(${this.projection([
+            this.state.data.long,
+            this.state.data.lat
+          ])})`}
+        />
+      );
+    }
+  }
 
   async mercator() {
     let displayWorldMap = async function() {
@@ -55,6 +84,7 @@ class MercatorMap extends React.Component {
             />
           ))}
         </g>
+        <g className="markers">{this.displayLocation()}</g>
       </svg>
     );
   }
