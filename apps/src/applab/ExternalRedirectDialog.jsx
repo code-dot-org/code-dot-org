@@ -21,6 +21,11 @@ class ExternalRedirectDialog extends React.Component {
     redirects: PropTypes.array
   };
 
+  handleRedirect(url) {
+    window.open(url, '_blank');
+    this.props.handleClose();
+  }
+
   render() {
     let title, body, footer;
     if (!(this.props.redirects && this.props.redirects.length > 0)) {
@@ -52,8 +57,7 @@ class ExternalRedirectDialog extends React.Component {
             color={Button.ButtonColor.gray}
           />
           <Button
-            href={url}
-            target={'_blank'}
+            onClick={() => this.handleRedirect(url)}
             text={i18n.continue()}
             color={Button.ButtonColor.orange}
           />
