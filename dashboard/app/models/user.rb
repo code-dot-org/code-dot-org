@@ -821,7 +821,17 @@ class User < ActiveRecord::Base
   end
 
   def managing_own_credentials?
-    provider.blank? || (provider == User::PROVIDER_MANUAL)
+    if provider.blank?
+      true
+    elsif manual?
+      true
+    elsif migrated?
+      authentication_options.any? do |ao|
+        ao.credential_type == AuthenticationOption::EMAIL
+      end
+    else
+      false
+    end
   end
 
   def password_required?
@@ -838,7 +848,7 @@ class User < ActiveRecord::Base
 
   def email_required?
     return true if teacher?
-    return false if provider == User::PROVIDER_MANUAL
+    return false if manual?
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
@@ -846,7 +856,7 @@ class User < ActiveRecord::Base
   end
 
   def username_required?
-    provider == User::PROVIDER_MANUAL || username_changed?
+    manual? || username_changed?
   end
 
   def update_without_password(params, *options)
@@ -1873,6 +1883,10 @@ class User < ActiveRecord::Base
 
   def migrated?
     provider == PROVIDER_MIGRATED
+  end
+
+  def manual?
+    provider == PROVIDER_MANUAL
   end
 
   def sponsored?
