@@ -141,7 +141,7 @@ class SchoolInfo < ActiveRecord::Base
   end
 
   def should_validate?
-    validation_type != VALIDATION_NONE
+    !(validation_type == VALIDATION_NONE || validation_type == VALIDATION_COMPLETE)
   end
 
   def validate_zip

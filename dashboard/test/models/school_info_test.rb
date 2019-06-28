@@ -294,14 +294,14 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # Non-US homeschool
 
   test 'Non-US homeschool succeeds' do
-    school_info = build :school_info_non_us_homeschool, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build :school_info_non_us_homeschool, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   # Non-US after school
 
   test 'Non-US after school succeeds' do
-    school_info = build :school_info_non_us_after_school, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build :school_info_non_us_after_school, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end
 
