@@ -85,8 +85,6 @@ import {setExportGeneratedProperties} from '../code-studio/components/exportDial
 const Applab = {};
 export default Applab;
 
-const DEFAULT_GENERATED_PROPERTIES = {};
-
 /**
  * @type {JsInterpreterLogger} observes the interpreter and logs to console
  */
@@ -401,7 +399,6 @@ Applab.init = function(config) {
   thumbnailUtils.init();
 
   Applab.generatedProperties = {
-    ...DEFAULT_GENERATED_PROPERTIES,
     ...config.initialGeneratedProperties
   };
   getStore().dispatch(
