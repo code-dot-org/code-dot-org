@@ -229,7 +229,8 @@ class ExportDialog extends React.Component {
       const sourcesChangedThisInstance =
         md5PublishSavedSources && md5SavedSources !== md5PublishSavedSources;
       if (sourcesChangedSinceExport) {
-        // Also cancel a build that may have started before this page was reloaded:
+        // Cancel any build that may have started with an older version of this
+        // project before this page was reloaded:
         this.cancelIfPreexistingApkBuild();
       }
       if (sourcesChangedThisInstance) {
@@ -518,11 +519,11 @@ class ExportDialog extends React.Component {
         apkBuildId,
         expoSnackId
       });
-      return this.waitForApkBuild(apkBuildId, expoSnackId);
+      this.waitForApkBuild(apkBuildId, expoSnackId);
     } else {
       // There is no previous build that matches the current sources,
       // so publish and generate a new build:
-      return this.publishAndGenerateApk();
+      this.publishAndGenerateApk();
     }
   }
 

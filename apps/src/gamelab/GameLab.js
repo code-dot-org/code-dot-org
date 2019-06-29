@@ -87,8 +87,6 @@ const validationLibraryName = 'ValidationSetup';
 const DRAW_LOOP_START = 'drawLoopStart';
 const DRAW_LOOP_MEASURE = 'drawLoop';
 
-const DEFAULT_GENERATED_PROPERTIES = {};
-
 /**
  * An instantiable GameLab class
  * @constructor
@@ -111,7 +109,7 @@ var GameLab = function() {
   /** @private {JsInterpreterLogger} */
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
-  this.generatedProperties = DEFAULT_GENERATED_PROPERTIES;
+  this.generatedProperties = {};
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -415,7 +413,6 @@ GameLab.prototype.init = function(config) {
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   this.generatedProperties = {
-    ...DEFAULT_GENERATED_PROPERTIES,
     ...config.initialGeneratedProperties
   };
   getStore().dispatch(
