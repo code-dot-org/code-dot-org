@@ -124,7 +124,7 @@ module Pd
           end
 
           last_known_submission_id = questions.last_submission_id
-          last_imported_submission_id = last_known_submission_id
+          last_processed_submission_id = last_known_submission_id
           all_sync_results[form_id] = {}
 
           offset = 0
@@ -148,10 +148,8 @@ module Pd
                 all_sync_results[form_id][res] ||= 0
                 all_sync_results[form_id][res] += 1
 
-                if res == IMPORTED
-                  imported += 1
-                  last_imported_submission_id = submission_id
-                end
+                last_processed_submission_id = submission_id
+                imported += 1 if res == IMPORTED
               rescue => e
                 # Store message and first line of backtrace for context
                 errors_per_form[form_id][submission_id] = "#{e.message}, #{e.backtrace.first}"
@@ -163,8 +161,8 @@ module Pd
                 # Have another job to re-sync these submissions later.
               end
 
-              questions.update!(last_submission_id: last_imported_submission_id) if
-                last_imported_submission_id != questions.last_submission_id
+              questions.update!(last_submission_id: last_processed_submission_id) if
+               last_processed_submission_id != questions.last_submission_id
             end
 
             if batch_error_count > 0 && batch_error_count == result_set[:count]
@@ -217,8 +215,9 @@ module Pd
 
           # Note, form_data_hash processes the answers and will raise an error if they don't match the questions.
           # Include hidden questions for full validation and so skip_submission? can inspect them.
-          if skip_submission?(model.form_data_hash(show_hidden_questions: true))
-            CDO.log.info "Skipping #{submission_id}"
+          processed_answers = model.form_data_hash(show_hidden_questions: true)
+          if skip_submission?(processed_answers)
+            CDO.log.info "Skipping #{processed_answers['environment']} environment submission #{submission_id}"
             return SKIPPED_DIFFERENT_ENVIRONMENT
           end
 
