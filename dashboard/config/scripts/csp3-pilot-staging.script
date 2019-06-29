@@ -36,3 +36,8 @@ stage 'Programs Investigate'
 level 'U3 Program Investigate Sequential 1', progression: 'Code Investigation'
 level 'U3 Program Investigate Sequential 2', progression: 'Code Investigation'
 level 'U3 Program Investigate Event-Driven 1', progression: 'Code Investigation'
+level 'U3 Program Investigate Event-Driven 2', progression: 'Code Investigation'
+
+stage 'Programs Practice'
+level 'U3 Program Practice Pt 1', progression: 'Debugging'
+level 'U3 Program Practice Pt 2', progression: 'Debugging'

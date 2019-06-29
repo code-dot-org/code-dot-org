@@ -636,7 +636,91 @@ designMode.onDuplicate = function(element, prevThemeName, event) {
   return duplicateElement;
 };
 
+designMode.hasCustomizedThemeProperties = function(element) {
+  const currentThemeValue = elementLibrary.getCurrentTheme(
+    designMode.activeScreen()
+  );
+  const themeValues = elementLibrary.getThemeValues(element);
+
+  for (const propName in themeValues) {
+    const propTheme = themeValues[propName];
+    const currentDefault = propTheme[currentThemeValue];
+    const currentPropValue = designMode.readProperty(element, propName);
+    const {type} = propTheme;
+    //
+    // Compare properties against the theme default
+    //
+    if (type === 'color') {
+      if (
+        new RGBColor(currentPropValue).toHex() !==
+        new RGBColor(currentDefault).toHex()
+      ) {
+        return true;
+      }
+    } else if (currentPropValue !== currentDefault) {
+      return true;
+    }
+  }
+  return false;
+};
+
 var batchChangeId = 1;
+
+designMode.onRestoreThemeDefaults = function(element) {
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: FIREHOSE_GROUP,
+    event: 'restore_theme_defaults',
+    project_id: project.getCurrentId(),
+    data_json: JSON.stringify({
+      elementId: element.id,
+      elementTag: element.tagName,
+      elementClass: element.className
+    })
+  });
+
+  const currentThemeValue = elementLibrary.getCurrentTheme(
+    designMode.activeScreen()
+  );
+  const themeValues = elementLibrary.getThemeValues(element);
+  let modifiedProperty = false;
+  // Start a new batched set of updateProperty() calls:
+  batchChangeId++;
+  for (const propName in themeValues) {
+    const dataModifiedAttributeName = `data-mod-${propName}`;
+    const propTheme = themeValues[propName];
+    const currentDefault = propTheme[currentThemeValue];
+    const currentPropValue = designMode.readProperty(element, propName);
+    const {type} = propTheme;
+    //
+    // Update properties to the theme default
+    //
+    let propNeedsUpdate;
+    if (type === 'color') {
+      propNeedsUpdate =
+        new RGBColor(currentPropValue).toHex() !==
+        new RGBColor(currentDefault).toHex();
+    } else {
+      propNeedsUpdate = currentPropValue !== currentDefault;
+    }
+    if (propNeedsUpdate) {
+      designMode.updateProperty(
+        element,
+        propName,
+        currentDefault,
+        null,
+        batchChangeId
+      );
+      modifiedProperty = true;
+    }
+    // Since we're resetting to the default theme value, in all cases,
+    // remove the attribute marking the element as explicitly modified:
+    element.removeAttribute(dataModifiedAttributeName);
+  }
+  if (modifiedProperty) {
+    designMode.renderDesignWorkspace(element);
+  }
+};
 
 designMode.changeThemeForElement = function(
   element,
@@ -1030,7 +1114,8 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
 designMode.parseScreenFromLevelHtml = function(
   screenEl,
   allowDragging,
-  prefix
+  prefix,
+  skipUnknownElements
 ) {
   var screen = $(screenEl);
   elementUtils.addIdPrefix(screen[0], prefix);
@@ -1048,7 +1133,8 @@ designMode.parseScreenFromLevelHtml = function(
     var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
     elementLibrary.onDeserialize(
       element,
-      designMode.updateProperty.bind(element)
+      designMode.updateProperty.bind(element),
+      skipUnknownElements
     );
   });
   return screen[0];
@@ -1080,7 +1166,12 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   );
   var children = $(levelDom).children();
   children.each(function() {
-    designMode.parseScreenFromLevelHtml(this, allowDragging, prefix);
+    designMode.parseScreenFromLevelHtml(
+      this,
+      allowDragging,
+      prefix,
+      true /* skipUnknownElements */
+    );
   });
   children.appendTo(rootEl);
 };
@@ -1580,6 +1671,10 @@ designMode.renderDesignWorkspace = function(element) {
     onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
     onDuplicate: designMode.onDuplicate.bind(this, element, null),
+    onRestoreThemeDefaults: designMode.onRestoreThemeDefaults.bind(
+      this,
+      element
+    ),
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleVersionHistory: Applab.handleVersionHistory,
