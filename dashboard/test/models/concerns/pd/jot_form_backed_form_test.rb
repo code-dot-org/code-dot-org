@@ -397,11 +397,11 @@ module Pd
       form_id = get_form_id
 
       mock_questions = mock {expects(:last_submission_id).returns(nil).at_least_once}
-      mock_questions.expects(:update!).at_least_once
 
       DummyForm.expects(:get_questions).with(form_id, force_sync: true).returns(mock_questions)
+      mock_questions.expects(:update!).at_least_once
 
-      generate_mock_submission = proc do |imported, error, expect_update_last_submission_id|
+      generate_mock_submission = proc do |imported, error|
         submission_id = get_submission_id
         mock do |mock_submission|
           expects(:[]).with(:submission_id).returns(submission_id)
@@ -419,11 +419,11 @@ module Pd
       end
 
       mock_submissions = [
-        generate_mock_submission[true, nil, true], # imported # 1
-        generate_mock_submission[false, nil, true], # skipped
-        generate_mock_submission[true, nil, true], # imported # 2
+        generate_mock_submission[true, nil],  # imported # 1
+        generate_mock_submission[false, nil], # skipped
+        generate_mock_submission[true, nil],  # imported # 2
         generate_mock_submission[false, 'Processing error 1', false], # error
-        generate_mock_submission[true, nil, true], # imported #3, post error
+        generate_mock_submission[true, nil],  # imported #3, post error
       ]
 
       JotForm::Translation.expects(:new).with(form_id).returns(
