@@ -18,6 +18,7 @@ gem 'rails-controller-testing'
 # Support numeric keys in Simple backend.
 # Ref: https://github.com/svenfuchs/i18n/pull/422
 gem 'i18n', github: 'wjordan/i18n', branch: 'cdo'
+gem 'i18n-instrument', require: 'i18n/instrument'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
