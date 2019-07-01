@@ -122,7 +122,7 @@ def serialize_i18n_strings(level, strings)
   result = Hash.new
 
   if strings.key? "contained levels"
-    contained_strings = strings.delete("contained_levels")
+    contained_strings = strings.delete("contained levels")
     unless contained_strings.blank?
       level.contained_levels.zip(contained_strings).each do |contained_level, contained_string|
         result.deep_merge! serialize_i18n_strings(contained_level, contained_string)
