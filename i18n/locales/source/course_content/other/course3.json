@@ -1,6 +1,6 @@
 {
   "https://studio.code.org/s/course3/stage/1/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?",
       "questions": [
@@ -29,7 +29,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/1/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Matching",
       "content1": "Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.",
       "questions": [
@@ -121,7 +121,7 @@
     "long_instructions": "**Assessment:** Get to the sunflower using as few blocks as possible."
   },
   "https://studio.code.org/s/course3/stage/2/puzzle/14": {
-    "dsl": {
+    "dsls": {
       "title": "Maze Match",
       "content1": "Match the puzzles to the blocks",
       "pre_title": "Instructions",
@@ -150,7 +150,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/2/puzzle/15": {
-    "dsl": {
+    "dsls": {
       "title": "Maze Multiple Choice",
       "content1": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500",
       "questions": [
@@ -290,7 +290,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/13": {
-    "dsl": {
+    "dsls": {
       "title": "Artist Multiple Choice",
       "questions": [
         {
@@ -318,7 +318,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/14": {
-    "dsl": {
+    "dsls": {
       "title": "Artist Multiple Choice",
       "questions": [
         {
@@ -350,7 +350,7 @@
     "long_instructions": "Free Draw!  Draw whatever you are inspired to create."
   },
   "https://studio.code.org/s/course3/stage/4/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png",
       "questions": [
@@ -375,7 +375,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/4/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Matching",
       "content1": "Match each program to the word it makes, using the provided group of skills.",
       "content2": "/script_assets/4-5_images/unplugged/suncatchers_1.png",
@@ -495,7 +495,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/10": {
-    "dsl": {
+    "dsls": {
       "title": "Artist Functions Multiple Choice One",
       "content1": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500",
       "questions": [
@@ -713,7 +713,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/7/puzzle/10": {
-    "dsl": {
+    "dsls": {
       "title": "Bee Conditionals Multiple Choice",
       "content1": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png",
       "content2": "A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?",
@@ -802,7 +802,7 @@
     "long_instructions": "**Assessment:** Use a `repeat until` and an `if/else` block to get me to the sunflower in as few blocks as possible."
   },
   "https://studio.code.org/s/course3/stage/8/puzzle/12": {
-    "dsl": {
+    "dsls": {
       "title": "Maze Conditionals Multiple Choice",
       "content1": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500",
       "questions": [
@@ -839,7 +839,7 @@
     "long_instructions": "Use If/Else blocks to follow the curvy path. At each corner, use the `remove 1` command in a loop to clear the piles."
   },
   "https://studio.code.org/s/course3/stage/9/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/4-5_images/unplugged/songwriting_1_q.png",
       "questions": [
@@ -868,7 +868,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/10/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Matching",
       "content1": "Match the steps in the Dice Race game to the order that they should appear in the algorithm.",
       "questions": [
@@ -902,7 +902,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/10/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "questions": [
         {
@@ -986,7 +986,7 @@
     "long_instructions": "**Assessment:** Use a nested loop to complete the design."
   },
   "https://studio.code.org/s/course3/stage/11/puzzle/12": {
-    "dsl": {
+    "dsls": {
       "title": "Artist Loops Multiple Choice",
       "content1": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500",
       "questions": [
@@ -1140,7 +1140,7 @@
     "long_instructions": "**Assessment:** Collect all of the nectar and make all of the honey using loops."
   },
   "https://studio.code.org/s/course3/stage/13/puzzle/13": {
-    "dsl": {
+    "dsls": {
       "title": "Bee Loops Multiple Choice",
       "content1": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png",
       "questions": [
@@ -1242,7 +1242,7 @@
     "long_instructions": "**Assessment:** Fix the code."
   },
   "https://studio.code.org/s/course3/stage/14/puzzle/13": {
-    "dsl": {
+    "dsls": {
       "title": "Bee Debug Multiple Choice",
       "content1": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png",
       "content2": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png",
@@ -1318,7 +1318,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/18/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png",
       "questions": [
@@ -1347,7 +1347,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/18/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png",
       "questions": [
@@ -1376,7 +1376,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/19/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "questions": [
         {
@@ -1396,7 +1396,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/19/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "questions": [
         {
@@ -1424,7 +1424,7 @@
     }
   },
   "https://studio.code.org/s/course3/stage/20/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "questions": [
         {

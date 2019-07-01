@@ -64,13 +64,13 @@
     "display_name": "Lesson Overview"
   },
   "https://studio.code.org/s/csd5-2018/stage/6/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Decoding Binary Strings",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/csd5-2018/stage/6/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -79,13 +79,13 @@
     "display_name": "Lesson Overview"
   },
   "https://studio.code.org/s/csd5-2018/stage/7/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/csd5-2018/stage/7/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -114,7 +114,7 @@
     "display_name": "Lesson Overview"
   },
   "https://studio.code.org/s/csd5-2018/stage/11/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -132,7 +132,7 @@
     "display_name": "Lesson Overview"
   },
   "https://studio.code.org/s/csd5-2018/stage/13/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Pizza Survey",
       "content1": "description here"
     }

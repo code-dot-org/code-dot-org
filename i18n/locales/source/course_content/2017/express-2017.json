@@ -60,7 +60,7 @@
     "short_instructions": "This code includes a new block. What do you think would happen if you press the \"Run\" block?",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "This code uses a new block. What do you think would happen if you pressed 'Run'?"
@@ -141,7 +141,7 @@
   "https://studio.code.org/s/express-2017/stage/2/puzzle/14": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Based on the code below, what do you think will happen if you press 'Run'?"
@@ -246,7 +246,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  Why won't Laurel collect all of the treasure when you click \"Run\"? Warning: This is a tricky question, make sure you read all of the options before answering!"
@@ -416,7 +416,7 @@
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
@@ -513,7 +513,7 @@
     "long_instructions": "Make all of the honey.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
@@ -720,7 +720,7 @@
     "long_instructions": "_\"I don't know how much dirt is in this pile!\"_\n\nHelp the farmer remove this entire pile using a `while` loop.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What will happen after you click \"Run\"?"
@@ -804,7 +804,7 @@
     "short_instructions": "Flatten all of these piles using as few blocks as possible. ",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
@@ -864,7 +864,7 @@
   "https://studio.code.org/s/express-2017/stage/18/puzzle/3": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a close look at the code below.  What do you think will happen when you click \"Run\"?"
@@ -968,7 +968,7 @@
     "long_instructions": "Help the zombie get to the sunflower.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What will happen after you click \"Run\"?"
@@ -1207,7 +1207,7 @@
     "long_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a close look at the code below.  What will happen after you click \"Run\"?"
@@ -1276,7 +1276,7 @@
   "https://studio.code.org/s/express-2017/stage/22/puzzle/4": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
@@ -1449,7 +1449,7 @@
   "https://studio.code.org/s/express-2017/stage/23/puzzle/4": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What would happen if the user entered the name \"Ali\" at the prompt?"
@@ -1569,7 +1569,7 @@
   "https://studio.code.org/s/express-2017/stage/25/puzzle/4": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Read the code below.  What will happen when you click \"Run\"?"
@@ -1774,7 +1774,7 @@
   "https://studio.code.org/s/express-2017/stage/26/puzzle/11": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you click \"Run\"?"
@@ -1840,7 +1840,7 @@
     "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
@@ -1922,7 +1922,7 @@
     "long_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb!\n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"?"
@@ -2144,7 +2144,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you run this program?"
@@ -2419,7 +2419,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you click \"Run\"?"
@@ -2520,13 +2520,13 @@
     }
   },
   "https://studio.code.org/s/express-2017/stage/32/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/express-2017/stage/35/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }

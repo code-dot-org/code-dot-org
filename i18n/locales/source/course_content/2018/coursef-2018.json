@@ -1,6 +1,6 @@
 {
   "https://studio.code.org/s/coursef-2018/stage/2/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -99,13 +99,13 @@
     "long_instructions": "Get the bird to the pig."
   },
   "https://studio.code.org/s/coursef-2018/stage/2/puzzle/13": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/4/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -170,7 +170,7 @@
   "https://studio.code.org/s/coursef-2018/stage/4/puzzle/10": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
@@ -206,7 +206,7 @@
     "short_instructions": "Debug this level to get Scrat to the acorn."
   },
   "https://studio.code.org/s/coursef-2018/stage/4/puzzle/12": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -284,7 +284,7 @@
   "https://studio.code.org/s/coursef-2018/stage/5/puzzle/10": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
@@ -332,7 +332,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/7/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -374,7 +374,7 @@
     "long_instructions": "Solve this puzzle by drawing a square with 200 pixel sides."
   },
   "https://studio.code.org/s/coursef-2018/stage/7/puzzle/13": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -397,7 +397,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/8/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -407,7 +407,7 @@
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
@@ -504,7 +504,7 @@
     "long_instructions": "Make all of the honey.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
@@ -537,7 +537,7 @@
     ]
   },
   "https://studio.code.org/s/coursef-2018/stage/8/puzzle/15": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -611,7 +611,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/11/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -678,7 +678,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/11/puzzle/14": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -848,7 +848,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/15/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -856,7 +856,7 @@
   "https://studio.code.org/s/coursef-2018/stage/15/puzzle/5": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
@@ -999,7 +999,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "title": "Bee Variables Multi",
           "questions": [
             {
@@ -1074,7 +1074,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/17/puzzle/6": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -1115,7 +1115,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/19/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -1123,7 +1123,7 @@
   "https://studio.code.org/s/coursef-2018/stage/19/puzzle/5": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Read the code below.  What will happen when you click \"Run\"?"
@@ -1231,7 +1231,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/19/puzzle/14": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -1334,7 +1334,7 @@
   "https://studio.code.org/s/coursef-2018/stage/20/puzzle/11": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you click \"Run\"?"
@@ -1528,7 +1528,7 @@
     "display_name": "Sprite Lab Example Project"
   },
   "https://studio.code.org/s/coursef-2018/stage/25/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Begin planning your project",
       "content1": "description here"
     }
@@ -1546,7 +1546,7 @@
     "display_name": "Revise Sprite Lab Project"
   },
   "https://studio.code.org/s/coursef-2018/stage/28/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Prepare for yur presentation"
     }
   }

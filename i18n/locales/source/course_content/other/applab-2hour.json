@@ -40,7 +40,7 @@
     "long_instructions": "# Updating IDs and Debugging with Console Log\n\nHere we have a couple buttons with event handlers and `console.log` statements, but they are all switched around!\n\nWe should have given the buttons better ID names so we could tell the difference based on the ID. **Can you update the ID names and `console.log` messages to match the correct button?**\n\n# Do This\n\n-   **Change the IDs** of the buttons in Design Mode to more descriptive names.\n\n-   Switch to Code Mode and notice that the **ID pulldowns have been updated to include the new IDs**. (You still need to select the correct ID from the pulldown menu.)\n\n-   **Update the `console.log` messages** to match the buttons."
   },
   "https://studio.code.org/s/applab-2hour/stage/2/puzzle/5": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }

@@ -70,7 +70,7 @@
     "long_instructions": "# Multi-function Light\n\nThis app should let you choose between three types of lights: on, blink, and pulse.  It should also have a button that turns the light completely off.  Right now only the \"on\" button works, and the \"off\" button is completely missing.\n\n# Do This\n\n-   Add code to make the \"blink\" and \"pulse\" buttons work.\n-   In design mode, add a new \"off\" button.\n-   Add code to make the \"off\" button work."
   },
   "https://studio.code.org/s/csd6-2019/stage/3/puzzle/10": {
-    "dsl": {
+    "dsls": {
       "title": "Make an App Using the LED",
       "content1": "description here"
     }
@@ -388,7 +388,7 @@
     "display_name": "Arrays"
   },
   "https://studio.code.org/s/csd6-2019/stage/10/puzzle/9": {
-    "dsl": {
+    "dsls": {
       "title": "Using Arrays",
       "questions": [
         {
@@ -714,7 +714,7 @@
     "display_name": "Lesson Overview"
   },
   "https://studio.code.org/s/csd6-2019/stage/16/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "content1": "description here"
     }
   },

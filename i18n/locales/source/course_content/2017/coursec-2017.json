@@ -90,7 +90,7 @@
     "long_instructions": "_\"Keep calm and help me find the bad pig.\"_",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Read through the code below very carefully.  What will happen when you click \"Run\"?"
@@ -200,7 +200,7 @@
   "https://studio.code.org/s/coursec-2017/stage/3/puzzle/9": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
@@ -334,7 +334,7 @@
     "long_instructions": "name 'grade2_multi_collector_A_predict1'\nquestion 'Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?'\nwrong 'Laurel will collect 4 pieces of treasure using this code.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'\nright 'Laurel will try to collect treasure where there is not any and it causes an error.', feedback: 'Correct!'\nwrong 'Laurel will collect all of the treasure.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'\nwrong 'I don't know.', feedback: 'Laurel tries to collect treasure where there is none and it causes an error.'",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?"
@@ -457,7 +457,7 @@
   "https://studio.code.org/s/coursec-2017/stage/6/puzzle/10": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
@@ -517,7 +517,7 @@
     "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What do you think will happen when you click \"Run\"?"
@@ -622,7 +622,7 @@
     "short_instructions": "You are doing great! Keep it up!",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What will happen when you click \"Run\"?"
@@ -848,7 +848,7 @@
   "https://studio.code.org/s/coursec-2017/stage/10/puzzle/12": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below. How many pumpkins will the farmer collect after you click \"Run\"?"

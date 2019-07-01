@@ -1,18 +1,18 @@
 {
   "https://studio.code.org/s/netsim/stage/1/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Internet Simulator Setup",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/netsim/stage/1/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/netsim/stage/1/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Internet Simulator Setup 3",
       "content1": "description here"
     }

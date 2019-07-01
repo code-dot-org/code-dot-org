@@ -198,7 +198,7 @@
     "long_instructions": "_\"Keep calm and help me find the bad pig.\"_",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Read through the code below very carefully.  What will happen when you click \"Run\"?"
@@ -309,7 +309,7 @@
   "https://studio.code.org/s/express-2019/stage/3/puzzle/9": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
@@ -445,7 +445,7 @@
   "https://studio.code.org/s/express-2019/stage/4/puzzle/12": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look at this code carefully. What do you think will happen when the program runs?"
@@ -568,7 +568,7 @@
   "https://studio.code.org/s/express-2019/stage/5/puzzle/10": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
@@ -628,7 +628,7 @@
     "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What do you think will happen when you click \"Run\"?"
@@ -733,7 +733,7 @@
     "short_instructions": "You are doing great! Keep it up!",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What will happen when you click \"Run\"?"
@@ -902,7 +902,7 @@
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
@@ -999,7 +999,7 @@
     "long_instructions": "Make all of the honey.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
@@ -1221,7 +1221,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
@@ -1312,7 +1312,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"? Remember: there will only ever be *one* honeycomb or *one* flower behind each cloud."
@@ -1406,7 +1406,7 @@
     "long_instructions": "_\"I don't know how much dirt is in this pile!\"_\n\nHelp the farmer remove this entire pile using a `while` loop.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What will happen after you click \"Run\"?"
@@ -1493,7 +1493,7 @@
     "short_instructions": "Flatten all of these piles using as few blocks as possible. ",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
@@ -1596,7 +1596,7 @@
   "https://studio.code.org/s/express-2019/stage/14/puzzle/3": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a close look at the code below.  What do you think will happen when you click \"Run\"?"
@@ -1684,7 +1684,7 @@
     "long_instructions": "Help the zombie get to the sunflower.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What will happen after you click \"Run\"?"
@@ -1787,7 +1787,7 @@
     "long_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a close look at the code below.  What will happen after you click \"Run\"?"
@@ -2122,7 +2122,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look at the functions defined below.  What will the harvester pick?"
@@ -2162,7 +2162,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you press \"Run\"?"
@@ -2336,7 +2336,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you press the \"Run\" button?"
@@ -2430,7 +2430,7 @@
     }
   },
   "https://studio.code.org/s/express-2019/stage/19/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -2438,7 +2438,7 @@
   "https://studio.code.org/s/express-2019/stage/19/puzzle/5": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
@@ -2584,7 +2584,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "title": "Bee Variables Multi",
           "questions": [
             {
@@ -2659,7 +2659,7 @@
     }
   },
   "https://studio.code.org/s/express-2019/stage/21/puzzle/6": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -2700,7 +2700,7 @@
     }
   },
   "https://studio.code.org/s/express-2019/stage/22/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -2708,7 +2708,7 @@
   "https://studio.code.org/s/express-2019/stage/22/puzzle/5": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Read the code below.  What will happen when you click \"Run\"?"
@@ -2816,7 +2816,7 @@
     }
   },
   "https://studio.code.org/s/express-2019/stage/22/puzzle/14": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -2919,7 +2919,7 @@
   "https://studio.code.org/s/express-2019/stage/23/puzzle/11": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you click \"Run\"?"
@@ -3067,7 +3067,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Click the \"edit\" button to see how the `mystery behavior` works. Study the code inside, then make a prediction."
@@ -3133,7 +3133,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Make a prediction. Which way will the satellite move towards the galaxy?"
@@ -3226,7 +3226,7 @@
     "long_instructions": "**Free Play:** Your virtual pet is _VIRTUALLY AWESOME!_ \n\nWhat more can you do? Try these ideas:\n\n-   Change the background to a color or an image.\n-   Print more! Try printing _\"Yum! Energy increased!\"_ when the pet eats food it likes, or _\"Yuck! Energy reset!\"_ when it eats food it doesn't like.\n-   Add another sprite that interacts with your pet in a different way. How about a **toy** sprite?\n-   Add another variable that can affect your pet or the world. What might `happiness` or `age` do?\n-   Experiment with behaviors! Try editing the **wandering** behavior to slow down or speed up the food sprites (hint: their \"speed\" is currently 5...)."
   },
   "https://studio.code.org/s/express-2019/stage/28/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }

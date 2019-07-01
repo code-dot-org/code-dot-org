@@ -143,7 +143,7 @@
   "https://studio.code.org/s/coursef-2017/stage/4/puzzle/9": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
@@ -251,7 +251,7 @@
   "https://studio.code.org/s/coursef-2017/stage/5/puzzle/10": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
@@ -356,7 +356,7 @@
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
@@ -453,7 +453,7 @@
     "long_instructions": "Make all of the honey.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
@@ -645,7 +645,7 @@
   "https://studio.code.org/s/coursef-2017/stage/11/puzzle/12": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Based on the code below, what do you think will happen if you press \"Run\"?"
@@ -948,7 +948,7 @@
   "https://studio.code.org/s/coursef-2017/stage/16/puzzle/4": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
@@ -1121,7 +1121,7 @@
   "https://studio.code.org/s/coursef-2017/stage/17/puzzle/4": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What would happen if the user entered the name \"Ali\" at the prompt?"
@@ -1241,7 +1241,7 @@
   "https://studio.code.org/s/coursef-2017/stage/19/puzzle/4": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Read the code below.  What will happen when you click \"Run\"?"
@@ -1446,7 +1446,7 @@
   "https://studio.code.org/s/coursef-2017/stage/20/puzzle/11": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you click \"Run\"?"
@@ -1512,7 +1512,7 @@
     "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
@@ -1594,7 +1594,7 @@
     "long_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb!\n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"?"
@@ -1816,7 +1816,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you run this program?"
@@ -2091,7 +2091,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you click \"Run\"?"
@@ -2192,13 +2192,13 @@
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/26/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/29/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }

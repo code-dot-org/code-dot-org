@@ -1,6 +1,6 @@
 {
   "https://studio.code.org/s/course1/stage/1/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
       "questions": [
@@ -29,7 +29,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/2/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png",
       "questions": [
@@ -97,7 +97,7 @@
     "short_instructions": "Move one way, then another to get me to the pig."
   },
   "https://studio.code.org/s/course1/stage/4/puzzle/14": {
-    "dsl": {
+    "dsls": {
       "title": "Maze",
       "content1": "/script_assets/k_1_images/maze_images/maze_WS.png, 500",
       "questions": [
@@ -126,7 +126,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/4/puzzle/15": {
-    "dsl": {
+    "dsls": {
       "title": "Matching",
       "content2": "Match the puzzles and blocks",
       "pre_title": "Instructions",
@@ -208,7 +208,7 @@
     "short_instructions": "This is a test!\nDebug this level by rearranging and changing blocks to get me to the pig"
   },
   "https://studio.code.org/s/course1/stage/5/puzzle/12": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/maze_images/EESq.png, 700",
       "questions": [
@@ -252,7 +252,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/6/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png",
       "questions": [
@@ -277,7 +277,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/6/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png",
       "questions": [
@@ -341,7 +341,7 @@
     "short_instructions": "Get two nectar to make two honey!"
   },
   "https://studio.code.org/s/course1/stage/7/puzzle/14": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png",
       "questions": [
@@ -370,7 +370,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/7/puzzle/15": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png",
       "questions": [
@@ -429,7 +429,7 @@
     "short_instructions": "Draw the dashed line by using both the jump and draw blocks"
   },
   "https://studio.code.org/s/course1/stage/8/puzzle/11": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500",
       "questions": [
@@ -458,7 +458,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/8/puzzle/12": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/artist_images/square.png, 500",
       "questions": [
@@ -545,7 +545,7 @@
     "short_instructions": "Assessment: Draw a square next to the other square."
   },
   "https://studio.code.org/s/course1/stage/10/puzzle/9": {
-    "dsl": {
+    "dsls": {
       "title": "Matching",
       "content2": "Match the shapes based on type.",
       "questions": [
@@ -582,7 +582,7 @@
     "short_instructions": "Draw anything!"
   },
   "https://studio.code.org/s/course1/stage/11/puzzle/11": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/search_images/move.png, 450",
       "questions": [
@@ -607,7 +607,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/11/puzzle/12": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/search_images/square.png, 700",
       "questions": [
@@ -632,7 +632,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/12/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png",
       "questions": [
@@ -703,7 +703,7 @@
     "short_instructions": "Use `repeat` loops to get me to the pig!"
   },
   "https://studio.code.org/s/course1/stage/13/puzzle/13": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/move_blocks/NNNequals.png, 300",
       "questions": [
@@ -728,7 +728,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/13/puzzle/14": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "content1": "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240",
       "questions": [
@@ -809,7 +809,7 @@
     "short_instructions": "Get all of the nectar and all of the honey."
   },
   "https://studio.code.org/s/course1/stage/14/puzzle/13": {
-    "dsl": {
+    "dsls": {
       "title": "Matching",
       "content2": "Match the blocks",
       "questions": [
@@ -861,7 +861,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/15/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Matching",
       "content1": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png",
       "content2": "Match the button combination to the dance moves.",
@@ -910,7 +910,7 @@
     }
   },
   "https://studio.code.org/s/course1/stage/17/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Multiple Choice",
       "questions": [
         {

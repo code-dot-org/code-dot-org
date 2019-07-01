@@ -46,25 +46,25 @@
     "display_name": "Binary and Data"
   },
   "https://studio.code.org/s/csd5-2017/stage/6/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Decoding Binary Strings",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/csd5-2017/stage/6/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/csd5-2017/stage/7/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/csd5-2017/stage/7/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -81,7 +81,7 @@
     "long_instructions": "Watch this video to learn how this problem is solved by Amazon. As you watch think about what data is being collected and where it's coming from."
   },
   "https://studio.code.org/s/csd5-2017/stage/11/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -93,13 +93,13 @@
     "long_instructions": "# Pizza Party\n\nWhen people work with data, they know to leave off answers that don't make sense, and that some answers, such as \"peppers\", \"pepppers\" and \"green peppers\", actually meant the same thing. Computers don't know how to do this, so we have to clean the data before the computer is able to use it.\n\nThis version of the app has a second column for data to be cleaned.\n\n## Do this\n\n-   Click \"Run\" to see the new list of answers to be cleaned.\n-   Click on each answer that needs to be cleaned and correct it so that the computer will chart it properly. (You may want to delete some answers entirely.)\n-   When you are finished, click \"Show Chart\" to see the new chart of cleaned answers."
   },
   "https://studio.code.org/s/csd5-2017/stage/13/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/csd5-2017/stage/13/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Pizza Survey",
       "content1": "description here"
     }

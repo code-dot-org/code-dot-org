@@ -1,12 +1,12 @@
 {
   "https://studio.code.org/s/csd2-2017/stage/2/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/csd2-2017/stage/3/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -37,7 +37,7 @@
     "long_instructions": "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>What is a paragraph element?</strong>\n</summary>\nParagraphs are marked by opening( `<p>` ) and closing( `</p>` ) tags. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\n</details>\n<details>\n<summary>\n<strong>Why does HTML seem to work even when it's broken?</strong>\n</summary>\nHTML is read by your web browser to generate web pages. Since people often make little mistakes when writing their web pages, browsers are programmed to make a best guess of what you intended to do. Sometimes different browsers are even programmed to make different guesses! The only way to ensure your code looks like you intend is make sure you're always using tags correctly.\n</details>\n<details>\n<summary>\n<strong>Why does the code sometimes turn pink?</strong>\n</summary>\n\nWeb Lab is programmed to automatically detect some mistakes in HTML.  When it notices a mistake, it turns that code pink.  The mistake might be in pink, or it might be somewhere before the pink code.  You'll need to carefully debug to find your mistake.\n\n</details>\n</div>\n\n# Debug: Fix the Broken Tags\n\nThis simple web page has some issues which are preventing the content from being displayed correctly. Identify and fix the issues. This practice is also called \"debugging\" your code.\n\n# Do This\n\n-   Fix the broken code so that the web page displays correctly\n-   Compare the problems you fixed with a neighbor"
   },
   "https://studio.code.org/s/csd2-2017/stage/4/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -54,7 +54,7 @@
     "long_instructions": "# Heading Sizes\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>What are headings?</strong>\n\n</summary>\nHeadings are the different sized section titles throughout a web page. Headings add structure to your web page by breaking it up so its easier for a user to read.\n</details>\n<details>\n<summary><strong>How do I make different sized headings?</strong>\n\n</summary>\nHeadings come in 6 different sizes.  The most common heading is &lt;h1&gt; The number 1 in the HTML tag designates that this is the biggest heading. The smallest heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, and &lt;h5&gt; tags which get smaller as the number gets larger.\n</details>\n<details>\n<summary><strong>What is HTML?</strong>\n\n</summary>\nHTML stands for Hypertext Markup Language. HTML is used to add structure to the content of a web page. HTML uses tags to specify where certain structures start and end. These tags are sets of characters not found in the English language so that the content and structure can be differentiated. \n</details>\n<details>\n<summary><strong>What is an HTML element?</strong>\n\n</summary>\nAn HTML element is a piece of a website that is marked by a start tag and sometimes closed with an end tag. The element also includes the content inside the tags. For example: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n</details>\n<details>\n<summary><strong>What is an HTML tag?</strong>\n\n</summary>\n\nAn HTML tag is the special set of characters that tells the machine where the start or end of an HTML element is and what type it is.\n\n</details>\n</div>\n\nHeadings can come in different sizes.  In this page, there are six different sized headings, but they are all mixed up.  Can you and your partner figure out how to fix them?\n\nDo This:\n\n-   Use the inspector tool to figure out what makes the headings different sizes\n-   Make sure you and your partner agree on what the different heading tags do.\n-   Change the tags so that the headings are in order from biggest to smallest, and the text says the correct size, as in the picture below. \n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15 PM.png\" style=\"width:100px; float:left\">"
   },
   "https://studio.code.org/s/csd2-2017/stage/4/puzzle/5": {
-    "dsl": {
+    "dsls": {
       "title": "Headings Quick Check",
       "content1": "Look at the code below and predict how the headings will be displayed.  Choose from one of the options on the right.",
       "answers": [
@@ -85,7 +85,7 @@
     "display_name": "Headings in HTML"
   },
   "https://studio.code.org/s/csd2-2017/stage/4/puzzle/9": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -94,13 +94,13 @@
     "long_instructions": "# Start Your Project\n\nNow that you have a plan for your personal website, you can start coding it here.  Don't worry if you can't do everything you want today.  You'll have plenty of chances to improve your work as you learn more about developing websites.\n\n# Do This\n\n-   Use HTML to create the page that you sketched out.  Make sure it includes\n    -   At least **two headings of different sizes**\n    -   At least **one paragraph**\n-   **Reflect** on your page by comparing to your sketch and showing it to your partner"
   },
   "https://studio.code.org/s/csd2-2017/stage/5/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
   },
   "https://studio.code.org/s/csd2-2017/stage/6/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -115,7 +115,7 @@
     "long_instructions": "# Unordered Lists\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>What are the two types of lists?</strong>\n</summary>\n There are two types of lists in HTML, ordered and unordered lists.\n</details>\n<details>\n<summary><strong>What is an unordered list?</strong>\n</summary>\n\nAn unordered list is just a set of bulleted items.\n<br /><br />An unordered list element has the tag \\<ul> . This is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist. Each item in the list is marked by a list item element \\<li>. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the unordered list (\\<ul>).\n\n</details>\n\n<details>\n<summary><strong>How do I make an unordered list?</strong>\n</summary>\n\nMaking an unordered list has two steps: making the list and adding the list items.  To make the unordered list, write the unordered list tags `<ul></ul>`.  Next, add your list items **inside** the unordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.\n\nIt can be helpful to indent your \\<li> tags so it's clear they are contained in the \\<ul> tag.\n\n</details>\n\n<details>\n<summary><strong>Show me working code.</strong>\n</summary>\n\n<table border=\"1\">\n<tr>\n<td>Example</td>\n<td>Result</td>\n</tr>\n<tr>\n<td><pre> &lt;ul&gt; <br>   &lt;li&gt;Red &lt;/li&gt; <br>   &lt;li&gt;Green &lt;/li&gt; <br>   &lt;li&gt;Blue&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>\n<td><img src=\"https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n</details>\n</div>\n\nThis page should have an unordered list, but it's missing the list tags.\n\n# Do This\n\n-   Use the `<ul>` and `<li>` tags to structure the content into an unordered list like the picture below.\n\n[][0]"
   },
   "https://studio.code.org/s/csd2-2017/stage/6/puzzle/5": {
-    "dsl": {
+    "dsls": {
       "title": "Lists Quick Check",
       "content1": "Match the list to the code that makes it.",
       "questions": [
@@ -158,7 +158,7 @@
     "display_name": "Lists in HTML"
   },
   "https://studio.code.org/s/csd2-2017/stage/6/puzzle/7": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -188,7 +188,7 @@
     "long_instructions": "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n<h2>\nChecklist\n</h2>\n\n<input type=\"checkbox\" style=\"float: left\"><span style=\"display: block; margin-left: 20px; margin-bottom: 10px\">Ensure that your image is properly licensed</span>\n<input type=\"checkbox\" style=\"float: left\"><span style=\"display: block; margin-left: 20px; margin-bottom: 10px\">Upload image into Web Lab</span>\n<input type=\"checkbox\" style=\"float: left\"><span style=\"display: block; margin-left: 20px; margin-bottom: 10px\">Create an image tag with a descriptive alt attribute</span>\n<input type=\"checkbox\" style=\"float: left\"><span style=\"display: block; margin-left: 20px; margin-bottom: 10px\">If the image isn't your own, add attribution underneath<br/>\n\n</div>\n\n# Adding Images to Your Site\n\nYou've already created some pages with great content on your website, now you can add some images!\n\n# Do This\n\nUsing either your own images or those found through a Commons Search, add some images to the pages you've already created. Get creative! Use the checklist to the right to keep track of the steps you need to follow when adding images."
   },
   "https://studio.code.org/s/csd2-2017/stage/8/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "content1": "description here"
     }
   },
@@ -224,7 +224,7 @@
     "long_instructions": "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>What are hyperlinks?</strong>\n</summary>\n\nHyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\n\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>\n\n<pre>\n&lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;\n</pre>\n\n</details>\n<details>\n<summary>\n<strong>How do I add a hyperlink?</strong>\n</summary>\n\nYou can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\n\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>\n\n<pre>\n&lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;\n</pre>\n\n</details>\n</div>\n\n# Create a Navigation Bar\n\nHere's your project from before.  You'll be linking the two pages by creating a **navigation bar** at the top of the page.  Websites usually have the same navigation bar across all of their pages so you can get back and forth between things on the site.  You can see an example of a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\" target=\"_new\">this page</a>\n\n# Do This\n\n-   In your home page (index.html), add two hyperlinks at the top of the page, one to your lists page, and one to the home page.\n    -   _Even though it might seem strange to link a page to itself, it's less confusing if the navigation bar is exactly the same on every page._\n-   Copy the code for the navigation bar, then add it to the top of your lists page.\n-   Test your links in the preview area by clicking on them."
   },
   "https://studio.code.org/s/csd2-2017/stage/9/puzzle/5": {
-    "dsl": {
+    "dsls": {
       "title": "Your Personal Website",
       "content1": "description here"
     }

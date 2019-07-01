@@ -4,7 +4,7 @@
     "long_instructions": "Have you ever wondered \"Exactly what is computer science?\" Or, \"Why are some computer programs written with words and some are written using images?\" If so, watch this video; it's a great introduction to the field of computer science."
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -114,7 +114,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
@@ -216,7 +216,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you press \"Run\"?"
