@@ -140,7 +140,7 @@ class SchoolInfo < ActiveRecord::Base
     ['US', 'USA', 'United States'].include? country
   end
 
-  def should_check_for_full_or_no_validation?
+  def should_check_for_full_validation?
     !(validation_type == VALIDATION_NONE || validation_type == VALIDATION_COMPLETE)
   end
 
@@ -165,7 +165,7 @@ class SchoolInfo < ActiveRecord::Base
   #
   # This method reports errors if the record has a country and is invalid.
   def validate_with_country
-    return unless country && should_check_for_full_or_no_validation?
+    return unless country && should_check_for_full_validation?
     usa? ? validate_us : validate_non_us
   end
 
@@ -241,7 +241,7 @@ class SchoolInfo < ActiveRecord::Base
   # validate records in the older data format (see school_info_test.rb for details).
   # This method reports errors if the record does NOT have a country and is invalid.
   def validate_without_country
-    return unless should_check_for_full_or_no_validation?
+    return unless should_check_for_full_validation?
     return if country
 
     # don't allow any new fields in the old data format.
