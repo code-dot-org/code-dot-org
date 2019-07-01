@@ -10,46 +10,29 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   end
 
   # PATCH /api/v1/users_school_infos
-  # def update
-  #   return unless school_info_params[:school_id].present? || school_info_params[:country].present?
-
-  #   existing_school_info = current_user.last_complete_school_info
-  #   existing_school_info&.assign_attributes school_info_params
-  #   if existing_school_info.nil? || existing_school_info.changed?
-  #     submitted_school_info = SchoolInfo.where(school_info_params).
-  #       first_or_create(validation_type: SchoolInfo::VALIDATION_NONE)
-  #     current_user.update! school_info: submitted_school_info
-  #     current_user.user_school_infos.where(school_info: submitted_school_info).
-  #       update(last_confirmation_date: DateTime.now)
-  #   else
-  #     current_user.user_school_infos.where(school_info: existing_school_info).
-  #       update(last_confirmation_date: DateTime.now)
-  #   end
-  # end
-
   def update
     return unless school_info_params[:school_id].present? || school_info_params[:country].present?
 
-    if school_info_params[:country]&.downcase&.eql? 'united states'
-      school_info_params[:country] = 'US'
-    end
+    new_school_info_params =
+      if school_info_params[:full_address]&.blank?
+        school_info_params.except(:full_address)
+      else
+        school_info_params
+      end
 
-    if school_info_params[:full_address]&.blank?
-      new_school_info_params = school_info_params.merge!(full_address: nil)
+    if new_school_info_params[:country]&.downcase&.eql? 'united states'
+      new_school_info_params[:country] = 'US'
     end
-
-    # new_school_info_params = school_info_params.reject{ |_, v| v.blank? }
 
     existing_school_info = current_user.last_complete_school_info
-    existing_school_info&.assign_attributes new_school_info_params
+    existing_school_info&.assign_attributes school_info_params
     if existing_school_info.nil? || existing_school_info.changed?
-      submitted_school_info = SchoolInfo.where(new_school_info_params).
+      submitted_school_info = SchoolInfo.where(school_info_params).
         first_or_create(validation_type: SchoolInfo::VALIDATION_NONE)
       current_user.update! school_info: submitted_school_info
       current_user.user_school_infos.where(school_info: submitted_school_info).
         update(last_confirmation_date: DateTime.now)
     else
-      puts "do I make it here?"
       current_user.user_school_infos.where(school_info: existing_school_info).
         update(last_confirmation_date: DateTime.now)
     end
