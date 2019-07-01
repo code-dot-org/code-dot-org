@@ -204,6 +204,40 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert_equal 'School name is required', school_info.errors.full_messages.first
   end
 
+  # Test VALIDATION_COMPLETE
+
+  test 'US public school with school_type and name succeeds' do
+    school_info = SchoolInfo.create(
+      {country: 'US',
+      school_type: 'public',
+      school_name: 'Philly High Harmony',
+      validation_type: SchoolInfo::VALIDATION_COMPLETE}
+    )
+    assert school_info.valid? school_info.errors.full_messages
+  end
+
+  test 'School info with only school type and name school does not succeed' do
+    school_info = SchoolInfo.create(
+      {country: nil,
+      school_type: 'private',
+      school_name: 'Grovers Academy',
+      validation_type: SchoolInfo::VALIDATION_COMPLETE}
+    )
+    refute school_info.valid?
+    assert_equal 'Country is required', school_info.errors.full_messages.first
+  end
+
+  test 'US private school with only school type does not succeed' do
+    school_info = SchoolInfo.create(
+      {country: 'US',
+      school_type: 'private',
+      school_name: '',
+      validation_type: SchoolInfo::VALIDATION_COMPLETE}
+    )
+    refute school_info.valid?
+    assert_equal 'School name cannot be blank', school_info.errors.full_messages.first
+  end
+
   # US, charter
 
   test 'US charter with school succeeds' do

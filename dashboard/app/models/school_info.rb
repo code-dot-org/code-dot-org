@@ -277,7 +277,7 @@ class SchoolInfo < ActiveRecord::Base
     return if validation_type != VALIDATION_COMPLETE || complete?
 
     errors.add(:country, "is required") if country.nil?
-    errors.add(:school_name, "can not be blank") if school_name.blank?
+    errors.add(:school_name, "cannot be blank") if school_name.blank?
   end
 
   def effective_school_district_name
