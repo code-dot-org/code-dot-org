@@ -25,9 +25,9 @@ class Api::V1::UserSchoolInfosController < ApplicationController
     end
 
     existing_school_info = current_user.last_complete_school_info
-    existing_school_info&.assign_attributes school_info_params
+    existing_school_info&.assign_attributes new_school_info_params
     if existing_school_info.nil? || existing_school_info.changed?
-      submitted_school_info = SchoolInfo.where(school_info_params).
+      submitted_school_info = SchoolInfo.where(new_school_info_params).
         first_or_create(validation_type: SchoolInfo::VALIDATION_NONE)
       current_user.update! school_info: submitted_school_info
       current_user.user_school_infos.where(school_info: submitted_school_info).
