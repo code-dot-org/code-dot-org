@@ -139,6 +139,38 @@ class TextToSpeechTest < ActiveSupport::TestCase
     assert_equal "long instructions in another language\n", translatable_level.tts_long_instructions_text
   end
 
+  test 'tts works for non-english contained levels' do
+    contained_level = create :level, name: 'contained level multi', type: 'Multi', properties: {
+      'markdown': 'Contained',
+      'questions': [{'text': 'Question text'}],
+      'answers': [
+        {"text" => "answer 1", "correct" => false},
+        {"text" => "answer 2", "correct" => true},
+        {"text" => "answer 3", "correct" => true},
+      ]
+    }
+    outer_level = create :level, name: 'level 4', type: 'Blockly'
+    outer_level.contained_level_names = [contained_level.name]
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "multi" => {
+          contained_level.name => {
+            'Question text': 'texte de la question',
+            'answer 1': 'réponse un',
+            'answer 2': 'réponse deux',
+            'answer 3': 'réponse troi'
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+    assert_equal "Contained\ntexte de la question\nréponse un\nréponse deux\nréponse troi\n", outer_level.tts_long_instructions_text
+  end
+
   test 'tts ignores overrides for non-english' do
     translatable_level = create :level, name: 'TTS test Short Instructions',
       type: 'Blockly', short_instructions: "regular instructions in English",
