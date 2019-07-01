@@ -3,17 +3,14 @@
 # - Manually build docker image using Dockerfile in this directory and push to ECR repository in same account + region as this stack
 #
 # Manual steps needed after stack creation:
-# - Configure Cloudwatch Event Rule to run Fargate task once per day with the following settings:
-#     Fixed rate of: 1 days
+# - Finish configuring Cloudwatch Event Rule to run Fargate task once per day with the following settings:
 #     Target: ECS task
-#       Cluster: ECS cluster from this stack
-#       Task Definition: Task Definition from this stack, latest revision
 #       Launch Type: Fargate
 #       Network Configuration:
 #         Subnet: A Private Subnet from VPC stack output
 #         Security Groups: default security group for VPC
 #         Auto-assign Public IP: DISABLED
-#       Role: CWEInvokeECSRole from this stack
+# - Enable Cloudwatch Event Rule
 
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation template to create an Fargate cluster and task definition for running Aurora backup verification.
@@ -120,21 +117,21 @@ Resources:
       LogGroupName: !Sub "ECSLogGroup-${AWS::StackName}"
       RetentionInDays: 14
 
-# Currently, a Cloudwatch Event Rule which runs a fargate task can't be configured via CloudFormation:
+# Currently, a Cloudwatch Event Rule which runs a fargate task can't be fully configured via CloudFormation:
 # https://github.com/aws/containers-roadmap/issues/92
-# For now, we manually configure this rule (see instructions in comments at top of file)
-
-#  OncePerDayRule:
-#    Type: AWS::Events::Rule
-#    Properties: 
-#      Description: Run aurora backups verification once per day.
-#      Name: !Sub "${AWS::StackName}-OncePerDay"
-#      RoleArn: String
-#      ScheduleExpression: rate(1 day)
-#      Targets:
-#        - Arn: !GetAtt ECSCluster.Arn
-#          RoleArn: !GetAtt CWEInvokeECSRole.Arn
-#          Id: FargateAuroraVerifyBackupsTarget
-#          EcsParameters:
-#            TaskCount: 1
-#            TaskDefinitionArn: !Ref TaskDefinition
+# For now, the stack will create the Rule, but it must be manually configured and enabled (see instructions in comments at top of file)
+  OncePerDayRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: Run aurora backups verification once per day.
+      Name: !Sub "${AWS::StackName}-OncePerDay"
+      RoleArn: !GetAtt CWEInvokeECSRole.Arn
+      ScheduleExpression: rate(1 day)
+      State: DISABLED
+      Targets:
+        - Arn: !GetAtt ECSCluster.Arn
+          RoleArn: !GetAtt CWEInvokeECSRole.Arn
+          Id: FargateAuroraVerifyBackupsTarget
+          EcsParameters:
+            TaskCount: 1
+            TaskDefinitionArn: !Ref TaskDefinition

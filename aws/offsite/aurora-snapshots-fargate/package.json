@@ -7,7 +7,7 @@
     "test": "mocha"
   },
   "author": "",
-  "license": "ISC",
+  "license": "apache-2.0",
   "dependencies": {
     "aws-sdk": "latest",
     "promise-mysql": "latest"
