@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
+import $ from 'jquery';
 
 export default class StudentFeedbackNotification extends Component {
   static propTypes = {
