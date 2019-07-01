@@ -264,7 +264,7 @@ function stages(state = [], action) {
   return newState;
 }
 
-function levelKeyList(state = [], action) {
+function levelKeyList(state = {}, action) {
   switch (action.type) {
     case INIT:
       return action.levelKeyList;
