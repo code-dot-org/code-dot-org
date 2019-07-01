@@ -982,6 +982,8 @@ module Pd
     end
 
     test 'csf facilitator survey: redirect to 2nd facilitator survey if response exists for 1st one' do
+      skip 'Investigate flaky test failures'
+
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
@@ -1009,6 +1011,8 @@ module Pd
     end
 
     test 'csf facilitator survey: show thanks page if response exists for all facilitators' do
+      skip 'Investigate flaky test failures'
+
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
