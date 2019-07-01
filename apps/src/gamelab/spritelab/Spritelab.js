@@ -8,13 +8,13 @@ var Spritelab = function() {
   this.reset = () => spriteUtils.reset();
 
   this.preview = function() {
-    if (!this.areAnimationsReady_()) {
-      return;
-    }
     spriteUtils.reset();
     getStore().dispatch(clearConsole());
     Sounds.getSingleton().muteURLs();
     if (this.gameLabP5.p5 && this.JSInterpreter) {
+      if (!this.areAnimationsReady_()) {
+        return;
+      }
       this.gameLabP5.p5.allSprites.removeSprites();
       this.JSInterpreter.deinitialize();
       this.initInterpreter(false /* attachDebugger */);
