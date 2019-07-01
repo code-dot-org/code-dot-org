@@ -14,7 +14,8 @@
   - else
     = f.hidden_field :name
   .edit_container
-  - scriptData = {script: @script ? @script.summarize(false) : {},
+  - include_stages = params[:beta].present?
+  - scriptData = {script: @script ? @script.summarize(include_stages) : {},
                   i18n: @script ? @script.summarize_i18n : {},
                   beta: params[:beta].present?,
                   levelKeyList: params[:beta] && Level.key_list,
