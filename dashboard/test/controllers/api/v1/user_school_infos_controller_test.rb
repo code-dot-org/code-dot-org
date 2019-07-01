@@ -401,7 +401,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal @teacher.user_school_infos.count, 2
     new_tenure = @teacher.user_school_infos.last
     assert_nil new_tenure.school_info.school_name
-    # assert_same_date Time.now, new_tenure.last_confirmation_date
+    assert_same_date Time.now, new_tenure.last_confirmation_date
   end
 
   test 'confirmation, partial previous, partial, manual' do
