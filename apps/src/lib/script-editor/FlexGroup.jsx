@@ -48,7 +48,7 @@ class FlexGroup extends Component {
     addGroup: PropTypes.func.isRequired,
     addStage: PropTypes.func.isRequired,
     stages: PropTypes.array.isRequired,
-    levelKeyList: PropTypes.array.isRequired
+    levelKeyList: PropTypes.object.isRequired
   };
 
   handleAddGroup = () => {
