@@ -199,7 +199,7 @@
   "https://studio.code.org/s/csd3-2019/stage/6/puzzle/5": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "When run, where will the sprite <code>mySprite</code> be located?"
@@ -250,7 +250,7 @@
     "long_instructions": "# Resizing with Scale\n\nIn the _Sprites_ drawer of the toolbox, you'll see a new block called `sprite.scale`. It lets you change the size of a sprite in relation to its original size. `sprite.scale = 1` is the normal size. `sprite.scale = 0.5` makes your sprite half as big, while `sprite.scale = 2` makes it twice as big.\n\n# Do This\n\nThe program should already include your newly uploaded image, but it's probably not the _perfect_ size. Use `sprite.scale` to change the size of your `kite` sprite.\n\n_Hint: the order of your code matters! You need to add `sprite.scale` **after** you've created the sprite, but **before** you draw the sprite with `drawSprites()`. For clarity, try to keep all of your sprite code together at the top of your program._"
   },
   "https://studio.code.org/s/csd3-2019/stage/6/puzzle/12": {
-    "dsl": {
+    "dsls": {
       "title": "drawSprites",
       "content1": "Match the code to the image that it will produce.",
       "questions": [
@@ -389,7 +389,7 @@
   "https://studio.code.org/s/csd3-2019/stage/9/puzzle/6": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Read this program and predict which of the following animations will be produced."
@@ -471,7 +471,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "title": "title",
           "questions": [
             {
@@ -509,7 +509,7 @@
     "long_instructions": "# Boolean Expressions\n\nThe simplest Boolean expressions are questions that the computer can answer with true or false. \nAnother way to say this is that Boolean expressions **evaluate** to `true` or `false`.\n\n# Do This\n\nCan you modify the values of the sprite properties so that each of the Boolean expressions evaluates to `true`?\n\n-   Read through the entire program to see how `sprite1` and `sprite2` are being created and which properties are compared.\n-   For each of the Boolean expressions, identify the sprite properties being compared.\n-   Change the code _in the first **11** lines only_ so that each of the `console.log()` statements print `true`."
   },
   "https://studio.code.org/s/csd3-2019/stage/11/puzzle/5": {
-    "dsl": {
+    "dsls": {
       "title": "Matching: Comparison Operators",
       "content1": "Match the boolean expression to the English description.",
       "questions": [
@@ -669,7 +669,7 @@
     ]
   },
   "https://studio.code.org/s/csd3-2019/stage/13/puzzle/10": {
-    "dsl": {
+    "dsls": {
       "title": "Matching: Responding to Keypresses",
       "content1": "Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.",
       "questions": [
@@ -721,7 +721,7 @@
     "long_instructions": "# Example Project\n\nRun the program a few times and answer the following questions:\n\n1.  Which elements appear to use drawing commands?\n\n2.  Which elements appear to be Sprites?\n\n3.  For each Sprite, which properties are being updated?\n\n4.  Where do you see conditionals being used?\n\n5.  Are there elements that you don’t understand?"
   },
   "https://studio.code.org/s/csd3-2019/stage/14/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Making an Interactive Card",
       "content1": "description here"
     }
@@ -1006,7 +1006,7 @@
   "https://studio.code.org/s/csd3-2019/stage/19/puzzle/5": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "answers": [
             {
               "text": "The red square will be drawn but the green one will not. You cannot call functions after they are created.",
@@ -1118,7 +1118,7 @@
     "long_instructions": "# Platform Jumper\n\nThe game on the left is an example of a platform jumper.  Press \"Run\" to play it.  You can make the alien jump with the up arrow, and move it to the left and right with the arrow keys.  You score by collecting stars, and if you score high enough, the background will change.\n\nYou already know how to use all the blocks you need to make a game just like this one, and you'll be making your own platform jumper in this lesson."
   },
   "https://studio.code.org/s/csd3-2019/stage/21/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Build a Platform Jumper",
       "content1": "description here"
     }
@@ -1195,7 +1195,7 @@
     "display_name": "Lesson Overview"
   },
   "https://studio.code.org/s/csd3-2019/stage/22/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "title": "Create Your Own Game",
       "content1": "description here"
     }

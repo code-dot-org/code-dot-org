@@ -143,7 +143,7 @@
   "https://studio.code.org/s/coursee-2017/stage/4/puzzle/9": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
@@ -251,7 +251,7 @@
   "https://studio.code.org/s/coursee-2017/stage/5/puzzle/10": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
@@ -356,7 +356,7 @@
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
@@ -453,7 +453,7 @@
     "long_instructions": "Make all of the honey.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
@@ -614,7 +614,7 @@
     "short_instructions": "This code includes a new block. What do you think would happen if you press the \"Run\" block?",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "This code uses a new block. What do you think would happen if you pressed 'Run'?"
@@ -727,7 +727,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What do you think will happen when you click \"Run\"? "
@@ -789,7 +789,7 @@
   "https://studio.code.org/s/coursee-2017/stage/12/puzzle/9": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What do you think will happen in this puzzle when you press 'Run'?"
@@ -860,7 +860,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you press \"Run\"?"
@@ -1019,7 +1019,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you press the \"Run\" button?"
@@ -1205,7 +1205,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click \"Run\"?"
@@ -1408,7 +1408,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look at the functions defined below.  What will the harvester pick?"
@@ -1690,7 +1690,7 @@
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/22/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -1704,7 +1704,7 @@
     "display_name": "Course E Artist Project"
   },
   "https://studio.code.org/s/coursee-2017/stage/24/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }

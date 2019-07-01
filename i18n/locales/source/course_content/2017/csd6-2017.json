@@ -8,7 +8,7 @@
   "https://studio.code.org/s/csd6-2017/stage/2/puzzle/3": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "title": "Make a Prediction",
           "questions": [
             {
@@ -104,7 +104,7 @@
     "long_instructions": "# Multi-function Light\n\nThis app should let you choose between three types of lights: on, blink, and pulse.  It should also have a button that turns the light completely off.  Right now only the \"on\" button works, and the \"off\" button is completely missing.\n\n# Do This\n\n-   Add code to make the \"blink\" and \"pulse\" buttons work.\n-   In design mode, add a new \"off\" button.\n-   Add code to make the \"off\" button work."
   },
   "https://studio.code.org/s/csd6-2017/stage/3/puzzle/10": {
-    "dsl": {
+    "dsls": {
       "title": "Make an App Using the LED",
       "content1": "description here"
     }
@@ -410,7 +410,7 @@
     "long_instructions": "# Using Variables\n\nThis program is like the last one, but the icons should always match the colors (red heart, yellow star, green leaf, and blue water).  You can do this using the variable \"myIndex\", which will store the value of a random number so that it can be used to get the icon and the color from the same place on each list.\n\n# Do This\n\n-   Change the code so that both the icon and its color are chosen using the \"myIndex\" variable."
   },
   "https://studio.code.org/s/csd6-2017/stage/10/puzzle/8": {
-    "dsl": {
+    "dsls": {
       "title": "Using Arrays",
       "questions": [
         {
@@ -710,7 +710,7 @@
     "display_name": "Lesson Overview"
   },
   "https://studio.code.org/s/csd6-2017/stage/16/puzzle/2": {
-    "dsl": {
+    "dsls": {
       "content1": "description here"
     }
   },

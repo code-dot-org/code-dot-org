@@ -323,7 +323,7 @@
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
@@ -420,7 +420,7 @@
     "long_instructions": "Make all of the honey.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
@@ -474,7 +474,7 @@
   "https://studio.code.org/s/coursef-2019/stage/7/puzzle/4": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
@@ -697,7 +697,7 @@
   "https://studio.code.org/s/coursef-2019/stage/12/puzzle/4": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Read the code below.  What will happen when you click \"Run\"?"
@@ -902,7 +902,7 @@
   "https://studio.code.org/s/coursef-2019/stage/13/puzzle/11": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you click \"Run\"?"
@@ -971,7 +971,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Click the \"edit\" button to see how the `mystery behavior` works. Study the code inside, then make a prediction."
@@ -1037,7 +1037,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Make a prediction. Which way will the satellite move towards the galaxy?"
@@ -1130,7 +1130,7 @@
     "long_instructions": "**Free Play:** Your virtual pet is _VIRTUALLY AWESOME!_ \n\nWhat more can you do? Try these ideas:\n\n-   Change the background to a color or an image.\n-   Print more! Try printing _\"Yum! Energy increased!\"_ when the pet eats food it likes, or _\"Yuck! Energy reset!\"_ when it eats food it doesn't like.\n-   Add another sprite that interacts with your pet in a different way. How about a **toy** sprite?\n-   Add another variable that can affect your pet or the world. What might `happiness` or `age` do?\n-   Experiment with behaviors! Try editing the **wandering** behavior to slow down or speed up the food sprites (hint: their \"speed\" is currently 5...)."
   },
   "https://studio.code.org/s/coursef-2019/stage/20/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }

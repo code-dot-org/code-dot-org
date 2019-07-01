@@ -90,7 +90,7 @@
     "long_instructions": "_\"Keep calm and help me find the bad pig.\"_",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Read through the code below very carefully.  What will happen when you click \"Run\"?"
@@ -201,7 +201,7 @@
   "https://studio.code.org/s/express-2018/stage/4/puzzle/9": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
@@ -334,7 +334,7 @@
   "https://studio.code.org/s/express-2018/stage/5/puzzle/12": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look at this code carefully. What do you think will happen when the program runs?"
@@ -457,7 +457,7 @@
   "https://studio.code.org/s/express-2018/stage/6/puzzle/10": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
@@ -517,7 +517,7 @@
     "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What do you think will happen when you click \"Run\"?"
@@ -622,7 +622,7 @@
     "short_instructions": "You are doing great! Keep it up!",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What will happen when you click \"Run\"?"
@@ -913,7 +913,7 @@
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
@@ -1010,7 +1010,7 @@
     "long_instructions": "Make all of the honey.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
@@ -1124,7 +1124,7 @@
     "long_instructions": "_\"I don't know how much dirt is in this pile!\"_\n\nHelp the farmer remove this entire pile using a `while` loop.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What will happen after you click \"Run\"?"
@@ -1211,7 +1211,7 @@
     "short_instructions": "Flatten all of these piles using as few blocks as possible. ",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
@@ -1262,7 +1262,7 @@
   "https://studio.code.org/s/express-2018/stage/15/puzzle/3": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a close look at the code below.  What do you think will happen when you click \"Run\"?"
@@ -1350,7 +1350,7 @@
     "long_instructions": "Help the zombie get to the sunflower.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What will happen after you click \"Run\"?"
@@ -1390,7 +1390,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
@@ -1497,7 +1497,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud."
@@ -1638,7 +1638,7 @@
     "long_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a close look at the code below.  What will happen after you click \"Run\"?"
@@ -1973,7 +1973,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look at the functions defined below.  What will the harvester pick?"
@@ -2013,7 +2013,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you press \"Run\"?"
@@ -2187,7 +2187,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you press the \"Run\" button?"
@@ -2467,7 +2467,7 @@
     }
   },
   "https://studio.code.org/s/express-2018/stage/29/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -2475,7 +2475,7 @@
   "https://studio.code.org/s/express-2018/stage/29/puzzle/5": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
@@ -2618,7 +2618,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "title": "Bee Variables Multi",
           "questions": [
             {
@@ -2693,7 +2693,7 @@
     }
   },
   "https://studio.code.org/s/express-2018/stage/31/puzzle/6": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -2734,7 +2734,7 @@
     }
   },
   "https://studio.code.org/s/express-2018/stage/33/puzzle/3": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -2742,7 +2742,7 @@
   "https://studio.code.org/s/express-2018/stage/33/puzzle/5": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Read the code below.  What will happen when you click \"Run\"?"
@@ -2850,7 +2850,7 @@
     }
   },
   "https://studio.code.org/s/express-2018/stage/33/puzzle/14": {
-    "dsl": {
+    "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page"
     }
@@ -2953,7 +2953,7 @@
   "https://studio.code.org/s/express-2018/stage/34/puzzle/11": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "What will happen when you click \"Run\"?"
@@ -3144,7 +3144,7 @@
     "display_name": "Sprite Lab Example Project"
   },
   "https://studio.code.org/s/express-2018/stage/39/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Begin planning your project",
       "content1": "description here"
     }
@@ -3162,12 +3162,12 @@
     "display_name": "Revise Sprite Lab Project"
   },
   "https://studio.code.org/s/express-2018/stage/42/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Prepare for yur presentation"
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Binary Drawing"
     }
   },
@@ -3271,7 +3271,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a close look at the code below.  Which image will it create after you click \"Run\"?"

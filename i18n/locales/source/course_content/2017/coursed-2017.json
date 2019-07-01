@@ -129,7 +129,7 @@
   "https://studio.code.org/s/coursed-2017/stage/2/puzzle/16": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": " "
@@ -205,7 +205,7 @@
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
@@ -302,7 +302,7 @@
     "long_instructions": "Make all of the honey.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
@@ -439,7 +439,7 @@
     "long_instructions": "**Challenge:** Can you figure out how to make a picture like this?\n\n-   Both shapes have 50 pixel sides",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a good look at the code below.  Which drawing will this program make when you click \"Run\"?"
@@ -639,7 +639,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  Why won't Laurel collect all of the treasure when you click \"Run\"? Warning: This is a tricky question, make sure you read all of the options before answering!"
@@ -720,7 +720,7 @@
     "long_instructions": "_\"I don't know how much dirt is in this pile!\"_\n\nHelp the farmer remove this entire pile using a `while` loop.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look closely at the code below.  What will happen after you click \"Run\"?"
@@ -804,7 +804,7 @@
     "short_instructions": "Flatten all of these piles using as few blocks as possible. ",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
@@ -862,7 +862,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
@@ -970,7 +970,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud."
@@ -1050,7 +1050,7 @@
   "https://studio.code.org/s/coursed-2017/stage/12/puzzle/3": {
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a close look at the code below.  What do you think will happen when you click \"Run\"?"
@@ -1154,7 +1154,7 @@
     "long_instructions": "Help the zombie get to the sunflower.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Look carefully at the code below.  What will happen after you click \"Run\"?"
@@ -1265,7 +1265,7 @@
     "long_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a close look at the code below.  What will happen after you click \"Run\"?"
@@ -1381,7 +1381,7 @@
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/1": {
-    "dsl": {
+    "dsls": {
       "title": "Binary Drawing"
     }
   },
@@ -1485,7 +1485,7 @@
     },
     "contained levels": [
       {
-        "dsl": {
+        "dsls": {
           "questions": [
             {
               "text": "Take a close look at the code below.  Which image will it create after you click \"Run\"?"

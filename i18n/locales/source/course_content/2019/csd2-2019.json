@@ -45,7 +45,7 @@
     "long_instructions": "# Heading Sizes\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary><strong>What are headings?</strong>\n\n</summary>\nHeadings are the different sized section titles throughout a web page. Headings add structure to your web page by breaking it up so its easier for a user to read.\n</details>\n<details>\n<summary><strong>How do I make different sized headings?</strong>\n\n</summary>\nHeadings come in 6 different sizes.  The most common heading is &lt;h1&gt; The number 1 in the HTML tag designates that this is the biggest heading. The smallest heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, and &lt;h5&gt; tags which get smaller as the number gets larger.\n</details>\n<details>\n<summary><strong>What is HTML?</strong>\n\n</summary>\nHTML stands for Hypertext Markup Language. HTML is used to add structure to the content of a web page. HTML uses tags to specify where certain structures start and end. These tags are sets of characters not found in the English language so that the content and structure can be differentiated. \n</details>\n<details>\n<summary><strong>What is an HTML element?</strong>\n\n</summary>\nAn HTML element is a piece of a website that is marked by a start tag and sometimes closed with an end tag. The element also includes the content inside the tags. For example: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n</details>\n<details>\n<summary><strong>What is an HTML tag?</strong>\n\n</summary>\n\nAn HTML tag is the special set of characters that tells the machine where the start or end of an HTML element is and what type it is.\n\n</details>\n</div>\n\nHeadings can come in different sizes.  In this page, there are six different sized headings, but they are all mixed up.  Can you and your partner figure out how to fix them?\n\nDo This:\n\n-   Use the inspector tool to figure out what makes the headings different sizes\n-   Make sure you and your partner agree on what the different heading tags do.\n-   Change the tags so that the headings are in order from biggest to smallest, and the text says the correct size, as in the picture below. \n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15 PM.png\" style=\"width:100px; float:left\">"
   },
   "https://studio.code.org/s/csd2-2019/stage/4/puzzle/5": {
-    "dsl": {
+    "dsls": {
       "title": "Headings Quick Check",
       "content1": "Look at the code below and predict how the headings will be displayed.  Choose from one of the options on the right.",
       "answers": [
@@ -76,7 +76,7 @@
     "display_name": "Headings in HTML"
   },
   "https://studio.code.org/s/csd2-2019/stage/4/puzzle/9": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -100,7 +100,7 @@
     "long_instructions": "# Ordered Lists\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>What are the two types of lists?</strong>\n</summary>\n There are two types of lists in HTML, ordered and unordered lists.\n</details>\n<details>\n<summary>\n<strong>What is an ordered list?</strong>\n</summary>\n\nAn ordered list is a set of bulleted items which are numbered.\n<br /><br />\nAn ordered list element has the tag `<ol>` . This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist. Each item in the list is marked by a list item element `<li>`;. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the ordered list (`<ol>`).\n\n</details>\n\n<details>\n<summary>\n<strong>How do I make an ordered list?</strong>\n</summary>\n\nMaking an ordered list has two steps: making the list and adding the list items.  To make the ordered list, write the ordered list tags `<ol></ol>`.  Next, add your list items **inside** the ordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.\n<br /><br />\nIt can be helpful to indent your `<li>` tags so it's clear they are contained in the `<ol>` tag.\n\n</details>\n\n<details>\n<summary>\n<strong>Show me working code.</strong>\n</summary>\n\n<table border=\"1\">\n<tr>\n<td>Example</td>\n<td>Result</td>\n</tr>\n<tr>\n<td><pre> &lt;ol&gt; <br>   &lt;li&gt;Step 1 &lt;/li&gt; <br>   &lt;li&gt;Step 2 &lt;/li&gt; <br>   &lt;li&gt;Step 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\n<td><img src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n</details>\n</div>\n\nThis page should include an ordered list, but it's missing the list tags.\n\n# Do This\n\n-   Use the `<ol>` and `<li>` tags to structure this content into an ordered list that looks like the one below.\n\n_Hint: There will be NO NUMBERS in your code._ \n\n[][0]"
   },
   "https://studio.code.org/s/csd2-2019/stage/6/puzzle/5": {
-    "dsl": {
+    "dsls": {
       "title": "Lists Quick Check",
       "content1": "Match the list to the code that makes it.",
       "questions": [
@@ -146,7 +146,7 @@
     "display_name": "Lists in HTML"
   },
   "https://studio.code.org/s/csd2-2019/stage/6/puzzle/8": {
-    "dsl": {
+    "dsls": {
       "title": "title",
       "content1": "description here"
     }
@@ -164,7 +164,7 @@
     "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>How do I add images?</strong>\n</summary>\n\nThe `<img>` tag allows you to show images on your web page. <br><br>\n\nExample:\n\n<pre>&lt;img src=\"dog.png\" alt=\"dog jumping\"&gt;</pre><br><br>\n\nIn order to tell the browser which file to use, extra information, called an **attribute**, is added to the \\<img> tag inside the brackets. The attribute `src` stands for **s**ou**rc**e and tell the name of the image. Image files names include extensions which tell the computer which type of image they are working with. Common extensions are .jpg, .jpeg, .png. <br><br>\n\nIn addition to have the src attribute, image elements also have the `alt` attribute which describe the image. This is important in case the image doesn’t load or for people who have trouble with their eyesight. <br><br>\n\nAn `<img>` tag is an example of a  **self-closing tag** because it starts and closes in one tag.\n\n</details>\n<details>\n<summary>\n<strong>Why does an image tag not have a closing tag?</strong>\n</summary>\nAn image tag doesn't need a closing tag because there is no text content which must be wrapped in tags. The content that shows on the screen is specified through the tags attributes.\n</details>\n<details>\n<summary>\n<strong>What is an attribute?</strong>\n</summary>\n\nAttributes are extra information included in a tag.  Attributes have names and values. The name tells what type of information is being provided and then the value gives the specific information for that tag. \n\nFor example \\<img> tags have two attributes, src and alt. src specifies the name of the image file and alt tells the browser in readable text what the image is.\n\n</details>\n</div>\n\n# The Details Matter\n\nThe `src` attribute needs to point to the _exact_ filename of the image you want to use. That means you need to pay attention to spelling, capitalization, and the file extension. Each of the three images on this page is broken because of an improper `src` attribute. Using the file menu for reference, fix each of the image tags.\n\n_Note: Even though the images are not loading properly, our website is still showing descriptive text of what should be there because we used `alt` attributes. Cool!_"
   },
   "https://studio.code.org/s/csd2-2019/stage/7/puzzle/4": {
-    "dsl": {
+    "dsls": {
       "content1": "Match the buggy HTML code with the description of its bug.",
       "questions": [
         {
@@ -255,7 +255,7 @@
     "display_name": "Hyperlinks"
   },
   "https://studio.code.org/s/csd2-2019/stage/9/puzzle/5": {
-    "dsl": {
+    "dsls": {
       "title": "Your Personal Website",
       "content1": "description here"
     }
