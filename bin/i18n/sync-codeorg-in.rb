@@ -27,7 +27,7 @@ def get_i18n_strings(level)
 
   if level.is_a?(DSLDefined)
     text = level.dsl_text
-    i18n_strings["dsl"] = level.class.dsl_class.parse(text, '')[1] if text
+    i18n_strings["dsls"] = level.class.dsl_class.parse(text, '')[1] if text
   elsif level.is_a?(Level)
     %w(
       display_name
