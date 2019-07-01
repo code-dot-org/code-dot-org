@@ -12,6 +12,7 @@ export default storybook => {
           <StudentFeedbackNotification
             numFeedbackLevels="2"
             linkToFeedbackOverview="/"
+            studentId={123}
           />
         )
       }
