@@ -5,7 +5,7 @@
   "main": "app.js",
   "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
   "author": "SAM CLI",
-  "license": "MIT",
+  "license": "apache-2.0",
   "dependencies": {
     "aws-sdk": "^2.481.0"
   },
