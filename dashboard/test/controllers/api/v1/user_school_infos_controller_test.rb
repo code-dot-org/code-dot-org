@@ -563,7 +563,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     @teacher.reload
     assert_equal 2, @teacher.user_school_infos.count
     assert tenure_c.school_info.complete?
-    assert_equal @teacher.school_info.id, school_info.id
   end
 
   test 'confirmation, complete, submit unchanged complete info' do
