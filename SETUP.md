@@ -36,7 +36,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `rake install`
   * If you needed `bundle exec` in front of the previous command, you will need it here too.
-  * This can take a LONG time. You can see if progress is being made by opening up a second shell and staring `mysql -u root`. Run the following command twice, with approximately a 5-10 second delay between
+  * This can take a LONG time. You can see if progress is being made by opening up a second shell and starting `mysql -u root`. Run the following command twice, with approximately a 5-10 second delay between
   each run `select table_schema, table_name, table_rows from information_schema.tables where table_schema like 'dashboard_development' order by table_rows;`  If you see a change in the last couple of rows, the
   install is working correctly.
 1. `rake build`
