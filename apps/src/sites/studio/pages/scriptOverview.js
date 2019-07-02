@@ -15,6 +15,7 @@ $(document).ready(initPage);
 function initPage() {
   const script = document.querySelector('script[data-scriptoverview]');
   const config = JSON.parse(script.dataset.scriptoverview);
+
   const {scriptData, plcBreadcrumb} = config;
   const store = getStore();
 
