@@ -180,16 +180,16 @@ module TextToSpeech
     if contained.long_instructions.nil?
       combined_text = []
       if contained.properties["markdown"]
-        combined_text << contained.localized_text(contained.properties["markdown"])
+        combined_text << contained.localized_property("markdown")
       end
       if contained.properties["questions"]
-        contained.properties["questions"].each do |question|
-          combined_text << contained.localized_text(question["text"])
+        contained.localized_property("questions").each do |question|
+          combined_text << question["text"]
         end
       end
       if contained.properties["answers"]
-        contained.properties["answers"].each do |answer|
-          combined_text << contained.localized_text(answer["text"])
+        contained.localized_property("answers").each do |answer|
+          combined_text << answer["text"]
         end
       end
       combined_text.join("\n")
