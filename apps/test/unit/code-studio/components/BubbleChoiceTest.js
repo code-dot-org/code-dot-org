@@ -71,7 +71,8 @@ describe('BubbleChoice', () => {
     it('redirect to previous/next levels', () => {
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
 
-      assert.equal(2, wrapper.find('button').length);
+      // 4 buttons - 2 "back" and 2 "continue/finish"
+      assert.equal(4, wrapper.find('button').length);
 
       const backButton = wrapper.find('button').at(0);
       backButton.simulate('click');
@@ -95,7 +96,8 @@ describe('BubbleChoice', () => {
       };
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
 
-      assert.equal(2, wrapper.find('button').length);
+      // 4 buttons - 2 "back" and 2 "continue/finish"
+      assert.equal(4, wrapper.find('button').length);
 
       const backButton = wrapper.find('button').at(0);
       backButton.simulate('click');
@@ -109,6 +111,34 @@ describe('BubbleChoice', () => {
       expect(utils.navigateToHref).to.have.been.calledWith(
         DEFAULT_PROPS.level.script_url + window.location.search
       );
+    });
+
+    it('hides back button if no previous level or script url', () => {
+      const level = {
+        ...DEFAULT_PROPS.level,
+        previous_level_url: null,
+        script_url: null
+      };
+      const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
+      const buttons = wrapper.find('button');
+
+      assert.equal(2, buttons.length);
+      assert.notEqual('Back', buttons.at(0).text());
+      assert.notEqual('Back', buttons.at(1).text());
+    });
+
+    it('hides continue button if no next level or script url', () => {
+      const level = {
+        ...DEFAULT_PROPS.level,
+        next_level_url: null,
+        script_url: null
+      };
+      const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
+      const buttons = wrapper.find('button');
+
+      assert.equal(2, buttons.length);
+      assert(!['Finish', 'Continue'].includes(buttons.at(0).text()));
+      assert(!['Finish', 'Continue'].includes(buttons.at(1).text()));
     });
   });
 });

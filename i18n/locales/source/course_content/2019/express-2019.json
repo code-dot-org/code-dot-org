@@ -285,8 +285,8 @@
     "https://studio.code.org/s/express-2019/stage/25/puzzle/4": "Create a new sprite that looks like a pink alien, then make it do a any move when it's clicked.  ",
     "https://studio.code.org/s/express-2019/stage/25/puzzle/5": "Create a third sprite that looks like a yellow alien, make it do a dance when clicked, and set all of your aliens to stand in a horizontal line.",
     "https://studio.code.org/s/express-2019/stage/25/puzzle/6": "Create a single keypress event using the keypress event block. For this event, make it so that when a key is pressed, each of your aliens changes color!",
-    "https://studio.code.org/s/express-2019/stage/25/puzzle/7": "Use the `stops everything` block with a **click** or **keypress** event make all three aliens stop dancing when the event occurs!",
-    "https://studio.code.org/s/express-2019/stage/25/puzzle/8": "Add a new sprite that looks like a bell. Make all the aliens start doing the same dance move when the bell is clicked.",
+    "https://studio.code.org/s/express-2019/stage/25/puzzle/7": "Add a sprite that looks like a bell, then add an event that makes each alien stop dancing when it is clicked.",
+    "https://studio.code.org/s/express-2019/stage/25/puzzle/8": "Make the blue alien begin a new dance when the pink alien touches it. Use the `when touches` event.",
     "https://studio.code.org/s/express-2019/stage/25/puzzle/9": "Now create your own alien disco!",
     "https://studio.code.org/s/express-2019/stage/26/puzzle/1": "Make a prediction!",
     "https://studio.code.org/s/express-2019/stage/26/puzzle/2": "Fly the rocket to the stars!",
@@ -295,8 +295,8 @@
     "https://studio.code.org/s/express-2019/stage/26/puzzle/5": "Make a prediction!",
     "https://studio.code.org/s/express-2019/stage/26/puzzle/6": "Move the astronaut diagonally.",
     "https://studio.code.org/s/express-2019/stage/26/puzzle/7": "Free play: Create your own outer space scene!",
-    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors 6": "Make the ball roll.",
-    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors 7": "Drive off into the horizon!",
+    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+6": "Make the ball roll.",
+    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+7": "Drive off into the horizon!",
     "https://studio.code.org/s/express-2019/stage/27/puzzle/8": "**Free Play:** What more can you make your pet do? Try anything you like!"
   },
   "long_instructions": {
@@ -370,8 +370,8 @@
     "https://studio.code.org/s/express-2019/stage/7/puzzle/7": "Edit your code so that you jump forward between drawing the two stickers. In this puzzle, make sure you have `jump to the middle center position` inside of your loop, so you stay in the center!\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n[expandable][3]",
     "https://studio.code.org/s/express-2019/stage/7/puzzle/8": "What happens when you replace one or both of the stickers with a different creature?\n\n* * *\n\n[expandable][0]",
     "https://studio.code.org/s/express-2019/stage/7/puzzle/9": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \n\n-   Try using the `set pattern` block before you start your loop to make a work of art!\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
-    "https://studio.code.org/s/express-2019/stage/7/puzzle/10": "Add a third sticker anywhere in the loop that you want! What does it look like now?\n\n-   Change the pattern on your brush for more variety!\n\n* * *\n\n[expandable][0]",
-    "https://studio.code.org/s/express-2019/stage/7/puzzle/11": "Try changing the `repeat` loop to run a different number of times.  How far do you have to turn to go around in a full circle?\n\n-   Try changing how many times you spin\n    -   Try a 60 degree turn for 6 times around\n    -   Try a 20 degree turn for 18 times around\n\n* * *\n\nThis image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20 degree turn.\n\n[expandable][0]",
+    "https://studio.code.org/s/express-2019/stage/7/puzzle/10": "Add a third sticker anywhere in the loop that you want! What does it look like now?\n\n-   Change the pattern on your brush for more variety!\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "https://studio.code.org/s/express-2019/stage/7/puzzle/11": "Try changing the `repeat` loop to run a different number of times.  How far do you have to turn to go around in a full circle?\n\n-   Try changing how many times you spin\n    -   Try a 60 degree turn for 6 times around\n    -   Try a 20 degree turn for 18 times around\n\n* * *\n\nThe first image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20 degree turn.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n[expandable][3]",
     "https://studio.code.org/s/express-2019/stage/7/puzzle/12": "Now make something on your own.  What happens when you make two separate circles of different stickers?\n\n* * *\n\nNeed an idea? Try making a design like this one.\n\n[expandable][0]",
     "https://studio.code.org/s/express-2019/stage/8/puzzle/1": "_\"This is going to **BEE** great!\"_\n\nHelp the bee collect all of the nectar.",
     "https://studio.code.org/s/express-2019/stage/8/puzzle/2": "\"_This is going to **BEE** great!_\"\n\nHelp the bee collect all of the nectar.",
@@ -539,8 +539,8 @@
     "https://studio.code.org/s/express-2019/stage/26/puzzle/5": "Make a prediction! Which path will the satellite follow to reach the solar system?",
     "https://studio.code.org/s/express-2019/stage/26/puzzle/6": "Write your own behavior.\n\n-   Write a new behavior for this astronaut to lead it towards one of the four ships in the display area.",
     "https://studio.code.org/s/express-2019/stage/26/puzzle/7": "**Free play:** Create your own outer space scene!",
-    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors 6": "Make the ball roll.\n\n-   Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.",
-    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors 7": "Drive off into the horizon!\n\n-   Create a new behavior and use it to make the car move up and shrink. If you do it right, it could look like it is driving off into the horizon.",
+    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+6": "Make the ball roll.\n\n-   Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.",
+    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+7": "Drive off into the horizon!\n\n-   Create a new behavior and use it to make the car move up and shrink. If you do it right, it could look like it is driving off into the horizon.",
     "https://studio.code.org/s/express-2019/stage/27/puzzle/1": "**Free Play**: Whoa! Check out this cool pet! \n\nWhile reading the code below, ask yourself:\n\n-   How do you command the pet to move? \n-   What happens when the pet touches the ice cream cone? How about the pepper?\n-   How is the `energy` variable used? How can you check the pet's current `energy` value?\n\nRun the code and play with the pet! When you are done, click **Finish**.",
     "https://studio.code.org/s/express-2019/stage/27/puzzle/2": "Now it's your turn to create your own virtual pet! Start by giving it a look you like.\n\n1.  Click the **Costumes** tab at the top-left of your screen (next to **Code**). \n2.  Edit the starting costume, or add a new one that you like. \n3.  Change the sprite's costume to your own in the code below.\n4.  Click **Run** to see your pet's new look!",
     "https://studio.code.org/s/express-2019/stage/27/puzzle/3": "Create events to make your pet move on command!\n\nStart by using <xml><block type=\"gamelab_keyPressed\" block-text=\"the while up key pressed event block\"><title name=\"CONDITION\">\"while\"</title><title name=\"KEY\">\"up\"</title></block></xml> along with <xml><block type=\"gamelab_moveInDirection\" block-text=\"the move in direction action block\"><title name=\"DIRECTION\">\"North\"</title></block></xml> to make your pet move North **while** the up arrow is pressed.\n\nRepeat the above for the other three directions (South, West, East) and arrow keys (down, left, right)!",
@@ -1446,10 +1446,10 @@
       "target hint": "You can pick any of the four ships. Which one does the astronaut want?",
       "behavior hint": "Edit the behavior to solve this puzzle. The astronaut sprite needs to move in two different directions to end up going diagonally."
     },
-    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors 6": {
+    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+6": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
     },
-    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors 7": {
+    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+7": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
     }
   },
@@ -2136,7 +2136,7 @@
       "Actions": "Actions",
       "Events": "Events"
     },
-    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors 6": {
+    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+6": {
       "World": "World",
       "Sprites": "Sprites",
       "Actions": "Actions",
@@ -2146,7 +2146,7 @@
       "Math": "Math",
       "Logic": "Logic"
     },
-    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors 7": {
+    "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+7": {
       "World": "World",
       "Sprites": "Sprites",
       "Actions": "Actions",
