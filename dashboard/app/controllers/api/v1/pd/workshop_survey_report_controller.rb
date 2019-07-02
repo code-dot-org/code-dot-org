@@ -159,61 +159,60 @@ module Api::V1::Pd
     end
 
     def create_csf_survey_report
-      # Retriever
-      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new workshop_ids: [@workshop.id]
-
-      # Transformers
-      parser = Pd::SurveyPipeline::DailySurveyParser
-      joiner = Pd::SurveyPipeline::DailySurveyJoiner
-
-      # Mapper + Reducers
+      # Fields used to group survey answers
       group_config = [:workshop_id, :form_id, :facilitator_id, :name, :type, :answer_type]
 
       is_single_select_answer = lambda {|hash| hash.dig(:answer_type) == 'singleSelect'}
       is_free_format_question = lambda {|hash| ['textbox', 'textarea'].include?(hash[:type])}
       is_number_question = lambda {|hash| hash[:type] == 'number'}
+
+      # Rules to map groups of survey answers to reducers
       map_config = [
-        {condition: is_single_select_answer, field: :answer,
-        reducers: [Pd::SurveyPipeline::HistogramReducer]},
-        {condition: is_free_format_question, field: :answer,
-        reducers: [Pd::SurveyPipeline::NoOpReducer]},
-        {condition: is_number_question, field: :answer,
-        reducers: [Pd::SurveyPipeline::AvgReducer]},
+        {
+          condition: is_single_select_answer,
+          field: :answer,
+          reducers: [Pd::SurveyPipeline::HistogramReducer]
+        },
+        {
+          condition: is_free_format_question,
+          field: :answer,
+          reducers: [Pd::SurveyPipeline::NoOpReducer]
+        },
+        {
+          condition: is_number_question,
+          field: :answer,
+          reducers: [Pd::SurveyPipeline::AvgReducer]
+        },
       ]
 
-      mapper = Pd::SurveyPipeline::GenericMapper.new(
-        group_config: group_config, map_config: map_config
-      )
+      # Centralized context object shared by all workers in the pipeline.
+      # Workers read from and write to this object.
+      context = {
+        current_user: current_user,
+        filters: {workshop_ids: @workshop.id}
+      }
 
-      # Decorator
-      decorator = Pd::SurveyPipeline::DailySurveyDecorator
+      # Assembly line to summarize CSF surveys
+      workers = [
+        Pd::SurveyPipeline::DailySurveyRetriever,
+        Pd::SurveyPipeline::DailySurveyParser,
+        Pd::SurveyPipeline::DailySurveyJoiner,
+        Pd::SurveyPipeline::GenericMapper.new(
+          group_config: group_config, map_config: map_config
+        ),
+        Pd::SurveyPipeline::DailySurveyDecorator
+      ]
 
-      create_generic_survey_report(
-        retriever: retriever,
-        parser: parser,
-        joiner: joiner,
-        mappers: [mapper],
-        decorator: decorator
-      )
+      create_generic_survey_report context, workers
+
+      render json: context[:decorated_summaries]
     end
 
-    def create_generic_survey_report(retriever:, parser:, joiner:, mappers:, decorator:)
-      retrieved_data = retriever.retrieve_data
-
-      parsed_data = parser.transform_data retrieved_data
-
-      joined_data = joiner.transform_data parsed_data
-
-      summary_data = []
-      mappers.each do |mapper|
-        summary_data += mapper.map_reduce joined_data
+    # Create survey report by having a group of workers process data in the same context.
+    def create_generic_survey_report(context, workers)
+      workers&.each do |w|
+        w.process_data context
       end
-
-      render json: decorator.decorate(
-        summary_data: summary_data,
-        parsed_data: parsed_data,
-        current_user: current_user
-      )
     end
 
     # We want to filter facilitator-specific responses if the user is a facilitator and

@@ -383,12 +383,12 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, partial previous, unchanged, manual' do
-    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    complete_school_info = SchoolInfo.create({country: 'US', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
     @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
-    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    partial_school_info = SchoolInfo.create({country: 'US', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
     @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
@@ -544,6 +544,50 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_same_date 7.days.ago, tenure_b.last_confirmation_date
   end
 
+  test 'confirmation complete submit unchanged manual info' do
+    # Edge case involving complete school info
+
+    # Given a user with a complete (dropdown OR manual) school info `A`
+    school_info = SchoolInfo.create({country: 'US', school_type: 'public', school_name: 'Acme Inc', full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE})
+    @teacher.update school_info: school_info
+    tenure_c = @teacher.user_school_infos.first
+    assert tenure_c.school_info.complete?
+
+    # When a year later they click "No" and "Save" without changing anything
+    Timecop.travel 1.year
+    sign_in @teacher
+    submit_complete_school_info_manual_no_school_params
+    assert_response :success, response.body
+
+    # Then, only update the last confirmation date
+    @teacher.reload
+    assert_equal 1, @teacher.user_school_infos.count
+    assert tenure_c.school_info.complete?
+    assert_equal @teacher.school_info.id, school_info.id
+  end
+
+  test 'confirmation, complete, submit unchanged complete info' do
+    # Edge case involving complete school info
+
+    # Given a user with a complete (dropdown OR manual) school info `A`
+    school_info = create :school_info
+    @teacher.update school_info: school_info
+    tenure_d = @teacher.user_school_infos.first
+    assert tenure_d.school_info.complete?
+
+    # When a year later they click "No" and "Save" without changing anything
+    Timecop.travel 1.year
+    sign_in @teacher
+    submit_complete_school_info_from_dropdown school_info.school
+    assert_response :success, response.body
+
+    # Then, only update the last confirmation date
+    @teacher.reload
+    assert_equal 1, @teacher.user_school_infos.count
+    assert tenure_d.school_info.complete?
+    assert_equal @teacher.school_info.id, school_info.id
+  end
+
   private def partial_manual_school_info
     SchoolInfo.create(
       country: 'United States',
@@ -594,6 +638,19 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
           school_type: 'public',
           school_name: 'Acme Inc',
           full_address: 'Seattle, Washington'
+        }
+      }
+    }
+  end
+
+  private def submit_complete_school_info_manual_no_school_params
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {
+          country: 'United States',
+          school_type: 'public',
+          school_name: 'Acme Inc',
+          full_address: ''
         }
       }
     }

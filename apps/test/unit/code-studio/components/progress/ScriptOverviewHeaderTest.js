@@ -5,7 +5,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 import {VisibilityType} from '../../../../../src/code-studio/scriptAnnouncementsRedux';
 import {UnconnectedScriptOverviewHeader as ScriptOverviewHeader} from '@cdo/apps/code-studio/components/progress/ScriptOverviewHeader';
-import i18n from '@cdo/locale';
 
 const defaultProps = {
   plcHeaderProps: undefined,
@@ -97,14 +96,7 @@ describe('ScriptOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      1
-    );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements[0].notice,
-      i18n.verifiedResourcesNotice()
-    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
   it('displays old teacher announcement for teacher', () => {
@@ -150,8 +142,9 @@ describe('ScriptOverviewHeader', () => {
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
-      2
+      1
     );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
   it('has non-verified and provided teacher announcements if necessary', () => {
@@ -170,8 +163,9 @@ describe('ScriptOverviewHeader', () => {
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
-      3
+      2
     );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
   it('has only teacher announcements', () => {
