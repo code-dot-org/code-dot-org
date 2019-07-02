@@ -644,6 +644,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'feedback', to: 'feedback#index'
+
   get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
