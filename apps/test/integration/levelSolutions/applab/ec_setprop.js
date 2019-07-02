@@ -140,13 +140,10 @@ module.exports = {
         '</div></div>',
       xml: `
         var unescapedImage = 'ñ#?( "\\'.jpg';
-
         setProperty("image1", "image", unescapedImage);
         console.log('image1 image: ' + getProperty("image1", "image"));
-
         setProperty("button1", "image", unescapedImage);
         console.log('button1 image: ' + getProperty("button1", "image"));
-
         setProperty("screen1", "image", unescapedImage);
         console.log('screen1 image: ' + getProperty("screen1", "image"));
 `,
@@ -672,7 +669,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"ERROR: Line: 1: There is no property named "cant_set_this" for element "my_image". Make sure you choose a property from the dropdown."'
+          'ERROR: Line: 1: There is no property named "cant_set_this" for element "my_image". Make sure you choose a property from the dropdown.'
         );
         return true;
       },
@@ -701,7 +698,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"WARNING: Line: 1: setProperty() value parameter value (true) is not a boolean."'
+          'WARNING: Line: 1: setProperty() value parameter value (true) is not a boolean.'
         );
         return true;
       },
