@@ -140,10 +140,13 @@ module.exports = {
         '</div></div>',
       xml: `
         var unescapedImage = 'ñ#?( "\\'.jpg';
+        
         setProperty("image1", "image", unescapedImage);
         console.log('image1 image: ' + getProperty("image1", "image"));
+        
         setProperty("button1", "image", unescapedImage);
         console.log('button1 image: ' + getProperty("button1", "image"));
+        
         setProperty("screen1", "image", unescapedImage);
         console.log('screen1 image: ' + getProperty("screen1", "image"));
 `,
@@ -241,7 +244,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          `"value: 51""min: 1""max: 101""step: 3"`
+          '"value: 51"' + '"min: 1"' + '"max: 101"' + '"step: 3"'
         );
         return true;
       },
@@ -500,7 +503,7 @@ module.exports = {
       },
       customValidator: function(assert) {
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, '"width: 12""height: 13"');
+        assert.equal(debugOutput.textContent, '"width: 12"' + '"height: 13"');
         return true;
       },
       expected: {
@@ -605,7 +608,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"group-id: gid1""checked: true"'
+          '"group-id: gid1"' + '"checked: true"'
         );
         return true;
       },
@@ -640,7 +643,10 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"readonly: false""readonly: false""readonly: true""text-align: right"'
+          '"readonly: false"' +
+            '"readonly: false"' +
+            '"readonly: true"' +
+            '"text-align: right"'
         );
         return true;
       },

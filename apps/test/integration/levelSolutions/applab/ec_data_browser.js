@@ -165,7 +165,10 @@ module.exports = {
       customValidator: function(assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, '"created record""created key"');
+        assert.equal(
+          debugOutput.textContent,
+          '"created record"' + '"created key"'
+        );
         return true;
       },
       expected: {
@@ -442,7 +445,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"created record 1""created record 2"'
+          '"created record 1"' + '"created record 2"'
         );
         return true;
       },
@@ -779,7 +782,7 @@ module.exports = {
                 );
                 assert.equal(
                   debugOutput.textContent,
-                  '"created record 1""created record 2"'
+                  '"created record 1"' + '"created record 2"'
                 );
 
                 // back to overview
@@ -791,7 +794,7 @@ module.exports = {
                 assert.equal(recordRow.length, 2, 'two table rows in mytable');
                 assert.equal(
                   debugOutput.textContent,
-                  '"created record 1""created record 2"'
+                  '"created record 1"' + '"created record 2"'
                 );
 
                 // create record 3
@@ -805,7 +808,9 @@ module.exports = {
                   );
                   assert.equal(
                     debugOutput.textContent,
-                    '"created record 1""created record 2""created record 3"'
+                    '"created record 1"' +
+                      '"created record 2"' +
+                      '"created record 3"'
                   );
 
                   Applab.onPuzzleComplete();
@@ -820,7 +825,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"created record 1""created record 2""created record 3"'
+          '"created record 1"' + '"created record 2"' + '"created record 3"'
         );
         return true;
       },
