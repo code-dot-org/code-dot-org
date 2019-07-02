@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
 import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import sinon from 'sinon';

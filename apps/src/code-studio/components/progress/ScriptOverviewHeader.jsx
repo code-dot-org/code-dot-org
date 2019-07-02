@@ -24,6 +24,7 @@ import AssignmentVersionSelector, {
 import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import experiments from '@cdo/apps/util/experiments';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -145,22 +146,6 @@ class ScriptOverviewHeader extends Component {
         currentAnnouncements.push(element);
       }
     });
-
-    // Checks if the non-verified teacher announcement should be shown
-    if (currentView === 'Teacher') {
-      if (
-        this.props.verificationCheckComplete &&
-        !this.props.isVerifiedTeacher &&
-        this.props.hasVerifiedResources
-      ) {
-        currentAnnouncements.push({
-          notice: i18n.verifiedResourcesNotice(),
-          details: i18n.verifiedResourcesDetails(),
-          link: 'https://support.code.org/hc/en-us/articles/115001550131',
-          type: NotificationType.information
-        });
-      }
-    }
     return currentAnnouncements;
   };
 
@@ -179,8 +164,17 @@ class ScriptOverviewHeader extends Component {
       versions,
       showHiddenUnitWarning,
       courseName,
-      userId
+      userId,
+      verificationCheckComplete,
+      isVerifiedTeacher,
+      hasVerifiedResources
     } = this.props;
+
+    const displayVerifiedResources =
+      viewAs === ViewType.Teacher &&
+      verificationCheckComplete &&
+      !isVerifiedTeacher &&
+      hasVerifiedResources;
 
     const displayVersionWarning =
       showRedirectWarning &&
@@ -223,6 +217,9 @@ class ScriptOverviewHeader extends Component {
             studentId={userId}
             linkToFeedbackOverview="/"
           />
+        )}
+        {displayVerifiedResources && (
+          <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />
         )}
         {displayVersionWarning && (
           <Notification

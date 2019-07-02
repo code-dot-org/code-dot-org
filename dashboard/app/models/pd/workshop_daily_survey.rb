@@ -101,7 +101,7 @@ module Pd
           form_name = category == CSF_CATEGORY ? CSF_SURVEY_NAMES[day] : "day_#{day}"
           get_form_id category, form_name
         end
-      end.flatten.compact
+      end.flatten.compact.uniq
     end
 
     def self.unique_attributes

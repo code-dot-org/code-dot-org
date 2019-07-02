@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import GameLab from '@cdo/apps/gamelab/GameLab';
 import Sounds from '@cdo/apps/Sounds';
 import {
@@ -68,10 +68,8 @@ describe('GameLab', () => {
       beforeEach(() => instance.injectStudioApp(studioApp));
 
       describe('Muting', () => {
-        let muteSpy;
         let unmuteSpy;
         beforeEach(() => {
-          muteSpy = sinon.stub(Sounds.getSingleton(), 'muteURLs');
           unmuteSpy = sinon.stub(Sounds.getSingleton(), 'unmuteURLs');
           instance.gameLabP5.p5 = sinon.spy();
           instance.gameLabP5.p5.allSprites = sinon.spy();
@@ -90,22 +88,11 @@ describe('GameLab', () => {
         });
 
         afterEach(() => {
-          muteSpy.restore();
           unmuteSpy.restore();
         });
 
-        it('Rerun mutes URLs', () => {
-          instance.rerunSetupCode();
-          expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
-        });
-
-        it('Execute mutes if not looping', () => {
-          instance.execute(false /* shouldLoop */);
-          expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
-        });
-
-        it('Execute unmutes if looping', () => {
-          instance.execute(true /* shouldLoop */);
+        it('Execute unmutes URLs', () => {
+          instance.execute();
           expect(Sounds.getSingleton().unmuteURLs).to.have.been.calledOnce;
         });
       });
