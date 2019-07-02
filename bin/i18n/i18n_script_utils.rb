@@ -85,7 +85,7 @@ def run_bash_script(location)
 end
 
 def plugins_to_arg(plugins)
-  plugins.map {|name| "bin/i18n/plugins/#{name}.js" if name}.join(',')
+  plugins.map {|name| "bin/i18n/node_modules/@code-dot-org/remark-plugins/src/#{name}.js" if name}.join(',')
 end
 
 def redact_course_content(source, dest, original, *plugins)
