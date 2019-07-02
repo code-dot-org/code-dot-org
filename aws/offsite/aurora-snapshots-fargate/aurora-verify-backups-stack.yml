@@ -1,0 +1,137 @@
+# Prerequisites:
+# - VPC stack must be created: https://github.com/code-dot-org/code-dot-org/blob/staging/aws/cloudformation/vpc.yml.erb
+# - Manually build docker image using Dockerfile in this directory and push to ECR repository in same account + region as this stack
+#
+# Manual steps needed after stack creation:
+# - Finish configuring Cloudwatch Event Rule to run Fargate task once per day with the following settings:
+#     Target: ECS task
+#       Launch Type: Fargate
+#       Network Configuration:
+#         Subnet: A Private Subnet from VPC stack output
+#         Security Groups: default security group for VPC
+#         Auto-assign Public IP: DISABLED
+# - Enable Cloudwatch Event Rule
+
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS CloudFormation template to create an Fargate cluster and task definition for running Aurora backup verification.
+
+Resources:
+  TaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AuroraVerifyBackupsEcsTaskRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonRDSFullAccess
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Effect: "Allow"
+            Principal: 
+              Service: 
+                - "ecs-tasks.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+
+  CWEInvokeECSRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AuroraVerifyBackupsCWERole
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Effect: "Allow"
+            Principal: 
+              Service: 
+                - "events.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+      Policies:
+        # Grant permissions for managing specific non-admin AWS::IAM resources.
+        - PolicyName: AllowRuleToRunFargateTask
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ecs:RunTask
+                Resource: !Ref TaskDefinition
+                Condition:
+                  ArnLike:
+                    ecs:cluster: !GetAtt ECSCluster.Arn
+              - Effect: Allow
+                Action:
+                  - iam:PassRole
+                Resource: !GetAtt TaskRole.Arn
+                Condition:
+                  StringLike:
+                    iam:PassedToService: ecs-tasks.amazonaws.com
+
+  ECSCluster:
+    Type: AWS::ECS::Cluster
+
+  TaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub "${AWS::StackName}-aurora-verify-backups"
+      RequiresCompatibilities:
+        - FARGATE
+      NetworkMode: awsvpc
+      ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/ecsTaskExecutionRole"
+      Cpu: 256
+      Memory: 0.5GB
+      TaskRoleArn: !GetAtt TaskRole.Arn
+      ContainerDefinitions:
+      - Name: aurora-verify-backups
+        Essential: true
+        Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/aurora-verify-backups:latest"
+        MemoryReservation: 512
+        LogConfiguration:
+          LogDriver: awslogs
+          Options:
+            awslogs-group: !Ref CloudwatchLogsGroup
+            awslogs-region: !Ref AWS::Region
+            awslogs-stream-prefix: !Sub "${AWS::StackName}-aurora-verify-backups"
+        Environment:
+          -
+            Name: DB_CLUSTER_ID
+            Value: aurora-verify-backups-cluster
+          -
+            Name: DB_INSTANCE_ID
+            Value: aurora-verify-backups-instance
+          -
+            Name: DB_SNAPSHOT_IDENTIFIER_PREFIX
+            Value: production
+          -
+            Name: DB_SUBNET_GROUP_NAME
+            Value: !ImportValue VPC-DBSubnetGroup
+          -
+            Name: REGION
+            Value: !Ref AWS::Region
+
+
+  CloudwatchLogsGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "ECSLogGroup-${AWS::StackName}"
+      RetentionInDays: 14
+
+# Currently, a Cloudwatch Event Rule which runs a fargate task can't be fully configured via CloudFormation:
+# https://github.com/aws/containers-roadmap/issues/92
+# For now, the stack will create the Rule, but it must be manually configured and enabled (see instructions in comments at top of file)
+  OncePerDayRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: Run aurora backups verification once per day.
+      Name: !Sub "${AWS::StackName}-OncePerDay"
+      RoleArn: !GetAtt CWEInvokeECSRole.Arn
+      ScheduleExpression: rate(1 day)
+      State: DISABLED
+      Targets:
+        - Arn: !GetAtt ECSCluster.Arn
+          RoleArn: !GetAtt CWEInvokeECSRole.Arn
+          Id: FargateAuroraVerifyBackupsTarget
+          EcsParameters:
+            TaskCount: 1
+            TaskDefinitionArn: !Ref TaskDefinition
