@@ -140,6 +140,21 @@ describe('The JSDebugger redux duck', () => {
       store.dispatch(actions.appendLog({output: 'open sesame'}));
       expect(selectors.isOpen(store.getState())).to.be.true;
     });
+
+    it('will append errors and warnings with note to skip react-inspector', () => {
+      store.dispatch(actions.appendLog({output: 'Text'}, 'ERROR'));
+      store.dispatch(actions.appendLog({input: 'More text'}, 'WARNING'));
+      store.dispatch(actions.appendLog({output: 'Even more text'}));
+      expect(
+        selectors.getLogOutput(store.getState()).toJS()[0].skipInspector
+      ).to.equal(true);
+      expect(
+        selectors.getLogOutput(store.getState()).toJS()[1].skipInspector
+      ).to.equal(true);
+      expect(
+        selectors.getLogOutput(store.getState()).toJS()[2].skipInspector
+      ).to.equal(false);
+    });
   });
 
   describe('before being initialized', () => {

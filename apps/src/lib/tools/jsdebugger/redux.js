@@ -102,6 +102,9 @@ export function initialize({runApp}) {
  */
 export function appendLog(output, level) {
   return (dispatch, getState) => {
+    // Errors and warnings should circumvent the react-inspector because they have
+    // their own styling
+    output['skipInspector'] = level === 'ERROR' || level === 'WARNING';
     const logLevel = level && level.toLowerCase();
     dispatch({type: APPEND_LOG, output, logLevel});
     if (!isOpen(getState())) {
