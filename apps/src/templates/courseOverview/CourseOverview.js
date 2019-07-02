@@ -81,7 +81,7 @@ export default class CourseOverview extends Component {
     showRedirectWarning: PropTypes.bool,
     redirectToCourseUrl: PropTypes.string,
     showAssignButton: PropTypes.bool,
-    studentId: PropTypes.number
+    userId: PropTypes.number
   };
 
   constructor(props) {
@@ -147,7 +147,7 @@ export default class CourseOverview extends Component {
       showRedirectWarning,
       redirectToCourseUrl,
       showAssignButton,
-      studentId
+      userId
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -187,13 +187,12 @@ export default class CourseOverview extends Component {
             redirectButtonText={i18n.goToAssignedVersion()}
           />
         )}
-        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) &&
-          studentId && (
-            <StudentFeedbackNotification
-              studentId={studentId}
-              linkToFeedbackOverview="/"
-            />
-          )}
+        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && userId && (
+          <StudentFeedbackNotification
+            studentId={userId}
+            linkToFeedbackOverview="/"
+          />
+        )}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <Notification
             type={NotificationType.warning}
