@@ -703,7 +703,7 @@ module.exports = {
         onRecordEvent('mytable', function(record, eventType) {
           if (eventType === 'create') {
             console.log('created record ' + record.id);
-          }
+          } 
         });`,
 
       runBeforeClick: function(assert) {

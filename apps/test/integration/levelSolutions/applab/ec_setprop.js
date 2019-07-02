@@ -140,13 +140,10 @@ module.exports = {
         '</div></div>',
       xml: `
         var unescapedImage = 'ñ#?( "\\'.jpg';
-
         setProperty("image1", "image", unescapedImage);
         console.log('image1 image: ' + getProperty("image1", "image"));
-
         setProperty("button1", "image", unescapedImage);
         console.log('button1 image: ' + getProperty("button1", "image"));
-
         setProperty("screen1", "image", unescapedImage);
         console.log('screen1 image: ' + getProperty("screen1", "image"));
 `,

@@ -124,7 +124,6 @@ export function attach(jsInterpreter) {
       dispatch(togglePause());
       dispatch(open());
     });
-
     observer.observe(jsInterpreter.onExecutionWarning, output =>
       dispatch(appendLog({output: output}, 'WARNING'))
     );
