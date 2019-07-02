@@ -70,10 +70,10 @@ class DslTest < ActiveSupport::TestCase
       }
     )
 
-    i18n_expected = {'stages' => {
+    i18n_expected = {'test' => {'stages' => {
       'Stage1' => {'name' => 'Stage1'},
       'Stage2' => {'name' => 'Stage2'}
-    }}
+    }}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
