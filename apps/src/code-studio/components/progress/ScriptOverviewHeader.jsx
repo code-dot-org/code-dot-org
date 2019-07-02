@@ -88,7 +88,7 @@ class ScriptOverviewHeader extends Component {
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
     locale: PropTypes.string,
-    studentId: PropTypes.number
+    userId: PropTypes.number
   };
 
   componentDidMount() {
@@ -179,7 +179,7 @@ class ScriptOverviewHeader extends Component {
       versions,
       showHiddenUnitWarning,
       courseName,
-      studentId
+      userId
     } = this.props;
 
     const displayVersionWarning =
@@ -218,13 +218,12 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         )}
-        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) &&
-          studentId && (
-            <StudentFeedbackNotification
-              studentId={studentId}
-              linkToFeedbackOverview="/"
-            />
-          )}
+        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && userId && (
+          <StudentFeedbackNotification
+            studentId={userId}
+            linkToFeedbackOverview="/"
+          />
+        )}
         {displayVersionWarning && (
           <Notification
             type={NotificationType.warning}
