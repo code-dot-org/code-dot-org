@@ -351,9 +351,7 @@ GameLab.prototype.init = function(config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.isSpritelab) {
-      this.studioApp_.addChangeHandler(
-        this.gameLabP5.spritelab.preview.bind(this)
-      );
+      this.studioApp_.addChangeHandler(this.rerunSetupCode.bind(this));
     }
   };
 
@@ -695,9 +693,10 @@ GameLab.prototype.startTickTimer = function() {
  *     implementation.
  */
 GameLab.prototype.resetHandler = function(ignore) {
-  this.reset();
   if (this.isSpritelab) {
-    this.gameLabP5.spritelab.preview.apply(this);
+    this.execute(false /* shouldLoop */);
+  } else {
+    this.reset();
   }
 };
 
@@ -747,6 +746,26 @@ GameLab.prototype.reset = function() {
   );
 
   getStore().dispatch(clearConsole());
+};
+
+GameLab.prototype.rerunSetupCode = function() {
+  if (
+    getStore().getState().runState.isRunning ||
+    !this.gameLabP5.p5 ||
+    !this.areAnimationsReady_()
+  ) {
+    return;
+  }
+  getStore().dispatch(clearConsole());
+  Sounds.getSingleton().muteURLs();
+  this.gameLabP5.p5.allSprites.removeSprites();
+  if (this.isSpritelab) {
+    this.gameLabP5.spritelab.reset();
+  }
+  this.JSInterpreter.deinitialize();
+  this.initInterpreter(false /* attachDebugger */);
+  this.onP5Setup();
+  this.gameLabP5.p5.redraw();
 };
 
 GameLab.prototype.onPuzzleComplete = function(submit, testResult, message) {
@@ -875,10 +894,15 @@ GameLab.prototype.runButtonClick = function() {
 
 /**
  * Execute the user's code.  Heaven help us...
+ * @param {boolean} shouldLoop - If true, runs user code in a loop. Otherwise,
+ * only executes once. Defaults to true.
  */
-GameLab.prototype.execute = function() {
-  Sounds.getSingleton().unmuteURLs();
-
+GameLab.prototype.execute = function(shouldLoop = true) {
+  if (shouldLoop) {
+    Sounds.getSingleton().unmuteURLs();
+  } else {
+    Sounds.getSingleton().muteURLs();
+  }
   this.result = ResultType.UNSET;
   this.testResults = TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
@@ -899,7 +923,7 @@ GameLab.prototype.execute = function() {
   }
 
   this.gameLabP5.startExecution();
-  this.gameLabP5.setLoop(true);
+  this.gameLabP5.setLoop(shouldLoop);
 
   if (
     !this.JSInterpreter ||
@@ -909,12 +933,14 @@ GameLab.prototype.execute = function() {
     return;
   }
 
-  if (this.studioApp_.isUsingBlockly()) {
+  if (this.studioApp_.isUsingBlockly() && shouldLoop) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  this.startTickTimer();
+  if (shouldLoop) {
+    this.startTickTimer();
+  }
 };
 
 GameLab.prototype.initInterpreter = function(attachDebugger = true) {
