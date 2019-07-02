@@ -256,9 +256,15 @@ export default connect(
       return false;
     }
 
-    displayMap(output) {
+    // determines whether a mercator map should be displayed in the debug console
+    // based on data passed into console.log
+    validMapData(output) {
       if (output.constructor === Array) {
         for (let i = 0; i < output.length; i++) {
+          // if lat is falsey except 0
+          // or if long is falsey except 0
+          // or if lat or long is not within their range
+          // don't display a map
           if (
             !(output[i].lat || output[i].lat === 0) ||
             !(-90 <= output[i].lat && output[i].lat <= 90) ||
@@ -274,6 +280,7 @@ export default connect(
       } else if (output.constructor === Object) {
         let keys = Object.keys(output);
 
+        // if object only has lat and long
         return (
           keys.includes('lat') && keys.includes('long') && keys.length === 2
         );
@@ -292,14 +299,9 @@ export default connect(
             if (rowValue.fromConsoleLog) {
               if (
                 experiments.isEnabled('mercator') &&
-                this.displayMap(rowValue.output)
+                this.validMapData(rowValue.output)
               ) {
-                return (
-                  <MercatorMap
-                    key={rowValue.output.lat}
-                    data={rowValue.output}
-                  />
-                );
+                return <MercatorMap key={i} data={rowValue.output} />;
               }
               return <Inspector key={i} data={rowValue.output} />;
             } else {

@@ -13,8 +13,7 @@ class MercatorMap extends React.Component {
   };
 
   state = {
-    mercator: '',
-    data: this.props.data
+    mercator: ''
   };
 
   async componentDidMount() {
@@ -29,8 +28,8 @@ class MercatorMap extends React.Component {
     .translate([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
 
   displayLocation() {
-    if (this.state.data.constructor === Array) {
-      return this.state.data.map((location, i) => {
+    if (this.props.data.constructor === Array) {
+      return this.props.data.map((location, i) => {
         return (
           <circle
             fill={'red'}
@@ -48,8 +47,8 @@ class MercatorMap extends React.Component {
           fill={'red'}
           r={5}
           transform={`translate(${this.projection([
-            this.state.data.long,
-            this.state.data.lat
+            this.props.data.long,
+            this.props.data.lat
           ])})`}
         />
       );
@@ -72,7 +71,7 @@ class MercatorMap extends React.Component {
     // TODO: consult with product/design about color scheme
     return (
       <svg width={MAP_WIDTH} height={MAP_HEIGHT}>
-        <g className="countries">
+        <g>
           {worldMap.map((d, i) => (
             <path
               key={i}
@@ -84,7 +83,7 @@ class MercatorMap extends React.Component {
             />
           ))}
         </g>
-        <g className="markers">{this.displayLocation()}</g>
+        <g>{this.displayLocation()}</g>
       </svg>
     );
   }
