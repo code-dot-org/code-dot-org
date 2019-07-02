@@ -55,7 +55,6 @@ import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import defaultSprites from './defaultSprites.json';
-import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
 import wrap from './debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -231,9 +230,6 @@ GameLab.prototype.init = function(config) {
   }
   this.level = config.level;
 
-  this.shouldAutoRunSetup =
-    config.level.autoRunSetup && !this.level.edit_blocks;
-
   this.level.helperLibraries = this.level.helperLibraries || [];
 
   this.level.softButtons = this.level.softButtons || [];
@@ -354,8 +350,10 @@ GameLab.prototype.init = function(config) {
 
     this.setCrosshairCursorForPlaySpace();
 
-    if (this.shouldAutoRunSetup) {
-      this.studioApp_.addChangeHandler(this.rerunSetupCode.bind(this));
+    if (this.isSpritelab) {
+      this.studioApp_.addChangeHandler(
+        this.gameLabP5.spritelab.preview.bind(this)
+      );
     }
   };
 
@@ -697,10 +695,9 @@ GameLab.prototype.startTickTimer = function() {
  *     implementation.
  */
 GameLab.prototype.resetHandler = function(ignore) {
-  if (this.shouldAutoRunSetup) {
-    this.execute(false /* shouldLoop */);
-  } else {
-    this.reset();
+  this.reset();
+  if (this.isSpritelab) {
+    this.gameLabP5.spritelab.preview.apply(this);
   }
 };
 
@@ -750,26 +747,6 @@ GameLab.prototype.reset = function() {
   );
 
   getStore().dispatch(clearConsole());
-};
-
-GameLab.prototype.rerunSetupCode = function() {
-  if (
-    getStore().getState().runState.isRunning ||
-    !this.gameLabP5.p5 ||
-    !this.areAnimationsReady_()
-  ) {
-    return;
-  }
-  getStore().dispatch(clearConsole());
-  Sounds.getSingleton().muteURLs();
-  this.gameLabP5.p5.allSprites.removeSprites();
-  if (this.isSpritelab) {
-    this.gameLabP5.spritelab.reset();
-  }
-  this.JSInterpreter.deinitialize();
-  this.initInterpreter(false /* attachDebugger */);
-  this.onP5Setup();
-  this.gameLabP5.p5.redraw();
 };
 
 GameLab.prototype.onPuzzleComplete = function(submit, testResult, message) {
@@ -898,15 +875,10 @@ GameLab.prototype.runButtonClick = function() {
 
 /**
  * Execute the user's code.  Heaven help us...
- * @param {boolean} shouldLoop - If true, runs user code in a loop. Otherwise,
- * only executes once. Defaults to true.
  */
-GameLab.prototype.execute = function(shouldLoop = true) {
-  if (shouldLoop) {
-    Sounds.getSingleton().unmuteURLs();
-  } else {
-    Sounds.getSingleton().muteURLs();
-  }
+GameLab.prototype.execute = function() {
+  Sounds.getSingleton().unmuteURLs();
+
   this.result = ResultType.UNSET;
   this.testResults = TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
@@ -927,7 +899,7 @@ GameLab.prototype.execute = function(shouldLoop = true) {
   }
 
   this.gameLabP5.startExecution();
-  this.gameLabP5.setLoop(shouldLoop);
+  this.gameLabP5.setLoop(true);
 
   if (
     !this.JSInterpreter ||
@@ -937,14 +909,12 @@ GameLab.prototype.execute = function(shouldLoop = true) {
     return;
   }
 
-  if (this.studioApp_.isUsingBlockly() && shouldLoop) {
+  if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  if (shouldLoop) {
-    this.startTickTimer();
-  }
+  this.startTickTimer();
 };
 
 GameLab.prototype.initInterpreter = function(attachDebugger = true) {
@@ -1366,18 +1336,8 @@ GameLab.prototype.onP5Draw = function() {
         this.eventHandlers.draw.apply(null);
         this.runValidationCode();
       });
-    } else if (this.shouldAutoRunSetup) {
-      switch (this.level.autoRunSetup) {
-        case GamelabAutorunOptions.draw_loop:
-          this.eventHandlers.draw.apply(null);
-          break;
-        case GamelabAutorunOptions.draw_sprites:
-          this.JSInterpreter.evalInCurrentScope('drawSprites();');
-          break;
-        case GamelabAutorunOptions.custom:
-          this.JSInterpreter.evalInCurrentScope(this.level.customSetupCode);
-          break;
-      }
+    } else if (this.isSpritelab) {
+      this.eventHandlers.draw.apply(null);
     }
   }
   this.completeRedrawIfDrawComplete();

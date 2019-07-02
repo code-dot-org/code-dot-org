@@ -22,9 +22,8 @@ import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
-import {actions} from './redux/applab';
+import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {getStore} from '../redux';
-import datasetLibrary from '@cdo/apps/code-studio/datasetLibrary.json';
 import $ from 'jquery';
 
 // For proxying non-https xhr requests
@@ -1573,12 +1572,16 @@ function filterUrl(urlToCheck) {
     data: JSON.stringify({url: urlToCheck})
   })
     .success(data => {
-      let approved = data['approved'];
-      getStore().dispatch(actions.addRedirectNotice(approved, urlToCheck));
+      let response = data['approved']
+        ? REDIRECT_RESPONSE.APPROVED
+        : REDIRECT_RESPONSE.REJECTED;
+      getStore().dispatch(actions.addRedirectNotice(response, urlToCheck));
     })
     .fail((jqXhr, status) => {
       // When this query fails, default to the dialog that allows the user to choose
-      getStore().dispatch(actions.addRedirectNotice(true, urlToCheck));
+      getStore().dispatch(
+        actions.addRedirectNotice(REDIRECT_RESPONSE.APPROVED, urlToCheck)
+      );
     });
 }
 
@@ -1603,6 +1606,10 @@ applabCommands.openUrl = function(opts) {
         // If url doesn't have a protocol, add one
         window.open('https://' + opts.url);
       }
+    } else if (hostname.startsWith('mailto')) {
+      getStore().dispatch(
+        actions.addRedirectNotice(REDIRECT_RESPONSE.UNSUPPORTED, opts.url)
+      );
     } else {
       filterUrl(opts.url);
     }
@@ -1753,71 +1760,6 @@ applabCommands.handleReadValue = function(opts, value) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null, value);
   }
-};
-
-applabCommands.getList = function(opts) {
-  validateGetListArgs(opts.tableName, opts.columnName);
-  var onSuccess = handleGetListSync.bind(this, opts);
-  var onError = handleGetListSyncError.bind(this, opts);
-  Applab.storage.readRecords(opts.tableName, {}, onSuccess, onError);
-};
-
-var validateGetListArgs = function(tableName, columnName) {
-  let dataset = datasetLibrary.datasets.find(d => d.name === tableName);
-  if (!dataset) {
-    outputWarning(
-      tableName +
-        ' is not a data set in this project. Check the Data tab to see the names of your tables'
-    );
-    return;
-  }
-  const columnList = dataset.columns.split(',');
-  if (columnList.indexOf(columnName) === -1) {
-    outputWarning(
-      columnName +
-        ' is not a column in ' +
-        tableName +
-        '. Check the Data tab to see the names of the columns in that table.'
-    );
-  }
-};
-
-var handleGetListSync = function(opts, values) {
-  let columnList = [];
-
-  if (values.length > 0) {
-    values.forEach(row => {
-      if (row.hasOwnProperty(opts.columnName)) {
-        columnList.push(row[opts.columnName]);
-      }
-    });
-    opts.callback(columnList);
-    return;
-  }
-
-  let url;
-  datasetLibrary.datasets.forEach(dataset => {
-    if (dataset.name === opts.tableName) {
-      url = dataset.url;
-    }
-  });
-  if (url) {
-    // Import the dataset, then try getList again.
-    Applab.storage.importDataset(
-      opts.tableName,
-      url,
-      () => applabCommands.getList(opts),
-      () => console.log('error')
-    );
-  } else {
-    // No dataset with the specified name, call back into interpreter and return the empty list.
-    opts.callback(columnList);
-  }
-};
-
-var handleGetListSyncError = function(opts, values) {
-  console.log('handleGetListSyncError');
-  opts.callback();
 };
 
 applabCommands.getKeyValueSync = function(opts) {

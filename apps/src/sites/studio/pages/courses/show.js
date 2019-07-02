@@ -25,6 +25,7 @@ function showCourseOverview() {
   const scriptData = JSON.parse(script.dataset.coursesShow);
   const courseSummary = scriptData.course_summary;
   const isTeacher = scriptData.is_teacher;
+  const userId = scriptData.user_id;
 
   const teacherResources = (courseSummary.teacher_resources || []).map(
     ([type, link]) => ({type, link})
@@ -81,6 +82,7 @@ function showCourseOverview() {
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectToCourseUrl={scriptData.redirect_to_course_url}
         showAssignButton={courseSummary.show_assign_button}
+        userId={userId}
       />
     </Provider>,
     document.getElementById('course_overview')
