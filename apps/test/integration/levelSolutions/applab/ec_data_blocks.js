@@ -236,7 +236,7 @@ export default {
         // Error text includes line number
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
-          String(debugOutput.textContent).startsWith('"WARNING: Line: 6:'),
+          String(debugOutput.textContent).startsWith('WARNING: Line: 6:'),
           true,
           `log message contains warning with line number: ${
             debugOutput.textContent
