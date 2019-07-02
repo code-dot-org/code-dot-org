@@ -250,6 +250,8 @@ export default connect(
           }
           if (rowValue.input) {
             return <div key={i}>&gt; {rowValue.input}</div>;
+          } else if (rowValue.skipInspector) {
+            return rowValue.output;
           } else if (this.isValidOutput(rowValue)) {
             if (rowValue.fromConsoleLog) {
               return <Inspector key={i} data={rowValue.output} />;
