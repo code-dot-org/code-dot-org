@@ -626,8 +626,8 @@ sk-SK:
         na spodok ostatných blokov, aby si dokončíl tento kód?
       courseA_maze_ramp4a_2019: Dokážeš prísť na to, ktorý blok potrebuješ pridať
         na spodok ostatných blokov, aby si dokončíl tento kód?
-      courseA_maze_ramp5a_2018: Vyskúšaj vyriešiť celú túto úlohu sám!
-      courseA_maze_ramp5a_2019: Vyskúšaj vyriešiť celú túto úlohu sám!
+      courseA_maze_ramp5a_2018: Skús túto úlohu vyriešiť bez pomoci!
+      courseA_maze_ramp5a_2019: Skús túto úlohu vyriešiť bez pomoci!
       courseB_Scrat_ramp1_2018: Aby si dostal Scrata k žaluďu, pripoj blok <xml><block
         type="maze_moveEast"/></xml> na spodok bloku <xml><block type="when_run"/></xml>,
         potom stlač "▶ Spustiť"!
@@ -658,8 +658,8 @@ sk-SK:
         na spodok ostatných blokov, aby si dokončíl tento kód?
       courseB_Scrat_ramp4a_2019: Dokážeš prísť na to, ktorý blok potrebuješ pridať
         na spodok ostatných blokov, aby si dokončíl tento kód?
-      courseB_Scrat_ramp5a_2018: Vyskúšaj vyriešiť celú túto úlohu sám!
-      courseB_Scrat_ramp5a_2019: Vyskúšaj vyriešiť celú túto úlohu sám!
+      courseB_Scrat_ramp5a_2018: Skús túto úlohu vyriešiť bez pomoci!
+      courseB_Scrat_ramp5a_2019: Skús túto úlohu vyriešiť bez pomoci!
       courseB_artist_loops10: |-
         Použi, čo si sa naučil, a nakresli obrázok toho, čo si myslíš, že umelec uvidel, keď prišiel domov.
 
@@ -2988,6 +2988,18 @@ sk-SK:
         pozbieral 3, 6, 9, 12, 15 nektárov?"
       courseF_bee_for8_2019: "Máš to! \n\nAký by mal byť tvoj **prírastok**, aby si
         pozbieral 3, 6, 9, 12, 15 nektárov?"
+      courseF_bee_for9: |-
+        Teraz skombinujme premennú `počítadlo` s `matematickým` blokom!
+
+        Ako môžeš použíť premennú `počítadlo` na prejdenie cez túto záhradu s najmenším počtom blokov?
+      courseF_bee_for9_2018: |-
+        Teraz skombinujme premennú `počítadlo` s `matematickým` blokom!
+
+        Ako môžeš použíť premennú `počítadlo` na prejdenie cez túto záhradu s najmenším počtom blokov?
+      courseF_bee_for9_2019: |-
+        Teraz skombinujme premennú `počítadlo` s `matematickým` blokom!
+
+        Ako môžeš použíť premennú `počítadlo` na prejdenie cez túto záhradu s najmenším počtom blokov?
       courseF_bee_for_challenge2: Vyrieš túto úlohu použitím čo najmenšieho možného
         počtu blokov.
       courseF_bee_for_challenge2_2018: Vyrieš túto úlohu použitím čo najmenšieho možného

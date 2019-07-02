@@ -5110,6 +5110,8 @@ is:
               name: Heimildir og leitarvélar
             RGB Colors and Classes:
               name: RGB Litir og Klasar
+            Images:
+              name: Myndir
         csd3-pilot:
           description_short: Forritun
           stages:
@@ -5269,3 +5271,7 @@ is:
                 til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
+        maddie-test:
+          stages:
+            new stage:
+              name: nýr áfangi

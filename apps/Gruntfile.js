@@ -38,6 +38,9 @@ module.exports = function(grunt) {
 // Auto-generated from Gruntfile.js
 import 'babel-polyfill';
 import 'whatwg-fetch';
+import Adapter from 'enzyme-adapter-react-15.4';
+import enzyme from 'enzyme';
+enzyme.configure({adapter: new Adapter()});
 import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/throwOnConsole';
 ${loadContext}
 describe('entry tests', () => {
@@ -517,6 +520,7 @@ describe('entry tests', () => {
     schoolInfoInterstitial:
       './src/sites/studio/pages/schoolInfoInterstitial.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
+    'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_header_progress':
       './src/sites/studio/pages/shared/_header_progress.js',
     signup: './src/sites/studio/pages/signup.js',
@@ -579,6 +583,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/views/share_privacy':
+      './src/sites/code.org/pages/views/share_privacy.js',
     'code.org/views/theme_common_head_after':
       './src/sites/code.org/pages/views/theme_common_head_after.js',
     'code.org/views/workshop_search':
@@ -597,10 +603,6 @@ describe('entry tests', () => {
 
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/facilitator_program_registration/new':
-      './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
-    'pd/regional_partner_program_registration/new':
-      './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
     'pd/workshop_survey/new':
       './src/sites/studio/pages/pd/workshop_survey/new.js',
     'pd/pre_workshop_survey/new':

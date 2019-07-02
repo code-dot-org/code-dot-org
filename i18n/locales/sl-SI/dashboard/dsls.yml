@@ -309,6 +309,12 @@ sl:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_starWars_predict1:
+        I don't know: Ne vem
+      courseC_multi_starWars_predict1_2018:
+        I don't know: Ne vem
+      courseC_multi_starWars_predict1_2018_2019:
+        I don't know: Ne vem
       courseD_multi_artist_binary8_predict1:
         A: A
         B: B
@@ -360,3 +366,9 @@ sl:
         14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+      courseE_multi_farmer_predict1:
+        I don't know: Ne vem
+        0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+        1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+        2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+        3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'

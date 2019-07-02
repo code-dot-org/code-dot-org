@@ -468,20 +468,6 @@ bg:
             '0': бас
             '1': mid
             '2': сопрано
-      gamelab_changeColor:
-        text: промяна на {COLOR} {METHOD} {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': оттенък
-            '"tone"': тон
-            '"shade"': сянка
-      gamelab_changeColorBy:
-        text: промяна на {COLOR} {METHOD} {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': оттенък
-            '"saturation"': наситеност
-            '"brightness"': яркост
       gamelab_changePropBy:
         text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
@@ -503,10 +489,6 @@ bg:
             'false': грешно
       gamelab_draggable:
         text: може да се мести
-      gamelab_enableDebug:
-        text: разреши отстраняването на грешки
-      gamelab_firstTouched:
-        text: първо докосване на спрайт
       gamelab_getProp:
         options:
           PROPERTY:
@@ -535,60 +517,19 @@ bg:
             '"w"': w
             '"x"': x
             '"y"': y
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': рамка
-            '"circle"': кръг
-            '"grid"': мрежа
-            '"row"': ред
-            '"column"': колона
-            '"plus"': плюс
-            '"random"': случаен
-      gamelab_locationConstant:
-        options:
-          DIR:
-            "'north'": север
-            "'south'": юг
-            "'east'": изток
-            "'west'": запад
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'north'": север
-            "'south'": юг
-            "'east'": изток
-            "'west'": запад
-            "'random'": случаен
-      gamelab_locationEast:
-        text: изток
-      gamelab_locationNorth:
-        text: север
       gamelab_locationOf:
         text: разположение на {SPRITE}
-      gamelab_locationSouth:
-        text: юг
-      gamelab_locationWest:
-        text: запад
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: разположение на {VAR}
-      gamelab_makeNewGroup:
-        text: създай нова група
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': надясно
             '"left"': наляво
-      gamelab_mouseDown:
-        text: мишка натисната
       gamelab_randColor:
         text: случаен цвят
       gamelab_randomColor:
         text: случаен цвят
-      gamelab_secondTouched:
-        text: второ докосване на спрайт
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -600,10 +541,6 @@ bg:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': под
               вода
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': случаен
       gamelab_setProp:
         text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
@@ -624,27 +561,6 @@ bg:
           CONDITION:
             '"when"': когато
             '"while"': докато
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"x"': x позиция
-            '"y"': y позиция
-            '"direction"': посока на движение
-            '"tint"': оттенък
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"x"': x позиция
-            '"y"': y позиция
-            '"direction"': посока на движение
-            '"tint"': оттенък
       gamelab_turn:
         options:
           DIRECTION:
@@ -670,11 +586,6 @@ bg:
             "'down'": надолу
             "'left'": наляво
             "'right'": надясно
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
       gamelab_whileKey:
         options:
           KEY:

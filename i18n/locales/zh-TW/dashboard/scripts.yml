@@ -5315,6 +5315,8 @@ zh-TW:
               name: 透過 CSS 修改元素樣式
             Sources and Search Engines:
               name: 來源和搜尋引擎
+            Images:
+              name: 圖像
         csd3-pilot:
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: "Game Lab 編程環境介紹"
@@ -5347,3 +5349,7 @@ zh-TW:
               name: 使用遊戲設計流程
             Project - Design a Game:
               name: 專案 - 設計一個遊戲
+        maddie-test:
+          stages:
+            new stage:
+              name: 新的階段
