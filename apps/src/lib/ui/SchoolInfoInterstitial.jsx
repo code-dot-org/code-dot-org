@@ -39,6 +39,12 @@ const styles = {
   },
   error: {
     color: color.red
+  },
+  button: {
+    marginLeft: 7,
+    marginRight: 7,
+    marginTop: 15,
+    marginBottom: 15
   }
 };
 
@@ -103,7 +109,8 @@ export default class SchoolInfoInterstitial extends React.Component {
       schoolLocation: existingSchoolInfo.full_address || '',
       ncesSchoolId: initialNcesSchoolId,
       showSchoolInfoUnknownError: false,
-      errors: {}
+      errors: {},
+      isOpen: true
     };
   }
 
@@ -292,6 +299,10 @@ export default class SchoolInfoInterstitial extends React.Component {
       });
   };
 
+  dismissSchoolInfoForm = () => {
+    this.setState({isOpen: false});
+  };
+
   onCountryChange = (_, event) => {
     const newCountry = event ? event.value : '';
     this.setState({country: newCountry, errors: {}});
@@ -325,7 +336,7 @@ export default class SchoolInfoInterstitial extends React.Component {
     return (
       <BaseDialog
         useUpdatedStyles
-        isOpen={true}
+        isOpen={this.state.isOpen}
         handleClose={this.props.onClose}
         uncloseable
       >
@@ -356,9 +367,20 @@ export default class SchoolInfoInterstitial extends React.Component {
           </div>
           <div style={styles.bottom}>
             <Button
+              onClick={this.dismissSchoolInfoForm}
+              style={styles.button}
+              color="gray"
+              size="large"
+              text={i18n.dismiss()}
+              id="dismiss-button"
+            />
+            <Button
               onClick={this.handleSchoolInfoSubmit}
+              style={styles.button}
+              size="large"
               text={i18n.save()}
               color={Button.ButtonColor.orange}
+              id="save-button"
             />
           </div>
         </div>
