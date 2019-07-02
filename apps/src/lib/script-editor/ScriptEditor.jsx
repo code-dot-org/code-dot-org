@@ -87,9 +87,8 @@ export default class ScriptEditor extends React.Component {
     const videoKeysBefore = (
       this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []
     ).length;
-    const videoKeysAfter = (
-      this.scriptTextArea.value.match(VIDEO_KEY_REGEX) || []
-    ).length;
+    const scriptText = this.props.beta ? '' : this.scriptTextArea.value;
+    const videoKeysAfter = (scriptText.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
       if (
         !confirm(
