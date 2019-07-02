@@ -61,6 +61,4 @@ npm run lint
   ${CODECOV} -cF integration) ${LOG} log/gameLabTest.log
 (PORT=9883 LEVEL_TYPE='craft' $GRUNT_CMD karma:integration && \
   ${CODECOV} -cF integration) ${LOG} log/craftTest.log
-(PORT=9884 LEVEL_TYPE='spritelab' $GRUNT_CMD karma:integration && \
-    ${CODECOV} -cF integration) ${LOG} log/spriteLabTest.log    
 SCRIPT
