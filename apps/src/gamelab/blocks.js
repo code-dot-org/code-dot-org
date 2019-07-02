@@ -162,7 +162,10 @@ const customInputTypes = {
             text: 'Draw',
             action: () => {
               getStore().dispatch(
-                changeInterfaceMode(GameLabInterfaceMode.ANIMATION)
+                changeInterfaceMode(
+                  GameLabInterfaceMode.ANIMATION,
+                  true /* spritelabDraw */
+                )
               );
             }
           },
