@@ -68,8 +68,10 @@ describe('GameLab', () => {
       beforeEach(() => instance.injectStudioApp(studioApp));
 
       describe('Muting', () => {
+        let muteSpy;
         let unmuteSpy;
         beforeEach(() => {
+          muteSpy = sinon.stub(Sounds.getSingleton(), 'muteURLs');
           unmuteSpy = sinon.stub(Sounds.getSingleton(), 'unmuteURLs');
           instance.gameLabP5.p5 = sinon.spy();
           instance.gameLabP5.p5.allSprites = sinon.spy();
@@ -88,11 +90,22 @@ describe('GameLab', () => {
         });
 
         afterEach(() => {
+          muteSpy.restore();
           unmuteSpy.restore();
         });
 
-        it('Execute unmutes URLs', () => {
-          instance.execute();
+        it('Rerun mutes URLs', () => {
+          instance.rerunSetupCode();
+          expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
+        });
+
+        it('Execute mutes if not looping', () => {
+          instance.execute(false /* shouldLoop */);
+          expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
+        });
+
+        it('Execute unmutes if looping', () => {
+          instance.execute(true /* shouldLoop */);
           expect(Sounds.getSingleton().unmuteURLs).to.have.been.calledOnce;
         });
       });
