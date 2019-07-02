@@ -241,7 +241,7 @@ module.exports = {
           var debugOutput = document.getElementById('debug-output');
           assert.equal(
             debugOutput.textContent,
-            '"WARNING: Line: 1: The button() id parameter refers to an id ("button1") which already exists."'
+            'WARNING: Line: 1: The button() id parameter refers to an id ("button1") which already exists.'
           );
           Applab.onPuzzleComplete();
         });
@@ -263,8 +263,8 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"ERROR: Line: 1: Error: The button() id parameter refers to an id ' +
-            '("runButton") which is already being used outside of App Lab. Please use a different id."'
+          'ERROR: Line: 1: Error: The button() id parameter refers to an id ' +
+            '("runButton") which is already being used outside of App Lab. Please use a different id.'
         );
         assert(
           !$('#divApplab #runButton')[0],
@@ -289,8 +289,8 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"ERROR: Line: 1: Error: The button() id parameter refers to an id ' +
-            '("submitButton") which is already being used outside of App Lab. Please use a different id."'
+          'ERROR: Line: 1: Error: The button() id parameter refers to an id ' +
+            '("submitButton") which is already being used outside of App Lab. Please use a different id.'
         );
         assert(
           !$('#divApplab #submitButton')[0],
@@ -476,7 +476,7 @@ module.exports = {
       customValidator: function(assert) {
         var expectedOutput =
           '' +
-          '"WARNING: Line: 1: The following lines of HTML were modified or removed:\n' +
+          'WARNING: Line: 1: The following lines of HTML were modified or removed:\n' +
           '<img id="image6" src="javascript:alert()" />\n' +
           '<script>alert()\n</script>\n' +
           'original html:\n' +
@@ -490,7 +490,7 @@ module.exports = {
           '<img id="image3" src />' +
           '<img id="image4" src="/base/static/flappy_promo.png" />' +
           '<img id="image5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />' +
-          '<img id="image6" /></div>"';
+          '<img id="image6" /></div>';
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, expectedOutput);
         return true;
@@ -538,7 +538,7 @@ module.exports = {
       customValidator: function(assert) {
         var expectedOutput =
           '' +
-          '"WARNING: Line: 1: The following lines of HTML were modified or removed:\n' +
+          'WARNING: Line: 1: The following lines of HTML were modified or removed:\n' +
           '<div id="divApplab">two\n' +
           '<div id="runButton">three\n' +
           '<div id="submitButton">four\n' +
@@ -549,7 +549,7 @@ module.exports = {
           'warnings:\n' +
           'element id is already in use: divApplab\n' +
           'element id is already in use: runButton\n' +
-          'element id is already in use: submitButton"';
+          'element id is already in use: submitButton';
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, expectedOutput);
         return true;

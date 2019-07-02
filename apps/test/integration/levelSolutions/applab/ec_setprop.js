@@ -669,7 +669,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"ERROR: Line: 1: There is no property named "cant_set_this" for element "my_image". Make sure you choose a property from the dropdown."'
+          'ERROR: Line: 1: There is no property named "cant_set_this" for element "my_image". Make sure you choose a property from the dropdown.'
         );
         return true;
       },
@@ -698,7 +698,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          '"WARNING: Line: 1: setProperty() value parameter value (true) is not a boolean."'
+          'WARNING: Line: 1: setProperty() value parameter value (true) is not a boolean.'
         );
         return true;
       },
