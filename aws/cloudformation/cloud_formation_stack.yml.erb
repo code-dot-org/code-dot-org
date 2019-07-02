@@ -691,7 +691,7 @@ Resources:
         SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
         GroupSet:
           - !ImportValue VPC-FrontendSecurityGroup
-          - !ImportValue VPC-GatewaySecurityGroup
+          - !ImportValue VPC-DaemonSecurityGroup # SSH access to frontends
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
