@@ -170,6 +170,10 @@ def redact(source, dest, *plugins)
   end
 end
 
+# This function currently looks for
+# 1. Translations with malformed redaction syntax, i.e. [] [0] (note the space)
+# 2. Translations with similarly malformed markdown, i.e. [link] (example.com)
+# If this function finds either of these cases in the string, it return true.
 def contains_malformed_link_or_image(translation)
   malformed_redaction_regex = /\[.*\]\s+\[[0-9]+\]/
   malformed_markdown_regex = /\[.*\]\s+\(.+\)/
