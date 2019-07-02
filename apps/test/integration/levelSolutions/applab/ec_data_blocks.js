@@ -92,7 +92,10 @@ export default {
       customValidator(assert) {
         // Verify that onRecordEvent was called with the correct data
         const debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, '"create 2""update 1""delete 1"');
+        assert.equal(
+          debugOutput.textContent,
+          '"create 2"' + '"update 1"' + '"delete 1"'
+        );
         return true;
       },
       expected: {
