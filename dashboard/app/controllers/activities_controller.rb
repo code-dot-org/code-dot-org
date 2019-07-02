@@ -177,6 +177,19 @@ class ActivitiesController < ApplicationController
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
       )
+      # Make sure we don't log when @script_level is a multi-page assessment
+      # and @level is a multi level.
+      is_sublevel = !@script_level.levels.include?(@level)
+      if @script_level.assessment && @level.is_a?(Multi) && !is_sublevel
+        AssessmentActivity.create(
+          user_id: current_user.id,
+          level_id: @level.id,
+          script_id: @script_level.script.id,
+          level_source_id: @level_source&.id,
+          test_result: test_result,
+          attempt: params[:attempt]
+        )
+      end
     end
 
     passed = ActivityConstants.passing?(test_result)
