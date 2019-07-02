@@ -158,10 +158,12 @@ class TextToSpeechTest < ActiveSupport::TestCase
       "data" => {
         "multi" => {
           contained_level.name => {
-            'Question text': 'texte de la question',
-            'answer 1': 'réponse un',
-            'answer 2': 'réponse deux',
-            'answer 3': 'réponse troi'
+            'questions': [{'text': 'texte de la question'}],
+            'answers': [
+              {"text" => "réponse un"},
+              {"text" => "réponse deux"},
+              {"text" => "réponse troi"},
+            ]
           }
         }
       }
