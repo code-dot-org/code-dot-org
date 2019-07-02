@@ -77,7 +77,7 @@ module.exports = {
       `,
       function isProgramDone() {
         const debugOutput = document.getElementById('debug-output').textContent;
-        return debugOutput.split('\n').length >= 3;
+        return debugOutput.split('""').length >= 3;
       },
       function validateResult(assert) {
         const debugOutput = document.getElementById('debug-output').textContent;
@@ -103,7 +103,7 @@ module.exports = {
       `,
       function isProgramDone() {
         const debugOutput = document.getElementById('debug-output').textContent;
-        return debugOutput.split('\n').length >= 3;
+        return debugOutput.split('""').length >= 3;
       },
       function validateResult(assert) {
         const debugOutput = document.getElementById('debug-output').textContent;
