@@ -72,8 +72,8 @@ module Pd
       [
         {
           string: ActiveSupport::NumberHelper.number_to_rounded(workshop.effective_num_hours, precision: 1, strip_insignificant_zeros: true),
-          y: 975,
-          x: 1065,
+          y: 978,
+          x: 880,
           height: 40,
           width: 50,
           pointsize: 40,
@@ -85,7 +85,7 @@ module Pd
       [
         {
           string: workshop.workshop_date_range_string,
-          y: 1042,
+          y: 1054,
           height: 50,
           pointsize: 45,
         }
