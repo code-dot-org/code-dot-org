@@ -503,7 +503,6 @@ describe('entry tests', () => {
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
     'levels/multi': './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch': './src/sites/studio/pages/levels/textMatch.js',
-    'levels/widget': './src/sites/studio/pages/levels/widget.js',
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
@@ -511,6 +510,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
+    'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
