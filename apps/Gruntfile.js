@@ -491,26 +491,28 @@ describe('entry tests', () => {
   var codeStudioEntries = {
     blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
-    'levels/contract_match':
-      './src/sites/studio/pages/levels/contract_match.jsx',
+    'levels/_bubble_choice':
+      './src/sites/studio/pages/levels/_bubble_choice.js',
+    'levels/_contract_match':
+      './src/sites/studio/pages/levels/_contract_match.js',
     'levels/_curriculum_reference':
       './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/_dialog': './src/sites/studio/pages/levels/_dialog.js',
-    'levels/_standalone_video':
-      './src/sites/studio/pages/levels/_standalone_video.js',
-    'levels/external': './src/sites/studio/pages/levels/external.js',
-    'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
-    'levels/_match': './src/sites/studio/pages/levels/_match.js',
-    'levels/multi': './src/sites/studio/pages/levels/multi.js',
-    'levels/textMatch': './src/sites/studio/pages/levels/textMatch.js',
-    'levels/widget': './src/sites/studio/pages/levels/widget.js',
+    'levels/_evaluation_multi':
+      './src/sites/studio/pages/levels/_evaluation_multi.js',
+    'levels/_external': './src/sites/studio/pages/levels/_external.js',
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
-    'levels/show': './src/sites/studio/pages/levels/show.js',
-    'levels/_bubble_choice':
-      './src/sites/studio/pages/levels/_bubble_choice.js',
+    'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
+    'levels/_match': './src/sites/studio/pages/levels/_match.js',
+    'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
+    'levels/_standalone_video':
+      './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
+    'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
+    'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
+    'levels/show': './src/sites/studio/pages/levels/show.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
@@ -549,20 +551,24 @@ describe('entry tests', () => {
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    levelbuilder_applab: './src/sites/studio/pages/levelbuilder_applab.js',
-    levelbuilder_craft: './src/sites/studio/pages/levelbuilder_craft.js',
     levelbuilder_edit_script:
       './src/sites/studio/pages/levelbuilder_edit_script.js',
-    levelbuilder_gamelab: './src/sites/studio/pages/levelbuilder_gamelab.js',
-    levelbuilder_pixelation:
-      './src/sites/studio/pages/levelbuilder_pixelation.js',
-    levelbuilder_studio: './src/sites/studio/pages/levelbuilder_studio.js',
     'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
+    'levels/editors/_applab':
+      './src/sites/studio/pages/levels/editors/_applab.js',
     'levels/editors/_blockly':
       './src/sites/studio/pages/levels/editors/_blockly.js',
+    'levels/editors/_craft':
+      './src/sites/studio/pages/levels/editors/_craft.js',
     'levels/editors/_droplet':
       './src/sites/studio/pages/levels/editors/_droplet.js',
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+    'levels/editors/_gamelab':
+      './src/sites/studio/pages/levels/editors/_gamelab.js',
+    'levels/editors/_pixelation':
+      './src/sites/studio/pages/levels/editors/_pixelation.js',
+    'levels/editors/_studio':
+      './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
