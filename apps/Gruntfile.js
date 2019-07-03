@@ -607,6 +607,9 @@ describe('entry tests', () => {
     'code.org/public/pd-workshop-survey/splat':
       './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
 
+    'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
+    'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
+
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
     'pd/workshop_survey/new':
@@ -638,14 +641,15 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 
     'pd/international_opt_in/new':
-      './src/sites/studio/pages/pd/international_opt_in/new.js'
+      './src/sites/studio/pages/pd/international_opt_in/new.js',
+
+    'peer_reviews/dashboard':
+      './src/sites/studio/pages/peer_reviews/dashboard.js',
+    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js'
   };
 
   var otherEntries = {
     essential: './src/sites/studio/pages/essential.js',
-    plc: './src/sites/studio/pages/plc.js',
-    jotformLoader: './src/sites/studio/pages/jotformLoader.js',
-    jotformEmbed: './src/sites/studio/pages/jotformEmbed.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
@@ -661,9 +665,6 @@ describe('entry tests', () => {
 
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
-
-    'peer_reviews/dashboard':
-      './src/sites/studio/pages/peer_reviews/dashboard.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
