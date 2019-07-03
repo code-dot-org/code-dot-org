@@ -12058,6 +12058,12 @@ en:
               name: Programs Investigate
             Programs Practice:
               name: Programs Practice
+            'Project: Designing an App, pt. 3':
+              name: 'Project: Designing an App, pt. 3'
+            'Project: Designing an App, pt. 4':
+              name: 'Project: Designing an App, pt. 4'
+            'Project: Share Your App':
+              name: 'Project: Share Your App'
           title: 'Unit 3: Intro to App Development'
           description_audience: ''
           description_short: ''
