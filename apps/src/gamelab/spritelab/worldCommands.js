@@ -20,8 +20,8 @@ export const commands = {
   },
 
   setBackgroundImage(img) {
-    if (this._predefinedBackgrounds[img]) {
-      let backgroundImage = this._predefinedBackgrounds[img];
+    if (this._preloadedBackgrounds[img]) {
+      let backgroundImage = this._preloadedBackgrounds[img];
       spriteUtils.background = backgroundImage;
     }
   },

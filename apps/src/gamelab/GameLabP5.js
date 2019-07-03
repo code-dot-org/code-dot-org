@@ -588,7 +588,6 @@ GameLabP5.prototype.preloadBackgrounds = function() {
     this.preloadBackgrounds_ = Promise.all(
       backgrounds.map(background => {
         return new Promise(resolve => {
-          console.log('loading.. ' + background.name);
           this.p5.loadImage(
             background.sourceUrl,
             image => {
@@ -606,8 +605,7 @@ GameLabP5.prototype.preloadBackgrounds = function() {
   }
   return this.preloadBackgrounds_.then(() => {
     return new Promise(resolve => {
-      console.log('then');
-      this.p5._predefinedBackgrounds = this.preloadedBackgrounds;
+      this.p5._preloadedBackgrounds = this.preloadedBackgrounds;
       resolve();
     });
   });
