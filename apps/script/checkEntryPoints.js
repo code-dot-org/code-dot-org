@@ -58,7 +58,6 @@ const SILENCED = [
   'gamelab',
   'gamelab-api',
   'jigsaw',
-  'jotformEmbed',
   'levelbuilder',
   'levelbuilder_edit_script',
   'maze',
