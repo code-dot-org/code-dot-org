@@ -10,6 +10,7 @@ function showFeedback() {
 
   ReactDOM.render(
     <div>
+      <h1>All Teacher Feedback</h1>
       <h3>
         This is where there will be an AllFeedback component. For now, I will
         show you that real data is here.

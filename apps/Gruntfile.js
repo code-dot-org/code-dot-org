@@ -542,7 +542,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
     'teacher_dashboard/show':
       './src/sites/studio/pages/teacher_dashboard/show.js',
-    'feedback/index': './src/sites/studio/pages/feedback/index.js'
+    'teacher_feedbacks/index':
+      './src/sites/studio/pages/teacher_feedbacks/index.js'
   };
 
   var internalEntries = {
