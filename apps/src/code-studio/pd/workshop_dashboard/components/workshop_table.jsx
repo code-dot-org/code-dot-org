@@ -294,7 +294,8 @@ export default class WorkshopTable extends React.Component {
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
         showSurveyUrl={
           state === 'Ended' ||
-          ([CSD, CSP].includes(course) && subject !== SubjectNames.fit) ||
+          ([CSD, CSP].includes(course) &&
+            subject !== SubjectNames.SUBJECT_FIT) ||
           (course === CSF && subject === 'Deep Dive')
         }
       />
