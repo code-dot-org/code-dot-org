@@ -76,8 +76,7 @@ const SILENCED = [
   'weblab',
   'cookieBanner',
   'dance',
-  'regionalPartnerMiniContact',
-  'code.org/public/educate/curriculum/courses'
+  'regionalPartnerMiniContact'
 ];
 const SITES_CONFIG = {
   studio: {
