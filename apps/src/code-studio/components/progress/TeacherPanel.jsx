@@ -13,6 +13,7 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import {SelectedStudentInfo} from './SelectedStudentInfo';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   scrollable: {
@@ -71,6 +72,28 @@ class TeacherPanel extends React.Component {
     students: PropTypes.arrayOf(studentShape)
   };
 
+  logToFirehose = (eventName, overrideData) => {
+    let data = {
+      script_name: this.props.scriptName,
+      view_mode: this.props.viewAs
+    };
+    data = {...data, ...overrideData};
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_panel',
+        event: eventName,
+        data_json: JSON.stringify(data)
+      },
+      {includeUserId: true}
+    );
+  };
+
+  onSelectUser = (id, selectType) => {
+    this.logToFirehose('select_student', {selectType});
+    this.props.onSelectUser(id);
+  };
+
   render() {
     const {
       sectionData,
@@ -125,7 +148,7 @@ class TeacherPanel extends React.Component {
                 students={students}
                 selectedStudent={currentStudent}
                 level={currentStudentScriptLevel}
-                onSelectUser={this.props.onSelectUser}
+                onSelectUser={id => this.onSelectUser(id, 'iterator')}
                 getSelectedUserId={this.props.getSelectedUserId}
               />
             )}
@@ -197,7 +220,7 @@ class TeacherPanel extends React.Component {
             <StudentTable
               levels={currentSectionScriptLevels}
               students={students}
-              onSelectUser={this.props.onSelectUser}
+              onSelectUser={id => this.onSelectUser(id, 'select_specific')}
               getSelectedUserId={this.props.getSelectedUserId}
               sectionId={sectionId}
               scriptName={scriptName}
