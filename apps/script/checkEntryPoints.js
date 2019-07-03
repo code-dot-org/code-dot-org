@@ -64,7 +64,6 @@ const SILENCED = [
   'levelbuilder_edit_script',
   'maze',
   'netsim',
-  'plc',
   'publicKeyCryptography',
   'raceInterstitial',
   'schoolInfoConfirmationDialog',
