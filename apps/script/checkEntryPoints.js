@@ -64,7 +64,6 @@ const SILENCED = [
   'netsim',
   'publicKeyCryptography',
   'scratch',
-  'scriptOverview',
   'studio',
   'turtle',
   'tutorialExplorer',
