@@ -64,7 +64,6 @@ const SILENCED = [
   'levelbuilder',
   'levelbuilder_craft',
   'levelbuilder_edit_script',
-  'levelbuilder_gamelab',
   'levelbuilder_studio',
   'levelbuilder_pixelation',
   'levels/contract_match',
