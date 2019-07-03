@@ -607,6 +607,9 @@ describe('entry tests', () => {
     'code.org/public/pd-workshop-survey/splat':
       './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
 
+    jotformLoader: './src/sites/studio/pages/jotformLoader.js',
+    jotformEmbed: './src/sites/studio/pages/jotformEmbed.js',
+
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
     'pd/workshop_survey/new':
@@ -647,8 +650,6 @@ describe('entry tests', () => {
 
   var otherEntries = {
     essential: './src/sites/studio/pages/essential.js',
-    jotformLoader: './src/sites/studio/pages/jotformLoader.js',
-    jotformEmbed: './src/sites/studio/pages/jotformEmbed.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
