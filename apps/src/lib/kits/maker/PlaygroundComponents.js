@@ -21,7 +21,6 @@ import NeoPixel from './NeoPixel';
 import Led from './Led';
 import Switch from './Switch';
 import experiments from '../../../util/experiments';
-import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -29,10 +28,9 @@ import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
  *
  * @param {five.Board} board - the johnny-five board object that needs new
  *        components initialized.
- * @param {string} boardType - string representing the type of board connected
  * @returns {Promise.<Object.<String, Object>>} board components
  */
-export function createCircuitPlaygroundComponents(board, boardType) {
+export function createCircuitPlaygroundComponents(board) {
   // Must initialize sound sensor BEFORE left button, otherwise left button
   // will not respond to input.  This has something to do with them sharing
   // pin 4 on the board.
@@ -60,7 +58,7 @@ export function createCircuitPlaygroundComponents(board, boardType) {
 
       tempSensor,
 
-      accelerometer: initializeAccelerometer(board, boardType),
+      accelerometer: initializeAccelerometer(board),
 
       buttonL: new Button({board, pin: 4}),
 
@@ -246,7 +244,7 @@ function initializeThermometer(board) {
   });
 }
 
-function initializeAccelerometer(board, boardType) {
+function initializeAccelerometer(board) {
   const accelerometer = new five.Accelerometer({
     board,
     controller: PlaygroundIO.Accelerometer
@@ -254,7 +252,7 @@ function initializeAccelerometer(board, boardType) {
   accelerometer.start = function() {
     accelerometer.io.sysexCommand([CP_COMMAND, CP_ACCEL_STREAM_ON]);
   };
-  accelerometer.getOrientation = function(orientationType, type = boardType) {
+  accelerometer.getOrientation = function(orientationType) {
     if (undefined === orientationType) {
       return [
         accelerometer.getOrientation('x'),
@@ -265,7 +263,7 @@ function initializeAccelerometer(board, boardType) {
 
     // Accelerometer on the express board is rotated 90 degrees from classic board.
     // Conditional ensures consistent output of 'pitch'/'roll' across both boards
-    if (type === BOARD_TYPE.EXPRESS) {
+    if (board.isExpressBoard) {
       if (orientationType === 'pitch') {
         return accelerometer['roll'];
       } else if (orientationType === 'roll') {
