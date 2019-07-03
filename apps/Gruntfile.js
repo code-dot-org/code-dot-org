@@ -607,7 +607,7 @@ describe('entry tests', () => {
     'code.org/public/pd-workshop-survey/splat':
       './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
 
-    jotformLoader: './src/sites/studio/pages/jotformLoader.js',
+    'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     jotformEmbed: './src/sites/studio/pages/jotformEmbed.js',
 
     'pd/workshop_dashboard/index':
