@@ -549,7 +549,6 @@ describe('entry tests', () => {
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    levelbuilder_craft: './src/sites/studio/pages/levelbuilder_craft.js',
     levelbuilder_edit_script:
       './src/sites/studio/pages/levelbuilder_edit_script.js',
     levelbuilder_pixelation:
@@ -560,6 +559,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/_applab.js',
     'levels/editors/_blockly':
       './src/sites/studio/pages/levels/editors/_blockly.js',
+    'levels/editors/_craft':
+      './src/sites/studio/pages/levels/editors/_craft.js',
     'levels/editors/_droplet':
       './src/sites/studio/pages/levels/editors/_droplet.js',
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
