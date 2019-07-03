@@ -5,7 +5,7 @@
  * back to our system so we have a sense of how often this fails.
  * We also attempt to improve the user experience when the form is unavailable.
  */
-import logToCloud from '../../../logToCloud';
+import logToCloud from '../../../../logToCloud';
 
 function main(context) {
   Promise.all([
