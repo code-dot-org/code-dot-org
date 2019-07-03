@@ -491,26 +491,26 @@ describe('entry tests', () => {
   var codeStudioEntries = {
     blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
+    'levels/_bubble_choice':
+      './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_contract_match':
       './src/sites/studio/pages/levels/_contract_match.js',
     'levels/_curriculum_reference':
       './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/_dialog': './src/sites/studio/pages/levels/_dialog.js',
     'levels/_external': './src/sites/studio/pages/levels/_external.js',
-    'levels/_standalone_video':
-      './src/sites/studio/pages/levels/_standalone_video.js',
-    'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
-    'levels/_match': './src/sites/studio/pages/levels/_match.js',
-    'levels/multi': './src/sites/studio/pages/levels/multi.js',
-    'levels/textMatch': './src/sites/studio/pages/levels/textMatch.js',
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
-    'levels/show': './src/sites/studio/pages/levels/show.js',
-    'levels/_bubble_choice':
-      './src/sites/studio/pages/levels/_bubble_choice.js',
+    'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
+    'levels/_match': './src/sites/studio/pages/levels/_match.js',
+    'levels/_standalone_video':
+      './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
     'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
+    'levels/multi': './src/sites/studio/pages/levels/multi.js',
+    'levels/show': './src/sites/studio/pages/levels/show.js',
+    'levels/textMatch': './src/sites/studio/pages/levels/textMatch.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
