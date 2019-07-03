@@ -62,7 +62,6 @@ const SILENCED = [
   'jotformLoader',
   'jotformEmbed',
   'levelbuilder',
-  'levelbuilder_applab',
   'levelbuilder_craft',
   'levelbuilder_edit_script',
   'levelbuilder_gamelab',
