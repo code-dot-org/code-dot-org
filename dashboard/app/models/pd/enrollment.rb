@@ -117,7 +117,8 @@ class Pd::Enrollment < ActiveRecord::Base
   scope :for_ended_workshops, -> {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
 
   # Any enrollment with attendance, for an ended workshop, has a survey
-  scope :with_surveys, -> {for_ended_workshops.attended}
+  # Except for FiT workshops - no exit surveys for them!
+  scope :with_surveys, -> {for_ended_workshops.attended.where.not(pd_workshops: {subject: SUBJECT_FIT})}
 
   def has_user?
     user_id
