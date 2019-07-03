@@ -638,12 +638,15 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 
     'pd/international_opt_in/new':
-      './src/sites/studio/pages/pd/international_opt_in/new.js'
+      './src/sites/studio/pages/pd/international_opt_in/new.js',
+
+    'peer_reviews/dashboard':
+      './src/sites/studio/pages/peer_reviews/dashboard.js',
+    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js'
   };
 
   var otherEntries = {
     essential: './src/sites/studio/pages/essential.js',
-    plc: './src/sites/studio/pages/plc.js',
     jotformLoader: './src/sites/studio/pages/jotformLoader.js',
     jotformEmbed: './src/sites/studio/pages/jotformEmbed.js',
 
@@ -661,9 +664,6 @@ describe('entry tests', () => {
 
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
-
-    'peer_reviews/dashboard':
-      './src/sites/studio/pages/peer_reviews/dashboard.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
