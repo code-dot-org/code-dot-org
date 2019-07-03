@@ -59,7 +59,6 @@ const SILENCED = [
   'gamelab-api',
   'jigsaw',
   'levelbuilder',
-  'levelbuilder_edit_script',
   'maze',
   'netsim',
   'publicKeyCryptography',
