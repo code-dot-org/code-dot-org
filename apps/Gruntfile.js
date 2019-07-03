@@ -602,7 +602,10 @@ describe('entry tests', () => {
     'hourofcode.com/public/index':
       './src/sites/hourofcode.com/pages/public/index.js',
     'hourofcode.com/views/theme_common_head_after':
-      './src/sites/hourofcode.com/pages/views/theme_common_head_after.js'
+      './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
+
+    // shared between code.org and hourofcode.com
+    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
   };
 
   var professionalDevelopmentEntries = {
@@ -664,9 +667,6 @@ describe('entry tests', () => {
     // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
     embedBlocks: './src/sites/studio/pages/embedBlocks.js',
-
-    // tutorialExplorer for code.org/learn 2016 edition.
-    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
