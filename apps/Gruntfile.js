@@ -551,7 +551,6 @@ describe('entry tests', () => {
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     levelbuilder_edit_script:
       './src/sites/studio/pages/levelbuilder_edit_script.js',
-    levelbuilder_studio: './src/sites/studio/pages/levelbuilder_studio.js',
     'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
@@ -566,6 +565,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/_gamelab.js',
     'levels/editors/_pixelation':
       './src/sites/studio/pages/levels/editors/_pixelation.js',
+    'levels/editors/_studio':
+      './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
