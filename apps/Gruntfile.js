@@ -589,6 +589,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/views/regional_partner_search':
+      './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
       './src/sites/code.org/pages/views/share_privacy.js',
     'code.org/views/theme_common_head_after':
@@ -677,8 +679,6 @@ describe('entry tests', () => {
 
     'census_reviewers/review_reported_inaccuracies':
       './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
-
-    regionalPartnerSearch: './src/regionalPartnerSearch/regionalPartnerSearch',
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
