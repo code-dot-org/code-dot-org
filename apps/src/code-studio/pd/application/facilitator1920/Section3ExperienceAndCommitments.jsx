@@ -47,7 +47,7 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
   loadFitWorkshops() {
     const queryParams = {
       course: this.props.data.program,
-      subject: SubjectNames.fit,
+      subject: SubjectNames.SUBJECT_FIT,
       zip_code: this.props.data.zipCode,
       state: this.props.data.state
     };

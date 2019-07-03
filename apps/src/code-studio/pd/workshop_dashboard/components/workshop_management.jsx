@@ -65,7 +65,7 @@ export class WorkshopManagement extends React.Component {
     let new_facilitator_weekend =
       workshop_date >= new Date('2018-08-01') &&
       ['CS Discoveries', 'CS Principles'].includes(this.props.course) &&
-      this.props.subject !== SubjectNames.fit;
+      this.props.subject !== SubjectNames.SUBJECT_FIT;
 
     let new_csf_201 =
       workshop_date >= new Date('2019-05-20') &&
