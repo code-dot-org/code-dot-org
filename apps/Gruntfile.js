@@ -518,8 +518,8 @@ describe('entry tests', () => {
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     'layouts/_school_info_confirmation_dialog':
       './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
-    schoolInfoInterstitial:
-      './src/sites/studio/pages/schoolInfoInterstitial.js',
+    'layouts/_school_info_interstitial':
+      './src/sites/studio/pages/layouts/_school_info_interstitial.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_header_progress':
