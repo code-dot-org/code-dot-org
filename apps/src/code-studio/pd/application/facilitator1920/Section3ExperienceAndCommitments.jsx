@@ -6,6 +6,7 @@ import {
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {CSF, CSD, CSP} from '../ApplicationConstants';
 
 const PARTNER_WORKSHOPS_API_ENDPOINT =
@@ -46,7 +47,7 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
   loadFitWorkshops() {
     const queryParams = {
       course: this.props.data.program,
-      subject: 'Code.org Facilitator Weekend',
+      subject: SubjectNames.fit,
       zip_code: this.props.data.zipCode,
       state: this.props.data.state
     };
