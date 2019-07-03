@@ -496,6 +496,8 @@ describe('entry tests', () => {
     'courses/show': './src/sites/studio/pages/courses/show.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+    'devise/registrations/_old_sign_up_form':
+      './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
     'devise/registrations/edit':
       './src/sites/studio/pages/devise/registrations/edit.js',
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
@@ -542,7 +544,6 @@ describe('entry tests', () => {
     'shared/_header_progress':
       './src/sites/studio/pages/shared/_header_progress.js',
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
-    signup: './src/sites/studio/pages/signup.js',
     'teacher_dashboard/show':
       './src/sites/studio/pages/teacher_dashboard/show.js'
   };
