@@ -498,18 +498,20 @@ describe('entry tests', () => {
     'levels/_curriculum_reference':
       './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/_dialog': './src/sites/studio/pages/levels/_dialog.js',
+    'levels/_evaluation_multi':
+      './src/sites/studio/pages/levels/_evaluation_multi.js',
     'levels/_external': './src/sites/studio/pages/levels/_external.js',
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
     'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
+    'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
     'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
-    'levels/multi': './src/sites/studio/pages/levels/multi.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
