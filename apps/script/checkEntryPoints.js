@@ -76,7 +76,6 @@ const SILENCED = [
   'weblab',
   'cookieBanner',
   'dance',
-  'regionalPartnerSearch',
   'regionalPartnerMiniContact',
   'code.org/public/educate/curriculum/courses'
 ];
