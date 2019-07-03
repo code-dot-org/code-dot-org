@@ -19,12 +19,12 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `rbenv rehash`
 1. `cd code-dot-org`
 1. `bundle install` (Problems running this step? See [tips](#bundle-install-tips) below.)
-1. `rake install:hooks`
+1. `bundle exec rake install:hooks`
     <details>
         <summary>Troubleshoot: `rake aborted!..` </summary>
 
         If you have issue "rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0. Prepending `bundle exec` to your command may solve this."
-            * Follow the instructions and add `bundle exec` in front of the command
+            * Follow the instructions and make sure you added `bundle exec` in front of the `rake install:hooks` command
     </details>
     <details>
         <summary>Troubleshoot: wrong version of rake </summary>
@@ -34,13 +34,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         $> bundle update rake
     </details>
 
-1. `rake install`
-  * If you needed `bundle exec` in front of the previous command, you will need it here too.
+1. `bundle exec rake install`
   * This can take a LONG time. You can see if progress is being made by opening up a second shell and staring `mysql -u root`. Run the following command twice, with approximately a 5-10 second delay between
   each run `select table_schema, table_name, table_rows from information_schema.tables where table_schema like 'dashboard_development' order by table_rows;`  If you see a change in the last couple of rows, the
   install is working correctly.
-1. `rake build`
-  * If you needed `bundle exec` in front of the previous command, you will need it here too.
+1. `bundle exec rake build`
   * This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See Bundle Install Tips for more information.
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
@@ -149,9 +147,9 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
    1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. **IMPORTANT:** Read the following notes, then go back up to the [overview](#overview) and run the commands there.
-   1. If, for any reason, you are forced to interrupt the `rake install` command before it completes,
-      cd into dashboard and run `bundle exec rake db:drop` before trying `rake install` again
-   1. `rake install` must always be called from the local project's root directory, or it won't work.
+   1. If, for any reason, you are forced to interrupt the `bundle exec rake install` command before it completes,
+      cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
+   1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
    1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation should still work properly regardless
 
 ### Windows note: use an Ubuntu VM
@@ -188,7 +186,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
        ```
      * run `ssh yourname-ec2` to connect to your instance
   1. Go back up to the [overview](#overview) and run the commands there.
-  1. Once you have successfully completed `rake build`, you can connect to it as follows:
+  1. Once you have successfully completed `bundle exec rake build`, you can connect to it as follows:
      * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your ssh connection is open.
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
 
@@ -207,9 +205,9 @@ If you want to make JavaScript changes and have them take effect locally, you'll
    use_my_apps: true
    ```
 
-1. Run `rake package` for the changes to take effect.
+1. Run `bundle exec rake package` for the changes to take effect.
 
-This configures dashboard to rebuild apps whenever you run `rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
+This configures dashboard to rebuild apps whenever you run `bundle exec rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
 
 If waiting around for javascript builds is making you sad, consider sending build time logs to New Relic so we can track the slowness. You can do this by copying our license key from [the New Relic account page](https://rpm.newrelic.com/accounts/501463) and pasting it into `locals.yml`:
 
