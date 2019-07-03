@@ -191,6 +191,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.travel 1.hour
     submit_partial_school_info
+    assert_response 422
 
     @teacher.reload
 
@@ -304,7 +305,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     @teacher.reload
     refute_nil @teacher.school_info
-    assert_equal @teacher.user_school_infos.count, 1
+    assert_equal 1, @teacher.user_school_infos.count
     assert_nil @teacher.user_school_infos.last.end_date
   end
 
@@ -389,7 +390,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     sign_in @teacher
     submit_unchanged_school_info partial_school_info
-    assert 500
+    assert_response 422
 
     @teacher.reload
     assert_equal 1, @teacher.user_school_infos.count
@@ -410,6 +411,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     sign_in @teacher
     submit_partial_school_info
+    assert_response 422
 
     new_tenure = @teacher.user_school_infos.last
     refute_nil @teacher.user_school_infos.last.school_info.school_name
@@ -495,6 +497,28 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal new_tenure.school_info.school, new_school
     refute_nil @second_teacher.user_school_infos.last.school_info.school_name
     refute_equal @second_teacher.user_school_infos.last.school_info.school, new_school
+  end
+
+  test 'confirmation complete submit unchanged manual info' do
+    # Edge case involving complete school info
+
+    # Given a user with a complete (dropdown OR manual) school info `A`
+    school_info = SchoolInfo.create({country: 'US', school_type: 'public', school_name: 'Acme Inc', full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE})
+    @teacher.update school_info: school_info
+    tenure_c = @teacher.user_school_infos.first
+    assert tenure_c.school_info.complete?
+
+    # When a year later they click "No" and "Save" without changing anything
+    Timecop.travel 1.year
+    sign_in @teacher
+    submit_complete_school_info_manual_no_school_params
+    assert_response :success, response.body
+
+    # Then, only update the last confirmation date
+    @teacher.reload
+    assert_equal 1, @teacher.user_school_infos.count
+    assert tenure_c.school_info.complete?
+    assert_equal @teacher.school_info.id, school_info.id
   end
 
   test 'confirmation, complete, submit unchanged complete info' do
