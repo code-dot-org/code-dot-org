@@ -3,6 +3,7 @@ import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var Spritelab = require('./spritelab/Spritelab');
+import {backgrounds} from './spritelab/backgrounds.json';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
@@ -579,6 +580,33 @@ GameLabP5.prototype.afterSetupStarted = function() {
 GameLabP5.prototype.afterSetupComplete = function() {
   this.p5._setupEpiloguePhase1();
   this.p5._setupEpiloguePhase2();
+};
+
+GameLabP5.prototype.preloadBackgrounds = function() {
+  if (this.preloadedBackgrounds) {
+    this.p5._predefinedBackgrounds = this.preloadedBackgrounds;
+    return Promise.resolve();
+  }
+  this.preloadedBackgrounds = {};
+  this.p5._predefinedBackgrounds = {};
+  return Promise.all(
+    backgrounds.map(background => {
+      return new Promise(resolve => {
+        this.p5.loadImage(
+          background.sourceUrl,
+          image => {
+            this.preloadedBackgrounds[background.legacyParam] = image;
+            this.p5._predefinedBackgrounds[background.legacyParam] = image;
+            resolve();
+          },
+          err => {
+            console.log(err);
+            resolve();
+          }
+        );
+      });
+    })
+  );
 };
 
 /**
