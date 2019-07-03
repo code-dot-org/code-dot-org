@@ -57,7 +57,8 @@ steps:
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
   commands:
-    - echo "Running on $DRONE_RUNNER_HOSTNAME"
+    # If running on EC2, get hostname from ec2 metadata
+    - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/local-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
     - sudo chown -R circleci:circleci .
     # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -162,7 +163,8 @@ steps:
     SAUCE_ACCESS_KEY:
       from_secret: SAUCE_ACCESS_KEY
   commands:
-    - echo "Running on $DRONE_RUNNER_HOSTNAME"
+    # If running on EC2, get hostname from ec2 metadata
+    - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/local-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
     - sudo chown -R circleci:circleci .
     # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -194,6 +196,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 6b7e7814aa5e4affe72e051161413e62d24dc552d6a2c85aabed23d134fd8cc3
+hmac: 9975920fee51286f7f774adcbfea7b8f5b4a539e13c4152a432093be3f8cb001
 
 ...
