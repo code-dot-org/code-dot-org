@@ -583,30 +583,34 @@ GameLabP5.prototype.afterSetupComplete = function() {
 };
 
 GameLabP5.prototype.preloadBackgrounds = function() {
-  if (this.preloadedBackgrounds) {
-    this.p5._predefinedBackgrounds = this.preloadedBackgrounds;
-    return Promise.resolve();
+  if (!this.preloadBackgrounds_) {
+    this.preloadedBackgrounds = {};
+    this.preloadBackgrounds_ = Promise.all(
+      backgrounds.map(background => {
+        return new Promise(resolve => {
+          console.log('loading.. ' + background.name);
+          this.p5.loadImage(
+            background.sourceUrl,
+            image => {
+              this.preloadedBackgrounds[background.legacyParam] = image;
+              resolve();
+            },
+            err => {
+              console.log(err);
+              resolve();
+            }
+          );
+        });
+      })
+    );
   }
-  this.preloadedBackgrounds = {};
-  this.p5._predefinedBackgrounds = {};
-  return Promise.all(
-    backgrounds.map(background => {
-      return new Promise(resolve => {
-        this.p5.loadImage(
-          background.sourceUrl,
-          image => {
-            this.preloadedBackgrounds[background.legacyParam] = image;
-            this.p5._predefinedBackgrounds[background.legacyParam] = image;
-            resolve();
-          },
-          err => {
-            console.log(err);
-            resolve();
-          }
-        );
-      });
-    })
-  );
+  return this.preloadBackgrounds_.then(() => {
+    return new Promise(resolve => {
+      console.log('then');
+      this.p5._predefinedBackgrounds = this.preloadedBackgrounds;
+      resolve();
+    });
+  });
 };
 
 /**
