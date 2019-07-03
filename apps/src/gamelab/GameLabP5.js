@@ -603,12 +603,9 @@ GameLabP5.prototype.preloadBackgrounds = function() {
       })
     );
   }
-  return this.preloadBackgrounds_.then(() => {
-    return new Promise(resolve => {
-      this.p5._preloadedBackgrounds = this.preloadedBackgrounds;
-      resolve();
-    });
-  });
+  return this.preloadBackgrounds_.then(
+    () => (this.p5._preloadedBackgrounds = this.preloadedBackgrounds)
+  );
 };
 
 /**
