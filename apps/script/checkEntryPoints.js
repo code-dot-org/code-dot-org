@@ -65,7 +65,6 @@ const SILENCED = [
   'publicKeyCryptography',
   'scratch',
   'scriptOverview',
-  'signup',
   'studio',
   'turtle',
   'tutorialExplorer',
