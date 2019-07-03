@@ -496,9 +496,9 @@ describe('entry tests', () => {
     'levels/_curriculum_reference':
       './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/_dialog': './src/sites/studio/pages/levels/_dialog.js',
+    'levels/_external': './src/sites/studio/pages/levels/_external.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
-    'levels/external': './src/sites/studio/pages/levels/external.js',
     'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
     'levels/multi': './src/sites/studio/pages/levels/multi.js',
