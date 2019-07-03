@@ -516,7 +516,6 @@ describe('entry tests', () => {
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
-    schoolInfo: './src/sites/studio/pages/schoolInfo.js',
     'layouts/_school_info_confirmation_dialog':
       './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
     schoolInfoInterstitial:
@@ -525,6 +524,7 @@ describe('entry tests', () => {
     'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_header_progress':
       './src/sites/studio/pages/shared/_header_progress.js',
+    'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
     signup: './src/sites/studio/pages/signup.js',
     'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'layouts/_race_interstitial':
