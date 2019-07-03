@@ -49,7 +49,10 @@ module Pd::SurveyPipeline
     #
     # @return [Hash{:summaries => Array<Hash>}] a collection of survey summaries.
     #   Each summary contains all fields in group_config, reducer name and reducer result.
-    #
+
+    # TODO
+    # PRE: Array, empty-able
+    # POST: Array, empty-able
     def map_reduce(question_answer_joined:)
       groups = group_data question_answer_joined
       map_to_reducers(groups)
@@ -69,10 +72,11 @@ module Pd::SurveyPipeline
         # Apply matched reducers on each group.
         # Add only non-empty result to the final summary.
         map_config.each do |condition:, field:, reducers:|
+          # Only reject if condition is explicitly false. Nil condition is treated as always true.
           next if condition && !condition.call(group_key)
 
           reducers.each do |reducer|
-            # TODO: use compact or not? How to handle nil?
+            # Only process values that are not nil
             reducer_result = reducer.reduce group_records.pluck(field).compact
 
             next unless reducer_result.present?

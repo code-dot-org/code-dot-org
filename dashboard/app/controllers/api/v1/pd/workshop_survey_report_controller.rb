@@ -146,11 +146,8 @@ module Api::V1::Pd
     # GET /api/v1/pd/workshops/experiment_survey_report/:id/
     def experiment_survey_report
       res1 = summarize_this_workshop(@workshop, current_user)
-      res2 = summarize_facilitator_rollup(@workshop, current_user)
+      res2 = summarize_rollup(@workshop, current_user)
       render json: res1.deep_merge(res2)
-
-      # res = summarize_facilitator_rollup(@workshop, current_user)
-      # render json: res
     end
 
     private

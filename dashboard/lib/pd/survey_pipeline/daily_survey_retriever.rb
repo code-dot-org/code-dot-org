@@ -32,6 +32,13 @@ module Pd::SurveyPipeline
     # @return [Hash{:survey_questions, :workshop_submissions, :facilitator_submissions => Array}]
     #   contains arrays of questions and submissions.
     #
+
+    # TODO
+    # pre-condition:
+    # workshop_ids exists, could be empty
+    # form_ids: doesn't have to exist, could empty
+    # post-condition: 3 arrays, all could be empty. Only returns element with answers?
+    # Func name should be: retrieve all surveys related to group of workshops and forms
     def self.retrieve_data(filters:)
       workshop_ids = filters[:workshop_ids]
       form_ids = filters[:form_ids]
@@ -42,6 +49,7 @@ module Pd::SurveyPipeline
       submission_filter[:form_id] = form_ids if form_ids.present?
 
       # Collect submissions
+      # TODO: is with_answers necessary
       ws_submissions = Pd::WorkshopDailySurvey.with_answers.where(submission_filter)
       facilitator_submissions = Pd::WorkshopFacilitatorDailySurvey.with_answers.where(submission_filter)
 

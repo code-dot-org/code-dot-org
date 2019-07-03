@@ -15,8 +15,6 @@ module Pd::SurveyPipeline
       }
     }
 
-    OUTPUT_KEYS = [:decorated_summaries]
-
     # @param context [Hash] contains necessary input for this worker to process.
     #   Results are added back to the context object.
     #
@@ -27,7 +25,7 @@ module Pd::SurveyPipeline
     def self.process_data(context)
       results = decorate context.slice(*self::INPUT_KEYS)
 
-      OUTPUT_KEYS.each do |key|
+      self::OUTPUT_KEYS.each do |key|
         next unless results.key?(key)
         if results[key].is_a? Hash
           context[key] ||= {}
@@ -80,11 +78,22 @@ module Pd::SurveyPipeline
 
       q_indexes
     end
+
+    def self.find_first_question_text(parsed_questions, q_name)
+      parsed_questions&.each_pair do |_, form_questions|
+        form_questions.each_pair do |_, qcontent|
+          if qcontent[:name] == q_name
+            return qcontent[:text]
+          end
+        end
+      end
+    end
   end
 
   # TODO: update test to test base and child classes!
   class SingleWorkshopResultDecorator < DailySurveyDecorator
     INPUT_KEYS = [:summaries, :parsed_questions, :parsed_submissions, :current_user, :errors]
+    OUTPUT_KEYS = [:decorated_summaries]
 
     # Combine summary data and parsed data into a format that UI client will understand.
     #
@@ -167,13 +176,16 @@ module Pd::SurveyPipeline
   end
 
   class FacilitatorRollupResultDecorator < DailySurveyDecorator
-    INPUT_KEYS = [:summaries, :parsed_questions, :facilitator_ids, :facilitator_submissions, :current_workshop, :errors]
+    INPUT_KEYS = [:summaries, :facilitator_ids, :current_workshop, :facilitator_submissions, :parsed_questions, :errors]
+    OUTPUT_KEYS = [:decorated_summaries]
 
-    def self.decorate(summaries:, parsed_questions:, facilitator_ids:, facilitator_submissions:, current_workshop:, errors: [])
+    def self.decorate(summaries:, facilitator_ids:, current_workshop:, facilitator_submissions:, parsed_questions:, errors: [])
       result = {
         facilitators: {},
         facilitator_response_counts: {this_workshop: {}, all_my_workshops: {}},
         facilitator_averages: {},
+        current_workshop: current_workshop.id,
+        related_workshops: {},
         errors: errors
       }
 
@@ -182,15 +194,15 @@ module Pd::SurveyPipeline
       # {this_workshop => {fac_id => count}, all_my_workshops => {fac_id => count}}
       facilitator_ids.each do |id|
         result[:facilitators][id] = User.find(id)&.name || "UserId_#{id}"
-        result[:facilitator_response_counts][:this_workshop][id] =
-          facilitator_submissions.where(facilitator_id: id, pd_workshop_id: current_workshop.id).count
         result[:facilitator_response_counts][:all_my_workshops][id] =
           facilitator_submissions.where(facilitator_id: id).count
+        result[:facilitator_response_counts][:this_workshop][id] =
+          facilitator_submissions.where(facilitator_id: id, pd_workshop_id: current_workshop.id).count
       end
 
       # Populate result[:facilitator_averages]
-      # x[fac_name] = {qname, qcategory => {this_workshop, all_my_workshops => score}}
-      # x[:questions] = {qname => qtext}
+      # result[:facilitator_averages][fac_name] = {qname, qcategory => {this_workshop, all_my_workshops => score}}
+      # result[:facilitator_averages][:questions] = {qname => qtext}
       fac_scores = result[:facilitator_averages]
       qtexts = {}
       summaries.each do |summary|
@@ -217,6 +229,7 @@ module Pd::SurveyPipeline
       end
 
       # Replace name of questions in this category just to make the UI happy
+      # Example: facilitator_effectiveness_<hash_string> -> facilitator_effectiveness_<index_number>
       category_name = 'facilitator_effectiveness'
       qname_replacement = {}
       qtexts.each_pair do |q_name, _|
@@ -245,15 +258,106 @@ module Pd::SurveyPipeline
 
       {decorated_summaries: result}
     end
+  end
 
-    def self.find_first_question_text(parsed_questions, q_name)
-      parsed_questions&.each_pair do |_, form_questions|
-        form_questions.each_pair do |_, qcontent|
-          if qcontent[:name] == q_name
-            return qcontent[:text]
+  class WorkshopRollupResultDecorator < DailySurveyDecorator
+    INPUT_KEYS = [:summaries, :facilitator_id, :current_workshop, :related_workshop_ids, :workshop_submissions, :parsed_questions, :errors]
+    OUTPUT_KEYS = [:decorated_summaries]
+
+    QUESTION_CATEGORIES = [
+      WORKSHOP_OVERALL_SUCCESS_CATEGORY = 'overall_success',
+      WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY = 'teacher_engagement'
+    ]
+
+    # TODO: use **params, like rails
+    def self.decorate(summaries:, facilitator_id:, current_workshop:, related_workshop_ids:, workshop_submissions:, parsed_questions:, errors: [])
+      result = {
+        facilitators: {},
+        workshop_response_counts: {this_workshop: {}, all_my_workshops: {}},
+        workshop_averages: {},
+        current_workshop: current_workshop.id,
+        related_workshops: {},
+        errors: errors
+      }
+
+      # Populate result[:facilitators] = {fac_id => fac_name}
+      fac_name = User.find(facilitator_id)&.name || "UserId_#{facilitator_id}"
+      result[:facilitators][facilitator_id] = fac_name
+
+      # Populate related workshops
+      result[:related_workshops][fac_name] = related_workshop_ids
+
+      # Populate result[:workshop_response_counts] =
+      # {this_workshop => {fac_id => count}, all_my_workshops => {fac_id => count}}
+      result[:workshop_response_counts][:all_my_workshops][facilitator_id] =
+        workshop_submissions.count
+      result[:workshop_response_counts][:this_workshop][facilitator_id] =
+        workshop_submissions.where(pd_workshop_id: current_workshop.id).count
+
+      # Populate result[:workshop_averages]
+      # result[:workshop_averages][fac_name] = {qname, qcategory => {this_workshop, all_my_workshops => score}}
+      # result[:workshop_averages][:questions] = {qname => qtext}
+      ws_scores = result[:workshop_averages]
+      qtexts = {}   # {qname => text}
+      summaries.each do |summary|
+        scope =
+          if summary[:workshop_id] == current_workshop.id
+            :this_workshop
+          elsif !summary[:workshop_id]
+            :all_my_workshops
+          else
+            # TODO: add non-fatal error
+            :wrong_scope
           end
-        end
+        next if scope == :wrong_scope
+
+        q_name = summary[:name]
+        ws_scores[fac_name] ||= {}
+        ws_scores[fac_name][q_name] ||= {}
+        ws_scores[fac_name][q_name][scope] = summary[:reducer_result]
+
+        qtexts[q_name] = find_first_question_text(parsed_questions, q_name)
       end
+
+      # Replace question names in question list to make the UI happy
+      # Example: overall_success_<hash_string> -> overall_success_<index_number>
+      #          teacher_engagement_<hash_string> -> teacher_engagement_<index_number>
+      qname_replacements = {}   # qname => q_new_name
+      qcategory_counts = {}     # qcategory => count
+      QUESTION_CATEGORIES.each do |qcategory|
+        qtexts.each_pair do |q_name, _|
+          next unless q_name.start_with?(qcategory) && !qname_replacements.key?(q_name)
+
+          qcategory_counts[qcategory] ||= 0
+          qname_replacements[q_name] = "#{qcategory}_#{qcategory_counts[qcategory]}"
+
+          qcategory_counts[qcategory] += 1
+        end
+        qtexts.transform_keys! {|k| qname_replacements[k] || k}
+      end
+
+      # Replace question names in score list
+      ws_scores[fac_name].transform_keys! {|k| qname_replacements[k] || k}
+
+      # Calculate category averages
+      question_scores = ws_scores[fac_name]
+      QUESTION_CATEGORIES.each do |category_name|
+        qnames_in_cateogry = qname_replacements.values.select {|val| val.start_with? category_name}
+
+        category_scores = question_scores.values_at(*qnames_in_cateogry).compact
+        this_workshop_scores = category_scores.pluck(:this_workshop)
+        all_workshop_scores = category_scores.pluck(:all_my_workshops)
+
+        question_scores[category_name] ||= {}
+        question_scores[category_name][:this_workshop] =
+          (this_workshop_scores.sum * 1.0 / this_workshop_scores.length).round(2)
+        question_scores[category_name][:all_my_workshops] =
+          (all_workshop_scores.sum * 1.0 / all_workshop_scores.length).round(2)
+      end
+
+      ws_scores[:questions] = qtexts
+
+      {decorated_summaries: result}
     end
   end
 end

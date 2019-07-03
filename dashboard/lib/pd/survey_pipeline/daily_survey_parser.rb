@@ -2,7 +2,8 @@ module Pd::SurveyPipeline
   class DailySurveyParser < SurveyPipelineWorker
     include Pd::JotForm::Constants
 
-    REQUIRED_INPUT_KEYS = [:survey_questions, :workshop_submissions, :facilitator_submissions]
+    REQUIRED_INPUT_KEYS = [:survey_questions]
+    OPTIONAL_INPUT_KEYS = [:workshop_submissions, :facilitator_submissions]
     OUTPUT_KEYS = [:parsed_questions, :parsed_submissions]
 
     # @param context [Hash] contains necessary input for this worker to process.
@@ -15,7 +16,7 @@ module Pd::SurveyPipeline
     def self.process_data(context)
       check_required_input_keys REQUIRED_INPUT_KEYS, context
 
-      results = transform_data context.slice(*REQUIRED_INPUT_KEYS)
+      results = transform_data context.slice(*(REQUIRED_INPUT_KEYS + OPTIONAL_INPUT_KEYS))
 
       OUTPUT_KEYS.each do |key|
         context[key] ||= {}
@@ -32,8 +33,16 @@ module Pd::SurveyPipeline
     # @param facilitator_submissions [Array<Pd::WorkshopFacilitatorDailySurvey>]
     #
     # @return [Hash{:questions, :submissions => Hash}]
-    #
-    def self.transform_data(survey_questions:, workshop_submissions:, facilitator_submissions:)
+
+    # TODO
+    # PRE
+    #   survey_question: Array, non-empty
+    #   1 of workshop_submissions OR facilitator_submissions: Array, non-empty. Raise if fail
+    #   workshop_submissions AND facilitator_submissions: if exists, must be Array
+    # POST
+    #   parsed_questions.length == survey_questions.length (> 0)
+    #   parsed_submissions.length == workshop_submissions.length + facilitator_submissions.length (> 0)
+    def self.transform_data(survey_questions:, workshop_submissions: [], facilitator_submissions: [])
       workshop_submissions = parse_submissions(workshop_submissions)
       facilitator_submissions = parse_submissions(facilitator_submissions)
 
@@ -53,7 +62,10 @@ module Pd::SurveyPipeline
     #   submission_content[:answer] is Hash{qid => answer_content}.
     #   answer_content is Array<Hash{:text, :answer => String}> for matrix question, and string
     #   for other question types.
-    #
+
+    # TODO
+    # PRE: survey_submissions: Array, empty-able
+    # POST: Hash, empty-able
     def self.parse_submissions(survey_submissions)
       parsed_submissions = {}
 
@@ -104,7 +116,10 @@ module Pd::SurveyPipeline
     # @return [Hash{form_id => {question_id => question_content}}]
     #   question_content is Hash{:type, :name, :text, :order, :hidden}.
     #   It could also have question-specific keys such as :options, :sub_questions etc.
-    #
+
+    # TODO
+    # PRE: survey_questions: Array, empty-able
+    # POST: Hash, empty-able
     def self.parse_questions(survey_questions)
       parsed_questions = {}
 

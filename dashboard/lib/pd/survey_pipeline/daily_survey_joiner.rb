@@ -43,7 +43,14 @@ module Pd::SurveyPipeline
     #
     # @see DailySurveyParser class, parse_survey and parse_submissions functions
     # for detailed structures of input params.
-    #
+
+    # TOOD:
+    # PRE
+    #   parsed_questions: Hash, empty-able
+    #   parsed_submissions: Hash, empty-able. Does it have to be non-empty? Best effort?
+    # POST: Array, empty-able
+
+    # TODO: make this pure functional!!! Return newly added parsed_questions
     def self.transform_data(parsed_questions:, parsed_submissions:)
       results = []
 
