@@ -64,7 +64,6 @@ const SILENCED = [
   'levelbuilder',
   'levelbuilder_edit_script',
   'levels/multi',
-  'levels/textMatch',
   'maze',
   'netsim',
   'plc',
