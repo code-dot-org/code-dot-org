@@ -298,6 +298,8 @@ module Pd::SurveyPipeline
       # result[:workshop_averages][fac_name] = {qname, qcategory => {this_workshop, all_my_workshops => score}}
       # result[:workshop_averages][:questions] = {qname => qtext}
       ws_scores = result[:workshop_averages]
+      ws_scores[fac_name] = {}
+
       qtexts = {}   # {qname => text}
       summaries.each do |summary|
         scope =
@@ -312,7 +314,6 @@ module Pd::SurveyPipeline
         next if scope == :wrong_scope
 
         q_name = summary[:name]
-        ws_scores[fac_name] ||= {}
         ws_scores[fac_name][q_name] ||= {}
         ws_scores[fac_name][q_name][scope] = summary[:reducer_result]
 

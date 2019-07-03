@@ -86,10 +86,6 @@ module Pd::SurveyPipeline
             }
           }
         },
-        all_my_workshops: {},
-        facilitators: {},
-        facilitator_averages: {},
-        facilitator_response_counts: {},
         errors: []
       }
 
@@ -100,7 +96,7 @@ module Pd::SurveyPipeline
         current_user: @workshop_admin
       }
 
-      DailySurveyDecorator.process_data context
+      SingleWorkshopResultDecorator.process_data context
 
       assert_equal expected_result, context[:decorated_summaries]
     end
@@ -156,10 +152,6 @@ module Pd::SurveyPipeline
             facilitator: {}
           }
         },
-        all_my_workshops: {},
-        facilitators: {},
-        facilitator_averages: {},
-        facilitator_response_counts: {},
         errors: []
       }
 
@@ -170,7 +162,7 @@ module Pd::SurveyPipeline
         current_user: @workshop_admin
       }
 
-      DailySurveyDecorator.process_data context
+      SingleWorkshopResultDecorator.process_data context
 
       assert_equal expected_result, context[:decorated_summaries]
     end
@@ -200,7 +192,7 @@ module Pd::SurveyPipeline
         }
       }
 
-      result = DailySurveyDecorator.index_question_by_names(questions)
+      result = SingleWorkshopResultDecorator.index_question_by_names(questions)
 
       assert_equal expected_result, result
     end
@@ -209,9 +201,9 @@ module Pd::SurveyPipeline
       data = @summary_data_permission_test
       user = @facilitators.first
 
-      assert_equal true, DailySurveyDecorator.data_visible_to_user?(user, data[0])
-      assert_equal false, DailySurveyDecorator.data_visible_to_user?(user, data[1])
-      assert_equal true, DailySurveyDecorator.data_visible_to_user?(user, data[2])
+      assert_equal true, SingleWorkshopResultDecorator.data_visible_to_user?(user, data[0])
+      assert_equal false, SingleWorkshopResultDecorator.data_visible_to_user?(user, data[1])
+      assert_equal true, SingleWorkshopResultDecorator.data_visible_to_user?(user, data[2])
     end
 
     test 'program mamager and workshop admin see all facilitator results' do
@@ -219,7 +211,7 @@ module Pd::SurveyPipeline
       users = [@program_manager, @workshop_admin]
 
       users.product(data).each do |user, data_row|
-        assert_equal true, DailySurveyDecorator.data_visible_to_user?(user, data_row)
+        assert_equal true, SingleWorkshopResultDecorator.data_visible_to_user?(user, data_row)
       end
     end
   end

@@ -49,9 +49,8 @@ module Pd::SurveyPipeline
       submission_filter[:form_id] = form_ids if form_ids.present?
 
       # Collect submissions
-      # TODO: is with_answers necessary
-      ws_submissions = Pd::WorkshopDailySurvey.with_answers.where(submission_filter)
-      facilitator_submissions = Pd::WorkshopFacilitatorDailySurvey.with_answers.where(submission_filter)
+      ws_submissions = Pd::WorkshopDailySurvey.where(submission_filter)
+      facilitator_submissions = Pd::WorkshopFacilitatorDailySurvey.where(submission_filter)
 
       # Collect survey questions; ignore forms that don't have submissions.
       form_ids_with_submissions =

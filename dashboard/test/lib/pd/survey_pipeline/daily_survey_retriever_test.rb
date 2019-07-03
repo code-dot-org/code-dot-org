@@ -36,16 +36,6 @@ module Pd::SurveyPipeline
       end
     end
 
-    test 'raise if missing input key' do
-      context = {}
-
-      exception = assert_raises RuntimeError do
-        DailySurveyRetriever.process_data context
-      end
-
-      assert exception.message.start_with?('Missing required input key')
-    end
-
     test 'can retrieve all data if no filter' do
       context = {filters: {}}
       DailySurveyRetriever.process_data context
