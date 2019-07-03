@@ -63,7 +63,6 @@ const SILENCED = [
   'jotformEmbed',
   'levelbuilder',
   'levelbuilder_edit_script',
-  'levels/contract_match',
   'levels/external',
   'levels/multi',
   'levels/textMatch',
