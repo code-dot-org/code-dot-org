@@ -517,8 +517,8 @@ describe('entry tests', () => {
     'projects/public': './src/sites/studio/pages/projects/public.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     schoolInfo: './src/sites/studio/pages/schoolInfo.js',
-    schoolInfoConfirmationDialog:
-      './src/sites/studio/pages/schoolInfoConfirmationDialog.js',
+    'layouts/_school_info_confirmation_dialog':
+      './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
     schoolInfoInterstitial:
       './src/sites/studio/pages/schoolInfoInterstitial.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',

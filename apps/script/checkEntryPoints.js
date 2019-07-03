@@ -63,7 +63,6 @@ const SILENCED = [
   'maze',
   'netsim',
   'publicKeyCryptography',
-  'schoolInfoConfirmationDialog',
   'schoolInfo',
   'schoolInfoInterstitial',
   'scratch',
