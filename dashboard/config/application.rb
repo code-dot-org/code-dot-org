@@ -102,6 +102,10 @@ module Dashboard
       end
     end
 
+    config.after_initialize do
+      I18n.fallbacks.map(es: :'es-MX')
+    end
+
     config.pretty_sharedjs = CDO.pretty_js
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
