@@ -576,6 +576,8 @@ describe('entry tests', () => {
 
   var pegasusEntries = {
     // code.org
+    'code.org/public/administrators':
+      './src/sites/code.org/pages/public/administrators.js',
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
@@ -589,6 +591,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/views/regional_partner_search':
+      './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
       './src/sites/code.org/pages/views/share_privacy.js',
     'code.org/views/theme_common_head_after':
@@ -600,7 +604,10 @@ describe('entry tests', () => {
     'hourofcode.com/public/index':
       './src/sites/hourofcode.com/pages/public/index.js',
     'hourofcode.com/views/theme_common_head_after':
-      './src/sites/hourofcode.com/pages/views/theme_common_head_after.js'
+      './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
+
+    // shared between code.org and hourofcode.com
+    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
   };
 
   var professionalDevelopmentEntries = {
@@ -663,9 +670,6 @@ describe('entry tests', () => {
     // in an iframe.
     embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
-    // tutorialExplorer for code.org/learn 2016 edition.
-    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
-
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
     brambleHost: './src/weblab/brambleHost.js',
@@ -677,8 +681,6 @@ describe('entry tests', () => {
 
     'census_reviewers/review_reported_inaccuracies':
       './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
-
-    regionalPartnerSearch: './src/regionalPartnerSearch/regionalPartnerSearch',
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
