@@ -507,10 +507,10 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
+    'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
     'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
     'levels/multi': './src/sites/studio/pages/levels/multi.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
-    'levels/textMatch': './src/sites/studio/pages/levels/textMatch.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
