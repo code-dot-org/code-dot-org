@@ -84,7 +84,7 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
 
     const queryParams = {
       course: this.props.data.program,
-      subject: '5-day Summer',
+      subject: SubjectNames.SUBJECT_SUMMER_WORKSHOP,
       zip_code: this.props.data.zipCode,
       state: this.props.data.state
     };

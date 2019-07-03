@@ -8,7 +8,7 @@ import WorkshopAssignmentSelect from './workshop_assignment_select';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const SUBJECT_NAME_MAP = {
-  summer: '5-day Summer',
+  summer: SubjectNames.SUBJECT_SUMMER_WORKSHOP,
   fit: SubjectNames.SUBJECT_FIT
 };
 const SUBJECT_TYPES = Object.keys(SUBJECT_NAME_MAP);
