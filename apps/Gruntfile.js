@@ -491,8 +491,8 @@ describe('entry tests', () => {
   var codeStudioEntries = {
     blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
-    'levels/contract_match':
-      './src/sites/studio/pages/levels/contract_match.jsx',
+    'levels/_contract_match':
+      './src/sites/studio/pages/levels/_contract_match.js',
     'levels/_curriculum_reference':
       './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/_dialog': './src/sites/studio/pages/levels/_dialog.js',
