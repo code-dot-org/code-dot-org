@@ -203,7 +203,7 @@ module Pd::SurveyPipeline::Helper
     end
   end
 
-  # Find all workshops of the same course and facilitated by selected facilitators.
+  # Find all workshops of the same course and facilitated by a facilitator.
   #
   # @param fac_ids [Number] valid facilitator id
   # @param course [String] valid course name
