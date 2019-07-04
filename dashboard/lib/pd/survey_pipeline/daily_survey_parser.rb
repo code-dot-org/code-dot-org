@@ -2,7 +2,8 @@ module Pd::SurveyPipeline
   class DailySurveyParser < SurveyPipelineWorker
     include Pd::JotForm::Constants
 
-    REQUIRED_INPUT_KEYS = [:survey_questions, :workshop_submissions, :facilitator_submissions]
+    REQUIRED_INPUT_KEYS = [:survey_questions]
+    OPTIONAL_INPUT_KEYS = [:workshop_submissions, :facilitator_submissions]
     OUTPUT_KEYS = [:parsed_questions, :parsed_submissions]
 
     # @param context [Hash] contains necessary input for this worker to process.
@@ -15,11 +16,11 @@ module Pd::SurveyPipeline
     def self.process_data(context)
       check_required_input_keys REQUIRED_INPUT_KEYS, context
 
-      results = transform_data context.slice(*REQUIRED_INPUT_KEYS)
+      results = transform_data context.slice(*(REQUIRED_INPUT_KEYS + OPTIONAL_INPUT_KEYS))
 
       OUTPUT_KEYS.each do |key|
         context[key] ||= {}
-        context[key].merge! results[key]
+        context[key].deep_merge! results[key]
       end
 
       context
@@ -33,7 +34,7 @@ module Pd::SurveyPipeline
     #
     # @return [Hash{:questions, :submissions => Hash}]
     #
-    def self.transform_data(survey_questions:, workshop_submissions:, facilitator_submissions:)
+    def self.transform_data(survey_questions:, workshop_submissions: [], facilitator_submissions: [])
       workshop_submissions = parse_submissions(workshop_submissions)
       facilitator_submissions = parse_submissions(facilitator_submissions)
 

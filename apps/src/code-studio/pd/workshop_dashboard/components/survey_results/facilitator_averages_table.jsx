@@ -104,18 +104,18 @@ export class FacilitatorAveragesTable extends React.Component {
           <tr>
             <td>Total responses</td>
             <td>
-              {
+              {JSON.stringify(
                 this.props.facilitatorResponseCounts['this_workshop'][
                   this.props.facilitatorId
                 ]
-              }
+              )}
             </td>
             <td>
-              {
+              {JSON.stringify(
                 this.props.facilitatorResponseCounts['all_my_workshops'][
                   this.props.facilitatorId
                 ]
-              }
+              )}
             </td>
           </tr>
           {Object.keys(questionOrder).map(category => {
