@@ -251,8 +251,7 @@ module Api::V1::Pd
     end
 
     test 'experiment_survey_report: return empty result for workshop without responds' do
-      csf_201_ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1,
-        facilitators: create_list(:facilitator, 2)
+      csf_201_ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1
 
       expected_result = {
         "course_name" => nil,
