@@ -576,6 +576,8 @@ describe('entry tests', () => {
 
   var pegasusEntries = {
     // code.org
+    'code.org/public/administrators':
+      './src/sites/code.org/pages/public/administrators.js',
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
@@ -589,6 +591,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/views/regional_partner_search':
+      './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
       './src/sites/code.org/pages/views/share_privacy.js',
     'code.org/views/theme_common_head_after':
@@ -600,12 +604,18 @@ describe('entry tests', () => {
     'hourofcode.com/public/index':
       './src/sites/hourofcode.com/pages/public/index.js',
     'hourofcode.com/views/theme_common_head_after':
-      './src/sites/hourofcode.com/pages/views/theme_common_head_after.js'
+      './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
+
+    // shared between code.org and hourofcode.com
+    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
   };
 
   var professionalDevelopmentEntries = {
     'code.org/public/pd-workshop-survey/splat':
       './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
+
+    'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
+    'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
 
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
@@ -638,14 +648,15 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 
     'pd/international_opt_in/new':
-      './src/sites/studio/pages/pd/international_opt_in/new.js'
+      './src/sites/studio/pages/pd/international_opt_in/new.js',
+
+    'peer_reviews/dashboard':
+      './src/sites/studio/pages/peer_reviews/dashboard.js',
+    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js'
   };
 
   var otherEntries = {
     essential: './src/sites/studio/pages/essential.js',
-    plc: './src/sites/studio/pages/plc.js',
-    jotformLoader: './src/sites/studio/pages/jotformLoader.js',
-    jotformEmbed: './src/sites/studio/pages/jotformEmbed.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
@@ -659,12 +670,6 @@ describe('entry tests', () => {
     // in an iframe.
     embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
-    // tutorialExplorer for code.org/learn 2016 edition.
-    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
-
-    'peer_reviews/dashboard':
-      './src/sites/studio/pages/peer_reviews/dashboard.js',
-
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
     brambleHost: './src/weblab/brambleHost.js',
@@ -676,8 +681,6 @@ describe('entry tests', () => {
 
     'census_reviewers/review_reported_inaccuracies':
       './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
-
-    regionalPartnerSearch: './src/regionalPartnerSearch/regionalPartnerSearch',
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
