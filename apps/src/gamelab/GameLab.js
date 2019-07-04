@@ -66,7 +66,11 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
-import {expoInteractWithApk} from '../util/exporter';
+import {
+  expoGenerateApk,
+  expoCheckApkBuild,
+  expoCancelApkBuild
+} from '../util/exporter';
 import project from '../code-studio/initApp/project';
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 
@@ -379,9 +383,26 @@ GameLab.prototype.init = function(config) {
     }
   }
 
+  const setAndroidExportProps = this.setAndroidExportProps.bind(this);
+
   this.studioApp_.setPageConstants(config, {
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: this.exportApp.bind(this),
+    expoGenerateApk: expoGenerateApk.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
+    expoCheckApkBuild: expoCheckApkBuild.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
+    expoCancelApkBuild: expoCancelApkBuild.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
     channelId: config.channel,
     nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
@@ -453,29 +474,12 @@ GameLab.prototype.init = function(config) {
  * @param {Object} expoOpts
  */
 GameLab.prototype.exportApp = async function(expoOpts) {
-  const {mode} = expoOpts || {};
-  const appName = project.getCurrentName() || 'my-app';
-
-  switch (mode) {
-    case 'expoGenerateApk':
-    case 'expoCheckApkBuild':
-    case 'expoCancelApkBuild':
-      return expoInteractWithApk(
-        {
-          ...expoOpts,
-          appName
-        },
-        this.studioApp_.config,
-        this.setAndroidExportProps.bind(this)
-      );
-    default:
-      await this.whenAnimationsAreReady();
-      return this.exportAppWithAnimations(
-        appName,
-        getStore().getState().animationList,
-        expoOpts
-      );
-  }
+  await this.whenAnimationsAreReady();
+  return this.exportAppWithAnimations(
+    project.getCurrentName() || 'my-app',
+    getStore().getState().animationList,
+    expoOpts
+  );
 };
 
 GameLab.prototype.setAndroidExportProps = function(props) {

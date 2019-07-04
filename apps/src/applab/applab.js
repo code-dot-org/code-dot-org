@@ -75,7 +75,11 @@ import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
-import {expoInteractWithApk} from '../util/exporter';
+import {
+  expoGenerateApk,
+  expoCheckApkBuild,
+  expoCancelApkBuild
+} from '../util/exporter';
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 
 /**
@@ -653,6 +657,21 @@ Applab.init = function(config) {
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
+    expoGenerateApk: expoGenerateApk.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
+    expoCheckApkBuild: expoCheckApkBuild.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
+    expoCancelApkBuild: expoCancelApkBuild.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode: !config.level.hideViewDataButton,
@@ -867,36 +886,19 @@ Applab.render = function() {
  * Export the project for web or use within Expo.
  * @param {Object} expoOpts
  */
-Applab.exportApp = async function(expoOpts) {
-  const appName = project.getCurrentName() || 'my-app';
+Applab.exportApp = function(expoOpts) {
+  // Run, grab the html from divApplab, then reset:
+  Applab.runButtonClick();
+  var html = document.getElementById('divApplab').outerHTML;
+  studioApp().resetButtonClick();
 
-  const {mode} = expoOpts || {};
-  switch (mode) {
-    case 'expoGenerateApk':
-    case 'expoCheckApkBuild':
-    case 'expoCancelApkBuild':
-      return expoInteractWithApk(
-        {
-          ...expoOpts,
-          appName
-        },
-        studioApp().config,
-        Applab.setAndroidExportProps
-      );
-    default:
-      // Run, grab the html from divApplab, then reset:
-      Applab.runButtonClick();
-      var html = document.getElementById('divApplab').outerHTML;
-      studioApp().resetButtonClick();
-
-      return Exporter.exportApp(
-        appName,
-        studioApp().editor.getValue(),
-        html,
-        expoOpts,
-        studioApp().config
-      );
-  }
+  return Exporter.exportApp(
+    project.getCurrentName() || 'my-app',
+    studioApp().editor.getValue(),
+    html,
+    expoOpts,
+    studioApp().config
+  );
 };
 
 Applab.setAndroidExportProps = function(props) {
