@@ -72,15 +72,17 @@ class TeacherPanel extends React.Component {
     students: PropTypes.arrayOf(studentShape)
   };
 
-  logToFirehose = (eventName, data = {}) => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_panel',
-        event: eventName,
-        data_json: JSON.stringify(data)
-      },
-      {includeUserId: true}
-    );
+  logToFirehose = (eventName, overrideData = {}) => {
+    let data = {
+      section_id: this.props.selectedSection.id,
+      ...overrideData
+    };
+
+    firehoseClient.putRecord({
+      study: 'teacher_panel',
+      event: eventName,
+      data_json: JSON.stringify(data)
+    });
   };
 
   onSelectUser = (id, selectType) => {
