@@ -201,6 +201,9 @@ class ExportDialog extends React.Component {
       t: PropTypes.func.isRequired
     }).isRequired,
     exportApp: PropTypes.func.isRequired,
+    expoGenerateApk: PropTypes.func.isRequired,
+    expoCheckApkBuild: PropTypes.func.isRequired,
+    expoCancelApkBuild: PropTypes.func.isRequired,
     exportGeneratedProperties: PropTypes.object,
     md5SavedSources: PropTypes.string.isRequired,
     isAbusive: PropTypes.bool.isRequired,
@@ -254,11 +257,10 @@ class ExportDialog extends React.Component {
     if (screen === 'generating' && generatingApk) {
       this.clearWaitTimer();
 
-      const {exportApp, md5SavedSources} = this.props;
+      const {expoCancelApkBuild, md5SavedSources} = this.props;
       const {expoSnackId, apkBuildId} = this.state;
 
-      exportApp({
-        mode: 'expoCancelApkBuild',
+      expoCancelApkBuild({
         md5SavedSources,
         expoSnackId,
         apkBuildId
@@ -290,9 +292,8 @@ class ExportDialog extends React.Component {
     // in process that needs to be canceled because Expo will only
     // allow one build to take place at a time
     if (apkBuildId && !apkUri) {
-      const {exportApp} = this.props;
-      exportApp({
-        mode: 'expoCancelApkBuild',
+      const {expoCancelApkBuild} = this.props;
+      expoCancelApkBuild({
         md5SavedSources: md5ApkSavedSources,
         expoSnackId: snackId,
         apkBuildId
@@ -401,7 +402,7 @@ class ExportDialog extends React.Component {
   }
 
   async publishAndGenerateApk() {
-    const {exportApp, md5SavedSources} = this.props;
+    const {expoGenerateApk, md5SavedSources} = this.props;
     const {apkUri} = this.state;
 
     if (apkUri) {
@@ -423,8 +424,7 @@ class ExportDialog extends React.Component {
 
     this.setState({generatingApk: true});
     try {
-      const apkBuildId = await exportApp({
-        mode: 'expoGenerateApk',
+      const apkBuildId = await expoGenerateApk({
         md5SavedSources,
         expoSnackId,
         iconUri,
@@ -443,10 +443,9 @@ class ExportDialog extends React.Component {
   }
 
   checkForApkBuild(apkBuildId, expoSnackId) {
-    const {exportApp, md5SavedSources} = this.props;
+    const {expoCheckApkBuild, md5SavedSources} = this.props;
 
-    return exportApp({
-      mode: 'expoCheckApkBuild',
+    return expoCheckApkBuild({
       md5SavedSources,
       expoSnackId,
       apkBuildId
@@ -532,17 +531,23 @@ class ExportDialog extends React.Component {
 
     switch (screen) {
       case 'intro':
-        return this.setState({screen: 'platform'});
+        this.setState({screen: 'platform'});
+        break;
       case 'platform':
-        return this.setState({screen: 'publish'});
-      // return this.setState({screen: 'icon'});
+        this.setState({screen: 'publish'});
+        break;
+      // this.setState({screen: 'icon'});
+      // break;
       // case 'icon':
-      //   return this.setState({screen: 'publish'});
+      //   this.setState({screen: 'publish'});
+      //   break;
       case 'publish':
         this.generateApkAsNeeded();
-        return this.setState({screen: 'generating'});
+        this.setState({screen: 'generating'});
+        break;
       case 'generating':
-        return this.close();
+        this.close();
+        break;
       default:
         throw new Error(`ExportDialog: Unexpected screen: ${screen}`);
     }
@@ -553,14 +558,17 @@ class ExportDialog extends React.Component {
 
     switch (screen) {
       case 'intro':
-        return;
+        break;
       case 'platform':
-        return this.setState({screen: 'intro'});
+        this.setState({screen: 'intro'});
+        break;
       // case 'icon':
       case 'publish':
-        return this.setState({screen: 'platform'});
+        this.setState({screen: 'platform'});
+        break;
       case 'generating':
-        return this.setState({screen: 'publish'});
+        this.setState({screen: 'publish'});
+        break;
       default:
         throw new Error(`ExportDialog: Unexpected screen: ${screen}`);
     }
@@ -928,6 +936,9 @@ export const UnconnectedExportDialog = ExportDialog;
 export default connect(
   state => ({
     exportApp: state.pageConstants.exportApp,
+    expoGenerateApk: state.pageConstants.expoGenerateApk,
+    expoCheckApkBuild: state.pageConstants.expoCheckApkBuild,
+    expoCancelApkBuild: state.pageConstants.expoCancelApkBuild,
     isOpen: state.exportDialog.isOpen,
     exportGeneratedProperties: state.exportDialog.exportGeneratedProperties,
     signInState: state.progress.signInState
