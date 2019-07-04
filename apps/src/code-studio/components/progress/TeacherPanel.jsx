@@ -72,7 +72,7 @@ class TeacherPanel extends React.Component {
     students: PropTypes.arrayOf(studentShape)
   };
 
-  logToFirehose = (eventName, overrideData) => {
+  logToFirehose = (eventName, overrideData = {}) => {
     let data = {
       script_name: this.props.scriptName,
       view_mode: this.props.viewAs
@@ -137,7 +137,7 @@ class TeacherPanel extends React.Component {
     const sectionId = selectedSection && selectedSection.id;
 
     return (
-      <TeacherPanelContainer>
+      <TeacherPanelContainer logToFirehose={this.logToFirehose}>
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle />
@@ -176,6 +176,7 @@ class TeacherPanel extends React.Component {
               <SectionSelector
                 style={{margin: '0px 10px'}}
                 reloadOnChange={true}
+                logToFirehose={() => this.logToFirehose('select_section')}
               />
               {selectedSection && (
                 <a
