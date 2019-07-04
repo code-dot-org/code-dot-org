@@ -16,7 +16,7 @@ import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import _ from 'lodash';
-import SubjectNames from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
   ...defaultStyles,
