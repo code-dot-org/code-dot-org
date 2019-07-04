@@ -429,6 +429,9 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def send_exit_surveys
+    # FiT workshops should not send exit surveys
+    return if SUBJECT_FIT == subject
+
     resolve_enrolled_users
 
     # Send the emails
