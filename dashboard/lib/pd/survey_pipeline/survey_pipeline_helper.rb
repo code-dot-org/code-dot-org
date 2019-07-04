@@ -113,6 +113,7 @@ module Pd::SurveyPipeline::Helper
     # Mapper + Reducer
     # Summarize results for all workshops
     group_config_all_ws = [:name, :type, :answer_type]
+
     is_selected_question_all_ws = lambda do |hash|
       context[:question_categories].any? {|category| hash[:name]&.start_with? category}
     end
@@ -124,16 +125,19 @@ module Pd::SurveyPipeline::Helper
         reducers: [Pd::SurveyPipeline::AvgReducer]
       }
     ]
+
     Pd::SurveyPipeline::GenericMapper.new(
       group_config: group_config_all_ws, map_config: map_config_all_ws
     ).process_data context
 
     # Summarize results for the current workshop
     group_config_this_ws = [:workshop_id, :name, :type, :answer_type]
+
     is_selected_question_this_ws = lambda do |hash|
       hash[:workshop_id] == context[:current_workshop_id] &&
       context[:question_categories].any? {|category| hash[:name]&.start_with? category}
     end
+
     map_config_this_ws = [
       {
         condition: is_selected_question_this_ws,
@@ -141,6 +145,7 @@ module Pd::SurveyPipeline::Helper
         reducers: [Pd::SurveyPipeline::AvgReducer]
       }
     ]
+
     Pd::SurveyPipeline::GenericMapper.new(
       group_config: group_config_this_ws, map_config: map_config_this_ws
     ).process_data context
@@ -227,6 +232,8 @@ module Pd::SurveyPipeline::Helper
   # @param ws_ids [Array<number>] non-empty list of workshop ids
   #
   # @return [Hash{:facilitator_submissions, :survey_questions => Array}]
+  #
+  # TODO: Move these functions into a Retriever
   #
   def retrieve_facilitator_surveys(fac_ids, ws_ids)
     fac_submissions = Pd::WorkshopFacilitatorDailySurvey.where(
