@@ -72,12 +72,7 @@ class TeacherPanel extends React.Component {
     students: PropTypes.arrayOf(studentShape)
   };
 
-  logToFirehose = (eventName, overrideData = {}) => {
-    let data = {
-      view_mode: this.props.viewAs
-    };
-    data = {...data, ...overrideData};
-
+  logToFirehose = (eventName, data = {}) => {
     firehoseClient.putRecord(
       {
         study: 'teacher_panel',
@@ -89,7 +84,7 @@ class TeacherPanel extends React.Component {
   };
 
   onSelectUser = (id, selectType) => {
-    this.logToFirehose('select_student', {selectType});
+    this.logToFirehose('select_student', {select_type: selectType});
     this.props.onSelectUser(id);
   };
 
@@ -139,7 +134,7 @@ class TeacherPanel extends React.Component {
       <TeacherPanelContainer logToFirehose={this.logToFirehose}>
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
-          <ViewAsToggle />
+          <ViewAsToggle logToFirehose={this.logToFirehose} />
           {viewAs === ViewType.Teacher &&
             currentStudent &&
             (students || []).length > 0 && (
@@ -182,6 +177,7 @@ class TeacherPanel extends React.Component {
                   href={teacherDashboardUrl(selectedSection.id)}
                   target="_blank"
                   style={styles.teacherDashboardLink}
+                  onClick={() => this.logToFirehose('select_teacher_dashboard')}
                 >
                   {i18n.teacherDashboard()}
                 </a>
