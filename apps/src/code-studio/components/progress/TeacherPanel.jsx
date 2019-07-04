@@ -74,7 +74,6 @@ class TeacherPanel extends React.Component {
 
   logToFirehose = (eventName, overrideData = {}) => {
     let data = {
-      script_name: this.props.scriptName,
       view_mode: this.props.viewAs
     };
     data = {...data, ...overrideData};
