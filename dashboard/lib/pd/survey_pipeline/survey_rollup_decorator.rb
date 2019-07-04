@@ -32,7 +32,7 @@ module Pd::SurveyPipeline
       result[:related_workshops][fac_name] = related_workshop_ids
 
       # Populate result[:facilitator_response_counts] =
-      # {this_workshop, all_my_workshops => {fac_id => count}}
+      # {this_workshop, all_my_workshops => {fac_id => {submission_type => count}}}
       result[:facilitator_response_counts][:all_my_workshops][facilitator_id] =
         {submission_type => submissions.count}
       result[:facilitator_response_counts][:this_workshop][facilitator_id] =
@@ -64,7 +64,7 @@ module Pd::SurveyPipeline
           qtexts.key?(q_name)
       end
 
-      # Map current question name to new names which follow a format that client expects.
+      # Map current question name to new names which follow a format that the client expects.
       # Examples:
       # overall_success_<hash_string> -> overall_success_<index_number>
       # teacher_engagement_<hash_string> -> teacher_engagement_<index_number>
