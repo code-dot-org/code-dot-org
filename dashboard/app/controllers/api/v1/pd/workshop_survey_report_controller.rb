@@ -123,24 +123,18 @@ module Api::V1::Pd
       error_status_code = :bad_request
       raise 'Action generic_survey_report should not be used for this workshop'
     rescue => e
-      Honeybadger.notify(
-        error_message: e.message,
-        context: {
-          workshop_id: @workshop.id,
-          course: @workshop.course,
-          subject: @workshop.subject
-        }
-      )
+      notify_error error_status_code, e
+    end
 
-      render status: error_status_code, json: {
-        errors: [
-          {
-            severity: Logger::Severity::ERROR,
-            message: "#{e.message}. Workshop id: #{@workshop.id},"\
-              " course: #{@workshop.course}, subject: #{@workshop.subject}."
-          }
-        ]
-      }
+    # GET /api/v1/pd/workshops/experiment_survey_report/:id/
+    def experiment_survey_report
+      results = report_single_workshop(@workshop, current_user)
+      results[:experiment] = true
+
+      # TODO: add rollup report before returning result to client
+      render json: results
+    rescue => e
+      notify_error e
     end
 
     private
@@ -157,6 +151,27 @@ module Api::V1::Pd
 
     def create_csf_survey_report
       render json: report_single_workshop(@workshop, current_user)
+    end
+
+    def notify_error(error_status_code, exception)
+      Honeybadger.notify(
+        error_message: exception.message,
+        context: {
+          workshop_id: @workshop.id,
+          course: @workshop.course,
+          subject: @workshop.subject
+        }
+      )
+
+      render status: error_status_code, json: {
+        errors: [
+          {
+            severity: Logger::Severity::ERROR,
+            message: "#{exception.message}. Workshop id: #{@workshop.id},"\
+              " course: #{@workshop.course}, subject: #{@workshop.subject}."
+          }
+        ]
+      }
     end
 
     # We want to filter facilitator-specific responses if the user is a facilitator and
