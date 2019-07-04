@@ -128,10 +128,12 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/experiment_survey_report/:id/
     def experiment_survey_report
-      results = report_single_workshop(@workshop, current_user)
+      this_ws_report = report_single_workshop(@workshop, current_user)
+      rollup_report = report_rollups(@workshop, current_user)
+
+      results = this_ws_report.merge(rollup_report)
       results[:experiment] = true
 
-      # TODO: add rollup report before returning result to client
       render json: results
     rescue => e
       notify_error e

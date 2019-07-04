@@ -5,7 +5,7 @@ module Pd::SurveyPipeline
     attr_reader :group_config, :map_config
 
     REQUIRED_INPUT_KEYS = [:question_answer_joined]
-    OUTPUT_KEYS = [:summaries]
+    OUTPUT_KEYS = [:summaries, :errors]
 
     # Configure mapper object.
     #
@@ -52,7 +52,7 @@ module Pd::SurveyPipeline
     #
     def map_reduce(question_answer_joined:)
       groups = group_data question_answer_joined
-      {summaries: map_to_reducers(groups)}
+      map_to_reducers(groups)
     end
 
     # Break data into groups using groupping configuration.
@@ -63,6 +63,7 @@ module Pd::SurveyPipeline
     # Map groups to reducers using mapping configuration.
     def map_to_reducers(groups)
       summaries = []
+      errors = []
 
       groups.each do |group_key, group_records|
         # Apply matched reducers on each group.
@@ -71,15 +72,21 @@ module Pd::SurveyPipeline
           next unless condition.call(group_key)
 
           reducers.each do |reducer|
-            reducer_result = reducer.reduce group_records.pluck(field)
+            # Only process values that are not nil
+            reducer_result = reducer.reduce group_records.pluck(field).compact
             next unless reducer_result.present?
 
             summaries << group_key.merge({reducer: reducer.name, reducer_result: reducer_result})
+          rescue => e
+            errors << e.message
           end
         end
       end
 
-      summaries
+      {
+        summaries: summaries,
+        errors: errors
+      }
     end
   end
 end
