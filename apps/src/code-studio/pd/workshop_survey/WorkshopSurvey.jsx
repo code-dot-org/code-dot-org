@@ -7,7 +7,7 @@ import PersonalInvolvement from './PersonalInvolvement';
 import WorkshopResults from './WorkshopResults';
 import Demographics from './Demographics';
 import Implementation from './Implementation';
-import SubjectNames from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default class WorkshopSurvey extends FormController {
   /**

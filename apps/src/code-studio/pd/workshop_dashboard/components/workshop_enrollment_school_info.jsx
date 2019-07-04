@@ -9,7 +9,7 @@ import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
 import Spinner from '../../components/spinner';
 import {WorkshopAdmin, ProgramManager} from '../permission';
 import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
-import SubjectNames from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = 'Deep Dive';
