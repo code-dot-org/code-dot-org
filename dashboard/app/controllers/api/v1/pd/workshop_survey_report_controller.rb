@@ -123,7 +123,7 @@ module Api::V1::Pd
       error_status_code = :bad_request
       raise 'Action generic_survey_report should not be used for this workshop'
     rescue => e
-      notify_error error_status_code, e
+      notify_error e, error_status_code
     end
 
     # GET /api/v1/pd/workshops/experiment_survey_report/:id/
@@ -153,7 +153,7 @@ module Api::V1::Pd
       render json: report_single_workshop(@workshop, current_user)
     end
 
-    def notify_error(error_status_code, exception)
+    def notify_error(exception, error_status_code = :internal_server_error)
       Honeybadger.notify(
         error_message: exception.message,
         context: {
