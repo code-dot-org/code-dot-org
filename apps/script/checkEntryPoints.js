@@ -58,13 +58,10 @@ const SILENCED = [
   'gamelab',
   'gamelab-api',
   'jigsaw',
-  'jotformLoader',
-  'jotformEmbed',
   'levelbuilder',
   'levelbuilder_edit_script',
   'maze',
   'netsim',
-  'plc',
   'publicKeyCryptography',
   'raceInterstitial',
   'schoolInfoConfirmationDialog',
@@ -79,9 +76,7 @@ const SILENCED = [
   'weblab',
   'cookieBanner',
   'dance',
-  'regionalPartnerSearch',
-  'regionalPartnerMiniContact',
-  'code.org/public/educate/curriculum/courses'
+  'regionalPartnerMiniContact'
 ];
 const SITES_CONFIG = {
   studio: {
