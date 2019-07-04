@@ -58,6 +58,9 @@ class TeacherPanel extends React.Component {
     getSelectedUserId: PropTypes.func,
     sectionData: PropTypes.object,
     scriptName: PropTypes.string,
+    // pageType describes the current route the user is on (e.g., 'level',
+    // 'script_overview', 'stage_extras'). Used only for logging to Firehose.
+    pageType: PropTypes.string,
 
     // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -73,8 +76,11 @@ class TeacherPanel extends React.Component {
   };
 
   logToFirehose = (eventName, overrideData = {}) => {
+    const sectionId =
+      this.props.selectedSection && this.props.selectedSection.id;
     let data = {
-      section_id: this.props.selectedSection.id,
+      section_id: sectionId,
+      page_type: this.props.pageType,
       ...overrideData
     };
 
