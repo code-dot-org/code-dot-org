@@ -501,6 +501,10 @@ class ExportDialog extends React.Component {
     return {};
   }
 
+  //
+  // Generates an APK - or monitors an existing APK build in progress
+  // Returns: Promise
+  //
   generateApkAsNeeded() {
     const {
       apkUri,
@@ -510,6 +514,7 @@ class ExportDialog extends React.Component {
     if (apkUri) {
       // The previous build completed, no need to generate a new one:
       this.setState({apkUri, apkBuildId, expoSnackId});
+      return Promise.resolve();
     } else if (apkBuildId) {
       // The previous build was in progress, resume monitoring that build:
       this.setState({
@@ -518,11 +523,11 @@ class ExportDialog extends React.Component {
         apkBuildId,
         expoSnackId
       });
-      this.waitForApkBuild(apkBuildId, expoSnackId);
+      return this.waitForApkBuild(apkBuildId, expoSnackId);
     } else {
       // There is no previous build that matches the current sources,
       // so publish and generate a new build:
-      this.publishAndGenerateApk();
+      return this.publishAndGenerateApk();
     }
   }
 
