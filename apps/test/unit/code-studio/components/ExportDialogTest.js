@@ -181,8 +181,7 @@ describe('ExportDialog', () => {
       iconUri: 'iconUri',
       splashImageUri: 'splashUri'
     });
-    // exportApp.withArgs({mode: 'expoPublish'}).returns(publishResult);
-    exportApp.returns(publishResult);
+    exportApp.withArgs({mode: 'expoPublish'}).returns(publishResult);
     const expoGenerateApk = sinon.stub();
     expoGenerateApk.returns(Promise.resolve('fakeBuildId'));
     const expoCheckApkBuild = sinon.stub();
