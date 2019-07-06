@@ -105,7 +105,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
 
     submit_blank_school_info
-    assert_response :success, response.body
+    assert_response 422
 
     @teacher.reload
     assert_nil @teacher.school_info
@@ -174,7 +174,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     @teacher.reload
 
-    assert_response :success, response.body
+    assert_response 422, response.body
     assert_equal @teacher.school_info.id, school_info.id
     assert_equal @teacher.school_info, school_info
     refute_nil @teacher.school_info.country
@@ -372,7 +372,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
     submit_blank_school_info
 
-    assert_response :success, response.body
+    assert_response 422
     refute_nil @teacher.user_school_infos.last.school_info.school_name
     assert_equal 1, @teacher.user_school_infos.count
   end
