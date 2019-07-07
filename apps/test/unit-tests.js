@@ -1,5 +1,5 @@
 // This gets replaced by karma webpack with the updated files on rebuild
-import 'babel-polyfill';
+import 'core-js';
 import 'whatwg-fetch';
 import {
   throwOnConsoleErrorsEverywhere,

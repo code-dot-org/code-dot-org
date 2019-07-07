@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import 'core-js';
 import 'whatwg-fetch';
 import {
   throwOnConsoleErrorsEverywhere,
