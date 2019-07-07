@@ -119,7 +119,7 @@
     "grunt-karma": "^2.0.0",
     "grunt-newer": "1.1.1",
     "grunt-notify": "0.4.5",
-    "grunt-sass": "2.1.0",
+    "grunt-sass": "3.0.2",
     "grunt-webpack": "^2.0.1",
     "hammerjs": "^2.0.8",
     "history": "^2.0.1",
