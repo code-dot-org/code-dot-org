@@ -161,7 +161,7 @@ if (envConstants.COVERAGE) {
     {
       test: /\.jsx?$/,
       enforce: 'pre',
-      loader: 'babel-istanbul-loader',
+      loader: 'istanbul-instrumenter-loader',
       include: path.resolve(__dirname, 'src'),
       exclude: [
         path.resolve(__dirname, 'src', 'lodash.js'),
