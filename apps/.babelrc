@@ -6,6 +6,7 @@
     "transform-object-rest-spread",
     "transform-class-properties",
     ["transform-regenerator", {"async": true, "asyncGenerators": true}],
+    'transform-runtime',
     // needed for IE 9/10 support
     ["transform-es2015-classes", {"loose": true}]
   ]
