@@ -54,4 +54,4 @@ All curriculum resources and tutorials we create will forever be free to use and
 
 [Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
 
-<%= view :social_media, facebook: "Code.org", twitter: "codeorg", instagram: "codeorg" %>
+{{ social_media_codeorg }}

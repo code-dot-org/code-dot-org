@@ -781,7 +781,7 @@ zh-CN:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION\_NAME} 精灵
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
       gamelab_mirrorSprite:
         text: "{SPRITE} 面向 {DIRECTION}"
         options:
@@ -1258,9 +1258,9 @@ zh-CN:
       aalab_createNewSpriteAdvanced:
         text: "制作一个新的精灵命名为 {NAME} \n 服装设置为 {COSTUME} \n 位于 {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION\_NAME} 精灵
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
       aalab_createNewSpriteAnonReturn:
-        text: aalab 在 {LOCATION} 处, 创建一个新的 {ANIMATION\_NAME} 精灵
+        text: aalab 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
       aalab_createPropertyGroup:
         text: 创建一个名为 {VAR} 的精灵组，其中包括所有的着装为 {COSTUME} 精灵
       aalab_createSpriteGroup:

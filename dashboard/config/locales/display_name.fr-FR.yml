@@ -2,7 +2,6 @@
 fr-FR:
   data:
     display_name:
-      AB_Debug_Artist1: 'Débogage artiste #1 (AB)'
       Alien Defender: Défenseur alien
       App Lab Intro 8 - Video Design Mode: 'Vidéo : Mode création'
       App Lab Intro 8 - Video Getting Started: 'Vidéo : Démarrer'
@@ -49,7 +48,6 @@ fr-FR:
       CSD Set Scale Map_2018: Modifier l’échelle des capteurs
       CSD Set Scale Map_2019: Modifier l’échelle des capteurs
       CSD U1L02 TFMD_2018: Aperçu de la leçon
-      CSD U1L02 TFMD_2019: Aperçu de la leçon
       CSD U1L03 TFMD_2018: Aperçu de la leçon
       CSD U1L03 TFMD_2019: Aperçu de la leçon
       CSD U1L04 TFMD_2018: Aperçu de la leçon
@@ -117,9 +115,7 @@ fr-FR:
       CSD U2 lists map_2018: Listes en HTML
       CSD U2 lists map_2019: Listes en HTML
       CSD U2L01 TFMD_2018: Aperçu de la leçon
-      CSD U2L01 TFMD_2019: Aperçu de la leçon
       CSD U2L02 TFMD_2018: Aperçu de la leçon
-      CSD U2L02 TFMD_2019: Aperçu de la leçon
       CSD U2L03 TFMD_2018: Aperçu de la leçon
       CSD U2L03 TFMD_2019: Aperçu de la leçon
       CSD U2L04 TFMD_2018: Aperçu de la leçon
@@ -228,7 +224,6 @@ fr-FR:
       CSD U3 L9 Freeplay_2019: Activité libre
       CSD U3 Plotting Shapes Shape Lab: Dessiner des formes
       CSD U3 Plotting Shapes Shape Lab_2018: Dessiner des formes
-      CSD U3 Plotting Shapes Shape Lab_2019: Dessiner des formes
       CSD U3 Random Number Map Level: Nombres aléatoires
       CSD U3 Random Number Map Level_2018: Nombres aléatoires
       CSD U3 Random Number Map Level_2019: Nombres aléatoires
@@ -313,10 +308,7 @@ fr-FR:
       CSD U3 velocity map: Vélocité des sprites
       CSD U3 velocity map_2018: Vélocité des sprites
       CSD U3 velocity map_2019: Vélocité des sprites
-      CSD U3L01 TFMD_2018: Aperçu de la leçon
-      CSD U3L01 TFMD_2019: Aperçu de la leçon
       CSD U3L02 TFMD_2018: Aperçu de la leçon
-      CSD U3L02 TFMD_2019: Aperçu de la leçon
       CSD U3L03 TFMD_2018: Aperçu de la leçon
       CSD U3L03 TFMD_2019: Aperçu de la leçon
       CSD U3L04 TFMD_2018: Aperçu de la leçon
@@ -376,9 +368,7 @@ fr-FR:
       CSD U4 User Input Map_2018: Répondre à l’entrée de l’utilisateur
       CSD U4 User Input Map_2019: Répondre à l’entrée de l’utilisateur
       CSD U4L01 autoSFLP_2018: Aperçu de la leçon
-      CSD U4L01 autoSFLP_2019: Aperçu de la leçon
       CSD U4L02 autoSFLP_2018: Aperçu de la leçon
-      CSD U4L02 autoSFLP_2019: Aperçu de la leçon
       CSD U4L03 autoSFLP_2018: Aperçu de la leçon
       CSD U4L03 autoSFLP_2019: Aperçu de la leçon
       CSD U4L04 autoSFLP_2018: Aperçu de la leçon
@@ -409,10 +399,8 @@ fr-FR:
       CSD U4L16 autoSFLP_2019: Aperçu de la leçon
       CSD U5 Amazon Data Video: Collecte d’informations sur les utilisateurs
       CSD U5 Amazon Data Video_2018: Collecte d’informations sur les utilisateurs
-      CSD U5 Amazon Data Video_2019: Collecte d’informations sur les utilisateurs
       CSD U5 Waze Data Video: Collecte d’informations sur les utilisateurs
       CSD U5 Waze Data Video_2018: Collecte d’informations sur les utilisateurs
-      CSD U5 Waze Data Video_2019: Collecte d’informations sur les utilisateurs
       CSD U5 black white images pixelation: Widget de pixellisation en noir et blanc
       CSD U5 black white images pixelation 2: Widget de pixellisation en noir et blanc
       CSD U5 black white images pixelation 2_2018: Widget de pixellisation en noir
@@ -439,9 +427,7 @@ fr-FR:
       CSD U5 black white images pixelation_2019: Widget de pixellisation en noir et
         blanc
       CSD U5L01 autoSFLP_2018: Aperçu de la leçon
-      CSD U5L01 autoSFLP_2019: Aperçu de la leçon
       CSD U5L02 autoSFLP_2018: Aperçu de la leçon
-      CSD U5L02 autoSFLP_2019: Aperçu de la leçon
       CSD U5L03 autoSFLP_2018: Aperçu de la leçon
       CSD U5L03 autoSFLP_2019: Aperçu de la leçon
       CSD U5L04 autoSFLP_2018: Aperçu de la leçon
@@ -527,12 +513,9 @@ fr-FR:
       CSD U6 tugowar final: Fais-le tien
       CSD U6 tugowar final_2018: Fais-le tien
       CSD U6 tugowar final_2019: Fais-le tien
-      CSD U6L01 TFMD: Aperçu de la leçon
       CSD U6L01 TFMD_2018: Aperçu de la leçon
-      CSD U6L01 TFMD_2019: Aperçu de la leçon
       CSD U6L02 TFMD: Aperçu de la leçon
       CSD U6L02 TFMD_2018: Aperçu de la leçon
-      CSD U6L02 TFMD_2019: Aperçu de la leçon
       CSD U6L03 TFMD: Aperçu de la leçon
       CSD U6L03 TFMD_2018: Aperçu de la leçon
       CSD U6L03 TFMD_2019: Aperçu de la leçon

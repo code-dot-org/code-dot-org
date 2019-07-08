@@ -1,16 +1,468 @@
 ---
-hy:
+hy-AM:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: 'Ալգորիթմ ընտրե՛ք տրված պատկերին:'
+        answers:
+        - text: Start with a square<br/>Put a triangle above the square<br/>Put a
+            triangle below the square
+        - {}
+        - text: Start with a square<br/>Put a parallelogram above the square<br/>Put
+            a triangle right of the parallelogram
+        - text: Start with a square<br/>Put a triangle below the square<br/>Put a
+            parallelogram right of the triangle
+      2-3 Algorithms Multi 2:
+        title: տարբերակային  ընտրություն
+        content1: Start with a triangle<br/>Put a square below the triangle<br/>Put
+          another triangle below the square
+        questions:
+        - text: 'Պատկերներից ո՞րը չի համապատասխանում ալգորիթմին:'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Համապատասխանեցում
+        content2: 'Համապատասխանեցրե՛ք պատկերները և պարային շարժումները:'
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Համապատասխանեցում
+        content2: Օգտագործեք ստեղնը համապատասխանելու յուրաքանչյուր կոդը նրա նամակում
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Ըստ կանոնների խաղի, ինչը սահմանված քարտերի վաստակեց ճիշտ.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Ինչպես կարող եք պարզեցնել այս հաջորդականությունը հետ loops.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Համապատասխանեցում
+        content1: 'Համապատասխանեցրու՛ ցանցը ծրագրին:'
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: 'Ո՞ր ծրագիրն է կազմում այս պատկերը:'
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: Maze Match
+        content1: 'Գլուխկոտրուկները համապատասխանեցրու՛ բլոկներին:'
+        pre_title: Հրահանգներ
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: Maze Multiple Ընտրություն
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ պատկերը ծրագիրը համակցված չի պարունակում սխալներ.
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: Արտիստ գործառույթները Multiple Ընտրություն One
+        questions:
+        - text: Ընտրեք ճիշտ նյութից է նկարել այս պատկերը, օգտագործելով իրեն տրված
+            գործառույթները
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Համապատասխանում հանգույց է վիճակում
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: Արվեստագետ Loops բազմակի ընտրություն
+        questions:
+        - text: Որ ձեւը կատարվում է սույն հանգույց.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: Արվեստագետ Loops բազմակի ընտրություն
+        questions:
+        - text: Որ ձեւը կատարվում է այս ծրագրի.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: Artist Համապատասխանեցման
+        content1: 'Համապատասխանում ձեւավորել հետ բլոկների, որոնք ավարտել այն:'
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: 'Որ համեմատությունը ստորեւ, ճշմարիտ է:'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: Ընտրեք լավագույն նյութից.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: Bee Loops բազմակի ընտրությամբ մեկը
+        questions:
+        - text: 'Որ արգելափակում հավաքել բոլոր նեկտար:'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Maze Match One
+        content1: 'Գլուխկոտրուկները համապատասխանեցրու՛ բլոկներին:'
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: Լաբիրինթոս բազմակի ընտրությամբ մեկը
+        questions:
+        - text: Որ փաթեթը բլոկների է ճիշտ պատասխանը.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Համապատասխանեցում
+        content1: Համապատասխանում քայլերը զառախաղ Race խաղի է, որպեսզի նրանք պետք
+          է հայտնվի ալգորիթմի.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Set Player 1 score to 0</h4>"
+        - text: "<h4>Player 1 rolls die</h4>"
+        - text: "<h4>Add Player 1 roll to total score</h4>"
+        - text: "<h4>Compare player scores to see who wins</h4>"
+      4-5 Algorithms Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ մեկը այդ իրերի ամենադժվար է նկարագրելու մի ալգորիթմ.
+        answers:
+        - text: Brushing ձեր ատամները
+        - text: Թխում թխվածքներ
+        - text: Գնումներ է մթերային ցուցակ
+        - text: բանան
+      4-5 Computational Thinking Match 1:
+        title: Համապատասխանեցում
+        content1: 'Տրանսպորտային միջոցներից յուրաքանչյուրը մասնատված է փոքր մասերի:
+          Համապատասխանեցրու՛ յուրաքանչյուր տրանսպորտային միջոց իր մասերը ներառող ցուցակին:'
+        questions:
+        - text: "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
+        - text: "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
+        - text: "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
+        - text: "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is
+            a small city.
+        answers:
+        - text: 'Seattle _____ մի _____ _____:'
+        - text: _____ is a _____ city.
+        - text: _____ is _____ a _____.
+        - text: Eugene է _____ քաղաքում.
+      4-5 Crowdsourcing Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ այդ նկարների լավագույնս է ներկայացնում քրաուդսորսինգը.
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ մեկն է այդ գործունեության կլինի լավագույնը զբաղվել քրաուդսորսինգը.
+        answers:
+        - text: Մաքրում Ձեր սենյակ
+        - text: Ուտում Ձեր դեսերտ
+        - text: Brushing ձեր մազերը
+        - text: Լվացքի ձեր դեմքը
+      4-5 Digital Footprint Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ կտոր տեղեկատվության նշված է լավ է կիսվել է ինտերնետում.
+        answers:
+        - text: Ձեր ծննդյան օրը
+        - text: Ձեր սիրած սննդի
+        - text: Ձեր հասցեն
+        - text: Your parent's credit card number
+      4-5 Internet Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Երբ դուք փորձեք մուտք է code.org, ինչը IP- հասցեն է DNS, ամենայն հավանականությամբ
+            կտանի Ձեզ.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Internet Multi 2:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Եթե ​​այդ DNS է ուղարկել Ձեզ էջում IP հասցեն 100.42.50.110, որի կայքը
+            են ձեզ վրա.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Համապատասխանեցում
+        content1: Համապատասխանի յուրաքանչյուր ծրագիր է բառի, այն կազմում, օգտագործելով
+          տրամադրված խումբը հմտությունների.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Suncatchers Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Which of the programs below <em>does not</em> make the exact same
+            sequence as Program 1?
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: Արվեստագետ Loops բազմակի ընտրություն
+        questions:
+        - text: Որ արգելափակում կստեղծի դիզայն.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: Artist Multiple Ընտրություն
+        questions:
+        - text: Որ արգելափակում հրավիրել է ուղղանկյան հետ պարագծային 100.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: Artist Multiple Ընտրություն
+        questions:
+        - text: 'Որ drawing է սիմետրիկ:'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: Bee Conditionals Multiple Choice
+        questions:
+        - text: Ընտրեք լավագույն նյութից.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: Bee Debug Multiple Choice
+        questions:
+        - text: Which version of the function will work?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: Bee Loops Multiple Choice
+        questions:
+        - text: 'Բլոկներից ո՞րն է լուծում գլուխկոտրուկը:'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: Maze Conditionals Multiple Choice
+        questions:
+        - text: 'Բլոկներից ո՞րն է լուծում գլուխկոտրուկը:'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Maze Match
+        content1: 'Գլուխկոտրուկները համապատասխանեցրու՛ բլոկներին:'
+        pre_title: Հրահանգներ
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: Maze Multiple Ընտրություն
+        questions:
+        - text: 'Բլոկներից ո՞րն է լուծում գլուխկոտրուկը:'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
         title: կոչում
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
         title: կոչում
       CSD U2 Design Project_2018:
         title: կոչում
       CSD U2 Design Project_2018_2019:
-        title: կոչում
-      CSD U2 L1 Overview:
         title: կոչում
       CSD U2 L2 Overview:
         title: կոչում
@@ -28,12 +480,245 @@ hy:
         title: կոչում
       CSD U2 expand project_2018_2019:
         title: կոչում
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: կոչում
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: կոչում
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: կոչում
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
         title: կոչում
       CSD U3 combining rep_2018:
         title: կոչում
       CSD U3 combining rep_2018_2019:
         title: կոչում
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U5 Encryption 1:
         title: կոչում
       CSD U5 Encryption 1_2018:
@@ -54,8 +739,244 @@ hy:
         title: կոչում
       CSD U5 student record_2018_2019:
         title: կոչում
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Internet Simulator Setup 2:
         title: կոչում
+      K-1 Artist 1 Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ բլոկն է լուծում գլուխկոտրուկը
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ բլոկերն են կազմում քառակուսի
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Համապատասխանեցում
+        content2: Համապատասխանում ձեւավորում հիման վրա տեսակի.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: How many nectars is this?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: How many nectars is this?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: Համապատասխանեցում
+        content2: Համապատասխանեցրե՛ք բլոկները։
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Համապատասխանեցում
+        content2: 'Համապատասխանեցրե՛ք պատկերները և պարային շարժումները:'
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Which animal has the digital footprint that leaves him or her the
+            <strong>most unsafe</strong>?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Ինչպես կարող եք պարզեցնել այս հաջորդականությունը հետ loops.
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: 'Որ աղեղը կմոտեցնի Ֆլուրնբին գանձերին:'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ տեղեկությունը դուք չէիք տարածի համացանցով
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Which choice should be the final block?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Which repeat block is the same?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Ընտրի՛ր ճիշտ տարբերակը
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: Համապատասխանեցում
+        content2: Համապատասխանում հանելուկներ եւ բլոկների
+        pre_title: Հրահանգներ
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: Maze
+        questions:
+        - text: Which answer solves this level?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ ալգորիթմը կհասցնի Ֆլուրբին ծաղիկների մոտ?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Which step should go at the beginning of this algorithm?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Which step should fill in the blank for this algorithm?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ բլոկներն են ստեղծում MOVEբառը
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: տարբերակային  ընտրություն
+        questions:
+        - text: Որ բառը ուղղագրությամբ.
+        answers:
+        - {}
+        - {}
+        - {}
       Multi-Screen Apps:
         title: կոչում
       New Challenge Introduction:
@@ -64,1199 +985,683 @@ hy:
         title: կոչում
       Prepare for your presentation:
         title: կոչում
-    match:
-      2-3 Big Event Match 1:
-        content2: 'Համապատասխանեցրե՛ք պատկերները և պարային շարժումները:'
-        title: Համապատասխանեցում
-      2-3 Binary Match 1:
-        content2: Օգտագործեք ստեղնը համապատասխանելու յուրաքանչյուր կոդը նրա նամակում
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: Համապատասխանեցում
-      2-3 Graph Paper Match 1:
-        content1: 'Համապատասխանեցրու՛ ցանցը ծրագրին:'
-        title: Համապատասխանեցում
-      2-3 Maze Match 2:
-        content1: 'Գլուխկոտրուկները համապատասխանեցրու՛ բլոկներին:'
-        pre_title: Հրահանգներ
-        title: Maze Match
-      2-3 artist loops match 1:
-        content2: Համապատասխանում հանգույց է վիճակում
-      2-3 artist match 1:
-        content1: 'Համապատասխանում ձեւավորել հետ բլոկների, որոնք ավարտել այն:'
-        title: Artist Համապատասխանեցման
-      2-3 maze match 1:
-        content1: 'Գլուխկոտրուկները համապատասխանեցրու՛ բլոկներին:'
-        title: Maze Match One
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>Set Player 1 score to 0</h4>"
-        - text: "<h4>Player 1 rolls die</h4>"
-        - text: "<h4>Add Player 1 roll to total score</h4>"
-        - text: "<h4>Compare player scores to see who wins</h4>"
-        content1: Համապատասխանում քայլերը զառախաղ Race խաղի է, որպեսզի նրանք պետք
-          է հայտնվի ալգորիթմի.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: Համապատասխանեցում
-      4-5 Computational Thinking Match 1:
-        content1: 'Տրանսպորտային միջոցներից յուրաքանչյուրը մասնատված է փոքր մասերի:
-          Համապատասխանեցրու՛ յուրաքանչյուր տրանսպորտային միջոց իր մասերը ներառող ցուցակին:'
-        questions:
-        - text: "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
-        - text: "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
-        - text: "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
-        - text: "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
-        title: Համապատասխանեցում
-      4-5 Suncatchers Match 1:
-        content1: Համապատասխանի յուրաքանչյուր ծրագիր է բառի, այն կազմում, օգտագործելով
-          տրամադրված խումբը հմտությունների.
-        title: Համապատասխանեցում
-      4-5 maze match 1:
-        content1: 'Գլուխկոտրուկները համապատասխանեցրու՛ բլոկներին:'
-        pre_title: Հրահանգներ
-        title: Maze Match
-      K-1 Artist 2 Match 2:
-        content2: Համապատասխանում ձեւավորում հիման վրա տեսակի.
-        title: Համապատասխանեցում
-      K-1 Bee Loops Match 1:
-        content2: Համապատասխանեցրե՛ք բլոկները։
-        title: Համապատասխանեցում
-      K-1 Big Event Match 1:
-        content2: 'Համապատասխանեցրե՛ք պատկերները և պարային շարժումները:'
-        title: Համապատասխանեցում
-      K-1 Maze Match 1:
-        content2: Համապատասխանում հանելուկներ եւ բլոկների
-        pre_title: Հրահանգներ
-        title: Համապատասխանեցում
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: Start with a square<br/>Put a triangle above the square<br/>Put a
-            triangle below the square
-          correct: false
-        - correct: true
-        - text: Start with a square<br/>Put a parallelogram above the square<br/>Put
-            a triangle right of the parallelogram
-          correct: false
-        - text: Start with a square<br/>Put a triangle below the square<br/>Put a
-            parallelogram right of the triangle
-          correct: false
-        questions:
-        - text: 'Ալգորիթմ ընտրե՛ք տրված պատկերին:'
-        title: տարբերակային  ընտրություն
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: Start with a triangle<br/>Put a square below the triangle<br/>Put
-          another triangle below the square
-        questions:
-        - text: 'Պատկերներից ո՞րը չի համապատասխանում ալգորիթմին:'
-        title: տարբերակային  ընտրություն
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Ըստ կանոնների խաղի, ինչը սահմանված քարտերի վաստակեց ճիշտ.
-        title: տարբերակային  ընտրություն
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Ինչպես կարող եք պարզեցնել այս հաջորդականությունը հետ loops.
-        title: տարբերակային  ընտրություն
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 'Ո՞ր ծրագիրն է կազմում այս պատկերը:'
-        title: տարբերակային  ընտրություն
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: Maze Multiple Ընտրություն
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: տարբերակային  ընտրություն
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Որ պատկերը ծրագիրը համակցված չի պարունակում սխալներ.
-        title: տարբերակային  ընտրություն
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Ընտրեք ճիշտ նյութից է նկարել այս պատկերը, օգտագործելով իրեն տրված
-            գործառույթները
-        title: Արտիստ գործառույթները Multiple Ընտրություն One
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Որ ձեւը կատարվում է սույն հանգույց.
-        title: Արվեստագետ Loops բազմակի ընտրություն
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Որ ձեւը կատարվում է այս ծրագրի.
-        title: Արվեստագետ Loops բազմակի ընտրություն
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 'Որ համեմատությունը ստորեւ, ճշմարիտ է:'
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Ընտրեք լավագույն նյութից.
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 'Որ արգելափակում հավաքել բոլոր նեկտար:'
-        title: Bee Loops բազմակի ընտրությամբ մեկը
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Որ փաթեթը բլոկների է ճիշտ պատասխանը.
-        title: Լաբիրինթոս բազմակի ընտրությամբ մեկը
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: Brushing ձեր ատամները
-          correct: false
-        - text: Թխում թխվածքներ
-          correct: false
-        - text: Գնումներ է մթերային ցուցակ
-          correct: false
-        - text: բանան
-          correct: true
-        questions:
-        - text: Որ մեկը այդ իրերի ամենադժվար է նկարագրելու մի ալգորիթմ.
-        title: տարբերակային  ընտրություն
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: 'Seattle _____ մի _____ _____:'
-          correct: false
-        - text: _____ is a _____ city.
-          correct: true
-        - text: _____ is _____ a _____.
-          correct: false
-        - text: Eugene է _____ քաղաքում.
-          correct: false
-        questions:
-        - text: Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is
-            a small city.
-        title: տարբերակային  ընտրություն
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: Որ այդ նկարների լավագույնս է ներկայացնում քրաուդսորսինգը.
-        title: տարբերակային  ընտրություն
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: Մաքրում Ձեր սենյակ
-          correct: true
-        - text: Ուտում Ձեր դեսերտ
-          correct: false
-        - text: Brushing ձեր մազերը
-          correct: false
-        - text: Լվացքի ձեր դեմքը
-          correct: false
-        questions:
-        - text: Որ մեկն է այդ գործունեության կլինի լավագույնը զբաղվել քրաուդսորսինգը.
-        title: տարբերակային  ընտրություն
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: Ձեր ծննդյան օրը
-          correct: false
-        - text: Ձեր սիրած սննդի
-          correct: true
-        - text: Ձեր հասցեն
-          correct: false
-        - text: Your parent's credit card number
-          correct: false
-        questions:
-        - text: Որ կտոր տեղեկատվության նշված է լավ է կիսվել է ինտերնետում.
-        title: տարբերակային  ընտրություն
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Երբ դուք փորձեք մուտք է code.org, ինչը IP- հասցեն է DNS, ամենայն հավանականությամբ
-            կտանի Ձեզ.
-        title: տարբերակային  ընտրություն
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Եթե ​​այդ DNS է ուղարկել Ձեզ էջում IP հասցեն 100.42.50.110, որի կայքը
-            են ձեզ վրա.
-        title: տարբերակային  ընտրություն
-      4-5 Songwriting Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: տարբերակային  ընտրություն
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Which of the programs below <em>does not</em> make the exact same
-            sequence as Program 1?
-        title: տարբերակային  ընտրություն
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Որ արգելափակում կստեղծի դիզայն.
-        title: Արվեստագետ Loops բազմակի ընտրություն
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Որ արգելափակում հրավիրել է ուղղանկյան հետ պարագծային 100.
-        title: Artist Multiple Ընտրություն
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 'Որ drawing է սիմետրիկ:'
-        title: Artist Multiple Ընտրություն
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Ընտրեք լավագույն նյութից.
-        title: Bee Conditionals Multiple Choice
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Which version of the function will work?
-        title: Bee Debug Multiple Choice
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 'Բլոկներից ո՞րն է լուծում գլուխկոտրուկը:'
-        title: Bee Loops Multiple Choice
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 'Բլոկներից ո՞րն է լուծում գլուխկոտրուկը:'
-        title: Maze Conditionals Multiple Choice
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 'Բլոկներից ո՞րն է լուծում գլուխկոտրուկը:'
-        title: Maze Multiple Ընտրություն
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: կոչում
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: կոչում
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: կոչում
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Որ բլոկն է լուծում գլուխկոտրուկը
-        title: տարբերակային  ընտրություն
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Որ բլոկերն են կազմում քառակուսի
-        title: տարբերակային  ընտրություն
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: How many nectars is this?
-        title: տարբերակային  ընտրություն
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: How many nectars is this?
-        title: տարբերակային  ընտրություն
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Which animal has the digital footprint that leaves him or her the
-            <strong>most unsafe</strong>?
-        title: տարբերակային  ընտրություն
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Ինչպես կարող եք պարզեցնել այս հաջորդականությունը հետ loops.
-        title: տարբերակային  ընտրություն
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 'Որ աղեղը կմոտեցնի Ֆլուրնբին գանձերին:'
-        title: տարբերակային  ընտրություն
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Որ տեղեկությունը դուք չէիք տարածի համացանցով
-        title: տարբերակային  ընտրություն
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Which choice should be the final block?
-        title: տարբերակային  ընտրություն
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Which repeat block is the same?
-        title: տարբերակային  ընտրություն
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Ընտրի՛ր ճիշտ տարբերակը
-        title: տարբերակային  ընտրություն
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Which answer solves this level?
-        title: Maze
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Որ ալգորիթմը կհասցնի Ֆլուրբին ծաղիկների մոտ?
-        title: տարբերակային  ընտրություն
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Which step should go at the beginning of this algorithm?
-        title: տարբերակային  ընտրություն
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Which step should fill in the blank for this algorithm?
-        title: տարբերակային  ընտրություն
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Որ բլոկներն են ստեղծում MOVEբառը
-        title: տարբերակային  ընտրություն
-      K-1 Word Search Multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Որ բառը ուղղագրությամբ.
-        title: տարբերակային  ընտրություն
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Incorrect
+        - {}
+        - {}
+        - {}
+        - feedback: Incorrect
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Incorrect
+        - {}
+        - {}
+        - {}
+        - feedback: Incorrect
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_scrat_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}

@@ -5,7 +5,7 @@
 - if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
   -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
 - content_for(:head) do
-  %script{ src: minifiable_asset_path('js/scriptOverview.js'), data: {scriptoverview: scriptOverviewData.to_json }}
+  %script{ src: minifiable_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
 
 
 - if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
