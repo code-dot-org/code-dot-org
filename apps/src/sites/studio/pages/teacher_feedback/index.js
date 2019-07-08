@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AllFeedback from '@cdo/apps/templates/feedback/AllFeedback';
 
 $(document).ready(showFeedback);
 
@@ -9,16 +10,7 @@ function showFeedback() {
   const feedbackData = JSON.parse(script.dataset.feedback);
 
   ReactDOM.render(
-    <div>
-      <h1>All Teacher Feedback</h1>
-      <h3>
-        This is where there will be an AllFeedback component. For now, I will
-        show you that real data is here.
-      </h3>
-      {feedbackData.all_feedback.map((feedback, i) => {
-        return <p key={i}>{feedback.comment}</p>;
-      })}
-    </div>,
+    <AllFeedback feedbacks={feedbackData.all_feedback} />,
     document.getElementById('feedback-container')
   );
 }

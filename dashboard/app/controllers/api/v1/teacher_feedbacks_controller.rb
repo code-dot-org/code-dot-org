@@ -42,7 +42,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     headers['csrf-token'] = form_authenticity_token
 
     @all_feedbacks_count = TeacherFeedback.where(
-      student_id: params.require(:student_id)
+      student_id: current_user.id
     ).length
 
     render json: @all_feedbacks_count, each_serializer: Api::V1::TeacherFeedbackSerializer
