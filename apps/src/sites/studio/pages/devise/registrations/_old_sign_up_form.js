@@ -7,7 +7,7 @@ import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocomplete
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from '@cdo/locale';
-import firehoseClient from '../../../lib/util/firehose';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
