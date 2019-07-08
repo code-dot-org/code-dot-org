@@ -278,6 +278,9 @@ uk-UA:
       courseD_scrat_ramp7:
         courseD_maze_ramp7_1: Це твоя перша головоломка виклику! Вони повинні бути
           важкими та можуть може потребувати кілька спроб.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: Це твоя перша головоломка виклику! Вони повинні бути
+          важкими та можуть може потребувати кілька спроб.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Використай блок "створити коло"
           та зміни розмір фігури.

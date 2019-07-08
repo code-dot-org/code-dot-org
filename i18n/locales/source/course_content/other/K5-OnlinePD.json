@@ -1,218 +1,340 @@
 {
-  "display_name": {
-    "https://studio.code.org/s/K5-OnlinePD/stage/2/puzzle/2": "What is computer science?"
+  "https://studio.code.org/s/K5-OnlinePD/stage/2/puzzle/2": {
+    "display_name": "What is computer science?",
+    "long_instructions": "Have you ever wondered \"Exactly what is computer science?\" Or, \"Why are some computer programs written with words and some are written using images?\" If so, watch this video; it's a great introduction to the field of computer science."
   },
-  "short_instructions": {
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/4": "Try this one yourself from the beginning.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/5": "Move one way, then another to get the bird to the pig!",
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/6": "Figure out what is missing and then add blocks to get the bird to the pig!",
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/7": "Solve this level and get the bird to the pig!",
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/8": "Challenge: Go around the TNT to get the bird to the pig! ",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/4": "To get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/5": "In this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/6": "Get BB-8 to pick up all the scrap metal as quickly as possible!",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/7": "Loops even work with more than one block inside!  Can you loop this sequence?",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/8": "Can you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/4": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/5": "Check underneath every cloud to see if it is hiding a flower before you get nectar.  ",
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/6": "Help the bee collect all of the nectar. \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/7": "Get all of the nectar using as few blocks as possible.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/8": "Collect all of the nectar using as few blocks as possible",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/4": "Help the zombie draw glasses using squares with sides of 100 pixels.  \nThe bridge between the glasses is 75 pixels long.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/6": "This time, use the `draw a square` function to create the glasses. ",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/7": "You can make this drawing by adding a repeat block.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/8": "Now that you can draw a star, try drawing four stars!",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/9": "Draw only those three stars to finish this puzzle.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/4": "Write the code to help Scrat get all of the acorns!",
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/5": "Can you finish this program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? ",
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/6": "Change the scene to an icy background and set Sid’s (actor 1) speed to fast."
+  "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/2": {
+    "dsls": {
+      "title": "title",
+      "content1": "description here"
+    }
   },
-  "long_instructions": {
-    "https://studio.code.org/s/K5-OnlinePD/stage/2/puzzle/2": "Have you ever wondered \"Exactly what is computer science?\" Or, \"Why are some computer programs written with words and some are written using images?\" If so, watch this video; it's a great introduction to the field of computer science.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/3": "Watch the video below, which explains the very first program that young students will write in [Course A][0]. On the next page, you'll get to write a similar program of your own!",
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/4": "Try this one yourself from the beginning.\n\n[expandable][0]",
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/5": "Move one way, then another to get the bird to the pig!\n\n[expandable][0]",
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/6": "Figure out what is missing and then add blocks to get the bird to the pig!\n\n[expandable][0]",
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/7": "Solve this level and get the bird to the pig!\n\n[expandable][0]",
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/8": "**Challenge:** Go around the TNT to get the bird to the pig!\n\n[expandable][0]",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/3": "Watch the video below, which explains how loops work and introduces the 'Repeat' block in CS Fundamentals.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/4": "[][0] _\"Go BB-8!\"_\n\nTo get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/5": "[][0] _\"Keep it up, BB-8.\"_\n\nIn this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/6": "[][0] _\"Go BB-8!\"_",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/7": "[][0] _\"Can you get it all?\"_\n\nLoops even work with more than one block inside!  Can you loop this sequence?",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/8": "[][0] _\"You can do it!\"_\n\nCan you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/9": "[][0] _\"Keep it up, BB-8.\"_\n\n**Challenge:** Combine ideas from the last few puzzles to complete this level.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/4": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/5": "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar _once_.  \n\nRemember: Not all clouds hide the same thing!",
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/6": "You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar _once_.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/7": "In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.\n\nGet all of the nectar using as few blocks as possible.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/4": "_\"Me zombie artist. Me love drawing!\"_\n\nHelp the zombie draw glasses using squares with sides of 100 pixels.  \nThe bridge between the glasses is 75 pixels long.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/5": "Here is a puzzle that uses a function that we have defined. ",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/6": "Functions let you define new blocks! \n\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \n\n* * *\n\nThe squares are 75 pixels apart.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/7": "We will come back to functions shortly. Let's take a break to practice making this star. \n\nYou can make this drawing by adding a repeat block.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/8": "Now that you can draw a star, try drawing four stars!\n\n-   Each branch of the star is 25 pixels long\n-   Turn 45 degrees between branches\n-   Jump 100 pixels between each star",
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/9": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\n\nDraw only those three stars to finish this puzzle.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/3": "Watch this video that defines \"events\" and shows how they work in CS Fundamentals. Afterwards, you will try some puzzles that require you to code events.\n\n> An event is a line of code that tells your computer to \"listen\" for something to happen, then take an action. For example, on web pages, you often can display a drop down menu when you roll over the navigation bar with your mouse. The \"mouse rollover\" is an \"event\" that triggers an action.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/4": "Scrat is still looking for acorns! \nHelp him scamper around by attaching a `move actor 1` block to each of the events and changing the direction to work for each arrow key. \nWhen you’re done, click \"Run\" and try to collect all of the acorns.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/5": "Here is your code from the last puzzle, as well as the code to move Granny left and right. \nCan you finish the program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? \nPress \"Run\" to play the game.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/6": "Everyone needs to move faster because an ice storm is coming! \nChange the scene to an icy background and set Sid’s (actor 1) speed to fast.\nPress \"Run\" and move Sid to Diego to warn him.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/9/puzzle/3": "So far, you've been introduced to some of our unplugged lesson plans. However, there are lesson plans for every single CS Fundamentals lesson -- both plugged and online. You can find the full list of lesson plans for each course below:\n<br/>\n<br/> \n[Course A lesson plans][0]<br/> \n[Course B lesson plans][1]<br/>\n[Course C lesson plans][2]<br/> \n[Course D lesson plans][3]<br/> \n[Course E lesson plans][4]<br/> \n[Course F lesson plans][5]<br/> \n\nHowever, you may want to adapt these lessons, or build your own! The video below explains the structure of the CS Fundamentals lessons, but also provides tips in case if you want to develop your own lessons.",
-    "https://studio.code.org/s/K5-OnlinePD/stage/11/puzzle/3": "> **If you enjoyed this course, sign up for an in-person workshop:**\n>\n> [Sign up now][0] to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area."
+  "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/3": {
+    "long_instructions": "Watch the video below, which explains the very first program that young students will write in [Course A][0]. On the next page, you'll get to write a similar program of your own!"
   },
-  "authored_hints": {
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/4": {
+  "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/4": {
+    "short_instructions": "Try this one yourself from the beginning.",
+    "long_instructions": "Try this one yourself from the beginning.\n\n[expandable][0]",
+    "authored_hints": {
       "courseA_maze_seq5_a": "Try writing down the steps on paper to find a solution!",
       "courseA_maze_seq5_b": "You will need 2 blocks, pointing in 2 directions."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/5": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/5": {
+    "short_instructions": "Move one way, then another to get the bird to the pig!",
+    "long_instructions": "Move one way, then another to get the bird to the pig!\n\n[expandable][0]",
+    "authored_hints": {
       "courseA_maze_seq6_a": "Your final code should have 3 movement blocks.",
       "courseA_maze_seq6_b": "If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/6": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/6": {
+    "short_instructions": "Figure out what is missing and then add blocks to get the bird to the pig!",
+    "long_instructions": "Figure out what is missing and then add blocks to get the bird to the pig!\n\n[expandable][0]",
+    "authored_hints": {
       "courseA_maze_seq7_a": "There is 1 block that you need to add to move the bird to the pig.",
       "courseA_maze_seq7_b": "If you can't figure out what to do, try drawing the puzzle on paper and use your finger to figure out which way to move."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/7": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/7": {
+    "short_instructions": "Solve this level and get the bird to the pig!",
+    "long_instructions": "Solve this level and get the bird to the pig!\n\n[expandable][0]",
+    "authored_hints": {
       "courseA_maze_seq8_a": "If you're stuck, try drawing the image on paper to see how the bird should move."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/8": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/8": {
+    "short_instructions": "Challenge: Go around the TNT to get the bird to the pig! ",
+    "long_instructions": "**Challenge:** Go around the TNT to get the bird to the pig!\n\n[expandable][0]",
+    "authored_hints": {
       "courseA_maze_seq10_a": "If you're having trouble, try writing down the steps on a piece of paper first.",
       "courseA_maze_seq10_b": "You will need to go 3 directions to solve this puzzle."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/4": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/3": {
+    "long_instructions": "Watch the video below, which explains how loops work and introduces the 'Repeat' block in CS Fundamentals."
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/4": {
+    "short_instructions": "To get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
+    "long_instructions": "[][0] _\"Go BB-8!\"_\n\nTo get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
+    "authored_hints": {
       "courseC_starWars_loops2_a": "To repeat code, drag out a `repeat` loop, then put the block you want inside of it."
     },
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/5": {
+    "callouts": {
+      "courseC_starWars_loops2": "You only have one of these blocks available in this puzzle."
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/5": {
+    "short_instructions": "In this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!",
+    "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\nIn this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!",
+    "authored_hints": {
       "courseC_starWars_loops4_c": "Clicking on the small arrow next to \"left\" on the turn block will let you change it to  \"right\".",
       "courseC_starWars_loops4_a": "Use two `repeat` blocks.",
       "courseC_starWars_loops4_b": "Each `repeat` loop will have only one command inside of it: `move forward`."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/6": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/6": {
+    "short_instructions": "Get BB-8 to pick up all the scrap metal as quickly as possible!",
+    "long_instructions": "[][0] _\"Go BB-8!\"_",
+    "authored_hints": {
       "courseC_starWars_loops5_b": "To move down, you have to turn and then move forward.",
       "courseC_starWars_loops5_a": "The best solution uses a turn, then a single `move forward`, another turn, then a loop."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/7": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/7": {
+    "short_instructions": "Loops even work with more than one block inside!  Can you loop this sequence?",
+    "long_instructions": "[][0] _\"Can you get it all?\"_\n\nLoops even work with more than one block inside!  Can you loop this sequence?",
+    "authored_hints": {
       "courseC_starWars_loops6_a": "Try writing all of the moves down on a piece of paper and looking for a pattern.",
-      "courseC_starWars_loops6_b": "If you want to use less code, you can put one `repeat` loop inside of another!  \nThis is called a **nested loop**."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/8": {
+      "courseC_starWars_loops6_b": "If you want to use less code, you can put one `repeat` loop inside of another!\\\nThis is called a **nested loop**."
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/8": {
+    "short_instructions": "Can you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
+    "long_instructions": "[][0] _\"You can do it!\"_\n\nCan you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
+    "authored_hints": {
       "courseC_starWars_loops7_a": "This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?",
       "courseC_starWars_loops7_b": "If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.",
       "courseC_starWars_loops7_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/9": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/9": {
+    "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\n**Challenge:** Combine ideas from the last few puzzles to complete this level.",
+    "authored_hints": {
       "course_starWars_loops8_a": "Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!",
       "course_starWars_loops8_b": "Think of the first half of this problem as a stair step problem. How did you solve that before?",
       "course_starWars_loops8_c": "Take a look at this path.\n\n[][0]"
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/4": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/4": {
+    "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
+    "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
+    "authored_hints": {
       "courseD_bee_conditionals1_a": "You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar."
     },
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/5": {
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
+            }
+          ],
+          "answers": [
+            {
+              "text": "The bee will move to the cloud and try to get nectar, no matter what. ",
+              "correct": false,
+              "feedback": "Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
+            },
+            {
+              "text": "The bee will move to the cloud and only try to get nectar if there is a flower underneath.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The bee will move to the cloud and then do nothing, no matter what. ",
+              "correct": false,
+              "feedback": "Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/5": {
+    "short_instructions": "Check underneath every cloud to see if it is hiding a flower before you get nectar.  ",
+    "long_instructions": "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar _once_.  \n\nRemember: Not all clouds hide the same thing!",
+    "authored_hints": {
       "courseD_bee_conditionals2_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals2_a": "Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.",
       "courseD_bee_conditionals2_b": "You can use a `repeat` loop or a `while path ahead` to move through this maze.",
       "courseD_bee_conditionals2_c": "You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.",
       "courseD_bee_conditionals2_hintVid2": "Watch this video for help solving this puzzle."
     },
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/6": {
+    "callouts": {
+      "4_5_Bee_Conditionals_2_1": "Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.",
+      "4_5_Bee_Conditionals_2_2": "Need help?  Click here for a VIDEO hint!"
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/6": {
+    "short_instructions": "Help the bee collect all of the nectar. \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
+    "long_instructions": "You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar _once_.",
+    "authored_hints": {
       "courseD_bee_conditionals3_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals3_a": "Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.",
       "courseD_bee_conditionals3_b": "You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!",
       "courseD_bee_conditionals3_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.",
       "courseD_bee_conditionals3_hintVid2": "Watch this video for help solving this puzzle."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/7": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/7": {
+    "short_instructions": "Get all of the nectar using as few blocks as possible.",
+    "long_instructions": "In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.\n\nGet all of the nectar using as few blocks as possible.",
+    "authored_hints": {
       "courseD_bee_conditionals4_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals4_a": "You can still treat every space as if there is a cloud over it, even though you can see the whole path.",
       "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. ",
       "courseD_bee_conditionals4_c": "Using <xml><block type=\"maze_untilBlocked\"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
       "courseD_bee_conditionals4_hintVid2": "Watch this video for help solving this puzzle."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/8": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/8": {
+    "short_instructions": "Collect all of the nectar using as few blocks as possible",
+    "authored_hints": {
       "courseD_bee_conditionals5_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals5_a": "Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz down every side with a flower?",
       "courseD_bee_conditionals5_c": "There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.",
       "courseD_bee_conditionals5_b": "Inside the `while there is a path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?",
       "courseD_bee_conditionals5_hintVid2": "Watch this video for help solving this puzzle."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/4": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/4": {
+    "short_instructions": "Help the zombie draw glasses using squares with sides of 100 pixels.\\\nThe bridge between the glasses is 75 pixels long.",
+    "long_instructions": "_\"Me zombie artist. Me love drawing!\"_\n\nHelp the zombie draw glasses using squares with sides of 100 pixels.\\\nThe bridge between the glasses is 75 pixels long.",
+    "authored_hints": {
       "courseE_artist_functions1_a": "The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.",
       "courseE_artist_functions1_b": "It is okay to draw overlapping lines to make your glasses.",
       "courseE_artist_functions1_c": "For shorter code, try using a `repeat` loop to draw the square frames of the glasses."
     },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/6": {
+    "callouts": {
+      "courseD_artist_functions1_1": "Let's start by using this block to help create the first square."
+    },
+    "function_names": {
+      "draw ear stems": "draw ear stems"
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/5": {
+    "long_instructions": "Here is a puzzle that uses a function that we have defined. ",
+    "function_names": {
+      "draw a square": "draw a square",
+      "draw ear stems": "draw ear stems"
+    },
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "What will happen when you press \"Run\"?"
+            }
+          ],
+          "answers": [
+            {
+              "text": "Nothing. The function is not called in the program.",
+              "correct": false,
+              "feedback": "Incorrect. The function is actually called two times in the program."
+            },
+            {
+              "text": "The artist will draw a single square.",
+              "correct": false,
+              "feedback": "Incorrect. The function is actually called two times in the program."
+            },
+            {
+              "text": "The artist will draw two squares that overlap.",
+              "correct": false,
+              "feedback": "Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions."
+            },
+            {
+              "text": "The artist will draw two squares with a small gap in between.",
+              "correct": true,
+              "feedback": "Correct! The function is called two times in the program, with a jump in between."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/6": {
+    "short_instructions": "This time, use the `draw a square` function to create the glasses. ",
+    "long_instructions": "Functions let you define new blocks! \n\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \n\n* * *\n\nThe squares are 75 pixels apart.",
+    "authored_hints": {
       "courseD_artist_functions2_b": "The function you write should not contain your whole program, just the part that draws a square with 100 pixel sides.",
       "courseD_artist_functions2_c": "Use the green `draw a square` block to \"call\" your function under the `when run` block. Otherwise, the code in your function will not run.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
       "courseD_artist_functions2_a": "Your program should:\n\n-   Use function\n-   Move forward 100 + 75 pixels\n-   Use function"
     },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/7": {
+    "callouts": {
+      "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
+    },
+    "function_names": {
+      "draw a square": "draw a square",
+      "draw ear stems": "draw ear stems"
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/7": {
+    "short_instructions": "You can make this drawing by adding a repeat block.",
+    "long_instructions": "We will come back to functions shortly. Let's take a break to practice making this star. \n\nYou can make this drawing by adding a repeat block.",
+    "authored_hints": {
       "courseD_artist_functions3_a": "To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.\n\nIf you can't remember what the starter code was, click \"start over\" in the upper right corner of the workspace.",
       "courseD_artist_functions3_b": "Your loop should have all 3 starter code blocks inside of it."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/8": {
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/8": {
+    "short_instructions": "Now that you can draw a star, try drawing four stars!",
+    "long_instructions": "Now that you can draw a star, try drawing four stars!\n\n-   Each branch of the star is 25 pixels long\n-   Turn 45 degrees between branches\n-   Jump 100 pixels between each star",
+    "authored_hints": {
       "courseD_artist_functions4_a": "Try using a function!",
       "courseD_artist_functions4_b": "Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.",
       "courseD_artist_functions4_c": "Use the green `draw a star` block to call this function in your main program. Don't forget to jump forward between each star!"
     },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/9": {
+    "function_names": {
+      "draw a star": "draw a star"
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/9": {
+    "short_instructions": "Draw only those three stars to finish this puzzle.",
+    "long_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\n\nDraw only those three stars to finish this puzzle.",
+    "authored_hints": {
       "courseD_artist_functions5_a": "Don't give up!  Remember what you have been learning.",
       "courseD_artist_functions5_b": "Functions make it easy to call saved code at any time, not just from inside a loop!",
       "courseD_artist_functions5_c": "Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!"
     },
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/4": {
+    "function_names": {
+      "draw a star": "draw a star"
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/3": {
+    "long_instructions": "Watch this video that defines \"events\" and shows how they work in CS Fundamentals. Afterwards, you will try some puzzles that require you to code events.\n\n> An event is a line of code that tells your computer to \"listen\" for something to happen, then take an action. For example, on web pages, you often can display a drop down menu when you roll over the navigation bar with your mouse. The \"mouse rollover\" is an \"event\" that triggers an action."
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/4": {
+    "short_instructions": "Write the code to help Scrat get all of the acorns!",
+    "long_instructions": "Scrat is still looking for acorns! \nHelp him scamper around by attaching a `move actor 1` block to each of the events and changing the direction to work for each arrow key. \nWhen you’re done, click \"Run\" and try to collect all of the acorns.",
+    "authored_hints": {
       "iceage_move_events_a": "Each of the `when ___ arrow` events will need to have a different `move actor 1` command connected to it to solve this puzzle. "
     },
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/5": {
+    "callouts": {
+      "arrows_move_actor": null
+    }
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/5": {
+    "short_instructions": "Can you finish this program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? ",
+    "long_instructions": "Here is your code from the last puzzle, as well as the code to move Granny left and right. \nCan you finish the program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? \nPress \"Run\" to play the game.",
+    "authored_hints": {
       "iceage_sound_and_points_a": "You will need to add two blocks beneath the `when actor 1 touches actor 2` event.",
       "iceage_sound_and_points_b": "You will need both the `score a point` block and the 'play \\_\\_\\_\\_ sound\\` block to pass this level."
     },
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/6": {
-      "iceage_warn_ice_age_a": "You should only have to add two blocks to get this puzzle where it needs to be. ",
-      "iceage_warn_ice_age_b": "Add both new blocks beneath the `when run` event to have them happen immediately after the program starts."
+    "callouts": {
+      "playlab_add_score": null
     }
   },
-  "callouts": {
-    "https://studio.code.org/s/K5-OnlinePD/stage/5/puzzle/4": {
-      "courseC_starWars_loops2": "You only have one of these blocks available in this puzzle."
+  "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/6": {
+    "short_instructions": "Change the scene to an icy background and set Sid’s (actor 1) speed to fast.",
+    "long_instructions": "Everyone needs to move faster because an ice storm is coming! \nChange the scene to an icy background and set Sid’s (actor 1) speed to fast.\nPress \"Run\" and move Sid to Diego to warn him.",
+    "authored_hints": {
+      "iceage_warn_ice_age_a": "You should only have to add two blocks to get this puzzle where it needs to be. ",
+      "iceage_warn_ice_age_b": "Add both new blocks beneath the `when run` event to have them happen immediately after the program starts."
     },
-    "https://studio.code.org/s/K5-OnlinePD/stage/6/puzzle/5": {
-      "4_5_Bee_Conditionals_2_1": "Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.",
-      "4_5_Bee_Conditionals_2_2": "Need help?  Click here for a VIDEO hint!"
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/4": {
-      "courseD_artist_functions1_1": "Let's start by using this block to help create the first square."
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/6": {
-      "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/4": {
-      "arrows_move_actor": null
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/5": {
-      "playlab_add_score": null
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/8/puzzle/6": {
+    "callouts": {
       "playlab_add_blocks": null
     }
   },
-  "function_names": {
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/4": {
-      "draw ear stems": "draw ear stems"
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/5": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/6": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/8": {
-      "draw a star": "draw a star"
-    },
-    "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/9": {
-      "draw a star": "draw a star"
-    }
+  "https://studio.code.org/s/K5-OnlinePD/stage/9/puzzle/3": {
+    "long_instructions": "So far, you've been introduced to some of our unplugged lesson plans. However, there are lesson plans for every single CS Fundamentals lesson -- both plugged and online. You can find the full list of lesson plans for each course below:\n<br/>\n<br/> \n[Course A lesson plans][0]<br/> \n[Course B lesson plans][1]<br/>\n[Course C lesson plans][2]<br/> \n[Course D lesson plans][3]<br/> \n[Course E lesson plans][4]<br/> \n[Course F lesson plans][5]<br/> \n\nHowever, you may want to adapt these lessons, or build your own! The video below explains the structure of the CS Fundamentals lessons, but also provides tips in case if you want to develop your own lessons."
+  },
+  "https://studio.code.org/s/K5-OnlinePD/stage/11/puzzle/3": {
+    "long_instructions": "> **If you enjoyed this course, sign up for an in-person workshop:**\n>\n> [Sign up now][0] to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area."
   }
 }

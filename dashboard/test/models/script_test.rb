@@ -1067,10 +1067,10 @@ class ScriptTest < ActiveSupport::TestCase
     course3_yml = {'stages' => {'course3' => {'name' => 'course3'}}}
     course4_yml = {'stages' => {'course4' => {'name' => 'course4'}}}
 
-    stages_i18n = {'en' => {'data' => {'script' => {'name' => {
+    stages_i18n = {
       'course3' => course3_yml,
       'course4' => course4_yml
-    }}}}}
+    }
 
     # updated represents what will get written to scripts.en.yml
     updated = Script.update_i18n(original_yml, stages_i18n)

@@ -109,6 +109,9 @@ bn:
     email_preference_yes: '"হ্যাঁ"'
     email_preference_no: না
   school_info:
+    title: স্কুলের তথ্য (ঐচ্ছিক)
+    school_country: স্কুলের দেশ
+    select_school_type: স্কুলের ধরণ
     other: অন্যান্য
   signin_form:
     title: একাউন্ট ইতিমধ্যেই আছে? সাইন ইন করুন
@@ -400,6 +403,7 @@ bn:
   pd:
     form_labels:
       email: ই-মেইল
+      school_country: স্কুলের দেশ
     form_entries:
       gender:
         male: পুরুষ
