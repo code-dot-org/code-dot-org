@@ -146,15 +146,14 @@ class FlexGroup extends Component {
       this.props.stages,
       stage => stage.flex_category || 'Default'
     );
-    let count = 0;
     let afterStage = 1;
 
     return (
       <div>
-        {_.map(groups, (stages, group) => (
+        {_.keys(groups).map((group, groupIndex) => (
           <div key={group}>
             <div style={styles.groupHeader}>
-              Group {++count}: {group}
+              Group {groupIndex + 1}: {group}
               <OrderControls
                 type={ControlTypes.Group}
                 position={afterStage}
@@ -162,7 +161,7 @@ class FlexGroup extends Component {
               />
             </div>
             <div style={styles.groupBody}>
-              {stages.map((stage, index) => {
+              {groups[group].map((stage, index) => {
                 afterStage++;
                 return (
                   <StageCard
