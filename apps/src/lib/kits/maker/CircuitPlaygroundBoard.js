@@ -146,7 +146,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       productId === CIRCUIT_PLAYGROUND_EXPRESS_PID
     ) {
       this.boardType_ = BOARD_TYPE.EXPRESS;
-      this.fiveBoard_.isExpressBoard = true;
+      if (this.fiveBoard_) {
+        this.fiveBoard_.isExpressBoard = true;
+      }
     } else {
       this.boardType_ = BOARD_TYPE.OTHER;
     }
