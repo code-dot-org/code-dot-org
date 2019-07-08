@@ -171,6 +171,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.travel 1.hour
     submit_blank_school_info
+    assert_response 422
 
     @teacher.reload
 

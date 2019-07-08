@@ -11,11 +11,8 @@ class Api::V1::UserSchoolInfosController < ApplicationController
 
   # PATCH /api/v1/users_school_infos
   def update
-    # return unless school_info_params[:school_id].present? || school_info_params[:country].present?
-
     unless school_info_params[:school_id].present? || school_info_params[:country].present?
       render json: {error: "school id or country is not present"}, status: 422
-      # head 422
       return
     end
 
