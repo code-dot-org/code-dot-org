@@ -471,7 +471,7 @@ class ExportDialog extends React.Component {
       } else {
         // Check status again...
         // NOTE: we don't timeout automatically
-        this.waitTimerId = setTimeout(async () => {
+        this.waitTimerId = setTimeout(() => {
           this.waitTimerId = null;
           this.waitForApkBuild(apkBuildId, expoSnackId);
         }, APK_BUILD_STATUS_CHECK_PERIOD);
