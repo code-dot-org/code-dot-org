@@ -1,9 +1,14 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import VariableFormGroup from '@cdo/apps/code-studio/pd/workshop_survey/VariableFormGroup';
 
-$(document).ready(function() {
+import('@cdo/apps/code-studio/pd/workshop_survey/VariableFormGroup').then(
+  ({default: VariableFormGroup}) => {
+    $(document).ready(onReady);
+  }
+);
+
+function onReady() {
   $('#pd-workshop-survey-form')
     .find('select')
     .selectize();
@@ -74,7 +79,7 @@ $(document).ready(function() {
     />,
     $('#facilitator-specific-questions').get(0)
   );
-});
+}
 
 function processResponse() {
   $('#btn-submit').removeAttr('disabled');

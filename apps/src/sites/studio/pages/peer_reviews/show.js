@@ -1,3 +1,3 @@
-import PlcHeader from '@cdo/apps/code-studio/plc/header';
-
-window.dashboard.plcHeader = PlcHeader;
+import('@cdo/apps/code-studio/plc/header').then(PlcHeader => {
+  window.dashboard.plcHeader = PlcHeader;
+});
