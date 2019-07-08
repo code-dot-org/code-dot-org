@@ -7,6 +7,7 @@ import PersonalInvolvement from './PersonalInvolvement';
 import WorkshopResults from './WorkshopResults';
 import Demographics from './Demographics';
 import Implementation from './Implementation';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default class WorkshopSurvey extends FormController {
   /**
@@ -34,7 +35,7 @@ export default class WorkshopSurvey extends FormController {
   isLocalSummer() {
     return (
       this.props.course === 'CS Principles' &&
-      this.props.subject === '5-day Summer'
+      this.props.subject === SubjectNames.SUBJECT_SUMMER_WORKSHOP
     );
   }
 
