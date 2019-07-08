@@ -29,7 +29,7 @@ RUN apt-get update && \
 		apt-get install -y \
 		  git \
 		  xvfb \
-		  yarn=1.16.0 \
+		  yarn=1.16.0-1 \
 		  sudo \
 		  openssh-client \
 		  ca-certificates \
