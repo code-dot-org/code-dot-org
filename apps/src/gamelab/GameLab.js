@@ -167,19 +167,10 @@ module.exports = GameLab;
  * @param {string} logLevel
  */
 GameLab.prototype.log = function(object, logLevel) {
-  this.consoleLogger_.log(
-    experiments.isEnabled('react-inspector')
-      ? {output: object, fromConsoleLog: true}
-      : object
-  );
+  this.consoleLogger_.log({output: object, fromConsoleLog: true});
   if (this.debuggerEnabled) {
     getStore().dispatch(
-      jsDebugger.appendLog(
-        experiments.isEnabled('react-inspector')
-          ? {output: object, fromConsoleLog: true}
-          : object,
-        logLevel
-      )
+      jsDebugger.appendLog({output: object, fromConsoleLog: true}, logLevel)
     );
   }
 };

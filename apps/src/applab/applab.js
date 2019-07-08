@@ -99,20 +99,11 @@ var jsInterpreterLogger = null;
  */
 Applab.log = function(object, logLevel) {
   if (jsInterpreterLogger) {
-    jsInterpreterLogger.log(
-      experiments.isEnabled('react-inspector')
-        ? {output: object, fromConsoleLog: true}
-        : object
-    );
+    jsInterpreterLogger.log({output: object, fromConsoleLog: true});
   }
 
   getStore().dispatch(
-    jsDebugger.appendLog(
-      experiments.isEnabled('react-inspector')
-        ? {output: object, fromConsoleLog: true}
-        : object,
-      logLevel
-    )
+    jsDebugger.appendLog({output: object, fromConsoleLog: true}, logLevel)
   );
 };
 consoleApi.setLogMethod(Applab.log);
