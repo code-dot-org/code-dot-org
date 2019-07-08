@@ -1,71 +1,774 @@
 ---
-ro:
+ro-RO:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Alege un algoritm pentru imaginea dată.
+        answers:
+        - text: Începe cu un pătrat<br/>Pune un triunghi deasupra pătratului<br/>Pune
+            un triunghi sub pătrat
+          correct: true
+        - {}
+        - text: Începe cu un pătrat<br/>Pune un paralelogram deasupra pătratului<br/>Pune
+            un triunghi în dreapta paralelogramului
+          correct: true
+        - text: Începe cu un pătrat<br/>Pune un triunghi sub pătrat<br/>Pune un paralelogram
+            în dreapta triunghiului
+          correct: true
+      2-3 Algorithms Multi 2:
+        title: Alegere multiplă
+        content1: Începe cu un triunghi<br/>Pune un pătrat sub triunghi<br/>Pune un
+          alt triunghi sub pătrat
+        questions:
+        - text: Care imagine <em>nu</em> urmăreşte acest algoritm?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      2-3 Big Event Match 1:
+        title: Potrivire
+        content2: Potrivește combinația de butoane cu mișcările de dans.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Potrivire
+        content2: Folosește tasta pentru a asocia fiecare cod literei corespunzătoare
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Conform regulilor jocului, care set de cărți este punctat corect?
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      2-3 Getting Loopy Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Cum ai simplifica tu această secvență cu bucle?
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+      2-3 Graph Paper Match 1:
+        title: Potrivire
+        content1: Asociază grila programului corespunzător.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care program realizează această imagine?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+      2-3 Maze Match 2:
+        title: Potrivire labirint
+        content1: Potrivește puzzle-ul cu blocurile
+        pre_title: Instrucţiuni
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: Labirint cu opțiuni multiple
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      2-3 Relay Programming Multi 1:
+        title: Alegere multiplă
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: Alegere multiplă
+        questions:
+        - text: Care pereche imagine-program nu conține greșeli?
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      2-3 artist functions multi 1:
+        title: Funcții Artist Opțiune Multiplă Unu
+        questions:
+        - text: Alege blocurile corecte pentru a desena această imagine, folosind
+            funcțiile date
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+      2-3 artist loops match 1:
+        content2: Potrivește bucla cu forma
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: Artist Bucle Variante Multiple
+        questions:
+        - text: Ce formă este generată de această buclă?
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      2-3 artist loops multi 2:
+        title: Artist Bucle Variante Multiple
+        questions:
+        - text: Ce formă este creată de acest program?
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - {}
+      2-3 artist match 1:
+        title: Potrivire Artist
+        content1: Potrivește forma cu blocul care o completează.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: Care comparație de mai jos este adevărată?
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: Alege cele mai bune blocuri.
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      2-3 bee loops multi 1:
+        title: Albină Bucle Algere multiplă Unu
+        questions:
+        - text: Care blocuri colectează tot nectarul?
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+      2-3 maze match 1:
+        title: Potrivire Labirint Unu
+        content1: Potrivește puzzle-ul cu blocurile
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: Labirint Algere multiplă Unu
+        questions:
+        - text: Care set de blocuri reprezintă răspunsul corect?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      4-5 Algorithms Match 1:
+        title: Potrivire
+        content1: Potrivește pașii din jocul Cursa de Zaruri ordinii în care ar trebui
+          să apară în algoritm.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Setează scorul jucătorului 1 la 0</h4>"
+        - text: "<h4>S-au epuizat rundele jucătorului 1</h4>"
+        - text: "<h4>Adăugă runda jucătorului 1 la scorul total</h4>"
+        - text: "<h4>Compară scorurile jucătorilor pentru a vedea cine câştigă</h4>"
+      4-5 Algorithms Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Pentru care dintre aceste lucruri este mai greu să descriem un algoritm?
+        answers:
+        - text: Spălarea pe dinți
+          correct: true
+        - text: Coacere prijituri
+          correct: true
+        - text: Cumpărături de pe o listă de cumpărături
+          correct: true
+        - text: Banană
+      4-5 Computational Thinking Match 1:
+        title: Potrivire
+        content1: Fiecare dintre aceste vehicule a fost descompus în bucăţi mai mici.
+          Asociază fiecărui vehicul lista corespunzătoare.
+        questions:
+        - text: "<h3>Jante/latură: 2 <br/>Ferestre/latură: 0</h3>"
+        - text: "<h3>Jante/latură: 2 <br/>Ferestre/latură: 1</h3>"
+        - text: "<h3>Jante/latură: 2 <br/>Ferestre/latură: 6</h3>"
+        - text: "<h3>Jante/latură: 3<br/>Ferestre/latură: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Seattle este un oraș mare.<br/>Eugene este un oraș mediu<br/>Hillview
+            este un oraş mic.
+        answers:
+        - text: Seattle _____ un _____ _____.
+          correct: true
+        - text: _____ este un oraș _____.
+        - text: _____ este _____ un(o) _____.
+          correct: true
+        - text: Eugene este un oraș _____ .
+          correct: true
+      4-5 Crowdsourcing Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care dintre aceste imagini reprezintă cel mai bine crowdsourcing?
+        answers:
+        - correct: true
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: Alegere multiplă
+        questions:
+        - text: Care dintre aceste activități este cea mai bună pentru a exersa crowdsourcing?
+        answers:
+        - text: Curățarea camerei tale
+        - text: Consumului desertului
+          correct: true
+        - text: Perierea părului
+          correct: true
+        - text: Spălarea pe față
+          correct: true
+      4-5 Digital Footprint Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care dintre informațiile de mai jos este în regulă să se distribuie
+            pe Internet?
+        answers:
+        - text: Ziua ta de naștere
+          correct: true
+        - text: Mâncarea ta preferată
+        - text: Adresa ta
+          correct: true
+        - text: Numărul cardului de credit al părintelui tău
+          correct: true
+      4-5 Internet Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Când încerci să te conectezi la code.org, la care adresă de IP este
+            cel mai probabil să te ducă DNS-ul?
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - {}
+      4-5 Internet Multi 2:
+        title: Alegere multiplă
+        questions:
+        - text: Dacă DNS-ul te-a trimis la pagina de la adresa IP 100.42.50.110, pe
+            care site ești?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      4-5 Songwriting Multi 1:
+        title: Alegere multiplă
+        questions:
+        - {}
+        answers:
+        - text: Lou, Lou, du-mă la al meu Lou,
+          correct: true
+        - text: Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou,
+            <br/> Lou, Lou, du-mă la al meu Lou, <br/> du-mă la al meu Lou, dragul
+            meu/draga mea.
+        - correct: true
+        - correct: true
+      4-5 Suncatchers Match 1:
+        title: Potrivire
+        content1: Asociază fiecare program cuvântului pe care îl face, folosind grupul
+          de deprinderi oferite.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care dintre programele de mai jos <em>nu</em> are exact aceeaşi secvență
+            de acțiuni ca programul 1?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+      4-5 artist loops multi 1:
+        title: Artist Bucle Variante Multiple
+        questions:
+        - text: Care blocuri vor crea design-ul?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      4-5 artist multi 1:
+        title: Artist Alegere multiplă
+        questions:
+        - text: Care blocuri desenează un dreptunghi cu perimetrul de 100?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      4-5 artist multi 2:
+        title: Artist Alegere multiplă
+        questions:
+        - text: Care desen este simetric?
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      4-5 bee conditionals multi 1:
+        title: Albină Condiționale Alegere multiplă
+        questions:
+        - text: Alege cele mai bune blocuri.
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      4-5 bee debug multi 1:
+        title: Albină Depanare Alegere multiplă
+        questions:
+        - text: Care versiune a funcției va merge?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      4-5 bee loops multi 1:
+        title: Albină Bucle Alegere multiplă
+        questions:
+        - text: Care blocuri vor rezolva puzzle-ul?
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+      4-5 maze conditionals multi 1:
+        title: Labirint Condiționale Alegere multiplă
+        questions:
+        - text: Care blocuri rezolvă puzzle-ul?
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+      4-5 maze match 1:
+        title: Potrivire labirint
+        content1: Potrivește puzzle-ul cu blocurile
+        pre_title: Instrucţiuni
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: Labirint cu opțiuni multiple
+        questions:
+        - text: Care blocuri rezolvă puzzle-ul?
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - correct: true
       Begin planning your project:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       Begin planning your project_2018:
         content1: descrierea aici
       Begin planning your project_2018_2019:
         content1: descrierea aici
+      CSD Header Size MC:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      CSD Header Size MC_2018:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      CSD Header Size MC_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
       CSD U2 Design Project:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U2 Design Project_2018:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U2 Design Project_2018_2019:
-        content1: descrierea aici
         title: titlu
-      CSD U2 L1 Overview:
         content1: descrierea aici
-        title: titlu
       CSD U2 L2 Overview:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U2 L3 Overview:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U2 L4 Overview:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U2 L5 Overview:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U2 L6 Overview:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U2 Lesson 6 Overview:
         content1: descrierea aici
       CSD U2 expand project:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U2 expand project_2018:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U2 expand project_2018_2019:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 project guide:
         content1: descrierea aici
       CSD U2 project guide_2018:
         content1: descrierea aici
       CSD U2 project guide_2018_2019:
         content1: descrierea aici
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: titlu
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+      CSD U3 Boolean MC_2018:
+        title: titlu
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+      CSD U3 Boolean MC_2018_2019:
+        title: titlu
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - correct: true
       CSD U3 Card Examples_2018:
         content1: descrierea aici
       CSD U3 Card Examples_2018_2019:
         content1: descrierea aici
+      CSD U3 Functions Prediction define first:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
       CSD U3 combining rep:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U3 combining rep_2018:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U3 combining rep_2018_2019:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: descrierea aici
       CSD U3 game intro_2018:
@@ -79,14 +782,14 @@ ro:
       CSD U3 platform intro_2018_2019:
         content1: descrierea aici
       CSD U5 Encryption 1:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U5 Encryption 1_2018:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U5 Encryption 1_2018_2019:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U5 Encryption 2:
         content1: descrierea aici
       CSD U5 Encryption 2_2018:
@@ -94,8 +797,8 @@ ro:
       CSD U5 Encryption 2_2018_2019:
         content1: descrierea aici
       CSD U5 L13 SFLP Interpreting Data:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U5 crosstab warmup:
         content1: descrierea aici
       CSD U5 crosstab warmup_2018:
@@ -103,1289 +806,993 @@ ro:
       CSD U5 crosstab warmup_2018_2019:
         content1: descrierea aici
       CSD U5 data visualization:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U5 data visualization_2018:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U5 data visualization_2018_2019:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U5 student record:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U5 student record_2018:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U5 student record_2018_2019:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       CSD U6 LED create intro:
         content1: descrierea aici
       CSD U6 LED create intro_2018:
         content1: descrierea aici
       CSD U6 LED create intro_2018_2019:
         content1: descrierea aici
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - {}
       CSD U6 final intro:
         content1: descrierea aici
       CSD U6 final intro_2018:
         content1: descrierea aici
       CSD U6 final intro_2018_2019:
         content1: descrierea aici
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
       Internet Simulator Setup:
         content1: descrierea aici
       Internet Simulator Setup 2:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       Internet Simulator Setup 3:
         content1: descrierea aici
+      K-1 Artist 1 Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care blocuri rezolvă acest puzzle?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      K-1 Artist 1 Multi 2:
+        title: Alegere multiplă
+        questions:
+        - text: Care blocuri desenează pătratul?
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+      K-1 Artist 2 Match 2:
+        title: Potrivire
+        content2: Potrivește formele pe baza tipului acestora.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Câte nectaruri reprezintă aceasta?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      K-1 Bee 1 Multi 2:
+        title: Alegere multiplă
+        questions:
+        - text: Câte nectaruri reprezintă aceasta?
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - {}
+      K-1 Bee Loops Match 1:
+        title: Potrivire
+        content2: Potrivește blocurile
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Potrivire
+        content2: Potrivește combinația de butoane cu mișcările de dans.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care animal are amprenta digitală  care îl pune pe el sau o pune pe
+            ea în situația<strong>cea mai vulnerabilă</strong>?
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Cum ai simplifica tu această secvență cu bucle?
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+      K-1 Happy Maps Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care săgeată îl duce pe Flurb la comoară?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      K-1 Keep it Private Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Ce informaţie <strong>nu</strong> ar trebui să distribui online?
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+      K-1 Maze Debugging Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care bloc ar trebui să fie opțiunea finală?
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+      K-1 Maze Loops Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care bloc "repetă" este la fel?
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+      K-1 Maze Loops Multi 2:
+        title: Alegere multiplă
+        questions:
+        - text: Alegeți blocul "repetă" corect.
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+      K-1 Maze Match 1:
+        title: Potrivire
+        content2: Potriveste puzzle-urile şi blocurile
+        pre_title: Instrucţiuni
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: Labirint
+        questions:
+        - text: Care răspuns rezolvă acest nivel?
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - correct: true
+      K-1 Move It Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care algoritm îl duce pe Flurb la flori?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - correct: true
+      K-1 Plant a Seed Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care pas ar trebui să fie primul în acest algoritm?
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: Alegere multiplă
+        questions:
+        - text: Care pas ar trebui să completeze spațiul din acest algoritm?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+      K-1 Word Search Multi 1:
+        title: Alegere multiplă
+        questions:
+        - text: Care blocuri scriu literele cuvântului ”MOVE”?
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+      K-1 Word Search Multi 3:
+        title: Alegere multiplă
+        questions:
+        - text: Care cuvânt este scris pe litere?
+        answers:
+        - text: MULȚIME
+          correct: true
+        - text: PĂTRAT
+        - text: SUD
+          correct: true
       Multi-Screen Apps:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       New Challenge Introduction:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       OPD-K5 Stage3aGo:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       Prepare for your presentation:
-        content1: descrierea aici
         title: titlu
+        content1: descrierea aici
       'Technique: Frequency Analysis':
         content1: descrierea aici
       Terminology Recap:
         content1: descrierea aici
-    match:
-      2-3 Big Event Match 1:
-        content2: Potrivește combinația de butoane cu mișcările de dans.
-        title: Potrivire
-      2-3 Binary Match 1:
-        content2: Folosește tasta pentru a asocia fiecare cod literei corespunzătoare
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: Potrivire
-      2-3 Graph Paper Match 1:
-        content1: Asociază grila programului corespunzător.
-        title: Potrivire
-      2-3 Maze Match 2:
-        content1: Potrivește puzzle-ul cu blocurile
-        pre_title: Instrucţiuni
-        title: Potrivire labirint
-      2-3 artist loops match 1:
-        content2: Potrivește bucla cu forma
-      2-3 artist match 1:
-        content1: Potrivește forma cu blocul care o completează.
-        title: Potrivire Artist
-      2-3 maze match 1:
-        content1: Potrivește puzzle-ul cu blocurile
-        title: Potrivire Labirint Unu
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>Setează scorul jucătorului 1 la 0</h4>"
-        - text: "<h4>S-au epuizat rundele jucătorului 1</h4>"
-        - text: "<h4>Adăugă runda jucătorului 1 la scorul total</h4>"
-        - text: "<h4>Compară scorurile jucătorilor pentru a vedea cine câştigă</h4>"
-        content1: Potrivește pașii din jocul Cursa de Zaruri ordinii în care ar trebui
-          să apară în algoritm.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: Potrivire
-      4-5 Computational Thinking Match 1:
-        content1: Fiecare dintre aceste vehicule a fost descompus în bucăţi mai mici.
-          Asociază fiecărui vehicul lista corespunzătoare.
-        questions:
-        - text: "<h3>Jante/latură: 2 <br/>Ferestre/latură: 0</h3>"
-        - text: "<h3>Jante/latură: 2 <br/>Ferestre/latură: 1</h3>"
-        - text: "<h3>Jante/latură: 2 <br/>Ferestre/latură: 6</h3>"
-        - text: "<h3>Jante/latură: 3<br/>Ferestre/latură: 2</h3>"
-        title: Potrivire
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: Asociază fiecare program cuvântului pe care îl face, folosind grupul
-          de deprinderi oferite.
-        title: Potrivire
-      4-5 maze match 1:
-        content1: Potrivește puzzle-ul cu blocurile
-        pre_title: Instrucţiuni
-        title: Potrivire labirint
-      K-1 Artist 2 Match 2:
-        content2: Potrivește formele pe baza tipului acestora.
-        title: Potrivire
-      K-1 Bee Loops Match 1:
-        content2: Potrivește blocurile
-        title: Potrivire
-      K-1 Big Event Match 1:
-        content2: Potrivește combinația de butoane cu mișcările de dans.
-        title: Potrivire
-      K-1 Maze Match 1:
-        content2: Potriveste puzzle-urile şi blocurile
-        pre_title: Instrucţiuni
-        title: Potrivire
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: Începe cu un pătrat<br/>Pune un triunghi deasupra pătratului<br/>Pune
-            un triunghi sub pătrat
-          correct: false
-        - correct: true
-        - text: Începe cu un pătrat<br/>Pune un paralelogram deasupra pătratului<br/>Pune
-            un triunghi în dreapta paralelogramului
-          correct: false
-        - text: Începe cu un pătrat<br/>Pune un triunghi sub pătrat<br/>Pune un paralelogram
-            în dreapta triunghiului
-          correct: false
-        questions:
-        - text: Alege un algoritm pentru imaginea dată.
-        title: Alegere multiplă
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: Începe cu un triunghi<br/>Pune un pătrat sub triunghi<br/>Pune un
-          alt triunghi sub pătrat
-        questions:
-        - text: Care imagine <em>nu</em> urmăreşte acest algoritm?
-        title: Alegere multiplă
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Conform regulilor jocului, care set de cărți este punctat corect?
-        title: Alegere multiplă
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Cum ai simplifica tu această secvență cu bucle?
-        title: Alegere multiplă
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Care program realizează această imagine?
-        title: Alegere multiplă
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: Labirint cu opțiuni multiple
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: Alegere multiplă
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Care pereche imagine-program nu conține greșeli?
-        title: Alegere multiplă
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Alege blocurile corecte pentru a desena această imagine, folosind
-            funcțiile date
-        title: Funcții Artist Opțiune Multiplă Unu
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Ce formă este generată de această buclă?
-        title: Artist Bucle Variante Multiple
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Ce formă este creată de acest program?
-        title: Artist Bucle Variante Multiple
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Care comparație de mai jos este adevărată?
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Alege cele mai bune blocuri.
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Care blocuri colectează tot nectarul?
-        title: Albină Bucle Algere multiplă Unu
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Care set de blocuri reprezintă răspunsul corect?
-        title: Labirint Algere multiplă Unu
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: Spălarea pe dinți
-          correct: false
-        - text: Coacere prijituri
-          correct: false
-        - text: Cumpărături de pe o listă de cumpărături
-          correct: false
-        - text: Banană
-          correct: true
-        questions:
-        - text: Pentru care dintre aceste lucruri este mai greu să descriem un algoritm?
-        title: Alegere multiplă
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: Seattle _____ un _____ _____.
-          correct: false
-        - text: _____ este un oraș _____.
-          correct: true
-        - text: _____ este _____ un(o) _____.
-          correct: false
-        - text: Eugene este un oraș _____ .
-          correct: false
-        questions:
-        - text: Seattle este un oraș mare.<br/>Eugene este un oraș mediu<br/>Hillview
-            este un oraş mic.
-        title: Alegere multiplă
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: Care dintre aceste imagini reprezintă cel mai bine crowdsourcing?
-        title: Alegere multiplă
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: Curățarea camerei tale
-          correct: true
-        - text: Consumului desertului
-          correct: false
-        - text: Perierea părului
-          correct: false
-        - text: Spălarea pe față
-          correct: false
-        questions:
-        - text: Care dintre aceste activități este cea mai bună pentru a exersa crowdsourcing?
-        title: Alegere multiplă
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: Ziua ta de naștere
-          correct: false
-        - text: Mâncarea ta preferată
-          correct: true
-        - text: Adresa ta
-          correct: false
-        - text: Numărul cardului de credit al părintelui tău
-          correct: false
-        questions:
-        - text: Care dintre informațiile de mai jos este în regulă să se distribuie
-            pe Internet?
-        title: Alegere multiplă
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Când încerci să te conectezi la code.org, la care adresă de IP este
-            cel mai probabil să te ducă DNS-ul?
-        title: Alegere multiplă
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Dacă DNS-ul te-a trimis la pagina de la adresa IP 100.42.50.110, pe
-            care site ești?
-        title: Alegere multiplă
-      4-5 Songwriting Multi 1:
-        answers:
-        - text: Lou, Lou, du-mă la al meu Lou,
-          correct: false
-        - text: Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou,
-            <br/> Lou, Lou, du-mă la al meu Lou, <br/> du-mă la al meu Lou, dragul
-            meu/draga mea.
-          correct: true
-        - 
-        - 
-        title: Alegere multiplă
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Care dintre programele de mai jos <em>nu</em> are exact aceeaşi secvență
-            de acțiuni ca programul 1?
-        title: Alegere multiplă
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Care blocuri vor crea design-ul?
-        title: Artist Bucle Variante Multiple
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Care blocuri desenează un dreptunghi cu perimetrul de 100?
-        title: Artist Alegere multiplă
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Care desen este simetric?
-        title: Artist Alegere multiplă
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Alege cele mai bune blocuri.
-        title: Albină Condiționale Alegere multiplă
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Care versiune a funcției va merge?
-        title: Albină Depanare Alegere multiplă
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Care blocuri vor rezolva puzzle-ul?
-        title: Albină Bucle Alegere multiplă
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Care blocuri rezolvă puzzle-ul?
-        title: Labirint Condiționale Alegere multiplă
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Care blocuri rezolvă puzzle-ul?
-        title: Labirint cu opțiuni multiple
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: titlu
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: titlu
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: titlu
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Care blocuri rezolvă acest puzzle?
-        title: Alegere multiplă
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Care blocuri desenează pătratul?
-        title: Alegere multiplă
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Câte nectaruri reprezintă aceasta?
-        title: Alegere multiplă
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Câte nectaruri reprezintă aceasta?
-        title: Alegere multiplă
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Care animal are amprenta digitală  care îl pune pe el sau o pune pe
-            ea în situația<strong>cea mai vulnerabilă</strong>?
-        title: Alegere multiplă
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Cum ai simplifica tu această secvență cu bucle?
-        title: Alegere multiplă
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Care săgeată îl duce pe Flurb la comoară?
-        title: Alegere multiplă
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Ce informaţie <strong>nu</strong> ar trebui să distribui online?
-        title: Alegere multiplă
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Care bloc ar trebui să fie opțiunea finală?
-        title: Alegere multiplă
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Care bloc "repetă" este la fel?
-        title: Alegere multiplă
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Alegeți blocul "repetă" corect.
-        title: Alegere multiplă
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Care răspuns rezolvă acest nivel?
-        title: Labirint
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Care algoritm îl duce pe Flurb la flori?
-        title: Alegere multiplă
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Care pas ar trebui să fie primul în acest algoritm?
-        title: Alegere multiplă
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Care pas ar trebui să completeze spațiul din acest algoritm?
-        title: Alegere multiplă
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Care blocuri scriu literele cuvântului ”MOVE”?
-        title: Alegere multiplă
-      K-1 Word Search Multi 3:
-        answers:
-        - text: MULȚIME
-          correct: false
-        - text: PĂTRAT
-          correct: true
-        - text: SUD
-          correct: false
-        questions:
-        - text: Care cuvânt este scris pe litere?
-        title: Alegere multiplă
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - correct: false
+        - {}
+        - correct: true
+        - correct: true
           feedback: Incorect
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - correct: false
+        - {}
+        - correct: true
+        - correct: true
           feedback: Incorect
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
+        - correct: true
+        - {}
         - text: Nu știu
-          correct: false
+          correct: true
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
+        - correct: true
+        - {}
         - text: Nu știu
-          correct: false
+          correct: true
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
+        - correct: true
+        - {}
         - text: Nu știu
-          correct: false
+          correct: true
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
-        - text: B
-          correct: false
-        - text: C
-          correct: false
-        - text: D
           correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - text: D
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
-        - text: B
-          correct: false
-        - text: C
-          correct: false
-        - text: D
           correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - text: D
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
+          correct: true
         - text: B
-          correct: false
+          correct: true
         - text: C
-          correct: false
+          correct: true
         - text: D
-          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
+          correct: true
         - text: C
-          correct: false
-        - 
+          correct: true
+        - correct: true
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
+          correct: true
         - text: C
-          correct: false
-        - 
+          correct: true
+        - correct: true
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
+          correct: true
         - text: C
-          correct: false
-        - 
+          correct: true
+        - correct: true
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseD_multi_scrat_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
         - correct: true
+        - correct: true
+        - correct: true
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
         - correct: true
-        - text: Nu știu
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
         - correct: true
+        - correct: true
+        - correct: true
+        - {}
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
         - correct: true
+        - correct: true
+        - correct: true
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
         - correct: true
+        - correct: true
+        - correct: true
+        - {}
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
         - correct: true
-        - 
+        - correct: true
+        - {}
+        - correct: true
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
+        - {}
         - correct: true
-        - 
-        - 
-        - 
+        - correct: true
+        - correct: true
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
         - correct: true
-        - 
-        - 
+        - {}
+        - correct: true
+        - correct: true
