@@ -1,16 +1,22 @@
 ---
-da-DK:
+da:
   data:
     block_categories:
       Actions: Handlinger
-      Color: Farve
-      Conditionals: Betingelser
-      Dancers: Dansere
-      Events: Hændelser
-      Functions: Funktioner
-      Groups: Grupper
-      Logic: Logik
       Loops: Løkker
+      Functions: Funktioner
+      Color: Farve
       Math: Matematik
-      Text: Tekst
+      Logic: Logik
       Variables: Variabler
+      Conditionals: Betingelser
+      Events: Hændelser
+      Text: Tekst
+      Location: Placering
+      Dancers: Dansere
+      Groups: Grupper
+      Start: Start
+      Booleans: Booleans
+      test: test
+      Name: Navn
+      Function: Funktion

@@ -1,29 +1,51 @@
 ---
-ar-SA:
+ar:
   data:
     block_categories:
       Actions: الإجراءات
-      Advanced: مُتقدم
-      Behaviors: السلوك
-      Brushes: فرش
-      Color: اللون
-      Comment: تعليق
-      Comments: تعليقات
-      Conditionals: الجمل الشرطية
-      Dancers: الراقصون
-      Default: الافتراضي
-      Events: الأحداث
+      Loops: الحلقات
       Functions: دوال
+      Color: اللون
+      Brushes: فرش
+      Math: العمليات الحسابية
+      Logic: المنطق
+      Variables: المتغيرات
+      Number: رقم
+      String: نص
+      Image: صورة
+      Boolean: قيمة منطقية
+      Conditionals: الجمل الشرطية
+      Events: الأحداث
+      Games/Score: ألعاب/نقطة
+      Comments: تعليقات
+      Category: فئة
+      Prebuilt: معدّة مسبقاً
+      Text: النص
+      Comment: تعليق
+      World: العالم
+      Behaviors: السلوك
+      'Variables ': 'المتغيرات '
+      Default: الافتراضي
+      Locations: مواقع
+      everythingelse: كل شيء اخر
+      Location: الموقع
+      numbers: أرقام
+      Numbers: أرقام
+      Dancers: الراقصون
+      Groups: المجموعات
+      Advanced: مُتقدم
+      Start: إبدأ
+      Dancing: رقص
+      Brush: فرشاة
+      Movement: حركة
+      Booleans: القيم المنطقية
+      Functional: الدوال
+      While Events: التكرار بواسطة (while)
+      Predefined: معرف مسبقاً
+      test: اختبار
+      test2: تجربة2
+      Name: الاسم
+      NEW BLOCKS: كتل برمجية جديدة
       'Functions ': 'الدوال '
       Game/Score: لعبة/نقطة
-      Games/Score: ألعاب/نقطة
-      Groups: المجموعات
-      Locations: مواقع
-      Logic: المنطق
-      Loops: الحلقات
-      Math: العمليات الحسابية
-      Numbers: أرقام
-      Text: النص
-      Variables: المتغيرات
-      'Variables ': 'المتغيرات '
-      World: العالم
+      Function: دالة
