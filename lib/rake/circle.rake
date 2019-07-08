@@ -95,9 +95,9 @@ namespace :circle do
     use_saucelabs = !ui_test_browsers.empty?
     if use_saucelabs || test_eyes?
       start_sauce_connect
-      RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost:4445); do sleep 5; done'
+      RakeUtils.wait_for_url('http://localhost:4445')
     end
-    RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost-studio.code.org:3000); do sleep 5; done'
+    RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")

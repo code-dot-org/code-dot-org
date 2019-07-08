@@ -645,9 +645,11 @@ de:
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
+            '"4"': '4'
             '"5"': '5'
             '"6"': '6'
             '"7"': '7'
+            '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
         text: wenn {RANGE} Höhepunkt
@@ -739,7 +741,7 @@ de:
             '"y"': 'y'
             '"z"': z
       gamelab_makeNewSpriteAnon:
-        text: erstelle neuen {ANIMATION\_NAME} Sprite in {LOCATION}
+        text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1043,9 +1045,9 @@ de:
       aalab_createNewSpriteAdvanced:
         text: "erstelle neuen Sprite genannt {NAME} \n mit Kostüm {COSTUME} \n in {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: erstelle neuen {ANIMATION\_NAME} Sprite in {LOCATION}
+        text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab erstelle neuen {ANIMATION\_NAME} Sprite in {LOCATION}
+        text: aalab erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           erstelle neue Sprite Gruppe genannt {VAR}
