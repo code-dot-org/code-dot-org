@@ -491,6 +491,23 @@ describe('entry tests', () => {
   var codeStudioEntries = {
     blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
+    'congrats/index': './src/sites/studio/pages/congrats/index.js',
+    'courses/index': './src/sites/studio/pages/courses/index.js',
+    'courses/show': './src/sites/studio/pages/courses/show.js',
+    'devise/registrations/_finish_sign_up':
+      './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+    'devise/registrations/edit':
+      './src/sites/studio/pages/devise/registrations/edit.js',
+    'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
+    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
+    'layouts/_race_interstitial':
+      './src/sites/studio/pages/layouts/_race_interstitial.js',
+    'layouts/_school_info_confirmation_dialog':
+      './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
+    'layouts/_school_info_interstitial':
+      './src/sites/studio/pages/layouts/_school_info_interstitial.js',
+    'layouts/_terms_interstitial':
+      './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_contract_match':
@@ -513,35 +530,19 @@ describe('entry tests', () => {
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
     'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
+    'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
+    'maker/home': './src/sites/studio/pages/maker/home.js',
+    'maker/setup': './src/sites/studio/pages/maker/setup.js',
+    'projects/featured': './src/sites/studio/pages/projects/featured.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
-    'projects/featured': './src/sites/studio/pages/projects/featured.js',
-    schoolInfo: './src/sites/studio/pages/schoolInfo.js',
-    schoolInfoConfirmationDialog:
-      './src/sites/studio/pages/schoolInfoConfirmationDialog.js',
-    schoolInfoInterstitial:
-      './src/sites/studio/pages/schoolInfoInterstitial.js',
+    scriptOverview: './src/sites/studio/pages/scriptOverview.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_header_progress':
       './src/sites/studio/pages/shared/_header_progress.js',
+    'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
     signup: './src/sites/studio/pages/signup.js',
-    raceInterstitial: './src/sites/studio/pages/raceInterstitial.js',
-    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
-    'layouts/_terms_interstitial':
-      './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'maker/home': './src/sites/studio/pages/maker/home.js',
-    'maker/setup': './src/sites/studio/pages/maker/setup.js',
-    'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
-    scriptOverview: './src/sites/studio/pages/scriptOverview.js',
-    'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
-    'congrats/index': './src/sites/studio/pages/congrats/index.js',
-    'courses/index': './src/sites/studio/pages/courses/index.js',
-    'courses/show': './src/sites/studio/pages/courses/show.js',
-    'devise/registrations/edit':
-      './src/sites/studio/pages/devise/registrations/edit.js',
-    'devise/registrations/_finish_sign_up':
-      './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
     'teacher_dashboard/show':
       './src/sites/studio/pages/teacher_dashboard/show.js'
   };
@@ -576,6 +577,8 @@ describe('entry tests', () => {
 
   var pegasusEntries = {
     // code.org
+    'code.org/public/administrators':
+      './src/sites/code.org/pages/public/administrators.js',
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
@@ -589,6 +592,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/views/regional_partner_search':
+      './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
       './src/sites/code.org/pages/views/share_privacy.js',
     'code.org/views/theme_common_head_after':
@@ -600,7 +605,10 @@ describe('entry tests', () => {
     'hourofcode.com/public/index':
       './src/sites/hourofcode.com/pages/public/index.js',
     'hourofcode.com/views/theme_common_head_after':
-      './src/sites/hourofcode.com/pages/views/theme_common_head_after.js'
+      './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
+
+    // shared between code.org and hourofcode.com
+    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
   };
 
   var professionalDevelopmentEntries = {
@@ -663,9 +671,6 @@ describe('entry tests', () => {
     // in an iframe.
     embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
-    // tutorialExplorer for code.org/learn 2016 edition.
-    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
-
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
     brambleHost: './src/weblab/brambleHost.js',
@@ -677,8 +682,6 @@ describe('entry tests', () => {
 
     'census_reviewers/review_reported_inaccuracies':
       './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
-
-    regionalPartnerSearch: './src/regionalPartnerSearch/regionalPartnerSearch',
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
