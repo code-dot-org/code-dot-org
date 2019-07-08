@@ -60,7 +60,7 @@ def puts_script_intro
     #{bold 'Documentation'}
 
       Dev-of-the-Day Checklist
-      #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
+      #{dim 'https://docs.google.com/document/d/16mKqnzKeZdYYTdVz2iXCQsStgvXyAthGJAIZB3Jl7VI/edit'}
 
       Known Issues
       #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
