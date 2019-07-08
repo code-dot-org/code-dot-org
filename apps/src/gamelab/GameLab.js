@@ -1483,7 +1483,11 @@ GameLab.prototype.getSerializedAnimationList = function(callback) {
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
  */
 GameLab.prototype.getGeneratedProperties = function() {
-  return this.generatedProperties;
+  // Must return a new object instance each time so the project
+  // system can properly compare currentSources vs newSources
+  return {
+    ...this.generatedProperties
+  };
 };
 
 /**
