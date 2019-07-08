@@ -250,6 +250,29 @@ module Api::V1::Pd
       )
     end
 
+    test 'experiment_survey_report: return empty result for workshop without responds' do
+      csf_201_ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1,
+        facilitators: create_list(:facilitator, 2)
+
+      expected_result = {
+        "course_name" => nil,
+        "questions" => {},
+        "this_workshop" => {},
+        "all_my_workshops" => {},
+        "facilitators" => {},
+        "facilitator_averages" => {},
+        "facilitator_response_counts" => {},
+        "experiment" => true
+      }
+
+      sign_in @admin
+      get :experiment_survey_report, params: {workshop_id: csf_201_ws.id}
+      result = JSON.parse(@response.body).slice(*expected_result.keys)
+
+      assert_equal expected_result, result
+      assert_response :success
+    end
+
     test 'generic_survey_report: CSF201 workshop uses new pipeline' do
       csf_201_ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201
 
