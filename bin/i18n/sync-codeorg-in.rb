@@ -96,7 +96,21 @@ def localize_level_content
     Script.all.each do |script|
       next unless ScriptConstants.i18n? script.name
       script_strings = {}
-      script.levels.each do |level|
+      script.script_levels.each do |script_level|
+        level =
+          if script_level.levels.count > 1
+            levels = script_level.levels.to_a
+            levels.delete_if do |l|
+              script_level.variants[l.name] && !script_level.variants[l.name]['active']
+            end
+            if levels.count > 1
+              puts "Multiple active levels for script level #{script_level.id}"
+              next
+            end
+            levels.first
+          else
+            script_level.level
+          end
         url = get_level_url_key(script, level)
         script_strings[url] = get_i18n_strings(level)
 
