@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
+import shapes from './shapes';
 
 const styles = {
   main: {
@@ -45,13 +45,7 @@ const styles = {
 
 export default class LevelFeedbackEntry extends Component {
   static propTypes = {
-    seenByStudent: PropTypes.bool.isRequired,
-    lessonName: PropTypes.string.isRequired,
-    levelName: PropTypes.string.isRequired,
-    courseName: PropTypes.string.isRequired,
-    unitName: PropTypes.string.isRequired,
-    lastUpdated: PropTypes.string.isRequired,
-    linkToLevel: PropTypes.string.isRequired
+    feedback: shapes.feedback
   };
 
   render() {
@@ -75,13 +69,9 @@ export default class LevelFeedbackEntry extends Component {
             </span>
             <span>{this.props.lessonName}</span>
             <span style={styles.label}>{i18n.feedbackNotificationLevel()}</span>
-            <span>{this.props.levelName}</span>
+            <span>{this.props.levelNum}</span>
           </div>
-          <div style={styles.courseUnit}>
-            <span style={styles.label}>
-              {i18n.feedbackNotificationCourse()}
-            </span>
-            <span>{this.props.courseName}</span>
+          <div>
             <span style={styles.label}>{i18n.feedbackNotificationUnit()}</span>
             <span>{this.props.unitName}</span>
           </div>
