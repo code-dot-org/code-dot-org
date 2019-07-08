@@ -143,40 +143,25 @@ if (envConstants.HOT) {
 
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
-  baseConfig.module.rules.splice(
-    -1,
-    1,
-    {
-      test: /\.jsx?$/,
-      enforce: 'pre',
-      include: [path.resolve(__dirname, 'test')].concat(
-        toTranspileWithinNodeModules
-      ),
-      loader: 'babel-loader',
-      query: {
-        cacheDirectory: true,
-        compact: false
-      }
-    },
-    {
-      test: /\.jsx?$/,
-      enforce: 'pre',
-      loader: 'babel-istanbul-loader',
-      include: path.resolve(__dirname, 'src'),
-      exclude: [
-        path.resolve(__dirname, 'src', 'lodash.js'),
+  baseConfig.module.rules.push({
+    test: /\.jsx?$/,
+    enforce: 'post',
+    loader: 'istanbul-instrumenter-loader',
+    include: path.resolve(__dirname, 'src'),
+    exclude: [
+      path.resolve(__dirname, 'src', 'lodash.js'),
 
-        // we need to turn off coverage for this file
-        // because we have tests that actually make assertions
-        // about the contents of the compiled version of this file :(
-        path.resolve(__dirname, 'src', 'flappy', 'levels.js')
-      ],
-      query: {
-        cacheDirectory: true,
-        compact: false
-      }
+      // we need to turn off coverage for this file
+      // because we have tests that actually make assertions
+      // about the contents of the compiled version of this file :(
+      path.resolve(__dirname, 'src', 'flappy', 'levels.js')
+    ],
+    query: {
+      cacheDirectory: true,
+      compact: false,
+      esModules: true
     }
-  );
+  });
 }
 
 var devtool = process.env.DEV ? 'cheap-inline-source-map' : 'inline-source-map';
