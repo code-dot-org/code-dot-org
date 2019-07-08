@@ -544,7 +544,9 @@ describe('entry tests', () => {
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
     signup: './src/sites/studio/pages/signup.js',
     'teacher_dashboard/show':
-      './src/sites/studio/pages/teacher_dashboard/show.js'
+      './src/sites/studio/pages/teacher_dashboard/show.js',
+    'teacher_feedbacks/index':
+      './src/sites/studio/pages/teacher_feedbacks/index.js'
   };
 
   var internalEntries = {
