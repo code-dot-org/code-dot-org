@@ -92,7 +92,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node and yarn
     1. `nvm install 8.15.0 && nvm alias default 8.15.0` this command should make this version the default version and print something like: `Creating default alias: default -> 8.15.0 (-> v8.15.0)`
-    1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.16.0`. Move the line
+    1. `npm install -g yarn@1.16.0`. Move the line
     `export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"`
     from your `~/.bashrc` to your `~/.bash_profile` to ensure it gets executed on terminal startup.
     1. (Note: You will have to come back to this step after you clone your repository) Reinstall node_modules `cd apps; yarn; cd ..`
