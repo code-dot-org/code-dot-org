@@ -557,7 +557,6 @@
   pdf_download: 'Last ned PDF'
   download_coming_soon: 'Nedlastbare aktiviteter kommer snart.'
   video_coming_soon: 'Video kommer snart!'
-  not_started: 'Eleven har ikke prøvd seg på denne banen.'
   share_code:
     title: "Klikk \"Kjør\" for å se programmet mitt i aksjon"
     bounce_og_title: "Sjekk ut Bounce-spillet mitt"

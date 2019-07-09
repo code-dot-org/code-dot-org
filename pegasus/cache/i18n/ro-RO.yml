@@ -1382,6 +1382,12 @@ ro-RO:
   coursed-2018_gradelevel: Gradele 8+
   coursee-2018_gradelevel: Vârste 8-12 ani
   coursef-2018_gradelevel: Clasele 10+
+  coursea-2019_gradelevel: Clasele 5+
+  courseb-2019_gradelevel: Clasele 6+
+  coursec-2019_gradelevel: Clasele 7+
+  coursed-2019_gradelevel: Gradele 8+
+  coursee-2019_gradelevel: Vârste 8-12 ani
+  coursef-2019_gradelevel: Clasele 10+
   accelerated_gradelevel: Vârste 10 - 18 ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
@@ -1545,6 +1551,16 @@ ro-RO:
   coursee-2018_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D
     şi apoi mergeți mai departe cu funcţii.
   coursef-2018_shortdescription_congrats: Învățați toate conceptele din fundamentele
+    informaticii şi creați propria dvs. artă, poveste sau joc.
+  coursea-2019_shortdescription_congrats: O introducere în informatică pentru preșcolari.
+  courseb-2019_shortdescription_congrats: O introducere în informatică pentru preșcolari.
+    (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursed-2019_shortdescription_congrats: Acoperiți rapid conceptele din cursul C,
+    apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe
+    altele.
+  coursee-2019_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D
+    şi apoi mergeți mai departe cu funcţii.
+  coursef-2019_shortdescription_congrats: Învățați toate conceptele din fundamentele
     informaticii şi creați propria dvs. artă, poveste sau joc.
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă
     simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat
@@ -2175,6 +2191,7 @@ ro-RO:
     meu legal de a utiliza serviciile Code.org.
   hoc_overview_dance_title: Petrecere cu dans
   hoc_overview_start_tutorial: Începe
+  hoc2018_creativity: creativitate
   hoc2018_creativity_create: Crează
   hoc2018_creativity_what_will_you_create: Ce vei creea?
   hoc2018_mc_page_title: Tutoriale Hour of Code Minecraft

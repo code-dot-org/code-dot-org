@@ -197,35 +197,6 @@ lv:
             '"right"': pa labi
             '"space"': telpa
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"row"': rinda
-            '"column"': kolonna
-            '"random"': nejaušs
-      gamelab_locationConstant:
-        options:
-          DIR:
-            "'north'": uz ziemeļiem
-            "'south'": uz dienvidiem
-            "'east'": uz austrumiem
-            "'west'": uz rietumiem
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'north'": uz ziemeļiem
-            "'south'": uz dienvidiem
-            "'east'": uz austrumiem
-            "'west'": uz rietumiem
-            "'random'": nejaušs
-      gamelab_locationEast:
-        text: uz austrumiem
-      gamelab_locationNorth:
-        text: uz ziemeļiem
-      gamelab_locationSouth:
-        text: uz dienvidiem
-      gamelab_locationWest:
-        text: uz rietumiem
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -252,10 +223,6 @@ lv:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': varavīksne
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': zemūdens
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ziema
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': nejaušs
       gamelab_setProp:
         options:
           PROPERTY:
@@ -270,23 +237,6 @@ lv:
           CONDITION:
             '"when"': kad
             '"while"': kamēr
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': kad
-            '"while"': kamēr
-      gamelab_spriteDirection:
-        options:
-          DIRECTION:
-            '"North"': Ziemeļi
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
       gamelab_turn:
         options:
           DIRECTION:
@@ -307,11 +257,6 @@ lv:
             "'down'": uz leju
             "'left'": pa kreisi
             "'right'": pa labi
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': kad
-            '"while"': kamēr
       gamelab_whileKey:
         options:
           KEY:

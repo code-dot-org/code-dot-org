@@ -1417,6 +1417,12 @@ fil-PH:
   coursed-2018_gradelevel: Baitang 8+
   coursee-2018_gradelevel: Baitang 9+
   coursef-2018_gradelevel: Baitang 10+
+  coursea-2019_gradelevel: Baitang 5+
+  courseb-2019_gradelevel: Baitang 6+
+  coursec-2019_gradelevel: Baitang 7+
+  coursed-2019_gradelevel: Baitang 8+
+  coursee-2019_gradelevel: Baitang 9+
+  coursef-2019_gradelevel: Baitang 10+
   accelerated_gradelevel: Mga edad na 10-18
   codeorg_platformtext: Makabagong mga browser, smartphone, at mga tablet
   codeintl_platformtext: Makabagong mga browser, smartphone, at mga tablet
@@ -1605,6 +1611,21 @@ fil-PH:
   coursee-2018_shortdescription_congrats: Madaling dumaan sa mga konsepto sa Kursong
     C & D at pagkatapos ay pumunta pa sa mga function.
   coursef-2018_shortdescription_congrats: Alamin ang lahat ng mga konsepto sa mga
+    Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining,
+    kuwento o laro.
+  coursea-2019_shortdescription_congrats: Isang panimula sa computer science para
+    sa mga hindi pa marunong magbasa.
+  courseb-2019_shortdescription_congrats: Isang panimula sa computer science para
+    sa mga hindi marunong magbasa. (Katulad ng Kursong A, ngunit may mas maraming
+    pagkakaiba para sa mga nakakatandang mga estudyante.)
+  coursec-2019_shortdescription_congrats: Alamin ang mga pangunahing alituntunin ng
+    computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
+  coursed-2019_shortdescription_congrats: Mabilis na dinaanan ang mga konsepto mula
+    sa Kursong C, pagkatapos ay pupunta pa tayo sa mga algoritmo, mga naka-nest na
+    mga loop, mga kondisyonal, at iba pa.
+  coursee-2019_shortdescription_congrats: Madaling dumaan sa mga konsepto sa Kursong
+    C & D at pagkatapos ay pumunta pa sa mga function.
+  coursef-2019_shortdescription_congrats: Alamin ang lahat ng mga konsepto sa mga
     Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining,
     kuwento o laro.
   codeorg_longdescription: Matuto ng mga pangunahing konsepto ng Computer Science

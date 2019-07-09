@@ -39,7 +39,7 @@ module.exports = {
       customValidator: function(assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, 'done');
+        assert.equal(debugOutput.textContent, '"done"');
         return true;
       },
       expected: {
@@ -74,7 +74,7 @@ module.exports = {
       customValidator: function(assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, 'done');
+        assert.equal(debugOutput.textContent, '"done"');
         return true;
       },
       expected: {
@@ -109,7 +109,7 @@ module.exports = {
       customValidator: function(assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, 'done');
+        assert.equal(debugOutput.textContent, '"done"');
         return true;
       },
       expected: {
@@ -149,7 +149,7 @@ module.exports = {
       `,
       function isProgramDone(assert) {
         var debugOutput = document.getElementById('debug-output').textContent;
-        const done = debugOutput.includes('done');
+        const done = debugOutput.includes('"done"');
         if (done) {
           assert.equal($('#studio-space-button').is(':visible'), true);
           assert.equal($('#studio-dpad-button').is(':visible'), true);
@@ -173,7 +173,7 @@ module.exports = {
       `,
       function isProgramDone(assert) {
         var debugOutput = document.getElementById('debug-output').textContent;
-        const done = debugOutput.includes('done');
+        const done = debugOutput.includes('"done"');
         if (done) {
           assert.equal($('#studio-space-button').is(':visible'), false);
           assert.equal($('#studio-dpad-button').is(':visible'), true);

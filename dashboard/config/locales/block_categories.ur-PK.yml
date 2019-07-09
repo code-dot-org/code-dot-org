@@ -1,13 +1,17 @@
 ---
-ur-PK:
+ur:
   data:
     block_categories:
       Actions: ایکشنز
+      Loops: لوپس
       Color: رنگ بھریں
+      Math: ریاضی
+      Logic: منطق
+      Variables: متغیرات
       Conditionals: شرائط
       Events: موقعے
-      Logic: منطق
-      Loops: لوپس
-      Math: ریاضی
       Text: متن
-      Variables: متغیرات
+      Start: شروع کریں
+      test: آزمانا
+      Name: نام
+      Function: فنکشن

@@ -292,17 +292,6 @@ da:
             '"right"': højre
             '"space"': rummet
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': grænse
-            '"inner"': indersiden af firkant
-            '"x"': kryds og tværs
-            '"random"': tilfældig
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": tilfældig
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -321,10 +310,6 @@ da:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnbue
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': undervands
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': tilfældig
       gamelab_setProp:
         options:
           PROPERTY:
@@ -341,23 +326,6 @@ da:
           CONDITION:
             '"when"': når
             '"while"': mens
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': mens
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
       gamelab_turn:
         options:
           DIRECTION:
@@ -378,11 +346,6 @@ da:
             "'down'": ned
             "'left'": venstre
             "'right'": højre
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': mens
       gamelab_whileKey:
         options:
           KEY:

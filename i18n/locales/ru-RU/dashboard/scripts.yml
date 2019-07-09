@@ -2852,7 +2852,28 @@ ru:
               name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Библиотеки
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Программирование на бумаге в клеточку
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Списки
+        csd3-pilot:
+          description_short: "Программирование"
+          stages:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Functions:
+              name: функции

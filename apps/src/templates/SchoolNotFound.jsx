@@ -60,9 +60,11 @@ export default class SchoolNotFound extends Component {
     schoolZip: PropTypes.string,
     schoolType: PropTypes.string,
     schoolLocation: PropTypes.string,
+    country: PropTypes.string,
     controlSchoolLocation: PropTypes.bool,
     fieldNames: PropTypes.object,
     showErrorMsg: PropTypes.bool,
+    isNcesSchool: PropTypes.bool,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicators: PropTypes.bool,
     schoolNameLabel: PropTypes.string,
@@ -111,7 +113,7 @@ export default class SchoolNotFound extends Component {
       return false;
     }
 
-    if (this.props.useGoogleLocationSearch) {
+    if (this.props.useGoogleLocationSearch && this.locationSearchRef) {
       return this.isFieldValid(this.locationSearchRef.value());
     } else {
       return (
@@ -122,7 +124,9 @@ export default class SchoolNotFound extends Component {
     }
   }
 
-  renderLabel(text) {
+  // isLabelRequired is a check to display an asterisk next to the
+  // required field name.
+  renderLabel(text, isLabelRequired = true) {
     const {singleLineLayout, showRequiredIndicators} = this.props;
     const questionStyle = {
       ...styles.question,
@@ -131,7 +135,9 @@ export default class SchoolNotFound extends Component {
     return (
       <div style={questionStyle}>
         {text}
-        {showRequiredIndicators && <span style={styles.asterisk}> *</span>}
+        {showRequiredIndicators && isLabelRequired && (
+          <span style={styles.asterisk}> *</span>
+        )}
       </div>
     );
   }
@@ -156,6 +162,21 @@ export default class SchoolNotFound extends Component {
       <div style={styles.errors}>{i18n.schoolInfoRequired()}</div>
     );
 
+    // Check if country selected is US or non-US.  This new check
+    // is used to decide which fields in the school info interstitial
+    // form should be required.
+    let countryIsUS = false;
+    if (this.props.country && this.props.country === 'United States') {
+      countryIsUS = true;
+    }
+
+    // An asterisk is not displayed next to the field name if
+    // school type is non-nces school
+    let isLabelRequired = countryIsUS;
+    if (!this.props.isNcesSchool) {
+      isLabelRequired = false;
+    }
+
     return (
       <div>
         {!singleLineLayout && (
@@ -168,7 +189,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolName !== OMIT_FIELD && (
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                {this.renderLabel(this.props.schoolNameLabel)}
+                {this.renderLabel(this.props.schoolNameLabel, isLabelRequired)}
                 <input
                   id="school_name"
                   type="text"
@@ -183,7 +204,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolType !== OMIT_FIELD && (
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                {this.renderLabel(i18n.schoolType())}
+                {this.renderLabel(i18n.schoolType(), countryIsUS)}
                 <select
                   id="school_type"
                   name={this.props.fieldNames.schoolType}
@@ -259,7 +280,7 @@ export default class SchoolNotFound extends Component {
         {this.props.useGoogleLocationSearch && (
           <div style={fieldStyle}>
             <label style={labelStyle}>
-              {this.renderLabel(i18n.schoolCityTown())}
+              {this.renderLabel(i18n.schoolCityTown(), false)}
               <GoogleSchoolLocationSearchField
                 ref={el => (this.locationSearchRef = el)}
                 name={this.props.fieldNames.googleLocation}

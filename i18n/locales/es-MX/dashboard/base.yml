@@ -577,7 +577,6 @@ es-MX:
   pdf_download: 'Descargar el PDF'
   download_coming_soon: 'Muy pronto podrás descargar esta actividad.'
   video_coming_soon: '¡Video próximamente!'
-  not_started: 'El estudiante no ha intentado este nivel.'
   share_code:
     title: "Haz clic en \"Ejecutar\" para ver el programa en acción"
     bounce_og_title: "Echa un vistazo a mi juego \"Rebote\""

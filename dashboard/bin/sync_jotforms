@@ -9,6 +9,8 @@ exit unless only_one_running?(__FILE__)
 require_relative '../config/environment'
 
 JOT_FORM_CLASSES = [
+  Pd::WorkshopFacilitatorDailySurvey,
+  Pd::WorkshopDailySurvey,
   Pd::MiscSurvey
 ].freeze
 

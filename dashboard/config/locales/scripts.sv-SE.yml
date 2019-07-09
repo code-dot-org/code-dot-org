@@ -2032,3 +2032,17 @@ sv:
           stages:
             Graph Paper Programming:
               name: Kalkyleringsprogrammering
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Listor
+            Images:
+              name: Bilder
+        csd3-pilot:
+          stages:
+            Variables:
+              name: variabler
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner

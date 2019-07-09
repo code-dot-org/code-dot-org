@@ -1736,3 +1736,17 @@ cs:
           stages:
             Graph Paper Programming:
               name: Programování Na Milimetrovém Papíru
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Seznamy
+        csd3-pilot:
+          title: CSD Jednotka 3 - Animace and hry ('18-'19)
+          description_short: Programování
+          stages:
+            Variables:
+              name: Proměnné
+            Conditionals:
+              name: Podmínky
+            Functions:
+              name: Funkce

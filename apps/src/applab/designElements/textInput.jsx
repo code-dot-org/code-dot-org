@@ -12,15 +12,9 @@ import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
-import {
-  defaultFontSizeStyle,
-  fontFamilyStyles,
-  themeOptions,
-  CLASSIC_THEME_INDEX
-} from '../constants';
+import {themeOptions, CLASSIC_THEME_INDEX} from '../constants';
 import themeColor from '../themeColor';
 import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class TextInputProperties extends React.Component {
   static propTypes = {
@@ -312,19 +306,11 @@ export default {
     element.style.margin = '0px';
     element.style.width = '200px';
     element.style.height = '30px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.fontFamily = fontFamilyStyles[0];
-      element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = themeColor.textInput.classic;
-      element.style.backgroundColor = '';
-      elementUtils.setDefaultBorderStyles(element, {
-        forceDefaults: true,
-        textInput: true
-      });
-    }
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     return element;
   },
@@ -334,17 +320,15 @@ export default {
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
     // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
-    if (experiments.isEnabled('applabThemes')) {
-      // Set the padding for older projects that didn't set it on create:
-      if (element.style.padding === '') {
-        element.style.padding = CLASSIC_TEXT_INPUT_PADDING;
-      }
-      // Set the background color for older projects that didn't set it on create:
-      if (element.style.backgroundColor === '') {
-        element.style.backgroundColor = this.themeValues.backgroundColor[
-          themeOptions[CLASSIC_THEME_INDEX]
-        ];
-      }
+    // Set the padding for older projects that didn't set it on create:
+    if (element.style.padding === '') {
+      element.style.padding = CLASSIC_TEXT_INPUT_PADDING;
+    }
+    // Set the background color for older projects that didn't set it on create:
+    if (element.style.backgroundColor === '') {
+      element.style.backgroundColor = this.themeValues.backgroundColor[
+        themeOptions[CLASSIC_THEME_INDEX]
+      ];
     }
 
     $(element).on('mousedown', function(e) {
