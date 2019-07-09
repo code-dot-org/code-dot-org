@@ -104,7 +104,7 @@ class Census::StateCsOffering < ApplicationRecord
     if state_uses_format_v2(state_code, school_year)
       # The V2 format requires either (district_id and school_id) OR nces_id.
       if row_hash['nces_id']
-        return School.find_by(id: row_hash['NCES'])&.state_school_id
+        return School.find_by(id: row_hash['nces_id'])&.state_school_id
       elsif row_hash['district_id'] && row_hash['school_id']
         return School.construct_state_school_id(state_code, row_hash['district_id'], row_hash['school_id'])
       else

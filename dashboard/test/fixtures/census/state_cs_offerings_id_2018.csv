@@ -1,45 +1,45 @@
 school_name,district_id,school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
-BOISE SENIOR HIGH SCHOOL,Unspecified,0007,00044,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,117,42,1,9,1,0,6,9,**
-BORAH SENIOR HIGH SCHOOL,Unspecified,0008,00045,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,91,29,2,10,1,0,21,**,**
-CAPITAL SENIOR HIGH SCHOOL,Unspecified,0009,00047,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,23,7,0,3,0,0,**,**,**
-CAPITAL SENIOR HIGH SCHOOL,Unspecified,0009,00047,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,33,9,1,5,0,0,8,**,**
-TIMBERLINE HIGH SCHOOL,Unspecified,0243,00643,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,105,25,2,6,0,2,10,**,**
-TREASURE VALLEY MATH/SCIENCE,Unspecified,0573,00823,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,230,55,5,15,0,0,**,**,**
-CENTENNIAL HIGH SCHOOL,Unspecified,0015,00674,10157,AP Computer Science A ,Unspecified,72,12,0,2,1,1,**,**,**
-ST MARIES HIGH SCHOOL,Unspecified,0029,00532,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
-SANDPOINT HIGH SCHOOL,Unspecified,0202,00087,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,52,20,0,4,0,0,7,**,**
-BONNERS FERRY HIGH SCHOOL,Unspecified,0057,00089,10157,AP Computer Science A ,Unspecified,1,0,0,0,0,0,**,**,**
-SKYVIEW HIGH SCHOOL,Unspecified,0994,00515,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,28,2,0,10,0,0,**,**,**
-NAMPA SENIOR HIGH SCHOOL,Unspecified,0998,00514,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,33,8,0,10,0,0,10,**,**
-CALDWELL SENIOR HIGH SCHOOL,Unspecified,0065,00104,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,175,45,0,80,5,0,CEP,5,10
-PARMA HIGH SCHOOL,Unspecified,0072,00451,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,1,0,0,0,0,**,**,**
-VALLIVUE HIGH SCHOOL,Unspecified,0074,00118,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,62,17,1,16,0,0,29,**,**
-RIDGEVUE HIGH SCHOOL,Unspecified,1380,01078,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
-SODA SPRINGS HIGH SCHOOL,Unspecified,0079,00526,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,5,0,0,0,0,0,**,**,**
-OROFINO HIGH SCHOOL,Unspecified,0088,00440,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
-CHALLIS JR/SR HIGH SCHOOL,Unspecified,0089,00140,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,4,0,0,0,0,0,**,**,**
-SALMON RIVER JR/SR HIGH SCHOOL,Unspecified,1281,00944,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,2,1,0,0,0,0,**,**,**
-COEUR D'ALENE HIGH SCHOOL,Unspecified,0122,00149,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,15,5,0,0,1,0,**,**,**
-LAKELAND SENIOR HIGH SCHOOL,Unspecified,0124,00311,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,4,2,0,0,0,0,**,**,**
-MOSCOW HIGH SCHOOL,Unspecified,0130,00394,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,22,5,0,1,0,0,**,**,**
-TROY JR/SR HIGH SCHOOL,Unspecified,0772,00582,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
-SALMON JR/SR HIGH SCHOOL,Unspecified,0136,00504,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,1,0,0,0,0,**,**,**
-MADISON SENIOR HIGH SCHOOL,Unspecified,0146,00341,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,15,4,0,0,0,0,**,**,**
-MADISON SENIOR HIGH SCHOOL,Unspecified,0146,00341,10157,AP Computer Science A ,Unspecified,2,0,0,0,0,0,**,**,**
-LEWISTON HIGH SCHOOL,Unspecified,0153,00323,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,25,7,0,4,0,1,**,**,**
-CULDESAC SCHOOL,Unspecified,0795,00164,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,5,2,0,0,0,0,**,**,**
-NEW PLYMOUTH HIGH SCHOOL,Unspecified,0164,00736,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,9,3,0,2,0,0,**,**,**
-FRUITLAND HIGH SCHOOL,Unspecified,0166,00212,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,8,2,0,0,0,0,**,**,**
-KELLOGG HIGH SCHOOL,Unspecified,0171,00293,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,5,2,0,1,0,0,**,**,**
-BUHL HIGH SCHOOL,Unspecified,0180,00102,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,6,1,0,1,0,0,**,**,**
-FILER HIGH SCHOOL,Unspecified,0181,00194,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,2,0,0,0,0,0,**,**,**
-KIMBERLY HIGH SCHOOL,Unspecified,0182,00635,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
-MCCALL-DONNELLY HIGH SCHOOL,Unspecified,0189,00354,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,15,2,0,0,0,0,**,**,**
-WEISER HIGH SCHOOL,Unspecified,0192,00568,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,28,4,0,11,0,0,10,**,**
-iSUCCEED VIRTUAL HIGH SCHOOL,Unspecified,0654,00967,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,7,3,0,0,1,0,**,**,**
-BINGHAM ACADEMY,Unspecified,1364,NULL,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,1,0,0,**,**,**
-IDAHO DISTANCE EDUCATION ACADEMY,Unspecified,1369,NULL,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
-COEUR D'ALENE CHARTER ACADEMY SCHOOL,Unspecified,1370,NULL,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,7,3,0,1,0,0,**,**,**
-COEUR D'ALENE CHARTER ACADEMY SCHOOL,Unspecified,1370,NULL,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,1,0,0,0,0,0,**,**,**
-ARTE I RPTCS (Regional Professional Technical Charter School),Unspecified,1414,NULL,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,6,1,0,1,0,0,**,**,**
-IDLA School,Unspecified,1082,NULL,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,46,10,0,3,0,0,**,**,**
+BOISE SENIOR HIGH SCHOOL,,0007,00044,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,117,42,1,9,1,0,6,9,**
+BORAH SENIOR HIGH SCHOOL,,0008,00045,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,91,29,2,10,1,0,21,**,**
+CAPITAL SENIOR HIGH SCHOOL,,0009,00047,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,23,7,0,3,0,0,**,**,**
+CAPITAL SENIOR HIGH SCHOOL,,0009,00047,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,33,9,1,5,0,0,8,**,**
+TIMBERLINE HIGH SCHOOL,,0243,00643,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,105,25,2,6,0,2,10,**,**
+TREASURE VALLEY MATH/SCIENCE,,0573,00823,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,230,55,5,15,0,0,**,**,**
+CENTENNIAL HIGH SCHOOL,,0015,00674,10157,AP Computer Science A ,Unspecified,72,12,0,2,1,1,**,**,**
+ST MARIES HIGH SCHOOL,,0029,00532,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
+SANDPOINT HIGH SCHOOL,,0202,00087,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,52,20,0,4,0,0,7,**,**
+BONNERS FERRY HIGH SCHOOL,,0057,00089,10157,AP Computer Science A ,Unspecified,1,0,0,0,0,0,**,**,**
+SKYVIEW HIGH SCHOOL,,0994,00515,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,28,2,0,10,0,0,**,**,**
+NAMPA SENIOR HIGH SCHOOL,,0998,00514,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,33,8,0,10,0,0,10,**,**
+CALDWELL SENIOR HIGH SCHOOL,,0065,00104,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,175,45,0,80,5,0,CEP,5,10
+PARMA HIGH SCHOOL,,0072,00451,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,1,0,0,0,0,**,**,**
+VALLIVUE HIGH SCHOOL,,0074,00118,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,62,17,1,16,0,0,29,**,**
+RIDGEVUE HIGH SCHOOL,,1380,01078,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
+SODA SPRINGS HIGH SCHOOL,,0079,00526,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,5,0,0,0,0,0,**,**,**
+OROFINO HIGH SCHOOL,,0088,00440,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
+CHALLIS JR/SR HIGH SCHOOL,,0089,00140,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,4,0,0,0,0,0,**,**,**
+SALMON RIVER JR/SR HIGH SCHOOL,,1281,00944,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,2,1,0,0,0,0,**,**,**
+COEUR D'ALENE HIGH SCHOOL,,0122,00149,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,15,5,0,0,1,0,**,**,**
+LAKELAND SENIOR HIGH SCHOOL,,0124,00311,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,4,2,0,0,0,0,**,**,**
+MOSCOW HIGH SCHOOL,,0130,00394,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,22,5,0,1,0,0,**,**,**
+TROY JR/SR HIGH SCHOOL,,0772,00582,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
+SALMON JR/SR HIGH SCHOOL,,0136,00504,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,1,0,0,0,0,**,**,**
+MADISON SENIOR HIGH SCHOOL,,0146,00341,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,15,4,0,0,0,0,**,**,**
+MADISON SENIOR HIGH SCHOOL,,0146,00341,10157,AP Computer Science A ,Unspecified,2,0,0,0,0,0,**,**,**
+LEWISTON HIGH SCHOOL,,0153,00323,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,25,7,0,4,0,1,**,**,**
+CULDESAC SCHOOL,,0795,00164,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,5,2,0,0,0,0,**,**,**
+NEW PLYMOUTH HIGH SCHOOL,,0164,00736,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,9,3,0,2,0,0,**,**,**
+FRUITLAND HIGH SCHOOL,,0166,00212,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,8,2,0,0,0,0,**,**,**
+KELLOGG HIGH SCHOOL,,0171,00293,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,5,2,0,1,0,0,**,**,**
+BUHL HIGH SCHOOL,,0180,00102,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,6,1,0,1,0,0,**,**,**
+FILER HIGH SCHOOL,,0181,00194,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,2,0,0,0,0,0,**,**,**
+KIMBERLY HIGH SCHOOL,,0182,00635,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
+MCCALL-DONNELLY HIGH SCHOOL,,0189,00354,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,15,2,0,0,0,0,**,**,**
+WEISER HIGH SCHOOL,,0192,00568,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,28,4,0,11,0,0,10,**,**
+iSUCCEED VIRTUAL HIGH SCHOOL,,0654,00967,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,7,3,0,0,1,0,**,**,**
+BINGHAM ACADEMY,,1364,NULL,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,1,0,0,**,**,**
+IDAHO DISTANCE EDUCATION ACADEMY,,1369,NULL,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,1,0,0,0,0,0,**,**,**
+COEUR D'ALENE CHARTER ACADEMY SCHOOL,,1370,NULL,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,7,3,0,1,0,0,**,**,**
+COEUR D'ALENE CHARTER ACADEMY SCHOOL,,1370,NULL,03208,AP/Dual Credit Computer Science – Science (11th-12th grade content),Unspecified,1,0,0,0,0,0,**,**,**
+ARTE I RPTCS (Regional Professional Technical Charter School),,1414,NULL,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,6,1,0,1,0,0,**,**,**
+IDLA School,,1082,NULL,02204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),Unspecified,46,10,0,3,0,0,**,**,**
