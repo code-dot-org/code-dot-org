@@ -23,13 +23,11 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
 
   test 'index returns expected values' do
     prepare_scenario
-    sign_in @teacher
+    load_pl_landing @teacher
 
-    get :index
-    assert_response :success
     response = assigns(:landing_page_data)
-
-    assert_equal CDO.code_org_url("/pd-workshop-survey/#{@ended_enrollment.code}", CDO.default_scheme), response[:last_workshop_survey_url]
+    assert_equal CDO.code_org_url("/pd-workshop-survey/#{@ended_enrollment.code}", CDO.default_scheme),
+      response[:last_workshop_survey_url]
     assert_equal Pd::Workshop::COURSE_CSF, response[:last_workshop_survey_course]
   end
 
@@ -42,13 +40,10 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     # Given a teacher that attended the workshop, such that they would get
     # a survey for any other workshop subject.
     teacher = create :teacher
-    enrollment = create :pd_enrollment, email: teacher.email, workshop: fit_workshop
-    create :pd_attendance, session: fit_workshop.sessions.first, enrollment: enrollment
+    go_to_workshop fit_workshop, teacher
 
     # When the teacher loads the PL landing page
-    sign_in teacher
-    get :index
-    assert_response :success
+    load_pl_landing teacher
 
     # Then they don't see a prompt for a pending exit survey
     # (That is, we didn't pass down the parameters that would cause that prompt to appear.)
@@ -71,18 +66,15 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
 
     # Given a teacher that attended both workshops
     teacher = create :teacher
-    csf_enrollment = create :pd_enrollment, email: teacher.email, workshop: csf_workshop
-    create :pd_attendance, session: csf_workshop.sessions.first, enrollment: csf_enrollment
-    enrollment = create :pd_enrollment, email: teacher.email, workshop: fit_workshop
-    create :pd_attendance, session: fit_workshop.sessions.first, enrollment: enrollment
+    go_to_workshop csf_workshop, teacher
+    go_to_workshop fit_workshop, teacher
 
     # When the teacher loads the PL landing page
-    sign_in teacher
-    get :index
-    assert_response :success
+    load_pl_landing teacher
 
     # They see a prompt to take the CSF workshop exit survey (not the more recent FiT workshop)
     response = assigns(:landing_page_data)
+    csf_enrollment = csf_workshop.enrollments.first
     assert_equal csf_enrollment.exit_survey_url, response[:last_workshop_survey_url]
     assert_equal csf_workshop.course, response[:last_workshop_survey_course]
   end
@@ -99,27 +91,36 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
 
   test 'teachers with a plc enrollment (and no workshop enrollment) are not redirected' do
     no_workshop_teacher = create :teacher
-    sign_in(no_workshop_teacher)
     create :plc_user_course_enrollment, user: no_workshop_teacher, plc_course: (create :plc_course, name: 'Course with no workshop')
 
-    get :index
-    assert_response :success
+    load_pl_landing no_workshop_teacher
+
     assert_empty Pd::Enrollment.for_user(no_workshop_teacher)
   end
 
   test 'courses are sorted as expected' do
     prepare_scenario
-    sign_in(@teacher)
 
     ['Bills Fandom 101', 'ECS Support', 'CSP Support'].each do |name|
       plc_course = Course.find_by(name: name).try(:plc_course) || create(:plc_course, name: name)
       Plc::UserCourseEnrollment.create(user: @teacher, plc_course: plc_course)
     end
 
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map {|enrollment| enrollment[:courseName]}
+  end
+
+  def go_to_workshop(workshop, teacher)
+    enrollment = create :pd_enrollment, email: teacher.email, workshop: workshop
+    create :pd_attendance, session: workshop.sessions.first, enrollment: enrollment
+    enrollment
+  end
+
+  def load_pl_landing(teacher)
+    sign_in teacher
     get :index
     assert_response :success
-    response = assigns(:landing_page_data)
-
-    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map {|enrollment| enrollment[:courseName]}
   end
 end
