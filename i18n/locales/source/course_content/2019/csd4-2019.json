@@ -1,4 +1,9 @@
 {
+  "https://studio.code.org/s/csd4-2019/stage/2/puzzle/1": {
+    "dsls": {
+      "markdown": "# This survey is still under development\n"
+    }
+  },
   "https://studio.code.org/s/csd4-2019/stage/3/puzzle/1": {
     "display_name": "Lesson Overview"
   },
@@ -22,6 +27,11 @@
   },
   "https://studio.code.org/s/csd4-2019/stage/10/puzzle/1": {
     "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd4-2019/stage/10/puzzle/2": {
+    "dsls": {
+      "markdown": "# Example App Types\n\nIn the following levels you see several different example apps. They will give you an idea of what the UI (User Interface) could look like for apps with different goals.\n\nFor each example app:\n\n* Click through the example to get a feel for how it functions.\n* In your activity guide, make a note of any features or UI elements you find and what they are used for.\n* Discuss with your groups how that app and any of its UI features could be applied to your chosen topic.\n\n# A Note About Functionality\n\nThese apps are _prototypes_; they allow a user to interact with the design without worrying about the underlying functionality. For example, when you take use the Quiz App, each question will always respond the same way, regardless of which answer you choose.\n\nBy focusing on an interactive prototype first you can learn a lot about how users might use your app before investing too much energy in making it actually work.\n"
+    }
   },
   "https://studio.code.org/s/csd4-2019/stage/10/puzzle/3": {
     "long_instructions": "# Quiz Me\n\nA quiz app can be used to teach, or help reinforce, information important to your chosen topic.\n\nAt its most basic, a quiz app is composed of a screen for each question with two or more buttons for multiple choice answers. Each button links to a page that either confirms that you were correct, or gives you information about why you were were wrong.\n\nMore advanced quiz apps could include features such as:\n\n-   Different types of questions (such as matching, free response, or even interactive games)\n-   Randomizing the order of questions\n-   Changing the questions based on how we'll you're doing\n-   Providing a final score\n-   Incorporating study material\n\n# Functionality Missing from this Prototype\n\n-   Questions aren't actually checked for correctness"
@@ -72,6 +82,11 @@
   },
   "https://studio.code.org/s/csd4-2019/stage/12/puzzle/11": {
     "display_name": "Design Mode Elements"
+  },
+  "https://studio.code.org/s/csd4-2019/stage/12/puzzle/12": {
+    "dsls": {
+      "markdown": "# Mocking Up Your App\n\nNow that you have some practice laying out elements in App Lab, you can start working on mocking your own app. With your group, divvy up the screens so that everyone is working on a different screen.\n\nBecause you'll be dividing the work up, you'll want to do some planning ahead of time to decide on a common look and feel for your pages. For example, you'll want to agree on things such as:\n\n* Where do navigation buttons go?\n* What colors will you use for backgrounds, text, and buttons\n* What's the general style and layout?\n\n# Namespacing\n\nIn the next lesson you will combine all of your team members' screens into one app. To make sure that the IDs on one page don't conflict with another you'll need to include a unique _namespace_ for your page. This will be something you add to the beginning of every id so that your element ids don't conflict with others when you merge everyone's screens together. Your namespace should be the ID of your screen with an underscore at the end. For example, if you are making the home page, you might use \"home_\" as your namespace - leading to ids such as:\n\n* \"home_title\"\n* \"home_loginButton\"\n* \"home_logo\"\n"
+    }
   },
   "https://studio.code.org/s/csd4-2019/stage/12/puzzle/13": {
     "display_name": "App Project: Screen Design",
