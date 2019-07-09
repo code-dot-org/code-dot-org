@@ -238,7 +238,7 @@ function initViewAs(store, scriptData) {
  */
 function queryUserProgress(store, scriptData, currentLevelId) {
   const onOverviewPage = !currentLevelId;
-  const pageType = !currentLevelId ? 'level' : 'script_overview';
+  const pageType = currentLevelId ? 'level' : 'script_overview';
 
   $.ajax('/api/user_progress/' + scriptData.name, {
     data: {
