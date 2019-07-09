@@ -58,22 +58,23 @@
     "instructions_important": "false",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
-    "encrypted_examples": "+cggenfkhjbxSXLNCHvVMA2tmo4BSCw45cqPJySBjlsYTzGQj9hZphao7di2\nUHqudx8iANYlCCJLItL5vqLejw==\n",
+    "encrypted_examples": "zd/oG2evbA9mJ9lZk0OkiTpBPwz63IeeAIBRlpFdpXPy1B5ZbYUo9yjtsOvn\nj5L4dn+RAoeR6pWHrJl2CrWOVT9vZDMWibl01lLPWaLTqeNEMORHuzh+KMx9\nLApw3Yw40HmTkeF1GuwTqpcHoamLXA==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "parent_level_id": 11330,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/javascript/if-statements/"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 17:09:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 17:09:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 22:36:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

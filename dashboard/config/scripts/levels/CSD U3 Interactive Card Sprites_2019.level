@@ -205,21 +205,22 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "encrypted_examples": "4yFqO07oP4/qm58OurvkJZQzi6EjTVQ7F9wjHkF+ToIDleWJs5j2MLuqdUqU\n/4N3\n",
+    "encrypted_examples": "EVq+/jEUPTmg0gBSHzk2jjWWkvGOOJyjlOcxwQQmMZiyoP2+hcos2qMV8KKp\nyVq6o5oLccamLPHc6SnaJAXPGg==\n",
     "parent_level_id": 11307,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/sprites/",
       "/docs/concepts/game-lab/sprites/sprite-properties/"
     ],
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 07:08:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 07:08:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 19:55:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

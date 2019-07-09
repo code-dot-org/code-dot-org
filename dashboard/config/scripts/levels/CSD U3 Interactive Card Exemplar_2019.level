@@ -209,17 +209,21 @@
     "start_in_animation_tab": "false",
     "show_debug_watch": "true",
     "expand_debugger": "false",
-    "encrypted_examples": "4pusEBGYlXPTlpSz8y4Fy5Tpvh7WMRzGg6niijHHjRtCuBkXNQlsus9m1ZkI\npFLs\n",
+    "encrypted_examples": "kqsvr0AuzfwjQ9NEFvOhnL1NA/WoqHj7wLoqUk+dWS15sSnh0EoypVytNSHM\nRCgA1E9/ysamitCt9sqE1nVPsg==\n",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 11304,
     "name_suffix": "_2019",
     "display_name": "Interactive Card",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-04 17:46:09 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-04 17:50:29 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-30 17:46:43 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-30 17:48:01 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-02 21:54:46 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-03 16:56:03 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-03 18:58:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-12-04 17:46:09 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-04 17:50:29 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-30 17:46:43 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-30 17:48:01 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-02 21:54:46 +0000\",\"changed\":[\"code_functions\",\"embed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-03 16:56:03 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-03 18:58:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 19:30:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

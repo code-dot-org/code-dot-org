@@ -129,8 +129,7 @@ function unpackSources(data) {
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
     generatedProperties: data.generatedProperties,
-    selectedSong: data.selectedSong,
-    libraries: data.libraries
+    selectedSong: data.selectedSong
   };
 }
 
@@ -594,10 +593,6 @@ var projects = (module.exports = {
         sourceHandler.setInitialGeneratedProperties(
           currentSources.generatedProperties
         );
-      }
-
-      if (currentSources.libraries) {
-        sourceHandler.setInitialLevelLibraries(currentSources.libraries);
       }
 
       if (isEditing) {
@@ -1092,20 +1087,6 @@ var projects = (module.exports = {
   },
 
   /**
-   * Asks the sourceHandler for the list of functions in an app
-   */
-  getLibraryFromApp() {
-    return this.sourceHandler.getLibrary();
-  },
-
-  /**
-   * Asks the sourceHandler whether the code contains an error (red gutter warning)
-   */
-  containsError() {
-    return this.sourceHandler.codeContainsError();
-  },
-
-  /**
    * Ask the configured sourceHandler for the latest project save data and
    * pass it to the provided callback.
    * @param {function} callback
@@ -1118,21 +1099,14 @@ var projects = (module.exports = {
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
         const generatedProperties = this.sourceHandler.getGeneratedProperties();
-        const libraries =
-          this.sourceHandler.getLevelLibraries &&
-          this.sourceHandler.getLevelLibraries();
-        var sourceAndHtml = {
+        callback({
           source,
           html,
           animations,
           makerAPIsEnabled,
           selectedSong,
           generatedProperties
-        };
-        if (libraries) {
-          sourceAndHtml['libraries'] = libraries;
-        }
-        callback(sourceAndHtml);
+        });
       })
     );
   },
@@ -1157,23 +1131,6 @@ var projects = (module.exports = {
           {
             ...sourceAndHtml,
             makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled
-          },
-          () => {
-            resolve();
-            utils.reload();
-          }
-        );
-      });
-    });
-  },
-
-  addLibrary(data) {
-    return new Promise(resolve => {
-      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-        this.saveSourceAndHtml_(
-          {
-            ...sourceAndHtml,
-            libraries: [data]
           },
           () => {
             resolve();

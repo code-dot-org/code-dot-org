@@ -7,7 +7,6 @@ require 'cdo/pardot'
 require 'cdo/chat_client'
 require 'cdo/only_one'
 require 'cdo/log_collector'
-require 'aws-sdk-rds'
 require 'honeybadger/ruby'
 
 CHAT_CHANNEL = "cron-daily".freeze
@@ -15,10 +14,6 @@ CHAT_CHANNEL = "cron-daily".freeze
 def main
   start_time = Time.now
   log_collector = LogCollector.new "Build contact rollups"
-
-  # Delete clone database cluster if it was left behind by the last execution of Contact Rollups.
-  log_collector.time!('Delete db clone') {ContactRollups.delete_database_clone}
-  log_collector.time!('Create db clone') {ContactRollups.create_database_clone}
 
   # Build new daily table of contact rollups
   log_collector.time!('Build contact rollups') {ContactRollups.build_contact_rollups(log_collector)}
@@ -43,10 +38,6 @@ def main
 rescue => e
   log_collector.record_exception(e)
 ensure
-  # Use time instead of time! so failure in cleaning up clone db
-  # will not stop reporting tasks following it.
-  log_collector.time('Clean up db clone') {ContactRollups.delete_database_clone}
-
   log_collector.info("Script finished with #{log_collector.errors.size} caught exception(s) in"\
     " #{LogCollector.get_friendly_time(Time.now - start_time)}."
   )
@@ -57,9 +48,6 @@ ensure
   log_collector.errors.each do |error|
     Honeybadger.notify(error)
   end
-
-  # TODO: remove before merge
-  puts log_collector.to_s
 end
 
 main if only_one_running?(__FILE__)

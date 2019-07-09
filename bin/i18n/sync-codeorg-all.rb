@@ -19,6 +19,7 @@
 # Otherwise, if run with one of the "command" flags, will run a single step of
 # the full sync
 
+require_relative '../../deployment'
 require_relative '../../lib/cdo/only_one'
 require_relative '../../lib/cdo/github'
 
@@ -83,6 +84,13 @@ def create_in_up_pr
       "i18n/locales/source/dashboard"
     ],
     "dashboard i18n sync"
+  )
+
+  git_add_and_commit(
+    [
+      "i18n/locales/source/course_content"
+    ],
+    "course content i18n sync"
   )
 
   git_add_and_commit(

@@ -182,6 +182,7 @@ progress.renderCourseProgress = function(scriptData) {
         courseName={scriptData.course_name}
         locale={scriptData.locale}
         showAssignButton={scriptData.show_assign_button}
+        userId={scriptData.user_id}
       />
     </Provider>,
     mountPoint
