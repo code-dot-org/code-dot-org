@@ -5,6 +5,5 @@ class TeacherFeedbacksController < ApplicationController
   # Feedback from any teacher who has provided feedback to the current
   # student on any level
   def index
-    @teacher_feedbacks = @teacher_feedbacks.map { |feedback| feedback.attributes.merge(feedback.level.summary_for_feedback) }
   end
 end

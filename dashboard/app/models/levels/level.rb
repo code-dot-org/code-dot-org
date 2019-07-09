@@ -495,16 +495,6 @@ class Level < ActiveRecord::Base
     }
   end
 
-  def summary_for_feedback
-    {
-      lesson_name: script_levels[0].stage.name,
-      level_num: script_levels[0].position,
-      link_to_level: script_levels[0].path,
-      unit_name: script_levels[0].stage.script.localized_title,
-      link_to_unit: script_levels[0].stage.script.link
-    }
-  end
-
   def summary_for_lesson_plans
     summary = summarize
 
