@@ -10,13 +10,14 @@ function showFeedback() {
   // once TeacherFeedbacks are associated with ScriptLevels rather than Levels.
   const feedbacks = [
     {
-      lesson_name: 'Creating Functions',
-      level_num: '8',
-      link_to_level: '/',
-      unit_name: 'CSP Unit 3 - Intro to Programming',
-      link_to_unit: '/',
-      updated_at: new Date().toLocaleString(),
-      comment: 'Good job!'
+      lessonName: 'Creating Functions',
+      levelNum: '8',
+      linkToLevel: '/',
+      unitName: 'CSP Unit 3 - Intro to Programming',
+      linkToUnit: '/',
+      lastUpdated: new Date().toLocaleString(),
+      comment: 'Good job!',
+      seenByStudent: false
     }
   ];
 
