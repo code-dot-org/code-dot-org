@@ -57,6 +57,36 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_nil response[:last_workshop_survey_course]
   end
 
+  test 'FiT workshops do not interfere with other pending exit surveys' do
+    # Fake CSF workshop (older than the FiT workshop) which should
+    # produce a pending exit survey
+    csf_workshop = create :pd_ended_workshop,
+      course: Pd::Workshop::COURSE_CSF,
+      ended_at: Date.today - 1.day
+
+    # Fake FiT workshop, which should not produce an exit survey
+    fit_workshop = create :pd_ended_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      subject: Pd::Workshop::SUBJECT_CSD_FIT
+
+    # Given a teacher that attended both workshops
+    teacher = create :teacher
+    csf_enrollment = create :pd_enrollment, email: teacher.email, workshop: csf_workshop
+    create :pd_attendance, session: csf_workshop.sessions.first, enrollment: csf_enrollment
+    enrollment = create :pd_enrollment, email: teacher.email, workshop: fit_workshop
+    create :pd_attendance, session: fit_workshop.sessions.first, enrollment: enrollment
+
+    # When the teacher loads the PL landing page
+    sign_in teacher
+    get :index
+    assert_response :success
+
+    # They see a prompt to take the CSF workshop exit survey (not the more recent FiT workshop)
+    response = assigns(:landing_page_data)
+    assert_equal csf_enrollment.exit_survey_url, response[:last_workshop_survey_url]
+    assert_equal csf_workshop.course, response[:last_workshop_survey_course]
+  end
+
   test_redirect_to_sign_in_for :index
 
   test 'teachers without enrollments are redirected' do
