@@ -1033,6 +1033,11 @@
       "courseF_artist_variables6a_1": "Variables can be helpful when you have to change a lot of copies of the same number."
     }
   },
+  "https://studio.code.org/s/coursef-2017/stage/16/puzzle/10": {
+    "dsls": {
+      "markdown": "<h2>More on Variables</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\" style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>You've just learned one great way to use a variable...as a constant!  \nWhen you use a variable as a constant, you are setting a value one time, then using that *same* value multiple times in your program without changing it after you click \"Run\".  </h3>\n<br/><hr/>\n<h3>In the next part of the series, you will write code with variables that *do* change inside the program.</h3>\n\n"
+    }
+  },
   "https://studio.code.org/s/coursef-2017/stage/16/puzzle/11": {
     "short_instructions": "Draw a triangle with 150 pixels sides. ",
     "long_instructions": "Let's start this section by drawing a triangle with 150 pixel sides. \n\nBe sure to use the `length` variable and a repeat loop.",
@@ -2194,13 +2199,15 @@
   "https://studio.code.org/s/coursef-2017/stage/26/puzzle/1": {
     "dsls": {
       "title": "title",
-      "content1": "description here"
+      "content1": "description here",
+      "markdown": "# The Design Process\n\n<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true\" style=\"width: 800px; height: 600px\"></iframe>\n"
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/29/puzzle/1": {
     "dsls": {
       "title": "title",
-      "content1": "description here"
+      "content1": "description here",
+      "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }
   }
 }
