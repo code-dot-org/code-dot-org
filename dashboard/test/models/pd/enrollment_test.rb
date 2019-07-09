@@ -388,25 +388,30 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'with_surveys scope' do
+    # Ended workshop with attendance
+    # (ONLY this one should show up in the scope at the end of the test)
     ended_workshop = create :pd_ended_workshop, num_sessions: 1
     expected_enrollment = create :pd_enrollment, workshop: ended_workshop
     create :pd_attendance, session: ended_workshop.sessions.first, enrollment: expected_enrollment
 
-    # Special case: FiT workshops don't have exit surveys
     # Ended FiT workshop, with attendance
+    # (Checks a special case: FiT workshops don't have exit surveys)
     fit_workshop = create :pd_ended_workshop, num_sessions: 1, subject: SUBJECT_FIT
     fit_enrollment = create :pd_enrollment, workshop: fit_workshop
     create :pd_attendance, session: fit_workshop.sessions.first, enrollment: fit_enrollment
 
     # Non-ended workshop, no attendance
+    # (No surveys because not ended)
     non_ended_workshop = create :pd_workshop, num_sessions: 1
     create :pd_enrollment, workshop: non_ended_workshop
 
     # Non-ended workshop, with attendance
+    # (No surveys because not ended)
     create :pd_enrollment, workshop: non_ended_workshop
     create :pd_attendance, session: non_ended_workshop.sessions.first
 
     # Ended workshop, no attendance
+    # (No surveys because no attendance)
     create :pd_enrollment, workshop: ended_workshop
 
     assert_equal [expected_enrollment], Pd::Enrollment.with_surveys
