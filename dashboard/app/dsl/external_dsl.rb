@@ -9,7 +9,7 @@ class ExternalDSL < ContentDSL
 
   def i18n_strings
     strings = super
-    strings[@name]['markdown'] = @hash[:markdown] unless @hash[:markdown].blank?
+    strings['markdown'] = @hash[:markdown] unless @hash[:markdown].blank?
     strings
   end
 end
