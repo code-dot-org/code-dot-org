@@ -1,4 +1,14 @@
 {
+  "https://studio.code.org/s/csd6-2019/stage/1/puzzle/2": {
+    "dsls": {
+      "markdown": "# Innovation Research\n\nChoose one of the following topics to look into. You'll want to find information about some of the most recent innovative computing devices related to your category.\n\n## Wearable Technology\nWearable technology includes any form of computing that is designed to be worn by the user, whether it's embedded into the clothing or worn as an accessory. Many wearables, such as smart pedometers, overlap somewhat with health and safety as the device is both wearable _and_ intended to help improve your personal health.\n\n## Health and Safety\nThe broad range topic includes both consumer technology (things that you might use to improve your health or safety) and professional technology (gear that a doctor or other professional might use).\n\n## Agriculture\nAgriculture might not be an obvious topic, but technological innovations have had a huge impact on how we approach farming. This includes incorporating computers into existing farm equipment, using sensors and robotics to monitor crops, and analyzing data to improve efficiency and sustainability.\n\n## Manufacturing\nAdvancements in rapid prototyping, industrial robotics, and automation have had a major impact on how goods are produced. Whether it's technology to enable affordable small-scale manufacturing (like 3D printers and laser cutters) or the integration of computers into factory work, there are many interesting areas to research here.\n\n## Art and Design\nThe intersection of artistic expression and computing can yield impressive and unexpected results. While you are less likely to find commercially available products related to art and design, you will find a wide variety of homemade creations that use all manners of computing devices in creative and expressive ways.\n\n## Smart Home\nThe dream of a house that understands and even anticipates your needs is closer than ever. Whether controlled explicitly through voice commands, or by using sensors to monitor and respond to changing conditions, smart home devices take care of any number of mundane or repetitive tasks around the house.\n\n\n# Research Considerations\n\nAs you research devices on your topic, keep the following considerations in mind:\n\n* Focus on hardware based solutions over software programs\n* Focus on recent innovations over old news\n* Follow what interests you\n\nIn addition to the recommended sites listed for each topic, consider looking towards the various crowd funding websites (such as Kickstarter and Indiegogo) to see the products that haven't quite made it off the ground yet.\n\n"
+    }
+  },
+  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/1": {
+    "dsls": {
+      "markdown": "# This survey is still under development\n"
+    }
+  },
   "https://studio.code.org/s/csd6-2019/stage/2/puzzle/3": {
     "long_instructions": "# Changing the Text\n\nThe `setProperty` block can be used to change lots of things about your design elements, including the text they contain.\n\n# Do This\n\n-   Drag out a `setProperty` block\n-   For the first parameter, select \"name\" (the element's id)\n-   For the second parameter, select \"text\" (the property you want to set)\n-   For the third parameter, write your name in quotes (the value to set)\n\n_Note: We've removed the Design Mode tab for now so you can practice working with `setProperty`, but it'll come back later once you're building apps of your own._"
   },
@@ -72,7 +82,8 @@
   "https://studio.code.org/s/csd6-2019/stage/3/puzzle/10": {
     "dsls": {
       "title": "Make an App Using the LED",
-      "content1": "description here"
+      "content1": "description here",
+      "markdown": "# LED Apps\n\nIn the last level, you made an app to control the LED with different buttons on the screen.   In the next two levels, you'll see some other examples of apps, then have a chance to make one of your own.\n\nAs you look at the examples, think of what code might be useful for the app that you and your partner want to create.\n"
     }
   },
   "https://studio.code.org/s/csd6-2019/stage/3/puzzle/11": {
@@ -287,6 +298,11 @@
     "display_name": "Sample Program",
     "long_instructions": "# Emoji Race!\n\nThis is an example of a race game that you'll build by the end of this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get their emoji to the bottom of the screen first wins.\n\n# Do This\n\nTurn to a classmate and make a list of the following information.\n\n-   What components of the board does this program use?\n-   What events is this program responding to?\n-   What functions might you create to make this program work?"
   },
+  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/3": {
+    "dsls": {
+      "markdown": "# Stop\n\nBefore you move on you'll need to look at the Project Guide for this project. Wait for instructions from your teacher as well.\n"
+    }
+  },
   "https://studio.code.org/s/csd6-2019/stage/8/puzzle/4": {
     "long_instructions": "# Getting Started: Screen Design\n\nYou should have already reviewed the planning guide for this project. Some of the work to turn this project guide into a working program has already been started. Based on the project guide you're going to do the rest of this work.\n\n# Do This\n\nWe've already created a \"start\" screen and included a title and \"play\" button. Using your planning guide, finish creating this screen. Specifically you'll want to:\n\n-   Update the title text to say \"Emoji Race\"\n-   Add instructions for playing using the ID \"instructions\"\n\nFeel free to add any other design tweaks that you'd like."
   },
@@ -336,6 +352,11 @@
   "https://studio.code.org/s/csd6-2019/stage/9/puzzle/2": {
     "display_name": "Demo - Bug Grab",
     "long_instructions": "# Grab that Bug!\n\nThis is an example of a tug o' war game that could be built in this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get the bug over to their side first wins."
+  },
+  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/3": {
+    "dsls": {
+      "markdown": "# Stop\n\nBefore you move on you'll need to look at the Project Guide for this project. Wait for instructions from your teacher as well.\n"
+    }
   },
   "https://studio.code.org/s/csd6-2019/stage/9/puzzle/4": {
     "long_instructions": "# Create Your Screens\n\nThe first thing you'll need to do is create all of the screens that you've sketched in your planning guide.\n\n# Do This\n\nUse Design Mode to create all of the screens that your program will need. Don't forget to **pick sensible IDs** for all of your design elements."
@@ -695,6 +716,11 @@
   "https://studio.code.org/s/csd6-2019/stage/15/puzzle/9": {
     "long_instructions": "# Smart Bike - Blinker Controls\n\nWith your turn signal LEDs hooked up, you just need to program some buttons to control them. You may want to place buttons elsewhere on the bike to make controlling your turn signals easier, but for now we'll just use the built in left and right buttons.\n\n# Do This\n\n-   Add event handlers to blink the left turn signal when the left button is pressed.\n-   Add event handlers to blink the right turn signal when the right button is pressed.\n-   Test your code!\n\n_Hint: You'll need to be in text mode to make the blinkers work, since there are no built-in blocks for the elements that you add on to the board._"
   },
+  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/10": {
+    "dsls": {
+      "markdown": "# Build Your Blinkers\n\nUsing the circuit you just built, return to your smart bike prototype and add the blinkers.\n"
+    }
+  },
   "https://studio.code.org/s/csd6-2019/stage/15/puzzle/11": {
     "display_name": "Button Circuits"
   },
@@ -715,7 +741,8 @@
   },
   "https://studio.code.org/s/csd6-2019/stage/16/puzzle/2": {
     "dsls": {
-      "content1": "description here"
+      "content1": "description here",
+      "markdown": "# Prototype your own innovation\n\nNow that you have all the skills you need, it's time to make your own game!\n\nWith a partner or team, brainstorm some different physical devices you could prototype. You can build on the programs that you've already made in previous lessons, innovative devices that you've seen in the real world, or any wild ideas you can come up with.\n\nOnce you have settled on an idea with your team, fill out the Project Guide with the sketches of the physical components of your device, inputs and outputs that you'll need, and plans for what information you'll need to process.\n\n## Innovation Ideas\n\nTo help kick off your brainstorming, check out these example projects:\n\n### Automatic Night Light\n\nUsing conductive thread, LEDs, and the light sensor, create a decorative piece of wall art the becomes a night light when the lights go out. This one is designed to look like flickering fireflies.\n\n![](https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)\n\n### Musical Instrument\n\nDesign a musical instrument that can be played any way you like, using sensors or buttons for input. In this case we created five new buttons using conductive copper tape, though you could also use aluminum foil or any other conductive material.\n\n![](https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)\n\n### Bop-it\n\nMake a game! This one uses an array to store the different commands, which are picked at random each time you correctly follow the instructions on screen.\n\n![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)\n"
     }
   },
   "https://studio.code.org/s/csd6-2019/stage/16/puzzle/3": {
