@@ -60,10 +60,7 @@ def puts_script_intro
     #{bold 'Documentation'}
 
       Dev-of-the-Day Checklist
-      #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
-
-      Known Issues
-      #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
+      #{dim 'https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit?usp=sharing'}
 
   EOS
 end
@@ -330,7 +327,7 @@ def puts_quit_message
   puts <<-EOS.unindent
 
     #{bold 'Something weird going on? Take a look at: '\
-      'http://wiki.code.org/display/PROD/Daily+Deployment'}
+      'https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit?usp=sharing'}
 
     You can find a log of your day at #{LOG_FILE}
 
