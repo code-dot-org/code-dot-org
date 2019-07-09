@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 import('@cdo/apps/code-studio/pd/application/teacher1920/Teacher1920Application').then(
-  Teacher1920Application => {
+  ({default: Teacher1920Application}) => {
     $(document).ready(function(event) {
       ReactDOM.render(
         <Teacher1920Application {...getScriptData('props')} />,
