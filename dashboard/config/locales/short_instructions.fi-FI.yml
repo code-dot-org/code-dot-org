@@ -2,479 +2,93 @@
 fi-FI:
   data:
     short_instructions:
+      2-3 Artist 1 new: Hei, olen taiteilija. Voit kirjoittaa koodia, jolla saat minut
+        piirtämään melkein mitä tahansa. Käytä muutamia lohkoja, joiden avulla minä
+        piirrän yli kuvan harmaiden linjojen. (Jokainen linja on 100 kuvapistettä
+        pitkä)
       2-3 Artist 12: Aseta "toista kertaa" -lohko niin että se luo "ympyrän", joka
         viimeistelee silmämunan. Jos jokainen liike kääntää oikealle yhden asteen,
         niin kuinka monta kertaa sinun täytyy toistaa tehdäksesi täyden ympyrän? 180?
         360? 500?
       2-3 Artist 2 new: 'Tässä talossa on puolivalmiit seinät. Kukin sivu on 100,
         mutta puolivalmis seinä on vain 50. Täydennä seinä. '
-      2-3 Artist 3.4: Hyppää-lohko siirtää taiteilijan ilman, että se piirtää. Piirrä
-        katkoviiva käyttämällä sekä hyppää- että piirrä-lohkoja.
-      2-3 Artist 3new: Punainen hattu on korkeudeltaan 100 kuvapistettä. Täydennä
-        piirustus mustasta hatusta, joka on 70 kuvapistetta matalampi. Mustan hatun
-        leveys on 50 kuvapistettä.
       2-3 Artist 4: Auta minua saamaan valmiiksi talo tälle kissalle.
-      2-3 Artist 6: 'Tämä talo tarvitsee katon. Piirrä kolmio. Vihje: kaikki kolme
-        sivua ovat saman pituisia.'
-      2-3 Artist 7: 'Viimeistele kuva piirtämällä viimeisen ikkunan oikea puoli. Jokainen
-        ikkunaruutu on 25 pikseliä. '
-      2-3 Artist 8: Valmista huoneita kullekin eläimelle jakamalla suorakulmio 2:een
-        samansuuruiseen neliöön. Suorakulmio on 200 kuvapistettä leveä ja 100 kuvapistettä
-        korkea.
+      2-3 Artist 6: 'Tmä talo tarvitsee katon! Piirrä kolmio. Vihje: kaikki kolme
+        sivua ovat saman pituiset.'
       2-3 Artist 9: Viimeistele tämä leija
-      2-3 Artist Assessment 1: 'Arviointi: Piirrä loppuun viimeinen hammas, korkeudeltaan
-        25 kuvapistettä ja leveydeltään 25 kuvapistettä.'
-      2-3 Artist Debugging 1: Voitko tehdä tämän hatun huippupituudella 100?
-      2-3 Artist Debugging 10: 'Minun peliohjaimen suunta-näppäimistö on liian kapea.
-        Vihje: Laajenna sitä 10 kuvapistettä'
-      2-3 Artist Debugging 11: Auta minua viimeistelemään kaunis lumihiutaleeni. Kuinka
-        monta kertaa minun täytyy "toistaa" saadakseni sen valmiiksi?
-      2-3 Artist Debugging 2: 'Koodi näkemällesi kolmelle viikselle on väärä. Vihje:
-        kukin viiksi on 75 kuvapistettä pitkä. Korjaa tämä koodi piirtääksesi viikset.'
-      2-3 Artist Debugging 3: 'Veneessäni on reikä! Voitko korjata sen muuttamalla
-        linjan kulmaa? Vihje: viimeinen kulma on väärässä 15 astetta.'
-      2-3 Artist Debugging 5: 'Koodi näkemällesi jalalle ja jalkaterälle on väärä.
-        Vihje: jalkaterä on liian pitkä, meidän täytyy ehkä poistaa askel (tehty kompa)'
-      2-3 Artist Debugging 6: Näyttää, että istun tuolilla, josta puuttuu jalka. Muokkaa
-        lohkoja piirtääksesi jalan.
-      2-3 Artist Debugging 7: "Näyttää, että koodissa oleva C on piirretty takaperin.
-        \nVoitko tehdä sen näyttämään C:ltä?"
-      2-3 Artist Debugging 8: Minun kärrynpyörä ei ole valmis. Kuinka monta kertaa
-        minun täytyy toistaa saadakseni sen valmiiksi?
-      2-3 Artist Debugging 9: 'Tämä rungon koodi on virheellinen. Vihje: Kulma on
-        pielessä 60 astetta'
-      2-3 Artist Debugging Assessment 1: 'Tämän muoto on liian pieni. Voitko tehdä
-        siitä isomman? Vihje: sen tulisi olla 75 kuvapistettä pitempi joka sivulta.'
       2-3 Artist Free Play: Vapaapeli! Piirrä ihan mitä tahansa.
-      2-3 Artist Functions 1: 'Moro! Mää zombie taitelija. Mää rakastaa piirtämistä!  Auta
-        minua tekemään neliölasit. Vihje: lasien nenäkappale on 25 kuvapistettä lyhyempi
-        kuin neliön pituus.'
-      2-3 Artist Functions 10: Tässä on kaksi funktiota, yhdellä piiretään iso (hammas)ratas
-        ja toisella piirretään pieni ratas. Käytä niitä tehdäksesi koneen sisus!
-      2-3 Artist Functions 11: Me nimesimme "piirrä neliö" -funktio  "piirrä kuusikulmio"
-        -funktioksi, mutta se tekee vain neliöitä! Voitko muokata "piirrä kuusikulmio"-funktiota
-        piirtämään kuusikulmion 50 kuvapisteen sivupituudella  ja piirrä kuva funktiota
-        käyttämällä?
-      2-3 Artist Functions 11.5: Tässä on sama "Piirrä kuusikulmio" -funktio. Mitä
-        tapahtuu, jos käännät vain 60 astetta joka kerta kun teet silmukan?
-      2-3 Artist Functions 12: 'Funktiot ovat todella upeita toimintoja kun piirretään
-        monimutkaisia asioita useita kertoja. Voitko käyttää "Piirrä kukka"-funktiota
-        täyttääksesi loput kylvökoneen laatikosta?(Vihje: kasvit erotettiin toisistaan
-        100 kuvapisteen pituudella)  '
-      2-3 Artist Functions 2: Funktioilla voit määrittää uusia lohkoja! Olemme siirtäneet
-        neliöiden piirtämislohkot funktioon nimeltä "piirrä neliö". Voitko käyttää
-        "piirrä neliö"-funktiota lasien luomiseksi? Neliöt ovat 75 kuvapistettä kumpikin.
-      2-3 Artist Functions 3: Muokkaa funktiota piirtääksesi neliön minkä sivu on
-        115 kuvapistettä pitkä ja piirrä isommat lasit. Nyt neliöt ovat 45 kuvapistettä
-        kumpikin.
-      2-3 Artist Functions 4: Käytä "toista" lohkoa piirtääksesi nämä 3 neliötä.
-      2-3 Artist Functions 9: Tässä on lumihiutale-funktio. Kokeilla sitä luodaksesi
-        talvimaisema! Tämä on ilmainen pelitaso, joten ei ole tehtävää ratkaistavana.
-        Pidä hauskaa!
-      2-3 Artist Loops New 1: Piirretään tälle robotille pää. Voitko tehdä neliön,
-        jonka sivut ovat 100 kuvapistettä?
-      2-3 Artist Loops New 10: Nyt yhdistetään joukko V-kirjaimia, piirretään ne silmukassa.
-      2-3 Artist Loops New 11: Tällä kertaa piirretään se 24 kertaa. Lisää käänny
-        vasemmalle 30 astetta tähän koodiin ja laita kaikki se toista -lohkoon.
-      2-3 Artist Loops New 12: Piirrä timantti, jossa sivut on 100 kuvapistettä.
-      2-3 Artist Loops New 13: Nyt piirrä timantti 3 kertaa silmukassa.
-      2-3 Artist Loops New 14: Nyt piirretään timantti 10 kertaa, mutta kierrä 90
-        astetta jokaisen timantin välissä.
+      2-3 Artist Loops New 1: Piirtäkäämme tämän robotin pää! Voitko tehdä neliön,
+        jossa sivun pituus on 100 kuvapistettä?
+      2-3 Artist Loops New 12: 'Piirrä timantti, jossa sivut on 100 kuvapistettä. '
       2-3 Artist Loops New 15: Piirrä jotakin hauskaa.
-      2-3 Artist Loops New 2: Tässä on jotain siitä koodista, jota käytit piirtääksesi
-        neliön. Mitä tapahtuu, jos käytät toista-lohkoa suorittaaksesi tämän koodin
-        4 kertaa?
-      2-3 Artist Loops New 9: Piirrä yksinkertainen V, jonka molemmat sivut ovat 50
-        kuvapistettä, jotta nuolen kuva täydentyy.
-      2-3 Artist Nested Loops 1: "Olet käyttänyt silmukoita piirtääksesi muotoja aiemmin,
-        mutta tiesitkö, että voit laittaa silmukan toisen silmukan sisään?\\\r\nSilmukoi
-        tätä koko koodilohkoa 3 kertaa piirtääksesi kuvion."
       2-3 Artist Nested Loops 10: Tee silmukka tälle koodille 12 kertaa täydentääksesi
         kuviosi.
       2-3 Artist Nested Loops 11: Tee silmukka tälle koodille 4 kertaa täydentääksesi
-        kuvion, käänny 90 astetta jokaisen ympyrän jälkeen.
+        kuviosi, käännä 90 astetta jokaisen ympyrän jälkeen.
       2-3 Artist Nested Loops 12: Tee silmukka tälle koodille 12 kertaa täydentääksesi
         kiharat.
-      2-3 Artist Nested Loops 2: Tee nyt silmukka tälle kolmiolle 6 kertaa. Joka kolmion
-        jälkeen sinun täytyy kääntyä 60 astetta ennen seuraavan piirtämistä.
-      2-3 Artist Nested Loops 3: Sinun täytyy silmukoida kolmiota 12 kertaa piirtääksesi
-        tämän kuvion. Jaa ympyrän asteiden lukumäärä (360) haluamallasi kuvioiden
-        lukumäärällä (12), jotta saisit selville kuinka paljon pitää kääntyä jokaisen
-        kuvion jälkeen.
-      2-3 Artist Nested Loops 4: 'Tee toistosilmukka tälle timantille 12 kertaa piirtääksesi
-        kukka. Vinkki: 12 timanttia on kuten 12 kolmiota, jotka teit - kuinka paljon
-        sinun täytyy kääntyä kunkin muodon jälkeen?'
-      2-3 Artist Nested Loops 5: Piirrä tähän rakennukseen ikkunat käyttämällä sisäkkäistä
-        silmukkaa. Ikkunat ovat 20 pikseliä leveitä ja 20 pikseliä erillään toisistaan.
-      2-3 Artist Nested Loops 6: Tällä dinosauruksella on kahdeksan piikkiä hännässään;
-        jokainen piikki on 30 pikseliä pitkä. Silmukoi kolmiota 8 kertaa, mutta muista
-        liikkua eteenpäin jokaisen piikin jälkeen.
-      2-3 Artist Nested Loops 7: Silmukoi tätä kolmiota 10 kertaa piirtääksesi auringon.
-        Sinun täytyy liikkua ja kääntyä jokaisen kolmion jälkeen. Voit selvittää,
-        kuinka paljon pitää kääntyä jakamalla ympyrän asteiden lukumäärän tarvittavien
-        kuvioiden lukumäärällä.
-      2-3 Artist Nested Loops 8: "Lisätäänpä vähän ruohoa kuvaamme. \nJokainen ruohotupsu
-        on 50 pikseliä toisistaan erillään."
-      2-3 Artist Nested Loops 9: |-
-        Viimeistelemme kuvan lisäämällä siihen kukan.
-        Silmukoi timanttia 12 kertaa piirtääksesi kukan.
       2-3 Artist Nested Loops Free Play: Vapaata piirtoa. Piirrä jotain kivaa sisäkkäisillä
         silmukoilla.
-      2-3 Bee Conditionals 11: Kerää mettä siellä missä kukissa on mettä.
-      2-3 Bee Conditionals 12: |-
-        Käytä silmukkaa tarkistaaksesi ja kerätäksesi 
-        meden kaikista näistä kukista.
-      2-3 Bee Conditionals 13: "Kerää mettä ja tee hunajaa. Vinkki: \nmitä tapatuu
-        jos käytät \"jos mettä\"-ehtoa punaiseen kukkaan? \nVoitko ratkaista tämän
-        käyttämällä silmukkaa?"
-      2-3 Bee Conditionals 14: |-
-        Kerää mettä ja tee hunajaa. Varo keräämästä
-        mettä violetilta kukalta, jos sillä ei ole yhtään.
-      2-3 Bee Conditionals 15: Kerää mettä kaikista neljästä kukasta.
-      2-3 Bee Conditionals 2: |-
-        Hei, olen mehiläinen! Auta minua keräämään 
-        kaikki mesi kukista.  Käytä silmukkaa.
-      2-3 Bee Conditionals 3: |-
-        Auta minua keräämään kaikki mesi
-        kukista ja tekemään hunajaa. Käytä silmukkaa.
-      2-3 Bee Conditionals 5: Violeteissa kukissa voi olla 1 tai 0 mettä, mutta et
-        tiedä kuinka paljon! Varo keräämästä mettä violetista kukasta jos sitä ei
-        ole. Tarkista onko meden määrä 1 käyttäen jos-lohkoa.
-      2-3 Bee Conditionals 6: |-
-        Tarkista tämä kukka "jos"-lohkolla
-        nähdäksesi onko siinä mettä.
-      2-3 Bee Conditionals 7: Cherry mesi kustakin kukasta, jos niissä sitä on.
-      2-3 Bee Conditionals 8: Kentällä on punaisia ja violetteja kukkia. Punaisilla
-        kukilla on tunnettu määrä mettä, mutta violettien kukkien mesimäärä on tuntematon.
-        Kerää kaikki mesi.
       2-3 Bee Conditionals 9: Kerää kaikki mesi kustakin kukasta.
-      2-3 Bee Conditionals Assessment 1: 'Arviointi: kerää kaikki mesi. Varo keräämästä
-        mettä violetista kukasta jos siinä ei ole lainkaan mettä.'
-      2-3 Bee Debugging 1: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
-        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
-      2-3 Bee Debugging 10: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
-        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
-      2-3 Bee Debugging 2: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
-        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
-      2-3 Bee Debugging 3: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
-        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
-      2-3 Bee Debugging 4: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
-        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
-      2-3 Bee Debugging 5: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
-        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi. Voit nyt käyttää suorita
-        vaiheittain.
-      2-3 Bee Debugging 6: 'Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
-        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi. '
-      2-3 Bee Debugging 7: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
-        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
-      2-3 Bee Debugging 8: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
-        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
-      2-3 Bee Debugging 9: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
-        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
-      2-3 Bee Debugging Assessment 1: 'Arviointi: Nämä lohkot todella häiritsevät
-        minua. Korjaa virhe(et) kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.'
-      2-3 Bee Functions 1: Funktiot ovat koodilohkoja, jotka suoittavat tehtävän.
-        Käytä "hae 2 mettä" -funktiota kerätäksesi meden joka kukasta.
-      2-3 Bee Functions 10: Violeteissa kukissa voi olla mettä joko 1 tai 0.  Luo
-        funktio, joka kerää mettä vain sellaisista violeteista kukista, joissa on
-        mettä.
-      2-3 Bee Functions 2: |-
-        Funktiot ovat koodilohkoja, jotka suorittavat jonkin tehtävän.
-        Käytä "ota 5"-fuktiota kerätäksesi 5 mettä kerralla. Käytä silmukkaa,
-        jotta pärjäisit järkevällä koodilohkomäärällä.
       2-3 Bee Functions 3: Kerää kaikki mesi kustakin kukasta.
-      2-3 Bee Functions 4: |-
-        "Liiku ja kerää mettä"-funktio kääntää mehiläistä,
-        kerää meden ja sitten palauttaa mehiläisen lähtöpaikkaansa.
-        Käytä funktiota kerätäksesi kaiken meden.
-      2-3 Bee Functions 5: Nyt kukissa on enemmän mettä. Muokkaa annettua funktiota
-        niin, että se kerää 4 mettä, jotta saat kaiken meden kukista.
       2-3 Bee Functions 6: Nyt käytä samaa funktiota kerätäksesi mesi kolmesta kukasta.
-      2-3 Bee Functions 8: Luo oma funktio jolla saat 7 mettä liikutettua eteenpäin
-        ja tehtyä 7 hunajaa. Käytä funktiota kerätäksesi mesi jokaisesta kukasta ja
-        tee hunajasta hunajakenno.
-      2-3 Bee Functions 9: Luo oma funktio joka kulkee polkua, kerää mettä, luo hunajaa
-        ja palaa takaisin mehiläisen luo polkua pitkin.
-      2-3 Bee Functions Assessment 1: 'Arviointi: Käytä funktiota kerätäksesi mesi
-        jokaisesta kukasta.'
-      2-3 Bee Functions Assessment 2: 'Arviointi: Luo funktio joka tekee 3 hunajaa
-        kerralla.'
-      2-3 Bee Loops 1: 'Jokainen kukka sisältää yhden verran mettä. Kerää mesi jokaisesta
-        kukasta. '
-      2-3 Bee Loops 10: Voitko käyttää while loop kahden loopin sisällä kerätäksesi
-        kaikki mesi?
-      2-3 Bee Loops 13: 'Tehtävä: Käytä toista-lohkoa kerätäksesi kaiken meden.'
-      2-3 Bee Loops 1A: 'Hei, olen mehiläinen. Voitko auttaa minua keräämään mettä
-        näistä kukista? '
-      2-3 Bee Loops 2: Käytä loop kerätäksesi mettä ja tehdäksesi hunajaa.
       2-3 Bee Loops 2A: Voitko tehdä saman tehtävän helpommin käyttämällä loop?
-      2-3 Bee Loops 3: Kerää mesi jokaisesta kukasta ja tee hunajaa jokaisessa hunajakennossa.
       2-3 Bee Loops 3A: Osaatko käytää silmukkaa kaiken meden keräämiseen?
-      2-3 Bee Loops 3B: Nyt käytä uutta toista-lohkoa saadaksesi kaiken meden kerättyä
-        ja hunajan tehtyä.
-      2-3 Bee Loops 4: Käytä samanlaista silmukkaa kuin edellisessä tehtävässä, mutta
-        tee nyt siihen käännös mukaan.
-      2-3 Bee Loops 4A: Mitä tapahtuu, jos toistat komentosarjan kolme kertaa? Älä
-        unohda tehdä hunajaa lopussa!
-      2-3 Bee Loops 5: Käytä silmukkaa mennäksesi portaita alas ja kerätäksesi meden.
-      2-3 Bee Loops 6: Käytä silmukkaa kerätäksesi meden jokaisesta kukasta ja tehdäksesi
-        hunajaa jokaisesta hunajakennosta.
-      2-3 Bee Loops 7: Laita nämä lohkot silmukan sisään, jotta saat kerättyä meden
-        jokaisesta kukasta.
-      2-3 Bee Loops 8: Violeteissa kukissa on tuntematon määrä mettä. Käytä "niin
-        kauan kuin mettä" -silmukkaa kerätäksesi kaiken meden. Tätä silmukkaa suoritetaan
-        niin kauan kuin ehto on tosi, tässä tapauksessa kun mettä > 0.
-      2-3 Bee Loops Assessment 1: Arviointi - käytä while silmukkaa kerätäksesi kaikki
-        mesi tästä kukasta.
-      2-3 Maze 1: 'Auttaisitko minua pyydystämään ilkeän possun? Pinoa muutama "liiku
-        eteenpäin"-lohko yhteen ja paina "Suorita"-painiketta. '
       2-3 Maze 10: Auta minut vihreän ilkiön luo! (Varo TNT:tä)
-      2-3 Maze 12: 'Voitko korvata nämä viisi lohkoa vain kahdella lohkolla? (Vihje:
-        Tee silmukka käyttäen "toista kertaa" -lohkoa.)'
-      2-3 Maze 13: Hoida minut possun luo käyttäen vain kahta lohkoa.
-      2-3 Maze 15: Mene possun luo, mutta vähennä lohkojen määrää käyttämällä kahta
-        silmukkaa.
-      2-3 Maze 16: Hoida minut auringonkukan luo. Käytä silmukkaa!
-      2-3 Maze 16 before: Hoida minut possun luo.
       2-3 Maze 2: Tuo possu pilaa höyheneni. Auta minua pääsemään sen luo!
-      2-3 Maze 3: Seuraa polkua ja johda minut tuon typerän possun luo. Vältä TNT:tä
-        tai höyhenet pöllyävät!
       2-3 Maze 4: Auta minut vihreän ilkiön luo! (Varo TNT:tä)
       2-3 Maze 6: Pysy rauhallisena ja auta minua löytämään ilkeä possu. Muuten saatan
         suuttua!
       2-3 Maze 7: Auta minut vihreän ilkiön luo! (Varo TNT:tä)
       2-3 Maze 8: Hoida minut tuon possun luo!
       2-3 Maze 9: Auta minut vihreän ilkiön luo! (Varo TNT:tä)
-      2-3 Maze Loops 1: Saatko vietyä minut sian luo käyttämällä viittä samanlaista
-        palikkaa?
       2-3 Maze Loops 17: Vie minut auringonkukan luo!
-      2-3 Maze Loops 18: Vie minut auringonkukan luo!
-      2-3 Maze Loops 19: Vie minut auringonkukan luo!
       2-3 Maze Loops 20: Vie minut auringonkukan luo käyttäen pienimmän mahdollisen
         määrän lohkoja!
-      2-3 Maze Loops 21: Vie minut auringonkukan luo!
       2-3 Maze Loops Assessment 1: 'Tehtävä: Hoida minut auringonkukan luo käyttäen
         vain viittä lohkoa!'
-      4-5 Artist 11: Täydennä vihreät viivat. Viivat ovat 300 kuvapisteen mittaisia
-        ja 15 pisteen etäisyydellä toisistaan.
-      4-5 Artist 2: Osaatko tehdä koodiin silmukan saadaksesi neliön valmiiksi?
-      4-5 Artist 3: Tämän suorakulmaisen kukkapenkin ympärysmitta on 600. Pitkän sivun
-        pituus on 200. Piirrä suorakulmio.
       4-5 Artist 3.5: OK, yritä selvittää mitä tapahtuu, jos ajat tämän koodin (tai
         paina "Suorita" kokeillaksesi). Toista se sitten tarpeeksi monta kertaa saadaksesi
         piirustus valmiiksi. Värit ovat (todennäköisesti) joka kerta eri.
       4-5 Artist 4: Kuinka monta astetta on ympyrässä? Tee silmukka lohkoille luodaksesi
         värien ympyrän.
-      4-5 Artist 5: Mitä kulmaa käytät?
-      4-5 Artist 6: Tasasivuisen kolmion kulmat ovat 60, 60 ja 60 astetta. Kukin sivu
-        on 200 kuvapistettä. Täydennä piirros.
-      4-5 Artist 7: Oikeanpuoleisen kolmion kulmat ovat 30, 60 ja 90 astetta. Vinon
-        sivun pituus on kaksinkertainen verrattuna korkeuteen, joka on 100 kuvapistettä.
-        Täydennä piirros.
-      4-5 Artist 8: Jalkapallokentän keskiviiva on kohtisuorassa sivurajoihin nähden.
-        Kentän ympärysmitta on 800 ja pituus 240 kuvapistettä. Kuinka leveä kenttä
-        on? Piirrä rajat ja keskiviiva.
-      4-5 Artist 9: Piirrä toinen puoli siten, että kuviosta tulee symmetrinen. Kolmiot
-        ovat tasasivuisia ja sivut 50 kuvapisteen mittaisia.
       4-5 Artist Assessment 1: 'Tehtävä: Käytä silmukkaa piirtääksesi tasasivuisen
         kolmion. Kukin sivu on 300 kuvapistettä.'
       4-5 Artist Free Draw 1: Vapaa piirto! Piirrä mitä ikinä oletkaan insproitunut
         luomaan.
-      4-5 Artist Patterns 1: Osaatko piirtää tämän neliön käyttämällä silmukkaa? Jokainen
-        sivu on 20 pikseliä pitkä.
-      4-5 Artist Patterns 11: 'Kuinka monta kertaa sinun pitää toistaa tämä, että
-        voit piirtää puoliympyrän ? '
-      4-5 Artist Patterns 12: Mitä tapahtuu, jos kopioit tämän silmukan ja käännät
-        vasemmalle oiken sijaan? Osaatko toistaa tuon piirtääksesi aallon?
-      4-5 Artist Patterns 13: "Kerrataanpa koko juttu neljä kertaa, jotta saadaan
-        kehykset tähän piirustukseen. Ole tarkkaavainen kulmissa, et voi vain kääntyä
-        90 astetta!\\\r\n\\\r Jos 3 asteen silmukka pitää toistaa 60 kertaa, jotta
-        saa puoliympyrän, millä näistä koodipalikoista saa aikaan kulmaan neljännesympyrän?"
-      4-5 Artist Patterns 2: Jos neliösilmukka laitetaan toisen silmukan sisään, sitä
-        kutsutaan sisäkkäiseksi silmukaksi. Mitä on lisättävä ulommaiseksi silmukaksi,
-        jotta varmistetaan, että kaikki 15 neliötä asettuvat suoraan jonoon?
-      4-5 Artist Patterns 3: Mennäänpä tasoa syvemmälle! Olemme laittaneet kokonaisen
-        koodipalikan toisen silmukan sisään, mutta nyt on saatava taiteilija paikalle
-        piirtämään seuraava viiva. Mikä näistä koodipalikoista pitää laittaa ulommaisimman
-        silmukan loppuun, jotta saadaan piirrettyä kokonainen ristikko?
-      4-5 Artist Patterns 4: Tällä timantilla on 50 pikselin sivut ja 120 ja 60 asteen
-        kulmat. Käytä silmukkaa piirtääksesi sen.
-      4-5 Artist Patterns 8: Käytä silmukkaa ja piirrä tämä kuusikulmio, jossa on
-        40 kuvapisteen sivut ja 60 asteen kulmat.
-      4-5 Artist Patterns 9: "Toista tämä koodi 3 kertaa ja piirrä kokonainen rivi.\\\r\n\\\r\nJokainen
-        kuusikulmio on 80 kuvapistettä mitattuna äärimmäisestä pisteestä vasemmalla
-        oikean reunan äärimmäiseen pisteeseen."
-      4-5 Artist Patterns 9.5: Tehdäänpä tähän koodiin silmukka, että saamme piirrettyä
-        kaksi riviä kuusikulmioita. Huomaa, kuinka toinen rivimme on siirtynyt oikealle.
-      4-5 Artist Patterns Free Play: Vapaa peli - koeta piirtää oma kuvio!
-      4-5 Bee Conditionals 1: En näe, koska pilvi on edessä! Katso, onko pilven alla
-        kukka. Jos löydät kukan, voit kerätä meden. Ole varovainen, se voi muuttua!
-      4-5 Bee Conditionals 2: "Lisää pilviä!\\\r\n\\\r\nTarkista jokainen pilvi, jotta
-        tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\\\r\n\\\r\nMuista:\nKaikki
-        pilvet eivät piilottelee samaa asiaa!"
-      4-5 Bee Conditionals 3: Nyt haluan tehdä hunajaa. Joidenkin näiden pilvien alla
-        voi olla hunajakennoja. Tarkista jokainen pilvi!
-      4-5 Bee Conditionals 4: Joskus pilvi peittää kukan, joskus hunajakennon! Jos
-        löydät kukan, käytä jos/muuten -palikkaa kerätäksesi mettä tai muuten-palikkaa
-        tehdäksesi hunajaa (koska löysit hunajakennon).
-      4-5 Bee Conditionals 5: "Noiden pilvien alta löytyy joko kukka tai hunajakenno!\\\r\n\\\r\nJos
-        löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi mettä.\\\r\nMuussa
-        tapauksessa, tee hunajaa (koska pilven alla on hunajakenno)."
-      4-5 Bee Conditionals 6: "En ole varma, kuinka paljon mettä tässä kukassa on,
-        mutta tiedän, että sillä on 1, 2 tai 3 mettä.\\\r\n\\\r\nYhdistä vaihtoehtoiset
-        palikat ('jos' ja/tai 'jos/muuten') saadaksesi kaiken kukan meden talteen.\n\\\r\n\\\r\nMuista,
-        meden määrä voi muuttua joka kerta, kun suoritat tehtävää!"
-      4-5 Bee Conditionals 7: "Näillä kukilla voi olla 3, 2 tai 1 mettä.\n\\\r\n\\\r\nTee
-        valmiiksi 'tarkasta violetti kukka' -funktio ja käytä sitä kerätessäsi kukkien
-        kaiken meden talteen."
-      4-5 Bee Conditionals 8: "Kirjoita funktio ' tarkista kukka, tee hunajaa'.\\\r\n\\\r\nFunktiosi
-        pitäisi tarkistaa, onko kukalla 3, 2 vai 1 mettä ja kerätä kaikki mesi.\\\r\nMene
-        sitten eteenpäin ja tee hunajaa."
-      4-5 Bee Conditionals Assessment 1: "Tehtävä: Tämä pilvi joko piilottelee kukkaa,
-        jossa on yksi mesi tai sellaista hunajakennoa, joka tarvitsee yhden hunajan.\\\r\n\\\r\nTäydennä
-        'hae mesi tai tee hunajaa' -funktio, pyydä sitten sitä keräämään mesi tai
-        hunaja.\\\r"
-      4-5 Bee Debugging 1: "Nämä palikat todellakin häiritsevät minua.\\\r\n\\\r\nOsaatko
-        korjata ne?"
+      4-5 Artist Patterns 7: Muokataanpa edellisen tehtävän koodia, jotta saadaan
+        tästä monimutkaisempi malli. Huomaa, kuinka timantit menevät nyt osittain
+        päällekkäin. Yritä muuttaa ensimmäistä 'hyppyä taaksepäin' sadasta viiteenkymmeneen
+        (puoliksi niin kauas). Kuinka kauas taiteilijan pitäisi mennä toisella 'hypyllä
+        taaksepäin'?
       4-5 Bee Debugging 10: Etsi virheet ja korjata ne.
       4-5 Bee Debugging 11: Laskeeko tämä oikein?
       4-5 Bee Debugging 2: Auttaa mehiläistä saamaan mettä ja tekemään hunajaa.
       4-5 Bee Debugging 3: Etsi virheet ja korjata ne.
       4-5 Bee Debugging 4: Nämä lohkot eivät toimi. Mikä on kaava?
       4-5 Bee Debugging 5: Jotakin ei ole tässä oikein...
-      4-5 Bee Debugging 6: Violetissa kukassa on tuntematon määrä mettä. Korjaa lohkot
-        siten, että kaikki mesi saadaan kerättyä.
       4-5 Bee Debugging 7: Funktiosta puuttuu jotain...
-      4-5 Bee Debugging 8: Tämä funktio on kunnossa, mutta sitä ei käytetä kunnolla.
       4-5 Bee Debugging 9: Miksi mehiläinen ei tee tarpeeksi hunajaa?
       4-5 Bee Debugging Assessment 1: 'Arviointi: Korjaa koodi.'
       4-5 Bee Nested Loops 1: Käytä silmukkaa kerätäksesi kaikki mesi.
-      4-5 Bee Nested Loops 2: 'Kerää kaikki metsi jokaisesta kukasta. Käytä sisäistä
-        silmukkaa. '
-      4-5 Bee Nested Loops 3: Kerää kaikki mesi laittamalla käynnistyskoodi sisäkkäiseen
-        silmukkaan.
-      4-5 Bee Nested Loops 4: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
-        Käytä sisäkkäistä silmukkaa. '
       4-5 Bee Nested Loops 5: Keŕää kaikki mesi käyttämällä sisäistä silmukkaa.
-      4-5 Bee Nested Loops 7: Laita silmukka toinen silmukan sisälle tehdäksesi sisäinen
-        silmukka, ja kerätäksesi kaikki mesi kukista.
-      4-5 Bee Nested Loops 9: Kerää kaikki mesi näistä kukista kerralla sijoittamalla
-        niin kauan kuin silmukka toista palikan sisälle.
-      4-5 Bee Nested Loops Assessment 1: 'Tehtävä: Kerää kaikki mesi ja tee kaikki
-        hunaja käyttämällä silmukoita.'
-      4-5 Bee Nested Loops Rows: Kerää mesi kukkariveistä! Käytä sisäkkäistä silmukkaa.
-      4-5 Maze 1: Hyvä ihminen. Minä zombi. Täytyy… päästä…auringonkukalle.
+      4-5 Maze 1: Hyvä hminen. Minä zombi. Täytyy.. päästä.. auringonkukalle.
       4-5 Maze 10: Pääsetkö auringonkukan luo käyttämällä vain neljää lohkoa?
       4-5 Maze 11: Pääsetkö auringonkukan luo käyttämällä vain kuutta lohkoa?
       4-5 Maze 12: Ok, tämä on hiukan erilainen. Voitko tehdä sen käyttämällä vain
         kuutta lohkoa?
-      4-5 Maze 2: Saa zombi auringonkukan luokse, mutta vältä ahmijaa!
+      4-5 Maze 2: Vie zombi auringonkukan luo, mutta vältä ahmijaa!
       4-5 Maze 3: Täytyy.. päästä... auringonkukalle.
-      4-5 Maze 4: Kokeile "toista" lohkoa käyttääksesi vähemmän lohkoja...
       4-5 Maze 5: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen määrän
         lohkoja?
       4-5 Maze 6: Vie minut auringonkukan luo käyttäen pienimmän mahdollisen määrän
         lohkoja!
-      4-5 Maze 7: Hyvä hminen. Minä zombi. Täytyy.. päästä.. auringonkukalle.
-      4-5 Maze 8: "Käytä mahdollisimman vähän palikoita ja vie zombie auringonkukan
-        luo.\\\r\n(Vältä ahmijoita!)"
-      4-5 Maze 9: "Meillä on uusi palikka, 'toista kunnes'.\\\r\nSen kanssa voimme
-        toistaa käskyjä kunnes zombie pääsee auringonkukan luo.\\\r\n\\\r\nKäytä uutta
-        'toista kunnes' -palikkaa tämän tehtävän ratkaisemiseen niin vähillä käskyillä
-        kuin mahdollista."
-      4-5 Maze Assessment 1: 'Tehtävä: Mene auringonkukan luo.'
-      4-5 Maze Conditionals 1: Käytä 'toista kunnes' -palikkaa ja vie zombie auringonkukan
-        luo.
-      4-5 Maze Conditionals 2: Käytä 'toista kunnes' -palikkaa ja vie zombie auringonkukan
-        luo.
-      4-5 Maze Conditionals 3: "Käytä 'jos'-palikkaa ja auta minua päättämään milloin
-        käännyt.\\\r"
-      4-5 Maze Conditionals 4: Ok, ratkaise tämä tehtävä samoin kuin edellinen. Sinun
-        on muistettava, kuinka käytit 'jos' ja 'toista kunnes'-palikoita yhdessä.
-      4-5 Maze Conditionals 5: Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi
-        minut sinne käyttäen mahdollisimman pientä määrää lohkoja.
-      4-5 Maze Conditionals 6: Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi
-        minut sinne käyttäen mahdollisimman pientä määrää lohkoja.
-      4-5 Maze Conditionals 7: Tämän tehtävän ratkaisu ei ole kovin erilainen, mutta
-        varo ahmijoita!
-      4-5 Maze Conditionals 8: "'Jos/muuten' -palikka tarkistaa ehdon, ja sitten se
-        tekee yhden asian TAI toisen.\\\r\n\\\r\nKäytä tätä uutta palikkaa ja vie
-        minut auringonkukan luo."
-      4-5 Maze Conditionals 9: "Vielä yksi harjoitustehtävä 'jos/muuten' -palikalla!\\\r\n\\\r\nKulje
-        sitä pitkin sormellasi ja kokeile, saatko sen oikein sen ensi yrittämällä."
-      4-5 Maze Conditionals Assessment 1: 'Tehtävä: Käytä ''toista kunnes'' ja ''jos/muuten''
-        -palikoita ja vie minut auringonkukan luo. Käytä mahdollisimman vähiä palikoita.'
-      4-5 Nested Loops 11: Osaatko piirtää tämän jalkakäytävän 10 neliötä käyttäen
-        sisäkkäistä silmukkaa? Jokainen neliö on 30 kuvapistettä.
-      4-5 Nested Loops 12: Osaatko piirtää nämä 36 kolmiota käyttäen sisäkkäistä silmukkaa?
-      4-5 Nested Loops 2: 'Laita tämä silmukka toisen silmukan sisään ja piirrä 10
-        kolmiota. Tätä kutsutaan sisäkkäiseksi silmukaksi.  '
       4-5 Nested Loops 5: Liitä annettu koodi silmukkaan. Tee tuulimylly.
-      4-5 Nested Loops 6: Osaatko piirtää kuusikulmion kolmiokoodia toistamalla?
-      4-5 Nested Loops 7: "Toista tämä kuvio 10 kertaa.\\\r\n\\\r\nKuinka monta astetta
-        sinun on käännyttävä joka toistolla?"
-      4-5 Nested Loops 8: "Toista tämä kuvio 6 kertaa.\\\r\n\\\r\nKuinka monta astetta
-        sinun on käännyttävä joka toistolla? "
       4-5 Nested Loops 9: Piirrä alligaattorin suuhun hampaat!
-      4-5 Nested Loops Assessment 1: 'Tehtävä: Piirrä kuvio valmiiksi. Käytä sisäkkäistä
-        silmukkaa.'
-      4-5 While Loops 1: Liikuta minut kuoppaan ja täytä se kahdella multalapiollisella,
-        käytä 'täytä'-palikkaa.
-      4-5 While Loops 2: Liikuta minut multakasan luo. Poista kasa kauhomalla lapiolla
-        5 kertaa. Käytä 'poista1'-palikkaa.
-      4-5 While Loops 3: "Tee tämä tehtävä käyttämällä niin vähän palikoita kuin mahdollista!\\\r\n\\\r\nLiikuta
-        minut kasan luo ja poista kaikki multa, siirry sitten kuopan luo ja täytä
-        se kokonaan."
-      4-5 While Loops 4: "Vau, katsohan!\\\r\n\\\r\nEn tiedä, kuinka monta multalapiollista
-        tähän kuoppaan tarvitaan.\\\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa,
-        kunnes maa on tasainen?  "
-      4-5 While Loops 5: Vau, nyt tässä on kaksi syvää kuoppaa! Osaatko kirjoittaa
-        ohjelman, joka täyttää ne molemmat, kunnes maa on tasainen?
-      4-5 While Loops 6: Vau, nyt edessäsi on iso multakasa. Osaatko kirjoittaa ohjelman,
-        joka poistaa sen kaiken niin, että maasta tulee tasainen?
-      4-5 While Loops 7: Vau, nyt multakasoja on kolme! Osaatko kirjoittaa ohjelman,
-        joka poistaa niistä jokaisen, kunnes maa on tasainen?
-      4-5 While Loops 8: " Nyt edessäsi on todella syvä kuoppa ja tosi suuri multakasa.
-        Kuinka monta lapiollista multaa pitää siirtää, jotta maa olisi tasainen? Vinkki:
-        Käytä molempiin 'niin kauan kuin' -silmukkaa."
-      4-5 While Loops Assessment 1: Kuoppia ja kasoja on paljon. Auta minua täyttämään
-        ja poistamaan ne niin, että maasta tulee tasainen.
-      Course 4 Artist 1: 'Auta minua laatikon piirtämisessa. (Jokainen viiva on 200
-        kuvapistettä pitkä) '
-      Course 4 Artist 11: Tässäpä haastetta! Kokeile vapaasti yrittämällä ja erehtymällä.
-        Sinun ei tarvitse onnistua täydellisesti ensimmäisellä kerralla. Haluatko
-        nähdä lisää vinkkejä? Klikkaa tästä!
-      Course 4 Artist 12: "Haluatko kurkistaa uudelleen suunnitteluapuun tai vinkkeihin?
-        Klikkaa tästä!\\\r\n\\\r\nJollet, tee kuvio aivan itse!"
-      Course 4 Artist 13: Pelaatko edelleen? Tässä sinulle tyhjä maalauspohja, jolle
-        voit piirtää, mitä haluat!
-      Course 4 Artist 2: Osaatko käyttää silmukkaa  harmaan neliön piirtämiseen? (Jokainen
-        sivu on 300 kuvapistettä pitkä.)
-      Course 4 Artist 20: Pelaatko edelleen? Tässä sinulle tyhjä maalauspohja, jolle
-        voit luoda, mitä haluat!
-      Course 4 Artist 3: Yritä päätellä, mitä tapahtuu, jos suoritat tämän koodin
-        (tai kokeile painamalla 'suorita'-nappulaa). Toista se sitten niin monta kertaa,
-        että saat piirroksen valmiiksi.
-      Course 4 Artist 4: Kuinka monta astetta ympyrä on? Kirjoita oikea numero toista-palikkaan
-        ja saat aikaan väriympyrän.
-      Course 4 Artist 5: 'Piirrä tämän kuvion toinen puoli niin, että kuviosta tulee
-        symmetrinen. Kolmiot ovat tasasivuisia ja 50 kuvapistettä pitkiä. Vinkki:
-        Voi olla, että koodi pitää suorittaa monta kertaa, jotta kaikki lisättävät
-        palikat selviävät.'
-      Course 4 Artist 6: "Täydennä koodi ja piirrä nämä kolmiot. \\\r\n\\\r\nJokaisen
-        tasakylkisen kolmion sivut ovat 100 kuvapistettä pitkiä. "
-      Course 4 Artist 8: Toista koko koodipalikka useita kertoja ja piirrä aurinko.
-      Course 4 Artist 8a: Muistatko tämän muodon? Nyt saat rakentaa ilman valmiita
-        aloituspalikoita!
       Course 4 Artist Binary 7: Tee tämä piirustus valmiiksi.
       Course 4 Artist Binary Free Play 2: 'Vapaa leikki: Tässä sinulle tyhjä maalauspohja,
         jolle voit piirtää. Pidä hauskaa!'
       Course 4 Artist Binary Free Play 2b: Katso täältä vinkkejä.
-      Course 4 Artist For Loops Challenge: "Keksitkö, kuinka voit käyttää kaikkia
-        oppimiasi asioita tämän kuvan luomiseen? \\\r\n\\\r\nJos haluat vinkin, napsauta
-        tästä."
-      Course 4 Artist Inspire: "Haluatko kurkistaa uudelleen suunnitteluapuun tai
-        vinkkeihin? Klikkaa tästä!\\\r\n\\\r\nJollet, tee kuvio aivan itse!"
       Course 4 Maze 5: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen
         määrän lohkoja?
       CourseD_Dance_Party_01: Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin
@@ -600,6 +214,8 @@ fi-FI:
       MC_HOC_2017_Ali_2019: Käytä toimintoja löytääksesi tie laavan yli.
       MC_HOC_2017_FP20x20: "**Vapaa peli:** Aika tehdä tutkimustyötä itsekseen!"
       MC_HOC_2017_FP20x20_2019: "**Vapaa peli:** Aika tehdä tutkimustyötä itsekseen!"
+      NEW Course 4 Artist Params 12: Osaatko täydentää tämän piirustuksen? Kaikkien
+        kuvioiden sivut ovat 100 pikselin pituiset.
       Overworld Avoid Monsters: Lurkkiin törmääminen on huono juttu. Ohita lurkki
         varovasti ja etene kotiisi turvaan.
       Overworld Avoid Monsters_2019: Lurkkiin törmääminen on huono juttu. Ohita lurkki

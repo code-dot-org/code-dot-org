@@ -10,6 +10,7 @@ var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+var sass = require('node-sass');
 
 module.exports = function(grunt) {
   // Decorate grunt to record and report build durations.
@@ -303,7 +304,8 @@ describe('entry tests', () => {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
         outputStyle: 'nested',
-        includePaths: ['node_modules', '../shared/css/']
+        includePaths: ['node_modules', '../shared/css/'],
+        implementation: sass
       },
       files: _.fromPairs(
         [
@@ -496,6 +498,8 @@ describe('entry tests', () => {
     'courses/show': './src/sites/studio/pages/courses/show.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+    'devise/registrations/_old_sign_up_form':
+      './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
     'devise/registrations/edit':
       './src/sites/studio/pages/devise/registrations/edit.js',
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
@@ -536,15 +540,16 @@ describe('entry tests', () => {
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
-    scriptOverview: './src/sites/studio/pages/scriptOverview.js',
+    'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_header_progress':
       './src/sites/studio/pages/shared/_header_progress.js',
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
-    signup: './src/sites/studio/pages/signup.js',
     'teacher_dashboard/show':
-      './src/sites/studio/pages/teacher_dashboard/show.js'
+      './src/sites/studio/pages/teacher_dashboard/show.js',
+    'teacher_feedbacks/index':
+      './src/sites/studio/pages/teacher_feedbacks/index.js'
   };
 
   var internalEntries = {
@@ -552,8 +557,6 @@ describe('entry tests', () => {
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    levelbuilder_edit_script:
-      './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
@@ -571,6 +574,7 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'scripts/_form': './src/sites/studio/pages/scripts/_form.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
   };

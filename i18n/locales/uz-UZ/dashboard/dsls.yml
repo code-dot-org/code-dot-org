@@ -2,166 +2,1216 @@ uz:
   data:
     match:
       2-3 Big Event Match 1:
-        Match the button combination to the dance moves.: Tugma kombinatsiyasini raqs harakatlariga moslang.
-        Matching: Moslashmoqda
+        content2: Tugma kombinatsiyasini raqs harakatlariga moslang.
+        title: Moslashmoqda
       2-3 Binary Match 1:
-        "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>O</strong>"
-        "<strong>P</strong>": "<strong>P</strong>"
-        "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: Moslashmoqda
-        Use the key to match each code to its letter: Kod harflarini moslashtirish uchun kalitni ishlating
+        content2: Kod harflarini moslashtirish uchun kalitni ishlating
+        questions:
+          - 
+            text: "<strong>N</strong>"
+          - 
+            text: "<strong>O</strong>"
+          - 
+            text: "<strong>P</strong>"
+          - 
+            text: "<strong>Q</strong>"
+        title: Moslashmoqda
       2-3 Graph Paper Match 1:
-        Match the grid to the program.: Panjarani dasturga moslang.
-        Matching: Moslashmoqda
+        content1: Panjarani dasturga moslang.
+        title: Moslashmoqda
       2-3 Maze Match 2:
-        Instructions: Qo'llanmalar
-        Match the puzzles to the blocks: Bloklarni boshqotirmaga moslang
-        Maze Match: Chigalni moslang
+        content1: Bloklarni boshqotirmaga moslang
+        pre_title: Qo'llanmalar
+        title: Chigalni moslang
       2-3 artist loops match 1:
-        Match the loop to the shape: Halqani shaklga moslashtiring
+        content2: Halqani shaklga moslashtiring
       2-3 artist match 1:
-        Artist Matching: Artist mos keldi
-        Match the shape with the blocks that complete it.: Shaklni biror bir mos keladigan blokga moslashtiring.
+        content1: Shaklni biror bir mos keladigan blokga moslashtiring.
+        title: Artist mos keldi
       2-3 maze match 1:
-        Match the puzzles to the blocks: Bloklarni boshqotirmaga moslang
-        Maze Match One: Chigal 1chi o'yin
+        content1: Bloklarni boshqotirmaga moslang
+        title: Chigal 1chi o'yin
       4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>2)</h4>"
-        "<h4>3)</h4>": "<h4>3)</h4>"
-        "<h4>4)</h4>": "<h4>4)</h4>"
-        "<h4>Add Player 1 roll to total score</h4>": "<h4>Oýinchi 1 ni qo'shish umumiy bahoga o'ting</h4>"
-        "<h4>Compare player scores to see who wins</h4>": "<h4>O'yinchilar bahosini solishtiring<h4>"
-        Matching: Moslashmoqda
+        answers:
+          - 
+          - 
+          - 
+            text: "<h4>Oýinchi 1 ni qo'shish umumiy bahoga o'ting</h4>"
+          - 
+            text: "<h4>O'yinchilar bahosini solishtiring<h4>"
+        questions:
+          - 
+            text: "<h4>1)</h4>"
+          - 
+            text: "<h4>2)</h4>"
+          - 
+            text: "<h4>3)</h4>"
+          - 
+            text: "<h4>4)</h4>"
+        title: Moslashmoqda
       4-5 Computational Thinking Match 1:
-        Matching: Moslashmoqda
+        title: Moslashmoqda
       4-5 Suncatchers Match 1:
-        Matching: Moslashmoqda
+        title: Moslashmoqda
       4-5 maze match 1:
-        Instructions: Qo'llanmalar
-        Match the puzzles to the blocks: Bloklarni boshqotirmaga moslang
-        Maze Match: Chigalni moslang
+        content1: Bloklarni boshqotirmaga moslang
+        pre_title: Qo'llanmalar
+        title: Chigalni moslang
       K-1 Artist 2 Match 2:
-        Matching: Moslashmoqda
+        title: Moslashmoqda
       K-1 Bee Loops Match 1:
-        Match the blocks: Bloklarni moslashtiring
-        Matching: Moslashmoqda
+        content2: Bloklarni moslashtiring
+        title: Moslashmoqda
       K-1 Big Event Match 1:
-        Match the button combination to the dance moves.: Tugma kombinatsiyasini raqs harakatlariga moslang.
-        Matching: Moslashmoqda
+        content2: Tugma kombinatsiyasini raqs harakatlariga moslang.
+        title: Moslashmoqda
       K-1 Maze Match 1:
-        Instructions: Qo'llanmalar
-        Matching: Moslashmoqda
+        pre_title: Qo'llanmalar
+        title: Moslashmoqda
     multi:
       2-3 Algorithms Multi 1:
-        Choose an algorithm for the image provided.: Rasmga berilgan algoritmni tanlang.
-        Multiple Choice: Turlicha tanlash
-        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Rasmga berilgan algoritmni tanlang.
+        title: Turlicha tanlash
       2-3 Algorithms Multi 2:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       2-3 Conditionals Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        title: Turlicha tanlash
       2-3 Getting Loopy Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        title: Turlicha tanlash
       2-3 Graph Paper Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        title: Turlicha tanlash
+      2-3 Maze Multi 2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       2-3 Relay Programming Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        title: Turlicha tanlash
       2-3 Relay Programming Multi 2:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        title: Turlicha tanlash
+      2-3 artist debug multi 1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      2-3 artist functions multi 1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+      2-3 artist loops multi 1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      2-3 artist loops multi 2:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      2-3 bee conditionals multi 1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      2-3 bee conditionals multi 3:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      2-3 bee loops multi 1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      2-3 maze multi 1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       4-5 Algorithms Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        title: Turlicha tanlash
       4-5 Computational Thinking Multi 1:
-        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
-        1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       4-5 Crowdsourcing Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+        title: Turlicha tanlash
       4-5 Crowdsourcing Multi 2:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        title: Turlicha tanlash
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       4-5 Internet Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        title: Turlicha tanlash
       4-5 Internet Multi 2:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       4-5 Songwriting Multi 1:
-        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
-        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
-        Multiple Choice: Turlicha tanlash
-        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
-        5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       4-5 Suncatchers Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        title: Turlicha tanlash
+      4-5 artist loops multi 1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      4-5 artist multi 1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      4-5 artist multi 2:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      4-5 bee conditionals multi 1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      4-5 bee debug multi 1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      4-5 bee loops multi 1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      4-5 maze conditionals multi 1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      4-5 maze multi 1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      CSD Header Size MC:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD Header Size MC_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD Header Size MC_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U3 Boolean MC:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      CSD U3 Boolean MC_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      CSD U3 Boolean MC_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      CSD U3 Functions Prediction define first:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprites intro predict multi:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U3 Sprites intro predict multi_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U6 array multi:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 array multi_2018:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 array multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 setProperty predict multi:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U6 setProperty predict multi_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       K-1 Artist 1 Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       K-1 Artist 1 Multi 2:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        title: Turlicha tanlash
       K-1 Bee 1 Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       K-1 Bee 1 Multi 2:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        title: Turlicha tanlash
       K-1 Digital Footprint Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        title: Turlicha tanlash
       K-1 Getting Loopy Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       K-1 Happy Maps Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       K-1 Keep it Private Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       K-1 Maze Debugging Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        title: Turlicha tanlash
       K-1 Maze Loops Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       K-1 Maze Loops Multi 2:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        title: Turlicha tanlash
+      K-1 Maze Multiple Choice 2:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       K-1 Move It Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: Turlicha tanlash
       K-1 Plant a Seed Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        title: Turlicha tanlash
       K-1 Plant a Seed Multi 2:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        title: Turlicha tanlash
       K-1 Word Search Multi 1:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        title: Turlicha tanlash
       K-1 Word Search Multi 3:
-        Multiple Choice: Turlicha tanlash
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        title: Turlicha tanlash
+      behaviors 1 predict:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      behaviors 4 predict:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_artist_prog6_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_artist_prog6_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       courseC_multi_harvester_loops11_predict1:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseC_multi_harvester_loops11_predict1_2018:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_starWars_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_starWars_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_starWars_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_artist_binary8_predict1:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseD_multi_artist_binary8_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_conditionals1_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals1_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_nestedLoops2_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       courseD_multi_bee_nestedLoops9_predict2:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_collector_debugging10_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_ramp13:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while4_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_while4_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_maze_until10_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until10_predict2_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until2_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_maze_until2_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_scrat_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_multi_artist_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseE_multi_bee_functions_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseE_multi_farmer_functions11_predict:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_multi_farmer_functions11_predict_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseE_multi_farmer_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseE_multi_farmer_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_multi_maze_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_prediction_artistFunction1:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_prediction_artistFunction1_2018:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_prediction_artistFunction1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseF_bee_variables_8a_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_bee_variables_8a_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_artist_for10_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_for10_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_fwp2_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_bee_conditionals1_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_conditionals7_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_bee_for3_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_for3_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_for3_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_fwp9_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_playlab_variables4c_predictive1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      coursee_prediction_artistfunction2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      coursee_prediction_artistfunction2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      coursee_prediction_artistfunction2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
