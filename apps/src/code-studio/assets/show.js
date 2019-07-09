@@ -43,6 +43,30 @@ module.exports = function showAssetManager(
 
   let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
 
+  renderPicker(
+    pickerType,
+    typeFilter,
+    options,
+    showChoseImageButton,
+    dialog,
+    assetChosen,
+    sounds,
+    codeDiv
+  );
+
+  dialog.show();
+};
+
+function renderPicker(
+  pickerType,
+  typeFilter,
+  options,
+  showChoseImageButton,
+  dialog,
+  assetChosen,
+  sounds,
+  codeDiv
+) {
   ReactDOM.render(
     React.createElement(pickerType, {
       typeFilter: typeFilter,
@@ -63,6 +87,4 @@ module.exports = function showAssetManager(
     }),
     codeDiv
   );
-
-  dialog.show();
-};
+}
