@@ -35,7 +35,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
           SchoolInfo.where(new_school_info_params).
           first_or_create
         else
-          SchoolInfo.where(new_school_info_params, validation_type: SchoolInfo::VALIDATION_NONE).
+          SchoolInfo.where(new_school_info_params).
           first_or_create(validation_type: SchoolInfo::VALIDATION_COMPLETE)
         end
       unless current_user.update(school_info: submitted_school_info)
