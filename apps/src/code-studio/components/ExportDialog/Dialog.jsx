@@ -1,16 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import BaseDialog from '../../templates/BaseDialog';
-import AbuseError from './AbuseError';
-import color from '../../util/color';
-import {hideExportDialog} from './exportDialogRedux';
+import BaseDialog from '../../../templates/BaseDialog';
+import AbuseError from '../AbuseError';
+import color from '../../../util/color';
+import {hideExportDialog} from '../exportDialogRedux';
 import i18n from '@cdo/locale';
-import {SignInState} from '../progressRedux';
-import firehoseClient from '../../lib/util/firehose';
-import exportExpoIconPng from '../../templates/export/expo/icon.png';
-import SendToPhone from './SendToPhone';
-import project from '../initApp/project';
+import {SignInState} from '../../progressRedux';
+import firehoseClient from '../../../lib/util/firehose';
+import project from '../../initApp/project';
+import commonStyles from './styles';
+import IntroPage from './IntroPage';
+import PlatformPage from './PlatformPage';
+// import IconPage from './IconPage';
+import PublishPage from './PublishPage';
+import GeneratingPage from './GeneratingPage';
 
 const APK_BUILD_STATUS_CHECK_PERIOD = 60000;
 
@@ -26,32 +30,6 @@ function recordExport(type) {
     {includeUserId: true}
   );
 }
-
-const baseStyles = {
-  button: {
-    borderWidth: 1,
-    borderColor: color.border_gray,
-    fontSize: 'larger',
-    outline: 'none',
-    padding: 10,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
-  },
-  section: {
-    marginTop: 10
-  },
-  text: {
-    fontSize: 'inherit',
-    lineHeight: 'inherit',
-    color: 'inherit'
-  },
-  inlineLabel: {
-    display: 'inline-block'
-  }
-};
 
 const styles = {
   modal: {
@@ -73,122 +51,35 @@ const styles = {
     fontSize: 13,
     fontWeight: 'bold'
   },
-  uploadIconButton: {
-    ...baseStyles.button,
-    backgroundColor: color.default_blue,
-    color: color.white
-  },
-  iosAppStoreButton: {
-    ...baseStyles.button,
-    backgroundColor: color.purple,
-    color: color.white
-  },
-  androidGooglePlayButton: {
-    ...baseStyles.button,
-    backgroundColor: color.purple,
-    color: color.white
-  },
   cancelButton: {
-    ...baseStyles.button,
+    ...commonStyles.button,
     backgroundColor: color.gray,
     color: color.black
   },
   actionButton: {
-    ...baseStyles.button,
+    ...commonStyles.button,
     backgroundColor: color.orange,
     color: color.white
   },
   actionButtonDisabled: {
-    ...baseStyles.button,
+    ...commonStyles.button,
     backgroundColor: color.gray,
     color: color.white
   },
   backButton: {
-    ...baseStyles.button,
+    ...commonStyles.button,
     backgroundColor: color.gray,
     color: color.black
   },
   backButtonDisabled: {
-    ...baseStyles.button,
+    ...commonStyles.button,
     backgroundColor: color.gray,
     color: color.white
   },
-  p: {
-    ...baseStyles.text
-  },
-  section: {
-    ...baseStyles.section
-  },
   buttonRow: {
-    ...baseStyles.section,
+    ...commonStyles.section,
     display: 'flex',
     justifyContent: 'flex-end'
-  },
-  title: {
-    fontSize: 16
-  },
-  radioLabel: {
-    ...baseStyles.text,
-    ...baseStyles.inlineLabel
-  },
-  radioLabelDisabled: {
-    ...baseStyles.text,
-    ...baseStyles.inlineLabel,
-    color: color.light_gray
-  },
-  radioInput: {
-    height: 18,
-    verticalAlign: 'middle'
-  },
-  icon: {
-    marginRight: 10,
-    width: 125,
-    height: 125,
-    overflow: 'hidden',
-    borderRadius: 2,
-    border: '1px solid rgb(187,187,187)',
-    backgroundColor: color.black,
-    position: 'relative',
-    display: 'inline-block'
-  },
-  iconImage: {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    width: '100%',
-    height: 'auto',
-    transform: 'translate(-50%,-50%)',
-    msTransform: 'translate(-50%,-50%)',
-    WebkitTransform: 'translate(-50%,-50%)'
-  },
-  spinner: {
-    fontSize: 24
-  },
-  expoInput: {
-    cursor: 'copy',
-    width: 'unset'
-  },
-  phoneLabel: {
-    marginTop: 15,
-    marginBottom: 0
-  },
-  apkUriContainer: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  sendToPhoneButton: {
-    ...baseStyles.button,
-    backgroundColor: color.purple,
-    color: color.white
-  },
-  sendToPhoneButtonBody: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  sendToPhoneIcon: {
-    fontSize: 32,
-    width: 30,
-    margin: '-8px 0'
   }
 };
 
@@ -311,7 +202,6 @@ class ExportDialog extends React.Component {
       iconUri: undefined,
       md5PublishSavedSources: undefined,
       splashImageUri: undefined,
-      showSendToPhone: false,
       apkUri: undefined,
       generatingApk: false,
       apkError: null
@@ -321,16 +211,6 @@ class ExportDialog extends React.Component {
   close = () => {
     recordExport('close');
     this.props.onClose();
-  };
-
-  onInputSelect = ({target}) => {
-    target.select();
-  };
-
-  showSendToPhone = () => {
-    this.setState({
-      showSendToPhone: true
-    });
   };
 
   onInstallExpoIOS = () => {
@@ -604,191 +484,36 @@ class ExportDialog extends React.Component {
 
     switch (screen) {
       case 'intro':
-        return this.renderIntroPage();
+        return <IntroPage />;
       case 'platform':
-        return this.renderPlatformPage();
+        return <PlatformPage />;
       // case 'icon':
-      //   return this.renderIconPage();
+      //   return (
+      //     <IconPage />
+      //   );
       case 'publish':
-        return this.renderPublishPage();
-      case 'generating':
-        return this.renderGeneratingPage();
+        return <PublishPage />;
+      case 'generating': {
+        const {appType} = this.props;
+        const {exportError, apkError, apkUri} = this.state;
+        return (
+          <GeneratingPage
+            appType={appType}
+            isGenerating={this.isGenerating()}
+            exportError={exportError}
+            apkError={apkError}
+            apkUri={apkUri}
+          />
+        );
+      }
       default:
         throw new Error(`ExportDialog: Unexpected screen: ${screen}`);
     }
   }
 
-  renderIntroPage() {
-    return (
-      <div>
-        <div style={styles.section}>
-          <p style={styles.title}>
-            Code Studio can export your project as a mobile app for iOS or
-            Android
-          </p>
-        </div>
-        <div style={styles.section}>
-          <p style={styles.p}>
-            Exporting will create a mobile app that you can install on your
-            phone. You can install that app on your phone and run it without
-            opening the Code.org website. If you make changes to your app after
-            you export, you will need to export it again.
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  renderPlatformPage() {
-    return (
-      <div>
-        <div style={styles.section}>
-          <p style={styles.title}>Choose your platform</p>
-        </div>
-        <div style={styles.section}>
-          <div>
-            <input
-              style={styles.radioInput}
-              type="radio"
-              id="radioAndroid"
-              readOnly
-              checked
-            />
-            <label htmlFor="radioAndroid" style={styles.radioLabel}>
-              I have an Android device
-            </label>
-          </div>
-          <div>
-            <input
-              style={styles.radioInput}
-              type="radio"
-              id="radioIOS"
-              disabled
-            />
-            <label htmlFor="radioIOS" style={styles.radioLabelDisabled}>
-              I have an iOS device (currently not supported)
-            </label>
-          </div>
-        </div>
-        <div style={styles.section}>
-          <p style={styles.p}>
-            <b>Note: </b>Exporting will take 10-15 minutes. If you change your
-            app after you start exporting, those changes will not be included.
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  renderIconPage() {
-    return (
-      <div>
-        <div style={styles.section}>
-          <p style={styles.title}>Upload your App icon</p>
-        </div>
-        <div style={styles.section}>
-          <div style={styles.icon}>
-            <img style={styles.iconImage} src={exportExpoIconPng} />
-          </div>
-          <button
-            type="button"
-            style={styles.uploadIconButton}
-            onClick={this.onUploadIcon}
-          >
-            Upload another image
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  renderPublishPage() {
-    return (
-      <div>
-        <div style={styles.section}>
-          <p style={styles.title}>Create Android Package</p>
-        </div>
-        <div style={styles.section}>
-          <p style={styles.p}>
-            An Android Package (APK) is a package of code and other files that
-            can be installed as an app on an Android device.
-          </p>
-          <p style={styles.p}>
-            <b>Note: </b>After you click "Create", it will take about 10-15
-            minutes to create the package.
-          </p>
-        </div>
-      </div>
-    );
-  }
-
   isGenerating() {
     const {screen, exporting, generatingApk} = this.state;
-    return screen === 'generating' && (exporting || generatingApk);
-  }
-
-  renderGeneratingPage() {
-    const {showSendToPhone, exportError, apkError, apkUri = ''} = this.state;
-    const waiting = this.isGenerating();
-    const error = exportError || apkError;
-    const {appType} = this.props;
-    const titleText = waiting
-      ? 'Creating Android Package...'
-      : error
-      ? 'Error creating Android Package'
-      : 'The Android Package was created successfully';
-    const headerText = waiting
-      ? 'Please wait for about <b>15 minutes</b>.'
-      : error || 'Send this link to your device to install the app.';
-    return (
-      <div>
-        <div style={styles.section}>
-          <p style={styles.title}>{titleText}</p>
-        </div>
-        <div style={styles.section}>
-          <p style={styles.p} dangerouslySetInnerHTML={{__html: headerText}} />
-        </div>
-        <div style={styles.section}>
-          {waiting && (
-            <i style={styles.spinner} className="fa fa-spinner fa-spin" />
-          )}
-          {!waiting && !error && (
-            <div>
-              <div style={styles.apkUriContainer}>
-                <input
-                  type="text"
-                  onClick={this.onInputSelect}
-                  readOnly="true"
-                  value={apkUri}
-                  style={styles.expoInput}
-                />
-              </div>
-              <button
-                type="button"
-                style={styles.sendToPhoneButton}
-                onClick={this.showSendToPhone}
-              >
-                <div style={styles.sendToPhoneButtonBody}>
-                  <i
-                    className="fa fa-mobile-phone"
-                    style={styles.sendToPhoneIcon}
-                  />
-                  <span>{i18n.sendToPhone()}</span>
-                </div>
-              </button>
-              {showSendToPhone && (
-                <SendToPhone
-                  appType={appType}
-                  downloadUrl={apkUri}
-                  isLegacyShare={false}
-                  styles={{label: styles.phoneLabel}}
-                />
-              )}
-            </div>
-          )}
-        </div>
-      </div>
-    );
+    return screen === 'generating' && !!(exporting || generatingApk);
   }
 
   getActionButtonInfo() {
