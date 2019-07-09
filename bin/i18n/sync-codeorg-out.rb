@@ -36,6 +36,21 @@ def rename_from_crowdin_name_to_locale
   end
 end
 
+def find_malformed_links_images(locale, file_path)
+  return unless File.exist?(file_path)
+  is_json = File.extname(file_path) == '.json'
+  data =
+    if is_json
+      file = File.open(file_path, 'r')
+      JSON.load(file)
+    else
+      YAML.load_file(file_path)
+    end
+
+  return unless data&.values&.first&.length
+  recursively_find_malformed_links_images(data, locale, file_path)
+end
+
 def restore_redacted_files
   total_locales = Languages.get_locale.count
   original_files = Dir.glob("i18n/locales/original/**/*.*").to_a
@@ -60,7 +75,9 @@ def restore_redacted_files
       else
         restore(original_path, translated_path, translated_path, plugin)
       end
+      find_malformed_links_images(locale, translated_path)
     end
+    upload_malformed_restorations(locale)
   end
 end
 
