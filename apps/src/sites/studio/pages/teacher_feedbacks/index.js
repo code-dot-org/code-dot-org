@@ -6,11 +6,22 @@ import AllFeedback from '@cdo/apps/templates/feedback/AllFeedback';
 $(document).ready(showFeedback);
 
 function showFeedback() {
-  const script = document.querySelector('script[data-feedback]');
-  const feedbackData = JSON.parse(script.dataset.feedback);
+  // TODO: Erin B. delete in favor of real data
+  // once TeacherFeedbacks are associated with ScriptLevels rather than Levels.
+  const feedbacks = [
+    {
+      lesson_name: 'Creating Functions',
+      level_num: '8',
+      link_to_level: '/',
+      unit_name: 'CSP Unit 3 - Intro to Programming',
+      link_to_unit: '/',
+      updated_at: new Date().toLocaleString(),
+      comment: 'Good job!'
+    }
+  ];
 
   ReactDOM.render(
-    <AllFeedback feedbacks={feedbackData.all_feedback} />,
+    <AllFeedback feedbacks={feedbacks} />,
     document.getElementById('feedback-container')
   );
 }
