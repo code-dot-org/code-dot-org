@@ -1,10 +1,11 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 
+require 'cdo/google_drive'
+require 'cgi'
 require 'fileutils'
 require 'open3'
 require 'psych'
 require 'tempfile'
-require 'cgi'
 
 CODEORG_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_crowdin.yml")
 CODEORG_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_credentials.yml")
@@ -82,6 +83,27 @@ def run_bash_script(location)
   run_standalone_script("bash #{location}")
 end
 
+def report_malformed_restoration(key, translation, file_name)
+  @malformed_restorations ||= [["Key", "File Name", "Translation"]]
+  @malformed_restorations << [key, file_name, translation]
+end
+
+def upload_malformed_restorations(locale)
+  return if @malformed_restorations.blank?
+  Google::Drive.new.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
+  @malformed_restorations = nil
+end
+
+def recursively_find_malformed_links_images(hash, key_str, file_name)
+  hash.each do |key, val|
+    if val.is_a?(Hash)
+      recursively_find_malformed_links_images(val, "#{key_str}.#{key}", file_name)
+    else
+      report_malformed_restoration("#{key_str}.#{+key}", val, file_name) if contains_malformed_link_or_image(val)
+    end
+  end
+end
+
 def plugins_to_arg(plugins)
   plugins.map {|name| "bin/i18n/plugins/#{name}.js" if name}.join(',')
 end
@@ -114,6 +136,18 @@ def redact(source, dest, *plugins)
       file.write(to_crowdin_yaml(data))
     end
   end
+end
+
+# This function currently looks for
+# 1. Translations with malformed redaction syntax, i.e. [] [0] (note the space)
+# 2. Translations with similarly malformed markdown, i.e. [link] (example.com)
+# If this function finds either of these cases in the string, it return true.
+def contains_malformed_link_or_image(translation)
+  malformed_redaction_regex = /\[.*\]\s+\[[0-9]+\]/
+  malformed_markdown_regex = /\[.*\]\s+\(.+\)/
+  non_malformed_redaction = (translation =~ malformed_redaction_regex).nil?
+  non_malformed_translation = (translation =~ malformed_markdown_regex).nil?
+  return !(non_malformed_redaction && non_malformed_translation)
 end
 
 def restore(source, redacted, dest, *plugins)
