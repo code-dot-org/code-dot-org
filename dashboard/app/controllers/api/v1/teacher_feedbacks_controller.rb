@@ -35,8 +35,8 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
   end
 
-  # Use student_id to determine how many feedback entries from any teacher
-  # for any level are associated with the given student
+  # Determine how many feedback entries from any teacher
+  # for any level are associated with the current user
   def count
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
