@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import shapes from './shapes';
+import TimeAgo from '@cdo/apps/templates/TimeAgo';
 
 const styles = {
   main: {
@@ -16,7 +17,7 @@ const styles = {
     boxSizing: 'border-box'
   },
   lessonDetails: {
-    width: '50%',
+    width: '75%',
     margin: 15
   },
   lessonLevel: {
@@ -33,9 +34,10 @@ const styles = {
     marginLeft: 10
   },
   time: {
-    width: '25%',
     marginTop: 15,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    color: color.light_gray,
+    float: 'left'
   },
   comment: {
     width: '100%',
@@ -92,7 +94,7 @@ export default class LevelFeedbackEntry extends Component {
             </div>
           </a>
         </div>
-        <div style={styles.time}>{lastUpdated}</div>
+        <TimeAgo style={styles.time} dateString={lastUpdated} />
         <div style={styles.comment}>{comment}</div>
       </div>
     );
