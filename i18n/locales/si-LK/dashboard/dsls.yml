@@ -65,286 +65,1424 @@ si:
         title: මාතෘකාව
     match:
       2-3 Big Event Match 1:
-        Match the button combination to the dance moves.: නර්තනය වෙනස් කිරීමට අවශ්‍ය යතුරු ගලපන්න.
-        Matching: ගැලපෙනවා
+        content2: නර්තනය වෙනස් කිරීමට අවශ්‍ය යතුරු ගලපන්න.
+        title: ගැලපෙනවා
       2-3 Binary Match 1:
-        "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>O</strong>"
-        "<strong>P</strong>": "<strong>P</strong>"
-        "<strong>Q</strong>": "<strong>P</strong>"
-        Matching: ගැලපෙනවා
-        Use the key to match each code to its letter: යතුර භාවිතෙයෙන් එක් එක් කෙත සදහා ගලෙපෙනේ අකුරු සොයන්න
+        content2: යතුර භාවිතෙයෙන් එක් එක් කෙත සදහා ගලෙපෙනේ අකුරු සොයන්න
+        questions:
+          - 
+            text: "<strong>N</strong>"
+          - 
+            text: "<strong>O</strong>"
+          - 
+            text: "<strong>P</strong>"
+          - 
+            text: "<strong>P</strong>"
+        title: ගැලපෙනවා
       2-3 Graph Paper Match 1:
-        Match the grid to the program.: පරිගනක වැඩසටහනේ කොටු ගැලපන්න
-        Matching: ගැලපෙනවා
+        content1: පරිගනක වැඩසටහනේ කොටු ගැලපන්න
+        title: ගැලපෙනවා
       2-3 Maze Match 2:
-        Instructions: උපදෙස්
-        Match the puzzles to the blocks: ප්‍රේහෙලිකාව වැඩසටහන සමග ගලපන්න
-        Maze Match: වංකගිරි තරගය
+        content1: ප්‍රේහෙලිකාව වැඩසටහන සමග ගලපන්න
+        pre_title: උපදෙස්
+        title: වංකගිරි තරගය
       2-3 artist loops match 1:
-        Match the loop to the shape: ලුපය ගලපන්න හැඩයට
+        content2: ලුපය ගලපන්න හැඩයට
       2-3 artist match 1:
-        Artist Matching: කලාකරුවා ගැලපීම
-        Match the shape with the blocks that complete it.: '   සම්පුරෙනේ කල ආකෘති සමග හැඩතල  ගැලපන්න'
+        content1: '   සම්පුරෙනේ කල ආකෘති සමග හැඩතල  ගැලපන්න'
+        title: කලාකරුවා ගැලපීම
       2-3 maze match 1:
-        Match the puzzles to the blocks: ප්‍රේහෙලිකාව වැඩසටහන සමග ගලපන්න
-        Maze Match One: වංකගිරි තරගය එක
+        content1: ප්‍රේහෙලිකාව වැඩසටහන සමග ගලපන්න
+        title: වංකගිරි තරගය එක
       4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>2)</h4>"
-        "<h4>3)</h4>": "<h4>3)</h4>"
-        "<h4>4)</h4>": "<h4>4)</h4>"
-        "<h4>Add Player 1 roll to total score</h4>": "<h4>මුළු ලකුණු වලට පළමු ක්‍රීඩකයාගේ කොටස එකතු කරන්න</h4>"
-        "<h4>Compare player scores to see who wins</h4>": "<h4>දිනුවේ කවුද කියා බලා ගැනීමට ක්‍රීඩකයන්ගේ ලකුණු සසඳා බලන්න</h4>"
-        "<h4>Player 1 rolls die</h4>": "<h4>1 වන ක්‍රීඩකයාගේ චරිතය අක්‍රිය වුනා</h4>"
-        "<h4>Set Player 1 score to 0</h4>": "<h4>ක්‍රීඩකයාගේ ලකුණු 0 කරන්න</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: ඇල්ගොරිතමයේ ඇතුලත් විය යුතු පිලිවෙලට දාදු කැට රේස් ගේම් එකේ පියවර අනුපිලිවෙලට සකසන්න.
-        Matching: ගැලපෙනවා
+        answers:
+          - 
+            text: "<h4>ක්‍රීඩකයාගේ ලකුණු 0 කරන්න</h4>"
+          - 
+            text: "<h4>1 වන ක්‍රීඩකයාගේ චරිතය අක්‍රිය වුනා</h4>"
+          - 
+            text: "<h4>මුළු ලකුණු වලට පළමු ක්‍රීඩකයාගේ කොටස එකතු කරන්න</h4>"
+          - 
+            text: "<h4>දිනුවේ කවුද කියා බලා ගැනීමට ක්‍රීඩකයන්ගේ ලකුණු සසඳා බලන්න</h4>"
+        content1: ඇල්ගොරිතමයේ ඇතුලත් විය යුතු පිලිවෙලට දාදු කැට රේස් ගේම් එකේ පියවර අනුපිලිවෙලට සකසන්න.
+        questions:
+          - 
+            text: "<h4>1)</h4>"
+          - 
+            text: "<h4>2)</h4>"
+          - 
+            text: "<h4>3)</h4>"
+          - 
+            text: "<h4>4)</h4>"
+        title: ගැලපෙනවා
       4-5 Computational Thinking Match 1:
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: සෑම වාහනයක් ම කුඩා කොටස් වලට වෙන් කර ඇත. සෑම වාහනයක් ම එම වාහනයේ කොටස් එකතුවට යා කරන්න.
-        Matching: ගැලපෙනවා
+        content1: සෑම වාහනයක් ම කුඩා කොටස් වලට වෙන් කර ඇත. සෑම වාහනයක් ම එම වාහනයේ කොටස් එකතුවට යා කරන්න.
+        questions:
+          - 
+            text: "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
+          - 
+            text: "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
+          - 
+            text: "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
+          - 
+            text: "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
+        title: ගැලපෙනවා
       4-5 Suncatchers Match 1:
-        Match each program to the word it makes, using the provided group of skills.: දී ඇති හැකියාවන් භාවිත කරමින් ඒ ඒ වචනය සැදෙන්නේ කුමන වැඩසටහන මගින් ද යන්න තෝරන්න.
-        Matching: ගැලපෙනවා
+        content1: දී ඇති හැකියාවන් භාවිත කරමින් ඒ ඒ වචනය සැදෙන්නේ කුමන වැඩසටහන මගින් ද යන්න තෝරන්න.
+        title: ගැලපෙනවා
       4-5 maze match 1:
-        Instructions: උපදෙස්
-        Match the puzzles to the blocks: ප්‍රේහෙලිකාව වැඩසටහන සමග ගලපන්න
-        Maze Match: වංකගිරි තරගය
+        content1: ප්‍රේහෙලිකාව වැඩසටහන සමග ගලපන්න
+        pre_title: උපදෙස්
+        title: වංකගිරි තරගය
       K-1 Artist 2 Match 2:
-        Match the shapes based on type.: වර්ගය මත පදනම් වූ හැඩ ගලපන්න.
-        Matching: ගැලපෙනවා
+        content2: වර්ගය මත පදනම් වූ හැඩ ගලපන්න.
+        title: ගැලපෙනවා
       K-1 Bee Loops Match 1:
-        Match the blocks: බ්ලොක් ගලපන්න
-        Matching: ගැලපෙනවා
+        content2: බ්ලොක් ගලපන්න
+        title: ගැලපෙනවා
       K-1 Big Event Match 1:
-        Match the button combination to the dance moves.: නර්තනය වෙනස් කිරීමට අවශ්‍ය යතුරු ගලපන්න.
-        Matching: ගැලපෙනවා
+        content2: නර්තනය වෙනස් කිරීමට අවශ්‍ය යතුරු ගලපන්න.
+        title: ගැලපෙනවා
       K-1 Maze Match 1:
-        Instructions: උපදෙස්
-        Match the puzzles and blocks: ප්‍රහේලිකා හා බ්ලොක්ස් ගලපන්න
-        Matching: ගැලපෙනවා
+        content2: ප්‍රහේලිකා හා බ්ලොක්ස් ගලපන්න
+        pre_title: උපදෙස්
+        title: ගැලපෙනවා
     multi:
       2-3 Algorithms Multi 1:
-        Choose an algorithm for the image provided.: ඇල්ගොරිතම් එකක් තෝරා ගන්න සපයා ඇති පින්තුරය සදහා.
-        Multiple Choice: බහුවරණ
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: සමචතුරස්රයෙන් ඇරඹ කර <br/>ඒහි උඩට සමාන්තරාශ්‍රා යක් එකතු  කරන්න<br/>සමාන්තරාශ්‍රායේ දකුණු පසට ත්‍රිකොණයක් අදින්න 
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: සමචතුරශ්‍රයකින් ආරම්බ කරන්න <br/>සමචතුරශ්‍රයට ඉහලින් ත්‍රිකෝණයක් දමන්න <br/>සමචතුරශ්‍රයට පහලින් ත්‍රිකෝණයක් දමන්න
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: සමචතුරශ්‍රයකින් ආරම්බ කරන්න <br/>සමචතුරශ්‍රයට පහලින් ත්‍රිකෝණයක් දමන්න <br/> ත්‍රිකෝණයට දකුණු පසින් සමාන්තරාශ්‍රයක් දමන්න
-        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        answers:
+          - 
+            text: සමචතුරශ්‍රයකින් ආරම්බ කරන්න <br/>සමචතුරශ්‍රයට ඉහලින් ත්‍රිකෝණයක් දමන්න <br/>සමචතුරශ්‍රයට පහලින් ත්‍රිකෝණයක් දමන්න
+            correct: false
+          - 
+            correct: true
+          - 
+            text: සමචතුරස්රයෙන් ඇරඹ කර <br/>ඒහි උඩට සමාන්තරාශ්‍රා යක් එකතු  කරන්න<br/>සමාන්තරාශ්‍රායේ දකුණු පසට ත්‍රිකොණයක් අදින්න 
+            correct: false
+          - 
+            text: සමචතුරශ්‍රයකින් ආරම්බ කරන්න <br/>සමචතුරශ්‍රයට පහලින් ත්‍රිකෝණයක් දමන්න <br/> ත්‍රිකෝණයට දකුණු පසින් සමාන්තරාශ්‍රයක් දමන්න
+            correct: false
+        questions:
+          - 
+            text: ඇල්ගොරිතම් එකක් තෝරා ගන්න සපයා ඇති පින්තුරය සදහා.
+        title: බහුවරණ
       2-3 Algorithms Multi 2:
-        Multiple Choice: බහුවරණ
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: ත්‍රිකෝණයක් අඳින්න.<br/> එයට යටින් සමචතුරශ්‍රයක් අඳින්න.<br/> ඊට යටින් තවත් ත්‍රිකෝණයක් අඳින්න
-        Which image does <em>not</em> follow this algorithm?: කුමන ජායාරූපය ඇල්ගොරිදමය අනුගමනය <em>නොකරයිද</em>?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        content1: ත්‍රිකෝණයක් අඳින්න.<br/> එයට යටින් සමචතුරශ්‍රයක් අඳින්න.<br/> ඊට යටින් තවත් ත්‍රිකෝණයක් අඳින්න
+        questions:
+          - 
+            text: කුමන ජායාරූපය ඇල්ගොරිදමය අනුගමනය <em>නොකරයිද</em>?
+        title: බහුවරණ
       2-3 Conditionals Multi 1:
-        According to the rules of the game, which set of cards is scored correctly?: ක්‍රීඩාවේ නීති රීති වලට අනුව, කුමන කාඩ් කට්ටලයද නිවැරදිව ලකුණු කර ඇත්තේ?
-        Multiple Choice: බහුවරණ
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: ක්‍රීඩාවේ නීති රීති වලට අනුව, කුමන කාඩ් කට්ටලයද නිවැරදිව ලකුණු කර ඇත්තේ?
+        title: බහුවරණ
       2-3 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: ඔබ කෙසේද ලෙහෙසි කර ගන්නේ මෙම පටිපාටිය ලුපයක් සමගින්?
-        Multiple Choice: බහුවරණ
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: ඔබ කෙසේද ලෙහෙසි කර ගන්නේ මෙම පටිපාටිය ලුපයක් සමගින්?
+        title: බහුවරණ
       2-3 Graph Paper Multi 1:
-        Multiple Choice: බහුවරණ
-        Which program makes this image?: කුමන වැඩ සටහනකින්ද මේ පින්තුරය සකස් කර ඇත්තේ?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: කුමන වැඩ සටහනකින්ද මේ පින්තුරය සකස් කර ඇත්තේ?
+        title: බහුවරණ
       2-3 Maze Multi 2:
-        Maze Multiple Choice: වංකගිරියේ විවිධ තේරීම්
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: වංකගිරියේ විවිධ තේරීම්
       2-3 Relay Programming Multi 1:
-        Multiple Choice: බහුවරණ
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        title: බහුවරණ
       2-3 Relay Programming Multi 2:
-        Multiple Choice: බහුවරණ
-        Which image-program combo does not contain mistakes?: කුමන ජායාරූපය-වැඩසටහන දෝෂ සහිත නොවේද?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: කුමන ජායාරූපය-වැඩසටහන දෝෂ සහිත නොවේද?
+        title: බහුවරණ
+      2-3 artist debug multi 1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: කලාකරුවාගේ ශ්‍රිත බහුගුන තීරණ එක
-        Pick the correct blocks to draw this image using the given functions: දී ඇති ශ්‍රිතයන් යොදා ගනිමින් පින්තුරය ඇදීම සදහා නිවැරදි බ්ලොක් එක තෝරන්න
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: දී ඇති ශ්‍රිතයන් යොදා ගනිමින් පින්තුරය ඇදීම සදහා නිවැරදි බ්ලොක් එක තෝරන්න
+        title: කලාකරුවාගේ ශ්‍රිත බහුගුන තීරණ එක
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: කලාකරුවාගේ ලුප බහුගුණ තීරණ
-        Which shape is made by this loop?: මෙම ලුපයෙන් කුමන හැඩයක් නිර්මාණය වෙයි ද?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: මෙම ලුපයෙන් කුමන හැඩයක් නිර්මාණය වෙයි ද?
+        title: කලාකරුවාගේ ලුප බහුගුණ තීරණ
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: කලාකරුවාගේ ලුප බහුගුණ තීරණ
-        Which shape is made by this program?: මෙම වැඩසටහනින් කුමන හැඩයක් නිර්මාණය වෙයි ද?
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: මෙම වැඩසටහනින් කුමන හැඩයක් නිර්මාණය වෙයි ද?
+        title: කලාකරුවාගේ ලුප බහුගුණ තීරණ
       2-3 bee conditionals multi 1:
-        Which comparison below is true?: පහත සදහන් කිනම් උපමාව සත්‍යද?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: පහත සදහන් කිනම් උපමාව සත්‍යද?
       2-3 bee conditionals multi 3:
-        Choose the best blocks.: හොදම බ්ලොක්ස් තෝරන්න.
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: හොදම බ්ලොක්ස් තෝරන්න.
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: මී මැස්සාගේ ලුප බහුගුණ තීරණ එක
-        Which blocks collect all of the nectar?: කුමන බ්ලොක්ස් වලින්ද සියලුම මල් පැණි එකතු කරන්නේ?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන බ්ලොක්ස් වලින්ද සියලුම මල් පැණි එකතු කරන්නේ?
+        title: මී මැස්සාගේ ලුප බහුගුණ තීරණ එක
       2-3 maze multi 1:
-        Maze Multiple Choice One: බහුවරණ වංකගිරිය එක
-        Which set of blocks is the correct answer?: කුමන බ්ලොක්ස් කුට්ටමද නිවැරදි පිළිතුර වන්නේ?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන බ්ලොක්ස් කුට්ටමද නිවැරදි පිළිතුර වන්නේ?
+        title: බහුවරණ වංකගිරිය එක
       4-5 Algorithms Multi 1:
-        Baking cookies: උදුනේ ඇති බිස්කට්
-        Banana: කෙසෙල්
-        Brushing your teeth: ඔබේ දත් මැදීම
-        Multiple Choice: බහුවරණ
-        Shopping from a grocery list: සාප්පු සවාරි ඇති වෙළෙඳ ලැයිස්තුවෙන්
-        Which one of these items is hardest to describe an algorithm for?: ඇල්ගොරිතමයක් සඳහා නොගැලපෙන නිර්වචනයක් වන්නේ කුමක්ද?
+        answers:
+          - 
+            text: ඔබේ දත් මැදීම
+            correct: false
+          - 
+            text: උදුනේ ඇති බිස්කට්
+            correct: false
+          - 
+            text: සාප්පු සවාරි ඇති වෙළෙඳ ලැයිස්තුවෙන්
+            correct: false
+          - 
+            text: කෙසෙල්
+            correct: true
+        questions:
+          - 
+            text: ඇල්ගොරිතමයක් සඳහා නොගැලපෙන නිර්වචනයක් වන්නේ කුමක්ද?
+        title: බහුවරණ
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene යනු _____ නගරයකි.
-        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
-        1: ': මෙන්න වාක්‍යය තුනක්. කුමන අච්චුව භාවිතා කර මෙම වාක්‍යය තුන අච්චුවේ ඇති පිලිවෙලට ම සැකසිය හැකිද?'
-        Multiple Choice: බහුවරණ
-        Seattle _____ a _____ _____.: සියැටල්ය _____ යනු _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle යනු ලොකු නගරයකි.<br/> Eugene මධ්‍යම ප්‍රමාණයේ නගරයකි.<br/> Hillview කුඩා නගරයකි.
-        _____ is _____ a _____.: _____ _____ _____
-        _____ is a _____ city.: _____ යනු _____ නගරයකි.
+        answers:
+          - 
+            text: සියැටල්ය _____ යනු _____ _____.
+            correct: false
+          - 
+            text: _____ යනු _____ නගරයකි.
+            correct: true
+          - 
+            text: _____ _____ _____
+            correct: false
+          - 
+            text: Eugene යනු _____ නගරයකි.
+            correct: false
+        questions:
+          - 
+            text: Seattle යනු ලොකු නගරයකි.<br/> Eugene මධ්‍යම ප්‍රමාණයේ නගරයකි.<br/> Hillview කුඩා නගරයකි.
+        title: බහුවරණ
       4-5 Crowdsourcing Multi 1:
-        Multiple Choice: බහුවරණ
-        Which of these pictures best represents crowdsourcing?: මෙම පින්තුර වලින් crowdsourcing වඩාත්ම හොදින් පෙන්වන්නේ?
+        answers:
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: මෙම පින්තුර වලින් crowdsourcing වඩාත්ම හොදින් පෙන්වන්නේ?
+        title: බහුවරණ
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: ඔබේ හිසකෙස් මැදීම
-        Cleaning your room: ඔබේ කාමරය පිරිසිදු කරමින්
-        Eating your dessert: ඔබේ අතුරුපස කනගමන්
-        Multiple Choice: බහුවරණ
-        Washing your face: ඔබේ මුහුණ සෝදමින්
-        Which one of these activities would be best for practicing crowdsourcing?: සමූහයක් ලෙස එකතු වී කල හැකි වැඩකට උදාහරණයක් වන්නේ කුමක්ද?
+        answers:
+          - 
+            text: ඔබේ කාමරය පිරිසිදු කරමින්
+            correct: true
+          - 
+            text: ඔබේ අතුරුපස කනගමන්
+            correct: false
+          - 
+            text: ඔබේ හිසකෙස් මැදීම
+            correct: false
+          - 
+            text: ඔබේ මුහුණ සෝදමින්
+            correct: false
+        questions:
+          - 
+            text: සමූහයක් ලෙස එකතු වී කල හැකි වැඩකට උදාහරණයක් වන්නේ කුමක්ද?
+        title: බහුවරණ
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: බහුවරණ
-        Which piece of information listed below is okay to share on the internet?: පහත ලැයිස්තුගත තොරතුරු වලින් කුමක් ඉන්තර්ජාලයේ බෙදාහැරීමට සුදුසු වේද?
-        Your address: ඔබේ ලිපිනය
-        Your birthday: ඔයාගේ උපන්දිනය
-        Your favorite food: ඔබේ ප්රියතම කෑම
-        Your parent's credit card number: ඔබේ මවගේ හෝ පියාගේ ණයපත් අංකය
+        answers:
+          - 
+            text: ඔයාගේ උපන්දිනය
+            correct: false
+          - 
+            text: ඔබේ ප්රියතම කෑම
+            correct: true
+          - 
+            text: ඔබේ ලිපිනය
+            correct: false
+          - 
+            text: ඔබේ මවගේ හෝ පියාගේ ණයපත් අංකය
+            correct: false
+        questions:
+          - 
+            text: පහත ලැයිස්තුගත තොරතුරු වලින් කුමක් ඉන්තර්ජාලයේ බෙදාහැරීමට සුදුසු වේද?
+        title: බහුවරණ
       4-5 Internet Multi 1:
-        Multiple Choice: බහුවරණ
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: ඔබ මෙහි ඇතුලත් වන විට කුමන IP හා DNS ලිපින ඇතුලත් වනවාටද ඔබ කැමති?
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: ඔබ මෙහි ඇතුලත් වන විට කුමන IP හා DNS ලිපින ඇතුලත් වනවාටද ඔබ කැමති?
+        title: බහුවරණ
       4-5 Internet Multi 2:
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: DNS විසින් 100.42.50.110 ලිපිනයේ ඇති වෙබ් අඩවිය ඔබ වෙත එවා තිබේනම්. ඔබට එවා තිබෙන්නේ කුමන වෙබ් අඩවියද?
-        Multiple Choice: බහුවරණ
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: DNS විසින් 100.42.50.110 ලිපිනයේ ඇති වෙබ් අඩවිය ඔබ වෙත එවා තිබේනම්. ඔබට එවා තිබෙන්නේ කුමන වෙබ් අඩවියද?
+        title: බහුවරණ
       4-5 Songwriting Multi 1:
-        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
-        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
-        Multiple Choice: බහුවරණ
-        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
-        5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: බහුවරණ
       4-5 Suncatchers Multi 1:
-        Multiple Choice: බහුවරණ
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: පහත කුමන ක්‍රමලේක අනුලේකන 1 හි අනුක්‍රමය සමග සම්පුර්ණයෙන් <em>නොගැලපේද</em>?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: පහත කුමන ක්‍රමලේක අනුලේකන 1 හි අනුක්‍රමය සමග සම්පුර්ණයෙන් <em>නොගැලපේද</em>?
+        title: බහුවරණ
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: කලාකරුවාගේ ලුප බහුගුණ තීරණ
-        Which blocks will create the design?: කුමන කොටස රටාවක් නිර්මාණය නොකරයිද?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන කොටස රටාවක් නිර්මාණය නොකරයිද?
+        title: කලාකරුවාගේ ලුප බහුගුණ තීරණ
       4-5 artist multi 1:
-        Artist Multiple Choice: කලාකරුවාගේ බහුවිධි වරණ
-        Which blocks draw a rectangle with a perimeter of 100?: කුමන බ්ලොක් එක පරිමිතිය 100 වන සමචාතුරස්රක් අදින්නේ ද?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන බ්ලොක් එක පරිමිතිය 100 වන සමචාතුරස්රක් අදින්නේ ද?
+        title: කලාකරුවාගේ බහුවිධි වරණ
       4-5 artist multi 2:
-        Artist Multiple Choice: කලාකරුවාගේ බහුවිධි වරණ
-        Which drawing is symmetric?: මොන ඇඳීමද සමමිතික?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: මොන ඇඳීමද සමමිතික?
+        title: කලාකරුවාගේ බහුවිධි වරණ
       4-5 bee conditionals multi 1:
-        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
-        1: ':දම් පට මලෙහි රේණු 3,2 හෝ 1 ක් තිබිය හැක එය නිශ්චිතව නොදනී. කුමන බ්ලොක් එක දම්පට මලෙහි රේණු ඔක්කොම පරික්ෂ කර එකතු කරන්නේ ද?'
-        Bee Conditionals Multiple Choice: මී මැස්සාගේ කොන්දේසි බහුගුණ තීරණ
-        Choose the best blocks.: හොදම බ්ලොක්ස් තෝරන්න.
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: හොදම බ්ලොක්ස් තෝරන්න.
+        title: මී මැස්සාගේ කොන්දේසි බහුගුණ තීරණ
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: මී මැස්ස වැරදි නිවැරදි කරනවා බහුගුණ තිරණ
-        Which version of the function will work?: ශිතයේ කුමන පිටපත වැඩ කරාවිද?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: ශිතයේ කුමන පිටපත වැඩ කරාවිද?
+        title: මී මැස්ස වැරදි නිවැරදි කරනවා බහුගුණ තිරණ
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: මී මැස්ස ලුප බැහුගුණ තීරණ
-        Which blocks will solve the puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+        title: මී මැස්ස ලුප බැහුගුණ තීරණ
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: අවුල් ජාල තීරණය බහුගුණ තීරණ
-        Which blocks solve the puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+        title: අවුල් ජාල තීරණය බහුගුණ තීරණ
       4-5 maze multi 1:
-        Maze Multiple Choice: වංකගිරියේ විවිධ තේරීම්
-        Which blocks solve the puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+        title: වංකගිරියේ විවිධ තේරීම්
+      CSD Header Size MC:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD Header Size MC_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD Header Size MC_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       CSD U3 Boolean MC:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
         title: මාතෘකාව
       CSD U3 Boolean MC_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
         title: මාතෘකාව
       CSD U3 Boolean MC_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
         title: මාතෘකාව
+      CSD U3 Functions Prediction define first:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprites intro predict multi:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U3 Sprites intro predict multi_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U6 array multi:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 array multi_2018:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 array multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 setProperty predict multi:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U6 setProperty predict multi_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       K-1 Artist 1 Multi 1:
-        Multiple Choice: බහුවරණ
-        Which blocks solve this puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+        title: බහුවරණ
       K-1 Artist 1 Multi 2:
-        Multiple Choice: බහුවරණ
-        Which blocks draw the square?: කුමන කොටස අඳිවිද සමචතුරස්‍රාය?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන කොටස අඳිවිද සමචතුරස්‍රාය?
+        title: බහුවරණ
       K-1 Bee 1 Multi 1:
-        How many nectars is this?: කොපමණ මල් පැණි තියෙනවද මෙහි?
-        Multiple Choice: බහුවරණ
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: කොපමණ මල් පැණි තියෙනවද මෙහි?
+        title: බහුවරණ
       K-1 Bee 1 Multi 2:
-        How many nectars is this?: කොපමණ මල් පැණි තියෙනවද මෙහි?
-        Multiple Choice: බහුවරණ
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: කොපමණ මල් පැණි තියෙනවද මෙහි?
+        title: බහුවරණ
       K-1 Digital Footprint Multi 1:
-        Multiple Choice: බහුවරණ
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: කුමන සත්වයාගේ පාසටහන් <strong>ඔහු හෝ ඇය බොහෝ <strong>අනාරක්ෂිත</strong> තත්වයට පත් කරයිද?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: කුමන සත්වයාගේ පාසටහන් <strong>ඔහු හෝ ඇය බොහෝ <strong>අනාරක්ෂිත</strong> තත්වයට පත් කරයිද?
+        title: බහුවරණ
       K-1 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: ඔබ කෙසේද ලෙහෙසි කර ගන්නේ මෙම පටිපාටිය ලුපයක් සමගින්?
-        Multiple Choice: බහුවරණ
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: ඔබ කෙසේද ලෙහෙසි කර ගන්නේ මෙම පටිපාටිය ලුපයක් සමගින්?
+        title: බහුවරණ
       K-1 Happy Maps Multi 1:
-        Multiple Choice: බහුවරණ
-        Which arrow gets the Flurb to the treasure?: පුද්ගලයාව නිධානය වෙතට ගෙනයන්නේ කුමන ඊතලයෙන්ද?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: පුද්ගලයාව නිධානය වෙතට ගෙනයන්නේ කුමන ඊතලයෙන්ද?
+        title: බහුවරණ
       K-1 Keep it Private Multi 1:
-        Multiple Choice: බහුවරණ
-        Which information should you <strong>not</strong> share online?: ඔබ කුමන තොරතුරු අන්තර්ජාලය හරහා බෙදා <strong>නොහරින්නේද</strong>?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: ඔබ කුමන තොරතුරු අන්තර්ජාලය හරහා බෙදා <strong>නොහරින්නේද</strong>?
+        title: බහුවරණ
       K-1 Maze Debugging Multi 1:
-        Multiple Choice: බහුවරණ
-        Which choice should be the final block?: කුමන තීරණයද අවසාන කොටස විය යුතුද?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන තීරණයද අවසාන කොටස විය යුතුද?
+        title: බහුවරණ
       K-1 Maze Loops Multi 1:
-        Multiple Choice: බහුවරණ
-        Which repeat block is the same?: නැවත එන කොටස් අතුරෙන් සමාන වන්නේ කුමන කොටස ද?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: නැවත එන කොටස් අතුරෙන් සමාන වන්නේ කුමන කොටස ද?
+        title: බහුවරණ
       K-1 Maze Loops Multi 2:
-        Multiple Choice: බහුවරණ
-        Pick the correct repeat block.: තෝරා ගන්න නිවැරදි නැවත සිද්ධ වෙන කොටස.
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: තෝරා ගන්න නිවැරදි නැවත සිද්ධ වෙන කොටස.
+        title: බහුවරණ
       K-1 Maze Multiple Choice 2:
-        Maze: පැටලිලි සහිත මාර්ගය
-        Which answer solves this level?: මෙම පියවර විසඳෙන්නේ කුමන පිලිතුරෙන් ද?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: මෙම පියවර විසඳෙන්නේ කුමන පිලිතුරෙන් ද?
+        title: පැටලිලි සහිත මාර්ගය
       K-1 Move It Multi 1:
-        Multiple Choice: බහුවරණ
-        Which algorithm gets the Flurb to the flowers?: කුමන අල්ග්රිතමය Flurb එක මලක් කරන්නේ ද?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: කුමන අල්ග්රිතමය Flurb එක මලක් කරන්නේ ද?
+        title: බහුවරණ
       K-1 Plant a Seed Multi 1:
-        Multiple Choice: බහුවරණ
-        Which step should go at the beginning of this algorithm?: කුමන අදියර ය යුතුද ඇල්ගොරිතමයේ මුලටම?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: කුමන අදියර ය යුතුද ඇල්ගොරිතමයේ මුලටම?
+        title: බහුවරණ
       K-1 Plant a Seed Multi 2:
-        Multiple Choice: බහුවරණ
-        Which step should fill in the blank for this algorithm?: කුමන අදියර පිරවිය යුතුද ඇල්ගොරිතමයේ හිස්තැන?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: කුමන අදියර පිරවිය යුතුද ඇල්ගොරිතමයේ හිස්තැන?
+        title: බහුවරණ
       K-1 Word Search Multi 1:
-        Multiple Choice: බහුවරණ
-        Which blocks spell "MOVE"?: '"MOVE" සෑදෙන්නේ කුමන කොටස් වලින් ද?'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: '"MOVE" සෑදෙන්නේ කුමන කොටස් වලින් ද?'
+        title: බහුවරණ
       K-1 Word Search Multi 3:
-        Multiple Choice: බහුවරණ
-        Which word is spelled?: කුමන වචනය අක්ෂර වින්‍යාසය දක්වයිද?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: කුමන වචනය අක්ෂර වින්‍යාසය දක්වයිද?
+        title: බහුවරණ
       behaviors 1 predict:
-        Incorrect: වැරදියි
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+            correct: false
+            feedback: වැරදියි
       behaviors 4 predict:
-        Incorrect: වැරදියි
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+            correct: false
+            feedback: වැරදියි
+      courseC_multi_artist_prog6_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_artist_prog6_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       courseC_multi_harvester_loops11_predict1:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseC_multi_harvester_loops11_predict1_2018:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_starWars_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_starWars_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_starWars_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_artist_binary8_predict1:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseD_multi_artist_binary8_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_conditionals1_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals1_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_nestedLoops2_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       courseD_multi_bee_nestedLoops9_predict2:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_collector_debugging10_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_ramp13:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while4_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_while4_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_maze_until10_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until10_predict2_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until2_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_maze_until2_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_scrat_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_multi_artist_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseE_multi_bee_functions_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseE_multi_farmer_functions11_predict:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_multi_farmer_functions11_predict_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseE_multi_farmer_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseE_multi_farmer_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_multi_maze_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_prediction_artistFunction1:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_prediction_artistFunction1_2018:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_prediction_artistFunction1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseF_bee_variables_8a_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_bee_variables_8a_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_artist_for10_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_for10_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_fwp2_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_bee_conditionals1_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_conditionals7_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_bee_for3_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_for3_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_for3_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_fwp9_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_playlab_variables4c_predictive1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      coursee_prediction_artistfunction2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      coursee_prediction_artistfunction2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      coursee_prediction_artistfunction2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 

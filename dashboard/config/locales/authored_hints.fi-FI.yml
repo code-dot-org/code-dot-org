@@ -24,8 +24,6 @@ fi-FI:
       2-3 Artist 4:
         2-3_Artist_4_a: Talon viimeistelyssä meidän vain täytyy piirtää neliö!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Jotta saadaan tehtyä nuo pienet kulmat, sinun täytyy kääntyä
-          \* kauemmas \* joka kerta kun teit neliön kanssa.   '
         2-3_Artist_6_b: Koska olen jo oikealla, on helpointa aloittaa menemällä eteenpäin,
           sitten tee käännökset vasempaan luodaksesi kolmion.
         2-3_Artist_6_c: Kolmion jokainen sivu on saman pituinen kuin neliön jokainen
@@ -40,8 +38,6 @@ fi-FI:
       2-3 Artist 9:
         2-3_Artist_9_a: Tämä timantti on oikeastaan vain neliö kyljellään
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_a: Muista, etä haluat ohjauspaneelin olevan 10 kuvapistettä
-          _laajempi_... joten **lisää** 10 siihen numeroon, jota olet muuttamassa.
         2-3_Artist_Debugging_10_b: "**Kokeilu ja virhe ovat hienosti tässä** \nAloita
           muuttamalla yksi numero kerrallaan. \nMitkä numerot tekevät mitäkin? \nJos
           eksyt liikaa, niin klikkaa ”aloita alusta” ja koodisi palautetaan alkutilaan."
@@ -54,11 +50,6 @@ fi-FI:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Mitä tapahtuu, jos sinulla on taiteilija, joka siirtyy
           tai hyppää taaksepäin, kun hän piirtänyt ensimmäisen rivin?
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: |-
-          Kuinka monta kertaa minun muotoni toistui?
-          Kuinka monta kertaa _olisi_ muotoa toistettava?
-          Missä voit muuttaa sitä ohjelmassa?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Taiteilijan on käännyttävä 60 astetta kauemmas vasemmalle
           ennen alkaa piirtämään!
@@ -87,20 +78,6 @@ fi-FI:
         2-3_Artist_Functions_4_a: Taiteilijan on käännyttävä 120 astetta jokaisen
           neliön välissä, jotta se voi suorittaa loppuun tämän mallin.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_a: "Muista että koodi edellisessä tehtävässä oli:
-          \n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\">
-          \n<next> \n<block type=\"controls_repeat\"> \n\n<title name=\"TIMES\">8</title>
-          \n<statement name=\"DO\"> \n<block type=\"draw_colour\" inline=\"true\">
-          \n<value name=\"COLOUR\"> \n<block type=\"colour_random\"/> \n</value> \n<next>
-          \n<block type=\"draw_turn_by_constant_dropdown\"> \n<title name=\"DIR\">turnRight</title>
-          \n<title name=\"VALUE\" config=\"45,60,90,120,180\">45</title> \n<next>
-          \n<block type=\"draw_move_by_constant\"> \n<title name=\"DIR\">moveForward</title>
-          \n<title name=\"VALUE\">50</title> \n<next> \n<block type=\"draw_turn_by_constant_dropdown\">
-          \n<title name=\"DIR\">turnLeft</title> \n<title name=\"VALUE\" config=\"45,60,90,120,180\">90</title>
-          \n<next> \n<block type=\"draw_move_by_constant\"> \n<title name=\"DIR\">moveForward</title>
-          \n<title name=\"VALUE\">50</title> \n</block> \n</next> \n</block> \n</next>
-          \n</block> \n</next> \n</block> \n</next> \n</block> \n</statement> \n</block>
-          \n</next> \n</block> \n</xml>"
         2-3_Artist_Loops_New_11_b: Sinun uusi käännöksesi olisi mentävä koodin \*\*
           loppuun \*\* silmukan sisällä.
       2-3 Artist Loops New 12:
@@ -114,9 +91,6 @@ fi-FI:
         2-3_Artist_Loops_New_13_a: "Jokaisen timantin lopussa taiteilija on jo oikeassa
           suunnassa alkaakseen seuraavan. \n\nTämän vuoksi meidän ei tarvitse lisätä
           ylimääräistä `käänny vasemmalle` lohkoa, ennen kuin aloitamme uudelleen."
-        2-3_Artist_Loops_New_13_b: "Saadakseen jokaisen timantin tehtyä taiteilijan
-          tarvitsee: \n\n-   siirtyä \n-   kääntyä oikealle 120 astetta \n-   siirtyä
-          \n-   kääntyä oikealle 60 astetta \n\nSitten tee kaikki uudelleen!"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Taiteilijan pitää kääntyä 45 astetta oikealle ennen
           kuin hän alkaa piirtämään.

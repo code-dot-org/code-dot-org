@@ -60,15 +60,6 @@ module SharedConstants
     }
   ).freeze
 
-  # The set of gamelab autorun options
-  GAMELAB_AUTORUN_OPTIONS = OpenStruct.new(
-    {
-      draw_loop: 'DRAW_LOOP',
-      draw_sprites: 'DRAW_SPRITES',
-      custom: 'CUSTOM',
-    }
-  ).freeze
-
   # Valid milestone post modes
   POST_MILESTONE_MODE = OpenStruct.new(
     {
@@ -273,6 +264,7 @@ module SharedConstants
       "toUpperCase": null,
       "toLowerCase": null,
       "declareAssign_list_abd": null,
+      "declareAssign_list_123": null,
       "accessListItem": null,
       "listLength": null,
       "insertItem": null,

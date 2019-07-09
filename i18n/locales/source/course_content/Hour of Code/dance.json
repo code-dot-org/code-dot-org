@@ -1,108 +1,110 @@
 {
-  "short_instructions": {
-    "https://studio.code.org/s/dance/stage/1/puzzle/1": "Drag the `make a new` block into the workspace, and connect it inside the `setup` block.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/2": "Make the moose start a new move after 4 measures!",
-    "https://studio.code.org/s/dance/stage/1/puzzle/3": "Now make the dancer start a new move after 6 measures!",
-    "https://studio.code.org/s/dance/stage/1/puzzle/4": "Add a background effect to your program.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/5": "Use another new block to make the dancer change moves every 2 measures.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/6": "Create a backup dancer called `backup_dancer1` to dance with the cat.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/7": "Can you make both backup dancers the same size?",
-    "https://studio.code.org/s/dance/stage/1/puzzle/8": "Use the `set tint` block to change the color of a dancer.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/9": "Make the other dancer respond to the music using the `begins following` block, too.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/10": "The `when up pressed` block lets you run code when the up arrow is pressed. Try to make the dancer do a quick move when you press up.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/11": "Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key. Do the drop-clap as fast as you can!",
-    "https://studio.code.org/s/dance/stage/1/puzzle/12": "Use the \"all ducks\" blocks to make the ducks dance together.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/13": "Get your groove on! Create a dance of your own to share with your friends."
-  },
-  "long_instructions": {
-    "https://studio.code.org/s/dance/stage/1/puzzle/1": "_Let's have a dance party!_\n\nDrag the `make a new` block into the workspace, and connect it inside the `setup` block to create your first dancer.\n\n-   _You can also click the lightbulb to the left if you want more information or extra challenges._",
-    "https://studio.code.org/s/dance/stage/1/puzzle/2": "Let's get this moose dancing!\n\nDrag out the <xml><block type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new\\_dancer</title><title name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml> block onto the workspace. Connect it underneath the <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml> block. Your dancer should start a new move after the fourth measure.\n\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/3": "_Now we're grooving!_ \n\nAdd an <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> block to your workspace. Make the dancer start a new move after 6 measures.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/4": "_This dance needs some flash!_\n\nLook for a new block in your toolbox that adds a background effect behind your dancer. Watch the effects change in time with the music!",
-    "https://studio.code.org/s/dance/stage/1/puzzle/5": "Use another new block to make the dancer change moves **every 2 measures**!\n\n-   Choosing `(Next)`, `(Previous)`, or `(Random)` tells the dancer to perform a different move every time the code is run.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/6": "_We need more dancers!_\n\nCreate a backup dancer called `backup_dancer1` to dance with the cat.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/7": "Every dancer has a set of _properties_ that control what it looks like.\n\nYou can make it look like a dancer is in the background by making their _size_ smaller. Can you make both backup dancers the same size?",
-    "https://studio.code.org/s/dance/stage/1/puzzle/8": "Dancers have a \"tint\" property that can add a layer of color. Try changing the tint of one of your dancers.\n\n-   Tints will mix the color you choose with the colors of the dancer.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/9": "Now we know how to change a dancer's properties. We can also make the same properties automatically respond to the music using this block:\n<xml>\n  <block type=\"Dancelab_startMapping\">\n    <title name=\"SPRITE\">right\\_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <title name=\"RANGE\">\"bass\"</title>\n  </block></xml>\n\nThis program uses the music's \"bass\" volume (the low sounds) to control one dancer's height. Can you make the other dancer respond to the music too?",
-    "https://studio.code.org/s/dance/stage/1/puzzle/10": "The <xml><block type=\"Dancelab_whenKey\"></block></xml> block lets you run code when the up arrow is pressed. \n\nYou might change the dance move, change a dancer's properties, or do a quick move just once. Be creative and look out for new blocks!",
-    "https://studio.code.org/s/dance/stage/1/puzzle/11": "It's time for a dance-off! The Cat dabs when you press the left arrow key. Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key.\n\n**Use the keys to get the Robot to do the drop-clap-drop-clap as fast as you can!**",
-    "https://studio.code.org/s/dance/stage/1/puzzle/12": "Check out this block:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nNow you can create a bunch of dancers at once!\n\nTry using some of the \"all ducks\" blocks to write code that will make all of the ducks dance together.",
-    "https://studio.code.org/s/dance/stage/1/puzzle/13": "Get your groove on! Create a dance of your own to share with your friends."
-  },
-  "authored_hints": {
-    "https://studio.code.org/s/dance/stage/1/puzzle/1": {
+  "https://studio.code.org/s/dance/stage/1/puzzle/1": {
+    "short_instructions": "Drag the `make a new` block into the workspace, and connect it inside the `setup` block.",
+    "long_instructions": "_Let's have a dance party!_\n\nDrag the `make a new` block into the workspace, and connect it inside the `setup` block to create your first dancer.\n\n-   _You can also click the lightbulb to the left if you want more information or extra challenges._",
+    "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Make sure a dancer appears on the screen.\n\n_This level ends after 4 measures._",
       "challenges": "**Optional Challenges**\n\n-   Choose a different song to play.\n-   Rename your dancer."
     },
-    "https://studio.code.org/s/dance/stage/1/puzzle/2": {
+    "callouts": {
+      "dance_callout_01": "Add this block to your program!"
+    }
+  },
+  "https://studio.code.org/s/dance/stage/1/puzzle/2": {
+    "short_instructions": "Make the moose start a new move after 4 measures!",
+    "long_instructions": "Let's get this moose dancing!\n\nDrag out the <xml><block type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new\\_dancer</title><title name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml> block onto the workspace. Connect it underneath the <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml> block. Your dancer should start a new move after the fourth measure.\n\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
+    "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   The dancer needs to switch to a new move after 4 measures.\n\n_The level ends after 7 measures._"
     },
-    "https://studio.code.org/s/dance/stage/1/puzzle/3": {
+    "callouts": {
+      "dance_callout_02": "Add this block to your program!"
+    }
+  },
+  "https://studio.code.org/s/dance/stage/1/puzzle/3": {
+    "short_instructions": "Now make the dancer start a new move after 6 measures!",
+    "long_instructions": "_Now we're grooving!_ \n\nAdd an <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> block to your workspace. Make the dancer start a new move after 6 measures.",
+    "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   After 6 measures, your dancer needs to be doing a different dance than it was after 4 measures.\n\n_The level ends after 11 measures._"
-    },
-    "https://studio.code.org/s/dance/stage/1/puzzle/4": {
+    }
+  },
+  "https://studio.code.org/s/dance/stage/1/puzzle/4": {
+    "short_instructions": "Add a background effect to your program.",
+    "long_instructions": "_This dance needs some flash!_\n\nLook for a new block in your toolbox that adds a background effect behind your dancer. Watch the effects change in time with the music!",
+    "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   You need to make the background effect change sometime before the seventh measure of the song.\n\n_This level ends after 9 measures._",
       "challenges": "**Optional Challenge**\n\nChange the background effect at different points during the song by connecting the new block under the <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> events."
     },
-    "https://studio.code.org/s/dance/stage/1/puzzle/6": {
+    "callouts": {
+      "dance_callout_04": "Add this block to your program!"
+    }
+  },
+  "https://studio.code.org/s/dance/stage/1/puzzle/5": {
+    "short_instructions": "Use another new block to make the dancer change moves every 2 measures.",
+    "long_instructions": "Use another new block to make the dancer change moves **every 2 measures**!\n\n-   Choosing `(Next)`, `(Previous)`, or `(Random)` tells the dancer to perform a different move every time the code is run."
+  },
+  "https://studio.code.org/s/dance/stage/1/puzzle/6": {
+    "short_instructions": "Create a backup dancer called `backup_dancer1` to dance with the cat.",
+    "long_instructions": "_We need more dancers!_\n\nCreate a backup dancer called `backup_dancer1` to dance with the cat.",
+    "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   You need to have at least two dancers.\n\n_This level ends after 5 measures._",
       "challenges": "**Optional Challenge**\n\n-   Add a third dancer (or as many as you want!)\n-   Make all of your dancers perform different moves at different points in the song."
     },
-    "https://studio.code.org/s/dance/stage/1/puzzle/7": {
-      "validation": "**How do I pass this level?**\n\n-   Two dancers need to have a size other than 100.\n\n_This level ends after 5 measures._",
-      "challenges": "**Optional Challenge**\n\n-   Experiment by changing other properties (width, height, rotation, etc.)"
-    },
-    "https://studio.code.org/s/dance/stage/1/puzzle/8": {
-      "validation": "**How do I pass this level?**\n\n-   Change the tint of at least one dancer.\n\n_This level ends after 7 measures._"
-    },
-    "https://studio.code.org/s/dance/stage/1/puzzle/9": {
-      "validation": "**How do I pass this level?**\n\n-   Properties for two or more dancers must change.\n\n_This level ends after 7 measures._"
-    },
-    "https://studio.code.org/s/dance/stage/1/puzzle/10": {
-      "validation": "**How do I pass this level?**\n\n-   Just be creative!\n\n_This level ends after 7 measures._"
-    },
-    "https://studio.code.org/s/dance/stage/1/puzzle/11": {
-      "validation": "**How do I pass this level?**\n\n-   Use the `when left arrow pressed` block to make the Robot do a dance move when you press it.\n\n_This level ends after 7 measures._"
-    },
-    "https://studio.code.org/s/dance/stage/1/puzzle/12": {
-      "validation": "**How do I pass this level?**\n\n-   Just be creative!\n\n_This level ends after 7 measures._"
+    "callouts": {
+      "dance_callout_06": "Add your new dancer here"
     }
   },
-  "callouts": {
-    "https://studio.code.org/s/dance/stage/1/puzzle/1": {
-      "dance_callout_01": "Add this block to your program!"
+  "https://studio.code.org/s/dance/stage/1/puzzle/7": {
+    "short_instructions": "Can you make both backup dancers the same size?",
+    "long_instructions": "Every dancer has a set of _properties_ that control what it looks like.\n\nYou can make it look like a dancer is in the background by making their _size_ smaller. Can you make both backup dancers the same size?",
+    "authored_hints": {
+      "validation": "**How do I pass this level?**\n\n-   Two dancers need to have a size other than 100.\n\n_This level ends after 5 measures._",
+      "challenges": "**Optional Challenge**\n\n-   Experiment by changing other properties (width, height, rotation, etc.)"
+    }
+  },
+  "https://studio.code.org/s/dance/stage/1/puzzle/8": {
+    "short_instructions": "Use the `set tint` block to change the color of a dancer.",
+    "long_instructions": "Dancers have a \"tint\" property that can add a layer of color. Try changing the tint of one of your dancers.\n\n-   Tints will mix the color you choose with the colors of the dancer.",
+    "authored_hints": {
+      "validation": "**How do I pass this level?**\n\n-   Change the tint of at least one dancer.\n\n_This level ends after 7 measures._"
+    }
+  },
+  "https://studio.code.org/s/dance/stage/1/puzzle/9": {
+    "short_instructions": "Make the other dancer respond to the music using the `begins following` block, too.",
+    "long_instructions": "Now we know how to change a dancer's properties. We can also make the same properties automatically respond to the music using this block:\n<xml>\n  <block type=\"Dancelab_startMapping\">\n    <title name=\"SPRITE\">right\\_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <title name=\"RANGE\">\"bass\"</title>\n  </block></xml>\n\nThis program uses the music's \"bass\" volume (the low sounds) to control one dancer's height. Can you make the other dancer respond to the music too?",
+    "authored_hints": {
+      "validation": "**How do I pass this level?**\n\n-   Properties for two or more dancers must change.\n\n_This level ends after 7 measures._"
+    }
+  },
+  "https://studio.code.org/s/dance/stage/1/puzzle/10": {
+    "short_instructions": "The `when up pressed` block lets you run code when the up arrow is pressed. Try to make the dancer do a quick move when you press up.",
+    "long_instructions": "The <xml><block type=\"Dancelab_whenKey\"></block></xml> block lets you run code when the up arrow is pressed. \n\nYou might change the dance move, change a dancer's properties, or do a quick move just once. Be creative and look out for new blocks!",
+    "authored_hints": {
+      "validation": "**How do I pass this level?**\n\n-   Just be creative!\n\n_This level ends after 7 measures._"
     },
-    "https://studio.code.org/s/dance/stage/1/puzzle/2": {
-      "dance_callout_02": "Add this block to your program!"
-    },
-    "https://studio.code.org/s/dance/stage/1/puzzle/4": {
-      "dance_callout_04": "Add this block to your program!"
-    },
-    "https://studio.code.org/s/dance/stage/1/puzzle/6": {
-      "dance_callout_06": "Add your new dancer here"
-    },
-    "https://studio.code.org/s/dance/stage/1/puzzle/10": {
+    "callouts": {
       "dance_callout_11_a": "New block!",
       "dance_callout_11_b": "New block!"
+    }
+  },
+  "https://studio.code.org/s/dance/stage/1/puzzle/11": {
+    "short_instructions": "Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key. Do the drop-clap as fast as you can!",
+    "long_instructions": "It's time for a dance-off! The Cat dabs when you press the left arrow key. Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key.\n\n**Use the keys to get the Robot to do the drop-clap-drop-clap as fast as you can!**",
+    "authored_hints": {
+      "validation": "**How do I pass this level?**\n\n-   Use the `when left arrow pressed` block to make the Robot do a dance move when you press it.\n\n_This level ends after 7 measures._"
+    }
+  },
+  "https://studio.code.org/s/dance/stage/1/puzzle/12": {
+    "short_instructions": "Use the \"all ducks\" blocks to make the ducks dance together.",
+    "long_instructions": "Check out this block:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nNow you can create a bunch of dancers at once!\n\nTry using some of the \"all ducks\" blocks to write code that will make all of the ducks dance together.",
+    "authored_hints": {
+      "validation": "**How do I pass this level?**\n\n-   Just be creative!\n\n_This level ends after 7 measures._"
     },
-    "https://studio.code.org/s/dance/stage/1/puzzle/12": {
+    "callouts": {
       "dance_party_11_5_groups": "Look here for \"all ducks\" blocks"
     }
   },
-  "block_categories": {
-    "https://studio.code.org/s/dance/stage/1/puzzle/12": {
-      "World": "World",
-      "Dancers": "Dancers",
-      "Groups": "Groups",
-      "Events": "Events"
-    },
-    "https://studio.code.org/s/dance/stage/1/puzzle/13": {
-      "World": "World",
-      "Dancers": "Dancers",
-      "Groups": "Groups",
-      "Events": "Events",
-      "Numbers": "Numbers",
-      "Logic": "Logic"
-    }
+  "https://studio.code.org/s/dance/stage/1/puzzle/13": {
+    "short_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
+    "long_instructions": "Get your groove on! Create a dance of your own to share with your friends."
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import sinon from 'sinon';
 import {
   UnconnectedVisualizationResizeBar as VisualizationResizeBar,
@@ -41,7 +41,7 @@ describe('VisualizationResizeBar', function() {
     // Mouse down doesn't fire resize event, but does attach needed handlers
     wrapper
       .find('div')
-      .getNode()
+      .instance()
       .dispatchEvent(mouseEvent('mousedown', 0, 0));
     expect(spy).to.have.callCount(0);
 
