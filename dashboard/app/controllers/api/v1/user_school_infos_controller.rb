@@ -30,8 +30,14 @@ class Api::V1::UserSchoolInfosController < ApplicationController
     existing_school_info = current_user.last_complete_school_info
     existing_school_info&.assign_attributes new_school_info_params
     if existing_school_info.nil? || existing_school_info.changed?
-      submitted_school_info = SchoolInfo.where(new_school_info_params).
-        first_or_create(validation_type: SchoolInfo::VALIDATION_COMPLETE)
+      submitted_school_info =
+        if new_school_info_params[:school_id]
+          SchoolInfo.where(new_school_info_params).
+          first_or_create
+        else
+          SchoolInfo.where(new_school_info_params, validation_type: SchoolInfo::VALIDATION_NONE).
+          first_or_create(validation_type: SchoolInfo::VALIDATION_COMPLETE)
+        end
       unless current_user.update(school_info: submitted_school_info)
         render json: current_user.errors, status: 422
         return
