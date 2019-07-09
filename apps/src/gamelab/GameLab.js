@@ -66,7 +66,13 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
-import {generateExpoApk} from '../util/exporter';
+import {
+  expoGenerateApk,
+  expoCheckApkBuild,
+  expoCancelApkBuild
+} from '../util/exporter';
+import project from '../code-studio/initApp/project';
+import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -107,6 +113,7 @@ var GameLab = function() {
   /** @private {JsInterpreterLogger} */
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
+  this.generatedProperties = {};
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -369,9 +376,26 @@ GameLab.prototype.init = function(config) {
     }
   }
 
+  const setAndroidExportProps = this.setAndroidExportProps.bind(this);
+
   this.studioApp_.setPageConstants(config, {
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: this.exportApp.bind(this),
+    expoGenerateApk: expoGenerateApk.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
+    expoCheckApkBuild: expoCheckApkBuild.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
+    expoCancelApkBuild: expoCancelApkBuild.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
     channelId: config.channel,
     nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
@@ -401,6 +425,13 @@ GameLab.prototype.init = function(config) {
       ? config.initialAnimationList
       : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
+
+  this.generatedProperties = {
+    ...config.initialGeneratedProperties
+  };
+  getStore().dispatch(
+    setExportGeneratedProperties(this.generatedProperties.export)
+  );
 
   // Pre-register all audio preloads with our Sounds API, which will load
   // them into memory so they can play immediately:
@@ -436,26 +467,25 @@ GameLab.prototype.init = function(config) {
  * @param {Object} expoOpts
  */
 GameLab.prototype.exportApp = async function(expoOpts) {
-  // TODO: find another way to get this info that doesn't rely on globals.
-  const appName =
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
-  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
-  if (mode === 'expoGenerateApk') {
-    return generateExpoApk(
-      {
-        appName,
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      },
-      this.studioApp_.config
-    );
-  }
   await this.whenAnimationsAreReady();
   return this.exportAppWithAnimations(
-    appName,
+    project.getCurrentName() || 'my-app',
     getStore().getState().animationList,
     expoOpts
+  );
+};
+
+GameLab.prototype.setAndroidExportProps = function(props) {
+  // Spread the previous object so changes here will always fail shallow
+  // compare and trigger react prop changes
+  this.generatedProperties.export = {
+    ...this.generatedProperties.export,
+    android: props
+  };
+  project.projectChanged();
+  project.saveIfSourcesChanged();
+  getStore().dispatch(
+    setExportGeneratedProperties(this.generatedProperties.export)
   );
 };
 
@@ -1446,6 +1476,18 @@ GameLab.prototype.getSerializedAnimationList = function(callback) {
       callback(getSerializedAnimationList(getStore().getState().animationList));
     })
   );
+};
+
+/**
+ * Get the project properties for upload to the sources API.
+ * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ */
+GameLab.prototype.getGeneratedProperties = function() {
+  // Must return a new object instance each time so the project
+  // system can properly compare currentSources vs newSources
+  return {
+    ...this.generatedProperties
+  };
 };
 
 /**
