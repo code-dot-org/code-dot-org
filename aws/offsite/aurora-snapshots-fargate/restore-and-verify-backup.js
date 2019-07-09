@@ -58,6 +58,7 @@ const restoreLatestSnapshot = async (rds, clusterId, instanceId) => {
     DBClusterIdentifier: clusterId,
     SnapshotIdentifier: mostRecentSnapshot.DBClusterSnapshotIdentifier,
     Engine: DB_ENGINE,
+    EngineVersion: mostRecentSnapshot.EngineVersion,
     DBSubnetGroupName: DB_SUBNET_GROUP_NAME
   };
 
@@ -67,7 +68,8 @@ const restoreLatestSnapshot = async (rds, clusterId, instanceId) => {
     DBInstanceClass: DB_INSTANCE_CLASS,
     DBClusterIdentifier: clusterId,
     DBInstanceIdentifier: instanceId,
-    Engine: DB_ENGINE
+    Engine: DB_ENGINE,
+    EngineVersion: mostRecentSnapshot.EngineVersion
   };
 
   await rds.createDBInstance(createInstanceParams).promise();

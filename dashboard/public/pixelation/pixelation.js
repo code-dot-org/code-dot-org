@@ -139,7 +139,7 @@ function initProjects() {
         callback({});
       },
       setInitialGeneratedProperties: function(_) {},
-      getGeneratedProperties() {
+      getGeneratedProperties: function() {
         return undefined;
       },
       setInitialLevelSource: function(levelSource) {
