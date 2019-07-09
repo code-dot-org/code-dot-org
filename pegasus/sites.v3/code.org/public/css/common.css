@@ -680,6 +680,10 @@ button {
   }
 }
 
+.user_menu {
+  padding-left: 6px;
+}
+
 @media screen and (min-width: 970px) {
   .starwars-container .img-container {
     min-height: 334px;
