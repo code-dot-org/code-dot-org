@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCase
-  setup do
+  def prepare_scenario
     @csf_workshop = create :pd_ended_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSF, ended_at: Date.today - 1.day
     @csd_workshop = create :pd_ended_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSD, ended_at: Date.today - 2.days
     @csp_workshop = create :pd_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSP
@@ -22,6 +22,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test 'index returns expected values' do
+    prepare_scenario
     sign_in @teacher
 
     get :index
@@ -53,6 +54,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test 'courses are sorted as expected' do
+    prepare_scenario
     sign_in(@teacher)
 
     ['Bills Fandom 101', 'ECS Support', 'CSP Support'].each do |name|
