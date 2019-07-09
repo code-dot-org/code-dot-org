@@ -4,7 +4,6 @@ import Sounds from '../../Sounds';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var ImagePicker = require('../components/ImagePicker');
-var SoundPicker = require('../components/SoundPicker');
 var Dialog = require('../LegacyDialog');
 
 /**
@@ -41,18 +40,31 @@ module.exports = function showAssetManager(
     }
   });
 
-  let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
-
-  renderPicker(
-    pickerType,
-    typeFilter,
-    options,
-    showChoseImageButton,
-    dialog,
-    assetChosen,
-    sounds,
-    codeDiv
-  );
+  if (typeFilter === 'audio') {
+    import('../components/SoundPicker').then(({default: SoundPicker}) => {
+      renderPicker(
+        SoundPicker,
+        typeFilter,
+        options,
+        showChoseImageButton,
+        dialog,
+        assetChosen,
+        sounds,
+        codeDiv
+      );
+    });
+  } else {
+    renderPicker(
+      ImagePicker,
+      typeFilter,
+      options,
+      showChoseImageButton,
+      dialog,
+      assetChosen,
+      sounds,
+      codeDiv
+    );
+  }
 
   dialog.show();
 };
