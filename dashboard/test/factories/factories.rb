@@ -640,6 +640,13 @@ FactoryGirl.define do
     level_source {create(:level_source, :with_image, level: user_level.level)}
   end
 
+  factory :assessment_activity do
+    user
+    script
+    level
+    level_source {create :level_source, level: level}
+  end
+
   factory :script do
     sequence(:name) {|n| "bogus-script-#{n}"}
 

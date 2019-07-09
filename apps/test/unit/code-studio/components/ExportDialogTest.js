@@ -11,6 +11,9 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
         isAbusive={false}
@@ -30,6 +33,9 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
         isAbusive={false}
@@ -49,6 +55,9 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
         isAbusive={false}
@@ -71,6 +80,9 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
         isAbusive={false}
@@ -92,6 +104,9 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
         isAbusive={true}
@@ -111,6 +126,9 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
         isAbusive={false}
@@ -135,6 +153,9 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={exportApp}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
         isAbusive={false}
@@ -152,9 +173,8 @@ describe('ExportDialog', () => {
     });
   });
 
-  it('generateApkAsNeeded() method calls exportApp() thrice with modes expoPublish, expoGenerateApk, and expoCheckApkBuild', async () => {
+  it('generateApkAsNeeded() method calls exportApp(), expoGenerateApk(), and expoCheckApkBuild()', async () => {
     const exportApp = sinon.stub();
-    exportApp.returns(Promise.resolve('fakeBuildId'));
     const publishResult = Promise.resolve({
       expoUri: 'uri',
       expoSnackId: 'id',
@@ -162,10 +182,17 @@ describe('ExportDialog', () => {
       splashImageUri: 'splashUri'
     });
     exportApp.withArgs({mode: 'expoPublish'}).returns(publishResult);
+    const expoGenerateApk = sinon.stub();
+    expoGenerateApk.returns(Promise.resolve('fakeBuildId'));
+    const expoCheckApkBuild = sinon.stub();
+
     const wrapper = shallow(
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={exportApp}
+        expoGenerateApk={expoGenerateApk}
+        expoCheckApkBuild={expoCheckApkBuild}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{}}
         md5SavedSources="fakeHash"
         isAbusive={false}
@@ -178,21 +205,20 @@ describe('ExportDialog', () => {
       />
     );
     await wrapper.instance().generateApkAsNeeded();
-    expect(exportApp)
-      .to.have.been.calledThrice.and.calledWith({mode: 'expoPublish'})
-      .and.calledWith({
-        mode: 'expoGenerateApk',
-        md5SavedSources: 'fakeHash',
-        expoSnackId: 'id',
-        iconUri: 'iconUri',
-        splashImageUri: 'splashUri'
-      })
-      .and.calledWith({
-        mode: 'expoCheckApkBuild',
-        md5SavedSources: 'fakeHash',
-        expoSnackId: 'id',
-        apkBuildId: 'fakeBuildId'
-      });
+    expect(exportApp).to.have.been.calledOnce.and.calledWith({
+      mode: 'expoPublish'
+    });
+    expect(expoGenerateApk).to.have.been.calledOnce.and.calledWith({
+      md5SavedSources: 'fakeHash',
+      expoSnackId: 'id',
+      iconUri: 'iconUri',
+      splashImageUri: 'splashUri'
+    });
+    expect(expoCheckApkBuild).to.have.been.calledOnce.and.calledWith({
+      md5SavedSources: 'fakeHash',
+      expoSnackId: 'id',
+      apkBuildId: 'fakeBuildId'
+    });
   });
 
   it('exportApp() not called by generateApkAsNeeded() if the sources have not changed since the last build', () => {
@@ -201,6 +227,9 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={exportApp}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{
           android: {
             md5ApkSavedSources: 'fakeHash',
@@ -237,6 +266,9 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={exportApp}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{
           android: {
             md5ApkSavedSources: 'differentHash',
@@ -260,11 +292,14 @@ describe('ExportDialog', () => {
   });
 
   it('An incomplete preexisting build will not be canceled when the dialog is opened if the sources are unchanged', () => {
-    const exportApp = sinon.stub();
+    const expoCancelApkBuild = sinon.stub();
     const wrapper = mount(
       <ExportDialog
         i18n={{t: id => id}}
-        exportApp={exportApp}
+        exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={expoCancelApkBuild}
         exportGeneratedProperties={{
           android: {
             md5ApkSavedSources: 'fakeHash',
@@ -284,15 +319,18 @@ describe('ExportDialog', () => {
     );
     wrapper.setProps({isOpen: true});
 
-    expect(exportApp).to.not.have.been.called;
+    expect(expoCancelApkBuild).to.not.have.been.called;
   });
 
   it('An incomplete preexisting build will be resumed within generateApkAsNeeded when the sources are unchanged', () => {
-    const exportApp = sinon.stub();
+    const expoCheckApkBuild = sinon.stub();
     const wrapper = shallow(
       <ExportDialog
         i18n={{t: id => id}}
-        exportApp={exportApp}
+        exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={expoCheckApkBuild}
+        expoCancelApkBuild={async () => ({})}
         exportGeneratedProperties={{
           android: {
             md5ApkSavedSources: 'fakeHash',
@@ -312,8 +350,7 @@ describe('ExportDialog', () => {
     );
     wrapper.instance().generateApkAsNeeded();
 
-    expect(exportApp).to.have.been.calledWith({
-      mode: 'expoCheckApkBuild',
+    expect(expoCheckApkBuild).to.have.been.calledWith({
       md5SavedSources: 'fakeHash',
       expoSnackId: 'fakeSnackId',
       apkBuildId: 'fakeBuildId'
@@ -321,11 +358,14 @@ describe('ExportDialog', () => {
   });
 
   it('An incomplete preexisting build will be canceled when the dialog is opened if the sources hash has changed', () => {
-    const exportApp = sinon.stub();
+    const expoCancelApkBuild = sinon.stub();
     const wrapper = mount(
       <ExportDialog
         i18n={{t: id => id}}
-        exportApp={exportApp}
+        exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={expoCancelApkBuild}
         exportGeneratedProperties={{
           android: {
             md5ApkSavedSources: 'differentHash',
@@ -345,8 +385,7 @@ describe('ExportDialog', () => {
     );
     wrapper.setProps({isOpen: true});
 
-    expect(exportApp).to.have.been.calledWith({
-      mode: 'expoCancelApkBuild',
+    expect(expoCancelApkBuild).to.have.been.calledWith({
       md5SavedSources: 'differentHash',
       expoSnackId: 'fakeSnackId',
       apkBuildId: 'fakeBuildId'
@@ -354,11 +393,14 @@ describe('ExportDialog', () => {
   });
 
   it('A complete preexisting build will not be canceled when the dialog is opened if the sources hash has changed', () => {
-    const exportApp = sinon.stub();
+    const expoCancelApkBuild = sinon.stub();
     const wrapper = mount(
       <ExportDialog
         i18n={{t: id => id}}
-        exportApp={exportApp}
+        exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={expoCancelApkBuild}
         exportGeneratedProperties={{
           android: {
             md5ApkSavedSources: 'differentHash',
@@ -379,6 +421,6 @@ describe('ExportDialog', () => {
     );
     wrapper.setProps({isOpen: true});
 
-    expect(exportApp).to.not.have.been.called;
+    expect(expoCancelApkBuild).to.not.have.been.called;
   });
 });

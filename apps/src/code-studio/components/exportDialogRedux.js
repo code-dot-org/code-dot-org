@@ -16,19 +16,16 @@ export default function reducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_EXPORT_DIALOG:
       return {
-        ...initialState,
         ...state,
         isOpen: true
       };
     case HIDE_EXPORT_DIALOG:
       return {
-        ...initialState,
         ...state,
         isOpen: false
       };
     case SET_EXPORT_GENERATED_PROPERTIES:
       return {
-        ...initialState,
         ...state,
         exportGeneratedProperties: action.exportGeneratedProperties
       };

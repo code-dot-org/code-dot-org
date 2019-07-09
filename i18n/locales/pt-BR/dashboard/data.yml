@@ -384,7 +384,7 @@ pt-BR:
         csd_concept_circuits_logic: 'Como Computadores Funcionam: Circuitos e Lógica'
         csd_concept_memory_cpu_input_output: 'Como Computadores Funcionam: CPU, Entrada e Saída'
         csd_concept_hardware_software: 'Como Computadores Funcionam: Hardware e Software'
-        csd_concept_search: Como funciona as pesquisas
+        csd_concept_search: Como funcionam as pesquisas
         csd_external_amazon_data: Como grandes dados são usados em sistemas de recomendação da Amazon para mudar as nossas vidas
         csd_external_netflix_data: Como a Netflix faz sugestões para programas de TV e filmes?
         csd_external_waze_data: Por que tantos usuários são obcecados com Waze?
@@ -521,10 +521,13 @@ pt-BR:
         what_is_an_event: O que é um evento?
         teaching_cs_pair_programming: 'Ensinando Fundamentos da CC: Programação em Pares'
         teaching_problem_solving: 'Ensinando Fundamentos da CC: Ensinando Resolução de Problemas'
+        csd_applab_designmode: 'Descobertas CS: App Lab - Modo Design'
         csd_pair_programming: Programação em duplas
         csd_gamelab_functions: Chamando e Definindo Funções
         csd_applab_parameters: Funções com Parâmetros
+        csd_applab_loops: Loops em App Lab
         CSF_Going_Places_Safely: Minha Vizinhança Online
+        CSF_SpriteLab_Intro_v2: Introdução ao Sprite Lab
         CSF_Spritelab_MakeSprite_v2: Como fazer um Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites em Ação
     callout:

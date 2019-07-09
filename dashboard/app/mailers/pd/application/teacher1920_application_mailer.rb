@@ -68,7 +68,7 @@ module Pd::Application
       raise "Partner contact email is required, application id #{@application.id}" unless partner_contact_email
 
       mail(
-        from: 'Anthonette Peña <teacher@code.org>',
+        from: 'Liz Gauthier <teacher@code.org>',
         to: partner_contact_email,
         subject: 'A principal has completed the principal approval form'
       )

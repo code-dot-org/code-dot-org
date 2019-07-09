@@ -12,7 +12,7 @@
       "gamelab"
     ],
     "helper_libraries": [
-      "SpriteLab2Beta"
+      "NativeSpriteLab"
     ],
     "use_default_sprites": "true",
     "hide_animation_mode": "true",

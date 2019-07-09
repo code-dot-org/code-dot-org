@@ -556,18 +556,6 @@ tr:
             '2': tiz
       Dancelab_whenSetup:
         text: kurulum
-      gamelab_changeColor:
-        text: "{COLOR} {METHOD}’u {AMOUNT} kadar değiştir"
-        options:
-          METHOD:
-            '"tint"': renk tonu
-      gamelab_changeColorBy:
-        text: "{COLOR} {METHOD}’u {AMOUNT} kadar değiştir"
-        options:
-          METHOD:
-            '"hue"': renk tonu
-            '"saturation"': doygunluk
-            '"brightness"': parlaklık
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY}’i {VAL} kadar değiştir"
         options:
@@ -615,29 +603,11 @@ tr:
             '"space"': uzay
             '"x"': x
             '"y"': y
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': kenarlık
-            '"inner"': iç kare
-            '"circle"': çember
-            '"grid"': ızgara
-            '"row"': satır
-            '"column"': sütun
-            '"x"': çapraz geçiş
-            '"plus"': artı
-            '"random"': gelişigüzel
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": gelişigüzel
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': sağ
             '"left"': sol
-      gamelab_mixColors:
-        text: "{COLOR1} ve {COLOR2}’yi karıştır"
       gamelab_moveInDirection:
         options:
           DIRECTION:
@@ -670,20 +640,6 @@ tr:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': gökkuşağı
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Sualtı
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': kış
-      gamelab_setPosition:
-        text: "{THIS}’i {POSITION} konuma getir"
-        options:
-          POSITION:
-            "{x: 50, y: 50}": sol üst
-            "{x: 200, y: 50}": orta üst
-            "{x: 350, y: 50}": sağ üst
-            "{x: 50, y: 200}": sol orta
-            "{x: 200, y: 200}": merkez
-            "{x: 350, y: 200}": sağ orta
-            "{x: 50, y: 350}": sol alt
-            "{x: 200, y: 350}": alt orta
-            "{x: 350, y: 350}": sağ alt
-            '"random"': gelişigüzel
       gamelab_setProp:
         options:
           PROPERTY:
@@ -700,41 +656,11 @@ tr:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-      gamelab_setup:
-        text: kurulum
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': Ne zaman
             '"while"': sürece
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': Ne zaman
-            '"while"': sürece
-      gamelab_spriteDirection:
-        options:
-          DIRECTION:
-            '"North"': Kuzey
-            '"East"': Doğu
-            '"South"': Güney
-            '"West"': Batı
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': boyut
-            '"x"': x konumu
-            '"y"': y konumu
-            '"direction"': hareket yönü
-            '"tint"': renk tonu
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': boyut
-            '"x"': x konumu
-            '"y"': y konumu
-            '"direction"': hareket yönü
-            '"tint"': renk tonu
       gamelab_turn:
         options:
           DIRECTION:
@@ -753,8 +679,6 @@ tr:
             '"space"': uzay
       gamelab_whenLeftArrow:
         text: sol ok basıldığında
-      gamelab_whenMouseClicked:
-        text: fare tıklandığında
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -762,11 +686,6 @@ tr:
             "'down'": aşağı
             "'left'": sol
             "'right'": sağ
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': Ne zaman
-            '"while"': sürece
       gamelab_whileKey:
         options:
           KEY:
