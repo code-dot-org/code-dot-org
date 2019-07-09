@@ -36,7 +36,7 @@ class BubbleChoiceDSL < BaseDSL
   def i18n_strings
     @i18n_strings['title'] = @hash[:title] if @hash[:title]
     @i18n_strings['description'] = @hash[:description] if @hash[:description]
-    {'name' => {@name => @i18n_strings}}
+    @i18n_strings
   end
 
   def self.parse_file(filename)

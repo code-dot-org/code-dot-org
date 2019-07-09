@@ -374,8 +374,6 @@ nn-NO:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Dette talet seier kor mange av desse blokkene
           du kan bruke i denne oppgåva.
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: Klikk her for å køyre koden!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Ser du nokre nye blokker i verktøykassa?  Ta det
           heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
@@ -695,6 +693,9 @@ nn-NO:
         courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
           deg hvor mange av disse blokkene du har igjen å bruke.
       courseD_scrat_ramp6:
+        courseE_artist_ramp8_1: Du kan endre dette nummeret.
+        courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal
+          bli gjenteke.
         courseD_maze_ramp6_1: Den koden du putter inn her vil bli repetert så monge
           gongar du seier den skal, og fortsetter deretter med å køyre programmet.
       courseD_scrat_ramp8:
@@ -732,10 +733,6 @@ nn-NO:
         courseE_artist_functions_challenge2_callout2: Om du ikkje liker dette designet,
           endre det til det du har lyst til!
       courseE_artist_ramp8:
-        courseE_artist_ramp8_1: Du kan endre dette nummeret.
-        courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal
-          bli gjenteke.
-      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Du kan endre dette nummeret.
         courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal
           bli gjenteke.

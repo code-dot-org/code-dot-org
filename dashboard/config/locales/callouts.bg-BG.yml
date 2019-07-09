@@ -3,9 +3,8 @@ bg-BG:
   data:
     callouts:
       2-3 Artist Debugging 1:
-        2-3_Artist_Debugging_1_a: Артистът няма бутон за всяка "Стъпка", но можете
-          да преместите плъзгача наляво и да видите как вашата програма се изпълнаво
-          по-внимателно и бавно.
+        2-3_Artist_Debugging_1_a: Artist doesn't have a "Step" button, but you can
+          drag the slider left to watch your program run more carefully.
       2-3 Bee Conditionals 5:
         Bee_Cond_5_1a: Лилавите цветя могат да имат 1 или 0 нектар..., но вие няма
           да знаете, докато не стартирате кода!

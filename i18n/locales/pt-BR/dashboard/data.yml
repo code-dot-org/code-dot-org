@@ -521,10 +521,13 @@ pt-BR:
         what_is_an_event: O que é um evento?
         teaching_cs_pair_programming: 'Ensinando Fundamentos da CC: Programação em Pares'
         teaching_problem_solving: 'Ensinando Fundamentos da CC: Ensinando Resolução de Problemas'
+        csd_applab_designmode: 'Descobertas CS: App Lab - Modo Design'
         csd_pair_programming: Programação em duplas
         csd_gamelab_functions: Chamando e Definindo Funções
         csd_applab_parameters: Funções com Parâmetros
+        csd_applab_loops: Loops em App Lab
         CSF_Going_Places_Safely: Minha Vizinhança Online
+        CSF_SpriteLab_Intro_v2: Introdução ao Sprite Lab
         CSF_Spritelab_MakeSprite_v2: Como fazer um Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites em Ação
     callout:

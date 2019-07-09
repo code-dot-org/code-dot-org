@@ -4,6 +4,7 @@ import $ from 'jquery';
 import Spinner from '../../../components/spinner';
 import Results from './results';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   errorContainer: {
@@ -32,9 +33,13 @@ export class ResultsLoader extends React.Component {
   }
 
   load() {
-    const url = `/api/v1/pd/workshops/${
-      this.props.params['workshopId']
-    }/generic_survey_report`;
+    const url = experiments.isEnabled(experiments.ROLLUP_SURVEY_REPORT)
+      ? `/api/v1/pd/workshops/${
+          this.props.params['workshopId']
+        }/experiment_survey_report`
+      : `/api/v1/pd/workshops/${
+          this.props.params['workshopId']
+        }/generic_survey_report`;
 
     this.loadRequest = $.ajax({
       method: 'GET',
