@@ -1,4 +1,14 @@
 {
+  "https://studio.code.org/s/courseb-2019/stage/1/puzzle/1": {
+    "dsls": {
+      "markdown": "# Your Digital Footprint\n\nPutting information about yourself online creates a digital footprint.\n"
+    }
+  },
+  "https://studio.code.org/s/courseb-2019/stage/2/puzzle/1": {
+    "dsls": {
+      "markdown": "# Move It, Move It\n\nUse a map and give commands to reach the goal.\n"
+    }
+  },
   "https://studio.code.org/s/courseb-2019/stage/3/puzzle/2": {
     "short_instructions": "For this puzzle, snap the blocks together and click \"▶ Run\"!",
     "long_instructions": "To get the bird to the pig, snap the <xml><block type=\"maze_moveEast\" block-text=\"move east\"/></xml> block to the bottom of the <xml><block type=\"when_run\" block-text=\"when run\"/></xml> block, then press \"▶ Run\"!",
@@ -220,6 +230,11 @@
     "long_instructions": "Help the harvester pick corn!",
     "authored_hints": {
       "courseA_bee_seq1_a": "Use this block to pick corn once the harvester gets to it.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+    }
+  },
+  "https://studio.code.org/s/courseb-2019/stage/6/puzzle/1": {
+    "dsls": {
+      "markdown": "# Getting Loopy\n\nThis lesson introduces the programming concept of loops through a dance activity.\n"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/7/puzzle/1": {
@@ -497,6 +512,16 @@
     },
     "function_names": {
       "potential solution": "potential solution"
+    }
+  },
+  "https://studio.code.org/s/courseb-2019/stage/10/puzzle/1": {
+    "dsls": {
+      "markdown": "# The Right App\n\n* Everyone uses computers these days, especially smartphones. \n* Smartphone apps help people do things like talk to friends, listen to music, shop, or just browse the web.\n* It is important for programmers to understand others' needs and design apps with them in mind!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+    }
+  },
+  "https://studio.code.org/s/courseb-2019/stage/11/puzzle/1": {
+    "dsls": {
+      "markdown": "# The Big Event\n\nIn computer science, events are actions that a computer monitors. In this lesson react differently depending on which button is pressed.\n"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/12/puzzle/1": {

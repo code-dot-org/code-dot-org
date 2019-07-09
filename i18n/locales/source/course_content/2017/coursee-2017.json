@@ -1692,7 +1692,8 @@
   "https://studio.code.org/s/coursee-2017/stage/22/puzzle/1": {
     "dsls": {
       "title": "title",
-      "content1": "description here"
+      "content1": "description here",
+      "markdown": "# The Design Process\n\n<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true\" style=\"width: 800px; height: 600px\"></iframe>\n"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/23/puzzle/1": {
@@ -1706,7 +1707,8 @@
   "https://studio.code.org/s/coursee-2017/stage/24/puzzle/1": {
     "dsls": {
       "title": "title",
-      "content1": "description here"
+      "content1": "description here",
+      "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }
   }
 }
