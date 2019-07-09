@@ -331,7 +331,6 @@
     "long_instructions": "Help Laurel collect all of the treasure."
   },
   "https://studio.code.org/s/coursec-2017/stage/5/puzzle/12": {
-    "long_instructions": "name 'grade2_multi_collector_A_predict1'\nquestion 'Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?'\nwrong 'Laurel will collect 4 pieces of treasure using this code.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'\nright 'Laurel will try to collect treasure where there is not any and it causes an error.', feedback: 'Correct!'\nwrong 'Laurel will collect all of the treasure.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'\nwrong 'I don't know.', feedback: 'Laurel tries to collect treasure where there is none and it causes an error.'",
     "contained levels": [
       {
         "dsls": {
