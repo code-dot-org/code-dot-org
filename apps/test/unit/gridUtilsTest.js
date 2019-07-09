@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 
 var gridUtils = require('@cdo/apps/applab/gridUtils');
 

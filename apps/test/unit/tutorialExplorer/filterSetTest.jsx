@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert, expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/configuredChai';
 import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 import FilterSet from '@cdo/apps/tutorialExplorer/filterSet';
 import FilterGroup from '@cdo/apps/tutorialExplorer/filterGroup';
@@ -45,40 +45,34 @@ const DEFAULT_PROPS = {
 describe('FilterSet', () => {
   it('renders the provided filter groups', () => {
     const wrapper = shallow(<FilterSet {...DEFAULT_PROPS} />);
-    assert(
-      wrapper.containsMatchingElement(
-        <FilterGroupOrgNames
-          orgName={FAKE_ORG_NAME}
-          uniqueOrgNames={FAKE_UNIQUE_ORG_NAMES}
-          onUserInput={FAKE_ON_ORG_NAME}
-        />
-      )
+    expect(wrapper).to.containMatchingElement(
+      <FilterGroupOrgNames
+        orgName={FAKE_ORG_NAME}
+        uniqueOrgNames={FAKE_UNIQUE_ORG_NAMES}
+        onUserInput={FAKE_ON_ORG_NAME}
+      />
     );
-    assert(
-      wrapper.containsMatchingElement(
-        <FilterGroup
-          key="group-1"
-          name="group-1"
-          text="Group 1"
-          filterEntries={[]}
-          onUserInput={FAKE_ON_USER_INPUT}
-          selection={[]}
-          singleEntry={false}
-        />
-      )
+    expect(wrapper).to.containMatchingElement(
+      <FilterGroup
+        key="group-1"
+        name="group-1"
+        text="Group 1"
+        filterEntries={[]}
+        onUserInput={FAKE_ON_USER_INPUT}
+        selection={[]}
+        singleEntry={false}
+      />
     );
-    assert(
-      wrapper.containsMatchingElement(
-        <FilterGroup
-          key="group-2"
-          name="group-2"
-          text="Group 2"
-          filterEntries={[{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}]}
-          onUserInput={FAKE_ON_USER_INPUT}
-          selection={['xyzzy']}
-          singleEntry={false}
-        />
-      )
+    expect(wrapper).to.containMatchingElement(
+      <FilterGroup
+        key="group-2"
+        name="group-2"
+        text="Group 2"
+        filterEntries={[{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}]}
+        onUserInput={FAKE_ON_USER_INPUT}
+        selection={['xyzzy']}
+        singleEntry={false}
+      />
     );
   });
 
@@ -86,10 +80,8 @@ describe('FilterSet', () => {
     const wrapper = shallow(
       <FilterSet {...DEFAULT_PROPS} roboticsButtonUrl="https://example.com" />
     );
-    assert(
-      wrapper.containsMatchingElement(
-        <RoboticsButton url="https://example.com" />
-      )
+    expect(wrapper).to.containMatchingElement(
+      <RoboticsButton url="https://example.com" />
     );
   });
 

@@ -41,7 +41,6 @@ import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {actions, reducers} from './redux/applab';
 import {add as addWatcher} from '../redux/watchedExpressions';
-import {setApplabLibraries} from '../code-studio/components/applabLibraryRedux';
 import {changeScreen} from './redux/screens';
 import * as applabConstants from './constants';
 const {ApplabInterfaceMode} = applabConstants;
@@ -76,7 +75,12 @@ import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
-import {generateExpoApk} from '../util/exporter';
+import {
+  expoGenerateApk,
+  expoCheckApkBuild,
+  expoCancelApkBuild
+} from '../util/exporter';
+import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 
 /**
  * Create a namespace for the application.
@@ -100,20 +104,11 @@ var jsInterpreterLogger = null;
  */
 Applab.log = function(object, logLevel) {
   if (jsInterpreterLogger) {
-    jsInterpreterLogger.log(
-      experiments.isEnabled('react-inspector')
-        ? {output: object, fromConsoleLog: true}
-        : object
-    );
+    jsInterpreterLogger.log({output: object, fromConsoleLog: true});
   }
 
   getStore().dispatch(
-    jsDebugger.appendLog(
-      experiments.isEnabled('react-inspector')
-        ? {output: object, fromConsoleLog: true}
-        : object,
-      logLevel
-    )
+    jsDebugger.appendLog({output: object, fromConsoleLog: true}, logLevel)
   );
 };
 consoleApi.setLogMethod(Applab.log);
@@ -323,11 +318,6 @@ Applab.getHtml = function() {
   return Applab.levelHtml;
 };
 
-Applab.getLibraries = function() {
-  var libraries = getStore().getState().applabLibrary.libraries;
-  return libraries.length ? libraries : undefined;
-};
-
 /**
  * Sets Applab.levelHtml as well as #designModeViz contents.
  * designModeViz is the source of truth for the app's HTML.
@@ -403,11 +393,17 @@ Applab.init = function(config) {
   // Necessary for tests.
   thumbnailUtils.init();
 
+  Applab.generatedProperties = {
+    ...config.initialGeneratedProperties
+  };
+  getStore().dispatch(
+    setExportGeneratedProperties(Applab.generatedProperties.export)
+  );
+  config.getGeneratedProperties = getGeneratedProperties;
+
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
-  config.getLibrary = getLibrary;
-  config.codeContainsError = codeContainsError;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -418,8 +414,7 @@ Applab.init = function(config) {
   if (config.level.editBlocks) {
     header.showLevelBuilderSaveButton(() => ({
       start_blocks: Applab.getCode(),
-      start_html: Applab.getHtml(),
-      start_libraries: Applab.getLibraries()
+      start_html: Applab.getHtml()
     }));
   }
   Applab.channelId = config.channel;
@@ -546,7 +541,6 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    getStore().dispatch(setApplabLibraries(config.level.startLibraries));
     Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
     Applab.storage.populateKeyValue(
       level.dataProperties,
@@ -654,6 +648,21 @@ Applab.init = function(config) {
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
+    expoGenerateApk: expoGenerateApk.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
+    expoCheckApkBuild: expoCheckApkBuild.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
+    expoCancelApkBuild: expoCancelApkBuild.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode: !config.level.hideViewDataButton,
@@ -699,39 +708,6 @@ Applab.init = function(config) {
       config.dropletConfig.blocks.push(customFunctions[key]);
       level.codeFunctions[key] = null;
     });
-  }
-
-  var librariesExist = level.libraries && level.libraries.length > 0;
-
-  if (
-    !librariesExist &&
-    level.startLibraries &&
-    level.startLibraries.length > 0
-  ) {
-    level.libraries = level.startLibraries;
-    librariesExist = true;
-  }
-
-  // Libraries should be added to redux whether the experiment is enabled or
-  // not. This prevents work from being lost if a levelbuilder toggles the
-  // experiment flag.
-  if (librariesExist) {
-    getStore().dispatch(setApplabLibraries(level.libraries));
-  }
-
-  if (experiments.isEnabled('student-libraries') && librariesExist) {
-    level.libraries.forEach(library => {
-      config.dropletConfig.additionalPredefValues.push(library.name);
-    });
-    let importedConfigs = level.libraries
-      .map(library => library.dropletConfig)
-      .reduce((a, b) => a.concat(b));
-    if (importedConfigs) {
-      Object.keys(importedConfigs).map(key => {
-        config.dropletConfig.blocks.push(importedConfigs[key]);
-        level.codeFunctions[importedConfigs[key].func] = null;
-      });
-    }
   }
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
@@ -897,33 +873,36 @@ Applab.render = function() {
   );
 };
 
+/**
+ * Export the project for web or use within Expo.
+ * @param {Object} expoOpts
+ */
 Applab.exportApp = function(expoOpts) {
+  // Run, grab the html from divApplab, then reset:
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
 
-  // TODO: find another way to get this info that doesn't rely on globals.
-  const appName = project.getCurrentName() || 'my-app';
-
-  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
-  if (mode === 'expoGenerateApk') {
-    return generateExpoApk(
-      {
-        appName,
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      },
-      studioApp().config
-    );
-  }
-
   return Exporter.exportApp(
-    appName,
+    project.getCurrentName() || 'my-app',
     studioApp().editor.getValue(),
     html,
     expoOpts,
     studioApp().config
+  );
+};
+
+Applab.setAndroidExportProps = function(props) {
+  // Spread the previous object so changes here will always fail shallow
+  // compare and trigger react prop changes
+  Applab.generatedProperties.export = {
+    ...Applab.generatedProperties.export,
+    android: props
+  };
+  project.projectChanged();
+  project.saveIfSourcesChanged();
+  getStore().dispatch(
+    setExportGeneratedProperties(Applab.generatedProperties.export)
   );
 };
 
@@ -1152,24 +1131,12 @@ Applab.onReportComplete = function(response) {
   displayFeedback();
 };
 
-/**
- * Generates a library from the functions in the project code
- */
-function getLibrary() {
-  var temporaryInterpreter = new JSInterpreter({studioApp: studioApp()});
-  temporaryInterpreter.parse({code: studioApp().getCode()});
-  return temporaryInterpreter.getFunctionsAndParams(studioApp().getCode());
-}
-
-/**
- * Returns true if a lint error (red gutter warning) exists in the code
- */
-function codeContainsError() {
-  var errors = annotationList.getJSLintAnnotations().filter(annotation => {
-    return annotation.type === 'error';
-  });
-
-  return errors.length > 0;
+function getGeneratedProperties() {
+  // Must return a new object instance each time so the project
+  // system can properly compare currentSources vs newSources
+  return {
+    ...Applab.generatedProperties
+  };
 }
 
 /**
@@ -1213,28 +1180,6 @@ Applab.execute = function() {
       jsInterpreterLogger.attachTo(Applab.JSInterpreter);
     }
     getStore().dispatch(jsDebugger.attach(Applab.JSInterpreter));
-
-    // Set up student-created libraries
-    if (experiments.isEnabled('student-libraries')) {
-      getStore()
-        .getState()
-        .applabLibrary.libraries.map(library => {
-          var functionNames = library.functionNames
-            .map(name => {
-              return name + ': ' + name;
-            })
-            .join(',');
-          var libraryClosure =
-            'var ' +
-            library.name +
-            ' = (function() {\n' +
-            library.source +
-            '\nreturn {' +
-            functionNames +
-            '};})();';
-          codeWhenRun = libraryClosure + codeWhenRun;
-        });
-    }
 
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({

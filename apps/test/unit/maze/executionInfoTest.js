@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import ExecutionInfo from '@cdo/apps/maze/executionInfo';
 
 describe('ExecutionInfo tests', function() {

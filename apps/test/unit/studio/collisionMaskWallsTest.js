@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import CollisionMaskWalls from '@cdo/apps/studio/collisionMaskWalls';
 
 describe('collisionMaskWalls', function() {

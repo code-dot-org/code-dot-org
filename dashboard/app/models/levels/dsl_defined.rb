@@ -34,14 +34,45 @@ class DSLDefined < Level
     "Enter the level definition here.\n"
   end
 
-  def localized_text(text)
-    I18n.t(
-      text,
-      scope: ['data', type.underscore, name],
+  def localized_property(property)
+    # We have to manually check for default here rather than just passing
+    # self.send(property) directly  because some properties used here (like
+    # questions and answer for multi and match levels) expect to return an
+    # array of values, and if you pass an array as default to I18n.t it
+    # actually only returns the first element
+    localized = I18n.t(
+      property,
+      scope: ['data', 'dsls', name],
       separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR,
-      default: text,
+      default: nil,
       smart: true
     )
+
+    source = try(property) || properties[property]
+    # When the result of I18n.t is a hash (or an array of hashes), they always
+    # have symbol keys regardless of the input format. We always want strings,
+    # so convert the value here.
+    self.class.resolve_partially_localized(localized, source)
+  end
+
+  # Localized content for DSL-Defined levels can be any combination of strings,
+  # arrays, or hashes. In every case, when we do not yet have a translation for
+  # a piece of content it comes back as nil. When that happens, we want to
+  # default back to the source (English) content; but we also want to make sure
+  # that we can deal with cases when _some_ of the content has been translated,
+  # but other parts return nil.
+  def self.resolve_partially_localized(localized, source)
+    if localized.blank?
+      source
+    elsif localized.is_a? Hash
+      source.deep_merge(localized).deep_stringify_keys
+    elsif localized.is_a? Array
+      localized.zip(source).map do |loc, src|
+        resolve_partially_localized(loc, src)
+      end
+    else
+      localized
+    end
   end
 
   def self.setup(data)

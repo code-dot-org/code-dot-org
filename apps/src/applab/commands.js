@@ -2,14 +2,12 @@ import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
-import experiments from '../util/experiments';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import * as setPropertyDropdown from './setPropertyDropdown';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
-import themeColor from './themeColor';
 import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
@@ -24,19 +22,14 @@ import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
-import {actions} from './redux/applab';
+import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {getStore} from '../redux';
-import datasetLibrary from '@cdo/apps/code-studio/datasetLibrary.json';
 import $ from 'jquery';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
-import {
-  ICON_PREFIX_REGEX,
-  defaultFontSizeStyle,
-  fontFamilyStyles
-} from './constants';
+import {ICON_PREFIX_REGEX} from './constants';
 
 var applabCommands = {};
 export default applabCommands;
@@ -197,16 +190,11 @@ applabCommands.button = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  if (experiments.isEnabled('applabThemes')) {
-    newButton.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(newButton, Applab.activeScreen());
-  } else {
-    newButton.style.fontSize = defaultFontSizeStyle;
-    newButton.style.fontFamily = fontFamilyStyles[0];
-    newButton.style.color = themeColor.buttonText.classic;
-    newButton.style.backgroundColor = themeColor.buttonBackground.classic;
-    elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
-  }
+  newButton.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newButton,
+    Applab.activeScreen()
+  );
 
   return Boolean(
     newButton.appendChild(textNode) &&
@@ -909,17 +897,11 @@ applabCommands.textInput = function(opts) {
   newInput.style.position = 'relative';
   newInput.style.height = '30px';
   newInput.style.width = '200px';
-  if (experiments.isEnabled('applabThemes')) {
-    newInput.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(newInput, Applab.activeScreen());
-  } else {
-    newInput.style.fontSize = defaultFontSizeStyle;
-    newInput.style.fontFamily = fontFamilyStyles[0];
-    elementUtils.setDefaultBorderStyles(newInput, {
-      forceDefaults: true,
-      textInput: true
-    });
-  }
+  newInput.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newInput,
+    Applab.activeScreen()
+  );
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -936,15 +918,11 @@ applabCommands.textLabel = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
-  if (experiments.isEnabled('applabThemes')) {
-    newLabel.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(newLabel, Applab.activeScreen());
-  } else {
-    newLabel.style.fontSize = defaultFontSizeStyle;
-    newLabel.style.fontFamily = fontFamilyStyles[0];
-    newLabel.style.backgroundColor = themeColor.labelBackground.classic;
-    elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
-  }
+  newLabel.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newLabel,
+    Applab.activeScreen()
+  );
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -1007,21 +985,11 @@ applabCommands.dropdown = function(opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
-  if (experiments.isEnabled('applabThemes')) {
-    newSelect.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(newSelect, Applab.activeScreen());
-  } else {
-    newSelect.style.fontSize = defaultFontSizeStyle;
-    newSelect.style.fontFamily = fontFamilyStyles[0];
-    newSelect.style.color = themeColor.dropdownText.classic;
-    elementLibrary.typeSpecificPropertyChange(
-      newSelect,
-      'textColor',
-      newSelect.style.color
-    );
-    newSelect.style.backgroundColor = themeColor.dropdownBackground.classic;
-    elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
-  }
+  newSelect.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newSelect,
+    Applab.activeScreen()
+  );
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
@@ -1604,12 +1572,16 @@ function filterUrl(urlToCheck) {
     data: JSON.stringify({url: urlToCheck})
   })
     .success(data => {
-      let approved = data['approved'];
-      getStore().dispatch(actions.addRedirectNotice(approved, urlToCheck));
+      let response = data['approved']
+        ? REDIRECT_RESPONSE.APPROVED
+        : REDIRECT_RESPONSE.REJECTED;
+      getStore().dispatch(actions.addRedirectNotice(response, urlToCheck));
     })
     .fail((jqXhr, status) => {
       // When this query fails, default to the dialog that allows the user to choose
-      getStore().dispatch(actions.addRedirectNotice(true, urlToCheck));
+      getStore().dispatch(
+        actions.addRedirectNotice(REDIRECT_RESPONSE.APPROVED, urlToCheck)
+      );
     });
 }
 
@@ -1634,6 +1606,10 @@ applabCommands.openUrl = function(opts) {
         // If url doesn't have a protocol, add one
         window.open('https://' + opts.url);
       }
+    } else if (hostname.startsWith('mailto')) {
+      getStore().dispatch(
+        actions.addRedirectNotice(REDIRECT_RESPONSE.UNSUPPORTED, opts.url)
+      );
     } else {
       filterUrl(opts.url);
     }
@@ -1784,71 +1760,6 @@ applabCommands.handleReadValue = function(opts, value) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null, value);
   }
-};
-
-applabCommands.getList = function(opts) {
-  validateGetListArgs(opts.tableName, opts.columnName);
-  var onSuccess = handleGetListSync.bind(this, opts);
-  var onError = handleGetListSyncError.bind(this, opts);
-  Applab.storage.readRecords(opts.tableName, {}, onSuccess, onError);
-};
-
-var validateGetListArgs = function(tableName, columnName) {
-  let dataset = datasetLibrary.datasets.find(d => d.name === tableName);
-  if (!dataset) {
-    outputWarning(
-      tableName +
-        ' is not a data set in this project. Check the Data tab to see the names of your tables'
-    );
-    return;
-  }
-  const columnList = dataset.columns.split(',');
-  if (columnList.indexOf(columnName) === -1) {
-    outputWarning(
-      columnName +
-        ' is not a column in ' +
-        tableName +
-        '. Check the Data tab to see the names of the columns in that table.'
-    );
-  }
-};
-
-var handleGetListSync = function(opts, values) {
-  let columnList = [];
-
-  if (values.length > 0) {
-    values.forEach(row => {
-      if (row.hasOwnProperty(opts.columnName)) {
-        columnList.push(row[opts.columnName]);
-      }
-    });
-    opts.callback(columnList);
-    return;
-  }
-
-  let url;
-  datasetLibrary.datasets.forEach(dataset => {
-    if (dataset.name === opts.tableName) {
-      url = dataset.url;
-    }
-  });
-  if (url) {
-    // Import the dataset, then try getList again.
-    Applab.storage.importDataset(
-      opts.tableName,
-      url,
-      () => applabCommands.getList(opts),
-      () => console.log('error')
-    );
-  } else {
-    // No dataset with the specified name, call back into interpreter and return the empty list.
-    opts.callback(columnList);
-  }
-};
-
-var handleGetListSyncError = function(opts, values) {
-  console.log('handleGetListSyncError');
-  opts.callback();
 };
 
 applabCommands.getKeyValueSync = function(opts) {

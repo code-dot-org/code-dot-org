@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import Alert from '@cdo/apps/templates/alert';
 
 describe('Alert', () => {

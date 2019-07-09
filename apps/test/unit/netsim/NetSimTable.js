@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
