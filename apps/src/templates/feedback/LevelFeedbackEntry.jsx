@@ -44,12 +44,16 @@ const styles = {
 };
 
 export default class LevelFeedbackEntry extends Component {
-  static propTypes = {
-    feedback: shapes.feedback
-  };
+  static propTypes = {feedback: shapes.feedback};
 
   render() {
-    const {seenByStudent} = this.props;
+    const {
+      seenByStudent,
+      lessonName,
+      levelNum,
+      unitName,
+      lastUpdated
+    } = this.props.feedback;
 
     const buttonColor = seenByStudent
       ? Button.ButtonColor.gray
@@ -67,20 +71,20 @@ export default class LevelFeedbackEntry extends Component {
             <span style={styles.label}>
               {i18n.feedbackNotificationLesson()}
             </span>
-            <span>{this.props.lessonName}</span>
+            <span>{lessonName}</span>
             <span style={styles.label}>{i18n.feedbackNotificationLevel()}</span>
-            <span>{this.props.levelNum}</span>
+            <span>{levelNum}</span>
           </div>
           <div>
             <span style={styles.label}>{i18n.feedbackNotificationUnit()}</span>
-            <span>{this.props.unitName}</span>
+            <span>{unitName}</span>
           </div>
         </div>
         <div style={styles.time}>
           <span style={styles.label}>
             {i18n.feedbackNotificationLastUpdated()}
           </span>
-          <span>{this.props.lastUpdated}</span>
+          <span>{lastUpdated}</span>
         </div>
         <Button
           href="/"

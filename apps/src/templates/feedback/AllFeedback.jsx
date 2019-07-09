@@ -16,19 +16,7 @@ export default class AllFeedback extends Component {
       <div>
         <h1>{i18n.feedbackAll()}</h1>
         {feedbacks.map((feedback, i) => {
-          return (
-            <LevelFeedbackEntry
-              key={i}
-              lessonName={feedback.lesson_name}
-              levelNum={feedback.level_num}
-              linkToLevel={feedback.link_to_level}
-              unitName={feedback.unit_name}
-              linkToUnit={feedback.link_to_level}
-              lastUpdated={feedback.updated_at}
-              comment={feedback.comment}
-              seenByStudent={false}
-            />
-          );
+          return <LevelFeedbackEntry key={i} feedback={feedback} />;
         })}
       </div>
     );
