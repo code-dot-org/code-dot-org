@@ -58,9 +58,8 @@ class TeacherPanel extends React.Component {
     getSelectedUserId: PropTypes.func,
     sectionData: PropTypes.object,
     scriptName: PropTypes.string,
-    // pageType describes the current route the user is on (e.g., 'level',
-    // 'script_overview', 'stage_extras'). Used only for logging to Firehose.
-    pageType: PropTypes.string,
+    // pageType describes the current route the user is on. Used only for logging.
+    pageType: PropTypes.oneOf(['level', 'script_overview', 'stage_extras']),
 
     // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
