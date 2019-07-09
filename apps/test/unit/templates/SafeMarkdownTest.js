@@ -239,4 +239,20 @@ describe('SafeMarkdown', () => {
       'arbitrary unsupported tags are ignored and/or escaped'
     ).to.equal(true);
   });
+
+  it('is resistant to JS injection in XML', () => {
+    const xmlJSInjection = shallow(
+      <SafeMarkdown markdown='<xml onload="alert(&#x22;foxtrot&#x22;)"><block/></xml>' />
+    );
+    expect(
+      xmlJSInjection.equals(
+        <div>
+          <xml>
+            <block />
+          </xml>
+        </div>
+      ),
+      'JS events in XML are ignored'
+    ).to.equal(true);
+  });
 });
