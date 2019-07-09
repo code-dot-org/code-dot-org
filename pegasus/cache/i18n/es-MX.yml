@@ -189,7 +189,7 @@ es-MX:
     obtener la ayuda necesaria durante el curso en la red de tutores.
   third_party_codehs_btn_try: Introducción a CS Aprende Más para escuelas
   third_party_codecademy_desc: Estamos redefiniendo la educación de principio a fin.
-    La web ha transformado ocasi todo, desde el comercio y las redes sociales, hasta
+    La web ha transformado casi todo, desde el comercio y las redes sociales, hasta
     la salud y más. Estamos construyendo la educación que el mundo necesita, la primera
     educación verdaderamente nativa de la red.
   third_party_codecademy_btn_curriculum: Descarga el plan de estudios de Codecademy
@@ -206,7 +206,7 @@ es-MX:
   third_party_desc_5_4to8: 5 lecciones, aproximadamente, dirigidas a estudiantes de
     cuarto a octavo grado
   third_party_desc_10to12_kto3: 10 a 12 lecciones, aproximadamente, dirigidas a estudiantes
-    de preescolar a tercer grado*
+    de preescolar a tercer grado
   third_party_desc_11_kto5: 11 lecciones, aproximadamente, dirigidas a estudiantes
     de preescolar a quinto grado*
   third_party_desc_10to12_kto5: 10 a 12 lecciones, aproximadamente, dirigidas a estudiantes
@@ -1311,6 +1311,7 @@ es-MX:
   express-2018_name: Curso Express (2018)
   pre-express-2018_name: Curso Express para prelectores (2018)
   express-2019_name: Curso Express (2019)
+  pre-express-2019_name: Curso Express para prelectores (2019)
   cspunit2_name: "(anterior) Unidad 2: Internet"
   cspunit3_name: "(anterior) Unidad 3: Programación"
   cspunit4_name: "(anterior) Unidad 4: Datos"
@@ -1457,6 +1458,12 @@ es-MX:
   coursed-2018_gradelevel: Edades de 7 a 11 años
   coursee-2018_gradelevel: De 8 a 12 años
   coursef-2018_gradelevel: De 9 a 13 años
+  coursea-2019_gradelevel: De 4 a 7 años
+  courseb-2019_gradelevel: De 5 a 8 años
+  coursec-2019_gradelevel: Edades de 6 a 10 años
+  coursed-2019_gradelevel: Edades de 7 a 11 años
+  coursee-2019_gradelevel: De 8 a 12 años
+  coursef-2019_gradelevel: De 9 a 13 años
   accelerated_gradelevel: De 10 a 18 años
   codeorg_platformtext: Navegadores modernos, teléfonos inteligentes, tabletas
   codeintl_platformtext: Navegadores modernos, teléfonos inteligentes, tabletas
@@ -1637,6 +1644,19 @@ es-MX:
   coursee-2018_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
     C y D, y luego avanza con funciones.
   coursef-2018_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
+    de Ciencias de la Computación y crea tu propio arte, historia o juego.
+  coursea-2019_shortdescription_congrats: Una introducción a las ciencias de la computación
+    para prelectores.
+  courseb-2019_shortdescription_congrats: Una introducción a las ciencias de la computación
+    para prelectores (similar al Curso A, pero con más variedad para estudiantes más
+    avanzados).
+  coursec-2019_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
+  coursed-2019_shortdescription_congrats: Rápidamente repasada conceptos del Curso
+    C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
+  coursee-2019_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
+    C y D, y luego avanza con funciones.
+  coursef-2019_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
     de Ciencias de la Computación y crea tu propio arte, historia o juego.
   codeorg_longdescription: Aprende los conceptos básicos de las ciencias de la computación
     mediante la programación del tipo arrastrar y soltar. Este tutorial autodirigido
@@ -2446,7 +2466,7 @@ es-MX:
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
     Engineer* es un programa que abarca desde la niñez hasta la carrera profesional,
     diseñado para inspirar, educar y formar a niños y jóvenes de bajos recursos y
-    con otras necesitados, y ayudarlos a seguir una carrera en ciencias de la computación.
+    con otras necesidades, y ayudarlos a seguir una carrera en ciencias de la computación.
     <a href='%{amazon_future_engineer_link}' target='_blank'>Conoce más</a>
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Aprende más acerca
     de Amazon Future Engineer

@@ -90,7 +90,7 @@ module Pd
     def self.all_form_ids
       CATEGORY_MAP.keys.map do |subject|
         form_id(subject)
-      end
+      end.flatten.compact.uniq
     end
 
     def self.unique_attributes

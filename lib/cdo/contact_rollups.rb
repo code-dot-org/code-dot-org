@@ -4,17 +4,12 @@ require src_dir 'database'
 require_relative('../../dashboard/config/environment')
 require 'cdo/properties'
 require 'json'
-require 'aws-sdk-rds'
 
 class ContactRollups
-  # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
+  # Production database has a global max query execution timeout setting. This 30 minute setting can be used
   # to override the timeout for a specific session or query.
-  MAX_EXECUTION_TIME = 1_200_000
+  MAX_EXECUTION_TIME = 1_800_000
   MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
-
-  DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
-  DATABASE_CLUSTER_CLONE_INSTANCE_ID = "#{DATABASE_CLUSTER_CLONE_ID}-instance"
-  DATABASE_CLONE_INSTANCE_TYPE = 'db.r4.2xlarge'
 
   # Connection to read from Pegasus production database.
   PEGASUS_DB_READER = sequel_connect(
@@ -30,13 +25,32 @@ class ContactRollups
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
+  # Connection to read from Pegasus reporting database.
+  PEGASUS_REPORTING_DB_READER = sequel_connect(
+    CDO.pegasus_reporting_db_reader,
+    CDO.pegasus_reporting_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
+
+  # Connection to write to Pegasus reporting database.
+  PEGASUS_REPORTING_DB_WRITER = sequel_connect(
+    CDO.pegasus_reporting_db_writer,
+    CDO.pegasus_reporting_db_writer,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
+
+  # Connection to read from Dashboard reporting database.
+  DASHBOARD_REPORTING_DB_READER = sequel_connect(
+    CDO.dashboard_reporting_db_reader,
+    CDO.dashboard_reporting_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
+
   def self.mysql_multi_connection
     # return a connection with the MULTI_STATEMENTS flag set that allows multiple statements in one DB call
-    pegasus_clone_writer_uri = URI(CDO.pegasus_reporting_db_writer)
-    pegasus_clone_writer_uri.host = @@clone_db_endpoint
     sequel_connect(
-      pegasus_clone_writer_uri.to_s,
-      pegasus_clone_writer_uri.to_s,
+      CDO.pegasus_reporting_db_writer,
+      CDO.pegasus_reporting_db_writer,
       query_timeout: MAX_EXECUTION_TIME_SEC,
       multi_statements: true
     )
@@ -138,31 +152,30 @@ class ContactRollups
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
   CENSUS_FORM_NAME = "Census".freeze
 
-  def self.build_contact_rollups
+  def self.build_contact_rollups(log_collector)
     start = Time.now
 
-    initialize_connections_to_database_clone
-
-    @@pegasus_clone_db_writer.run "SET SQL_SAFE_UPDATES = 0"
+    PEGASUS_REPORTING_DB_WRITER.run "SET SQL_SAFE_UPDATES = 0"
     # set READ UNCOMMITTED transaction isolation level on both read connections to avoid taking locks
     # on tables we are reading from during what can be multi-minute operations
-    @@dashboard_clone_db_reader.run "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
+    DASHBOARD_REPORTING_DB_READER.run "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
     ActiveRecord::Base.connection.execute "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
-    create_destination_table
-    insert_from_pegasus_forms
-    insert_from_dashboard_contacts
-    insert_from_dashboard_pd_enrollments
-    insert_from_dashboard_census_submissions
-    update_geo_from_school_data
-    update_unsubscribe_info
-    update_roles
-    update_grades_taught
-    update_ages_taught
-    update_district
-    update_school
-    update_courses_facilitated
-    update_professional_learning_enrollment
-    update_professional_learning_attendance
+
+    log_collector.time!('create_destination_table') {create_destination_table}
+    log_collector.time!('insert_from_pegasus_forms') {insert_from_pegasus_forms}
+    log_collector.time!('insert_from_dashboard_contacts') {insert_from_dashboard_contacts}
+    log_collector.time!('insert_from_dashboard_pd_enrollments') {insert_from_dashboard_pd_enrollments}
+    log_collector.time!('insert_from_dashboard_census_submissions') {insert_from_dashboard_census_submissions}
+    log_collector.time!('update_geo_from_school_data') {update_geo_from_school_data}
+    log_collector.time!('update_unsubscribe_info') {update_unsubscribe_info}
+    log_collector.time!('update_roles') {update_roles}
+    log_collector.time!('update_grades_taught') {update_grades_taught}
+    log_collector.time!('update_ages_taught') {update_ages_taught}
+    log_collector.time!('update_district') {update_district}
+    log_collector.time!('update_school') {update_school}
+    log_collector.time!('update_courses_facilitated') {update_courses_facilitated}
+    log_collector.time!('update_professional_learning_enrollment') {update_professional_learning_enrollment}
+    log_collector.time!('update_professional_learning_attendance') {update_professional_learning_attendance}
 
     # record contacts' interactions with us based on forms
     FORM_INFOS.each do |form_info|
@@ -171,21 +184,23 @@ class ContactRollups
 
     # parse all forms that collect user-reported address/location or other data of interest
     FORM_KINDS_WITH_DATA.each do |kind|
-      update_data_from_forms(kind)
+      log_collector.time!("update_data_from_forms kind=#{kind}") {update_data_from_forms(kind)}
     end
 
     # Add contacts to the Teacher role based on form responses
-    update_teachers_from_forms
-    update_teachers_from_census_submissions
+    log_collector.time!('update_teachers_from_forms') {update_teachers_from_forms}
+    log_collector.time!('update_teachers_from_census_submissions') {update_teachers_from_census_submissions}
 
     # Set opt_in based on information collected in Dashboard Email Preference.
-    update_email_preferences
+    log_collector.time!('update_email_preferences') {update_email_preferences}
 
-    count = @@pegasus_clone_db_reader["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
+    count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
+
+    log_collector.info("#{count} records created in contact_rollups_daily table")
   end
 
-  def self.sync_contact_rollups_to_main
+  def self.sync_contact_rollups_to_main(log_collector)
     log("#{Time.now} Starting")
 
     num_inserts = 0
@@ -196,7 +211,7 @@ class ContactRollups
     # MySQL use the email index to sort by email.
 
     # Query all of the contacts in the latest daily contact rollup table (contact_rollups_daily) sorted by email.
-    contact_rollups_src = @@pegasus_clone_db_reader['SELECT * FROM contact_rollups_daily FORCE INDEX(contact_rollups_email_index) ORDER BY email']
+    contact_rollups_src = PEGASUS_REPORTING_DB_READER['SELECT * FROM contact_rollups_daily FORCE INDEX(contact_rollups_email_index) ORDER BY email']
     # Query all of the contacts in the master contact rollup table (contact_rollups_daily) sorted by email.
     # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
     contact_rollups_dest = PEGASUS_DB_READER["SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups FORCE INDEX(contact_rollups_email_index) ORDER BY email"]
@@ -277,6 +292,7 @@ class ContactRollups
     end
 
     log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
+    log_collector.info("#{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
   end
 
   def self.create_destination_table
@@ -285,8 +301,8 @@ class ContactRollups
     # Ensure destination table exists and is empty. Since this code runs on the clone and the destination
     # table should exist only there, we can't use a migration to create it. Create the destination table explicitly in code.
     # Create it based on master contact_rollups table. Create it every time to keep up with schema changes in contact_rollups.
-    @@pegasus_clone_db_writer.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
-    @@pegasus_clone_db_writer.run "CREATE TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
+    PEGASUS_REPORTING_DB_WRITER.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
+    PEGASUS_REPORTING_DB_WRITER.run "CREATE TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
     log_completion(start)
   end
 
@@ -302,7 +318,7 @@ class ContactRollups
   def self.insert_from_dashboard_contacts
     start = Time.now
     log "Inserting teacher contacts and IP geo data from dashboard.users"
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, dashboard_user_id, roles, city, state, postal_code, country)
     -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
     SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), '#{ROLE_TEACHER}'),
@@ -318,7 +334,7 @@ class ContactRollups
   def self.insert_from_dashboard_pd_enrollments
     start = Time.now
     log "Inserting contacts from dashboard.pd_enrollments"
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles)
     SELECT email, name, '#{ROLE_TEACHER}'
     FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
@@ -337,7 +353,7 @@ class ContactRollups
   def self.insert_from_dashboard_census_submissions
     start = Time.now
     log "Inserting contacts from dashboard.census_submissions"
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, form_roles)
     SELECT submitter_email_address, submitter_name, '#{ROLE_FORM_SUBMITTER}', '#{CENSUS_FORM_NAME}', lower(submitter_role)
     FROM #{DASHBOARD_DB_NAME}.census_submissions AS census_submissions
@@ -375,7 +391,7 @@ class ContactRollups
     INNER JOIN school_infos ON school_infos.id = users_view.school_info_id
     INNER JOIN schools ON schools.id = school_infos.school_id"
 
-    dataset = @@dashboard_clone_db_reader[sql]
+    dataset = DASHBOARD_REPORTING_DB_READER[sql]
 
     dataset.each do |user_and_geo|
       state_code = user_and_geo[:state]
@@ -386,7 +402,7 @@ class ContactRollups
       zip = user_and_geo[:zip]
       email = user_and_geo[:email]
       # update the user's city/state/zip
-      @@pegasus_clone_db_writer[DEST_TABLE_NAME.to_sym].where(email: email).
+      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: email).
         update(city: city, state: state,
         postal_code: zip, country: 'United States'
         )
@@ -398,7 +414,7 @@ class ContactRollups
   def self.update_teachers_from_forms
     start = Time.now
     log "Updating teacher roles based on submitted forms"
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{PEGASUS_DB_NAME}.forms on forms.email = #{DEST_TABLE_NAME}.email
     SET roles =
@@ -416,7 +432,7 @@ class ContactRollups
   def self.update_teachers_from_census_submissions
     start = Time.now
     log "Updating teacher roles based on census submissions"
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.census_submissions on census_submissions.submitter_email_address = #{DEST_TABLE_NAME}.email
     SET roles =
@@ -433,7 +449,7 @@ class ContactRollups
   def self.update_unsubscribe_info
     start = Time.now
     log "Inserting contacts from pegasus.contacts"
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{PEGASUS_DB_NAME}.contacts on contacts.email = #{DEST_TABLE_NAME}.email
     SET opted_out = true
@@ -444,7 +460,7 @@ class ContactRollups
   def self.update_email_preferences
     start = Time.now
     log "Updating from dashboard.email_preferences"
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.email_preferences on email_preferences.email = #{DEST_TABLE_NAME}.email
     SET #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.opt_in = #{DASHBOARD_DB_NAME}.email_preferences.opt_in"
@@ -454,7 +470,7 @@ class ContactRollups
   def self.insert_from_pegasus_forms
     start = Time.now
     log "Inserting contacts and IP geo data from pegasus.forms"
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, city, state, postal_code, country)
     SELECT email, name, '#{ROLE_FORM_SUBMITTER}', kind, city, state, postal_code, country FROM #{PEGASUS_DB_NAME}.forms
     LEFT OUTER JOIN #{PEGASUS_DB_NAME}.form_geos on form_geos.form_id = forms.id
@@ -498,7 +514,7 @@ class ContactRollups
   end
 
   def self.append_to_role_list_from_permission(permission_name, dest_value)
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     INNER JOIN #{DASHBOARD_DB_NAME}.user_permissions AS user_permissions ON user_permissions.user_id = users.id
@@ -511,7 +527,7 @@ class ContactRollups
     start = Time.now
     log "Appending '#{dest_field}' field with #{dest_value} from forms of kind #{form_kinds}"
 
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{PEGASUS_DB_NAME}.forms ON forms.email = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.email
     SET #{dest_field} = CONCAT(COALESCE(CONCAT(#{dest_field}, ','), ''), #{dest_value})
@@ -520,7 +536,7 @@ class ContactRollups
   end
 
   def self.add_role_from_course_sections_taught(role_name, course_name)
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN (
       select distinct id from (
@@ -542,7 +558,7 @@ class ContactRollups
   end
 
   def self.add_role_from_script_sections_taught(role_name, script_list)
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN (
         select distinct sections.user_id from #{DASHBOARD_DB_NAME}.sections AS sections
@@ -554,7 +570,7 @@ class ContactRollups
   end
 
   def self.append_regional_partner_to_role_list
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     INNER JOIN #{DASHBOARD_DB_NAME}.regional_partners AS regional_partners ON regional_partners.contact_id = users.id
@@ -565,7 +581,7 @@ class ContactRollups
   def self.update_courses_facilitated
     start = Time.now
     log "Updating courses_facilitated"
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
     (SELECT facilitator_id, GROUP_CONCAT(course) AS courses FROM
       (SELECT DISTINCT facilitator_id, course FROM #{DASHBOARD_DB_NAME}.pd_course_facilitators
@@ -595,7 +611,7 @@ class ContactRollups
   # Updates user id-based professional learning enrollment for specified course
   # @param course [String] name of course to update for
   def self.update_professional_learning_enrollment_for_course_from_userid(course)
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
       (SELECT user_id FROM
         (SELECT DISTINCT pd_enrollments.user_id FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
@@ -615,7 +631,7 @@ class ContactRollups
   # Updates email-based professional learning enrollment for specified course
   # @param course [String] name of course to update for
   def self.update_professional_learning_enrollment_for_course_from_email(course)
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
       (SELECT email FROM
         (SELECT DISTINCT pd_enrollments.email FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
@@ -644,7 +660,7 @@ class ContactRollups
   # Updates professional learning attendance based on pd_attendances table
   # @param course [String] name of course to update for
   def self.update_professional_learning_attendance_for_course_from_pd_attendances(course)
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
       UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
         (SELECT DISTINCT users.email
           FROM #{DASHBOARD_DB_NAME}.pd_attendances AS pd_attendances
@@ -665,7 +681,7 @@ class ContactRollups
   # Updates professional learning attendance based on sections table
   # @param course [String] name of course to update for
   def self.update_professional_learning_attendance_for_course_from_sections(course)
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
       (SELECT DISTINCT users_view.email
       FROM #{DASHBOARD_DB_NAME}.sections
@@ -773,7 +789,7 @@ class ContactRollups
     conn = mysql_multi_connection
     time_last_output = start
 
-    @@pegasus_clone_db_reader[:forms].where(kind: form_kind).each do |form|
+    PEGASUS_REPORTING_DB_READER[:forms].where(kind: form_kind).each do |form|
       record_count += 1
       begin
         data = JSON.parse(form[:data])
@@ -831,7 +847,7 @@ class ContactRollups
   def self.update_grades_taught
     start = Time.now
     log "Updating grades taught from dashboard.users"
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
     (SELECT dashboard_user_id, GROUP_CONCAT(grade) as grades FROM
       (SELECT DISTINCT #{DEST_TABLE_NAME}.dashboard_user_id, sections.grade FROM #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
@@ -858,7 +874,7 @@ class ContactRollups
     # for age = 4, include 4 and below
     max_birthday_clause = "students.birthday <= DATE_ADD(NOW(), INTERVAL -#{age} YEAR) AND" unless age <= 4
 
-    @@pegasus_clone_db_writer.run "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}, (
     SELECT DISTINCT sections.user_id AS teacher_user_id
     FROM #{DASHBOARD_DB_NAME}.users_view AS students
@@ -903,14 +919,14 @@ class ContactRollups
         AND (length(email) > 0)
     END_OF_STRING
 
-    users = @@dashboard_clone_db_reader[users_query]
+    users = DASHBOARD_REPORTING_DB_READER[users_query]
     # Create iterator for query using the #stream method so we stream the results back rather than
     # trying to load everything in memory
     users_iterator = users.stream.to_enum
     user = grab_next(users_iterator)
     until user.nil?
       unless user[:ops_school].nil?
-        @@pegasus_clone_db_writer[DEST_TABLE_NAME.to_sym].where(email: user[:email]).
+        PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user[:email]).
             update(school_name: user[:ops_school])
       end
       user = grab_next(users_iterator)
@@ -920,11 +936,11 @@ class ContactRollups
 
     start = Time.now
     log "Updating district information from dashboard.pd_enrollments"
-    @@dashboard_clone_db_reader[:pd_enrollments].exclude(email: nil).exclude(school_info_id: nil).
+    DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).exclude(school_info_id: nil).
         select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
         inner_join(:school_infos, id: :school_info_id).
         inner_join(:school_districts, id: :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
-      @@pegasus_clone_db_writer[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(
+      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(
         district_name: pd_enrollment[:district_name],
         district_city: pd_enrollment[:city],
         district_state: pd_enrollment[:state],
@@ -937,8 +953,8 @@ class ContactRollups
   def self.update_school
     start = Time.now
     log "Updating school information from dashboard.pd_enrollments"
-    @@dashboard_clone_db_reader[:pd_enrollments].exclude(email: nil).where('length(school) > 0').find do |pd_enrollment|
-      @@pegasus_clone_db_writer[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(school_name: pd_enrollment[:school])
+    DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).where('length(school) > 0').find do |pd_enrollment|
+      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(school_name: pd_enrollment[:school])
     end
     log_completion(start)
   end
@@ -950,142 +966,5 @@ class ContactRollups
     nil
   rescue StandardError => error
     log "Error iterating over stream #{s} - #{error}"
-  end
-
-  def self.initialize_connections_to_database_clone
-    rds_client = Aws::RDS::Client.new
-    @@clone_db_endpoint = rds_client.describe_db_cluster_endpoints(
-      {
-        db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
-        filters: [{name: 'db-cluster-endpoint-type', values: ['writer']}],
-      }
-    ).db_cluster_endpoints.first.endpoint
-
-    # Connection to write to Pegasus clone database.
-    pegasus_clone_writer_uri = URI(CDO.pegasus_reporting_db_writer)
-    pegasus_clone_writer_uri.host = @@clone_db_endpoint
-    @@pegasus_clone_db_writer = sequel_connect(
-      pegasus_clone_writer_uri.to_s,
-      pegasus_clone_writer_uri.to_s,
-      query_timeout: MAX_EXECUTION_TIME_SEC
-    )
-
-    # Connection to read from Pegasus clone database.
-    pegasus_clone_reader_uri = URI(CDO.pegasus_reporting_db_reader)
-    pegasus_clone_reader_uri.host = @@clone_db_endpoint
-    @@pegasus_clone_db_reader = sequel_connect(
-      pegasus_clone_reader_uri.to_s,
-      pegasus_clone_reader_uri.to_s,
-      query_timeout: MAX_EXECUTION_TIME_SEC
-    )
-
-    # Connection to read from Dashboard clone database.
-    dashboard_clone_reader_uri = URI(CDO.dashboard_reporting_db_reader)
-    dashboard_clone_reader_uri.host = @@clone_db_endpoint
-    @@dashboard_clone_db_reader = sequel_connect(
-      dashboard_clone_reader_uri.to_s,
-      dashboard_clone_reader_uri.to_s,
-      query_timeout: MAX_EXECUTION_TIME_SEC
-    )
-  end
-
-  # Enable ContactRollupsValidation to get a read-only connection to the clone server's Pegasus database.
-  def self.pegasus_clone_db_reader
-    @@pegasus_clone_db_reader
-  end
-
-  # Delete database cluster clone if it exists.
-  def self.delete_database_clone
-    rds_client = Aws::RDS::Client.new
-    begin
-      existing_cluster_response = rds_client.describe_db_clusters({db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID})
-      log("Cluster clone exists and is in state - #{existing_cluster_response.db_clusters.first.status}.  Deleting cluster and its instances.")
-      existing_cluster_response.db_clusters.first.db_cluster_members.each do |instance|
-        log("Deleting clone instance - #{instance.db_instance_identifier}")
-        rds_client.delete_db_instance(
-          {
-            db_instance_identifier: instance.db_instance_identifier,
-            skip_final_snapshot: true,
-          }
-        )
-        rds_client.wait_until(:db_instance_deleted, {db_instance_identifier: instance.db_instance_identifier}, {max_attempts: 20, delay: 60})
-      end
-      log("Deleting clone cluster - #{DATABASE_CLUSTER_CLONE_ID}")
-      rds_client.delete_db_cluster(
-        {
-          db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
-          skip_final_snapshot: true,
-        }
-      )
-      # Wait 20 minutes.  As of mid-2019, it takes about 10 minutes to delete a clone of the production cluster.
-      wait_until_db_cluster_deleted(DATABASE_CLUSTER_CLONE_ID, 10, 60)
-    rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
-      log("Cluster #{DATABASE_CLUSTER_CLONE_ID} does not exist from previous execution of Contact Rollups. #{error.message}.  No need to delete it.")
-    end
-  end
-
-  # Clone the Aurora database cluster to use for the Contact Rollups batch aggregation queries.
-  def self.create_database_clone
-    rds_client = Aws::RDS::Client.new
-    begin
-      log("Creating clone of database cluster - #{DATABASE_CLUSTER_CLONE_ID}")
-      existing_cluster = rds_client.describe_db_clusters({db_cluster_identifier: CDO.db_cluster_id}).db_clusters.first
-      rds_client.restore_db_cluster_to_point_in_time(
-        {
-          db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
-          restore_type: 'copy-on-write',
-          source_db_cluster_identifier: CDO.db_cluster_id,
-          use_latest_restorable_time: true,
-          db_subnet_group_name: existing_cluster.db_subnet_group,
-          vpc_security_group_ids: existing_cluster.vpc_security_groups.map(&:vpc_security_group_id),
-          tags: [
-            {
-              key: 'environment',
-              value: CDO.rack_env.to_s,
-            },
-          ]
-        }
-      )
-      rds_client.create_db_instance(
-        {
-          db_instance_identifier: DATABASE_CLUSTER_CLONE_INSTANCE_ID,
-          db_instance_class: DATABASE_CLONE_INSTANCE_TYPE,
-          engine: existing_cluster.engine,
-          db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
-        }
-      )
-      # Wait 30 minutes.  As of mid-2019, it takes about 15 minutes to provision a clone of the production cluster.
-      rds_client.wait_until(:db_instance_available, {db_instance_identifier: DATABASE_CLUSTER_CLONE_INSTANCE_ID}, {max_attempts: 30, delay: 60})
-    rescue Aws::Waiters::Errors::WaiterFailed => error
-      log("Error waiting for cluster clone instance to become available. #{error.message}")
-    end
-    log("Done creating clone of database cluster.")
-  end
-
-  # The AWS SDK does not currently provide waiters for DBCluster operations.
-  def self.wait_until_db_cluster_deleted(db_cluster_id, max_attempts, delay)
-    rds_client = Aws::RDS::Client.new
-    attempts = 0
-    cluster_state = nil
-    while attempts <= max_attempts && cluster_state != 'deleted'
-      begin
-        # describe_db_cluster will Raise a DBClusterNotFound Error when the cluster has been deleted.
-        cluster_state = rds_client.
-          describe_db_clusters({db_cluster_identifier: db_cluster_id}).
-          db_clusters.
-          first.
-          status
-      rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
-        cluster_state = 'deleted'
-        log("Database Cluster #{db_cluster_id} has been deleted. #{error.message}")
-      end
-      attempts += 1
-      sleep delay
-    end
-    unless cluster_state == 'deleted'
-      raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster" \
-        " #{DATABASE_CLUSTER_CLONE_ID} deletion to complete.  Current cluster status - #{cluster_state}"
-      )
-    end
   end
 end

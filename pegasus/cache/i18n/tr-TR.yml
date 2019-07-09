@@ -1308,6 +1308,12 @@ tr-TR:
   coursed-2018_gradelevel: 8+ sınıfları
   coursee-2018_gradelevel: 9. ve üzeri Sınıflar
   coursef-2018_gradelevel: 10 ve üzeri Sınıflar
+  coursea-2019_gradelevel: 5. ve üzeri Sınıflar
+  courseb-2019_gradelevel: 6. ve üzeri Sınıflar
+  coursec-2019_gradelevel: 7. ve üzeri Sınıflar
+  coursed-2019_gradelevel: 8+ sınıfları
+  coursee-2019_gradelevel: 9. ve üzeri Sınıflar
+  coursef-2019_gradelevel: 10 ve üzeri Sınıflar
   accelerated_gradelevel: 10 Yaş ve Üstü (Ders 3 sonrası)
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
@@ -1474,6 +1480,18 @@ tr-TR:
   coursee-2018_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
     ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
   coursef-2018_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursea-2019_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar
+    bilimine giriş.
+  courseb-2019_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar
+    bilimine giriş.
+  coursec-2019_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursed-2019_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursee-2019_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursef-2019_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
     ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
   codeorg_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit
     kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler

@@ -10,10 +10,10 @@ import {
   showLevelBuilderSaveButton,
   setProjectUpdatedError,
   setProjectUpdatedSaving,
-  setProjectUpdatedSaved,
   showProjectUpdatedAt,
   setProjectUpdatedAt,
-  refreshProjectName
+  refreshProjectName,
+  setShowTryAgainDialog
 } from './headerRedux';
 
 import progress from './progress';
@@ -240,8 +240,12 @@ header.showProjectSaving = () => {
   getStore().dispatch(setProjectUpdatedSaving());
 };
 
-header.showProjectSaved = () => {
-  getStore().dispatch(setProjectUpdatedSaved());
+header.showTryAgainDialog = () => {
+  getStore().dispatch(setShowTryAgainDialog(true));
+};
+
+header.hideTryAgainDialog = () => {
+  getStore().dispatch(setShowTryAgainDialog(false));
 };
 
 export default header;

@@ -131,33 +131,44 @@
           This project is safe to share.
         .blocked{ style: 'display: none;' }
           This project is blocked from sharing.
+      %br
       %ul.blocked-reasons{ style: 'display: none;' }
         %li.admin-sharing{ style: 'display: none;' }
           Sharing is disabled
         %li.privacy-profanity{ style: 'display: none;' }
           Private or profane text
+          .privacy-profanity-details-english{ style: 'display: none;' }
+            English:
+            %span.eng-flagged-text
+          .privacy-profanity-details-intl{ style: 'display: none;' }
+            Language:
+            %span.intl-flagged-language
+            %br
+            Flagged content:
+            %span.intl-flagged-text
         %li.abusive-image{ style: 'display: none;' }
           Inappropriate image
+          .image-mod-controls{ style: 'display: none;' }
+            #disable-auto-moderation{'style' => ('display: none;' if content_moderation_disabled)}
+              %br
+              %button{id: "disable-auto-moderation", class: "btn btn-default btn-sm"}
+                Disable automated moderation
+
+            #moderation-explanation{style: 'margin-top: 20px; width: 250px;'}
+              Disabling automated moderation will prevent our content moderation service from flagging this project. Disable automated moderation if the service has inaccurately flagged this project before.
+
+            #enable-auto-moderation{'style' => ('display: none;' unless content_moderation_disabled)}
+              %br
+              %button{id: "enable-auto-moderation", class: "btn btn-default btn-sm"}
+                Enable automated moderation
         %li.reported-abuse{ style: 'display: none;' }
           Manually reported abusive
 
       .admin-abuse{ :style => "display: none" }
         Abuse score:
         %span.admin-abuse-score
+      %br
         = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
 
       .admin-report-abuse
         = link_to 'Report Abuse', '/report_abuse'
-
-      #disable-auto-moderation{'style' => ('display: none;' if content_moderation_disabled)}
-        %br
-        %button{id: "disable-auto-moderation", class: "btn btn-default btn-sm"}
-          Disable automated moderation
-
-      #moderation-explanation{style: 'margin-top: 20px; width: 250px;'}
-        Disabling automated moderation will prevent our content moderation service from flagging this project. Disable automated moderation if the service has inaccurately flagged this project before.
-
-      #enable-auto-moderation{'style' => ('display: none;' unless content_moderation_disabled)}
-        %br
-        %button{id: "enable-auto-moderation", class: "btn btn-default btn-sm"}
-          Enable automated moderation
