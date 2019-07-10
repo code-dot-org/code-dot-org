@@ -13,30 +13,10 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   def update
     return unless school_info_params[:school_id].present? || school_info_params[:country].present?
 
-    # new_school_info_params =
-    #   if school_info_params[:full_address]&.blank?
-    #     school_info_params.except(:full_address)
-    #   else
-    #     school_info_params
-    #   end
-    puts "school info before deletion --> #{school_info_params.inspect}"
-    school_info_params.delete(:full_address) if school_info_params[:full_address]&.blank?
-
-    # if school_info_params[:country]&.downcase&.eql? 'united states'
-      e = school_info_params.merge({country: 'US'})
-      e.delete(:full_address) if e[:full_address]&.blank?
-
+    # school_info_params.delete(:full_address) if school_info_params[:full_address]&.blank?
+    e = school_info_params.merge({country: 'US'})
+    e.delete(:full_address) if e[:full_address]&.blank?
     school_info_params = e
-      # end
-
-    puts "school info --> #{school_info_params.inspect}"
-    # puts "newbie --> #{newbee.inspect}"
-    # if new_school_info_params[:country]&.downcase&.eql? 'united states'
-    #   new_school_info_params[:country] = 'US'
-    # end
-
-    # We could set up a reverse mapping using the constants in country codes
-    # other alternative is to call .to_hash => returns a hash object
 
     existing_school_info = current_user.last_complete_school_info
     existing_school_info&.assign_attributes school_info_params
