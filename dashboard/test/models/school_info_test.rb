@@ -137,7 +137,7 @@ class SchoolInfoTest < ActiveSupport::TestCase
 
   test 'auto upgrade validation type without other overwritting does not notify' do
     Honeybadger.expects(:notify).never
-    school_info = build :school_info_with_public_school_only, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build :school_info_with_public_school_only, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end
 
@@ -202,6 +202,40 @@ class SchoolInfoTest < ActiveSupport::TestCase
     school_info = build :school_info_us_public, :with_district, school_other: true, zip: 12345
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School name is required', school_info.errors.full_messages.first
+  end
+
+  # Test VALIDATION_COMPLETE
+
+  test 'US public school with school_type and name succeeds' do
+    school_info = SchoolInfo.create(
+      {country: 'US',
+      school_type: 'public',
+      school_name: 'Philly High Harmony',
+      validation_type: SchoolInfo::VALIDATION_COMPLETE}
+    )
+    assert school_info.valid? school_info.errors.full_messages
+  end
+
+  test 'School info with only school type and name school does not succeed' do
+    school_info = SchoolInfo.create(
+      {country: nil,
+      school_type: 'private',
+      school_name: 'Grovers Academy',
+      validation_type: SchoolInfo::VALIDATION_COMPLETE}
+    )
+    refute school_info.valid?
+    assert_equal 'Country is required', school_info.errors.full_messages.first
+  end
+
+  test 'US private school with only school type does not succeed' do
+    school_info = SchoolInfo.create(
+      {country: 'US',
+      school_type: 'private',
+      school_name: '',
+      validation_type: SchoolInfo::VALIDATION_COMPLETE}
+    )
+    refute school_info.valid?
+    assert_equal 'School name cannot be blank', school_info.errors.full_messages.first
   end
 
   # US, charter
@@ -280,28 +314,28 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # US homeschool
 
   test 'US homeschool succeeds' do
-    school_info = build :school_info_us_homeschool, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build :school_info_us_homeschool, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   # US after school
 
   test 'US after school succeeds' do
-    school_info = build :school_info_us_after_school, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build :school_info_us_after_school, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   # Non-US homeschool
 
   test 'Non-US homeschool succeeds' do
-    school_info = build :school_info_non_us_homeschool, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build :school_info_non_us_homeschool, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   # Non-US after school
 
   test 'Non-US after school succeeds' do
-    school_info = build :school_info_non_us_after_school, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build :school_info_non_us_after_school, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end
 
@@ -461,5 +495,99 @@ class SchoolInfoTest < ActiveSupport::TestCase
         create :school_info
       end
     end
+  end
+
+  test 'complete if all school info is provided' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_info.school_name = 'Primary School'
+    school_info.full_address = '123 Sesame Street'
+
+    assert_nil school_info.school_id
+    refute_nil school_info.school_name
+    refute_nil school_info.full_address
+    assert school_info.complete?
+  end
+
+  test 'complete if all school info but location is provided' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_info.school_name = 'Primary School'
+
+    assert_nil school_info.school_id
+    refute_nil school_info.school_name
+    assert_nil school_info.full_address
+
+    assert school_info.complete?
+  end
+
+  test 'complete if school is found by NCES id' do
+    school_info = SchoolInfo.new
+    school_info.school_id = 1
+
+    refute_nil school_info.school_id
+    assert school_info.complete?
+  end
+
+  test 'complete if school type is homeschool/after school/organization/other' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
+    assert school_info.complete?
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
+    assert school_info.complete?
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_ORGANIZATION
+    assert school_info.complete?
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_OTHER
+    assert school_info.complete?
+  end
+
+  test 'complete if country is not US' do
+    school_info = SchoolInfo.new
+    school_info.country = 'Canada'
+    assert school_info.complete?
+  end
+
+  test 'not complete without country' do
+    school_info = SchoolInfo.new
+    assert_nil school_info.country
+    refute school_info.complete?
+  end
+
+  test 'not complete if country is US but no school type is set' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    assert_nil school_info.school_type
+    refute school_info.complete?
+  end
+
+  test 'not complete if country is US and school type is public/private/charter but other information is missing' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
+    refute school_info.complete?
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PRIVATE
+    refute school_info.complete?
+
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_CHARTER
+    refute school_info.complete?
+  end
+
+  test 'not complete if name is entirely whitespace' do
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_info.school_name = 'Primary School'
+    assert school_info.complete?
+
+    school_info.school_name = '     '
+    refute school_info.complete?
   end
 end

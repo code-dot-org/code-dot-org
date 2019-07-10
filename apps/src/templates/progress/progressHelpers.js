@@ -74,8 +74,8 @@ export function stageLocked(levels) {
  * @returns A friendly name for the icon name (that can be passed to FontAwesome)
  *   for the given level.
  */
-export function getIconForLevel(level, miniRubricExperiment = false) {
-  if (miniRubricExperiment && isLevelAssessment(level)) {
+export function getIconForLevel(level, inProgressView = false) {
+  if (inProgressView && isLevelAssessment(level)) {
     return 'check-circle';
   }
   if (level.icon) {
@@ -142,6 +142,7 @@ export function summarizeProgressInStage(levelsWithStatus) {
       case LevelStatus.submitted:
       case LevelStatus.free_play_complete:
       case LevelStatus.completed_assessment:
+      case LevelStatus.readonly:
         statusCounts.completed = statusCounts.completed + 1;
         break;
       case LevelStatus.not_tried:

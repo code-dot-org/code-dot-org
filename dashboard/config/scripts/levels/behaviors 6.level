@@ -9,10 +9,10 @@
     "show_debug_watch": "true",
     "block_pools": [
       "GamelabJr",
-      "SpriteLab2Beta"
+      "NativeSpriteLab"
     ],
     "helper_libraries": [
-      "SpriteLab2Beta"
+      "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "false",
@@ -43,7 +43,7 @@
     "long_instructions": "Make the ball roll.\r\n\r\n* Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 15499,
-    "validation_code": "var ball = allSpritesWithAnimation(\"soccer\");\r\nif(ball.x>350 && ball.rotation != 0){levelSuccess();}",
+    "validation_code": "if (getProp(\"soccer\", \"x\") > 350 && getProp(\"soccer\", \"rotation\") != 0) {\r\n  levelSuccess(0);\r\n}",
     "encrypted": "false",
     "mini_rubric": "false",
     "preload_asset_list": null

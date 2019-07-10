@@ -93,7 +93,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         oauth_refresh_token: auth_hash.credentials.refresh_token
       }.to_json
     end
-    email = auth_hash.info.email
+    email = auth_hash.info.email || ""
     hashed_email = nil
     hashed_email = User.hash_email(email) unless email.blank?
     auth_option = AuthenticationOption.new(
@@ -388,7 +388,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     begin
       if lookup_user.migrated?
-        AuthenticationOption.create!(
+        ao = AuthenticationOption.create!(
           user: lookup_user,
           email: lookup_email,
           credential_type: provider,
@@ -405,6 +405,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         # deprecated in favor of microsoft_v2_auth.
         windowslive_auth_option = lookup_user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::WINDOWS_LIVE}
         if windowslive_auth_option.present? && provider == AuthenticationOption::MICROSOFT
+          lookup_user.update!(primary_contact_info: ao) if windowslive_auth_option.primary?
           windowslive_auth_option.destroy!
         end
       else

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import MultipleChoiceByStudentTable from './MultipleChoiceByStudentTable';
 import {
-  studentWithResponsesPropType,
+  studentWithMCResponsesPropType,
   multipleChoiceQuestionPropType
 } from './assessmentDataShapes';
 import {
@@ -17,7 +17,7 @@ import {connect} from 'react-redux';
 class MultipleChoiceByStudentContainer extends Component {
   static propTypes = {
     multipleChoiceStructure: PropTypes.arrayOf(multipleChoiceQuestionPropType),
-    studentAnswerData: studentWithResponsesPropType,
+    studentAnswerData: studentWithMCResponsesPropType,
     studentId: PropTypes.number,
     currentStudentHasResponses: PropTypes.bool
   };

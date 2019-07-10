@@ -27,7 +27,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     const tableHeaders = wrapper.find('th');
-    expect(tableHeaders).to.have.length(4);
+    expect(tableHeaders).to.have.length(6);
 
     const tableRows = wrapper.find('tr');
     expect(tableRows).to.have.length(11);
@@ -52,7 +52,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
       />
     );
 
-    const checkMarkIcons = wrapper.find('#checkmark');
+    const checkMarkIcons = wrapper.find('.fa-check-circle');
     assert.equal(checkMarkIcons.length, 6);
   });
 

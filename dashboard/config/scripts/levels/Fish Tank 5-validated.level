@@ -8,7 +8,7 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
-      "GameLabJr"
+      "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -47,7 +47,7 @@
     "parent_level_id": 12609,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
-    "validation_code": "if (World.frameCount > 50) {\r\n  if (World.allSprites.length > 5) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
+    "validation_code": "if (World.frameCount > 50) {\r\n  if (getSpriteIdsInUse().length > 1) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
     "project_template_level_name": "Fish Tank Template",
     "short_instructions": "Our fish is getting a little lonely. Add another sprite to the fish tank.",
     "block_pool": "gamelab",

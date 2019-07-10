@@ -46,7 +46,7 @@ module Pd::Application
         to: @application.formatted_principal_email,
         cc: @application.formatted_applicant_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Action Needed: Your teacher has applied to #{@application.effective_regional_partner_name}'s Professional Learning Program!"
+        subject: "[Urgent - Action Needed] #{@application.applicant_full_name}'s application requires your approval."
       )
     end
 
@@ -68,7 +68,7 @@ module Pd::Application
       raise "Partner contact email is required, application id #{@application.id}" unless partner_contact_email
 
       mail(
-        from: 'Anthonette Peña <teacher@code.org>',
+        from: 'Liz Gauthier <teacher@code.org>',
         to: partner_contact_email,
         subject: 'A principal has completed the principal approval form'
       )

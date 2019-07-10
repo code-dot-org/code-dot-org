@@ -1174,13 +1174,8 @@ is-IS:
   coursee-2017_name: Námskeið E (2017)
   coursef-2017_name: Námskeið F (2017)
   coursea-2018_name: Námskeið A (2018)
-  accelerated_name: Hraðnámskeiðið
-  express_name: Hraðnámskeið
-  pre-express_name: Hraðnámskeið fyrir forlæsa
-  express-2017_name: Hraðnámskeið (2017)
-  pre-express-2017_name: Hraðnámskeið fyrir forlæsa (2017)
+  coursea-2019_name: Námskeið A (2019)
   pre-express-2018_name: Hraðnámskeið fyrir forlæsa (2018)
-  cspunit1_name: Kafli 1 - Stafrænar upplýsingar
   cspunit2_name: 'Kafli 2: Internetið'
   cspunit3_name: 'Kafli 3: Forritun'
   cspunit4_name: 'Kafli 4: Gögn'
@@ -1312,6 +1307,12 @@ is-IS:
   coursed-2018_gradelevel: 14 ára og eldri
   coursee-2018_gradelevel: 8 - 12 ára
   coursef-2018_gradelevel: Bekkur 10+
+  coursea-2019_gradelevel: Bekkur 5+
+  courseb-2019_gradelevel: Bekkur 6+
+  coursec-2019_gradelevel: Bekkur 7+
+  coursed-2019_gradelevel: 14 ára og eldri
+  coursee-2019_gradelevel: 8 - 12 ára
+  coursef-2019_gradelevel: Bekkur 10+
   accelerated_gradelevel: Fyrir 10-18 ára
   codeorg_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   codeintl_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
@@ -1474,6 +1475,18 @@ is-IS:
   coursee-2018_shortdescription_congrats: Hér er farið fljótt yfir hugtök frá Námskeiðum
     C og D og síðan haldið lengra með föllum.
   coursef-2018_shortdescription_congrats: Lærðu öll hugtökin í Grunnatriði tölvunarfræði
+    og búðu til eigin myndir, sögur og leiki.
+  coursea-2019_shortdescription_congrats: Kynning á tölvunarfræði fyrir byrjendur
+    í lestri.
+  courseb-2019_shortdescription_congrats: Kynning á tölvunarfræði fyrir byrjendur
+    í lestri. (Svipað og Námskeið A en með meiri fjölbreytni fyrir eldri nemendur.)
+  coursec-2019_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og
+    búðu til eigin myndir, sögur og leiki.
+  coursed-2019_shortdescription_congrats: Hér er farið fljótt yfir hugtök frá Námskeiði
+    C og svo haldið lengra með algrímum, földuðum lykkjum, skilyrðingum og fleiru.
+  coursee-2019_shortdescription_congrats: Hér er farið fljótt yfir hugtök frá Námskeiðum
+    C og D og síðan haldið lengra með föllum.
+  coursef-2019_shortdescription_congrats: Lærðu öll hugtökin í Grunnatriði tölvunarfræði
     og búðu til eigin myndir, sögur og leiki.
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta
     er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem
@@ -2209,3 +2222,6 @@ is-IS:
     Athugaðu veffangið og prófaðu aftur. Eða farðu aftur á heimasíðu okkar.
   page_not_found_button: Aftur á heimasíðu
   hoc2018_mc_with_microsoft: Í samstarfi við
+  hoc2018_mc_thank_microsoft: Við þökkum Microsoft fyrir að styðja við hugsjón og
+    stefnumið okkar sem er að tryggja að hvert barn hafi tækifæri til að læra tölvunarfræði
+    og öðlast þá færni sem þarf til að ná árangri á 21. öldinni.

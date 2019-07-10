@@ -8,7 +8,7 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
-      "GameLabJr"
+      "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -51,7 +51,7 @@
       "Fish Tank Predict"
     ],
     "include_shared_functions": "false",
-    "custom_helper_library": "function tumbling(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation -= 6;\r\n    sprite.x -= 3;\r\n  };\r\n  behavior.name = 'tumbling';\r\n  return behavior;\r\n}\r\n",
+    "custom_helper_library": "function tumbling(spriteId) {\r\n  var behavior = function(spriteId) {\r\n    changePropBy(spriteId, \"rotation\", -6);\r\n    changePropBy(spriteId, \"x\", -3);\r\n  };\r\n  return {func: behavior, name: \"tumbling\"};\r\n}\r\n",
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"tumbling\",\r\n    \"blockText\": \"tumbling\",\r\n    \"returnType\": \"Behavior\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
     "block_pool": "gamelab"
   },

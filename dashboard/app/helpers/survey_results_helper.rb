@@ -41,8 +41,8 @@ module SurveyResultsHelper
   end
 
   def country_us?
-    us_code_for_env = Rails.env.production? ? 'US' : 'RD'
-    request.location.try(:country_code) == us_code_for_env
+    request.location.try(:country_code) == 'US' ||
+      (!Rails.env.production? && request.location.try(:country_code) == 'RD')
   end
 
   def has_any_students?

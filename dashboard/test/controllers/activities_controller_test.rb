@@ -5,24 +5,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   include LevelsHelper
   include UsersHelper
 
-  # A fake queue implementation that captures each message sent and sends it to the handler
-  # only when requested by the test.
-  class FakeQueue
-    def initialize(handler)
-      @handler = handler
-      @messages = []
-    end
-
-    def enqueue(message_body)
-      @messages << message_body
-    end
-
-    def handle_pending_messages
-      @handler.handle(@messages.map {|body| SQS::Message.new(body)})
-      @messages.clear
-    end
-  end
-
   setup do
     client_state.reset
     Gatekeeper.clear
@@ -30,7 +12,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # rubocop:disable Lint/Void
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     # rubocop:enable Lint/Void
-    CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
+    CDO.stubs(disable_s3_image_uploads: true) # make sure image uploads are disabled unless specified in individual tests
 
     Geocoder.stubs(:find_potential_street_address).returns(nil) # don't actually call geocoder service
 
@@ -63,10 +45,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       app: 'test',
       program: '<hey>'
     }
-
-    # Stub out the SQS client to invoke the handler on queued messages only when requested.
-    @fake_queue = FakeQueue.new(AsyncProgressHandler.new)
-    AsyncProgressHandler.stubs(:progress_queue).returns(@fake_queue)
   end
 
   # Ignore any additional keys in 'actual' not found in 'expected'.
@@ -105,19 +83,9 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone" do
-    _test_logged_in_milestone(async_activity_writes: false)
-  end
-
-  test "logged in milestone with async activity writes" do
-    _test_logged_in_milestone(async_activity_writes: true)
-  end
-
-  def _test_logged_in_milestone(async_activity_writes:)
     # Configure a fake slogger to verify that the correct data is logged.
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
-
-    Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -126,7 +94,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, params: @milestone_params
-          @fake_queue.handle_pending_messages if async_activity_writes
         end
       end
     end
@@ -343,20 +310,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone should save to gallery when passing an impressive level" do
-    _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes: false
-    )
-  end
-
-  test "logged in milestone should save to gallery when passing an impressive level with aysnc writes" do
-    _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes: true
-    )
-  end
-
-  def _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(async_activity_writes:)
-    Gatekeeper.set('async_activity_writes', value: async_activity_writes)
-
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
@@ -370,7 +323,6 @@ class ActivitiesControllerTest < ActionController::TestCase
             save_to_gallery: 'true',
             image: Base64.encode64(@good_image)
           )
-        @fake_queue.handle_pending_messages if async_activity_writes
       end
     end
 
@@ -510,16 +462,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with image" do
-    _test_logged_in_milestone_with_image(async_activity_writes: false)
-  end
-
-  test "logged in milestone with image and async writes" do
-    _test_logged_in_milestone_with_image(async_activity_writes: true)
-  end
-
-  def _test_logged_in_milestone_with_image(async_activity_writes:)
-    Gatekeeper.set('async_activity_writes', value: async_activity_writes)
-
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
@@ -529,8 +471,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     original_activity_count = Activity.count
     original_user_level_count = UserLevel.count
 
-    expected_created_classes = async_activity_writes ? [LevelSource, LevelSourceImage] :
-        [LevelSource, UserLevel, LevelSourceImage]
+    expected_created_classes = [LevelSource, UserLevel, LevelSourceImage]
 
     assert_creates(*expected_created_classes) do
       assert_does_not_create(GalleryActivity) do
@@ -539,18 +480,6 @@ class ActivitiesControllerTest < ActionController::TestCase
             params: @milestone_params.merge(image: Base64.encode64(@good_image))
         end
       end
-    end
-    if async_activity_writes
-      # Activity count etc. shouldn't have changed yet.
-      assert_equal original_activity_count, Activity.count
-      assert_nil UserLevel.where(
-        user_id: @user,
-        level_id: @script_level.level_id,
-        script_id: @script_level.script_id
-      ).first
-      assert_equal original_user_level_count, UserLevel.count
-
-      @fake_queue.handle_pending_messages
     end
     assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
@@ -1293,5 +1222,59 @@ class ActivitiesControllerTest < ActionController::TestCase
     user_level = UserLevel.last
     # panda_panda contains a panda emoji, ensure that it's gone
     assert_equal user_level.level_source.data, 'Panda'
+  end
+
+  test "milestone updates assessment activities for multi assessments" do
+    post :milestone, params: @milestone_params
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: @script_level.id, script_id: @script_level.script.id)
+
+    assessment_script_level = create :script_level, assessment: true
+    post :milestone, params: @milestone_params.merge(script_level_id: assessment_script_level.id)
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: assessment_script_level.level.id, script_id: assessment_script_level.script.id)
+
+    multi_level = create :multi
+
+    multi_sl = create :script_level, levels: [multi_level]
+    post :milestone, params: @milestone_params.merge(script_level_id: multi_sl.id)
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sl.level.id, script_id: multi_sl.script.id)
+
+    assessment_multi_sl = create :script_level, levels: [multi_level], assessment: true
+    milestone_params = @milestone_params.merge(
+      script_level_id: assessment_multi_sl.id, program: '0'
+    )
+    post :milestone, params: milestone_params
+    assessment_activity = AssessmentActivity.find_by(
+      user_id: @user,
+      level_id: assessment_multi_sl.level.id,
+      script_id: assessment_multi_sl.script.id
+    )
+    refute_nil assessment_activity
+    assert_equal @milestone_params[:attempt].to_i, assessment_activity.attempt
+    assert_equal @milestone_params[:testResult].to_i, assessment_activity.test_result
+
+    # allow multiple entries to be created
+
+    post :milestone, params: milestone_params.merge(attempt: '2', program: '4')
+    post :milestone, params: milestone_params.merge(attempt: '3', program: '5')
+    assessment_activities = AssessmentActivity.where(
+      user_id: @user,
+      level_id: assessment_multi_sl.level.id,
+      script_id: assessment_multi_sl.script.id
+    ).all
+    assert_equal [1, 2, 3], assessment_activities.map(&:attempt)
+    answers = assessment_activities.map {|aa| LevelSource.find(aa.level_source_id)&.data}
+    assert_equal ['0', '4', '5'], answers
+
+    # make sure that we don't create an AssessmentActivity when the multi level
+    # is updated within an assessment level group.
+
+    multi_sublevel = create :multi
+    level_group = create :level_group, name: 'assessment-level-group'
+    script_level = create :script_level, levels: [level_group], assessment: true
+    post :milestone, params: @milestone_params.merge(
+      script_level_id: script_level.id,
+      level_id: multi_sublevel.id
+    )
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sublevel.id)
   end
 end

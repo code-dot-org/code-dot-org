@@ -9,9 +9,10 @@ import rehypeSanitize from 'rehype-sanitize';
 import rehypeReact from 'rehype-react';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
 
+import details from './plugins/details';
 import expandableImages from './plugins/expandableImages';
-import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 import externalLinks from './plugins/externalLinks';
+import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 
 // create custom sanitization schema as per
 // https://github.com/syntax-tree/hast-util-sanitize#schema
@@ -20,15 +21,20 @@ const schema = Object.assign({}, defaultSanitizationSchema);
 
 // We use a _lot_ of image formatting stuff in our
 // instructions, particularly in CSP
-schema.attributes.img.push('style', 'height', 'width');
+schema.attributes.img.push('height', 'width');
 
 // Add support for expandableImages
 schema.tagNames.push('span');
 schema.attributes.span = ['dataUrl', 'className'];
 
+// Add support for inline styles (gross)
+// TODO replace all inline styles in our curriculum content with
+// semantically-significant content
+schema.attributes['*'].push('style', 'className');
+
 // Add support for Blockly XML
 schema.clobber = [];
-schema.tagNames.push(
+const blocklyTags = [
   'block',
   'functional_input',
   'mutation',
@@ -37,12 +43,16 @@ schema.tagNames.push(
   'title',
   'value',
   'xml'
-);
+];
+schema.tagNames = schema.tagNames.concat(blocklyTags);
+blocklyTags.forEach(tag => {
+  schema.attributes[tag] = ['block_text', 'id', 'inline', 'name', 'type'];
+});
 
 const markdownToReact = Parser.create()
   .getParser()
   // include custom plugins
-  .use([xmlAsTopLevelBlock, expandableImages])
+  .use([xmlAsTopLevelBlock, expandableImages, details])
   // convert markdown to an HTML Abstract Syntax Tree (HAST)
   .use(remarkRehype, {
     // include any raw HTML in the markdown as raw HTML nodes in the HAST

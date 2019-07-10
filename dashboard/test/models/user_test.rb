@@ -2218,7 +2218,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def track_progress(user_id, script_level, result, pairings: nil)
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: user_id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
@@ -2229,15 +2229,17 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
-  test 'track_level_progress_sync calls track_proficiency if new perfect csf score' do
+  test 'track_level_progress calls track_proficiency if new perfect csf score' do
     user = create :user
-    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    csf_script = create :csf_script
+    csf_script_level = create :csf_script_level
+    csf_script.script_levels << csf_script_level
 
     User.expects(:track_proficiency).once
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if new perfect non-csf score' do
+  test 'track_level_progress does not call track_proficiency if new perfect non-csf score' do
     user = create :user
     non_csf_script_level = create :script_level
 
@@ -2245,7 +2247,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, non_csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if old perfect score' do
+  test 'track_level_progress does not call track_proficiency if old perfect score' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     create :user_level,
@@ -2258,7 +2260,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if new passing csf score' do
+  test 'track_level_progress does not call track_proficiency if new passing csf score' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
@@ -2266,7 +2268,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 25)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if hint used' do
+  test 'track_level_progress does not call track_proficiency if hint used' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     create :hint_view_request,
@@ -2278,7 +2280,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
+  test 'track_level_progress does not call track_proficiency if authored hint used' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     AuthoredHintViewRequest.create(
@@ -2291,7 +2293,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency when pairing' do
+  test 'track_level_progress does not call track_proficiency when pairing' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
@@ -2299,13 +2301,16 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100, pairings: [create(:user).id])
   end
 
-  test 'track_level_progress_sync does call track_profiency when manual_pass to perfect' do
+  test 'track_level_progress does call track_profiency when manual_pass to perfect' do
     user = create :user
-    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    csf_script = create :csf_script
+    csf_script_level = create :csf_script_level
+    csf_script.script_levels << csf_script_level
+
     UserLevel.create!(
       user: user,
       level: csf_script_level.level,
-      script: Script.get_from_cache('20-hour'),
+      script: csf_script_level.script,
       best_result: ActivityConstants::MANUAL_PASS_RESULT
     )
 
@@ -2313,7 +2318,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync stops incrementing attempts for perfect results' do
+  test 'track_level_progress stops incrementing attempts for perfect results' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     ul = UserLevel.create!(
@@ -2341,12 +2346,12 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 4, ul.reload.attempts
   end
 
-  test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
+  test 'track_level_progress does not overwrite the level_source_id of the navigator' do
     script_level = create :script_level
     student = create :student
     level_source = create :level_source, data: 'sample answer'
 
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: student.id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
@@ -2360,7 +2365,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 30, ul.best_result
     assert_equal 'sample answer', ul.level_source.data
 
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: create(:user).id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
@@ -2375,7 +2380,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'sample answer', ul.level_source.data
   end
 
-  test 'track_level_progress_sync does not overwrite level_source_id with nil' do
+  test 'track_level_progress does not overwrite level_source_id with nil' do
     script_level = create :script_level
     user = create :user
     level_source = create :level_source, data: 'sample answer'
@@ -2385,7 +2390,7 @@ class UserTest < ActiveSupport::TestCase
       level_id: script_level.level_id,
       level_source_id: level_source.id
 
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: user.id,
       script_id: script_level.script_id,
       level_id: script_level.level_id,
@@ -3276,14 +3281,34 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
   end
 
+  test 'managing_own_credentials? is true for users with email logins' do
+    user = create :user
+    assert user.managing_own_credentials?
+  end
+
+  test 'managing_own_credentials? is true for students with email logins' do
+    user = create :student
+    assert user.managing_own_credentials?
+  end
+
+  test 'managing_own_credentials? is false for users with oauth logins' do
+    user = create :user, :sso_provider
+    refute user.managing_own_credentials?
+  end
+
+  test 'managing_own_credentials? is false for students with sponsored logins' do
+    user = create :student_in_picture_section
+    refute user.managing_own_credentials?
+  end
+
   test 'password_required? is false if user is not creating their own account' do
-    user = build :user
+    user = create :user
     user.expects(:managing_own_credentials?).returns(false)
     refute user.password_required?
   end
 
   test 'password_required? is true for new users with no encrypted password' do
-    user = build :user, encrypted_password: nil
+    user = create :user, encrypted_password: nil
     user.expects(:managing_own_credentials?).returns(true)
     assert user.encrypted_password.nil?
     assert user.password_required?

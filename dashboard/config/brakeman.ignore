@@ -1,0 +1,26 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "4c70264964f5a73d9d96e3642705fba07d423acca57660112dd3093cc5a80d3d",
+      "check_name": "SQL",
+      "message": "Possible SQL injection",
+      "file": "app/controllers/api/v1/pd/workshops_controller.rb",
+      "line": 99,
+      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(:subject => (Pd::Workshop::SUBJECT_TEACHER_CON)).where(:course => params[:course]).where(\"#{current_user.regional_partners.map do\n get_matching_teachercon(partner)\n end.compact.to_set.pluck(:city).map do\n \"%#{city}%\"\n end.length} OR location_address like ?\", *current_user.regional_partners.map do\n get_matching_teachercon(partner)\n end.compact.to_set.pluck(:city).map do\n \"%#{city}%\"\n end)",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Api::V1::Pd::WorkshopsController",
+        "method": "upcoming_teachercons"
+      },
+      "user_input": "current_user.regional_partners.map",
+      "confidence": "High",
+      "note": "Bind variable is used on previous line (https://github.com/code-dot-org/code-dot-org/blob/fa81c9dee24f3b7ab2f6c5eb9d1155ee56e2570f/dashboard/app/controllers/api/v1/pd/workshops_controller.rb#L98) and cities array comes from the database, not user input."
+    }
+  ],
+  "updated": "2019-05-08 12:48:33 -0700",
+  "brakeman_version": "4.5.0"
+}

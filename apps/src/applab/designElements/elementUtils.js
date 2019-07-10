@@ -227,3 +227,63 @@ export function setDefaultBorderStyles(element, options = {}) {
     element.style.borderRadius = '0px';
   }
 }
+
+/**
+ * Parse a padding string and return the total horizontal padding and
+ * total vertical padding.
+ * @param {string} cssPaddingString value from element.style.padding
+ */
+export function calculatePadding(cssPaddingString) {
+  // Extract up to 4 numbers, ignoring the 'px' that may be included
+
+  // NOTE: if other measurement values (e.g. 'em') make it into the padding string,
+  // we will treat them as 'px' values
+
+  // Ideally, we could use getComputedStyle(), but we need to work with
+  // detached DOM nodes, which doesn't work on Chrome and Safari
+
+  const paddingValues = (cssPaddingString || '')
+    .split(/\s+/)
+    .map(part => parseInt(part, 10));
+  for (
+    var validPaddingValues = 0;
+    validPaddingValues < paddingValues.length;
+    validPaddingValues++
+  ) {
+    if (isNaN(paddingValues[validPaddingValues])) {
+      break;
+    }
+  }
+
+  // The meaning of the numeric values depends on the number that are supplied.
+  // 1 value: Apply to all four sides
+  // 2 values: vertical | horizontal
+  // 3 values: top | horizontal | bottom
+  // 4 values: top | right | bottom | left
+  // See https://developer.mozilla.org/en-US/docs/Web/CSS/padding#Syntax
+  let horizontalPadding, verticalPadding;
+  switch (validPaddingValues) {
+    case 1:
+      horizontalPadding = verticalPadding = 2 * paddingValues[0];
+      break;
+    case 2:
+      verticalPadding = 2 * paddingValues[0];
+      horizontalPadding = 2 * paddingValues[1];
+      break;
+    case 3:
+      verticalPadding = paddingValues[0] + paddingValues[2];
+      horizontalPadding = 2 * paddingValues[1];
+      break;
+    case 4:
+      verticalPadding = paddingValues[0] + paddingValues[2];
+      horizontalPadding = paddingValues[1] + paddingValues[3];
+      break;
+    default:
+      horizontalPadding = verticalPadding = 0;
+      break;
+  }
+  return {
+    horizontalPadding,
+    verticalPadding
+  };
+}

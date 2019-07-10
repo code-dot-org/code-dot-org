@@ -8,7 +8,7 @@ text 'csp-post-survey-2017 preamble 1_2019'
 level 'csp-post-survey-2017-q1_2018'
 level 'csp-post-survey-2017-q4_2018'
 
-text 'csp-pre-survey-2017 preamble 2 cs in general'
+text 'csp-pre-survey-2017 preamble 2 cs in general_2018_2019'
 level 'csp-post-survey-2017-q10_2018'
 level 'csp-post-survey-2017-q12_2018'
 level 'csp-post-survey-2017-q13_2018'
@@ -20,12 +20,16 @@ level 'csp-post-survey-2017-q29_2018'
 level 'csd-post-survey-2019-I want more cs'
 
 page
-text 'csp-pre-survey-2017 preamble 3 this class'
+text 'csp-pre-survey-2017 preamble 3 this class_2018_2019'
 level 'csp-post-survey-2017-q19_2018'
 level 'csp-post-survey-2017-q20_2018'
 level 'csp-post-survey-2017-q22_2018'
 level 'csp-post-survey-2017-q23_2018'
 level 'csp-post-survey-2017-q24_2018'
+level 'curriculum-how-did-you-like-lessons'
+level 'curriculum-how-challenging'
+level 'post-assessment survey q31-a-2017b'
+level 'csp-post-survey-2018-topics-liked-FR'
 
 page
 text 'csd-post-survey-2017-implementation-teacher'
@@ -49,11 +53,5 @@ level 'how-often-consider-alternative-approaches-2019'
 level 'how-often-explain-why-disagree-2019'
 
 page
-text 'csp-pre-survey-2017 preamble 3 this class'
-level 'curriculum-how-did-you-like-lessons'
-level 'curriculum-how-challenging'
-level 'post-assessment survey q31-a-2017b'
-level 'csp-post-survey-2018-topics-liked-FR'
 text 'csp-post-survey-2017-thanks_2018'
 level 'csp-post-survey-2017-FR_2018'
-

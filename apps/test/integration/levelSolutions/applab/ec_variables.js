@@ -107,7 +107,7 @@ module.exports = {
     testApplabConsoleOutput({
       testName: 'Array.prototype.sort',
       source: 'console.log([5, 4, 4, 1].sort());',
-      expect: '[1,4,4,5]'
+      expect: '▶[1, 4, 4, 5]'
     })
   ]
 };

@@ -1258,13 +1258,7 @@ es-ES:
   coursed-2017_name: Curso D (2017)
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
-  accelerated_name: Curso acelerado
-  express_name: Curso Rápido
-  pre-express_name: Curso rápido prescolar
-  express-2017_name: Curso Rápido (2017)
-  pre-express-2017_name: Curso rápido prescolar (2017)
   pre-express-2018_name: Curso rápido prescolar (2018)
-  cspunit1_name: 'Tema 1: Información digital'
   cspunit2_name: 'Tema 2: El Internet'
   cspunit3_name: Principios de CS Unidad 3
   cspunit4_name: 'Tema 4: Datos'
@@ -1409,6 +1403,12 @@ es-ES:
   coursed-2018_gradelevel: Grado 8 +
   coursee-2018_gradelevel: Edad 8-12
   coursef-2018_gradelevel: 9-13 años
+  coursea-2019_gradelevel: Edades de 4 a 7 años
+  courseb-2019_gradelevel: Edades de 5 a 8 años
+  coursec-2019_gradelevel: Edades de 6 a 10 años
+  coursed-2019_gradelevel: Grado 8 +
+  coursee-2019_gradelevel: Edad 8-12
+  coursef-2019_gradelevel: 9-13 años
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
@@ -1584,6 +1584,17 @@ es-ES:
   coursee-2018_shortdescription_congrats: Cubre rápidamente los conceptos en el curso
     C y D y luego ir más allá con funciones.
   coursef-2018_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
+    de Informática y crea tu propio arte, historia o juego.
+  coursea-2019_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+  courseb-2019_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+    (Similar al curso A, pero con más variedad para alumnos mayores.)
+  coursec-2019_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
+    de la computación y crea tu propio arte, historias y juegos.
+  coursed-2019_shortdescription_congrats: Rápidamente cubre conceptos del curso C,
+    luego ve más allá con algoritmos, bucles anidados, condicionales y más.
+  coursee-2019_shortdescription_congrats: Cubre rápidamente los conceptos en el curso
+    C y D y luego ir más allá con funciones.
+  coursef-2019_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
     de Informática y crea tu propio arte, historia o juego.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
     programación de arrastrar y soltar. Este tutorial autodirigido que se parece a
@@ -2153,6 +2164,7 @@ es-ES:
   full_course_category_name: Cursos Completos
   user_header_label: Hola %{username}
   user_header_team: Equipo
+  user_header_my_projects: Mis proyectos
   user_header_settings: Mi cuenta
   user_header_logout: Cerrar sesión
   user_header_signin: Iniciar Sesión

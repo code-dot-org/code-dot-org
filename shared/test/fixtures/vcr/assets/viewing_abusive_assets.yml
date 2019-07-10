@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:26 GMT
+      - Fri, 07 Jun 2019 18:59:35 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -30,12 +30,12 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:25 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:34 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1/
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -46,7 +46,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:27 GMT
+      - Fri, 07 Jun 2019 18:59:36 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -61,7 +61,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:26 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:35 GMT
 - request:
     method: put
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
@@ -83,7 +83,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:27 GMT
+      - Fri, 07 Jun 2019 18:59:37 GMT
+      X-Amz-Version-Id:
+      - cIOfF3oW6ZcEpqR795GKRuCTJztD1aJR
       Etag:
       - '"593f84d5c5f5f6b80161676517701886"'
       Content-Length:
@@ -94,12 +96,12 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:26 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:36 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -110,13 +112,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:28 GMT
-      X-Amz-Meta-Abuse-Score:
-      - '0'
+      - Fri, 07 Jun 2019 18:59:37 GMT
       Last-Modified:
-      - Mon, 16 Nov 2015 23:11:27 GMT
+      - Fri, 07 Jun 2019 18:59:37 GMT
       Etag:
       - '"593f84d5c5f5f6b80161676517701886"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - cIOfF3oW6ZcEpqR795GKRuCTJztD1aJR
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -129,12 +133,12 @@ http_interactions:
       encoding: UTF-8
       string: stub-image-contents
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:27 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:36 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -145,13 +149,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:28 GMT
-      X-Amz-Meta-Abuse-Score:
-      - '0'
+      - Fri, 07 Jun 2019 18:59:37 GMT
       Last-Modified:
-      - Mon, 16 Nov 2015 23:11:27 GMT
+      - Fri, 07 Jun 2019 18:59:37 GMT
       Etag:
       - '"593f84d5c5f5f6b80161676517701886"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - cIOfF3oW6ZcEpqR795GKRuCTJztD1aJR
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -164,12 +170,12 @@ http_interactions:
       encoding: UTF-8
       string: stub-image-contents
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:27 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:36 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1/
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -180,7 +186,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:28 GMT
+      - Fri, 07 Jun 2019 18:59:38 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -193,14 +199,14 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg</Key><LastModified>2015-11-16T23:11:27.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg</Key><LastModified>2019-06-07T18:59:37.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:27 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:37 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -211,13 +217,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:29 GMT
-      X-Amz-Meta-Abuse-Score:
-      - '0'
+      - Fri, 07 Jun 2019 18:59:38 GMT
       Last-Modified:
-      - Mon, 16 Nov 2015 23:11:27 GMT
+      - Fri, 07 Jun 2019 18:59:37 GMT
       Etag:
       - '"593f84d5c5f5f6b80161676517701886"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - cIOfF3oW6ZcEpqR795GKRuCTJztD1aJR
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -230,18 +238,55 @@ http_interactions:
       encoding: UTF-8
       string: stub-image-contents
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:28 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:38 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 07 Jun 2019 18:59:39 GMT
+      Last-Modified:
+      - Fri, 07 Jun 2019 18:59:37 GMT
+      Etag:
+      - '"593f84d5c5f5f6b80161676517701886"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - cIOfF3oW6ZcEpqR795GKRuCTJztD1aJR
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '19'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: stub-image-contents
+    http_version: 
+  recorded_at: Fri, 07 Jun 2019 18:59:38 GMT
 - request:
     method: put
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       X-Amz-Copy-Source:
       - cdo-v3-assets/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
       X-Amz-Meta-Abuse-Score:
-      - '10'
+      - '15'
       X-Amz-Metadata-Directive:
       - REPLACE
       Content-Length:
@@ -252,7 +297,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:29 GMT
+      - Fri, 07 Jun 2019 18:59:40 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - cIOfF3oW6ZcEpqR795GKRuCTJztD1aJR
+      X-Amz-Version-Id:
+      - dleC_hXxBcJRKAHlSoQvkYmfiOCy0LLK
       Content-Type:
       - application/xml
       Content-Length:
@@ -263,14 +312,14 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2015-11-16T23:11:29.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag></CopyObjectResult>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-07T18:59:40.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag></CopyObjectResult>
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:28 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:39 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -281,13 +330,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:30 GMT
-      X-Amz-Meta-Abuse-Score:
-      - '10'
+      - Fri, 07 Jun 2019 18:59:40 GMT
       Last-Modified:
-      - Mon, 16 Nov 2015 23:11:29 GMT
+      - Fri, 07 Jun 2019 18:59:40 GMT
       Etag:
       - '"593f84d5c5f5f6b80161676517701886"'
+      X-Amz-Meta-Abuse-Score:
+      - '15'
+      X-Amz-Version-Id:
+      - dleC_hXxBcJRKAHlSoQvkYmfiOCy0LLK
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -300,12 +351,12 @@ http_interactions:
       encoding: UTF-8
       string: stub-image-contents
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:29 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:39 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -316,13 +367,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:30 GMT
-      X-Amz-Meta-Abuse-Score:
-      - '10'
+      - Fri, 07 Jun 2019 18:59:41 GMT
       Last-Modified:
-      - Mon, 16 Nov 2015 23:11:29 GMT
+      - Fri, 07 Jun 2019 18:59:40 GMT
       Etag:
       - '"593f84d5c5f5f6b80161676517701886"'
+      X-Amz-Meta-Abuse-Score:
+      - '15'
+      X-Amz-Version-Id:
+      - dleC_hXxBcJRKAHlSoQvkYmfiOCy0LLK
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -335,12 +388,12 @@ http_interactions:
       encoding: UTF-8
       string: stub-image-contents
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:29 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:40 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -351,13 +404,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:30 GMT
-      X-Amz-Meta-Abuse-Score:
-      - '10'
+      - Fri, 07 Jun 2019 18:59:41 GMT
       Last-Modified:
-      - Mon, 16 Nov 2015 23:11:29 GMT
+      - Fri, 07 Jun 2019 18:59:40 GMT
       Etag:
       - '"593f84d5c5f5f6b80161676517701886"'
+      X-Amz-Meta-Abuse-Score:
+      - '15'
+      X-Amz-Version-Id:
+      - dleC_hXxBcJRKAHlSoQvkYmfiOCy0LLK
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -370,12 +425,12 @@ http_interactions:
       encoding: UTF-8
       string: stub-image-contents
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:29 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:40 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -386,13 +441,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:31 GMT
-      X-Amz-Meta-Abuse-Score:
-      - '10'
+      - Fri, 07 Jun 2019 18:59:42 GMT
       Last-Modified:
-      - Mon, 16 Nov 2015 23:11:29 GMT
+      - Fri, 07 Jun 2019 18:59:40 GMT
       Etag:
       - '"593f84d5c5f5f6b80161676517701886"'
+      X-Amz-Meta-Abuse-Score:
+      - '15'
+      X-Amz-Version-Id:
+      - dleC_hXxBcJRKAHlSoQvkYmfiOCy0LLK
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -405,12 +462,12 @@ http_interactions:
       encoding: UTF-8
       string: stub-image-contents
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:30 GMT
+  recorded_at: Fri, 07 Jun 2019 18:59:41 GMT
 - request:
     method: delete
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/abusive_assetac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -421,12 +478,16 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Mon, 16 Nov 2015 23:11:31 GMT
+      - Fri, 07 Jun 2019 18:59:42 GMT
+      X-Amz-Version-Id:
+      - Cj.vfKxmGQw3788AMrSvx.lcE7X9vY3q
+      X-Amz-Delete-Marker:
+      - 'true'
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 16 Nov 2015 23:11:30 GMT
-recorded_with: VCR 3.0.0
+  recorded_at: Fri, 07 Jun 2019 18:59:41 GMT
+recorded_with: VCR 3.0.3
