@@ -12,6 +12,11 @@ module Pd
         "https://form.jotform.com/#{form_id}?#{format_url_params(params)}"
       end
 
+      # If the DCDO setting 'jotform_redirect' is enabled,
+      # this method causes the server to respond with a 302,
+      # redirecting the browser to the JotForm form URL (instead of following our usual flow,
+      # embedding the form within our own chrome).
+      # @return [Boolean] whether the experiment is enabled and a redirect occurred
       def experimental_redirect!(form_id, params)
         DCDO.get('jotform_redirect', false).tap do |experiment_enabled|
           redirect_to jotform_form_url form_id, params if experiment_enabled
