@@ -771,10 +771,10 @@ describe('entry tests', () => {
         splitChunks: {
           maxInitialRequests: 5,
           cacheGroups: {
-            // Pull any module shared by 2+ appsEntries into the "common" chunk.
+            // Pull any module shared by ALL appsEntries into the "common" chunk.
             common: {
               name: 'common',
-              minChunks: 2,
+              minChunks: appsEntries.length,
               chunks: chunk => {
                 return _.keys(appsEntries).includes(chunk.name);
               }
