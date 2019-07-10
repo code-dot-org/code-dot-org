@@ -30,6 +30,7 @@ function updateTitle() {
 
 export const commands = {
   executeDrawLoopAndCallbacks() {
+    this.createEdgeSprites();
     drawBackground.apply(this);
     spriteUtils.runBehaviors();
     spriteUtils.runEvents(this);
