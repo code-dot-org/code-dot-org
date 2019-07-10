@@ -12,6 +12,12 @@ module Pd
         "https://form.jotform.com/#{form_id}?#{format_url_params(params)}"
       end
 
+      def experimental_redirect!(form_id, params)
+        DCDO.get('jotform_redirect', false).tap do |experiment_enabled|
+          redirect_to jotform_form_url form_id, params if experiment_enabled
+        end
+      end
+
       def format_url_params(hash)
         hash.map do |key, value|
           [
