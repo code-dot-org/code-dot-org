@@ -1,4 +1,6 @@
-import loadApplab from './init/loadApplab';
-import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
-
-loadAppOptions().then(loadApplab);
+Promise.all([
+  import('@cdo/apps/code-studio/initApp/loadApp'),
+  import('./init/loadApplab')
+]).then(([{default: loadAppOptions}, {default: loadApplab}]) =>
+  loadAppOptions().then(loadApplab)
+);
