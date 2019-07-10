@@ -8,6 +8,13 @@ var Spritelab = function() {
   this.reset = () => spriteUtils.reset();
 
   this.preview = function() {
+    if (this.gameLabP5.p5decrementPreload) {
+      // preload is still in progress. This happens sometimes on initial page load because both the Gamelab reset
+      // handler and the Blockly change handler call preview. The first call goes to the else case below and calls
+      // gameLabP5.startExecution (which starts the p5 preload phase). The second call would go into the first case
+      // and, not knowing that preload is still in progress, would attempt to call p5.redraw(), and mess up the preview
+      return;
+    }
     spriteUtils.reset();
     getStore().dispatch(clearConsole());
     Sounds.getSingleton().muteURLs();
