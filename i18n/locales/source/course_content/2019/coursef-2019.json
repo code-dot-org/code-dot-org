@@ -452,6 +452,11 @@
       }
     ]
   },
+  "https://studio.code.org/s/coursef-2019/stage/6/puzzle/1": {
+    "dsls": {
+      "markdown": "# Envelope Variables\n\nVariables allow for a lot of freedom in computer science. This lesson helps to explain what variables are and how we can use them in many different ways.\n"
+    }
+  },
   "https://studio.code.org/s/coursef-2019/stage/7/puzzle/1": {
     "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
     "authored_hints": {
@@ -678,6 +683,11 @@
   },
   "https://studio.code.org/s/coursef-2019/stage/10/puzzle/2": {
     "long_instructions": "# Modify and Predict\n\nPick one of the variables that control this simulation to modify and predict how that will change the outcome.\n\nAfter you have written down your prediction, run the simulation 5 times and write down your findings. Was your prediction accurate?"
+  },
+  "https://studio.code.org/s/coursef-2019/stage/11/puzzle/1": {
+    "dsls": {
+      "markdown": "# For Loop Fun\n\nWe know that loops allow us to do things over and over again, but now we're going to learn how to use loops with extra structure built right in.\n"
+    }
   },
   "https://studio.code.org/s/coursef-2019/stage/12/puzzle/1": {
     "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",
@@ -963,6 +973,11 @@
       "courseF_artist_for_challenge2_d": "**Solution:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n[][0]"
     }
   },
+  "https://studio.code.org/s/coursef-2019/stage/14/puzzle/1": {
+    "dsls": {
+      "markdown": "# The Internet\n\nBuild your own Internet in the classroom just using pieces of paper.\n"
+    }
+  },
   "https://studio.code.org/s/coursef-2019/stage/15/puzzle/1": {
     "short_instructions": "Make a prediction!",
     "long_instructions": "Make a prediction! Study the code.\n\n-   The sprite will spin.\n-   The sprite will shrink.\n-   The sprite will move.\n-   The sprite will change colors.",
@@ -1129,10 +1144,26 @@
     "short_instructions": "**Free Play:** What more can you make your pet do? Try anything you like!",
     "long_instructions": "**Free Play:** Your virtual pet is _VIRTUALLY AWESOME!_ \n\nWhat more can you do? Try these ideas:\n\n-   Change the background to a color or an image.\n-   Print more! Try printing _\"Yum! Energy increased!\"_ when the pet eats food it likes, or _\"Yuck! Energy reset!\"_ when it eats food it doesn't like.\n-   Add another sprite that interacts with your pet in a different way. How about a **toy** sprite?\n-   Add another variable that can affect your pet or the world. What might `happiness` or `age` do?\n-   Experiment with behaviors! Try editing the **wandering** behavior to slow down or speed up the food sprites (hint: their \"speed\" is currently 5...)."
   },
+  "https://studio.code.org/s/coursef-2019/stage/17/puzzle/1": {
+    "dsls": {
+      "markdown": "# The Power of Words\n\nToday you will learn about what to do if someone is being mean online.\n"
+    }
+  },
+  "https://studio.code.org/s/coursef-2019/stage/18/puzzle/1": {
+    "dsls": {
+      "markdown": "# Crowdsourcing\n\nSee how crowdsourcing, a problem-solving technique common in computer science, can help you complete a task together as a classroom more efficiently than if you had to do it alone.\n"
+    }
+  },
+  "https://studio.code.org/s/coursef-2019/stage/19/puzzle/1": {
+    "dsls": {
+      "markdown": "# Digital Sharing\n\nIn this lesson you'll consider the challenges and benefits of respecting ownership and copyright, particularly in digital environments.\n"
+    }
+  },
   "https://studio.code.org/s/coursef-2019/stage/20/puzzle/1": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |\n|---|---|\n| [![#Bunny Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/QeROTy1pNyjNPC-ZZdBN1mcpkmTEMUc2FYwXX0SOFAY/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Arist) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |\n| Let's get creative with variables! | Let's get creative with For Loops! |\n\n"
     }
   },
   "https://studio.code.org/s/coursef-2019/stage/20/puzzle/2": {

@@ -96,7 +96,8 @@ def localize_level_content
     Script.all.each do |script|
       next unless ScriptConstants.i18n? script.name
       script_strings = {}
-      script.levels.each do |level|
+      script.script_levels.each do |script_level|
+        level = script_level.oldest_active_level
         url = get_level_url_key(script, level)
         script_strings[url] = get_i18n_strings(level)
 
