@@ -111,7 +111,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       }
     assert_response 400
     response = JSON.parse(@response.body)
-    # puts response
     assert_includes response["school_name"], "cannot be blank"
   end
 
