@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import shapes from './shapes';
-import TimeAgo from '@cdo/apps/templates/TimeAgo';
+import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 
 const styles = {
   main: {
