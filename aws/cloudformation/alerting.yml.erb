@@ -1,0 +1,52 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Resources used for monitoring and alerting on infrastructure issues.
+
+Parameters:
+  HoneybadgerApiKey:
+    Type: String
+    NoEcho: true
+
+Resources:
+  HoneybadgerLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Publish an SNS notification to Honeybadger.'
+      FunctionName: HoneybadgerNotify
+      Code: <%=js_zip ['honeybadgerNotify.js']%>
+      Environment:
+        Variables:
+          HONEYBADGER_API_KEY: !Ref HoneybadgerApiKey
+      Handler: honeybadgerNotify.handler
+      Runtime: nodejs10.x
+      Timeout: 30
+      Role: !GetAtt BasicLambdaRole.Arn
+
+  BasicLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: ['sts:AssumeRole']
+            Effect: Allow
+            Principal: {Service: [lambda.amazonaws.com]}
+      Path: /
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+
+  SNSInvokeLambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt HoneybadgerLambda.Arn
+      Action: 'lambda:InvokeFunction'
+      Principal: sns.amazonaws.com
+      SourceArn: !Ref HoneybadgerSNSTopic
+
+  HoneybadgerSNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: HoneybadgerNotify
+      Subscription:
+        - Endpoint: !GetAtt HoneybadgerLambda.Arn
+          Protocol: lambda
