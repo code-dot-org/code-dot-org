@@ -1,24 +1,28 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AllFeedback from '@cdo/apps/templates/feedback/AllFeedback';
 
 $(document).ready(showFeedback);
 
 function showFeedback() {
-  const script = document.querySelector('script[data-feedback]');
-  const feedbackData = JSON.parse(script.dataset.feedback);
+  // TODO: Erin B. delete in favor of real data
+  // once TeacherFeedbacks are associated with ScriptLevels rather than Levels.
+  const feedbacks = [
+    {
+      lessonName: 'Creating Functions',
+      levelNum: '8',
+      linkToLevel: '/',
+      unitName: 'CSP Unit 3 - Intro to Programming',
+      linkToUnit: '/',
+      lastUpdated: new Date().toLocaleString(),
+      comment: 'Good job!',
+      seenByStudent: false
+    }
+  ];
 
   ReactDOM.render(
-    <div>
-      <h1>All Teacher Feedback</h1>
-      <h3>
-        This is where there will be an AllFeedback component. For now, I will
-        show you that real data is here.
-      </h3>
-      {feedbackData.all_feedback.map((feedback, i) => {
-        return <p key={i}>{feedback.comment}</p>;
-      })}
-    </div>,
+    <AllFeedback feedbacks={feedbacks} />,
     document.getElementById('feedback-container')
   );
 }
