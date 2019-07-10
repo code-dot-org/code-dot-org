@@ -376,7 +376,7 @@ module.exports = {
         $('#designModeButton').click();
         testUtils.dragToVisualization('BUTTON', 10, 20);
         assertPropertyRowValue(0, 'id', 'button1', assert);
-        assertPropertyRowValue(2, 'width (px)', 80, assert);
+        assertPropertyRowValue(2, 'width (px)', 100, assert);
         assertPropertyRowValue(3, 'height (px)', 30, assert);
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
         assertPropertyRowValue(5, 'y position (px)', 20, assert);
