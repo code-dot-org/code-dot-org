@@ -8,7 +8,7 @@ const defaultProps = {
     linkToLevel: '/',
     unitName: 'CSP Unit 3 - Intro to Programming',
     linkToUnit: '/',
-    lastUpdated: new Date().toLocaleString(),
+    lastUpdated: new Date(),
     comment: 'Excellent work! You followed the directions closely.'
   }
 };
