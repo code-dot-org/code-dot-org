@@ -36,7 +36,7 @@ class Census::ApCsOffering < ApplicationRecord
         normalized_school_code = Census::ApSchoolCode.normalize_school_code(raw_school_code)
         unless normalized_school_code == '000000'
           begin
-            ap_school_code = Census::ApSchoolCode.find(normalized_school_code)
+            ap_school_code = Census::ApSchoolCode.find([normalized_school_code, school_year])
             Census::ApCsOffering.find_or_create_by!(
               ap_school_code: ap_school_code,
               course: course,

@@ -30,29 +30,39 @@ class Census::ApSchoolCode < ApplicationRecord
     format("%06d", raw_school_code.to_i)
   end
 
+  def self.construct_object_key(school_year)
+    "ap_school_codes/#{school_year}-#{school_year + 1}.csv"
+  end
+
   def self.seed_from_csv(filename, school_year)
     ActiveRecord::Base.transaction do
       CSV.foreach(filename, {headers: true}) do |row|
         normalized_school_code = normalize_school_code(row.to_hash['school_code'])
-        begin
-          school_id = School.normalize_school_id(row.to_hash['school_id'])
-          school = School.find_by(id: school_id)
-          if school.nil?
-            puts "AP School Code seed: school not found - skipping row for school_code:#{normalized_school_code} school_id:#{school_id}"
-          else
-            find_or_create_by!(school_code: normalized_school_code, school: school, school_year: school_year)
-          end
+        school_id = School.normalize_school_id(row.to_hash['school_id'])
+        school = School.find_by(id: school_id)
+        if school.nil?
+          puts "AP School Code seed: school not found - skipping row for school_code:#{normalized_school_code} school_id:#{school_id}"
+        else
+          find_or_create_by!(school_code: normalized_school_code, school: school, school_year: school_year)
         end
       end
     end
   end
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
-  CSV_OBJECT_KEY = "ap_school_codes.csv".freeze
 
   def self.seed_from_s3
-    AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, CSV_OBJECT_KEY) do |filename|
-      seed_from_csv(filename)
+    current_year = Date.today.year
+    (2016..current_year).each do |school_year|
+      object_key = construct_object_key(school_year)
+      begin
+        AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key) do |filename|
+          seed_from_csv(filename, school_year)
+        end
+      rescue Aws::S3::Errors::NotFound
+        # We don't expect every school year to be there so skip anything that isn't found.
+        CDO.log.warn "AP School Code seeding: object #{object_key} not found in S3 - skipping."
+      end
     end
   end
 
