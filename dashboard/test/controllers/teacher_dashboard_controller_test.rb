@@ -26,4 +26,11 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     get :show, params: {section_id: other_teacher_section.id}
     assert_response :forbidden
   end
+
+  test 'index: returns success if requested section belongs to teacher' do
+    sign_in @teacher
+    section = create :section, user: @teacher
+    get :show, params: {section_id: section.id}
+    assert_response :success
+  end
 end
