@@ -119,4 +119,11 @@ ruby
     ul = user.user_levels.where(level: sublevels).max_by(&:best_result)
     ul&.level
   end
+
+  # Returns an array of BubbleChoice parent levels for any given sublevel name.
+  # @param [String] level_name. The name of the sublevel.
+  # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
+  def self.parent_levels(level_name)
+    where("properties -> '$.sublevels' LIKE ?", "%\"#{level_name}\"%")
+  end
 end
