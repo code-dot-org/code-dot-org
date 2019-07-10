@@ -13,6 +13,8 @@
 
 const AWS = require("aws-sdk");
 const mysqlPromise = require("promise-mysql");
+// Uses API key from HONEYBADGER_API_KEY env variable
+const Honeybadger = require("honeybadger");
 
 const DB_CLUSTER_ID = process.env.DB_CLUSTER_ID;
 const DB_INSTANCE_ID = process.env.DB_INSTANCE_ID;
@@ -164,6 +166,9 @@ const main = async () => {
     await verifyDb(rds, DB_INSTANCE_ID, NEW_PASSWORD);
     console.log("verified");
   } catch (error) {
+    Honeybadger.notify(error, {
+      name: "Offsite account snapshot verification"
+    });
     console.log(error);
     throw error;
   } finally {
