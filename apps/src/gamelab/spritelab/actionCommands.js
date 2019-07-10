@@ -26,16 +26,10 @@ export const commands = {
     });
   },
   edgesDisplace(spriteId) {
-    if (!this.edges) {
-      this.createEdgeSprites();
-    }
     let sprites = spriteUtils.getSpriteArray(spriteId);
     sprites.forEach(sprite => this.edges.displace(sprite));
   },
   isTouchingEdges(spriteId) {
-    if (!this.edges) {
-      this.createEdgeSprites();
-    }
     let sprites = spriteUtils.getSpriteArray(spriteId);
     let touching = false;
     sprites.forEach(sprite => {
