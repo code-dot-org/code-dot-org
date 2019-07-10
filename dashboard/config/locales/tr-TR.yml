@@ -75,7 +75,6 @@ tr:
   of: "/"
   more: DAHA FAZLA
   less: DAHA AZ
-  beta: beta
   try_hoc: 'Kod Saati''ni denemek için buraya tıklayın >> '
   try_k8intro: İlk ve Orta Okula yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin
     (15-25 saat)
@@ -728,7 +727,6 @@ tr:
   pdf_download: PDF İndir
   download_coming_soon: İndirilebilir aktivite yakında geliyor.
   video_coming_soon: Video Yakında Geliyor!
-  not_started: Öğrenciler bu bölüm için henüz giriş yapmadılar.
   share_code:
     title: Benim programımın çalışmasını görmek için, 'Çalıştır' seçeneğini tıklayın
     bounce_og_title: Benim Bounce oyunuma göz atın
@@ -1024,23 +1022,10 @@ tr:
     create: Proje Oluştur
     create_a_project: 'Yeni bir proje oluşturun:'
     new: Yeni oluştur
-    rename: Yeniden adlandır
-    save: Kaydet
-    delete: Sil
-    import: İçeri Aktar
-    share_link_import_bad_link_header: Paylaşım bağlantısı tanınmıyor
-    share_link_import_bad_link_body: 'Bu paylaşım bağlantısını içeri aktaramadık.
-      Bir Minecraft: Agent bulmacasındaki bağlantıyı kullandığından ve tam bağlantıyı
-      kopyaladığından emin ol.'
-    share_link_import_error_header: Bir sorun oluştu.
-    share_link_import_error_body: Paylaşım bağlantısını içeri aktarırken bir sorun
-      oluştu. Lütfen tekrar dene.
     exit: Kursa dön
-    my_projects: Projelerim
     project_gallery: Projeler
     publish: Yayımla
     unpublish: Yayımdan Kaldır
-    share: Paylaş
     share_title: Projenizi paylaşın
     share_copy_link: 'Bağlantıyı kopyala:'
     share_embed_description: Projeyi bir web sayfasında görüntülemek için yerleştirme
@@ -1051,8 +1036,6 @@ tr:
     advanced_share: Gelişmiş seçenekleri göster
     no_projects: Şu anda hiç proje var. Bir proje başlatmak için yukarıdaki düğmelerden
       birini tıklatın.
-    close: Kapat
-    more: Daha Fazla
     name: İsim
     updated: Güncellendi
     project_type: Proje türü
@@ -1062,20 +1045,9 @@ tr:
     thumbnail_help: Projeniz için doğru küçük resim göremiyorum? Yeni küçük resim
       oluşturmak için uygulamanızı çalıştırın. Resmi her yerde yenilemek birkaç saat
       sürebilir.
-    really_delete: Silinsin mi?
-    delete_yes: Evet
-    delete_no: Hayır
     saved: Kaydedildi
     not_saved: Kaydedilmedi
-    cancel: İptal
-    delete_confirm_title: Bu projeyi silmek istediğinizden emin misiniz?
-    delete_confirm_text: Projeyi silmek onu kalıcı olarak Projelerim listenizden kaldıracaktır.
-      Bağlantı olarak paylaştığınız kimseler artık projenizi göremeyecekler.
     view_all: Projelerimi görüntüle
-    remix: 'karıştır.
-
-'
-    click_to_remix: Kendi sürümünüzü yaratmak için 'Remix'e basın!
     edit_project: Projeyi Düzenle
     sharing_disabled: Üzgünüz, bu proje paylaşım için kullanılabilir değil. Bu sizin
       projeniz ya da proje öğrencilerinden birinin ise, projeyi görüntülemek için

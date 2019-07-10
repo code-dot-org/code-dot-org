@@ -2,11 +2,14 @@ require 'test_helper'
 
 module Api::V1::Pd
   class WorkshopSurveyReportControllerTest < ::ActionController::TestCase
+    include Pd::WorkshopConstants
+
     self.use_transactional_test_case = true
     setup_all do
       @facilitator = create :facilitator
       @program_manager = create :program_manager
       @workshop = create(:pd_workshop, organizer: @program_manager, facilitators: [@facilitator])
+      @admin = create :workshop_admin
     end
 
     setup do
@@ -191,7 +194,7 @@ module Api::V1::Pd
       sign_in @facilitator
 
       @controller.expects(:generate_workshop_daily_session_summary)
-      get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
+      get :generic_survey_report, params: {workshop_id: workshop.id}
       assert_response :success
     end
 
@@ -200,19 +203,22 @@ module Api::V1::Pd
       sign_in @facilitator
 
       @controller.expects(:generate_workshop_daily_session_summary)
-      get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
+      get :generic_survey_report, params: {workshop_id: workshop.id}
       assert_response :success
     end
 
     test 'facilitators cannot see results for other types of workshops' do
-      workshop = create :pd_workshop, facilitators: [@facilitator]
+      workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101,
+        facilitators: [@facilitator]
       sign_in @facilitator
 
-      get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
+      get :generic_survey_report, params: {workshop_id: workshop.id}
+      result = JSON.parse(@response.body)
+
       assert_response :bad_request
-      assert_equal(
-        {'error' => 'Only call this route for new academic year workshops, 5 day summer workshops, local or TeacherCon'},
-        JSON.parse(@response.body)
+      assert result['errors']&.present?
+      assert result['errors'].first["message"]&.start_with?(
+        'Action generic_survey_report should not be used for this workshop'
       )
     end
 
@@ -242,6 +248,99 @@ module Api::V1::Pd
         user: @program_manager,
         expected_facilitator_name_filter: nil
       )
+    end
+
+    test 'experiment_survey_report: return empty result for workshop without responds' do
+      csf_201_ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1,
+        facilitators: create_list(:facilitator, 2)
+
+      expected_result = {
+        "course_name" => nil,
+        "questions" => {},
+        "this_workshop" => {},
+        "all_my_workshops" => {},
+        "facilitators" => {},
+        "facilitator_averages" => {},
+        "facilitator_response_counts" => {},
+        "experiment" => true
+      }
+
+      sign_in @admin
+      get :experiment_survey_report, params: {workshop_id: csf_201_ws.id}
+      result = JSON.parse(@response.body).slice(*expected_result.keys)
+
+      assert_equal expected_result, result
+      assert_response :success
+    end
+
+    test 'generic_survey_report: CSF201 workshop uses new pipeline' do
+      csf_201_ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201
+
+      WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report)
+
+      sign_in @admin
+      get :generic_survey_report, params: {workshop_id: csf_201_ws.id}
+
+      assert_response :success
+    end
+
+    test 'generic_survey_report: return empty result for CSF201 workshop without responds' do
+      csf_201_ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 2
+
+      expected_result = {
+        "course_name" => nil,
+        "questions" => {},
+        "this_workshop" => {},
+        "all_my_workshops" => {},
+        "facilitators" => {},
+        "facilitator_averages" => {},
+        "facilitator_response_counts" => {}
+      }
+
+      sign_in @admin
+      get :generic_survey_report, params: {workshop_id: csf_201_ws.id}
+      result = JSON.parse(@response.body).slice(*expected_result.keys)
+
+      assert_equal expected_result, result
+      assert_response :success
+    end
+
+    test 'generic_survey_report: CSF101 workshop cannot invoke this action' do
+      csf_101_ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101
+
+      WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
+      WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report).never
+      Honeybadger.expects(:notify)
+
+      sign_in @admin
+      get :generic_survey_report, params: {workshop_id: csf_101_ws.id}
+
+      assert_response :bad_request
+    end
+
+    test 'generic_survey_report: summer workshop uses old pipeline' do
+      local_summer_ws = create :pd_workshop, course: COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP
+
+      WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
+      WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report)
+
+      sign_in @admin
+      get :generic_survey_report, params: {workshop_id: local_summer_ws.id}
+
+      assert_response :success
+    end
+
+    test 'generic_survey_report: academic-year workshop uses old pipeline' do
+      new_academic_ws = create :pd_workshop, course: COURSE_CSP, num_sessions: 1,
+        started_at: Date.new(2019, 8, 1)
+
+      WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
+      WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report)
+
+      sign_in @admin
+      get :generic_survey_report, params: {workshop_id: new_academic_ws.id}
+
+      assert_response :success
     end
 
     private

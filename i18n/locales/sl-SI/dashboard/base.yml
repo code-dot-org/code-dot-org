@@ -60,7 +60,6 @@ sl:
   of: "od"
   more: "VEČ"
   less: "MANJ"
-  beta: "beta"
   try_hoc: "Poskusi Ura programiranja, klikni tu >> "
   try_k8intro: "Poizkusi naš K-8 tečaj Uvod v računalništvo (15-25 ur)"
   k8intro: "Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)"
@@ -165,6 +164,7 @@ sl:
     type:
       word: 'Skrivna beseda'
       email: 'Elektronska pošta'
+      clever: 'Clever'
   follower:
     invite_sent: 'Povabilo poslano'
     added_teacher: '%{name} dodan/a kot tvoj/a učitelj/ica'
@@ -250,6 +250,7 @@ sl:
       iceage: 'Ledena doba'
       infinity: 'Neskončnost'
       minecraft_adventurer: 'Minecraft Pustolovec'
+      minecraft_aquatic: 'Minecraft Aquatic'
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
       starwars: 'Star Wars'
@@ -581,32 +582,19 @@ sl:
     create: "Ustvari projekt"
     create_a_project: 'Ustvari nov projekt:'
     new: "Ustvari novo"
-    rename: "Preimenuj"
-    save: "Shrani"
-    delete: "Izbriši"
     exit: "Vrni se na tečaj"
-    my_projects: "Moji projekti"
     project_gallery: "Projekti"
-    share: "Deli"
     share_title: Deli svoj projekt
     share_copy_link: "Kopiraj povezavo:"
     advanced_share: "Prikaz dodatnih možnosti"
-    close: "Zapri"
-    more: "Več"
     name: "Ime"
     updated: "Posodobljeno"
     project_type: "Vrsta projekta"
     help_text: "Klikni spodaj na <strong>Ustvari App</strong> ali <strong>Nariši kaj</strong>, da začneš nov projekt!<br/>Kadarkoli lahko prideš nazaj in delaš na svojih projektih."
     need_help: "Potrebujete pomoč za začetek?"
-    really_delete: 'Izbriši?'
-    delete_yes: 'Da'
-    delete_no: 'Ne'
     saved: "Shranjeno"
     not_saved: "Ni shranjeno"
-    cancel: 'Prekliči'
-    delete_confirm_title: Ali ste prepričani, da želite izbrisati ta projekt?
     view_all: 'Poglej si Moji projekti'
-    remix: 'Remiks'
     edit_project: 'Uredi projekt'
     abuse:
       tos: "Ta projekt so prijavili, da je kršil <a href='http://code.org/tos'>Pogoje storitve</a> spletne strani Code.org in zato ga ni mogoče deliti z drugimi."

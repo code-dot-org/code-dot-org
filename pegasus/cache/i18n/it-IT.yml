@@ -1201,7 +1201,7 @@ it-IT:
   tynker_name: Costruisci un gioco come vuoi tu
   scratch_name: Scopri la tua creatività con la programmazione
   thinkersmith_name: I miei amici robotici
-  condcards_name: Istruzioni condizionali con le Carte da Gioco
+  condcards_name: Istruzioni condizionali con le carte da gioco
   codehs_name: Imparare a programmare con il cane Karel
   codemonkey_name: CodeMonkey
   codeavengers_name: Costruisci un gioco con JavaScript
@@ -1258,14 +1258,8 @@ it-IT:
   coursed-2018_name: Corso D (2018)
   coursee-2018_name: Corso E (2018)
   coursef-2018_name: Corso F (2018)
-  accelerated_name: Corso rapido
-  express_name: Corso Rapido
-  pre-express_name: Corso Rapido pre-scolare
-  express-2017_name: Corso Rapido (2017)
-  pre-express-2017_name: Corso Rapido pre-scolare (2017)
   express-2018_name: Corso Rapido
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
-  cspunit1_name: Princìpi dell'Informatica - Unità 1
   cspunit2_name: Princìpi dell'Informatica - Unità 2
   cspunit3_name: Princìpi dell'Informatica - Unità 3
   cspunit4_name: Princìpi dell'Informatica - Unità 4
@@ -1395,6 +1389,12 @@ it-IT:
   coursed-2018_gradelevel: Da 7 a 11 anni
   coursee-2018_gradelevel: Da 8 a 12 anni
   coursef-2018_gradelevel: Da 9 a 13 anni
+  coursea-2019_gradelevel: Da 4 a 7 anni
+  courseb-2019_gradelevel: Da 5 a 8 anni
+  coursec-2019_gradelevel: Da 6 a 10 anni
+  coursed-2019_gradelevel: Da 7 a 11 anni
+  coursee-2019_gradelevel: Da 8 a 12 anni
+  coursef-2019_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
   codeorg_platformtext: Browser moderni, smartphone, tablet
   codeintl_platformtext: Browser moderni, smartphone, tablet
@@ -1571,6 +1571,19 @@ it-IT:
   coursee-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
     corsi C e D e viene aggiunto il concetto di funzione.
   coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
+    di informatica e crea disegni, storie o giochi interattivi.
+  coursea-2019_shortdescription_congrats: Introduzione all'informatica per bambini
+    che non leggono ancora.
+  courseb-2019_shortdescription_congrats: Introduzione all'informatica per bambini
+    che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà
+    per bambini leggermente più grandi.)
+  coursec-2019_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
+    storie animate o giochi interattivi.
+  coursed-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti del
+    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+  coursee-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
+    corsi C e D e viene aggiunto il concetto di funzione.
+  coursef-2019_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
     di informatica e crea disegni, storie o giochi interattivi.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
@@ -2133,6 +2146,7 @@ it-IT:
   full_course_category_name: Corsi Avanzati
   user_header_label: Ciao %{username}
   user_header_team: Squadra
+  user_header_my_projects: Collezione Privata
   user_header_settings: Il mio account
   user_header_logout: Esci
   user_header_signin: Accedi
@@ -2337,7 +2351,7 @@ it-IT:
     tradizionale)
   hoc2018_dance_teacher_resources_tile2_description: Non sono necessari computer!
     Impara i concetti di programmazione creando tutti insieme una coreografia di ballo.
-  hoc2018_dance_teacher_resources_tile2_button: Attività Tradizionale
+  hoc2018_dance_teacher_resources_tile2_button: Attività tradizionale
   hoc2018_dance_featured_student_creations_title: Creazioni degli studenti consigliate
   hoc2018_dance_videos_section_heading: Cerca l'ispirazione
   hoc2018_dance_video_title_what_is_creativity: Cos'è la creatività?

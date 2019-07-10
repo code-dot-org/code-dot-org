@@ -10,6 +10,9 @@ class ContentDSL < BaseDSL
   def submittable(text) @hash[:submittable] = text end
   def display_name(text) @hash[:display_name] = text end
   def display_as_unplugged(text) @hash[:display_as_unplugged] = text end
+  def use_large_video_player(text) @hash[:use_large_video_player] = text end
+  def hide_reference_area(text) @hash[:hide_reference_area] = text end
+  def video_key(text) @hash[:video_key] = text end
 
   # legacy
   def description(text) @hash[:content1] = text end
@@ -48,8 +51,8 @@ class ContentDSL < BaseDSL
       content3
       pre_title
     ).each do |property|
-      strings[@hash[property]] = @hash[property] unless @hash[property].blank?
+      strings[property] = @hash[property] unless @hash[property].blank?
     end
-    {@name => strings}
+    strings.stringify_keys
   end
 end

@@ -70,7 +70,6 @@ zh-CN:
   of: 的
   more: 更多
   less: 更少
-  beta: 测试版
   try_hoc: 尝试一小时代码，请单击此处 >>
   try_k8intro: 尝试我们的K-8计算机科学入门课程（15-25小时）
   k8intro: K-8计算机科学入门课程（15-25小时）
@@ -289,6 +288,10 @@ zh-CN:
       professional_learning: 专业学习
       documentation: 使用文档
       tutorials: 教程
+      app_lab_documentation: 应用程序实验室文档
+      app_lab_tutorials: 应用程序实验室说明
+      game_lab_documentation: 游戏实验室文档
+      game_lab_tutorials: 游戏实验室说明
       educate_overview: 教育工作者概述
       educate_elementary: 小学
       educate_middle: 中学
@@ -346,10 +349,10 @@ zh-CN:
       gumball: 阿甘妙世界
       iceage: 冰河世纪
       infinity: 无限
-      makerlab: 制造商工具包
+      makerlab: Maker 工具包
       minecraft_adventurer: "《我的世界》大冒险"
       minecraft_aquatic: 水上我的世界
-      minecraft_codebuilder: '我的世界: 代码连接'
+      minecraft_codebuilder: '我的世界: 连接代码'
       minecraft_designer: 我的世界
       minecraft_hero: "《我的世界》 英雄"
       playlab: 游戏实验室
@@ -612,7 +615,6 @@ zh-CN:
   pdf_download: 下载 PDF
   download_coming_soon: 可下载的活动即将推出.
   video_coming_soon: 视频即将推出！
-  not_started: 学生已经不会尝试这一水平。
   share_code:
     title: 点击“运行”来看程序如何运行
     bounce_og_title: 看看我的弹球游戏
@@ -851,20 +853,10 @@ zh-CN:
     create: 创建项目
     create_a_project: 创建一个新项目：
     new: 新建
-    rename: 重命名
-    save: 保存​​
-    delete: 刪除
-    import: 导入
-    share_link_import_bad_link_header: 分享的链接无法识别
-    share_link_import_bad_link_body: 无法导入共享链接。请确保这个链接是来源于《我的世界：代理人关卡》，并且完整复制了整个链接。
-    share_link_import_error_header: 出错了。
-    share_link_import_error_body: 导入该共享链接时出错。请再试一次。
     exit: 返回课程
-    my_projects: 我的项目
     project_gallery: 项目
     publish: 发布
     unpublish: 取消发布
-    share: 分享
     share_title: 分享您的项目
     share_copy_link: 复制链接：
     share_embed_description: 您可以将嵌入的代码粘贴到HTML页，就可以在一个网页上显示这个项目。
@@ -872,25 +864,15 @@ zh-CN:
     embed: 嵌入
     advanced_share: 显示更高级的选项
     no_projects: 你当前没有任何项目，点击上面的任何按钮来开始一个项目。
-    close: 关闭
-    more: 更多
     name: 姓名
     updated: 最后更新于
     project_type: 项目类型
     help_text: 单击 <strong>制作一个App</strong> 或 <strong>绘制东西</strong> 制作一个新的游戏实验室或者是艺术家项目！<br/>您可以在随时来继续这个项目。
     need_help: 实施这些课程来帮助你开始新项目。
     thumbnail_help: 没有为您的项目扎红到正确的缩略图？运行您的应用来生成一个新的缩略图。注意，需要几个小时后，缩略图才会同步显示到每个地方。
-    really_delete: 要删除吗？
-    delete_yes: 对
-    delete_no: 不
     saved: 已保存
     not_saved: 没有保存
-    cancel: 取消
-    delete_confirm_title: 您确认您要删除此项目吗？
-    delete_confirm_text: 此项目将从项目列表中永久删除。任何人将不再能够通过您已共享的链接查看这个项目。
     view_all: 查看我的项目
-    remix: 合成
-    click_to_remix: 点击"合成"来创造出你自己的版本！
     edit_project: 编辑工程
     sharing_disabled: 抱歉，这个项目不能分享。如果这是你或者你学生的项目，请<a href='https://studio.code.org/users/sign_in'>登录</a>到你的账号查看这个项目。
     abuse:
@@ -941,7 +923,7 @@ zh-CN:
     csf_f_2: 课程F的内容
     csf_digcit: 数字公民
     csf_jigsaw: 拼图
-    csf_sequencing: 排序
+    csf_sequencing: 序列
     csf_loops: 循环
     csf_events: 事件
     csf_online_safety: 在线安全
@@ -955,6 +937,7 @@ zh-CN:
     csf_for_loops: 计数循环
     csf_internet: 互联网
     csf_impacts: 计算的影响
+    csf_warmup: 热身
     csd1_1: 第 1 章︰ 解决问题的流程
     csd1_2: 第 2 章︰ 计算机和解决问题的能力
     csd2_1: 第 1 章︰ 网站内容和 HTML
@@ -992,7 +975,8 @@ zh-CN:
     csp_lists: 列表
     csp_loops: 循环
     csp_traversals: 遍历
-    csp_libraries: 使用的开源库
+    csp_libraries: 库
+    csp_parameters_return_values: 参数和返回值
     dlp: 反思提示
     time4cs_c1: 湿地及其生态系统
     time4cs_c2: 湿地里的食物链
@@ -1064,7 +1048,7 @@ zh-CN:
   locked_stage: 这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候， 你的老师可以解锁这一阶段。
   hidden_stage: 你的老师没有预料到你来到这里。 请询问你的老师你应该上什么课。
   hidden_script: 你的老师不期待你来这里。请询问你的老师应该上哪个单元。
-  no_script_access_student: 您无权访问此单元。请问您的教师，您应该设置什么单元。
+  no_script_access_student: 无权访问此单元。请询问教师，应该访问什么单元。
   no_script_access_teacher: 你不能进入这个单元。如果你确认要访问这个单元, 请写信给 support@code.org, 以便我们可以解决这种情况。
   return_unit_overview: 转到单元概述
   return_course_overview: 转到课程概述

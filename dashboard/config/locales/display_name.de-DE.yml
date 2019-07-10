@@ -1,7 +1,22 @@
 ---
-de:
+de-DE:
   data:
     display_name:
+      App Lab Intro 8 - Video Design Mode: 'Video: Designmodus'
+      App Lab Intro 8 - Video Getting Started: 'Video: Einführung'
+      App Lab Intro 8 - Video Images and Sounds: 'Video: Bild und Klang'
+      App Lab Intro 8 - Video Make It Interactive: 'Video: Mache es interaktiv'
+      App Lab Intro 8 - Video Share Your App: 'Video: Teile deine App mit Anderen'
+      AppLab Intro 7 - Change Screen Color: Bildschirmfarbe ändern
+      AppLab Intro 7 - Change Text 2: Text ändern
+      AppLab Intro 7 - Full Text: Zwei Tasten
+      AppLab Intro 7 - onEvent intro: Funktion der Tasten erstellen
+      AppLab Intro 7 - onEvent twoButtons: Mehr Praxis
+      AppLab Intro 7 - playSound: playSound verwenden
+      AppLab Intro 7 - thisOrThatAddButton: Dies oder das
+      AppLab Intro 7 - thisOrThatAddScreen: Dies oder das
+      AppLab Intro 7 - thisOrThatPersonalize: Dies oder das
+      AppLab Intro 7 - thisOrThatSetScreen: Dies oder das
       CSD U2 Pair Programming Video: Paarprogrammierung
       CSD U2 Pair Programming Video_2018: Paarprogrammierung
       CSD U2 Pair Programming Video_2019: Paarprogrammierung
@@ -56,7 +71,6 @@ de:
       CSD U3 Variables Map: Variablen
       CSD U3 Variables Map_2018: Variablen
       CSD U3 Variables Map_2019: Variablen
-      CSD U3 functions map: Funktionen
       CSD U6 arrays intro: Einführung in Arrays
       CSD U6 arrays intro_2018: Einführung in Arrays
       CSD U6 for loop map: '"Zähle mit"-Schleifen'
@@ -66,22 +80,14 @@ de:
       CSD U6 functions paramters video_2018: Funktionen mit Parametern
       CSD U6 functions paramters video_2019: Funktionen mit Parametern
       'CSD: For Loop_2018': '"Zähle mit"-Schleifen'
-      'CSD: For Loop_2019': '"Zähle mit"-Schleifen'
       Dance_Party_extras_battle: Tanz-Crews
       Dance_Party_extras_every_beat: Viertelnoten
       Dance_Party_extras_layout: Formation einnehmen
       Dance_Party_extras_on_beat: Bass, mittlerer Ton und Sopran
       Dance_Party_extras_speed: Beschleunigen, verlangsamen
       Dance_Party_extras_visible: Wohin würden sie gehen?
-      MC_HOC_2017_FP10x10: Freies Spiel
-      MC_HOC_2017_FP10x10_RE: Freies Spiel
-      OPD-K5 S2L2: Was ist Informatik?
       OPD-K5 WhatIsCS: Was ist Informatik?
-      OPD-K5S2L2: Was ist Informatik?
-      SG U3L07 More Subgoals: Dokumentation
       courseA_video_Stevie: Stevie und das große Projekt
       courseA_video_Stevie_2018: Stevie und das große Projekt
-      courseA_video_Stevie_2019: Stevie und das große Projekt
       courseB_video_Unspotted: Unentdeckte Bugs
       courseB_video_Unspotted_2018: Unentdeckte Bugs
-      courseB_video_Unspotted_2019: Unentdeckte Bugs

@@ -631,7 +631,13 @@ de:
         C4_unplugged_forloops: '"Zähle mit"-Schleifen'
         C4_unplugged_parameters: Songschreiben mit Parametern
         C4_unplugged_binary: Binärdatei
+        CSF_collector_k1_blocks: 'Einführung in Informatik und Programmieren: Der
+          Sammler'
+        CSF_collector_text_blocks: 'Einführung in Informatik und Programmieren: Der
+          Sammler'
         CSF_EF_cs_matters: Informatik ist wichtig
+        CSF_maze_intro_k1_blocks: Einführung in Code Studio
+        CSF_maze_intro_text_blocks: Einführung in Code Studio
         CSF_my_robotic_friends: Meine Roboterfreunde
         CSF_Power_of_Words: Macht der Worte
         CSF_Super_Digital_Citizen: Super digitale Bürger
@@ -664,9 +670,15 @@ de:
         csd_external_waze_data: Warum sind So viele Nutzer von Waze besessen?
         csd_gamelab_animation_tab: Der Animations Tab
         csd_gamelab_velocity: Geschwindigkeit
+        csd_weblab_intro_1: Einführung in Web Lab - Teil 1
+        csd_weblab_intro_2: Einführung in Web Lab - Teil 2
+        csd_weblab_css_1: Einführung in CSS - Teil 1
+        csd_weblab_css_2: Einführung in CSS - Teil 2
+        csd_weblab_intro_3: Einführung in Web Lab - Teil 3
         csp_applab_functions: Einführung in Funktionen
         csp_applab_functions_parameters: Funktionen mit Parametern
         csp_applab_loops: Schleifen
+        csp_cs_is_changing_everything: Informatik verändert alles
         starwars_intro: 'Star Wars: Baue eine Galaxie aus Code – Einführung'
         starwars_typing: 'Star Wars: Baue eine Galaxie aus Code – JavaScript'
         starwars_events: 'Star Wars: Erbaue ein Galaxie aus Code – Ereignisse'
@@ -691,8 +703,17 @@ de:
         mc_2016_events: Minecraft Hour of Code - Programmereignisse
         mc_2016_spawn: Minecraft Hour of Code - Spawn
         mc_2016_congrats: Minecraft Hour of Code - Gratuliere
+        applab_hoc_welcome: App-Labor Hour of Code - Willkommen
+        applab_hoc_setproperty: App-Labor Hour of Code - setProperty
+        applab_hoc_onevent: App-Labor Hour of Code - onEvent
+        applab_hoc_designmode: App-Labor Hour of Code - Entwurfsmodus
         mc_2017_congratulations: Minecraft Hour of Code - Gratuliere
         csd_applab_arrays: Einführung in Arrays
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_scrat_loops_K1: Schleifen in Ice Age
+        CSF_scrat_loops_CF: Schleifen in Ice Age
+        CSF_if_allskins: Der Wenn-Block
         CSF_loops_AB: Schleifen
         CDEF_Video_SpritesInAction: Sprites in Aktion
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Aktion
@@ -704,6 +725,9 @@ de:
         repeat_block: Benutze den Wiederholungsblock
         csd_pair_programming: Paarprogrammierung
         csd_applab_parameters: Funktionen mit Parametern
+        csd_applab_loops: Schleifen im App-Labor
+        CSF_SpriteLab_Intro_v2: Einführung Sprite Lab
+        CSF_SpriteLab_SpritesInAction_v2: Sprites in Aktion
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den

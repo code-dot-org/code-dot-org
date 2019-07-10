@@ -1,0 +1,50 @@
+{
+  "https://studio.code.org/s/csd1-2017/stage/1/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nThe class works in groups to design aluminum foil boats that will support as many pennies as possible.  At the end of the lesson groups reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course. \n\n\n## Resources\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/stage/2/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson you will learn a formal problem solving process that will help you to structure your approach to a wide variety of problems.\n\n\n## Resources\n\n* [The Problem Solving Process - Activity Guide](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/stage/3/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\nIn this lesson you'll apply the problem solving process to a variety of problems to explore how each step helps you develop and improve solutions to problems.\n\n## Resources\n\n* [Solving Problems - Activity Guide](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/stage/4/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson you'll start thinking about how computers help solve certain kinds of problems and learn the key features of every computer.\n\n## Resources\n\n* [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/stage/4/puzzle/2": {
+    "display_name": "Video: What Makes a Computer, a Computer?"
+  },
+  "https://studio.code.org/s/csd1-2017/stage/5/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson you'll learn about the different types of input and output devices used by computers and the types of information they send and receive.\n\n## Vocabulary\n\n* **Input** - A device or component that allows information to be given to a computer\n* **Output** - Any device or component that receives information from a computer\n\n\n## Resources\n\n* [Input and Output - Activity Guide](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/stage/6/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson you'll learn how processing is used by humans and computers to turn inputs into outputs.\n\n## Vocabulary\n\n* **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer\n\n## Resources\n\n* [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/stage/7/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson you'll learn about the kinds of information computers store and how storage is a critical part of processing information.\n\n## Resources\n\n* [Storage and Processing - Activity Guide](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/stage/8/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson you will explore the ways apps process different kinds of information in order to solve problems.\n\n## Resources\n\n* [App Exploration - Activity Guide](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/stage/9/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nFor this project you will design your own app that solves a problem that you get to define.\n\n## Resources\n\n* [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)\n* [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)\n* [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)\n"
+    }
+  }
+}

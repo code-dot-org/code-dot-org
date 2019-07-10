@@ -639,18 +639,6 @@ sk:
             '2': výšky
       Dancelab_whenSetup:
         text: nastavenie
-      gamelab_changeColor:
-        text: zmeň {COLOR} {METHOD} o {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': sfarbenie
-      gamelab_changeColorBy:
-        text: zmeň {COLOR} {METHOD} o {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': odtieň
-            '"saturation"': sýtosť
-            '"brightness"': jas
       gamelab_changePropBy:
         text: zmeň {SPRITE} {PROPERTY} o {VAL}
         options:
@@ -712,29 +700,11 @@ sk:
             '"x"': x
             '"y"': y
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': okraj
-            '"inner"': vnútorný štvorec
-            '"circle"': kruh
-            '"grid"': mriežka
-            '"row"': riadok
-            '"column"': stĺpec
-            '"x"': uhlopriečka
-            '"plus"': plus
-            '"random"': náhodný
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": náhodný
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': vpravo
             '"left"': vľavo
-      gamelab_mixColors:
-        text: zmiešaj {COLOR1} a {COLOR2}
       gamelab_randColor:
         text: náhodná farba
       gamelab_randomColor:
@@ -752,15 +722,6 @@ sk:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod
               vodou
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
-      gamelab_setPosition:
-        options:
-          POSITION:
-            "{x: 50, y: 50}": vľavo hore
-            "{x: 350, y: 50}": vpravo hore
-            "{x: 200, y: 200}": v strede
-            "{x: 50, y: 350}": vľavo dole
-            "{x: 350, y: 350}": vpravo dole
-            '"random"': náhodný
       gamelab_setProp:
         options:
           PROPERTY:
@@ -776,34 +737,11 @@ sk:
             '"scale"': veľkosť
             '"width"': šírka
             '"height"': výška
-      gamelab_setup:
-        text: nastavenie
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': keď
             '"while"': pokiaľ
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': keď
-            '"while"': pokiaľ
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-            '"direction"': smeru pohybu
-            '"tint"': sfarbenie
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-            '"direction"': smeru pohybu
-            '"tint"': sfarbenie
       gamelab_turn:
         options:
           DIRECTION:
@@ -831,11 +769,6 @@ sk:
             "'down'": dole
             "'left'": vľavo
             "'right'": vpravo
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': keď
-            '"while"': pokiaľ
       gamelab_whenUpArrow:
         text: pri stlačení šípky hore
       gamelab_whileKey:

@@ -201,8 +201,8 @@ pt-BR:
           então use o bloco "contador". Dica: ele está na categoria Variáveis.'
         turtle_2_7: Aqui temos um programa para desenhar uma espiral, mas os blocos
           estão desativados para que eles não sejam executados. Faça um novo programa
-          usando um bloco "conte com" (na categoria Laços) e um bloco "contador" (na
-          categoria Variáveis) para desenhar a mesma espiral.
+          usando um bloco "Para" (na categoria Laços) e um bloco "contador" (na categoria
+          Variáveis) para desenhar a mesma espiral.
         turtle_2_7_5: Há uma nova função "desenhe um boneco de neve" (na categoria
           Funções). Desenhe dois bonecos de neve, de 250 e 100 de altura.
         turtle_2_8: Esse desafio é um pouco complicado. Use a função "desenhe um boneco
@@ -323,7 +323,7 @@ pt-BR:
         jigsaw_8: Organize os blocos para formar a imagem
         jigsaw_9: Organize os blocos para formar a imagem
         jigsaw_10: Organize os blocos para formar a imagem
-        jigsaw_11: Organize os blocos para formar a imagem
+        jigsaw_11: Organize os blocos em ordem numérica
         jigsaw_12: Coloque estes blocos em ordem numérica
         jigsaw_13: Resolva o desafio!
         mazestep_1: Descrição do labirinto aqui
@@ -635,9 +635,9 @@ pt-BR:
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_binary: Binário
         CSF_artist_angles: Ângulos em Artista
-        CSF_collector_k1_blocks: 'Fundamentos do CS: O Coletor'
+        CSF_collector_k1_blocks: 'Fundamentos de CS: O Coletor'
         CSF_collector_repeat_loops: Laços Repita em Coletor
-        CSF_collector_text_blocks: 'Fundamentos do CS: O Coletor'
+        CSF_collector_text_blocks: 'Fundamentos de CS: O Coletor'
         CSF_create_functions: Criar Funções
         CSF_debugging_k1_blocks: Analisando
         CSF_debugging_text_blocks: Analisando
@@ -649,7 +649,7 @@ pt-BR:
         CSF_Super_Digital_Citizen: Cidadão Super Digital
         CSF_stevie_big_project: Stevie e o Grande Projeto
         CSF_unspotted_bugs: Erros Não Reportados
-        CSF_zuck_loops_short: Repita as rotações
+        CSF_zuck_loops_short: Laços Repita
         frozen_intro: Introdução à Hora de Código
         frozen_loops: Introdução aos Laços
         frozen_functions: Introdução às Funções
@@ -660,15 +660,15 @@ pt-BR:
         infinity_playlab_intro: Laboratório - Introdução
         infinity_playlab_events: Laboratório - Eventos
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
-        csd_concept_how_computers_work: Introdução de como os computadores funcionam
-        csd_concept_computer: 'Como computadores funcionam: O que faz um computador,
+        csd_concept_how_computers_work: Introdução de Como Computadores Funcionam
+        csd_concept_computer: 'Como Computadores Funcionam: O que faz um computador,
           ser um computador?'
-        csd_concept_binary_data: 'Como os computadores funcionam: Binário & Dados'
-        csd_concept_circuits_logic: 'Como computadores funcionam: Circuitos e Lógica'
-        csd_concept_memory_cpu_input_output: 'Como computadores funcionam: CPU, entrada
-          e saída'
-        csd_concept_hardware_software: 'Como computadores funcionam: Hardware e Software'
-        csd_concept_search: Como funciona as pesquisas
+        csd_concept_binary_data: 'Como Computadores Funcionam: Binário e Dados'
+        csd_concept_circuits_logic: 'Como Computadores Funcionam: Circuitos e Lógica'
+        csd_concept_memory_cpu_input_output: 'Como Computadores Funcionam: CPU, Entrada
+          e Saída'
+        csd_concept_hardware_software: 'Como Computadores Funcionam: Hardware e Software'
+        csd_concept_search: Como funcionam as pesquisas
         csd_external_amazon_data: Como grandes dados são usados em sistemas de recomendação
           da Amazon para mudar as nossas vidas
         csd_external_netflix_data: Como a Netflix faz sugestões para programas de
@@ -685,7 +685,7 @@ pt-BR:
         csp_applab_functions_parameters: Funções com Parâmetros
         csp_applab_loops: laços
         csp_concept_rgb: Um pouco sobre pixels
-        csp_cs_is_changing_everything: Ciência da computação está mudando tudo
+        csp_cs_is_changing_everything: Ciência da Computação está Mudando Tudo
         csp_pixelation_color_1: Widget de pixelização de cores - Parte 1
         csp_pixelation_color_2: Widget de pixelização de cores - Parte 2
         csp_pixelation_color_3: Widget de pixelização de cores - Parte 3
@@ -746,11 +746,11 @@ pt-BR:
         applab_hoc_designmode: Aplicativo Laboratório Hora do Código - Modo Design
         applab_hoc_share: LabApp Hora do Código - Compartilhar
         mc_2017_agent_intro: Hora do Código Minecraft - O Agente
-        mc_2017_repeat: Hora do Código Minecraft - Loops repetitivos
+        mc_2017_repeat: Hora do Código Minecraft - Laços Repita
         mc_2017_functions: Hora do Código Minecraft - Funções
         mc_2017_congratulations: Hora do Código Minecraft - Parabéns
         mc_2017_puzzle_1: Hora do Código Minecraft - O Agente
-        mc_2017_puzzle_3: Hora do Código Minecraft - Loops repetitivos
+        mc_2017_puzzle_3: Hora do Código Minecraft - Laços Repita
         mc_2017_puzzle_8: Hora do Código Minecraft - Funções
         mc_2017_puzzle_12: Hora do Código Minecraft - Jogo Livre
         hint_videos_d_11_3_first: 'Vídeo-dica: D.11.3 Primeiro'
@@ -777,8 +777,8 @@ pt-BR:
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_harvester_skinOverview_K-1: A Colheitadeira
-        CSF_scrat_loops_K1: Repetições na Era do gelo
-        CSF_scrat_loops_CF: Repetições na Era do gelo
+        CSF_scrat_loops_K1: Laços na Era do gelo
+        CSF_scrat_loops_CF: Laços na Era do gelo
         CSF_if_allskins: O Bloco Se
         CSF_ifelse_allskins: Usando Blocos "Se/Senão"
         CSF_ifelseifelse_allskins: Usando Blocos "Se/SenãoSe/Senão"
@@ -786,13 +786,13 @@ pt-BR:
         csd_gamelab_booleans: Expressões Booleanas
         csd_gamelab_conditional_statements: Instruções Condicionais
         csd_gamelab_if_else: Declarações Se/Senão
-        CSF_SpriteLabIntro_CDEF: Este é o Laboratório de Sprite
+        CSF_SpriteLabIntro_CDEF: Este é o Laboratório de Sprites
         CSF_Spritelab_MakeSprite_CDEF: Como fazer um no Laboratório de Sprite
         CDEF_Video_SpritesInAction: Sprites em Ação
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites em Ação
         CSF_StarWars_ProjectIntro: Introdução para o Projeto Star Wars
         mc_2018_intro: 'Minecraft: Introdução à Viagem Aquática'
-        MC_2018_loops: 'Minecraft: Viagem Aquática Repetir Até'
+        MC_2018_loops: 'Minecraft: Viagem Aquática Repita Até'
         mc_2018_conditionals: 'Minecraft: Viagem Aquática Condicionais'
         mc_2018_closing: 'Minecraft: Viagem Aquática Parabéns'
         hoc_dance_warmup: Festa Dançante - Aquecimento
@@ -801,9 +801,10 @@ pt-BR:
         hoc_dance_congrats: Festa Dançante - Festejar!
         c_and_c_great_to_create: É Ótimo Criar e Jogar Limpo
         c_and_c_digital_sharing: Compartilhamento Digital
+        teaching_csf_how_it_works: 'Ensinando Fundamentos da CC: Como o Curso funciona'
         elem_pd_2: Ciência da computação no Ensino Fundamental - Vídeo PD 2/2
         what_is_cs: O que é ciência da computação?
-        repeat_block: Usando o bloco repita
+        repeat_block: Usando o Bloco Repita
         lesson_planning: Planejamento de aula
         opd_closing: 'Ensinando Fundamentos da CC: Fechamento e Próximos passos'
         why_unplugged_lessons: Ficando "offline"
@@ -816,8 +817,15 @@ pt-BR:
           Pares'
         teaching_problem_solving: 'Ensinando Fundamentos da CC: Ensinando Resolução
           de Problemas'
+        csd_applab_designmode: 'Descobertas CS: App Lab - Modo Design'
         csd_pair_programming: Programação em duplas
+        csd_gamelab_functions: Chamando e Definindo Funções
         csd_applab_parameters: Funções com Parâmetros
+        csd_applab_loops: Loops em App Lab
+        CSF_Going_Places_Safely: Minha Vizinhança Online
+        CSF_SpriteLab_Intro_v2: Introdução ao Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: Como fazer um Sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites em Ação
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

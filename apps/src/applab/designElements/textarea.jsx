@@ -13,10 +13,8 @@ import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
 import designMode from '../designMode';
-import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
 import themeColor from '../themeColor';
 import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {
@@ -192,6 +190,9 @@ class TextAreaEvents extends React.Component {
   }
 }
 
+const CLASSIC_TEXT_AREA_PADDING = '5px';
+const NEW_THEME_TEXT_AREA_PADDING = '5px 15px';
+
 export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
@@ -271,6 +272,22 @@ export default {
       millennial: 13,
       robot: 13,
       classic: 14
+    },
+    padding: {
+      default: NEW_THEME_TEXT_AREA_PADDING,
+      orange: NEW_THEME_TEXT_AREA_PADDING,
+      citrus: NEW_THEME_TEXT_AREA_PADDING,
+      ketchupAndMustard: NEW_THEME_TEXT_AREA_PADDING,
+      lemonade: NEW_THEME_TEXT_AREA_PADDING,
+      forest: NEW_THEME_TEXT_AREA_PADDING,
+      watermelon: NEW_THEME_TEXT_AREA_PADDING,
+      area51: NEW_THEME_TEXT_AREA_PADDING,
+      polar: NEW_THEME_TEXT_AREA_PADDING,
+      glowInTheDark: NEW_THEME_TEXT_AREA_PADDING,
+      bubblegum: NEW_THEME_TEXT_AREA_PADDING,
+      millennial: NEW_THEME_TEXT_AREA_PADDING,
+      robot: NEW_THEME_TEXT_AREA_PADDING,
+      classic: CLASSIC_TEXT_AREA_PADDING
     }
   },
 
@@ -279,19 +296,11 @@ export default {
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
     element.style.height = '100px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.fontFamily = fontFamilyStyles[0];
-      element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = themeColor.textArea.classic;
-      element.style.backgroundColor = themeColor.textAreaBackground.classic;
-      elementUtils.setDefaultBorderStyles(element, {
-        forceDefaults: true,
-        textInput: true
-      });
-    }
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     $(element).addClass('textArea');
 
@@ -303,8 +312,12 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
-    // Set the font family for older projects that didn't set them on create:
+    // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
+    // Set the padding for older projects that didn't set it on create:
+    if (element.style.padding === '') {
+      element.style.padding = CLASSIC_TEXT_AREA_PADDING;
+    }
 
     $(element).addClass('textArea');
 

@@ -16,7 +16,6 @@ import * as gridUtils from '../gridUtils';
 import designMode from '../designMode';
 import themeColor from '../themeColor';
 import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class LabelProperties extends React.Component {
   static propTypes = {
@@ -191,6 +190,9 @@ class LabelEvents extends React.Component {
  */
 const STILL_FITS = 5;
 
+const CLASSIC_LABEL_PADDING = '2px';
+const NEW_THEME_LABEL_PADDING = '2px 15px';
+
 export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
@@ -270,28 +272,38 @@ export default {
       millennial: 13,
       robot: 13,
       classic: 14
+    },
+    padding: {
+      default: NEW_THEME_LABEL_PADDING,
+      orange: NEW_THEME_LABEL_PADDING,
+      citrus: NEW_THEME_LABEL_PADDING,
+      ketchupAndMustard: NEW_THEME_LABEL_PADDING,
+      lemonade: NEW_THEME_LABEL_PADDING,
+      forest: NEW_THEME_LABEL_PADDING,
+      watermelon: NEW_THEME_LABEL_PADDING,
+      area51: NEW_THEME_LABEL_PADDING,
+      polar: NEW_THEME_LABEL_PADDING,
+      glowInTheDark: NEW_THEME_LABEL_PADDING,
+      bubblegum: NEW_THEME_LABEL_PADDING,
+      millennial: NEW_THEME_LABEL_PADDING,
+      robot: NEW_THEME_LABEL_PADDING,
+      classic: CLASSIC_LABEL_PADDING
     }
   },
 
   create: function() {
     const element = document.createElement('label');
     element.style.margin = '0px';
-    element.style.padding = '2px';
     element.style.lineHeight = '1';
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.backgroundColor = themeColor.labelBackground.classic;
-      element.style.fontFamily = applabConstants.fontFamilyStyles[0];
-      element.style.fontSize = applabConstants.defaultFontSizeStyle;
-      element.style.color = themeColor.labelText.classic;
-      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-    }
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     this.resizeToFitText(element);
     return element;
@@ -354,14 +366,17 @@ export default {
         })
         .appendTo($(document.body));
 
-      const padding = parseInt(element.style.padding, 10);
+      const {
+        horizontalPadding,
+        verticalPadding
+      } = elementUtils.calculatePadding(element.style.padding);
 
       if (!widthLocked) {
         // Truncate the width before it runs off the edge of the screen
-        size.width = Math.min(clone.width() + 1 + 2 * padding, maxWidth);
+        size.width = Math.min(clone.width() + 1 + horizontalPadding, maxWidth);
       }
       if (!heightLocked) {
-        size.height = clone.height() + 1 + 2 * padding;
+        size.height = clone.height() + 1 + verticalPadding;
       }
 
       clone.remove();
@@ -401,18 +416,52 @@ export default {
   },
 
   /**
-   * Returns whether this element perfectly fits its bounding size, if that is needed in onPropertyChange.
+   * Cache whether or not this label previously fit exactly, so the result can be re-used
+   * across multiple property changes in the same batch.
+   *
+   * This object stores a batchId property (number) and a previouslyFitsExactly property (boolean)
    */
-  beforePropertyChange: function(element, name) {
-    if (name !== 'text' && name !== 'fontSize') {
-      return null;
+  _lastFitsExactly: {},
+
+  /**
+   * Returns whether this element perfectly fits its bounding size, if that is needed in onPropertyChange.
+   *
+   * If several property changes happen together, they will share the same unique batchChangeId
+   * parameter. Batched property changes occur as a result of theme changes.
+   */
+  beforePropertyChange: function(element, name, batchChangeId) {
+    switch (name) {
+      case 'padding':
+      case 'text':
+      case 'fontFamily':
+      case 'fontSize': {
+        // Check _lastFitsExactly for a cache hit
+        const {
+          batchId = -1,
+          previouslyFitExactly: batchPreviouslyFitExactly
+        } = this._lastFitsExactly;
+        if (batchId === batchChangeId) {
+          // We've already computed previouslyFitExactly for this batch of property updates:
+          return batchPreviouslyFitExactly;
+        }
+        const currentSize = this.getCurrentSize(element);
+        const bestSize = this.getBestSize(element);
+        const previouslyFitExactly =
+          Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
+          Math.abs(currentSize.height - bestSize.height) < STILL_FITS;
+        // Cache this result in the _lastFitsExactly object in case we need it again for
+        // another property change in the same batch
+        this._lastFitsExactly = batchChangeId
+          ? {
+              batchId: batchChangeId,
+              previouslyFitExactly
+            }
+          : {};
+        return previouslyFitExactly;
+      }
+      default:
+        return null;
     }
-    const currentSize = this.getCurrentSize(element);
-    const bestSize = this.getBestSize(element);
-    return (
-      Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
-      Math.abs(currentSize.height - bestSize.height) < STILL_FITS
-    );
   },
 
   /**
@@ -421,7 +470,9 @@ export default {
   onPropertyChange: function(element, name, value, previouslyFitExactly) {
     switch (name) {
       case 'text':
+      case 'fontFamily':
       case 'fontSize':
+      case 'padding':
         if (previouslyFitExactly) {
           this.resizeToFitText(element);
         }

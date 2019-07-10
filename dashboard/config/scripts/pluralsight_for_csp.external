@@ -3,32 +3,37 @@ title 'Pluralsight for CSP'
 description 'description here'
 
 markdown <<MARKDOWN
-# Go further with _Pluralsight One_ computer science courses!
+# Build tech skills of the future with Pluralsight!!
 
-Having fun learning computer science? Now you can get access to **Pluralsight One** courses for one year, and learn even more about networking, help desk, databases, programming, game dev and more! 
+Ready for a future in tech? Now you can get access to Pluralsight courses free for one year through Pluralsight One and continue to grow the skills you’ve gained through Code.org.
 
-With Pluralsight One, you can try courses like **"Introduction to Web Development"**; **"Game Prototyping in Unity"**; and **"Getting Started in UX Design"**, pick up new skills, and test out what you've learned through Code.org.
+Take advantage of on-demand courses authored by an elite network of industry experts. Master skills in software development, data security, cloud, game design, mobile, Adobe Creative Suite and more. Pluralsight can also prepare you for important certifications with industry leading practice exams. 
+
+Get started today with these specially curated Pluralsight courses, and keep learning for free for one whole year. To get started, sign up below and you’ll receive a redemption code to access the free courses on the Pluralsight platform. 
 
 
-To get access to the specially-curated catalog of Pluralsight One courses for a year, **click the "Get started" button** below. You'll be asked to sign up for Pluralsight One and will receive a redemption code to your email that you can use to access the courses.
-
-
-<a class=“btn btn-large btn-primary” href="https://www.pluralsight.com/redeem"> Get started </a>
+<a class=“btn btn-large btn-primary” href="https://www.pluralsightone.org/product/education/code-org-redemption"> Get started </a>
 
 
 
 <h3>
-What is Pluralsight One?
+What can you expect with your Pluralsight One access?
 </h3>
-Curated by expert technologists, the library features over 150 courses totaling over 500 hours of content across four major areas: IT/OPs, software development, design/creative, and product management. [Learn more about Pluralsight](https://www.pluralsight.com).
+You’ll have access to a library of over 350 courses, totaling over 1,000 hours of expert-led content  mapped to computer science standards and AP CSP curriculum across four major areas: IT/OPs, software development, design/creative, and product management.  [Learn more](https://vimeo.com/319103540).
+<h3>
+*************************************************************************************************
+</h3>
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-To access this offer, have your students do the following:
-1. Click the “Get started” button above to sign up for the Pluralsight One offer
-2. After signing up, the student will receive an email with a link to activate the offer
-3. Once they've activated the offer via the link, the student will have 12 months free access to Pluralsight One
+**Give your students the chance to continue their tech skills journey with Pluralsight.** 
 
-[Learn more about how to use this offer in your classroom](https://www.pluralsight.com)
+Through Pluralsight One, your students can build on what they’ve learned through Code.org by accessing over 350 expert-authored Pluralsight courses mapped to computer science standards and AP CSP curriculum—completely free for one year.
+
+To access this offer, have your students do the following:
+1. Have your students visit this page when they are signed in
+2. Ask them to click the “Get started” button above to sign up for the Pluralsight One offer
+3. After signing up, the student will receive an email with a link to activate the offer
+4. Once they've activated the offer via the link, the student will have 12 months free access to Pluralsight One
 
 MARKDOWN

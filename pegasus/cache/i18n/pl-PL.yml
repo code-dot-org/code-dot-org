@@ -1216,9 +1216,6 @@ pl-PL:
   coursee_name: Kurs E
   coursef-draft_name: Kurs F
   coursef_name: Kurs F
-  accelerated_name: Przyspieszony kurs
-  pre-express_name: Ekspresowy kurs dla dzieci, które nie umieją czytać
-  cspunit1_name: "(stary) Unit 1: Informacje cyfrowe"
   cspunit2_name: "(stary) Unit 2: Internet"
   cspunit3_name: "(stary) Unit 3: Programowanie"
   cspunit4_name: "(stary) Unit 4: Dane"
@@ -1346,6 +1343,12 @@ pl-PL:
   coursed-2018_gradelevel: Klasa 8+
   coursee-2018_gradelevel: W wieku 8-12
   coursef-2018_gradelevel: Klasy 2+ szkół średnich
+  coursea-2019_gradelevel: Klasa 5+
+  courseb-2019_gradelevel: Klasy 6+
+  coursec-2019_gradelevel: Klasy 7+
+  coursed-2019_gradelevel: Klasa 8+
+  coursee-2019_gradelevel: W wieku 8-12
+  coursef-2019_gradelevel: Klasy 2+ szkół średnich
   accelerated_gradelevel: W wieku 10-18
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
@@ -1527,6 +1530,18 @@ pl-PL:
   coursee-2018_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie
     przejdź dalej do funkcji.
   coursef-2018_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki
+    i stwórz własne dzieło sztuki, historyjkę lub grę.
+  coursea-2019_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących
+    czytać.
+  courseb-2019_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących
+    czytać. (Podobny do Kursu A, ale bardziej różnorodny dla starszych uczniów.)
+  coursec-2019_shortdescription_congrats: Poznaj podstawy informatyki i twórz własne
+    artystyczne dzieła, opowiadania i gry.
+  coursed-2019_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie
+    przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
+  coursee-2019_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie
+    przejdź dalej do funkcji.
+  coursef-2019_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki
     i stwórz własne dzieło sztuki, historyjkę lub grę.
   codeorg_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą
     przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo
@@ -2052,7 +2067,7 @@ pl-PL:
     nie działać właściwie.
   flappy_shortcode: pofruń
   header_home: Strona główna
-  header_my_dashboard: Pulpit
+  header_my_dashboard: Mój pulpit
   header_courses: Kursy
   header_course_catalog: Katalog Kursów
   header_project_gallery: Galeria Projektów

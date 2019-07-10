@@ -55,7 +55,6 @@ hy:
   of: Հյուրատետր
   more: ԱՎԵԼԻ
   less: ՔԻՉ
-  beta: բետա
   try_hoc: Փորձեք ժամը օրենսգրքով, սեղմեք այստեղ >>
   try_k8intro: Փորձեք մեր K-8 Intro է Computer Science դասընթաց (15-25 ժամ)
   k8intro: K-8 Intro է Համակարգչային գիտություն դասընթաց (15-25 ժամ)
@@ -427,7 +426,6 @@ hy:
   pdf_download: Բեռնել PDF
   download_coming_soon: 'Բեռնվող գործունեության շուտով:'
   video_coming_soon: Վիդեո Շուտով!
-  not_started: Ուսանողը չի փորձել այս մակարդակը.
   share_code:
     title: Սեղմեք Run տեսնել իմ ծրագիրը գործողության
     bounce_og_title: Check out my Bounce Game
@@ -647,21 +645,14 @@ hy:
     create: Ստեղծել ծրագիրը
     create_a_project: 'Ստեղծել նոր նախագիծ:'
     new: Ստեղծել նոր
-    rename: վերանվանել
-    save: Save
-    delete: Delete
     exit: Վերադարձ դեպի դասընթաց
-    my_projects: Իմ ծրագրեր
     project_gallery: ծրագրեր
-    share: Տարածել
     share_title: Կիսեք Ձեր նախագիծը
     share_copy_link: 'Պատճենահանել հղումը:'
     share_embed_description: 'Դուք կարող եք տեղադրեք embed կոդը վերածել HTML էջում
       ցուցադրել նախագիծը մի կայքէջում:'
     embed: պառկեցնել
     advanced_share: Ցույց տալ, առաջադեմ տարբերակները
-    close: փակել
-    more: More
     name: Անուն
     updated: Թարմացվել է
     project_type: Ծրագրի տեսակը
@@ -669,18 +660,9 @@ hy:
       strong> ներքեւինը սկսել նոր ծրագիր. <br /> Դուք կարող եք վերադառնալ եւ աշխատում
       ձեր նախագծերի ցանկացած ժամանակ:'
     need_help: Փորձեք այդ դասընթացներ, որոնք կօգնեն ձեզ սկսել ձեր նոր ծրագրի
-    really_delete: Delete?
-    delete_yes: այո
-    delete_no: ոչ
     saved: փրկվել
     not_saved: չի պահպանվել
-    cancel: վերացնել
-    delete_confirm_title: 'Համոզված եք, որ ցանկանում եք ջնջել այս նախագիծը:'
-    delete_confirm_text: 'Deleting Ձեր նախագիծը մշտապես հեռացնել այն ձեր իմ ծրագրերում
-      ցուցակում: Յուրաքանչյուրը դուք կիսում հղումը այլեւս չի կարողանա դիտել ձեր նախագիծը.'
     view_all: Դիտել Իմ Ծրագրեր
-    remix: remix
-    click_to_remix: 'Սեղմեք Remix է վազել դուրս ձեր սեփական տարբերակը:'
     edit_project: Խմբագրել Project
     abuse:
       tos: 'Այս ծրագիրն արդեն տեղեկացրել խախտելու համար Code.orgs <a href=http://code.org/tos>

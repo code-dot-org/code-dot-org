@@ -68,7 +68,6 @@ nn:
   of: "av"
   more: "MEIR"
   less: "MINDRE"
-  beta: "beta"
   try_hoc: "Prøv Kodetimen, klikk her >> "
   try_k8intro: "Eller prøv vår barneskuleintroduksjon til informatikkurs (15-25 timar)"
   k8intro: "Barneskuleintroduksjon til informatikkurs (15-25 timar)"
@@ -559,7 +558,6 @@ nn:
   pdf_download: 'Last ned PDF'
   download_coming_soon: 'Nedlastbare aktivitetar kjem snart.'
   video_coming_soon: 'Video kjem snart!'
-  not_started: 'Eleven har ikkje prøvd seg på denne bana.'
   share_code:
     title: "Klikk \"Kjør\" for å sjå programmet mitt i aksjon"
     bounce_og_title: "Sjekk ut sprette-spelet mitt"
@@ -790,20 +788,10 @@ nn:
     create: "Opprett prosjekt"
     create_a_project: 'Lag eit nytt prosjekt:'
     new: "Lag ny"
-    rename: "Gje nytt navn"
-    save: "Lagre"
-    delete: "Slett"
-    import: "Importér"
-    share_link_import_bad_link_header: "Delelenke ikkje attkjend"
-    share_link_import_bad_link_body: "Vi kunne ikke importere lenka. Kontroller at du brukar ei lenke frå ei Minecraft: Agent-oppgåve, og at du har kopiert hele lenka."
-    share_link_import_error_header: "Noke gjekk gale."
-    share_link_import_error_body: "Det oppstod eit problem ved import av lenka. Prøv igjen."
     exit: "Attende til kurset"
-    my_projects: "Mine prosjekt"
     project_gallery: "Prosjekt"
     publish: "Publisér"
     unpublish: "Opphev publisering"
-    share: "Del"
     share_title: Del prosjektet ditt
     share_copy_link: "Kopier lenkja:"
     share_embed_description: "Du kan lime den innebygde koden i ei HTML side for å vise prosjektet på ei nettside."
@@ -811,25 +799,15 @@ nn:
     embed: "Bygg inn"
     advanced_share: "Vis avanserte alternativ"
     no_projects: "Du har ingen prosjekter. Klikk på en av knappene over for å starte et prosjekt."
-    close: "Lukk"
-    more: "Meir"
     name: "Namn"
     updated: "Oppdatert"
     project_type: "Prosjekttype"
     help_text: "Klikk <strong>Lag ein app</strong> eller <strong>Teikn noko</strong> under for å lage eit prosjekt!<br/>Du kan komme tilbake og jobbe på prosjekta dine når som helst."
     need_help: "Treng du hjelp for å kome i gong?"
     thumbnail_help: "Ikke riktig miniatyrbildet for prosjektet? Kjør din app for å generere et nytt miniatyrbilde. Merk at det kan ta et par timer før miniatyrbildet er oppdatert overalt."
-    really_delete: 'Slette?'
-    delete_yes: 'Ja'
-    delete_no: 'Nei'
     saved: "Lagra"
     not_saved: "Ikkje lagra"
-    cancel: 'Avbryt'
-    delete_confirm_title: Er du sikker på at du vil slette dette prosjektet?
-    delete_confirm_text: "Ved å slette prosjektet fjernar du det frå lista Mine prosjekt for godt. Om du har delt lenkja til prosjektet ditt med nokon, vil dei ikkje lenger kunne sjå prosjektet ditt."
     view_all: 'Sjå Mine prosjekt'
-    remix: 'Remix'
-    click_to_remix: "Klikk \"Remix\" for å snurre i gong din eigen versjon!"
     edit_project: 'Endre prosjekt'
     sharing_disabled: "Beklager, dette prosjektet er ikke tilgjengelig for deling. Hvis dette er ditt eller en av dine elevers prosjekt, vennligst <a href='https://studio.code.org/users/sign_in'>logg på</a> din konto for å se prosjektet."
     abuse:

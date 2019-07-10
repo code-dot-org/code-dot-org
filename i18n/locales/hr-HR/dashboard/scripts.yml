@@ -1466,3 +1466,15 @@ hr:
           stages:
             Graph Paper Programming:
               name: Grafičko programiranje
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Liste
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije

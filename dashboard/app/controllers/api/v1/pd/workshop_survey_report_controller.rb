@@ -1,8 +1,12 @@
+require 'pd/survey_pipeline/survey_pipeline_helper.rb'
+require 'honeybadger/ruby'
+
 module Api::V1::Pd
   class WorkshopSurveyReportController < ReportControllerBase
     include WorkshopScoreSummarizer
     include ::Pd::WorkshopSurveyReportCsvConverter
     include Pd::WorkshopSurveyResultsHelper
+    include Pd::SurveyPipeline::Helper
 
     load_and_authorize_resource :workshop, class: 'Pd::Workshop'
 
@@ -104,15 +108,38 @@ module Api::V1::Pd
       end
     end
 
-    # GET /api/v1/pd/workshops/:id/local_workshop_daily_survey_report
-    def local_workshop_daily_survey_report
-      unless @workshop.local_summer? || @workshop.teachercon? ||
-        ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) && @workshop.workshop_starting_date > Date.new(2018, 8, 1))
-        return render status: :bad_request, json: {
-          error: 'Only call this route for new academic year workshops, 5 day summer workshops, local or TeacherCon'
-        }
-      end
+    # GET /api/v1/pd/workshops/:id/generic_survey_report
+    def generic_survey_report
+      # Default HTTP status code to return to client if
+      # we encouter an exception processing this request.
+      error_status_code = :internal_server_error
 
+      return local_workshop_daily_survey_report if @workshop.summer? ||
+        ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) &&
+        @workshop.workshop_starting_date > Date.new(2018, 8, 1))
+
+      return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
+
+      error_status_code = :bad_request
+      raise 'Action generic_survey_report should not be used for this workshop'
+    rescue => e
+      notify_error e, error_status_code
+    end
+
+    # GET /api/v1/pd/workshops/experiment_survey_report/:id/
+    def experiment_survey_report
+      results = report_single_workshop(@workshop, current_user)
+      results[:experiment] = true
+
+      # TODO: add rollup report before returning result to client
+      render json: results
+    rescue => e
+      notify_error e
+    end
+
+    private
+
+    def local_workshop_daily_survey_report
       survey_report = generate_workshop_daily_session_summary(@workshop)
 
       respond_to do |format|
@@ -122,7 +149,30 @@ module Api::V1::Pd
       end
     end
 
-    private
+    def create_csf_survey_report
+      render json: report_single_workshop(@workshop, current_user)
+    end
+
+    def notify_error(exception, error_status_code = :internal_server_error)
+      Honeybadger.notify(
+        error_message: exception.message,
+        context: {
+          workshop_id: @workshop.id,
+          course: @workshop.course,
+          subject: @workshop.subject
+        }
+      )
+
+      render status: error_status_code, json: {
+        errors: [
+          {
+            severity: Logger::Severity::ERROR,
+            message: "#{exception.message}. Workshop id: #{@workshop.id},"\
+              " course: #{@workshop.course}, subject: #{@workshop.subject}."
+          }
+        ]
+      }
+    end
 
     # We want to filter facilitator-specific responses if the user is a facilitator and
     # NOT a workshop admin, workshop organizer, or program manager - the filter is the user's name.

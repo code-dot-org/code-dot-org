@@ -91,7 +91,7 @@
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": "h9c2ldte6Uf/Jt/4TZ5osVvmAtuYR2kwvFxTeY6y4uUjvMe5F6cWwdWVFsYp\nykZylBebBheQ8hWk5XHk1BrWYA==\n",
+    "encrypted_examples": "h9c2ldte6Uf/Jt/4TZ5osVvmAtuYR2kwvFxTeY6y4uW05ojnE7vSqUUV1vtw\ngRUEHOXT5sjmH2jIsKC5sBB7RGpaw+gLn1sN1QbntVgNSLbxu7MslgcPVxxz\nbrdPbPYI\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
@@ -106,11 +106,15 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 3248,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 22:17:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-17 02:50:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-11-17 02:51:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-31 22:17:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-17 02:50:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-11-17 02:51:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2019-05-15 10:38:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

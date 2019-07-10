@@ -1,6 +1,4 @@
-/* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Button from '@cdo/apps/templates/Button';
@@ -9,7 +7,8 @@ import i18n from '@cdo/locale';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {
   getCurrentQuestion,
-  getStudentAnswersForCurrentQuestion
+  getStudentAnswersForCurrentQuestion,
+  QuestionType
 } from './sectionAssessmentsRedux';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -66,32 +65,40 @@ class MultipleChoiceDetailsDialog extends Component {
         style={styles.dialog}
         handleClose={this.props.closeDialog}
       >
-        <h2>{i18n.questionDetails()}</h2>
-        <div style={styles.instructions}>
-          <UnsafeRenderedMarkdown markdown={questionAndAnswers.question} />
-        </div>
-        {questionAndAnswers.answers && questionAndAnswers.answers.length > 0 && (
+        {questionAndAnswers.questionType === QuestionType.MULTI && (
           <div>
-            {questionAndAnswers.answers.map((answer, index) => {
-              return (
-                <div key={index} style={styles.answerBlock}>
-                  <div style={styles.iconSpace}>
-                    {answer.correct && (
-                      <FontAwesome icon="check-circle" style={styles.icon} />
-                    )}
-                    {!answer.correct && <span>&nbsp;</span>}
-                  </div>
-                  <div style={styles.answerLetter}>{answer.letter}</div>
-                  <div style={styles.answers} />
-                  <UnsafeRenderedMarkdown markdown={answer.text} />
-                  <div style={{clear: 'both'}} />
+            <h2>{i18n.questionDetails()}</h2>
+            <div style={styles.instructions}>
+              <UnsafeRenderedMarkdown markdown={questionAndAnswers.question} />
+            </div>
+            {questionAndAnswers.answers &&
+              questionAndAnswers.answers.length > 0 && (
+                <div>
+                  {questionAndAnswers.answers.map((answer, index) => {
+                    return (
+                      <div key={index} style={styles.answerBlock}>
+                        <div style={styles.iconSpace}>
+                          {answer.correct && (
+                            <FontAwesome
+                              icon="check-circle"
+                              style={styles.icon}
+                            />
+                          )}
+                          {!answer.correct && <span>&nbsp;</span>}
+                        </div>
+                        <div style={styles.answerLetter}>{answer.letter}</div>
+                        <div style={styles.answers} />
+                        <UnsafeRenderedMarkdown markdown={answer.text} />
+                        <div style={{clear: 'both'}} />
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
+              )}
+            {studentAnswers && studentAnswers.length > 0 && (
+              <MultipleChoiceByQuestionTable studentAnswers={studentAnswers} />
+            )}
           </div>
-        )}
-        {studentAnswers && studentAnswers.length > 0 && (
-          <MultipleChoiceByQuestionTable studentAnswers={studentAnswers} />
         )}
         <DialogFooter>
           <Button

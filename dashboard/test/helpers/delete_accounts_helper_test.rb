@@ -206,8 +206,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       ops_gender: 'test-value',
       using_text_mode: 'test-value',
       last_seen_school_info_interstitial: 'test-value',
-      ui_tip_dismissed_homepage_header: 'test-value',
-      ui_tip_dismissed_teacher_courses: 'test-value',
       oauth_refresh_token: 'test-value',
       oauth_token: 'test-value',
       oauth_token_expiration: 'test-value',
@@ -449,6 +447,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Table: dashboard.activities
   # Table: dashboard.overflow_activities
   # Table: dashboard.gallery_activities
+  # Table: dashboard.assessment_activities
   #
 
   test "clears activities.level_source_id for all of user's activity" do
@@ -481,6 +480,20 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil gallery_activity.level_source_id
 
     assert_logged "Cleaned 1 GalleryActivity"
+  end
+
+  test 'disconnects assessment activities from level sources' do
+    user = create :student
+    assessment_activity = create :assessment_activity, user: user
+
+    refute_nil assessment_activity.level_source_id
+
+    purge_user user
+    assessment_activity.reload
+
+    assert_nil assessment_activity.level_source_id
+
+    assert_logged "Cleaned 1 AssessmentActivity"
   end
 
   #

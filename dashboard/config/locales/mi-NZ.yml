@@ -67,7 +67,6 @@ mi:
   of: o
   more: NUI AKE
   less: ITI IHO
-  beta: beta
   try_hoc: 'Tēnā whakamātauria te Hour of Code, pāwhiritia i konei >> '
   try_k8intro: Whakamātauria tā mātou Akoranga Whakataki K-8 ki te Pūtaiao Rorohiko
     (15-25 haora)
@@ -493,7 +492,6 @@ mi:
   pdf_download: Tikiake i te PDF
   download_coming_soon: Ākuanei ka puta mai te ngohe tikiake.
   video_coming_soon: Ākuanei ka Puta te Ataata!
-  not_started: Kāore anō te ākonga kia whakamātau i tēnei taumata.
   share_code:
     title: Pāwhiri 'Whakahaere' kia kitea taku papatono e rere ana
     bounce_og_title: Tirohia taku Kēmu Bounce
@@ -761,11 +759,8 @@ mi:
     create: Waihanga Tūmahi
     create_a_project: 'Waihanga i tētahi tūmahi hou:'
     new: Waihanga mea Hou
-    rename: Whakaingoa anō
     exit: Hoki atu ki te Akoranga
-    my_projects: Aku Tūmahi
     project_gallery: Ngā Tūmahi
-    share: Tiri
     share_title: Tiria tō tūmahi
     share_copy_link: 'Tāruatia te honongaitua:'
     share_embed_description: E āhei ana koe te waehere tāmau te whakapiri ki tētahi
@@ -774,7 +769,6 @@ mi:
       iho ki ērā atu kei tō kura ake.
     embed: Tāmau
     advanced_share: Whakaaturia ngā kōwhiringa atu anō
-    close: Kati
     name: Ingoa
     updated: Kua Whakahoutia
     project_type: Momo Tūmahi
@@ -783,18 +777,9 @@ mi:
       wātea ana kia hoki atu koe ki te whanake i tō tūmahi i ngā wā katoa.
     need_help: Whakamātauria ēnei whakaakoranga hei hāpai i a koe ki te tīmata i tō
       tūmahi hou
-    delete_yes: Āe
-    delete_no: Kāore
     saved: Kua Tiakina
     not_saved: Kāore anō kia tiakina
-    cancel: Whakakore
-    delete_confirm_title: Āe rānei e hiahia ana koe ki te muku i tēnei tūmahi?
-    delete_confirm_text: Mā te muku i tō tūmahi ka poroa rawatia i tō rārangi Aku
-      Tūmahi. Ko te katoa o ngā tāngata nāu te honongaitua o tēnei tūmahi i tiri ki
-      a rātou, ka kore e kite tonu i tō tūmahi.
     view_all: Tirohia Aku Tūmahi
-    remix: Ranu Anō
-    click_to_remix: Pāwhiritia te "Ranu Anō" ki te waihanga i tāu ake putanga!
     edit_project: Whakatika Tūmahi
     abuse:
       tos: Kua pūrongotia tēnei tūmahi, nā te mea, kua takahia <a href='http://code.org/tos'>Ngā

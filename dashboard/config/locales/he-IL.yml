@@ -74,7 +74,6 @@ he:
   of: של
   more: יותר
   less: פחות
-  beta: בטא
   try_hoc: 'נסה את שעת קוד, לחץ כאן >> '
   try_k8intro: נסה את הקורס מבוא למדעי המחשב לכיתות גן-ח'(15-25 שעות)
   k8intro: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
@@ -268,7 +267,7 @@ he:
         אנא בקש מהם להירשם כאן ונסה להוסיף אותם שנית
       section_not_found: לא היתה אפשרות למצוא את קוד הקבוצה '%{section_code}'.
       blank_code: אנא הזן קוד הקבוצה
-      cant_join_own_section: מצטערים, לא תוכל להצטרף לתוך קבוצה משלך.
+      cant_join_own_section: מצטערים, לא תוכל להצטרף לתוך קבוצה שלך.
       provider_managed_section: קבוצה זו מנוהלת ע"י ספק חיצוני אחר ולא ניתן להצטרף
         אליו באופן ישיר. אנא בקש מהמורה שלך להוסיף אותך דרך %{provider} ושיסנכרן את
         הקבוצה מחדש.
@@ -626,7 +625,7 @@ he:
     teacher: הצג את הפתרון
     teacher_no_solution: הפסק צפייה בפתרון
     auth_error: אינך מורשה לראות את הפתרון.
-    submit: עדכן מיקום אומן
+    submit: עדכן מיקום אמן
     direction: התחל כיוון (במעלות)
   video:
     tab: וידאו.
@@ -653,7 +652,6 @@ he:
   pdf_download: הורדת PDF
   download_coming_soon: פעילות להורדה בקרוב.
   video_coming_soon: וידאו בקרוב!
-  not_started: התלמיד לא ניגש לבצע את השלב הזה.
   share_code:
     title: לחץ'ריצה' כדי לראות את התקדמותי בזמן פעולה
     bounce_og_title: תראה את המשחק קפיצה שלי
@@ -917,17 +915,10 @@ he:
     create: צור פרויקט
     create_a_project: 'צור פרויקט חדש:'
     new: צור חדש
-    rename: שנה שם
-    save: שמור
-    delete: מחק
-    import: ייבא
-    share_link_import_error_header: משהו השתבש.
     exit: חזור לקורס
-    my_projects: הפרויקטים שלי
     project_gallery: פרויקטים
     publish: פרסם
     unpublish: בטל פרסום
-    share: שתף
     share_title: שתף את הפרויקט שלך
     share_copy_link: 'העתק קישור:'
     share_embed_description: תוכל להדביק את הקוד לתוך דף HTML כדי להציג את הפרויקט
@@ -938,8 +929,6 @@ he:
     advanced_share: הצג אפשרויות מתקדמות
     no_projects: כרגע אין לך פרויקטים. לחץ על אחד מהכפתורים למעלה כדי להתחיל פרויקט
       חדש.
-    close: סגור
-    more: יותר
     name: שם
     updated: עודכן
     project_type: סוג פרויקט
@@ -949,18 +938,9 @@ he:
     thumbnail_help: לא רואה תמונה ממוזערת של הפרויקט שלך? הרץ את האפליקציה כדי לייצר
       תמונה חדשה שכזו. שים לב שיתכן ויעברו כמה שעות עד שהתמונה הממוזערת תעדכן בכל
       המקומות.
-    really_delete: למחוק?
-    delete_yes: כן
-    delete_no: לא
     saved: נשמר
     not_saved: לא נשמר
-    cancel: בטל
-    delete_confirm_title: האם אתה בטוח שברצונך למחוק את הפרויקט הזה?
-    delete_confirm_text: מחיקת הפרויקט שלך תסיר אותה לתמיד מרשימת הפרויקטים שלך. כל
-      מי ששיתפת איתו את הקישור לפרויקט לא יוכל עוד לצפות בו.
     view_all: הצג את הפרויקטים שלי
-    remix: צור משלך
-    click_to_remix: לחץ "צור משלך" כדי ליצר גרסה משלך לפרויקט!
     edit_project: ערוך פרויקט
     sharing_disabled: מצטערים, פרויקט זה אינו זמין לשיתוף. אם זה הפרויקט שלך או הפרויקט
       של אחד מתלמידיך, אנא <a href='https://studio.code.org/users/sign_in'>התחבר</a>

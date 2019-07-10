@@ -82,7 +82,6 @@ pt-BR:
   of: de
   more: MAIS
   less: MENOS
-  beta: beta
   try_hoc: 'Experimente a Hora do Código, clique aqui >> '
   try_k8intro: Experimente nossa introdução do curso de Ciência da Computação (15-25
     horas) para o Ensino Fundamental
@@ -343,6 +342,10 @@ pt-BR:
       professional_learning: Aprendizado Profissional
       documentation: Documentação
       tutorials: Tutoriais
+      app_lab_documentation: Documentação App Lab
+      app_lab_tutorials: Tutoriais App Lab
+      game_lab_documentation: Documentação Game Lab
+      game_lab_tutorials: Tutoriais Game Lab
       educate_overview: Visão Geral do Educador
       educate_elementary: Ensino Fundamental
       educate_middle: Ensino Fundamental II
@@ -373,6 +376,7 @@ pt-BR:
       district_dashboard: Painel do distrito
       label: Oi, %{username}
       stats: Code Studio
+      my_projects: Meus projetos
       settings: Configurações da conta
       logout: Sair
       signin: Entrar
@@ -399,8 +403,10 @@ pt-BR:
       gumball: O Incrível Mundo de Gumball
       iceage: Era do Gelo
       infinity: Infinito
+      makerlab: Conjunto de Ferramentas Maker
       minecraft_adventurer: Aventureiro de Minecraft
       minecraft_aquatic: Minecraft Aquático
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: Minecraft
       minecraft_hero: Herói de Minecraft
       playlab: Laboratório
@@ -805,7 +811,6 @@ pt-BR:
   pdf_download: Baixar PDF
   download_coming_soon: Atividade disponível para download em breve.
   video_coming_soon: Vídeo em breve!
-  not_started: O aluno ainda não praticou este nível.
   share_code:
     title: Clique em 'Executar' para ver meu programa em ação
     bounce_og_title: Veja meu jogo de Pingue-pongue
@@ -1109,23 +1114,10 @@ pt-BR:
     create: Criar projeto
     create_a_project: 'Crie um novo projeto:'
     new: Criar novo
-    rename: Renomear
-    save: Salvar
-    delete: Excluir
-    import: Importar
-    share_link_import_bad_link_header: link de compartilhamento não reconhecido
-    share_link_import_bad_link_body: 'Não foi possível importar esse link de compartilhamento.
-      Certifique-se de que você está usando um link de um Minecraft: quebra-cabeça
-      do Agente e que você copiou o link completo.'
-    share_link_import_error_header: Ocorreu um erro.
-    share_link_import_error_body: Houve um problema ao importar o link de compartilhamento.
-      Tente novamente.
     exit: Voltar ao curso
-    my_projects: Meus projetos
     project_gallery: Projetos
     publish: Publicar
     unpublish: Despublicar
-    share: Compartilhar
     share_title: Compartilhar seu projeto
     share_copy_link: 'Copie o link:'
     share_embed_description: Você pode colar o código incorporado em uma página HTML
@@ -1136,8 +1128,6 @@ pt-BR:
     advanced_share: Mostrar opções avançadas
     no_projects: Você não tem projetos atualmente. Para iniciar um projeto, clique
       em um dos botões acima.
-    close: Fechar
-    more: Mais
     name: Nome
     updated: Atualizado
     project_type: Tipo de projeto
@@ -1148,19 +1138,9 @@ pt-BR:
     thumbnail_help: Não está vendo a miniatura correta para seu projeto? Rode o seu
       app para criar uma miniatura nova. Observe que pode levar algumas horas para
       que a miniatura seja atualizada em todos os lugares.
-    really_delete: Excluir?
-    delete_yes: Sim
-    delete_no: Não
     saved: Salvo
     not_saved: Não salvo
-    cancel: Cancelar
-    delete_confirm_title: Tem certeza de que deseja excluir esse projeto?
-    delete_confirm_text: Ao excluir seu projeto, vai removê-lo permanentemente da
-      sua lista "Meus projetos". As pessoas com quem você compartilhou o link não
-      vão mais poder visualizar seu projeto.
     view_all: Visualizar meus projetos
-    remix: Remix
-    click_to_remix: Clique em "Remix" para fazer sua própria versão!
     edit_project: Editar projeto
     sharing_disabled: Desculpe, este projeto não está disponível para compartilhamento.
       Se este é o seu projeto ou o projeto de um de seus alunos, por favor <a href='https://studio.code.org/users/sign_in'>faça
@@ -1237,6 +1217,7 @@ pt-BR:
     csf_variables: variáveis
     csf_for_loops: Laços para
     csf_internet: Internet
+    csf_warmup: Aquecimento
     csd1_1: 'Capítulo 1: O Processo de Solução de Problemas'
     csd1_2: 'Capítulo 2: Computadores e Solução de Problemas'
     csd2_1: 'Capítulo 1: Conteúdo Web e HTML'
@@ -1275,7 +1256,13 @@ pt-BR:
     csp_loops: laços
     csp_traversals: Traversais
     csp_libraries: Bibliotecas
+    csp_parameters_return_values: Parâmetros e valores de retorno
     dlp: Prompts de reflexão
+    time4cs_c1: Everglades e seus ecossistemas
+    time4cs_c2: Cadeias de comida em Everglades
+    time4cs_c3: Viver em Everglades
+    time4cs_c4: Impactos Invasivos em Everglades
+    time4cs_c5: Cidadãos influenciam as mudanças em Everglades
   external_links:
     disclaimer: Aviso
     leaving_domain: Você está deixando este domínio para acessar um site que não é

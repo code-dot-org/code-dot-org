@@ -1,5 +1,5 @@
 ---
-cs:
+cs-CZ:
   data:
     display_name:
       CSD U2 Pair Programming Video: Párové programování
@@ -50,11 +50,9 @@ cs:
       CSD U3 Random Number Map Level: Náhodná čísla
       CSD U3 Random Number Map Level_2018: Náhodná čísla
       CSD U3 Random Number Map Level_2019: Náhodná čísla
-      CSD U3 Random Number Map: Náhodná čísla
       CSD U3 Variables Map: Proměnné
       CSD U3 Variables Map_2018: Proměnné
       CSD U3 Variables Map_2019: Proměnné
-      CSD U3 functions map: Funkce
       CSD U6 for loop map: For cykly
       CSD U6 for loop map_2018: For cykly
       CSD U6 for loop map_2019: For cykly
@@ -62,8 +60,6 @@ cs:
       CSD U6 functions paramters video_2018: Funkce s Parametry
       CSD U6 functions paramters video_2019: Funkce s Parametry
       'CSD: For Loop_2018': For cykly
-      'CSD: For Loop_2019': For cykly
-      CSDU6 buzzer.stop: Zastavuji hudbu
       CSDU6 buzzer.stop_2018: Zastavuji hudbu
       CSDU6 buzzer.stop_2019: Zastavuji hudbu
       Dance_Party_extras_battle: Taneční skupiny
@@ -72,12 +68,7 @@ cs:
       Dance_Party_extras_on_beat: Basy, středy a výšky
       Dance_Party_extras_speed: Zrychli to, zpomal to
       Dance_Party_extras_visible: Kam by šli?
-      MC_HOC_2017_FP10x10: Volná hra
-      MC_HOC_2017_FP10x10_RE: Volná hra
-      SG U3L07 More Subgoals: Dokumentace
       courseA_video_Stevie: Stevie a Velký projekt
       courseA_video_Stevie_2018: Stevie a Velký projekt
-      courseA_video_Stevie_2019: Stevie a Velký projekt
       courseB_video_Unspotted: Nezachycené chyby
       courseB_video_Unspotted_2018: Nezachycené chyby
-      courseB_video_Unspotted_2019: Nezachycené chyby

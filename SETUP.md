@@ -6,25 +6,25 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OSX](#os-x-mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1604-download-iso-note-virtual-machine-users-should-check-the-windows-note-below-before-starting), [Windows](#windows-note-use-an-ubuntu-vm)
+   - See the appropriate section below: [OSX](#os-x-mojave--mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1604-download-iso-note-virtual-machine-users-should-check-the-windows-note-below-before-starting), [Windows](#windows-note-use-an-ubuntu-vm)
    - When done, check for correct versions of these dependencies:
 
      ```
      ruby --version  # --> ruby 2.5.0
      node --version  # --> v8.15.0
-     yarn --version  # --> 1.6.0
+     yarn --version  # --> 1.16.0
      ```
 1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
 1. `gem install bundler -v 1.17`
 1. `rbenv rehash`
 1. `cd code-dot-org`
 1. `bundle install` (Problems running this step? See [tips](#bundle-install-tips) below.)
-1. `rake install:hooks`
+1. `bundle exec rake install:hooks`
     <details>
         <summary>Troubleshoot: `rake aborted!..` </summary>
 
         If you have issue "rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0. Prepending `bundle exec` to your command may solve this."
-            * Follow the instructions and add `bundle exec` in front of the command
+            * Follow the instructions and make sure you added `bundle exec` in front of the `rake install:hooks` command
     </details>
     <details>
         <summary>Troubleshoot: wrong version of rake </summary>
@@ -34,11 +34,15 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         $> bundle update rake
     </details>
 
-1. `rake install`
-1. `rake build`
+1. `bundle exec rake install`
+  * This can take a LONG time. You can see if progress is being made by opening up a second shell and starting `mysql -u root`. Run the following command twice, with approximately a 5-10 second delay between
+  each run `select table_schema, table_name, table_rows from information_schema.tables where table_schema like 'dashboard_development' order by table_rows;`  If you see a change in the last couple of rows, the
+  install is working correctly.
+1. `bundle exec rake build`
+  * This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See Bundle Install Tips for more information.
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
-   
+
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
 ## OS-specific prerequisites
@@ -49,16 +53,16 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 1. Install Redis: `brew install redis`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite`
     <details>
-        <summary>Troubleshoot: `Formula.sha1` is disabled</summary>
+        <summary>Troubleshoot: <code>Formula.sha1</code> is disabled or <code>Error: pdftk: undefined method sha1' for #&lt;Class:...&gt;</code></summary>
 
-        If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
+        If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail). It may be a new URL is needed in the dependency list, see https://leancrew.com/all-this/2017/01/pdftk/
     </details>
-
     <details>
-          <summary>Troubleshoot: old version of `&lt;package&gt;`</summary>
+        <summary>Troubleshoot: old version of `&lt;package&gt;`</summary>
 
-          If it complains about an old version of `&lt;package&gt;`, run `brew unlink &lt;package&gt;` and run `brew install &lt;package&gt;` again
+        If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
     </details>
+
 
 1. Install PhantomJS: `brew cask install phantomjs`
 1. Set up MySQL
@@ -88,8 +92,8 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node and yarn
     1. `nvm install 8.15.0 && nvm alias default 8.15.0` this command should make this version the default version and print something like: `Creating default alias: default -> 8.15.0 (-> v8.15.0)`
-    1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.6.0`
-    1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
+    1. `npm install -g yarn@1.16.0`.
+    1. (Note: You will have to come back to this step after you clone your repository) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan only) Ensure that openssl is linked: `brew link --force openssl`
 1. Prevent future problems related to the `Too many open files` error:
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
@@ -111,6 +115,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
               check to make sure XCode is downloaded and up to date manually.
 
     </details>
+
 1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
@@ -136,13 +141,13 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 1. Install yarn
     1. `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
     1. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    1. `sudo apt-get update && sudo apt-get install yarn=1.6.0-1`
+    1. `sudo apt-get update && sudo apt-get install yarn=1.16.0-1`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
    1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. **IMPORTANT:** Read the following notes, then go back up to the [overview](#overview) and run the commands there.
-   1. If, for any reason, you are forced to interrupt the `rake install` command before it completes,
-      cd into dashboard and run `bundle exec rake db:drop` before trying `rake install` again
-   1. `rake install` must always be called from the local project's root directory, or it won't work.
+   1. If, for any reason, you are forced to interrupt the `bundle exec rake install` command before it completes,
+      cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
+   1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
    1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation should still work properly regardless
 
 ### Windows note: use an Ubuntu VM
@@ -179,7 +184,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
        ```
      * run `ssh yourname-ec2` to connect to your instance
   1. Go back up to the [overview](#overview) and run the commands there.
-  1. Once you have successfully completed `rake build`, you can connect to it as follows:
+  1. Once you have successfully completed `bundle exec rake build`, you can connect to it as follows:
      * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your ssh connection is open.
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
 
@@ -198,9 +203,9 @@ If you want to make JavaScript changes and have them take effect locally, you'll
    use_my_apps: true
    ```
 
-1. Run `rake package` for the changes to take effect.
+1. Run `bundle exec rake package` for the changes to take effect.
 
-This configures dashboard to rebuild apps whenever you run `rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
+This configures dashboard to rebuild apps whenever you run `bundle exec rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
 
 If waiting around for javascript builds is making you sad, consider sending build time logs to New Relic so we can track the slowness. You can do this by copying our license key from [the New Relic account page](https://rpm.newrelic.com/accounts/501463) and pasting it into `locals.yml`:
 
@@ -248,7 +253,7 @@ If you continue to have issues with rmagick, after changing your imagemagick ver
 If you run into an error with libv8 while running bundle install
 - Uninstall libv8: `gem uninstall libv8`
 - Make sure the gem no longer exists with: `gem list libv8`
-- Install the current version used in code.org repo: `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (you can find the current version in the [Gemfile.lock](./Gemfile.lock)).
+- Install the current version used in code.org repo: `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (you can find what to fill in for CURRENT_CODEORG_VERSION as the current version of libv8 in the [Gemfile.lock](./Gemfile.lock)).
 
 #### mysql2
 
@@ -262,8 +267,8 @@ If you run into an issue about mysql2 while running `bundle install` and the err
 
 If you run into an issue about therubyracer while running `bundle install` try :
 - `gem uninstall libv8`
-- `gem install therubyracer -v CURRENT_CODEORG_VERSION` (you can find the current version in the [Gemfile.lock](./Gemfile.lock)).
-- `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8`
+- `gem install therubyracer -v CURRENT_CODEORG_VERSION` (you can find  what to fill in for CURRENT_CODEORG_VERSION as the current version of the therubyracer in the [Gemfile.lock](./Gemfile.lock)).
+- `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (You can find what to fill in for CURRENT_CODEORG_VERSION as the current version of libv8 in the [Gemfile.lock](./Gemfile.lock)).
 
 (Steps from [this stackoverflow question](https://stackoverflow.com/questions/19577759/installing-libv8-gem-on-os-x-10-9))
 
@@ -275,7 +280,8 @@ If you run into the error message `can't find gem bundler (>= 0.a) with executab
 
 #### Xcode Set Up
 
-OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031))
+OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
+  https://github.com/nodejs/node-gyp/issues/569): `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
 
 
 ### Recommended hardware

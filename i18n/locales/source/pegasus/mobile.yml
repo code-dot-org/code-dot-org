@@ -843,6 +843,7 @@
   carousel_heading_beyond_languages: "Learn other programming languages"
   carousel_heading_apps_games: "Make your own apps or games"
   carousel_heading_university: "Online courses and schools"
+  carousel_heading_online_university: "University Courses Available Online"
   carousel_heading_webpages: "Learn to make web pages"
   carousel_heading_robots: "Learn to program with robots and devices"
   carousel_heading_ide: "Platforms popular among teachers"
@@ -944,14 +945,16 @@
   coursed-2018_name: Course D (2018)
   coursee-2018_name: Course E (2018)
   coursef-2018_name: Course F (2018)
-  accelerated_name: "Accelerated Course"
-  express_name: "Express Course"
-  pre-express_name: Pre-reader Express Course
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
   express-2018_name: Express Course (2018)
   pre-express-2018_name: Pre-reader Express Course (2018)
-  cspunit1_name: "(old) Unit 1: Digital Information"
+  express-2019_name: Express Course (2019)
+  pre-express-2019_name: Pre-reader Express Course (2019)
   cspunit2_name: "(old) Unit 2: The Internet"
   cspunit3_name: "(old) Unit 3: Programming"
   cspunit4_name: "(old) Unit 4: Data"
@@ -1009,6 +1012,9 @@
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: "Grades 9-12"
   cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
+  accelerated_name: "Accelerated Course"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   20-hour_name: Accelerated Course
   algebra_name: "CS in Algebra Full Course"
   AlgebraA_name: "CS in Algebra Course A"
@@ -1031,9 +1037,11 @@
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries ('17-'18)"
   csd_2018_category_name: "CS Discoveries ('18-'19)"
+  csd_2019_category_name: "CS Discoveries ('19-'20)"
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "CS Principles ('17-'18)"
   csp_2018_category_name: "CS Principles ('18-'19)"
+  csp_2019_category_name: "CS Principles ('19-'20)"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
@@ -1114,6 +1122,12 @@
   coursed-2018_gradelevel: Ages 7-11
   coursee-2018_gradelevel: Ages 8-12
   coursef-2018_gradelevel: Ages 9-13
+  coursea-2019_gradelevel: Ages 4-7
+  courseb-2019_gradelevel: Ages 5-8
+  coursec-2019_gradelevel: Ages 6-10
+  coursed-2019_gradelevel: Ages 7-11
+  coursee-2019_gradelevel: Ages 8-12
+  coursef-2019_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1234,6 +1248,12 @@
   coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
   coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
   coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+  coursea-2019_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2019_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2019_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2019_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2019_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2019_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
   codeorg_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1511,8 +1531,12 @@
   header_about: "About"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support '
-  header_report_bug: "Report bug"
+  header_report_bug: "Report a problem"
   header_tutorials: "Tutorials"
+  app_lab_documentation: "App Lab Documentation"
+  app_lab_tutorials: "App Lab Tutorials"
+  game_lab_documentation: "Game Lab Documentation"
+  game_lab_tutorials: "Game Lab Tutorials"
   header_documentation: "Documentation"
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"

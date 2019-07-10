@@ -12,15 +12,9 @@ import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
-import {
-  defaultFontSizeStyle,
-  fontFamilyStyles,
-  themeOptions,
-  CLASSIC_THEME_INDEX
-} from '../constants';
+import {themeOptions, CLASSIC_THEME_INDEX} from '../constants';
 import themeColor from '../themeColor';
 import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class TextInputProperties extends React.Component {
   static propTypes = {
@@ -206,6 +200,9 @@ class TextInputEvents extends React.Component {
   }
 }
 
+const CLASSIC_TEXT_INPUT_PADDING = '5px';
+const NEW_THEME_TEXT_INPUT_PADDING = '5px 15px';
+
 export default {
   PropertyTab: TextInputProperties,
   EventTab: TextInputEvents,
@@ -285,6 +282,22 @@ export default {
       millennial: 13,
       robot: 13,
       classic: 14
+    },
+    padding: {
+      default: NEW_THEME_TEXT_INPUT_PADDING,
+      orange: NEW_THEME_TEXT_INPUT_PADDING,
+      citrus: NEW_THEME_TEXT_INPUT_PADDING,
+      ketchupAndMustard: NEW_THEME_TEXT_INPUT_PADDING,
+      lemonade: NEW_THEME_TEXT_INPUT_PADDING,
+      forest: NEW_THEME_TEXT_INPUT_PADDING,
+      watermelon: NEW_THEME_TEXT_INPUT_PADDING,
+      area51: NEW_THEME_TEXT_INPUT_PADDING,
+      polar: NEW_THEME_TEXT_INPUT_PADDING,
+      glowInTheDark: NEW_THEME_TEXT_INPUT_PADDING,
+      bubblegum: NEW_THEME_TEXT_INPUT_PADDING,
+      millennial: NEW_THEME_TEXT_INPUT_PADDING,
+      robot: NEW_THEME_TEXT_INPUT_PADDING,
+      classic: CLASSIC_TEXT_INPUT_PADDING
     }
   },
 
@@ -293,19 +306,11 @@ export default {
     element.style.margin = '0px';
     element.style.width = '200px';
     element.style.height = '30px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.fontFamily = fontFamilyStyles[0];
-      element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = themeColor.textInput.classic;
-      element.style.backgroundColor = '';
-      elementUtils.setDefaultBorderStyles(element, {
-        forceDefaults: true,
-        textInput: true
-      });
-    }
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     return element;
   },
@@ -315,13 +320,15 @@ export default {
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
     // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
-    if (experiments.isEnabled('applabThemes')) {
-      // Set the background color for older projects that didn't set it on create:
-      if (element.style.backgroundColor === '') {
-        element.style.backgroundColor = this.themeValues.backgroundColor[
-          themeOptions[CLASSIC_THEME_INDEX]
-        ];
-      }
+    // Set the padding for older projects that didn't set it on create:
+    if (element.style.padding === '') {
+      element.style.padding = CLASSIC_TEXT_INPUT_PADDING;
+    }
+    // Set the background color for older projects that didn't set it on create:
+    if (element.style.backgroundColor === '') {
+      element.style.backgroundColor = this.themeValues.backgroundColor[
+        themeOptions[CLASSIC_THEME_INDEX]
+      ];
     }
 
     $(element).on('mousedown', function(e) {

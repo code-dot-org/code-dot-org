@@ -80,7 +80,6 @@ hu:
   of: "/"
   more: TÖBB
   less: KEVESEBB
-  beta: béta
   try_hoc: 'Próbáld ki a Kódolás Óráját, kattints ide >> '
   try_k8intro: Próbáld ki az általános iskolás Bevezető számítógép-tudományi tanfolyamot
     (15-25 óra)
@@ -561,7 +560,6 @@ hu:
   pdf_download: Letöltés PDF-ben
   download_coming_soon: Hamarosan lesz letölthető tevékenység.
   video_coming_soon: Hamarosan lesz videó!
-  not_started: A diák nem próbálta meg ezt a szintet.
   share_code:
     title: Kattints a "Fuss"-ra, hogy lásd a programomat működés közben
     bounce_og_title: Nézd meg a Visszapattanós játékomat
@@ -781,29 +779,13 @@ hu:
     create: Projekt létrehozása
     create_a_project: 'Új projekt létrehozása:'
     new: Új létrehozása
-    rename: Átnevezés
-    save: Mentés
-    delete: Törlés
-    import: Importálás
-    share_link_import_bad_link_header: A megosztási hivatkozást a rendszer nem ismerte
-      fel
-    share_link_import_bad_link_body: 'Nem sikerült importálni a megosztási hivatkozást.
-      Bizonyosodj meg arról, hogy a Minecraft: Agent kirakósból származó hivatkozást
-      használsz, és hogy a teljes hivatkozást lemásoltad.'
-    share_link_import_error_header: Hiba történt.
-    share_link_import_error_body: Hiba történt a megosztási hivatkozás importálása
-      során. Próbáld újra!
     exit: Vissza a tanfolyamhoz
-    my_projects: Projektjeim
     project_gallery: Projektek
     publish: Közzétesz
     unpublish: Közzététel visszavonása
-    share: Megosztás
     share_title: A projekt megosztása
     share_copy_link: 'A hivatkozás másolása:'
     embed: Beágyaz
-    close: Bezár
-    more: Mégtöbb
     name: Név
     updated: Frissítve
     project_type: Projekt típusa
@@ -811,19 +793,9 @@ hu:
       feliratokra egy új "Játék a Laborban" vagy "Művész" projekt létrehozásához!<br/>Bármikor
       vissza tudsz térni és folytatni a munkát a projektjeiden.
     need_help: Szükséged van segítségre a kezdéshez?
-    really_delete: Biztos törölni akarod?
-    delete_yes: Igen
-    delete_no: Nem
     saved: Mentve
     not_saved: Nincs mentve
-    cancel: Mégsem
-    delete_confirm_title: Biztosan törlöd ezt a projektet?
-    delete_confirm_text: A projekt törlése véglegesen eltávolítja azt a saját projektek
-      listájából. Bárki, akivel korábban megosztottad azt, többé már nem fogja tudni
-      megtekinteni a projektet.
     view_all: Projektjeim megtekintése
-    remix: Remix
-    click_to_remix: Kattints a 'Remix'-re, hogy lepörgesd a saját verziódat!
     edit_project: Projekt szerkesztése
     abuse:
       tos: Ezt a projektet jelentették, mint amely nem tesz eleget a Code.org <a href='http://code.org/tos'>Felhasználói

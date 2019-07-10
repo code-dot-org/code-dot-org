@@ -64,7 +64,6 @@ ga:
   of: "as"
   more: "NÍOS MÓ"
   less: "NÍOS LÚ"
-  beta: "béite"
   try_hoc: "Bain triail as an Uair Chódála; cliceáil anseo >> "
   try_k8intro: "Bain triail as ár gCúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna (15-25 uair an chloig)"
   k8intro: "Cúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna (15-25 uair an chloig)"
@@ -536,7 +535,6 @@ ga:
   pdf_download: 'Íoslódáil PDF'
   download_coming_soon: 'Gníomhaíocht in-íoslódáilte le teacht go luath.'
   video_coming_soon: 'Físeán le teacht go luath!'
-  not_started: 'Níor bhain an dalta triail as an leibhéal seo fós.'
   share_code:
     title: "Cliceáil 'Rith' chun mo ríomhchlár a fheiceáil"
     bounce_og_title: "Féach ar mo Chluiche Liathróide"
@@ -763,20 +761,10 @@ ga:
     create: "Cruthaigh Togra"
     create_a_project: 'Cruthaigh togra nua:'
     new: "Cruthaigh Togra Nua"
-    rename: "Athainmnigh"
-    save: "Sábháil"
-    delete: "Scrios"
-    import: "Iompórtáil"
-    share_link_import_bad_link_header: "Nasc comhroinnte neamhaitheanta"
-    share_link_import_bad_link_body: "Níorbh fhéidir linn an nasc comhroinnte sin a iompórtáil. Deimhnigh gur tháinig an nasc ó dhúshlán Minecraft: Gníomhaire, agus gur chóipeáil tú an nasc iomlán."
-    share_link_import_error_header: "Tharla earráid."
-    share_link_import_error_body: "Tharla earráid agus an nasc comhroinnte sin á iompórtáil. Bain triail eile as."
     exit: "Fill ar an gCúrsa"
-    my_projects: "Mo Chuid Tograí"
     project_gallery: "Tograí"
     publish: "Foilsigh"
     unpublish: "Dífhoilsigh"
-    share: "Comhroinn"
     share_title: Comhroinn do thogra
     share_copy_link: "Cóipeáil an nasc:"
     share_embed_description: "Is féidir an cód leabaithe a ghreamú isteach i leathanach HTML chun an togra a chur ar taispeáint ar leathanach Gréasáin."
@@ -784,25 +772,15 @@ ga:
     embed: "Leabaigh"
     advanced_share: "Taispeáin na hardroghanna"
     no_projects: "Níl aon togra agat faoi láthair. Cliceáil ceann de na cnaipí thuas le togra nua a thosú."
-    close: "Dún"
-    more: "Tuilleadh"
     name: "Ainm"
     updated: "Nuashonraithe"
     project_type: "Cineál an Togra"
     help_text: "Cliceáil <strong>Déan aip</strong> nó <strong>Tarraing pictiúr</strong> thíos chun togra nua a thosú!<br/>Is féidir leat filleadh anseo agus tuilleadh oibre a dhéanamh ar do chuid tograí am ar bith."
     need_help: "Bain triail as na cúrsaí seo chun cabhrú linn tosú amach le do thogra nua"
     thumbnail_help: "Nach bhfeiceann tú an mionphictiúr ceart le do thogra? Rith d'aip chun mionphictiúr nua a ghiniúint. Uaireanta tógann sé cúpla uair an chloig sula mbeidh an mionphictiúr ar fáil chuile áit."
-    really_delete: 'Scrios?'
-    delete_yes: 'Tá'
-    delete_no: 'Níl'
     saved: "Sábháilte"
     not_saved: "Gan sábháil"
-    cancel: 'Cealaigh'
-    delete_confirm_title: An bhfuil tú cinnte gur mhaith leat an togra seo a scriosadh?
-    delete_confirm_text: "Má scriosann tú an togra, bainfear ón liosta \"Mo Chuid Tograí\" é go buan. Má thug tú nasc leis an togra do chairde, ní bheidh siad in ann féachaint air a thuilleadh."
     view_all: 'Mo Chuid Tograí'
-    remix: 'Athmheascadh'
-    click_to_remix: "Cliceáil \"Athmheascadh\" le do leagan féin a dhéanamh!"
     edit_project: 'Cuir an Togra in Eagar'
     sharing_disabled: "Ár leithscéal, ach níl an togra seo ar fáil le foilsiú. Más leatsa nó le dalta de do chuid é, <a href='https://studio.code.org/users/sign_in'>logáil isteach</a> i do chuntas le breathnú air."
     abuse:

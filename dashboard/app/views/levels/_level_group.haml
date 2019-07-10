@@ -4,76 +4,56 @@
 
 = render partial: 'levels/common_audio'
 
--#
-  If the viewer can't view last_attempt, which would happen when it's a teacher
-  looking at a student's attempt at an anonymous survey, then just show explanation
-  text.  It's very important that we don't lose or miss this check.
-  Check that @script_level exists, because it won't for a /level/ view.
+-# If we are looking at the level independent of a script, then let's just
+-# show all pages of the LevelGroup at once.  Otherwise we'll show the actual
+-# page.  The controller takes care of that for us.
+- current_page = params[:puzzle_page] || 1
 
-- if @script_level && @script_level.should_hide_survey(current_user, @user)
-  - page = @pages.first
-  %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
-  %br/
-  = I18n.t('level_group.hide_survey_last_answer')
+-# Is this a survey where we've already submitted
+- submitted_survey = @script_level.try(:anonymous?) && current_user && current_user.user_level_for(@script_level, @level).try(:submitted?)
 
-- else
-  -# If we are looking at the level independent of a script, then let's just
-  -# show all pages of the LevelGroup at once.  Otherwise we'll show the actual
-  -# page.  The controller takes care of that for us.
-  - current_page = params[:puzzle_page] || 1
+.level-group
+  - @pages.each do |page|
+    - unless data["title"].blank?
+      %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
+      %br/
 
-  -# Is this a survey where we've already submitted
-  - submitted_survey = @script_level.try(:anonymous?) && current_user && current_user.user_level_for(@script_level, @level).try(:submitted?)
+    - if submitted_survey
+      #survey-submission-thankyou
+        = I18n.t('level_group.survey_submission_thankyou')
 
-  -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
-  - if @script_level && @script_level.stage.lockable? && (!current_user || @script_level.locked?(current_user))
-    = render 'levels/locked_stage'
-  - else
-    -# If we're a teacher, render the locked_stage UI, which the client will conditionally hide based on Student/Teacher toggle
-    - if @script_level && @script_level.stage.lockable? && current_user.try(:teacher?)
-      = render 'levels/locked_stage', hidden: true
-    .level-group
-      - @pages.each do |page|
-        - unless data["title"].blank?
-          %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
-          %br/
+    - page.levels.each_with_index do |level, index|
+      -# Don't show last attempt for submitted surveys, even for the current user, otherwise teachers
+      -# could access student responses
+      - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level, @script) unless submitted_survey
 
-        - if submitted_survey
-          #survey-submission-thankyou
-            = I18n.t('level_group.survey_submission_thankyou')
-
-        - page.levels.each_with_index do |level, index|
-          -# Don't show last attempt for submitted surveys, even for the current user, otherwise teachers
-          -# could access student responses
-          - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level, @script) unless submitted_survey
-
-          -# Show any text from an external level.
-          - if data["texts"]
-            - data["texts"].select {|text| text["index"] == page.offset + index}.each do |text_level_info|
-              - text_level = Script.cache_find_level(text_level_info["level_name"])
-              .level-group-content
-                = render partial: 'levels/external', locals: {in_level_group: true, level: text_level}
-
-          -# Embed the multi/match/free_response level.
-
-          - level_class = level.class.to_s.underscore
-
-          .level-group-number= "#{page.offset + index + 1}. "
+      -# Show any text from an external level.
+      - if data["texts"]
+        - data["texts"].select {|text| text["index"] == page.offset + index}.each do |text_level_info|
+          - text_level = Script.cache_find_level(text_level_info["level_name"])
           .level-group-content
-            - if ['multi', 'evaluation_multi'].include? level_class
-              = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
-            - elsif level_class == "text_match"
-              -# For students (or teachers doing PD), clear out all answers.
-              - unless current_user.try(:should_see_inline_answer?, @script_level)
-                - level.properties['answers'] = nil
-              = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt }
-            - elsif level_class == "free_response"
-              = render partial: 'levels/free_response', locals: {in_level_group: true, level: level, last_attempt: sublevel_last_attempt}
-            - elsif level_class == "match"
-              = render partial: 'levels/single_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt}
+            = render partial: 'levels/external', locals: {in_level_group: true, level: text_level}
 
-        - unless @script_level.nil?
-          = render partial: 'levels/dialog', locals: {app: app, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}
+      -# Embed the multi/match/free_response level.
+
+      - level_class = level.class.to_s.underscore
+
+      .level-group-number= "#{page.offset + index + 1}. "
+      .level-group-content
+        - if ['multi', 'evaluation_multi'].include? level_class
+          = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
+        - elsif level_class == "text_match"
+          -# For students (or teachers doing PD), clear out all answers.
+          - unless current_user.try(:should_see_inline_answer?, @script_level)
+            - level.properties['answers'] = nil
+          = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt }
+        - elsif level_class == "free_response"
+          = render partial: 'levels/free_response', locals: {in_level_group: true, level: level, last_attempt: sublevel_last_attempt}
+        - elsif level_class == "match"
+          = render partial: 'levels/single_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt}
+
+    - unless @script_level.nil?
+      = render partial: 'levels/dialog', locals: {app: app, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}
 
 - content_for(:head) do
   - level_data = data

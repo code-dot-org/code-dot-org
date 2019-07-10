@@ -9,11 +9,12 @@ import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
 import Spinner from '../../components/spinner';
 import {WorkshopAdmin, ProgramManager} from '../permission';
 import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = 'Deep Dive';
 const NA = 'N/A';
-const LOCAL_SUMMER = '5-day Summer';
+const LOCAL_SUMMER = SubjectNames.SUBJECT_SUMMER_WORKSHOP;
 
 export class WorkshopEnrollmentSchoolInfo extends React.Component {
   constructor(props) {
@@ -191,21 +192,18 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             this.props.workshopSubject === DEEP_DIVE && (
               <td>{enrollment.csf_has_physical_curriculum_guide}</td>
             )}
-          {this.props.accountRequiredForAttendance && (
-            <td>{enrollment.user_id ? 'Yes' : 'No'}</td>
-          )}
           {this.props.workshopSubject === LOCAL_SUMMER && (
             <td>
               {enrollment.attendances} / {this.props.numSessions}
             </td>
           )}
-          {this.props.workshopSubject === LOCAL_SUMMER &&
+          {this.props.scholarshipWorkshop &&
             this.state.pendingScholarshipUpdates.includes(enrollment.id) && (
               <td>
                 <Spinner size="small" />
               </td>
             )}
-          {this.props.workshopSubject === LOCAL_SUMMER &&
+          {this.props.scholarshipWorkshop &&
             !this.state.pendingScholarshipUpdates.includes(enrollment.id) &&
             this.scholarshipInfo(enrollment)}
         </tr>
@@ -266,13 +264,10 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
               this.props.workshopSubject === DEEP_DIVE && (
                 <th style={styles.th}>Has Physical Copy of Curriculum?</th>
               )}
-            {this.props.accountRequiredForAttendance && (
-              <th style={styles.th}>Code Studio Account?</th>
-            )}
             {this.props.workshopSubject === LOCAL_SUMMER && (
               <th style={styles.th}>Total Attendance</th>
             )}
-            {this.props.workshopSubject === LOCAL_SUMMER && (
+            {this.props.scholarshipWorkshop && (
               <th style={styles.th}>Scholarship Teacher?</th>
             )}
           </tr>
@@ -287,6 +282,7 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   permissionList: PropTypes.object.isRequired,
   enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
   accountRequiredForAttendance: PropTypes.bool.isRequired,
+  scholarshipWorkshop: PropTypes.bool.isRequired,
   onDelete: PropTypes.func.isRequired,
   workshopCourse: PropTypes.string.isRequired,
   workshopSubject: PropTypes.string.isRequired,

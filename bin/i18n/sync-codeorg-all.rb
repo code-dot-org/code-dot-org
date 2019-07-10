@@ -19,6 +19,7 @@
 # Otherwise, if run with one of the "command" flags, will run a single step of
 # the full sync
 
+require_relative '../../deployment'
 require_relative '../../lib/cdo/only_one'
 require_relative '../../lib/cdo/github'
 
@@ -83,6 +84,13 @@ def create_in_up_pr
       "i18n/locales/source/dashboard"
     ],
     "dashboard i18n sync"
+  )
+
+  git_add_and_commit(
+    [
+      "i18n/locales/source/course_content"
+    ],
+    "course content i18n sync"
   )
 
   git_add_and_commit(
@@ -172,10 +180,16 @@ def create_down_out_pr
   puts "\r\rremember to update blockly\r\r"
 end
 
+def checkout_staging
+  return if GitUtils.current_branch == "staging"
+  `git checkout staging` if should_i "switch to staging branch"
+end
+
 def main
   options = parse_options
 
   if options[:interactive]
+    checkout_staging
     sync_in if should_i "sync in"
     sync_up if should_i "sync up"
     create_in_up_pr if options[:with_pull_request]
@@ -183,6 +197,7 @@ def main
     sync_out if should_i "sync out"
     create_down_out_pr if options[:with_pull_request]
     upload_i18n_stats if should_i "upload translation stats"
+    checkout_staging
   elsif options[:command]
     case options[:command]
     when 'in'

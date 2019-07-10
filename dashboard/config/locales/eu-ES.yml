@@ -62,7 +62,6 @@ eu:
   of: "-tik"
   more: GEHIAGO
   less: GUTXIAGO
-  beta: beta
   try_hoc: 'Probatu kode ordu bat. Klikatu hemen >> '
   try_k8intro: Probatu gure 2. DBHko Informatikarako Sarrera kurtsoa (15-25 ordu)
   k8intro: 2. DBHko Informatikarako Sarrera kurtsoa (15-25 ordu)
@@ -407,7 +406,6 @@ eu:
   pdf_download: Jaitsi PDFa
   download_coming_soon: Jarduera deskargagarria aurki.
   video_coming_soon: Bideoa laster!
-  not_started: Ikaslea ez da saiatu maila honetan.
   share_code:
     title: Sakatu "Hasi" nire programa martxan ikusteko
     bounce_og_title: Berrikusi nire errebote jokoa
@@ -584,17 +582,10 @@ eu:
     create: Sortu proiektua
     create_a_project: 'Sortu proiektu berria:'
     new: Berria sortu
-    rename: Aldatu izena
-    save: Gorde
-    delete: Ezabatu
     exit: Itzuli kurtsora
-    my_projects: Nire proiektuak
     project_gallery: Proiektuak
-    share: Partekatu
     share_title: Partekatu zure proiektuak
     share_copy_link: 'Esteka kopiatu:'
-    close: Itxi
-    more: Gehiago
     name: Izena
     updated: Eguneratua
     project_type: Proiektu mota
@@ -602,19 +593,9 @@ eu:
       zerbait</strong>-en, Artista edo Jolas Laborategiko proiektu berri bat egiteko!<br/>Zure
       proiektuetara itzuli ahal izango zara edozein unetan.
     need_help: Hasteko laguntzarik behar?
-    really_delete: Ezabatu?
-    delete_yes: Bai
-    delete_no: Ez
     saved: Gordeta
     not_saved: Gorde gabe
-    cancel: Ezeztatu
-    delete_confirm_title: Ziur zaude proiektu hau ezabatu nahi duzula?
-    delete_confirm_text: Zure proiektua ezabatzen baduzu, Nire Proiektuak zerrendatik
-      desagertuko da. Proiektuaren esteka konpartitzen zutenek ezingo dute gehiago
-      proiektua ikusi.
     view_all: Ikusi Nire Proiektuak
-    remix: Nahastu
-    click_to_remix: Klikatu "Nahastu" zure bertsioa lortzeko!
     edit_project: Editatu Proiektua
     abuse:
       tos: Proiektu honek Code.org-en <a href='http://code.org/tos'>Zerbitzuaren Baldintzak</a>

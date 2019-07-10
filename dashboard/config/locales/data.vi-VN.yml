@@ -594,6 +594,7 @@ vi:
         mc_2018_closing: 'Minecraft: Chuyến thám hiểm đại dương - Chúc mừng'
         csd_pair_programming: Lập trình đôi
         csd_applab_parameters: Hàm và tham số
+        csd_problem_solving_process: Quá trình giải quyết vấn đề
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

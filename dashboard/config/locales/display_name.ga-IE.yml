@@ -1,8 +1,7 @@
 ---
-ga:
+ga-IE:
   data:
     display_name:
-      AB_Debug_Artist1: 'Debugging Ealaíontóir # 1 (AB)'
       CSD U2 Pair Programming Video: Códáil Bheirte
       CSD U2 Pair Programming Video_2018: Códáil Bheirte
       CSD U2 Pair Programming Video_2019: Códáil Bheirte
@@ -57,7 +56,6 @@ ga:
       CSD U3 Variables Map: Athróga
       CSD U3 Variables Map_2018: Athróga
       CSD U3 Variables Map_2019: Athróga
-      CSD U3 functions map: Feidhmeanna
       CSD U6 for loop map: Lúba "Do Gach"
       CSD U6 for loop map_2018: Lúba "Do Gach"
       CSD U6 for loop map_2019: Lúba "Do Gach"
@@ -65,14 +63,7 @@ ga:
       CSD U6 functions paramters video_2018: Feidhmeanna a ghlacann le Paraiméadair
       CSD U6 functions paramters video_2019: Feidhmeanna a ghlacann le Paraiméadair
       'CSD: For Loop_2018': Lúba "Do Gach"
-      'CSD: For Loop_2019': Lúba "Do Gach"
-      MC_HOC_2017_FP10x10: Saorimirt
-      MC_HOC_2017_FP10x10_RE: Saorimirt
-      SG U3L07 More Subgoals: Doiciméadú
       courseA_video_Stevie: Stiofán agus an Tionscadal Mór
       courseA_video_Stevie_2018: Stiofán agus an Tionscadal Mór
-      courseA_video_Stevie_2019: Stiofán agus an Tionscadal Mór
       courseB_video_Unspotted: Fabhtanna nár tugadh faoi deara
       courseB_video_Unspotted_2018: Fabhtanna nár tugadh faoi deara
-      courseB_video_Unspotted_2019: Fabhtanna nár tugadh faoi deara
-      expresslink: Luaschúrsa

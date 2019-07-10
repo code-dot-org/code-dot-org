@@ -68,7 +68,6 @@ cs:
   of: "z"
   more: "VÍCE"
   less: "MÉNĚ"
-  beta: "beta"
   try_hoc: "Zkus Hodinu Kódu kliknutím zde >> "
   try_k8intro: "Vyzkoušej náš kurz K-8 Úvod do informatiky (15-25 hodin)"
   k8intro: "Kurz K-8 Úvod do počítačové vědy (15-25 hodin)"
@@ -552,7 +551,6 @@ cs:
   pdf_download: 'Stáhnout ve formátu PDF'
   download_coming_soon: 'Aktivita ke stažení již brzy.'
   video_coming_soon: 'Video již brzy!'
-  not_started: 'Student nezačal tuto úroveň.'
   share_code:
     title: "Klepněte na \"Spustit\", abyste viděli svůj program v akci"
     bounce_og_title: "Zkontrolujte hru Bounce"
@@ -769,44 +767,24 @@ cs:
     create: "Vytvořit projekt"
     create_a_project: 'Vytvořte nový projekt:'
     new: "Vytvořit nový"
-    rename: "Přejmenovat"
-    save: "Uložit"
-    delete: "Odstranit"
-    import: "Importovat"
-    share_link_import_bad_link_header: "Odkaz pro sdílení nebyl rozpoznán"
-    share_link_import_bad_link_body: "Daný odkaz pro sdílení se nám nepodařilo naimportovat. Ověřte, zda používáte odkaz z hádanky Minecraft: Agent a zda jste zkopírovali úplný odkaz."
-    share_link_import_error_header: "Něco se nepovedlo."
-    share_link_import_error_body: "Došlo k problému při importu daného odkazu pro sdílení. Zkuste to znovu."
     exit: "Návrat ke kurzu"
-    my_projects: "Moje projekty"
     project_gallery: "Projekty"
     publish: "Publikovat"
     unpublish: "Zrušit publikování"
-    share: "Sdílet"
     share_title: Sdílení projektu
     share_copy_link: "Zkopírujte odkaz:"
     share_embed_description: "Můžete vložit kód do HTML stránky pro zobrazení projektu na webové stránce."
     share_u13_warning: "Poraďte se se svým učitelem ještě před odesláním. Sdílejte jen v rámci školy."
     embed: "Vložit"
     advanced_share: "Zobrazit pokročilé možnosti"
-    close: "Zavřít"
-    more: "Více"
     name: "Jméno"
     updated: "Aktualizováno"
     project_type: "Typ projektu"
     help_text: "Klepněte na tlačítko <strong>vytvořit aplikaci</strong> nebo <strong>nakreslit něco</strong> níže se vytvoří nový projekt Play Lab nebo umělec! <br/> Můžete se vrátit a pracovat na vašich projektech v kteroukoli dobu."
     need_help: "Potřebujete pomoc, začneme?"
-    really_delete: 'Odstranit?'
-    delete_yes: 'Ano'
-    delete_no: 'Ne'
     saved: "Uloženo"
     not_saved: "Neuloženo"
-    cancel: 'Storno'
-    delete_confirm_title: Opravdu chcete odstranit toto nastavení?
-    delete_confirm_text: "Váš projekt bude natrvalo odstraněn ze seznamu projektů. Každý, s kterým jste sdíleli odkaz, nebude již schopen zobrazit váš projekt."
     view_all: 'Zobrazit mé projekty'
-    remix: 'Remix'
-    click_to_remix: "Klepněte na \"Remix\" na přetočení vlastní verze!"
     edit_project: 'Upravit projekt'
     abuse:
       tos: "Tento projekt byl nahlášen pro Code.org-si <a href='http://code.org/tos'> Podmínky služby</a> a nemůže být sdílen s ostatními."

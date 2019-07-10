@@ -2,14 +2,12 @@ import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
-import experiments from '../util/experiments';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import * as setPropertyDropdown from './setPropertyDropdown';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
-import themeColor from './themeColor';
 import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
@@ -24,18 +22,14 @@ import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
-import {actions} from './redux/applab';
+import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {getStore} from '../redux';
 import $ from 'jquery';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
-import {
-  ICON_PREFIX_REGEX,
-  defaultFontSizeStyle,
-  fontFamilyStyles
-} from './constants';
+import {ICON_PREFIX_REGEX} from './constants';
 
 var applabCommands = {};
 export default applabCommands;
@@ -107,32 +101,29 @@ function apiValidateDomIdExistence(
     };
     var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
-    var valid = !existsOutsideApplab && shouldExist === existsInApplab;
+    var valid = true;
+    var message;
+    if (existsOutsideApplab) {
+      message =
+        'is already being used outside of App Lab. Please use a different id.';
+      throw new Error(invalidIdMessage(funcName, varName, id, message));
+    }
 
-    if (!valid) {
-      var errorString = '';
-      if (existsOutsideApplab) {
-        errorString =
-          funcName +
-          '() ' +
-          varName +
-          ' parameter refers to an id ("' +
-          id +
-          '") which is already being used outside of App Lab. Please use a different id.';
-        throw new Error(errorString);
-      } else {
-        if (!callback || !callback(existsInApplab)) {
-          outputWarning(
-            funcName +
-              '() ' +
-              varName +
-              ' parameter refers to an id ("' +
-              id +
-              '") which ' +
-              (existsInApplab ? 'already exists.' : 'does not exist.')
-          );
-        }
-      }
+    if (
+      shouldExist !== existsInApplab &&
+      (!callback || !callback(existsInApplab))
+    ) {
+      valid = false;
+      message = existsInApplab ? 'already exists.' : 'does not exist.';
+      outputWarning(invalidIdMessage(funcName, varName, id, message));
+    }
+
+    var idContainsWhiteSpace = -1 !== id.search(/\s/);
+    if (idContainsWhiteSpace) {
+      valid = false;
+      var validId = id.replace(/\s+/g, '');
+      message = `contains whitespace. Change the id name to ("${validId}")`;
+      outputWarning(invalidIdMessage(funcName, varName, id, message));
     }
     opts[validatedDomKey] = valid;
   }
@@ -199,16 +190,11 @@ applabCommands.button = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  if (experiments.isEnabled('applabThemes')) {
-    newButton.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(newButton, Applab.activeScreen());
-  } else {
-    newButton.style.fontSize = defaultFontSizeStyle;
-    newButton.style.fontFamily = fontFamilyStyles[0];
-    newButton.style.color = themeColor.buttonText.classic;
-    newButton.style.backgroundColor = themeColor.buttonBackground.classic;
-    elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
-  }
+  newButton.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newButton,
+    Applab.activeScreen()
+  );
 
   return Boolean(
     newButton.appendChild(textNode) &&
@@ -911,17 +897,11 @@ applabCommands.textInput = function(opts) {
   newInput.style.position = 'relative';
   newInput.style.height = '30px';
   newInput.style.width = '200px';
-  if (experiments.isEnabled('applabThemes')) {
-    newInput.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(newInput, Applab.activeScreen());
-  } else {
-    newInput.style.fontSize = defaultFontSizeStyle;
-    newInput.style.fontFamily = fontFamilyStyles[0];
-    elementUtils.setDefaultBorderStyles(newInput, {
-      forceDefaults: true,
-      textInput: true
-    });
-  }
+  newInput.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newInput,
+    Applab.activeScreen()
+  );
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -938,15 +918,11 @@ applabCommands.textLabel = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
-  if (experiments.isEnabled('applabThemes')) {
-    newLabel.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(newLabel, Applab.activeScreen());
-  } else {
-    newLabel.style.fontSize = defaultFontSizeStyle;
-    newLabel.style.fontFamily = fontFamilyStyles[0];
-    newLabel.style.backgroundColor = themeColor.labelBackground.classic;
-    elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
-  }
+  newLabel.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newLabel,
+    Applab.activeScreen()
+  );
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -1009,21 +985,11 @@ applabCommands.dropdown = function(opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
-  if (experiments.isEnabled('applabThemes')) {
-    newSelect.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(newSelect, Applab.activeScreen());
-  } else {
-    newSelect.style.fontSize = defaultFontSizeStyle;
-    newSelect.style.fontFamily = fontFamilyStyles[0];
-    newSelect.style.color = themeColor.dropdownText.classic;
-    elementLibrary.typeSpecificPropertyChange(
-      newSelect,
-      'textColor',
-      newSelect.style.color
-    );
-    newSelect.style.backgroundColor = themeColor.dropdownBackground.classic;
-    elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
-  }
+  newSelect.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newSelect,
+    Applab.activeScreen()
+  );
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
@@ -1351,6 +1317,10 @@ function setSize_(elementId, width, height) {
   }
 }
 
+function invalidIdMessage(functionName, variableName, id, message) {
+  return `The ${functionName}() ${variableName} parameter refers to an id ("${id}") which ${message}`;
+}
+
 applabCommands.setProperty = function(opts) {
   apiValidateDomIdExistence(
     opts,
@@ -1359,15 +1329,10 @@ applabCommands.setProperty = function(opts) {
     opts.elementId,
     true,
     exists => {
+      var idExistsMessage = exists ? 'already exists.' : 'does not exist.';
+      var warningMessage = `${idExistsMessage} You should be able to find the list of all the possible ids in the dropdown (unless you created the element inside your code).`;
       outputWarning(
-        `The setProperty() id parameter refers to an id (“${
-          opts.elementId
-        }”) ` +
-          `which ${
-            exists ? 'already exists.' : 'does not exist.'
-          } You should be able to ` +
-          'find the list of all the possible ids in the dropdown (unless you created the ' +
-          'element inside your code).'
+        invalidIdMessage('setProperty', 'id', opts.elementId, warningMessage)
       );
       return true;
     }
@@ -1607,12 +1572,16 @@ function filterUrl(urlToCheck) {
     data: JSON.stringify({url: urlToCheck})
   })
     .success(data => {
-      let approved = data['approved'];
-      getStore().dispatch(actions.addRedirectNotice(approved, urlToCheck));
+      let response = data['approved']
+        ? REDIRECT_RESPONSE.APPROVED
+        : REDIRECT_RESPONSE.REJECTED;
+      getStore().dispatch(actions.addRedirectNotice(response, urlToCheck));
     })
     .fail((jqXhr, status) => {
       // When this query fails, default to the dialog that allows the user to choose
-      getStore().dispatch(actions.addRedirectNotice(true, urlToCheck));
+      getStore().dispatch(
+        actions.addRedirectNotice(REDIRECT_RESPONSE.APPROVED, urlToCheck)
+      );
     });
 }
 
@@ -1637,6 +1606,10 @@ applabCommands.openUrl = function(opts) {
         // If url doesn't have a protocol, add one
         window.open('https://' + opts.url);
       }
+    } else if (hostname.startsWith('mailto')) {
+      getStore().dispatch(
+        actions.addRedirectNotice(REDIRECT_RESPONSE.UNSUPPORTED, opts.url)
+      );
     } else {
       filterUrl(opts.url);
     }
@@ -1787,23 +1760,6 @@ applabCommands.handleReadValue = function(opts, value) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null, value);
   }
-};
-
-applabCommands.getList = function(opts) {
-  var onSuccess = handleGetListSync.bind(this, opts);
-  var onError = handleGetListSyncError.bind(this, opts);
-  Applab.storage.readRecords(opts.tableName, {}, onSuccess, onError);
-};
-
-var handleGetListSync = function(opts, values) {
-  let columnList = [];
-  values.forEach(row => columnList.push(row[opts.columnName]));
-  opts.callback(columnList);
-};
-
-var handleGetListSyncError = function(opts, values) {
-  console.log('handleGetListSyncError');
-  opts.callback();
 };
 
 applabCommands.getKeyValueSync = function(opts) {

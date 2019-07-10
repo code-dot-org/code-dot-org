@@ -595,7 +595,6 @@
   course2_name: "دوره 2"
   course3_name: "دورۀ 3"
   course4_name: "دوره 4"
-  accelerated_name: "دوره های سریع"
   20-hour_name: دوره های سریع
   classicmaze_name: "هزارتوی کلاسیک"
   iceage_name: "عصر یخبندان"
@@ -664,6 +663,8 @@
   coursee-2017_gradelevel: سنین 8-12
   coursed-2018_gradelevel: رده ی سنی 8+
   coursee-2018_gradelevel: سنین 8-12
+  coursed-2019_gradelevel: رده ی سنی 8+
+  coursee-2019_gradelevel: سنین 8-12
   accelerated_gradelevel: "سنین 10 به بالا (پس از دوره 3)"
   codeorg_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
   codeintl_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"

@@ -40,6 +40,8 @@ require src_dir 'homepage'
 require src_dir 'advocacy_site'
 require 'cdo/hamburger'
 
+require pegasus_dir 'helper_modules/multiple_extname_file_utils'
+
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
   return vary if types.include?('*') || types.include?(type)
@@ -100,7 +102,7 @@ class Documents < Sinatra::Base
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found', '.404']
     set :redirect_extnames, ['.redirect', '.moved', '.found', '.301', '.302']
-    set :template_extnames, ['.erb', '.haml', '.html', '.md', '.txt']
+    set :template_extnames, ['.erb', '.haml', '.html', '.md', '.partial']
     set :non_static_extnames,
       settings.not_found_extnames +
       settings.redirect_extnames +
@@ -232,7 +234,7 @@ class Documents < Sinatra::Base
       transaction_name = transaction_name.sub(request.env[:splat_path_info], '') if request.env[:splat_path_info]
       NewRelic::Agent.set_transaction_name(transaction_name)
     end
-    not_found! if settings.not_found_extnames.include?(File.extname(path))
+    not_found! if MultipleExtnameFileUtils.file_has_any_extnames(path, settings.not_found_extnames)
     document path
   end
 
@@ -338,7 +340,7 @@ class Documents < Sinatra::Base
       end
 
       response.headers['X-Pegasus-Version'] = '3'
-      render_(content, File.extname(path), path, line)
+      render_(content, path, line)
     rescue => e
       # Add document path to backtrace if not already included.
       if path && [e.message, *e.backtrace].none? {|location| location.include?(path)}
@@ -347,12 +349,29 @@ class Documents < Sinatra::Base
       raise
     end
 
+    def render_partials(template_content)
+      # Template types that do not have thier own way of rendering partials
+      # (ie, markdown) can include other partials with the syntax:
+      #
+      #     {{ path/to/partial }}
+      #
+      # Because such content can be translated, we want to make sure that if a
+      # translator accidentally translates the path to the template, we simply
+      # render nothing rather than throwing an error
+      template_content.
+        gsub(/{{([^}]*)}}/) do
+          view($1.strip)
+        rescue
+          ''
+        end
+    end
+
     def preprocess_markdown(markdown_content)
       markdown_content.gsub(/```/, "```\n")
     end
 
     def resolve_static(subdir, uri)
-      return nil if settings.non_static_extnames.include?(File.extname(uri))
+      return nil if MultipleExtnameFileUtils.file_has_any_extnames(uri, settings.non_static_extnames)
 
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
@@ -366,23 +385,13 @@ class Documents < Sinatra::Base
     def resolve_template(subdir, extnames, uri, is_document = false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
-        extnames.each do |extname|
-          path = content_dir(dir, subdir, "#{uri}#{extname}")
-          if File.file?(path)
-            return path
-          end
-        end
+        found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), uri, extnames)
+        return found.first unless found.empty?
       end
 
       # Also look for shared items.
-      extnames.each do |extname|
-        path = content_dir('..', '..', 'shared', 'haml', "#{uri}#{extname}")
-        if File.file?(path)
-          return path
-        end
-      end
-
-      nil
+      found = MultipleExtnameFileUtils.find_with_extnames(content_dir('..', '..', 'shared', 'haml'), uri, extnames)
+      return found.first unless found.empty?
     end
 
     # Scans the filesystem and finds all documents served by Pegasus CMS.
@@ -404,7 +413,7 @@ class Documents < Sinatra::Base
           # Reduce file to URI.
           uri = file.
             sub(site_sub, '').
-            sub(/#{File.extname(file)}$/, '').
+            sub(/(#{settings.template_extnames.join('|')})*$/, '').
             sub(/\/index$/, '')
 
           # hourofcode.com has custom logic to resolve `/:country/:language/:path` URIs to
@@ -417,21 +426,34 @@ class Documents < Sinatra::Base
     end
 
     def resolve_document(uri)
-      extnames = settings.non_static_extnames + [".#{request.locale}.md"]
+      # Find the template representing this URI using the following logic:
+      #
+      #   1. If a locale-specific template exists at the file indicated by the URI, return that
+      #   2. If a locale-specific template called "index" exists in the directory indicated by the URI, return that
+      #   3. If a default template exists at the file indicated by the URI, return that
+      #   4. If a default template called "index" exists in the directory indicated by the URI, return that
+      #   5. If a splat template exists anywhere in the directory structure indicated by the URI, return that
+      #   6. We could not find a template
 
-      path = resolve_template('public', extnames, uri, true)
-      return path if path
+      # Steps 1-4: Try to find the relevant template
+      paths = [
+        "#{uri}.#{request.locale}",
+        File.join(uri, "index.#{request.locale}"),
+        uri,
+        File.join(uri, "index")
+      ]
+      paths.each do |path|
+        template = resolve_template('public', settings.non_static_extnames, path, true)
+        return template if template
+      end
 
-      path = resolve_template('public', extnames, File.join(uri, 'index'), true)
-      return path if path
-
-      # Recursively resolve '/splat.[ext]' template from the given URI.
+      # Step 5: Recursively resolve '/splat.[ext]' template from the given URI.
       # env[:splat_path_info] contains the path_info following the splat template's folder.
       at = uri
       while at != '/'
         parent = File.dirname(at)
 
-        path = resolve_template('public', extnames, File.join(parent, 'splat'), true)
+        path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), true)
         if path
           request.env[:splat_path_info] = uri[parent.length..-1]
           return path
@@ -440,6 +462,7 @@ class Documents < Sinatra::Base
         at = parent
       end
 
+      # Step 6: failure
       nil
     end
 
@@ -452,44 +475,58 @@ class Documents < Sinatra::Base
     end
 
     def render_template(path, locals={})
-      render_(IO.read(path), File.extname(path), path, 0, locals)
+      render_(IO.read(path), path, 0, locals)
     rescue => e
       Honeybadger.context({path: path, e: e})
       raise "Error rendering #{path}: #{e}"
     end
 
-    def render_(body, extname, path=nil, line=0, locals={})
+    def render_(body, path=nil, line=0, locals={})
       locals = @locals.merge(locals).symbolize_keys
       options = {locals: locals, line: line, path: path}
 
-      case extname
-      when '.erb', '.html'
-        erb body, options
-      when '.haml'
-        haml body, options
-      when '.fetch'
-        url = erb(body, options)
+      extensions = MultipleExtnameFileUtils.all_extnames(path)
 
-        cache_file = cache_dir('fetch', request.site, request.path_info)
-        unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
-          FileUtils.mkdir_p File.dirname(cache_file)
-          IO.binwrite(cache_file, Net::HTTP.get(URI(url)))
+      # Now, apply the processing operations implied by each extension to the
+      # given file, in an "outside-in" order
+      # IE, "foo.md.erb" will be processed as an ERB template, then the result
+      # of that will be processed as a MD template
+      #
+      # TODO elijah: Note that several extensions will perform ERB templating
+      # in addition to their other operations. This functionality should be
+      # removed, and the relevant templates should be renamed to "*.erb.*"
+      result = body
+      extensions.reverse.each do |extension|
+        case extension
+        when '.erb', '.html'
+          result = erb result, options
+        when '.haml'
+          result = haml result, options
+        when '.fetch'
+          url = erb(result, options)
+
+          cache_file = cache_dir('fetch', request.site, request.path_info)
+          unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
+            FileUtils.mkdir_p File.dirname(cache_file)
+            IO.binwrite(cache_file, Net::HTTP.get(URI(url)))
+          end
+          pass unless File.file?(cache_file)
+
+          cache :static
+          result = send_file(cache_file)
+        when '.md'
+          preprocessed = preprocess_markdown result
+          result = markdown preprocessed, options
+        when '.partial'
+          result = render_partials(result)
+        when '.redirect', '.moved', '.301'
+          result = redirect erb(result, options), 301
+        when '.found', '.302'
+          result = redirect erb(result, options), 302
         end
-        pass unless File.file?(cache_file)
-
-        cache :static
-        send_file(cache_file)
-      when '.md', '.txt'
-        preprocessed = erb body, options
-        preprocessed = preprocess_markdown preprocessed
-        markdown preprocessed, options
-      when '.redirect', '.moved', '.301'
-        redirect erb(body, options), 301
-      when '.found', '.302'
-        redirect erb(body, options), 302
-      else
-        raise "'#{extname}' isn't supported."
       end
+
+      result
     end
 
     def social_metadata

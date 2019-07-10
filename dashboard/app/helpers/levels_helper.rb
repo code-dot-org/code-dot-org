@@ -20,6 +20,8 @@ module LevelsHelper
       else
         puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
       end
+    elsif params[:sublevel_position]
+      sublevel_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:sublevel_position])
     elsif script_level.stage.lockable?
       script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     elsif script_level.bonus
@@ -84,7 +86,7 @@ module LevelsHelper
       user_storage_id = storage_id_for_user_id(user.id)
       channel_token = ChannelToken.find_channel_token(level, user_storage_id)
     else
-      user_storage_id = storage_id('user')
+      user_storage_id = get_storage_id
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
         request.ip,
@@ -247,7 +249,7 @@ module LevelsHelper
       end
 
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?) && I18n.en?
+    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if I18n.en? && can_view_teacher_markdown?
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -654,7 +656,7 @@ module LevelsHelper
     )
   end
 
-  def render_multi_or_match_content(text, level = @level)
+  def render_multi_or_match_content(text)
     return unless text
 
     path, width = text.split(',')
@@ -662,7 +664,7 @@ module LevelsHelper
     return match_answer_as_embedded_blockly(path) if File.extname(path).ends_with? '_blocks'
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
-    level.localized_text(text)
+    text
   end
 
   def level_title
@@ -690,7 +692,7 @@ module LevelsHelper
   end
 
   def video_key_choices
-    Video.pluck(:key)
+    Video.distinct.pluck(:key)
   end
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs

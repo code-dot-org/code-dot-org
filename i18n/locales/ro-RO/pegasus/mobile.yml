@@ -912,13 +912,7 @@
   coursed-2017_name: Curs D (2017)
   coursee-2017_name: Curs E (2017)
   coursef-2017_name: Curs F (2017)
-  accelerated_name: "Curs intensiv"
-  express_name: "Curs Expres"
-  pre-express_name: Curs Expres pentru preșcolari
-  express-2017_name: Curs Expres (2017)
-  pre-express-2017_name: Curs Expres pentru preșcolari (2017)
   pre-express-2018_name: Curs Expres pentru preșcolari (2018)
-  cspunit1_name: "(vechi) Unitatea 1: Informaţii digitale"
   cspunit2_name: "(vechi) Unitatea 2: Internet"
   cspunit3_name: "(vechi) Unitate 3: programare"
   cspunit4_name: "(vechi) Unitatea 4: date"
@@ -1052,6 +1046,12 @@
   coursed-2018_gradelevel: Gradele 8+
   coursee-2018_gradelevel: Vârste 8-12 ani
   coursef-2018_gradelevel: Clasele 10+
+  coursea-2019_gradelevel: Clasele 5+
+  courseb-2019_gradelevel: Clasele 6+
+  coursec-2019_gradelevel: Clasele 7+
+  coursed-2019_gradelevel: Gradele 8+
+  coursee-2019_gradelevel: Vârste 8-12 ani
+  coursef-2019_gradelevel: Clasele 10+
   accelerated_gradelevel: "Vârste 10 - 18 ani"
   codeorg_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   codeintl_platformtext: "Browsere web moderne, smartphone-uri, tablete"
@@ -1167,6 +1167,11 @@
   coursed-2018_shortdescription_congrats: Acoperiți rapid conceptele din cursul C, apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele.
   coursee-2018_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D şi apoi mergeți mai departe cu funcţii.
   coursef-2018_shortdescription_congrats: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+  coursea-2019_shortdescription_congrats: O introducere în informatică pentru preșcolari.
+  courseb-2019_shortdescription_congrats: O introducere în informatică pentru preșcolari. (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursed-2019_shortdescription_congrats: Acoperiți rapid conceptele din cursul C, apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele.
+  coursee-2019_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D şi apoi mergeți mai departe cu funcţii.
+  coursef-2019_shortdescription_congrats: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil în 34 de limbi."
   codeintl_longdescription: "Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil în 34 de limbi."
   thinkersmithspanish_longdescription: "Folosind un limbaj predefinit \"Vocabularul Robotului\", elevii vor descoperi; mijloace prin care care să se ghideze pentru a duce la bun sfârșit anumite acțiuni specifice, fără a le discuta în prealabil. Această segment învață copiii legătura dintre simboluri și acțiuni, precum și deprinderea atât de necesară de debugging."
@@ -1469,6 +1474,7 @@
   account_sign_up_child_accept_terms: "Confirm că am permisiunea părintelui sau tutorelui meu legal de a utiliza serviciile Code.org."
   hoc_overview_dance_title: "Petrecere cu dans"
   hoc_overview_start_tutorial: "Începe"
+  hoc2018_creativity: "creativitate"
   hoc2018_creativity_create: "Crează"
   hoc2018_creativity_what_will_you_create: "Ce vei creea?"
   hoc2018_mc_page_title: "Tutoriale Hour of Code Minecraft"

@@ -460,6 +460,7 @@ class ShareAllowedDialog extends React.Component {
                   <SendToPhone
                     channelId={this.props.channelId}
                     appType={this.props.appType}
+                    isLegacyShare={false}
                     styles={{label: {marginTop: 15, marginBottom: 0}}}
                   />
                 )}

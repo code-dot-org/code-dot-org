@@ -68,7 +68,6 @@
   of: "av"
   more: "MER"
   less: "MINDRE"
-  beta: "beta"
   try_hoc: "Prøv Hour of Code (kodetimen), klikk her >> "
   try_k8intro: "Prøv vårt introduksjonskurs i informatikk for elever opp til 8. klasse (15-25 timer)"
   k8intro: "Introduksjonskurs i informatikk for elever opp til 8. klasse (15-25 timer)"
@@ -558,7 +557,6 @@
   pdf_download: 'Last ned PDF'
   download_coming_soon: 'Nedlastbare aktiviteter kommer snart.'
   video_coming_soon: 'Video kommer snart!'
-  not_started: 'Eleven har ikke prøvd seg på denne banen.'
   share_code:
     title: "Klikk \"Kjør\" for å se programmet mitt i aksjon"
     bounce_og_title: "Sjekk ut Bounce-spillet mitt"
@@ -789,20 +787,10 @@
     create: "Opprett prosjekt"
     create_a_project: 'Opprett et nytt prosjekt:'
     new: "Opprett ny"
-    rename: "Gi nytt navn"
-    save: "Lagre"
-    delete: "Slett"
-    import: "Importer"
-    share_link_import_bad_link_header: "Lenke ikke gjenkjent"
-    share_link_import_bad_link_body: "Vi kunne ikke importere lenken. Kontroller at du bruker en kobling fra en Minecraft: Agent puslespill, og at du har kopiert hele koblingen."
-    share_link_import_error_header: "Noe gikk galt."
-    share_link_import_error_body: "Det oppstod et problem ved import av lenken. Vennligst prøv igjen."
     exit: "Tilbake til kurset"
-    my_projects: "Mine prosjekter"
     project_gallery: "Prosjekter"
     publish: "Publiser"
     unpublish: "Avpubliser"
-    share: "Del"
     share_title: Del prosjektet
     share_copy_link: "Kopier lenken:"
     share_embed_description: "Du kan lime den innebygde koden inn i en HTML side for å vise prosjektet på en nettside."
@@ -810,25 +798,15 @@
     embed: "Bygg inn"
     advanced_share: "Vis avanserte alternativer"
     no_projects: "Du har ingen prosjekter. Klikk på en av knappene over for å starte et prosjekt."
-    close: "Lukk"
-    more: "Mer"
     name: "Navn"
     updated: "Oppdatert"
     project_type: "Prosjekttype"
     help_text: "Klikk <strong>Lag en App</strong> eller <strong>Tegn noe</strong> nedenfor for å lage et nytt Spill-Lab eller kunstprosjekt!<br/>Du kan komme tilbake og arbeide videre på prosjektene når som helst."
     need_help: "Trenger du hjelp for å komme i gang?"
     thumbnail_help: "Ikke riktig miniatyrbildet for prosjektet? Kjør din app for å generere et nytt miniatyrbilde. Merk at det kan ta et par timer før miniatyrbildet er oppdatert overalt."
-    really_delete: 'Slette?'
-    delete_yes: 'Ja'
-    delete_no: 'Nei'
     saved: "Lagret"
     not_saved: "Ikke lagret"
-    cancel: 'Avbryt'
-    delete_confirm_title: Er du sikker på at du vil slette dette prosjektet?
-    delete_confirm_text: "Slettes prosjektet, fjernes det permanent fra listen Mine prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet."
     view_all: 'Vis mine prosjekter'
-    remix: 'Remix'
-    click_to_remix: "Klikk på \"Remiks\" for å lage din egen versjon!"
     edit_project: 'Rediger prosjekt'
     sharing_disabled: "Beklager, dette prosjektet er ikke tilgjengelig for deling. Hvis dette er ditt eller en av dine elevers prosjekt, vennligst <a href='https://studio.code.org/users/sign_in'>logg på</a> din konto for å se prosjektet."
     abuse:
