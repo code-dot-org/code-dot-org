@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
+import shapes from './shapes';
 
 const styles = {
   main: {
@@ -44,18 +44,16 @@ const styles = {
 };
 
 export default class LevelFeedbackEntry extends Component {
-  static propTypes = {
-    seenByStudent: PropTypes.bool.isRequired,
-    lessonName: PropTypes.string.isRequired,
-    levelName: PropTypes.string.isRequired,
-    courseName: PropTypes.string.isRequired,
-    unitName: PropTypes.string.isRequired,
-    lastUpdated: PropTypes.string.isRequired,
-    linkToLevel: PropTypes.string.isRequired
-  };
+  static propTypes = {feedback: shapes.feedback};
 
   render() {
-    const {seenByStudent} = this.props;
+    const {
+      seenByStudent,
+      lessonName,
+      levelNum,
+      unitName,
+      lastUpdated
+    } = this.props.feedback;
 
     const buttonColor = seenByStudent
       ? Button.ButtonColor.gray
@@ -73,24 +71,20 @@ export default class LevelFeedbackEntry extends Component {
             <span style={styles.label}>
               {i18n.feedbackNotificationLesson()}
             </span>
-            <span>{this.props.lessonName}</span>
+            <span>{lessonName}</span>
             <span style={styles.label}>{i18n.feedbackNotificationLevel()}</span>
-            <span>{this.props.levelName}</span>
+            <span>{levelNum}</span>
           </div>
-          <div style={styles.courseUnit}>
-            <span style={styles.label}>
-              {i18n.feedbackNotificationCourse()}
-            </span>
-            <span>{this.props.courseName}</span>
+          <div>
             <span style={styles.label}>{i18n.feedbackNotificationUnit()}</span>
-            <span>{this.props.unitName}</span>
+            <span>{unitName}</span>
           </div>
         </div>
         <div style={styles.time}>
           <span style={styles.label}>
             {i18n.feedbackNotificationLastUpdated()}
           </span>
-          <span>{this.props.lastUpdated}</span>
+          <span>{lastUpdated}</span>
         </div>
         <Button
           href="/"
