@@ -2432,7 +2432,8 @@
   "https://studio.code.org/s/express-2019/stage/19/puzzle/3": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **In this lesson...**\n\n### *Variables* are placeholders for information that can change.  Having a placeholder makes it possible to write a program, even when you won't know all of your values until later!\n\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n\n\n"
     }
   },
   "https://studio.code.org/s/express-2019/stage/19/puzzle/5": {
@@ -2521,6 +2522,11 @@
     },
     "callouts": {
       "courseF_artist_variables6a_1": "Variables can be helpful when you have to change a lot of copies of the same number."
+    }
+  },
+  "https://studio.code.org/s/express-2019/stage/19/puzzle/11": {
+    "dsls": {
+      "markdown": "<h2>More on Variables</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\" style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>You've just learned one great way to use a variable...as a constant!  \nWhen you use a variable as a constant, you are setting a value one time, then using that *same* value multiple times in your program without changing it after you click \"Run\".  </h3>\n<br/><hr/>\n<h3>In the next part of the series, you will write code with variables that *do* change inside the program.</h3>\n\n"
     }
   },
   "https://studio.code.org/s/express-2019/stage/20/puzzle/1": {
@@ -2661,7 +2667,8 @@
   "https://studio.code.org/s/express-2019/stage/21/puzzle/6": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **You just learned \"variables\"!**\n\n### In order to use a variable, it needs a name and a value. The name doesn't change, but the value can. This way you can use the name of the variable as a placeholder wherever you want in your program! \n\n---\n\n## **Vocab to Know**\n\n### **Variable** - A placeholder for a piece of information that can change\n\n"
     }
   },
   "https://studio.code.org/s/express-2019/stage/21/extras?level_name=courseF_artist_variables_challenge1_2019": {
@@ -2702,7 +2709,8 @@
   "https://studio.code.org/s/express-2019/stage/22/puzzle/3": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **In this lesson...**\n\n### Today you'll be learning about a new kind of `repeat` loop. Here is a preview of the block you'll be using:\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n### *For*tunately, this new loop will make solving puzzles like this really easy!\n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n\n"
     }
   },
   "https://studio.code.org/s/express-2019/stage/22/puzzle/5": {
@@ -2818,7 +2826,8 @@
   "https://studio.code.org/s/express-2019/stage/22/puzzle/14": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **You just learned \"for loops\"!**\n\n### **For loops are loops where you set the start, stop, and step values.**\n\n### This new kind of `repeat` loop gives you more control over when you loop starts, when it ends, and what your loop should increase by every time it runs.\n\n### More control means you can solve puzzles a lot faster! \n\n---\n\n## **Vocab to Know**\n\n### **For loop** - For loops are loops that have a predetermined beginning, end, and increment (step interval)\n\n"
     }
   },
   "https://studio.code.org/s/express-2019/stage/22/extras?level_name=courseF_bee_for_challenge1_2019": {
@@ -3228,7 +3237,8 @@
   "https://studio.code.org/s/express-2019/stage/28/puzzle/1": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |\n|---|---|\n| [![#Bunny Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/QeROTy1pNyjNPC-ZZdBN1mcpkmTEMUc2FYwXX0SOFAY/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Arist) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |\n| Let's get creative with variables! | Let's get creative with For Loops! |\n\n"
     }
   },
   "https://studio.code.org/s/express-2019/stage/28/puzzle/2": {
