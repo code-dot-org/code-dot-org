@@ -1132,7 +1132,11 @@ Applab.onReportComplete = function(response) {
 };
 
 function getGeneratedProperties() {
-  return Applab.generatedProperties;
+  // Must return a new object instance each time so the project
+  // system can properly compare currentSources vs newSources
+  return {
+    ...Applab.generatedProperties
+  };
 }
 
 /**
