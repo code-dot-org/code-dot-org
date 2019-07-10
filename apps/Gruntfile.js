@@ -771,14 +771,6 @@ describe('entry tests', () => {
         splitChunks: {
           maxInitialRequests: 5,
           cacheGroups: {
-            // Pull any module shared by ALL appsEntries into the "common" chunk.
-            common: {
-              name: 'common',
-              minChunks: appsEntries.length,
-              chunks: chunk => {
-                return _.keys(appsEntries).includes(chunk.name);
-              }
-            },
             // Pull any module shared by 2+ codeStudioEntries into the
             // "code-studio-common" chunk.
             'code-studio-common': {
@@ -789,39 +781,6 @@ describe('entry tests', () => {
                 return chunkNames.includes(chunk.name);
               },
               priority: 10
-            },
-            // With just the cacheGroups listed above, we end up with many
-            // duplicate modules between the "common" and "code-studio-common"
-            // chunks. The next cache group eliminates some of this duplication
-            // by pulling more modules from "common" into "code-studio-common".
-            //
-            // The use of minChunks provides a guarantee that we don't
-            // unnecessarily move things into "code-studio-common" which are
-            // needed only by appsEntries. This avoids increasing the download
-            // size for code studio pages which include code-studio-common.js
-            // but not common.js.
-            //
-            // There is no converse guarantee that this strategy will eliminate
-            // all duplication between "common" and "code-studio-common".
-            // However, at the time of this writing, bundle analysis indicates
-            // that is currently effective in eliminating any duplication.
-            //
-            // In the future, we want to move toward asynchronous imports, which
-            // allow webpack to manage bundle splitting and sharing behind the
-            // scenes. Once we adopt this approach, the need for predefined
-            // cacheGroups will go away.
-            //
-            // For more information see: https://webpack.js.org/guides/code-splitting/
-            'code-studio-multi': {
-              name: 'code-studio-common',
-              minChunks: _.keys(appsEntries).length + 1,
-              chunks: chunk => {
-                const chunkNames = _.keys(codeStudioEntries).concat(
-                  _.keys(appsEntries)
-                );
-                return chunkNames.includes(chunk.name);
-              },
-              priority: 20
             },
             vendors: {
               name: 'vendors',
