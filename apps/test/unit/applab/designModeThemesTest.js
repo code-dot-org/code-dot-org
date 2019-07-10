@@ -26,7 +26,7 @@ describe('themes: ', () => {
   }
 
   describe('getCurrentTheme: ', () => {
-    it('will treat a screen without the data-theme attribute as the classic theme', () => {
+    it('will treat a screen without the data-theme attribute as the default theme', () => {
       setExistingHTML(`
         <div class="screen" id="design_screen1">
         </div>
@@ -34,7 +34,7 @@ describe('themes: ', () => {
 
       expect(
         elementLibrary.getCurrentTheme(getPrefixedElementById('screen1'))
-      ).to.equal('classic');
+      ).to.equal('default');
     });
   });
 
