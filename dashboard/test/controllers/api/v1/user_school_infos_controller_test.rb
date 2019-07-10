@@ -561,6 +561,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     # Then, only update the last confirmation date
     @teacher.reload
+    puts "#{@teacher.user_school_infos.map(&:school_info)}"
     assert_equal 1, @teacher.user_school_infos.count
     assert tenure_c.school_info.complete?
     assert_equal @teacher.school_info.id, school_info.id

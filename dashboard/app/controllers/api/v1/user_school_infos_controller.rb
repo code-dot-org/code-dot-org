@@ -13,21 +13,37 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   def update
     return unless school_info_params[:school_id].present? || school_info_params[:country].present?
 
-    new_school_info_params =
-      if school_info_params[:full_address]&.blank?
-        school_info_params.except(:full_address)
-      else
-        school_info_params
-      end
+    # new_school_info_params =
+    #   if school_info_params[:full_address]&.blank?
+    #     school_info_params.except(:full_address)
+    #   else
+    #     school_info_params
+    #   end
+    puts "school info before deletion --> #{school_info_params.inspect}"
+    school_info_params.delete(:full_address) if school_info_params[:full_address]&.blank?
 
-    if new_school_info_params[:country]&.downcase&.eql? 'united states'
-      new_school_info_params[:country] = 'US'
-    end
+    # if school_info_params[:country]&.downcase&.eql? 'united states'
+      e = school_info_params.merge({country: 'US'})
+      e.delete(:full_address) if e[:full_address]&.blank?
+
+    school_info_params = e
+      # end
+
+    puts "school info --> #{school_info_params.inspect}"
+    # puts "newbie --> #{newbee.inspect}"
+    # if new_school_info_params[:country]&.downcase&.eql? 'united states'
+    #   new_school_info_params[:country] = 'US'
+    # end
+
+    # We could set up a reverse mapping using the constants in country codes
+    # other alternative is to call .to_hash => returns a hash object
 
     existing_school_info = current_user.last_complete_school_info
-    existing_school_info&.assign_attributes new_school_info_params
+    existing_school_info&.assign_attributes school_info_params
+    puts "school info before existing sch--> #{school_info_params.inspect}"
     if existing_school_info.nil? || existing_school_info.changed?
-      submitted_school_info = SchoolInfo.where(new_school_info_params).
+      puts existing_school_info.changes
+      submitted_school_info = SchoolInfo.where(school_info_params).
         first_or_create(validation_type: SchoolInfo::VALIDATION_NONE)
       current_user.update! school_info: submitted_school_info
       current_user.user_school_infos.where(school_info: submitted_school_info).
