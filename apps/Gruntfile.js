@@ -824,20 +824,23 @@ describe('entry tests', () => {
             },
             vendors: {
               name: 'vendors',
+              priority: 30,
               chunks: chunk => {
+                // all 'initial' chunks except internalEntries
                 const chunkNames = _.concat(
-                  [],
-                  // _.keys(codeStudioEntries),
-                  // _.keys(appsEntries),
-                  // _.keys(pegasusEntries),
-                  _.keys(professionalDevelopmentEntries)
-                  // _.keys(internalEntries)
+                  _.keys(codeStudioEntries),
+                  _.keys(appsEntries),
+                  _.keys(pegasusEntries),
+                  _.keys(professionalDevelopmentEntries),
+                  _.keys(internalEntries)
                 );
                 return chunkNames.includes(chunk.name);
               },
               test(module) {
-                console.log(module.resource);
                 return [
+                  'babel-polyfill',
+                  'canvg',
+                  'immutable',
                   'react-dom',
                   'react-bootstrap',
                   'moment',
@@ -845,13 +848,11 @@ describe('entry tests', () => {
                   'core-js',
                   'radium'
                 ].some(libName =>
-                  /apps[\\/]node_modules[\\/]${libName}[\\/]/.test(
+                  new RegExp(`/apps/node_modules/${libName}/`).test(
                     module.resource
                   )
                 );
-              },
-              priority: 30
-              // reuseExistingChunks: true
+              }
             }
           }
         }
