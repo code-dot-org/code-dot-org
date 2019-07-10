@@ -1,4 +1,6 @@
-import loadCalc from './init/loadCalc';
-import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
-
-loadAppOptions().then(loadCalc);
+Promise.all([
+  import(/* webpackChunkName: "loadApp" */ '@cdo/apps/code-studio/initApp/loadApp'),
+  import(/* webpackChunkName: "loadCalc" */ './init/loadCalc')
+]).then(([{default: loadAppOptions}, {default: loadCalc}]) =>
+  loadAppOptions().then(loadCalc)
+);

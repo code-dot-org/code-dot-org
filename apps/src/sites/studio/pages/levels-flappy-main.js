@@ -1,4 +1,6 @@
-import loadFlappy from './init/loadFlappy';
-import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
-
-loadAppOptions().then(loadFlappy);
+Promise.all([
+  import(/* webpackChunkName: "loadApp" */ '@cdo/apps/code-studio/initApp/loadApp'),
+  import(/* webpackChunkName: "loadFlappy" */ './init/loadFlappy')
+]).then(([{default: loadAppOptions}, {default: loadFlappy}]) =>
+  loadAppOptions().then(loadFlappy)
+);

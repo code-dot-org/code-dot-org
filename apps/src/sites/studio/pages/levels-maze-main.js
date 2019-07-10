@@ -1,4 +1,6 @@
-import loadMaze from './init/loadMaze';
-import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
-
-loadAppOptions().then(loadMaze);
+Promise.all([
+  import(/* webpackChunkName: "loadApp" */ '@cdo/apps/code-studio/initApp/loadApp'),
+  import(/* webpackChunkName: "loadMaze" */ './init/loadMaze')
+]).then(([{default: loadAppOptions}, {default: loadMaze}]) =>
+  loadAppOptions().then(loadMaze)
+);

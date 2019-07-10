@@ -1,4 +1,6 @@
-import loadJigsaw from './init/loadJigsaw';
-import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
-
-loadAppOptions().then(loadJigsaw);
+Promise.all([
+  import(/* webpackChunkName: "loadApp" */ '@cdo/apps/code-studio/initApp/loadApp'),
+  import(/* webpackChunkName: "loadJigsaw" */ './init/loadJigsaw')
+]).then(([{default: loadAppOptions}, {default: loadJigsaw}]) =>
+  loadAppOptions().then(loadJigsaw)
+);

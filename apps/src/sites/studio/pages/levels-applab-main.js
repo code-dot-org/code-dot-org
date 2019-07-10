@@ -1,6 +1,6 @@
 Promise.all([
-  import('@cdo/apps/code-studio/initApp/loadApp'),
-  import('./init/loadApplab')
+  import(/* webpackChunkName: "loadApp" */ '@cdo/apps/code-studio/initApp/loadApp'),
+  import(/* webpackChunkName: "loadApplab" */ './init/loadApplab')
 ]).then(([{default: loadAppOptions}, {default: loadApplab}]) =>
   loadAppOptions().then(loadApplab)
 );

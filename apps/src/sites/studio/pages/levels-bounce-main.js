@@ -1,4 +1,6 @@
-import loadBounce from './init/loadBounce';
-import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
-
-loadAppOptions().then(loadBounce);
+Promise.all([
+  import(/* webpackChunkName: "loadApp" */ '@cdo/apps/code-studio/initApp/loadApp'),
+  import(/* webpackChunkName: "loadBounce" */ './init/loadBounce')
+]).then(([{default: loadAppOptions}, {default: loadBounce}]) =>
+  loadAppOptions().then(loadBounce)
+);

@@ -1,4 +1,6 @@
-import loadArtist from './init/loadArtist';
-import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
-
-loadAppOptions().then(loadArtist);
+Promise.all([
+  import(/* webpackChunkName: "loadApp" */ '@cdo/apps/code-studio/initApp/loadApp'),
+  import(/* webpackChunkName: "loadArtist" */ './init/loadArtist')
+]).then(([{default: loadAppOptions}, {default: loadArtist}]) =>
+  loadAppOptions().then(loadArtist)
+);
