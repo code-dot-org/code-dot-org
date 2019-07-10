@@ -312,6 +312,11 @@
       "courseE_farmer_ramp12G_b": "Use an `if/else` block to help the farmer decide if she needs to turn right or left."
     }
   },
+  "https://studio.code.org/s/coursee-2019/stage/5/puzzle/1": {
+    "dsls": {
+      "markdown": "# Simon Says\n\nPlay a game and think about what commands are needed to get the right result.\n"
+    }
+  },
   "https://studio.code.org/s/coursee-2019/stage/6/puzzle/1": {
     "display_name": "This is Sprite Lab"
   },
@@ -391,6 +396,11 @@
     "short_instructions": "Now create your own alien disco!",
     "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create another alien that does another move when clicked.\n-   Make aliens do more dance moves when they touch each other."
   },
+  "https://studio.code.org/s/coursee-2019/stage/8/puzzle/1": {
+    "dsls": {
+      "markdown": "# Private and Personal Information\n\nDeveloped by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.\n\n![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)\n"
+    }
+  },
   "https://studio.code.org/s/coursee-2019/stage/9/puzzle/1": {
     "long_instructions": "[][0] _\"Hello, world! My name is Rikki, and here are some things I'd to share about me!\"_\n\n**Free Play**: Rikki is using Sprite Lab to create an _interactive poster_ about herself that she can share on the web.  \n\nRikki has given you permission to check out her poster. You can even edit her code! \n\nPlay with Rikki's poster and code for a bit, then click **Finish**."
   },
@@ -412,6 +422,11 @@
   "https://studio.code.org/s/coursee-2019/stage/9/puzzle/6": {
     "short_instructions": "Keep going! Try adding more features to your poster to make it even better. ",
     "long_instructions": "[][0] _\"Wow! Your poster is almost as cool as mine! Almost. 😉\"_\n\nWhose world is this?! It's yours! \n\nSo keep going! Here are a few ideas to make your poster even better:\n\n-   Add a background! Choose a background that fits your poster.\n-   Add behaviors! Make each of your sprites react differently when clicked.\n-   Add more events! Use the other blocks in the `Events` blocks category."
+  },
+  "https://studio.code.org/s/coursee-2019/stage/10/puzzle/1": {
+    "dsls": {
+      "markdown": "# Designing for Accessibility\n\n* In the world of computer science, **accessibility** is about creating technology for people with disabilities.\n* Disabilities include physical, auditory, visual, and many others.\n* Disabilities are diverse and impact people in different ways, including how they use technology like **smartphone apps**.\n* Designing apps that are accessible for people with disabilities makes those apps better for everyone else as well!\n\n![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)\n"
+    }
   },
   "https://studio.code.org/s/coursee-2019/stage/11/puzzle/1": {
     "short_instructions": "Help the bee collect all of the nectar.",
@@ -796,6 +811,11 @@
     "long_instructions": "[][0]  _\"Now, what should we do? Let’s explore and create our own winter wonderland!\"_\n\nTry playing around with what you've created. Draw whatever you like!\n\n-   What happens if you use two different angles in your stair step pattern?\n-   What happens if you make your diamond pattern longer or shorter?\n-   What does it look like to draw two snowflakes on top of one another?",
     "authored_hints": {
       "courseD_artist_project4a_a": "Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+    }
+  },
+  "https://studio.code.org/s/coursee-2019/stage/14/puzzle/1": {
+    "dsls": {
+      "markdown": "# Songwriting\n\nUse the concept of the chorus in a song to learn about defining and calling functions.\n"
     }
   },
   "https://studio.code.org/s/coursee-2019/stage/15/puzzle/1": {
@@ -1377,7 +1397,8 @@
   "https://studio.code.org/s/coursee-2019/stage/18/puzzle/1": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |\n|---|---|\n| [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png \"Monster Dance (Sprite Lab\")](https://studio.code.org/projects/spritelab/S2l_b6LHSmSULTBF7CibJm1rTsngztJyu5pgORe7GBs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png \"Cupcake Game (Sprite Lab\")](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Pattern (Artist) | Function Flowers (Arist) |\n|---|---|\n| [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png \"Pattern (Artist)\")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png \"Function Flowers (Artist)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |\n| Let's get creative with nested loops! | Let's get creative with functions! |\n\n"
     }
   },
   "https://studio.code.org/s/coursee-2019/stage/18/puzzle/2": {
