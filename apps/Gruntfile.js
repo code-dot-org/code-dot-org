@@ -821,6 +821,37 @@ describe('entry tests', () => {
                 return chunkNames.includes(chunk.name);
               },
               priority: 20
+            },
+            vendors: {
+              name: 'vendors',
+              chunks: chunk => {
+                const chunkNames = _.concat(
+                  [],
+                  // _.keys(codeStudioEntries),
+                  // _.keys(appsEntries),
+                  // _.keys(pegasusEntries),
+                  _.keys(professionalDevelopmentEntries)
+                  // _.keys(internalEntries)
+                );
+                return chunkNames.includes(chunk.name);
+              },
+              test(module) {
+                console.log(module.resource);
+                return [
+                  'react-dom',
+                  'react-bootstrap',
+                  'moment',
+                  'lodash',
+                  'core-js',
+                  'radium'
+                ].some(libName =>
+                  /apps[\\/]node_modules[\\/]${libName}[\\/]/.test(
+                    module.resource
+                  )
+                );
+              },
+              priority: 30
+              // reuseExistingChunks: true
             }
           }
         }
