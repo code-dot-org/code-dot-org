@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import * as constants from '../constants';
 import * as utils from '../../utils';
-import themeColor from '../themeColor';
+import themeValues from '../themeValues';
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
 export function rgb2hex(rgb) {
@@ -219,9 +219,11 @@ export function setDefaultBorderStyles(element, options = {}) {
     element.style.borderWidth = textInput ? '1px' : '0px';
   }
   if (forceDefaults || element.style.borderColor === '') {
+    // Backfill borderColor property to match "classic" values:
+    // rgb(153, 153, 153) for textInput, #000000 for everything else
     element.style.borderColor = textInput
-      ? themeColor.textInputBorder.classic
-      : themeColor.dropdownBorder.classic;
+      ? themeValues.textInput.borderColor.classic
+      : themeValues.dropdown.borderColor.classic;
   }
   if (forceDefaults || element.style.borderRadius === '') {
     element.style.borderRadius = '0px';

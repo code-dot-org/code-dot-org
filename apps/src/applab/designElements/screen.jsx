@@ -11,7 +11,7 @@ import designMode from '../designMode';
 import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
-import themeColor from '../themeColor';
+import themeValues from '../themeValues';
 import experiments from '../../util/experiments';
 
 class ScreenProperties extends React.Component {
@@ -153,12 +153,7 @@ class ScreenEvents extends React.Component {
 export default {
   PropertyTab: ScreenProperties,
   EventTab: ScreenEvents,
-  themeValues: {
-    backgroundColor: {
-      type: 'color',
-      ...themeColor.background
-    }
-  },
+  themeValues: themeValues.screen,
 
   create: function() {
     const element = document.createElement('div');
