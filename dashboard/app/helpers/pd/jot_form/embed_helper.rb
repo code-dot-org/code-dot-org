@@ -5,7 +5,11 @@ module Pd
       # @param form_id [Integer]
       # @param params [Hash] parameters to pass to the form, shaped {question_name => initial value}
       def jotform_iframe(form_id, params)
-        content_tag :iframe, nil, id: "JotFormIFrame-#{form_id}", onload: "window.parent.scrollTo(0,0)", allowtransparency: "true", allowfullscreen: "true", allow: "geolocation; microphone; camera", src: "https://form.jotform.com/#{form_id}?#{format_url_params(params)}", frameborder: "0", style: "width: 1px; min-width: 100%; height:539px; border:none;", scrolling: "no"
+        content_tag :iframe, nil, id: "JotFormIFrame-#{form_id}", onload: "window.parent.scrollTo(0,0)", allowtransparency: "true", allowfullscreen: "true", allow: "geolocation; microphone; camera", src: jotform_form_url(form_id, params), frameborder: "0", style: "width: 1px; min-width: 100%; height:539px; border:none;", scrolling: "no"
+      end
+
+      def jotform_form_url(form_id, params)
+        "https://form.jotform.com/#{form_id}?#{format_url_params(params)}"
       end
 
       def format_url_params(hash)
