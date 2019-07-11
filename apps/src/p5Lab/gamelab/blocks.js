@@ -1,7 +1,7 @@
 /* global dashboard */
 
-import {SVG_NS} from '../constants';
-import {getStore} from '../redux';
+import {SVG_NS} from '../../constants';
+import {getStore} from '../../redux';
 import {getLocation} from './locationPickerModule';
 import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
 import {animationSourceUrl} from './animationListModule';

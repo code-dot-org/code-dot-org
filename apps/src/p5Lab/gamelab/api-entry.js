@@ -1,5 +1,5 @@
 // entry point for api that gets exposed.
-import {globalFunctions as utilFunctions} from '../dropletUtilsGlobalFunctions';
+import {globalFunctions as utilFunctions} from '../../dropletUtilsGlobalFunctions';
 import {
   commands as audioCommands,
   executors as audioExecutors,

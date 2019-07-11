@@ -5,8 +5,8 @@ import {changeInterfaceMode} from './actions';
 import {connect} from 'react-redux';
 import {GameLabInterfaceMode} from './constants';
 import msg from '@cdo/locale';
-import ToggleGroup from '../templates/ToggleGroup';
-import styleConstants from '../styleConstants';
+import ToggleGroup from '../../templates/ToggleGroup';
+import styleConstants from '../../styleConstants';
 import {allowAnimationMode} from './stateQueries';
 
 const styles = {

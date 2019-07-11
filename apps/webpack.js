@@ -49,6 +49,7 @@ var baseConfig = {
       '@cdo/gamelab/locale': path.resolve(
         __dirname,
         'src',
+        'p5Lab',
         'gamelab',
         'locale-do-not-import.js'
       ),

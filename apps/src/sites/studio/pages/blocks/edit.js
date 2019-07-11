@@ -7,12 +7,12 @@ import initializeCodeMirror, {
 import jsonic from 'jsonic';
 import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
-import {customInputTypes} from '@cdo/apps/gamelab/blocks';
-import {valueTypeTabShapeMap} from '@cdo/apps/gamelab/GameLab';
+import {customInputTypes} from '@cdo/apps/p5Lab/gamelab/blocks';
+import {valueTypeTabShapeMap} from '@cdo/apps/p5Lab/gamelab/GameLab';
 import animationListModule, {
   setInitialAnimationList
-} from '@cdo/apps/gamelab/animationListModule';
-import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
+} from '@cdo/apps/p5Lab/gamelab/animationListModule';
+import defaultSprites from '@cdo/apps/p5Lab/gamelab/defaultSprites.json';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
 let poolField, nameField, helperEditor;
