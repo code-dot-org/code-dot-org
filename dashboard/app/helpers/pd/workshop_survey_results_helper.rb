@@ -440,7 +440,8 @@ module Pd::WorkshopSurveyResultsHelper
         # specific, we need to go one level deeper in the hash to get the question
         # histogram. Do the same thing for both this_workshop and all_my_workshops.
         # When all_workshops is implemented, it will be in S3 and not computed on the fly
-        histogram_for_this_workshop = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_this_workshop_histograms[x]}.compact.first
+        question_ids = question_group[:all_ids] || [question_group[:primary_id]]
+        histogram_for_this_workshop = question_ids.map {|x| flattened_this_workshop_histograms[x]}.compact.first
 
         if histogram_for_this_workshop.values.first.is_a? Hash
           next unless histogram_for_this_workshop.key? facilitator
@@ -454,7 +455,7 @@ module Pd::WorkshopSurveyResultsHelper
 
         histogram_for_this_workshop = histogram_for_this_workshop.try(:[], facilitator) || histogram_for_this_workshop
 
-        histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
+        histogram_for_all_my_workshops = question_ids.map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
         histogram_for_all_my_workshops = histogram_for_all_my_workshops.try(:[], facilitator) || histogram_for_all_my_workshops
 
         # Similar to above, clear the num_respondent entry that is alongside
