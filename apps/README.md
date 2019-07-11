@@ -17,12 +17,11 @@ cd apps
 
 # Machine setup (OSX with Homebrew)
 brew install node
-npm install -g grunt-cli yarn@1.6.0
+npm install -g grunt-cli yarn@1.16.0
 
 # Perform first full build
 yarn
 npm run build
-npm rebuild node-sass
 
 # automatically rebuild every time you make changes to source files
 yarn start

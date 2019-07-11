@@ -21,7 +21,8 @@ export function renderTeacherPanel(
   scriptId,
   section,
   scriptName,
-  sectionData = null
+  sectionData = null,
+  pageType = null
 ) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
@@ -49,6 +50,7 @@ export function renderTeacherPanel(
         onSelectUser={onSelectUser}
         scriptName={scriptName}
         getSelectedUserId={getSelectedUserId}
+        pageType={pageType}
       />
     </Provider>,
     div
