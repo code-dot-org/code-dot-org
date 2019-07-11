@@ -257,6 +257,6 @@ def get_level_from_url(url)
     stage = script.stages.find_by_relative_position(matches[:stage_pos])
     level_info_regex = %r{puzzle/(?<level_pos>[0-9]+)}
     level_pos = matches[:level_info].match(level_info_regex)[:level_pos]
-    stage.script_levels.find_by_position(level_pos.to_i).level
+    stage.script_levels.find_by_position(level_pos.to_i).oldest_active_level
   end
 end
