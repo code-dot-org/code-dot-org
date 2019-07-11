@@ -73,8 +73,6 @@ class Census::StateCsOffering < ApplicationRecord
   # the new format as of 2019-20.
   STATES_USING_FORMAT_V2_IN_2018_19 = %w(
     ID
-    MN
-    AR
   ).freeze
 
   def self.state_uses_format_v2(state_code, school_year)
@@ -104,11 +102,14 @@ class Census::StateCsOffering < ApplicationRecord
   def self.construct_state_school_id(state_code, row_hash, school_year)
     # Using V2 format.
     if state_uses_format_v2(state_code, school_year)
-      # The V2 format requires either (district_id and school_id) OR nces_id.
-      if row_hash['nces_id'] && row_hash['nces_id'] != UNSPECIFIED_VALUE
-        return School.find_by(id: row_hash['nces_id'])&.state_school_id
-      elsif row_hash['state_school_id'] && row_hash['state_school_id'] != UNSPECIFIED_VALUE
-        return row_hash['state_school_id']
+      nces_id = row_hash['nces_id']
+      state_school_id = row_hash['state_school_id']
+
+      # The V2 format requires either nces_id or state_school_id.
+      if nces_id != UNSPECIFIED_VALUE
+        return School.find_by(id: nces_id)&.state_school_id
+      elsif state_school_id != UNSPECIFIED_VALUE
+        return state_school_id
       else
         raise ArgumentError.new("Entry for #{state_code} requires either (district_id and school_id) OR nces_id.")
       end
