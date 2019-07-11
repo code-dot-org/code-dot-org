@@ -40,7 +40,8 @@
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/1": {
     "dsls": {
-      "title": "Binary Drawing"
+      "title": "Binary Drawing",
+      "markdown": "<h1>Draw with Binary</h1>\n \n<h3>Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\" width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\" width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\" float=\"left\"/><h3>In this stage, we've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on certain squares!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
     }
   },
   "https://studio.code.org/s/fesbinary/stage/3/puzzle/2": {
@@ -201,6 +202,11 @@
   "https://studio.code.org/s/fesbinary/stage/4/puzzle/6": {
     "short_instructions": "Make something awesome and share it with your classmates! You can copy and paste the value of a pixel to use it repeatedly.",
     "long_instructions": "# 3-Bit Color\n\nYou have one last chance to experiment and get creative with the pixelation widget. Make something awesome and share it with your classmates!\n\n-   _Hint:_ You can copy and paste the value of a pixel to use it repeatedly."
+  },
+  "https://studio.code.org/s/fesbinary/stage/5/puzzle/1": {
+    "dsls": {
+      "markdown": "# Problem Solving - Computers and Logic: Lesson 6 - Processing with Bits\n\n## Background\n\nIn this lesson you'll learn how computers process binary information as you design bit-level filters of simple images.\n\n# Resources\n\n* [Pixel Filtering](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))\n"
+    }
   },
   "https://studio.code.org/s/fesbinary/stage/5/puzzle/2": {
     "long_instructions": "# 3 Bit Colors\n\nEach pixel is a square on a screen that emits light. Each pixel can have a certain number of bits assigned to it, and bits per pixel determine the colors that can be rendered.\n\nIn this tool we're using 3 bits to define the one large black pixel. The first bit affects the red tint. The second bit affects the green tint. The third bit affects the blue tint.\n\n# Do This\n\n-   Click the \"Run\" button to start the widget\n-   Click on the light bulbs to turn on or off each color and see what happens to your pixel\n-   See how many different colors you can create with just three bits\n-   Write down the binary associated with each color you come up with"
