@@ -70,6 +70,8 @@ module Pd
         submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
       )
 
+      return if experimental_redirect! @form_id, @form_params
+
       if CDO.newrelic_logging
         NewRelic::Agent.record_custom_event(
           "RenderJotFormView",
@@ -153,6 +155,8 @@ module Pd
         submitRedirect: url_for(action: 'submit_facilitator', params: {key: key_params})
       )
 
+      return if experimental_redirect! @form_id, @form_params
+
       if CDO.newrelic_logging
         NewRelic::Agent.record_custom_event(
           "RenderJotFormView",
@@ -220,6 +224,8 @@ module Pd
         regionalPartnerName: workshop.regional_partner&.name,
         submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
       )
+
+      return if experimental_redirect! @form_id, @form_params
 
       # Same view as the general daily survey
       render :new_general
@@ -351,6 +357,7 @@ module Pd
       )
 
       return redirect_general(key_params) if response_exists_general?(key_params)
+      return if experimental_redirect! @form_id, @form_params
 
       if CDO.newrelic_logging
         NewRelic::Agent.record_custom_event(
