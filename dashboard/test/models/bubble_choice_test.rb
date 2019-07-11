@@ -155,4 +155,23 @@ DSL
 
     assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student)
   end
+
+  test 'self.parent_levels returns BubbleChoice parent levels for given sublevel name' do
+    sublevel1 = create :level, name: 'sublevel_1'
+    sublevel2 = create :level, name: 'sublevel_2'
+    parent1 = create :bubble_choice_level, name: 'parent_1', sublevels: [sublevel1, sublevel2]
+    parent2 = create :bubble_choice_level, name: 'parent_2', sublevels: [sublevel1]
+
+    sublevel1_parents = BubbleChoice.parent_levels(sublevel1.name)
+    assert_equal 2, sublevel1_parents.length
+    assert sublevel1_parents.include?(parent1)
+    assert sublevel1_parents.include?(parent2)
+
+    assert_equal [parent1], BubbleChoice.parent_levels(sublevel2.name)
+
+    # Edge cases
+    assert_empty BubbleChoice.parent_levels("sublevel") # contained by sublevel names above
+    assert_empty BubbleChoice.parent_levels("sublevel_12") # contains sublevel name above
+    assert_empty BubbleChoice.parent_levels("nonexistent level name")
+  end
 end
