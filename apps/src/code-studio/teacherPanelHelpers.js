@@ -26,7 +26,6 @@ export function renderTeacherPanel(
 ) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
-  queryLockStatus(store, scriptId);
 
   if (section && section.students) {
     store.dispatch(setStudentsForCurrentSection(section.id, section.students));
