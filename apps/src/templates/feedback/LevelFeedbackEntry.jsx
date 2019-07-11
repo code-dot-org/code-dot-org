@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import Button from '@cdo/apps/templates/Button';
 import shapes from './shapes';
+import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 
 const styles = {
   main: {
@@ -14,22 +14,19 @@ const styles = {
     marginBottom: 20,
     display: 'flex',
     flexFlow: 'wrap',
-    boxSizing: 'border-box',
-    color: color.charcoal
+    boxSizing: 'border-box'
   },
   lessonDetails: {
-    width: '50%',
+    width: '75%',
     margin: 15
-  },
-  button: {
-    marginLeft: 25,
-    marginRight: 25,
-    marginTop: 18,
-    marginBottom: 18
   },
   lessonLevel: {
     fontSize: 16,
-    marginBottom: 10
+    marginBottom: 8,
+    color: color.teal
+  },
+  unit: {
+    color: color.teal
   },
   label: {
     fontFamily: '"Gotham 5r", sans-serif',
@@ -37,9 +34,19 @@ const styles = {
     marginLeft: 10
   },
   time: {
-    width: '25%',
-    marginTop: 30,
-    fontStyle: 'italic'
+    marginTop: 15,
+    fontStyle: 'italic',
+    color: color.light_gray,
+    float: 'left'
+  },
+  comment: {
+    width: '100%',
+    fontStyle: 'italic',
+    color: color.charcoal,
+    marginLeft: 25,
+    marginRight: 25,
+    marginBottom: 15,
+    fontSize: 14
   }
 };
 
@@ -51,48 +58,44 @@ export default class LevelFeedbackEntry extends Component {
       seenByStudent,
       lessonName,
       levelNum,
+      linkToLevel,
       unitName,
-      lastUpdated
+      linkToUnit,
+      lastUpdated,
+      comment
     } = this.props.feedback;
 
-    const buttonColor = seenByStudent
-      ? Button.ButtonColor.gray
-      : Button.ButtonColor.orange;
-
     const style = {
-      backgroundColor: seenByStudent ? color.lightest_gray : color.white,
+      backgroundColor: seenByStudent ? color.lightest_teal : color.white,
       ...styles.main
     };
 
     return (
       <div style={style}>
         <div style={styles.lessonDetails}>
-          <div style={styles.lessonLevel}>
-            <span style={styles.label}>
-              {i18n.feedbackNotificationLesson()}
-            </span>
-            <span>{lessonName}</span>
-            <span style={styles.label}>{i18n.feedbackNotificationLevel()}</span>
-            <span>{levelNum}</span>
-          </div>
-          <div>
-            <span style={styles.label}>{i18n.feedbackNotificationUnit()}</span>
-            <span>{unitName}</span>
-          </div>
+          <a href={linkToLevel}>
+            <div style={styles.lessonLevel}>
+              <span style={styles.label}>
+                {i18n.feedbackNotificationLesson()}
+              </span>
+              <span>{lessonName}</span>
+              <span style={styles.label}>
+                {i18n.feedbackNotificationLevel()}
+              </span>
+              <span>{levelNum}</span>
+            </div>
+          </a>
+          <a href={linkToUnit}>
+            <div style={styles.unit}>
+              <span style={styles.label}>
+                {i18n.feedbackNotificationUnit()}
+              </span>
+              <span>{unitName}</span>
+            </div>
+          </a>
         </div>
-        <div style={styles.time}>
-          <span style={styles.label}>
-            {i18n.feedbackNotificationLastUpdated()}
-          </span>
-          <span>{lastUpdated}</span>
-        </div>
-        <Button
-          href="/"
-          color={buttonColor}
-          text={i18n.feedbackNotificationButton()}
-          target={'_blank'}
-          style={styles.button}
-        />
+        <TimeAgo style={styles.time} dateString={lastUpdated} />
+        <div style={styles.comment}>{comment}</div>
       </div>
     );
   }
