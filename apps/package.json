@@ -217,7 +217,7 @@
     "url-loader": "^0.5.7",
     "video.js": "4.5.2",
     "webpack": "^4.29.0",
-    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-dev-server": "^3.2.1",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-livereload-plugin": "^0.8.1",
