@@ -376,8 +376,8 @@ sq:
             '"space"': hapësirë
       craft_ifPath:
         text: |-
-          nëse shtegu {DIR}
-          {STATEMENT}
+          nëse shtegu [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": përpara
@@ -385,8 +385,8 @@ sq:
             "'left'": në të majtë
       craft_ifStandingOn:
         text: |-
-          nëse je ngritur {TYPE}
-          {STATEMENT}
+          nëse je ngritur [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": korali blu
@@ -397,8 +397,8 @@ sq:
             "'seaLantern'": fari i detit
       craft_ifStandingOnLimit:
         text: |-
-          nëse je ngritur {TYPE}
-          {STATEMENT}
+          nëse je ngritur [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": rërë
@@ -407,7 +407,7 @@ sq:
       craft_moveForward:
         text: lëviz përpara
       craft_placeBlock:
-        text: vendos {blockType}
+        text: vendos [blockType][0]
         options:
           blockType:
             '"strippedOak"': lis i zhveshur
@@ -442,13 +442,13 @@ sq:
       craft_repeatUntilConduit:
         text: |-
           përsërite deri sa tubi të mbarojë
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           përsërit deri te pikësynimi
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: vezë peshku {ENTITY}
+        text: vezë peshku [ENTITY][0]
         options:
           ENTITY:
             '"cod"': merluc
@@ -458,7 +458,7 @@ sq:
             '"squid"': kallamar
             '"tropicalFish"': peshk tropikal
       craft_turn:
-        text: kthehu {DIR}
+        text: kthehu [DIR][0]
         options:
           DIR:
             right: djathtas ↻
