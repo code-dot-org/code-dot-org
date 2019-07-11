@@ -456,7 +456,20 @@ module Pd::WorkshopSurveyResultsHelper
         histogram_for_this_workshop = histogram_for_this_workshop.try(:[], facilitator) || histogram_for_this_workshop
 
         histogram_for_all_my_workshops = question_ids.map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
-        histogram_for_all_my_workshops = histogram_for_all_my_workshops.try(:[], facilitator) || histogram_for_all_my_workshops
+
+        # At this point, histogram_for_all_my_workshops can be in one of these three forms:
+        #
+        # nil
+        # {"Agree" => 6, "Disagree" => 4, "num_respondents" => 10}
+        # {"Facilitator 1" => {"Agree" => 6, "Disagree" => 4}, "Facilitator 2" => {"Agree" => 10}}
+        #
+        # In the first two forms, we don't want to change anything.
+        # In the third form, we want to dive one layer and extract the results for the specific
+        # facilitator we're considering.  If the facilitator in question is not present in the
+        # hash, convert to nil since we have no results.
+        if histogram_for_all_my_workshops&.values&.first.is_a? Hash
+          histogram_for_all_my_workshops = histogram_for_all_my_workshops.try(:[], facilitator)
+        end
 
         # Similar to above, clear the num_respondent entry that is alongside
         # the answer entries.
