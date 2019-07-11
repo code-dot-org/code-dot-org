@@ -22,7 +22,7 @@
       - elsif !@level.has_submit_button? && !(video && use_large_video_player)
         %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
 
-  = render partial: 'levels/content', locals: {app: 'external', data: level_props, content_class: level_props['options'].try(:[], 'css'), postcontent: postcontent}
+  = render partial: 'levels/content', locals: {app: 'external', data: level_props, content_class: level_props['options'].try(:[], 'css'), postcontent: postcontent, source_level: level}
   = render partial: 'levels/teacher_markdown', locals: {data: level_props}
 
 - if in_level_group
