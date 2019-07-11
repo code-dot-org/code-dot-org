@@ -8,7 +8,10 @@ const shapes = {
     linkToLevel: PropTypes.string.isRequired,
     unitName: PropTypes.string,
     linkToUnit: PropTypes.string,
-    lastUpdated: PropTypes.string.isRequired,
+    lastUpdated: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.instanceOf(Date)
+    ]).isRequired,
     comment: PropTypes.string
   })
 };
