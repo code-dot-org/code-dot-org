@@ -79,7 +79,8 @@ describe('entry tests', () => {
     'studio',
     'turtle',
     'scratch',
-    'weblab'
+    'weblab',
+    'spritelab'
   ];
 
   if (SINGLE_APP && ALL_APPS.indexOf(SINGLE_APP) === -1) {
