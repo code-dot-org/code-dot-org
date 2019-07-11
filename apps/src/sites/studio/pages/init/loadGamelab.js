@@ -12,6 +12,7 @@ export default function loadGamelab(options) {
 
   // Bind helper that provides project metadata for gamelab autosave
   options.getAnimationList = gamelab.getSerializedAnimationList.bind(gamelab);
+  options.getGeneratedProperties = gamelab.getGeneratedProperties.bind(gamelab);
 
   gamelab.injectStudioApp(studioApp());
   appMain(gamelab, levels, options);
