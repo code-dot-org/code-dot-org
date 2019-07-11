@@ -1,0 +1,19 @@
+{
+  "questions": [
+    {
+      "type": "dropdown",
+      "id": "course_v3",
+      "text": "What unit and lesson will you have most recently finished by {{workshopDate}}",
+      "options": [
+        { "id": "csf", "text": "CSF" },
+        { "id": "csd", "text": "CSD" },
+        { "id": "csp", "text": "CSP" }
+      ]
+    },
+    {
+      "type": "text_multiline",
+      "id": "questions_on_mind",
+      "text": "What questions are on your mind leading into this workshop? What topics do you hope to discuss during the workshop?"
+    }
+  ]
+}

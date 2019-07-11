@@ -8,6 +8,9 @@ class Pd::PreWorkshopSurveyController < ApplicationController
     return render :submitted if Pd::PreWorkshopSurvey.exists?(pd_enrollment_id: @pd_enrollment.id)
     return render_404 unless @workshop.try(:pre_survey?)
 
+    form_json = File.read("config/forms/surveys/pd/pre_workshop_survey.json")
+    @form_data = JSON.parse(form_json)
+
     @workshop_date = @workshop.sessions.first.start.strftime('%-m/%-d/%y')
     @script_data = {
       props: {
@@ -16,7 +19,12 @@ class Pd::PreWorkshopSurveyController < ApplicationController
         pdEnrollmentCode: @pd_enrollment.code,
         workshopDate: @workshop_date,
         unitsAndLessons: Pd::PreWorkshopSurvey.units_and_lessons(@workshop),
-        apiEndpoint: "/api/v1/pd/pre_workshop_surveys"
+        apiEndpoint: "/api/v1/pd/pre_workshop_surveys",
+
+        formData: @form_data,
+        substitutes: {
+          workshopDate: @workshop_date
+        }
       }.to_json
     }
   end
