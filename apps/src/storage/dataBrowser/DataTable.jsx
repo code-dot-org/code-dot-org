@@ -297,8 +297,9 @@ class DataTable extends React.Component {
     );
     let editingColumn = this.state.editingColumn;
 
-    let numPages = Math.ceil(
-      Object.keys(this.props.tableRecords).length / MAX_ROWS_PER_PAGE
+    let numPages = Math.max(
+      1,
+      Math.ceil(Object.keys(this.props.tableRecords).length / MAX_ROWS_PER_PAGE)
     );
     let rows = this.getRowsForCurrentPage();
 
