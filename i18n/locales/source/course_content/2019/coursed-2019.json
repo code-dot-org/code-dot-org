@@ -1,9 +1,4 @@
 {
-  "https://studio.code.org/s/coursed-2019/stage/1/puzzle/1": {
-    "dsls": {
-      "markdown": "# Graph Paper Programming\n\nWrite algorithms that your classmates can use to draw pictures.\n"
-    }
-  },
   "https://studio.code.org/s/coursed-2019/stage/2/puzzle/2": {
     "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
@@ -88,11 +83,6 @@
   "https://studio.code.org/s/coursed-2019/stage/2/puzzle/10": {
     "short_instructions": "Get the bird to the pig.",
     "long_instructions": "Get the bird to the pig."
-  },
-  "https://studio.code.org/s/coursed-2019/stage/3/puzzle/1": {
-    "dsls": {
-      "markdown": "# Relay Programming\n\nBreak into teams and work together to write programs that draw pictures.\n"
-    }
   },
   "https://studio.code.org/s/coursed-2019/stage/4/puzzle/2": {
     "short_instructions": "Fix the error(s) to collect all of the treasure.",
@@ -189,7 +179,7 @@
     "short_instructions": "Attach the `score point` block to the `when ball in goal` event and the `score opponent point` block to the `when ball misses hand` event to make a game. ",
     "long_instructions": "There is now a hoop at the top.  \n\nAttach the `score point` block to the `when ball in goal` event and the `score opponent point` block to the `when ball misses hand` event to make a game. \n\n* * *\n\nSee how many points you can score before your opponent scores twice.",
     "authored_hints": {
-      "courseD_bounce_events10s_a": "You should have both of these events in your code:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+      "courseD_bounce_events10s_a": "You should have both of these events in your code:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/5/puzzle/7": {
@@ -501,11 +491,6 @@
       "courseD_bee_nested_loops_challenge2_d": "**Solution:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
     }
   },
-  "https://studio.code.org/s/coursed-2019/stage/10/puzzle/1": {
-    "dsls": {
-      "markdown": "# Conditionals With Cards\n\nPlay a card game and create rules like \"If I draw a red card, I get a point\" and \"If I draw a black card, you get a point.\"\n"
-    }
-  },
   "https://studio.code.org/s/coursed-2019/stage/11/puzzle/2": {
     "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
@@ -550,8 +535,11 @@
     "short_instructions": "Check underneath every cloud to see if it is hiding a flower before you get nectar.  ",
     "long_instructions": "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar _once_.  \n\nRemember: Not all clouds hide the same thing!",
     "authored_hints": {
+      "courseD_bee_conditionals2_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals2_a": "Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.",
-      "courseD_bee_conditionals2_c": "You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds."
+      "courseD_bee_conditionals2_b": "You can use a `repeat` loop or a `while path ahead` to move through this maze.",
+      "courseD_bee_conditionals2_c": "You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.",
+      "courseD_bee_conditionals2_hintVid2": "Watch this video for help solving this puzzle."
     },
     "callouts": {
       "4_5_Bee_Conditionals_2_1": "Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all."
@@ -561,40 +549,53 @@
     "short_instructions": "Help the bee collect all of the nectar. \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
     "long_instructions": "You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar _once_.",
     "authored_hints": {
+      "courseD_bee_conditionals3_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals3_a": "Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.",
-      "courseD_bee_conditionals3_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
+      "courseD_bee_conditionals3_b": "You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!",
+      "courseD_bee_conditionals3_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.",
+      "courseD_bee_conditionals3_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/11/puzzle/5": {
     "short_instructions": "Get all of the nectar using as few blocks as possible.",
     "long_instructions": "In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.\n\nGet all of the nectar using as few blocks as possible.",
     "authored_hints": {
+      "courseD_bee_conditionals4_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals4_a": "You can still treat every space as if there is a cloud over it, even though you can see the whole path.",
-      "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. "
+      "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. ",
+      "courseD_bee_conditionals4_c": "Using <xml><block type=\"maze_untilBlocked\"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
+      "courseD_bee_conditionals4_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/11/puzzle/6": {
     "short_instructions": "Collect all of the nectar using as few blocks as possible",
     "authored_hints": {
-      "courseD_bee_conditionals5_a": "If you use an `if at flower` block, you can solve this using a nested loop. Write a program for the left and bottom paths, then repeat everything twice!",
-      "courseD_bee_conditionals5_c": "To continue down the path, the bee will need to `move forward`. As it moves, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`."
+      "courseD_bee_conditionals5_hintVid1": "Need help getting started?  Watch the video!",
+      "courseD_bee_conditionals5_a": "Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz down every side with a flower?",
+      "courseD_bee_conditionals5_c": "There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.",
+      "courseD_bee_conditionals5_b": "Inside the `while path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?",
+      "courseD_bee_conditionals5_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/11/puzzle/7": {
     "short_instructions": "Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!",
     "long_instructions": "_\"Now I just want to make honey.\"_\n\nSome of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud! If there is a honeycomb, the bee will only need to make honey _once_.",
     "authored_hints": {
+      "courseD_bee_conditionals6_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals6_a": "Make sure to use an `if` statement to check for honeycomb beneath each cloud.",
       "courseD_bee_conditionals6_b": "In this case, you do not need to check for flowers under the clouds.",
-      "courseD_bee_conditionals6_c": "Is there a loop you can use to make your code simpler?"
+      "courseD_bee_conditionals6_c": "Is there a loop you can use to make your code simpler?",
+      "courseD_bee_conditionals6_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/11/puzzle/9": {
     "short_instructions": "Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.",
     "long_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: if there is a flower, the bee only needs to get nectar _once_. If there is a honeycomb, the bee only needs to make honey _once_.",
     "authored_hints": {
+      "courseD_bee_conditionals7_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals7_a": "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge.",
-      "courseD_bee_conditionals7_b": "If there is not a flower under the cloud, there must be a honeycomb, so you don't need to think about the case of an empty space."
+      "courseD_bee_conditionals7_b": "If there is not a flower under the cloud, there must be a honeycomb, so you don't need to think about the case of an empty space.",
+      "courseD_bee_conditionals7_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/11/puzzle/10": {
@@ -1075,15 +1076,9 @@
       "courseD_farmer_condLoops_challenge2_a": "The amount of each vegetable in each space can change. A `while` loop can help!"
     }
   },
-  "https://studio.code.org/s/coursed-2019/stage/15/puzzle/1": {
-    "dsls": {
-      "markdown": "# Binary Images\n\nCommunicate how to recreate an image using just two simple values.\n"
-    }
-  },
   "https://studio.code.org/s/coursed-2019/stage/16/puzzle/1": {
     "dsls": {
-      "title": "Binary Drawing",
-      "markdown": "<h1>Draw with Binary</h1>\n \n<h3>Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\" width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\" width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\" float=\"left\"/><h3>In this stage, we've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on certain squares!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      "title": "Binary Drawing"
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/16/puzzle/2": {
@@ -1242,11 +1237,6 @@
     "function_names": {
       "draw": "draw",
       "draw bit": "draw bit"
-    }
-  },
-  "https://studio.code.org/s/coursed-2019/stage/17/puzzle/1": {
-    "dsls": {
-      "markdown": "# Digital Citizenship\n\nSome information is not safe to share online. This lesson will help you learn the difference between safe and private information.\n"
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/18/puzzle/1": {

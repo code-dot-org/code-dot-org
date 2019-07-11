@@ -179,7 +179,7 @@
     "short_instructions": "Attach the `score point` block to the `when ball in goal` event and the `score opponent point` block to the `when ball misses hand` event to make a game. ",
     "long_instructions": "There is now a hoop at the top.  \n\nAttach the `score point` block to the `when ball in goal` event and the `score opponent point` block to the `when ball misses hand` event to make a game. \n\n* * *\n\nSee how many points you can score before your opponent scores twice.",
     "authored_hints": {
-      "courseD_bounce_events10s_a": "You should have both of these events in your code:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+      "courseD_bounce_events10s_a": "You should have both of these events in your code:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
     }
   },
   "https://studio.code.org/s/coursed-2018/stage/5/puzzle/7": {
@@ -1333,8 +1333,7 @@
   },
   "https://studio.code.org/s/coursed-2018/stage/19/puzzle/1": {
     "dsls": {
-      "title": "Binary Drawing",
-      "markdown": "<h1>Draw with Binary</h1>\n \n<h3>Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\" width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\" width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\" float=\"left\"/><h3>In this stage, we've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on certain squares!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      "title": "Binary Drawing"
     }
   },
   "https://studio.code.org/s/coursed-2018/stage/19/puzzle/2": {

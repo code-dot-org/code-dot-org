@@ -233,7 +233,7 @@
     "short_instructions": "What can we replace \"???\" with to make sure that the zombie completes this drawing using the loop provided?",
     "long_instructions": "What can we replace \"???\" with to make sure that the zombie completes this drawing using the loop provided?",
     "authored_hints": {
-      "4-5_Artist_5_a": "Trial and error is a great method, but you can also solve the problem by dividing the 90 degree angle into thirds.\n\n**90 / 3 = \\_\\_\\_\\_\\_**"
+      "4-5_Artist_5_a": "Trial and error is a great method, but you can also solve the problem by dividing the 90 degree angle into thirds.\n\n**90 / 3 = **\\_****"
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/7": {
