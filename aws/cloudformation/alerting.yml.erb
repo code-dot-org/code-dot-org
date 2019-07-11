@@ -1,3 +1,9 @@
+# Creates a SNS topic and Lambda which publish events to Honeybadger. This allows for any Cloudwatch Alarm
+# to specify the HoneybadgerSNSTopic as the notification action to integrate with Honeybadger.
+#
+# Requires ADMIN=1.
+# Also requires specifying parameters via environment variables or locals.yml for the initial stack creation.
+
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
@@ -5,6 +11,9 @@ Description: >-
 
 Parameters:
   HoneybadgerApiKey:
+    Type: String
+    NoEcho: true
+  OffsiteAwsAccountID:
     Type: String
     NoEcho: true
 
@@ -50,3 +59,41 @@ Resources:
       Subscription:
         - Endpoint: !GetAtt HoneybadgerLambda.Arn
           Protocol: lambda
+
+  HoneybadgerSNSTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      PolicyDocument:
+        Id: HoneybadgerSNSTopicPolicy
+        Version: '2012-10-17'
+        Statement:
+        # This is the default access policy
+        - Sid: __default_statement_ID
+          Effect: Allow
+          Principal:
+            AWS: "*"
+          Action:
+            - sns:GetTopicAttributes
+            - sns:SetTopicAttributes
+            - sns:AddPermission
+            - sns:RemovePermission
+            - sns:DeleteTopic
+            - sns:Subscribe
+            - sns:ListSubscriptionsByTopic
+            - sns:Publish
+            - sns:Receive
+          Resource: !Ref HoneybadgerSNSTopic
+          Condition:
+            StringEquals:
+              AWS:SourceOwner: !Ref AWS::AccountId
+        - Sid: AllowOffsiteAccountToPublish
+          Effect: Allow
+          Principal:
+            AWS: "*"
+          Action: sns:Publish
+          Resource: !Ref HoneybadgerSNSTopic
+          Condition:
+            StringEquals:
+              AWS:SourceOwner: !Ref OffsiteAwsAccountID
+      Topics:
+      - !Ref HoneybadgerSNSTopic
