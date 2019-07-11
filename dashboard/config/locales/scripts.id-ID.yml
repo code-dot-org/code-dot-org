@@ -2020,6 +2020,8 @@ id:
               name: CSP Mahasiswa pasca survei pementasan
             Post-Course Survey:
               name: Survei Pasca Kursus
+            Student Post-Course Survey:
+              name: Pos siswa-survei kursus
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -3698,6 +3700,8 @@ id:
               name: Perulangan bercabang
           title: Kursus D
           assignment_family_title: Kursus D
+          description_short: Segera beralih konsep dari kursus C, kemudian algoritma,
+            nested loops, kondisional, dan banyak lagi.
         coursee-2017:
           stages:
             Introduction:
@@ -3745,6 +3749,8 @@ id:
               name: Perulangan bercabang
           title: Kursus E
           assignment_family_title: Kursus E
+          description_short: Segera berpindah konsep di kursus C&D kemudian lanjutkan
+            dengan fungsi.
         coursef-2017:
           stages:
             Introduction:
@@ -4849,6 +4855,9 @@ id:
           stages:
             Artist:
               name: Artis
+        dance-extras:
+          title: Tetaplah berdansa
+          description: Lewatilah jam pertama dengan ide ide proyek yang luas.
         coursef-2019:
           description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
             dan buat seni, cerita atau permainan anda sendiri.
@@ -5009,6 +5018,9 @@ id:
           stages:
             'null':
               name: 'null'
+        dance-extras-gallery:
+          title: Tetaplah berdansa
+          description: Lewatilah jam pertama dengan ide ide proyek yang luas.
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -5440,6 +5452,10 @@ id:
               name: Contoh aplikasi
             Final Project:
               name: Tugas Akhir
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sistem nomor
         time4csdemo:
           stages:
             Crowdsourcing:
