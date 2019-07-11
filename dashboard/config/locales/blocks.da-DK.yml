@@ -130,7 +130,7 @@ da:
       Dancelab_randomColor:
         text: tilfældig farve
       Dancelab_setBackgroundEffect:
-        text: indstil baggrundseffekt [EFFECT][0] [PALETTE][1]
+        text: indstil baggrundseffekt {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"circles"': Tunnel
@@ -151,7 +151,7 @@ da:
             '"tropical"': Tropisk
             '"warm"': Rød
       Dancelab_setBackgroundEffectWithPalette:
-        text: indstil baggrundseffekt [EFFECT][0] [PALETTE][1]
+        text: indstil baggrundseffekt {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"circles"': Tunnel
@@ -233,7 +233,7 @@ da:
           THIS:
             sprites: alle
       Dancelab_setVisible:
-        text: indstil [SPRITE][0] synlighed til [VISIBILITY][1]
+        text: indstil {SPRITE} synlighed til {VISIBILITY}
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -553,8 +553,8 @@ da:
             '"space"': rummet
       craft_ifPath:
         text: |-
-          hvis stien [DIR][0]
-          [STATEMENT][1]
+          hvis stien {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": forude
@@ -562,8 +562,8 @@ da:
             "'left'": til venstre
       craft_ifStandingOn:
         text: |-
-          hvis stående på [TYPE][0]
-          [STATEMENT][1]
+          hvis stående på {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": blå koral
@@ -574,8 +574,8 @@ da:
             "'seaLantern'": havlanterne
       craft_ifStandingOnLimit:
         text: |-
-          hvis stående på [TYPE][0]
-          [STATEMENT][1]
+          hvis stående på {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": sand
@@ -584,7 +584,7 @@ da:
       craft_moveForward:
         text: flyt fremad
       craft_placeBlock:
-        text: sted [blockType][0]
+        text: sted {blockType}
         options:
           blockType:
             '"strippedOak"': afbarket eg
@@ -618,13 +618,13 @@ da:
       craft_repeatUntilConduit:
         text: |-
           gentag, indtil kanalen er færdig
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           gentag indtil, du er i mål
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: fiskeyngel [ENTITY][0]
+        text: fiskeyngel {ENTITY}
         options:
           ENTITY:
             '"cod"': torsk
@@ -634,7 +634,7 @@ da:
             '"squid"': blæksprutte
             '"tropicalFish"': tropisk fisk
       craft_turn:
-        text: drej [DIR][0]
+        text: drej {DIR}
         options:
           DIR:
             right: til højre ↻

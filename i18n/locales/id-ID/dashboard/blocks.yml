@@ -3,19 +3,19 @@ id:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: setelah [TIMESTAMP][0][UNIT][1]
+        text: setelah {TIMESTAMP}{UNIT}
         options:
           UNIT:
             '"seconds"': detik
       Dancelab_changeColorBy:
-        text: ubah [COLOR][0][METHOD][1] dengan [AMOUNT][2]
+        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
         options:
           METHOD:
             '"hue"': Corak warna warni
             '"saturation"': Saturasi
             '"brightness"': Kecerahan
       Dancelab_changeMoveEachLR:
-        text: lakukan [GROUP][0] [MOVE][1] [DIR][2] selamanya
+        text: lakukan {GROUP} {MOVE} {DIR} selamanya
         options:
           GROUP:
             sprites: semua
