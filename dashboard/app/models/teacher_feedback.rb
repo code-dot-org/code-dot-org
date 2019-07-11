@@ -15,6 +15,8 @@
 #  student_first_visited_at :datetime
 #  student_last_visited_at  :datetime
 #  script_level_id          :integer
+#  seen                     :boolean          default(FALSE)
+#  seen_at                  :datetime
 #
 # Indexes
 #
