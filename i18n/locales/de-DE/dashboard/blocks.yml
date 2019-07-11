@@ -3,20 +3,20 @@ de:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: nach {TIMESTAMP} {UNIT}
+        text: nach [TIMESTAMP][0] [UNIT][1]
         options:
           UNIT:
             '"measures"': Takte
             '"seconds"': Sekunden
       Dancelab_changeColorBy:
-        text: ändern {COLOR} {METHOD} um {AMOUNT}
+        text: ändern [COLOR][0] [METHOD][1] um [AMOUNT][2]
         options:
           METHOD:
             '"hue"': Farbton
             '"saturation"': Sättigung
             '"brightness"': Helligkeit
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} tut {MOVE} {DIR} für immer"
+        text: "[GROUP][0] tut [MOVE][1] [DIR][2] für immer"
         options:
           GROUP:
             sprites: Alle
@@ -50,7 +50,7 @@ de:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} tut {MOVE} {DIR} für immer"
+        text: "[SPRITE][0] tut [MOVE][1] [DIR][2] für immer"
         options:
           MOVE:
             '"next"': "(nächster)"
@@ -71,7 +71,7 @@ de:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: ändern {SPRITE} {PROPERTY} um {VAL}
+        text: ändern [SPRITE][0] [PROPERTY][1] um [VAL][2]
         options:
           PROPERTY:
             '"scale"': Größe
@@ -81,7 +81,7 @@ de:
             '"x"': horizontale Position
             '"y"': vertikale Position
       Dancelab_doMoveEachLR:
-        text: "{GROUP} tut {MOVE} {DIR} einmal"
+        text: "[GROUP][0] tut [MOVE][1] [DIR][2] einmal"
         options:
           GROUP:
             sprites: Alle
@@ -125,7 +125,7 @@ de:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} tut {MOVE} {DIR} einmal"
+        text: "[SPRITE][0] tut [MOVE][1] [DIR][2] einmal"
         options:
           MOVE:
             '"rand"': "(zufällig)"
@@ -156,32 +156,32 @@ de:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'jede {N} {UNIT} '
+        text: 'jede [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': Takte
             '"seconds"': Sekunden
       Dancelab_everySecondsRange:
-        text: 'jede {N} {UNIT} von {START} bis {STOP} '
+        text: 'jede [N][0] [UNIT][1] von [START][2] bis [STOP][3] '
         options:
           UNIT:
             measures: Takte
             seconds: Sekunden
       Dancelab_everyVerseChorus:
-        text: 'jede {UNIT} '
+        text: 'jede [UNIT][0] '
         options:
           UNIT:
             '"verse"': Strophe
             '"chorus"': Refrain
       Dancelab_getEnergy:
-        text: erhalten {RANGE}
+        text: erhalten [RANGE][0]
         options:
           RANGE:
             '"low"': Bässe
             '"mid"': Mitten
             '"high"': Höhen
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': Größe
@@ -192,15 +192,15 @@ de:
             '"y"': vertikale Position
             '"tint"': Farbton
       Dancelab_getTime:
-        text: "{UNIT} vergangen"
+        text: "[UNIT][0] vergangen"
         options:
           UNIT:
             '"measures"': Takte
             '"seconds"': Sekunden
       Dancelab_ifDanceIs:
         text: |-
-          wenn {SPRITE} {DANCE} tut
-          {DO1} {DO2}
+          wenn [SPRITE][0] [DANCE][1] tut
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Oben klatschen
@@ -216,14 +216,14 @@ de:
             MOVES.Rest: Keiner
       Dancelab_ifTime:
         text: |-
-          wenn {UNIT} ist {OP} {N}
-          {DO1} {DO2}
+          wenn [UNIT][0] ist [OP][1] [N][2]
+          [DO1][3] [DO2][4]
         options:
           UNIT:
             '"measures"': Takte
             '"seconds"': Sekunden
       Dancelab_jumpTo:
-        text: "{SPRITE} springen Sie zu {LOCATION}"
+        text: "[SPRITE][0] springen Sie zu [LOCATION][1]"
         options:
           LOCATION:
             "{x: 200, y: 100}": oben
@@ -237,7 +237,7 @@ de:
             "{x: 300, y: 300}": unten rechts
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zufällig
       Dancelab_layoutSprites:
-        text: Layout {GROUP} als ein {FORMAT}
+        text: Layout [GROUP][0] als ein [FORMAT][1]
         options:
           GROUP:
             sprites: Alle
@@ -264,8 +264,8 @@ de:
             '"random"': zufällig
       Dancelab_makeNewDanceSprite:
         text: |-
-          machen Sie ein neues {COSTUME}
-          genannt {NAME} in {LOCATION}
+          machen Sie ein neues [COSTUME][0]
+          genannt [NAME][1] in [LOCATION][2]
         options:
           COSTUME:
             '"ALIEN"': Alien
@@ -292,8 +292,8 @@ de:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zufällig
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          erstelle {N} neues {COSTUME}
-          in einem {LAYOUT}
+          erstelle [N][0] neues [COSTUME][1]
+          in einem [LAYOUT][2]
         options:
           'N':
             '2': '2'
@@ -338,9 +338,9 @@ de:
             '"plus"': plus
             '"random"': zufällig
       Dancelab_mixColors:
-        text: Mischen Sie {COLOR1} und {COLOR2}
+        text: Mischen Sie [COLOR1][0] und [COLOR2][1]
       Dancelab_nMeasures:
-        text: "{N} Takte"
+        text: "[N][0] Takte"
       Dancelab_onPointerDown:
         text: auf Zeiger nach unten
       Dancelab_onPointerDrag:
@@ -350,9 +350,9 @@ de:
       Dancelab_randomColor:
         text: zufällige Farbe
       Dancelab_setBackground:
-        text: Hintergrundfarbe einstellen {COLOR}
+        text: Hintergrundfarbe einstellen [COLOR][0]
       Dancelab_setBackgroundEffect:
-        text: Hintergrundeffekt einstellen {EFFECT} {PALETTE}
+        text: Hintergrundeffekt einstellen [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"none"': Keiner
@@ -384,7 +384,7 @@ de:
             '"vintage"': Altmodisch
             '"warm"': Rottöne
       Dancelab_setBackgroundEffectWithPalette:
-        text: Hintergrundeffekt einstellen {EFFECT} {PALETTE}
+        text: Hintergrundeffekt einstellen [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"none"': Keiner
@@ -417,7 +417,7 @@ de:
             '"vintage"': Altmodisch
             '"warm"': Rottöne
       Dancelab_setDanceSpeed:
-        text: verändern Sie die {SPRITE} Tanzgeschwindigkeit zu {SPEED}
+        text: verändern Sie die [SPRITE][0] Tanzgeschwindigkeit zu [SPEED][1]
         options:
           SPEED:
             '1': Normal
@@ -426,7 +426,7 @@ de:
             '0.5': langsam
             '0.25': sehr langsam
       Dancelab_setDanceSpeedEach:
-        text: verändere die {GROUP} Tanzgeschwindigkeit zu {SPEED}
+        text: verändere die [GROUP][0] Tanzgeschwindigkeit zu [SPEED][1]
         options:
           GROUP:
             sprites: Alle
@@ -448,7 +448,7 @@ de:
             '0.5': langsam
             '0.25': sehr langsam
       Dancelab_setForegroundEffect:
-        text: Vordergrundeffekt einstellen {EFFECT}
+        text: Vordergrundeffekt einstellen [EFFECT][0]
         options:
           EFFECT:
             '"none"': Keiner
@@ -466,7 +466,7 @@ de:
             '"color_lights"': Bühnenlicht
             '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
-        text: Vordergrundeffekt einstellen {EFFECT}
+        text: Vordergrundeffekt einstellen [EFFECT][0]
         options:
           EFFECT:
             '"none"': Keiner
@@ -485,7 +485,7 @@ de:
             '"color_lights"': Bühnenlicht
             '"raining_tacos"': Tacos
       Dancelab_setProp:
-        text: 'stellen Sie {SPRITE} {PROPERTY} auf {VAL} '
+        text: 'stellen Sie [SPRITE][0] [PROPERTY][1] auf [VAL][2] '
         options:
           PROPERTY:
             '"scale"': Größe
@@ -496,7 +496,7 @@ de:
             '"y"': vertikale Position
             '"tint"': Farbton
       Dancelab_setPropEach:
-        text: stellen Sie {GROUP} {PROPERTY} auf {VAL}
+        text: stellen Sie [GROUP][0] [PROPERTY][1] auf [VAL][2]
         options:
           GROUP:
             sprites: Alle
@@ -520,7 +520,7 @@ de:
             '"y"': vertikale Position
             '"tint"': Farbton
       Dancelab_setPropRandom:
-        text: randomisieren Sie {SPRITE} {PROPERTY}
+        text: randomisieren Sie [SPRITE][0] [PROPERTY][1]
         options:
           PROPERTY:
             '"scale"': Größe
@@ -531,9 +531,9 @@ de:
             '"y"': vertikale Position
             '"tint"': Farbton
       Dancelab_setTint:
-        text: stellen Sie {SPRITE} Farbton auf {VAL}
+        text: stellen Sie [SPRITE][0] Farbton auf [VAL][1]
       Dancelab_setTintEach:
-        text: stelle {THIS} Farbton auf {VAL}
+        text: stelle [THIS][0] Farbton auf [VAL][1]
         options:
           THIS:
             sprites: Alle
@@ -548,15 +548,15 @@ de:
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
       Dancelab_setTintInline:
-        text: stellen Sie {SPRITE} Farbton auf {VAL}
+        text: stellen Sie [SPRITE][0] Farbton auf [VAL][1]
       Dancelab_setVisible:
-        text: "{SPRITE} für {VISIBILITY} sichtbar machen"
+        text: "[SPRITE][0] für [VISIBILITY][1] sichtbar machen"
         options:
           VISIBILITY:
             'true': sichtbar
             'false': unsichtbar
       Dancelab_setVisibleEach:
-        text: stellen Sie {THIS} Sichtbarkeit auf {VISIBILITY}
+        text: stellen Sie [THIS][0] Sichtbarkeit auf [VISIBILITY][1]
         options:
           THIS:
             sprites: Alle
@@ -575,7 +575,7 @@ de:
             'true': sichtbar
             'false': unsichtbar
       Dancelab_startMapping:
-        text: "{SPRITE} beginnt {PROPERTY} nach {RANGE}"
+        text: "[SPRITE][0] beginnt [PROPERTY][1] nach [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': Größe
@@ -590,7 +590,7 @@ de:
             '"mid"': Mitten
             '"treble"': Höhen
       Dancelab_stopMapping:
-        text: "{SPRITE} stoppt {PROPERTY} nach {RANGE}"
+        text: "[SPRITE][0] stoppt [PROPERTY][1] nach [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': Größe
@@ -606,7 +606,7 @@ de:
             '"mid"': Mitten
             '"treble"': Höhen
       Dancelab_whenKey:
-        text: wenn {KEY} gedrückt
+        text: wenn [KEY][0] gedrückt
         options:
           KEY:
             '"up"': hoch
@@ -652,7 +652,7 @@ de:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: wenn {RANGE} Höhepunkt
+        text: wenn [RANGE][0] Höhepunkt
         options:
           RANGE:
             '0': Bässe
@@ -661,9 +661,9 @@ de:
       Dancelab_whenSetup:
         text: Setup
       gamelab_addBehaviorSimple:
-        text: "{SPRITE} beginnt {BEHAVIOR}"
+        text: "[SPRITE][0] beginnt [BEHAVIOR][1]"
       gamelab_changePropBy:
-        text: ändern {SPRITE} {PROPERTY} um {VAL}
+        text: ändern [SPRITE][0] [PROPERTY][1] um [VAL][2]
         options:
           PROPERTY:
             '"scale"': Größe
@@ -677,18 +677,18 @@ de:
             '"when"': wenn
             '"while"': solange
       gamelab_clickedOn:
-        text: wenn {SPRITE} angeklickt
+        text: wenn [SPRITE][0] angeklickt
       gamelab_createNewSprite:
-        text: "erstelle neuen Sprite\n genannt {NAME} \n mit Kostüm {COSTUME} \n in {LOCATION}"
+        text: "erstelle neuen Sprite\n genannt [NAME][0] \n mit Kostüm [COSTUME][1] \n in [LOCATION][2]"
       gamelab_debugSprite:
         options:
           VAL:
             'true': wahr
             'false': falsch
       gamelab_destroy:
-        text: entferne {THIS}
+        text: entferne [THIS][0]
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': Größe
@@ -702,7 +702,7 @@ de:
           CHOICE:
             '"this"': dies
       gamelab_jumpTo:
-        text: "{SPRITE} springen Sie zu {LOCATION}"
+        text: "[SPRITE][0] springen Sie zu [LOCATION][1]"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -741,7 +741,7 @@ de:
             '"y"': 'y'
             '"z"': z
       gamelab_makeNewSpriteAnon:
-        text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
+        text: erstelle neuen [ANIMATION\_NAME][0] Sprite in [LOCATION][1]
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -752,7 +752,7 @@ de:
       gamelab_randomColor:
         text: zufällige Farbe
       gamelab_setBackground:
-        text: Hintergrundfarbe einstellen {COLOR}
+        text: Hintergrundfarbe einstellen [COLOR][0]
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -791,7 +791,7 @@ de:
             '"right"': rechts
             '"left"': links
       gamelab_whenKey:
-        text: wenn {KEY} gedrückt
+        text: wenn [KEY][0] gedrückt
         options:
           KEY:
             '"up"': hoch
@@ -823,7 +823,7 @@ de:
             '"s"': s
             '"d"': d
       Mikelab_addBehaviorSimple:
-        text: "{SPRITE} beginnt {BEHAVIOR}"
+        text: "[SPRITE][0] beginnt [BEHAVIOR][1]"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -869,7 +869,7 @@ de:
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
       Mikelab_groupCreateNewSprite:
-        text: erstelle neues {COSTUME} in {LOCATION}
+        text: erstelle neues [COSTUME][0] in [LOCATION][1]
         options:
           LOCATION:
             "{x: 200, y: 100}": oben
@@ -929,8 +929,8 @@ de:
             '"this"': dies
       Mikelab_ifDanceIs:
         text: |-
-          wenn {SPRITE} {DANCE} tut
-          {DO1} {DO2}
+          wenn [SPRITE][0] [DANCE][1] tut
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Oben klatschen
@@ -976,9 +976,9 @@ de:
             "{x: 100, y: 300}": unten links
             "{x: 300, y: 300}": unten rechts
       Mikelab_whenClickedOn:
-        text: wenn {SPRITE} angeklickt
+        text: wenn [SPRITE][0] angeklickt
       Mikelab_whenKeyPressed:
-        text: wenn {KEY} gedrückt
+        text: wenn [KEY][0] gedrückt
         options:
           KEY:
             '"up"': Pfeil-nach-oben
@@ -1020,9 +1020,9 @@ de:
           PROPERTY:
             "'shapeColor'": Farbe
       aalab_addBehaviorUntilBoolean:
-        text: "{SPRITE} beginnt {BEHAVIOR} bis {CONDITION}"
+        text: "[SPRITE][0] beginnt [BEHAVIOR][1] bis [CONDITION][2]"
       aalab_changePropByFlexible:
-        text: Änderung {SPRITE} {PROPERTY} bis {VAL}.
+        text: Änderung [SPRITE][0] [Eigenschaft][1] bis [VAL][2].
         options:
           PROPERTY:
             '"scale"': Größe
@@ -1041,25 +1041,25 @@ de:
             '"when"': wenn
             '"while"': solange
       aalab_createNewSprite:
-        text: "aalab erstelle neuen Sprite \n genannt {NAME} \n mit Kostüm {COSTUME} \n in {LOCATION}"
+        text: "aalab erstelle neuen Sprite \n genannt [NAME][0] \n mit Kostüm [COSTUME][1] \n in [LOCATION][2]"
       aalab_createNewSpriteAdvanced:
-        text: "erstelle neuen Sprite genannt {NAME} \n mit Kostüm {COSTUME} \n in {LOCATION}"
+        text: "erstelle neuen Sprite genannt [NAME][0] \n mit Kostüm [COSTUME][1] \n in [LOCATION][2]"
       aalab_createNewSpriteAnon:
-        text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
+        text: erstelle neuen [ANIMATION\_NAME][0] Sprite in [LOCATION][1]
       aalab_createNewSpriteAnonReturn:
-        text: aalab erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
+        text: aalab erstelle neuen [ANIMATION\_NAME][0] Sprite in [LOCATION][1]
       aalab_createPropertyGroup:
         text: |-
-          erstelle neue Sprite Gruppe genannt {VAR}
-          mit allen {COSTUME} Sprites
+          erstelle neue Sprite Gruppe genannt [VAR][0]
+          mit allen [COSTUME][1] Sprites
       aalab_createSpriteGroup:
-        text: erstelle eine neue Sprite Gruppe genannt {VAR}
+        text: erstelle eine neue Sprite Gruppe genannt [VAR][0]
       aalab_getThisSprite:
         options:
           CHOICE:
             '"this"': dies
       aalab_jumpTo:
-        text: "{SPRITE} springen Sie zu {LOCATION}"
+        text: "[SPRITE][0] springen Sie zu [LOCATION][1]"
       aalab_keyPressed:
         options:
           CONDITION:
@@ -1072,7 +1072,7 @@ de:
             '"right"': rechts
             '"space"': Weltall
       aalab_removeOneAndAll:
-        text: entferne {THIS}
+        text: entferne [THIS][0]
       aalab_setBG:
         options:
           BG:
@@ -1119,7 +1119,7 @@ de:
             '"left"': links
             '"right"': rechts
       binary_whenKey:
-        text: wenn {KEY} gedrückt
+        text: wenn [KEY][0] gedrückt
         options:
           KEY:
             '"up"': hoch
@@ -1133,8 +1133,8 @@ de:
             '"d"': d
       craft_ifPath:
         text: |-
-          wenn Weg {DIR}
-          {STATEMENT}
+          wenn Weg [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": voraus
@@ -1142,8 +1142,8 @@ de:
             "'left'": nach links
       craft_ifStandingOn:
         text: |-
-          wenn auf {TYPE}
-          {STATEMENT}
+          wenn auf [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": blaue Koralle
@@ -1154,8 +1154,8 @@ de:
             "'seaLantern'": Seelaterne
       craft_ifStandingOnLimit:
         text: |-
-          wenn auf {TYPE}
-          {STATEMENT}
+          wenn auf [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": Sand
@@ -1174,7 +1174,7 @@ de:
       craft_repeatUntilGoal:
         text: |-
           bis Ziel wiederholen
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
         options:
           ENTITY:
