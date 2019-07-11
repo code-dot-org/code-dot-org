@@ -3297,6 +3297,65 @@ zh-CN:
         cursive;\n</pre>\n\n在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。
         \n\n</details>\n</details>\n</div>\n# 文本对齐\n\n`text-align`属性设置了文本在每一行上，水平（从一边到另一边）方向的位置。\n\n-
         \  找到段落标签中的\"text-align\"属性\n-   改变段落的对齐方式。\n-   从\"left\"，\"right\"，和\"center\"中选择一个。"
+      CSD U2 unordered list_2018: |-
+        # 无序列表
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>哪两类列表？</strong>
+        </summary>
+        HTML 语言有两类列表：有序列表、无序列表。
+
+        </details>
+        <details>
+        <summary>
+        <strong>什么是无序列表？</strong>
+        </summary>
+
+        无序列表，就是一系列条目。
+        <br /><br />无序列表的引导标签是 \<ul> 。来自无序列表的英文首字母缩写  <strong>U</strong>nordered <strong>L</strong>ist。每个列表项的引导标签是 \<li>，来自英文缩写 <strong>L</strong>ist <strong>I</strong>tem。列表项是子元素，也就是说它出现在父级元素，也就是无序列表的内部。 (\<ul>).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>如何制作无序列表？</strong>
+        </summary>
+
+        制作无序列表需要两个步骤：建立列表、添加列表项。 第一步，只要写下标签 `<ul></ul>`。接下来，就是在上述标签内部 **添加** 列表项。每个列表项都要分别写在标签 `<li></li>` 内部。
+        <br /><br />
+        有个小技巧，缩进 \<li> 标签会看起来更清晰，并确保包含在 \<ul> 标签内部。
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>展示代码</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>示例</td>
+        <td>结果</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br>   &lt;li&gt;Red &lt;/li&gt; <br>   &lt;li&gt;Green &lt;/li&gt; <br>   &lt;li&gt;Blue&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        页面应该有无序列表，但缺少列表标签。
+
+        # 这样做
+
+        -   使用 `<ul>` 和 `<li>` 标签来构建无序列表，参照下图。
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
       CSD U2 upload images: "# 上传图片\\\r\n\n\\\r\n接下来，你需要将所有图片上传到你的项目中。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\*\n将想要的图片都下载到你的电脑里。如果需要帮助，就浏览<a href=\"/s/csd2/stage/7/puzzle/5\"\ntarget=\"_new\">课程7
         关卡5</a>。\\\r\n\n-   确保你有权利使用这些图片。\\\r\n-   写下所有你需要的属性信息。\\\r\n-   将所有图片上传到你的项目中。如果忘了怎么做，就浏览\n
