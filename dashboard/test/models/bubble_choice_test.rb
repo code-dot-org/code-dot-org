@@ -83,6 +83,15 @@ DSL
     assert_equal [sublevel1, sublevel2, sublevel3], level.sublevels
   end
 
+  test 'sublevel_position returns the position of a sublevel in a parent level' do
+    assert_equal 1, @bubble_choice.sublevel_position(@sublevel1)
+    assert_equal 2, @bubble_choice.sublevel_position(@sublevel2)
+  end
+
+  test 'sublevel_position returns nil for a level that is not a sublevel of the parent' do
+    assert_nil @bubble_choice.sublevel_position(create(:level))
+  end
+
   test 'summarize' do
     summary = @bubble_choice.summarize
     expected_summary = {

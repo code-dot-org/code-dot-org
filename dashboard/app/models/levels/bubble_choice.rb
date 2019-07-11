@@ -59,7 +59,8 @@ ruby
   # @param [Level] sublevel
   # @return [Integer] The sublevel's position (i.e., its index + 1) under the parent level.
   def sublevel_position(sublevel)
-    sublevels.index(sublevel) + 1
+    i = sublevels.index(sublevel)
+    i.present? ? i + 1 : nil
   end
 
   # Summarizes the level.
