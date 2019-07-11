@@ -1,5 +1,5 @@
 name 'CSD U3 drawing challenges'
-title 'Drawing Challenges'
+display_name 'Drawing Challenges'
 description 'Try out some challenges!'
 
 sublevels
