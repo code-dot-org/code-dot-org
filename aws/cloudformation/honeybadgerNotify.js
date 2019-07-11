@@ -30,7 +30,7 @@ const handler = async (event, context) => {
     Honeybadger.notify(error, {
       name: "Honeybadger Lambda failed to notify",
       context: {
-        fullEvent: event
+        fullEvent: JSON.stringify(event)
       }
     });
   }
