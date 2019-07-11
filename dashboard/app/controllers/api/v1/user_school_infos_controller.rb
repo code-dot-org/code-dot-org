@@ -16,30 +16,25 @@ class Api::V1::UserSchoolInfosController < ApplicationController
       return
     end
 
-    new_school_info_params =
-      if school_info_params[:full_address]&.blank?
-        school_info_params.except(:full_address)
-      else
-        school_info_params
-      end
+    school_info_params.delete(:full_address) if school_info_params[:full_address]&.blank?
 
-    if new_school_info_params[:country]&.downcase&.eql? 'united states'
-      new_school_info_params[:country] = 'US'
+    if school_info_params[:country]&.downcase&.eql? 'united states'
+      school_info_params[:country] = 'US'
     end
 
     existing_school_info = current_user.last_complete_school_info
-    existing_school_info&.assign_attributes new_school_info_params
+    existing_school_info&.assign_attributes school_info_params
     if existing_school_info.nil? || existing_school_info.changed?
       submitted_school_info =
-        if new_school_info_params[:school_id]
-          SchoolInfo.where(new_school_info_params).
+        if school_info_params[:school_id]
+          SchoolInfo.where(school_info_params).
           first_or_create
         else
           # VALIDATION_COMPLETE is passed when the school_id does not exist to check
-          # for form completeness, specifically, school name is required.
-          # If school_id does not exist, ncesSchoolId  is set to -1 when the checkbox
+          # form for completeness; specifically, school name is required.
+          # If school_id does not exist, ncesSchoolId is set to -1 when the checkbox
           # for school not found is clicked.
-          SchoolInfo.where(new_school_info_params).
+          SchoolInfo.where(school_info_params).
           first_or_create(validation_type: SchoolInfo::VALIDATION_COMPLETE)
         end
       unless current_user.update(school_info: submitted_school_info)
@@ -57,6 +52,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   private
 
   def school_info_params
-    params.require(:user).require(:school_info_attributes).permit(:school_type, :school_name, :full_address, :country, :school_id)
+    @school_info_params ||= params.require(:user).require(:school_info_attributes).
+      permit(:school_type, :school_name, :full_address, :country, :school_id)
   end
 end
