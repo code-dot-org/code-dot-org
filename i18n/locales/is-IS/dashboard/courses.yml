@@ -3,16 +3,41 @@ is:
     course:
       name:
         csp-2017:
+          assignment_family_title: Undirstöðuatriði tölvunarfræði
           title: Undirstöðuatriði tölvunarfræði ('17-'18)
           version_title: "'17-'18"
+          description_short: Kennir grunnhugtök í tölvunarfræði.
         csd-2017:
+          assignment_family_title: Uppgötvanir í Tölvunarfræði
+          title: Uppgötvanir í Tölvunarfræði ('17-'18)
           version_title: "'17-'18"
+          description_student: Uppgötvanir í tölvunarfræði (CS Discoveries) er inngangsnámskeið í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk og nota tölvunarfræði sem tæki til sköpunar, samskipta, þrautalausna og gamans.
+          description_teacher: Uppgötvanir í tölvunarfræði (CS Discoveries) er inngangsnámskeið í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk og nota tölvunarfræði sem tæki til sköpunar, samskipta, þrautalausna og gamans.
+          description_short: Inngangsnámskeið í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk.
         allthethingscourse:
           title: allthethings námskeið
           description_short: Þetta er námskeið fyrir allthethings
           description_student: Þetta er námskeið fyrir allthethings og er með lengri lýsingu fyrir nemendur
           description_teacher: Þetta er námskeið fyrir allthethings og er með lengri lýsingu fyrir kennara
         csd-2018:
+          assignment_family_title: Uppgötvanir í Tölvunarfræði
+          title: Uppgötvanir í Tölvunarfræði ('18-'19)
           version_title: "'18-'19"
+          description_short: Inngangsnámskeið í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk.
+          description_student: Uppgötvanir í tölvunarfræði (CS Discoveries) er inngangsnámskeið í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk og nota tölvunarfræði sem tæki til sköpunar, samskipta, þrautalausna og gamans.
+          description_teacher: Uppgötvanir í tölvunarfræði (CS Discoveries) er inngangsnámskeið í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk og nota tölvunarfræði sem tæki til sköpunar, samskipta, þrautalausna og gamans.
         csp-2018:
+          assignment_family_title: Undirstöðuatriði tölvunarfræði
+          title: Undirstöðuatriði tölvunarfræði ('18-'19)
           version_title: "'18-'19"
+          description_short: Kennir grunnhugtök í tölvunarfræði.
+        csp-2019:
+          title: Undirstöðuatriði tölvunarfræði ('19-'20)
+          version_title: "'19-'20"
+          description_short: Kennir grunnhugtök í tölvunarfræði.
+        csd-2019:
+          title: Uppgötvanir í Tölvunarfræði ('19-'20)
+          version_title: "'19-'20"
+          description_short: Inngangsnámskeið í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk.
+          description_student: Uppgötvanir í tölvunarfræði (CS Discoveries) er inngangsnámskeið í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk og nota tölvunarfræði sem tæki til sköpunar, samskipta, þrautalausna og gamans.
+          description_teacher: Uppgötvanir í tölvunarfræði (CS Discoveries) er inngangsnámskeið í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk og nota tölvunarfræði sem tæki til sköpunar, samskipta, þrautalausna og gamans.

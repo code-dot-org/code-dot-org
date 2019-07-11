@@ -105,6 +105,8 @@ is-IS:
       4-5 Bee Nested Loops 1: Notaðu lykkju til að safna öllum blómasafanum.
       4-5 Bee Nested Loops 2: 'Safnaðu öllum blómasafanum úr hverju blómi. Notaðu
         faldaða lykkju. '
+      4-5 Bee Nested Loops 3: Safnaðu öllum blómasafanum með því að setja byrjunarkóðann
+        í aðra lykkju.
       4-5 Bee Nested Loops 5: Safnaðu öllum blómasafanum með því að búa til faldaða
         lykkju.
       4-5 Bee Nested Loops 7: Settu þessa lykkju innan í aðra lykkju til að mynda
@@ -126,6 +128,10 @@ is-IS:
       4-5 Nested Loops 11: Getur þú teiknað þessa 10 ferninga fyrir gangstétt með
         faldaðri lykkju? Hver ferningur er 30 dílar.
       4-5 Nested Loops 12: Getur þú teiknað þessa 36 þríhyrninga með faldaðri lykkju?
+      4-5 Nested Loops 3: |-
+        Búðu til sól með því að falda byrjunarkóðann í annarri lykkju.
+
+        Til að miðjan verði hol þarft þú að stökkva áfram um lengd þríhyrningsins áður en þú snýrð.
       4-5 Nested Loops 5: Settu gefna kóðann í lykkju til að búa til vindmyllu.
       4-5 Nested Loops 6: Getur þú teiknað sexhyrning með því að setja þríhyrningskóðann
         í lykkju?
@@ -138,7 +144,10 @@ is-IS:
         sem fjarlægir þá alla.
       4-5 While Loops Assessment 1: Hér eru fleiri holur og haugar. Hjálpaðu mér að
         fylla og fjarlægja til að slétta yfirborðið.
+      AB_Debug_PlayLab3: Færðu riddarann á hvert flagg. Ef þetta virkar ekki, þá er
+        bara að finna villurnar!
       Alien Defender: 'Hugmynd að verkefni: Búðu til Defender leik í Leikjasmiðjunni!'
+      CDEF_debugging_flappy2: Af hverju virkar þessi leikur ekki?
       CSD U3 L5 Freeplay: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 L5 Freeplay_2018: Breyttu gildi petalSize oft. Hvaða áhrif hefur það
         á teikninguna?
@@ -213,6 +222,11 @@ is-IS:
         -   (Vísbending: þú notar næstum því sama kóðann og í `moveCloud0` fallinu)
         -   Kallaðu á nýja `moveCloud(heiti)` fallið innan úr atburðarkubbnum, einu sinni fyrir hvert skýjaheiti.
         -   (Vísbending: þetta er líkt því hvernig kallað er oft á `loopCloud(heiti)` fallið.
+      CSDU4 - Design Mode - 16: Bættu við atvikshöndlara fyrir hnappinn með því að
+        nota "Setja inn og sýna" tengilinn á atvikaflipa (Events ) Hönnunarstöðunnar.
+        (Smelltu til að fá ítarlegri leiðbeiningar.).
+      CSDU4 - Design Mode - 17: Uppfærðu heitin (id) og `console.log` skilaboðin svo
+        þau eigi við réttan hnapp. (Smelltu til að fá ítarlegri leiðbeiningar.)
       CSDU4 - Design Mode - 18: Lagaðu uppröðun eininganna í skotmarksleiknum. (Smelltu
         til að fá ítarlegri leiðbeiningar)
       CSDU4 - Design Mode - 4: Endurbættu hnappinn með því að setja lýsandi heiti
@@ -225,8 +239,47 @@ is-IS:
         talnaröð. (Smelltu til að sjá nánari leiðbeiningar)
       Choose Your Own Adventure: Þú getur gert hvað sem þú vilt í leikjasmiðjunni!
         Hér er dæmi um að velja eigin ævintýrasögu í leikjasmiðjunni.
+      Course 4 Artist 1: 'Hjálpaðu mér að teikna kassa. (Hver lína er 200 díla löng) '
+      Course 4 Artist 10: |-
+        Smelltu hér til að sjá ítarlegar leiðbeiningar aftur!
+
+        Hér er kóði fyrir áhugavert form. Hvað gerist þegar þú endurtekur hann mörgum sinnum og snýrð í hvert sinn? Taktu eftir að hornin í forminu eru samanlagt 420, sem þýðir að þegar listamaðurinn er búinn að teikna þá snýr hann í aðra átt en í byrjun. Þessi nýja átt er nákvæmlega 60 gráðum til hægri frá upphafinu.
+      Course 4 Artist 11: Hér er áskorun! Ekki hika við að prófa þig áfram. Það er
+        engin krafa um að þú leysir þetta í fyrstu atrennu. Viltu fá fleiri vísbendingar?
+        Smelltu hér!
+      Course 4 Artist 12: |-
+        Viltu kíkja aftur á fyrirmyndina eða vísbendingarnar? Smelltu hér!
+
+        Annars skaltu bara búa til þína eigin mynd!
+      Course 4 Artist 13: Enn að spila? Hér er auður flötur þar sem þú getur hannað
+        hvað sem þú vilt!
+      Course 4 Artist 2: Getur þú sett þennan kóða í lykkju til að teikna yfir gráa
+        ferninginn? (Hver hlið er 300 dílar á lengd)
+      Course 4 Artist 20: Enn að spila? Hér er auður flötur þar sem þú getur búið
+        til hvað sem þú vilt!
+      Course 4 Artist 3: Reyndu að greina hvað þessi kóði gerir (eða smelltu á "Keyra"
+        til að komast að því). Endurtaktu svo nógu oft til að ljúka teikningunni.
       Course 4 Artist 4: Hvað eru margar gráður í hring? Settu þá tölu í endurtaka
         kubbinn til að búa til hring úr litum.
+      Course 4 Artist 5: 'Teiknaðu hinn helming þessarar myndar svo hún sé samhverf.
+        Þríhyrningarnir eru jafnhliða og 50 dílar á lengd. Vísbending: Þú gætir þurft
+        að keyra kóðann nokkrum sinnum til að finna alla kubbana sem þarf að bæta
+        við.'
+      Course 4 Artist 6: Ljúktu við kóðann til að teikna þessa þrjá jafnhliða þríhyrninga.
+      Course 4 Artist 7: 'Settu nú þessa lykkju innan í aðra lykkju til að teikna
+        10 þríhyrninga. Þetta er kallað að falda lykkju. Vísbending: Þríhyrningarnir
+        10 snúast um samtals 360 gráður.  '
+      Course 4 Artist 8: Teiknaðu þessa sól með því að endurtaka allan þennan kóða
+        mörgum sinnum í lykkju.
+      Course 4 Artist 8a: Manstu eftir þessu formi? Nú ætlum við að leyfa þér að búa
+        það til án þess að fá nokkra kubba til að byrja með!
+      Course 4 Artist 9: 'Endurtaktu þessa mynd 10 sinnum í lykkju, en gættu þess
+        að snúa í hverri umferð. '
+      Course 4 Artist Binary 1: "Hér er fall sem tekur tvíundarstreng með 1 og 0 og
+        segir listamanninum að færa sig frá vinstri til hægri niður eftir myndinni.
+        Listamaðurinn á að lita þá reiti svarta þar sem 1 er í strengnum en sleppa
+        að lita ef það er 0. \n\nKeyrðu þennan kóða til að sjá hvernig listamaðurinn
+        notar tvíundir til að teikna mynstur."
       Course 4 Artist Binary 2: Hver af þessum tvíundarstrengjum endurtekinn 8 sinnum
         mundi teikna þessa mynd?
       Course 4 Artist Binary 3: Getur þú teiknað þetta mynstur með því að endurtaka
@@ -246,14 +299,126 @@ is-IS:
       Course 4 Artist Binary Free Play 2b: Smelltu hér til að sjá vísbendingar.
       Course 4 Artist Binary pre1: Notaðu kubbana fyrir neðan til að láta listamanninn
         teikna tvíundirnar "01010101" í fyrstu röðina.
+      Course 4 Artist For Loops 1: Notaðu endurtekningarkubb til að teikna þennan
+        þríhyrning sem er 50 díla breiður.
+      Course 4 Artist For Loops 11: 'Manstu eftir fyrri áfanga þar sem við notuðum
+        breytu til að stjórna fjölda hliða á formi? Við ætlum nú að gera það sama
+        með teljarabreytunni `teljari`. Mynstrið byrjar á þríhyrningi og bætir við
+        einni hlið í einu þangað til það teiknar tíhyrning (10 hliðar). Hver hlið
+        á að vera 100 dílar. '
+      Course 4 Artist For Loops 11a: |-
+        Setjum þetta allt saman! Notaðu þekkingu þína á `frá` lykkjum og breytunni `teljari` til að búa til þessa teikningu þar sem hvert form hefur tvær fleiri hliðar en formið á undan. Gættu þess að hver hlið forms sé 10 sinnum fjöldi hliða á forminu.
+
+        Þú færð mjög lítinn kóða gefins.
+      Course 4 Artist For Loops 14: Ef þú snýrð aðeins meira eða minna en þú mundir
+        venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart.
+        Prófaðu að nota eitthvað af kóðanum úr síðasta áfanga, en snúa um 89 gráður
+        til að búa til þennan snúna spíral úr ferningum.
+      Course 4 Artist For Loops 15: Frjáls æfing! Prófaðu að búa til eigin teikningar
+        með "frá lykkjum". Við höfum líka bætt við nokkrum gagnlegum breytum sem þú
+        getur notað.
+      Course 4 Artist For Loops 2: 'Ég hef sett kóða fyrir þríhyrning inn í "frá"
+        lykkju sem telur frá 50 til 100 um 10. Athugaðu: Gættu þess að lesa kóðann
+        yfir áður en þú smellir á "Keyra".'
+      Course 4 Artist For Loops 3: 'Það sem þú gerðir í síðustu þraut hjálpar þér
+        að klára þessa. Minnsti þríhyrningurinn hefur 20 díla hliðar, sá stærsti 200,
+        og hver þríhyrningur er 20 dílum stærri en næsti á undan. '
+      Course 4 Artist For Loops 4: 'Hvernig mundir þú aðlaga það sem þú hefur lært
+        að því að teikna þessa ferninga? Lengd þess fyrsta er 15 dílar, þess stærsta
+        300 dílar og hver ferningur er 15 dílum stærri en sá á undan. '
       Course 4 Artist For Loops 6a: Gerðu þrjár litlar breytingar á kóðanum úr síðasta
         áfanga til að ná þessu!
+      Course 4 Artist For Loops 8: |-
+        Með einni lítilli breytingu á kóðanum úr síðustu þraut getur þú búið til þessa mynd. Geturðu fundið út hver sú breyting er?
+
+        Vísbending: Þú þarft að fjarlægja eitthvað!
+      Course 4 Artist For Loops Challenge: "**Áskorun:** Getur þú nýtt þér allt sem
+        þú hefur lært til að búa til þessa mynd með fjölhliðungum sem allir hafa 40
+        díla hliðar?"
+      Course 4 Artist For Loops inspire: |-
+        Frjáls æfing með innblæstri: Þú hefur nú lært allt sem þarf til að búa til svona mynstur! Ef þessi mynd veitir þér innblástur, reyndu þá að búa til eitthvað líkt henni. Ef ekki, búðu þá til þína eigin mynd.
+
+        Þarftu vísbendingu? Smelltu hér.
+      Course 4 Artist Functions Inspiration: Smelltu hér til að sjá vísbendingarnar
+        aftur.
+      Course 4 Artist Functions challenge: Smelltu hér til að sjá vísbendingarnar
+        aftur.
+      Course 4 Artist Inspire: |-
+        Viltu kíkja aftur á fyrirmyndina eða vísbendingarnar? Smelltu hér!
+
+        Annars skaltu bara búa til þína eigin mynd!
+      Course 4 Artist Vars 1: "Við skulum teikna jafnhliða þríhyrning? \n\nHver hlið
+        verður að vera nákvæmlega 100 dílar."
+      Course 4 Artist Vars 11: Hér er flóknari kóði sem notar sömu hugtök og síðasta
+        þraut - hvaða gildi ætti að setja í breytuna "hliðar" til að teikna þessa
+        mynd gerða úr ferningum?
+      Course 4 Artist Vars 12: Prófum að setja "hliðar" jafnt og 5. Því fleiri hliðar
+        sem við notum í algríminu, því stærra verður allt mynstrið! Taktu eftir að
+        það er ný breyta "lengd". Við getum nú notað hana í hvert sinn sem við höfum
+        "færa áfram". Settu 75 í breytuna "lengd" til að teikna þetta form.
+      Course 4 Artist Vars 13: |-
+        Eftir því sem form hefur fleiri hliðar, þarf hver hlið að vera styttri ef allt mynstrið á að geta komist fyrir á skjánum.
+
+        Við skulum búa til algrímið fyrir þetta flotta mynstur, en í stað þess að setja fasta tölu í  breytuna `lengd`, skulum við nota reikningskubb með breytunni `hliðar` til að tryggja að hvert form komist fyrir. Ummál hvers fjölhliðungs er 300 dílar.
+        Þarftu vísbendingar. Smelltu hér.
+      Course 4 Artist Vars 14: |-
+        Frjáls æfing! Kíktu á þetta: Nú er algrímið þitt faldað í enn einni lykkju. Gerðu tilraunir með gildi í breytunum tveimur til að teikna óvænt mynstur.
+
+        Enn meiri áhrif fást með því að nota liti! Notaðu handahófsliti innan í lykkjum til að sjá hvernig það breytir hönnuninni þinni.
+      Course 4 Artist Vars 2: Í stað þess að "færa áfram um 150" er "færa" kubburinn
+        nú að lesa úr breytunni "lengd". Getur þú stillt "lengd" á 150 og teiknað
+        þennan nýja þríhyrning?
+      Course 4 Artist Vars 4: Nú vil ég búa til rétthyrning með hæð sem er tvöföld
+        breiddin. Við eru með breytuna "breidd" sem þarf að stilla á 100. Getur þú
+        notað reikningskubba til að ljúka við kóðann?
+      Course 4 Artist Vars 6: |-
+        Hér er kóði sem getur teiknað hvaða reglulegan marghyrning sem er. Það er ný breyta sem nefnist "hliðar" og í henni er gildið 4. Getur þú notað breytuna "hliðar" (ásamt reikningskubbi) til að snúa um réttan gráðufjölda alveg sama hve margar hliðar eru í marghyrningnum?
+
+        Smelltu hér til að fara aftur í vísbendinguna!
+      Course 4 Artist Vars 7: |-
+        Notaðu það sem þú lærðir í síðustu þraut til að búa til þennan sexhyrning með breytunni "hliðar".
+
+        Sérðu hvernig þú gætir breytt aðeins einu gildi til að teikna þríhyrning, ferning, fimmhyrning eða átthyrning?
+      Course 4 Artist Vars 8: 'Frjáls æfing: Gerðu tilraunir með fjölda hliða á þessu
+        formi. Getur þú breytt algríminu þannig að heildarstærð formsins haldist svipuð
+        sama hversu margar hliðar það hefur? Vísbending: Ef þú deilir upphaflegu lengdinni
+        með fjölda hliða, mun lengd hverrar hliðar styttast þegar hliðunum fjölgar.'
+      Course 4 Bee 1: "Býflugan veit ekki hvað er undir skýinu! \n\nNotaðu `ef` kubbinn
+        til að athuga hvort það er blóm undir skýinu.\n\nSafnaðu blómasafa einu sinni
+        en AÐEINS ef það er blóm."
+      Course 4 Bee 2: Notaðu "ef/annars" kubbinn til að athuga hvort hver hlutur er
+        blóm eða bú. Ef hann er blóm, á að safna einum af blómasafa, annars á að búa
+        til einn af hunangi!
+      Course 4 Bee 3: Óþekkti hluturinn er annað hvort blóm eða býflugnabú. Notaðu
+        "ef/annars" kubbinn til að safna blómasafa ef þetta er blóm, annars búa til
+        hunang (því þá er þetta bú).
+      Course 4 Bee Loops 5 NEW: Hér eru þrjú blóm. Getur þú fundið kubbamynstrið sem
+        þarf að endurtaka 3 sinnum til að safna blómasafanum með sem fæstum kubbum?
+      Course 4 Bee Loops 5a NEW: Notaðu nú lykkjur til að hjálpa býflugunni að safna
+        öllum blómasafanum á leið sinni til býflugnabúsins með sem allra fæstum kubbum.
+        Ekki gleyma að búa til hunang þegar þú kemst þangað!
+      Course 4 Bee Params 1: Skrifaðu röð skipana til að safna öllum blómasafanum.
+        Notaðu fallið `sækja 3 blómasafa` sem snýr, færir til að safna safanum og
+        fer svo aftur á upphaflega staðinn.
       Course 4 Bee Params 2: Breyttu "sækja 3 blómasafa" fallinu svo að það láti mig
         snúa til hægri í stað vinstri til blómanna.
+      Course 4 Bee Params 3: 'Nú eru blóm á báðar hliðar! Við höfum bætt við breytunum
+        "vinstri" og "hægri" sem þú getur notað og bætt stikanum "stefna" við "sækja
+        3 safa" fallið. Breyttu "sækja 3 safa" svo að býflugan snúi í rétta átt þegar
+        breyturnar "vinstri" og "hægri" eru settar í fallið.  '
+      Course 4 Bee Params 4: Reyndu að nota nýja fallið þitt til að safna safa úr
+        öllum blómunum. Mundu að nota breyturnar fyrir vinstri og hægri.
       Course 4 Bee Params 5: Byrjum frá grunni. Getur þú búið til nýtt fall "sækja
         5 safa" með stika fyrir stefnu?
+      Course 4 Bee Params 6: Væri ekki ljúft ef við gætum safnað öllum þessum blómasafa
+        með einu falli? Prófaðu að bæta nýjum stika "magn safa" við fallið til að
+        stjórna hve miklum safa á að safna. Þú vilt ábyggilega líka gefa fallinu meira
+        viðeigandi heiti!
       Course 4 Bee Params 7: Prófaðu að nota nýja fallið þitt til að safna öllum þessum
         blómasafa.
+      Course 4 Bee Params 8: 'Áskorun: Nú er komið hunang til að fást við líka! Endurskrifaðu
+        fallið svo að það taki inn bæði fjölda eininga af blómasafa og fjölda eininga
+        af hunangi. Hvernig gætir þú notað þessar tölur til að ákveða hvað á að gera?'
       Course 4 EC 1a: Engar reglur. Engar vísbendingar. Bara áskorunin!
       Course 4 EC 1b: Engar reglur. Engar vísbendingar. Bara áskorunin!
       Course 4 EC 2a: Engar reglur. Engar vísbendingar. Bara áskorunin!
@@ -261,18 +426,83 @@ is-IS:
       Course 4 EC 2c: Engar reglur. Engar vísbendingar. Bara áskorunin!
       Course 4 Maze 2: Gættu þín á TNT!
       Course 4 Maze 3: 'Forritaðu reiða fuglinn svo hann nái svíninu. '
+      Course 4 Maze 4: Með "endurtaka" kubbi gætirðu notað færri kubba til að leysa
+        þessa þraut...
       Course 4 Maze 5: Getur þú leyst þessa þraut með sem allra fæstum kubbum?
+      Course 4 Play Lab Vars 1: Núna þarft þú ekki að búa til neinn kóða heldur bara
+        ýta á "Keyra" til að spila leikinn! Í leiknum stjórnar þú hundinum sem reynir
+        að safna fleiri flöggum en kötturinn. Notaðu örvarlykilinn niður til að stjórna
+        hundinum. Ýttu á "Ljúka" þegar þú vilt hætta.
       Course 4 Play Lab Vars 2: Keppnin í síðustu þraut var ekki sanngjörn! Breyttu
         breytunni `hraði_hunds` til að tryggja að þú náir að safna fleiri flöggum
         en kötturinn. Sá sem fyrst safnar 10 vinnur leikinn!
+      Course 4 Play Lab Vars 3: Notaðu vinstri og hægri örvarnar til að hreyfa og
+        upp örina til að stökkva. Reyndu að safna öllum flöggunum.
+      Course 4 Play Lab Vars 4: Nú notum við breytuna "hæð" til að stjórna hve hátt
+        hundurinn getur stokkið. Uppfærðu breytuna "hæð" svo að hundurinn geti stokkið
+        nógu hátt til að ná öllum flöggunum.
+      Course 4 Play Lab Vars 5: 'Búum til leik! Fyrst þurfum við stigaskor. Endurgerðu
+        kóðann sem þú sást í síðasta borði til að setja skorið á 10. '
+      Course 4 Play Lab Vars 6: |-
+        Notaðu hægri örina til að kasta böku.
+
+        Hvernig ættum við að skora stig í þessum leik? Bættu 1 við breytuna "stig" í hvert skipti sem hundurinn hæfir köttinn með böku. Notaðu atvikið "þegar leikmaður 2 snertir eitthvað" til að kveikja uppfærslu á skorinu. Þú getur uppfært breytuna með "stig = stig + 1". Komdu skorinu upp í 10 (um 1 í einu!) til að klára borðið.
+      Course 4 Play Lab Vars 7: Fínt en nú skulum við tryggja að leikurinn sé ekki
+        of auðveldur. Í hvert sinn sem hundurinn (leikmaður 1) verður fyrir samloku
+        frá kettinum (leikmanni 2) ættir þú að tapa stigi. Byrjaðu með 10 stig svo
+        að þetta sé ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að klára borðið.
+      Course 4 Play Lab Vars 9: "Frjáls æfing! Hér eru allar breyturnar sem við höfum
+        notað hingað til og nokkrar í viðbót ef þú skyldir vilja nota þær. \n\nTaktu
+        eftir að nú eru svo margir kubbar í verkfærakassanum að við höfum þurft að
+        raða þeim í viðeigandi flokka! Taktu þér tíma til að skoða hvað þú hefur.
+        Búðu svo til leik eða sögu með endurtekningum, breytum og atvikum. \n\nVísbending:
+        Flettu niður til að sjá allar skipanirnar á vinnusvæðinu."
+      Course 4 Play Labs For Loops 1: Við skulum láta hundinn segja hverja tölu frá
+        1 til 100. Notaðu `frá` lykkju og teljarakubbinn til að segja teljarann í
+        hverri umferð lykkjunnar.
+      Course 4 Play Labs For Loops 2: Hjálpaðu nú kisunni Ólafíu að telja bara oddatölur
+        frá 1 til 101.
+      Course 4 Play Labs For Loops 3: Ef við teljum í stærri tölum, getum við talið
+        enn hærra á sama tíma. Prófaðu að láta Flísafót sjóræninga telja frá 10 til
+        1000 um 10 í einu.
+      Course 4 Playlab For Loop Freeplay: 'Frjáls æfing: Notaðu allt sem þú hefur
+        lært til að búa til leik sem inniheldur `frá` lykkju!'
+      Course 4 Playlab For Loops 4b: Getur þú breytt **aukanum** í annarri lykkjunni
+        svo þeir komi jafnt í mark?
+      Course 4 Playlab For Loops 5b: Breyttu aukanum í þessum `frá` lykkjum svo leikmennirnir
+        tveir endi á nákvæmlega sama stað.
+      Course 4 Playlab For Loops 6b: "Breyttu þessari `frá` lykkju svo úr verði leikur
+        sem þér finnst gaman að spila! \nÝttu á \"Keyra\" og smelltu á Frú Einhyrningi
+        eins oft og þú getur. Getur þú bætt skorið okkar 24? "
+      Course 4 SCF 1: Notaðu föllin sem hér eru til að teikna fjórar raðir af sexhyrningum.
+        Sérðu hvernig röðunum með jafna tölu er hliðrað til hægri?
+      Course 4 SCF 1a: Getur þú fundið út hvernig öllum þessum blómasafa verður safnað
+        með sem fæstum mögulegum kubbum?
+      Course 4 SCF 1b: Getur þú fundið út hvernig öllum þessum blómasafa verður safnað
+        með sem fæstum mögulegum kubbum?
+      Course 4 SCF 2: 'Notaðu það sem þú lærðir í síðasta borði til að teikna svona
+        mynd. Athugasemd: Kóðinn verður einfaldari ef þú notar stika. '
+      Course 4 SCF 3: 'Notaðu það sem þú lærðir í síðasta borði til að teikna svona
+        mynd. Athugasemd: Kóðinn verður einfaldari ef þú notar stika. '
       Course 4 SCFL 1: Leystu þessa þraut með eins fáum kubbum og mögulegt er.
+      Course 4 SCFL 1a: Getur þú komið Skrat til akarnsins með sem fæstum mögulegum
+        kubbum?
+      Course 4 SCFL 1b: Getur þú komið Skrat til akarnsins með sem fæstum mögulegum
+        kubbum?
       Course 4 SCFL 2: Leystu þessa þraut með eins fáum kubbum og mögulegt er.
       Course 4 SCFL 3: Getur þú fundið út hvernig á að endurgera þessa teikningu?
       Course 4 SCFL 4: Getur þú fundið út hvernig á að endurgera þessa teikningu?
       Course 4 SCFL 6: Getur þú fundið út hvernig á að endurgera þessa teikningu með
         einni lykkju?
+      Course 4 SCFL 7: Listamaðurinn vill ná nokkrum öldum! Getur þú fundið út hvernig
+        á að endurgera þessa teikningu?
       Course 4 SCV 1: Smelltu hér til að sjá fyrirmælin aftur.
       Course 4 SCV 2: Smelltu hér til að sjá fyrirmælin aftur.
+      Course 4 SCV 3: |-
+        Nú skulum við leika "klukk"!  Klukkaðu Kött til að fá 2 stig. Eða Mörgæs til að fá 3 stig. Náðu 10 stigum til að vinna!
+        En farðu varlega. Ef Köttur og Mörgæs klukka hvort annað, dragast stig frá.
+
+        Bættu við kubbunum sem þarf í leikinn til að hann virki eins og lýsingin segir. Hvernig færðu Hund til að færast í allar áttir með örvarlyklunum? Hvernig bætirðu við stigum þegar Hundur klukkar Kött eða Mörgæs? Hvernig dregurðu frá stig þegar Köttur og Mörgæs snertast?
       Course 4 SCV 4: Leystu þessa þraut með eins fáum kubbum og mögulegt er.
       Course 4 SCV 5: Leystu þessa þraut með eins fáum kubbum og mögulegt er.
       Course 4 SCV 6: Smelltu hér til að sjá fyrirmælin aftur.
@@ -386,6 +616,7 @@ is-IS:
       Fish Tank 7-validated_2019: Notaðu nýja kubba úr verkfærakassanum til að gera
         fiskbúrið sérstakt!
       FoodFight: Þetta er dæmi um leik sem þú getur búið til í Leikjasmiðjunni.
+      Frequency Analysis: Próf
       Function intro Ryan: Notaðu `byggja brú` fallið tvisvar til að búa til slóð
         að kyndlinum.
       Function intro Ryan_2019: Notaðu `byggja brú` fallið tvisvar til að búa til
@@ -571,7 +802,33 @@ is-IS:
       MC_HOC_2017_Ali_2019: Notaðu föllin til að finna leið yfir hraunið.
       MC_HOC_2017_FP20x20: "**Frjáls æfing:** Kannaðu heiminn!"
       MC_HOC_2017_FP20x20_2019: "**Frjáls æfing:** Kannaðu heiminn!"
+      NEW Course 4 Artist Functions 1: Getur þú teiknað ferning með lengdina 100 með
+        því að nota lykkju?
+      NEW Course 4 Artist Functions 11: Nú viljum búa til nýtt fall `teikna röð ferninga`
+        sem teiknar sex ferninga í röð. Getur þú búið til þetta fall með því að nota
+        `teikna ferning 20` fallið sem við höfum þegar búið til?
+      NEW Course 4 Artist Functions 12: Notaðu fallið `teikna röð ferninga` úr síðustu
+        þraut til að teikna þetta mynstur.
+      NEW Course 4 Artist Functions 13: 'Getur þú teiknað stjörnuform með því að nota
+        fallið `teikna röð ferninga`?  '
       NEW Course 4 Artist Functions 14: 'Frjáls æfing! '
+      NEW Course 4 Artist Functions 2: Getur þú teiknað 3 ferninga með 20 díla millibili?
+        Hver ferningur er 100 dílar á stærð.
+      NEW Course 4 Artist Functions 3: "Hér er ný tegund af kubbi. Þetta er kubbur
+        fyrir `fall` (function). Smelltu á \"breyta\" og settu í hann kóða til að
+        teikna ferning með 100 díla hliðar. \n\nSmelltu svo á \"loka\" til að fara
+        aftur í forritið."
+      NEW Course 4 Artist Functions 4: Notaðu fallið `teikna ferning` til að teikna
+        þetta mynstur.
+      NEW Course 4 Artist Functions 7: 'Ertu komin upp á lag með að nota fallkubba?
+        Breytum þessum ferningi svo hann sé 200 dílar á stærð. Smelltu á "breyta"
+        til að opna kubb fallsins `teikna ferning`. Mundu að smella á "loka" til að
+        komast út úr kubbi fallsins. '
+      NEW Course 4 Artist Functions 8: Við höfum búið til nýtt fall fyrir þig sem
+        heitir "teikna þríhyrning". Getur þú breytt skilgreiningu fallsins svo að
+        það teikni þríhyrning með 100 díla hliðar?
+      NEW Course 4 Artist Functions 9: Getur þú leyst þetta með því að bæta við aðeins
+        einum kubbi?
       NEW Course 4 Artist Params 1: Skilgreinum þetta fall sem á að teikna ferning
         með 50 díla hliðar. Smelltu á "breyta" til að byrja verkið.
       NEW Course 4 Artist Params 11: Getur þú fundið út hvernig á að teikna þetta
@@ -586,13 +843,48 @@ is-IS:
         fallsins "teikna ferning" og bættu við stika. Fallið á að hafa stika fyrir
         lengd, eins og þríhyrningurinn. Teiknaðu 3 ferninga með lengdir 25, 50 og
         75 og hafðu 100 díla á milli þeirra.
+      NEW Course 4 Artist Vars 12: Endurskapaðu nú kóðann frá síðasta borði og búðu
+        til fimmhyrning með hliðarnar 150.
+      NEW Course 4 Artist Vars 2: 'Dragðu talnakubb í `stilla lengd` kubbinn og í
+        `endurtaka _ sinnum` kubbinn og teiknaðu 50 díla þríhyrninga. '
+      NEW Course 4 Artist Vars 4: "Prófum þetta aftur! \n\nGetur þú stillt breytuna
+        `lengd` á 60 og búið til þessa fínu hönnun með sexhyrningum?"
+      NEW Course 4 Artist Vars 6: "Teiknaðu þetta mynstur fimmhyrninga með 100 díla
+        hliðar með því að setja rétta gildið í `lengd` og setja svo breytuna `lengd`
+        á alla réttu staðina. \n\nTaktu eftir hvernig þú stillir gildið fyrir `lengd`
+        bara einu sinni og kóðinn notar það svo alls staðar."
       NEW Course 4 Bee For Loops 1: Notaðu lykkju til að safna blómasafa úr hverju
         blómi.
+      NEW Course 4 Bee For Loops 10a: 'Ertu til í áskorun? Notaðu það sem þú hefur
+        lært um lykkjur og reyndu að leysa þessa þraut. Mundu: Þú gætir þurft að keyra
+        lausnina margsinnis áður en þú finnur út öll þrepin.'
       NEW Course 4 Bee For Loops 2: Bættu við kóðanum sem þarf til að tryggja að býflugan
         safni öllum blómasafanum. Þetta er heilmikill kóði sem við þurfum! (Þú munt
         læra einfaldari aðferð í næstu þraut!)
+      NEW Course 4 Bee For Loops 3: 'Þetta er mun auðveldara með "frá" lykkju! Allur
+        kóðinn sem þú þarft er hér. Skoðaðu vel hvernig hann er settur saman og smelltu
+        svo á "Keyra" til að sjá hann virka. '
+      NEW Course 4 Bee For Loops 4: 'Skiptu ??? í "frá" lykkjunni út fyrir mesta magninu
+        af blómasafa sem býflugan þarf að safna. '
+      NEW Course 4 Bee For Loops 4 4: Nú þurfum við að færa áfram "teljari" sinnum
+        og svo safna blómasafa "teljari" sinnum. Getur þú notað tvær "endurtaka" lykkjur
+        til að leysa þessa þraut?
+      NEW Course 4 Bee For Loops 5: Þú getur líka látið "frá" lykkju telja niður.
+        Prófaðu að safna þessum blómasafa með því að telja niður frá 5 til 1 um 1.
+      NEW Course 4 Bee For Loops 6: Síðasta talan í "frá" lykkjunni er kölluð "aukinn"
+        (increment). Í hverri umferð lykkjunnar breytist innihald teljarans um aukann.
+        Prófaðu að safna úr þessum blómum með aukann 2.
+      NEW Course 4 Bee For Loops 7: |-
+        Nú skulum við nota reikningskubb með teljarabreytunni! Hvernig getur þú notað teljarann til að fara í gegnum garðinn með sem allra fæstum kubbum? Hvað þarftu að gera til að safna 3, 6, 9, 12, 15 af blómasafa í þetta sinn? Svarið felst í teljarabreytunni!
+
+        Mundu: Ef lykkjan telur upp á við, er aukanum bætt við teljarabreytuna í hverri umferð lykkjunnar.
       NEW Course 4 Bee For Loops 8: Þú hefur náð þessu! Hver ætti aukinn að vera til
         að safna 3, 6, 9, 12, 15 af safa?
+      NEW Course 4 Bee For Loops 9: Ef lykkjan telur niður, er aukinn ("um" talan)
+        dregin frá teljaranum í hverri umferð. Hver ætti aukinn að vera til að safna
+        9, síðan 6 og svo 3 af blómasafa?
+      NEW Course 4 Play Lab Params 11: 'Tími til að leika sér! Leiktu þér með alla
+        kubbana í verkfærakassanum. '
       Overworld Avoid Monsters: "Það er ekki góð hugmynd að rekast á laumupúka. \nFarðu
         varlega framhjá þeim til að komast í öryggi heimilisins."
       Overworld Avoid Monsters_2019: "Það er ekki góð hugmynd að rekast á laumupúka.
@@ -699,6 +991,7 @@ is-IS:
       Underground Mining Coal_2019: Þú finnur dýrmætasta hráefnið neðanjarðar, en
         það getur orðið dimmt. Settu upp minnst 2 kyndla og grafðu út minnst 2 af
         kolum.
+      Vigenere: Próf
       Virtual Pet 1: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra" og smellir
         svo á hana?
       Virtual Pet 1 Predict: 'Hvað heldur þú að muni gerast þegar þú smellir á geimveruna?  '
@@ -1013,12 +1306,24 @@ is-IS:
         á villur?"_
       courseA_collector_loops_challenge1_2019: _"Getur þú hjálpað mér að koma auga
         á villur?"_
+      courseA_collector_loops_challenge2: 'Náðu öllum fjársjóðnum! '
       courseA_collector_loops_challenge2kp: Safnaðu minnst _3_ gersemum til að leysa
         þetta borð.
       courseA_collector_loops_challenge2kp_2018: Safnaðu minnst _3_ gersemum til að
         leysa þetta borð.
       courseA_collector_loops_challenge2kp_2019: Safnaðu minnst _3_ gersemum til að
         leysa þetta borð.
+      courseA_collector_preLoops1: |-
+        Þetta er Lára ævintýramær!
+
+        Ýttu á "Keyra" til að sjá hana ganga að fjársjóðnum og grípa hann.
+      courseA_collector_preLoops2: "Fínt! Nú getur þú bætt við kóða! \n\nBættu við
+        kubbnum `sækja fjársjóð` neðst í forritinu og smelltu á \"Keyra\"."
+      courseA_collector_preLoops3: Tengdu tvo `A-->` kubba og einn `sækja fjársjóð`
+        kubb við forritið neðst og smelltu svo á "Keyra".
+      courseA_collector_preLoops4: Geturðu fundið lausn á þessari þraut?
+      courseA_collector_preLoops5: Náðu 1 af þessum 2 gimsteinum til að leysa þrautina.
+      courseA_collector_preLoops6: Náðu báðum dýrgripunum til að leysa þessa þraut.
       courseA_collector_preLoops7: Náðu öllum þremur hrúgunum til að klára þennan
         áfanga.
       courseA_harvester_loops1: Hjálpaðu hirðinum að tína allan maísinn!
@@ -1553,12 +1858,81 @@ is-IS:
       courseC19_playLab_EOC5: Eyddu nú smá tíma þar til þú ert viss um að leikurinn
         geri það sem þú vilt. Bættu við leið til að vinna eða tapa leiknum, og leiktu
         hann svo þar til þú uppfyllir annað hvort skilyrðið.
+      courseC_PlayLab_events1: Láttu hundinn Jörund (leikmann 1) segja "Hæ."
+      courseC_PlayLab_events1_2018: Láttu hundinn Jörund (leikmann 1) segja "Hæ."
+      courseC_PlayLab_events1_2019: Láttu hundinn Jörund (leikmann 1) segja "Hæ."
+      courseC_PlayLab_events2: Getur þú látið hundinn Jörund (leikmann 1) segja eitthvað
+        og síðan látið köttinn Ólafíu (leikmann 2) segja eitthvað?
+      courseC_PlayLab_events2_2018: Getur þú látið hundinn Jörund (leikmann 1) segja
+        eitthvað og síðan látið köttinn Ólafíu (leikmann 2) segja eitthvað?
+      courseC_PlayLab_events2_2019: Getur þú látið hundinn Jörund (leikmann 1) segja
+        eitthvað og síðan látið köttinn Ólafíu (leikmann 2) segja eitthvað?
       courseC_PlayLab_events3: Getur þú skrifað forrit sem færir hundinn Jörund (leikmann
         1) að kettinum Ólafíu?
       courseC_PlayLab_events3_2018: Getur þú skrifað forrit sem færir hundinn Jörund
         (leikmann 1) að kettinum Ólafíu?
       courseC_PlayLab_events3_2019: Getur þú skrifað forrit sem færir hundinn Jörund
         (leikmann 1) að kettinum Ólafíu?
+      courseC_PlayLab_events4: Getur þú skrifað forrit sem lætur hundinn Jörund (leikmann
+        1) færa sig að kettinum Ólafíu og látið Ólafíu segja "Hæ" þegar Jörundur kemur
+        til hennar?
+      courseC_PlayLab_events4_2018: Getur þú skrifað forrit sem lætur hundinn Jörund
+        (leikmann 1) færa sig að kettinum Ólafíu og látið Ólafíu segja "Hæ" þegar
+        Jörundur kemur til hennar?
+      courseC_PlayLab_events4_2019: Getur þú skrifað forrit sem lætur hundinn Jörund
+        (leikmann 1) færa sig að kettinum Ólafíu og látið Ólafíu segja "Hæ" þegar
+        Jörundur kemur til hennar?
+      courseC_PlayLab_events5: Getur þú skrifað forrit sem lætur Oktavíu kolkrabba
+        segja "Hvað er að frétta?" þegar smellt er á hana?
+      courseC_PlayLab_events5_2018: Getur þú skrifað forrit sem lætur Oktavíu kolkrabba
+        segja "Hvað er að frétta?" þegar smellt er á hana?
+      courseC_PlayLab_events5_2019: Getur þú skrifað forrit sem lætur Oktavíu kolkrabba
+        segja "Hvað er að frétta?" þegar smellt er á hana?
+      courseC_PlayLab_events6: Skrifaðu nú forrit sem notar örvarlyklana upp/niður/vinstri/hægri
+        til að hreyfa mörgæsina Waddles og láta hana snerta öll mörkin!
+      courseC_PlayLab_events6_2018: Skrifaðu nú forrit sem notar örvarlyklana upp/niður/vinstri/hægri
+        til að hreyfa mörgæsina Waddles og láta hana snerta öll mörkin!
+      courseC_PlayLab_events6_2019: Skrifaðu nú forrit sem notar örvarlyklana upp/niður/vinstri/hægri
+        til að hreyfa mörgæsina Waddles og láta hana snerta öll mörkin!
+      courseC_PlayLab_events7: Með kubbnum `endurtaka endalaust` getur þú látið kóða
+        keyra aftur og aftur án enda. Notaðu þennan kubb til að láta risaeðluna Kjamma
+        (leikmann 2) hreyfast stöðugt upp og niður um 400 díla.
+      courseC_PlayLab_events7_2018: Með kubbnum `endurtaka endalaust` getur þú látið
+        kóða keyra aftur og aftur án enda. Notaðu þennan kubb til að láta risaeðluna
+        Kjamma (leikmann 2) hreyfast stöðugt upp og niður um 400 díla.
+      courseC_PlayLab_events7_2019: Með kubbnum `endurtaka endalaust` getur þú látið
+        kóða keyra aftur og aftur án enda. Notaðu þennan kubb til að láta risaeðluna
+        Kjamma (leikmann 2) hreyfast stöðugt upp og niður um 400 díla.
+      courseC_PlayLab_events8: "Getur þú látið Waddles (leikmann 1) spila \"áreksturshljóð\"
+        og segja \"Á!\" ef hann rekst á Kjamma? \nSpilaðu svo leikinn til að láta
+        það gerast."
+      courseC_PlayLab_events8_2018: "Getur þú látið Waddles (leikmann 1) spila \"áreksturshljóð\"
+        og segja \"Á!\" ef hann rekst á Kjamma? \nSpilaðu svo leikinn til að láta
+        það gerast."
+      courseC_PlayLab_events8_2019: "Getur þú látið Waddles (leikmann 1) spila \"áreksturshljóð\"
+        og segja \"Á!\" ef hann rekst á Kjamma? \nSpilaðu svo leikinn til að láta
+        það gerast."
+      courseC_PlayLab_events9: "Getur þú bætt við kubbi til að skora stig þegar mörgæsin
+        Waddles (leikmaður 1) rekst á Oktavíu kolkrabba (leikmann 3)? \nSpila leikinn
+        og hreyfðu Waddles með örvunum þar til þú skorar!"
+      courseC_PlayLab_events9_2018: "Getur þú bætt við kubbi til að skora stig þegar
+        mörgæsin Waddles (leikmaður 1) rekst á Oktavíu kolkrabba (leikmann 3)? \nSpila
+        leikinn og hreyfðu Waddles með örvunum þar til þú skorar!"
+      courseC_PlayLab_events9_2019: "Getur þú bætt við kubbi til að skora stig þegar
+        mörgæsin Waddles (leikmaður 1) rekst á Oktavíu kolkrabba (leikmann 3)? \nSpila
+        leikinn og hreyfðu Waddles með örvunum þar til þú skorar!"
+      courseC_PlayLab_eventsA: |-
+        Bættu kubbum við "þegar keyrt" atvikið til að breyta bakgrunni og hraða mörgæsarinnar Waddles.
+
+        Spilaðu leikinn og færðu Waddles með örvunum þar til þú skorar.
+      courseC_PlayLab_eventsA_2018: |-
+        Bættu kubbum við "þegar keyrt" atvikið til að breyta bakgrunni og hraða mörgæsarinnar Waddles.
+
+        Spilaðu leikinn og færðu Waddles með örvunum þar til þú skorar.
+      courseC_PlayLab_eventsA_2019: |-
+        Bættu kubbum við "þegar keyrt" atvikið til að breyta bakgrunni og hraða mörgæsarinnar Waddles.
+
+        Spilaðu leikinn og færðu Waddles með örvunum þar til þú skorar.
       courseC_PlayLab_eventsA_embed_2019: Förum í leik. Skoraðu 5 stig með því að
         færa Mörgæs að Kolkrabba!
       courseC_PlayLab_eventsFP: Búðu til eigin sögu. Smelltu svo á "Ljúka" til að
@@ -1684,12 +2058,44 @@ is-IS:
       courseC_collector_loops_challenge2: Náðu minnst **5** fjársjóðum!
       courseC_collector_loops_challenge2_2018: Náðu minnst **5** fjársjóðum!
       courseC_collector_loops_challenge2_2019: Náðu minnst **5** fjársjóðum!
+      courseC_collector_prog1: Prófaðu þig áfram með kubbana og gáðu hvort þú getir
+        hjálpað Láru að safna fjársjóði.
+      courseC_collector_prog1_2018: Prófaðu þig áfram með kubbana og gáðu hvort þú
+        getir hjálpað Láru að safna fjársjóði.
+      courseC_collector_prog1_2019: Prófaðu þig áfram með kubbana og gáðu hvort þú
+        getir hjálpað Láru að safna fjársjóði.
       courseC_collector_prog2: Færðu Laurel að fjársjóðnum og notaðu svo "safna" til
         að taka hann upp.
       courseC_collector_prog2_2018: Færðu Laurel að fjársjóðnum og notaðu svo "safna"
         til að taka hann upp.
       courseC_collector_prog2_2019: Færðu Laurel að fjársjóðnum og notaðu svo "safna"
         til að taka hann upp.
+      courseC_collector_prog3: Raðaðu þessum kubbum til að ná fjársjóðnum og leysa
+        þrautina.
+      courseC_collector_prog3_2018: Raðaðu þessum kubbum til að ná fjársjóðnum og
+        leysa þrautina.
+      courseC_collector_prog3_2019: Raðaðu þessum kubbum til að ná fjársjóðnum og
+        leysa þrautina.
+      courseC_collector_prog4: Raðaðu þessum kubbum til að safna öllum fjársjóðum
+        og ljúka þrautinni.
+      courseC_collector_prog4_2018: Raðaðu þessum kubbum til að safna öllum fjársjóðum
+        og ljúka þrautinni.
+      courseC_collector_prog4_2019: Raðaðu þessum kubbum til að safna öllum fjársjóðum
+        og ljúka þrautinni.
+      courseC_collector_prog5: Þessir kubbar eru í rangri röð. Getur þú lagað þá?
+      courseC_collector_prog5_2018: Þessir kubbar eru í rangri röð. Getur þú lagað
+        þá?
+      courseC_collector_prog5_2019: Þessir kubbar eru í rangri röð. Getur þú lagað
+        þá?
+      courseC_collector_prog6: Breyttu röð kubbanna til að safna öllum fjársjóðnum.
+      courseC_collector_prog6_2018: Breyttu röð kubbanna til að safna öllum fjársjóðnum.
+      courseC_collector_prog6_2019: Breyttu röð kubbanna til að safna öllum fjársjóðnum.
+      courseC_collector_prog7: Notaðu kubba úr verkfærakassanum til að safna öllum
+        fjársjóðnum.
+      courseC_collector_prog7_2018: Notaðu kubba úr verkfærakassanum til að safna
+        öllum fjársjóðnum.
+      courseC_collector_prog7_2019: Notaðu kubba úr verkfærakassanum til að safna
+        öllum fjársjóðnum.
       courseC_collector_prog8: _"Þetta gengur bara vel! Hjálpaðu mér að safna öllum
         fjársjóðunum."_
       courseC_collector_prog8_2018: _"Þetta gengur bara vel! Hjálpaðu mér að safna
@@ -1783,12 +2189,15 @@ is-IS:
         endi þegar Flappy rekst á hindrun þá stillist skorið aftur á 0.
       courseC_flappy_events9_2019: Breyttu þessu nú þannig að í stað þess að leikurinn
         endi þegar Flappy rekst á hindrun þá stillist skorið aftur á 0.
+      courseC_harvester_loops1: Notaðu lykkjur til að hirða öll graskerin.
       courseC_harvester_loops10: Safnaðu öllum maísnum og öllum graskerunum.
       courseC_harvester_loops10_2018: Safnaðu öllum maísnum og öllum graskerunum.
       courseC_harvester_loops10_2019: Safnaðu öllum maísnum og öllum graskerunum.
       courseC_harvester_loops11: Safnaðu öllum maísnum og öllum graskerunum.
       courseC_harvester_loops11_2018: Safnaðu öllum maísnum og öllum graskerunum.
       courseC_harvester_loops11_2019: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops1_2018: Notaðu lykkjur til að hirða öll graskerin.
+      courseC_harvester_loops1_2019: Notaðu lykkjur til að hirða öll graskerin.
       courseC_harvester_loops2: Getur þú notað tvær lykkjur til að fara að graskerunum
         og safna þeim öllum?
       courseC_harvester_loops2_2018: Getur þú notað tvær lykkjur til að fara að graskerunum
@@ -1810,6 +2219,11 @@ is-IS:
       courseC_harvester_loops7: Safnaðu öllum maísnum og öllum graskerunum.
       courseC_harvester_loops7_2018: Safnaðu öllum maísnum og öllum graskerunum.
       courseC_harvester_loops7_2019: Safnaðu öllum maísnum og öllum graskerunum.
+      courseC_harvester_loops8: "**Áskorun:** Safnaðu öllum maísnum og öllum graskerunum."
+      courseC_harvester_loops8_2018: "**Áskorun:** Safnaðu öllum maísnum og öllum
+        graskerunum."
+      courseC_harvester_loops8_2019: "**Áskorun:** Safnaðu öllum maísnum og öllum
+        graskerunum."
       courseC_harvester_loops9: Safnaðu öllum maísnum og öllum graskerunum.
       courseC_harvester_loops9_2018: Safnaðu öllum maísnum og öllum graskerunum.
       courseC_harvester_loops9_2019: Safnaðu öllum maísnum og öllum graskerunum.
@@ -1859,6 +2273,10 @@ is-IS:
         og smelltu á "Keyra" til að sjá hvað gerist!'
       courseC_maze_programming1_2019: 'Í þessari þraut: Dragðu alla kubbana saman
         og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseC_maze_programming2: Dragðu annan `færa áfram` kubb úr verkfærakassanum
+        til að ljúka við kóðann.
+      courseC_maze_programming2_2018: Dragðu annan `færa áfram` kubb úr verkfærakassanum
+        til að ljúka við kóðann.
       courseC_maze_programming2_2019: Dragðu annan `færa áfram` kubb úr verkfærakassanum
         til að ljúka við kóðann.
       courseC_maze_programming3: Það er einn aukakubbur sem veldur því að fuglinn
@@ -1879,6 +2297,10 @@ is-IS:
         Annars gæti ég reiðst!"'
       courseC_maze_programming6_2019: '"Slakaðu á og hjálpaðu mér finna illa svínið.
         Annars gæti ég reiðst!"'
+      courseC_maze_programming7: "**Áskorun:** Þessi kóða hefur margar villur. Þú
+        þarft að fjarlægja kubba og bæta öðrum við."
+      courseC_maze_programming7_2018: "**Áskorun:** Þessi kóða hefur margar villur.
+        Þú þarft að fjarlægja kubba og bæta öðrum við."
       courseC_maze_programming7_2019: "**Áskorun:** Þessi kóða hefur margar villur.
         Þú þarft að fjarlægja kubba og bæta öðrum við."
       courseC_maze_programming8: _"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."_
@@ -1918,6 +2340,12 @@ is-IS:
       courseC_starWars_loops10_predict2: Þér gengur vel! Haltu því áfram!
       courseC_starWars_loops10_predict2_2018: Þér gengur vel! Haltu því áfram!
       courseC_starWars_loops10_predict2_2019: Þér gengur vel! Haltu því áfram!
+      courseC_starWars_loops11: Þetta er að verða búið! Í þetta sinn getur þú valið
+        hvaða leið þú ferð!
+      courseC_starWars_loops11_2018: Þetta er að verða búið! Í þetta sinn getur þú
+        valið hvaða leið þú ferð!
+      courseC_starWars_loops11_2019: Þetta er að verða búið! Í þetta sinn getur þú
+        valið hvaða leið þú ferð!
       courseC_starWars_loops1_2018: BB-8 mun tína upp öll málmbrot á slóðinni sem
         hann fer eftir. Notaðu 5 eins kubba til að láta BB-8 tína upp allan brotamálm
         á leiksvæðinu.
@@ -1951,6 +2379,12 @@ is-IS:
         og hægt er!
       courseC_starWars_loops5_2019: Láttu BB-8 tína upp allan brotamálminn eins fljótt
         og hægt er!
+      courseC_starWars_loops6: Lykkjur virka þó þær innihaldi fleiri en einn kubb!
+        Getur þú sett þessa röð skipana í lykkju?
+      courseC_starWars_loops6_2018: Lykkjur virka þó þær innihaldi fleiri en einn
+        kubb! Getur þú sett þessa röð skipana í lykkju?
+      courseC_starWars_loops6_2019: Lykkjur virka þó þær innihaldi fleiri en einn
+        kubb! Getur þú sett þessa röð skipana í lykkju?
       courseC_starWars_loops7: Getur þú reynt að ná öllum brotamálminum með aðeins
         einni lykkju? Prófaðu að forrita allar aðgerðirnar í röð og finna svo endurtekninguna
         sem gæti farið í lykkju.
@@ -3084,6 +3518,12 @@ is-IS:
       frozen square snowflake: Getur þú búið til snjókorn með því að láta `endurtaka`
         kubbinn búa til ferning 10 sinnum og láta `snúa` kubb snúa um 36 gráður á
         milli ferninga?
+      grade2_collector_10: Þetta er að verða búið! Safnaðu eins miklum fjársjóði og
+        þú getur til að klára áfangann!
+      grade2_collector_10_2018: Þetta er að verða búið! Safnaðu eins miklum fjársjóði
+        og þú getur til að klára áfangann!
+      grade2_collector_10_2019: Þetta er að verða búið! Safnaðu eins miklum fjársjóði
+        og þú getur til að klára áfangann!
       grade2_collector_A: Hjálpaðu Láru að safna öllum fjársjóðunum.
       grade2_collector_A_2018: Hjálpaðu Láru að safna öllum fjársjóðunum.
       grade2_collector_A_2019: Hjálpaðu Láru að safna öllum fjársjóðunum.
