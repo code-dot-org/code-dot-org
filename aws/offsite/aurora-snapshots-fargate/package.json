@@ -10,7 +10,8 @@
   "license": "apache-2.0",
   "dependencies": {
     "aws-sdk": "latest",
-    "promise-mysql": "latest"
+    "promise-mysql": "latest",
+    "honeybadger": "latest"
   },
   "devDependencies": {
     "mocha": "latest",
