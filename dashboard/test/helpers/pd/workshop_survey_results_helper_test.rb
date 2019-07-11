@@ -962,10 +962,10 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     expected_averages = {
       "Vladimir" => {
         "facilitator_effectiveness_0" => {this_workshop: 4.0, all_my_workshops: nil},
-        "overall_success_0" => {this_workshop: 4.0, all_my_workshops: nil},
+        "overall_success_0" => {this_workshop: 4.0, all_my_workshops: 6.4},
         facilitator_effectiveness: {this_workshop: 0.67, all_my_workshops: 0.0},
         teacher_engagement: {this_workshop: 0.0, all_my_workshops: 0.0},
-        overall_success: {this_workshop: 0.8, all_my_workshops: 0.0}
+        overall_success: {this_workshop: 0.8, all_my_workshops: 1.28}
       },
       questions: {
         "facilitator_effectiveness_0" => "During my workshop, {facilitatorName} did the following: Demonstrated knowledge of the curriculum.",
