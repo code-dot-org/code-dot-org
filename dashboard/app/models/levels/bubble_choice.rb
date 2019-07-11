@@ -54,6 +54,14 @@ ruby
     sublevels[index]
   end
 
+  # Returns a sublevel's position in the parent level. Can be used for generating
+  # a sublevel URL (/s/:script_name/stage/:stage_pos/puzzle/:puzzle_pos/sublevel/:sublevel_pos).
+  # @param [Level] sublevel
+  # @return [Integer] The sublevel's position (i.e., its index + 1) under the parent level.
+  def sublevel_position(sublevel)
+    sublevels.index(sublevel) + 1
+  end
+
   # Summarizes the level.
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels,
   # previous/next levels, and script will be included in the summary.
