@@ -20,6 +20,8 @@ class Census::StateCsOffering < ApplicationRecord
   validates_presence_of :course
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
 
+  UNSPECIFIED_VALUE = 'unspecified'.freeze
+
   SUPPORTED_STATES = %w(
     AL
     AR
@@ -103,10 +105,10 @@ class Census::StateCsOffering < ApplicationRecord
     # Using V2 format.
     if state_uses_format_v2(state_code, school_year)
       # The V2 format requires either (district_id and school_id) OR nces_id.
-      if row_hash['nces_id']
+      if row_hash['nces_id'] && row_hash['nces_id'] != UNSPECIFIED_VALUE
         return School.find_by(id: row_hash['nces_id'])&.state_school_id
-      elsif row_hash['district_id'] && row_hash['school_id']
-        return School.construct_state_school_id(state_code, row_hash['district_id'], row_hash['school_id'])
+      elsif row_hash['state_school_id'] && row_hash['state_school_id'] != UNSPECIFIED_VALUE
+        return row_hash['state_school_id']
       else
         raise ArgumentError.new("Entry for #{state_code} requires either (district_id and school_id) OR nces_id.")
       end
@@ -1250,7 +1252,7 @@ class Census::StateCsOffering < ApplicationRecord
   def self.get_courses(state_code, row_hash, school_year)
     # Using V2 format.
     if state_uses_format_v2(state_code, school_year)
-      return row_hash['course_id']
+      return [row_hash['course_id']]
     end
 
     # Special casing for V1 format.
