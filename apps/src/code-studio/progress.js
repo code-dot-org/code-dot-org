@@ -33,7 +33,7 @@ import {
   getLevelResult
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import {renderTeacherPanel} from './teacherPanelHelpers';
+import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 import experiments from '../util/experiments';
 
 var progress = module.exports;
@@ -278,6 +278,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       }
 
       store.dispatch(showTeacherInfo());
+      queryLockStatus(store, scriptData.id);
 
       renderTeacherPanel(
         store,
