@@ -142,6 +142,19 @@ class UserTest < ActiveSupport::TestCase
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
   end
 
+  test 'update_school_info with custom school does not update user info when user school info does not include a school_id' do
+    original_school_info = create :school_info
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other, school_id: nil
+
+    user.update_school_info(new_school_info)
+    assert_equal original_school_info, user.school_info
+    refute_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
+
+    assert_equal user.user_school_infos.count, 1
+  end
+
   # Test updating the school_info of an older user without an email address.
   test 'update_school_info with specific school overwrites user school info for user without email' do
     user = create :teacher, :without_email, :with_school_info
