@@ -73,7 +73,7 @@ It's also possible to run a subset of tests:
 * `npm run lint`
 * `npm run test:unit`
 * `npm run test:integration`
-* `npm run test:entry -- --entry ./test/unit/gridUtilsTest.js`
+* `npm run test:entry -- --entry=./test/unit/gridUtilsTest.js`
 
 To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 

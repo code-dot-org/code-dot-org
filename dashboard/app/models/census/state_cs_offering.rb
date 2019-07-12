@@ -20,6 +20,8 @@ class Census::StateCsOffering < ApplicationRecord
   validates_presence_of :course
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
 
+  UNSPECIFIED_VALUE = 'unspecified'.freeze
+
   SUPPORTED_STATES = %w(
     AL
     AR
@@ -66,6 +68,18 @@ class Census::StateCsOffering < ApplicationRecord
     WY
   ).freeze
 
+  # We want to use a consistent "V2" format for CSV source files, starting with some
+  # states in 2018-19, as listed here.  The expectation is that all states will use
+  # the new format as of 2019-20.
+  STATES_USING_FORMAT_V2_IN_2018_19 = %w(
+    ID
+  ).freeze
+
+  def self.state_uses_format_v2(state_code, school_year)
+    state_uses_format_v2_in_2018 = STATES_USING_FORMAT_V2_IN_2018_19.include? state_code
+    (school_year == 2018 && state_uses_format_v2_in_2018) || school_year >= 2019
+  end
+
   # By default we treat the lack of state data for high schools as an
   # indication that the school doesn't teach cs. We aren't as confident
   # that the state data is conplete for the following states so we do
@@ -85,7 +99,29 @@ class Census::StateCsOffering < ApplicationRecord
     INFERRED_NO_EXCLUSION_LIST.exclude? state_code.upcase
   end
 
-  def self.construct_state_school_id(state_code, row_hash)
+  def self.get_state_school_id(state_code, row_hash, school_year)
+    # Using V2 format.
+    if state_uses_format_v2(state_code, school_year)
+      # The V2 format requires either nces_id or state_school_id.
+
+      # Try to get the state_school_id from the nces_id first.
+      nces_id = row_hash['nces_id']
+      if nces_id != UNSPECIFIED_VALUE
+        state_school_id = School.find_by(id: nces_id)&.state_school_id
+        return state_school_id if state_school_id
+      end
+
+      # Fall back to the provided state_school_id.
+      state_school_id = row_hash['state_school_id']
+      if state_school_id != UNSPECIFIED_VALUE
+        return state_school_id
+      end
+
+      # At this point we have nothing left.
+      raise ArgumentError.new("Entry for #{state_code} requires either nces_id or state_school_id.")
+    end
+
+    # Special casing for V1 format.
     case state_code
     when 'AL'
       row_hash['State School ID']
@@ -1220,7 +1256,13 @@ class Census::StateCsOffering < ApplicationRecord
     10155
   ).freeze
 
-  def self.get_courses(state_code, row_hash)
+  def self.get_courses(state_code, row_hash, school_year)
+    # Using V2 format.
+    if state_uses_format_v2(state_code, school_year)
+      return [row_hash['course_id']]
+    end
+
+    # Special casing for V1 format.
     case state_code
     when 'AL'
       AL_COURSE_CODES.select {|course| course == row_hash['Course Code']}
@@ -1257,7 +1299,7 @@ class Census::StateCsOffering < ApplicationRecord
       [UNSPECIFIED_COURSE]
     when 'ID'
       # A column per CS course with a value of 'Y' if the course is offered.
-      ['02204',	'03208', '10157'].select {|course| row_hash[course] == 'Y'}
+      ['02204', '03208', '10157'].select {|course| row_hash[course] == 'Y'}
     when 'IN'
       # A column per CS course with a value of 'Y' if the course is offered.
       IN_COURSE_CODES.select {|course| row_hash[course] == 'Y'}
@@ -1339,8 +1381,8 @@ class Census::StateCsOffering < ApplicationRecord
     ActiveRecord::Base.transaction do
       CSV.foreach(filename, {headers: true}) do |row|
         row_hash = row.to_hash
-        state_school_id = construct_state_school_id(state_code, row_hash)
-        courses = get_courses(state_code, row_hash)
+        state_school_id = get_state_school_id(state_code, row_hash, school_year)
+        courses = get_courses(state_code, row_hash, school_year)
         # state_school_id is unique so there should be at most one school.
         school = School.where(state_school_id: state_school_id).first
         if school && state_school_id
@@ -1388,7 +1430,7 @@ class Census::StateCsOffering < ApplicationRecord
 
   def self.seed
     if CDO.stub_school_data
-      seed_from_csv('GA', 2017, "test/fixtures/census/state_cs_offerings.csv")
+      seed_from_csv('ID', 2018, "test/fixtures/census/state_cs_offerings_id_2018.csv")
     else
       seed_from_s3
     end

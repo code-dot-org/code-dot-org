@@ -3,18 +3,15 @@ var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
-var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+var sass = require('node-sass');
 
 module.exports = function(grunt) {
-  // Decorate grunt to record and report build durations.
-  var buildTimeLogger = logBuildTimes(grunt);
-
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
     if (
@@ -304,7 +301,8 @@ describe('entry tests', () => {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
         outputStyle: 'nested',
-        includePaths: ['node_modules', '../shared/css/']
+        includePaths: ['node_modules', '../shared/css/'],
+        implementation: sass
       },
       files: _.fromPairs(
         [
@@ -1102,11 +1100,6 @@ describe('entry tests', () => {
 
   // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
   grunt.registerTask('scratchTest', ['preconcat', 'karma:scratch']);
-
-  grunt.registerTask('logBuildTimes', function() {
-    var done = this.async();
-    buildTimeLogger.upload(console.log, done);
-  });
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };

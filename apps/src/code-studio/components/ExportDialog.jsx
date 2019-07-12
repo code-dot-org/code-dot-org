@@ -471,7 +471,7 @@ class ExportDialog extends React.Component {
       } else {
         // Check status again...
         // NOTE: we don't timeout automatically
-        this.waitTimerId = setTimeout(async () => {
+        this.waitTimerId = setTimeout(() => {
           this.waitTimerId = null;
           this.waitForApkBuild(apkBuildId, expoSnackId);
         }, APK_BUILD_STATUS_CHECK_PERIOD);
@@ -511,17 +511,26 @@ class ExportDialog extends React.Component {
       apkBuildId,
       snackId: expoSnackId
     } = this.getValidPreviousApkInfo();
+    const {md5SavedSources} = this.props;
     if (apkUri) {
-      // The previous build completed, no need to generate a new one:
-      this.setState({apkUri, apkBuildId, expoSnackId});
+      // The previous build completed, no need to generate a new one.
+      // Set up state to match a completed export:
+      this.setState({
+        apkUri,
+        apkBuildId,
+        expoSnackId,
+        md5PublishSavedSources: md5SavedSources
+      });
       return Promise.resolve();
     } else if (apkBuildId) {
-      // The previous build was in progress, resume monitoring that build:
+      // The previous build was in progress, resume monitoring that build.
+      // Set up state to match an export in progress:
       this.setState({
         generatingApk: true,
         apkUri: null,
         apkBuildId,
-        expoSnackId
+        expoSnackId,
+        md5PublishSavedSources: md5SavedSources
       });
       return this.waitForApkBuild(apkBuildId, expoSnackId);
     } else {
