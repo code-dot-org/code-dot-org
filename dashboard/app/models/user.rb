@@ -1017,6 +1017,11 @@ class User < ActiveRecord::Base
     sections_as_student.find_by_login_type(Section::LOGIN_TYPE_CLEVER).present?
   end
 
+  # True if user is a student in a section that uses any oauth login type
+  def oauth_student?
+    sections_as_student.find_by_login_type(Section::LOGIN_TYPES_OAUTH).present?
+  end
+
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
   # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
   def self.find_for_authentication(tainted_conditions)
