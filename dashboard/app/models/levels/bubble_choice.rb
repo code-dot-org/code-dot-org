@@ -29,14 +29,14 @@ class BubbleChoice < DSLDefined
   include SerializedProperties
 
   serialized_attrs %w(
-    title
+    display_name
     description
   )
 
   def dsl_default
     <<ruby
 name 'unique level name here'
-title 'level title here'
+display_name 'level display_name here'
 description 'level description here'
 
 sublevels
@@ -62,7 +62,7 @@ ruby
   # @return [Hash]
   def summarize(script_level: nil, user_id: nil)
     summary = {
-      title: title,
+      display_name: display_name,
       description: description,
       sublevels: summarize_sublevels(script_level: script_level, user_id: user_id)
     }
@@ -93,7 +93,7 @@ ruby
     sublevels.each_with_index do |level, index|
       level_info = {
         id: level.id,
-        title: level.display_name || level.name,
+        display_name: level.display_name || level.name,
         description: level.try(:bubble_choice_description),
         thumbnail_url: level.try(:thumbnail_url)
       }

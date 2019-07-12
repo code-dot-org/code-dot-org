@@ -27,7 +27,7 @@ export default {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'record created with id: 1 name: Alice age: 7'
+          '"record created with id: 1 name: Alice age: 7"'
         );
         return true;
       },
@@ -57,7 +57,7 @@ export default {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'record created with id: 1 name: Alice age: 7'
+          '"record created with id: 1 name: Alice age: 7"'
         );
         return true;
       },
@@ -94,7 +94,7 @@ export default {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'create 2\n' + 'update 1\n' + 'delete 1'
+          '"create 2"' + '"update 1"' + '"delete 1"'
         );
         return true;
       },
@@ -132,7 +132,7 @@ export default {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'create 1\n' + 'create 2\n' + 'update 1\n' + 'delete 1'
+          '"create 1"' + '"create 2"' + '"update 1"' + '"delete 1"'
         );
         return true;
       },
@@ -173,7 +173,7 @@ export default {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          'create 2\n' + 'update 1\n' + 'delete 1'
+          '"create 2"' + '"update 1"' + '"delete 1"'
         );
         return true;
       },

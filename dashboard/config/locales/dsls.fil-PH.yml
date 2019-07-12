@@ -1,16 +1,474 @@
 ---
-fil:
+fil-PH:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Pumili ng algoritmo para sa binigay na larawan.
+        answers:
+        - text: Mag-umpisa sa square<br/>Maglagay ng triangle sa taas ng square<br/>Maglagay
+            ng triangle sa ibaba ng square
+        - {}
+        - text: Magsimula sa isang parisukat<br/>Maglagay ng isang parigapay sa taas
+            ng parisukat<br/>Maglagay ng isang tatsulok sa kanan ng parigapay
+        - text: Magsimula sa isang parisukat<br/>Maglagay ng isang parigapay sa baba
+            ng parisukat<br/>Maglagay ng isang parigapay sa kanan ng tatsulok
+      2-3 Algorithms Multi 2:
+        title: Multiple Choice
+        content1: Magsimula sa isang tatsulok<br/>Maglagay ng parisukat sa baba ng
+          tatsulok<br/>Maglagay ng isa pang tatsulok sa baba ng parisukat
+        questions:
+        - text: Aling larawan ang <em>hindi</em> ang hindi sumusunod sa algoritmong
+            ito?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Magkapareho
+        content2: Itugma ang button na kombinasyon sa mga galaw ng sayaw.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Magkapareho
+        content2: Gamitin ang susi para itugma ang bawat code sa letra nito
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>O</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Ayon as mga patakaran ng laro, aling grupo ng mga baraha ang tamang
+            binigyan ng iskor?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Paano mo gawing simple ang pagkakasunod na ito gamit ang mga loop?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Magkapareho
+        content1: Itugma ang grid sa programa.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling programa ang gumagawa sa larawang ito?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: Maze Match
+        content1: Itugma ang mga palaisipan sa mga bloke
+        pre_title: Alituntunin
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: Maze Multiple Choice
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: Multiple Choice
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: Multiple Choice
+        questions:
+        - text: Aling imahe-programa na combo ang hindi naglalaman ng mga pagkakamali?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: Artist Functions Multiple Choice One
+        questions:
+        - text: Pillin ang tamang mga block upang makaguhit ng ganitong imahe gamit
+            ang mga binigay na mga function
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Ipareho ang loop sa hugis
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: Artist Loops Multiple Choice
+        questions:
+        - text: Anong shape ang binubuo ng loop na ito?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: Artist Loops Multiple Choice
+        questions:
+        - text: Anong shape ang ginawa ng program na ito?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: Artist Matching
+        content1: Itugma ang hugis ng mga bloke na kumukumpleto dito.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: Alin sa mga ikinumpara sa ibaba ang totoo?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: Piliin ang pinakamagaling na mga block.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: Bee Loops Multiple Choice One
+        questions:
+        - text: Anong mga block ang kinukulekta ang lahat ng nectar?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Maze Match One
+        content1: Itugma ang mga palaisipan sa mga bloke
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: Maze Multiple Choice Bilang Isa
+        questions:
+        - text: Aling grupo ng mga bloke ang tamang sagot?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Magkapareho
+        content1: Itugma ang mga hakbang sa laro Dice Race sa order na dapat silang
+          lumitaw sa algorithm.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>1)</h4>"
+        - text: "<h4>1)</h4>"
+        - text: "<h4>1)</h4>"
+        answers:
+        - text: "<h4>Itakda ang puntos ng Player 1 sa 0</h4>"
+        - text: "<h4>Player 1 ay nagrolyo sa die</h4>"
+        - text: "<h4>Magdagdag ng Player 1 na rolyo sa kabuuang iskor</h4>"
+        - text: "<h4>Ihambing ang mga puntos ng manlalaro para makita kung sino ang
+            nanalo</h4>"
+      4-5 Algorithms Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling sa mga aytem na mga ito ang pinakamahirap na maglarawan ng isang
+            algoritmo?
+        answers:
+        - text: Pagsisipilyo ng iyong mga ngipin
+        - text: Pagluto ng mga biskwit
+        - text: Pamimili mula sa listahan ng groseri
+        - text: Saging
+      4-5 Computational Thinking Match 1:
+        title: Magkapareho
+        content1: Bawat isa sa mga sasakyan ay hinati sa mga maliliit na mga piraso.
+          Itugma ang bawat sasakyan sa mga listahan ng mga piraso nito.
+        questions:
+        - text: "<h3>Tabi ng mga Gulong: 2<br/>Tabi ng mga Bintana: 0</h3>"
+        - text: "<h3>Tabi ng mga Gulong: 2<br/>Tabi ng mga Bintana: 1</h3>"
+        - text: "<h3>Tabi ng mga Gulong: 2<br/>Tabi ng mga Bintana: 6</h3>"
+        - text: "<h3>Tabi ng mga Gulong: 3<br/>Tabi ng mga Bintana: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Ang Seattle ay isang malaking siyudad.<br/>Ang Eugene ay isang katamtamang
+            siyudad<br/>Ang Hillview ay isang maliit na siyudad.
+        answers:
+        - text: Seattle _____ ay isang _____ _____.
+        - text: Ang _____ ay isang _____ siyudad.
+        - text: _____ ay _____ isang _____.
+        - text: Ang Eugene ay isang _____ na siyudad.
+      4-5 Crowdsourcing Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Alin sa mga larawang ito ang pinkamahusay na kumakatawan sa crowdsourcing?
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: Multiple Choice
+        questions:
+        - text: Aling sa isa sa mga gawaing ito ang pinakamahusay para sa pagsasanay
+            sa crowdsourcing?
+        answers:
+        - text: Paglinis sa iyong silid
+        - text: Pagkain ng iyong dessert
+        - text: Pagsuklay sa iyong buhok
+        - text: Paghugas ng iyong mukha
+      4-5 Digital Footprint Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Anong mga impormasyon sa ibaba ang maaaring ibahagi sa internet?
+        answers:
+        - text: Iyong kaarawan
+        - text: Iyong paboritong pagkain
+        - text: Iyong address
+        - text: Numero ng credit card ng iyong magulang
+      4-5 Internet Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Kapag sinubukan mong mag-logon sa code.org,, aling IP address ang
+            pinakamalamang na pagdadalhan ng DNS?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Internet Multi 2:
+        title: Multiple Choice
+        questions:
+        - text: Kung ang DNS ay nagpapadala sa iyo sa pahina sa IP address na 100.42.50.110,
+            aling website ka naroroon?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: Multiple Choice
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Magkapareho
+        content1: Itugma ang bawat program ng salitang ginagawa, gamit ang ibinigay
+          na pangkat ng mga kasanayan.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Alin sa mga programa sa ibaba <em>ang hindi</em> gumagawa ng eksaktong
+            kaparehas na pagkakasunod-sunod ng Programang 1?
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: Artist Loops Multiple Choice
+        questions:
+        - text: Aling mga bloke ang lilikha sa disenyo?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: Artist maraming pagpipilian
+        questions:
+        - text: Aling mga bloke ang guguhit ng isang parisukat na may buong gilid
+            na 100?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: Artist maraming pagpipilian
+        questions:
+        - text: Aling drowing ang simetriko?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: Mga Kondisyonal sa Bee Maraming Pagpipilian
+        questions:
+        - text: Piliin ang pinakamagaling na mga block.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: Bee Debug Maraming Pagpipilian
+        questions:
+        - text: Aling bersyon ng mga function ang gagana?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: Bee Loops Multiple Choice
+        questions:
+        - text: Aling mga bloke ang lulutas sa palaisipan?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: Mga Kondisyonal sa Maze Maraming Pagpipilian
+        questions:
+        - text: Aling mga bloke ang naglutas sa palaisipan?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Maze Match
+        content1: Itugma ang mga palaisipan sa mga bloke
+        pre_title: Alituntunin
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: Maze Multiple Choice
+        questions:
+        - text: Aling mga bloke ang naglutas sa palaisipan?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
         title: title
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
         title: title
       CSD U2 Design Project_2018:
         title: title
       CSD U2 Design Project_2018_2019:
-        title: title
-      CSD U2 L1 Overview:
         title: title
       CSD U2 L2 Overview:
         title: title
@@ -28,12 +486,245 @@ fil:
         title: title
       CSD U2 expand project_2018_2019:
         title: title
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: title
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: title
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: title
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
         title: title
       CSD U3 combining rep_2018:
         title: title
       CSD U3 combining rep_2018_2019:
         title: title
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U5 Encryption 1:
         title: title
       CSD U5 Encryption 1_2018:
@@ -54,8 +745,244 @@ fil:
         title: title
       CSD U5 student record_2018_2019:
         title: title
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Internet Simulator Setup 2:
         title: title
+      K-1 Artist 1 Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling mga bloke ang lulutas sa palaisipang ito?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: Multiple Choice
+        questions:
+        - text: Aling mga bloke ang guguhit sa parisukat?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Magkapareho
+        content2: Itugma ang mga hugis batay sa uri.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Ilang nektar ito?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: Multiple Choice
+        questions:
+        - text: Ilang nektar ito?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: Magkapareho
+        content2: Itugma ang mga block
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Magkapareho
+        content2: Itugma ang button na kombinasyon sa mga galaw ng sayaw.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling mga hayop ang mayroong digital na footprint na nag-iiwan sa
+            kanya na <strong>pinakahindi ligtas</strong>?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Paano mo gawing simple ang pagkakasunod na ito gamit ang mga loop?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling arrow ang nagdadala kay Flurb sa kayamanan?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling impormasyon ang dapat mong <strong>hindi</strong> ibahagi online?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling pagpipilian ang dapat gawing huling bloke?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling repeat na bloke ang magkapareho?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: Multiple Choice
+        questions:
+        - text: Piliin ang tamang repeat na bloke.
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: Magkapareho
+        content2: Itugma ang mga puzzle at mga block
+        pre_title: Alituntunin
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: Maze
+        questions:
+        - text: Aling sagot ang naglulutas sa antas na ito?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling algoritmo ang magdadala kay Flurb sa mga bulaklak?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling hakbang ang dapat mapunta sa simula ng algoritmong ito?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: Multiple Choice
+        questions:
+        - text: Aling hakbang ang dapat pupunan sa puwang para sa algoritmong ito?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: Multiple Choice
+        questions:
+        - text: Aling mga bloke ang bumigkas nang "MOVE"?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: Multiple Choice
+        questions:
+        - text: Aling salita ang nabaybay?
+        answers:
+        - {}
+        - {}
+        - {}
       Multi-Screen Apps:
         title: title
       New Challenge Introduction:
@@ -64,1214 +991,683 @@ fil:
         title: title
       Prepare for your presentation:
         title: title
-    match:
-      2-3 Big Event Match 1:
-        content2: Itugma ang button na kombinasyon sa mga galaw ng sayaw.
-        title: Magkapareho
-      2-3 Binary Match 1:
-        content2: Gamitin ang susi para itugma ang bawat code sa letra nito
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>O</strong>"
-        title: Magkapareho
-      2-3 Graph Paper Match 1:
-        content1: Itugma ang grid sa programa.
-        title: Magkapareho
-      2-3 Maze Match 2:
-        content1: Itugma ang mga palaisipan sa mga bloke
-        pre_title: Alituntunin
-        title: Maze Match
-      2-3 artist loops match 1:
-        content2: Ipareho ang loop sa hugis
-      2-3 artist match 1:
-        content1: Itugma ang hugis ng mga bloke na kumukumpleto dito.
-        title: Artist Matching
-      2-3 maze match 1:
-        content1: Itugma ang mga palaisipan sa mga bloke
-        title: Maze Match One
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>Itakda ang puntos ng Player 1 sa 0</h4>"
-        - text: "<h4>Player 1 ay nagrolyo sa die</h4>"
-        - text: "<h4>Magdagdag ng Player 1 na rolyo sa kabuuang iskor</h4>"
-        - text: "<h4>Ihambing ang mga puntos ng manlalaro para makita kung sino ang
-            nanalo</h4>"
-        content1: Itugma ang mga hakbang sa laro Dice Race sa order na dapat silang
-          lumitaw sa algorithm.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>1)</h4>"
-        - text: "<h4>1)</h4>"
-        - text: "<h4>1)</h4>"
-        title: Magkapareho
-      4-5 Computational Thinking Match 1:
-        content1: Bawat isa sa mga sasakyan ay hinati sa mga maliliit na mga piraso.
-          Itugma ang bawat sasakyan sa mga listahan ng mga piraso nito.
-        questions:
-        - text: "<h3>Tabi ng mga Gulong: 2<br/>Tabi ng mga Bintana: 0</h3>"
-        - text: "<h3>Tabi ng mga Gulong: 2<br/>Tabi ng mga Bintana: 1</h3>"
-        - text: "<h3>Tabi ng mga Gulong: 2<br/>Tabi ng mga Bintana: 6</h3>"
-        - text: "<h3>Tabi ng mga Gulong: 3<br/>Tabi ng mga Bintana: 2</h3>"
-        title: Magkapareho
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: Itugma ang bawat program ng salitang ginagawa, gamit ang ibinigay
-          na pangkat ng mga kasanayan.
-        title: Magkapareho
-      4-5 maze match 1:
-        content1: Itugma ang mga palaisipan sa mga bloke
-        pre_title: Alituntunin
-        title: Maze Match
-      K-1 Artist 2 Match 2:
-        content2: Itugma ang mga hugis batay sa uri.
-        title: Magkapareho
-      K-1 Bee Loops Match 1:
-        content2: Itugma ang mga block
-        title: Magkapareho
-      K-1 Big Event Match 1:
-        content2: Itugma ang button na kombinasyon sa mga galaw ng sayaw.
-        title: Magkapareho
-      K-1 Maze Match 1:
-        content2: Itugma ang mga puzzle at mga block
-        pre_title: Alituntunin
-        title: Magkapareho
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: Mag-umpisa sa square<br/>Maglagay ng triangle sa taas ng square<br/>Maglagay
-            ng triangle sa ibaba ng square
-          correct: false
-        - correct: true
-        - text: Magsimula sa isang parisukat<br/>Maglagay ng isang parigapay sa taas
-            ng parisukat<br/>Maglagay ng isang tatsulok sa kanan ng parigapay
-          correct: false
-        - text: Magsimula sa isang parisukat<br/>Maglagay ng isang parigapay sa baba
-            ng parisukat<br/>Maglagay ng isang parigapay sa kanan ng tatsulok
-          correct: false
-        questions:
-        - text: Pumili ng algoritmo para sa binigay na larawan.
-        title: Multiple Choice
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: Magsimula sa isang tatsulok<br/>Maglagay ng parisukat sa baba ng
-          tatsulok<br/>Maglagay ng isa pang tatsulok sa baba ng parisukat
-        questions:
-        - text: Aling larawan ang <em>hindi</em> ang hindi sumusunod sa algoritmong
-            ito?
-        title: Multiple Choice
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Ayon as mga patakaran ng laro, aling grupo ng mga baraha ang tamang
-            binigyan ng iskor?
-        title: Multiple Choice
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Paano mo gawing simple ang pagkakasunod na ito gamit ang mga loop?
-        title: Multiple Choice
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Aling programa ang gumagawa sa larawang ito?
-        title: Multiple Choice
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: Maze Multiple Choice
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: Multiple Choice
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Aling imahe-programa na combo ang hindi naglalaman ng mga pagkakamali?
-        title: Multiple Choice
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Pillin ang tamang mga block upang makaguhit ng ganitong imahe gamit
-            ang mga binigay na mga function
-        title: Artist Functions Multiple Choice One
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Anong shape ang binubuo ng loop na ito?
-        title: Artist Loops Multiple Choice
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Anong shape ang ginawa ng program na ito?
-        title: Artist Loops Multiple Choice
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Alin sa mga ikinumpara sa ibaba ang totoo?
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Piliin ang pinakamagaling na mga block.
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Anong mga block ang kinukulekta ang lahat ng nectar?
-        title: Bee Loops Multiple Choice One
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Aling grupo ng mga bloke ang tamang sagot?
-        title: Maze Multiple Choice Bilang Isa
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: Pagsisipilyo ng iyong mga ngipin
-          correct: false
-        - text: Pagluto ng mga biskwit
-          correct: false
-        - text: Pamimili mula sa listahan ng groseri
-          correct: false
-        - text: Saging
-          correct: true
-        questions:
-        - text: Aling sa mga aytem na mga ito ang pinakamahirap na maglarawan ng isang
-            algoritmo?
-        title: Multiple Choice
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: Seattle _____ ay isang _____ _____.
-          correct: false
-        - text: Ang _____ ay isang _____ siyudad.
-          correct: true
-        - text: _____ ay _____ isang _____.
-          correct: false
-        - text: Ang Eugene ay isang _____ na siyudad.
-          correct: false
-        questions:
-        - text: Ang Seattle ay isang malaking siyudad.<br/>Ang Eugene ay isang katamtamang
-            siyudad<br/>Ang Hillview ay isang maliit na siyudad.
-        title: Multiple Choice
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: Alin sa mga larawang ito ang pinkamahusay na kumakatawan sa crowdsourcing?
-        title: Multiple Choice
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: Paglinis sa iyong silid
-          correct: true
-        - text: Pagkain ng iyong dessert
-          correct: false
-        - text: Pagsuklay sa iyong buhok
-          correct: false
-        - text: Paghugas ng iyong mukha
-          correct: false
-        questions:
-        - text: Aling sa isa sa mga gawaing ito ang pinakamahusay para sa pagsasanay
-            sa crowdsourcing?
-        title: Multiple Choice
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: Iyong kaarawan
-          correct: false
-        - text: Iyong paboritong pagkain
-          correct: true
-        - text: Iyong address
-          correct: false
-        - text: Numero ng credit card ng iyong magulang
-          correct: false
-        questions:
-        - text: Anong mga impormasyon sa ibaba ang maaaring ibahagi sa internet?
-        title: Multiple Choice
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Kapag sinubukan mong mag-logon sa code.org,, aling IP address ang
-            pinakamalamang na pagdadalhan ng DNS?
-        title: Multiple Choice
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Kung ang DNS ay nagpapadala sa iyo sa pahina sa IP address na 100.42.50.110,
-            aling website ka naroroon?
-        title: Multiple Choice
-      4-5 Songwriting Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: Multiple Choice
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Alin sa mga programa sa ibaba <em>ang hindi</em> gumagawa ng eksaktong
-            kaparehas na pagkakasunod-sunod ng Programang 1?
-        title: Multiple Choice
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Aling mga bloke ang lilikha sa disenyo?
-        title: Artist Loops Multiple Choice
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Aling mga bloke ang guguhit ng isang parisukat na may buong gilid
-            na 100?
-        title: Artist maraming pagpipilian
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Aling drowing ang simetriko?
-        title: Artist maraming pagpipilian
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Piliin ang pinakamagaling na mga block.
-        title: Mga Kondisyonal sa Bee Maraming Pagpipilian
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Aling bersyon ng mga function ang gagana?
-        title: Bee Debug Maraming Pagpipilian
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Aling mga bloke ang lulutas sa palaisipan?
-        title: Bee Loops Multiple Choice
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Aling mga bloke ang naglutas sa palaisipan?
-        title: Mga Kondisyonal sa Maze Maraming Pagpipilian
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Aling mga bloke ang naglutas sa palaisipan?
-        title: Maze Multiple Choice
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: title
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: title
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: title
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Aling mga bloke ang lulutas sa palaisipang ito?
-        title: Multiple Choice
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Aling mga bloke ang guguhit sa parisukat?
-        title: Multiple Choice
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Ilang nektar ito?
-        title: Multiple Choice
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Ilang nektar ito?
-        title: Multiple Choice
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Aling mga hayop ang mayroong digital na footprint na nag-iiwan sa
-            kanya na <strong>pinakahindi ligtas</strong>?
-        title: Multiple Choice
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Paano mo gawing simple ang pagkakasunod na ito gamit ang mga loop?
-        title: Multiple Choice
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Aling arrow ang nagdadala kay Flurb sa kayamanan?
-        title: Multiple Choice
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Aling impormasyon ang dapat mong <strong>hindi</strong> ibahagi online?
-        title: Multiple Choice
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Aling pagpipilian ang dapat gawing huling bloke?
-        title: Multiple Choice
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Aling repeat na bloke ang magkapareho?
-        title: Multiple Choice
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Piliin ang tamang repeat na bloke.
-        title: Multiple Choice
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Aling sagot ang naglulutas sa antas na ito?
-        title: Maze
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Aling algoritmo ang magdadala kay Flurb sa mga bulaklak?
-        title: Multiple Choice
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Aling hakbang ang dapat mapunta sa simula ng algoritmong ito?
-        title: Multiple Choice
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Aling hakbang ang dapat pupunan sa puwang para sa algoritmong ito?
-        title: Multiple Choice
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Aling mga bloke ang bumigkas nang "MOVE"?
-        title: Multiple Choice
-      K-1 Word Search Multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Aling salita ang nabaybay?
-        title: Multiple Choice
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Hindi tama
+        - {}
+        - {}
+        - {}
+        - feedback: Hindi tama
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Hindi tama
+        - {}
+        - {}
+        - {}
+        - feedback: Hindi tama
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Hindi ko alam
-          correct: false
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Hindi ko alam
-          correct: false
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Hindi ko alam
-          correct: false
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_scrat_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: Hindi ko alam
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}

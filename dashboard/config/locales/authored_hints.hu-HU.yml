@@ -24,8 +24,6 @@ hu-HU:
       2-3 Artist 4:
         2-3_Artist_4_a: A ház befejezéséhez, már csak egy négyzetet kell rajzolnod!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Hogy ezeket a kis angyalokat megcsináld, minden egyes alkalommal
-          többet kell elfordulnod, mint amennyit a négyzeteknél fordultál.   '
         2-3_Artist_6_b: Mivel már elfordultam jobbra, könnyebb előremozogni, mint
           balra fordulva elkészíteni a háromszöget.
         2-3_Artist_6_c: A háromszög minden oldala egyforma hosszú, mint a négyzet
@@ -39,13 +37,11 @@ hu-HU:
       2-3 Artist 9:
         2-3_Artist_9_a: Ez a gyémánt valóban csak egy négyzet ezen az oldalán
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_a: Ne feledje, ha azt akartad hogy a vezérlő 10 képponttal
-          \* szélesebb \*... győződj meg róla, hogy \*\* hozzáadsz \*\* 10-et ahhoz
-          a számhoz amit cserélni akarsz.
-        2-3_Artist_Debugging_10_b: "\\*\\* Próba és hiba teljesen elfogadott itt!
-          \\*\\*\nkezdd úgy, hogy egyszerre csak egy számot változtass\nMelyik szám
-          mit csinál?  \nHa túl belebonyolódsz, csak kattints az \"Újrakezdés\", és
-          a kódod újraindul."
+        2-3_Artist_Debugging_10_b: |-
+          \*\* Próba és hiba teljesen elfogadott itt! \*\*
+          kezdd úgy, hogy egyszerre csak egy számot változtass
+          Melyik szám mit csinál?\
+          Ha túl belebonyolódsz, csak kattints az "Újrakezdés", és a kódod újraindul.
       2-3 Artist Debugging 2:
         2-3_Artist_Debugging_2_a: 'Tipp: Minden egyes darukar 75 pixel hosszú.'
       2-3 Artist Debugging 3:
@@ -55,11 +51,6 @@ hu-HU:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Mi történik, ha a művész hátra ugrik vagy hátrafelé
           mozog, miután megrajzolja az első vonalat?
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: |-
-          Hányszor ismétlődött meg az alakzatom?
-          Hányszor kellett volna megismétlődnie az alakzatnak?
-          Hol tudod ezt módosítani a programban?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: A művészt tovább kell forgatni 60 fokkal balra,
           mielőtt rajzolni kezdesz!
@@ -89,7 +80,6 @@ hu-HU:
         2-3_Artist_Functions_4_a: A művész el kell fordítani 120 fokkal minden négyzet
           között, hogy elkészüljön a design.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_a: Ne feledje, hogy az utolsó puzzle kódja:! \[] (<https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png>)
         2-3_Artist_Loops_New_11_b: Következő körben el kell jutnod a ciklusod kódjának
           a végére.
       2-3 Artist Loops New 12:
@@ -103,14 +93,6 @@ hu-HU:
         2-3_Artist_Loops_New_13_a: A művész minden gyémánt végén már befordul a jó
           irányba, hogy tudja kezdeni a következőt. Emiatt nem kell egy plussz fordulj
           balra blokkot betennünk, mielőtt újat kezdünk.
-        2-3_Artist_Loops_New_13_b: |-
-          Hogy elkészüljön az összes gyémánt, a művésznek az alábbiakat kell megtennie:
-          \-mozgás
-          \-jobbra fordulni 120 fokkal
-          \-mozgás
-          \-jobbra fordulni 60 fokkal
-
-          És ezt csináld meg újra!
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: A művésznek 45 fokkal jobbra kell fordulnia, mielőtt
           elkezd rajzolni.
@@ -145,10 +127,6 @@ hu-HU:
           ugyanúgy kezelni a piros virágot, mint a lilát!
         2-3_Bee_Conditionals_14_b: Ha a piros virág lila lenne, kitalálnád hogyan
           kell a kódba egy extra "ismétlés" ciklust tenni a levágáshoz?
-        2-3_Bee_Conditionals_14_c: "Próbáld meg ezt két külön részben:\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.
-          \ Gyűjts nektárt 3-szor\n    -   Menj előre 5-ször\n    -   Ellenőrizd,
-          hogy látod-e a nektárt, ha igen szerezd meg\n    -   Fordulj balra\n\n2.
-          \ Készíts mézet  \n\n3.  Menj előre egyszer\n\n4.  Készíts két mézet"
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Emlékezz: a lila virágok csak 0 vagy 1 nektár
           tartalmaznak és meg tudnak változni minden alkalommal, amikor futtatod a

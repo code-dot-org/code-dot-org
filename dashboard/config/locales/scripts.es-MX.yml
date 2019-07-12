@@ -16135,6 +16135,12 @@ es-MX:
               name: PT de práctica Parte 3
             Unit 4 Assessment:
               name: Evaluación de la Unidad 4
+            Introduction to Apps:
+              name: Introducción a las aplicaciones
+            'Project: Designing an App, pt. 1':
+              name: 'Proyecto: diseñar una aplicación, pt. 1'
+            'Project: Designing an App, pt. 2':
+              name: 'Proyecto: diseñar una aplicación, pt. 2'
           title: 'Unidad 3: Introducción al desarrollo de aplicaciones'
         csp4-pilot-staging:
           stages:
@@ -17107,6 +17113,12 @@ es-MX:
                 Computación
             Intellectual Property:
               name: Propiedad intelectual
+            Project - Planning Layout and Style:
+              name: Proyecto - Planificación de disposición y estilo
+            Project - Building a Webpage:
+              name: Proyecto - Crear una página web
+            Purpose of a  Websites:
+              name: Propósito de un sitio web
             Images:
               name: Imágenes
         csd3-pilot:
@@ -17471,7 +17483,16 @@ es-MX:
             CS Discoveries Post Course survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
+        csd-bugs:
+          stages:
+            Game Lab Bugs:
+              name: Errores en el Laboratorio de juegos
+            Immovable Crab:
+              name: Cangrejo inmóvil
+          title: Ejemplo de errores para docentes de CSD
         maddie-test:
           stages:
+            stage 1:
+              name: etapa 1
             new stage:
               name: nueva etapa

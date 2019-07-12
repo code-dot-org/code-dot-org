@@ -1257,10 +1257,10 @@ class Script < ActiveRecord::Base
           }
         end
       end
-      # unlike stages_i18n, we don't expect meta_i18n to have the full tree
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
     end
 
+    stages_i18n = {'en' => {'data' => {'script' => {'name' => stages_i18n}}}}
     existing_i18n.deep_merge(stages_i18n) {|_, old, _| old}.deep_merge!(metadata_i18n)
   end
 
