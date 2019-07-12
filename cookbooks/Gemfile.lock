@@ -202,7 +202,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     public_suffix (3.0.2)
-    rack (1.6.8)
+    rack (1.6.11)
     retryable (2.0.4)
     ridley (5.1.1)
       addressable
@@ -242,7 +242,7 @@ GEM
       builder (< 4)
       rspec-core (>= 2, < 4, != 2.12.0)
     rubyntlm (0.6.2)
-    rubyzip (1.2.1)
+    rubyzip (1.2.3)
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
