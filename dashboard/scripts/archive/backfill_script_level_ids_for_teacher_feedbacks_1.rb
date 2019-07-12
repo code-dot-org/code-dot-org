@@ -14,7 +14,7 @@ end
 def update_script_level_ids
   puts "backfilling script_level_ids..."
   feedbacks_without_script_level_id.find_each do |feedback|
-    associated_script_levels = Level.find(feedback.level_id).script_levels
+    associated_script_levels = feedback.level.script_levels
     if associated_script_levels.length == 1
       script_level_id = associated_script_levels[0].id
       feedback.update_attributes(script_level_id: script_level_id)
