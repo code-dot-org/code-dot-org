@@ -951,6 +951,8 @@
   cspexam1-mWU7ilDYM9_name: テストその1 - 25 の質問
   cspexam2-AKwgAh1ac5_name: テストその2 - 25 の質問
   cspunit3_gradelevel: "中学3年～高校3年生向け"
+  accelerated_name: "上級コース"
+  express_name: "エクスプレスコース"
   20-hour_name: 上級コース
   algebra_name: "コンピューターサイエンスと代数 フルコース"
   AlgebraA_name: "コンピューター・サイエンス代数 A コース"

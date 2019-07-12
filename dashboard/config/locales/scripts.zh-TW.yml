@@ -5155,6 +5155,8 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+            Number Systems:
+              name: 數字系統
         csd-tests:
           stages:
             Computers and Problem Solving:

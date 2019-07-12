@@ -1692,6 +1692,10 @@ sq:
           stages:
             While Loops:
               name: Përsëritjet Ndërsa
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sistemi Numerik
         time4csdemo:
           stages:
             Crowdsourcing:

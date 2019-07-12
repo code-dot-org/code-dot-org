@@ -4,12 +4,14 @@ is-IS:
     dsls:
       2-3 Algorithms Multi 1:
         title: Valspurningar
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: Veldu algrím fyrir myndina sem er sýnd.
         answers:
         - text: Byrja með ferning<br/>Setja þríhyrning ofan við ferninginn<br/>Setja
             þríhyrning neðan við ferninginn
-        - {}
+        - text: Byrja með ferning<br/>Setja þríhyrning hægra megin við ferninginn<br/>Setja
+            samsíðung neðan við ferninginn<br/>Setja þríhyrning hægra megin við samsíðunginn
         - text: Byrja með ferning<br/>Setja samsíðung ofan við ferninginn<br/>Setja
             þríhyrning hægra megin við samsíðunginn
         - text: Byrja með ferning<br/>Setja þríhyrning neðan við ferninginn<br/>Setja
@@ -21,25 +23,27 @@ is-IS:
         questions:
         - text: Hvaða mynd fylgir <em>ekki</em> þessu algrími?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
       2-3 Big Event Match 1:
         title: Samsvörun
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Hvaða hnappasamsetning samsvarar danshreyfingunum?
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
       2-3 Binary Match 1:
         title: Samsvörun
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Notaðu lykilinn til að tengja hvern kóða við staf sinn
         questions:
         - text: "<strong>N</strong>"
@@ -47,188 +51,209 @@ is-IS:
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
       2-3 Conditionals Multi 1:
         title: Valspurningar
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: Hvaða spjöld eru rétt skoruð ef miðað er við reglur leiksins?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
       2-3 Getting Loopy Multi 1:
         title: Valspurningar
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: Hvernig mundir þú einfalda þessa röð með lykkjum?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
       2-3 Graph Paper Match 1:
         title: Samsvörun
         content1: Finndu samsvörun reita og forrits.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       2-3 Graph Paper Multi 1:
         title: Valspurningar
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Hvaða forrit býr til þessa mynd?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
       2-3 Maze Match 2:
         title: Völundarhús - Samsvörun
         content1: Finndu samsvörun þrauta og kubba
         pre_title: Leiðbeiningar
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
       2-3 Maze Multi 2:
         title: Völundarhús - Valspurningar
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
-        - {}
+        - text: Hvaða kubbar koma mér til svínsins?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
       2-3 Relay Programming Multi 1:
         title: Valspurningar
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - {}
+        - text: Hvaða forrit býr **ekki** til þessa mynd?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
       2-3 Relay Programming Multi 2:
         title: Valspurningar
         questions:
         - text: Hvaða samstæða myndar og forrits inniheldur ekki villur?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
       2-3 artist debug multi 1:
+        title: Villuleit listamanns - Valspurning 1
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
-        - {}
+        - text: Hvað mundir þú þurfa að laga til að láta þetta vera heilan hring?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
       2-3 artist functions multi 1:
         title: Föll listamanns - Valspurning 1
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
         questions:
         - text: Veldu réttu kubbana til að teikna þessa mynd með hinum gefnu föllum
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
       2-3 artist loops match 1:
+        title: Lykkjur listamanns - Samsvörun 1
         content2: Tengdu lykkjuna við samsvarandi form
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
       2-3 artist loops multi 1:
         title: Lykkjur listamanns - Valspurningar
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: Hvaða form býr þessi lykkja til?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
       2-3 artist loops multi 2:
         title: Lykkjur listamanns - Valspurningar
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: Hvaða form er búið til með þessu forriti?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
       2-3 artist match 1:
         title: Listamaður - Samsvörun
         content1: Tengdu formið við kubbana sem klára að búa það til.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
       2-3 bee conditionals multi 1:
+        title: Skilyrði býflugu - Valspurning 1
         questions:
         - text: Hvaða samanburður hér fyrir neðan er sannur?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
       2-3 bee conditionals multi 3:
+        title: Skilyrði býflugu - Valspurning 2
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
         - text: Veldu bestu kubbana.
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
       2-3 bee loops multi 1:
         title: Lykkjur býflugu - Valspurning 1
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: Hvaða kubbar safna öllum blómasafanum?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
       2-3 maze match 1:
         title: Völundarhús - Samsvörun 1
         content1: Finndu samsvörun þrauta og kubba
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
       2-3 maze multi 1:
         title: Völundarhús - Valspurningar 1
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: Hvaða kubbastæða myndar rétta svarið?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
       4-5 Algorithms Match 1:
         title: Samsvörun
         content1: Tengdu þrepin í teningakappleiknum við þá röð sem þau ættu að vera
@@ -262,12 +287,14 @@ is-IS:
         - text: "<h3>Hjól/hlið: 2<br/>Gluggar/hlið: 6</h3>"
         - text: "<h3>Hjól/hlið: 3<br/>Gluggar/hlið: 2</h3>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Computational Thinking Multi 1:
         title: Valspurningar
+        content1: Hér eru þrjár setningar. Hvert af eftirfarandi sniðmátum passar
+          best við innihaldið í öllum þremur setningunum?
         questions:
         - text: Seattle er stór borg.<br/>Eugene er miðlungsborg<br/>Hillview er lítil
             borg.
@@ -281,8 +308,8 @@ is-IS:
         questions:
         - text: Hver þessara mynda lýsir best hugtakinu hópvistun?
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
       4-5 Crowdsourcing Multi 2:
         title: Valspurningar
         questions:
@@ -303,43 +330,52 @@ is-IS:
         - text: Greiðslukortanúmeri foreldris
       4-5 Internet Multi 1:
         title: Valspurningar
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Til hvaða IP tölu er líklegt að DNS fari með þig, ef þú reynir að
             skrá þig inn á code.org?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
       4-5 Internet Multi 2:
         title: Valspurningar
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Á hvaða vef ertu ef DNS hefur sent þig á síðu þar sem IP talan er
             100.42.50.110?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: code.org
+        - text: csisfun.com
+        - text: thinkersmith.org
+        - text: khanacademy.org
       4-5 Songwriting Multi 1:
         title: Valspurningar
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: Hver er stærsti bútur í þessum söngtexta sem gæti verið viðlag, þ.
+            e. eitthvað sem er endurtekið og er nákvæmlega eins í hvert sinn?
         answers:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
-        - {}
-        - {}
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's
+            in the buttermilk, <br/>Shoo, fly, shoo,
+        - text: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+            <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+            <br/>Skip to my Lou, my darlin.
       4-5 Suncatchers Match 1:
         title: Samsvörun
         content1: Tengdu hvert forrit við orðið sem það býr til með þeim kostum sem
           gefnir eru.
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
@@ -347,122 +383,149 @@ is-IS:
         - text: "<h4>RAMP</h4>"
       4-5 Suncatchers Multi 1:
         title: Valspurningar
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: Hvert af forritunum hér fyrir neðan býr <em>ekki</em> til nákvæmlega
             sömu röð og Forrit 1?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
       4-5 artist loops multi 1:
         title: Lykkjur listamanns - Valspurningar
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
         questions:
         - text: Hvaða kubbar munu búa til myndina?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
       4-5 artist multi 1:
         title: Listamaður - Valspurningar
         questions:
         - text: Hvaða kubbar teikna rétthyrning með ummálið 100?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
       4-5 artist multi 2:
         title: Listamaður - Valspurningar
         questions:
         - text: Hvaða teikning er samhverf?
         answers:
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
         - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
       4-5 bee conditionals multi 1:
         title: Skilyrði býflugu - Valspurningar
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        content2: Fjólublátt blóm gæti haft 3, 2 eða 1 af blómasafa, en þú veist ekki
+          hve marga. Hvaða kubbar athuga og safna rétt öllum blómasafa úr fjólubláu
+          blómi?
         questions:
         - text: Veldu bestu kubbana.
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
       4-5 bee debug multi 1:
         title: Villuleit býflugu - Valspurningar
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         questions:
         - text: Hvaða útgáfa af fallinu mun virka?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
       4-5 bee loops multi 1:
         title: Lykkjur býflugu - Valspurningar
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         questions:
         - text: Hvaða kubbar munu leysa þrautina?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
       4-5 maze conditionals multi 1:
         title: Skilyrði völundarhúss - Valspurningar
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
         questions:
         - text: Hvaða kubbar leysa þrautina?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
       4-5 maze match 1:
         title: Völundarhús - Samsvörun
         content1: Finndu samsvörun þrauta og kubba
         pre_title: Leiðbeiningar
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
       4-5 maze multi 1:
         title: Völundarhús - Valspurningar
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: Hvaða kubbar leysa þrautina?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
       Begin planning your project:
         title: titill
         content1: lýsing hér
       Begin planning your project_2018:
+        title: Byrja að skipuleggja verkefnið
         content1: lýsing hér
       Begin planning your project_2018_2019:
+        title: Byrja að skipuleggja verkefnið
         content1: lýsing hér
       CSD Header Size MC:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD U2 Design Project:
         title: titill
         content1: lýsing hér
@@ -500,69 +563,112 @@ is-IS:
         content1: lýsing hér
       CSD U2 image debug match:
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Eigindin `src` er ekki skrifuð rétt.
+        - text: Eigindirnar `src` og `alt` hafa víxlast
+        - text: Það vantar skráarendinguna (.jpg) í heiti myndarinnar
+        - text: Heiti myndarinnar er ekki í `src` eigindinni
+        - text: Það er bil í skrárheitinu
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png">
+        - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png">
+        - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png">
+        - text: <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png">
+        - text: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png">
       CSD U2 lists match:
+        content1: Finndu kóðann sem býr til listann.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
       CSD U2 lists match_2018:
+        content1: Finndu kóðann sem býr til listann.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
       CSD U2 lists match_2018_2019:
+        content1: Finndu kóðann sem býr til listann.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
       CSD U2 project guide:
+        title: Þinn eiginn vefur
         content1: lýsing hér
       CSD U2 project guide_2018:
+        title: Þinn eiginn vefur
         content1: lýsing hér
       CSD U2 project guide_2018_2019:
+        title: Þinn eiginn vefur
         content1: lýsing hér
       CSD U3 - conditionals - Matching:
+        title: 'Samsvörun: Samanburðarvirkjar'
+        content1: Finndu samsvörun milli enskrar lýsingar og boole yrðingar.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Er snúningur kvika hundsins hægari en snúningur kvika kattarins?
+        - text: Er x-hnit kvika hundsins minna en x-hnit kvika kattarins?
+        - text: Er stærðarskali kvika hundsins stærri en skali kvika kattarins?
+        - text: Er x-hnit kvika hundsins hærra en x-hnit kvika kattarins?
+        - text: Er x-hnit kvika hundsins jafnt og x-hnit kvika kattarins?
         answers:
         - {}
         - {}
@@ -570,12 +676,14 @@ is-IS:
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
+        title: 'Samsvörun: Samanburðarvirkjar'
+        content1: Finndu samsvörun milli enskrar lýsingar og boole yrðingar.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Er snúningur kvika hundsins hægari en snúningur kvika kattarins?
+        - text: Er x-hnit kvika hundsins minna en x-hnit kvika kattarins?
+        - text: Er stærðarskali kvika hundsins stærri en skali kvika kattarins?
+        - text: Er x-hnit kvika hundsins hærra en x-hnit kvika kattarins?
+        - text: Er x-hnit kvika hundsins jafnt og x-hnit kvika kattarins?
         answers:
         - {}
         - {}
@@ -583,12 +691,14 @@ is-IS:
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
+        title: 'Samsvörun: Samanburðarvirkjar'
+        content1: Finndu samsvörun milli enskrar lýsingar og boole yrðingar.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Er snúningur kvika hundsins hægari en snúningur kvika kattarins?
+        - text: Er x-hnit kvika hundsins minna en x-hnit kvika kattarins?
+        - text: Er stærðarskali kvika hundsins stærri en skali kvika kattarins?
+        - text: Er x-hnit kvika hundsins hærra en x-hnit kvika kattarins?
+        - text: Er x-hnit kvika hundsins jafnt og x-hnit kvika kattarins?
         answers:
         - {}
         - {}
@@ -623,8 +733,10 @@ is-IS:
         - {}
         - {}
       CSD U3 Card Examples_2018:
+        title: Að búa til gagnvirkt kort
         content1: lýsing hér
       CSD U3 Card Examples_2018_2019:
+        title: Að búa til gagnvirkt kort
         content1: lýsing hér
       CSD U3 Functions Prediction define first:
         answers:
@@ -645,32 +757,41 @@ is-IS:
         - {}
         - {}
       CSD U3 Keypress Matching:
+        title: 'Samsvörun: Viðbrögð við lyklaáslætti'
+        content1: Tengdu kubb fyrir áslátt lykils við lýsinguna á virkni hans. Farðu
+          til baka að vild ef þú vilt gera tilraunir.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Er satt aðeins einu sinni þegar ýtt er á lykilinn.
+        - text: Er satt aðeins einu sinni þegar lyklinum er sleppt.
+        - text: Er satt allan tímann á meðan ýtt er á lykilinn eða honum haldið niðri.
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
       CSD U3 Keypress Matching_2018:
+        title: 'Samsvörun: Viðbrögð við lyklaáslætti'
+        content1: Tengdu kubb fyrir áslátt lykils við lýsinguna á virkni hans. Farðu
+          til baka að vild ef þú vilt gera tilraunir.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Er satt aðeins einu sinni þegar ýtt er á lykilinn.
+        - text: Er satt aðeins einu sinni þegar lyklinum er sleppt.
+        - text: Er satt allan tímann á meðan ýtt er á lykilinn eða honum haldið niðri.
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
       CSD U3 Keypress Matching_2018_2019:
+        title: 'Samsvörun: Viðbrögð við lyklaáslætti'
+        content1: Tengdu kubb fyrir áslátt lykils við lýsinguna á virkni hans. Farðu
+          til baka að vild ef þú vilt gera tilraunir.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Er satt aðeins einu sinni þegar ýtt er á lykilinn.
+        - text: Er satt aðeins einu sinni þegar lyklinum er sleppt.
+        - text: Er satt allan tímann á meðan ýtt er á lykilinn eða honum haldið niðri.
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
       CSD U3 Sprite Movement Predict Multi:
         questions:
         - {}
@@ -729,38 +850,64 @@ is-IS:
         title: titill
         content1: lýsing hér
       CSD U3 drawSprites placement match:
+        title: drawSprites
+        content1: Tengdu kóðann við myndina sem hann mun búa til.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
       CSD U3 drawSprites placement match_2019:
+        title: drawSprites
+        content1: Tengdu kóðann við myndina sem hann mun búa til.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
       CSD U3 game intro:
+        title: Búa til þinn eigin leik
         content1: lýsing hér
       CSD U3 game intro_2018:
+        title: Búa til þinn eigin leik
         content1: lýsing hér
       CSD U3 game intro_2018_2019:
+        title: Búa til þinn eigin leik
         content1: lýsing hér
       CSD U3 platform intro:
+        title: Búa til pallahoppara
         content1: lýsing hér
       CSD U3 platform intro_2018:
+        title: Búa til pallahoppara
         content1: lýsing hér
       CSD U3 platform intro_2018_2019:
+        title: Búa til pallahoppara
         content1: lýsing hér
       CSD U5 Encryption 1:
         title: titill
@@ -772,19 +919,25 @@ is-IS:
         title: titill
         content1: lýsing hér
       CSD U5 Encryption 2:
+        title: Ráðning tvíundarstrengja
         content1: lýsing hér
       CSD U5 Encryption 2_2018:
+        title: Ráðning tvíundarstrengja
         content1: lýsing hér
       CSD U5 Encryption 2_2018_2019:
+        title: Ráðning tvíundarstrengja
         content1: lýsing hér
       CSD U5 L13 SFLP Interpreting Data:
         title: titill
         content1: lýsing hér
       CSD U5 crosstab warmup:
+        title: Pítsakönnun
         content1: lýsing hér
       CSD U5 crosstab warmup_2018:
+        title: Pítsakönnun
         content1: lýsing hér
       CSD U5 crosstab warmup_2018_2019:
+        title: Pítsakönnun
         content1: lýsing hér
       CSD U5 data visualization:
         title: titill
@@ -805,10 +958,13 @@ is-IS:
         title: titill
         content1: lýsing hér
       CSD U6 LED create intro:
+        title: Búa til app með LED
         content1: lýsing hér
       CSD U6 LED create intro_2018:
+        title: Búa til app með LED
         content1: lýsing hér
       CSD U6 LED create intro_2018_2019:
+        title: Búa til app með LED
         content1: lýsing hér
       CSD U6 array multi:
         questions:
@@ -841,6 +997,7 @@ is-IS:
       CSD U6 final intro_2018_2019:
         content1: lýsing hér
       CSD U6 setProperty predict multi:
+        title: Spáðu hvað mun gerast
         questions:
         - {}
         answers:
@@ -849,6 +1006,7 @@ is-IS:
         - {}
         - {}
       CSD U6 setProperty predict multi_2018:
+        title: Spáðu hvað mun gerast
         questions:
         - {}
         answers:
@@ -857,11 +1015,13 @@ is-IS:
         - {}
         - {}
       Internet Simulator Setup:
+        title: Uppsetning nethermis
         content1: lýsing hér
       Internet Simulator Setup 2:
         title: titill
         content1: lýsing hér
       Internet Simulator Setup 3:
+        title: Uppsetning nethermis 3
         content1: lýsing hér
       K-1 Artist 1 Multi 1:
         title: Valspurningar
@@ -885,173 +1045,188 @@ is-IS:
         title: Samsvörun
         content2: Tengdu samsvarandi form út frá gerð þeirra.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
       K-1 Bee 1 Multi 1:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: Hve margir blómasafar eru þetta?
         answers:
         - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
       K-1 Bee 1 Multi 2:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: Hve margir blómasafar eru þetta?
         answers:
         - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
       K-1 Bee Loops Match 1:
         title: Samsvörun
         content2: Tengdu samsvarandi kubba
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
       K-1 Big Event Match 1:
         title: Samsvörun
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Hvaða hnappasamsetning samsvarar danshreyfingunum?
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
       K-1 Digital Footprint Multi 1:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: Hvaða dýr hefur stafrænt fótspor sem gerir það <strong>mest óöruggt</strong>?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
       K-1 Getting Loopy Multi 1:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: Hvernig mundir þú einfalda þessa röð með lykkjum?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
       K-1 Happy Maps Multi 1:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: Hvaða píla kemur Flurb til fjársjóðsins?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
       K-1 Keep it Private Multi 1:
         title: Valspurningar
         questions:
         - text: Hvaða upplýsingum ættir þú <strong>ekki</strong> að deila á netinu?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
       K-1 Maze Debugging Multi 1:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: Hvaða valkostur ætti að vera síðasti kubburinn?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
       K-1 Maze Loops Multi 1:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: Hvaða endurtekningarkubbur er eins?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
       K-1 Maze Loops Multi 2:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: Veldu rétta endurtekningarkubbinn.
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
       K-1 Maze Match 1:
         title: Samsvörun
         content2: Tengdu samsvarandi þrautir og kubba
         pre_title: Leiðbeiningar
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
       K-1 Maze Multiple Choice 2:
         title: Völundarhús
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: Hvaða svar leysir þetta borð?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
       K-1 Move It Multi 1:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: Hvaða algrím kemur Flurb til blómanna?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
       K-1 Plant a Seed Multi 1:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: Hvaða skref ætti að fara í upphaf þessa algríms?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
       K-1 Plant a Seed Multi 2:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: Hvaða skref ætti að fylla eyðuna fyrir þetta algrím?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
       K-1 Word Search Multi 1:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
         - text: Hvaða kubbar stafa orðið "MOVE"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
       K-1 Word Search Multi 3:
         title: Valspurningar
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
         questions:
         - text: Hvaða orð er stafað hér?
         answers:
@@ -1070,458 +1245,595 @@ is-IS:
       Prepare for your presentation:
         title: titill
         content1: lýsing hér
+      Prepare for your presentation_2018:
+        title: Undirbúa kynninguna þína
       'Technique: Frequency Analysis':
+        title: Hvernig á að ráða útskiptidulmál
         content1: lýsing hér
       Terminology Recap:
+        title: Þetta var auðvelt, hvað er næst?
         content1: lýsing hér
       behaviors 1 predict:
         questions:
-        - {}
+        - text: Smelltu á "breyta" hnappinn til að sjá hvaða hegðun er í `mystery
+            behavior`. Skoðaðu kóðann og spáðu svo hvað muni gerast.
         answers:
-        - {}
-        - {}
-        - {}
-        - feedback: Ekki rétt
+        - text: Veran mun snúast
+          feedback: Ekki rétt.
+        - text: Veran mun minnka.
+          feedback: Rétt!
+        - text: Veran mun hreyfast.
+          feedback: Ekki rétt.
+        - text: Veran mun skipta um lit.
+          feedback: Ekki rétt
       behaviors 4 predict:
         questions:
-        - {}
+        - text: Spáðu. Í hvaða átt mun gervitunglið hreyfast í átt að stjörnuþyrpingunni?
         answers:
-        - {}
-        - {}
-        - {}
-        - feedback: Ekki rétt
+        - text: Vinstri svo niður
+          feedback: Ekki rétt.
+        - text: Skáhallt
+          feedback: Rétt!
+        - text: Zikk zakk
+          feedback: 'Ekki rétt. '
+        - text: Niður síðan til vinstri
+          feedback: Ekki rétt
       courseC_multi_artist_prog6_predict1:
         questions:
-        - {}
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Listamaðurinn mun teikna þríhyrning með þrjár jafnlangar hliðar.
+          feedback: Ekki rétt. Listamaðurinn teiknar ferning.
+        - text: Listamaðurinn mun teikna eina beina línu.
+          feedback: Ekki rétt. Listamaðurinn teiknar ferning.
+        - text: Listamaðurinn teiknar ferning.
+          feedback: Rétt!
+        - text: Veit ekki.
+          feedback: Listamaðurinn teiknar ferning.
       courseC_multi_artist_prog6_predict1_2018:
         questions:
-        - {}
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Listamaðurinn mun teikna þríhyrning með þrjár jafnlangar hliðar.
+          feedback: Ekki rétt. Listamaðurinn teiknar ferning.
+        - text: Listamaðurinn mun teikna eina beina línu.
+          feedback: Ekki rétt. Listamaðurinn teiknar ferning.
+        - text: Listamaðurinn mun teikna ferning.
+          feedback: Rétt!
+        - text: Veit ekki.
+          feedback: Listamaðurinn teiknar ferning.
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
-        - {}
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Listamaðurinn mun teikna þríhyrning með þrjár jafnlangar hliðar.
+          feedback: Ekki rétt. Listamaðurinn teiknar ferning.
+        - text: Listamaðurinn mun teikna eina beina línu.
+          feedback: Ekki rétt. Listamaðurinn teiknar ferning.
+        - text: Listamaðurinn mun teikna ferning.
+          feedback: Rétt!
+        - text: Veit ekki.
+          feedback: Listamaðurinn teiknar ferning.
       courseC_multi_harvester_loops11_predict1:
         questions:
-        - {}
+        - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hve mörgum graskerum mun
+            bóndinn safna þegar þú smellir á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: Ekki rétt. Bóndinn mun safna 4 graskerum í hverri af lykkjunum
+            þremur. 4 sinnum 3 er 12!
+        - feedback: Rétt!
+        - feedback: Ekki rétt. Bóndinn mun safna 4 graskerum í hverri af lykkjunum
+            þremur. 4 sinnum 3 er 12!
+        - text: Veit ekki.
+          feedback: Bóndinn mun safna 4 graskerum í hverri af lykkjunum þremur. 4
+            sinnum 3 er 12!
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
-        - {}
+        - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hve mörgum graskerum mun
+            bóndinn safna þegar þú smellir á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: Ekki rétt. Bóndinn mun safna 4 graskerum í hverri af lykkjunum
+            þremur. 4 sinnum 3 er 12!
+        - feedback: Rétt!
+        - feedback: Ekki rétt. Bóndinn mun safna 4 graskerum í hverri af lykkjunum
+            þremur. 4 sinnum 3 er 12!
+        - text: Veit ekki.
+          feedback: Bóndinn mun safna 4 graskerum í hverri af lykkjunum þremur. 4
+            sinnum 3 er 12!
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
-        - {}
+        - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hve mörgum graskerum mun
+            bóndinn safna þegar þú smellir á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: Ekki rétt. Bóndinn mun safna 4 graskerum í hverri af lykkjunum
+            þremur. 4 sinnum 3 er 12!
+        - feedback: Rétt!
+        - feedback: Ekki rétt. Bóndinn mun safna 4 graskerum í hverri af lykkjunum
+            þremur. 4 sinnum 3 er 12!
+        - text: Veit ekki.
+          feedback: Bóndinn mun safna 4 graskerum í hverri af lykkjunum þremur. 4
+            sinnum 3 er 12!
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Forritið mun ekki bregðast. Skrat mun komast til akarnsins.
+          feedback: Ekki rétt. Skrat fer í ranga átt eftir síðasta snúninginn.
+        - text: Skrat mun fara í ranga átt eftir síðasta snúninginn.
+          feedback: Rétt!
+        - text: Skrat vantar eitt skref upp á að ná akarninu.
+          feedback: Ekki rétt. Að hann gengur einu skrefi of stutt gerist eftir að
+            Skrat snýr í ranga átt.
+        - text: Veit ekki.
+          feedback: 'Fyrsta villan er að Skrat fer í ranga átt eftir síðasta snúninginn. '
       courseC_multi_maze_debugging8_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Forritið mun ekki bregðast. Skrat mun komast til akarnsins.
+          feedback: Ekki rétt. Skrat fer í ranga átt eftir síðasta snúninginn.
+        - text: Skrat mun fara í ranga átt eftir síðasta snúninginn.
+          feedback: Rétt!
+        - text: Skrat vantar eitt skref upp á að ná akarninu.
+          feedback: Ekki rétt. Að hann gengur einu skrefi of stutt gerist eftir að
+            Skrat snýr í ranga átt.
+        - text: Veit ekki.
+          feedback: 'Fyrsta villan er að Skrat fer í ranga átt eftir síðasta snúninginn. '
       courseC_multi_maze_debugging8_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Forritið mun ekki bregðast. Skrat mun komast til akarnsins.
+          feedback: Ekki rétt. Skrat fer í ranga átt eftir síðasta snúninginn.
+        - text: Skrat mun fara í ranga átt eftir síðasta snúninginn.
+          feedback: Rétt!
+        - text: Skrat vantar eitt skref upp á að ná akarninu.
+          feedback: Ekki rétt. Að hann gengur einu skrefi of stutt gerist eftir að
+            Skrat snýr í ranga átt.
+        - text: Veit ekki.
+          feedback: 'Fyrsta villan er að Skrat fer í ranga átt eftir síðasta snúninginn. '
       courseC_multi_maze_programming8_predict1:
         questions:
-        - {}
+        - text: Lestu kóðann hér fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
         answers:
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Fuglinn mun komast til svínsins.
+          feedback: Rétt!
+        - text: Fuglinn mun rekast á TNT sprengju.
+        - text: Veit ekki.
+          feedback: Þessi kóði kemur fuglinum fullkomlega til svínsins.
       courseC_multi_maze_programming8_predict1_2018:
         questions:
-        - {}
+        - text: Lestu kóðann hér fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
         answers:
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Fuglinn mun komast til svínsins.
+          feedback: Rétt!
+        - text: Fuglinn mun rekast á TNT sprengju.
+        - text: Veit ekki.
+          feedback: Þessi kóði kemur fuglinum fullkomlega til svínsins.
       courseC_multi_maze_programming8_predict1_2018_2019:
         questions:
-        - {}
+        - text: Lestu kóðann hér fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
         answers:
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Fuglinn mun komast til svínsins.
+          feedback: Rétt!
+        - text: Fuglinn mun rekast á TNT sprengju.
+        - text: Veit ekki.
+          feedback: Þessi kóði kemur fuglinum fullkomlega til svínsins.
       courseC_multi_starWars_predict1:
         questions:
-        - {}
+        - text: Hvað heldur þú að muni gerast þegar þú smellir á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 mun ekki hreyfast.
+          feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+            sinnum.
+        - text: BB-8 mun færast um aðeins eitt bil
+          feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+            sinnum.
+        - text: BB-8 mun færast 5 sinnum og ná öllum málminum
+          feedback: Rétt!
         - text: Veit ekki
+          feedback: '"Endurtaka" kubburinn mun láta BB-8 færast áfram 5 sinnum.'
       courseC_multi_starWars_predict1_2018:
         questions:
-        - {}
+        - text: Hvað heldur þú að muni gerast þegar þú smellir á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 mun ekki hreyfast.
+          feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+            sinnum.
+        - text: BB-8 mun færast um aðeins eitt bil
+          feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+            sinnum.
+        - text: BB-8 mun færast 5 sinnum og ná öllum málminum
+          feedback: Rétt!
         - text: Veit ekki
+          feedback: '"Endurtaka" kubburinn mun láta BB-8 færast áfram 5 sinnum.'
       courseC_multi_starWars_predict1_2018_2019:
         questions:
-        - {}
+        - text: Hvað heldur þú að muni gerast þegar þú smellir á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 mun ekki hreyfast.
+          feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+            sinnum.
+        - text: BB-8 mun færast um aðeins eitt bil
+          feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+            sinnum.
+        - text: BB-8 mun færast 5 sinnum og ná öllum málminum
+          feedback: Rétt!
         - text: Veit ekki
+          feedback: '"Endurtaka" kubburinn mun láta BB-8 færast áfram 5 sinnum.'
       courseC_multi_starWars_predict2:
         questions:
-        - {}
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 mun færast of langt í fyrstu lykkjunni.
+          feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
+        - text: BB-8 mun ekki færast nógu langt í fyrstu lykkjunni til að hann nái
+            öllum málminum.
+          feedback: Rétt!
+        - text: BB-8 mun safna öllum málminum án nokkurra vandræða.
+          feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
+        - text: Veit ekki.
+          feedback: Fyrsta lykkjan færir BB-8 áfram um aðeins 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
       courseC_multi_starWars_predict2_2018:
         questions:
-        - {}
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 mun færast of langt í fyrstu lykkjunni.
+          feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
+        - text: BB-8 mun ekki færast nógu langt í fyrstu lykkjunni til að hann nái
+            öllum málminum.
+          feedback: Rétt!
+        - text: BB-8 mun safna öllum málminum án nokkurra vandræða.
+          feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
+        - text: Veit ekki.
+          feedback: Fyrsta lykkjan færir BB-8 áfram um aðeins 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
       courseC_multi_starWars_predict2_2018_2019:
         questions:
-        - {}
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 mun færast of langt í fyrstu lykkjunni.
+          feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
+        - text: BB-8 mun ekki færast nógu langt í fyrstu lykkjunni til að hann nái
+            öllum málminum.
+          feedback: Rétt!
+        - text: BB-8 mun safna öllum málminum án nokkurra vandræða.
+          feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
+        - text: Veit ekki.
+          feedback: Fyrsta lykkjan færir BB-8 áfram um aðeins 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
+      courseD_external_binary1:
+        title: Tvíundarteikning
+      courseD_external_binary1_2018:
+        title: Tvíundarteikning
+      courseD_external_binary1_2018_2019:
+        title: Tvíundarteikning
       courseD_multi_artist_binary8_predict1:
         questions:
         - {}
         answers:
         - text: A
+          feedback: Ekki rétt.
         - text: B
+          feedback: Ekki rétt.
         - text: C
+          feedback: Ekki rétt.
         - text: D
+          feedback: Rétt!
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
         answers:
         - text: A
+          feedback: Ekki rétt.
         - text: B
+          feedback: Ekki rétt.
         - text: C
+          feedback: Ekki rétt.
         - text: D
+          feedback: Rétt!
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
         answers:
         - text: A
+          feedback: Ekki rétt.
         - text: B
+          feedback: Ekki rétt.
         - text: C
+          feedback: Ekki rétt.
         - text: D
+          feedback: Rétt!
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
+          feedback: Rétt!
         - text: B
         - text: C
-        - {}
+        - text: Veit ekki.
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
         - {}
         answers:
         - text: A
+          feedback: Rétt!
         - text: B
         - text: C
-        - {}
+        - text: Veit ekki.
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
         - {}
         answers:
         - text: A
+          feedback: Rétt!
         - text: B
         - text: C
-        - {}
+        - text: Veit ekki.
       courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_bee_conditionals1_predict1_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_bee_conditionals7_predict2_2018:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_bee_nestedLoops2_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_collector_debugging10_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseD_multi_farmer_condLoops9_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hirðirinn mun hirða alla uppskeruna.
+          feedback: Ekki rétt. Hér er enginn kóði til að hirða graskerið.
+        - text: Hirðirinn mun ekki hirða neina uppskeru á þeirri slóð sem hún fer.
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - {}
         answers:
+        - text: Hirðirinn mun hirða alla uppskeruna.
         - {}
-        - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - {}
         answers:
+        - text: Hirðirinn mun hirða alla uppskeruna.
         - {}
-        - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_farmer_while10_predict2:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_farmer_while10_predict2_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_farmer_while10_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_farmer_while4_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseD_multi_farmer_while4_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_maze_until10_predict2_2018:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_maze_until10_predict2_2018_2019:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_maze_until2_predict1:
         questions:
         - {}
         answers:
         - {}
+        - text: Fuglinn mun komast til svínsins.
+          feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_maze_until2_predict1_2018:
         questions:
         - {}
         answers:
         - {}
+        - text: Fuglinn mun komast til svínsins.
+          feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_maze_until2_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - text: Fuglinn mun komast til svínsins.
+          feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseD_multi_scrat_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
@@ -1529,7 +1841,7 @@ is-IS:
         - {}
         - {}
         - {}
-        - {}
+        - text: Veit ekki.
       courseE_multi_farmer_functions11_predict:
         questions:
         - {}
@@ -1537,14 +1849,14 @@ is-IS:
         - {}
         - {}
         - {}
-        - {}
+        - feedback: Rétt!
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - feedback: Rétt!
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1552,7 +1864,7 @@ is-IS:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: Rétt!
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1583,95 +1895,95 @@ is-IS:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseF_bee_variables_8a_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseF_multi_artist_for10_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseF_multi_artist_for10_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Rétt!
+        - text: Veit ekki.
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseF_multi_artist_variables3a_predict1:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseF_multi_bee_conditionals1_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
+        - feedback: Rétt!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       courseF_multi_bee_for3_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: Rétt!
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1679,7 +1991,7 @@ is-IS:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: Rétt!
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1687,7 +1999,7 @@ is-IS:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: Rétt!
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1697,7 +2009,7 @@ is-IS:
         - {}
         - {}
         - {}
-        - {}
+        - text: Veit ekki.
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
@@ -1705,13 +2017,13 @@ is-IS:
         - {}
         - {}
         - {}
-        - {}
+        - text: Veit ekki.
       coursee_prediction_artistfunction2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: Rétt!
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1719,7 +2031,7 @@ is-IS:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: Rétt!
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1727,7 +2039,7 @@ is-IS:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: Rétt!
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1735,22 +2047,24 @@ is-IS:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       grade2_multi_collector_A_predict1_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: Rétt!
         - {}
-        - {}
-        - {}
+        - text: Veit ekki.
+      gradek1_activity_beNice:
+        title: Tölvan er vinur þinn
