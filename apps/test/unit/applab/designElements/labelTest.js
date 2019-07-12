@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import label from '@cdo/apps/applab/designElements/label';
 import library from '@cdo/apps/applab/designElements/library';
 import * as applabConstants from '@cdo/apps/applab/constants';

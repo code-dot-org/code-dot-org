@@ -27,6 +27,9 @@ const styles = {
   },
   noResponse: {
     color: color.lighter_gray
+  },
+  response: {
+    whiteSpace: 'pre-wrap'
   }
 };
 
@@ -68,7 +71,7 @@ class FreeResponsesAssessmentsTable extends Component {
   responseCellFormatter = (response, {rowData, rowIndex}) => {
     return (
       <div>
-        {response && <div>{response}</div>}
+        {response && <div style={styles.response}>{response}</div>}
         {!response && (
           <div style={styles.noResponse}>{i18n.emptyFreeResponse()}</div>
         )}

@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import dropdown from '@cdo/apps/applab/designElements/dropdown';
 import library from '@cdo/apps/applab/designElements/library';
 

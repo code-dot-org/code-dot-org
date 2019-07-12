@@ -1,16 +1,473 @@
 ---
-mi:
+mi-NZ:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Kōwhiria tēahi hātepe mō te atahanga kua whakaratoa.
+        answers:
+        - text: Me tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapatoru ki runga ake
+            i te tapawhā<br/>Hoatu i tētahi tapatoru ki raro iho i te tapawhā
+        - {}
+        - text: Me tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapawhā whakarara ki
+            runga ake i te tapawhā<br/>Hoatu i tētahi tapatoru ki te taha matau o
+            te tapawhā whakarara
+        - text: Me tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapatoru ki raro iho
+            i te tapawhā<br/>Hoatu i tētahi tapawhā whakarara ki te taha matau o te
+            tapatoru
+      2-3 Algorithms Multi 2:
+        title: Kōwhiringa Maha
+        content1: Me tīmata me tētahi tapatoru<br/>Hoatu i tētahi tapawhā ki raro
+          i te tapatoru<br/>Hoatu i tētahi tapatoru anō ki raro iho i te tapawhā
+        questions:
+        - text: Ko tēhea o ngā atahanga kāore <em> e </em> whai i tēnei hātepe?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Te Whakataurite
+        content2: Whakatauritea te pahekotanga pātene ki ngā nekehanga kanikani.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Te Whakataurite
+        content2: Whakamahia te tohu ki te whakataurite i te waehere ki tōna pū
+        questions:
+        - text: "<strong>A</strong>"
+        - text: "<strong>E</strong>"
+        - text: "<strong>I</strong>"
+        - text: "<strong>O</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: E ai ki ngā ture o te kēmu, kua tika te tapeke piro o tēhea huinga
+            kāri?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ka pēhea tō whakamāmā i tēnei raupapatanga me ngā koromeke?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Te Whakataurite
+        content1: Me whakataurite i te mātiti ki te papatono.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Nā tēhea papatono tēnei atahanga i hanga?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: Whakataurite Rīrapa
+        content1: Me whakataurite i ngā panga ki te paraka
+        pre_title: Ngā Tohutohu
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: Rīrapa Kōwhiringa Maha
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ko tēhea takiruatanga papatono-atahanga kāore ōna hapa?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: Ngā Taumahi Rehetoi Kōwhiringa Maha Tahi
+        questions:
+        - text: Tīpakohia ngā paraka e tika ana ki te tā i tēnei atahanga me ngā taumahi
+            kua tukuna
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Whakataurite i te koromeke ki te āhua
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: Ngā Koromeke Rehetoi Kōwhiringa Maha
+        questions:
+        - text: Ko tēhea āhua ka hangaia e tēnei koromeke?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: Ngā Koromeke Rehetoi Kōwhiringa Maha
+        questions:
+        - text: Ko tēhea āhua ka hangaia e tēnei papatono?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: Whakataurite ā-Rehetoi
+        content1: Me whakataurite i te āhua ki ngā paraka e tika ana kia oti pai.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: Ko tēhea te whakaritenga pono o raro iho nei?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: Kōwhiria ngā paraka whai take.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: Ngā Koromeke Pī Kōwhiringa Maha Tahi
+        questions:
+        - text: Mā ēhea paraka te katoa o te waireka e kohikohi?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Whakataurite Rīrapa 1
+        content1: Me whakataurite i ngā panga ki te paraka
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: Rīrapa Kōwhiringa Maha Tahi
+        questions:
+        - text: Ko tēhea tautuhinga paraka te whakautu tika?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Te Whakataurite
+        content1: Me whakataurite i ngā hipanga i te kēmu Reihi Mataono ki te raupapatanga
+          e tika ana e ai ki te hātepe.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Tautuhia te whiwhinga piro o Kaitākaro 1 ki te 0</h4>"
+        - text: "<h4>Ka makaia te mataono e Kaitākaro 1</h4>"
+        - text: "<h4>Tāpiritia te uara o tā Kaitākaro 1 maka mataono ki te tapeketanga
+            piro</h4>"
+        - text: "<h4>Kia kitea he toa whakatairitehia ngā tapeketanga piro</h4>"
+      4-5 Algorithms Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ka uaua rawa atu te whakaahua i te hātepe mō tēhea o ēnei tūemi?
+        answers:
+        - text: Te taitai i ō niho
+        - text: Te tunu pihikete
+        - text: Te hoko kai i tētahi rārangi hoko
+        - text: Panana
+      4-5 Computational Thinking Match 1:
+        title: Te Whakataurite
+        content1: Kua pūririkitia ēnei waka katoa. Me whakataurite i ia waka ki tōna
+          rārangi pūririki.
+        questions:
+        - text: "<h3>Wīra/taha: 2<br/>Matapihi/taha: 0</h3>"
+        - text: "<h3>Wīra/taha: 2<br/>Matapihi/taha: 1</h3>"
+        - text: "<h3>Wīra/taha: 2<br/>Matapihi/taha: 6</h3>"
+        - text: "<h3>Wīra/taha: 3<br/>Matapihi/taha: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: He taone nui a Seattle.<br/> He taone waenganui a Eugene<br/>He taone
+            iti a Hillview.
+        answers:
+        - text: He _____ _____ _____Seattle.
+        - text: He taone _____ a_____.
+        - text: He _____ _____ a_____.
+        - text: He taone _____ a Eugene.
+      4-5 Crowdsourcing Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ko tēhea o ēnei pikitia te whakaahuatanga pai o te mahi ā-ohu?
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ko tēhea o ēnei ngohe ka tino whai take i te mahi ā-ohu?
+        answers:
+        - text: Te whakanahanaha i tō rūma
+        - text: Te kai i tō wainene
+        - text: Te paraehe i ō makawe
+        - text: Te horoi i tō kanohi
+      4-5 Digital Footprint Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ko tēhea mōhiotanga kua tuhia ki raro iho nei ka pai noa iho ki te
+            tiri ki te ipurangi?
+        answers:
+        - text: Tō huritau
+        - text: Tō tino kai
+        - text: Tō wāhinoho
+        - text: Te nama kāri tāwere a tō matua
+      4-5 Internet Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ka haria koe ki tēhea wāhitau IP mā te DNS i a koe ka ngana ki te
+            takiuru ki code.org?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Internet Multi 2:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Kei tēhea pae tukutuku koe mēnā kua tukuna koe e te DNS ki te whārangi
+            koinei tana wāhitau IP 100.42.50.110?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Te Whakataurite
+        content1: Mā te whakamahi i te rōpū pūkenga kua whakaratoa me whakataurite
+          i te papatono ki tōna kupu.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Suncatchers Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ko ēhea o ngā papatono kei raro iho nei<em>kāore e</em>hanga i te
+            raupapatanga ōrite rawa ki tērā o te Papatono 1?
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: Ngā Koromeke Rehetoi Kōwhiringa Maha
+        questions:
+        - text: Mā ēhea paraka te hoahoatanga e waihanga?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: Rehetoi Kōwhiringa Maha
+        questions:
+        - text: Mā ēhea paraka tētahi tapawhā roa, 100 te paenga, e waihanga?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: Rehetoi Kōwhiringa Maha
+        questions:
+        - text: He hangarite tēhea tānga?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: Herenga Pī Kōwhiringa Maha
+        questions:
+        - text: Kōwhiria ngā paraka whai take.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: Patuiro Pī Kōwhiringa Maha
+        questions:
+        - text: Ko tēhea putanga o te taumahi ka tutuki ina whakamahia?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: Ngā Koromeke Pī Kōwhiringa Maha
+        questions:
+        - text: Ko ēhea paraka ka whakaoti i te panga?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: Herenga Rīrapa Kōwhiringa Maha
+        questions:
+        - text: Mā ēhea paraka tēnei panga e whakaoti?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Whakataurite Rīrapa
+        content1: Me whakataurite i ngā panga ki te paraka
+        pre_title: Ngā Tohutohu
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: Rīrapa Kōwhiringa Maha
+        questions:
+        - text: Mā ēhea paraka tēnei panga e whakaoti?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
         title: taitara
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
         title: taitara
       CSD U2 Design Project_2018:
         title: taitara
       CSD U2 Design Project_2018_2019:
-        title: taitara
-      CSD U2 L1 Overview:
         title: taitara
       CSD U2 L2 Overview:
         title: taitara
@@ -28,12 +485,245 @@ mi:
         title: taitara
       CSD U2 expand project_2018_2019:
         title: taitara
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: taitara
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: taitara
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: taitara
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
         title: taitara
       CSD U3 combining rep_2018:
         title: taitara
       CSD U3 combining rep_2018_2019:
         title: taitara
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U5 Encryption 1:
         title: taitara
       CSD U5 Encryption 1_2018:
@@ -54,8 +744,244 @@ mi:
         title: taitara
       CSD U5 student record_2018_2019:
         title: taitara
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Internet Simulator Setup 2:
         title: taitara
+      K-1 Artist 1 Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Mā ēhea paraka tēnei panga e whakaoti?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Mā ēhea paraka te tapawhā e tā?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Te Whakataurite
+        content2: Whakatauritea ngā āhua i runga i te momo.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: E hia katoa ngā waireka kei tēnei?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: Kōwhiringa Maha
+        questions:
+        - text: E hia katoa ngā waireka kei tēnei?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: Te Whakataurite
+        content2: Whakatauritea ngā paraka
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Te Whakataurite
+        content2: Whakatauritea te pahekotanga pātene ki ngā nekehanga kanikani.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Kei tēhea kararehe te tapuwae matihiko nā reira ka <strong>mōrearea</strong>tana
+            noho?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ka pēhea tō whakamāmā i tēnei raupapatanga me ngā koromeke?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Mā tēhea pere e tae atu ai a Flurb ki te kura?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ko ēhea mōhiohio me <strong>kaua</strong>koe e tiri ā-tuihono?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ko tēhea kōwhiringa te paraka whakamutunga?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ko tēhea te paraka tōai he ōrite?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Tīpakohia te paraka tōai tika.
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: Te Whakataurite
+        content2: Whakatauritea ngā panga me ngā paraka
+        pre_title: Ngā Tohutohu
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: Rīrapa
+        questions:
+        - text: Mā tēhea whakautu e tutuki ai tēnei taumata?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Mā tēhea hātepe a Flurb e tae atu ai ngā putiputi?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: E tika ana kia noho ko tēhea hipanga i te tīmatanga o tēnei hātepe?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: Kōwhiringa Maha
+        questions:
+        - text: E tika ana kia whakakīia te āputa me tēhea hipanga i tēnei hātepe?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Mā ēhea paraka te kupu "MOVE" e tātaki?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: Kōwhiringa Maha
+        questions:
+        - text: Ka tātakina tēhea kupu?
+        answers:
+        - {}
+        - {}
+        - {}
       Multi-Screen Apps:
         title: taitara
       New Challenge Introduction:
@@ -64,383 +990,683 @@ mi:
         title: taitara
       Prepare for your presentation:
         title: taitara
-    match:
-      2-3 Big Event Match 1:
-        Match the button combination to the dance moves.: Whakatauritea te pahekotanga
-          pātene ki ngā nekehanga kanikani.
-        Matching: Te Whakataurite
-      2-3 Binary Match 1:
-        "<strong>N</strong>": "<strong>A</strong>"
-        "<strong>O</strong>": "<strong>E</strong>"
-        "<strong>P</strong>": "<strong>I</strong>"
-        "<strong>Q</strong>": "<strong>O</strong>"
-        Matching: Te Whakataurite
-        Use the key to match each code to its letter: Whakamahia te tohu ki te whakataurite
-          i te waehere ki tōna pū
-      2-3 Graph Paper Match 1:
-        Match the grid to the program.: Me whakataurite i te mātiti ki te papatono.
-        Matching: Te Whakataurite
-      2-3 Maze Match 2:
-        Instructions: Ngā Tohutohu
-        Match the puzzles to the blocks: Me whakataurite i ngā panga ki te paraka
-        Maze Match: Whakataurite Rīrapa
-      2-3 artist loops match 1:
-        Match the loop to the shape: Whakataurite i te koromeke ki te āhua
-      2-3 artist match 1:
-        Artist Matching: Whakataurite ā-Rehetoi
-        Match the shape with the blocks that complete it.: Me whakataurite i te āhua
-          ki ngā paraka e tika ana kia oti pai.
-      2-3 maze match 1:
-        Match the puzzles to the blocks: Me whakataurite i ngā panga ki te paraka
-        Maze Match One: Whakataurite Rīrapa 1
-      4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>2)</h4>"
-        "<h4>3)</h4>": "<h4>3)</h4>"
-        "<h4>4)</h4>": "<h4>4)</h4>"
-        "<h4>Add Player 1 roll to total score</h4>": "<h4>Tāpiritia te uara o tā Kaitākaro
-          1 maka mataono ki te tapeketanga piro</h4>"
-        "<h4>Compare player scores to see who wins</h4>": "<h4>Kia kitea he toa whakatairitehia
-          ngā tapeketanga piro</h4>"
-        "<h4>Player 1 rolls die</h4>": "<h4>Ka makaia te mataono e Kaitākaro 1</h4>"
-        "<h4>Set Player 1 score to 0</h4>": "<h4>Tautuhia te whiwhinga piro o Kaitākaro
-          1 ki te 0</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Me
-          whakataurite i ngā hipanga i te kēmu Reihi Mataono ki te raupapatanga e
-          tika ana e ai ki te hātepe.
-        Matching: Te Whakataurite
-      4-5 Computational Thinking Match 1:
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Wīra/taha: 2<br/>Matapihi/taha:
-          0</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Wīra/taha: 2<br/>Matapihi/taha:
-          1</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Wīra/taha: 2<br/>Matapihi/taha:
-          6</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Wīra/taha: 3<br/>Matapihi/taha:
-          2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Kua
-          pūririkitia ēnei waka katoa. Me whakataurite i ia waka ki tōna rārangi pūririki.
-        Matching: Te Whakataurite
-      4-5 Suncatchers Match 1:
-        Match each program to the word it makes, using the provided group of skills.: Mā
-          te whakamahi i te rōpū pūkenga kua whakaratoa me whakataurite i te papatono
-          ki tōna kupu.
-        Matching: Te Whakataurite
-      4-5 maze match 1:
-        Instructions: Ngā Tohutohu
-        Match the puzzles to the blocks: Me whakataurite i ngā panga ki te paraka
-        Maze Match: Whakataurite Rīrapa
-      K-1 Artist 2 Match 2:
-        Match the shapes based on type.: Whakatauritea ngā āhua i runga i te momo.
-        Matching: Te Whakataurite
-      K-1 Bee Loops Match 1:
-        Match the blocks: Whakatauritea ngā paraka
-        Matching: Te Whakataurite
-      K-1 Big Event Match 1:
-        Match the button combination to the dance moves.: Whakatauritea te pahekotanga
-          pātene ki ngā nekehanga kanikani.
-        Matching: Te Whakataurite
-      K-1 Maze Match 1:
-        Instructions: Ngā Tohutohu
-        Match the puzzles and blocks: Whakatauritea ngā panga me ngā paraka
-        Matching: Te Whakataurite
-    multi:
-      2-3 Algorithms Multi 1:
-        Choose an algorithm for the image provided.: Kōwhiria tēahi hātepe mō te atahanga
-          kua whakaratoa.
-        Multiple Choice: Kōwhiringa Maha
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Me
-          tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapawhā whakarara ki runga ake
-          i te tapawhā<br/>Hoatu i tētahi tapatoru ki te taha matau o te tapawhā whakarara
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Me
-          tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapatoru ki runga ake i te tapawhā<br/>Hoatu
-          i tētahi tapatoru ki raro iho i te tapawhā
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Me
-          tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapatoru ki raro iho i te tapawhā<br/>Hoatu
-          i tētahi tapawhā whakarara ki te taha matau o te tapatoru
-        0: "? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram"
-        1: ": Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram"
-      2-3 Algorithms Multi 2:
-        Multiple Choice: Kōwhiringa Maha
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Me
-          tīmata me tētahi tapatoru<br/>Hoatu i tētahi tapawhā ki raro i te tapatoru<br/>Hoatu
-          i tētahi tapatoru anō ki raro iho i te tapawhā
-        Which image does <em>not</em> follow this algorithm?: Ko tēhea o ngā atahanga
-          kāore <em> e </em> whai i tēnei hātepe?
-      2-3 Conditionals Multi 1:
-        According to the rules of the game, which set of cards is scored correctly?: E
-          ai ki ngā ture o te kēmu, kua tika te tapeke piro o tēhea huinga kāri?
-        Multiple Choice: Kōwhiringa Maha
-      2-3 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Ka pēhea tō whakamāmā i
-          tēnei raupapatanga me ngā koromeke?
-        Multiple Choice: Kōwhiringa Maha
-      2-3 Graph Paper Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which program makes this image?: Nā tēhea papatono tēnei atahanga i hanga?
-      2-3 Maze Multi 2:
-        Maze Multiple Choice: Rīrapa Kōwhiringa Maha
-      2-3 Relay Programming Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-      2-3 Relay Programming Multi 2:
-        Multiple Choice: Kōwhiringa Maha
-        Which image-program combo does not contain mistakes?: Ko tēhea takiruatanga
-          papatono-atahanga kāore ōna hapa?
-      2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: Ngā Taumahi Rehetoi Kōwhiringa Maha
-          Tahi
-        Pick the correct blocks to draw this image using the given functions: Tīpakohia
-          ngā paraka e tika ana ki te tā i tēnei atahanga me ngā taumahi kua tukuna
-      2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: Ngā Koromeke Rehetoi Kōwhiringa Maha
-        Which shape is made by this loop?: Ko tēhea āhua ka hangaia e tēnei koromeke?
-      2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: Ngā Koromeke Rehetoi Kōwhiringa Maha
-        Which shape is made by this program?: Ko tēhea āhua ka hangaia e tēnei papatono?
-      2-3 bee conditionals multi 1:
-        Which comparison below is true?: Ko tēhea te whakaritenga pono o raro iho
-          nei?
-      2-3 bee conditionals multi 3:
-        Choose the best blocks.: Kōwhiria ngā paraka whai take.
-      2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: Ngā Koromeke Pī Kōwhiringa Maha Tahi
-        Which blocks collect all of the nectar?: Mā ēhea paraka te katoa o te waireka
-          e kohikohi?
-      2-3 maze multi 1:
-        Maze Multiple Choice One: Rīrapa Kōwhiringa Maha Tahi
-        Which set of blocks is the correct answer?: Ko tēhea tautuhinga paraka te
-          whakautu tika?
-      4-5 Algorithms Multi 1:
-        Baking cookies: Te tunu pihikete
-        Banana: Panana
-        Brushing your teeth: Te taitai i ō niho
-        Multiple Choice: Kōwhiringa Maha
-        Shopping from a grocery list: Te hoko kai i tētahi rārangi hoko
-        Which one of these items is hardest to describe an algorithm for?: Ka uaua
-          rawa atu te whakaahua i te hātepe mō tēhea o ēnei tūemi?
-      4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: He taone _____ a Eugene.
-        0: "? Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?"
-        1: ": Anei ētahi rerenga e toru. Ko ēhea o ngā tauiraira o raro iho nei tērā
-          ka whakarāpopoto tika kia taurite te katoa ki te tauira ōrite ki te tauiraira?"
-        Multiple Choice: Kōwhiringa Maha
-        Seattle _____ a _____ _____.: He _____ _____ _____Seattle.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: He
-          taone nui a Seattle.<br/> He taone waenganui a Eugene<br/>He taone iti a
-          Hillview.
-        _____ is _____ a _____.: He _____ _____ a_____.
-        _____ is a _____ city.: He taone _____ a_____.
-      4-5 Crowdsourcing Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which of these pictures best represents crowdsourcing?: Ko tēhea o ēnei pikitia
-          te whakaahuatanga pai o te mahi ā-ohu?
-      4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Te paraehe i ō makawe
-        Cleaning your room: Te whakanahanaha i tō rūma
-        Eating your dessert: Te kai i tō wainene
-        Multiple Choice: Kōwhiringa Maha
-        Washing your face: Te horoi i tō kanohi
-        Which one of these activities would be best for practicing crowdsourcing?: Ko
-          tēhea o ēnei ngohe ka tino whai take i te mahi ā-ohu?
-      4-5 Digital Footprint Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which piece of information listed below is okay to share on the internet?: Ko
-          tēhea mōhiotanga kua tuhia ki raro iho nei ka pai noa iho ki te tiri ki
-          te ipurangi?
-        Your address: Tō wāhinoho
-        Your birthday: Tō huritau
-        Your favorite food: Tō tino kai
-        Your parent's credit card number: Te nama kāri tāwere a tō matua
-      4-5 Internet Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Ka
-          haria koe ki tēhea wāhitau IP mā te DNS i a koe ka ngana ki te takiuru ki
-          code.org?
-      4-5 Internet Multi 2:
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Kei
-          tēhea pae tukutuku koe mēnā kua tukuna koe e te DNS ki te whārangi koinei
-          tana wāhitau IP 100.42.50.110?
-        Multiple Choice: Kōwhiringa Maha
-      4-5 Songwriting Multi 1:
-        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin."
-        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin."
-        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,"
-        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,"
-        Multiple Choice: Kōwhiringa Maha
-        4: "? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?"
-        5: ": What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?"
-      4-5 Suncatchers Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Ko
-          ēhea o ngā papatono kei raro iho nei<em>kāore e</em>hanga i te raupapatanga
-          ōrite rawa ki tērā o te Papatono 1?
-      4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: Ngā Koromeke Rehetoi Kōwhiringa Maha
-        Which blocks will create the design?: Mā ēhea paraka te hoahoatanga e waihanga?
-      4-5 artist multi 1:
-        Artist Multiple Choice: Rehetoi Kōwhiringa Maha
-        Which blocks draw a rectangle with a perimeter of 100?: Mā ēhea paraka tētahi
-          tapawhā roa, 100 te paenga, e waihanga?
-      4-5 artist multi 2:
-        Artist Multiple Choice: Rehetoi Kōwhiringa Maha
-        Which drawing is symmetric?: He hangarite tēhea tānga?
-      4-5 bee conditionals multi 1:
-        0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know
-          how many. Which blocks correctly check and collect all of the nectar from
-          a purple flower?"
-        1: ": E 3, e 2, kotahi rānei ngā waireka kei tētahi putiputi tawa, heoi anō,
-          kāore koe e mōhio e hia. Mā ēhea paraka te waireka e takitaki, e kohikohi
-          tika hoki i te putiputi tawa?"
-        Bee Conditionals Multiple Choice: Herenga Pī Kōwhiringa Maha
-        Choose the best blocks.: Kōwhiria ngā paraka whai take.
-      4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: Patuiro Pī Kōwhiringa Maha
-        Which version of the function will work?: Ko tēhea putanga o te taumahi ka
-          tutuki ina whakamahia?
-      4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: Ngā Koromeke Pī Kōwhiringa Maha
-        Which blocks will solve the puzzle?: Ko ēhea paraka ka whakaoti i te panga?
-      4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Herenga Rīrapa Kōwhiringa Maha
-        Which blocks solve the puzzle?: Mā ēhea paraka tēnei panga e whakaoti?
-      4-5 maze multi 1:
-        Maze Multiple Choice: Rīrapa Kōwhiringa Maha
-        Which blocks solve the puzzle?: Mā ēhea paraka tēnei panga e whakaoti?
-      CSD U3 Boolean MC:
-        title: taitara
-      CSD U3 Boolean MC_2018:
-        title: taitara
-      CSD U3 Boolean MC_2018_2019:
-        title: taitara
-      K-1 Artist 1 Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which blocks solve this puzzle?: Mā ēhea paraka tēnei panga e whakaoti?
-      K-1 Artist 1 Multi 2:
-        Multiple Choice: Kōwhiringa Maha
-        Which blocks draw the square?: Mā ēhea paraka te tapawhā e tā?
-      K-1 Bee 1 Multi 1:
-        How many nectars is this?: E hia katoa ngā waireka kei tēnei?
-        Multiple Choice: Kōwhiringa Maha
-      K-1 Bee 1 Multi 2:
-        How many nectars is this?: E hia katoa ngā waireka kei tēnei?
-        Multiple Choice: Kōwhiringa Maha
-      K-1 Digital Footprint Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Kei
-          tēhea kararehe te tapuwae matihiko nā reira ka <strong>mōrearea</strong>tana
-          noho?
-      K-1 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Ka pēhea tō whakamāmā i
-          tēnei raupapatanga me ngā koromeke?
-        Multiple Choice: Kōwhiringa Maha
-      K-1 Happy Maps Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which arrow gets the Flurb to the treasure?: Mā tēhea pere e tae atu ai a
-          Flurb ki te kura?
-      K-1 Keep it Private Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which information should you <strong>not</strong> share online?: Ko ēhea mōhiohio
-          me <strong>kaua</strong>koe e tiri ā-tuihono?
-      K-1 Maze Debugging Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which choice should be the final block?: Ko tēhea kōwhiringa te paraka whakamutunga?
-      K-1 Maze Loops Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which repeat block is the same?: Ko tēhea te paraka tōai he ōrite?
-      K-1 Maze Loops Multi 2:
-        Multiple Choice: Kōwhiringa Maha
-        Pick the correct repeat block.: Tīpakohia te paraka tōai tika.
-      K-1 Maze Multiple Choice 2:
-        Maze: Rīrapa
-        Which answer solves this level?: Mā tēhea whakautu e tutuki ai tēnei taumata?
-      K-1 Move It Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which algorithm gets the Flurb to the flowers?: Mā tēhea hātepe a Flurb e
-          tae atu ai ngā putiputi?
-      K-1 Plant a Seed Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which step should go at the beginning of this algorithm?: E tika ana kia noho
-          ko tēhea hipanga i te tīmatanga o tēnei hātepe?
-      K-1 Plant a Seed Multi 2:
-        Multiple Choice: Kōwhiringa Maha
-        Which step should fill in the blank for this algorithm?: E tika ana kia whakakīia
-          te āputa me tēhea hipanga i tēnei hātepe?
-      K-1 Word Search Multi 1:
-        Multiple Choice: Kōwhiringa Maha
-        Which blocks spell "MOVE"?: Mā ēhea paraka te kupu "MOVE" e tātaki?
-      K-1 Word Search Multi 3:
-        Multiple Choice: Kōwhiringa Maha
-        Which word is spelled?: Ka tātakina tēhea kupu?
+      behaviors 1 predict:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      behaviors 4 predict:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_ramp13:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_scrat_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_prediction_artistFunction1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_bee_variables_8a_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      coursee_prediction_artistfunction2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}

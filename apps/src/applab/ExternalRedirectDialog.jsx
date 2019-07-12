@@ -5,7 +5,7 @@ import DialogFooter from '../templates/teacherDashboard/DialogFooter';
 import Button from '../templates/Button';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-import {actions} from './redux/applab';
+import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
@@ -21,15 +21,20 @@ class ExternalRedirectDialog extends React.Component {
     redirects: PropTypes.array
   };
 
+  handleRedirect(url) {
+    window.open(url, '_blank');
+    this.props.handleClose();
+  }
+
   render() {
     let title, body, footer;
     if (!(this.props.redirects && this.props.redirects.length > 0)) {
       return null;
     }
 
-    let approved = this.props.redirects[0].approved;
+    let response = this.props.redirects[0].response;
     let url = this.props.redirects[0].url;
-    if (approved) {
+    if (response === REDIRECT_RESPONSE.APPROVED) {
       title = i18n.redirectTitle();
       body = (
         <div>
@@ -52,16 +57,20 @@ class ExternalRedirectDialog extends React.Component {
             color={Button.ButtonColor.gray}
           />
           <Button
-            href={url}
-            target={'_blank'}
+            onClick={() => this.handleRedirect(url)}
             text={i18n.continue()}
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
       );
     } else {
-      title = i18n.redirectRejectTitle();
-      body = <p>{i18n.redirectRejectExplanation()}</p>;
+      if (response === REDIRECT_RESPONSE.UNSUPPORTED) {
+        title = i18n.redirectUnsupportedTitle();
+        body = <p>{i18n.redirectUnsupportedExplanation()}</p>;
+      } else {
+        title = i18n.redirectRejectTitle();
+        body = <p>{i18n.redirectRejectExplanation()}</p>;
+      }
       footer = (
         <DialogFooter rightAlign>
           <Button

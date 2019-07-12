@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../util/configuredChai';
 import * as achievements from '@cdo/apps/achievements';
 import sinon from 'sinon';
 import authoredHintUtils from '@cdo/apps/authoredHintUtils';

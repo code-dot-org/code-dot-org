@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../util/reconfiguredChai';
+import {expect} from '../../util/configuredChai';
 import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
 import Image from '@cdo/apps/tutorialExplorer/image';
 import LazyLoad from 'react-lazy-load';
@@ -26,27 +26,25 @@ describe('Tutorial', () => {
     const wrapper = shallow(
       <Tutorial item={FAKE_TUTORIAL} tutorialClicked={CALLBACK} />
     );
-    assert(
-      wrapper.containsMatchingElement(
-        <div onClick={CALLBACK}>
-          <div>
-            <div />
-            <LazyLoad offset={1000}>
-              <Image
-                src="/images/fill-480x360/httyd.jpg"
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%'
-                }}
-              />
-            </LazyLoad>
-          </div>
-          <div>How to train your dragon</div>
-          <div>Ages 8 and up. | FORTRAN | iOS</div>
+    expect(wrapper).to.containMatchingElement(
+      <div onClick={CALLBACK}>
+        <div>
+          <div />
+          <LazyLoad offset={1000}>
+            <Image
+              src="/images/fill-480x360/httyd.jpg"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%'
+              }}
+            />
+          </LazyLoad>
         </div>
-      )
+        <div>How to train your dragon</div>
+        <div>Ages 8 and up. | FORTRAN | iOS</div>
+      </div>
     );
   });
 });

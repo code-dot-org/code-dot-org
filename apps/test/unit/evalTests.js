@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 
 var Eval = require('@cdo/apps/eval/eval');
 var EvalText = require('@cdo/apps/eval/evalText');

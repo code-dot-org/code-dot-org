@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import ReactDOM from 'react-dom';
-import {expect} from 'chai';
-import initPage from '@cdo/apps/sites/studio/pages/levelbuilder_edit_script';
+import {expect} from '../../../../util/configuredChai';
+import initPage from '@cdo/apps/sites/studio/pages/scripts/_form';
 
 describe('the level builder page init script', () => {
   let container;
