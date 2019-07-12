@@ -32,6 +32,7 @@ class Census::ApCsOffering < ApplicationRecord
     ActiveRecord::Base.transaction do
       CSV.foreach(filename, {headers: true}) do |row|
         raw_school_code = row.to_hash['School Code']
+        raw_school_name = row.to_hash['School Name']
         next unless raw_school_code
         normalized_school_code = Census::ApSchoolCode.normalize_school_code(raw_school_code)
         unless normalized_school_code == '000000'
@@ -45,7 +46,7 @@ class Census::ApCsOffering < ApplicationRecord
           rescue ActiveRecord::RecordNotFound
             # We don't have mapping for every school code so skip over any that
             # can't be found in the database.
-            puts "AP CS Offering seeding: skipping unknown school code #{normalized_school_code}"
+            puts "AP CS Offering seeding: skipping unknown school code #{normalized_school_code}, school name #{raw_school_name}"
           end
         end
       end
