@@ -1101,6 +1101,7 @@ GameLab.prototype.onP5ExecutionStarting = function() {
 GameLab.prototype.onP5Preload = function() {
   Promise.all([
     this.preloadAnimations_(this.level.pauseAnimationsByDefault),
+    this.maybePreloadBackgrounds_(),
     this.runPreloadEventHandler_()
   ]).then(() => {
     this.gameLabP5.notifyPreloadPhaseComplete();
@@ -1115,6 +1116,14 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function() {
   ) {
     this.level.helperLibraries.unshift(validationLibraryName);
   }
+};
+
+// Preloads background images if this is Sprite Lab
+GameLab.prototype.maybePreloadBackgrounds_ = function() {
+  if (!this.isSpritelab) {
+    return Promise.resolve();
+  }
+  return this.gameLabP5.preloadBackgrounds();
 };
 
 /**

@@ -95,7 +95,11 @@ var baseConfig = {
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {
         test: /\.scss$/,
-        loader: `style-loader!css-loader!sass-loader?includePaths=${scssIncludePath}`
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {loader: 'sass-loader', options: {includePaths: [scssIncludePath]}}
+        ]
       },
       {test: /\.interpreted.js$/, loader: 'raw-loader'},
       {test: /\.exported_js$/, loader: 'raw-loader'},
