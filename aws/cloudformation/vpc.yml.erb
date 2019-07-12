@@ -101,6 +101,11 @@ Resources:
           FromPort: 22
           ToPort: 22
           CidrIp: <%=ssh_ip%>
+  DaemonSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH access to frontends from daemon.
+      VpcId: {Ref: VPC}
   ELBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -142,6 +147,10 @@ Resources:
           FromPort: 22
           ToPort: 22
           SourceSecurityGroupId: {Ref: GatewaySecurityGroup}
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          SourceSecurityGroupId: {Ref: DaemonSecurityGroup}
   RedisSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -312,6 +321,10 @@ Outputs:
     Description: Security group for DMS
     Value: !Ref DMSSecurityGroup
     Export: {Name: !Sub "${AWS::StackName}-DMSSecurityGroup"}
+  DaemonSecurityGroup:
+    Description: Security group for Daemon
+    Value: !Ref DaemonSecurityGroup
+    Export: {Name: !Sub "${AWS::StackName}-DaemonSecurityGroup"}
 <%
   AVAILABILITY_ZONES.each_with_index do |zone, i|
     az = zone[-1].upcase

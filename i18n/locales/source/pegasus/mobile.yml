@@ -1012,6 +1012,9 @@
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: "Grades 9-12"
   cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
+  accelerated_name: "Accelerated Course"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   20-hour_name: Accelerated Course
   algebra_name: "CS in Algebra Full Course"
   AlgebraA_name: "CS in Algebra Course A"
@@ -1034,9 +1037,11 @@
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries ('17-'18)"
   csd_2018_category_name: "CS Discoveries ('18-'19)"
+  csd_2019_category_name: "CS Discoveries ('19-'20)"
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "CS Principles ('17-'18)"
   csp_2018_category_name: "CS Principles ('18-'19)"
+  csp_2019_category_name: "CS Principles ('19-'20)"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"

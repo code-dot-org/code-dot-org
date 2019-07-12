@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 import {parseElement} from '@cdo/apps/xml';
 import {setupTestBlockly, getStudioAppSingleton} from '../util/testBlockly';
 import blocksCommon from '@cdo/apps/blocksCommon';

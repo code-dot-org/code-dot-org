@@ -1,7 +1,7 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/configuredChai';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -23,7 +23,7 @@ describe('SchoolInfoInterstitial', () => {
   beforeEach(() => sinon.stub(firehoseClient, 'putRecord'));
   afterEach(() => firehoseClient.putRecord.restore());
 
-  it('renders an uncloseable dialog with school info inputs and a save button', () => {
+  it('renders an uncloseable dialog with school info inputs, a dismiss button and a save button', () => {
     const wrapper = shallow(<SchoolInfoInterstitial {...MINIMUM_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <BaseDialog>
@@ -51,13 +51,51 @@ describe('SchoolInfoInterstitial', () => {
           </div>
           <div>
             <Button
+              text={i18n.dismiss()}
+              onClick={wrapper
+                .find('Button[id="dismiss-button"]')
+                .prop('onClick')}
+            />
+            <Button
               text={i18n.save()}
-              onClick={wrapper.find(Button).prop('onClick')}
+              onClick={wrapper.find('Button[id="save-button"]').prop('onClick')}
             />
           </div>
         </div>
       </BaseDialog>
     );
+  });
+
+  it('closes the school info interstitial modal when the dismiss button is clicked', () => {
+    const wrapper = mount(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {}
+        }}
+      />
+    );
+    const wrapperInstance = wrapper.instance();
+    sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
+    /**
+     * When you shallow render a component, the render method of that component is called.
+     * The onClick is already bound to the original, so if you do not re-render the component, spying on the
+     * component will fail.  Thus, the original dissmissSchoolInfoForm function is called and the spied function
+     * will not be called. This will cause the assertion that checks if the dismissSchoolInfoForm function was
+     * called to fail.  However, the second assertion that checks if the modal was closed will pass.
+     * The typical approach to solve this is to trigger a force update that also triggers a re-render of the
+     * component and consequently, the click event listener is re-set with the spied method.
+     * However, forcing a re-render using "wrapper.update()" does not work.
+     * Using wrapper.setState({}) forces a re-render of the component. setState triggers a re-render of the
+     * component and since an empty object is passed there is no change to the current state.  This is a hacky
+     * way of handling the re-render.  The test was updated to use mount() and the component was re-rendered by
+     * forcing an update on the instance of the wrapper.
+     */
+    wrapper.instance().forceUpdate();
+    wrapper.find('Button[id="dismiss-button"]').simulate('click');
+    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
+    expect(wrapper.state('isOpen')).to.be.false;
   });
 
   it('passes empty school info if created with no existing school info', () => {
@@ -262,7 +300,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors').country).to.equal(true);
     });
@@ -279,7 +317,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors')).to.not.have.property('country');
       expect(wrapper.state('errors').schoolType).to.equal(true);
@@ -298,7 +336,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests.length).to.equal(0);
       expect(wrapper.state('errors')).to.not.have.property('country');
       expect(wrapper.state('errors')).to.not.have.property('school_type');
@@ -318,7 +356,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       // No need to send anything but ID if it's available...
       // All other info will be backfilled from records on the server.
       expect(server.requests[0].requestBody).to.equal(
@@ -344,7 +382,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -372,7 +410,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -398,7 +436,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -425,7 +463,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -452,7 +490,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -478,7 +516,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -505,7 +543,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -531,7 +569,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -558,7 +596,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -587,7 +625,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(server.requests[0].requestBody).to.equal(
         [
           '_method=patch',
@@ -617,7 +655,7 @@ describe('SchoolInfoInterstitial', () => {
           onClose={onClose}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       expect(onClose).not.to.have.been.called;
 
       server.requests[0].respond(204, {}, '');
@@ -641,7 +679,7 @@ describe('SchoolInfoInterstitial', () => {
           onClose={onClose}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       server.requests[0].respond(404, {}, '');
       expect(onClose).not.to.have.been.called;
       expect(wrapper).to.containMatchingElement(
@@ -666,11 +704,11 @@ describe('SchoolInfoInterstitial', () => {
           onClose={onClose}
         />
       );
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       server.requests[0].respond(404, {}, '');
       expect(onClose).not.to.have.been.called;
 
-      wrapper.find(Button).simulate('click');
+      wrapper.find('Button[id="save-button"]').simulate('click');
       server.requests[1].respond(404, {}, '');
       expect(onClose).to.have.been.calledOnce;
     });

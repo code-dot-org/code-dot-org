@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../../util/configuredChai';
 import React from 'react';
 import Immutable from 'immutable';
 import {shallow} from 'enzyme';

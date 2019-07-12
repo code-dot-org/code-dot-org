@@ -18,7 +18,7 @@ import reducer, {
 import animationTab from '@cdo/apps/gamelab/AnimationTab/animationTabModule';
 import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
 import {createStore} from '../../util/redux';
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import {setExternalGlobals} from '../../util/testUtils';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';

@@ -1,5 +1,5 @@
 /** @file Tests for our johnny-five Piezo wrapper */
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
