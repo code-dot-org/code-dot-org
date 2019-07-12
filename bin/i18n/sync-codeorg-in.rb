@@ -230,7 +230,7 @@ def redact_block_content
   backup = source.sub("source", "original")
   FileUtils.mkdir_p(File.dirname(backup))
   FileUtils.cp(source, backup)
-  redact(source, source, 'blockfield')
+  redact(source, source, ['blockfield'], 'txt')
 end
 
 sync_in if __FILE__ == $0
