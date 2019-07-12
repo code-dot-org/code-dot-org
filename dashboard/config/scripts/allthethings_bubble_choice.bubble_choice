@@ -1,5 +1,5 @@
 name 'allthethings_bubble_choice'
-title 'Bubble Choice: All the Choices'
+display_name 'Bubble Choice: All the Choices'
 description 'This is a BubbleChoice level. Choose one of the activities below to practice what you have learned!'
 
 sublevels
