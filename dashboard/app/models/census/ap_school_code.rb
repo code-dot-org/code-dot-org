@@ -41,7 +41,7 @@ class Census::ApSchoolCode < ApplicationRecord
         school_id = School.normalize_school_id(row.to_hash['school_id'])
         school = School.find_by(id: school_id)
         if school.nil?
-          puts "AP School Code seed: school not found - skipping row for school_code:#{normalized_school_code} school_id:#{school_id}"
+          CDO.log.warn "AP School Code seed: school not found - skipping row for school_code:#{normalized_school_code} school_id:#{school_id}"
         else
           find_or_create_by!(school_code: normalized_school_code, school: school, school_year: school_year)
         end
