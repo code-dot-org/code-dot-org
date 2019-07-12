@@ -16,7 +16,6 @@ const initialState = {
 
 export default function verifiedTeacher(state = initialState, action) {
   if (action.type === SET_VERIFIED) {
-    console.log('SET_VERIFIED');
     return {
       ...state,
       isVerified: true
