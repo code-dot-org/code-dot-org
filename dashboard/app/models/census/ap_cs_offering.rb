@@ -46,7 +46,7 @@ class Census::ApCsOffering < ApplicationRecord
           rescue ActiveRecord::RecordNotFound
             # We don't have mapping for every school code so skip over any that
             # can't be found in the database.
-            puts "AP CS Offering seeding: skipping unknown school code #{normalized_school_code}, school name #{raw_school_name}"
+            CDO.log.warn "AP CS Offering seeding: skipping unknown school code #{normalized_school_code}, school name #{raw_school_name}"
           end
         end
       end
@@ -74,7 +74,7 @@ class Census::ApCsOffering < ApplicationRecord
           end
         rescue Aws::S3::Errors::NotFound
           # We don't expect every school year to be there so skip anything that isn't found.
-          puts "AP CS Offering seeding: object #{object_key} not found in S3 - skipping."
+          CDO.log.warn "AP CS Offering seeding: object #{object_key} not found in S3 - skipping."
         end
       end
     end
