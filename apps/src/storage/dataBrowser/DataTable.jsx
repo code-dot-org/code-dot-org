@@ -16,8 +16,11 @@ import * as dataStyles from './dataStyles';
 import color from '../../util/color';
 import {connect} from 'react-redux';
 import {getColumnNamesFromRecords} from '../firebaseMetadata';
+import PaginationWrapper from '../../templates/PaginationWrapper';
+import msg from '@cdo/locale';
 
 const MIN_TABLE_WIDTH = 600;
+const MAX_ROWS_PER_PAGE = 500;
 
 const styles = {
   addColumnHeader: [
@@ -39,6 +42,11 @@ const styles = {
     flexGrow: 1,
     overflow: 'scroll'
   },
+  pagination: {
+    float: 'right',
+    display: 'inline',
+    marginTop: 10
+  },
   plusIcon: {
     alignItems: 'center',
     borderRadius: 2,
@@ -57,7 +65,8 @@ const INITIAL_STATE = {
   pendingAdd: false,
   // The old name of the column currently being renamed or deleted.
   pendingColumn: null,
-  showDebugView: false
+  showDebugView: false,
+  currentPage: 0
 };
 
 class DataTable extends React.Component {
@@ -267,12 +276,32 @@ class DataTable extends React.Component {
     return JSON.stringify(records, null, 2);
   }
 
+  onChangePageNumber = number => {
+    this.setState({currentPage: number - 1});
+  };
+
+  getRowsForCurrentPage() {
+    if (this.props.tableRecords['slice']) {
+      return this.props.tableRecords.slice(
+        this.state.currentPage * MAX_ROWS_PER_PAGE,
+        (this.state.currentPage + 1) * MAX_ROWS_PER_PAGE
+      );
+    }
+    return this.props.tableRecords;
+  }
+
   render() {
     let columnNames = this.getColumnNames(
       this.props.tableRecords,
       this.props.tableColumns
     );
     let editingColumn = this.state.editingColumn;
+
+    let numPages = Math.max(
+      1,
+      Math.ceil(Object.keys(this.props.tableRecords).length / MAX_ROWS_PER_PAGE)
+    );
+    let rows = this.getRowsForCurrentPage();
 
     // Always show at least one column.
     if (columnNames.length === 1) {
@@ -333,6 +362,15 @@ class DataTable extends React.Component {
 
         <div style={debugDataStyle}>{this.getTableJson()}</div>
 
+        <div style={styles.pagination}>
+          <PaginationWrapper
+            totalPages={numPages}
+            currentPage={this.state.currentPage + 1}
+            onChangePage={this.onChangePageNumber}
+            label={msg.paginationLabel()}
+          />
+        </div>
+
         <div style={styles.tableWrapper}>
           <table style={tableDataStyle}>
             <tbody>
@@ -379,11 +417,11 @@ class DataTable extends React.Component {
                 columnNames={columnNames}
               />
 
-              {Object.keys(this.props.tableRecords).map(id => (
+              {Object.keys(rows).map(id => (
                 <EditTableRow
                   columnNames={columnNames}
                   tableName={this.props.tableName}
-                  record={JSON.parse(this.props.tableRecords[id])}
+                  record={JSON.parse(rows[id])}
                   key={id}
                 />
               ))}
