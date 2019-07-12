@@ -564,6 +564,52 @@ tr-TR:
         tanımlayıp giderin. Bu uygulama \"hata ayıklama\" olarak da adlandırılır.
         \r \n\r \n# Bunu Yap\r\n\r \n* Web sayfasının doğru görüntülenmesi için bozulmuş
         kodu düzeltin\r\n* Yanınızdaki arkadaşınız ile düzeltilen sorunları karşılaştırın"
+      CSD U2 Heading Demo: |-
+        # Başlıklar
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Başlıklar nedir?</strong></summary>
+
+        Başlıklar bir genel ağ sayfasında farklı büyüklüklerde olabilen metinlerdir.Başlıklar sitenizi kullanıcıların daha rahat okuyabilmesi için parçalara ayırır.
+
+        </details>
+        <details>
+        <summary><strong>Nasıl farklı büyüklükte başlıklar yapılabilir?</strong></summary>
+
+        Başlıklar 6 farklı boyuta sahiptir.En büyüğünü zaten kullanmıştınız.En büyük başlık etiketi <h1>'dir. <h1> etiketindeki bir sayısı başlığın büyüklüğünü belirler,yani en büyük başlık <h1>'dir.En küçük başlık ise <h6>'dır.
+        Ayrıca <h2>,<h3>,<h4> ve <h5> etiketlerini de deneyebilirsiniz.
+
+        </h1>
+        </details>
+        <details>
+        <summary><strong>HTML nedir?</strong></summary>
+
+        HTML,Hiper Metin İşaret Dili anlamına gelir.HTML bir web sayfasının belkemiğini oluşturur.HTML belirli elementlerin nerede bitip başladığını belirlemek için etiketler kullanır.
+
+        </details>
+        <details>
+
+        <summary><strong>HTML elementi nedir?</strong></summary>
+        HTML elementi web sayfanızın bir parçasıdır ve bir açılış etiketiyle başlayıp kapanış etiketiyle kapatılır.HTML Elementi ayrıca açılış ve kapanış etiketleri arasında içeriğede sahiptir.
+        Örnek:
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+        </details>
+        <details>
+        <summary><strong>HTML etiketi nedir?</strong></summary>
+        HTML etiketi makineye bir HTML elementinin nerede başlayıp nerede biteceğini ve elementin ne çeşit bir element olduğunu söyleyen özel karakterlerdir.
+
+        </details>
+        </div>
+
+        Şimdiye kadar içeriklerinizi sadece paragraflara dökmeye öğrendiniz ancak HTML sizin başlıklar kullanarak kodlarınızı yönetmenizi de sağlar.Başlıklar belli içeriklerin yada sayfaların bir kısmına özel şekilde yazılmış metinlerdir.
+
+        Şunları Yap:
+
+        \-Aşağıdaki kodlardan başlıkları bularak onları incele.
+        \-Partnerinle etiketlerin ne işe yaradığını anladığınıza emin olun.
+        \-"Drawing" ve "2 years" yazan elementleri tüm sayfayla uyum içinde olması için değiştirip başlık yapın.
       CSD U2 Heading Demo_2018: "# Başlıklar\\\r\n\n\\\r\n\n<div style=\"float:\nright;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\r\n<details>\r\n<summary>**Başlıklar
         nedir?**</summary>\r\nBaşlıklar bir web sayfası boyunca farklı boyutlardaki
@@ -4047,6 +4093,36 @@ tr-TR:
         var.\\\r\n\\\r\n\n# Bunu Yap\\\r\n\n\\\r\n\"Oyun\" ekranına geçin\" ve planlama
         rehberiniz ile iki emoji resminin renklerini değiştirerek bu ekranı düzeltin.\\\r\n\\\r\nİstediğiniz
         herhangi bir tasarım ayarını eklemekten çekinmeyin."
+      CSDU2 - Type Anything: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+        # Web Laboratuvarına Hoşgeldiniz!
+
+        Şuan kullandığınız platforma Web Lab deniyor.Web Lab'da ekranın 3 ana parçası vardır.
+
+        # Şunu Yap
+
+        \-Çalışma alanına bir şey yazmayı dene.
+        \-Önizleme alanında görmek için <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> koduna bas!
+      CSDU2 - Type Anything_2018: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+        # Web Laboratuvarına Hoşgeldiniz!
+
+        Şuan kullandığınız platforma Web Lab deniyor.Web Lab'da ekranın 3 ana parçası vardır.
+
+        # Şunu Yap
+
+        \-Çalışma alanına bir şey yazmayı dene.
+        \-Önizleme alanında görmek için <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> koduna bas!
+      CSDU2 - Type Anything_2019: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+        # Web Laboratuvarına Hoşgeldiniz!
+
+        Şuan kullandığınız platforma Web Lab deniyor.Web Lab'da ekranın 3 ana parçası vardır.
+
+        # Şunu Yap
+
+        \-Çalışma alanına bir şey yazmayı dene.
+        \-Önizleme alanında görmek için <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> koduna bas!
       CSDU6 - button LED prediction: Düşürmek için içerilen seviyeye bakın
       CSDU6 - button LED prediction_2018: Düşürmek için içerilen seviyeye bakın
       CSDU6 - button LED prediction_2019: Düşürmek için içerilen seviyeye bakın

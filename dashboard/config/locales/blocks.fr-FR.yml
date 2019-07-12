@@ -98,7 +98,9 @@ fr:
             '"UNICORN"': Toutes les licornes
           MOVE:
             '"rand"': "(Aléatoire)"
+            MOVES.XBend: Pliez
             MOVES.Roll: Roulis de caisse
+            MOVES.XClapSide: Tapez
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Dab: Dab
             MOVES.XFever: Disco
@@ -108,7 +110,14 @@ fr:
             MOVES.Fresh: Fresh dance
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Tête + hanches
+            MOVES.XHop: Saut
+            MOVES.XHighKick: Donnez un coup
+            MOVES.XKnee: Genoux
+            MOVES.XKneel: S'agenouiller
+            MOVES.XArmsSide: Atteindre
+            MOVES.XSlide: Faire glisser
             MOVES.Kick: Étoile
+            MOVES.XArmsUp: Étendu
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           DIR:
@@ -119,7 +128,9 @@ fr:
         options:
           MOVE:
             '"rand"': "(Aléatoire)"
+            MOVES.XBend: Pliez
             MOVES.Roll: Roulis de caisse
+            MOVES.XClapSide: Tapez
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Dab: Dab
             MOVES.XFever: Disco
@@ -129,7 +140,14 @@ fr:
             MOVES.Fresh: Fresh dance
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Tête + hanches
+            MOVES.XHop: Saut
+            MOVES.XHighKick: Donnez un coup
+            MOVES.XKnee: Genoux
+            MOVES.XKneel: S'agenouiller
+            MOVES.XArmsSide: Atteindre
+            MOVES.XSlide: Faire glisser
             MOVES.Kick: Étoile
+            MOVES.XArmsUp: Étendu
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           DIR:
@@ -243,6 +261,7 @@ fr:
             '"grid"': grille
             '"row"': ligne
             '"column"': colonne
+            '"x"': entrecroisement
             '"plus"': plus
             '"random"': aléatoire
       Dancelab_makeNewDanceSprite:
@@ -317,6 +336,7 @@ fr:
             '"grid"': grille
             '"row"': ligne
             '"column"': colonne
+            '"x"': entrecroisement
             '"plus"': plus
             '"random"': aléatoire
       Dancelab_mixColors:
@@ -613,6 +633,14 @@ fr:
             '"x"': x
             '"y"': y
             '"z"': z
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: Lorsque {RANGE} pic
         options:

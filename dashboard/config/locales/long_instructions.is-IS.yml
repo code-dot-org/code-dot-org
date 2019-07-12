@@ -44,6 +44,10 @@ is-IS:
       4-5 Nested Loops 1: 'Ljúktu við kóða sem teiknar þessa þrihyrninga. Sá fyrsti
         er tilbúinn. Vísbending: 3 þríhyrningar sem mynda 360 gráðu hring.'
       4-5 Nested Loops 12: Getur þú teiknað þessa 36 þríhyrninga með faldaðri lykkju?
+      4-5 Nested Loops 3: |-
+        Búðu til sól með því að falda byrjunarkóðann í annarri lykkju.
+
+        Til að miðjan verði hol þarft þú að stökkva áfram um lengd þríhyrningsins áður en þú snýrð.
       4-5 Nested Loops 5: Settu gefna kóðann í lykkju til að búa til vindmyllu.
       4-5 Nested Loops 6: Getur þú teiknað sexhyrning með því að setja þríhyrningskóðann
         í lykkju?
@@ -921,6 +925,194 @@ is-IS:
         textinn er í einum graut.\n\nGerðu þetta:\n\n-   Skoðu innihaldið með félaga
         þínum og ákveðið saman hvernig væri best að skipuleggja efnið.\n-   Notaðu
         fyrirsagna- og efnisgreinartög til að kóða skipulag fyrir síðuna."
+      CSD U2 Image Tag 1_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Hvernig bæti ég við myndum?</strong>
+        </summary>
+
+        Með taginu `<img>` getur þú birt myndir á vefsíðunni þinni. <br><br>
+
+        Dæmi:
+
+        <pre>&lt;img src="dog.png" alt="dog jumping"&gt;</pre><br><br>
+
+        Svo að vafrinn viti hvaða mynd á að sýna eru viðbótarupplýsingar settar í það sem nefnist **eigind** (attribute) \<img> tagsins innan í hornklofunum. Eigindin `src` er skammstöfun fyrir enska orðið **s**ou**rc**e (uppruni) og segir til um hvaða mynd á að sækja. Heiti vistaðra mynda hafa endingar sem segja til um gerð þeirra. Algengar endingar eru .jpg, .jpeg, .png. <br><br>
+
+        Auk eigingarinnar src, hafa myndeiningar líka eigindina `alt` sem inniheldur lýsingu á myndinni. Lýsingin birtist ef myndin finnst ekki og er einnig notuð af skjálesurum fyrir sjónskerta. <br><br>
+
+        `<img>` tag er dæmi um **sjálf-lokandi** því að upphafstagið er líka endatag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju hefur tagið fyrir mynd ekki endatag?</strong>
+        </summary>
+        Tagið fyrir mynd þarf ekki endatag því að það hefur engan texta sem þarf að afmarka með endatagi. Innihaldið sem tagið sýnir er skilgreint í eigindum tagsins.
+        </details>
+        <details>
+        <summary>
+        <strong>What is an attribute?</strong>
+        </summary>
+
+        Eigindin innihalda nánari upplýsingar um hvernig tag á að virka.  Eigind samanstednur af heiti eigindar og gildi hennar. Heitið gefur til kynna hvers konar upplýsingar er verið að veita og gildið er þá sjálfar upplýsingarnar.
+
+        Sem dæmi hafa \<img> tög tvær eigindir, src og alt. src tilgreinir heiti myndskrárinnar og alt segir vafranum með lesanlegan texta hvaða mynd þetta er.
+
+        </details>
+        </div>
+
+        # Myndir
+
+        Það hefur verið byrjað á Dog vs Cat vefsíðu fyrir þig. Það er búið að setja myndina af hundinum á vefsíðuna. Skoðaðu kóðann sem lét myndina af hundinum birtast, og notaðu síðan myndtag til að bæta myndinni `cat.jpeg` á síðuna neðan við kattarfyrirsögnina.
+
+        Þessi mynd fannst á vefnum pixabay og var hlaðið upp af notandanum "Alexas\_Fotos", sem notaði notkunarleyfin "free for commercial use" (frjáls notkun) og "no attribution required" (tilvitnun óþörf).
+      CSD U2 Image Tag 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Hvernig bæti ég við myndum?</strong>
+        </summary>
+
+        Með taginu `<img>` getur þú birt myndir á vefsíðunni þinni. <br><br>
+
+        Dæmi:
+
+        <pre>&lt;img src="dog.png" alt="dog jumping"&gt;</pre><br><br>
+
+        Svo að vafrinn viti hvaða mynd á að sýna eru viðbótarupplýsingar settar í það sem nefnist **eigind** (attribute) \<img> tagsins innan í hornklofunum. Eigindin `src` er skammstöfun fyrir enska orðið **s**ou**rc**e (uppruni) og segir til um hvaða mynd á að sækja. Heiti vistaðra mynda hafa endingar sem segja til um gerð þeirra. Algengar endingar eru .jpg, .jpeg, .png. <br><br>
+
+        Auk eigingarinnar src, hafa myndeiningar líka eigindina `alt` sem inniheldur lýsingu á myndinni. Lýsingin birtist ef myndin finnst ekki og er einnig notuð af skjálesurum fyrir sjónskerta. <br><br>
+
+        `<img>` tag er dæmi um **sjálf-lokandi** því að upphafstagið er líka endatag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju hefur tagið fyrir mynd ekki endatag?</strong>
+        </summary>
+        Tagið fyrir mynd þarf ekki endatag því að það hefur engan texta sem þarf að afmarka með endatagi. Innihaldið sem tagið sýnir er skilgreint í eigindum tagsins.
+        </details>
+        <details>
+        <summary>
+        <strong>What is an attribute?</strong>
+        </summary>
+
+        Eigindin innihalda nánari upplýsingar um hvernig tag á að virka.  Eigind samanstednur af heiti eigindar og gildi hennar. Heitið gefur til kynna hvers konar upplýsingar er verið að veita og gildið er þá sjálfar upplýsingarnar.
+
+        Sem dæmi hafa \<img> tög tvær eigindir, src og alt. src tilgreinir heiti myndskrárinnar og alt segir vafranum með lesanlegan texta hvaða mynd þetta er.
+
+        </details>
+        </div>
+
+        # Að hlaða upp myndum
+
+        Þú getur hlaðið upp myndum sem þú átt eða hefur fundið annars staðar með því að nota **Add Image** hnappinn. Finndu mynd af einhverju uppáhaldsdýri og vistaðu hana á tölvuna (hægrismelltu og notaðu "Save Image").
+
+        Þegar myndin er vistuð skaltu smella á ![](<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png>) og hlaða myndinni upp frá tölvunni og í verkefnið hér svo þú getir notað hana á vefsíðunni.
+
+        # Gerðu þetta
+
+        -   Hladdu upp að minnsta kosti einni mynd
+        -   Notaðu `<img>` tagið til að birta myndina á vefsíðunni.
+        -   Mundu eftir að hafa `alt` eigind með texta.
+      CSD U2 Image Tag Attribution_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Hvernig bæti ég við myndum?</strong>
+        </summary>
+
+        Með taginu `<img>` getur þú birt myndir á vefsíðunni þinni. <br><br>
+
+        Dæmi:
+
+        <pre>&lt;img src="dog.png" alt="dog jumping"&gt;</pre><br><br>
+
+        Svo að vafrinn viti hvaða mynd á að sýna eru viðbótarupplýsingar settar í það sem nefnist **eigind** (attribute) \<img> tagsins innan í hornklofunum. Eigindin `src` er skammstöfun fyrir enska orðið **s**ou**rc**e (uppruni) og segir til um hvaða mynd á að sækja. Heiti vistaðra mynda hafa endingar sem segja til um gerð þeirra. Algengar endingar eru .jpg, .jpeg, .png. <br><br>
+
+        Auk eigingarinnar src, hafa myndeiningar líka eigindina `alt` sem inniheldur lýsingu á myndinni. Lýsingin birtist ef myndin finnst ekki og er einnig notuð af skjálesurum fyrir sjónskerta. <br><br>
+
+        `<img>` tag er dæmi um **sjálf-lokandi** því að upphafstagið er líka endatag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju hefur tagið fyrir mynd ekki endatag?</strong>
+        </summary>
+        Tagið fyrir mynd þarf ekki endatag því að það hefur engan texta sem þarf að afmarka með endatagi. Innihaldið sem tagið sýnir er skilgreint í eigindum tagsins.
+        </details>
+        <details>
+        <summary>
+        <strong>What is an attribute?</strong>
+        </summary>
+
+        Eigindin innihalda nánari upplýsingar um hvernig tag á að virka.  Eigind samanstednur af heiti eigindar og gildi hennar. Heitið gefur til kynna hvers konar upplýsingar er verið að veita og gildið er þá sjálfar upplýsingarnar.
+
+        Sem dæmi hafa \<img> tög tvær eigindir, src og alt. src tilgreinir heiti myndskrárinnar og alt segir vafranum með lesanlegan texta hvaða mynd þetta er.
+
+        </details>
+        </div>
+
+        # Tilvísanir
+
+        Þegar mynd, sem annar á, er notuð með Creative Commons leyfi, verður þú að hafa tilvísun á eigandann eða upprunann (þetta er einnig kallað _eignun_). Það eru margar aðferðir til að koma eignun á framfæri, en auðveldast er að bæta við texta neðan við myndina sem tilgreinir eigandann og vefinn þaðan sem myndin kom.
+
+        # Gerðu þetta
+
+        Á þessari síðu höfum við sett inn mynd af froski og bætt við eignun fyrir hana. Notaðu Creative Commons leitarvélina til að finna aðra mynd af froskdýri. Bættu myndinni á þessa síðu með viðeigandi eignun, þar á meðal:
+
+        -   Nafni höfundar (ef það er tiltækt)
+        -   Vefinn sem myndin fannst á (t.d. commons.wikimedia.org)
+        -   Leyfið sem birting myndarinnar er háð (e.g. CC-BY)
+      CSD U2 Image Tag Debug_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Hvernig bæti ég við myndum?</strong>
+        </summary>
+
+        Með taginu `<img>` getur þú birt myndir á vefsíðunni þinni. <br><br>
+
+        Dæmi:
+
+        <pre>&lt;img src="dog.png" alt="dog jumping"&gt;</pre><br><br>
+
+        Svo að vafrinn viti hvaða mynd á að sýna eru viðbótarupplýsingar settar í það sem nefnist **eigind** (attribute) \<img> tagsins innan í hornklofunum. Eigindin `src` er skammstöfun fyrir enska orðið **s**ou**rc**e (uppruni) og segir til um hvaða mynd á að sækja. Heiti vistaðra mynda hafa endingar sem segja til um gerð þeirra. Algengar endingar eru .jpg, .jpeg, .png. <br><br>
+
+        Auk eigingarinnar src, hafa myndeiningar líka eigindina `alt` sem inniheldur lýsingu á myndinni. Lýsingin birtist ef myndin finnst ekki og er einnig notuð af skjálesurum fyrir sjónskerta. <br><br>
+
+        `<img>` tag er dæmi um **sjálf-lokandi** því að upphafstagið er líka endatag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju hefur tagið fyrir mynd ekki endatag?</strong>
+        </summary>
+        Tagið fyrir mynd þarf ekki endatag því að það hefur engan texta sem þarf að afmarka með endatagi. Innihaldið sem tagið sýnir er skilgreint í eigindum tagsins.
+        </details>
+        <details>
+        <summary>
+        <strong>What is an attribute?</strong>
+        </summary>
+
+        Eigindin innihalda nánari upplýsingar um hvernig tag á að virka.  Eigind samanstednur af heiti eigindar og gildi hennar. Heitið gefur til kynna hvers konar upplýsingar er verið að veita og gildið er þá sjálfar upplýsingarnar.
+
+        Sem dæmi hafa \<img> tög tvær eigindir, src og alt. src tilgreinir heiti myndskrárinnar og alt segir vafranum með lesanlegan texta hvaða mynd þetta er.
+
+        </details>
+        </div>
+
+        # Smáatriðin skipta máli
+
+        Eigindin `src` verður að vísa á _nákvæmt_ heiti myndarinnar sem á að nota. Það þýðir að þarf að gæta að ritun, há-/lágstöfum og skrárendingunni. Myndirnar þrjár á þessari síðu virka ekki vegna þess að `src` eiginindin er ekki rétt. Hafðu listann yfir skrárnar til hliðsjónar og lagaðu myndtögin.
+
+        _Athugaðu: Þó að myndirnar birtist ekki, sýnir vefsíðan samt lýsandi texta um hvað ætti að vera þar vegna þess að við notuðum `alt` eigindina. Gagnlegt!_
       CSD U2 Info Page Final Touches: "<div style=\"float: right;\nheight: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n<h2>\r\nGátlisti\r\n</h2>\r\n\r\n<input\ntype=\"checkbox\"
         style=\"float: left\"><span style=\"display: block; margin-left:\n20px; margin-bottom:
@@ -1064,6 +1256,82 @@ is-IS:
         HTML við síðurnar þínar.\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\n-   Bættu HTML
         í hverja nýja síðu sem þú dróst upp í leiðarvísi verkefnisins.\\\r\n-   Þú
         getur líka bætt meira HTML í síður sem þú bjóst til áður.\\\r"
+      CSD U2 add file_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Hvað er stílsíða?</strong>
+        </summary>
+
+        Stílsíða er skjal sem stjórnar útliti vefsíðu.  Utanáliggjandi stílsíður eru sérstakar skrár sem eru tengdar HTML síðunni.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er CSS?</strong>
+        </summary>
+
+        CSS er forritunarmál sem stjórnar því hvernig innihald vefs birtist.  Það notar sett af reglum til að stýra útliti vefsíðu.  Hvert sett af reglum hefur veljara (selector), sem velur þær einingar á síðunni sem stjórnast af reglunum, og sjálfar reglurnar, sem segja til um hvernig einingarnar skuli birtast.   Hver regla samanstendur af eiginleika (property) og gildi (value) fyrir eiginleikann.
+
+        Hér er dæmi um reglusett sem lætur textann í `h2` tögum fá bláan lit og skrifstafi:
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        }</pre>
+
+        Í þessu dæmi er `h2` veljarinn, `color` og `font-family` eru eiginleikar og `blue` og `cursive` eru gildi fyrir þá eiginleika.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvernig bý ég til nýja stílsíðu?</strong>
+        </summary>
+        Ný stílsíða er búin til með því að smella á "Bæta við CSS" (Add CSS) hnappinn ofan við kóðasvæðið.
+        </details>
+        <details>
+        <summary>
+        <strong>Hvaða heiti ætti ég að gefa stílsíðunni?</strong>
+        </summary>
+        Þú getur látið hana heita hvað sem er, en það er betra að velja lýsandi heiti svo sem "style.css" eða "vefurinnminn.css" svo það sé á hreinu hvers konar skrá þetta er.  Skráin ætti alltaf að hafa ".css" endinguna.
+        </details>
+        <details>
+        <summary>
+        <strong>Hvernig breyti ég heiti skrár?</strong>
+        </summary>
+        Þú getur hægrismellt (eða control smellt) á núverandi heiti skrárinnar og valið "Endurnefna" (rename) valkostinn.  Þá opnast textareitur þar sem getur þú skrifað nýtt heiti. Önnur aðferð til að opna textareitinn: Smella á skráarheiti sem er þegar valið (litað).
+        </details>
+        <details>
+        <summary>
+        <strong>Hvernig tengi ég stílsíðu við vefsíðu?</strong>
+        </summary>
+
+        Opnaðu kóða vefsíðunnar. Bættu eftirfarandi kóða við innan í "head" taginu: `<link rel="stylesheet" href="style.css">`.  Breyttu "style.css" í það heiti sem þú gafst þinni stílsíðu.
+
+        </details>
+        </div>
+
+        # Að bæta við stílsíðu
+
+        Þetta er verkefnið þitt frá því áður. Í næsta áfanga færðu tækifæri til að bæta ýmsum stílum í það, en fyrst þarftu að búa til stílsíðu, gefa henni heiti og tengja hana við html síðuna þína.
+
+        1.  Búðu til nýja stílsíðu fyrir verkefnið þitt.
+        2.  Gefðu skránni lýsandi heiti.
+        3.  Tengdu stílsíðuna við HTML síðuna þína.
+
+        <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png" style=" max-width:500px">
+      CSD U2 add style_2019: |-
+        # Prófaðu þetta!
+
+        Nú þegar þú hefur séð nokkrar mismunandi aðferðir við að útlitsmóta vefsíðu, er kominn tími til að þú prófir.  Hér er vefsíða sem þú hefur séð áður, en það vantar að gefa henni betra útlit!
+
+        # Gerðu þetta
+
+        -   Settu bakgrunnslit á síðuna.
+        -   Hafðu meira bil milli mynda og texta.
+        -   Láttu allan texta hafa annan textalit.
+        -   Bættu við öðrum útlitsatriðum eins og þú vilt.
       CSD U2 challenge: |-
         # Áskorun
 
@@ -1100,6 +1368,120 @@ is-IS:
         -   Skoðaðu kóðann með félaga. Ræðið hvernig síðan ætti að vera.
         -   Vinnið saman að því að ljúka síðunni. Gefið útlitsmótun hennar gaum.
         -   Berið ykkur saman við aðra til að sjá hvort síðurnar eru eins.
+      CSD U2 classes modify_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Hvernig virkar þessi kóði?</strong>
+        </summary>
+        Til að kóðinn virku þarft þú að búa til klasa (class) til að skilgreina útlit fyrir kaflann um vetur og bæta einingum í þann klasa.
+
+        Klasinn er búinn til í stílsíðunni með eftirfarandi kóða.
+
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+
+        Þessi kóði býr til klasa (class) sem nefnist `winter` og lætur allt í klasanum fá vetrarlegan bláan lit, sem hefur RGB gildin (195,230,255).
+
+        Kóðinn sem setur svo `h5` einingar í klasann er `<h5 class="winter">`.  Eigindin `class=winter` innan í upphafstaginu setur allt innihald tagsins í þennan klasa.
+
+        </details>
+        <details>
+
+        <summary>
+        <strong>Hvaða reglur er hægt að setja í reglusett klasa?</strong>
+        </summary>
+
+        Reglur fyrir klasa geta haft sömu reglur og aðrir veljarar, t.d. tög.  Ef regla á ekki við innihalda klasa (t.d. ef `font-size` er notað á einingu sem hefur engan texta), þá gerir tölvan einfaldlega ekkert með þá reglu, en notar samt þær reglur sem virka.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju er veljarinn með punkt fyrir framan heitið?</strong>
+        </summary>
+        Í CSS táknar punktur framan við heiti veljara að þetta er heiti á klasa. Ef það er enginn punktur þýðir það að veljarinn er heiti á HTML tagi.
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju mundi vefsmiður vilja nota klasa?</strong>
+        </summary>
+        Vefsmiður notar klasa ef hann vill að sumar einingar hafi annað útlit en aðrar jafnvel þó að þær séu í samskonar tagi.  Það er líka hægt að nota klasa til að gefa einingum sem eru í ólíkum tögum sama útlit.
+        </details>
+        <details>
+        <summary>
+        <strong>Ég er með aðeins öðruvísi RGB gildi en fæ sama lit.</strong>
+        </summary>
+
+        Þar sem RGB kerfið býr til miljónir lita, eru sumir þeirra svo líkir að sjá að mannlegt auga á erfitt með að greina á milli. Það þýðir að það eru mörg RGB gildi sem geta gefið okkur þennan kuldalega bláa lit.
+
+        </details>
+        </div>
+
+        # Að bæta við reglum
+
+        Vetrarorðin á síðunni ættu öll að hafa sama lit og leturgerð.
+
+        -   Finndu CSS reglurnar í stílsíðunni sem gefa vetrarorðunum útlit sitt.
+        -   Bættu við reglu sem breytir leturgerð vetrarorðanna.  Það má vera hvaða leturgerð sem er, en verður að vera ólík leturgerðum hinna árstíðanna.
+        -   Bættu við hvaða reglum sem þú vilt fyrir vetrarorðin.
+      CSD U2 classes sample_2019: "<div class=\"no-pullthrough\" style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>Hvernig virkar þessi kóði?</strong>\n</summary>\nTil
+        að kóðinn virku þarft þú að búa til klasa (class) til að skilgreina útlit
+        fyrir kaflann um vetur og bæta einingum í þann klasa.\n\nKlasinn er búinn
+        til í stílsíðunni með eftirfarandi kóða.\n\n<pre>.winter {\n  color: rgb(195,230,255);\n}</pre>\n\nÞessi
+        kóði býr til klasa (class) sem nefnist `winter` og lætur allt í klasanum fá
+        vetrarlegan bláan lit, sem hefur RGB gildin (195,230,255).\n\nKóðinn sem setur
+        svo `h5` einingar í klasann er `<h5 class=\"winter\">`.  Eigindin `class=winter`
+        innan í upphafstaginu setur allt innihald tagsins í þennan klasa.\n\n</details>\n<details>\n<summary>\n<strong>Af
+        hverju er veljarinn með punkt fyrir framan heitið?</strong>\n</summary>\nÍ
+        CSS táknar punktur framan við heiti veljara að þetta er heiti á klasa. Ef
+        það er enginn punktur þýðir það að veljarinn er heiti á HTML tagi.\n</details>\n<details>\n<summary>\n<strong>Af
+        hverju mundi vefsmiður vilja nota klasa?</strong>\n</summary>\nVefsmiður notar
+        klasa ef hann vill að sumar einingar hafi annað útlit en aðrar jafnvel þó
+        að þær séu í samskonar tagi.  Það er líka hægt að nota klasa til að gefa einingum
+        sem eru í ólíkum tögum sama útlit.\n</details>\n<details>\n<summary>\n<strong>Ég
+        er með aðeins öðruvísi RGB gildi en fæ sama lit.</strong>\n</summary>\n\nÞar
+        sem RGB kerfið býr til miljónir lita, eru sumir þeirra svo líkir að sjá að
+        mannlegt auga á erfitt með að greina á milli. Það þýðir að það eru mörg RGB
+        gildi sem geta gefið okkur þennan kuldalega bláa lit.\n\n</details>\n</div>\n\n#
+        Klasar\n\nÁ þessari síðu hefur vefsmiðurinn notað klasa til að setja vetrarlega
+        litinn á eitthvað af orðunm.\n\n-   Skoðaðu HTML kóðann til að finna vetrarlegu
+        orðin.  Af hverju er \"snowy\" eina vetrarorðið sem hefur ekki vetrarlitinn?\n-
+        \  Bættu kóða í HTML sem lætur orðið \"snowy\" fá sama vetrarlega litinn og
+        hin orðin.\n-   Skoðaðu stílsíðuna til að finna regluna sem lætur öll orðin
+        í \"winter\" klasanum fá bláa litinn og athugaðu hvort þín RGB gildi eru lík
+        þeim í stílsíðunni.  \n-   Ræddu við félaga hvernig þessi kóði virkar."
+      CSD U2 classes spring_2019: "<div class=\"no-pullthrough\" style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>Hvernig virkar þessi kóði?</strong>\n</summary>\nTil
+        að kóðinn virku þarft þú að búa til klasa (class) til að skilgreina útlit
+        fyrir kaflann um vorið og bæta einingum í þann klasa.\n\nKlasinn fyrir vorið
+        er þegar í stílsíðunni en hefur engar reglur.\n\n<pre>.spring {\n  color:
+        rgb(195,230,255);\n}</pre>\n\nSkoðaðu reglurnar fyrir klasann `winter` til
+        að fá vísbendingar um hvernig þú getur búið til reglur fyrir vorið. \n\nÞú
+        þarft líka að bæta nokkrum einingum í vorklasann í sjálfri HTML síðunni.\n\nKóðinn
+        sem setur `h5` einingar í vetrarklasann er `<h5 class=\"winter\">`.  Notaðu
+        sömu aðferð til að setja einingar í vorklasann.\n\n</details>\n<details>\n<summary>\n<strong>Hvaða
+        reglur er hægt að setja í reglusett klasa?</strong>\n</summary>\n\nReglur
+        fyrir klasa geta haft sömu reglur og aðrir veljarar, t.d. tög.  Ef regla á
+        ekki við innihalda klasa (t.d. ef `font-size` er notað á einingu sem hefur
+        engan texta), þá gerir tölvan einfaldlega ekkert með þá reglu, en notar samt
+        þær reglur sem virka.\n\n</details>\n<details>\n<summary>\n<strong>Af hverju
+        er veljarinn með punkt fyrir framan heitið?</strong>\n</summary>\nÍ CSS táknar
+        punktur framan við heiti veljara að þetta er heiti á klasa. Ef það er enginn
+        punktur þýðir það að veljarinn er heiti á HTML tagi.\n</details>\n<details>\n<summary>\n<strong>Af
+        hverju mundi vefsmiður vilja nota klasa?</strong>\n</summary>\n\nVefsmiður
+        notar klasa ef hann vill að sumar einingar hafi annað útlit en aðrar jafnvel
+        þó að þær séu í samskonar tagi.  Það er líka hægt að nota klasa til að gefa
+        einingum sem eru í ólíkum tögum sama útlit.\n\n</details>\n</div>\n\n# Vorklasinn\n\nNú
+        þegar klasinn fyrir vetur er tilbúinn, getur þú byrjað á hinum árstíðunum.\n\n-
+        \  Finndu tóma CSS reglusettið í stílsíðunni sem gefa vororðunum útlit sitt.\n-
+        \  Bættu við tveimur reglum, aðra til að gefa textanum vorlega litinn úr fyrri
+        áfanga og hina til að setja aðra leturgerð, leturstærð eða skreytingu á textann.\n-
+        \  Bættu einingunum í vorhluta síðunnar við klasann `spring` í HTML síðunni."
       CSD U2 classes summer_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1377,6 +1759,405 @@ is-IS:
         \  Settu á hverja síðu síðufót sem inniheldur upplýsingar um höfundarrétt
         fyrir síðuna. (Farðu á <a href=\"https://creativecommons.org/choose/\" target=\"_new\">Creative
         Commons</a> til að fá hjálp með að búa til þetta HTML.)"
+      CSD U2 layout style bgcolor_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Hvernig virkar kóðinn?</strong>
+        </summary>
+
+        Hér er kóðinn sem gefur síðunni bláan bakgrunn:
+
+        <pre>
+        body {
+          background-color: lightblue;
+        }
+        </pre>
+
+        -   `body` er _veljarinn_ (selector).  Hann velur hvaða einingar eiga að fylgja reglunum í krullusviganum { }. Í þessu tilfelli er það "body" einingin sem er öll síðan.
+        -   `background-color: lightblue;` er reglan sem litar síðuna ljósbláa.
+            -   `background-color` er _eiginleiki_ (property). Hann segir til um hverju á að breyta í völdu einingunum, í þessu tilfelli lit bakgrunns.
+            -   `lightblue` er _gildið_ (value). Það segir til um hvernig eigi að hafa eiginleikann, í þessu tilfelli að hafa bakgrunnslitinn ljósbláan.
+
+        </details>
+         <details>
+            <summary>
+              <strong>Hvaða liti get ég notað í CSS?</strong>
+            </summary>
+
+        CSS getur notað algengustu (ensku) heitin á litum (red, blue, green, o.s.frv.), og mörg af þeim óalgengari.  Þú getur séð lista yfir öll litaheiti sem CSS skilur á vefsíðunni <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  Þú getur samt notað liti sem ekki eru á listanum en þá þarft þú að nota RGB gildi þeirra.  Þú getur lesið meira um notkun lita í CSS á síðunni <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað gerir eiginleikinn "background-color"?</strong>
+        </summary>
+
+        Eiginleikinn `background-color` segir til um lit á bakgrunni einingar.  Þú getur lesið meira um þennan eiginleika á síðunni <a href="http://www.w3schools.com/cssref/pr_background-color.asp" target="_new">W3Schools - CSS background-color Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað ef eining innan síðunnar hefur annan bakgrunnslit en body einingin?</strong>
+        </summary>
+
+        Þú getur séð svarið við spurningunni með því að bæta reglu fyrir `background-color` við `p` tagið.  Efnisgreinar munu þá fá lit samkvæmt reglunni fyrir `p` tagið og aðrar einingar síðunnar fylgja reglunni fyrir `body` tagið.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er stílsíða?</strong>
+        </summary>
+
+        Stílsíða er skjal sem stjórnar útliti vefsíðu.  Utanáliggjandi stílsíður eru sérstakar skrár sem eru tengdar HTML síðunni.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er CSS?</strong>
+        </summary>
+
+        CSS er forritunarmál sem stjórnar því hvernig innihald vefs birtist.  Það notar sett af reglum til að stýra útliti vefsíðu.  Hvert sett af reglum hefur veljara (selector), sem velur þær einingar á síðunni sem stjórnast af reglunum, og sjálfar reglurnar, sem segja til um hvernig einingarnar skuli birtast.   Hver regla samanstendur af eiginleika (property) og gildi (value) fyrir eiginleikann.
+
+        Hér er dæmi um reglusett sem lætur textann í `h2` tögum fá bláan lit og skrifstafi:
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        }</pre>
+
+        Í þessu dæmi er `h2` veljarinn, `color` og `font-family` eru eiginleikar og `blue` og `cursive` eru gildi fyrir þá eiginleika.
+
+        </details>
+        </div>
+
+        # Bakgrunnslitur
+
+        -   Finndu kóðann í stílsíðunni sem setur ljósbláan bakgrunn á alla síðuna.
+        -   Breyttu kóðanum svo síðan fái annan lit.
+        -   Prófaðu að breyta bakgrunnslit bara fyrir efnisgreinar.
+      CSD U2 layout style body_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Hvað gerir veljarinn "body"?</strong>
+        </summary>
+
+        Þar sem allt innihald vefsíðu er innan í `body` taginu, geta reglur með "body" fyrir veljara haft áhrif á allt efni síðunnar.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað gerir eiginleikinn "color"?</strong>
+        </summary>
+
+        Eiginleikinn `color` skilgreinir lit á texta.  Ef það er enginn texti hefur hann ekki áhrif. Meira um það á <a href="http://www.w3schools.com/cssref/pr_text_color.asp" target="_new"> W3Schools - CSS color Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað gerir eiginleikinn "text-align"?</strong>
+        </summary>
+
+        Eiginleikinn `text-align` stillir texta til vinstri, hægri eða fyrir miðju. Meira um það á síðunni <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað gerir eiginleikinn "text-decoration"?</strong>
+        </summary>
+
+        Eiginleikinn `text-decoration` setur línu yfir, undir eða í gegnum texta.  Þú getur lesið meira um hann á síðunni <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað gerir eiginleikinn "font-family"?</strong>
+        </summary>
+
+        Eiginleikinn `font-family` stjórnar almennri leturgerð texta. Hann segir til um almenna gerð leturs, en nákvæmlega hvaða letur er notað getur verið mismunandi eftir vöfrum. Meiri lesning um það á <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp" target="_new">W3chools - CSS font-family Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað gerir eiginleikinn "font-size"?</strong>
+        </summary>
+
+        Eiginleikinn `font-size` stýrir stærð leturs. Það er m.a. hægt að nota stærðarflokka eins og `small`, `medium` og `large`, eða tilgreina stærðina nákvæmlega í skjádílum, svo sem `20px`. Nánar á <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp" target="_new">W3Schools - CSS font-size Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er stílsíða?</strong>
+        </summary>
+
+        Stílsíða (stylesheet) er skjal sem stjórnar útliti vefsíðu. Utanáliggjandi stílsíður eru sérstakar skrár sem eru tengdar við HTML síðuna.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er CSS?</strong>
+        </summary>
+
+        CSS er forritunarmál sem stjórnar því hvernig innihald vefs birtist.  Það notar sett af reglum til að stýra útliti vefsíðu.  Hvert sett af reglum hefur veljara (selector), sem velur þær einingar á síðunni sem stjórnast af reglunum, og sjálfar reglurnar, sem segja til um hvernig einingarnar skuli birtast.   Hver regla samanstendur af eiginleika (property) og gildi (value) fyrir eiginleikann.
+
+        Hér er dæmi um reglusett sem lætur textann í `h2` tögum fá bláan lit og skrifstafi:
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        }</pre>
+
+        Í þessu dæmi er `h2` veljarinn, `color` og `font-family` eru eiginleikar og `blue` og `cursive` eru gildi fyrir þá eiginleika.
+
+        </details>
+        </div>
+
+        # Body einingin
+
+        -   Finndu reglusettið fyrir `body` í stílsíðunni.
+        -   Ræddu við félaga um hvað þið haldið að muni gerast ef þú bætir `text-align`, `color`, eða öðrum textaeiginleikum við `body` reglurnar.
+        -   Prófaðu eitthvað af öðrum eiginleikum til að sjá hvaða áhrif þeir hafa.
+      CSD U2 layout style border_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+          <details>
+
+            <summary>
+              <strong>Hvaða liti get ég notað í CSS?</strong>
+            </summary>
+
+        CSS getur notað algengustu (ensku) heitin á litum (red, blue, green, o.s.frv.), og mörg af þeim óalgengari.  Þú getur séð lista yfir öll litaheiti sem CSS skilur á vefsíðunni <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  Þú getur samt notað liti sem ekki eru á listanum en þá þarft þú að nota RGB gildi þeirra.  Þú getur lesið meira um notkun lita í CSS á síðunni <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
+
+          </details>
+        <details>
+        <summary>
+        <strong>Hvernig virkar kóðinn?</strong>
+        </summary>
+        Hér er kóðinn sem býr til umgjörð myndanna:
+
+        <pre>img {
+          border-color: saddlebrown;
+          border-width: 4px;
+          border-style: solid;
+          border-radius: 10px;
+        }</pre>
+
+        -   `img` er _veljarinn_ (selector). Hann velur hvaða einingar eiga að fylgja reglunum sem eru í krullusviganum { }, í þessu tilfelli myndirnar (img).
+        -   `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;` og `border-radius: 10px;` eru reglurnar sem skilgreina jaðar myndanna.
+            </details>
+            <details>
+            <summary>
+            <strong>Hvað gerir eiginleikinn <code>border-style</code>?</strong>
+            </summary>
+            Eiginleikinn `border-style` segir til um hvernig rammalína (heila línu, punktalínu, o.s.frv.) er á jaðri einingarinnar.  Nánar um það á síðunni <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
+            </details>
+            <details>
+            <summary>
+            <strong>Hvað gerir eiginleikinn <code>border-radius</code>?</strong>
+            </summary>
+            Eiginleikinn `border-radius` stjórnar hvorn horn einingar eru bogadregin eða venjuleg.  Stærri radíus gefur lengri, mýkri boga og smærri radíus gefur styttri og skarpari boga. Radíus sem er 0 gefur venjulegt horn. Nánar um þennan eiginleika á <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
+            </details>
+            <details>
+            <summary>
+            <strong>Hvað gerir eiginleikinn <code>float</code>?</strong>
+            </summary>
+
+        Með `float` eiginleikanum getum við látið einingu "fljóta", sem þýðir að einingarnar sem koma á eftir henni munu flæða í kringum hana eins og hægt er.  Ef gildi `float` er `left`, mun einingin fljóta til vinstri og einingarnar sem fylgja munu liggja til hægri við hana (eftir því sem þær geta).  Ef `float` hefur gildið `right`, mun einingin fljóta til hægri og einingarnar á eftir henni munu liggja til vinstri við hana. Þú getur lesið meira um þennan eiginleika á síðunni <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
+
+        </details>
+        </div>
+
+        # Jaðrar
+
+        -   Finndu reglurnar í stílsíðunni sem stilla lit og breidd á jöðrum mynda.
+        -   Breyttu lit og breidd jaðranna.
+        -   Prófaðu mismunandi línugerðir á jöðrunum.
+            -   Valkostir eru `dotted`, `dashed`, `solid` og `double`
+        -   Settu sýnilegan jaðar á einhverja aðra einingu á síðunni, svo sem a´eina fyrirsögnina eða á efnisgreinar.
+      CSD U2 layout style borderradius_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+        <summary>
+        <strong>Hvernig virkar kóðinn?</strong>
+        </summary>
+        Hér er kóðinn sem býr til umgjörð myndanna:
+
+        <pre>img {
+          border-color: saddlebrown;
+          border-width: 4px;
+          border-style: solid;
+          border-radius: 10px;
+        }</pre>
+
+        -   `img` er _veljarinn_ (selector). Hann velur hvaða einingar eiga að fylgja reglunum sem eru í krullusviganum { }, í þessu tilfelli myndirnar (img).
+        -   `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;` og `border-radius: 10px;` eru reglurnar sem skilgreina jaðar myndanna.
+            </details>
+            <details>
+            <summary>
+            <strong>Hvað gerir eiginleikinn <code>border-style</code>?</strong>
+            </summary>
+            Eiginleikinn `border-style` segir til um hvernig rammalína (heila línu, punktalínu, o.s.frv.) er á jaðri einingarinnar.  Nánar um það á síðunni <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
+            </details>
+            <details>
+            <summary>
+            <strong>Hvað gerir eiginleikinn <code>border-radius</code>?</strong>
+            </summary>
+            Eiginleikinn `border-radius` stjórnar hvorn horn einingar eru bogadregin eða venjuleg.  Stærri radíus gefur lengri, mýkri boga og smærri radíus gefur styttri og skarpari boga. Radíus sem er 0 gefur venjulegt horn. Nánar um þennan eiginleika á <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
+            </details>
+            <details>
+            <summary>
+            <strong>Hvað gerir eiginleikinn <code>float</code>?</strong>
+            </summary>
+
+        Með `float` eiginleikanum getum við látið einingu "fljóta", sem þýðir að einingarnar sem koma á eftir henni munu flæða í kringum hana eins og hægt er.  Ef gildi `float` er `left`, mun einingin fljóta til vinstri og einingarnar sem fylgja munu liggja til hægri við hana (eftir því sem þær geta).  Ef `float` hefur gildið `right`, mun einingin fljóta til hægri og einingarnar á eftir henni munu liggja til vinstri við hana. Þú getur lesið meira um þennan eiginleika á síðunni <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
+
+        </details>
+        </div>
+
+        # Radíus jaðarhorna
+
+        -   Skoðaðu eiginleikann `border-radius` í `img` reglunum
+        -   Ræddu við félaga þinn hvað þið haldið að þessi eiginleiki geri.
+        -   Prófaðu mismunandi tölur fyrir radíusinn og veldu þá sem þér finns tkoma best út.
+      CSD U2 layout style float_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+
+        <details>
+
+        <summary>
+        <strong>Hvernig virkar þessi kóði?</strong>
+        </summary>
+        Hér er kóðinn sem lætur myndina "fljóta" til vinstri á síðunnni:
+
+        <pre>img {
+          float: left;
+        }</pre>
+
+        -   `img` er _veljarinn_ (selector). Hann velur þær einingar sem þurfa að fylgja reglunum í krullusviganum { }, í þessu tilfelli eru það myndirnar.
+        -   `float: left;` er reglan sem lætur myndina fljóta til vinstri.
+            </details>
+            <details>
+            <summary>
+            <strong>
+            Hvað gerir eiginleikinn <code>float</code>?
+
+        </strong>
+        </summary>
+
+        Með `float` eiginleikanum getum við látið einingu "fljóta", sem þýðir að einingarnar sem koma á eftir henni munu flæða í kringum hana eins og hægt er.  Ef gildi `float` er `left`, mun einingin fljóta til vinstri og einingarnar sem fylgja munu liggja til hægri við hana (eftir því sem þær geta).  Ef `float` hefur gildið `right`, mun einingin fljóta til hægri og einingarnar á eftir henni munu liggja til vinstri við hana. Þú getur lesið meira um þennan eiginleika á síðunni <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
+
+        </details>
+        </div>
+
+        # Float
+
+        -   Skoðaðu `float` eiginleikan í `img` reglunum
+        -   Ræddu við félaga þinn hvað þið haldið að þessi eiginleiki geri.
+        -   Breyttu gildinu úr `left` í `right`.
+      CSD U2 layout style margin_2019: "<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>Hvernig virkar þessi kóði?</strong>\n</summary>\nHér
+        er kóði sem býr til autt svæði í kringum myndirnar:\n\n<pre>img {\n\tmargin:
+        10px;\n}</pre>\n\n-   `img` er _veljarinn_ (selector).  Hann velur þær einingar
+        sem þurfa að fylgja reglunum í krullusviganum { }, í þessu tilfelli eru það
+        myndir.\n\n-   `margin: 10px` er reglan sem setur 10 díla breitt autt svæði
+        utan um einingarnar.\n    </details>\n    <details>\n    <summary>\n    <strong>Hvað
+        gerir eiginleikinn `margin`?</strong>\n    </summary>\n\nEiginleikinn `margin`
+        (spássía) stækkar einingu með því að bæta auðu svæði utan við og í kringum
+        eininguna.  Oftast er spássían skilgreind í dílum.  Þú getur lesið meira um
+        þetta á síðunni <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\"
+        target=\"_new\">W3Schools - CSS margin Property</a>\n\n</details>\n<details>\n<summary>\n<strong>Hvað
+        táknar `px` / Hvað er díll (pixel)?</strong>\n</summary>\n\nDíll eða pixill
+        (pixel, skammstafað `px`) er mælieininig í CSS. Einn díll er einn ljóspunktur
+        á tölvuskjánum.\n\n</details>\n</div>\n\n# Margin\n\nEiginleikinn `margin`
+        skilgreinir autt svæði utan um einingu.\n\n-   Finndu eiginleikann `margin`
+        í reglunum fyrir `img` einingar.\n-   Stækkaðu auða svæðið utan um myndir
+        og ræddu árangurinn við félaga.\n-   Veldu einhverja aðra einingu og prófaðu
+        að skilgreina autt svæði (spássíu) utan um hana líka."
+      CSD U2 layout style sample_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Hvað gerir veljarinn "body"?</strong>
+        </summary>
+
+        Þar sem allt efni vefsíðunnar er innan í `body` taginu, þá virkar CSS regla með "body" sem veljara á allt viðeigandi efni síðu.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað gerir eiginleikinn "border-style"?</strong>
+        </summary>
+
+        Eiginleikinn `border-style` stjórnar því hvers konar lína er notuð fyrir ramma utan um einingu. Valkostir eru m.a. heil lína (solid), punktalína (dotted) og strikalína (dashed). Þú getur lesið meira um þennan eiginleika á síðunni <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað gerir eiginleikinn "border-radius"?</strong>
+        </summary>
+
+        Með `border-radius` eiginleikanum getum við stjórnað því hvort hornin á einingu eru venjuleg eða bogadregin. Stærri radíus gefur lengri og mýkri boga og lítill radíus gefur styttri og skarpari boga. Ef radíusinn er 0 er það venjulegt horn. Þú getur lesið meira um þennan eiginleika á síðunni <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað gerir eiginleikinn "float"?</strong>
+        </summary>
+
+        Með `float` eiginleikanum getum við látið einingu "fljóta", sem þýðir að einingarnar sem koma á eftir henni munu flæða í kringum hana eins og hægt er.  Ef gildi `float` er `left`, mun einingin fljóta til vinstri og einingarnar sem fylgja munu liggja til hægri við hana (eftir því sem þær geta).  Ef `float` hefur gildið `right`, mun einingin fljóta til hægri og einingarnar á eftir henni munu liggja til vinstri við hana. Þú getur lesið meira um þennan eiginleika á síðunni <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
+
+        </details>
+        </div>
+
+        # Uppstilling og stílar
+
+        -   Skoðaðu vefsíðuna hér fyrir neðan til að finna nýja stíla.
+        -   Opnaðu stílsíðuna
+        -   Ræddu við félaga þinn um hvaða hlutar CSS kóðans eru að gera hvað á síðunni.
+            -   Hvað lætur alla síðuna vera bláa?
+            -   Hvernig eru myndirnar látnar vera vinstra megin við allar hinar einingarnar?
+            -   Af hverju er myndin með bogadregin horn?
+
+        Í næstu áföngum munt þú breyta og bæta stílum við þessa síða.
+      CSD U2 layout style width_2019: "<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n<strong>Hvernig
+        virkar þessi kóði?</strong>\n</summary>\n\nHér er kóðinn sem gefur myndinni
+        núverandi stærð hennar:\n\n    img {\n    \twidth: 250px;\n    }\n\n-   `img`
+        er _veljarinn_ (selector).  Hann velur þær einingar sem þurfa að fylgja reglunum
+        í krullusviganum { }, í þessu tilfelli eru það myndir.\n-   `width: 250px`
+        er reglan sem gerir myndina 250 díla (pixels) breiða.  Hæð myndarinnar breytist
+        sjálfkrafa um leið svo að myndin verði ekki teygð.\n\n</details>\n<details>\n<summary>\n<strong>Hvað
+        gerir eiginleikinn <code>width</code>?</strong>\n</summary>\n\nEiginleikinn
+        `width` stjórnar því hve breið einingin verður. Algengast er að skilgreina
+        breiddina í dílum (pixels), sem lætur eininguna ná yfir visst svæði á tölvuskjánum.
+        Ef aðeins breiddin er tiltekin, breytist hæðin sjálfkrafa með svo myndin bjagist
+        ekki. Ef hæðin er líka tiltekin, fær myndin þá hæð. Þú getur lesið meira um
+        þennan eiginleika á síðunni <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\"
+        target=\"_new\">W3Schools - CSS width Property</a>\n\n</details>\n<details>\n<summary>\n<strong>Hvað
+        gerir eiginleikinn <code>height</code>?</strong>\n</summary>\n\nEiginleikinn
+        `height` stjórnar því hve há einingin verður. Algengast er að skilgreina hæðina
+        í dílum (pixels), sem lætur eininguna ná yfir visst svæði á tölvuskjánum.
+        Ef aðeins hæðin er tiltekin, breytist breiddin sjálfkrafa með svo myndin bjagist
+        ekki. Ef breiddin er líka tiltekin, fær myndin þá breidd. Þú getur lesið meira
+        um þennan eiginleika á síðunni <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\"
+        target=\"_new\">W3Schools - CSS height Property</a>\n\n</details>\n<details>\n<summary>\n<strong>Hvað
+        táknar <code>px</code> / Hvað er díll (pixel)?</strong>\n</summary>\n\nDíll
+        eða pixill (pixel, skammstafað `px`) er mælieininig í CSS. Einn díll er einn
+        ljóspunktur á tölvuskjánum.\n\n</details>\n<details>\n<summary>\n<strong>Af
+        hverju getur það aflagað mynd að tilgreina bæði hæð og breidd í sömu reglu?</strong>\n</summary>\n\nÞegar
+        breiddin breytist verður hæðin að breytast í sama hlutfalli, annars verður
+        myndin teygð. Tildæmis ef breiddin er tvöfölduð verður líka að tvöfalda hæðina,
+        annars aflagast myndin. Ef aðeins hæðin eða breiddin er tilgreind, mun tölvan
+        sjálfkrafa breyta hinum eiginleikanum svo að hlutföllin haldist og myndin
+        líti eðlilega út..\n\n</details>\n</div>\n\n# Breidd og hæð\n\n-   Finndu
+        þann eiginleika í stílsíðunni sem stjórnar breidd myndanna.\n-   Breyttu breiddinni
+        svo að myndirnar verði stærri eða minni.\n-   Búðu til nýja reglu með `height`
+        eiginleika til að stjórna hæð myndanna.\n-   Notaðu `width` eiginleikann með
+        reglunum fyrir `p` til að breyta breidd efnisgreinanna."
       CSD U2 link demo: |-
         # Gerð vefs með fleiri síður
 
@@ -1978,6 +2759,414 @@ is-IS:
         \  Smelltu á \n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
         \   AM.png>) hnappinn efst á þessari síðu.\\\r\n-   Afritaðu vefslóðina sem
         þú færð og sendu hana í tölvupósti til þeirra sem mega sjá síðuna.\\\r\n    \\\r"
+      CSD U2 publish video: |-
+        ## Spurningar til að hugleiða
+
+        -   Hvaða ábyrgð heldur þú að þú hafir sem útgefandi vefs og hvað finnst þér um það?
+        -   Af hverju mundir þú vilja sjá kóða bak við vefsíðu einhvers annars eða nota hann fyrir eigin vef með breytingum?
+      CSD U2 text style decoration_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Hvernig virkar kóðinn?</strong>
+        </summary>
+
+        Hér er kóðinn sem setur undirstrikun á `h1` einingarnar:
+
+        <pre>p {
+          text-decoration: underline;
+        }</pre>
+
+        -   `h1` er _veljarinn_ (selector). Hann velur hvaða einingar eiga að fylgja reglunum í krullusviganum { }. `h` táknar fyrirsögn (heading).
+        -   `text-decoration: underline;` er reglan sem lætur texta innan í `h1` tögum fá undurstrikun.
+            -   `text-decoration` er _eiginleikinn_.  Hann segir til um á hvað reglan hefur áhrif, í þessu tilfelli að "skreyta" letrið.
+            -   `underline` er _gildið_.  Það segir til um hvaða áhrif reglan hefur varðandi eiginleikann, í þessu tilfelli á letrið að vera undirstrikað.
+                </details>
+                <details>
+                <summary>
+                <strong>Hvað gildi getur `text-decoration` haft?</strong>
+                </summary>
+
+        Þú getur m.a. valið um "underline", "overline" og "line-through".  Þú getur lesið meira um `text-decoration` eiginleikann á síðunni  <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
+
+        </details>
+
+        <details>
+        <summary><strong>Af hverju þarf öll þessi greinarmerki?</strong>
+        </summary>
+
+        Greinarmerkin, svo sem krullusvigarnir `{ }`, tvípunkturinn `:` og semikomman `;`, hjálpa tölvunni að skilja reglur stílsíðunnar.  Krullusvigarnir afmarka allar reglurnar fyrir tiltekinn veljara.  Hver regla þarf að enda á tvípunkti, og eiginleikarnir ásamt gildum þeirra eru alltaf aðskildir með semikommu.
+
+        </details>
+        <details>
+        <summary><strong>Hvað er stílsíða?</strong></summary>
+        Stílsíða er skjal sem stjórnar útliti vefsíðu.  Utanáliggjandi stílsíður eru sérstakar skrár sem eru tengdar HTML síðunni.
+
+        </details>
+        <details>
+        <summary><strong>Hvað er CSS?</strong></summary>
+
+        CSS er forritunarmál sem stjórnar því hvernig innihald vefs birtist.  Það notar sett af reglum til að stýra útliti vefsíðu.  Hvert sett af reglum hefur veljara (selector), sem velur þær einingar á síðunni sem stjórnast af reglunum, og sjálfar reglurnar, sem segja til um hvernig einingarnar skuli birtast.   Hver regla samanstendur af eiginleika (property) og gildi (value) fyrir eiginleikann.
+
+        Hér er dæmi um reglusett sem lætur textann í `h2` tögum fá bláan lit og skrifstafi:
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        }</pre>
+
+        Í þessu dæmi er `h2` veljarinn, `color` og `font-family` eru eiginleikar og `blue` og `cursive` eru gildi fyrir þá eiginleika.
+
+        </details>
+        </div>
+
+        # Undirstrikun
+
+        -   Finndu kóðann í stílsíðunni sem setur undirstrikun á h1 tög.
+        -   Breyttu textaskreytingunni (text-decoration) og veldu þá sem þér líst best á.
+            -   Valkostir eru "underline", "overline", og "line-through"
+        -   Bættu samskonar reglu við fyrir p eða h3 tögin.
+      CSD U2 text style font family_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Hvernig virkar kóðinn?</strong>
+        </summary>
+
+        Hér er kóðinn sem stjórnar leturgerð efnisgreina:
+
+        <pre>p {
+          font-family: cursive;
+        }</pre>
+
+        -   `p` er _veljarinn_ (selector). Hann velur hvaða einingar eiga að fylgja reglunum í krullusviganum { }. `p` táknar efnisgrein (paragraph).
+        -   `font-family: cursive;` er reglan sem lætur texta innan í `p` tögum fá þessa leturgerð.
+            -   `font-family` er _eiginleikinn_.  Hann segir til um á hvað reglan hefur áhrif, í þessu tilfelli að stilla leturgerð.
+            -   `cursive` er _gildið_.  Það segir til um hvaða áhrif reglan hefur varðandi eiginleikann, í þessu tilfelli á letrið að vera skriftarletur.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað gildi getur `font-family` haft?</strong>
+        </summary>
+
+        Þú getur m.a. valið um "serif", "sans-serif", "cursive", "fantasy" og "monospace".  Þú getur líka prófað tilteknar leturgerðir eins og lýst er á síðunni  <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_new">W3Schools - CSS Web Safe Font Combinations</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju þarf öll þessi greinarmerki?</strong>
+        </summary>
+
+        Greinarmerkin, svo sem krullusvigarnir `{ }`, tvípunkturinn `:` og semikomman `;`, hjálpa tölvunni að skilja reglur stílsíðunnar.  Krullusvigarnir afmarka allar reglurnar fyrir tiltekinn veljara.  Hver regla þarf að enda á tvípunkti, og eiginleikarnir ásamt gildum þeirra eru alltaf aðskildir með semikommu.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er stílsíða?</strong>
+        </summary>
+
+        Stílsíða er skjal sem stjórnar útliti vefsíðu.  Utanáliggjandi stílsíður eru sérstakar skrár sem eru tengdar HTML síðunni.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Hvað er CSS?</strong>
+        </summary>
+
+        CSS er forritunarmál sem stjórnar því hvernig innihald vefs birtist.  Það notar sett af reglum til að stýra útliti vefsíðu.  Hvert sett af reglum hefur veljara (selector), sem velur þær einingar á síðunni sem stjórnast af reglunum, og sjálfar reglurnar, sem segja til um hvernig einingarnar skuli birtast.   Hver regla samanstendur af eiginleika (property) og gildi (value) fyrir eiginleikann.
+
+        Hér er dæmi um reglusett sem lætur textann í `h2` tögum fá bláan lit og skrifstafi:
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        }</pre>
+
+        Í þessu dæmi er `h2` veljarinn, `color` og `font-family` eru eiginleikar og `blue` og `cursive` eru gildi fyrir þá eiginleika.
+
+        </details>
+        </div>
+
+        # Að breyta leturgerðinni
+
+        -   Finndu CSS reglusettið í stílsíðunni sem ákveður útlit efnisgreinartagsins.
+        -   Breyttu leturgerðinni (font family) og veldu það sem þér líst best á.
+            -   Valkostir eru "serif", "sans-serif", "cursive", "fantasy" og "monospace"
+        -   Bættu leturgerðarreglu við fyrir h1 eða h3 tögin.
+      CSD U2 text style h1_2019: "<div class=\"no-pullthrough\" \n style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n
+        \ <details>\n    <summary>\n      <strong>\n        Hvaða liti get ég notað
+        í CSS?\n      </strong>\n    </summary>\n    CSS getur notað algengustu (ensku)
+        heitin á litum (red, blue, green, o.s.frv.), og mörg af þeim óalgengari.  Þú
+        getur séð lista yfir öll litaheiti sem CSS skilur á vefsíðunni <a href=\"http://www.w3schools.com/colors/colors_names.asp\"
+        target=\"_new\">W3Schools - HTML Color Names</a>.  Þú getur samt notað liti
+        sem ekki eru á listanum en þá þarft þú að nota RGB gildi þeirra.  Þú getur
+        lesið meira um notkun lita í CSS á síðunni <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\"
+        target=\"_new\">W3Schools - CSS Legal Color Values</a>\n  </details>\n\n<details>\n<summary>\n<strong>Hvernig
+        virkar kóðinn?</strong>\n</summary>\n\nHér er kóði sem gefur `h1` fyrirsögninni
+        rauðan textalit:\n\n<pre>h1 {\n  color: red;\n}</pre>\n\n-   `h1` er _veljarinn_
+        (selector).  Hann skilgreinir hvaða einingar munu fylgja reglunum innan krullusviganna
+        { }.\n-   `color: red;` er reglan sem lætur texta innan í `h1` tögum fá rauðan
+        lit.\n    -   `color` er _eiginleikinn_.  Hann skýrir það um hvað reglan snýst,
+        í þessu tilfelli textalit.\n    -   `red` er _gildið_.  Það skýrir hvernig
+        skuli framfylgja reglunni, í þessu tilfelli að hafa textalitinn rauðan.\n\n</details>\n\n<details>\n<summary>\n<strong>Af
+        hverju þarf öll þessi greinarmerki?</strong>\n</summary>\n\nGreinarmerkin,
+        svo sem krullusvigarnir `{ }`, tvípunkturinn `:` og semikomman `;`, hjálpa
+        tölvunni að skilja reglur stílsíðunnar.  Krullusvigarnir afmarka allar reglurnar
+        fyrir tiltekinn veljara.  Hver regla þarf að enda á tvípunkti, og eiginleikarnir
+        ásamt gildum þeirra eru alltaf aðskildir með semikommu.\n\n</details>\n<details>\n<summary>\n<strong>Hvað
+        er stílsíða?</strong>\n</summary>\n\nStílsíða er skjal sem stjórnar útliti
+        vefsíðu.  Utanáliggjandi stílsíður eru sérstakar skrár sem eru tengdar HTML
+        síðunni.\n\n</details>\n\n<details>\n<summary>\n<strong>Hvað er CSS?</strong>\n</summary>\nCSS
+        er forritunarmál sem stjórnar því hvernig innihald vefs birtist.  Það notar
+        sett af reglum til að stýra útliti vefsíðu.  Hvert sett af reglum hefur veljara
+        (selector), sem velur þær einingar á síðunni sem stjórnast af reglunum, og
+        sjálfar reglurnar, sem segja til um hvernig einingarnar skuli birtast.   Hver
+        regla samanstendur af eiginleika (property) og gildi (value) fyrir eiginleikann.\n\nHér
+        er dæmi um reglusett sem lætur textann í `h2` tögum fá bláan lit og skrifstafi:\n\n<pre>h2
+        {\n   color: blue;\n   font-family: cursive;\n}</pre>\n\nÍ þessu dæmi er `h2`
+        veljarinn, `color` og `font-family` eru eiginleikar og `blue` og `cursive`
+        eru gildi fyrir þá eiginleika.\n\n</details>\n\n</div>\n\n# CSS og textalitur\n\nÞessi
+        HTML skrá notar stílsíðu (\"style.css\") til að gefa síðunni þetta tiltekna
+        útlit eða stíl.  Stílsíðan inniheldur upplýsingar um hvernig HTML einingarnar
+        eiga að líta út.\n\n-   Finndu kóðann í stílsíðunni (smelltu á \"style.css\"
+        í skráalistanum) sem gefur h1 fyrirsögninnni rauðan lit.\n-   Breyttu kóðanum
+        fyrir lit h1 fyrirsagnarinnar úr `red` í annan lit."
+      CSD U2 text style h3_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+          <details>
+            <summary>
+              <strong>Hvaða liti get ég notað í CSS?</strong>
+            </summary>
+        CSS getur notað algengustu (ensku) heitin á litum (red, blue, green, o.s.frv.), og mörg af þeim óalgengari.  Þú getur séð lista yfir öll litaheiti sem CSS skilur á vefsíðunni <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  Þú getur samt notað liti sem ekki eru á listanum en þá þarft þú að nota RGB gildi þeirra.  Þú getur lesið meira um notkun lita í CSS á síðunni <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
+        </details>
+
+        <details>
+        <summary>
+        <strong>Hvernig virkar kóðinn?</strong>
+        </summary>
+
+        Hér er kóði sem gefur `h1` fyrirsögninni rauðan textalit:
+
+        <pre>h1 {
+          color: red;
+        }</pre>
+
+        -   `h1` er _veljarinn_ (selector).  Hann skilgreinir hvaða einingar munu fylgja reglunum innan krullusviganna { }.
+        -   `color: red;` er reglan sem lætur texta innan í `h1` tögum fá rauðan lit.
+            -   `color` er _eiginleikinn_.  Hann skýrir það um hvað reglan snýst, í þessu tilfelli textalit.
+            -   `red` er _gildið_.  Það skýrir hvernig skuli framfylgja reglunni, í þessu tilfelli að hafa textalitinn rauðan.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvernig bý ég til nýtt reglusett?</strong>
+        </summary>
+        Til að búa til nýtt reglusett þarftu að hafa veljar og lista af reglum. Veljarinn er heiti þess tags sem þú vilt láta reglurnar gilda um. Reglurnar eru listi þar sem eiginleikar og gildi eru pöruð saman.  Þú þarft að gæta vandlega að ritun greinarmerkja í reglusettinu.  Skoðaðu kóðann hér fyrir neðan til að sjá hvernig kóðinn á að líta út.  Þú þarft auðvitað að aðlaga smáatriðin að síðunni þinni.
+
+        <pre>h1 {
+          color: red;
+        }</pre>
+
+        -   `h1` er _veljarinn_ (selector).  Hann skilgreinir hvaða einingar munu fylgja reglunum innan krullusviganna { }.
+        -   `color: red;` er reglan sem lætur texta innan í `h1` tögum fá rauðan lit.
+            -   `color` er _eiginleikinn_.  Hann skýrir það um hvað reglan snýst, í þessu tilfelli textalit.
+            -   `red` er _gildið_.  Það skýrir hvernig skuli framfylgja reglunni, í þessu tilfelli að hafa textalitinn rauðan.
+                </details>
+                <details>
+                <summary>
+                <strong>Af hverju þarf öll þessi greinarmerki?</strong>
+                </summary>
+
+        Greinarmerkin, svo sem krullusvigarnir `{ }`, tvípunkturinn `:` og semikomman `;`, hjálpa tölvunni að skilja reglur stílsíðunnar.  Krullusvigarnir afmarka allar reglurnar fyrir tiltekinn veljara.  Hver regla þarf að enda á tvípunkti, og eiginleikarnir ásamt gildum þeirra eru alltaf aðskildir með semikommu.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er stílsíða?</strong>
+        </summary>
+
+        Stílsíða er skjal sem stjórnar útliti vefsíðu.  Utanáliggjandi stílsíður eru sérstakar skrár sem eru tengdar HTML síðunni.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Hvað er CSS?</strong>
+        </summary>
+        CSS er forritunarmál sem stjórnar því hvernig innihald vefs birtist.  Það notar sett af reglum til að stýra útliti vefsíðu.  Hvert sett af reglum hefur veljara (selector), sem velur þær einingar á síðunni sem stjórnast af reglunum, og sjálfar reglurnar, sem segja til um hvernig einingarnar skuli birtast.   Hver regla samanstendur af eiginleika (property) og gildi (value) fyrir eiginleikann.
+
+        Hér er dæmi um reglusett sem lætur textann í `h2` tögum fá bláan lit og skrifstafi:
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        }</pre>
+
+        Í þessu dæmi er `h2` veljarinn, `color` og `font-family` eru eiginleikar og `blue` og `cursive` eru gildi fyrir þá eiginleika.
+
+        </details>
+
+        </div>
+
+        # Að búa til nýtt CSS reglusett
+
+        Kóðabúturinn sem skilgreinur reglur fyrir tiltekið tag er kallað _reglusett_.  Þú getur búið til nýtt reglusett með því að fylgja mynstrinu fyrir `h1` tagið.
+
+        -   Finndu CSS reglusettið í stílsíðunni sem skilgreinir stílana fyrir `h1` tagið.
+        -   Notaðu sömu uppsetningu til að skrifa nýtt CSS reglusett sem á að stjórna stíl tagsins `h3`.
+        -   Settu inn kóða til að gefa `h3` tögum öðruvísi lit.
+      CSD U2 text style size_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Hvernig virkar kóðinn?</strong>
+        </summary>
+
+        Hér er kóðinn sem stjórnar stærð textans í efnisgreinum (p tögum):
+
+        <pre>p {
+          font-size: 14px;
+        }</pre>
+
+        -   `p` er _veljarinn_ (selector). Hann velur hvaða einingar eiga að fylgja reglunum í krullusviganum { }. `p` táknar efnisgrein (paragraph).
+        -   `font-size: 14px;` er reglan sem lætur texta innan í `p` tögum fá þessa leturstærð.
+            -   `font-size` er _eiginleikinn_.  Hann segir til um á hvað reglan hefur áhrif, í þessu tilfelli að stilla leturstærð.
+            -   `14px` er _gildið_.  Það segir til um hvaða áhrif reglan hefur varðandi eiginleikann, í þessu tilfelli á leturstærðin að vera 14 dílar.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað þýðir <code>px</code> / Hvað er díll?</strong>
+        </summary>
+
+        Díll (pixel, skammstafað `px`) er mælieining sem er notuð í CSS. Díll er stærðin á einum ljóspunkti á tölvuskjánum.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju þarf öll þessi greinarmerki?</strong>
+        </summary>
+
+        Greinarmerkin, svo sem krullusvigarnir `{ }`, tvípunkturinn `:` og semikomman `;`, hjálpa tölvunni að skilja reglur stílsíðunnar.  Krullusvigarnir afmarka allar reglurnar fyrir tiltekinn veljara.  Hver regla þarf að enda á tvípunkti, og eiginleikarnir ásamt gildum þeirra eru alltaf aðskildir með semikommu.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er stílsíða?</strong>
+        </summary>
+
+        Stílsíða er skjal sem stjórnar útliti vefsíðu.  Utanáliggjandi stílsíður eru sérstakar skrár sem eru tengdar HTML síðunni.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Hvað er CSS?</strong>
+        </summary>
+        CSS er forritunarmál sem stjórnar því hvernig innihald vefs birtist.  Það notar sett af reglum til að stýra útliti vefsíðu.  Hvert sett af reglum hefur veljara (selector), sem velur þær einingar á síðunni sem stjórnast af reglunum, og sjálfar reglurnar, sem segja til um hvernig einingarnar skuli birtast.   Hver regla samanstendur af eiginleika (property) og gildi (value) fyrir eiginleikann.
+
+        Hér er dæmi um reglusett sem lætur textann í `h2` tögum fá bláan lit og skrifstafi:
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        }</pre>
+
+        Í þessu dæmi er `h2` veljarinn, `color` og `font-family` eru eiginleikar og `blue` og `cursive` eru gildi fyrir þá eiginleika.
+
+        </details>
+        </div>
+
+        # Að breyta stærð texta
+
+        Þú getur stjórnað fleiru en litum með því að nota aðra eiginleika.
+
+        -   Finndu CSS reglusettið í stílsíðunni sem stjórnar útlit efnisgreinartagsins `p`.
+        -   Breyttu stærð textans í efnisgreinum svo hann verði stærri.
+        -   Bættu nýrri reglu við reglusettið fyrir h3 tagið til að gera textann stærri eða minni.
+      CSD U2 text style text align_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Hvernig virkar kóðinn?</strong>
+        </summary>
+
+        Hér er kóðinn sem stjórnar stillingu texta í efnisgreinum:
+
+        <pre>p {
+          text-align: left;
+        }</pre>
+
+        -   `p` er _veljarinn_ (selector). Hann velur hvaða einingar eiga að fylgja reglunum í krullusviganum { }. `p` táknar efnisgrein (paragraph).
+        -   `text-align: left;` er reglan sem lætur texta innan í `p` tögum liggja upp að vinstri hlið efnisgreinar (vinstri stilling).
+            -   `text-align` er _eiginleikinn_.  Hann segir til um á hvað reglan hefur áhrif, í þessu tilfelli upp að hvaða hlið einingar textalínur liggja.
+            -   `left` er _gildið_.  Það segir til um hvaða áhrif reglan hefur varðandi eiginleikann, í þessu tilfelli eiga línur textans að liggja upp að vinstri hlið völdu eininganna.
+                </details>
+                <details>
+                <summary>
+                <strong>Af hverju gerir <code>text-align:left;</code> ekki neitt?</strong>
+                </summary>
+
+        Flestir eiginleikar hafa sjálfgefin gildi. Sjálfgefnu gildin eru þau sem einingar fá sjálfkrafa án þess að þú gerir neitt. Sjálfgefna gildið fyrir `text-align` er `left`, svo kóðinn hefur ekki breytt neinu. Textinn er sjálfkrafa stilltur til vinstri.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvaða gildi getur `text-align` haft?</strong>
+        </summary>
+
+        Þú getur valið um "left", "right" og "center". Þú getur lesið meira um "text-align" eiginleikann á síðunni  <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Af hverju þarf öll þessi greinarmerki?</strong>
+        </summary>
+
+        Greinarmerkin, svo sem krullusvigarnir `{ }`, tvípunkturinn `:` og semikomman `;`, hjálpa tölvunni að skilja reglur stílsíðunnar.  Krullusvigarnir afmarka allar reglurnar fyrir tiltekinn veljara.  Hver regla þarf að enda á tvípunkti, og eiginleikarnir ásamt gildum þeirra eru alltaf aðskildir með semikommu.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er stílsíða?</strong>
+        </summary>
+
+        Stílsíða er skjal sem stjórnar útliti vefsíðu.  Utanáliggjandi stílsíður eru sérstakar skrár sem eru tengdar HTML síðunni.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hvað er CSS?</strong>
+        </summary>
+
+        CSS er forritunarmál sem stjórnar því hvernig innihald vefs birtist.  Það notar sett af reglum til að stýra útliti vefsíðu.  Hvert sett af reglum hefur veljara (selector), sem velur þær einingar á síðunni sem stjórnast af reglunum, og sjálfar reglurnar, sem segja til um hvernig einingarnar skuli birtast.   Hver regla samanstendur af eiginleika (property) og gildi (value) fyrir eiginleikann.
+        <br/><br/>
+        Hér er dæmi um reglusett sem lætur textann í `h2` tögum fá bláan lit og skrifstafi:
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        }</pre>
+
+        Í þessu dæmi er `h2` veljarinn, `color` og `font-family` eru eiginleikar og `blue` og `cursive` eru gildi fyrir þá eiginleika.
+
+        </details>
+
+        </details>
+        </div>
+
+        # Stilling texta
+
+        -   Finndu "text-align" eiginleikann í efnisgreinartaginu.
+        -   Breyttu stillingu textans.
+            -   Valkostir eru "left", "right", og "center"
       CSD U2 un_ordered lists: "# Að samein lista\n\n<div class=\"no-pullthrough\"
         style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
         20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Tvær
@@ -2111,6 +3300,26 @@ is-IS:
         allar eignunarupplýsingar sem þú þarft að hafa.\n-   Hladdu öllum myndunum
         upp í verkefnið þitt.   <a href=\"../../../stage/7/puzzle/5\" target=\"_new\">Kennslustund
         7 þraut 5</a> er með hjálp ef þú þarft."
+      CSD U3 - Booleans Video_2019: |-
+        ## Spurningar til að hugleiða
+
+        -   Hvað er Boole yrðing?
+        -   Hvers konar yrðing mundi gefa útkomuna "true"?
+        -   Hvers konar yrðing mundi gefa útkomuna "false"?
+      CSD U3 - Conditionals Video_2019: |-
+        ## Spurning til að hugleiða
+
+        -   Hvenær getur þú ímyndað þér að þú þyrftir að nota "if/else" yrðingu?
+      CSD U3 Boolean Modify_2019: "# Boole yrðingar\n\nEinföldustu Boole yrðingar
+        eru spurningar sem tölvan getur svarað með \"true\" (satt) eða \"false\" (ósatt).
+        \nÞað er líka hægt að segja að Boole yrðingar **gefi útkomuna** `true` eða
+        `false`.\n\n# Gerðu þetta\n\nGetur þú breytt tölum í eiginleikum kvikanna
+        svo að hver Boole yrðing gefi útkomuna `true`?\n\n-   Lestu í gegnum allt
+        forritið til að sjá hvernig `sprite1` og `sprite2` eru búin til og hvaða eiginleika
+        er verið að bera saman.\n-   Farðu yfir hverja af Boole yrðingunum til að
+        sjá hvaða eiginleika kvikanna er verið að bera saman.\n-   Breyttu kóðanum
+        _en aðeins í fyrstu **11** línunum_ þannig að hver `console.log()` skipun
+        skrifi út `true`."
       CSD U3 Conditionals Apple: |-
         # Meiri æfing með Boole gildi
 
@@ -2168,7 +3377,7 @@ is-IS:
       CSD U3 Draw Loop Plugged update your scene: |-
         # Færa út sviðið
 
-        Hér er sviðið fyrir hreyfingu kvika sem þú bjóst til í síðustu kennslustund. Nú átt þú að uppfæra svo það noti teiknilykkjuna (enska:draw loop) og eiginleika kvika.
+        Hér er sviðið fyrir hreyfingu vera sem þú bjóst til í síðustu kennslustund. Nú átt þú að uppfæra svo það noti teiknilykkjuna (enska:draw loop) og eiginleika veru.
 
         <img src="https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png" style="float:right;height:100px">
 
@@ -2176,11 +3385,11 @@ is-IS:
 
         -   Bættu teiknilykkju í forritið þitt (þú ættir að hafa bara eina)
         -   Notaðu snöruna (enska: lasso selector) (smelltu, haltu og dragðu) til að velja allan kóðann þinn og settu hann í teiknilykkjuna. Með Crtl-Z getur þú afturkallað mistök sem þú gerir.
-        -   Bættu kóða í forritið sem uppfærir þessa eiginleika kvikanna: `sprite.x`, `sprite.y` eða `sprite.rotation` svo þeir hreyfist. Þú verður að uppfæra eiginleikana með handahófstölum: `randomNumber()`.
+        -   Bættu kóða í forritið sem uppfærir þessa eiginleika veranna: `sprite.x`, `sprite.y` eða `sprite.rotation` svo þær hreyfist. Þú verður að uppfæra eiginleikana með handahófstölum: `randomNumber()`.
       CSD U3 Draw Loop Plugged update your scene_2018: |-
         # Færa út sviðið
 
-        Hér er sviðið fyrir hreyfingu kvika sem þú bjóst til í síðustu kennslustund. Nú átt þú að uppfæra svo það noti teiknilykkjuna (enska:draw loop) og eiginleika kvika.
+        Hér er sviðið fyrir hreyfingu vera sem þú bjóst til í síðustu kennslustund. Nú átt þú að uppfæra svo það noti teiknilykkjuna (enska:draw loop) og eiginleika veru.
 
         <img src="https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png" style="float:right;height:100px">
 
@@ -2188,11 +3397,11 @@ is-IS:
 
         -   Bættu teiknilykkju í forritið þitt (þú ættir að hafa bara eina)
         -   Notaðu snöruna (enska: lasso selector) (smelltu, haltu og dragðu) til að velja allan kóðann þinn og settu hann í teiknilykkjuna. Með Crtl-Z getur þú afturkallað mistök sem þú gerir.
-        -   Bættu kóða í forritið sem uppfærir þessa eiginleika kvikanna: `sprite.x`, `sprite.y` eða `sprite.rotation` svo þeir hreyfist. Þú verður að uppfæra eiginleikana með handahófstölum: `randomNumber()`.
+        -   Bættu kóða í forritið sem uppfærir þessa eiginleika veranna: `sprite.x`, `sprite.y` eða `sprite.rotation` svo þær hreyfist. Þú verður að uppfæra eiginleikana með handahófstölum: `randomNumber()`.
       CSD U3 Draw Loop Plugged update your scene_2019: |-
         # Færa út sviðið
 
-        Hér er sviðið fyrir hreyfingu kvika sem þú bjóst til í síðustu kennslustund. Nú átt þú að uppfæra svo það noti teiknilykkjuna (enska:draw loop) og eiginleika kvika.
+        Hér er sviðið fyrir hreyfingu vera sem þú bjóst til í síðustu kennslustund. Nú átt þú að uppfæra svo það noti teiknilykkjuna (enska:draw loop) og eiginleika vera.
 
         <img src="https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png" style="float:right;height:100px">
 
@@ -2200,17 +3409,17 @@ is-IS:
 
         -   Bættu teiknilykkju í forritið þitt (þú ættir að hafa bara eina)
         -   Notaðu snöruna (enska: lasso selector) (smelltu, haltu og dragðu) til að velja allan kóðann þinn og settu hann í teiknilykkjuna. Með Crtl-Z getur þú afturkallað mistök sem þú gerir.
-        -   Bættu kóða í forritið sem uppfærir þessa eiginleika kvikanna: `sprite.x`, `sprite.y` eða `sprite.rotation` svo þeir hreyfist. Þú verður að uppfæra eiginleikana með handahófstölum: `randomNumber()`.
+        -   Bættu kóða í forritið sem uppfærir þessa eiginleika veranna: `sprite.x`, `sprite.y` eða `sprite.rotation` svo þær hreyfist. Þú verður að uppfæra eiginleikana með handahófstölum: `randomNumber()`.
       CSD U3 Draw Loop Plugged wiggle sprite rotation: |-
         \<img src="<https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif">, style="float:right;height:150px">
 
         # Að uppfæra eiginleika
 
-        Þessi áfangi sameinar ýmsa þá kunnáttu sem þú hefur þegar kynnst. Hann teiknar hringform á bakgrunninn og uppfærir líka eiginleika kvika. Í þetta sinn er verið að breyta `sprite.rotation` eiginleikanum fyrir snúning kvika.
+        Þessi áfangi sameinar ýmsa þá kunnáttu sem þú hefur þegar kynnst. Hann teiknar hringform á bakgrunninn og uppfærir líka eiginleika hreyfanlegra vera. Í þetta sinn er verið að breyta `sprite.rotation` eiginleikanum fyrir snúning vera.
 
         # Gerðu þetta
 
-        Þessi hreyfimynd er þegar að uppfæra snúning eins kvikans þannig að hann virðist titra
+        Þessi hreyfimynd er þegar að uppfæra snúning einnar verunnar þannig að hún virðist titra
 
         -   Keyrðu forritið til að sjá hvernig það virkar.
         -   Bættu kóða í forritið til að láta hina geimveruna titra á sama hátt.
@@ -2220,11 +3429,11 @@ is-IS:
 
         # Að uppfæra eiginleika
 
-        Þessi áfangi sameinar ýmsa þá kunnáttu sem þú hefur þegar kynnst. Hann teiknar hringform á bakgrunninn og uppfærir líka eiginleika kvika. Í þetta sinn er verið að breyta `sprite.rotation` eiginleikanum fyrir snúning kvika.
+        Þessi áfangi sameinar ýmsa þá kunnáttu sem þú hefur þegar kynnst. Hann teiknar hringform á bakgrunninn og uppfærir líka eiginleika hreyfanlegra vera. Í þetta sinn er verið að breyta `sprite.rotation` eiginleikanum fyrir snúning vera.
 
         # Gerðu þetta
 
-        Þessi hreyfimynd er þegar að uppfæra snúning eins kvikans þannig að hann virðist titra
+        Þessi hreyfimynd er þegar að uppfæra snúning einnar verunnar þannig að hún virðist titra
 
         -   Keyrðu forritið til að sjá hvernig það virkar.
         -   Bættu kóða í forritið til að láta hina geimveruna titra á sama hátt.
@@ -2234,11 +3443,11 @@ is-IS:
 
         # Að uppfæra eiginleika
 
-        Þessi áfangi sameinar ýmsa þá kunnáttu sem þú hefur þegar kynnst. Hann teiknar hringform á bakgrunninn og uppfærir líka eiginleika kvika. Í þetta sinn er verið að breyta `sprite.rotation` eiginleikanum fyrir snúning kvika.
+        Þessi áfangi sameinar ýmsa þá kunnáttu sem þú hefur þegar kynnst. Hann teiknar hringform á bakgrunninn og uppfærir líka eiginleika hreyfanlegra vera. Í þetta sinn er verið að breyta `sprite.rotation` eiginleikanum fyrir snúning vera.
 
         # Gerðu þetta
 
-        Þessi hreyfimynd er þegar að uppfæra snúning eins kvikans þannig að hann virðist titra
+        Þessi hreyfimynd er þegar að uppfæra snúning einnar verunnar þannig að hún virðist titra
 
         -   Keyrðu forritið til að sjá hvernig það virkar.
         -   Bættu kóða í forritið til að láta hina geimveruna titra á sama hátt.
@@ -2248,42 +3457,42 @@ is-IS:
 
         # Uppfærsla eiginleika
 
-        Kvikar hafa eiginleika sem segja tölvunni hvar og hvernig á að teikna þá. Tveir mikið notaðir eiginleikar eru `sprite.x` and `sprite.y` sem stjórna stað kvikans. Ef ný gildi eru sett í þessa eiginleika mun kvikinn færast á nýjan stað á skjánum.
+        Verur hafa eiginleika sem segja tölvunni hvar og hvernig á að teikna þær. Tveir mikið notaðir eiginleikar eru `sprite.x` and `sprite.y` sem stjórna stað verunnar. Ef ný gildi eru sett í þessa eiginleika mun veran færast á nýjan stað á skjánum.
 
         # Gerðu þetta
 
-        Þessi hreyfimynd er þegar að uppfæra x eiginleika eins kvikans svo hann virðist titra
+        Þessi hreyfimynd er þegar að uppfæra x eiginleika einnar verunnar svo hún virðist titra
 
         -   Keyrðu forritið til að sjá það virka.
-        -   Breyttu kóðanum í þessu forriti svo að hinn kvikinn titri á sama og sá fyrri.
+        -   Breyttu kóðanum í þessu forriti svo að hin veran titri á sama og sú fyrri.
         -   Ekki hætta fyrr en forritið lítur út eins og það sem sést í myndinni hér til hægri.
       CSD U3 Draw Loop Plugged wiggle sprite x_2018: |-
         \<img src="<https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif">, style="float:right;height:150px">
 
         # Uppfærsla eiginleika
 
-        Kvikar hafa eiginleika sem segja tölvunni hvar og hvernig á að teikna þá. Tveir mikið notaðir eiginleikar eru `sprite.x` and `sprite.y` sem stjórna stað kvikans. Ef ný gildi eru sett í þessa eiginleika mun kvikinn færast á nýjan stað á skjánum.
+        Verur hafa eiginleika sem segja tölvunni hvar og hvernig á að teikna þær. Tveir mikið notaðir eiginleikar eru `sprite.x` and `sprite.y` sem stjórna stað verunnar. Ef ný gildi eru sett í þessa eiginleika mun veran færast á nýjan stað á skjánum.
 
         # Gerðu þetta
 
-        Þessi hreyfimynd er þegar að uppfæra x eiginleika eins kvikans svo hann virðist titra
+        Þessi hreyfimynd er þegar að uppfæra x eiginleika einnar verunnar svo hún virðist titra
 
         -   Keyrðu forritið til að sjá það virka.
-        -   Breyttu kóðanum í þessu forriti svo að hinn kvikinn titri á sama og sá fyrri.
+        -   Breyttu kóðanum í þessu forriti svo að hin veran titri á sama og sú fyrri.
         -   Ekki hætta fyrr en forritið lítur út eins og það sem sést í myndinni hér til hægri.
       CSD U3 Draw Loop Plugged wiggle sprite x_2019: |-
         \<img src="<https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif">, style="float:right;height:150px">
 
         # Uppfærsla eiginleika
 
-        Kvikar hafa eiginleika sem segja tölvunni hvar og hvernig á að teikna þá. Tveir mikið notaðir eiginleikar eru `sprite.x` and `sprite.y` sem stjórna stað kvikans. Ef ný gildi eru sett í þessa eiginleika mun kvikinn færast á nýjan stað á skjánum.
+        Verur hafa eiginleika sem segja tölvunni hvar og hvernig á að teikna þær. Tveir mikið notaðir eiginleikar eru `sprite.x` and `sprite.y` sem stjórna stað verunnar. Ef ný gildi eru sett í þessa eiginleika mun veran færast á nýjan stað á skjánum.
 
         # Gerðu þetta
 
-        Þessi hreyfimynd er þegar að uppfæra x eiginleika eins kvikans svo hann virðist titra
+        Þessi hreyfimynd er þegar að uppfæra x eiginleika einnar verunnar svo hún virðist titra
 
         -   Keyrðu forritið til að sjá það virka.
-        -   Breyttu kóðanum í þessu forriti svo að hinn kvikinn titri á sama og sá fyrri.
+        -   Breyttu kóðanum í þessu forriti svo að hin veran titri á sama og sú fyrri.
         -   Ekki hætta fyrr en forritið lítur út eins og það sem sést í myndinni hér til hægri.
       CSD U3 Draw Loop Plugged wiggle sprite y: |-
         \<img src="<https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif">, style="float:right;height:150px">
@@ -2342,6 +3551,14 @@ is-IS:
         x og y hnitin sem þú ert að leita eftir.\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\n\\\r\n\n-
         \  Settu tvo rétthyrninga nákvæmlega í hornin á skjánum eins og sýnt er í
         myndinni."
+      CSD U3 Else_2019: |-
+        # Snúa tannhjólunum öfugt
+
+        Tannhjólin eru komin aftur. Eins og er snúast þau þegar þú ýtir á bilslána, en nú viltu láta þau snúast öfugt þegar þú ýtir ekki á hana.
+
+        # Gerðu þetta
+
+        -   Láttu tannhjólin snúast öfugt við það sem þau gera þegar ýtt er á  bilslána.
       CSD U3 Entertainment Sample 1: "# Geimstökkull\\\r\n\n\\\r\nÝttu á \"Keyra\"
         til að spila leikinn hér til vinstri.  Þú getur látið geimveruna stökkva með
         upp örinni og hreyft hana til vinstri og hægri með örvarlyklunum.   Þú skorar
@@ -2396,6 +3613,36 @@ is-IS:
       CSD U3 Entertainment Sample 4_2019: "# Stimplar\\\r\n\n\\\r\nSmelltu á\n\"Keyra\"
         til að ræsa forritið, og notaðu svo stimpilinn til að teikna myndir með einföldum
         litum og stimpluðum dýramyndum.\\\r"
+      CSD U3 Functions Call Function_2019: |-
+        # Að kalla á föll
+
+        Með föllum getur þú búið til eigin kubba og ákveðið hvaða kóði er settur í þá.  Þetta forrit hefur nú þegar búið til tvö föll, en það kallar aðeins á annað þeirra.
+
+        # Gerðu þetta
+
+        -   **Kallaði á hitt fallið** til að birta alla myndina. Notaðu fallið sem verið er að kalla á sem fyrirmynd.
+        -   **Ábending:** Eins og gildir um aðra kubba þá er stafsetning og notkun há- og lágstafa mikilvæg hér.
+      CSD U3 If Else predict question: |-
+        # Ef/annars spádómar
+
+        Lestu í gegnum þetta forrit og taktu sérstaklega eftir `if/else` kubbnum í línu 10.  Ræddu eftirfarandi spurningar við félaga þinn og skrifaðu niður hvað þið haldið að muni gerast og keyrið svo kóðann til að sjá hvað forritið gerir.
+
+        -   Hvað gerist þegar þú ýtir á bilslána?
+        -   Hvað gerist þegar þú ýtir **ekki** á bilslána?
+      CSD U3 If Else_2019: |-
+        # Hvenær á að hafa "Else"
+
+        Else klausan er gagnleg þegar þú vilt láta forritið þitt gera eitt þegar skilyrðið er satt og _eitthvað annað_ þegar skilyrðið er ósatt.
+
+        <img src="https://images.code.org/730a895b50375781e72c95f5fa21d09d-image-1477681109870.gif" style="float:right;">
+
+        # Gerðu þetta
+
+        Smelltu á "Keyra" til að sjá býflugur sem hafa verið gerðar fyrir þig og blóm vinstra megin á skjánum. Láttu býflugurnar **birtast þegar músin er nálægt blóminu** (vinstra megin á skjánum) og **hverfa þegar músin er fjarri blóminu** (hægra megin á skjánum). Skoðaðu dæmið til hægri.
+
+        -   Bættu við `if else` yrðingu eftir að þú uppfærir stað býfluganna.
+        -   Notaðu boole yrðingu í Inntaki "if" til að athuga hvort x-hnit músarinnar séu þeim megin sem blómið er.
+        -   Stilltu sýnileika hverrar býflugu með `visible` eiginleika hennar í bæði "if" og "else" yrðingunum þannig að býflugurnar sjáist aðeins þegar þær eru nálægt blóminu.
       CSD U3 Input Fish: "# Fiskar með örvum\\\r\n\n\\\r\nFiskarnir eru komnir aftur.
         Getur þú látið fisk hreyfast til vinstri en aðeins þegar ýtt er á vinstri
         örvarlykilinn?\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\n\\\r\n\n-   Bættu við yrðingu
@@ -2928,6 +4175,20 @@ is-IS:
         við slönguna\\\r\n-   Notaðu `randomNumber()`\n    til að láta allan líkama
         slöngunnar hreyfast upp og niður\\\r\n    \\\r\n    _Áskorun:\n    Getur þú
         látið stærð sumra hringanna líka stjórnast af handahófi?_"
+      CSD U3 Random rainbow snake_2018_2019: |-
+        <img src="https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58 PM.png" style="float:right;height:150px">
+
+        # Regnbogaslanga
+
+        Þetta forrit teiknar mjög sjaldgæfa tegund af regnbogaslöngu. Til að slangan verði teiknuð mismunandi í hvert sinn þarft þú að nota handahófstölur (random numbers).
+
+        # Gerðu þetta
+
+        -   Keyrðu forritið nokkrum sinnum til að sjá hvernig kóðinn virkar í upphafi.
+        -   Bættu að minnsta kosti þremur nýjum og ólíkum hringjum við regnbogaslönguna.
+        -   Notaðu `randomNumber()` til að láta líkama slöngunnar hreyfast upp og niður eins og hinir þrír.
+
+        _Áskorun: Geturðu látið stærð sumra hringjanna stjórnast af handahófi líka?_
       CSD U3 Random random ellipse: "# Slembitölur\\\r\n\n\\\r\n`randomNumber()`\nvelur
         tölu af handahófi (slembitölu) úr tölum sem liggja á tilteknu talnabili. Þú
         getur notað þennan kubb í stað þess að skrifa ákveðna tölu.  Ef þú notar slembitölur
@@ -2965,6 +4226,14 @@ is-IS:
         vilt sjá í lok þessarar æfingar. Notaðu einföld form sem þú þekkir, kvika
         fyrir persónur og texta sem birtist á skjánum. Þegar uppkastið er tilbúið,
         munt þú læra um `text` kubbinn og hvernig á að stilla upp sviði.\\\r"
+      CSD U3 Scene Example_2018_2019: |-
+        # Verur á leiksviði
+
+        Með því að nota form, verur og texta saman, getur þú búið til einfaldar sviðsetningar, sögur eða teiknimyndir. Þó að þetta dæmi sé einfalt, getur þú notað eins margar verur og form og þú vilt til að búa til flóknari og nákvæmari sviðsetningar eftir eigin höfði.
+
+        ## Útbúðu uppkast
+
+        Áður en lengra er haldið ættir þú að taka þér tíma til að teikna upp sviðsetninguna sem þú vilt sjá í lok þessarar æfingar. Notaðu einföld form sem þú þekkir, verur fyrir persónur og texta sem birtist á skjánum. Þegar uppkastið er tilbúið, munt þú læra hvernig á að stilla upp sviði.
       CSD U3 Sprite Movement Left: "<img src=\"https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif\"\nstyle=\"float:
         right; margin-left: 20px\">\\\r\n\\\r\n\n# Hreyfing til vinstri\\\r\n\n\\\r\nEf
         þú leggur tölu við x-hnit kvika færist hann til hægri. Hvernig gætir þú þá
@@ -3016,120 +4285,153 @@ is-IS:
         þetta\\\r\n\n\\\r\nSettu hreyfingu í forritið þitt eins og myndin til hægri
         sýnir. Við höfum þegar bætt inn línu til að uppfæra `plane.x` í teiknilykkjunni
         en þetta er óklárað.\\\r"
-      CSD U3 Sprites anitab 1: "# Myndir\\\r\n\n\\\r\nÁ **hreyfingasíðunni** (enska:Animations
-        Tab) sérðu þrjár myndir sem hafa verið settar þar fyrir þig.\nÞú getur komist
-        á hreyfingarsíðuna með því að smella á  **Animation** hnappinn ofan við leiksvæðið.\\\r\n\\\r\n<img
-        src=\"https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11\nPM.png\"
-        style=\"width:300px;float:right\">\\\r\n\\\r\nEftir að þú hefur búið til kvika
-        **notar þú `sprite.setAnimation()` skipunina til að breyta ásýnd kvikans úr
-        rétthyrningi í mynd.** Allar myndir sem þú hefur hlaðið inn á hreyfingasíðuna
-        koma fram í fellilista `sprite.setAnimation()`.  Geimverunni hefur verið stillt
-        upp sem dæmi.\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\nBreyttu kvikanum í aðra mynd
-        af hreyfingasíðunni.\\\r\n\\\r\n\n-   Það er þegar búið að gera einn kvika
-        með mynd.\\\r\n-   Keyrðu kóðann til að sjá hvernig þetta virkar.\\\r\n-   Breyttu
-        inntakinu í `setAnimation` skipuninni svo ásýnd kvikans breytist.\\\r\n-   Prófaðu
-        allar myndirnar."
-      CSD U3 Sprites anitab 1_2018: "# Myndir\\\r\n\n\\\r\nÁ **hreyfingasíðunni**
-        (enska:Animations Tab) sérðu þrjár myndir sem hafa verið settar þar fyrir
-        þig.\nÞú getur komist á hreyfingarsíðuna með því að smella á  **Animation**
-        hnappinn ofan við leiksvæðið.\\\r\n\\\r\n<img src=\"https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11\nPM.png\"
-        style=\"width:300px;float:right\">\\\r\n\\\r\nEftir að þú hefur búið til kvika
-        **notar þú `sprite.setAnimation()` skipunina til að breyta ásýnd kvikans úr
-        rétthyrningi í mynd.** Allar myndir sem þú hefur hlaðið inn á hreyfingasíðuna
-        koma fram í fellilista `sprite.setAnimation()`.  Geimverunni hefur verið stillt
-        upp sem dæmi.\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\nBreyttu kvikanum í aðra mynd
-        af hreyfingasíðunni.\\\r\n\\\r\n\n-   Það er þegar búið að gera einn kvika
-        með mynd.\\\r\n-   Keyrðu kóðann til að sjá hvernig þetta virkar.\\\r\n-   Breyttu
-        inntakinu í `setAnimation` skipuninni svo ásýnd kvikans breytist.\\\r\n-   Prófaðu
-        allar myndirnar."
-      CSD U3 Sprites anitab 1_2019: "# Myndir\\\r\n\n\\\r\nÁ **hreyfingasíðunni**
-        (enska:Animations Tab) sérðu þrjár myndir sem hafa verið settar þar fyrir
-        þig.\nÞú getur komist á hreyfingarsíðuna með því að smella á  **Animation**
-        hnappinn ofan við leiksvæðið.\\\r\n\\\r\n<img src=\"https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11\nPM.png\"
-        style=\"width:300px;float:right\">\\\r\n\\\r\nEftir að þú hefur búið til kvika
-        **notar þú `sprite.setAnimation()` skipunina til að breyta ásýnd kvikans úr
-        rétthyrningi í mynd.** Allar myndir sem þú hefur hlaðið inn á hreyfingasíðuna
-        koma fram í fellilista `sprite.setAnimation()`.  Geimverunni hefur verið stillt
-        upp sem dæmi.\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\nBreyttu kvikanum í aðra mynd
-        af hreyfingasíðunni.\\\r\n\\\r\n\n-   Það er þegar búið að gera einn kvika
-        með mynd.\\\r\n-   Keyrðu kóðann til að sjá hvernig þetta virkar.\\\r\n-   Breyttu
-        inntakinu í `setAnimation` skipuninni svo ásýnd kvikans breytist.\\\r\n-   Prófaðu
-        allar myndirnar."
-      CSD U3 Sprites anitab 2: "# Hladdu upp eigin mynd\\\r\n\n\\\r\nÞú getur líka
-        notað hreyfingasíðuna til að hlaða upp eða teikna eigin mynd.\\\r\n\\\r\n\n#
-        \n\nGerðu þetta\\\r\nÞú átt að búa til fljúgandi flugdreka. Þú getur notað
-        <a href=\"https://www.google.com/search?as_st=y&tbm=isch&as_q=kite&as_epq=&as_oq=&as_eq=&cr=&as_sitesearch=&safe=active&tbs=isz:s,ic:trans,sur:f\"\ntarget=\"_blank\">þennan
-        tengil</a> til að leita í Google myndum eða fundið þína eigin. Þú getur líka
-        búið til nýja hreyfimynd frá grunni og teiknað eigin flugdreka.\\\r\n\\\r\n\n-
-        \  Hladdu niður mynd af flugdreka. Myndir með gegnsæjan bakgrunn virka best.\\\r\n-
-        \  Opnaðu hreyfingasíðuna.\\\r\n-   Smelltu á <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05\n
-        \   PM.png\" style=\"width:50px\"> og svo <img src=\"https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16\n
-        \   PM.png\" style=\"width:50px\"> til að hlaða upp mynd.\\\r\n-   Veldu skrána
-        í tölvunni.\\\r\n-   Endurnefndu skrána með því að smella á textann neðan
-        við myndina. Þá er auðveldara að muna hana. \\\r\n-   Bættu `sprite.setAnimation()`
-        kubbi í kóðann til að láta `flugdreka` kvikann nota nýju hreyfinguna.\\\r\n
-        \   \\\r\n    Það er í lagi þó flugdrekinn sé of stór! Þú lærir að laga það
-        í næsta áfanga."
-      CSD U3 Sprites anitab 2_2018: "# Hladdu upp eigin mynd\\\r\n\n\\\r\nÞú getur
-        líka notað hreyfingasíðuna til að hlaða upp eða teikna eigin mynd.\\\r\n\\\r\n\n#
-        \n\nGerðu þetta\\\r\nÞú átt að búa til fljúgandi flugdreka. Þú getur notað
-        <a href=\"https://www.google.com/search?as_st=y&tbm=isch&as_q=kite&as_epq=&as_oq=&as_eq=&cr=&as_sitesearch=&safe=active&tbs=isz:s,ic:trans,sur:f\"\ntarget=\"_blank\">þennan
-        tengil</a> til að leita í Google myndum eða fundið þína eigin. Þú getur líka
-        búið til nýja hreyfimynd frá grunni og teiknað eigin flugdreka.\\\r\n\\\r\n\n-
-        \  Hladdu niður mynd af flugdreka. Myndir með gegnsæjan bakgrunn virka best.\\\r\n-
-        \  Opnaðu hreyfingasíðuna.\\\r\n-   Smelltu á <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05\n
-        \   PM.png\" style=\"width:50px\"> og svo <img src=\"https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16\n
-        \   PM.png\" style=\"width:50px\"> til að hlaða upp mynd.\\\r\n-   Veldu skrána
-        í tölvunni.\\\r\n-   Endurnefndu skrána með því að smella á textann neðan
-        við myndina. Þá er auðveldara að muna hana. \\\r\n-   Bættu `sprite.setAnimation()`
-        kubbi í kóðann til að láta `flugdreka` kvikann nota nýju hreyfinguna.\\\r\n
-        \   \\\r\n    Það er í lagi þó flugdrekinn sé of stór! Þú lærir að laga það
-        í næsta áfanga."
-      CSD U3 Sprites anitab 2_2019: "# Hladdu upp eigin mynd\\\r\n\n\\\r\nÞú getur
-        líka notað hreyfingasíðuna til að hlaða upp eða teikna eigin mynd.\\\r\n\\\r\n\n#
-        \n\nGerðu þetta\\\r\nÞú átt að búa til fljúgandi flugdreka. Þú getur notað
-        <a href=\"https://www.google.com/search?as_st=y&tbm=isch&as_q=kite&as_epq=&as_oq=&as_eq=&cr=&as_sitesearch=&safe=active&tbs=isz:s,ic:trans,sur:f\"\ntarget=\"_blank\">þennan
-        tengil</a> til að leita í Google myndum eða fundið þína eigin. Þú getur líka
-        búið til nýja hreyfimynd frá grunni og teiknað eigin flugdreka.\\\r\n\\\r\n\n-
-        \  Hladdu niður mynd af flugdreka. Myndir með gegnsæjan bakgrunn virka best.\\\r\n-
-        \  Opnaðu hreyfingasíðuna.\\\r\n-   Smelltu á <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05\n
-        \   PM.png\" style=\"width:50px\"> og svo <img src=\"https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16\n
-        \   PM.png\" style=\"width:50px\"> til að hlaða upp mynd.\\\r\n-   Veldu skrána
-        í tölvunni.\\\r\n-   Endurnefndu skrána með því að smella á textann neðan
-        við myndina. Þá er auðveldara að muna hana. \\\r\n-   Bættu `sprite.setAnimation()`
-        kubbi í kóðann til að láta `flugdreka` kvikann nota nýju hreyfinguna.\\\r\n
-        \   \\\r\n    Það er í lagi þó flugdrekinn sé of stór! Þú lærir að laga það
-        í næsta áfanga."
-      CSD U3 Sprites anitab 3: "# Að breyta stærð\\\r\n\n\\\r\nÍ _Sprites_ skúffunni
-        í verkfærakassanum er nýr kubbur, `sprite.scale`.\nMeð þessari skipun getur
-        þú breytt stærð kvika miðað við upphaflega stærð hans. `sprite.scale = 1`
-        er upphaflega stærðin. `sprite.scale = 0.5` helmingar stærðina, en `sprite.scale
-        = 2` tvöfaldar hana.\\\r\n\\\r\n\n# \n\nGerðu þetta\\\r\n\\\r\nÁ þessu stigi
-        ætti forritið að hafa nýupphlaðna mynd, en sennilega ekki í _heppilegri_ stærð.
-        Bættu við `sprite.scale` kubbi til að breyta stærð flugdrekans.\\\r\n\\\r\n_Vísbending:
-        Röð kóðans skiptir máli! Þú verður að bæta `sprite.scale` við **eftir** að
-        þú hefur búið kvikann til, en **áður** en þú teiknar kvikann með `drawSprites()`.
-        Það auðveldar lestur kóðans ef þú hefur allan kóða fyrir kvika efst í forritinu._"
-      CSD U3 Sprites anitab 3_2018: "# Að breyta stærð\\\r\n\n\\\r\nÍ _Sprites_ skúffunni
-        í verkfærakassanum er nýr kubbur, `sprite.scale`.\nMeð þessari skipun getur
-        þú breytt stærð kvika miðað við upphaflega stærð hans. `sprite.scale = 1`
-        er upphaflega stærðin. `sprite.scale = 0.5` helmingar stærðina, en `sprite.scale
-        = 2` tvöfaldar hana.\\\r\n\\\r\n\n# \n\nGerðu þetta\\\r\n\\\r\nÁ þessu stigi
-        ætti forritið að hafa nýupphlaðna mynd, en sennilega ekki í _heppilegri_ stærð.
-        Bættu við `sprite.scale` kubbi til að breyta stærð flugdrekans.\\\r\n\\\r\n_Vísbending:
-        Röð kóðans skiptir máli! Þú verður að bæta `sprite.scale` við **eftir** að
-        þú hefur búið kvikann til, en **áður** en þú teiknar kvikann með `drawSprites()`.
-        Það auðveldar lestur kóðans ef þú hefur allan kóða fyrir kvika efst í forritinu._"
-      CSD U3 Sprites anitab 3_2019: "# Að breyta stærð\\\r\n\n\\\r\nÍ _Sprites_ skúffunni
-        í verkfærakassanum er nýr kubbur, `sprite.scale`.\nMeð þessari skipun getur
-        þú breytt stærð kvika miðað við upphaflega stærð hans. `sprite.scale = 1`
-        er upphaflega stærðin. `sprite.scale = 0.5` helmingar stærðina, en `sprite.scale
-        = 2` tvöfaldar hana.\\\r\n\\\r\n\n# \n\nGerðu þetta\\\r\n\\\r\nÁ þessu stigi
-        ætti forritið að hafa nýupphlaðna mynd, en sennilega ekki í _heppilegri_ stærð.
-        Bættu við `sprite.scale` kubbi til að breyta stærð flugdrekans.\\\r\n\\\r\n_Vísbending:
-        Röð kóðans skiptir máli! Þú verður að bæta `sprite.scale` við **eftir** að
-        þú hefur búið kvikann til, en **áður** en þú teiknar kvikann með `drawSprites()`.
-        Það auðveldar lestur kóðans ef þú hefur allan kóða fyrir kvika efst í forritinu._"
+      CSD U3 Sprites anitab 1: |-
+        # Myndir
+
+        Á **hreyfingasíðunni** (Animations) sérðu þrjár myndir sem hafa verið settar þar fyrir þig.
+        Þú getur komist á hreyfingarsíðuna með því að smella á  **Animation** hnappinn ofan við leiksvæðið.
+
+        <img src="https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11
+        PM.png" style="width:300px;float:right">
+
+        Eftir að þú hefur búið til veru **notar þú `sprite.setAnimation()` skipunina til að breyta ásýnd verunnar úr rétthyrningi í mynd.** Allar myndir sem þú hefur hlaðið inn á hreyfingasíðuna koma fram í fellilista `sprite.setAnimation()`.  Geimverunni hefur verið stillt upp sem dæmi.
+
+        # Gerðu þetta
+
+        Breyttu verunni í aðra mynd af hreyfingasíðunni.
+
+        -   Það er þegar búið að gera eina veru með mynd.
+        -   Keyrðu kóðann til að sjá hvernig þetta virkar.
+        -   Breyttu inntakinu í `setAnimation` skipuninni svo ásýnd verunnar breytist.
+        -   Prófaðu allar myndirnar.
+      CSD U3 Sprites anitab 1_2018: |-
+        # Myndir
+
+        Á **hreyfingasíðunni** (Animations) sérðu þrjár myndir sem hafa verið settar þar fyrir þig.
+        Þú getur komist á hreyfingarsíðuna með því að smella á  **Animation** hnappinn ofan við leiksvæðið.
+
+        <img src="https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11
+        PM.png" style="width:300px;float:right">
+
+        Eftir að þú hefur búið til veru **notar þú `sprite.setAnimation()` skipunina til að breyta ásýnd verunnar úr rétthyrningi í mynd.** Allar myndir sem þú hefur hlaðið inn á hreyfingasíðuna koma fram í fellilista `sprite.setAnimation()`.  Geimverunni hefur verið stillt upp sem dæmi.
+
+        # Gerðu þetta
+
+        Breyttu verunni í aðra mynd af hreyfingasíðunni.
+
+        -   Það er þegar búið að gera eina veru með mynd.
+        -   Keyrðu kóðann til að sjá hvernig þetta virkar.
+        -   Breyttu inntakinu í `setAnimation` skipuninni svo ásýnd verunnar breytist.
+        -   Prófaðu allar myndirnar.
+      CSD U3 Sprites anitab 1_2019: |-
+        # Myndir
+
+        Á **hreyfingasíðunni** (Animations) sérðu þrjár myndir sem hafa verið settar þar fyrir þig.
+        Þú getur komist á hreyfingarsíðuna með því að smella á  **Animation** hnappinn ofan við leiksvæðið.
+
+        <img src="https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11
+        PM.png" style="width:300px;float:right">
+
+        Eftir að þú hefur búið til veru **notar þú `sprite.setAnimation()` skipunina til að breyta ásýnd verunnar úr rétthyrningi í mynd.** Allar myndir sem þú hefur hlaðið inn á hreyfingasíðuna koma fram í fellilista `sprite.setAnimation()`.  Geimverunni hefur verið stillt upp sem dæmi.
+
+        # Gerðu þetta
+
+        Breyttu verunni í aðra mynd af hreyfingasíðunni.
+
+        -   Það er þegar búið að gera eina veru með mynd.
+        -   Keyrðu kóðann til að sjá hvernig þetta virkar.
+        -   Breyttu inntakinu í `setAnimation` skipuninni svo ásýnd verunnar breytist.
+        -   Prófaðu allar myndirnar.
+      CSD U3 Sprites anitab 2: |-
+        # Hladdu upp eigin mynd
+
+        Þú getur líka notað hreyfingasíðuna til að hlaða upp eða teikna eigin mynd.
+
+        # Gerðu þetta
+
+        Þú átt að búa til fljúgandi flugdreka. Þú getur leitað að mynd á vefnum eða búið til nýja hreyfimynd frá grunni og teiknað eigin flugdreka.
+
+        -   Hladdu niður mynd af flugdreka. Myndir með gegnsæjan bakgrunn virka best.
+        -   Opnaðu hreyfingasíðuna.
+        -   Smelltu á <img src="https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05
+            PM.png" style="width:50px"> og svo <img src="https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16
+            PM.png" style="width:50px"> til að hlaða upp mynd.
+        -   Veldu skrána í tölvunni.
+        -   Endurnefndu skrána með því að smella á textann neðan við myndina. Þá er auðveldara að muna hana.
+        -   Bættu `sprite.setAnimation()` kubbi í kóðann til að láta `flugdreka` veruna nota nýju hreyfinguna.
+
+        Það er í lagi þó flugdrekinn sé of stór! Þú lærir að laga það í næsta áfanga.
+      CSD U3 Sprites anitab 2_2018: |-
+        # Hladdu upp eigin mynd
+
+        Þú getur líka notað hreyfingasíðuna til að hlaða upp eða teikna eigin mynd.
+
+        # Gerðu þetta
+
+        Þú átt að búa til fljúgandi flugdreka. Þú getur leitað að mynd á vefnum eða búið til nýja hreyfimynd frá grunni og teiknað eigin flugdreka.
+
+        -   Hladdu niður mynd af flugdreka. Myndir með gegnsæjan bakgrunn virka best.
+        -   Opnaðu hreyfingasíðuna.
+        -   Smelltu á <img src="https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05
+            PM.png" style="width:50px"> og svo <img src="https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16
+            PM.png" style="width:50px"> til að hlaða upp mynd.
+        -   Veldu skrána í tölvunni.
+        -   Endurnefndu skrána með því að smella á textann neðan við myndina. Þá er auðveldara að muna hana.
+        -   Bættu `sprite.setAnimation()` kubbi í kóðann til að láta `flugdreka` veruna nota nýju hreyfinguna.
+
+        Það er í lagi þó flugdrekinn sé of stór! Þú lærir að laga það í næsta áfanga.
+      CSD U3 Sprites anitab 2_2019: |-
+        # Hladdu upp eigin mynd
+
+        Þú getur líka notað hreyfingasíðuna til að hlaða upp eða teikna eigin mynd.
+
+        # Gerðu þetta
+
+        Þú átt að búa til fljúgandi flugdreka. Þú getur leitað að mynd á vefnum eða búið til nýja hreyfimynd frá grunni og teiknað eigin flugdreka.
+
+        -   Hladdu niður mynd af flugdreka. Myndir með gegnsæjan bakgrunn virka best.
+        -   Opnaðu hreyfingasíðuna.
+        -   Smelltu á <img src="https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05
+            PM.png" style="width:50px"> og svo <img src="https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16
+            PM.png" style="width:50px"> til að hlaða upp mynd.
+        -   Veldu skrána í tölvunni.
+        -   Endurnefndu skrána með því að smella á textann neðan við myndina. Þá er auðveldara að muna hana.
+        -   Bættu `sprite.setAnimation()` kubbi í kóðann til að láta `flugdreka` veruna nota nýju hreyfinguna.
+
+        Það er í lagi þó flugdrekinn sé of stór! Þú lærir að laga það í næsta áfanga.
+      CSD U3 Sprites anitab 3: |-
+        # Að breyta stærð
+
+        Í _Verur_ skúffu verkfærakassans er nýr kubbur, `sprite.scale`.
+        Með þessari skipun getur þú breytt stærð veru miðað við upphaflega stærð hennar. `sprite.scale = 1` er upphaflega stærðin. `sprite.scale = 0.5` helmingar stærðina, en `sprite.scale = 2` tvöfaldar hana.
+
+        # Gerðu þetta
+
+        Á þessu stigi ætti forritið að hafa nýupphlaðna mynd, en sennilega ekki í _heppilegri_ stærð. Bættu við `sprite.scale` kubbi til að breyta stærð flugdrekans.
+
+        _Vísbending: Röð kóðans skiptir máli! Þú verður að bæta `sprite.scale` við **eftir** að þú hefur búið veruna til, en **áður** en þú teiknar hana með `drawSprites()`. Það auðveldar lestur kóðans ef þú hefur allan kóða fyrir verur efst í forritinu._
+      CSD U3 Sprites anitab 3_2018: |-
+        # Að breyta stærð
+
+        Í _Verur_ skúffu verkfærakassans er nýr kubbur, `sprite.scale`.
+        Með þessari skipun getur þú breytt stærð veru miðað við upphaflega stærð hennar. `sprite.scale = 1` er upphaflega stærðin. `sprite.scale = 0.5` helmingar stærðina, en `sprite.scale = 2` tvöfaldar hana.
+
+        # Gerðu þetta
+
+        Á þessu stigi ætti forritið að hafa nýupphlaðna mynd, en sennilega ekki í _heppilegri_ stærð. Bættu við `sprite.scale` kubbi til að breyta stærð flugdrekans.
+
+        _Vísbending: Röð kóðans skiptir máli! Þú verður að bæta `sprite.scale` við **eftir** að þú hefur búið veruna til, en **áður** en þú teiknar hana með `drawSprites()`. Það auðveldar lestur kóðans ef þú hefur allan kóða fyrir verur efst í forritinu._
+      CSD U3 Sprites anitab 3_2019: |-
+        # Að breyta stærð
+
+        Í _Verur_ skúffu verkfærakassans er nýr kubbur, `sprite.scale`.
+        Með þessari skipun getur þú breytt stærð veru miðað við upphaflega stærð hennar. `sprite.scale = 1` er upphaflega stærðin. `sprite.scale = 0.5` helmingar stærðina, en `sprite.scale = 2` tvöfaldar hana.
+
+        # Gerðu þetta
+
+        Á þessu stigi ætti forritið að hafa nýupphlaðna mynd, en sennilega ekki í _heppilegri_ stærð. Bættu við `sprite.scale` kubbi til að breyta stærð flugdrekans.
+
+        _Vísbending: Röð kóðans skiptir máli! Þú verður að bæta `sprite.scale` við **eftir** að þú hefur búið veruna til, en **áður** en þú teiknar hana með `drawSprites()`. Það auðveldar lestur kóðans ef þú hefur allan kóða fyrir verur efst í forritinu._
       CSD U3 Sprites intro debug: |-
         <img src="https://images.code.org/63207a624d751aacb376db18cdf09eec-image-1491255841823.png" style="width: 150px; float: right; margin-left: 20px; border: 1px solid #f2f2f2;">
 
@@ -3178,33 +4480,45 @@ is-IS:
         að teikna bakgrunninn.\\\r\n\\\r\n\n# \n\nGerðu þetta\\\r\n\\\r\n\n-   Notaðu
         `background()` skipun til að fylla skjáinn með lit.\\\r\n-   Bættu við skipunum
         til að teikna aðra óhreyfanlega hluti leiksviðsins."
-      CSD U3 Sprites scene sprites: "# Gerð leiksviðs - Kvikar\\\r\n\n\\\r\nEftir
-        að bakgrunnurinn er tilbúinn er næst að bæta við kvikum.\\\r\n\n# Gerðu þetta\\\r\n\n\\\r\n\\*\nBættu
-        við eða búðu til allar myndir fyrir kvika á hreyfingasíðunni.\\\r\n\n-   Búðu
-        til breytu fyrir hvern kvika efst í forritinu og notaðu `setAnimation()` til
-        að tengja myndirnar sem eru á hreyfingasíðunni.\\\r\n-   Kallaðu á `drawSprites()`
-        einu sinni í lok forritsins.\\\r\n    \\\r\n    _Vísbending: Þú vilt sennilega
-        kalla á `drawSprites()`\n    í blálokin til þess að kvikarnir birtist framan
-        við bakgrunninn, en það getur líka átt við að kalla á `drawSprites()` fyrr,
-        t. d. ef kvikarnir eiga að vera framan við sum form en bak við önnur._"
-      CSD U3 Sprites scene sprites_2018: "# Gerð leiksviðs - Kvikar\\\r\n\n\\\r\nEftir
-        að bakgrunnurinn er tilbúinn er næst að bæta við kvikum.\\\r\n\n# Gerðu þetta\\\r\n\n\\\r\n\\*\nBættu
-        við eða búðu til allar myndir fyrir kvika á hreyfingasíðunni.\\\r\n\n-   Búðu
-        til breytu fyrir hvern kvika efst í forritinu og notaðu `setAnimation()` til
-        að tengja myndirnar sem eru á hreyfingasíðunni.\\\r\n-   Kallaðu á `drawSprites()`
-        einu sinni í lok forritsins.\\\r\n    \\\r\n    _Vísbending: Þú vilt sennilega
-        kalla á `drawSprites()`\n    í blálokin til þess að kvikarnir birtist framan
-        við bakgrunninn, en það getur líka átt við að kalla á `drawSprites()` fyrr,
-        t. d. ef kvikarnir eiga að vera framan við sum form en bak við önnur._"
-      CSD U3 Sprites scene sprites_2019: "# Gerð leiksviðs - Kvikar\\\r\n\n\\\r\nEftir
-        að bakgrunnurinn er tilbúinn er næst að bæta við kvikum.\\\r\n\n# Gerðu þetta\\\r\n\n\\\r\n\\*\nBættu
-        við eða búðu til allar myndir fyrir kvika á hreyfingasíðunni.\\\r\n\n-   Búðu
-        til breytu fyrir hvern kvika efst í forritinu og notaðu `setAnimation()` til
-        að tengja myndirnar sem eru á hreyfingasíðunni.\\\r\n-   Kallaðu á `drawSprites()`
-        einu sinni í lok forritsins.\\\r\n    \\\r\n    _Vísbending: Þú vilt sennilega
-        kalla á `drawSprites()`\n    í blálokin til þess að kvikarnir birtist framan
-        við bakgrunninn, en það getur líka átt við að kalla á `drawSprites()` fyrr,
-        t. d. ef kvikarnir eiga að vera framan við sum form en bak við önnur._"
+      CSD U3 Sprites scene sprites: |-
+        # Gerð leiksviðs - Verur
+
+        Eftir að bakgrunnurinn er tilbúinn er næst að bæta við verum.
+
+        # Gerðu þetta
+
+        -   Bættu við eða búðu til allar myndir fyrir verur á hreyfingasíðunni.
+        -   Búðu til breytu fyrir hverja veru efst í forritinu og notaðu `setAnimation()` til að tengja myndirnar sem eru á hreyfingasíðunni.
+        -   Kallaðu á `drawSprites()` einu sinni í lok forritsins.
+
+        _Vísbending: Þú vilt sennilega kalla á `drawSprites()`
+        í blálokin til þess að verurnar birtist framan við bakgrunninn, en það getur líka átt við að kalla á `drawSprites()` fyrr, t. d. ef verurnar eiga að vera framan við sum form en bak við önnur._
+      CSD U3 Sprites scene sprites_2018: |-
+        # Gerð leiksviðs - Verur
+
+        Eftir að bakgrunnurinn er tilbúinn er næst að bæta við verum.
+
+        # Gerðu þetta
+
+        -   Bættu við eða búðu til allar myndir fyrir verur á hreyfingasíðunni.
+        -   Búðu til breytu fyrir hverja veru efst í forritinu og notaðu `setAnimation()` til að tengja myndirnar sem eru á hreyfingasíðunni.
+        -   Kallaðu á `drawSprites()` einu sinni í lok forritsins.
+
+        _Vísbending: Þú vilt sennilega kalla á `drawSprites()`
+        í blálokin til þess að verurnar birtist framan við bakgrunninn, en það getur líka átt við að kalla á `drawSprites()` fyrr, t. d. ef verurnar eiga að vera framan við sum form en bak við önnur._
+      CSD U3 Sprites scene sprites_2019: |-
+        # Gerð leiksviðs - Verur
+
+        Eftir að bakgrunnurinn er tilbúinn er næst að bæta við verum.
+
+        # Gerðu þetta
+
+        -   Bættu við eða búðu til allar myndir fyrir verur á hreyfingasíðunni.
+        -   Búðu til breytu fyrir hverja veru efst í forritinu og notaðu `setAnimation()` til að tengja myndirnar sem eru á hreyfingasíðunni.
+        -   Kallaðu á `drawSprites()` einu sinni í lok forritsins.
+
+        _Vísbending: Þú vilt sennilega kalla á `drawSprites()`
+        í blálokin til þess að verurnar birtist framan við bakgrunninn, en það getur líka átt við að kalla á `drawSprites()` fyrr, t. d. ef verurnar eiga að vera framan við sum form en bak við önnur._
       CSD U3 Sprites scene text: "# Gerð leiksviðs - Texti\\\r\n\n\\\r\nÞað síðasta
         sem þú bætir við leiksviðið er texti.\\\r\n\\\r\n\n# Gerðu þetta\\\r\n\n\\\r\n\n-
         \  Bættu við `text()` skipun fyrir hverja aðskilda línu af texta.\\\r\n-   Notaðu
@@ -3513,6 +4827,18 @@ is-IS:
         áskoranir_\\\r\n\\\r\nGetur þú, með því að nota aðeins `rect` og `ellipse`
         skipanirnar,\nteiknað nýtt form, eins og t.d. þennan þríhyrning gerðan úr
         hringum?"
+      CSD U3 collisions types_2019: |-
+        # Tegundir árekstra
+
+        Það eru fjórar tegundir árekstra sem við notum í Leikjasmiðjunni: `displace`, `collide`, `bounce` og `bounceOff`.  Þessir kubbar framkalla vissar tegundir áhrifa sem _kvikinn_ og _mark_ hans hafa á hvort annað.
+
+        # Gerðu þetta
+
+        Veldu besta kubbinn til að líkja eftir því að körfuboltinn endurkastist á gólfinu. ( [Sýndu mér hvar](#triggercallout=code_triggered) )
+        \*Vísbending: Þú getur prófað þig áfram með kubbana eða lesið meira um þá undir "Hjálp & ábendingar" flipanum.
+        [//]\: # (<https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png>)
+
+        [//]: # "https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png"
       CSD U3 dancing alien: "# Kvikar í teiknilykkjunni\\\r\n\n\\\r\nMeð því að breyta
         eiginleikum kvika í teiknilykkjunni getur þú sett hreyfingu í persónur þínar.\n\\\r\n\\\r\nÞessi
         hreyfimynd hefur verið stillt á hægagang.  Í upphafi forritsins hefur kubburinn
@@ -3624,6 +4950,14 @@ is-IS:
         -   Breyttu litnum úr bláu í gult.
         -   Bættu við nýjum ferningi með því að bæta `rect` kubbi í kóðann fyrir neðan `fill` skipunina ( [Sýndu mér hvar]
             (#triggercallout=rect\_block) ).  Nýi ferningurinn má vera hvar sem er á skjánum.
+      CSD U3 function video: |-
+        ## Spurningar til að hugleiða
+
+        -   Hugleiddu hvenær fall gæti hafa hjálpað þér að skrifa forrit.
+            -   Hvaða kóði mundi fara í **skilgreiningu** fallsins?
+            -   Hvenær mundir þú **kalla á** fallið?
+            -   Hvaða heiti mundirðu gefa því?
+      CSD U3 if else predict: Spádómsáfangi, sjá leiðbeiningar í áfanga.
       CSD U3 keydown conditional: "# Skipt um kvika\\\r\n\n\\\r\nÞú sást í síðasta
         áfanga að `keyDown` gefur `true` á meðan þú heldur niðri lykli og `false`
         þegar ekki er ýtt á lykilinn.   Inntakið fyrir \n`keyDown` skipunina er (enskt)
@@ -3647,6 +4981,29 @@ is-IS:
         kennarann áður en þú byrjar svona áskoranir_\\\r\n\\\r\nÍ síðustu kennslustund
         skapaðir þú með félaga þínum nokkrar áhugaverðar myndir. Gáðu hvort þið getið
         endurskapað þær með kóða."
+      CSD U3 platform background2_2019: |-
+        # Að velja bakgrunn
+
+        Nú hefurðu breytu fyrir skor, svo að þú getur notað hana til að velja rétta bakgrunninn fyrir leikinn.  Þú getur séð dæmi um hvernig bakgrunni er breytt út frá skorinu í [Kennslustund 19 Áfanga 12](../../19/puzzle/12)
+
+        # Gerðu þetta
+
+        -   Vertu innan "draw" lykkjunar og  notaðu `if` yrðingu og bakgrunnsföllin tvö til að teikna bakgrunn út frá skorinu.
+        -   Prófaðu kóðann með því að breyta upphafsskorinu í 100 og keyra svo kóðann til að sjá hvort bakgrunnurinn breytist.
+
+        _Áskorun: Ef þú ert með þriðja bakgrunnin getur þú smellt á plústáknið neðst á `if` kubbnum.  Annað hólf birtist fyrir þriðja bakgrunnsfallið ásamt stað til að athuga skorið aftur._
+      CSD U3 platform player2_2019: |-
+        # Stjórntæki notanda
+
+        Næst ættir þú að bæta við stjórntækjum fyrir notanda svo þú getir fært leikmanninn til.  Leikmaðurinn þarf að færast til vinstri þegar ýtt er á vinstri örvarlykil, til hægri þegar ýtt er á hægri örvarlykil og hoppa þegar ýtt er á bilslána.
+
+        # Gerðu þetta
+
+        -   Búðu til nýtt `controlPlayer` fall á "functions" svæði kóðans.
+        -   Í `controlPlayer` fallinu notar þú `if`, `keyDown` og `sprite.x` kubbana til að láta örvarlyklana færa leikmanninn til vinstri og hægri.  Hér eru dæmi: <a href="../../12/puzzle/7" target="_blank"> Kennslustund 12 Þraut 7 </a>.
+        -   Í `controlPlayer` fallinu notar þú `if`, `keyDown`  og `velocityY` kubbana til að láta leikmanninn hoppa þegar ýtt er á bilslána.  Hæer er dæmi: <a href="../../15/puzzle/11" target="_blank"> Kennslustund 15 Þraut 11 </a>.
+        -   Kallaðu á `controlPlayer` fallið innan "draw" lykkjunnar.
+        -   Keyrðu leikinn og prófaðu kóðann.
       CSD U3 rect: "# Leikjasmiðjan könnuð\\\r\n\n\\\r\nVelkomin í Leikjasmiðjuna
         þar sem þú getur búið til gagnvirkar hreyfimyndir og leiki!   \\\r\n\\\r\nÞú
         ættir þegar að hafa æft að setja form inn í hnitakerfi eða grind.  Í Leikjasmiðjunni
@@ -3739,6 +5096,11 @@ is-IS:
         hana efst á skjáinn\n-   Breyttu heiti hennar (id) í \"titleLabel\"\n-   Breyttu
         textanum í \"Appið mitt\"\n-   Hafðu letrið stærra (font size)\n-   Veldu
         textalit (text color) á titilinn"
+      CSD U5 binary video_2019: |-
+        ## Spurningar til að hugleiða
+
+        -   Hvers vegna eru allar tegundir upplýsinga í tölvunni vistaðar sem tölur?
+        -   Ef allt er vistað sem tölur, hvernig heldur þú þá að tölvan geti þekkt í sundur talnagögn, bókstafi, myndir og hljóð?
       CSD U5 black white images pixelation: "# Gerðu þetta\\\r\n\n\\\r\nLjúktu við
         \"X\" formið með því að skrifa stafina 0 og 1. Þú getur alltaf smellt á \"Læsilegt
         snið\" ef þú vilt hreinsa til."
@@ -3861,6 +5223,38 @@ is-IS:
         Gerðu þetta\\\r\n\n\\\r\nBúðu til einfalt hitamælisapp sem les af hitanemanum.\nÞú
         getur látið appið birta hitastigið á Fahrenheit eða Celsius kvarða (eða báðum!)\\\r\n\\\r\n_Áskorun:\nGetur
         þú látið appið uppfæra hitastigið í rauntíma?_"
+      CSD U6 arrays video: |-
+        ## Spurningar til að hugleiða
+
+        -   Hvenær gæti fylki verið gagnlegra en venjuleg breyta?
+        -   Hvers vegna þarf alltaf að setja fylki í breytu?
+        -   Hvernig er hægt að vísa í atriði sem eru geymd í fylki?
+      CSD U6 for loop led color_2019: |-
+        # Bæta við lit
+
+        Nú getur þú kveikt og slökkt á LED ljósunum, en nú skulum við bæta litum við.
+
+        # Gerðu þetta
+
+        Bættu atvikshöndlurum við hnappana "button\_red" and "button\_green" sem láta LED ljósin fá þessa liti (rauðan og grænan).
+      CSD U6 for loop led personalize_2019: |-
+        # Gerðu þitt eigið
+
+        Hugsaðu þér nýjan hnapp sem þú mundir vilja bæta við þetta verkefni. Ekki gleyma öðrum valkostum fyrir LED ljósin svo sem að láta þau slá (pulse) og blikka (blink).
+
+        # Gerðu þetta
+
+        Bættu nýjum hnappi við verkefnið og láttu hann gera eitthvað sem þú ákveður.
+      CSD U6 functions paramters video_2019: |-
+        ## Spurningar til að hugleiða
+
+        -   Hvernig gera stikar (parameters) föll gagnlegri?
+        -   Hvernig veistu hvenær þú getur sameinað mörg föll í eitt?
+      CSD U6 hardware software video_2019: |-
+        ## Spurningar til að hugleiða
+
+        -   Hver er munurinn á vélbúnaði og hugbúnaði?
+        -   Hvað gerir stýrikerfi tölvu?
       CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -3870,11 +5264,74 @@ is-IS:
       CSD U6 light pattern challenge_2019: "# Áskorun: Fleiri mynstur\\\r\n\n\\\r\nBættu
         nokkrum mynstrum í appið þitt. Bættu við mynstri frá félaga ef þú vilt. Gættu
         þess að setja hvert mynstur í sitt eigið fall."
+      CSD U6 params modify clouds_2019: |-
+        # Ský
+
+        Þetta forrit lætur ský hreyfast þegar þú blæst á hljóðnemann, en forritið er óklárað.
+
+        # Gerðu þetta
+
+        -   Búðu til nýtt fall `moveCloud(name)` sem getur fært ský með því að tilgreina heiti þess.
+            -   (Vísbending: þú munt nota næstum þvi sama kóðann og er í  `moveCloud0` fallinu)
+        -   Kallaðu á nýja `moveCloud(name)` fallið þitt innan í atvikskubbnum, einu sinni fyrir hvert heiti skýs.
+            -   (Vísbending: þetta er svipað því hvernig kallað er oft á `loopCloud(name)` fallið.)
+      CSD U6 setProperty hidden 2_2019: |-
+        # Sýna/Fela
+
+        Þetta hringingarapp er ekki mjög gagnlegt ef þú getur ekki slökkt á hringingunni eftir að hún fer af stað. Lögum þetta.
+
+        # Gerðu þetta
+
+        Búðu til annað atvik til að fylgjast með hvort smellt er á  "stopAlarmButton" hnappinn. Þegar það atvik kveikir á að:
+
+        -   Breyta stöðutextanum í "OFF"
+        -   Fela "stopAlarmButton" hnappinn
+
+        _Vísbending: "hidden" eiginleiki með boole gildi. Ef við notum `false` tl að láta hnappinn sjást, hvað ættum við þá að nota til að fela hann aftur?_
       CSD What Makes a Computer a Computer Video_2019: |-
         ## Spurningar til að hugsa um
 
         -   Hvað var það sem gerði tölvur ólíkar þeim vélum sem komu áður?
         -   Hugsaðu þér eitthvað sem þú gerir í tölvu. Hvers konar inntak, úttak, geymsla og úrvinnsla fer fram?
+      'CSD: Animating Sprite Movement_2019': |-
+        ## Spurningar til að íhuga
+
+        -   Hvað er teljaramynstrið (counter pattern)?
+        -   Hvernig lætur teljaramynstrið verur (kvika) færast yfir skjáinn?
+      'CSD: Animation Tab_2019': |-
+        ## Spurningar til að hugleiða
+
+        -   Hvaða skref þarf að taka til að bæta mynd í veru?
+        -   Hvaða leiðir er hægt að fara til að ná í myndir?
+      'CSD: Drawing in Game Lab 1_2019': |-
+        ## Spurningar til að hugleiða
+
+        -   Hvar getur þú fundið nánari upplýsingar um hvernig á að nota kubbana?
+        -   Hver er kosturinn við að vinna með kubba (block mode)?
+      'CSD: Drawing in Game Lab 2_2019': |-
+        ## Spurningar til að íhuga
+
+        -   Hver er munurinn á stroku og fyllingu?
+      'CSD: For Loop_2019': |-
+        ## Spurningar til að íhuga
+
+        -   Hvernig eru lykkjur notaðar í forritun?
+        -   Hvar eiga lykkjur að vera í kóðanum þínum?
+      'CSD: Introduction to the Draw Loop_2019': |-
+        ## Spurning til að íhuga
+
+        -   Hvað gerir "draw" fallið?
+      'CSD: Sprite Velocity_2019': |-
+        ## Spurningar til að hugleiða
+
+        -   Hvenær gæti heppilegra að nota hraðakubb (velocity block) í staðinn fyrir teljamynstrið?
+        -   Nefndu dæmi um teljaramynstur og hvernig þú gætir notað hraðakubb í staðinn.
+      'CSD: Sprites in Game Lab_2019': |-
+        ## Spurningar til að hugleiða
+
+        -   Hvað er vera, einnig nefnt kviki (sprite)?
+        -   Hvað eru eiginleika (properties)?
+        -   Hvaða vandamál leysa verur?
       CSDU4 - Design Mode - 15: "# Hönnunarstaða (Design Mode)\n\nVelkomin í Hönnunarstöðuna
         í Appsmiðjunni! Hér getur þú auðveldlega búið til stafræna útgáfu af apphugmynd
         sem þú hefur með því að setja inn skjáeiningar úr verkfærakassanum og gefa
@@ -3884,6 +5341,36 @@ is-IS:
         \  **Breyttu texta hnappsins** í \"Smelltu á mig\".\n\n-   **Breyttu lit hnappsins**
         í rautt (red).\n\n<img src=\"https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif\"
         style=\"width: 500px; float: middle\">"
+      CSDU4 - Design Mode - 16: |-
+        # Virkjaðu hnappinn
+
+        Í síðustu kennslustund var áherslan á að stilla upp skjá appsins í Hönnunarstöðunni. Þetta góð og hraðvirk leið til að vinna með útlit appsins en bætir engri virkni í það. Ef þú smellir á hnappana sem þú bættir við þá gerist ekkert. Nú er ætlunin að bæta við grunnvirkni með því að láta hnappana í appinu _gera_ eitthvað!
+
+        **Markmið:** Að bæta við kóða með því að nota Hönnunarstöðuna til að láta hnapp bregðast við smelli.
+
+        # Gerðu þetta
+
+        Í appinu eru í upphafi tvær einingar, _texti_ (label) með heitið (id) `titleLabel` og _hnappur_ (button) með heitið `changeTitleButton`. Til að byrja með átt þú að láta hnappinn skrifa skilaboð á skjáinn þegar smellt er á hann.
+
+        -   Vertu í Hönnunarstöðu og **smelltu á hnappinn til að breyta eiginleikum hans**
+        -   Smelltu á **atvikaflipann** (Events)
+        -   Settu inn `onEvent` kubb með því að smella á **Setja inn og sýna kóða** undir **atvikaflipanum**.
+        -   Skoðaðu kubbinn sem bættist við **kóðastöðuflipann** (Code Mode).
+        -   Keyrðu forritið, smelltu á hnappinn og **athugaðu það sem birtist í  _Villuleitarglugganum_ (Debug Console)** fyrir neðan vinnusvæðið fremur en á skjá appsins. Við munum fjalla um _Villuleitargluggann_ í næsta áfanga.
+      CSDU4 - Design Mode - 17: |-
+        # Að uppfæra ID heiti og villuleita með Console Log
+
+        Hér eru hnappar sem hafa atvikahöndlara og `console.log` skipanir, en það er búið að víxla þeim!
+
+        Við ættum að hafa gefið hnöppunum betri ID heiti svo við gætum greint á milli þeirra út frá ID heitinu. **Getur þú breytt ID heitunum og  `console.log` skilaboðunum svo þau passi við hnappana?**
+
+        # Gerðu þetta
+
+        -   **Breyttu ID heitum** hnappanna í Hönnunarstöðu og gefðu þeim meira lýsandi heiti.
+
+        -   Skiptu yfir í Kóðastöðu og taktu eftir að **ID fellilistarnir hafa verið uppfærðir svo þeir innihalda nú nýju ID heitin**. (Þú þarft samt að velja rétt ID úr fellilistanum.)
+
+        -   **Uppfærðu `console.log` skilaboðin** svo þau passi við hnappana.
       CSDU4 - Design Mode - 18: "# Lagskipting og eyðing eininga\n\n<img src=\"https://images.code.org/9e620f70869de438c4f0c66663686876-image-1444678130772.gif\"
         style=\"width: 200px; float: right\">Einingar í notendaviðmótinu geta skarast
         þannig að nauðsynlegt er að geta stjórnað röð eða **dýpt** hverrar einingar.
@@ -3901,6 +5388,36 @@ is-IS:
         style=\"width:200px ; border: solid 1px black\"></td>\n    <td style=\"text-align:center\"><img
         src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\"
         style=\"width:200px; border: solid 1px black\"></td>\n</tr>\n</table>"
+      CSDU4 - Design Mode - 19: "# Annar skjár\n\nFlest öpp hafa fleiri en einn skjá
+        eða síðu fyrir mismunandi innihald. Í Hönnunarstöðu getur þú mjög auðveldlega
+        bætt nýrri skjámynd í appið þitt.\n\n# Gerðu þetta\n\nÞú átt að bæta öðrum
+        skjá við appið og setja hnapp á þann skjá. Gættu þess að nota lýsandi ID heiti!\n\n-
+        \  Dragðu fram <img src=\"https://images.code.org/4337b39cfd797ed9289b70fb6cb365fb-image-1444353631083.17.39
+        PM.png\" style=\"width: 50px\"> úr Hönnunarverkfærunum yfir á appið þitt.
+        Nú hefur appið tvo skjái!\n-   Notaðu Hönnunarstöðuna til að bæta hnappi á
+        skjáinn.  <img src=\"https://images.code.org/bbf464e2fc94bacba39407d6842f2336-image-1478300698068.04.35
+        PM.png\" style=\"width: 150px\"> \n-   Gefðu báðum skjánum og hnöppunum lýsandi
+        ID heiti, til dæmis _\"homeScreen\"_, _\"detailsScreen\"_, _\"homeButton\"_,
+        and _\"detailsButton\"_ (eða eitthvað á íslensku!)\n\nÞú getur alltaf notað
+        fellilistann yfir skjámyndir efst í app glugganum til að skipta á milli skjámynda
+        <img src=\"https://images.code.org/404e0b3f520a413c8a5e62e74b70bb19-image-1478300388689.58.59
+        PM.png\" style=\"width: 150px\"> "
+      CSDU4 - Design Mode - 20: |-
+        # Skipt á milli skjámynda
+
+        Þú getur stjórnað því hvaða skjámynd birtist í appinu með skipuninni `setScreen()`. Ef þú ert að vinna með kubba getur þú valið hvaða skjámynd þú vilt skipta yfir í með því að velja hana úr fellilista.
+
+        ![](<https://images.code.org/615fae136488e1e6d1349e4383388e08-image-1478303858022.13.25 PM.png>)
+
+        # Gerðu þetta
+
+        Þú munt nota `onEvent()` kubb með `setScreen()` til að láta hnappana tvo í appinu skipta á milli skjámyndanna tveggja.
+
+        -   Dragðu út tvo `onEvent()` kubba
+        -   Gefðu `onEvent()` kubbunum ID heiti fyrir hvorn hnapp
+        -   Settu `setScreen` hnapp innan í sinn hvorn `onEvent` kubbinn.
+        -   Veldu viðeigandi skjámynd úr fellilista hvors `setScreen` kubbs.
+        -   Prófaðu appið til að ganga úr skugga um að hnapparnir skipti á milli skjámyndanna tveggja
       CSDU4 - Design Mode - 21: "# Myndefni bætt við\n\nStundum duga hnappar og reitir
         ekki til að ná fram þeirri virkni sem þú vilt hafa í appi. Auðveldasta leiðin
         til að fá ítarlegri virkni (svo sem að sýna landakort) er að nota myndir\n\n#
@@ -3912,6 +5429,21 @@ is-IS:
         Þú getur alltaf séð skrár sem þú hefur hlaðið upp með því að smella á tannhjólið
         efst í verkfærakassanum. ![](<https://images.code.org/53b405b771bc11bf5d24c84c878c80dd-image-1444668067826.35.10
         AM.png>)\n-   Ekki gleyma að gefa myndinni gott heiti (ID)!"
+      CSDU4 - Design Mode - 3: |-
+        # Hvernig virka atvik?
+
+        Atvikaknúin öpp innihalda einingar (t.d. hnappa) sem hleypa af stað atvikum og kóðabúta sem kallast **atvikshöndlarar** (event handlers). Atvikshöndlari "fylgist með" hvort tiltekið atvik eigi sér stað í forritinu og keyrir tiltekið fall þegar það atvik á sér stað.
+
+        Þegar þú byrjar á að búa til atvikshöndlara í Hönnunarstöðunni er gott ráð að setja `console.log()` kubb í hann til að auðvelda að prófa atvikið, en að öðru leyti getur þú sett hvaða kóða sem þú vilt í atvikshöndlarann.
+
+        # Gerðu þetta
+
+        Verkfærakassinn er með nýjan kubb sem heitir `setText` en með honum getur þú breytt textanum í einingu á skjánum. Þú ætlar að breyta atvikshöndlara fyrir hnappinn þannig að hann breyta texta fyrirsagnarinnar þegar smellt er á hnappinn.
+
+        -   Dragðu fram `setText()` kubb og settu _innan í_  `onEvent()` endurkallsfall (callback function) (þar sem `console.log()` kubburinn er nú)
+        -   Veldu úr fellilista kubbsins "titleLabel" (heiti einingarinnar sem þú vilt breyta)
+        -   Skiptu út "text" í í öðru inntaki kubbsins og settu inn nýja fyrirsögn fyrir appið
+        -   Keyrðu forritið og smelltu á hnappinn til að sjá þetta virka
       CSDU4 - Design Mode - 4: "# ID\n\nEiginleikinn `id` (venjulega skrifað **ID**)
         er **einstakt auðkenni** eða heiti sem hver eining í appinu hefur.\n\nHver
         eining í appinu verður að hafa **einstakt auðkenni (ID)**. Ef í appinu eru
@@ -3936,6 +5468,11 @@ is-IS:
         -   Smelltu á "Choose..." við "Picture" reitinn
         -   Smelltu á flipann "Icons" og veldu tákn
         -   Ekki gleyma að gefa myndinni gott heiti (ID)! (við erum alltaf að segja þetta...)
+      CSDU4 Design Mode Video_2019: |-
+        ## Spurningar til að hugleiða
+
+        -   Hvar í Appsmiðjunni getur þú hannað notendaviðmót apps?
+        -   Nefndu einhverjar einingar sem hægt er að setja í app.
       CSDU6 - final project 1: "# Hönnun notendaviðmóts\\\r\n\n\\\r\nÁður en þú byrjar
         að fást við kóða fyrir forritið, skaltu byrja á að stilla upp notendaviðmótinu.\nGefðu
         hverri einingu, sem þú setur í hönnunina, auðkenni (\"id\") sem sýnir hvað
@@ -4010,8 +5547,196 @@ is-IS:
         # Lokafrágangur
 
         Leggðu lokahönd á forritið svo það verði alveg ógnvænlega gott! Sé tími til ættir þú að fá endurgjöf frá hugsanlegum notendum og leita að tækifærum til endurbóta. Þegar forritið er alveg tilbúið getur þú smellt á "Ljúka" til að skila því!
+      CSDU6 making new arrays_2019: |-
+        # Að búa til ný fylki
+
+        Nú þegar þú kannst að breyta fylkjum, er kominn tími til að læra að búa til eigin fylki.
+
+        # Gerðu þetta
+
+        -   Búðu til nýtt fylki með hvaða nótum sem þú vilt. Þær geta verið í mismunandi áttundum, í tiltekinni tóntegund o. s. frv. Eins og þú vilt!
+        -   Láttu hljóðgjafann spila nótu af handahófi þegar ýtt er á **réttan** hnapp.
+      Course 4 Artist 1: "Hjálpaðu mér að teikna kassa.\\\n(Hver lína er 200 díla
+        löng) \n\n<br/><br/>"
+      Course 4 Artist 12: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png"
+        width="250px"/>
+
+        Frjáls æfing með hugmynd: Þú hefur nú lært allt sem þú þarft að kunna til að búa til svona mynstur! Ef þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.
+      Course 4 Artist 13: Enn að spila? Hér er auður flötur þar sem þú getur hannað
+        hvað sem þú vilt!
+      Course 4 Artist 2: "Getur þú sett þennan kóða í lykkju til að teikna yfir gráa
+        ferninginn?\\\\ \n(Hver hlið er 300 dílar á lengd)"
+      Course 4 Artist 20: "Enn að spila?  \n\nHér er auður flötur þar sem þú getur
+        búið til hvað sem þú vilt!"
+      Course 4 Artist 3: "Reyndu að greina hvað þessi kóði gerir (eða smelltu á \"Keyra\"
+        til að komast að því). \n\nEndurtaktu svo nógu oft til að ljúka teikningunni."
+      Course 4 Artist 4: "Hvað eru margar gráður í hring?\\\\ \nSettu þá tölu í endurtaka
+        kubbinn til að búa til hring úr litum."
+      Course 4 Artist 5: "Teiknaðu hinn helming þessarar myndar svo hún sé samhverf.
+        Þríhyrningarnir eru jafnhliða og 50 dílar á lengd.  \n\nÞú gætir þurft að
+        keyra kóðann nokkrum sinnum til að finna alla kubbana sem þarf að bæta við."
+      Course 4 Artist 6: Ljúktu við kóðann til að teikna þessa þrjá jafnhliða þríhyrninga.
+      Course 4 Artist 7: 'Faldaðu nú þessa lykkju í annarri lykkju og búðu til 10
+        þríhyrninga. '
+      Course 4 Artist 8: Teiknaðu þessa sól með því að endurtaka allan þennan kóða
+        mörgum sinnum í lykkju.
+      Course 4 Artist 8a: Manstu eftir þessu formi? Nú ætlum við að leyfa þér að búa
+        það til án þess að fá nokkra kubba til að byrja með!
+      Course 4 Artist 9: 'Endurtaktu þessa mynd 10 sinnum í lykkju, en gættu þess
+        að snúa í hverri umferð. '
+      Course 4 Artist Binary 1: "Hér er fall sem tekur tvíundarstreng með 1 og 0 og
+        segir listamanninum að færa sig frá vinstri til hægri niður eftir myndinni.
+        \n\nListamaðurinn á að lita þá reiti svarta þar sem 1 er í strengnum en sleppa
+        að lita ef það er 0. \n\n**Keyrðu þennan kóða til að sjá hvernig listamaðurinn
+        notar tvíundir til að teikna mynstur.**"
+      Course 4 Artist Binary Free Play 2b: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\"
+        width=\"250px\"/>\n\n**Frjáls æfing með hugmynd:** Þú hefur nú lært allt sem
+        þú þarft að kunna til að búa til svona mynstur! \n\nEf þessi mynd gefur þér
+        hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér
+        dettur í hug. \n\n<br/>"
+      Course 4 Artist For Loops 1: Notaðu endurtekningarkubb til að teikna þennan
+        þríhyrning sem er 50 díla breiður.
+      Course 4 Artist For Loops 11: "Manstu eftir því frá fyrri áfanga þegar við notuðum
+        breytu til að stjórna fjölda hliða á formi?? Við ætlum að gera það sama nú
+        með breytunni `teljari`.  \n\nÞetta mynstur byrjar á þríhyrningi og bætir
+        svo við einni hlið í einu þar til það er orðið að tíhyrningi (með 10 hliðar).
+        Lengd hverrar hliðar á að vera 100 dílar. \n\nHvernig getur þú notað `teljari`
+        breytuna úr `frá` lykkjunni til að endurgera þessa teikningu?"
+      Course 4 Artist For Loops 11a: "Setjum þetta allt saman!  \n\nNotaðu þekkingu
+        þína á `frá` lykkjum og breytunni `teljari` til að búa til þessa teikningu
+        þar sem hvert form hefur tvær fleiri hliðar en formið á undan. Gættu þess
+        að hver hlið forms sé 10 sinnum fjöldi hliða á forminu.\n\nÞú færð mjög lítinn
+        kóða gefins."
+      Course 4 Artist For Loops 14: "Ef þú snýrð aðeins meira eða minna en þú mundir
+        venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart.
+        \n\nPrófaðu að nota eitthvað af kóðanum úr síðasta áfanga, en snúa um 89 gráður
+        til að búa til þennan snúna spíral úr ferningum."
+      Course 4 Artist For Loops 15: Frjáls æfing! Prófaðu að búa til eigin teikningar
+        með `frá` lykkjum. Við höfum líka bætt við nokkrum gagnlegum breytum sem þú
+        getur notað.
+      Course 4 Artist For Loops 2: "Kóðinn sem teiknar þríhyrning hefur verið settur
+        inn í `frá` lykkju sem telur frá 50 til 100 hlaupandi á 10. \n\n**ATHUGAÐU:**
+        Gættu þess að skoða kóðann _áður_ en þú ýtir á \"Keyra\"."
+      Course 4 Artist For Loops 3: Það sem þú gerðir í síðustu þraut hjálpar þér að
+        klára þessa. Minnsti þríhyrningurinn hefur 20 díla hliðar, sá stærsti 200,
+        og hver þríhyrningur er 20 dílum stærri en næsti á undan.
+      Course 4 Artist For Loops 4: 'Hvernig mundir þú aðlaga það sem þú hefur lært
+        að því að teikna þessa ferninga? Lengd þess fyrsta er 15 dílar, þess stærsta
+        300 dílar og hver ferningur er 15 dílum stærri en sá á undan. '
       Course 4 Artist For Loops 6a: Gerðu þrjár litlar breytingar á kóðanum úr síðasta
         áfanga til að ná þessu!
+      Course 4 Artist For Loops 8: "Með einni lítilli breytingu á kóðanum úr síðustu
+        þraut getur þú búið til þessa mynd. Geturðu fundið út hver sú breyting er?\n\nVísbending:
+        Þú þarft að fjarlægja eitthvað!  "
+      Course 4 Artist For Loops Challenge: |-
+        **Áskorun:** Getur þú séð hvernig allt sem þú hefur lært gæti nýst þér til að búa til þessa mynd af fjölhliðungum, sem allir hafa 40 díla hliðar?
+
+        Mundu að til að teikna spíral má ekki loka fjölhliðungnum.  Það þýðir að hvert form mun þurfa að hafa einni hlið færra en venjulega.
+      Course 4 Artist For Loops inspire: "<br/><br/>\n<img\nsrc=\"https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png\"
+        width=\"250px\"/> \n<br/><br/>\n**Frjáls æfing með hugmynd:** Þú hefur nú
+        lært allt sem þú þarft að kunna til að búa til svona mynstur! Ef þessi mynd
+        gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað
+        sem þér dettur í hug."
+      Course 4 Artist Functions challenge: "<img src=\"https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png\"\nwidth=\"250px\"/>\n\n**Áskorunaráfangi:**
+        Notaðu það sem þú hefur lært á þessu stigi og öðrum til að búa til teikninguna
+        hér fyrir ofan.  "
+      Course 4 Artist Inspire: "<img src=\"https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png\"
+        width=\"250px\"/>\n\n**Frjáls æfing með hugmynd:** Þú hefur nú lært allt sem
+        þú þarft að kunna til að búa til svona mynstur! Ef þessi mynd gefur þér hugmyndir,
+        gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í
+        hug. "
+      Course 4 Artist Vars 1: "Við skulum teikna jafnhliða þríhyrning. \n\nHver hlið
+        verður að vera nákvæmlega 100 dílar.\n\n<br/>"
+      Course 4 Artist Vars 11: |-
+        Hér er flóknari kóði sem byggir á sömu hugmyndum og síðasta þraut - hvaða stærð ættir þú að setja í breytuna `hliðar` til að teikna þessa mynd sem er gerð úr ferningum?
+
+        <p style="font-size:small; padding: 15px 15px 15px 40px; background-color:#dcf3f3; border-radius:10px;">
+             Til gamans: Prófaðu að nota nokkrar mismunandi tölur til að sjá hvaða áhrif það hefur á mynstrið!
+        </p>
+      Course 4 Artist Vars 12: "Prófum að setja `hliðar` jafnt og 5. Því fleiri hliðar
+        sem við notum í algríminu, því stærra verður allt mynstrið!\n\nTaktu eftir
+        að það er ný breyta `lengd`. \nVið getum nú notað hana í hvert sinn sem við
+        höfum `færa áfram`. \n\nSettu 75 í breytuna `lengd` til að teikna þetta form."
+      Course 4 Artist Vars 13: "Eftir því sem form hefur fleiri hliðar, þarf hver
+        hlið að vera styttri ef allt mynstrið á að geta komist fyrir á skjánum.\n\nVið
+        skulum búa til algrímið fyrir þetta flotta mynstur, en í stað þess að setja
+        fasta tölu í  breytuna `lengd`, skulum við nota reikningskubb með breytunni
+        `hliðar` til að tryggja að hvert form komist fyrir. \n\nUmmál hvers fjölhliðungs
+        er 300 dílar."
+      Course 4 Artist Vars 14: |-
+        **Frjáls æfing** Kíktu á þetta: Nú er algrímið þitt faldað í enn einni lykkju. Gerðu tilraunir með gildi í breytunum tveimur til að teikna óvænt mynstur.
+
+        Enn meiri áhrif fást með því að nota liti! Notaðu handahófsliti innan í lykkjum til að sjá hvernig það breytir hönnuninni þinni.
+      Course 4 Artist Vars 2: Í stað þess að `færa áfram um 150` er `færa` kubburinn
+        nú að lesa úr breytunni `lengd`. Getur þú stillt `lengd` á 150 og teiknað
+        þennan nýja þríhyrning?
+      Course 4 Artist Vars 4: Nú vil ég búa til rétthyrning með hæð sem er tvöföld
+        breiddin. Við erum með breytuna `breidd` sem þarf að stilla á 100. Getur þú
+        notað reikningskubba til að ljúka við kóðann?
+      Course 4 Artist Vars 6: "Hér er kóði sem getur teiknað hvaða reglulegan fjölhliðung
+        sem er. \n\nÞað er ný breyta sem nefnist `hliðar` og í henni er gildið 4.
+        \n\nGetur þú notað breytuna `hliðar` (ásamt reikningskubbi) til að snúa alltaf
+        um réttan gráðufjölda alveg sama hve margar hliðar eru á fjölhliðungnum?"
+      Course 4 Artist Vars 7: |-
+        Notaðu það sem þú lærðir í síðustu þraut til að búa til þennan sexhyrning með breytunni `hliðar`.
+
+        Sérðu hvernig þú gætir breytt aðeins einu gildi til að teikna þríhyrning, ferning, fimmhyrning eða átthyrning?
+      Course 4 Artist Vars 8: "**Frjáls æfing:** Gerðu tilraunir með fjölda hliða
+        á þessu formi. Getur þú breytt algríminu þannig að heildarstærð formins haldist
+        óbreytt alveg sama hvað hliðarnar eru margar? "
+      Course 4 Bee 1: "Býflugan veit ekki hvað er undir skýinu! \n\nNotaðu `ef` kubbinn
+        til að athuga hvort það er blóm undir skýinu.\n\nSafnaðu blómasafa einu sinni,
+        en **AÐEINS** ef það er blóm."
+      Course 4 Bee 2: Notaðu "ef/annars" kubbinn til að athuga hvort hver hlutur er
+        blóm eða bú!
+      Course 4 Bee 3: "Óþekkti hluturinn er annað hvort blóm eða býkúpa. \n\nNotaðu
+        `ef/annars` kubbinn til að safna blómasafa **ef** þetta er blóm, **annars**
+        búa til hunang (því þá er þetta býkúpa)."
+      Course 4 Bee Params 1: Skrifaðu röð skipana til að safna öllum blómasafanum.
+        Notaðu fallið `sækja 3 blómasafa` sem snýr, færir til að safna safanum og
+        fer svo aftur á upphaflega staðinn.
+      Course 4 Bee Params 2: Breyttu `sækja 3 blómasafa` fallinu svo að það láti mig
+        snúa til hægri í stað vinstri til blómanna.
+      Course 4 Bee Params 3: "Nú eru blóm á báðar hliðar! \n\nVið höfum bætt við breytunum
+        `vinstri` og `hægri`, sem þú getur notað, og líka bætt stikanum `stefna` við
+        `sækja 3 blómasafa` fallið. \n\n**Breyttu `sækja 3 blómasafa` svo að býflugan
+        snúi í rétta átt þegar breyturnar `vinstri` og `hægri` eru settar í fallið.**"
+      Course 4 Bee Params 5: Byrjum frá grunni. Getur þú búið til nýtt fall `sækja
+        5 safa` með stika fyrir stefnu?
+      Course 4 Bee Params 6: |-
+        Væri ekki ljúft ef við gætum safnað öllum þessum blómasafa með einu falli?
+
+        Prófaðu að bæta nýjum stika `magn` við fallið til að stjórna hve miklum safa á að safna. Þú vilt ábyggilega líka gefa fallinu annað heiti!
+      Course 4 Bee Params 7: |-
+        Prófaðu að nota nýja fallið þitt til að safna öllum þessum blómasafa.
+
+        <br/>
+      Course 4 Bee Params 8: "**Áskorun:** Nú er komið hunang til að fást við líka!
+        \n\nEndurskrifaðu fallið svo að það taki inn bæði fjölda eininga af blómasafa
+        og fjölda eininga af hunangi. Hvernig gætir þú notað þessar tölur til að ákveða
+        hvað á að gera?"
+      Course 4 EC 1a: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!"
+      Course 4 EC 1b: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!"
+      Course 4 EC 2a: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!"
+      Course 4 EC 2b: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!"
+      Course 4 EC 2c: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!"
+      Course 4 Maze 4: Prófaðu að nota `endurtaka` kubbinn svo þú getir leyst þessa
+        þraut með færri kubbum...
+      Course 4 Play Lab Params 10: |-
+        Við höfum bætt við einu falli í viðbót fyrir þig.
+
+        <hr/>
+
+        Notaðu `ef` setningu til að forrita leikinn svo hann kalli á fallið `næsta_borð` aðeins ef `stig_leikmanns` fer upp fyrir tiltekna tölu.
+
+        </h4>
+
+        *Til dæmis `stig_leikmanns` > 6*
+
+        <hr/>
+
+        _Spilaðu leikinn og náðu að ljúka borði 3 til að fara í næstu þraut._
       Course 4 Play Lab Params 3: "Við höfum bætt við öðrum stika við stökkfallið
         svo við getum notað það með öðrum leikmönnum. Hver leikmaður er táknaður með
         tölu, talið frá 1. \n\nBreyttu fallinu `stökkva` svo að það noti stikann `leikmaður`
@@ -4029,11 +5754,96 @@ is-IS:
         Þú þarft ekki að breyta neinu í þessum áfanga.
 
         **Leiðbeiningar:** Notaðu hægri og vinstri örvar til að færa og upp örina til að stökkva. Reyndu að safna öllum flöggunum.
+      Course 4 Play Lab Vars 4: 'Nú notum við breytuna `hæð` til að stjórna hve hátt
+        hundurinn getur stokkið. Uppfærðu breytuna `hæð` svo að hundurinn geti stokkið
+        nógu hátt til að ná öllum flöggunum. '
+      Course 4 Play Lab Vars 6: "Hvernig gætum við skorað stig í þessum leik? \n\n1.
+        \ Bættu 1 við `stig`breytuna í hvert sinn sem Hundur hittir Kött með kökusneið.
+        \n\n2.  Notaðu `þegar leikmaður 2 snertir eitthvað` atburðinn til að koma
+        af stað uppfærslu á skorinu. Þú getur aukið breytuna með `stig = stig + 1.`\n\n3.
+        \ Náðu skorinu 10 til að standast áfangann.\n\n**Athugaðu:** Notaðu hægri
+        örina fyrir kökukastið!"
       Course 4 Play Lab Vars 7: "Fínt en nú skulum við tryggja að leikurinn sé ekki
         of auðveldur. \n\nÍ hvert sinn sem hundurinn (leikmaður 1) verður fyrir samloku
         frá kettinum (leikmanni 2) ættir þú að tapa stigi. \n\nByrjaðu með 10 stig
         svo að þetta sé ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að klára
         áfangann."
+      Course 4 Play Lab Vars 9: "Frjáls æfing! Hér eru allar breyturnar sem við höfum
+        notað hingað til og nokkrar í viðbót ef þú skyldir vilja nota þær. \n\nTaktu
+        eftir að nú eru svo margir kubbar í verkfærakassanum að við höfum þurft að
+        raða þeim í viðeigandi flokka! Taktu þér tíma til að skoða hvað þú hefur.
+        Búðu svo til leik eða sögu með endurtekningum, breytum og atvikum. \n\n_Vísbending:
+        Flettu niður til að sjá allar skipanirnar á vinnusvæðinu._"
+      Course 4 Play Labs For Loops 1: Við skulum láta hundinn segja hverja tölu frá
+        1 til 100. Notaðu `frá` lykkju og teljarakubbinn til að segja teljarann í
+        hverri umferð lykkjunnar.
+      Course 4 Playlab For Loop Freeplay: "**Frjáls æfing:** Notaðu allt sem þú hefur
+        lært til að búa til leik sem inniheldur `frá` lykkju!"
+      Course 4 Playlab For Loops 4b: "Nú ætla þessir tveir leikmenn að fara í kapp!
+        \ \n\nHvor um sig mun færast um `teljari` skref í einu, en teljararnir þeirra
+        munu hafa mismunandi gildi vegna `frá` lykkjanna.  \n\nGetur þú breytt **aukanum**
+        í annarri lykkjunni svo þeir komi jafnt í mark?"
+      Course 4 Playlab For Loops 5b: Breyttu aukanum í þessum `frá` lykkjum svo leikmennirnir
+        tveir endi á nákvæmlega sama stað.
+      Course 4 SCF 1: "**Ofuráskorun með föll:** Notaðu gefin föll til að teikna fjórar
+        raðir af sexhyrningum. Sérðu hvernig röðum með jafna tölu er hliðrað til hægri?"
+      Course 4 SCF 1a: "**Ofuráskorun með föll:** Getur þú fundið leið til að safna
+        öllum þessum blómasafa með sem allra fæstum kubbum?"
+      Course 4 SCF 1b: "**Ofuráskorun með föll:** Getur þú fundið leið til að safna
+        öllu þessu hunangi með sem allra fæstum kubbum?"
+      Course 4 SCF 2: "**Ofuráskorun með föll:** Notaðu það sem þú lærðir í síðasta
+        áfanga til að teikna svona mynd.\n\n_Athugaðu: Kóðinn verður einfaldari ef
+        þú notar stika._  "
+      Course 4 SCFL 1: "**Ofuráskorun með `frá` lykkjur:** Leystu þessa þraut með
+        eins fáum kubbum og mögulegt er."
+      Course 4 SCFL 1a: "**Ofuráskorun með `frá` lykkjur:** Geturðu komið Scrat til
+        akarnsins með eins fáum kubbum og mögulegt er?"
+      Course 4 SCFL 1b: "**Ofuráskorun með `frá` lykkjur:** Geturðu komið Scrat til
+        akarnsins með eins fáum kubbum og mögulegt er?"
+      Course 4 SCFL 2: |-
+        **Ofuráskorun með `frá` lykkjur:** Leystu þessa þraut með eins fáum kubbum og mögulegt er.\
+        <br/>
+      Course 4 SCFL 3: "**Ofuráskorun með `frá` lykkjur:** Getur þú fundið leið til
+        að endurgera þessa teikningu? \n\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"
+        width=\"350px\"/>"
+      Course 4 SCFL 4: "**Ofuráskorun með `frá` lykkjur:** Getur þú fundið leið til
+        að endurgera þessa teikningu? \n\n<img src=\"https://images.code.org/407f502735beec686187451bdf67aada-image-1446002848700.59.34.png\"
+        width=\"350px\"/>"
+      Course 4 SCFL 6: "**Ofuráskorun með `frá` lykkjur:** Getur þú fundið leið til
+        að endurgera þessa teikningu með einni lykkju? \n\n<img\nsrc=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"
+        width=\"350px\"/>"
+      Course 4 SCFL 7: "**Ofuráskorun með `frá` lykkjur:** Listamaðurinn vill ná nokkrum
+        öldum! Getur þú fundið leið til endurgera þessa teikningu? \n\n<img src=\"https://images.code.org/fba3423f2e9a405d4d3859de32cdb0f3-image-1446102880655.13.36.png\"
+        width=\"350px\"/>"
+      Course 4 SCV 1: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png" width="250px"/>
+
+        **Ofuráskorun með breytur:** Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?
+      Course 4 SCV 2: |-
+        <img src="https://images.code.org/85f0b27009edd86eff78692004b9ed52-image-1444712655590.02.32.png" width="250px"/>
+
+        **Ofuráskorun með breytur:** Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?
+      Course 4 SCV 3: |-
+        **Ofuráskorun með breytur:** Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið. Getur þú haldið þig við hana þar til þú finnur lausn?
+
+        * * *
+
+        Nú er það klukkleikur! Klukkaðu Kött til að fá 2 stig. Klukkaðu Mörgæs til að fá 3 stig.  Náðu nákvæmlega 10 stigum til að vinna!
+        En gættu þín því ef Köttur og Mörgæs klukka hvort annað þá tapast stig.
+
+        **Bættu við þeim kubbum sem þarf til að leikurinn virki eins og hér var lýst.**
+
+        -   \*\*Hvernig læturðu Hund færast í allar áttir með örvarlyklunum? \*\*
+        -   \*\*Hvernig ætlarðu að bæta við stigum þegar Hundur klukkar Kött eða Mörgæs? \*\*
+        -   **Hvernig ætlarðu að draga frá stig þegar Köttur og Mörgæs snertast?**
+      Course 4 SCV 4: "**Ofuráskorun með breytur:** Leystu þessa þraut með eins fáum
+        kubbum og mögulegt er."
+      Course 4 SCV 5: "**Ofuráskorun með breytur:** Leystu þessa þraut með eins fáum
+        kubbum og mögulegt er."
+      Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"
+        width=\"250px\"/>\n\n**Ofuráskorun með breytur:** Þú hefur nú lært allt sem
+        þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.
+        \ Getur þú haldið þig við hana þar til þú finnur lausn?  "
       CourseD_Dance_Party_01: |-
         \*Nú skulum við halda danspartý!
 
@@ -4354,6 +6164,25 @@ is-IS:
         Hvað vilt þú að nýi vinur fisksins geri?
 
         Gefðu honum hegðun og sjáðu hvað gerist!
+      Frequency Analysis: |-
+        # Að ráða dulkóðun með handahófs-útskiptum!
+
+        Það er auðvelt að ráða skilaboð sem dulkóðuð eru með **Sesar dulmálslyklinum**. En hvað ef í stað þess að hliðra öllu stafrófinu, þá mundum við skipta hverjum staf út fyrir annan staf valinn af handhófi úr stafrófinu (þó aldrei sama tvisvar)? Þetta er kallað **dulmálslykill með handahófs útskiptun**.
+
+        Í þessari útgáfu vekfærisins munt þú nota meira gröfin sem sýna tíðni stafa. Með því að bera saman tíðni stafanna í dulkóðuðu skilaboðunum og tíðni stafa í dæmigerðum enskum texta, getur þú byrjað að fá hugmynd um suma stafina. Vissir þú að  _'E'_ er algengasti stafur í ensku? Kannske samsvarar algengasti stafurinn í dulkóðaða textanum stafnum _'E'_, en það er ekki víst! Þú þarft að reyna að sjá út hvort það gæti verið t. d. út frá því hvar E kemur þá fyrir í orðunum.
+
+        # Gerðu þetta
+
+        -   Sæktu skilaboðin **Sample message (hard)** úr skilaboðalistanum. Þetta hleður inn skilaboðum sem hafa verið dulkóðuð með handahófsútskiptum stafa.\
+            ![](https://images.code.org/04c6230c9607110126581c298bc09183-image-1443569176380.gif)
+
+        -   Þú munt ráða skilaboðin með því að giska á hvaða stafi ætti að setja inn í stað stafanna í dulkóðaða textanum. Þú getur gert það með því að draga bláan staf í stafrófinu beint undir appelsínugula stafinn sem þú vilt skipta um í dulkóðaða textanum. Stafir sem þú hefur breytt þannig hafa þá ekki lengur gulan lit í skilaboðaglugganum vinstra megin.
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        -   Prófaðu röðunarvalkostina sem þú hefur undir Random substitution flipanum til að fá mismunandi sjónarhorn á tíðni stafa í skilaboðunum og í dæmigerðum enskum texta.
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        Hvað skyldi það taka þig langan tíma að ráða skilaboðin! Er þetta góð aðferð við að dulkóða leynilegar upplýsingar?
       Function intro Ryan_2019: "Þú finnur **fall** sem heitir `byggja brú` á vinnusvæðinu.
         Allur kóðinn sem þú þarft til að komast yfir ána er þegar í fallinu! \n\nSettu
         litla, græna <xml> <block type=\"procedures_callnoreturn\" id=\"callMe\" block-text=\"build
@@ -4413,6 +6242,12 @@ is-IS:
 
         -   Af hverju eru HTML tög gagnleg?
         -   Hvað gerir efnisgreinartagið p?
+      Introduction to Variables - Part 1_2019: |-
+        ## Spurningar til að hugleiða
+
+        -   Til hvers eru breytur (variables) notaðar?
+        -   Hvernig býrð þú til breytu og setur í hana gildi?
+        -   Hvað getur farið í breytu?
       K-1 Bee Loops 5: Notaðu "endurtaka" lykkjur til að sækja blómasafann og búa
         til hunang!
       K-1 Maze Loops 2: Notaðu "endurtaka" kubbinn til að koma mér til svínsins!
@@ -4425,6 +6260,35 @@ is-IS:
         endurbyggi brúna með <xml>  <block type=\"craft_placeBlock\" block-text=\"place\">\n
         \   <title name=\"TYPE\">       </title>\n  </block></xml> kubbnum svo að
         {currentPlayerName} komist til **skóflunnar** [diamond_shovel]."
+      NEW Course 4 Artist Functions 1: Getur þú teiknað ferning með lengdina 100 með
+        því að nota lykkju?
+      NEW Course 4 Artist Functions 11: "Nú viljum búa til nýtt fall `teikna röð ferninga`
+        sem teiknar sex ferninga í röð. \n\nGetur þú búið til þetta fall með því að
+        nota `teikna ferning 20` fallið sem við höfum þegar búið til? \n<br/><br/>\n\n_Athugaðu:
+        Taktu eftir að við höfum breytt pennanum svo hann er mun fínni. Smelltu á
+        \"breyta\" á `teikna ferning 20` fallinu til að sjá hvernig!_"
+      NEW Course 4 Artist Functions 12: Notaðu fallið `teikna röð ferninga` úr síðustu
+        þraut til að teikna þetta mynstur.
+      NEW Course 4 Artist Functions 13: "Getur þú teiknað stjörnulaga form með fallinu
+        `teikna röð ferninga`?  \n\n(Gættu þess að `færa áfram` 60 díla áður en þú
+        snýrð 144 gráður!)"
+      NEW Course 4 Artist Functions 2: "Getur þú teiknað 3 ferninga með 20 díla millibili?
+        \n\nHver ferningur er 100 dílar á stærð."
+      NEW Course 4 Artist Functions 3: "Hér er ný tegund af kubbi. Þetta er kubbur
+        fyrir `fall` (function). Smelltu á \"breyta\" og settu í hann kóða til að
+        teikna ferning með 100 díla hliðar. \n\nSmelltu svo á \"loka\" til að fara
+        aftur í forritið."
+      NEW Course 4 Artist Functions 4: 'Notaðu fallið `teikna ferning` til að teikna
+        þetta mynstur. '
+      NEW Course 4 Artist Functions 7: "Ertu komin upp á lag með að nota fallkubba?
+        Breytum fallinu `teikna ferning` svo það teikni ferninga sem eru 200 dílar
+        á stærð. \n\nSmelltu á \"breyta\" til að opna kubb fallsins `teikna ferning`.
+        \n\nMundu að smella á \"Loka\" til að komast út úr kubbi fallsins. "
+      NEW Course 4 Artist Functions 8: Við höfum búið til nýtt fall fyrir þig sem
+        heitir `teikna þríhyrning`. Getur þú breytt skilgreiningu fallsins svo að
+        það teikni þríhyrning með 100 díla hliðar?
+      NEW Course 4 Artist Functions 9: Getur þú leyst þetta með því að bæta við aðeins
+        einum kubbi?
       NEW Course 4 Artist Params 1: Skilgreinum þetta fall sem á að teikna ferning
         með 50 díla hliðar. Smelltu á "breyta" til að byrja verkið.
       NEW Course 4 Artist Params 13: |-
@@ -4437,6 +6301,61 @@ is-IS:
         Það á að teikna þríhyrning með 50 díla hliðar.
       NEW Course 4 Artist Params 4: Sérðu eitthvað nýtt við þessa fallkubba? Smelltu
         á "Keyra" til að sjá hvað gerist.
+      NEW Course 4 Artist Vars 12: Endurskapaðu nú kóðann frá síðasta borði og búðu
+        til fimmhyrning með hliðarnar 150.
+      NEW Course 4 Artist Vars 2: 'Dragðu talnakubb í `stilla lengd` kubbinn og í
+        `endurtaka _ sinnum` kubbinn og teiknaðu 50 díla þríhyrninga. '
+      NEW Course 4 Artist Vars 4: "Prófum þetta aftur! \n\nGetur þú stillt breytuna
+        `lengd` á 60 og búið til þessa fínu hönnun með sexhyrningum?"
+      NEW Course 4 Artist Vars 6: "Teiknaðu þetta mynstur fimmhyrninga með 100 díla
+        hliðar með því að setja rétta gildið í `lengd` og setja svo breytuna `lengd`
+        á alla réttu staðina. \n\nTaktu eftir hvernig þú stillir gildið fyrir `lengd`
+        bara einu sinni og kóðinn notar það svo alls staðar."
+      NEW Course 4 Bee For Loops 10a: "Ertu til í áskorun? Notaðu það sem þú hefur
+        lært um lykkjur og reyndu að leysa þessa þraut. \n\nMundu: Þú gætir þurft
+        að keyra lausnina margsinnis áður en þú finnur út öll þrepin."
+      NEW Course 4 Bee For Loops 2: "Bættu við kóðanum sem þarf til að tryggja að
+        býflugan safni öllum blómasafanum. \n\nÞetta er heilmikill kóði sem við þurfum!\\\n(Þú
+        munt læra einfaldari aðferð í næstu þraut.)"
+      NEW Course 4 Bee For Loops 3: 'Þetta er mun auðveldara með `frá` lykkju! Allur
+        kóðinn sem þú þarft er hér. Skoðaðu vel hvernig hann er settur saman og smelltu
+        svo á "Keyra" til að sjá hann virka. '
+      NEW Course 4 Bee For Loops 4: 'Skiptu ??? í `frá` lykkjunni út fyrir mesta magninu
+        af blómasafa sem býflugan þarf að safna. '
+      NEW Course 4 Bee For Loops 4 4: Nú þurfum við að færa áfram `teljari` sinnum
+        og svo `safna blómasafa` `teljari` sinnum. Getur þú notað tvær `endurtaka`
+        lykkjur til að leysa þessa þraut?
+      NEW Course 4 Bee For Loops 5: Þú getur líka látið `frá` lykkju telja niður.
+        Prófaðu að safna þessum blómasafa með því að telja niður frá 5 til 1 um 1.
+      NEW Course 4 Bee For Loops 6: "Síðasta talan í `frá` lykkjunni er kölluð `auki`
+        (increment). Í hverri umferð lykkjunnar breytist innihald teljarans um aukann.
+        \n\nPrófaðu að safna úr þessum blómum með aukanum 2."
+      NEW Course 4 Bee For Loops 7: |-
+        Nú skulum við nota reikningskubb með breytunni `teljari`! Hvernig getur þú notað teljarann til að fara í gegnum garðinn með sem allra fæstum kubbum?
+
+        Hvað þarftu að gera til að safna 3, 6, 9, 12, 15 af blómasafa í þetta sinn? Svarið felst í breytunni `teljari`!
+
+        Mundu: Ef lykkjan telur upp á við, er aukanum bætt við breytuna `teljari` í hverri umferð lykkjunnar.
+      NEW Course 4 Bee For Loops 8: "Þú hefur náð þessu! \n\nHver ætti aukinn að vera
+        til að safna 3, 6, 9, 12, 15 af safa?"
+      NEW Course 4 Play Lab Params 11: |-
+        Frjáls tími! Leiktu þér með kubbana í verkfærakassanum.\
+        <br/>
+
+        <h5>
+        <details>
+        <summary><b>Vantar þig hugmyndir?</b></summary>
+        <br>
+        <h5>
+        <ul>
+            <li><strong>Klukk</strong> - Láttu leikmann 2 rása og notaðu örvarnar til að láta leikmann 1 elta þar til þeir rekast á. </li>
+            <li><strong>Flugnaspaði</strong> - Láttu leikmann skjóta upp kolli hingað og þangað af handahófi. Gefðu stig fyrir að smella á veruna áður en hún hverfur. </li>
+            <li><strong>Besta ágiskun</strong> - Láttu báða leikmenn hverfa, breyttu stað af handahófi, og láttu þá birtast sem persóna valin af handahófi. Smellur á þann fyrri gefur stig, smellur á annan TAPAR stigi! </li>
+        </ul>
+        </h5>
+
+        </details>
+        </h5>
       Overworld Move to Sheep: Bættu við annarri "færa áfram" skipun til að ná til
         kindarinnar.
       Overworld Move to Sheep_2019: Bættu við annarri "færa áfram" skipun til að ná
@@ -4595,6 +6514,24 @@ is-IS:
         mynstur úr ferningum, þríhyrningum eða átthyrningum?\\\r\n\\\r"
       Standalone_Artist_9: "Haltu nú áfram og teiknaðu þína eigin hugmynd! Þú ert
         meira að segja með tómt fall sem þú getur látið gera hvað sem er!\\\r\n\\\r"
+      U4 Model Program 5_2019: |-
+        # Virkjaðu hina hnappana
+
+        Nú þegar einn hnappurinn er farinn að virka, getur þú notað sömu aðferðir til að virkja alla hina.
+
+        # Gerðu þetta
+
+        -   Búðu til, fyrir hvern hnapp, atvik sem kallar fram viðeignandi skjámynd þegar ýtt á hnappinn.
+        -   Keyrðu appið og prófaðu virkni allra hnappanna.
+      'Video: Intro to CSS Part 2_2019': |-
+        ## Spurning til að hugleiða
+
+        -   Hvernig veit vefsíðan hvaða stílsíðu hún á að nota?
+      'Video: Intro to CSS_2019': |-
+        ## Spurningar til að hugleiða
+
+        -   Hvernig er útliti vefsíðu haldið aðskildu frá uppbyggingu síðunnar?
+        -   Mundir þú vilja að vefsíðan þín hefði sérstakt útlit? Hvers vegna?
       Virtual Pet 1_2019: "**Frjáls æfing**: Hér er heldur betur flott gæludýr! \n\nLestu
         kóðann fyrir neðan og spáðu í eftirfarandi:\n\n-   Hvernig er gæludýrið látið
         hreyfast? \n-   Hvað gerist ef dýrið snertir ísinn? Hvað með paprikuna?\n-
@@ -4666,7 +6603,7 @@ is-IS:
 
         -   Breyttu hegðun geimbílsins svo hann fari hraðar en vélmennið.
       behaviors 3a: |-
-        Það ætti að nota <xml><block type="sprite_parameter_get" block-text="this sprite"><title name="VAR">this sprite</title></block></xml> kubbinn í staðinn fyrir `allar` kubbinn. Þá mun snúningurinn virka fyrir hvaða veru sem, óháð búningi hennar.
+        Það ætti að nota <xml><block type="sprite_parameter_get" block-text="this sprite"><title name="VAR">this sprite</title></block></xml> kubbinn í staðinn fyrir `allar` kubbinn. Þá mun snúningurinn virka fyrir hvaða veru sem er, óháð búningi hennar.
 
         **Villuleit:** Láttu allar stjörnunar snúast á sama hátt!
       behaviors 4: Spáðu! Hvað leið mun gervitunglið fara til að komast til sólkerfisins?
@@ -5035,6 +6972,16 @@ is-IS:
       courseA_collector_loops_challenge1_2019: _"Getur þú hjálpað mér að koma auga
         á villur? Ég veit í hvaða átt ég vil fara, en ekki hvað ég þarf að taka mörg
         skref."_
+      courseA_collector_preLoops1: |-
+        Þetta er Lára ævintýramær!
+
+        Ýttu á "Keyra" til að sjá hana ganga að fjársjóðnum og grípa hann.
+      courseA_collector_preLoops2: "Fínt! Nú getur þú bætt við kóða! \n\nBættu við
+        kubbnum ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        neðst í forritinu og smelltu á \"Keyra\"!"
+      courseA_collector_preLoops3: Náðu fjársjóðnum með því að smella tveimur ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
+        kubbum og einum ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        kubbi neðst í forritið og smella á "Keyra"!
       courseA_collector_preLoops7: "Náðu öllum þremur hrúgunum! Færðu Laurel að hverjum
         fjársjóð og notaðu svo þennan kubb: \n<xml><block type=\"collector_collect\"/></xml>"
       courseA_harvester_loops1: Hjálpaðu hirðinum að tína allan maísinn!
@@ -5226,7 +7173,7 @@ is-IS:
         </block></xml> block to the <xml><block type="studio_whenArrow">
         <title name="VALUE">left</title>
         </block></xml>
-        atburðarkubbinn sem er nú þegar á vinnusvæðinu.
+        atvikskubbinn sem er nú þegar á vinnusvæðinu.
 
         Komdu Jorge til flaggsins til að ljúka þessum áfanga!
       courseA_playLab_events3_2018: |-
@@ -5237,7 +7184,7 @@ is-IS:
         </block></xml> block to the <xml><block type="studio_whenArrow">
         <title name="VALUE">left</title>
         </block></xml>
-        atburðarkubbinn sem er nú þegar á vinnusvæðinu.
+        atvikskubbinn sem er nú þegar á vinnusvæðinu.
 
         Komdu Jorge til flaggsins til að ljúka þessum áfanga!
       courseA_playLab_events3_2019: |-
@@ -5615,6 +7562,8 @@ is-IS:
       courseC19_playLab_EOC5: Vel gert! Þú hefur alla helstu hluta leiks sem virkar.
         Leggðu nú vinnu í að láta leikinn virka eins og þú vilt að hann geri. Smelltu
         svo á "Ljúka".
+      courseC_PlayLab_events6_2019: Skrifaðu nú forrit sem notar örvarlyklana upp/niður/vinstri/hægri
+        til að hreyfa mörgæsina Waddles og láta hana snerta öll mörkin!
       courseC_PlayLab_events7: |-
         Kubburinn `endurtaka endalaust` endurtekur kóðann sem er í honum aftur og aftur endalaust. Notaðu þennan kubb til að færa risaeðluna Dino (leikmann 2) upp og niður 400 díla.
 
@@ -6609,12 +8558,84 @@ is-IS:
         Hvað gerist ef þú snýrð líka um 90 gráður á milli hringa?
 
         (Til að fá þessa mynd þarftu enn að hoppa um 50 díla á milli hringa)
+      courseD_artist_nestedLoops7: |-
+        Notaðu það sem þú hefur lært til að gera þessa teikningu.
+
+        -   Hver ferningur hefur **100 díla hliðar** og **90 gráðu horn**
+        -   Þú þarft að snúa um **60 gráður á milli ferninga**. Hvers vegna?
+            Vegna þess að það eru 6 ferningar og 360 gráður (snúið í heilan hring) deilt með 6 eru 60 gráður.
+        -   Gættu þess að hoppa **50 díla á milli ferninga**
+      courseD_artist_nestedLoops7_2018: |-
+        Notaðu það sem þú hefur lært til að gera þessa teikningu.
+
+        -   Hver ferningur hefur **100 díla hliðar** og **90 gráðu horn**
+        -   Þú þarft að snúa um **60 gráður á milli ferninga**. Hvers vegna?
+            Vegna þess að það eru 6 ferningar og 360 gráður (snúið í heilan hring) deilt með 6 eru 60 gráður.
+        -   Gættu þess að hoppa **50 díla á milli ferninga**
+      courseD_artist_nestedLoops7_2019: |-
+        Notaðu það sem þú hefur lært til að gera þessa teikningu.
+
+        -   Hver ferningur hefur **100 díla hliðar** og **90 gráðu horn**
+        -   Þú þarft að snúa um **60 gráður á milli ferninga**. Hvers vegna?
+            Vegna þess að það eru 6 ferningar og 360 gráður (snúið í heilan hring) deilt með 6 eru 60 gráður.
+        -   Gættu þess að hoppa **50 díla á milli ferninga**
+      courseD_artist_nestedLoops8: |-
+        Notaðu það sem þú hefur lært í síðustu þrautum og teiknaðu þessa mynd frá grunni.
+
+        -   Hver sexhyrningur er með **50 díla hliðar** og **60 gráðu snúninga**
+      courseD_artist_nestedLoops8_2018: |-
+        Notaðu það sem þú hefur lært í síðustu þrautum og teiknaðu þessa mynd frá grunni.
+
+        -   Hver sexhyrningur er með **50 díla hliðar** og **60 gráðu snúninga**
+      courseD_artist_nestedLoops8_2019: |-
+        Notaðu það sem þú hefur lært í síðustu þrautum og teiknaðu þessa mynd frá grunni.
+
+        -   Hver sexhyrningur er með **50 díla hliðar** og **60 gráðu snúninga**
+      courseD_artist_nestedLoops9: |-
+        **Áskorun:** Geturðu búið til svona mynd?
+
+        -   Bæði formin hafa **50 díla hliðar**
+        -   Eftir hver tvö form þarftu að hoppa áfram um lengd hliðar og snúa um 45 gráður.
+      courseD_artist_nestedLoops9_2018: |-
+        **Áskorun:** Geturðu búið til svona mynd?
+
+        -   Bæði formin hafa **50 díla hliðar**
+        -   Eftir hver tvö form þarftu að hoppa áfram um lengd hliðar og snúa um 45 gráður.
+      courseD_artist_nestedLoops9_2019: |-
+        **Áskorun:** Geturðu búið til svona mynd?
+
+        -   Bæði formin hafa **50 díla hliðar**
+        -   Eftir hver tvö form þarftu að hoppa áfram um lengd hliðar og snúa um 45 gráður.
       courseD_artist_nestedLoops9_predict1: "**Áskorun:** Getur þú fundið leið til
         að búa til svona mynd?\\\r\n\\\r\n\n-   Bæði formin hafa 50 díla hliðar"
       courseD_artist_nestedLoops9_predict1_2018: "**Áskorun:** Getur þú fundið leið
         til að búa til svona mynd?\\\r\n\\\r\n\n-   Bæði formin hafa 50 díla hliðar"
       courseD_artist_nestedLoops9_predict1_2019: "**Áskorun:** Getur þú fundið leið
         til að búa til svona mynd?\\\r\n\\\r\n\n-   Bæði formin hafa 50 díla hliðar"
+      courseD_artist_nestedLoopsFP: |-
+        Nú er komið að þér.  Notaðu það sem þú hefur lært og búðu til eitthvað sem þér þykir vænt um!
+
+        Ekki með hugmynd?  Prófaðu að búa til eina af þessum:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoopsFP_2018: |-
+        Nú er komið að þér.  Notaðu það sem þú hefur lært og búðu til eitthvað sem þér þykir vænt um!
+
+        Ekki með hugmynd?  Prófaðu að búa til eina af þessum:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoopsFP_2019: |-
+        Nú er komið að þér.  Notaðu það sem þú hefur lært og búðu til eitthvað sem þér þykir vænt um!
+
+        Ekki með hugmynd?  Prófaðu að búa til eina af þessum:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
       courseD_artist_nestedLoops_challenge1: "Getur þú fundið leið til að búa til
         svona mynd?\\\r\n\\\r\n\n-   Bæði formin hafa **50 díla hliðar**\\\r\n-   _Átthyrningarnir_
         eru gerðir með **45 gráðu** snúningum.\\\r\n-   _Þríhyrningarnir_ eru gerðir
@@ -6909,6 +8930,39 @@ is-IS:
         að sjá hvort það feli blóm áður en þú reynir að ná blómasafa. Ef það er blóm
         undir skýinu á býflugan að safna blómasafa _einu sinni_. \n\nMundu: Skýin
         fela ekki öll það sama!"
+      courseD_bee_conditionals3: Þú getur aðeins safnað blómasafa á blómum, en þú
+        getur athugað hvaða bil sem er til að gá hvort þar er blóm. Ef það er blóm
+        undir skýi, þarf býflugan að safna blómasafa _einu sinni_.
+      courseD_bee_conditionals3_2018: Þú getur aðeins safnað blómasafa á blómum, en
+        þú getur athugað hvaða bil sem er til að gá hvort þar er blóm. Ef það er blóm
+        undir skýi, þarf býflugan að safna blómasafa _einu sinni_.
+      courseD_bee_conditionals3_2019: Þú getur aðeins safnað blómasafa á blómum, en
+        þú getur athugað hvaða bil sem er til að gá hvort þar er blóm. Ef það er blóm
+        undir skýi, þarf býflugan að safna blómasafa _einu sinni_.
+      courseD_bee_conditionals6: |-
+        _"Nú vil ég bara búa til hunang."_
+
+        Undir sumum skýjunum gæti verið býkúpa. Gættu þess að athuga hvert ský hvort þar sé falin býkúpa! Ef þar er býkúpa, þarf býflugan bara að búa til hunang _einu sinni_.
+      courseD_bee_conditionals6_2018: |-
+        _"Nú vil ég bara búa til hunang."_
+
+        Undir sumum skýjunum gæti verið býkúpa. Gættu þess að athuga hvert ský hvort þar sé falin býkúpa! Ef þar er býkúpa, þarf býflugan bara að búa til hunang _einu sinni_.
+      courseD_bee_conditionals6_2019: |-
+        _"Nú vil ég bara búa til hunang."_
+
+        Undir sumum skýjunum gæti verið býkúpa. Gættu þess að athuga hvert ský hvort þar sé falin býkúpa! Ef þar er býkúpa, þarf býflugan bara að búa til hunang _einu sinni_.
+      courseD_bee_conditionals7: |-
+        Stundum hylur ský blóm en stundum býkúpu!
+
+        Notaðu `ef/annars` kubbinn til að safna blómasafa á blómum en búa til hunang í býkúpum. Mundu: Ef það er blóm, þarf býflugan bara að safna blómasafa _einu sinni_. Ef það er býkúpa, þarf hún bara að búa til hunang _einu sinni_.
+      courseD_bee_conditionals7_2018: |-
+        Stundum hylur ský blóm en stundum býkúpu!
+
+        Notaðu `ef/annars` kubbinn til að safna blómasafa á blómum en búa til hunang í býkúpum. Mundu: Ef það er blóm, þarf býflugan bara að safna blómasafa _einu sinni_. Ef það er býkúpa, þarf hún bara að búa til hunang _einu sinni_.
+      courseD_bee_conditionals7_2019: |-
+        Stundum hylur ský blóm en stundum býkúpu!
+
+        Notaðu `ef/annars` kubbinn til að safna blómasafa á blómum en búa til hunang í býkúpum. Mundu: Ef það er blóm, þarf býflugan bara að safna blómasafa _einu sinni_. Ef það er býkúpa, þarf hún bara að búa til hunang _einu sinni_.
       courseD_bee_conditionals7_predict2: |-
         Stundum hylur ský blóm en stundum hylur það býkúpu!
 
@@ -6921,6 +8975,21 @@ is-IS:
         Stundum hylur ský blóm en stundum hylur það býkúpu!
 
         Notaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema _ein_ býkúpa eða _eitt_ blóm undir hverju skýi.
+      courseD_bee_conditionals8: |-
+        **Áskorun:** Það er annað hvort blóm eða býkúpa undir hverju af þessum skýjum!
+
+        Safnaðu blómasafa ef það er blóm.
+        Búðu annars til hunang (því þá er það býkúpa).
+      courseD_bee_conditionals8_2018: |-
+        **Áskorun:** Það er annað hvort blóm eða býkúpa undir hverju af þessum skýjum!
+
+        Safnaðu blómasafa ef það er blóm.
+        Búðu annars til hunang (því þá er það býkúpa).
+      courseD_bee_conditionals8_2019: |-
+        **Áskorun:** Það er annað hvort blóm eða býkúpa undir hverju af þessum skýjum!
+
+        Safnaðu blómasafa ef það er blóm.
+        Búðu annars til hunang (því þá er það býkúpa).
       courseD_bee_conditionals9: Safnaðu öllum blómasafanum eða búðu til allt hunangið.
         Þú getur aðeins safnað blómasafa á blómum og búið til hunang í býkúpum. Athugaðu
         hvern reit hvort hann hafi blóm eða býkúpu. Það er aldrei fleira en eitt blóm
@@ -7252,6 +9321,66 @@ is-IS:
       courseD_maze_until8: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until_challenge1: Engar vísbendingar - bara áskorun. Komdu uppvakningnum
         til sólblómsins.
+      courseD_playLab_cond1: "Til að byrja með í leiknum, þarf Pegleg sjóræningi (leikmaður
+        1) að geta hreyft sig í allar áttir. Tengdu kubbana við réttu atvikin til
+        að hreyfa Pegleg. \n\n* * *\n\nHjálpaðu Pegleg að safna flöggunum til að leysa
+        þessa þraut."
+      courseD_playLab_cond1_2018: "Til að byrja með í leiknum, þarf Pegleg sjóræningi
+        (leikmaður 1) að geta hreyft sig í allar áttir. Tengdu kubbana við réttu atvikin
+        til að hreyfa Pegleg. \n\n* * *\n\nHjálpaðu Pegleg að safna flöggunum til
+        að leysa þessa þraut."
+      courseD_playLab_cond2: "Nú skulum við bæta við stigaskori!  \n\nBreyttu kóðanum
+        svo að Pegleg (leikmaður 1) fái stig ef hann kemst til drekans (leikmanns
+        2). "
+      courseD_playLab_cond2_2018: "Nú skulum við bæta við stigaskori!  \n\nBreyttu
+        kóðanum svo að Pegleg (leikmaður 1) fái stig ef hann kemst til drekans (leikmanns
+        2). "
+      courseD_playLab_cond3: 'Notaðu `endurtaka endalaust` lykkju til að láta drekann
+        (leikmann 2) skipta um skap af handahófi á sekúndu fresti.  '
+      courseD_playLab_cond3_2018: 'Notaðu `endurtaka endalaust` lykkju til að láta
+        drekann (leikmann 2) skipta um skap af handahófi á sekúndu fresti.  '
+      courseD_playLab_cond3a: "Nú skulum við nota það sem við höfum lært um skilyrði
+        til að bæta þennan leik svo um munar. \n\nBættu við kóða svo að Pegleg fái
+        tvö stig þegar hann kemst til drekans en bara _ef_ drekinn er í góðu skapi.
+        Annars bætist aðeins 1 stig við skorið hans."
+      courseD_playLab_cond3a_2018: "Nú skulum við nota það sem við höfum lært um skilyrði
+        til að bæta þennan leik svo um munar. \n\nBættu við kóða svo að Pegleg fái
+        tvö stig þegar hann kemst til drekans en bara _ef_ drekinn er í góðu skapi.
+        Annars bætist aðeins 1 stig við skorið hans."
+      courseD_playLab_cond4: |-
+        Þetta er að verða áhugavert!
+
+        Bættu við kóða svo að ninjan (leikmaður 3) byrji að elta Pegleg um leið og leikurinn byrjar.  Láttu leikinn enda með tapi ef ninjan nær honum.
+      courseD_playLab_cond4_2018: |-
+        Þetta er að verða áhugavert!
+
+        Bættu við kóða svo að ninjan (leikmaður 3) byrji að elta Pegleg um leið og leikurinn byrjar.  Láttu leikinn enda með tapi ef ninjan nær honum.
+      courseD_playLab_cond5: |-
+        Nú vantar okkur leið til að vinna leikinn.
+
+        Bættu við `endurtaka endalaust` sem athugar stöðugt **hvort** skorið sé hærra en 5 og lýkur leiknum með **sigri** ef svo er.
+      courseD_playLab_cond5_2018: |-
+        Nú vantar okkur leið til að vinna leikinn.
+
+        Bættu við `endurtaka endalaust` sem athugar stöðugt **hvort** skorið sé hærra en 5 og lýkur leiknum með **sigri** ef svo er.
+      courseD_playLab_cond6: |-
+        Úff, það er erfitt að vinna í þessum leik!
+
+        Við skulum aðlaga leikinn til að gera hann skemmtilegri. Þessi áskorun er í tveimur hlutum:
+
+        * * *
+
+        1.  Hægðu á ninjunni (leikmanni 3) áður en þú lætur hana elta sjóræningjann (leikmann 1).
+
+        2.  Notaðu `endurtaka endalaust` lykkju til að athuga hvort sjóræninginn er á "örugga svæðinu" neðan við röð kolkrabbanna (meira en 225 díla niður). Ef svo er á ninjan að **flýja** sjóræningjann. Annars á ninjan að **elta** sjóræningjann.
+      courseD_playLab_cond6a: "Við viljum ekki að sjóræninginn hangi of lengi á \"örugga
+        svæðinu\"! \n\nBættu kóða við `ef` yrðinguna svo að ef sjóræninginn (leikmaður
+        1) er á örugga svæðinu, þá muni forritið bíða í eina sekúndu, og síðan draga
+        frá eitt stig á meðan hann er neðan við röð kolkrabbanna."
+      courseD_playLab_cond6a_2018: "Við viljum ekki að sjóræninginn hangi of lengi
+        á \"örugga svæðinu\"! \n\nBættu kóða við `ef` yrðinguna svo að ef sjóræninginn
+        (leikmaður 1) er á örugga svæðinu, þá muni forritið bíða í eina sekúndu, og
+        síðan draga frá eitt stig á meðan hann er neðan við röð kolkrabbanna."
       courseD_scrat_predict1: "_\"Slakaðu á og hjálpaðu mér að finna vonda svínið.
         Annars gæti ég reiðst!\"_\\\r\n\\\r\nÞegar þú hefur marga eins kubba í röð,
         geturðu í staðinn sett bara einn þeirra í `endurtaka` lykkju. Þetta gerir
@@ -7349,6 +9478,19 @@ is-IS:
         _"Ég listauppvakningur. Mig elska teikna!"_
 
         Hjálpaðu uppvakningnum að teikna gleraugu úr ferningum með 100 díla hliðar. Bilið á milli glerjanna er 75 dílar.
+      courseE_artist_functions2: "Með föllum getur þú búið til nýja kubba! \n\nVið
+        höfum fært kubbana sem teikna ferning inn í fall, sem heitir `teikna ferning`.
+        Getur þú notað `teikna ferning` fallið til að búa til gleraugun? \n\n* * *\n\nÞað
+        eru 75 dílar á milli ferninganna."
+      courseE_artist_functions3: "Við munum bráðum fara meira í föll. En fyrst skulum
+        við æfa að teikna þessa stjörnu. \n\nÞú getur búið hana til með því að nota
+        \"endurtaka\" kubb."
+      courseE_artist_functions4: |-
+        Þar sem þú kannt nú að teikna eina stjörnu, skulum við teikna fjórar!
+
+        -   Hver armur er 25 díla langur
+        -   Snúðu um 45 gráður á milli arma
+        -   Hoppaðu um 100 díla á milli stjarna
       courseE_artist_functions5: |-
         Hvenær er erfiðara að teikna þrjár stjörnur heldur en fjórar? Þegar þú þarft líka að stökkva yfir tunglið!
 
@@ -7392,6 +9534,12 @@ is-IS:
         <title name="XPOS">???</title>
         <title name="YPOS">???</title>
         </block></xml>
+      courseE_artist_functions_predict1: 'Hér er þraut sem notar fall (function) sem
+        við höfum skilgreint. '
+      courseE_artist_functions_predict1_2018: 'Hér er þraut sem notar fall (function)
+        sem við höfum skilgreint. '
+      courseE_artist_functions_predict1_2019: 'Hér er þraut sem notar fall (function)
+        sem við höfum skilgreint. '
       courseE_artist_ramp8: |-
         Fínt!  Nú skulum nota þessa `endurtaka` lykkju til að búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.
 
@@ -7445,6 +9593,12 @@ is-IS:
         Leystu þessa þraut með þeim kubbum sem þú hefur.
 
         Þessi áfangi æfir þig í að nota `endurtaka þar til` kubbinn. Safnaðu öllum maís og káli þar til þú kemst til graskersins. (Ekki gleyma að taka graskerið líka!)
+      courseE_farmer_ramp12g: Farðu áfram þar til þú nærð til kálsins og snúðu svo
+        til vinstri **ef** það er slóð til vinstri. Annars skaltu snúa til hægri.
+      courseE_farmer_ramp12g_2018: Farðu áfram þar til þú nærð til kálsins og snúðu
+        svo til vinstri **ef** það er slóð til vinstri. Annars skaltu snúa til hægri.
+      courseE_farmer_ramp12g_2019: Farðu áfram þar til þú nærð til kálsins og snúðu
+        svo til vinstri **ef** það er slóð til vinstri. Annars skaltu snúa til hægri.
       courseE_playLab_challenge1: "_Nú eru **íkornarnir** skelfingu lostnir yfir því
         að það er **risaeðla** mætt á svæðið! Getur hugrakki **riddarinn** komið í
         veg fyrir að þeir hlaupi í burtu?_\n\nReglur:\n\n1.  \\*Að snerta íkornana
@@ -7661,6 +9815,10 @@ is-IS:
       coursea_maze_ramp1_2019: Komdu fuglinum til svínsins með því að festa <xml><block
         type="maze_moveEast"/></xml> kubb neðan á <xml><block type="when_run"/></xml>
         kubbinn, og ýttu svo á "▶ Keyra"!
+      csd U3 conditional statements video_2019: |-
+        ## Spurning til að hugleiða
+
+        -   Hvenær væri gagnlegt að nota "ef" yrðingu?
       frozen circle: Hringur er sérstakt form. Geturðu fundið út hvaða tölu þarf að
         setja í stað spurningarmerkjanna til að teikna hring?
       frozen circle function: Notaðu nýja `gera hring` kubbinn til að búa til 10 hringa
@@ -7705,6 +9863,12 @@ is-IS:
       frozen square snowflake: Getur þú búið til snjókorn með því að láta `endurtaka`
         kubbinn búa til ferning 10 sinnum og láta `snúa` kubb snúa um 36 gráður á
         milli ferninga?
+      grade2_collector_10: "Þetta er að verða búið! \n\nSafnaðu eins miklum fjársjóði
+        og þú getur til að klára áfangann!"
+      grade2_collector_10_2018: "Þetta er að verða búið! \n\nSafnaðu eins miklum fjársjóði
+        og þú getur til að klára áfangann!"
+      grade2_collector_10_2019: "Þetta er að verða búið! \n\nSafnaðu eins miklum fjársjóði
+        og þú getur til að klára áfangann!"
       grade2_collector_A: Hjálpaðu Láru að safna öllum fjársjóðunum.
       grade2_collector_A_2018: Hjálpaðu Láru að safna öllum fjársjóðunum.
       grade2_collector_A_2019: Hjálpaðu Láru að safna öllum fjársjóðunum.
