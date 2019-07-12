@@ -27,9 +27,9 @@
 
 -# Droplet script dependencies (only when editor present)
 - if use_droplet && !hide_source
-  %script{src: "#{static_asset_base_path}js/ace/ace.js"}
-  %script{src: "#{static_asset_base_path}js/ace/mode-javascript.js"}
-  %script{src: "#{static_asset_base_path}js/ace/ext-language_tools.js"}
+  %script{src: asset_path('js/ace/ace.js')}
+  %script{src: asset_path('js/ace/mode-javascript.js')}
+  %script{src: asset_path('js/ace/ext-language_tools.js')}
   %script{src: minifiable_asset_path('js/droplet/droplet-full.js')}
   %script{src: minifiable_asset_path('js/tooltipster/jquery.tooltipster.js')}
 -# Asset uploader script dependencies (not in share mode)
