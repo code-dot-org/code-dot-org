@@ -304,7 +304,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
-          ['in callback', 'after callback', 'done'].join('\n')
+          '"in callback"' + '"after callback"' + '"done"'
         );
       }
     )

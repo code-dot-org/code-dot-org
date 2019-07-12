@@ -71,13 +71,13 @@ Feature: App Lab Scenarios
     And I wait until element "#divApplab > .screen > div#text_area1" is visible
     And I press keys "123" for element "#text_input1"
     And I blur selector "#text_input1"
-    Then element "#debug-output" has escaped text "text_input1: 123"
+    Then element "#debug-output" has escaped text "\"text_input1: 123\""
 
     # in a text input, enter produces a change event but then blur does not
     When I press keys "456\n" for element "#text_input1"
-    Then element "#debug-output" has escaped text "text_input1: 123\ntext_input1: 123456"
+    Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
     And I blur selector "#text_input1"
-    Then element "#debug-output" has escaped text "text_input1: 123\ntext_input1: 123456"
+    Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
 
     # in a text area, blur produces a change event. sending keystrokes (especially 'enter')
     # to a contentetiable div was too hard to test here due to browser differences.
@@ -88,7 +88,7 @@ Feature: App Lab Scenarios
     And I focus selector "#text_area1"
     And I set selector "#text_area1" text to "abc"
     And I blur selector "#text_area1"
-    Then element "#debug-output" has text "text_area1: abc"
+    Then element "#debug-output" has text "\"text_area1: abc\""
 
   @no_mobile
   Scenario: Upload Image Asset

@@ -25,7 +25,7 @@ export default {
       },
       customValidator: function(assert) {
         const debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, 'hello world\n123');
+        assert.equal(debugOutput.textContent, '"hello world"123');
         return true;
       },
       expected: {

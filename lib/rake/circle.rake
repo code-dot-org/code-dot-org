@@ -5,6 +5,7 @@ require 'cdo/circle_utils'
 require 'cdo/git_utils'
 require 'open-uri'
 require 'json'
+require 'net/http'
 
 # CircleCI Build Tags
 # We provide some limited control over CircleCI's build behavior by adding these
@@ -94,9 +95,9 @@ namespace :circle do
     use_saucelabs = !ui_test_browsers.empty?
     if use_saucelabs || test_eyes?
       start_sauce_connect
-      RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost:4445); do sleep 5; done'
+      RakeUtils.wait_for_url('http://localhost:4445')
     end
-    RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost-studio.code.org:3000); do sleep 5; done'
+    RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
@@ -194,9 +195,19 @@ def test_eyes?
 end
 
 def start_sauce_connect
-  RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.5.3-linux.tar.gz'
-  RakeUtils.system_stream_output 'tar -xzf sc-4.5.3-linux.tar.gz'
-  Dir.chdir(Dir.glob('sc-4.5.3-linux')[0]) do
+  # Use latest sauce connect client for each run so we don't have to keep up with updates and end-of-lifes.
+  # If a newly-released version breaks the build, a quick fix to unblock the issue is to temporarily
+  # pin the version we use to the last working version, while we schedule the task to get the upgraded version
+  # working. You can do this by replacing `sc_download_url` with a hard-coded download url.
+  sc_version_info = JSON.parse(Net::HTTP.get(URI('https://saucelabs.com/versions.json')))
+  sc_download_url = sc_version_info['Sauce Connect']['linux']['download_url']
+  # example: get 'sc-4.5.4-linux.tar.gz' from 'https://saucelabs.com/downloads/sc-4.5.4-linux.tar.gz'
+  tar_name = sc_download_url.split('/')[-1]
+  dir_name = tar_name.chomp('.tar.gz')
+
+  RakeUtils.system_stream_output "wget #{sc_download_url}"
+  RakeUtils.system_stream_output "tar -xzf #{tar_name}"
+  Dir.chdir(Dir.glob(dir_name)[0]) do
     # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930
     RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains *.code.org,*.csedweek.org,*.hourofcode.com,*.codeprojects.org && break; done"
   end

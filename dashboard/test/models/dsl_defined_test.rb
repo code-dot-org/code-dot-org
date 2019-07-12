@@ -19,7 +19,7 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
-        "match" => {
+        "dsls" => {
           "Test DSLDefined" => {
             answers: [{text: "un"}, {text: "deux"}, {text: "troi"}]
           }
@@ -42,7 +42,7 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
-        "match" => {
+        "dsls" => {
           "Test DSLDefined" => {
             answers: [{text: "un"}, nil, {}]
           }

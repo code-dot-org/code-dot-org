@@ -7,21 +7,17 @@ require File.expand_path('../../../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
 
 require_relative '../i18n_script_utils'
+require_relative '../sync-codeorg-in'
 
-FILES_TO_REDACT = [
-  "dashboard/long_instructions.yml",
-  "dashboard/short_instructions.yml",
-  "dashboard/authored_hints.yml"
-]
+CLEAR = "\r\033[K"
 
 def download_translations(locale)
   system "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} -l #{locale} download translations"
 end
 
 def redact_translations(locale, language)
-  FILES_TO_REDACT.each do |file|
-    source = "i18n/locales/#{language}/#{file}"
-    redact(source, source, nil)
+  Dir.glob("i18n/locales/#{language}/course_content/**/*.json").each do |source_path|
+    redact_level_file(source_path)
   end
 end
 
@@ -32,6 +28,8 @@ end
 Languages.get_crowdin_name_and_locale.each do |prop|
   locale = prop[:locale_s]
   language = prop[:crowdin_name_s]
+  print "#{CLEAR}Redacting #{locale}"
+  $stdout.flush
   download_translations(locale)
   redact_translations(locale, language)
   upload_translations(locale)
