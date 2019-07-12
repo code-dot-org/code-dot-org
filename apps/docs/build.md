@@ -186,10 +186,7 @@ different configurations get run. Here is the approximate flow of commands/files
 
 6. `assets:sync` - This step is actually run whenever `rake assets:precompile`
    is run. It uploads everything in `dashboard/public/assets/` to an S3
-   bucket. When frontend EC2 servers are deployed to production, each frontend
-   downloads this folder from S3 and serves it, ensuring that every frontend is
-   serving the exact same assets. Cloudfront provides a caching layer in front
-   of this.
+   bucket. Cloudfront then serves those files directly from the S3 bucket.
 
 ### Replicating production behavior locally (long way)
 
