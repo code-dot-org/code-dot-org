@@ -1,0 +1,75 @@
+#!/usr/bin/env ruby
+
+# The map on code.org/yourschool is run off of a Google Fusion Table
+# (documentation: https://developers.google.com/maps/documentation/javascript/fusiontableslayer).
+# This script updates the fusion table using the REST API
+# (documentation: https://developers.google.com/fusiontables/docs/v2/using),
+# populating it with all rows from the census_summaries table for the appropriate school year.
+
+# After setting up authentication, provide the following CDO.* attributes:
+#   CDO.hoc_map_account: (JSON of a credential which can edit the FusionTables table)
+#   CDO.census_map_table_id: (the id of the fusion table)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/properties'
+
+require_relative 'upload_to_mapbox'
+
+def make_location(lat, long)
+  return nil if lat.nil? || long.nil?
+
+  "#{format('%.6f', lat)}, #{format('%.6f', long)}"
+end
+
+# Update summaries before updating the fusion table
+# If any single teaches_cs category in a given year changes by more than
+# 10% of the total number of schools then issue a Honeybadger notification.
+threshold = School.count * 0.1
+old_summary_counts = Census::CensusSummary.group(:school_year, :teaches_cs).count
+Census::CensusSummary.summarize_census_data
+new_summary_counts = Census::CensusSummary.group(:school_year, :teaches_cs).count
+
+unless old_summary_counts.select {|k, c| (c - new_summary_counts[k]).abs > threshold}.empty?
+  Honeybadger.notify(
+    error_message: "High rate of change in census_summaries. This may be expected if summary logic was recently changed or if a new data source was just added.",
+    error_class: "Census Summary High Rate of Change",
+    context: {
+      old_counts: old_summary_counts,
+      new_counts: new_summary_counts
+    }
+  )
+end
+
+# The map should show the data from the school year that began
+# in the previous calendar year. So, Aug-Dec we show the previous school
+# year's data and then switch over to the current school year in Jan.
+year = Date.today.year - 1
+geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
+Census::CensusSummary.where(school_year: year).find_each do |summary|
+  school = summary.school
+  geojson["features"] <<
+    {
+      geometry: {
+        coordinates: [school.longitude.to_f, school.latitude.to_f],
+        type: "Point"
+      },
+      properties: {
+        school_id: school.id,
+        year: year,
+        school_name: school.name.titleize,
+        school_city: school.city.titleize,
+        school_state: school.state,
+        teaches_cs: summary.teaches_cs
+      },
+      type: "Feature"
+    }
+end
+
+file = Tempfile.new(['census', 'geojson'])
+tiles = Tempfile.new(['censustiles', 'mbtiles'])
+file.write(JSON.pretty_generate(geojson))
+stdout, _status = Open3.capture2(
+  "./../tippecanoe-executable -zg -o #{tiles.path} -l \"census\" --force -r1 --cluster-distance=10 #{file.path}"
+)
+upload_maptiles(tiles.path, 'censustiles')
+puts stdout
