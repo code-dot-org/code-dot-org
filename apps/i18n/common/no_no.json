@@ -535,6 +535,7 @@
   "featured": "Utvalgt",
   "featureUnpublishedWarning": "Dette prosjektet er ikke publisert på nett. Det kan fortsatt bli markert som utvalgt, men det vil ikke dukke opp i galleriet før eieren publiserer det.",
   "feedback": "Tilbakemeldinger",
+  "feedbackNotificationLastUpdated": "Sist oppdatert:",
   "fewerNumberOfBlocks": "Færre enn {numBlocks, plural, one {en blokk} other {# blokker}} brukt!",
   "filterByStudent": "Filtrer etter student:",
   "filterByStage": "Filtrer etter scene:",

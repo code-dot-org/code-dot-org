@@ -20,7 +20,6 @@ level 'CSDU2 - Type Anything_pilot', progression: 'Experiment with Web Lab'
 level 'Intro to Web Lab - Part 1_pilot', named: true
 level 'CSD U2 Inspector Warm Up_pilot', named: true
 level 'Intro to Web Lab - Part 2_pilot', named: true
-level 'CSD U2 HTML Tags Map_pilot', named: true
 level 'CSD U2 HTML Adding Paragraphs_pilot', progression: 'Using HTML Tags'
 level 'CSD U2 HTML Adding Paragraphs pt 2_pilot', progression: 'Using HTML Tags', assessment: true
 level 'CSD U2 HTML Debug Paragraphs_pilot', progression: 'Using HTML Tags'

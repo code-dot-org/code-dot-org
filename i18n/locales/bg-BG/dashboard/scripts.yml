@@ -2324,6 +2324,10 @@ bg:
           stages:
             While Loops:
               name: Докато цикли
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Бройни системи
         time4csdemo:
           stages:
             Crowdsourcing:

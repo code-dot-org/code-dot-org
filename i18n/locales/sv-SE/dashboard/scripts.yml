@@ -1964,6 +1964,10 @@ sv:
           stages:
             While Loops:
               name: '''Medan'' loopar(slingor)'
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Talsystem
         time4csdemo:
           stages:
             Crowdsourcing:

@@ -4160,6 +4160,39 @@ fr-FR:
         game with only one button, keeping an eye on the value of `player_y`\\\r\n-
         \  \\*\n    Decide what value of `player_y` should be considered the bottom
         of the screen"
+      CSDU2 - Type Anything: |-
+        <img src = "https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style = "width: 400px; float: right">
+
+        # Bienvenue au Web Lab!
+
+         La plateforme dans laquelle vous vous trouvez s'appelle Web Lab.  Il existe trois parties principales de l’écran dans Web Lab.
+
+        # Faites ceci
+
+        -   Essayez de taper quelque chose dans l'espace de travail.
+        -   Appuyez sur <img src = "https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-149322666060.14.14 AM.png" style = "width: 150px"> pour le voir dans la zone d’aperçu!
+      CSDU2 - Type Anything_2018: |-
+        <img src = "https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style = "width: 400px; float: right">
+
+        # Bienvenue au Web Lab!
+
+         La plateforme dans laquelle vous vous trouvez s'appelle Web Lab.  Il existe trois parties principales de l’écran dans Web Lab.
+
+        # Faites ceci
+
+        -   Essayez de taper quelque chose dans l'espace de travail.
+        -   Appuyez sur <img src = "https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-149322666060.14.14 AM.png" style = "width: 150px"> pour le voir dans la zone d’aperçu!
+      CSDU2 - Type Anything_2019: |-
+        <img src = "https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style = "width: 400px; float: right">
+
+        # Bienvenue au Web Lab!
+
+         La plateforme dans laquelle vous vous trouvez s'appelle Web Lab.  Il existe trois parties principales de l’écran dans Web Lab.
+
+        # Faites ceci
+
+        -   Essayez de taper quelque chose dans l'espace de travail.
+        -   Appuyez sur <img src = "https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-149322666060.14.14 AM.png" style = "width: 150px"> pour le voir dans la zone d’aperçu!
       CSDU4 Project Events: "# Linking Screens\\\r\n\n\\\r\nWith all\nof your screens
         in place you can start adding events that will change the\nscreens. When you're
         done with this step you'll actually have an interactive\nprototype!\\\r\n\\\r\n\n#
@@ -4644,6 +4677,11 @@ fr-FR:
         -   Ajoutez un autre groupe de danseurs
         -   Affichez et masquez les danseurs à l'aide des touches fléchées
         -   Cachez tous les danseurs et passez à un effet d’arrière plan excitant
+      Escape Room Example: "# Room Escape Dans l'atelier d'aujourd'hui, vous allez
+        travailler à la création d'une application pour l'évasion de la pièce! Ce
+        niveau contient un exemple d'application avec lequel vous devriez jouer pour
+        avoir une idée de ce que vous allez créer. # Faites ceci - Cliquez sur Exécuter
+        pour lancer l'application - Essayez de trouver la clé qui ouvrira la porte."
       Function intro Ryan: "Une **fonction** nommée « construire un pont » se trouve
         dans votre espace de travail.  Tout le code nécessaire pour traverser la rivière
         est inclus ! \\\r\n \\\r\nPlacez deux fois le petit bloc vert dans votre espace
@@ -4775,6 +4813,93 @@ fr-FR:
         atteindre le mouton.
       Overworld Move to Sheep_2019: Ajoute une deuxième commande « avancer plus »
         pour atteindre le mouton.
+      Room Escape Workshop - 1: |-
+        # Mise en place des chambres
+
+        <img src = "https://images.code.org/9d103d74f7c2da05aeccd5fc317e6ab6-image-1490368234432.08.44 AM.png" style = "width: 200px; float: right">
+
+        Afin de faire sortir votre chambre, vous devrez créer la salle dans laquelle l'utilisateur pourra se lancer. Une partie du travail a déjà été effectuée pour vous. Il vous suffit de décider à quoi ressembleront les différentes parties de la pièce en choisissant des images!
+
+        # Faites ceci
+
+        -   Le niveau commence en mode conception
+        -   Pour chaque élément d'image vierge (rectangle gris), ajoutez une image appropriée. Par exemple, vous aurez besoin d’une image de porte pour l’élément d’image intitulé porte.
+        -   Un exemple de ce à quoi la salle pourrait ressembler sont sur la droite.
+      Room Escape Workshop - 3: |-
+        # Masquer le code
+
+        <img src = "https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png" style = "width: 400px; float: right">
+
+        1.  En mode Conception Cliquez sur le carré blanc où il est écrit "CODE". Changez-le pour afficher un code secret de votre choix
+        2.  Faites glisser la photo vers le bas pour couvrir le code secret
+
+        \[] [0]
+      Room Escape Workshop - 3-2: |-
+        # Déplacer l'image
+
+        Maintenant, faites en sorte que l'utilisateur puisse trouver le code secret en cliquant sur l'image. Quand ils cliquent sur l'image, elle devrait monter et se déplacer.
+
+        # Faites ceci
+
+        -   Sortez un bloc `onEvent`
+        -   Changez le point id du bloc `onEvent` en image (qui est l’ID de l’élément picture)
+        -   Dans le bloc `onEvent`, ajoutez le bloc`setPosition` avec les entrées suivantes
+                 \- ID: photo
+                 \- Les deux entrées suivantes sont les valeurs x et y - testez quelques chiffres pour que l'image bouge comme dans l'image de droite
+      Room Escape Workshop - 4: |-
+        # Mise en place du coffre-fort
+
+        Vous avez généré un code secret afin que les utilisateurs puissent accéder à la deuxième pièce. Permet à l'utilisateur de saisir le code secret lorsqu'il clique sur le coffre-fort.
+
+        # Faites ceci
+
+        -   Ajouter un bloc `onEvent`
+                 \- Choisissez l'ID du coffre-fort
+        -   Dans le bloc `onEvent`, ajoutez un \<img src =" <https://images.code.org/c0964a8543728d018d5d9583319e22b9-image-1491060910093.34.36> AM.png "style =" width: 300px "> bloc
+                 \- Sur le côté gauche, changez le _x_ (le nom de la variable) en _guess_
+                 \- Sur le côté droit, changer \_ "Entrez une valeur" \_ (l'invite à demander à l'utilisateur) en \_ "Entrez le code" \_
+      Room Escape Workshop - 5: |-
+        # Vérification du code secret
+
+        Maintenant que vous avez recueilli une estimation du code secret de l'utilisateur, vous devrez vérifier s'il est correct! Nous pouvons le faire en utilisant une déclaration `if`. Une instruction if vérifie si une condition est vraie. Dans ce cas, elle vérifiera si le nombre saisi par l'utilisateur est égal au code secret.
+
+        # Faites ceci
+
+        -   Dans le bloc `onEvent` pour le coffre-fort sous la commande d'invite, ajoutez un élément \<img src =" <https://images.code.org/5e9a434b1ad6b8f010db928b668127a5-image-1491061131564.37.01> AM ". déclaration
+        -   Créez la condition en extrayant le bloc <img src = "https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08 AM.png" style = "width: 100px"> qui vérifie si deux éléments sont détectés. égal
+        -   D'un côté de <img src = "https://images.code.org/f0680979704c30975550211b03ed222e- image-1491061134985.37.08 AM.png" style = "width: 100px"> mettez _guess_ (le nom de la valeur que nous avons utilisée) stocker les utilisateurs devinent)
+        -   De l'autre côté, mettez la valeur de votre code secret
+      Room Escape Workshop - 7: |-
+        # Montrer à l'intérieur du coffre-fort
+
+        <img src = "https://images.code.org/71e74305187a46d0badeb29a9a69ac56-image-1490371014841.55.37 AM.png" style = "width: 200px; float: right">
+
+        Une fois que le programme vérifie le code secret, vous voulez "ouvrir" le coffre-fort et afficher la clé à l'intérieur. Vous devez d’abord créer ces éléments en mode Création.
+
+        # Faites ceci
+
+        -   Accédez au mode Création et ajoutez une image carrée grise.
+                \- Cliquez et faites glisser un élément d'image <img src = "https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13 AM.png" style = "width: 75px"> sur l'écran
+                \- Donnez-lui un bon identifiant (peut-être _insideSafe_)
+                \- Trouver un carré gris à utiliser comme image
+                \- Cela agira comme l'intérieur du coffre-fort car il cachera l'avant du coffre-fort lorsqu'il sera montré
+        -   Ajouter une image clé
+                \- Cliquez et faites glisser un élément d'image <img src = "https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13 AM.png" style = "width: 75px"> sur l'écran
+                \- Donnez-lui un bon identifiant (peut-être _key_)
+                \- Trouver une image clé à utiliser
+        -   Cliquez sur la propriété masquée en mode Création pour le carré gris et la clé. Quand ils sont cachés, cela ressemblera à quelque chose comme ci-dessous en mode Création.
+
+        <img src = "https://images.code.org/2c2c7e9996515f2b30d416b558fd1360-image-1489605526794.17.55 PM.png" style = "width: 200px">
+      Room Escape Workshop - 8: |-
+        # Montrer à l'intérieur du coffre-fort
+
+        Configurez maintenant le code pour afficher la clé et le carré gris lorsque l'utilisateur saisit le code correct.
+
+        # Faites ceci
+
+        -   Dans l'instruction `if` que vous avez créée dans la commande`onEvent` pour l'ajout sécurisé:
+                 \- Le bloc `showElement` pour afficher le carré gris
+                 \- Le bloc `showElement` pour afficher la clé
       Standalone_Artist_2: "Draw this diamond with 120 and 60\ndegree angles and 150
         pixel long sides.\\\r\n\\\r"
       Standalone_Artist_3: "Pouvez-vous dessiner cet hexagone avec des côtés de 100\npixels

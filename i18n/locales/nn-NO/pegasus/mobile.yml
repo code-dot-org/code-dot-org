@@ -949,6 +949,8 @@
   cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
   cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
   cspunit3_gradelevel: "9.-12. klasse"
+  accelerated_name: "Framskunda kurs"
+  express_name: "Ekspresskurs"
   20-hour_name: Framskunda kurs
   algebra_name: "Heilt kurs i algebra for datavitskap"
   AlgebraA_name: "Informatikk i algebra kurs A"
