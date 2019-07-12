@@ -985,6 +985,8 @@
   cspexam2-AKwgAh1ac5_name: Teste, parte 2 - 25 questões
   cspunit3_gradelevel: "Alunos do 9° ano ao Ensino Médio"
   cspunit3_shortdescription_congrats: "Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação."
+  accelerated_name: "Curso acelerado"
+  express_name: "Curso Expresso"
   20-hour_name: Curso acelerado
   algebra_name: "CC na Álgebra Curso Completo"
   AlgebraA_name: "CC no Curso A de Álgebra"

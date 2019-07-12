@@ -38,7 +38,7 @@
   "drawUpperWave": "debuxar a onda superior",
   "drawLowerWave": "debuxe a onda inferior",
   "drawSticker": "debuxar un adhesivo",
-  "drawStickerWithSize": "",
+  "drawStickerWithSize": "debuxar a autoadhesivo con tamaño",
   "heightParameter": "altura",
   "hideTurtle": "ocultar o artista",
   "jump": "saltar",
@@ -74,7 +74,7 @@
   "penDown": "baixar o lapis",
   "penTooltip": "Levanta ou baixa o lapis, para comezar ou parar de debuxar.",
   "penUp": "levantar o lapis",
-  "pointTo": "",
+  "pointTo": "apuntar cara",
   "pixels": "píxeles",
   "reinfFeedbackMsg": "Aquí está o teu debuxo! Continúa a traballar nel, ou segue para o próximo desafío.",
   "setAlpha": "definir alfa",
@@ -94,6 +94,6 @@
   "turnTooltip": "Vira o artista á dereita ou á esquerda usando o número especificado de graos.",
   "turtleVisibilityTooltip": "Fai que o artista fique visíbel ou invisíbel.",
   "widthTooltip": "Cambia o longo do lapis.",
-  "withSize": "",
+  "withSize": "con tamaño",
   "wrongColour": "A túa figura ten unha cor errónea. Para este desafío necesita ser %1."
 }

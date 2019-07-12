@@ -2354,6 +2354,10 @@ is:
               description_teacher: Nemendur kanna þær áskoranir sem felast í að miðla því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður fara fram.
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
               description_student: Hópurinn byrjar á að nota boole-virkja til að bera saman gildið í eiginleika kvika við markgildi og nota þann samanburð til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið. Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum og skrifar kóða til að vinna úr þessum samanburði.
@@ -2792,6 +2796,10 @@ is:
               name: Lokaverkefni
             Post-Course Survey:
               name: Könnun eftir námskeið
+        gamelab-demo:
+          stages:
+            Simple Sprite Movement:
+              name: Einföld hreyfing kvika
         csd6-draft:
           stages:
             Lists:
@@ -2810,6 +2818,8 @@ is:
           stages:
             Introduction:
               name: Kynning
+            Sprites:
+              name: Kvikar
             'Project: Interactive Card':
               name: 'Verkefni: Gagnvirkt kort'
         csd5-draft:
@@ -2856,6 +2866,10 @@ is:
               name: Teikning í Leikjasmiðju
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
             Complex Conditionals:
@@ -2974,6 +2988,10 @@ is:
               name: Teikning í Leikjasmiðju
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
             'Project: Interactive Card':
@@ -3432,6 +3450,10 @@ is:
               name: Form og handahóf
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
             Velocity:
@@ -3470,6 +3492,10 @@ is:
               name: Form og handahóf
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
               description_student: Hópurinn byrjar á að nota boole-virkja til að bera saman gildið í eiginleika kvika við markgildi og nota þann samanburð til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið. Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum og skrifar kóða til að vinna úr þessum samanburði.
@@ -3958,6 +3984,9 @@ is:
               name: Fara yfir verkefnið
             The Artist:
               name: Listamaðurinn
+            Virtual Pet:
+              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
+              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
             Internet:
               name: Internetið
             Crowdsourcing:
@@ -4164,6 +4193,10 @@ is:
               name: Form og handahóf
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
               description_student: Hópurinn byrjar á að nota boole-virkja til að bera saman gildið í eiginleika kvika við markgildi og nota þann samanburð til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið. Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum og skrifar kóða til að vinna úr þessum samanburði.
@@ -4346,6 +4379,8 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+            Number Systems:
+              name: Talnakerfi
         csd-videos:
           stages:
             new stage:
@@ -4417,6 +4452,10 @@ is:
               name: Form og handahóf
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
               description_student: Hópurinn byrjar á að nota boole-virkja til að bera saman gildið í eiginleika kvika við markgildi og nota þann samanburð til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið. Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum og skrifar kóða til að vinna úr þessum samanburði.

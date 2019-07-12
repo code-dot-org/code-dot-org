@@ -104,6 +104,7 @@ gl-ES:
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
           neve!
       frozen line:
+        run: Preme en "Correr" para probares o teu programa!
         move_elsa_forward: Arrastre un bloque "Avance" e encáixeo baixo o bloque "Cando
           o xogo comeza" para que Elsa avance
       frozen perpendicular:
