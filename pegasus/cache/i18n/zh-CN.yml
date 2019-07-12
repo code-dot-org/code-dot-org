@@ -1020,6 +1020,8 @@ zh-CN:
   cspexam2-AKwgAh1ac5_name: 测试部分 2 - 25 个问题
   cspunit3_gradelevel: 9-12年级
   cspunit3_shortdescription_congrats: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
+  accelerated_name: 加速课程
+  express_name: 快速课程
   20-hour_name: 加速课程
   algebra_name: 代数课程中的计算机科学
   AlgebraA_name: 计算机代数 课程A
