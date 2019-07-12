@@ -15,6 +15,12 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation template to create an Fargate cluster and task definition for running Aurora backup verification.
 
+Parameters:
+  HoneybadgerApiKey:
+    Type: String
+    Default: ""
+    Description: Honeybadger API key used for reporting errors during execution of the ECS task
+
 Resources:
   TaskRole:
     Type: AWS::IAM::Role
@@ -73,14 +79,17 @@ Resources:
               - Effect: Allow
                 Action:
                   - ecs:RunTask
-                Resource: !Ref TaskDefinition
+                # Manually construct the Task Definition Family ARN, since !Ref returns the Task Definition Revision ARN
+                Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/${AWS::StackName}-aurora-verify-backups"
                 Condition:
                   ArnLike:
                     ecs:cluster: !GetAtt ECSCluster.Arn
               - Effect: Allow
                 Action:
                   - iam:PassRole
-                Resource: !GetAtt TaskRole.Arn
+                Resource:
+                  - !GetAtt TaskRole.Arn
+                  - !GetAtt TaskExecutionRole.Arn
                 Condition:
                   StringLike:
                     iam:PassedToService: ecs-tasks.amazonaws.com
@@ -126,6 +135,9 @@ Resources:
           -
             Name: REGION
             Value: !Ref AWS::Region
+          -
+            Name: HONEYBADGER_API_KEY
+            Value: !Ref HoneybadgerApiKey
 
 
   CloudwatchLogsGroup:
