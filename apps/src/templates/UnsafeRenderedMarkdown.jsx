@@ -34,7 +34,7 @@ schema.attributes['*'].push('style', 'className');
 
 // Add support for Blockly XML
 schema.clobber = [];
-schema.tagNames.push(
+const blocklyTags = [
   'block',
   'functional_input',
   'mutation',
@@ -43,7 +43,11 @@ schema.tagNames.push(
   'title',
   'value',
   'xml'
-);
+];
+schema.tagNames = schema.tagNames.concat(blocklyTags);
+blocklyTags.forEach(tag => {
+  schema.attributes[tag] = ['block_text', 'id', 'inline', 'name', 'type'];
+});
 
 const markdownToReact = Parser.create()
   .getParser()
