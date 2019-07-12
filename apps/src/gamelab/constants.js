@@ -1,5 +1,5 @@
 /** @file Game Lab constants */
-var utils = require('../utils');
+var utils = require('@cdo/apps/utils');
 
 /** @enum {string} */
 module.exports.GameLabInterfaceMode = utils.makeEnum('CODE', 'ANIMATION');

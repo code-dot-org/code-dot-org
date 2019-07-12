@@ -1,7 +1,7 @@
 import {commands} from './commands';
 import * as spriteUtils from './spriteUtils';
-import Sounds from '../../Sounds';
-import {getStore} from '../../redux';
+import Sounds from '@cdo/apps/Sounds';
+import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from '../textConsoleModule';
 
 var Spritelab = function() {

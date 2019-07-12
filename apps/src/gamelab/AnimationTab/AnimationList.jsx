@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import color from '../../util/color';
+import color from '@cdo/apps/util/color';
 import * as shapes from '../shapes';
 import {show, Goal} from '../AnimationPicker/animationPickerModule';
 import AnimationListItem from './AnimationListItem';

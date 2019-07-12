@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {createUuid} from '../../utils';
+import {createUuid} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
-import BaseDialog from '../../templates/BaseDialog.jsx';
+import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import gamelabMsg from '@cdo/gamelab/locale';
 import styles from './styles';
 import {
@@ -14,7 +14,7 @@ import {
   handleUploadError
 } from './animationPickerModule';
 import AnimationPickerBody from './AnimationPickerBody.jsx';
-import HiddenUploader from '../../code-studio/components/HiddenUploader';
+import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.

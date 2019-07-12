@@ -5,7 +5,7 @@ import {
   UPDATE_LOCATION
 } from './actions';
 import {LocationPickerMode} from './constants';
-import {getStore} from '../redux';
+import {getStore} from '@cdo/apps/redux';
 
 export default function locationPicker(state, action) {
   state = state || {
