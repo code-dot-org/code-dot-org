@@ -82,6 +82,8 @@ class SchoolInfo < ActiveRecord::Base
   # Only sync from school on create to avoid unintended updates to old data
   before_validation :sync_from_schools, on: :create
 
+  before_validation :update_school_info, on: :update
+
   def sync_from_schools
     # If a SchoolInfo is linked to a School then the SchoolInfo pulls its data from the School
     # It seems like there is some code that is passing in mismatched data at times.
@@ -316,5 +318,11 @@ class SchoolInfo < ActiveRecord::Base
 
     # Given we got past above cases, school name is sufficient
     !school_name.blank?
+  end
+
+  private
+
+  def update_school_info
+    throw :abort
   end
 end
