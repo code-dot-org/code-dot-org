@@ -105,7 +105,7 @@ def recursively_find_malformed_links_images(hash, key_str, file_name)
 end
 
 def plugins_to_arg(plugins)
-  plugins.map {|name| "bin/i18n/plugins/#{name}.js" if name}.join(',')
+  plugins.map {|name| "bin/i18n/node_modules/@code-dot-org/remark-plugins/src/#{name}.js" if name}.join(',')
 end
 
 def redact(source, dest, plugins=[], format='md')
