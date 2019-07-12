@@ -176,7 +176,7 @@
     "react-pointable": "^1.1.1",
     "react-portal": "^3.0.0",
     "react-redux": "~4.4.5",
-    "react-router": "~2.6.0",
+    "react-router": "~5.0.1",
     "react-select": "^1.2.1",
     "react-sticky": "~5.0.5",
     "react-tether": "^0.5.2",
