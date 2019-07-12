@@ -73,6 +73,11 @@ class Section < ActiveRecord::Base
     LOGIN_TYPE_CLEVER = 'clever'.freeze
   ]
 
+  LOGIN_TYPES_OAUTH = [
+    LOGIN_TYPE_GOOGLE_CLASSROOM,
+    LOGIN_TYPE_CLEVER
+  ]
+
   TYPES = [
     # Insert non-workshop section types here.
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
