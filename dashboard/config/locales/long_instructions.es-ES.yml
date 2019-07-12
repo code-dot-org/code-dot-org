@@ -1730,15 +1730,6 @@ es-ES:
       grade2_collector_A: Ayuda a Laurel a recoger todo el tesoro.
       grade2_collector_A_2018: Ayuda a Laurel a recoger todo el tesoro.
       grade2_collector_A_2019: Ayuda a Laurel a recoger todo el tesoro.
-      grade2_collector_A_predict1: "name 'grade2_multi_collector_A_predict1' \nquestion
-        'Mira detenidamente el código. Si se ejecutara hasta el final (ignorando los
-        errroes), ¿cuantas joyas recogería Laurel?' wrong 'Laurel recogería 4 joyas
-        usando este código.', feedback: 'Incorrecto. Laurel intenta recoger joyas
-        donde no hay ninguna y eso provoca un error.' right 'Laurel intentará recoger
-        joyas donde no hay y eso provocará un error.', feedback: 'Correcto!' wrong
-        'Laurel recogerá todas las joyas.', feedback: 'Incorrecto. Laurel intentará
-        recoger joyas donde no hay y eso provocará un error.' wrong 'No lo se.', feedback:
-        'Laurel intentará recoger joyas donde no hay y eso provocará un error..'"
       ramp_artist_loops1: "¡Qué día más maravilloso! \n\nAyuda al artista a cubrir
         sus flores antes del invierno moviéndose 60 píxeles hacia delante."
       ramp_artist_loops1_2018: "¡Qué día más maravilloso! \n\nAyuda al artista a cubrir

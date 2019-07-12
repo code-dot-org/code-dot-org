@@ -1101,6 +1101,7 @@ GameLab.prototype.onP5ExecutionStarting = function() {
 GameLab.prototype.onP5Preload = function() {
   Promise.all([
     this.preloadAnimations_(this.level.pauseAnimationsByDefault),
+    this.maybePreloadBackgrounds_(),
     this.runPreloadEventHandler_()
   ]).then(() => {
     this.gameLabP5.notifyPreloadPhaseComplete();
@@ -1115,6 +1116,14 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function() {
   ) {
     this.level.helperLibraries.unshift(validationLibraryName);
   }
+};
+
+// Preloads background images if this is Sprite Lab
+GameLab.prototype.maybePreloadBackgrounds_ = function() {
+  if (!this.isSpritelab) {
+    return Promise.resolve();
+  }
+  return this.gameLabP5.preloadBackgrounds();
 };
 
 /**
@@ -1483,7 +1492,11 @@ GameLab.prototype.getSerializedAnimationList = function(callback) {
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
  */
 GameLab.prototype.getGeneratedProperties = function() {
-  return this.generatedProperties;
+  // Must return a new object instance each time so the project
+  // system can properly compare currentSources vs newSources
+  return {
+    ...this.generatedProperties
+  };
 };
 
 /**

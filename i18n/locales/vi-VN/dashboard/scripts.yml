@@ -5132,6 +5132,8 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+            Number Systems:
+              name: Hệ thống các con số
         csd-videos:
           stages:
             new stage:
