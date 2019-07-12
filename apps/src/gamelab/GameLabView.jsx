@@ -5,18 +5,18 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
 import AnimationTab from './AnimationTab/AnimationTab';
-import StudioAppWrapper from '../templates/StudioAppWrapper';
+import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import ErrorDialogStack from './ErrorDialogStack';
 import AnimationJsonViewer from './AnimationJsonViewer';
 import {GameLabInterfaceMode, GAME_WIDTH, GAME_HEIGHT} from './constants';
 import GameLabVisualizationHeader from './GameLabVisualizationHeader';
 import GameLabVisualizationColumn from './GameLabVisualizationColumn';
-import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
-import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-import CodeWorkspace from '../templates/CodeWorkspace';
+import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import {isResponsiveFromState} from '@cdo/apps/templates/ProtectedVisualizationDiv';
+import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
 import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
-import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
-import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
+import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
+import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker from './AnimationPicker/AnimationPicker';
 
 /**

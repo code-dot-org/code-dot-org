@@ -6,7 +6,7 @@ import {
   HIDE_ANIMATION_JSON,
   TOGGLE_GRID_OVERLAY
 } from './actions';
-import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
+import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';

@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Radium from 'radium';
-import color from '../../util/color';
+import color from '@cdo/apps/util/color';
 import {AnimationCategories, CostumeCategories} from '../constants';
 import gamelabMsg from '@cdo/gamelab/locale';
 import animationLibrary from '../animationLibrary.json';
@@ -11,8 +11,8 @@ import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
-import PaginationWrapper from '../../templates/PaginationWrapper';
-import {searchAssets} from '../../code-studio/assets/searchAssets';
+import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
+import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
 import {connect} from 'react-redux';
 
 const MAX_SEARCH_RESULTS = 27;

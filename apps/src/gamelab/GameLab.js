@@ -9,27 +9,30 @@ import {
   GAME_WIDTH,
   SpritelabReservedWords
 } from './constants';
-import experiments from '../util/experiments';
-import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import BlocklyModeErrorHandler from '../BlocklyModeErrorHandler';
+import experiments from '@cdo/apps/util/experiments';
+import {
+  outputError,
+  injectErrorHandler
+} from '@cdo/apps/lib/util/javascriptMode';
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./apiJavascript');
-var consoleApi = require('../consoleApi');
-var utils = require('../utils');
+var consoleApi = require('@cdo/apps/consoleApi');
+var utils = require('@cdo/apps/utils');
 var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
-import * as apiTimeoutList from '../lib/util/timeoutList';
-var JsInterpreterLogger = require('../JsInterpreterLogger');
+var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
+import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
+var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
-import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-var dom = require('../dom');
-import {initFirebaseStorage} from '../storage/firebaseStorage';
-import {getStore} from '../redux';
+import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
+var dom = require('@cdo/apps/dom');
+import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
+import {getStore} from '@cdo/apps/redux';
 import {
   allAnimationsSingleFrameSelector,
   setInitialAnimationList,
@@ -37,23 +40,23 @@ import {
   withAbsoluteSourceUrls
 } from './animationListModule';
 import {getSerializedAnimationList} from './shapes';
-import {add as addWatcher} from '../redux/watchedExpressions';
+import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
-import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
+import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
-} from '../containedLevels';
-import {hasValidContainedLevelResult} from '../code-studio/levels/codeStudioLevels';
-import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
+} from '@cdo/apps/containedLevels';
+import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {addConsoleMessage, clearConsole} from './textConsoleModule';
-import {captureThumbnailFromCanvas} from '../util/thumbnail';
-import Sounds from '../Sounds';
-import {TestResults, ResultType} from '../constants';
-import {showHideWorkspaceCallouts} from '../code-studio/callouts';
+import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
+import Sounds from '@cdo/apps/Sounds';
+import {TestResults, ResultType} from '@cdo/apps/constants';
+import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import defaultSprites from './defaultSprites.json';
 import wrap from './debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -70,9 +73,9 @@ import {
   expoGenerateApk,
   expoCheckApkBuild,
   expoCancelApkBuild
-} from '../util/exporter';
-import project from '../code-studio/initApp/project';
-import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
+} from '@cdo/apps/util/exporter';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,

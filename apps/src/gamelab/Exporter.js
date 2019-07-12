@@ -5,23 +5,23 @@ import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
 import {SnackSession} from '@code-dot-org/snack-sdk';
 
-import * as assetPrefix from '../assetManagement/assetPrefix';
-import download from '../assetManagement/download';
-import exportGamelabCodeEjs from '../templates/export/gamelabCode.js.ejs';
-import exportGamelabIndexEjs from '../templates/export/gamelabIndex.html.ejs';
-import exportExpoPackageJson from '../templates/export/expo/package.exported_json';
-import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
-import exportExpoAppEjs from '../templates/export/expo/App.js.ejs';
-import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported_js';
-import exportExpoDataWarningJs from '../templates/export/expo/DataWarning.exported_js';
-import exportExpoMetroConfigJs from '../templates/export/expo/metro.config.exported_js';
-import exportExpoWarningPng from '../templates/export/expo/warning.png';
-import exportExpoIconPng from '../templates/export/expo/icon.png';
-import exportExpoSplashPng from '../templates/export/expo/splash.png';
-import logToCloud from '../logToCloud';
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
+import download from '@cdo/apps/assetManagement/download';
+import exportGamelabCodeEjs from '@cdo/apps/templates/export/gamelabCode.js.ejs';
+import exportGamelabIndexEjs from '@cdo/apps/templates/export/gamelabIndex.html.ejs';
+import exportExpoPackageJson from '@cdo/apps/templates/export/expo/package.exported_json';
+import exportExpoAppJsonEjs from '@cdo/apps/templates/export/expo/app.json.ejs';
+import exportExpoAppEjs from '@cdo/apps/templates/export/expo/App.js.ejs';
+import exportExpoCustomAssetJs from '@cdo/apps/templates/export/expo/CustomAsset.exported_js';
+import exportExpoDataWarningJs from '@cdo/apps/templates/export/expo/DataWarning.exported_js';
+import exportExpoMetroConfigJs from '@cdo/apps/templates/export/expo/metro.config.exported_js';
+import exportExpoWarningPng from '@cdo/apps/templates/export/expo/warning.png';
+import exportExpoIconPng from '@cdo/apps/templates/export/expo/icon.png';
+import exportExpoSplashPng from '@cdo/apps/templates/export/expo/splash.png';
+import logToCloud from '@cdo/apps/logToCloud';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {GAME_WIDTH, GAME_HEIGHT} from './constants';
-import {EXPO_SESSION_SECRET} from '../constants';
+import {EXPO_SESSION_SECRET} from '@cdo/apps/constants';
 import {
   EXPO_SDK_VERSION,
   extractSoundAssets,
@@ -30,7 +30,7 @@ import {
   rewriteAssetUrls,
   getEnvironmentPrefix,
   fetchWebpackRuntime
-} from '../util/exporter';
+} from '@cdo/apps/util/exporter';
 
 const CONTROLS_HEIGHT = 165;
 

@@ -1,10 +1,10 @@
-import {getStore} from '../redux';
+import {getStore} from '@cdo/apps/redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var Spritelab = require('./spritelab/Spritelab');
 import {backgrounds} from './spritelab/backgrounds.json';
-import * as assetPrefix from '../assetManagement/assetPrefix';
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
 

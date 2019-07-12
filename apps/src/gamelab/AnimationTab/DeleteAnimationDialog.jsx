@@ -1,7 +1,12 @@
 /** @file controls below a dialog to delete animations */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Dialog, {Body, Buttons, Cancel, Confirm} from '../../templates/Dialog';
+import Dialog, {
+  Body,
+  Buttons,
+  Cancel,
+  Confirm
+} from '@cdo/apps/templates/Dialog';
 
 export default class DeleteAnimationDialog extends React.Component {
   static propTypes = {

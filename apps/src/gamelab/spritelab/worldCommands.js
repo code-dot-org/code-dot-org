@@ -1,5 +1,5 @@
 import * as spriteUtils from './spriteUtils';
-import {getStore} from '../../redux';
+import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../textConsoleModule';
 
 export const commands = {
