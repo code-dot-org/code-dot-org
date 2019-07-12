@@ -11,25 +11,36 @@ class Api::V1::UserSchoolInfosController < ApplicationController
 
   # PATCH /api/v1/users_school_infos
   def update
-    return unless school_info_params[:school_id].present? || school_info_params[:country].present?
+    unless school_info_params[:school_id].present? || school_info_params[:country].present?
+      render json: {error: "school id or country is not present"}, status: 422
+      return
+    end
 
-    new_school_info_params =
-      if school_info_params[:full_address]&.blank?
-        school_info_params.except(:full_address)
-      else
-        school_info_params
-      end
+    school_info_params.delete(:full_address) if school_info_params[:full_address]&.blank?
 
-    if new_school_info_params[:country]&.downcase&.eql? 'united states'
-      new_school_info_params[:country] = 'US'
+    if school_info_params[:country]&.downcase&.eql? 'united states'
+      school_info_params[:country] = 'US'
     end
 
     existing_school_info = current_user.last_complete_school_info
-    existing_school_info&.assign_attributes new_school_info_params
+    existing_school_info&.assign_attributes school_info_params
     if existing_school_info.nil? || existing_school_info.changed?
-      submitted_school_info = SchoolInfo.where(new_school_info_params).
-        first_or_create(validation_type: SchoolInfo::VALIDATION_NONE)
-      current_user.update! school_info: submitted_school_info
+      submitted_school_info =
+        if school_info_params[:school_id]
+          SchoolInfo.where(school_info_params).
+          first_or_create
+        else
+          # VALIDATION_COMPLETE is passed when the school_id does not exist to check
+          # form for completeness; specifically, school name is required.
+          # If school_id does not exist, ncesSchoolId is set to -1 when the checkbox
+          # for school not found is clicked.
+          SchoolInfo.where(school_info_params).
+          first_or_create(validation_type: SchoolInfo::VALIDATION_COMPLETE)
+        end
+      unless current_user.update(school_info: submitted_school_info)
+        render json: current_user.errors, status: 422
+        return
+      end
       current_user.user_school_infos.where(school_info: submitted_school_info).
         update(last_confirmation_date: DateTime.now)
     else
@@ -41,6 +52,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   private
 
   def school_info_params
-    params.require(:user).require(:school_info_attributes).permit(:school_type, :school_name, :full_address, :country, :school_id)
+    @school_info_params ||= params.require(:user).require(:school_info_attributes).
+      permit(:school_type, :school_name, :full_address, :country, :school_id)
   end
 end
