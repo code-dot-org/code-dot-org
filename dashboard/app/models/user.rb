@@ -311,7 +311,6 @@ class User < ActiveRecord::Base
     )
   end
 
-  # TODO: Add comment
   def complete_school_info
     if user_school_infos.count > 0 && !school_info.complete?
       errors.add(:school_info_id, "cannot add new school id")
