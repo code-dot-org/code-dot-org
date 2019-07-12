@@ -171,7 +171,7 @@
     "react-inspector": "2.3.1",
     "react-lazy-load": "~3.0.10",
     "react-motion": "0.4.5",
-    "react-onclickoutside": "^5.7.1",
+    "react-onclickoutside": "~5.11.1",
     "react-paginate": "^6.3.0",
     "react-pointable": "^1.1.1",
     "react-portal": "^3.0.0",
