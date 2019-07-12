@@ -122,6 +122,7 @@ var TOUCH_MAP = {
     ie11: 'pointermove'
   }
 };
+exports.TOUCH_MAP = TOUCH_MAP;
 
 exports.isMobile = function() {
   var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
