@@ -447,10 +447,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def allows_silent_takeover(oauth_user, auth_hash)
-    allow_takeover = auth_hash.provider.present?
-    allow_takeover &= AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
+    return false unless auth_hash.provider.present?
+    return false unless AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
+    return false if oauth_user.persisted?
+
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
-    allow_takeover && lookup_user && !oauth_user.persisted?
+    return !!lookup_user
   end
 
   def should_connect_provider?
