@@ -99,20 +99,26 @@ class Census::StateCsOffering < ApplicationRecord
     INFERRED_NO_EXCLUSION_LIST.exclude? state_code.upcase
   end
 
-  def self.construct_state_school_id(state_code, row_hash, school_year)
+  def self.get_state_school_id(state_code, row_hash, school_year)
     # Using V2 format.
     if state_uses_format_v2(state_code, school_year)
-      nces_id = row_hash['nces_id']
-      state_school_id = row_hash['state_school_id']
-
       # The V2 format requires either nces_id or state_school_id.
+
+      # Try to get the state_school_id from the nces_id first.
+      nces_id = row_hash['nces_id']
       if nces_id != UNSPECIFIED_VALUE
-        return School.find_by(id: nces_id)&.state_school_id
-      elsif state_school_id != UNSPECIFIED_VALUE
-        return state_school_id
-      else
-        raise ArgumentError.new("Entry for #{state_code} requires either (district_id and school_id) OR nces_id.")
+        state_school_id = School.find_by(id: nces_id)&.state_school_id
+        return state_school_id if state_school_id
       end
+
+      # Fall back to the provided state_school_id.
+      state_school_id = row_hash['state_school_id']
+      if state_school_id != UNSPECIFIED_VALUE
+        return state_school_id
+      end
+
+      # At this point we have nothing left.
+      raise ArgumentError.new("Entry for #{state_code} requires either nces_id or state_school_id.")
     end
 
     # Special casing for V1 format.
@@ -1375,7 +1381,7 @@ class Census::StateCsOffering < ApplicationRecord
     ActiveRecord::Base.transaction do
       CSV.foreach(filename, {headers: true}) do |row|
         row_hash = row.to_hash
-        state_school_id = construct_state_school_id(state_code, row_hash, school_year)
+        state_school_id = get_state_school_id(state_code, row_hash, school_year)
         courses = get_courses(state_code, row_hash, school_year)
         # state_school_id is unique so there should be at most one school.
         school = School.where(state_school_id: state_school_id).first
