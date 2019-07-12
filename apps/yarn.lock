@@ -5135,10 +5135,6 @@ data-uri-to-buffer@1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-1.2.0.tgz#77163ea9c20d8641b4707e8f18abdf9a78f34835"
 
-date-fns@^1.28.5:
-  version "1.29.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
-
 date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
@@ -12586,15 +12582,6 @@ react-dom-confetti@^0.0.8:
     prop-types "^15.6.2"
     scheduler "^0.12.0"
 
-react-dom@^15.5.4:
-  version "15.6.2"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
-  dependencies:
-    fbjs "^0.8.9"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.10"
-
 react-dom@^16.7.0:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
@@ -12652,14 +12639,10 @@ react-html-attributes@^1.4.2:
   dependencies:
     html-element-attributes "^1.0.0"
 
-react-idle-timer@~1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/react-idle-timer/-/react-idle-timer-1.5.2.tgz#898b2c2668bd932fdcc8a86b15037895cc91067b"
-  dependencies:
-    date-fns "^1.28.5"
-    prop-types "^15.5.10"
-    react "^15.5.4"
-    react-dom "^15.5.4"
+react-idle-timer@^4.2.7:
+  version "4.2.7"
+  resolved "https://registry.yarnpkg.com/react-idle-timer/-/react-idle-timer-4.2.7.tgz#a4da0401252485c71fbc0f52bdba8dd42d260d8d"
+  integrity sha512-6rVnCRwWqINxznXSBcHIlgp3Tk8Xb7X0qZjjbssdIChLWTnWHl6EzIRahKaILz7p2KKbwWTsA8UsztTtvEO4MQ==
 
 react-input-autosize@^2.1.2:
   version "2.2.1"
@@ -12933,7 +12916,7 @@ react-with-context@^2.0.0:
     prop-types "^15.6.2"
     scheduler "^0.12.0"
 
-react@^15.5.4, react@^15.6.2:
+react@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
