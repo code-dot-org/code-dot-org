@@ -1,71 +1,757 @@
 ---
-tr:
+tr-TR:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Sağlanan görüntü için bir algoritma seçin.
+        answers:
+        - text: Kare ile başlayın<br/>Karenin üstünü üçgen yerleştirin<br/>Karenin
+            altına üçgen yerleştirin
+        - {}
+        - text: Kare ile başla<br/>Karenin üzerine bir paralelkenar koy<br/>Paralelkenarın
+            sağına bir üçgen koy
+        - text: Kare ile başla<br/>Karenin üzerine bir üçgen koy<br/>Üçgenin sağına
+            bir paralelkenar koy
+      2-3 Algorithms Multi 2:
+        title: Çoktan Seçmeli
+        content1: Üçgen ile başlayın<br/>Üçgenin altına kare yerleştirin<br/>Karenin
+          altına başka bir üçgen daha yerleştirin
+        questions:
+        - text: Hangi resim bu algoritmayı <em>takip etmez</em>?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Eşleştirme
+        content2: Dans hareketleri için düğme kombinasyonlarını eşleştir.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Eşleştirme
+        content2: Her kodu ilgili harf ile eşleştirmek için anahtarı kullan
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Oyun kurallarına uygun olarak, hangi kağıt seti doğru olarak puan
+            alır?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Bu bölümü döngüler ile nasıl basitleştirebilirsin?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Eşleştirme
+        content1: Kılavuzla programı eşleştir.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Bu resim hangi programla yapılmıştır?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: Labirent eşleştirme
+        content1: bloklar için bulmacaları eşleştir
+        pre_title: Talimatlar
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: Labirent çoktan seçmeli
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Hangi resim-program ikilisi hata içermez?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: 'Sanatçı: Fonksiyonlarla İlgili Çoktan Seçmeli Sorular 1'
+        questions:
+        - text: Verilen fonksiyonları kullanarak  resmi çizmek için doğru blokları
+            seçin
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Şekil için döngü eşleştir
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: 'Sanatçı: Döngülerle İlgili Çoktan Seçmeli Sorular'
+        questions:
+        - text: Hangi şekil bu döngü tarafından yapılmıştır?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: 'Sanatçı: Döngülerle İlgili Çoktan Seçmeli Sorular'
+        questions:
+        - text: Hangi şekil bu program tarafından yapılmıştır?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: Sanatçı Eşleştirme
+        content1: Tamamlamak için bloklarla şekilleri eşleştir.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: Aşağıdaki karşılaştırmalardan hangisi doğru?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: En iyi blokları seç.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: Arı döngüleri çoktan seçmeli Bir
+        questions:
+        - text: Hangi blok tüm nektarı toplar?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Labirent eşleştirme
+        content1: bloklar için bulmacaları eşleştir
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: Labirent çoktan seçmeli Bir
+        questions:
+        - text: Hangi blok seti doğru cevap?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Eşleştirme
+        content1: Zar Yarışı oyununun algoritmasının çalışması için adımları doğru
+          şekilde yerleştirin.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>1. Oyuncu puanını 0 yap</h4>"
+        - text: "<h4>Oynama sırası 1. Oyuncuda</h4>"
+        - text: "<h4> Player 1 oyuncusunu toplam skora ekle</h4>"
+        - text: "<h4>Kazananı görmek için oyuncuların puanlarını karşılaştır.</h4>"
+      4-5 Algorithms Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Bu öğelerden hangisi algoritmayı en zor açıklayandır?
+        answers:
+        - text: Dişini fırçalıyor
+        - text: Tanımlama bilgileri
+        - text: Alışveriş listesinden alışveriş
+        - text: Muz
+      4-5 Computational Thinking Match 1:
+        title: Eşleştirme
+        content1: Her araçta daha küçük parçalar var. Listedeki parçaları doğru şekilde
+          eşleştir.
+        questions:
+        - text: "<h3>Teker/Kenar: 2<br/>Pencere/Kenar: 0</h3>"
+        - text: "<h3>Teker/Kenar: 2<br/>Pencere/Kenar: 1 </h3>"
+        - text: "<h3>Teker/Kenar: 2<br/>Pencere/Kenar: 6</h3>"
+        - text: "<h3>Teker/Kenar: 3<br/>Pencere/Kenar: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Seattle büyük bir şehirdir. <br/> Eugene orta bir şehirdir <br/> Hillview
+            küçük bir şehirdir.
+        answers:
+        - text: Seattle _____ bir _____ _____.
+        - text: _____ bir _____ şehirdir.
+        - text: "<h4>_____  _____ bir _____.</h4>"
+        - text: Eugene _____ şehirdir.
+      4-5 Crowdsourcing Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Bu resimlerden hangisi kitlesel kaynağı en iyi şekilde temsil eder?
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Bu faaliyetlerden hangisi kitlesel kaynağı uygulamak için en iyisi
+            olurdu?
+        answers:
+        - text: Odanı temizle
+        - text: Tatlını ye
+        - text: Saçını fırçala
+        - text: Yüzünü yıka
+      4-5 Digital Footprint Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Aşağıda listelenen bilgilerden hangisini internette paylaşmak uygundur?
+        answers:
+        - text: Doğum günün
+        - text: Favori yiyeceğin
+        - text: Adresin
+        - text: Ailenin kredi kartı numarası
+      4-5 Internet Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Code.org'ta oturum açmaya çalıştığında, hangi IP adresi sizi büyük
+            ihtimalle DNS'e götürüyor?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Internet Multi 2:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Eğer DNS (alan adı hizmeti) sizi 100.42.50.110 nolu IP adresini gönderirse
+            hangi sitede olursunuz?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - {}
+        answers:
+        - text: Lou, Lou, skip to my Lou,
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Eşleştirme
+        content1: Beceriler tablosuna bakarak kelimeler ile oluşturan programları
+          eşleştirin.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Aşağıdaki programlardan hangisi program 1 ile aynı sırayı oluşturmaz?
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: 'Sanatçı: Döngülerle İlgili Çoktan Seçmeli Sorular'
+        questions:
+        - text: Hangi bloklar dizaynı oluşturur?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: Sanatçı Çoktan Seçmeli
+        questions:
+        - text: Hangi bloklar çevre 100 olan bir dikdörtgen çizer?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: Sanatçı Çoktan Seçmeli
+        questions:
+        - text: Hangi çizim simetriktir?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: Arı Koşullar çoktan seçmeli
+        questions:
+        - text: En iyi blokları seç.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: Arı Hata ayıklama çoktan seçmeli
+        questions:
+        - text: Fonksiyonun hangi versiyonu çalışır?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: Arı Döngüler çoktan seçmeli
+        questions:
+        - text: Hangi bloklar yapbozu çözecek?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: Labirent Koşullar Çoktan Seçmeli
+        questions:
+        - text: Hangi bloklar yapbozu çözer?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Labirent eşleştirme
+        content1: bloklar için bulmacaları eşleştir
+        pre_title: Talimatlar
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: Labirent çoktan seçmeli
+        questions:
+        - text: Hangi bloklar yapbozu çözer?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       Begin planning your project_2018:
         content1: açıklama burada
       Begin planning your project_2018_2019:
         content1: açıklama burada
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U2 Design Project_2018:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U2 Design Project_2018_2019:
-        content1: açıklama burada
         title: başlık
-      CSD U2 L1 Overview:
         content1: açıklama burada
-        title: başlık
       CSD U2 L2 Overview:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U2 L3 Overview:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U2 L4 Overview:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U2 L5 Overview:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U2 L6 Overview:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U2 Lesson 6 Overview:
         content1: açıklama burada
       CSD U2 expand project:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U2 expand project_2018:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U2 expand project_2018_2019:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 project guide:
         content1: açıklama burada
       CSD U2 project guide_2018:
         content1: açıklama burada
       CSD U2 project guide_2018_2019:
         content1: açıklama burada
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: başlık
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: başlık
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: başlık
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Card Examples_2018:
         content1: açıklama burada
       CSD U3 Card Examples_2018_2019:
         content1: açıklama burada
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U3 combining rep_2018:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U3 combining rep_2018_2019:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: açıklama burada
       CSD U3 game intro_2018:
@@ -79,14 +765,14 @@ tr:
       CSD U3 platform intro_2018_2019:
         content1: açıklama burada
       CSD U5 Encryption 1:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U5 Encryption 1_2018:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U5 Encryption 1_2018_2019:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U5 Encryption 2:
         content1: açıklama burada
       CSD U5 Encryption 2_2018:
@@ -94,8 +780,8 @@ tr:
       CSD U5 Encryption 2_2018_2019:
         content1: açıklama burada
       CSD U5 L13 SFLP Interpreting Data:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U5 crosstab warmup:
         content1: açıklama burada
       CSD U5 crosstab warmup_2018:
@@ -103,1286 +789,971 @@ tr:
       CSD U5 crosstab warmup_2018_2019:
         content1: açıklama burada
       CSD U5 data visualization:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U5 data visualization_2018:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U5 data visualization_2018_2019:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U5 student record:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U5 student record_2018:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U5 student record_2018_2019:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       CSD U6 LED create intro:
         content1: açıklama burada
       CSD U6 LED create intro_2018:
         content1: açıklama burada
       CSD U6 LED create intro_2018_2019:
         content1: açıklama burada
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 final intro:
         content1: açıklama burada
       CSD U6 final intro_2018:
         content1: açıklama burada
       CSD U6 final intro_2018_2019:
         content1: açıklama burada
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Internet Simulator Setup:
         content1: açıklama burada
       Internet Simulator Setup 2:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       Internet Simulator Setup 3:
         content1: açıklama burada
+      K-1 Artist 1 Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Hangi bloklar bulmacayı çözer?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Hangi bloklar kare çizer?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Eşleştirme
+        content2: türüne göre şekil temellerini eşleştir.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Bunun içinde ne kadar nektar var?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Bunun içinde ne kadar nektar var?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: Eşleştirme
+        content2: Blokları eşleştir
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Eşleştirme
+        content2: Dans hareketleri için düğme kombinasyonlarını eşleştir.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Hayvanlardan hangisi kendisini <strong>en güvensiz</strong> durumda
+            bırakan dijital ayak izine sahiptir?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Bu bölümü döngüler ile nasıl basitleştirebilirsin?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Hangi ok Flurb' u hazineye ulaştırır?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Hangi bilgiyi çevrimiçi ortamlarda (internette) <strong>paylaşmamalıyız?</strong>
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Son blok hangisi olmalı?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Aynı olan tekrar blokları hangileridir?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Doğru olan tekrar bloğunu seçiniz.
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: Eşleştirme
+        content2: bloklarla bulmacaları eşleştir
+        pre_title: Talimatlar
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: Labirent
+        questions:
+        - text: Bu seviyenin çözümü hangi cevaptır?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Hangi algoritma Flurb' u çiçeklere götürür?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Bu algoritmanın başlangıç adımı hangisi olabilir?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Bu algoritmada boş olan yere hangi adım gelmeli?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Hangi bloklar "MOVE" kelimesini heceler?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: Çoktan Seçmeli
+        questions:
+        - text: Hangi kelime hecelenmiş?
+        answers:
+        - {}
+        - {}
+        - text: GÜNEY
       Multi-Screen Apps:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       New Challenge Introduction:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       OPD-K5 Stage3aGo:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       Prepare for your presentation:
-        content1: açıklama burada
         title: başlık
+        content1: açıklama burada
       'Technique: Frequency Analysis':
         content1: açıklama burada
       Terminology Recap:
         content1: açıklama burada
-    match:
-      2-3 Big Event Match 1:
-        content2: Dans hareketleri için düğme kombinasyonlarını eşleştir.
-        title: Eşleştirme
-      2-3 Binary Match 1:
-        content2: Her kodu ilgili harf ile eşleştirmek için anahtarı kullan
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: Eşleştirme
-      2-3 Graph Paper Match 1:
-        content1: Kılavuzla programı eşleştir.
-        title: Eşleştirme
-      2-3 Maze Match 2:
-        content1: bloklar için bulmacaları eşleştir
-        pre_title: Talimatlar
-        title: Labirent eşleştirme
-      2-3 artist loops match 1:
-        content2: Şekil için döngü eşleştir
-      2-3 artist match 1:
-        content1: Tamamlamak için bloklarla şekilleri eşleştir.
-        title: Sanatçı Eşleştirme
-      2-3 maze match 1:
-        content1: bloklar için bulmacaları eşleştir
-        title: Labirent eşleştirme
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>1. Oyuncu puanını 0 yap</h4>"
-        - text: "<h4>Oynama sırası 1. Oyuncuda</h4>"
-        - text: "<h4> Player 1 oyuncusunu toplam skora ekle</h4>"
-        - text: "<h4>Kazananı görmek için oyuncuların puanlarını karşılaştır.</h4>"
-        content1: Zar Yarışı oyununun algoritmasının çalışması için adımları doğru
-          şekilde yerleştirin.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: Eşleştirme
-      4-5 Computational Thinking Match 1:
-        content1: Her araçta daha küçük parçalar var. Listedeki parçaları doğru şekilde
-          eşleştir.
-        questions:
-        - text: "<h3>Teker/Kenar: 2<br/>Pencere/Kenar: 0</h3>"
-        - text: "<h3>Teker/Kenar: 2<br/>Pencere/Kenar: 1 </h3>"
-        - text: "<h3>Teker/Kenar: 2<br/>Pencere/Kenar: 6</h3>"
-        - text: "<h3>Teker/Kenar: 3<br/>Pencere/Kenar: 2</h3>"
-        title: Eşleştirme
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: Beceriler tablosuna bakarak kelimeler ile oluşturan programları
-          eşleştirin.
-        title: Eşleştirme
-      4-5 maze match 1:
-        content1: bloklar için bulmacaları eşleştir
-        pre_title: Talimatlar
-        title: Labirent eşleştirme
-      K-1 Artist 2 Match 2:
-        content2: türüne göre şekil temellerini eşleştir.
-        title: Eşleştirme
-      K-1 Bee Loops Match 1:
-        content2: Blokları eşleştir
-        title: Eşleştirme
-      K-1 Big Event Match 1:
-        content2: Dans hareketleri için düğme kombinasyonlarını eşleştir.
-        title: Eşleştirme
-      K-1 Maze Match 1:
-        content2: bloklarla bulmacaları eşleştir
-        pre_title: Talimatlar
-        title: Eşleştirme
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: Kare ile başlayın<br/>Karenin üstünü üçgen yerleştirin<br/>Karenin
-            altına üçgen yerleştirin
-          correct: false
-        - correct: true
-        - text: Kare ile başla<br/>Karenin üzerine bir paralelkenar koy<br/>Paralelkenarın
-            sağına bir üçgen koy
-          correct: false
-        - text: Kare ile başla<br/>Karenin üzerine bir üçgen koy<br/>Üçgenin sağına
-            bir paralelkenar koy
-          correct: false
-        questions:
-        - text: Sağlanan görüntü için bir algoritma seçin.
-        title: Çoktan Seçmeli
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: Üçgen ile başlayın<br/>Üçgenin altına kare yerleştirin<br/>Karenin
-          altına başka bir üçgen daha yerleştirin
-        questions:
-        - text: Hangi resim bu algoritmayı <em>takip etmez</em>?
-        title: Çoktan Seçmeli
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Oyun kurallarına uygun olarak, hangi kağıt seti doğru olarak puan
-            alır?
-        title: Çoktan Seçmeli
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Bu bölümü döngüler ile nasıl basitleştirebilirsin?
-        title: Çoktan Seçmeli
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Bu resim hangi programla yapılmıştır?
-        title: Çoktan Seçmeli
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: Labirent çoktan seçmeli
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: Çoktan Seçmeli
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Hangi resim-program ikilisi hata içermez?
-        title: Çoktan Seçmeli
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Verilen fonksiyonları kullanarak  resmi çizmek için doğru blokları
-            seçin
-        title: 'Sanatçı: Fonksiyonlarla İlgili Çoktan Seçmeli Sorular 1'
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hangi şekil bu döngü tarafından yapılmıştır?
-        title: 'Sanatçı: Döngülerle İlgili Çoktan Seçmeli Sorular'
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Hangi şekil bu program tarafından yapılmıştır?
-        title: 'Sanatçı: Döngülerle İlgili Çoktan Seçmeli Sorular'
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Aşağıdaki karşılaştırmalardan hangisi doğru?
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: En iyi blokları seç.
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hangi blok tüm nektarı toplar?
-        title: Arı döngüleri çoktan seçmeli Bir
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hangi blok seti doğru cevap?
-        title: Labirent çoktan seçmeli Bir
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: Dişini fırçalıyor
-          correct: false
-        - text: Tanımlama bilgileri
-          correct: false
-        - text: Alışveriş listesinden alışveriş
-          correct: false
-        - text: Muz
-          correct: true
-        questions:
-        - text: Bu öğelerden hangisi algoritmayı en zor açıklayandır?
-        title: Çoktan Seçmeli
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: Seattle _____ bir _____ _____.
-          correct: false
-        - text: _____ bir _____ şehirdir.
-          correct: true
-        - text: "<h4>_____  _____ bir _____.</h4>"
-          correct: false
-        - text: Eugene _____ şehirdir.
-          correct: false
-        questions:
-        - text: Seattle büyük bir şehirdir. <br/> Eugene orta bir şehirdir <br/> Hillview
-            küçük bir şehirdir.
-        title: Çoktan Seçmeli
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: Bu resimlerden hangisi kitlesel kaynağı en iyi şekilde temsil eder?
-        title: Çoktan Seçmeli
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: Odanı temizle
-          correct: true
-        - text: Tatlını ye
-          correct: false
-        - text: Saçını fırçala
-          correct: false
-        - text: Yüzünü yıka
-          correct: false
-        questions:
-        - text: Bu faaliyetlerden hangisi kitlesel kaynağı uygulamak için en iyisi
-            olurdu?
-        title: Çoktan Seçmeli
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: Doğum günün
-          correct: false
-        - text: Favori yiyeceğin
-          correct: true
-        - text: Adresin
-          correct: false
-        - text: Ailenin kredi kartı numarası
-          correct: false
-        questions:
-        - text: Aşağıda listelenen bilgilerden hangisini internette paylaşmak uygundur?
-        title: Çoktan Seçmeli
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Code.org'ta oturum açmaya çalıştığında, hangi IP adresi sizi büyük
-            ihtimalle DNS'e götürüyor?
-        title: Çoktan Seçmeli
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Eğer DNS (alan adı hizmeti) sizi 100.42.50.110 nolu IP adresini gönderirse
-            hangi sitede olursunuz?
-        title: Çoktan Seçmeli
-      4-5 Songwriting Multi 1:
-        answers:
-        - text: Lou, Lou, skip to my Lou,
-          correct: false
-        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
-            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
-          correct: true
-        - 
-        - 
-        title: Çoktan Seçmeli
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Aşağıdaki programlardan hangisi program 1 ile aynı sırayı oluşturmaz?
-        title: Çoktan Seçmeli
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hangi bloklar dizaynı oluşturur?
-        title: 'Sanatçı: Döngülerle İlgili Çoktan Seçmeli Sorular'
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hangi bloklar çevre 100 olan bir dikdörtgen çizer?
-        title: Sanatçı Çoktan Seçmeli
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hangi çizim simetriktir?
-        title: Sanatçı Çoktan Seçmeli
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: En iyi blokları seç.
-        title: Arı Koşullar çoktan seçmeli
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Fonksiyonun hangi versiyonu çalışır?
-        title: Arı Hata ayıklama çoktan seçmeli
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hangi bloklar yapbozu çözecek?
-        title: Arı Döngüler çoktan seçmeli
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hangi bloklar yapbozu çözer?
-        title: Labirent Koşullar Çoktan Seçmeli
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hangi bloklar yapbozu çözer?
-        title: Labirent çoktan seçmeli
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: başlık
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: başlık
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: başlık
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hangi bloklar bulmacayı çözer?
-        title: Çoktan Seçmeli
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hangi bloklar kare çizer?
-        title: Çoktan Seçmeli
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Bunun içinde ne kadar nektar var?
-        title: Çoktan Seçmeli
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Bunun içinde ne kadar nektar var?
-        title: Çoktan Seçmeli
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Hayvanlardan hangisi kendisini <strong>en güvensiz</strong> durumda
-            bırakan dijital ayak izine sahiptir?
-        title: Çoktan Seçmeli
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Bu bölümü döngüler ile nasıl basitleştirebilirsin?
-        title: Çoktan Seçmeli
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hangi ok Flurb' u hazineye ulaştırır?
-        title: Çoktan Seçmeli
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hangi bilgiyi çevrimiçi ortamlarda (internette) <strong>paylaşmamalıyız?</strong>
-        title: Çoktan Seçmeli
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Son blok hangisi olmalı?
-        title: Çoktan Seçmeli
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Aynı olan tekrar blokları hangileridir?
-        title: Çoktan Seçmeli
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Doğru olan tekrar bloğunu seçiniz.
-        title: Çoktan Seçmeli
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Bu seviyenin çözümü hangi cevaptır?
-        title: Labirent
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hangi algoritma Flurb' u çiçeklere götürür?
-        title: Çoktan Seçmeli
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Bu algoritmanın başlangıç adımı hangisi olabilir?
-        title: Çoktan Seçmeli
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Bu algoritmada boş olan yere hangi adım gelmeli?
-        title: Çoktan Seçmeli
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hangi bloklar "MOVE" kelimesini heceler?
-        title: Çoktan Seçmeli
-      K-1 Word Search Multi 3:
-        answers:
-        - 
-        - correct: true
-        - text: GÜNEY
-          correct: false
-        questions:
-        - text: Hangi kelime hecelenmiş?
-        title: Çoktan Seçmeli
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Yanlış
+        - {}
+        - {}
+        - {}
+        - feedback: Yanlış
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Yanlış
+        - {}
+        - {}
+        - {}
+        - feedback: Yanlış
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Bilmiyorum
-          correct: false
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Bilmiyorum
-          correct: false
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Bilmiyorum
-          correct: false
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_scrat_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: Bilmiyorum
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}

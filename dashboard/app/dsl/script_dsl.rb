@@ -250,7 +250,7 @@ class ScriptDSL < BaseDSL
       i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
-    {'name' => {@name => {'stages' => i18n_strings}}}
+    {@name => {'stages' => i18n_strings}}
   end
 
   def self.parse_file(filename, name = nil)

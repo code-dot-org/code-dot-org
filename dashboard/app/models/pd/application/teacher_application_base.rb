@@ -579,7 +579,7 @@ module Pd::Application
           zip: hash[:school_zip_code],
           school_name: hash[:school_name],
           full_address: hash[:school_address],
-          validation_type: SchoolInfo::VALIDATION_NONE
+          validation_type: SchoolInfo::VALIDATION_COMPLETE
         }
       end
     end

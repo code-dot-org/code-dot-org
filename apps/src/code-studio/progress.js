@@ -182,6 +182,7 @@ progress.renderCourseProgress = function(scriptData) {
         courseName={scriptData.course_name}
         locale={scriptData.locale}
         showAssignButton={scriptData.show_assign_button}
+        userId={scriptData.user_id}
       />
     </Provider>,
     mountPoint
@@ -237,6 +238,7 @@ function initViewAs(store, scriptData) {
  */
 function queryUserProgress(store, scriptData, currentLevelId) {
   const onOverviewPage = !currentLevelId;
+  const pageType = currentLevelId ? 'level' : 'script_overview';
 
   $.ajax('/api/user_progress/' + scriptData.name, {
     data: {
@@ -281,7 +283,9 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         store,
         scriptData.id,
         scriptData.section,
-        scriptData.name
+        scriptData.name,
+        null,
+        pageType
       );
     }
 

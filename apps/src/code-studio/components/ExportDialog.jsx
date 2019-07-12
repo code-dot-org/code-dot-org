@@ -12,6 +12,8 @@ import exportExpoIconPng from '../../templates/export/expo/icon.png';
 import SendToPhone from './SendToPhone';
 import project from '../initApp/project';
 
+const APK_BUILD_STATUS_CHECK_PERIOD = 60000;
+
 function recordExport(type) {
   firehoseClient.putRecord(
     {
@@ -30,6 +32,7 @@ const baseStyles = {
     borderWidth: 1,
     borderColor: color.border_gray,
     fontSize: 'larger',
+    outline: 'none',
     padding: 10,
     marginTop: 0,
     marginBottom: 0,
@@ -96,6 +99,16 @@ const styles = {
     color: color.white
   },
   actionButtonDisabled: {
+    ...baseStyles.button,
+    backgroundColor: color.gray,
+    color: color.white
+  },
+  backButton: {
+    ...baseStyles.button,
+    backgroundColor: color.gray,
+    color: color.black
+  },
+  backButtonDisabled: {
     ...baseStyles.button,
     backgroundColor: color.gray,
     color: color.white
@@ -188,10 +201,13 @@ class ExportDialog extends React.Component {
       t: PropTypes.func.isRequired
     }).isRequired,
     exportApp: PropTypes.func.isRequired,
-    projectUpdatedAt: PropTypes.string,
+    expoGenerateApk: PropTypes.func.isRequired,
+    expoCheckApkBuild: PropTypes.func.isRequired,
+    expoCancelApkBuild: PropTypes.func.isRequired,
+    exportGeneratedProperties: PropTypes.object,
+    md5SavedSources: PropTypes.string.isRequired,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
-    channelId: PropTypes.string.isRequired,
     appType: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
@@ -206,25 +222,94 @@ class ExportDialog extends React.Component {
   };
 
   componentDidUpdate(prevProps) {
-    const {isOpen, projectUpdatedAt} = this.props;
-    const {exportProjectUpdatedAt} = this.state;
+    const {isOpen, md5SavedSources} = this.props;
+    const {md5PublishSavedSources} = this.state;
     if (isOpen && !prevProps.isOpen) {
       recordExport('open');
-      if (projectUpdatedAt !== exportProjectUpdatedAt) {
-        // The project has changed since we last opened the dialog,
-        // reset our export state, so we will need to export again:
-        this.resetExportState();
+      const md5ApkSavedSources = this.getMd5ApkSavedSources();
+      const sourcesChangedSinceExport =
+        md5ApkSavedSources && md5SavedSources !== md5ApkSavedSources;
+      const sourcesChangedThisInstance =
+        md5PublishSavedSources && md5SavedSources !== md5PublishSavedSources;
+      if (sourcesChangedSinceExport) {
+        // Cancel any build that may have started with an older version of this
+        // project before this page was reloaded:
+        this.cancelIfPreexistingApkBuild();
       }
+      if (sourcesChangedThisInstance) {
+        // The project has changed since we last published within this dialog,
+        // cancel any builds in progress and reset our export state, so we will
+        // start all over again:
+        this.cancelIfGeneratingAndResetState();
+      }
+    }
+  }
+
+  clearWaitTimer() {
+    if (this.waitTimerId) {
+      clearTimeout(this.waitTimerId);
+      this.waitTimerId = null;
+    }
+  }
+
+  cancelIfGeneratingAndResetState() {
+    const {screen, generatingApk} = this.state;
+    if (screen === 'generating' && generatingApk) {
+      this.clearWaitTimer();
+
+      const {expoCancelApkBuild, md5SavedSources} = this.props;
+      const {expoSnackId, apkBuildId} = this.state;
+
+      expoCancelApkBuild({
+        md5SavedSources,
+        expoSnackId,
+        apkBuildId
+      });
+    }
+    // If we are publishing to expo (state.exporting is true), we don't need
+    // to cancel, just resetting our state is good enough.
+    this.resetExportState();
+  }
+
+  getMd5ApkSavedSources() {
+    const {exportGeneratedProperties = {}} = this.props;
+    const {android = {}} = exportGeneratedProperties;
+    const {md5ApkSavedSources} = android;
+
+    return md5ApkSavedSources;
+  }
+
+  //
+  // Cancel preexisting builds for this project (the page may have been
+  // refreshed while a build was in progress)
+  //
+  cancelIfPreexistingApkBuild() {
+    const {exportGeneratedProperties = {}} = this.props;
+    const {android = {}} = exportGeneratedProperties;
+    const {md5ApkSavedSources, snackId, apkBuildId, apkUri} = android;
+
+    // If we have an apkBuildId, but not apkUri, there was a build
+    // in process that needs to be canceled because Expo will only
+    // allow one build to take place at a time
+    if (apkBuildId && !apkUri) {
+      const {expoCancelApkBuild} = this.props;
+      expoCancelApkBuild({
+        md5SavedSources: md5ApkSavedSources,
+        expoSnackId: snackId,
+        apkBuildId
+      });
     }
   }
 
   resetExportState() {
     this.setState({
+      screen: 'intro',
       exporting: false,
       exportError: null,
       expoUri: undefined,
       expoSnackId: undefined,
       iconUri: undefined,
+      md5PublishSavedSources: undefined,
       splashImageUri: undefined,
       showSendToPhone: false,
       apkUri: undefined,
@@ -234,15 +319,6 @@ class ExportDialog extends React.Component {
   }
 
   close = () => {
-    const {expoUri} = this.state;
-    if (expoUri) {
-      // If we are re-opened, start at the platform page:
-      this.setState({screen: 'platform'});
-    } else {
-      // If we don't haven't succesfully exported, then clear all export
-      // state so we will start again fresh the next time:
-      this.resetExportState();
-    }
     recordExport('close');
     this.props.onClose();
   };
@@ -282,15 +358,22 @@ class ExportDialog extends React.Component {
         splashImageUri
       };
     }
-    const {exportApp, projectUpdatedAt} = this.props;
+    const {exportApp, md5SavedSources} = this.props;
     this.setState({
       exporting: true,
-      exportProjectUpdatedAt: projectUpdatedAt
+      md5PublishSavedSources: md5SavedSources
     });
     try {
       const exportResult = await exportApp({
         mode: 'expoPublish'
       });
+      const {exporting} = this.state;
+      if (!exporting) {
+        // The user has canceled (resetExportState() was called)
+        // Simply return an empty object and don't modify state
+        // or return the exportResult:
+        return {};
+      }
       this.setState({
         exporting: false,
         exportError: null,
@@ -300,7 +383,7 @@ class ExportDialog extends React.Component {
     } catch (e) {
       this.setState({
         exporting: false,
-        exportProjectUpdatedAt: null,
+        md5PublishSavedSources: null,
         expoUri: null,
         expoSnackId: null,
         exportError: 'Failed to create app. Please try again later.'
@@ -319,9 +402,10 @@ class ExportDialog extends React.Component {
   }
 
   async publishAndGenerateApk() {
-    const {exportApp} = this.props;
+    const {expoGenerateApk, md5SavedSources} = this.props;
+    const {apkUri} = this.state;
 
-    if (this.state.apkUri) {
+    if (apkUri) {
       // We have already have generated an APK
       return;
     }
@@ -333,28 +417,126 @@ class ExportDialog extends React.Component {
     } = await this.publishExpoExport();
 
     if (!expoSnackId) {
-      // We failed to generate a snackId
+      // We failed to generate a snackId, simply return
+      // (publishExpoExport() will have set exportError in state as needed)
       return;
     }
 
     this.setState({generatingApk: true});
     try {
-      const apkUri = await exportApp({
-        mode: 'expoGenerateApk',
+      const apkBuildId = await expoGenerateApk({
+        md5SavedSources,
         expoSnackId,
         iconUri,
         splashImageUri
       });
-      this.setState({
-        generatingApk: false,
-        apkError: null,
-        apkUri
-      });
+      this.setState({apkBuildId});
+      return this.waitForApkBuild(apkBuildId, expoSnackId);
     } catch (e) {
       this.setState({
         generatingApk: false,
-        apkError: 'Failed to create Android app. Please try again later.'
+        apkError: 'Failed to create Android app. Please try again later.',
+        apkUri: null,
+        apkBuildId: null
       });
+    }
+  }
+
+  checkForApkBuild(apkBuildId, expoSnackId) {
+    const {expoCheckApkBuild, md5SavedSources} = this.props;
+
+    return expoCheckApkBuild({
+      md5SavedSources,
+      expoSnackId,
+      apkBuildId
+    });
+  }
+
+  async waitForApkBuild(apkBuildId, expoSnackId) {
+    this.clearWaitTimer();
+
+    try {
+      const apkUri = await this.checkForApkBuild(apkBuildId, expoSnackId);
+      const {generatingApk} = this.state;
+      if (!generatingApk) {
+        // Build was canceled while we were checking on the status
+        return;
+      }
+      if (apkUri) {
+        this.setState({
+          generatingApk: false,
+          apkError: null,
+          apkUri
+        });
+      } else {
+        // Check status again...
+        // NOTE: we don't timeout automatically
+        this.waitTimerId = setTimeout(() => {
+          this.waitTimerId = null;
+          this.waitForApkBuild(apkBuildId, expoSnackId);
+        }, APK_BUILD_STATUS_CHECK_PERIOD);
+      }
+    } catch (e) {
+      this.setState({
+        generatingApk: false,
+        apkError: 'Failed to create Android app. Please try again later.',
+        apkUri: null,
+        apkBuildId: null
+      });
+    }
+  }
+
+  //
+  // Return properties related to the last saved APK build as long as the
+  // project's md5SavedSources hash matches
+  //
+  getValidPreviousApkInfo() {
+    const {exportGeneratedProperties = {}, md5SavedSources} = this.props;
+    const {android = {}} = exportGeneratedProperties;
+    const {md5ApkSavedSources, ...apkInfo} = android;
+
+    if (md5ApkSavedSources && md5SavedSources === md5ApkSavedSources) {
+      return apkInfo;
+    }
+    return {};
+  }
+
+  //
+  // Generates an APK - or monitors an existing APK build in progress
+  // Returns: Promise
+  //
+  generateApkAsNeeded() {
+    const {
+      apkUri,
+      apkBuildId,
+      snackId: expoSnackId
+    } = this.getValidPreviousApkInfo();
+    const {md5SavedSources} = this.props;
+    if (apkUri) {
+      // The previous build completed, no need to generate a new one.
+      // Set up state to match a completed export:
+      this.setState({
+        apkUri,
+        apkBuildId,
+        expoSnackId,
+        md5PublishSavedSources: md5SavedSources
+      });
+      return Promise.resolve();
+    } else if (apkBuildId) {
+      // The previous build was in progress, resume monitoring that build.
+      // Set up state to match an export in progress:
+      this.setState({
+        generatingApk: true,
+        apkUri: null,
+        apkBuildId,
+        expoSnackId,
+        md5PublishSavedSources: md5SavedSources
+      });
+      return this.waitForApkBuild(apkBuildId, expoSnackId);
+    } else {
+      // There is no previous build that matches the current sources,
+      // so publish and generate a new build:
+      return this.publishAndGenerateApk();
     }
   }
 
@@ -363,22 +545,58 @@ class ExportDialog extends React.Component {
 
     switch (screen) {
       case 'intro':
-        return this.setState({screen: 'platform'});
-      // case 'export':
-      //   return this.setState({screen: 'platform'});
+        this.setState({screen: 'platform'});
+        break;
       case 'platform':
-        return this.setState({screen: 'publish'});
-      // return this.setState({screen: 'icon'});
+        this.setState({screen: 'publish'});
+        break;
+      // this.setState({screen: 'icon'});
+      // break;
       // case 'icon':
-      //   return this.setState({screen: 'publish'});
+      //   this.setState({screen: 'publish'});
+      //   break;
       case 'publish':
-        this.publishAndGenerateApk();
-        return this.setState({screen: 'generating'});
+        this.generateApkAsNeeded();
+        this.setState({screen: 'generating'});
+        break;
       case 'generating':
-        return this.close();
+        this.close();
+        break;
       default:
         throw new Error(`ExportDialog: Unexpected screen: ${screen}`);
     }
+  };
+
+  onBackButton = () => {
+    const {screen} = this.state;
+
+    switch (screen) {
+      case 'intro':
+        break;
+      case 'platform':
+        this.setState({screen: 'intro'});
+        break;
+      // case 'icon':
+      case 'publish':
+        this.setState({screen: 'platform'});
+        break;
+      case 'generating':
+        this.setState({screen: 'publish'});
+        break;
+      default:
+        throw new Error(`ExportDialog: Unexpected screen: ${screen}`);
+    }
+  };
+
+  onCancelButton = () => {
+    // If an operation is in progress, cancel and reset back the
+    // beginning as part of the close operation:
+    const {exporting} = this.state;
+    if (exporting) {
+      this.resetExportState();
+    }
+    this.cancelIfGeneratingAndResetState();
+    this.close();
   };
 
   renderMainContent() {
@@ -387,8 +605,6 @@ class ExportDialog extends React.Component {
     switch (screen) {
       case 'intro':
         return this.renderIntroPage();
-      // case 'export':
-      //   return this.renderExportPage();
       case 'platform':
         return this.renderPlatformPage();
       // case 'icon':
@@ -418,53 +634,6 @@ class ExportDialog extends React.Component {
             opening the Code.org website. If you make changes to your app after
             you export, you will need to export it again.
           </p>
-          {/*<p style={styles.p}>
-            The first step is to install the Expo app on your mobile device so
-            you can test your project within the Expo app.
-          </p>
-          <button
-            type="button"
-            style={styles.iosAppStoreButton}
-            onClick={this.onInstallExpoIOS}
-          >
-            iOS Expo App
-          </button>
-          <button
-            type="button"
-            style={styles.androidGooglePlayButton}
-            onClick={this.onInstallExpoAndroid}
-          >
-            Android Expo App
-          </button>*/}
-        </div>
-      </div>
-    );
-  }
-
-  renderExportPage() {
-    const {
-      exporting,
-      exportError,
-      expoUri,
-      expoSnackId,
-      iconUri,
-      splashImageUri
-    } = this.state;
-    // TODO: This page should be updated as a transition page to snack.expo.io
-    // when iOS IPA export is ready to go
-    return (
-      <div>
-        <div style={styles.section}>
-          <p style={styles.title}>Preview your project in the Expo app</p>
-        </div>
-        <div style={styles.section}>
-          <p style={styles.p}>TBD.</p>
-          <p style={styles.p}>{`exporting: ${exporting}`}</p>
-          <p style={styles.p}>{`exportError: ${exportError}`}</p>
-          <p style={styles.p}>{`expoUri: ${expoUri}`}</p>
-          <p style={styles.p}>{`expoSnackId: ${expoSnackId}`}</p>
-          <p style={styles.p}>{`iconUri: ${iconUri}`}</p>
-          <p style={styles.p}>{`splashImageUri: ${splashImageUri}`}</p>
         </div>
       </div>
     );
@@ -553,18 +722,16 @@ class ExportDialog extends React.Component {
     );
   }
 
+  isGenerating() {
+    const {screen, exporting, generatingApk} = this.state;
+    return screen === 'generating' && (exporting || generatingApk);
+  }
+
   renderGeneratingPage() {
-    const {
-      exporting,
-      generatingApk,
-      showSendToPhone,
-      exportError,
-      apkError,
-      apkUri = ''
-    } = this.state;
-    const waiting = exporting || generatingApk;
+    const {showSendToPhone, exportError, apkError, apkUri = ''} = this.state;
+    const waiting = this.isGenerating();
     const error = exportError || apkError;
-    const {appType, channelId} = this.props;
+    const {appType} = this.props;
     const titleText = waiting
       ? 'Creating Android Package...'
       : error
@@ -611,7 +778,6 @@ class ExportDialog extends React.Component {
               </button>
               {showSendToPhone && (
                 <SendToPhone
-                  channelId={channelId}
                   appType={appType}
                   downloadUrl={apkUri}
                   isLegacyShare={false}
@@ -636,14 +802,23 @@ class ExportDialog extends React.Component {
         info.text = 'Finish';
         info.enabled = !exporting && !generatingApk;
         break;
-      case 'export':
-        info.enabled = !exporting;
-        break;
       case 'publish':
         info.text = 'Create';
         break;
     }
     return info;
+  }
+
+  backButtonEnabled() {
+    const {screen, exporting, generatingApk} = this.state;
+    switch (screen) {
+      case 'intro':
+        return false;
+      case 'generating':
+        return !exporting && !generatingApk;
+      default:
+        return true;
+    }
   }
 
   render() {
@@ -657,6 +832,7 @@ class ExportDialog extends React.Component {
       signInState,
       userSharingDisabled
     } = this.props;
+    const {screen} = this.state;
 
     const needToSignIn =
       !isProjectLevel && signInState !== SignInState.SignedIn;
@@ -669,6 +845,9 @@ class ExportDialog extends React.Component {
       text: actionText,
       enabled: actionEnabled
     } = this.getActionButtonInfo();
+    const backVisible = screen !== 'intro';
+    const cancelVisible = this.isGenerating();
+    const backEnabled = this.backButtonEnabled();
     const showShareWarning = !canShareSocial;
     return (
       <div>
@@ -721,13 +900,29 @@ class ExportDialog extends React.Component {
                 )}
                 {this.renderMainContent()}
                 <div style={styles.buttonRow}>
-                  <button
-                    type="button"
-                    style={styles.cancelButton}
-                    onClick={this.close}
-                  >
-                    Cancel
-                  </button>
+                  {cancelVisible && (
+                    <button
+                      type="button"
+                      style={styles.cancelButton}
+                      onClick={this.onCancelButton}
+                    >
+                      Cancel Package Creation
+                    </button>
+                  )}
+                  {backVisible && (
+                    <button
+                      type="button"
+                      style={
+                        backEnabled
+                          ? styles.backButton
+                          : styles.backButtonDisabled
+                      }
+                      onClick={this.onBackButton}
+                      disabled={!backEnabled}
+                    >
+                      Back
+                    </button>
+                  )}
                   <button
                     type="button"
                     style={
@@ -755,8 +950,11 @@ export const UnconnectedExportDialog = ExportDialog;
 export default connect(
   state => ({
     exportApp: state.pageConstants.exportApp,
+    expoGenerateApk: state.pageConstants.expoGenerateApk,
+    expoCheckApkBuild: state.pageConstants.expoCheckApkBuild,
+    expoCancelApkBuild: state.pageConstants.expoCancelApkBuild,
     isOpen: state.exportDialog.isOpen,
-    projectUpdatedAt: state.header.projectUpdatedAt,
+    exportGeneratedProperties: state.exportDialog.exportGeneratedProperties,
     signInState: state.progress.signInState
   }),
   dispatch => ({

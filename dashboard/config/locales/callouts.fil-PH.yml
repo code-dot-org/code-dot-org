@@ -617,6 +617,9 @@ fil-PH:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi
           ito kung ilan sa mga blokeng ito ang natira para magamit mo.
       courseD_scrat_ramp6:
+        courseE_artist_ramp8_1: Maaari mong baguhin ang numerong ito.
+        courseE_artist_ramp8_2: Mag-click dito para ma-type kung ilang beses uulitin
+          ang iyong code.
         courseD_maze_ramp6_1: Kahit anong code ang ilalagay mo dito ay mag-uulit ng
           ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin
           ang natirang programa.
@@ -624,6 +627,8 @@ fil-PH:
         courseD_maze_ramp7_1: Ito ang iyong unang hamon na palaisipan! Ang mga ito
           ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
       courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: Ito ang iyong unang hamon na palaisipan! Ang mga ito
+          ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
         courseE_artist_ramp8_1: Maaari mong baguhin ang numerong ito.
         courseE_artist_ramp8_2: Mag-click dito para ma-type kung ilang beses uulitin
           ang iyong code.
@@ -649,10 +654,6 @@ fil-PH:
         courseD_artist_functions8_1: Ang iyong mga bloke para sa paglikha ng mga function
           ay inilipat sa ilalim ng label na ito sa loob ng iyong toolbox.
       courseE_artist_ramp8:
-        courseE_artist_ramp8_1: Maaari mong baguhin ang numerong ito.
-        courseE_artist_ramp8_2: Mag-click dito para ma-type kung ilang beses uulitin
-          ang iyong code.
-      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Maaari mong baguhin ang numerong ito.
         courseE_artist_ramp8_2: Mag-click dito para ma-type kung ilang beses uulitin
           ang iyong code.

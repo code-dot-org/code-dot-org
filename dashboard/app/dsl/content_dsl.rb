@@ -53,6 +53,6 @@ class ContentDSL < BaseDSL
     ).each do |property|
       strings[property] = @hash[property] unless @hash[property].blank?
     end
-    {@name => strings.stringify_keys}
+    strings.stringify_keys
   end
 end
