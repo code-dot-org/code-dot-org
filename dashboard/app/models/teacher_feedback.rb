@@ -14,6 +14,8 @@
 #  student_visit_count      :integer
 #  student_first_visited_at :datetime
 #  student_last_visited_at  :datetime
+#  script_level_id          :integer
+#  seen_on_feedback_page_at :datetime
 #
 # Indexes
 #
