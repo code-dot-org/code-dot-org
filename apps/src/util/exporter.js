@@ -82,6 +82,16 @@ async function expoBuildOrCheckApk(options, mode, sessionSecret) {
   } = appJson.expo;
   appJson.expo = onlineOnlyExpo;
 
+  // Expo requires that these additional keys (iconUrl, imageUrl)
+  // are passed when the files are not provided locally
+  appJson.expo.iconUrl = appJson.expo.icon;
+  appJson.expo.splash.imageUrl = appJson.expo.splash.image;
+
+  // Starting with SDK 33, the turtle build system requires that
+  // we specify our dependencies here (we currently depend only
+  // on the 'expo' module):
+  appJson.expo.dependencies = ['expo'];
+
   if (buildMode) {
     return buildApk(session, appJson.expo);
   } else {
