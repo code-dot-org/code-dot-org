@@ -156,7 +156,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
-        "multi" => {
+        "dsls" => {
           contained_level.name => {
             'questions': [{'text': 'texte de la question'}],
             'answers': [
