@@ -85,6 +85,21 @@ const styles = {
 
 /**
  * Export Dialog used by projects
+ *
+ * This dialog contains a series of pages in a wizard-like flow to help a student export
+ * their applab or gamelab app into a mobile app for Android or iOS.
+ *
+ * The process requires that we first publish the app to Expo (including a stock React
+ * Native wrapper app that hosts a WebView with the student's HTML app files)
+ *
+ * For Android, we then ask Expo to start building a native Android Package (APK).
+ * This process uses Expo's build farm and takes 10-15 minutes (the assets are bundled
+ * alongside the React Native app and then Android java code is compiled, packaged, and
+ * signed)
+ *
+ * For iOS, we plan to transition to the Expo web site to ask the student to enter their
+ * Apple developer credentials. Expo will then build a native iOS app (IPA) and upload
+ * it to TestFlight.
  */
 class ExportDialog extends React.Component {
   static propTypes = {
@@ -546,13 +561,55 @@ class ExportDialog extends React.Component {
     }
   }
 
+  renderBlocked() {
+    const {userSharingDisabled} = this.props;
+
+    // NOTE: this uses the i18n that we import, not the i18n passed as a prop
+    const blockText = userSharingDisabled
+      ? i18n.sharingBlockedByTeacher()
+      : i18n.createAccountToShareDescription();
+
+    return (
+      <div style={{position: 'relative'}}>
+        <div style={{paddingRight: 10}}>
+          <p>{blockText}</p>
+        </div>
+        <div style={{clear: 'both', height: 40}}>
+          <button
+            type="button"
+            id="continue-button"
+            style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
+            onClick={this.close}
+          >
+            {i18n.dialogOK()}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  renderWrappedInBaseDialog(children) {
+    const {hideBackdrop, isOpen} = this.props;
+
+    return (
+      <div>
+        <BaseDialog
+          style={styles.modal}
+          isOpen={isOpen}
+          handleClose={this.close}
+          hideBackdrop={hideBackdrop}
+        >
+          {children}
+        </BaseDialog>
+      </div>
+    );
+  }
+
   render() {
     const {
       canShareSocial,
-      hideBackdrop,
       i18n: i18nProp,
       isAbusive,
-      isOpen,
       isProjectLevel,
       signInState,
       userSharingDisabled
@@ -562,9 +619,10 @@ class ExportDialog extends React.Component {
     const needToSignIn =
       !isProjectLevel && signInState !== SignInState.SignedIn;
     const blockExport = userSharingDisabled || needToSignIn;
-    const blockText = userSharingDisabled
-      ? i18n.sharingBlockedByTeacher()
-      : i18n.createAccountToShareDescription();
+
+    if (blockExport) {
+      return this.renderWrappedInBaseDialog(this.renderBlocked());
+    }
 
     const {
       text: actionText,
@@ -574,97 +632,68 @@ class ExportDialog extends React.Component {
     const cancelVisible = this.isGenerating();
     const backEnabled = this.backButtonEnabled();
     const showShareWarning = !canShareSocial;
-    return (
+
+    return this.renderWrappedInBaseDialog(
       <div>
-        <BaseDialog
-          style={styles.modal}
-          isOpen={isOpen}
-          handleClose={this.close}
-          hideBackdrop={hideBackdrop}
+        <div
+          id="project-export"
+          className="modal-content no-modal-icon"
+          style={{position: 'relative'}}
         >
-          {blockExport && (
-            <div style={{position: 'relative'}}>
-              <div style={{paddingRight: 10}}>
-                <p>{blockText}</p>
-              </div>
-              <div style={{clear: 'both', height: 40}}>
-                <button
-                  type="button"
-                  id="continue-button"
-                  style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
-                  onClick={this.close}
-                >
-                  {i18n.dialogOK()}
-                </button>
-              </div>
-            </div>
+          <p className="dialog-title">Export your project</p>
+          {isAbusive && (
+            <AbuseError
+              i18n={{
+                tos: i18nProp.t('project.abuse.tos'),
+                contact_us: i18nProp.t('project.abuse.contact_us')
+              }}
+              className="alert-error"
+              style={styles.abuseStyle}
+              textStyle={styles.abuseTextStyle}
+            />
           )}
-          {!blockExport && (
-            <div>
-              <div
-                id="project-export"
-                className="modal-content no-modal-icon"
-                style={{position: 'relative'}}
+          {showShareWarning && (
+            <p style={styles.shareWarning}>
+              {i18nProp.t('project.share_u13_warning')}
+            </p>
+          )}
+          {this.renderMainContent()}
+          <div style={styles.buttonRow}>
+            {cancelVisible && (
+              <button
+                type="button"
+                style={styles.cancelButton}
+                onClick={this.onCancelButton}
               >
-                <p className="dialog-title">Export your project</p>
-                {isAbusive && (
-                  <AbuseError
-                    i18n={{
-                      tos: i18nProp.t('project.abuse.tos'),
-                      contact_us: i18nProp.t('project.abuse.contact_us')
-                    }}
-                    className="alert-error"
-                    style={styles.abuseStyle}
-                    textStyle={styles.abuseTextStyle}
-                  />
-                )}
-                {showShareWarning && (
-                  <p style={styles.shareWarning}>
-                    {i18nProp.t('project.share_u13_warning')}
-                  </p>
-                )}
-                {this.renderMainContent()}
-                <div style={styles.buttonRow}>
-                  {cancelVisible && (
-                    <button
-                      type="button"
-                      style={styles.cancelButton}
-                      onClick={this.onCancelButton}
-                    >
-                      Cancel Package Creation
-                    </button>
-                  )}
-                  {backVisible && (
-                    <button
-                      type="button"
-                      style={
-                        backEnabled
-                          ? styles.backButton
-                          : styles.backButtonDisabled
-                      }
-                      onClick={this.onBackButton}
-                      disabled={!backEnabled}
-                    >
-                      Back
-                    </button>
-                  )}
-                  <button
-                    type="button"
-                    style={
-                      actionEnabled
-                        ? styles.actionButton
-                        : styles.actionButtonDisabled
-                    }
-                    onClick={this.onActionButton}
-                    disabled={!actionEnabled}
-                  >
-                    {actionText}
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-        </BaseDialog>
+                Cancel Package Creation
+              </button>
+            )}
+            {backVisible && (
+              <button
+                type="button"
+                style={
+                  backEnabled ? styles.backButton : styles.backButtonDisabled
+                }
+                onClick={this.onBackButton}
+                disabled={!backEnabled}
+              >
+                Back
+              </button>
+            )}
+            <button
+              type="button"
+              style={
+                actionEnabled
+                  ? styles.actionButton
+                  : styles.actionButtonDisabled
+              }
+              onClick={this.onActionButton}
+              disabled={!actionEnabled}
+            >
+              {actionText}
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
