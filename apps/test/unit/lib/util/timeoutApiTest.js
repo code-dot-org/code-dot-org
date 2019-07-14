@@ -376,7 +376,7 @@ describe('Timeout API', () => {
 
     it(`complains if argument ${argName} is not a ${expectedType}`, () => {
       if (expectedType !== 'number') {
-        testErrorHandler.outputWarning.reset();
+        testErrorHandler.outputWarning.resetHistory();
         callFuncWithArgValue(42);
         expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
         expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
@@ -385,7 +385,7 @@ describe('Timeout API', () => {
       }
 
       if (expectedType !== 'string') {
-        testErrorHandler.outputWarning.reset();
+        testErrorHandler.outputWarning.resetHistory();
         callFuncWithArgValue('foobar');
         expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
         expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
@@ -394,14 +394,14 @@ describe('Timeout API', () => {
       }
 
       if (expectedType !== 'object') {
-        testErrorHandler.outputWarning.reset();
+        testErrorHandler.outputWarning.resetHistory();
         callFuncWithArgValue(null);
         expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
         expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
           `${funcName}() ${argName} parameter value (null) is not a ${expectedType}.`
         );
 
-        testErrorHandler.outputWarning.reset();
+        testErrorHandler.outputWarning.resetHistory();
         callFuncWithArgValue({obj: 5});
         expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
         expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
