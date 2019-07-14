@@ -488,7 +488,7 @@ describe('AssignmentSelector', () => {
         .find('select')
         .at(0)
         .simulate('change', {target: {value: 'csd'}});
-      spy.reset();
+      spy.resetHistory();
       wrapper
         .find('select')
         .at(1)

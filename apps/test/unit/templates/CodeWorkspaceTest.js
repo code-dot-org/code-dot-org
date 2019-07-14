@@ -20,9 +20,17 @@ describe('CodeWorkspace', () => {
     showMakerToggle: false
   };
 
-  const studioApp = studioAppSingleton();
-  sinon.stub(studioApp, 'showGeneratedCode');
-  let workspace = mount(<CodeWorkspace {...MINIMUM_PROPS} />);
+  let studioApp, workspace;
+
+  beforeEach(() => {
+    studioApp = studioAppSingleton();
+    sinon.stub(studioApp, 'showGeneratedCode');
+    workspace = mount(<CodeWorkspace {...MINIMUM_PROPS} />);
+  });
+
+  afterEach(() => {
+    studioApp.showGeneratedCode.restore();
+  });
 
   it('onToggleShowCode displays blocks for levels with enableShowBlockCount=true', () => {
     studioApp.enableShowBlockCount = true;
