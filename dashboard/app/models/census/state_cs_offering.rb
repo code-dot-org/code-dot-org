@@ -72,8 +72,41 @@ class Census::StateCsOffering < ApplicationRecord
   # states in 2018-19, as listed here.  The expectation is that all states will use
   # the new format as of 2019-20.
   STATES_USING_FORMAT_V2_IN_2018_19 = %w(
+    AK
+    AR
+    CO
+    FL
+    GA
+    IA
     ID
+    IL
+    IN
+    LA
+    ME
+    MN
+    MO
+    MS
+    MT
+    ND
+    NM
+    OH
+    PA
+    RI
+    SD
+    TX
+    UT
+    WI
+    WV
+    WY
   ).freeze
+
+  # Note: Remaining entries for STATES_USING_FORMAT_V2_IN_2018_19:
+  # DE   # will have a second set for 2018-2019
+  # NH   # will have second set for 2018-2019 added (perhaps by hand)
+  # NJ   # will have a second set for 2018-2019
+  # NV   # will have second set for 2018-2019 added (perhaps by hand)
+  # VT   # will have second set for 2018-2019 added (perhaps by hand)
+  # WA   # needs its gsheet to be updated to V2 format
 
   def self.state_uses_format_v2(state_code, school_year)
     state_uses_format_v2_in_2018 = STATES_USING_FORMAT_V2_IN_2018_19.include? state_code
@@ -1430,7 +1463,9 @@ class Census::StateCsOffering < ApplicationRecord
 
   def self.seed
     if CDO.stub_school_data
-      seed_from_csv('ID', 2018, "test/fixtures/census/state_cs_offerings_id_2018.csv")
+      STATES_USING_FORMAT_V2_IN_2018_19.each do |state|
+        seed_from_csv(state, 2018, "test/fixtures/census/actual_state_cs_offerings_2018_2019/#{state.downcase}/2018-2019.csv")
+      end
     else
       seed_from_s3
     end
