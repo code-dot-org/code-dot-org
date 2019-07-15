@@ -75,8 +75,10 @@ class Census::StateCsOffering < ApplicationRecord
     AK
     AR
     CO
+    DC
     FL
     GA
+    HI
     IA
     ID
     IL
