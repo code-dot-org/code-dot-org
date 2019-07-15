@@ -294,7 +294,7 @@ class Game < ActiveRecord::Base
     CustomFlappy:flappy
     Scratch:scratch
     Dance:dance
-    Spritelab:spritelab
+    Spritelab:gamelab
     BubbleChoice:bubble_choice
   )
 
