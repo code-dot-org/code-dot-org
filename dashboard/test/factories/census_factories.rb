@@ -339,6 +339,7 @@ FactoryGirl.define do
 
   factory :ap_school_code, class: 'Census::ApSchoolCode' do
     sequence(:school_code) {|n| Census::ApSchoolCode.normalize_school_code(n)}
+    school_year 2017
     school {create :school}
 
     trait :without_school_code do
@@ -357,16 +358,21 @@ FactoryGirl.define do
       school_code "ABCDEF"
     end
 
+    trait :without_school_year do
+      school_year nil
+    end
+
+    trait :with_invalid_school_year do
+      school_year "FISH"
+    end
+
     trait :with_ap_cs_offering do
-      transient do
-        school_year 2017
-      end
       ap_cs_offering {build_list(:ap_cs_offering, 1, school_year: school_year)}
     end
   end
 
   factory :ap_cs_offering, class: 'Census::ApCsOffering' do
-    ap_school_code {build :ap_school_code}
+    ap_school_code {build :ap_school_code, school_year: school_year}
     course "CSP"
     school_year 2017
 
