@@ -61,7 +61,7 @@ const ArrowRenderer = ({onMouseDown}) => {
 };
 ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
-class LevelTokenDetails extends Component {
+export class UnconnectedLevelTokenDetails extends Component {
   static propTypes = {
     levelKeyList: PropTypes.object.isRequired,
     chooseLevelType: PropTypes.func.isRequired,
@@ -257,4 +257,4 @@ export default connect(
       dispatch(setField(stage, level, modifier));
     }
   })
-)(LevelTokenDetails);
+)(UnconnectedLevelTokenDetails);
