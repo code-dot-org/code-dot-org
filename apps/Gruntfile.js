@@ -73,7 +73,6 @@ describe('entry tests', () => {
     'eval',
     'flappy',
     'gamelab',
-    'spritelab',
     'jigsaw',
     'maze',
     'netsim',
