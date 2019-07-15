@@ -74,7 +74,9 @@ class Census::StateCsOffering < ApplicationRecord
   STATES_USING_FORMAT_V2_IN_2018_19 = %w(
     AK
     AR
+    CA
     CO
+    CT
     DC
     FL
     GA
@@ -84,6 +86,8 @@ class Census::StateCsOffering < ApplicationRecord
     IL
     IN
     LA
+    MA
+    MD
     ME
     MN
     MO
@@ -91,15 +95,19 @@ class Census::StateCsOffering < ApplicationRecord
     MT
     ND
     NM
+    NY
     OH
+    OR
     PA
     RI
+    SC
     SD
     TX
     UT
     WI
     WV
     WY
+    VA
   ).freeze
 
   # Note: Remaining entries for STATES_USING_FORMAT_V2_IN_2018_19:
