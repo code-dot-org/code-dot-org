@@ -163,7 +163,7 @@
     "react": "~15.4.0",
     "react-addons-test-utils": "~15.4.0",
     "react-bootstrap": "0.30.1",
-    "react-color": "^2.11.7",
+    "react-color": "^2.17.3",
     "react-datepicker": "1.6.0",
     "react-dom": "~15.4.0",
     "react-google-charts": "~1.5.5",
