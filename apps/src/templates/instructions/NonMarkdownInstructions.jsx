@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
+import SafeMarkdown from '../SafeMarkdown';
 
 var styles = {
   main: {
@@ -21,12 +21,12 @@ var NonMarkdownInstructions = function(props) {
       <p className="dialog-title">{props.puzzleTitle}</p>
       {props.shortInstructions && (
         <div className="instructions">
-          <UnsafeRenderedMarkdown markdown={props.shortInstructions} />
+          <SafeMarkdown markdown={props.shortInstructions} />
         </div>
       )}
       {props.instructions2 && (
         <div className="instructions2">
-          <UnsafeRenderedMarkdown markdown={props.instructions2} />
+          <SafeMarkdown markdown={props.instructions2} />
         </div>
       )}
     </div>
