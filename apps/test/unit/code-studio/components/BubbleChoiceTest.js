@@ -37,7 +37,7 @@ describe('BubbleChoice', () => {
     assert.equal(DEFAULT_PROPS.level.display_name, wrapper.find('h1').text());
     assert.equal(
       DEFAULT_PROPS.level.description,
-      wrapper.find('UnsafeRenderedMarkdown').text()
+      wrapper.find('SafeMarkdown').text()
     );
   });
 

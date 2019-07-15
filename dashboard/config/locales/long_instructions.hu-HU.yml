@@ -56,6 +56,67 @@ hu-HU:
       4-5 Nested Loops 6: Meg tudod rajzolni a hatszöget a háromszög rajzoló kód ciklusba
         ágyazásával?
       4-5 Nested Loops 9: Rajzold meg az alligátor alsó fogsorát!
+      CSD Problem Solving Process Video: |-
+        ## megfontolandó kérdések
+
+        -   Hogyan követte az utolsó leckében a problémamegoldási folyamatot?
+        -   Hogyan használhatnád ezt a folyamatot a mindennapi életed problémájára?
+      CSD U2 HTML Adding Paragraphs pt 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Mi a bekezdés címke?</strong>
+        </summary>
+
+        A bekezdéseket a (`<p>`) nyitó és (`</p>`) záró címkékkel jelöljük. A HTML-bekezdések bármekkora szövegek lehetnek egy szótól sok-sok mondatig terjedhetnek. A bekezdések csoportosítják a mondatok halmazait, és egy kis üres helyet képeznek a szövegcsoport és a következő szövegcsoport között.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hogyan készíthetek több bekezdést?</strong>
+        </summary>
+
+        Íme egy példa több bekezdéscímkére egy sorban. Ezt a kódot a weboldalának body részébe kell írni.
+
+            <p>Ez egy bekezdés. Két mondatból áll.</p>
+            <p>Ez egy másik bekezdés.</p>
+
+        </details>
+        </div>
+
+        # Bekezdés címke használata
+
+        A `<p>` `</p>` címkék vagy a "bekezdés" kezdő- és végcímkék a szöveg körül helyezkednek el, jelezve, hogy ez egy bekezdés. A szöveget elhelyezve a bekezdés elejére és végére vonatkozó címkék közé a számítógép tudja, hogy ezt a szöveget másképpen kell kezelni, legtöbbször csak a másik szövegektől távolabb írva.
+
+        # Csináld ezt
+
+        -   Helyezzen az írott szövegbe legalább két különálló bekezdést úgy, hogy a <p> `és` </p> \`címkékkel körülveszi azt
+        -   Hasonlítsa össze az eredményeket egy szomszéddal. Mi változott a szöveg megjelenítésének módjában?
+      CSD U2 Inspector Warm Up_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong><span> Hogyan használhatom az Inspector eszközt? </span></strong>
+        </summary>
+
+        Az Inspector eszköz egy nagyszerű módja annak, hogy többet megtudjon a Web Lab ismeretlen kódjáról. Az Inspector eszköz bekapcsolásához kattintson a gombra.  <img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px">. Tudni fogja, hogy az Inspector Tool be van kapcsolva, mert a gomb fehérre vált és azt látja: "Inspector: On". Miután bekapcsolta az Inspector eszközt, az előnézeti területen bárhová léphet, és a Web Lab kijelöli azt a kódot, amelyik az oldalt megjeleníti.
+
+        </details>
+        </div>
+
+        # HTML felfedezése
+
+        Ez egy weblap, amely HTML-ben van írva, a web nyelvén. Tudjon meg többet arról, hogyan működik, de először vizsgálja meg az Inspector Tool segítségével.
+
+        # Csináld ezt
+
+        -   Kattintson a Tipp "Hogyan használhatom az Inspector toolt?" a jobb oldalon, hogy megtudja, hogyan kell használni az Inspector eszközt.
+        -   Kövesse a weboldalon megjelenő utasításokat a weblap felfedezéséhez és beszélje meg a partnerével a működés elvét.
+      CSD U2 Pair Programming Video_2019: "## megfontolandó kérdések\n\n-   Miért
+        gondolod, hogy a profi programozók párprogramozást használnak? \n-   Szerinted
+        hogyan segít a párosprogramozás a programozásban?"
       CSD U2 create page: "# Hozd létre, és nevezd el az új oldaladat\\\r\n\n\\\r\nMielőtt\nelkezdesz
         kódolni, meg kell bizonyosodnod róla, hogy minden lap megvan,\namire szükséged
         lesz a projektben.\\\r\n\\\r\n\n# Tedd a következőt\\\r\n\n-   Hozz létre
@@ -95,6 +156,28 @@ hu-HU:
         A fejléc átismétléséhez keresd fel a\n    [9. szint 3. feladványát](/s/csd2/stage/9/puzzle/3).\\\r\n-
         \  Minden oldal esetén\n    bizonyosodj meg róla, hogy van lábléc, amely tartalmazza
         az oldal felhasználási feltételeit.\\\r\n    \\\r"
+      CSD U5 binary video_2019: |-
+        # megfontolandó kérdések
+
+        -   Miért tárolják a számítógépen az összes adattípust számként?
+        -   Ha mindent számként tárol, hogyan tudja a számítógép a különbséget a számok, betűk, képek és hang között?
+      CSD U6 setProperty hidden 2_2019: "# Mutatás / Elrejtés\n\nEz a riasztó alkalmazás
+        nem túl hasznos, ha nem bírja kikapcsolni a riasztást, miután bekapcsolta.
+        Javítsuk meg.\n\n# Csináld a következőt:\n\nHozzon létre egy második eseményt,
+        hogy megnézze a \"stopAlarmButton\" -t. Az esemény bekapcsolásakor: \n\n-
+        \  Állítsa az állapot szövegét \"OFF\" -ra \n-   A \"stopAlarmButton\" elrejtése
+        \n\n\\_segítség: \"rejtett\" egy logikai tulajdonság. Ha a \"false\" -t használjuk
+        a gomb megjelenítéséhez, mit kell használnod, hogy újra elrejtse? \\_"
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## gondolkodtató kérdések
+
+        -   Miben különböznek a számítógépek a korábbi gépektől?
+        -   Gondolj valamire, amit a számítógépen csinálsz. Milyen bemenet, kimenet, tárolás és feldolgozás történik?
+      CSDU4 Design Mode Video_2019: |-
+        ## megfontolandó kérdések
+
+        -   Hol lehet az App Labben megtervezni az alkalmazás felhasználói felületét?
+        -   Milyen típusú elemek adhatók hozzá az alkalmazáshoz?
       Course 4 Artist 2: Ciklusba tudnád rakni ezt a kód részletet, hogy a szürke
         négyzet kirajzolódjon? (Minden oldal 300 pixel hosszú)
       Course 4 Artist 3: Rendben, most próbáld meg kitalálni, hogy mi fog történni,
@@ -384,6 +467,12 @@ hu-HU:
       HOC 2018 Level_9b: Elérted a zátonyt, most keresd meg a **Tenger szívét** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! A kék és vörös korall segítségével juss el a kincset tartalmazó **ládához**
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Intro to Web Lab - Part 1_2019: |-
+        ## megfontolandó kérdés:
+
+        -   Melyek a Web Lab különböző részei, és mire használhatók?
+      Intro to Web Lab - Part 2_2019: "## megfontolandó kérdés:\n\n-   Miért hasznosak
+        a HTML-címkék? \n-   Mit csinál a bekezdéscímke?"
       K-1 Bee Loops 5: Használj ciklusokat, hogy nektárt gyűjts és mézet készíts!
       K-1 Maze Loops 2: Használd az Ismételd blokkot és juttass el a malachoz!
       MC_HOC_2017_01_RETRY: "{currentPlayerName} a ház foglya, de az Agent a segítségére
@@ -462,9 +551,19 @@ hu-HU:
         a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
         elérd a bárányt.
+      U4 Model Program 5_2019: "# A többi gomb felszerelése\n\nMost, hogy készült
+        egy működő gomb, csak ismételd tovább mintát. \n\n# Csináld ezt\n\n-   Minden
+        gomb megnyomásakor hozzon létre egy eseményt, amely a gomb megnyomásakor hivatkozik
+        a megfelelő képernyőre. \n-   Futtassa az alkalmazást és tesztelje, hogy az
+        összes gomb működik-e."
       course4_artist_fwp_challenge1: Próbálja meg futtatni ezt a programot, és változtassa
         meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár
         törölheti az egészet, és írhat helyette valami teljesen mást)
+      courseC_collector_prog2_2019: Move Laurelt a kincshez, majd használja <xml><block
+        type="collector_collect" block-text="collect"/></xml> blokkot, hogy felvegye.
+      courseC_maze_programming2_2019: Húzz egy extra <xml><block type="maze_moveForward"
+        block-text="move forward"/></xml> blokkot elő a eszköztárból, hogy befejezd
+        a kódod.
       courseD_bee_nestedLoops8: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2018: Gyűjtsd össze az összes nektárt az összes virágról,

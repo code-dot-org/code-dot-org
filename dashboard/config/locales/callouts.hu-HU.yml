@@ -153,6 +153,10 @@ hu-HU:
         craft_what_is_iron: Bányászd ki a vasat!
       Underground Iron_2019:
         craft_what_is_iron: Bányászd ki a vasat!
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_1: Ezek a blokkok zárolva vannak és nem törölhetők!
+      courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: Húzza a blokkokat az eszköztárból a munkaterületre.
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
           felhőben. A lépeket nem kell ellenőrizned.
@@ -162,6 +166,8 @@ hu-HU:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
           felhőben. A lépeket nem kell ellenőrizned.
+      express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: Húzza a blokkokat az eszköztárból a munkaterületre.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Használd az "kör létrehozása"
           blokkot, és változtasd meg a méretét.

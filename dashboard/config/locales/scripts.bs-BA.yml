@@ -2195,6 +2195,10 @@ bs:
               name: Primjeri aplikacija
             Final Project:
               name: Završni projekat
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Brojčani Sistemi
         time4csdemo:
           stages:
             Crowdsourcing:
