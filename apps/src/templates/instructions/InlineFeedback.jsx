@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ChatBubble from './ChatBubble';
 import {convertXmlToBlockly} from './utils';
-import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
+import SafeMarkdown from '../SafeMarkdown';
 
 class InlineFeedback extends Component {
   static propTypes = {
@@ -27,7 +27,7 @@ class InlineFeedback extends Component {
     return (
       <ChatBubble borderColor={borderColor} ttsMessage={message}>
         <div className="uitest-topInstructions-inline-feedback">
-          <UnsafeRenderedMarkdown markdown={message} />
+          <SafeMarkdown markdown={message} />
         </div>
         {extra && <p style={styles.message}>{extra}</p>}
       </ChatBubble>

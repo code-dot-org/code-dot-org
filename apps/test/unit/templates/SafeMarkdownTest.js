@@ -1,12 +1,12 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-describe('UnsafeRenderedMarkdown', () => {
+describe('SafeMarkdown', () => {
   it('will render basic markdown', () => {
     const wrapper = shallow(
-      <UnsafeRenderedMarkdown markdown="**some** _basic_ [inline](markdown)" />
+      <SafeMarkdown markdown="**some** _basic_ [inline](markdown)" />
     );
 
     expect(
@@ -22,7 +22,7 @@ describe('UnsafeRenderedMarkdown', () => {
 
   it('will render raw html', () => {
     const basicWrapper = shallow(
-      <UnsafeRenderedMarkdown markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>' />
+      <SafeMarkdown markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>' />
     );
 
     expect(
@@ -37,7 +37,7 @@ describe('UnsafeRenderedMarkdown', () => {
     ).to.equal(true);
 
     const advancedWrapper = shallow(
-      <UnsafeRenderedMarkdown markdown="<table><thead><th>Some advanced html</th><th><strong>not</strong> usually supported by markdown</th></thead></table>" />
+      <SafeMarkdown markdown="<table><thead><th>Some advanced html</th><th><strong>not</strong> usually supported by markdown</th></thead></table>" />
     );
 
     // note the output has added <tr> tags as appropriate
@@ -62,7 +62,7 @@ describe('UnsafeRenderedMarkdown', () => {
 
   it('implements expandableImages', () => {
     const regularImage = shallow(
-      <UnsafeRenderedMarkdown markdown="![regular](http://example.com/img.jpg)" />
+      <SafeMarkdown markdown="![regular](http://example.com/img.jpg)" />
     );
 
     expect(
@@ -77,7 +77,7 @@ describe('UnsafeRenderedMarkdown', () => {
     ).to.equal(true);
 
     const expandableImage = shallow(
-      <UnsafeRenderedMarkdown markdown="![expandable](http://example.com/img.jpg)" />
+      <SafeMarkdown markdown="![expandable](http://example.com/img.jpg)" />
     );
 
     // Enzyme doesn't like the data-url property when comparing equality
@@ -101,7 +101,7 @@ describe('UnsafeRenderedMarkdown', () => {
 
   it('renders XML as top level block when appropriate', () => {
     const inlineXml = shallow(
-      <UnsafeRenderedMarkdown markdown="Text with <xml><block type='xml'></block></xml> inline" />
+      <SafeMarkdown markdown="Text with <xml><block type='xml'></block></xml> inline" />
     );
 
     expect(
@@ -122,7 +122,7 @@ describe('UnsafeRenderedMarkdown', () => {
     // Need to use markdown={} rather than markdown="" here so React doesn't
     // escape the newlines
     const blockXml = shallow(
-      <UnsafeRenderedMarkdown
+      <SafeMarkdown
         markdown={
           "Text with\n\n<xml><block type='xml'></block></xml>\n\nin its own block"
         }
@@ -141,7 +141,7 @@ describe('UnsafeRenderedMarkdown', () => {
 
   it('renders links normally by default', () => {
     const externalLink = shallow(
-      <UnsafeRenderedMarkdown markdown="[external link](example.com)" />
+      <SafeMarkdown markdown="[external link](example.com)" />
     );
     expect(
       externalLink.equals(
@@ -154,7 +154,7 @@ describe('UnsafeRenderedMarkdown', () => {
     ).to.equal(true);
 
     const internalLink = shallow(
-      <UnsafeRenderedMarkdown markdown="[internal link](code.org)" />
+      <SafeMarkdown markdown="[internal link](code.org)" />
     );
     expect(
       internalLink.equals(
@@ -169,7 +169,7 @@ describe('UnsafeRenderedMarkdown', () => {
 
   it('will open links in a new tab if specified', () => {
     const externalLink = shallow(
-      <UnsafeRenderedMarkdown
+      <SafeMarkdown
         openExternalLinksInNewTab
         markdown="[external link](example.com)"
       />
@@ -187,7 +187,7 @@ describe('UnsafeRenderedMarkdown', () => {
     ).to.equal(true);
 
     const internalLink = shallow(
-      <UnsafeRenderedMarkdown
+      <SafeMarkdown
         openExternalLinksInNewTab
         markdown="[internal link](code.org)"
       />
@@ -207,7 +207,7 @@ describe('UnsafeRenderedMarkdown', () => {
 
   it('is resistant to JS injection', () => {
     const scriptTagInjection = shallow(
-      <UnsafeRenderedMarkdown markdown='<script type="text/javascript">alert(&#x22;hello!&#x22;)</script>' />
+      <SafeMarkdown markdown='<script type="text/javascript">alert(&#x22;hello!&#x22;)</script>' />
     );
     expect(
       scriptTagInjection.equals(<div />),
@@ -215,7 +215,7 @@ describe('UnsafeRenderedMarkdown', () => {
     ).to.equal(true);
 
     const inlineEventInjection = shallow(
-      <UnsafeRenderedMarkdown markdown='<div onMouseOver="alert("hello!")"></div>' />
+      <SafeMarkdown markdown='<div onMouseOver="alert("hello!")"></div>' />
     );
     expect(
       inlineEventInjection.equals(<div />),
@@ -223,7 +223,7 @@ describe('UnsafeRenderedMarkdown', () => {
     ).to.equal(true);
 
     const iframeInjection = shallow(
-      <UnsafeRenderedMarkdown
+      <SafeMarkdown
         markdown={`<iframe src="javascript:alert('hello')"></iframe>`}
       />
     );
@@ -232,11 +232,27 @@ describe('UnsafeRenderedMarkdown', () => {
     );
 
     const miscInjection = shallow(
-      <UnsafeRenderedMarkdown markdown='<div><math><mi xlink:href="data:x,<script>alert(&#x22;foxtrot&#x22;)</script>"></mi></math></div>' />
+      <SafeMarkdown markdown='<div><math><mi xlink:href="data:x,<script>alert(&#x22;foxtrot&#x22;)</script>"></mi></math></div>' />
     );
     expect(
       miscInjection.equals(<div>{'">'}</div>),
       'arbitrary unsupported tags are ignored and/or escaped'
+    ).to.equal(true);
+  });
+
+  it('is resistant to JS injection in XML', () => {
+    const xmlJSInjection = shallow(
+      <SafeMarkdown markdown='<xml onload="alert(&#x22;foxtrot&#x22;)"><block/></xml>' />
+    );
+    expect(
+      xmlJSInjection.equals(
+        <div>
+          <xml>
+            <block />
+          </xml>
+        </div>
+      ),
+      'JS events in XML are ignored'
     ).to.equal(true);
   });
 });

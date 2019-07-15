@@ -52,7 +52,7 @@ describe('HiddenForSectionToggle', () => {
       .onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('visible');
 
-    callback.reset();
+    callback.resetHistory();
 
     // Click the second button
     wrapper
