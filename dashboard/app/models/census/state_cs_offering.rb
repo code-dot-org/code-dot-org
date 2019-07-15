@@ -77,10 +77,8 @@ class Census::StateCsOffering < ApplicationRecord
     CA
     CO
     CT
-    DC
     FL
     GA
-    HI
     IA
     ID
     IL
@@ -111,7 +109,9 @@ class Census::StateCsOffering < ApplicationRecord
   ).freeze
 
   # Note: Remaining entries for STATES_USING_FORMAT_V2_IN_2018_19:
+  # DC   # will have a second set for 2018-2019
   # DE   # will have a second set for 2018-2019
+  # HI   # will have a second set for 2018-2019
   # NH   # will have second set for 2018-2019 added (perhaps by hand)
   # NJ   # will have a second set for 2018-2019
   # NV   # will have second set for 2018-2019 added (perhaps by hand)
