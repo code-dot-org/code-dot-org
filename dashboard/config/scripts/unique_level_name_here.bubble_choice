@@ -1,7 +1,0 @@
-name 'unique level name here'
-display_name 'level display_name here'
-description 'level description here'
-
-sublevels
-level 'level1'
-level 'level2'
