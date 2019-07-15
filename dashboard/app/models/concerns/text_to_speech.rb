@@ -154,42 +154,48 @@ module TextToSpeech
   end
 
   def tts_long_instructions_text
-    if I18n.locale == I18n.default_locale
-      # Instructions in contained levels are used as TTS instead of the
-      # instructions of the containing level
-      return tts_long_instructions_override ||
-        TextToSpeech.sanitize(tts_for_contained_level || long_instructions || "")
+    # Instructions content priority:
+    #
+    # 1. manual override if it exists (English only)
+    # 2. contained level content if it exists
+    # 3. instructions content
+    if tts_long_instructions_override && I18n.locale == I18n.default_locale
+      tts_long_instructions_override
+    elsif contained_level_text = tts_for_contained_level
+      TextToSpeech.sanitize(contained_level_text)
     else
-      TextToSpeech.sanitize(try(:localized_long_instructions) || "")
+      TextToSpeech.sanitize(try(:localized_long_instructions) || long_instructions || "")
     end
   end
 
   def tts_for_contained_level
-    all_instructions = []
-
-    contained_levels.each {|contained| all_instructions.push(contained_level_text(contained))}
-    all_instructions.empty? ? nil : all_instructions * "\n"
+    all_instructions = contained_levels.map do |contained|
+      contained_level_text(contained)
+    end
+    all_instructions.empty? ? nil : all_instructions.join("\n")
   end
 
   def contained_level_text(contained)
     # For multi questions, create a string for TTS of the markdown, question, and answers
     if contained.long_instructions.nil?
-      combined_text = contained.properties["markdown"].nil? ? "" : contained.properties["markdown"] + "\n"
+      combined_text = []
+      if contained.properties["markdown"]
+        combined_text << contained.localized_property("markdown")
+      end
       if contained.properties["questions"]
-        contained.properties["questions"].each do |question|
-          combined_text += question["text"] + "\n"
+        contained.localized_property("questions").each do |question|
+          combined_text << question["text"]
         end
       end
       if contained.properties["answers"]
-        contained.properties["answers"].each do |answer|
-          combined_text += answer["text"] + "\n"
+        contained.localized_property("answers").each do |answer|
+          combined_text << answer["text"]
         end
       end
-      combined_text
+      combined_text.join("\n")
     else
-      #For free response, create a string for TTS of the instructions
-      contained.long_instructions
-
+      # For free response, create a string for TTS of the instructions
+      contained.try(:localized_long_instructions) || contained.long_instructions
     end
   end
 
