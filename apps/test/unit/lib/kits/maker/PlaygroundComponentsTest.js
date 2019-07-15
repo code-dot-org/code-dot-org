@@ -515,7 +515,7 @@ describe('Circuit Playground Components', () => {
       // No pin?  Doesn't report one.
 
       it('with a start() method', () => {
-        accelerometer.io.sysexCommand.reset(); // Reset spy
+        accelerometer.io.sysexCommand.resetHistory(); // Reset spy
         expect(accelerometer).to.haveOwnProperty('start');
         expect(accelerometer.io.sysexCommand).not.to.have.been.called;
 

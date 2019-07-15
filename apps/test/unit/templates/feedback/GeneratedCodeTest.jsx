@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import GeneratedCode from '@cdo/apps/templates/feedback/GeneratedCode';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 describe('GeneratedCode', () => {
   const wrapper = shallow(
@@ -15,7 +15,7 @@ describe('GeneratedCode', () => {
 
   it('renders message with markdown support', () => {
     expect(wrapper).to.containMatchingElement(
-      <UnsafeRenderedMarkdown markdown="Test message" />
+      <SafeMarkdown markdown="Test message" />
     );
   });
 });

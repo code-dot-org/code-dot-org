@@ -155,10 +155,14 @@ class Census::CensusSummary < ApplicationRecord
   end
 
   def self.summarize_ap_data(school, school_year, audit)
-    ap_offerings = school.ap_school_code.try(:ap_cs_offering) || []
-    ap_offerings_this_year = ap_offerings.select {|o| o.school_year == school_year}
-    ap_offerings_this_year.each do |offering|
-      audit[:ap_cs_offerings].push(offering.id)
+    ap_offerings_this_year = []
+    school.ap_school_code.each do |ap_school_code|
+      ap_offerings = ap_school_code.try(:ap_cs_offering) || []
+      ap_offerings_filtered = ap_offerings.select {|o| o.school_year == school_year}
+      ap_offerings_filtered.each do |offering|
+        audit[:ap_cs_offerings].push(offering.id)
+      end
+      ap_offerings_this_year.push(*ap_offerings_filtered)
     end
     ap_offerings_this_year.present?
   end

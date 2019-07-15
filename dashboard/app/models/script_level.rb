@@ -237,7 +237,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def bubble_choice?
-    level.is_a? BubbleChoice
+    oldest_active_level.is_a? BubbleChoice
   end
 
   def name

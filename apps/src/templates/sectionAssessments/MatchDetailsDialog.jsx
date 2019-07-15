@@ -6,7 +6,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {getCurrentQuestion, QuestionType} from './sectionAssessmentsRedux';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {matchDetailsQuestionPropType} from './assessmentDataShapes';
 
 const styles = {
@@ -45,7 +45,7 @@ class MatchDetailsDialog extends Component {
           <div>
             <h2>{i18n.questionDetails()}</h2>
             <div style={styles.instructions}>
-              <UnsafeRenderedMarkdown markdown={questionAndAnswers.question} />
+              <SafeMarkdown markdown={questionAndAnswers.question} />
             </div>
             {questionAndAnswers.answers &&
               questionAndAnswers.options &&
@@ -63,14 +63,14 @@ class MatchDetailsDialog extends Component {
                         <tr key={index}>
                           <td>
                             <div style={styles.answers}>
-                              <UnsafeRenderedMarkdown
+                              <SafeMarkdown
                                 markdown={questionAndAnswers.options[index]}
                               />
                             </div>
                           </td>
                           <td>
                             <div style={styles.answers}>
-                              <UnsafeRenderedMarkdown markdown={answer} />
+                              <SafeMarkdown markdown={answer} />
                             </div>
                           </td>
                         </tr>
