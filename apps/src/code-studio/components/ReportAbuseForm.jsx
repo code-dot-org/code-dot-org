@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -136,7 +136,7 @@ export default class ReportAbuseForm extends React.Component {
           />
 
           <div>
-            <UnsafeRenderedMarkdown
+            <SafeMarkdown
               markdown={i18n.t(
                 'project.abuse.report_abuse_form.abuse_type.question',
                 {
@@ -178,7 +178,7 @@ export default class ReportAbuseForm extends React.Component {
           />
 
           <div>
-            <UnsafeRenderedMarkdown
+            <SafeMarkdown
               markdown={i18n.t('project.abuse.report_abuse_form.acknowledge', {
                 link_start_privacy:
                   '<a href="https://code.org/privacy" target="_blank">',
