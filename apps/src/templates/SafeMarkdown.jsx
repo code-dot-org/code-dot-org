@@ -72,9 +72,11 @@ const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {
 });
 
 /**
- * Basic component for rendering a markdown string as HTML, with sanitization
+ * Basic component for rendering a markdown string as HTML, with sanitization.
+ * Can safely render markdown even from untrusted sources, without potentially
+ * exposing us to an XSS injection.
  */
-export default class UnsafeRenderedMarkdown extends React.Component {
+export default class SafeMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
     openExternalLinksInNewTab: PropTypes.bool
