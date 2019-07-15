@@ -70,7 +70,7 @@ describe('TouchSensor', function() {
     touchSensor.stop();
 
     // Listener was removed in reset, so event is not forwarded.
-    spy.reset();
+    spy.resetHistory();
     fakeTouchPad.down(0);
     expect(spy).not.to.have.been.called;
 
