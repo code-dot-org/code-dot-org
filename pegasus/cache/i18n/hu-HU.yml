@@ -882,27 +882,11 @@ hu-HU:
   course2_name: 2. tanfolyam
   course3_name: 3. tanfolyam
   course4_name: 4. tanfolyam
-  csp1-2017_name: '1. lecke: Az internet'
-  csp2-2017_name: '2. fejezet: Digitális információ'
-  csp1-2018_name: '1. lecke: Az internet'
-  csp2-2018_name: '2. fejezet: Digitális információ'
-  csp1_name: '1. lecke: Az internet'
-  csp2_name: '2. fejezet: Digitális információ'
-  cspassessment_name: Teljes teszt - 50 kérdés
-  cspexam1-mWU7ilDYM9_name: Teszt 1. része - 25 kérdés
-  cspexam2-AKwgAh1ac5_name: Teszt 2. része - 25 kérdés
-  cspunit3_gradelevel: 9-12. évfolyam
   accelerated_name: Gyorsított tanfolyam
   20-hour_name: Gyorsított tanfolyam
   classicmaze_name: Hagyományos Útvesztö
   iceage_name: Jégkorszak
   minecraft_name: Minecraft
-  math_category_name: Matematika
-  hoc_category_name: A kódolás órája
-  csf_category_name: A számítógép-tudomány alapjai
-  csf_2017_category_name: A számítógép-tudomány alapjai (2017)
-  csf_2018_category_name: A számítógép-tudomány alapjai (2018)
-  csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
   applab_name: App Lab
   sports_name: Kódold le a saját sportjátékodat
   applab_gradelevel: Kor 13+

@@ -848,9 +848,6 @@
   coursee-2017_name: الدورة E (2017)
   coursef-2017_name: الدورة F (2017)
   pre-express-2018_name: دورة سريعة لمستوى ما قبل القراءة (2018)
-  cspunit2_name: "(قديم) الوحدة 2: الإنترنت"
-  cspunit3_name: "(قديم) الوحدة 3: البرمجة"
-  cspunit4_name: "(قديم) الوحدة 4: البيانات"
   accelerated_name: "دورة تدريبية مسرّعة"
   express_name: "دورة سريعة"
   20-hour_name: دورة تدريبية مسرّعة
@@ -860,8 +857,6 @@
   classicmaze_name: "المتاهة الكلاسيكية"
   iceage_name: "العصر الجليدي"
   minecraft_name: "Minecraft"
-  math_category_name: "العمليات الحسابية"
-  hoc_category_name: "ساعة البرمجة"
   applab_name: "مختبر التطبيق"
   basketball_name: "اصنع لعبة كرة السلة"
   applab_gradelevel: "للأعمار 13 +"

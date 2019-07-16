@@ -917,41 +917,6 @@
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
   pre-express-2018_name: Curso rápido prescolar (2018)
-  cspunit2_name: "Tema 2: El Internet"
-  cspunit3_name: "Principios de CS Unidad 3"
-  cspunit4_name: "Tema 4: Datos"
-  cspunit5_name: "Unidad 5: Explorar y Crear PT"
-  cspunit6_name: 'Post-AP: Bases de Datos en Aplicaciones'
-  csd5_name: 'Unidad 5: Información y Sociedad'
-  csd6_name: 'Unidad 6: Computación Física'
-  csd5-2017_name: 'Unidad 5: Información y Sociedad'
-  csd6-2017_name: 'Unidad 6: Computación Física'
-  csd5-2018_name: 'Unidad 5: Información y Sociedad'
-  csd6-2018_name: 'Unidad 6: Computación Física'
-  csp1-2017_name: 'Tema 1: El Internet'
-  csp2-2017_name: 'Unidad 2: Información Digital'
-  csp-explore-2017_name: 'AP: Explorar PT Prep'
-  csp-create-2017_name: 'AP: Crear PT Prep'
-  csppostap-2017_name: 'Post AP: Bases de datos en Apps'
-  csp1-2018_name: 'Tema 1: El Internet'
-  csp2-2018_name: 'Unidad 2: Información Digital'
-  csp-explore-2018_name: 'AP: Explorar PT Prep'
-  csp-create-2018_name: 'AP: Crear PT Prep'
-  csppostap-2018_name: 'Post AP: Bases de datos en Apps'
-  csp1_name: 'Tema 1: El Internet'
-  csp2_name: 'Unidad 2: Información Digital'
-  csp3-a_name: 'Unidad 3: Introducción a la Programación (versión A)'
-  csp3-research-mxghyt_name: 'Unidad 3: Introducción a la Programación (subobjetivos)'
-  csp-ap_name: Tareas de rendimiento AP
-  csppostap_name: 'Post AP: Bases de datos en Apps'
-  csp-post-survey_name: Encuesta de fin de curso
-  cspassessment_name: "Prueba completa - 50 preguntas"
-  csp-explore_name: 'AP: Explorar PT Prep'
-  csp-create_name: 'AP: Crear PT Prep'
-  cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
-  cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
-  cspunit3_gradelevel: "Grados 9-12"
-  cspunit3_shortdescription_congrats: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
   accelerated_name: "Curso acelerado"
   express_name: "Curso Rápido"
   20-hour_name: Curso acelerado
@@ -965,18 +930,6 @@
   starwarsblocks_name: "Bloques de La Guerra de Las Galaxias"
   hoc-encryption_name: Encripción simple
   text-compression_name: Compresión de texto
-  math_category_name: "Matemáticas"
-  hoc_category_name: "Hora del Código"
-  csf_category_name: "Fundamentos de CS"
-  csf_2017_category_name: "Fundamentos de Informática (2017)"
-  csf_2018_category_name: "Fundamentos de Informática (2018)"
-  csf_international_category_name: "Fundamentos de Informática Internacional"
-  csf2_draft_category_name: 'En desarrollo: Cursos A - F'
-  csd_2018_category_name: "Descubrimientos de Informática ('18-'19)"
-  csp_category_name: "'15-'16 Principios de CS"
-  csp17_category_name: "'16-'17 Principios de CS"
-  csp_2018_category_name: "Principios de Informática ('18-'19)"
-  cspexams_category_name: "Prueba de práctica de principios de CS"
   applab_name: "Laboratorio de Aplicaciones"
   gamelab_name: "Laboratorio de juego"
   basketball_name: "Crear un juego de baloncesto"
@@ -1460,10 +1413,6 @@
   header_report_bug: "Reporte los errores"
   header_tutorials: "Tutoriales"
   header_documentation: "Documentacion"
-  csp_name: "'16-'17 Principios de CS"
-  csd_name: "Descubrimientos de la informática"
-  csd_2018_name: "Descubrimientos de la informática"
-  full_course_category_name: "Cursos Completos"
   user_header_label: "Hola %{username}"
   user_header_team: "Equipo"
   user_header_my_projects: "Mis proyectos"

@@ -1010,19 +1010,6 @@ de-DE:
   course2_name: Kurs 2
   course3_name: Kurs 3
   course4_name: Kurs 4
-  csd5_name: 'Lektion 5: Daten und Gesellschaft'
-  csd5-2017_name: 'Lektion 5: Daten und Gesellschaft'
-  csd5-2018_name: 'Lektion 5: Daten und Gesellschaft'
-  csp1-2017_name: 'Lektion 1: Das Internet'
-  csp2-2017_name: 'Einheit 2: Digitale Informationen'
-  csp1-2018_name: 'Lektion 1: Das Internet'
-  csp2-2018_name: 'Einheit 2: Digitale Informationen'
-  csp1_name: 'Lektion 1: Das Internet'
-  csp2_name: 'Einheit 2: Digitale Informationen'
-  cspassessment_name: Vollständiger Test - 50 Fragen
-  cspexam1-mWU7ilDYM9_name: Test Teil 1 - 25 Fragen
-  cspexam2-AKwgAh1ac5_name: Test Teil 2 - 25 Fragen
-  cspunit3_gradelevel: 9. - 12. Klasse
   accelerated_name: Beschleunigter Kurs
   20-hour_name: Beschleunigter Kurs
   gumball_name: Gumball
@@ -1032,13 +1019,6 @@ de-DE:
   starwarsblocks_name: Star Wars (Bausteine)
   hoc-encryption_name: Einfache Verschlüsselung
   text-compression_name: Text-Kompression
-  math_category_name: Mathematik
-  hoc_category_name: Hour of Code
-  csf_category_name: Einführung in Informatik und Programmieren
-  csf_international_category_name: Informatik Grundlagen international
-  csf2_draft_category_name: 'In der Entwicklung: Kurse A - F'
-  csp17_category_name: Informatik Grundprinzipien
-  cspexams_category_name: Praxistest Grundlagen der Informatik
   applab_name: App-Labor
   gamelab_name: Spielelabor
   basketball_name: Baue ein Basketball-Spiel
@@ -1757,7 +1737,6 @@ de-DE:
   header_report_bug: Einen Fehler melden
   header_tutorials: Einführungen
   header_documentation: Dokumentation
-  csp_name: Informatik Grundprinzipien
   user_header_label: Hallo %{username}
   user_header_team: Team
   user_header_settings: Mein Account
