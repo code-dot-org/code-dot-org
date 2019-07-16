@@ -28,6 +28,7 @@ var blockUtils = require('../block_utils');
 var codegen = require('../lib/tools/jsinterpreter/codegen');
 
 var msg = require('./locale');
+var msg2 = require('./locale-tracking');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -180,7 +181,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.maze_turn.DIRECTIONS = [
     [msg.turnLeft() + ' \u21BA', 'turnLeft'],
-    [msg.turnRight() + ' \u21BB', 'turnRight']
+    [msg2('turnRight') + ' \u21BB', 'turnRight']
   ];
 
   generator.maze_turn = function() {
