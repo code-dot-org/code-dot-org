@@ -13,7 +13,7 @@ tr-TR:
       2-3 Artist 4: Kedi için bu evi tamamlamama yardım et.
       2-3 Artist 6: 'Bu evin bir çatıya ihtiyacı var! Üçgeni çizin. İpucu: Üç kenarda
         aynı uzunluktadır.'
-      2-3 Artist 9: Uçurtmayı bitirin.
+      2-3 Artist 9 NEW: Uçurtmayı bitirin.
       2-3 Artist Free Play: Serbest çizim! İstediğiniz herhangi bir şey çizin.
       2-3 Artist Loops New 1: Hadi robotun kafasını çizelim! Kenarları 100 piksel
         olan bir kare yapabilir misin?
@@ -1272,27 +1272,26 @@ tr-TR:
         tarlalardan sakın!
       courseC_harvester_loops_challenge2_2019: Tüm marulları topla. Ağaçlardan ve
         tarlalardan sakın!
-      courseC_maze_debugging1: Tüm hazineyi toplamak için hataları düzelt.
+      courseC_maze_debugging1: Scrat'in meşe palamuduna ulaşması için kodu düzelt.
       courseC_maze_debugging1_2018: Scrat'in meşe palamuduna ulaşması için kodu düzelt.
       courseC_maze_debugging1_2019: Scrat'in meşe palamuduna ulaşması için kodu düzelt.
-      courseC_maze_debugging2: Tüm hazineyi toplamak için hataları düzelt.
+      courseC_maze_debugging2: Hata ayıklama yeteneklerinizi kullanarak Scrat'i meşe
+        palamuduna ulaştırın.
       courseC_maze_debugging2_2018: Hata ayıklama yeteneklerinizi kullanarak Scrat'i
         meşe palamuduna ulaştırın.
       courseC_maze_debugging2_2019: Hata ayıklama yeteneklerinizi kullanarak Scrat'i
         meşe palamuduna ulaştırın.
-      courseC_maze_debugging3: Tüm hazineyi toplamak için hataları düzelt.
+      courseC_maze_debugging3: Scrat'i meşe palamuduna ulaştırmak için bazı blokları
+        çıkarın!
       courseC_maze_debugging3_2018: Scrat'i meşe palamuduna ulaştırmak için bazı blokları
         çıkarın!
       courseC_maze_debugging3_2019: Scrat'i meşe palamuduna ulaştırmak için bazı blokları
         çıkarın!
-      courseC_maze_debugging4: Tüm hazineyi toplamak için hataları düzelt.
+      courseC_maze_debugging4: Bu kodda bir yanlışlık var, Düzeltebilir misin?
       courseC_maze_debugging4_2018: Bu kodda bir yanlışlık var, Düzeltebilir misin?
       courseC_maze_debugging4_2019: Bu kodda bir yanlışlık var, Düzeltebilir misin?
-      courseC_maze_debugging5: 'Meydan Okuma: İhtiyacınız olan bütün komutlar burada...
-        Şimdi hata ayıklama becerilerinizi kullanarak bu bulmacayı nasıl çözeceğinizi
-        bulun.'
-      courseC_maze_debugging6: 'Meydan Okuma: Hataları düzeltmek ve hazinenin tamamını
-        toplamak için hata ayıklama yeteneklerinizi kullanın.'
+      courseC_maze_debugging6: Neyin hatalı olduğunu bulun ve Scrat'i meşe palamuduna
+        ulaştırın.
       courseC_maze_debugging6_2018: Neyin hatalı olduğunu bulun ve Scrat'i meşe palamuduna
         ulaştırın.
       courseC_maze_debugging6_2019: Neyin hatalı olduğunu bulun ve Scrat'i meşe palamuduna
@@ -1422,8 +1421,6 @@ tr-TR:
         öğrendiklerini kullan!
       courseC_starWars_loops9_2019: Bütün hurda metalleri toplamak için daha önce
         öğrendiklerini kullan!
-      courseC_video_angles2: Şimdi, son üçgen kodunu döngü içine sürükleyin ve kendi
-        etrafında dönerek bir kar tanesi yapın!
       courseD_artist_5_2018: Kar taneleri ile oynayın!
       courseD_artist_5_2018_2019: Kar taneleri ile oynayın!
       courseD_artist_binary1: "İkili sadece iki seçeneği kullanarak bilgileri gösteren
@@ -1831,18 +1828,17 @@ tr-TR:
         sonra ahtapot hattında kaldığı sürece bir puan azaltın.
       courseD_playLab_cond6a_2018: Eğer korsan güvenli bölgedeyse, bir saniye bekleyin,
         sonra ahtapot hattında kaldığı sürece bir puan azaltın.
-      courseD_scrat_predict1: Bu kod yeni blok içermektedir. Çalıştır tuşuna bastığınızda
-        sizce ne olacak?
       courseD_scrat_ramp1: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek
         için "Çalıştır" ı tıklatın!
       courseD_scrat_ramp2: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı
         zaman ' tüm blokları ekleyebilirsiniz.
       courseD_scrat_ramp3: Kuşun ezilmesine sebep olacak bir fazla blok var. O bloğu
         bulup araç kurtusuna geri at.
-      courseD_scrat_ramp6: Sakin ol ve kötü domuzu bulmama yardım et. Yoksa sinirlenebilirim
-      courseD_scrat_ramp7: Kuşu domuza ulaştırmak için öğrendiklerini kullan!
-      courseD_scrat_ramp8: Şimdi sanatçıyı kullanarak bir kare oluşturun!
-      courseD_video_repeatUntil: Eğer marul ise marul topla. değilse, mısır al.
+      courseD_scrat_ramp6: "-   \"Sakin ol ve kötü domuzu bulmama yardım et. Aksi
+        takdirde sinirleniyorum!\" \\* \\\r \\\r bir satırda birkaç blok varsa 'tekrarla'
+        döngüsü içine taşıyın.  Bu daha az kod ile aynı şeyi yapmayı sağlar!"
+      courseD_scrat_ramp7: Scrat'in meşe palamuduna ulaşmasını sağlayın!
+      courseD_scrat_ramp8: Öğrendiklerini kullanarak Scrat'i meşe palamuduna ulaştır!
       courseE_artist_concept_challenge1: Deneme yanılmayı kullanmaktan çekinmeyin.
         İlk seferde mükemmel olman beklenmiyor. Daha fazla ipucu ister misin?  Buraya
         tıklayın!
@@ -1879,8 +1875,9 @@ tr-TR:
       courseE_artist_functions_challenge2_2019: Nasıl çalıştığını görmek için bu kodu
         deneyin, sonra kendi programınızı yapın!
       courseE_artist_ramp8: Şimdi sanatçıyı kullanarak bir kare oluşturun!
-      courseE_artist_ramp8_2: Bu üçgeni çizmek için öğrendiklerinizi kullanın.
+      courseE_artist_ramp8_2: Şimdi sanatçıyı kullanarak bir kare oluşturun!
       courseE_artist_ramp9: Bu üçgeni çizmek için öğrendiklerinizi kullanın.
+      courseE_artist_ramp9_2: Bu üçgeni çizmek için öğrendiklerinizi kullanın.
       courseE_bee_concept1: 'Her çiçekteki bütün nektarı topla. İç içe döngü kullan. '
       courseE_bee_concept1_2018: 'Her çiçekteki bütün nektarı topla. İç içe döngü
         kullan. '
@@ -1910,31 +1907,38 @@ tr-TR:
       courseE_farmer_ramp11a: 'Marul olduğu sürece marlu topla. '
       courseE_farmer_ramp11a_2018: 'Marul olduğu sürece marlu topla. '
       courseE_farmer_ramp11a_2019: 'Marul olduğu sürece marlu topla. '
-      courseE_farmer_ramp11b: Bu bulmacayı çözmek için bir tane iç içe döngü kullanın.
+      courseE_farmer_ramp11b: 'Marul olduğu sürece marlu topla. '
       courseE_farmer_ramp11b_2018: 'Marul olduğu sürece marlu topla. '
       courseE_farmer_ramp11b_2019: 'Marul olduğu sürece marlu topla. '
+      courseE_farmer_ramp12_forswap: Bu bulmacayı çözmek için bir tane iç içe döngü
+        kullanın.
       courseE_farmer_ramp12_forswap_2018: Bu bulmacayı çözmek için bir tane iç içe
         döngü kullanın.
       courseE_farmer_ramp12_forswap_2019: Bu bulmacayı çözmek için bir tane iç içe
         döngü kullanın.
-      courseE_farmer_ramp12b: Eğer marul ise marul topla. değilse, mısır al.
+      courseE_farmer_ramp12b: Marul olduğu sürece marul topla!
       courseE_farmer_ramp12b_2018: Marul olduğu sürece marul topla!
       courseE_farmer_ramp12b_2019: Marul olduğu sürece marul topla!
-      courseE_farmer_ramp12c: Mısır varsa mısır al ve marul varsa marul al.
+      courseE_farmer_ramp12c: Marula ulaşana kadar ilerle, sonra hepsine sürece döngüsü
+        ile topla.
       courseE_farmer_ramp12c_2018: Marula ulaşana kadar ilerle, sonra hepsine sürece
         döngüsü ile topla.
       courseE_farmer_ramp12c_2019: Marula ulaşana kadar ilerle, sonra hepsine sürece
         döngüsü ile topla.
-      courseE_farmer_ramp12d: 'Nektar olduğu sürece nektar al \*_değilse_ bal yap. '
+      courseE_farmer_ramp12d: Marula ulaşana kadar ilerle, sonra hepsine sürece döngüsü
+        ile topla.
       courseE_farmer_ramp12d_2018: Marula ulaşana kadar ilerle, sonra hepsine sürece
         döngüsü ile topla.
       courseE_farmer_ramp12d_2019: Marula ulaşana kadar ilerle, sonra hepsine sürece
         döngüsü ile topla.
+      courseE_farmer_ramp12e: Marula ulaşana kadar ilerle, sonra hepsine sürece döngüsü
+        ile topla.
       courseE_farmer_ramp12e_2018: Marula ulaşana kadar ilerle, sonra hepsine sürece
         döngüsü ile topla.
       courseE_farmer_ramp12e_2019: Marula ulaşana kadar ilerle, sonra hepsine sürece
         döngüsü ile topla.
-      courseE_farmer_ramp12f: Mvcut blokları kullanarak bulmacayı çöz.
+      courseE_farmer_ramp12f: Marula ulaşana kadar ilerle, sonra sola dön **eğer**
+        sola doğru yol varsa. Yoksa, sağa dön.
       courseE_farmer_ramp12f_2018: Marula ulaşana kadar ilerle, sonra sola dön **eğer**
         sola doğru yol varsa. Yoksa, sağa dön.
       courseE_farmer_ramp12f_2019: Marula ulaşana kadar ilerle, sonra sola dön **eğer**
