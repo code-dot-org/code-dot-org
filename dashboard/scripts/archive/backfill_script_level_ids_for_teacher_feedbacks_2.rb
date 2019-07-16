@@ -21,11 +21,14 @@ def update_script_level_ids
         level_id: feedback.level_id
       )
       if associated_user_levels.length == 1
-        script_level_id = ScriptLevel.where(
+        script_levels = ScriptLevel.where(
           level_id: associated_user_levels[0].level_id,
           script_id: associated_user_levels[0].script_id
-        ).id
-        feedback.update_attributes(script_level_id: script_level_id)
+        )
+        if script_levels.length == 1
+          script_level_id = script_levels[0].id
+          feedback.update_attributes(script_level_id: script_level_id)
+        end
       end
     end
   end
