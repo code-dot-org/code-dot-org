@@ -3,20 +3,20 @@ ja:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: "{TIMESTAMP} [UNIT][1] 後"
+        text: "{TIMESTAMP} {UNIT} 後"
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
       Dancelab_changeColorBy:
-        text: "{COLOR} [METHOD][1] を [AMOUNT][2] 変更 "
+        text: "{COLOR} {METHOD} を {AMOUNT} 変更 "
         options:
           METHOD:
             '"hue"': 色相
             '"saturation"': 彩度
             '"brightness"': 明るさ
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} で実行 [MOVE][1] [DIR][2] ずっとくりかえす"
+        text: "{GROUP} で実行 {MOVE} {DIR} ずっとくりかえす"
         options:
           GROUP:
             sprites: すべて
@@ -50,7 +50,7 @@ ja:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} で実行 [MOVE][1] [DIR][2] ずっとくりかえす"
+        text: "{SPRITE} で実行 {MOVE} {DIR} ずっとくりかえす"
         options:
           MOVE:
             '"next"': "(次へ)"
@@ -71,7 +71,7 @@ ja:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: "{SPRITE} [PROPERTY][1] を [VAL][2] 変更"
+        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -81,7 +81,7 @@ ja:
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
       Dancelab_doMoveEachLR:
-        text: "{GROUP} で実行 [MOVE][1] [DIR][2] いちどだけ"
+        text: "{GROUP} で実行 {MOVE} {DIR} いちどだけ"
         options:
           GROUP:
             sprites: すべて
@@ -113,7 +113,7 @@ ja:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} で実行 [MOVE][1] [DIR][2] いちどだけ"
+        text: "{SPRITE} で実行 {MOVE} {DIR} いちどだけ"
         options:
           MOVE:
             '"rand"': "(ランダム)"
@@ -132,25 +132,25 @@ ja:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'すべての [N][0] [UNIT][1] '
+        text: 'すべての {N} {UNIT} '
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
       Dancelab_everySecondsRange:
-        text: 'すべての [N][0] [UNIT][1] [START][2] から [STOP][3] まで '
+        text: 'すべての {N} {UNIT} {START} から {STOP} まで '
         options:
           UNIT:
             measures: 小節
             seconds: 秒
       Dancelab_everyVerseChorus:
-        text: 'すべての [UNIT][0] '
+        text: 'すべての {UNIT} '
         options:
           UNIT:
             '"verse"': Aメロ・Bメロ
             '"chorus"': サビ
       Dancelab_getEnergy:
-        text: 取得 [RANGE][0]
+        text: 取得 {RANGE}
         options:
           RANGE:
             '"low"': ベース
@@ -174,8 +174,8 @@ ja:
             '"seconds"': 秒
       Dancelab_ifDanceIs:
         text: |-
-          もし [SPRITE][0] が [DANCE][1] をしてたら
-          [DO1][2] [DO2][3]
+          もし {SPRITE} が {DANCE} をしてたら
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: 手を高く上げてたたく
@@ -195,7 +195,7 @@ ja:
             '"measures"': 小節
             '"seconds"': 秒
       Dancelab_jumpTo:
-        text: "{SPRITE}　[LOCATION][1]にとぶ"
+        text: "{SPRITE}　{LOCATION}にとぶ"
         options:
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -209,7 +209,7 @@ ja:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_layoutSprites:
-        text: "{GROUP} を [FORMAT][1] にレイアウト"
+        text: "{GROUP} を {FORMAT} にレイアウト"
         options:
           GROUP:
             sprites: すべて
@@ -237,7 +237,7 @@ ja:
       Dancelab_makeNewDanceSprite:
         text: |-
           {COSTUME} を新しくつくる
-          名前は [NAME][1] 場所は [LOCATION][2]
+          名前は {NAME} 場所は {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': エイリアン
@@ -264,8 +264,8 @@ ja:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          {N} を新しい [COSTUME][1] にする
-          [LAYOUT][2] で
+          {N} を新しい {COSTUME} にする
+          {LAYOUT} で
         options:
           'N':
             '2': '2'
@@ -310,7 +310,7 @@ ja:
             '"plus"': プラス
             '"random"': ランダム に
       Dancelab_mixColors:
-        text: "{COLOR1} と [COLOR2][1] をまぜる"
+        text: "{COLOR1} と {COLOR2} をまぜる"
       Dancelab_nMeasures:
         text: "{N} 小節"
       Dancelab_onPointerDown:
@@ -322,9 +322,9 @@ ja:
       Dancelab_randomColor:
         text: てきとうな色
       Dancelab_setBackground:
-        text: 背景色を [COLOR][0] にセット
+        text: 背景色を {COLOR} にセット
       Dancelab_setBackgroundEffect:
-        text: 背景エフェクトを [EFFECT][0] [PALETTE][1] にセット
+        text: 背景エフェクトを {EFFECT} {PALETTE} にセット
         options:
           EFFECT:
             '"none"': 設定なし
@@ -353,7 +353,7 @@ ja:
             '"vintage"': ヴィンテージ
             '"warm"': 赤
       Dancelab_setBackgroundEffectWithPalette:
-        text: 背景エフェクトを [EFFECT][0] [PALETTE][1] にセット
+        text: 背景エフェクトを {EFFECT} {PALETTE} にセット
         options:
           EFFECT:
             '"none"': 設定なし
@@ -383,7 +383,7 @@ ja:
             '"vintage"': ヴィンテージ
             '"warm"': 赤
       Dancelab_setDanceSpeed:
-        text: "{SPRITE} のダンスの速さを [SPEED][1] に変更"
+        text: "{SPRITE} のダンスの速さを {SPEED} に変更"
         options:
           SPEED:
             '1': ノーマル
@@ -413,7 +413,7 @@ ja:
             '0.5': おそい
             '0.25': すごくおそい
       Dancelab_setForegroundEffect:
-        text: 前景エフェクトを [EFFECT][0] にセット
+        text: 前景エフェクトを {EFFECT} にセット
         options:
           EFFECT:
             '"none"': 設定なし
@@ -428,7 +428,7 @@ ja:
             '"smile_face"': スマイル
             '"raining_tacos"': タコス
       Dancelab_setForegroundEffectExtended:
-        text: 前景エフェクトを [EFFECT][0] にセット
+        text: 前景エフェクトを {EFFECT} にセット
         options:
           EFFECT:
             '"none"': 設定なし
@@ -444,7 +444,7 @@ ja:
             '"smile_face"': スマイル
             '"raining_tacos"': タコス
       Dancelab_setProp:
-        text: "{SPRITE} [PROPERTY][1] を [VAL][2] にセット "
+        text: "{SPRITE} {PROPERTY} を {VAL} にセット "
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -455,7 +455,7 @@ ja:
             '"y"': 垂直方向の位置
             '"tint"': 色合い
       Dancelab_setPropEach:
-        text: "{GROUP} [PROPERTY][1] を [VAL][2] にセット"
+        text: "{GROUP} {PROPERTY} を {VAL} にセット"
         options:
           GROUP:
             sprites: すべて
@@ -479,7 +479,7 @@ ja:
             '"y"': 垂直方向の位置
             '"tint"': 色合い
       Dancelab_setPropRandom:
-        text: ランダムにする [SPRITE][0] [PROPERTY][1]
+        text: ランダムにする {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -490,7 +490,7 @@ ja:
             '"y"': 垂直方向の位置
             '"tint"': 色合い
       Dancelab_setTint:
-        text: "{SPRITE} の色合いを [VAL][1] にセット"
+        text: "{SPRITE} の色合いを {VAL} にセット"
       Dancelab_setTintEach:
         options:
           THIS:
@@ -506,15 +506,15 @@ ja:
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
       Dancelab_setTintInline:
-        text: "{SPRITE} の色合いを [VAL][1] にセット"
+        text: "{SPRITE} の色合いを {VAL} にセット"
       Dancelab_setVisible:
-        text: "{SPRITE} 可視を[VISIBILITY][1] に設定"
+        text: "{SPRITE} 可視を{VISIBILITY} に設定"
         options:
           VISIBILITY:
             'true': 見える
             'false': 見えない
       Dancelab_setVisibleEach:
-        text: "{THIS} の見え方を [VISIBILITY][1] にセット"
+        text: "{THIS} の見え方を {VISIBILITY} にセット"
         options:
           THIS:
             sprites: すべて
@@ -533,7 +533,7 @@ ja:
             'true': 見える
             'false': 見えない
       Dancelab_startMapping:
-        text: "{SPRITE} が [PROPERTY][1] をはじめる、[RANGE][2] のあとに"
+        text: "{SPRITE} が {PROPERTY} をはじめる、{RANGE} のあとに"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -548,7 +548,7 @@ ja:
             '"mid"': ミドル
             '"treble"': トレブル
       Dancelab_stopMapping:
-        text: "{SPRITE} が [PROPERTY][1] をやめる、[RANGE][2] のあとに"
+        text: "{SPRITE} が {PROPERTY} をやめる、{RANGE} のあとに"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -584,7 +584,7 @@ ja:
       Dancelab_whenSetup:
         text: セットアップ
       gamelab_changePropBy:
-        text: "{SPRITE} [PROPERTY][1] を [VAL][2] 変更"
+        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -612,7 +612,7 @@ ja:
             '"direction"': 動きの方向
             '"tint"': 色合い
       gamelab_jumpTo:
-        text: "{SPRITE}　[LOCATION][1]にとぶ"
+        text: "{SPRITE}　{LOCATION}にとぶ"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -636,7 +636,7 @@ ja:
       gamelab_randomColor:
         text: てきとうな色
       gamelab_setBackground:
-        text: 背景色を [COLOR][0] にセット
+        text: 背景色を {COLOR} にセット
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -791,8 +791,8 @@ ja:
             '"all"': すべて
       Mikelab_ifDanceIs:
         text: |-
-          もし [SPRITE][0] が [DANCE][1] をしてたら
-          [DO1][2] [DO2][3]
+          もし {SPRITE} が {DANCE} をしてたら
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: 手を高く上げてたたく
@@ -876,7 +876,7 @@ ja:
       Vector_positionCenter:
         text: 中央
       aalab_changePropByFlexible:
-        text: "{SPRITE} [PROPERTY][1] を [VAL][2] 変更"
+        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -895,7 +895,7 @@ ja:
             '"when"': もし
             '"while"': 以下の間
       aalab_jumpTo:
-        text: "{SPRITE}　[LOCATION][1]にとぶ"
+        text: "{SPRITE}　{LOCATION}にとぶ"
       aalab_keyPressed:
         options:
           CONDITION:
@@ -953,7 +953,7 @@ ja:
       craft_ifPath:
         text: |-
           {DIR}に道がある時
-          [STATEMENT][1]
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": その前に
@@ -962,7 +962,7 @@ ja:
       craft_ifStandingOn:
         text: |-
           {TYPE}の上にいる時
-          [STATEMENT][1]
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": 青色のサンゴ
@@ -974,7 +974,7 @@ ja:
       craft_ifStandingOnLimit:
         text: |-
           {TYPE}の上にいる時
-          [STATEMENT][1]
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": 砂
@@ -1018,11 +1018,11 @@ ja:
       craft_repeatUntilConduit:
         text: |-
           コンジットができるまでリピート
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           ゴールまでリピート
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
         text: "{ENTITY}を産む"
         options:

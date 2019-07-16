@@ -3,20 +3,20 @@ he:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: אחרי [TIMESTAMP][0] [UNIT][1]
+        text: אחרי {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': תיבות
             '"seconds"': שניות
       Dancelab_changeColorBy:
-        text: שנה [COLOR][0] [METHOD][1] ב [AMOUNT][2]
+        text: שנה {COLOR} {METHOD} ב {AMOUNT}
         options:
           METHOD:
             '"hue"': גוון
             '"saturation"': רוויה
             '"brightness"': בהירות
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} עושים [MOVE][1] [DIR][2] לנצח"
+        text: "{GROUP} עושים {MOVE} {DIR} לנצח"
         options:
           GROUP:
             sprites: כולם
@@ -50,7 +50,7 @@ he:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} עושה [MOVE][1] [DIR][2] לנצח"
+        text: "{SPRITE} עושה {MOVE} {DIR} לנצח"
         options:
           MOVE:
             '"next"': "(הבא)"
@@ -71,7 +71,7 @@ he:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: שנה [PROPERTY][1] של [SPRITE][0] ב [VAL][2]
+        text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
           PROPERTY:
             '"scale"': גודל
@@ -81,7 +81,7 @@ he:
             '"x"': מיקום אופקי
             '"y"': מיקום אנכי
       Dancelab_doMoveEachLR:
-        text: "{GROUP} עושים [MOVE][1] [DIR][2] פעם אחת"
+        text: "{GROUP} עושים {MOVE} {DIR} פעם אחת"
         options:
           GROUP:
             sprites: כולם
@@ -125,7 +125,7 @@ he:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} עושה [MOVE][1] [DIR][2] פעם אחת"
+        text: "{SPRITE} עושה {MOVE} {DIR} פעם אחת"
         options:
           MOVE:
             '"rand"': "(רנדומלי)"
@@ -156,32 +156,32 @@ he:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'כל [N][0] [UNIT][1] '
+        text: 'כל {N} {UNIT} '
         options:
           UNIT:
             '"measures"': תיבות
             '"seconds"': שניות
       Dancelab_everySecondsRange:
-        text: 'כל [N][0] [UNIT][1] מ-[START][2] ועד [STOP][3] '
+        text: 'כל {N} {UNIT} מ-{START} ועד {STOP} '
         options:
           UNIT:
             measures: תיבות
             seconds: שניות
       Dancelab_everyVerseChorus:
-        text: 'כל [UNIT][0] '
+        text: 'כל {UNIT} '
         options:
           UNIT:
             '"verse"': בית
             '"chorus"': פזמון
       Dancelab_getEnergy:
-        text: קבל [RANGE][0]
+        text: קבל {RANGE}
         options:
           RANGE:
             '"low"': באס
             '"mid"': אמצע
             '"high"': טְרֶבֶּל
       Dancelab_getProp:
-        text: "{PROPERTY} של [SPRITE][0]"
+        text: "{PROPERTY} של {SPRITE}"
         options:
           PROPERTY:
             '"scale"': גודל
@@ -192,15 +192,15 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
       Dancelab_getTime:
-        text: זמן נוכחי ב [UNIT][0]
+        text: זמן נוכחי ב {UNIT}
         options:
           UNIT:
             '"measures"': תיבות
             '"seconds"': שניות
       Dancelab_ifDanceIs:
         text: |-
-          אם [SPRITE][0] עושה [DANCE][1]
-          [DO1][2] [DO2][3]
+          אם {SPRITE} עושה {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: קלאפ היי
@@ -216,8 +216,8 @@ he:
             MOVES.Rest: כלום
       Dancelab_ifTime:
         text: |-
-          אם [UNIT][0] הוא [OP][1] [N][2]
-          [DO1][3] [DO2][4]
+          אם {UNIT} הוא {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': תיבות
@@ -227,7 +227,7 @@ he:
             '"<"': "\\<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} קפוץ למיקום [LOCATION][1]"
+        text: "{SPRITE} קפוץ למיקום {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": עליון
@@ -241,7 +241,7 @@ he:
             "{x: 300, y: 300}": למטה מימין
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": אקראי
       Dancelab_layoutSprites:
-        text: סידור [GROUP][0] כ [FORMAT][1]
+        text: סידור {GROUP} כ {FORMAT}
         options:
           GROUP:
             sprites: כולם
@@ -268,8 +268,8 @@ he:
             '"random"': אקראי
       Dancelab_makeNewDanceSprite:
         text: |-
-          צור [COSTUME][0] חדש
-          בשם [NAME][1] ב [LOCATION][2]
+          צור {COSTUME} חדש
+          בשם {NAME} ב {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': חייזר
@@ -296,8 +296,8 @@ he:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": אקראי
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          צור [N][0] [COSTUME][1] חדשים
-          ב [LAYOUT][2]
+          צור {N} {COSTUME} חדשים
+          ב {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -342,7 +342,7 @@ he:
             '"plus"': פלוס
             '"random"': אקראי
       Dancelab_mixColors:
-        text: ערבב [COLOR1][0] עם [COLOR2][1]
+        text: ערבב {COLOR1} עם {COLOR2}
       Dancelab_nMeasures:
         text: "{N} תיבות"
       Dancelab_onPointerDown:
@@ -354,9 +354,9 @@ he:
       Dancelab_randomColor:
         text: צבע אקראי
       Dancelab_setBackground:
-        text: קבע צבע רקע [COLOR][0]
+        text: קבע צבע רקע {COLOR}
       Dancelab_setBackgroundEffect:
-        text: קבעו אפקט רקע [EFFECT][0] [PALETTE][1]
+        text: קבעו אפקט רקע {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': כלום
@@ -369,7 +369,7 @@ he:
             '"spiral"': ספירלה
             '"disco"': ריבועים
       Dancelab_setBackgroundEffectWithPalette:
-        text: קבעו אפקט רקע [EFFECT][0] [PALETTE][1]
+        text: קבעו אפקט רקע {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': כלום
@@ -383,7 +383,7 @@ he:
             '"spiral"': ספירלה
             '"disco"': ריבועים
       Dancelab_setDanceSpeed:
-        text: קבע [SPRITE][0] מהירות ריקוד ל [SPEED][1]
+        text: קבע {SPRITE} מהירות ריקוד ל {SPEED}
         options:
           SPEED:
             '1': רגיל
@@ -392,7 +392,7 @@ he:
             '0.5': איטי
             '0.25': מאוד איטי
       Dancelab_setDanceSpeedEach:
-        text: קבע [GROUP][0] מהירות ריקוד ל [SPEED][1]
+        text: קבע {GROUP} מהירות ריקוד ל {SPEED}
         options:
           GROUP:
             sprites: כולם
@@ -414,7 +414,7 @@ he:
             '0.5': איטי
             '0.25': מאוד איטי
       Dancelab_setForegroundEffect:
-        text: קבע אפקט חזית [EFFECT][0]
+        text: קבע אפקט חזית {EFFECT}
         options:
           EFFECT:
             '"none"': כלום
@@ -424,7 +424,7 @@ he:
             '"spotlight"': זרקור
             '"raining_tacos"': טָאקוֹ
       Dancelab_setForegroundEffectExtended:
-        text: קבע אפקט חזית [EFFECT][0]
+        text: קבע אפקט חזית {EFFECT}
         options:
           EFFECT:
             '"none"': כלום
@@ -435,7 +435,7 @@ he:
             '"spotlight"': זרקור
             '"raining_tacos"': טָאקוֹ
       Dancelab_setProp:
-        text: 'קבע [PROPERTY][1] של [SPRITE][0] ל [VAL][2] '
+        text: 'קבע {PROPERTY} של {SPRITE} ל {VAL} '
         options:
           PROPERTY:
             '"scale"': גודל
@@ -446,7 +446,7 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
       Dancelab_setPropEach:
-        text: קבע [PROPERTY][1] של [GROUP][0] ל [VAL][2]
+        text: קבע {PROPERTY} של {GROUP} ל {VAL}
         options:
           GROUP:
             sprites: כולם
@@ -470,7 +470,7 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
       Dancelab_setPropRandom:
-        text: קבע באקראי את [PROPERTY][1] של [SPRITE][0]
+        text: קבע באקראי את {PROPERTY} של {SPRITE}
         options:
           PROPERTY:
             '"scale"': גודל
@@ -481,9 +481,9 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
       Dancelab_setTint:
-        text: קבע גוון של [SPRITE][0] ל [VAL][1]
+        text: קבע גוון של {SPRITE} ל {VAL}
       Dancelab_setTintEach:
-        text: קבע גוון של [THIS][0] ל [VAL][1]
+        text: קבע גוון של {THIS} ל {VAL}
         options:
           THIS:
             sprites: כולם
@@ -498,15 +498,15 @@ he:
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
       Dancelab_setTintInline:
-        text: קבע גוון של [SPRITE][0] ל [VAL][1]
+        text: קבע גוון של {SPRITE} ל {VAL}
       Dancelab_setVisible:
-        text: קבע את הנראות של [SPRITE][0] ל [VISIBILITY][1]
+        text: קבע את הנראות של {SPRITE} ל {VISIBILITY}
         options:
           VISIBILITY:
             'true': נראה
             'false': בלתי נראה
       Dancelab_setVisibleEach:
-        text: שנה את הנראות של [THIS][0] ל [VISIBILITY][1]
+        text: שנה את הנראות של {THIS} ל {VISIBILITY}
         options:
           THIS:
             sprites: כולם
@@ -525,7 +525,7 @@ he:
             'true': נראה
             'false': בלתי נראה
       Dancelab_startMapping:
-        text: "{PROPERTY} של [SPRITE][0] מתחיל לעקוב אחרי [RANGE][2]"
+        text: "{PROPERTY} של {SPRITE} מתחיל לעקוב אחרי {RANGE}"
         options:
           PROPERTY:
             '"scale"': גודל
@@ -540,7 +540,7 @@ he:
             '"mid"': אמצע
             '"treble"': טְרֶבֶּל
       Dancelab_stopMapping:
-        text: "{PROPERTY} של [SPRITE][0] מפסיק לעקוב אחרי [RANGE][2]"
+        text: "{PROPERTY} של {SPRITE} מפסיק לעקוב אחרי {RANGE}"
         options:
           PROPERTY:
             '"scale"': גודל
@@ -556,7 +556,7 @@ he:
             '"mid"': אמצע
             '"treble"': טְרֶבֶּל
       Dancelab_whenKey:
-        text: כשמקש [KEY][0] לחוץ
+        text: כשמקש {KEY} לחוץ
         options:
           KEY:
             '"up"': למעלה
@@ -597,7 +597,7 @@ he:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: כאשר [RANGE][0] מגיע לשיא
+        text: כאשר {RANGE} מגיע לשיא
         options:
           RANGE:
             '0': באס
@@ -606,7 +606,7 @@ he:
       Dancelab_whenSetup:
         text: הגדרה
       gamelab_changePropBy:
-        text: שנה [PROPERTY][1] של [SPRITE][0] ב [VAL][2]
+        text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
           PROPERTY:
             '"scale"': גודל
@@ -620,20 +620,20 @@ he:
             '"when"': כאשר
             '"while"': כאשר
       gamelab_clickedOn:
-        text: כאשר [SPRITE][0] נלחץ
+        text: כאשר {SPRITE} נלחץ
       gamelab_comment:
-        text: 'הערה: [COMMENT][0]'
+        text: 'הערה: {COMMENT}'
       gamelab_console.log:
-        text: הודעת לוג [MESSAGE][0]
+        text: הודעת לוג {MESSAGE}
       gamelab_debugSprite:
         options:
           VAL:
             'true': נכון
             'false': שגוי
       gamelab_destroy:
-        text: הסר את [THIS][0]
+        text: הסר את {THIS}
       gamelab_getProp:
-        text: "{PROPERTY} של [SPRITE][0]"
+        text: "{PROPERTY} של {SPRITE}"
         options:
           PROPERTY:
             '"scale"': גודל
@@ -645,7 +645,7 @@ he:
       gamelab_hideTitleScreen:
         text: הסתר כותרת מסך
       gamelab_jumpTo:
-        text: "{SPRITE} קפוץ למיקום [LOCATION][1]"
+        text: "{SPRITE} קפוץ למיקום {LOCATION}"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -682,7 +682,7 @@ he:
       gamelab_locationMouse:
         text: מיקום עכבר
       gamelab_locationOf:
-        text: מיקום [SPRITE][0]
+        text: מיקום {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_mirrorSprite:
@@ -697,7 +697,7 @@ he:
       gamelab_randomColor:
         text: צבע אקראי
       gamelab_setBackground:
-        text: קבע צבע רקע [COLOR][0]
+        text: קבע צבע רקע {COLOR}
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -724,7 +724,7 @@ he:
             '"width"': רוחב
             '"height"': גובה
       gamelab_setTint:
-        text: שנה צבע של [THIS][0] ל-[COLOR][1]
+        text: שנה צבע של {THIS} ל-{COLOR}
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -736,7 +736,7 @@ he:
             '"right"': ימינה
             '"left"': שמאלה
       gamelab_whenKey:
-        text: כשמקש [KEY][0] לחוץ
+        text: כשמקש {KEY} לחוץ
         options:
           KEY:
             '"up"': למעלה
@@ -861,8 +861,8 @@ he:
             '"all"': כולם
       Mikelab_ifDanceIs:
         text: |-
-          אם [SPRITE][0] עושה [DANCE][1]
-          [DO1][2] [DO2][3]
+          אם {SPRITE} עושה {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: קלאפ היי
@@ -910,9 +910,9 @@ he:
             "{x: 100, y: 300}": למטה משמאל
             "{x: 300, y: 300}": למטה מימין
       Mikelab_whenClickedOn:
-        text: כאשר [SPRITE][0] נלחץ
+        text: כאשר {SPRITE} נלחץ
       Mikelab_whenKeyPressed:
-        text: כשמקש [KEY][0] לחוץ
+        text: כשמקש {KEY} לחוץ
         options:
           KEY:
             '"up"': חץ למעלה
@@ -948,7 +948,7 @@ he:
       RyanLab_turnRight:
         text: פנה ימינה
       Vector_log:
-        text: הודעת לוג [MESSAGE][0]
+        text: הודעת לוג {MESSAGE}
       Vector_positionCenter:
         text: באמצע
       Vector_vectorNorth:
@@ -958,7 +958,7 @@ he:
           PROPERTY:
             "'shapeColor'": צבע
       aalab_changePropByFlexible:
-        text: שנה [PROPERTY][1] של [SPRITE][0] ב [VAL][2]
+        text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
           PROPERTY:
             '"scale"': גודל
@@ -977,7 +977,7 @@ he:
             '"when"': כאשר
             '"while"': כאשר
       aalab_jumpTo:
-        text: "{SPRITE} קפוץ למיקום [LOCATION][1]"
+        text: "{SPRITE} קפוץ למיקום {LOCATION}"
       aalab_keyPressed:
         options:
           CONDITION:
@@ -992,7 +992,7 @@ he:
       aalab_location_picker:
         text: "{LOCATION}"
       aalab_removeOneAndAll:
-        text: הסר את [THIS][0]
+        text: הסר את {THIS}
       aalab_setBG:
         options:
           BG:
@@ -1028,7 +1028,7 @@ he:
             '"left"': שמאלה
             '"right"': ימינה
       binary_whenKey:
-        text: כשמקש [KEY][0] לחוץ
+        text: כשמקש {KEY} לחוץ
         options:
           KEY:
             '"up"': למעלה
@@ -1042,8 +1042,8 @@ he:
             '"d"': d
       craft_ifPath:
         text: |-
-          אם יש נתיב [DIR][0]
-          [STATEMENT][1]
+          אם יש נתיב {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": קדימה
@@ -1051,8 +1051,8 @@ he:
             "'left'": שמאלה
       craft_ifStandingOn:
         text: |-
-          אם עומדים מעל [TYPE][0]
-          [STATEMENT][1]
+          אם עומדים מעל {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": שונית כחולה
@@ -1063,19 +1063,19 @@ he:
             "'seaLantern'": פנס ימי
       craft_ifStandingOnLimit:
         text: |-
-          אם עומדים מעל [TYPE][0]
-          [STATEMENT][1]
+          אם עומדים מעל {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": חול
             "'darkPrismarine'": פריזמרינה כהה
             "'seaLantern'": פנס ימי
       craft_log:
-        text: הודעת לוג [MESSAGE][0]
+        text: הודעת לוג {MESSAGE}
       craft_moveForward:
         text: זוז קדימה
       craft_placeBlock:
-        text: הנח [blockType][0]
+        text: הנח {blockType}
         options:
           blockType:
             '"strippedOak"': עץ אלון מקולף
@@ -1110,13 +1110,13 @@ he:
       craft_repeatUntilConduit:
         text: |-
           חזור עד שהמגדלור התת-ימי מושלם
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           חזור עד המטרה
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: צור [ENTITY][0]
+        text: צור {ENTITY}
         options:
           ENTITY:
             '"cod"': דג
@@ -1126,7 +1126,7 @@ he:
             '"squid"': דיונון
             '"tropicalFish"': דג טרופי
       craft_turn:
-        text: פנה [DIR][0]
+        text: פנה {DIR}
         options:
           DIR:
             right: ימינה

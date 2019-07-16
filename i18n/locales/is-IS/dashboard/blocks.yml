@@ -3,20 +3,20 @@ is:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: eftir [TIMESTAMP][0] [UNIT][1]
+        text: eftir {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': takta
             '"seconds"': sekúndur
       Dancelab_changeColorBy:
-        text: breyta [COLOR][0] [METHOD][1] um [AMOUNT][2]
+        text: breyta {COLOR} {METHOD} um {AMOUNT}
         options:
           METHOD:
             '"hue"': litblær
             '"saturation"': litamettun
             '"brightness"': birtustig
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} gera [MOVE][1] [DIR][2] alltaf"
+        text: "{GROUP} gera {MOVE} {DIR} alltaf"
         options:
           GROUP:
             sprites: allt
@@ -50,7 +50,7 @@ is:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} gerir [MOVE][1] [DIR][2] alltaf"
+        text: "{SPRITE} gerir {MOVE} {DIR} alltaf"
         options:
           MOVE:
             '"next"': "(Næsti)"
@@ -71,7 +71,7 @@ is:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: breyta [SPRITE][0] [PROPERTY][1] um [VAL][2]
+        text: breyta {SPRITE} {PROPERTY} um {VAL}
         options:
           PROPERTY:
             '"scale"': stærð
@@ -81,7 +81,7 @@ is:
             '"x"': lárétt staða
             '"y"': lóðrétt staða
       Dancelab_doMoveEachLR:
-        text: "{GROUP} gera [MOVE][1] [DIR][2] einu sinni"
+        text: "{GROUP} gera {MOVE} {DIR} einu sinni"
         options:
           GROUP:
             sprites: allt
@@ -125,7 +125,7 @@ is:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} gerir [MOVE][1] [DIR][2] einu sinni"
+        text: "{SPRITE} gerir {MOVE} {DIR} einu sinni"
         options:
           MOVE:
             '"rand"': "(Handahóf)"
@@ -156,32 +156,32 @@ is:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'á [N][0] [UNIT][1] fresti '
+        text: 'á {N} {UNIT} fresti '
         options:
           UNIT:
             '"measures"': takta
             '"seconds"': sekúndur
       Dancelab_everySecondsRange:
-        text: 'á [N][0] [UNIT][1] fresti frá [START][2] til [STOP][3] '
+        text: 'á {N} {UNIT} fresti frá {START} til {STOP} '
         options:
           UNIT:
             measures: Taktar
             seconds: Sekúndur
       Dancelab_everyVerseChorus:
-        text: 'á [UNIT][0] fresti '
+        text: 'á {UNIT} fresti '
         options:
           UNIT:
             '"verse"': vers
             '"chorus"': viðlag
       Dancelab_getEnergy:
-        text: sækja [RANGE][0]
+        text: sækja {RANGE}
         options:
           RANGE:
             '"low"': bassahljóð
             '"mid"': miðhljóð
             '"high"': háhljóð
       Dancelab_getProp:
-        text: "{SPRITE} [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': stærð
@@ -192,15 +192,15 @@ is:
             '"y"': lóðrétt staða
             '"tint"': litur
       Dancelab_getTime:
-        text: tími nú í [UNIT][0]
+        text: tími nú í {UNIT}
         options:
           UNIT:
             '"measures"': takta
             '"seconds"': sekúndur
       Dancelab_ifDanceIs:
         text: |-
-          ef [SPRITE][0] gerir [DANCE][1]
-          [DO1][2] [DO2][3]
+          ef {SPRITE} gerir {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Háklappa
@@ -216,8 +216,8 @@ is:
             MOVES.Rest: Ekkert
       Dancelab_ifTime:
         text: |-
-          ef [UNIT][0] er [OP][1] [N][2]
-          [DO1][3] [DO2][4]
+          ef {UNIT} er {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': takta
@@ -227,7 +227,7 @@ is:
             '"<"': "\\<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} hoppa til [LOCATION][1]"
+        text: "{SPRITE} hoppa til {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": efst
@@ -241,7 +241,7 @@ is:
             "{x: 300, y: 300}": neðst til hægri
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": eitthvað
       Dancelab_layoutSprites:
-        text: stilla [GROUP][0] upp sem [FORMAT][1]
+        text: stilla {GROUP} upp sem {FORMAT}
         options:
           GROUP:
             sprites: allt
@@ -268,8 +268,8 @@ is:
             '"random"': eitthvað
       Dancelab_makeNewDanceSprite:
         text: |-
-          búa til [COSTUME][0]
-          með nafn [NAME][1] á stað [LOCATION][2]
+          búa til {COSTUME}
+          með nafn {NAME} á stað {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': Geimvera
@@ -296,8 +296,8 @@ is:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": eitthvað
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          búa til [N][0] [COSTUME][1]
-          í uppstillingu [LAYOUT][2]
+          búa til {N} {COSTUME}
+          í uppstillingu {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -342,7 +342,7 @@ is:
             '"plus"': plús
             '"random"': eitthvað
       Dancelab_mixColors:
-        text: blanda litum [COLOR1][0] og [COLOR2][1]
+        text: blanda litum {COLOR1} og {COLOR2}
       Dancelab_nMeasures:
         text: "{N} takta"
       Dancelab_onPointerDown:
@@ -354,9 +354,9 @@ is:
       Dancelab_randomColor:
         text: einhver litur
       Dancelab_setBackground:
-        text: stilla bakgrunnslitinn [COLOR][0]
+        text: stilla bakgrunnslitinn {COLOR}
       Dancelab_setBackgroundEffect:
-        text: stilla bakgrunnshrifin [EFFECT][0] [PALETTE][1]
+        text: stilla bakgrunnshrifin {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ekkert
@@ -388,7 +388,7 @@ is:
             '"vintage"': Klassískt
             '"warm"': Hlýlegt
       Dancelab_setBackgroundEffectWithPalette:
-        text: stilla bakgrunn [EFFECT][0] [PALETTE][1]
+        text: stilla bakgrunn {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ekkert
@@ -421,7 +421,7 @@ is:
             '"vintage"': Klassískt
             '"warm"': Hlýlegt
       Dancelab_setDanceSpeed:
-        text: stilla danshraða [SPRITE][0] á [SPEED][1]
+        text: stilla danshraða {SPRITE} á {SPEED}
         options:
           SPEED:
             '1': venjulegt
@@ -430,7 +430,7 @@ is:
             '0.5': hægt
             '0.25': mjög hægt
       Dancelab_setDanceSpeedEach:
-        text: stilla danshraða [GROUP][0] á [SPEED][1]
+        text: stilla danshraða {GROUP} á {SPEED}
         options:
           GROUP:
             sprites: allt
@@ -452,7 +452,7 @@ is:
             '0.5': hægt
             '0.25': mjög hægt
       Dancelab_setForegroundEffect:
-        text: stilla á forgrunnshrifin [EFFECT][0]
+        text: stilla á forgrunnshrifin {EFFECT}
         options:
           EFFECT:
             '"none"': Ekkert
@@ -470,7 +470,7 @@ is:
             '"color_lights"': Sviðsljós
             '"raining_tacos"': Takós
       Dancelab_setForegroundEffectExtended:
-        text: stilla á forgrunnshrifin [EFFECT][0]
+        text: stilla á forgrunnshrifin {EFFECT}
         options:
           EFFECT:
             '"none"': Ekkert
@@ -489,7 +489,7 @@ is:
             '"color_lights"': Sviðsljós
             '"raining_tacos"': Takós
       Dancelab_setProp:
-        text: 'stilla [SPRITE][0] [PROPERTY][1] á [VAL][2] '
+        text: 'stilla {SPRITE} {PROPERTY} á {VAL} '
         options:
           PROPERTY:
             '"scale"': stærð
@@ -500,7 +500,7 @@ is:
             '"y"': lóðrétt staða
             '"tint"': litur
       Dancelab_setPropEach:
-        text: stilla [GROUP][0] [PROPERTY][1] á [VAL][2]
+        text: stilla {GROUP} {PROPERTY} á {VAL}
         options:
           GROUP:
             sprites: allt
@@ -524,7 +524,7 @@ is:
             '"y"': lóðrétt staða
             '"tint"': litur
       Dancelab_setPropRandom:
-        text: handahófsstilla [SPRITE][0] [PROPERTY][1]
+        text: handahófsstilla {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': stærð
@@ -535,9 +535,9 @@ is:
             '"y"': lóðrétt staða
             '"tint"': litur
       Dancelab_setTint:
-        text: stilla lit [SPRITE][0] á [VAL][1]
+        text: stilla lit {SPRITE} á {VAL}
       Dancelab_setTintEach:
-        text: stilla lit [THIS][0] á [VAL][1]
+        text: stilla lit {THIS} á {VAL}
         options:
           THIS:
             sprites: allt
@@ -552,15 +552,15 @@ is:
             '"ROBOT"': öll vélmenni
             '"SHARK"': allir hákarlar
       Dancelab_setTintInline:
-        text: stilla lit [SPRITE][0] á [VAL][1]
+        text: stilla lit {SPRITE} á {VAL}
       Dancelab_setVisible:
-        text: stilla sýnileika [SPRITE][0] á [VISIBILITY][1]
+        text: stilla sýnileika {SPRITE} á {VISIBILITY}
         options:
           VISIBILITY:
             'true': sýnilegt
             'false': ósýnilegt
       Dancelab_setVisibleEach:
-        text: stilla sýnileika [THIS][0] á [VISIBILITY][1]
+        text: stilla sýnileika {THIS} á {VISIBILITY}
         options:
           THIS:
             sprites: allt
@@ -579,7 +579,7 @@ is:
             'true': sýnilegt
             'false': ósýnilegt
       Dancelab_startMapping:
-        text: "{SPRITE} fær eiginleika [PROPERTY][1] eftir [RANGE][2]"
+        text: "{SPRITE} fær eiginleika {PROPERTY} eftir {RANGE}"
         options:
           PROPERTY:
             '"scale"': stærð
@@ -594,7 +594,7 @@ is:
             '"mid"': miðhljóð
             '"treble"': háhljóð
       Dancelab_stopMapping:
-        text: "{SPRITE} missir eiginleika [PROPERTY][1] eftir [RANGE][2]"
+        text: "{SPRITE} missir eiginleika {PROPERTY} eftir {RANGE}"
         options:
           PROPERTY:
             '"scale"': stærð
@@ -610,7 +610,7 @@ is:
             '"mid"': miðhljóð
             '"treble"': háhljóð
       Dancelab_whenKey:
-        text: þegar ýtt er á [KEY][0]
+        text: þegar ýtt er á {KEY}
         options:
           KEY:
             '"up"': uppi
@@ -656,7 +656,7 @@ is:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: þegar [RANGE][0] hæst
+        text: þegar {RANGE} hæst
         options:
           RANGE:
             '0': bassahljóð
@@ -665,11 +665,11 @@ is:
       Dancelab_whenSetup:
         text: uppstilling
       gamelab_addBehaviorSimple:
-        text: vera [SPRITE][0] byrjar [BEHAVIOR][1]
+        text: vera {SPRITE} byrjar {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
-        text: aalab allar [ANIMATION][0]
+        text: aalab allar {ANIMATION}
       gamelab_changePropBy:
-        text: breyta [SPRITE][0] [PROPERTY][1] um [VAL][2]
+        text: breyta {SPRITE} {PROPERTY} um {VAL}
         options:
           PROPERTY:
             '"scale"': stærð
@@ -678,37 +678,37 @@ is:
             '"y"': y staða
             '"direction"': stefna hreyfingar
       gamelab_checkTouching:
-        text: "{CONDITION} [SPRITE1][1] snertir [SPRITE2][2]"
+        text: "{CONDITION} {SPRITE1} snertir {SPRITE2}"
         options:
           CONDITION:
             '"when"': þegar
             '"while"': meðan
       gamelab_clickedOn:
-        text: þegar smellt á [SPRITE][0]
+        text: þegar smellt á {SPRITE}
       gamelab_clickedSpritePointer:
         text: ásmellt vera
       gamelab_comment:
-        text: 'athugasemd: [COMMENT][0]'
+        text: 'athugasemd: {COMMENT}'
       gamelab_console.log:
-        text: skrá boð [MESSAGE][0]
+        text: skrá boð {MESSAGE}
       gamelab_createNewSprite:
-        text: "búa til nýja veru \n nafn [NAME][0] \n búningur [COSTUME][1] \n staður [LOCATION][2]"
+        text: "búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
       gamelab_debugSprite:
-        text: aflúsa [SPRITE][0] [VAL][1]
+        text: aflúsa {SPRITE} {VAL}
         options:
           VAL:
             'true': satt
             'false': ósatt
       gamelab_destroy:
-        text: fjarlægja [THIS][0]
+        text: fjarlægja {THIS}
       gamelab_displace:
-        text: "{THIS} hindra [SPRITE][1] að hreyfast"
+        text: "{THIS} hindra {SPRITE} að hreyfast"
       gamelab_draggable:
         text: er hægt að draga
       gamelab_edgesDisplace:
-        text: brúnir hindra [SPRITE][0] að hreyfast
+        text: brúnir hindra {SPRITE} að hreyfast
       gamelab_getProp:
-        text: "{SPRITE} [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': stærð
@@ -727,9 +727,9 @@ is:
       gamelab_isTouchingEdges:
         text: "{SPRITE} snertir brúnir"
       gamelab_jumpTo:
-        text: "{SPRITE} hoppa til [LOCATION][1]"
+        text: "{SPRITE} hoppa til {LOCATION}"
       gamelab_keyPressed:
-        text: "{CONDITION} [KEY][1] niðri"
+        text: "{CONDITION} {KEY} niðri"
         options:
           CONDITION:
             '"when"': þegar
@@ -767,17 +767,17 @@ is:
             '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
-        text: 'staður x: [X][0] y: [Y][1]'
+        text: 'staður x: {X} y: {Y}'
       gamelab_locationMouse:
         text: staður músar
       gamelab_locationOf:
-        text: staður [SPRITE][0]
+        text: staður {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: aalab búa til nýja [ANIMATION_NAME][0] veru á stað [LOCATION][1]
+        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_mirrorSprite:
-        text: "{SPRITE} snýr [DIRECTION][1]"
+        text: "{SPRITE} snýr {DIRECTION}"
         options:
           DIRECTION:
             '"right"': hægri
@@ -785,9 +785,9 @@ is:
       gamelab_mouseLocation:
         text: staður músar
       gamelab_moveForward:
-        text: færa [SPRITE][0] [DISTANCE][1] díla áfram
+        text: færa {SPRITE} {DISTANCE} díla áfram
       gamelab_moveInDirection:
-        text: færa [SPRITE][0] [DISTANCE][1] díla í [DIRECTION][2]
+        text: færa {SPRITE} {DISTANCE} díla í {DIRECTION}
         options:
           DIRECTION:
             '"North"': norður
@@ -795,11 +795,11 @@ is:
             '"South"': suður
             '"West"': vestur
       gamelab_moveToward:
-        text: færa [SPRITE][0] vegalengd [DISTANCE][1] til [TARGET][2]
+        text: færa {SPRITE} vegalengd {DISTANCE} til {TARGET}
       gamelab_playSound:
-        text: spilaHljóð [SOUND][0]
+        text: spilaHljóð {SOUND}
       gamelab_pointInDirection:
-        text: beina [SPRITE][0] [DIRECTION][1]
+        text: beina {SPRITE} {DIRECTION}
         options:
           DIRECTION:
             '"North"': norður
@@ -807,7 +807,7 @@ is:
             '"South"': suður
             '"West"': vestur
       gamelab_printText:
-        text: prenta [TEXT][0]
+        text: prenta {TEXT}
       gamelab_randColor:
         text: einhver litur
       gamelab_randomColor:
@@ -817,15 +817,15 @@ is:
       gamelab_removeAllBehaviors:
         text: "{SPRITE} hættir öllu"
       gamelab_removeBehaviorSimple:
-        text: vera [SPRITE][0] hættir [BEHAVIOR][1]
+        text: vera {SPRITE} hættir {BEHAVIOR}
       gamelab_removeTint:
-        text: fjarlægja lit af [THIS][0]
+        text: fjarlægja lit af {THIS}
       gamelab_setAnimation:
-        text: breyta búningi [THIS][0] í [ANIMATION][1]
+        text: breyta búningi {THIS} í {ANIMATION}
       gamelab_setBackground:
-        text: stilla bakgrunnslitinn [COLOR][0]
+        text: stilla bakgrunnslitinn {COLOR}
       gamelab_setBackgroundImage:
-        text: stilla bakgrunn á [IMG][0]
+        text: stilla bakgrunn á {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': hellir
@@ -841,7 +841,7 @@ is:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vetur
             undefined: ekkert
       gamelab_setProp:
-        text: stilla [SPRITE][0] [PROPERTY][1] á [VAL][2]
+        text: stilla {SPRITE} {PROPERTY} á {VAL}
         options:
           PROPERTY:
             '"scale"': stærð
@@ -851,31 +851,31 @@ is:
             '"direction"': stefna hreyfingar
             '"tint"': litur
       gamelab_setSizes:
-        text: stilla [SPRITE][0] [PROPERTY][1] á [N][2]%
+        text: stilla {SPRITE} {PROPERTY} á {N}%
         options:
           PROPERTY:
             '"scale"': stærð
             '"width"': breidd
             '"height"': hæð
       gamelab_setTint:
-        text: breyta lit [THIS][0] í [COLOR][1]
+        text: breyta lit {THIS} í {COLOR}
       gamelab_setupSim:
         text: |-
           stilla upp hermi þar sem
-          [SPRITE1N][0][SPRITE1COSTUME][1]speed[SPRITE1SPEED][2]
-          [SPRITE2N][3][SPRITE2COSTUME][4]speed[SPRITE2SPEED][5]
+          {SPRITE1N}{SPRITE1COSTUME}speed{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}speed{SPRITE2SPEED}
           eru að safna
-          [SPRITE3N][6][SPRITE3COSTUME][7]
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: sýna titilskjá [BREAK][0] titill [TITLE][1] texti [SUBTITLE][2]
+        text: sýna titilskjá {BREAK} titill {TITLE} texti {SUBTITLE}
       gamelab_spriteClicked:
-        text: "{CONDITION} [SPRITE][1] ef smellt"
+        text: "{CONDITION} {SPRITE} ef smellt"
         options:
           CONDITION:
             '"when"': þegar
             '"while"': meðan
       gamelab_turn:
-        text: "{SPRITE} snýr [DIRECTION][1] [N][2] gráður"
+        text: "{SPRITE} snýr {DIRECTION} {N} gráður"
         options:
           DIRECTION:
             '"right"': hægri
@@ -883,7 +883,7 @@ is:
       gamelab_whenDownArrow:
         text: þegar ýtt er á ör niður
       gamelab_whenKey:
-        text: þegar ýtt er á [KEY][0]
+        text: þegar ýtt er á {KEY}
         options:
           KEY:
             '"up"': uppi
@@ -898,7 +898,7 @@ is:
       gamelab_whenLeftArrow:
         text: þegar ýtt er á vinstri ör
       gamelab_whenPressedAndReleased:
-        text: "þegar [DIR][0] haldið \n[STATEMENT1][1] þegar sleppt \n[STATEMENT2][2]"
+        text: "þegar {DIR} haldið \n{STATEMENT1} þegar sleppt \n{STATEMENT2}"
         options:
           DIR:
             "'up'": uppi
@@ -909,16 +909,16 @@ is:
         text: þegar ýtt er á hægri ör
       gamelab_whenStartAndStopTouching:
         text: |-
-          þegar [SPRITE1][0] byrjar að snerta [SPRITE2][1] [STATEMENT1][2] þegar snerting hættir
-          [STATEMENT2][3]
+          þegar {SPRITE1} byrjar að snerta {SPRITE2} {STATEMENT1} þegar snerting hættir
+          {STATEMENT2}
       gamelab_whenTouching:
-        text: þegar [SPRITE1][0] snertir [SPRITE2][1]
+        text: þegar {SPRITE1} snertir {SPRITE2}
       gamelab_whenUpArrow:
         text: þegar ýtt er á ör upp
       gamelab_whileDownArrow:
         text: meðan ýtt er á ör niður
       gamelab_whileKey:
-        text: meðan ýtt er á [KEY][0]
+        text: meðan ýtt er á {KEY}
         options:
           KEY:
             '"up"': uppi
@@ -935,15 +935,15 @@ is:
       gamelab_whileRightArrow:
         text: meðan ýtt er á hægri ör
       gamelab_whileTouching:
-        text: meðan [SPRITE1][0] snertir [SPRITE2][1]
+        text: meðan {SPRITE1} snertir {SPRITE2}
       gamelab_whileUpArrow:
         text: meðan ýtt er á ör upp
       gamelab_xLocationOf:
-        text: x hnit [SPRITE][0]
+        text: x hnit {SPRITE}
       gamelab_yLocationOf:
-        text: y hnit [SPRITE][0]
+        text: y hnit {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: vera [SPRITE][0] byrjar [BEHAVIOR][1]
+        text: vera {SPRITE} byrjar {BEHAVIOR}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -973,13 +973,13 @@ is:
             '"y"': y staða
             '"direction"': stefna hreyfingar
       Mikelab_groupChangeAnim:
-        text: breyta [SELECT][0] [COSTUME][1] í [COSTUME2][2]
+        text: breyta {SELECT} {COSTUME} í {COSTUME2}
         options:
           SELECT:
             '"all"': allt
             '"this"': þetta
       Mikelab_groupChangePropBy:
-        text: "{PROPERTY} eiginleiki [SELECT][1] [COSTUME][2] breytist um [VAL][3]"
+        text: "{PROPERTY} eiginleiki {SELECT} {COSTUME} breytist um {VAL}"
         options:
           SELECT:
             '"all"': allt
@@ -991,7 +991,7 @@ is:
             '"y"': y staða
             '"direction"': stefna hreyfingar
       Mikelab_groupCreateNewSprite:
-        text: búa til [COSTUME][0] á stað [LOCATION][1]
+        text: búa til {COSTUME} á stað {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": efst
@@ -1004,17 +1004,17 @@ is:
             "{x: 100, y: 300}": neðst til vinstri
             "{x: 300, y: 300}": neðst til hægri
       Mikelab_groupDestroy:
-        text: fjarlægja [SELECT][0] [COSTUME][1]
+        text: fjarlægja {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': allt
             '"this"': þetta
       Mikelab_groupDisplace:
-        text: allir [COSTUME][0] hindra hreyfingu [COSTUME2][1]
+        text: allir {COSTUME} hindra hreyfingu {COSTUME2}
       Mikelab_groupEdgesDisplace:
-        text: brúnir hindra [COSTUME][0] að hreyfast
+        text: brúnir hindra {COSTUME} að hreyfast
       Mikelab_groupGetProp:
-        text: "{PROPERTY} eiginleiki [SELECT][0] [COSTUME][1]"
+        text: "{PROPERTY} eiginleiki {SELECT} {COSTUME}"
         options:
           SELECT:
             '"average"': meðal
@@ -1026,25 +1026,25 @@ is:
             '"y"': y staða
             '"direction"': stefna hreyfingar
       Mikelab_groupRemoveAllBehaviors:
-        text: stöðva hegðun [SELECT][0] [COSTUME][1]
+        text: stöðva hegðun {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': allt
             '"this"': þetta
       Mikelab_groupRemoveBehaviorSimple:
-        text: "{SELECT} [COSTUME][1] stöðvar [BEHAVIOR][2]"
+        text: "{SELECT} {COSTUME} stöðvar {BEHAVIOR}"
         options:
           SELECT:
             '"all"': allt
             '"this"': þetta
       Mikelab_groupRemoveTint:
-        text: fjarlægja lit úr [SELECT][0] [COSTUME][1]
+        text: fjarlægja lit úr {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': allt
             '"this"': þetta
       Mikelab_groupSetProp:
-        text: breyta [PROPERTY][0] fyrir [SELECT][1] [COSTUME][2] í [VAL][3]
+        text: breyta {PROPERTY} fyrir {SELECT} {COSTUME} í {VAL}
         options:
           SELECT:
             '"all"': allt
@@ -1056,27 +1056,27 @@ is:
             '"y"': y staða
             '"direction"': stefna hreyfingar
       Mikelab_groupSetTint:
-        text: breyta lit [SELECT][0] [COSTUME][1] í [COLOR][2]
+        text: breyta lit {SELECT} {COSTUME} í {COLOR}
         options:
           SELECT:
             '"all"': allt
             '"this"': þetta
       Mikelab_groupWhenClickedOn:
-        text: þegar smellt á [COSTUME][0]
+        text: þegar smellt á {COSTUME}
       Mikelab_groupWhenXTouchesY:
-        text: þegar [COSTUME][0] snertir [COSTUME2][1]
+        text: þegar {COSTUME} snertir {COSTUME2}
       Mikelab_groupWhileClicked:
-        text: á meðan smellt er á [COSTUME][0]
+        text: á meðan smellt er á {COSTUME}
       Mikelab_groupWhileTouchingAny:
         text: |-
-          á meðan [COSTUME][0] snertir [COSTUME2][1]
-          [STATEMENT][2]
+          á meðan {COSTUME} snertir {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
-        text: hegðun [SPRITE][0] er nú [BEHAVIOR][1]
+        text: hegðun {SPRITE} er nú {BEHAVIOR}
       Mikelab_ifDanceIs:
         text: |-
-          ef [SPRITE][0] gerir [DANCE][1]
-          [DO1][2] [DO2][3]
+          ef {SPRITE} gerir {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Háklappa
@@ -1091,13 +1091,13 @@ is:
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
       Mikelab_locationAt:
-        text: 'staður x: [X][0] y: [Y][1]'
+        text: 'staður x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: einhver litur
       Mikelab_removeBehaviorSimple:
-        text: vera [SPRITE][0] hættir [BEHAVIOR][1]
+        text: vera {SPRITE} hættir {BEHAVIOR}
       Mikelab_setBG:
         options:
           BG:
@@ -1116,7 +1116,7 @@ is:
             '"right"': hægri
             '"left"': vinstri
       Mikelab_sprite:
-        text: "´ný [COSTUME][0] vera á stað [LOCATION][1]"
+        text: "´ný {COSTUME} vera á stað {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": efst
@@ -1129,9 +1129,9 @@ is:
             "{x: 100, y: 300}": neðst til vinstri
             "{x: 300, y: 300}": neðst til hægri
       Mikelab_whenClickedOn:
-        text: þegar smellt á [SPRITE][0]
+        text: þegar smellt á {SPRITE}
       Mikelab_whenKeyPressed:
-        text: þegar ýtt er á [KEY][0]
+        text: þegar ýtt er á {KEY}
         options:
           KEY:
             '"up"': upp ör
@@ -1166,9 +1166,9 @@ is:
             '"right"': hægri ör
             '"space"': bilslá
       Mikelab_xLocationOf:
-        text: x hnit [SPRITE][0]
+        text: x hnit {SPRITE}
       Mikelab_yLocationOf:
-        text: y hnit [SPRITE][0]
+        text: y hnit {SPRITE}
       RyanLab_moveForward:
         text: færa áfram
       RyanLab_turnLeft:
@@ -1176,44 +1176,44 @@ is:
       RyanLab_turnRight:
         text: snúa til hægri
       SpriteLab2Beta_spriteSay:
-        text: vera [SPRITE][0] segir [TEXT][1] í [SECONDS][2] sekúndur
+        text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
       Vector_createSpriteWith:
         text: |-
           búa til veru
-          gera [STATEMENT][0]
+          gera {STATEMENT}
       Vector_log:
-        text: skrá boð [MESSAGE][0]
+        text: skrá boð {MESSAGE}
       Vector_positionCenter:
         text: í miðju
       Vector_push:
-        text: stilla hraða [VECTOR][0]
+        text: stilla hraða {VECTOR}
       Vector_randomLocation:
         text: staður af handahófi
       Vector_setColor:
-        text: stilla lit á [COLOR][0]
+        text: stilla lit á {COLOR}
       Vector_setSize:
-        text: stilla breidd [WIDTH][0] hæð [HEIGHT][1]
+        text: stilla breidd {WIDTH} hæð {HEIGHT}
       Vector_teleportTo:
-        text: stilla stað á [POSITION][0]
+        text: stilla stað á {POSITION}
       Vector_vectorNorth:
         text: norður
       Vector_where:
-        text: allar verur með [PROPERTY][0] = [VALUE][1] gera [STATEMENT][2]
+        text: allar verur með {PROPERTY} = {VALUE} gera {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": litur
       aalab_addBehaviorForDuration:
-        text: aalab vera [SPRITE][0] gerir [BEHAVIOR][1] í [SECONDS][2] sekúndur
+        text: aalab vera {SPRITE} gerir {BEHAVIOR} í {SECONDS} sekúndur
       aalab_addBehaviorSimpleFlexible:
-        text: aalab vera [SPRITE][0] gerir [BEHAVIOR][1]
+        text: aalab vera {SPRITE} gerir {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
-        text: aalab vera [SPRITE][0] gerir [BEHAVIOR][1] þar til [CONDITION][2]
+        text: aalab vera {SPRITE} gerir {BEHAVIOR} þar til {CONDITION}
       aalab_addToSpriteGroup:
-        text: bæta veru [SPRITE][0] í hóp [GROUP][1]
+        text: bæta veru {SPRITE} í hóp {GROUP}
       aalab_allSpritesWithAnimation:
-        text: aalab allar [ANIMATION][0]
+        text: aalab allar {ANIMATION}
       aalab_changePropByFlexible:
-        text: aalab breyta [SPRITE][0] [PROPERTY][1] um [VAL][2]
+        text: aalab breyta {SPRITE} {PROPERTY} um {VAL}
         options:
           PROPERTY:
             '"scale"': stærð
@@ -1222,42 +1222,42 @@ is:
             '"y"': y staða
             '"direction"': stefna hreyfingar
       aalab_checkTouching:
-        text: "{CONDITION} [SPRITE1][1] snertir [SPRITE2][2]"
+        text: "{CONDITION} {SPRITE1} snertir {SPRITE2}"
         options:
           CONDITION:
             '"when"': þegar
             '"while"': meðan
       aalab_clickedOn:
-        text: "{CONDITION} [SPRITE][1] ef smellt"
+        text: "{CONDITION} {SPRITE} ef smellt"
         options:
           CONDITION:
             '"when"': þegar
             '"while"': meðan
       aalab_createNewSprite:
-        text: "aalab búa til nýja veru \n nafn [NAME][0] \n búningur [COSTUME][1] \n staður [LOCATION][2]"
+        text: "aalab búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
       aalab_createNewSpriteAdvanced:
-        text: "búa til nýja veru \n nafn [NAME][0] \n búningur [COSTUME][1] \n staður [LOCATION][2]"
+        text: "búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: aalab búa til nýja [ANIMATION_NAME][0] veru á stað [LOCATION][1]
+        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab búa til nýja [ANIMATION_NAME][0] veru á stað [LOCATION][1]
+        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       aalab_createPropertyGroup:
         text: |-
-          búa til nýjan hóp sem heitir [VAR][0]
-          með öllum [COSTUME][1] verum
+          búa til nýjan hóp sem heitir {VAR}
+          með öllum {COSTUME} verum
       aalab_createSpriteGroup:
-        text: búa til nýjan hóp sem heitir [VAR][0]
+        text: búa til nýjan hóp sem heitir {VAR}
       aalab_getSpritesByName:
-        text: allar verur sem heita [NAME][0]
+        text: allar verur sem heita {NAME}
       aalab_getThisSprite:
         text: "{CHOICE} vera"
         options:
           CHOICE:
             '"this"': þetta
       aalab_jumpTo:
-        text: "{SPRITE} hoppa til [LOCATION][1]"
+        text: "{SPRITE} hoppa til {LOCATION}"
       aalab_keyPressed:
-        text: "{CONDITION} [KEY][1] niðri"
+        text: "{CONDITION} {KEY} niðri"
         options:
           CONDITION:
             '"when"': þegar
@@ -1269,13 +1269,13 @@ is:
             '"right"': hægri
             '"space"': geimur
       aalab_locationOf:
-        text: aalab staður [SPRITE][0]
+        text: aalab staður {SPRITE}
       aalab_location_picker:
         text: "{LOCATION}"
       aalab_moveForward:
-        text: aalab færa [SPRITE][0] [DISTANCE][1] díla áfram
+        text: aalab færa {SPRITE} {DISTANCE} díla áfram
       aalab_moveInDirection:
-        text: aalab færa [SPRITE][0] [DISTANCE][1] díla í [DIRECTION][2]
+        text: aalab færa {SPRITE} {DISTANCE} díla í {DIRECTION}
         options:
           DIRECTION:
             '"North"': norður
@@ -1283,29 +1283,29 @@ is:
             '"South"': suður
             '"West"': vestur
       aalab_moveToward:
-        text: aalab færa [SPRITE][0] vegalengd [DISTANCE][1] til [TARGET][2]
+        text: aalab færa {SPRITE} vegalengd {DISTANCE} til {TARGET}
       aalab_nameStringSay:
-        text: "{NAMESTRING} segir [MESSAGE][1]"
+        text: "{NAMESTRING} segir {MESSAGE}"
       aalab_prompt:
-        text: spyrja spurningar [MESSAGE][0]
+        text: spyrja spurningar {MESSAGE}
       aalab_randomLocation:
         text: aalab handahófsstaður
       aalab_removeOneAndAll:
-        text: aalab fjarlægja [THIS][0]
+        text: aalab fjarlægja {THIS}
       aalab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': borg
       aalab_setCollidable:
-        text: aalab stilla árekstra [SPRITE][0] á [VAL][1]
+        text: aalab stilla árekstra {SPRITE} á {VAL}
         options:
           VAL:
             '"true"': satt
             '"false"': ósatt
       aalab_setDirection:
-        text: aalab láta [SPRITE][0] færast í átt [DIRECTION][1]
+        text: aalab láta {SPRITE} færast í átt {DIRECTION}
       aalab_setProp:
-        text: aalab stilla [SPRITE][0] [PROPERTY][1] á [VAL][2]
+        text: aalab stilla {SPRITE} {PROPERTY} á {VAL}
         options:
           PROPERTY:
             '"scale"': stærð
@@ -1315,9 +1315,9 @@ is:
             '"direction"': stefna hreyfingar
             '"tint"': litur
       aalab_setSpriteVariable:
-        text: aalab stilla [VARIABLE][0] á [SPRITE][1]
+        text: aalab stilla {VARIABLE} á {SPRITE}
       aalab_showCustomText:
-        text: sýna texta[TEXT][0]staður[LOCATION][1]stærð[SIZE][2]litur[COLOR][3]tímalengd[DURATION][4]
+        text: sýna texta{TEXT}staður{LOCATION}stærð{SIZE}litur{COLOR}tímalengd{DURATION}
         options:
           DURATION:
             '"1"': 1 sekúnda
@@ -1327,11 +1327,11 @@ is:
             '"5"': 5 sekúndur
             '"0"': að eilífu
       aalab_showSpriteLabel:
-        text: sýna merki[TEXT][0] [LOCATION][1] vera[SPRITE][2]
+        text: sýna merki{TEXT} {LOCATION} vera{SPRITE}
       aalab_speakerSaysConsole:
-        text: "{SPRITE} segir [MESSAGE][1]"
+        text: "{SPRITE} segir {MESSAGE}"
       aalab_spriteSay:
-        text: vera [SPRITE][0] segir [TEXT][1] í [SECONDS][2] sekúndur
+        text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
       aalab_toggleHideCustomText:
         text: "{OPTION} sérsniðinn texti"
         options:
@@ -1339,37 +1339,37 @@ is:
             '"show"': sýna
             '"hide"': fela
       binary_drawBin:
-        text: teikna tvíund [BIN][0]
+        text: teikna tvíund {BIN}
       binary_drawBinScreen:
         text: |-
           teikna skjá
-          [B1][0]
-          [B2][1]
-          [B3][2]
-          [B4][3]
-          [B5][4]
-          [B6][5]
-          [B7][6]
-          [B8][7]
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
       binary_drawDec:
-        text: teikna tugatölu [DEC][0]
+        text: teikna tugatölu {DEC}
       binary_drawPixelHere:
-        text: stilla díl [VAL][0]
+        text: stilla díl {VAL}
         options:
           VAL:
             '0': af
             '1': á
             '"toggle"': víxla
       binary_drawString:
-        text: teikna streng [STR][0]
+        text: teikna streng {STR}
       binary_goTo:
-        text: hoppa á [LOC][0]
+        text: hoppa á {LOC}
       binary_goToHome:
         text: hoppa efst vinstri
       binary_gridSize:
-        text: stilla stærð hnita [SIZE][0]
+        text: stilla stærð hnita {SIZE}
       binary_move:
-        text: færa [DIR][0]
+        text: færa {DIR}
         options:
           DIR:
             '"up"': uppi
@@ -1377,7 +1377,7 @@ is:
             '"left"': vinstri
             '"right"': hægri
       binary_whenKey:
-        text: þegar ýtt er á [KEY][0]
+        text: þegar ýtt er á {KEY}
         options:
           KEY:
             '"up"': uppi
@@ -1391,8 +1391,8 @@ is:
             '"d"': d
       craft_ifPath:
         text: |-
-          ef slóð [DIR][0]
-          [STATEMENT][1]
+          ef slóð {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": framfyrir
@@ -1400,8 +1400,8 @@ is:
             "'left'": til vinstri
       craft_ifStandingOn:
         text: |-
-          ef stendur á [TYPE][0]
-          [STATEMENT][1]
+          ef stendur á {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": blár kórall
@@ -1412,19 +1412,19 @@ is:
             "'seaLantern'": sælukt
       craft_ifStandingOnLimit:
         text: |-
-          ef stendur á [TYPE][0]
-          [STATEMENT][1]
+          ef stendur á {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": sand
             "'darkPrismarine'": dökkt prismarín
             "'seaLantern'": sælukt
       craft_log:
-        text: skrá boð [MESSAGE][0]
+        text: skrá boð {MESSAGE}
       craft_moveForward:
         text: færa áfram
       craft_placeBlock:
-        text: setja [blockType][0]
+        text: setja {blockType}
         options:
           blockType:
             '"strippedOak"': afrifin eik
@@ -1459,13 +1459,13 @@ is:
       craft_repeatUntilConduit:
         text: |-
           endurtaka þar til leiðsla fullgerð
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           endurtaka þar til marki náð
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: skapa [ENTITY][0]
+        text: skapa {ENTITY}
         options:
           ENTITY:
             '"cod"': þorskur
@@ -1475,7 +1475,7 @@ is:
             '"squid"': smokkfiskur
             '"tropicalFish"': heitsjávarfiskur
       craft_turn:
-        text: snúa [DIR][0]
+        text: snúa {DIR}
         options:
           DIR:
             right: hægri ↻

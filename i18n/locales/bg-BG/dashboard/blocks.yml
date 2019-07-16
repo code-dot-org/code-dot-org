@@ -3,20 +3,20 @@ bg:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: след [TIMESTAMP][0] [UNIT][1]
+        text: след {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': мерки
             '"seconds"': секунди
       Dancelab_changeColorBy:
-        text: промяна на [COLOR][0] [METHOD][1] [AMOUNT][2]
+        text: промяна на {COLOR} {METHOD} {AMOUNT}
         options:
           METHOD:
             '"hue"': оттенък
             '"saturation"': наситеност
             '"brightness"': яркост
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} направи [MOVE][1] [DIR][2] завинаги"
+        text: "{GROUP} направи {MOVE} {DIR} завинаги"
         options:
           GROUP:
             sprites: всички
@@ -49,7 +49,7 @@ bg:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} направи [MOVE][1] [DIR][2] завинаги"
+        text: "{SPRITE} направи {MOVE} {DIR} завинаги"
         options:
           MOVE:
             '"next"': "(Следващ)"
@@ -70,7 +70,7 @@ bg:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -79,7 +79,7 @@ bg:
             '"x"': хоризонтално положение
             '"y"': вертикално положение
       Dancelab_doMoveEachLR:
-        text: "{GROUP} направи [MOVE][1] [DIR][2] веднъж"
+        text: "{GROUP} направи {MOVE} {DIR} веднъж"
         options:
           GROUP:
             sprites: всички
@@ -110,7 +110,7 @@ bg:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} направи [MOVE][1] [DIR][2] веднъж"
+        text: "{SPRITE} направи {MOVE} {DIR} веднъж"
         options:
           MOVE:
             '"rand"': Случаен
@@ -128,25 +128,25 @@ bg:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'всеки [N][0] [UNIT][1] '
+        text: 'всеки {N} {UNIT} '
         options:
           UNIT:
             '"measures"': мерки
             '"seconds"': секунди
       Dancelab_everySecondsRange:
-        text: 'всеки [N][0] [UNIT][1] от [START],[2] до [STOP][3] '
+        text: 'всеки {N} {UNIT} от [START],[2] до {STOP} '
         options:
           UNIT:
             measures: Измерване
             seconds: Секунди
       Dancelab_everyVerseChorus:
-        text: 'всеки [UNIT][0] '
+        text: 'всеки {UNIT} '
         options:
           UNIT:
             '"verse"': стих
             '"chorus"': припев
       Dancelab_getEnergy:
-        text: взима [RANGE][0]
+        text: взима {RANGE}
         options:
           RANGE:
             '"low"': бас
@@ -345,7 +345,7 @@ bg:
             '"spotlight"': Прожектор
             '"raining_tacos"': Такос
       Dancelab_setProp:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -448,7 +448,7 @@ bg:
             '"bass"': бас
             '"treble"': сопрано
       Dancelab_whenKey:
-        text: когато [KEY][0] е натиснат
+        text: когато {KEY} е натиснат
         options:
           KEY:
             '"up"': нагоре
@@ -469,7 +469,7 @@ bg:
             '1': mid
             '2': сопрано
       gamelab_changePropBy:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -518,7 +518,7 @@ bg:
             '"x"': x
             '"y"': 'y'
       gamelab_locationOf:
-        text: разположение на [SPRITE][0]
+        text: разположение на {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_mirrorSprite:
@@ -541,7 +541,7 @@ bg:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': под вода
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
       gamelab_setProp:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -566,7 +566,7 @@ bg:
             '"right"': надясно
             '"left"': наляво
       gamelab_whenKey:
-        text: когато [KEY][0] е натиснат
+        text: когато {KEY} е натиснат
         options:
           KEY:
             '"up"': нагоре
@@ -598,7 +598,7 @@ bg:
             '"s"': s
             '"d"': d
       Mikelab_changePropBy:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {PROPERTY} {SPRITE} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -704,7 +704,7 @@ bg:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': град
       Mikelab_setProp:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {PROPERTY} {SPRITE} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -726,7 +726,7 @@ bg:
             "{x: 300, y: 200}": надясно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Случаен
       Mikelab_whenKeyPressed:
-        text: когато [KEY][0] е натиснат
+        text: когато {KEY} е натиснат
         options:
           KEY:
             '"up"': стрелка нагоре
@@ -764,7 +764,7 @@ bg:
       Vector_vectorNorth:
         text: север
       aalab_changePropByFlexible:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -830,7 +830,7 @@ bg:
             '"left"': наляво
             '"right"': надясно
       binary_whenKey:
-        text: когато [KEY][0] е натиснат
+        text: когато {KEY} е натиснат
         options:
           KEY:
             '"up"': нагоре
@@ -844,8 +844,8 @@ bg:
             '"d"': d
       craft_ifPath:
         text: |-
-          ако пътят [DIR][0]
-          [STATEMENT][1]
+          ако пътят {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": отпред
@@ -853,8 +853,8 @@ bg:
             "'left'": вляво
       craft_ifStandingOn:
         text: |-
-          ако стоиш на [TYPE][0]
-          [STATEMENT][1]
+          ако стоиш на {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": син корал
@@ -865,8 +865,8 @@ bg:
             "'seaLantern'": морски фенер
       craft_ifStandingOnLimit:
         text: |-
-          ако стоиш на [TYPE][0]
-          [STATEMENT][1]
+          ако стоиш на {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": пясък
@@ -875,7 +875,7 @@ bg:
       craft_moveForward:
         text: върви напред
       craft_placeBlock:
-        text: място [blockType][0]
+        text: място {blockType}
         options:
           blockType:
             '"strippedOak"': отрязан дъб
@@ -908,11 +908,11 @@ bg:
       craft_placeTorch:
         text: постави факел
       craft_repeatUntilConduit:
-        text: повтаряй докато водопроводът е завършен [STATEMENT][0]
+        text: повтаряй докато водопроводът е завършен {STATEMENT}
       craft_repeatUntilGoal:
-        text: повтаряй до достигане на цел [STATEMENT][0]
+        text: повтаряй до достигане на цел {STATEMENT}
       craft_spawnEntity:
-        text: хайвер [ENTITY][0]
+        text: хайвер {ENTITY}
         options:
           ENTITY:
             '"cod"': треска
@@ -922,7 +922,7 @@ bg:
             '"squid"': калмар
             '"tropicalFish"': тропическа риба
       craft_turn:
-        text: обърни се [DIR][0]
+        text: обърни се {DIR}
         options:
           DIR:
             right: дясно ↻

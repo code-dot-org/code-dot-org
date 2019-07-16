@@ -3,20 +3,20 @@ zh-TW:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: 當時間經過 [TIMESTAMP][0] [UNIT][1]
+        text: 當時間經過 {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
       Dancelab_changeColorBy:
-        text: "{COLOR} [METHOD][1] 改變 [AMOUNT][2]"
+        text: "{COLOR} {METHOD} 改變 {AMOUNT}"
         options:
           METHOD:
             '"hue"': 色調
             '"saturation"': 飽和度
             '"brightness"': 亮度
       Dancelab_changeMoveEachLR:
-        text: 群組 [GROUP][0] 重複執行 [MOVE][1] [DIR][2] 無限次
+        text: 群組 {GROUP} 重複執行 {MOVE} {DIR} 無限次
         options:
           GROUP:
             sprites: 全部
@@ -51,7 +51,7 @@ zh-TW:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: 角色 [SPRITE][0] 重複執行 [MOVE][1] [DIR][2] 無限次
+        text: 角色 {SPRITE} 重複執行 {MOVE} {DIR} 無限次
         options:
           MOVE:
             '"next"': 下一個
@@ -73,7 +73,7 @@ zh-TW:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: 角色 [SPRITE][0] [PROPERTY][1] 改變 [VAL][2]
+        text: 角色 {SPRITE} {PROPERTY} 改變 {VAL}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -83,7 +83,7 @@ zh-TW:
             '"x"': 水平位置
             '"y"': 垂直位置
       Dancelab_doMoveEachLR:
-        text: 群組 [GROUP][0] 重複執行 [MOVE][1] [DIR][2] 一次
+        text: 群組 {GROUP} 重複執行 {MOVE} {DIR} 一次
         options:
           GROUP:
             sprites: 全部
@@ -128,7 +128,7 @@ zh-TW:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: 角色 [SPRITE][0] 重複執行 [MOVE][1] [DIR][2] 一次
+        text: 角色 {SPRITE} 重複執行 {MOVE} {DIR} 一次
         options:
           MOVE:
             '"rand"': 隨機
@@ -160,32 +160,32 @@ zh-TW:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 每次時間經過 [N][0] [UNIT][1] 後
+        text: 每次時間經過 {N} {UNIT} 後
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
       Dancelab_everySecondsRange:
-        text: '從 [START][2] 到 [STOP][3] 的每個 [N][0] [UNIT][1] '
+        text: '從 {START} 到 {STOP} 的每個 {N} {UNIT} '
         options:
           UNIT:
             measures: 小節
             seconds: 秒
       Dancelab_everyVerseChorus:
-        text: 每次時間經過 [UNIT][0] 後
+        text: 每次時間經過 {UNIT} 後
         options:
           UNIT:
             '"verse"': 詩歌
             '"chorus"': 合唱
       Dancelab_getEnergy:
-        text: 取得 [RANGE][0]
+        text: 取得 {RANGE}
         options:
           RANGE:
             '"low"': 低音
             '"mid"': 中音
             '"high"': 高音
       Dancelab_getProp:
-        text: 角色 [SPRITE][0] 的 [PROPERTY][1]
+        text: 角色 {SPRITE} 的 {PROPERTY}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -196,15 +196,15 @@ zh-TW:
             '"y"': 垂直位置
             '"tint"': 色調
       Dancelab_getTime:
-        text: 經過 [UNIT][0]
+        text: 經過 {UNIT}
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
       Dancelab_ifDanceIs:
         text: |-
-          如果角色 [SPRITE][0] 目前動作為 [DANCE][1]
-          [DO1][2]否則 [DO2][3]
+          如果角色 {SPRITE} 目前動作為 {DANCE}
+          {DO1}否則 {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Clap High
@@ -229,7 +229,7 @@ zh-TW:
             '"<"': "\\<"
             '"="': "="
       Dancelab_jumpTo:
-        text: 角色 [SPRITE][0] 定位到 [LOCATION][1]
+        text: 角色 {SPRITE} 定位到 {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": 頂部
@@ -243,7 +243,7 @@ zh-TW:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 隨機
       Dancelab_layoutSprites:
-        text: 群組 [GROUP][0] 分佈設為 [FORMAT][1]
+        text: 群組 {GROUP} 分佈設為 {FORMAT}
         options:
           GROUP:
             sprites: 全部
@@ -270,8 +270,8 @@ zh-TW:
             '"random"': 隨機
       Dancelab_makeNewDanceSprite:
         text: |-
-          角色 創建一個新的 [COSTUME][0]
-          名稱 [NAME][1] 位置 [LOCATION][2]
+          角色 創建一個新的 {COSTUME}
+          名稱 {NAME} 位置 {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': 外星人
@@ -298,8 +298,8 @@ zh-TW:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 隨機
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          群組 創建一群新的 [COSTUME][1]
-          數量 [N][0] 分佈 [LAYOUT][2]
+          群組 創建一群新的 {COSTUME}
+          數量 {N} 分佈 {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -344,7 +344,7 @@ zh-TW:
             '"plus"': 十字加號
             '"random"': 隨機
       Dancelab_mixColors:
-        text: 混合顏色 [COLOR1][0] 和 [COLOR2][1]
+        text: 混合顏色 {COLOR1} 和 {COLOR2}
       Dancelab_nMeasures:
         text: "{N} 小節"
       Dancelab_onPointerDown:
@@ -356,9 +356,9 @@ zh-TW:
       Dancelab_randomColor:
         text: 隨機顏色
       Dancelab_setBackground:
-        text: 背景顏色設為 [COLOR][0]
+        text: 背景顏色設為 {COLOR}
       Dancelab_setBackgroundEffect:
-        text: 背景效果設為 [EFFECT][0] [PALETTE][1]
+        text: 背景效果設為 {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': 無
@@ -390,7 +390,7 @@ zh-TW:
             '"vintage"': 復古
             '"warm"': 暖色系
       Dancelab_setBackgroundEffectWithPalette:
-        text: 背景效果設為 [EFFECT][0] [PALETTE][1]
+        text: 背景效果設為 {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': 無
@@ -423,7 +423,7 @@ zh-TW:
             '"vintage"': 復古
             '"warm"': 暖色系
       Dancelab_setDanceSpeed:
-        text: 角色 [SPRITE][0] 跳舞速度設為 [SPEED][1]
+        text: 角色 {SPRITE} 跳舞速度設為 {SPEED}
         options:
           SPEED:
             '1': 普通
@@ -432,7 +432,7 @@ zh-TW:
             '0.5': 慢
             '0.25': 很慢
       Dancelab_setDanceSpeedEach:
-        text: 群組 [GROUP][0] 跳舞速度設為 [SPEED][1]
+        text: 群組 {GROUP} 跳舞速度設為 {SPEED}
         options:
           GROUP:
             sprites: 全部
@@ -454,7 +454,7 @@ zh-TW:
             '0.5': 慢
             '0.25': 很慢
       Dancelab_setForegroundEffect:
-        text: 前景效果設為 [EFFECT][0]
+        text: 前景效果設為 {EFFECT}
         options:
           EFFECT:
             '"none"': 無
@@ -472,7 +472,7 @@ zh-TW:
             '"color_lights"': 舞台燈
             '"raining_tacos"': 墨西哥捲餅
       Dancelab_setForegroundEffectExtended:
-        text: 前景效果設為 [EFFECT][0]
+        text: 前景效果設為 {EFFECT}
         options:
           EFFECT:
             '"none"': 無
@@ -491,7 +491,7 @@ zh-TW:
             '"color_lights"': 舞台燈
             '"raining_tacos"': 墨西哥捲餅
       Dancelab_setProp:
-        text: '角色 [SPRITE][0] [PROPERTY][1] 設為 [VAL][2] '
+        text: '角色 {SPRITE} {PROPERTY} 設為 {VAL} '
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -502,7 +502,7 @@ zh-TW:
             '"y"': 垂直位置
             '"tint"': 色調
       Dancelab_setPropEach:
-        text: 群組 [GROUP][0] [PROPERTY][1] 設為 [VAL][2]
+        text: 群組 {GROUP} {PROPERTY} 設為 {VAL}
         options:
           GROUP:
             sprites: 全部
@@ -526,7 +526,7 @@ zh-TW:
             '"y"': 垂直位置
             '"tint"': 色調
       Dancelab_setPropRandom:
-        text: 角色 [SPRITE][0] [PROPERTY][1] 改變 隨機取數
+        text: 角色 {SPRITE} {PROPERTY} 改變 隨機取數
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -537,9 +537,9 @@ zh-TW:
             '"y"': 垂直位置
             '"tint"': 色調
       Dancelab_setTint:
-        text: 角色 [SPRITE][0] 色調設為 [VAL][1]
+        text: 角色 {SPRITE} 色調設為 {VAL}
       Dancelab_setTintEach:
-        text: 角色 [THIS][0] 色調設為 [VAL][1]
+        text: 角色 {THIS} 色調設為 {VAL}
         options:
           THIS:
             sprites: 全部
@@ -554,15 +554,15 @@ zh-TW:
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
       Dancelab_setTintInline:
-        text: 角色 [SPRITE][0] 色調設為 [VAL][1]
+        text: 角色 {SPRITE} 色調設為 {VAL}
       Dancelab_setVisible:
-        text: 角色 [SPRITE][0] 可見度設為 [VISIBILITY][1]
+        text: 角色 {SPRITE} 可見度設為 {VISIBILITY}
         options:
           VISIBILITY:
             'true': 可見
             'false': 不可見
       Dancelab_setVisibleEach:
-        text: 群組 [THIS][0] 可見度設為 [VISIBILITY][1]
+        text: 群組 {THIS} 可見度設為 {VISIBILITY}
         options:
           THIS:
             sprites: 全部
@@ -581,7 +581,7 @@ zh-TW:
             'true': 可見
             'false': 不可見
       Dancelab_startMapping:
-        text: 角色 [SPRITE][0] [PROPERTY][1] 改變 隨著 [RANGE][2] 開始
+        text: 角色 {SPRITE} {PROPERTY} 改變 隨著 {RANGE} 開始
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -596,7 +596,7 @@ zh-TW:
             '"mid"': 中音
             '"treble"': 高音
       Dancelab_stopMapping:
-        text: 角色 [SPRITE][0] [PROPERTY][1] 改變 隨著 [RANGE][2] 停止
+        text: 角色 {SPRITE} {PROPERTY} 改變 隨著 {RANGE} 停止
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -612,7 +612,7 @@ zh-TW:
             '"mid"': 中音
             '"treble"': 高音
       Dancelab_whenKey:
-        text: 當 [KEY][0] 鍵被按下時
+        text: 當 {KEY} 鍵被按下時
         options:
           KEY:
             '"up"': 向上
@@ -657,7 +657,7 @@ zh-TW:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: 當 [RANGE][0] 處於峰值時
+        text: 當 {RANGE} 處於峰值時
         options:
           RANGE:
             '0': 低音
@@ -666,11 +666,11 @@ zh-TW:
       Dancelab_whenSetup:
         text: 設定
       gamelab_addBehaviorSimple:
-        text: 角色 [SPRITE][0] 開始 [BEHAVIOR][1]
+        text: 角色 {SPRITE} 開始 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_changePropBy:
-        text: 角色 [SPRITE][0] [PROPERTY][1] 改變 [VAL][2]
+        text: 角色 {SPRITE} {PROPERTY} 改變 {VAL}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -684,27 +684,27 @@ zh-TW:
             '"when"': 當
             '"while"': 當
       gamelab_clickedOn:
-        text: 當角色 [SPRITE][0] 被點擊
+        text: 當角色 {SPRITE} 被點擊
       gamelab_console.log:
-        text: 紀錄訊息 [MESSAGE][0]
+        text: 紀錄訊息 {MESSAGE}
       gamelab_createNewSprite:
         text: |-
-          角色 創建一個新的 [COSTUME][1]
-          名稱 [NAME][0] 位置 [LOCATION][2]
+          角色 創建一個新的 {COSTUME}
+          名稱 {NAME} 位置 {LOCATION}
       gamelab_debugSprite:
-        text: 角色 [SPRITE][0] 偵錯 [VAL][1]
+        text: 角色 {SPRITE} 偵錯 {VAL}
         options:
           VAL:
             'true': 'true'
             'false': 'false'
       gamelab_destroy:
-        text: 角色 移除 [THIS][0]
+        text: 角色 移除 {THIS}
       gamelab_displace:
-        text: "{THIS} 阻擋 [SPRITE][1] 前進"
+        text: "{THIS} 阻擋 {SPRITE} 前進"
       gamelab_edgesDisplace:
-        text: 邊緣阻擋 [SPRITE][0] 前進
+        text: 邊緣阻擋 {SPRITE} 前進
       gamelab_getProp:
-        text: 角色 [SPRITE][0] 的 [PROPERTY][1]
+        text: 角色 {SPRITE} 的 {PROPERTY}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -721,11 +721,11 @@ zh-TW:
       gamelab_hideTitleScreen:
         text: 標題畫面隱藏
       gamelab_isTouchingEdges:
-        text: 角色 [SPRITE][0] 碰到邊緣？
+        text: 角色 {SPRITE} 碰到邊緣？
       gamelab_jumpTo:
-        text: 角色 [SPRITE][0] 定位到 [LOCATION][1]
+        text: 角色 {SPRITE} 定位到 {LOCATION}
       gamelab_keyPressed:
-        text: "{CONDITION} [KEY][1] 鍵被按下？"
+        text: "{CONDITION} {KEY} 鍵被按下？"
         options:
           CONDITION:
             '"when"': 當
@@ -763,15 +763,15 @@ zh-TW:
             '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
-        text: '座標 x: [X][0] y: [Y][1]'
+        text: '座標 x: {X} y: {Y}'
       gamelab_locationMouse:
         text: 鼠標位置
       gamelab_locationOf:
-        text: 位置 [SPRITE][0]
+        text: 位置 {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_mirrorSprite:
-        text: 角色 [SPRITE][0] 面朝 [DIRECTION][1] 向
+        text: 角色 {SPRITE} 面朝 {DIRECTION} 向
         options:
           DIRECTION:
             '"right"': 向右
@@ -779,9 +779,9 @@ zh-TW:
       gamelab_mouseLocation:
         text: 鼠標位置
       gamelab_moveForward:
-        text: 角色 [SPRITE][0] 移動 [DISTANCE][1] 像素 面向前面
+        text: 角色 {SPRITE} 移動 {DISTANCE} 像素 面向前面
       gamelab_moveInDirection:
-        text: 角色 [SPRITE][0] 移動 [DISTANCE][1] 像素 面向 [DIRECTION][2]
+        text: 角色 {SPRITE} 移動 {DISTANCE} 像素 面向 {DIRECTION}
         options:
           DIRECTION:
             '"North"': 北
@@ -789,9 +789,9 @@ zh-TW:
             '"South"': 南
             '"West"': 西
       gamelab_playSound:
-        text: 播放音效 [SOUND][0]
+        text: 播放音效 {SOUND}
       gamelab_pointInDirection:
-        text: 角色 [SPRITE][0] 面朝 [DIRECTION][1] 度
+        text: 角色 {SPRITE} 面朝 {DIRECTION} 度
         options:
           DIRECTION:
             '"North"': 北
@@ -799,7 +799,7 @@ zh-TW:
             '"South"': 南
             '"West"': 西
       gamelab_printText:
-        text: 輸出 [TEXT][0]
+        text: 輸出 {TEXT}
       gamelab_randColor:
         text: 隨機顏色
       gamelab_randomColor:
@@ -807,17 +807,17 @@ zh-TW:
       gamelab_randomLocation:
         text: 隨機座標
       gamelab_removeAllBehaviors:
-        text: 角色 [SPRITE][0] 停止所有行為
+        text: 角色 {SPRITE} 停止所有行為
       gamelab_removeBehaviorSimple:
-        text: 角色 [SPRITE][0] 停止 [BEHAVIOR][1]
+        text: 角色 {SPRITE} 停止 {BEHAVIOR}
       gamelab_removeTint:
-        text: 角色 [THIS][0] 顏色移除
+        text: 角色 {THIS} 顏色移除
       gamelab_setAnimation:
-        text: 角色 [THIS][0] 造型設為 [ANIMATION][1]
+        text: 角色 {THIS} 造型設為 {ANIMATION}
       gamelab_setBackground:
-        text: 背景顏色設為 [COLOR][0]
+        text: 背景顏色設為 {COLOR}
       gamelab_setBackgroundImage:
-        text: 背景設為 [IMG][0]
+        text: 背景設為 {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': 洞穴
@@ -831,7 +831,7 @@ zh-TW:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
             undefined: 無
       gamelab_setProp:
-        text: 角色 [SPRITE][0] [PROPERTY][1] 設為 [VAL][2]
+        text: 角色 {SPRITE} {PROPERTY} 設為 {VAL}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -841,24 +841,24 @@ zh-TW:
             '"direction"': 移動方向
             '"tint"': 色調
       gamelab_setSizes:
-        text: 角色 [SPRITE][0] [PROPERTY][1] 設為 [N][2]%
+        text: 角色 {SPRITE} {PROPERTY} 設為 {N}%
         options:
           PROPERTY:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
       gamelab_setTint:
-        text: 角色 [THIS][0] 顏色設為 [COLOR][1]
+        text: 角色 {THIS} 顏色設為 {COLOR}
       gamelab_showTitleScreen:
-        text: 標題畫面顯示 [BREAK][0] 標題 [TITLE][1] 內文 [SUBTITLE][2]
+        text: 標題畫面顯示 {BREAK} 標題 {TITLE} 內文 {SUBTITLE}
       gamelab_spriteClicked:
-        text: "{CONDITION} 角色 [SPRITE][1] 被點擊？"
+        text: "{CONDITION} 角色 {SPRITE} 被點擊？"
         options:
           CONDITION:
             '"when"': 當
             '"while"': 當
       gamelab_turn:
-        text: 角色 [SPRITE][0] 轉向 [DIRECTION][1] [N][2] 度
+        text: 角色 {SPRITE} 轉向 {DIRECTION} {N} 度
         options:
           DIRECTION:
             '"right"': 向右
@@ -866,7 +866,7 @@ zh-TW:
       gamelab_whenDownArrow:
         text: 當向下鍵被按下
       gamelab_whenKey:
-        text: 當 [KEY][0] 鍵被按下時
+        text: 當 {KEY} 鍵被按下時
         options:
           KEY:
             '"up"': 向上
@@ -890,13 +890,13 @@ zh-TW:
       gamelab_whenRightArrow:
         text: 當向右鍵被按下
       gamelab_whenTouching:
-        text: 當角色 [SPRITE1][0] 碰到角色 [SPRITE2][1] 時
+        text: 當角色 {SPRITE1} 碰到角色 {SPRITE2} 時
       gamelab_whenUpArrow:
         text: 當向上鍵被按下
       gamelab_whileDownArrow:
         text: 當向下鍵被按住
       gamelab_whileKey:
-        text: 當 [KEY][0] 鍵被按住時
+        text: 當 {KEY} 鍵被按住時
         options:
           KEY:
             '"up"': 向上
@@ -913,17 +913,17 @@ zh-TW:
       gamelab_whileRightArrow:
         text: 當向右鍵被按住
       gamelab_whileTouching:
-        text: 當角色 [SPRITE1][0] 碰著角色 [SPRITE2][1] 時
+        text: 當角色 {SPRITE1} 碰著角色 {SPRITE2} 時
       gamelab_whileUpArrow:
         text: 當向上鍵被按住
       gamelab_xLocationOf:
-        text: x 座標 [SPRITE][0]
+        text: x 座標 {SPRITE}
       gamelab_yLocationOf:
-        text: y 座標 [SPRITE][0]
+        text: y 座標 {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: 角色 [SPRITE][0] 開始 [BEHAVIOR][1]
+        text: 角色 {SPRITE} 開始 {BEHAVIOR}
       Mikelab_changeAnim:
-        text: 角色 [SPRITE][0] 造型設為 [COSTUME][1]
+        text: 角色 {SPRITE} 造型設為 {COSTUME}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -933,11 +933,11 @@ zh-TW:
             '"y"': y 座標
             '"direction"': 移動方向
       Mikelab_checkAnim:
-        text: 角色 [SPRITE][0] 造型是 [COSTUME][1]？
+        text: 角色 {SPRITE} 造型是 {COSTUME}？
       Mikelab_createNewSprite:
         text: |-
-          角色 創建一個新的 [COSTUME][0]
-          名稱 [NAME][1] 位置 [LOCATION][2]
+          角色 創建一個新的 {COSTUME}
+          名稱 {NAME} 位置 {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": 頂部
@@ -951,13 +951,13 @@ zh-TW:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 隨機
       Mikelab_destroy:
-        text: 角色 移除 [SPRITE][0]
+        text: 角色 移除 {SPRITE}
       Mikelab_displace:
-        text: "{TARGET} 阻擋 [SPRITE][1] 前進"
+        text: "{TARGET} 阻擋 {SPRITE} 前進"
       Mikelab_getAnim:
-        text: 角色 [SPRITE][0] 的造型
+        text: 角色 {SPRITE} 的造型
       Mikelab_getProp:
-        text: 角色 [SPRITE][0] 的 [PROPERTY][1]
+        text: 角色 {SPRITE} 的 {PROPERTY}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -982,7 +982,7 @@ zh-TW:
             '"y"': y 座標
             '"direction"': 移動方向
       Mikelab_groupCreateNewSprite:
-        text: 角色 創建一個新的 [COSTUME][0] 位置 [LOCATION][1]
+        text: 角色 創建一個新的 {COSTUME} 位置 {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": 頂部
@@ -1001,7 +1001,7 @@ zh-TW:
             '"all"': 全部
             '"this"': this
       Mikelab_groupEdgesDisplace:
-        text: 邊緣阻擋 [COSTUME][0] 前進
+        text: 邊緣阻擋 {COSTUME} 前進
       Mikelab_groupGetProp:
         options:
           SELECT:
@@ -1044,15 +1044,15 @@ zh-TW:
             '"all"': 全部
             '"this"': this
       Mikelab_groupWhenClickedOn:
-        text: 當角色 [COSTUME][0] 被點擊
+        text: 當角色 {COSTUME} 被點擊
       Mikelab_groupWhenXTouchesY:
-        text: 當角色 [COSTUME][0] 碰到角色 [COSTUME2][1] 時
+        text: 當角色 {COSTUME} 碰到角色 {COSTUME2} 時
       Mikelab_groupWhileClicked:
-        text: 當 [COSTUME][0] 被點著
+        text: 當 {COSTUME} 被點著
       Mikelab_ifDanceIs:
         text: |-
-          如果角色 [SPRITE][0] 目前動作為 [DANCE][1]
-          [DO1][2]否則 [DO2][3]
+          如果角色 {SPRITE} 目前動作為 {DANCE}
+          {DO1}否則 {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Clap High
@@ -1068,26 +1068,26 @@ zh-TW:
             MOVES.Thriller: Zombie
             MOVES.Rest: 無
       Mikelab_locationAt:
-        text: '座標 x: [X][0] y: [Y][1]'
+        text: '座標 x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: 隨機顏色
       Mikelab_removeAllBehaviors:
-        text: 角色 [SPRITE][0] 停止所有行為
+        text: 角色 {SPRITE} 停止所有行為
       Mikelab_removeBehaviorSimple:
-        text: 角色 [SPRITE][0] 停止 [BEHAVIOR][1]
+        text: 角色 {SPRITE} 停止 {BEHAVIOR}
       Mikelab_removeTint:
-        text: 角色 [SPRITE][0] 顏色移除
+        text: 角色 {SPRITE} 顏色移除
       Mikelab_setBG:
-        text: 背景設為 [BG][0]
+        text: 背景設為 {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': 舞台
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': 太陽和彩虹
       Mikelab_setProp:
-        text: 角色 [SPRITE][1] [PROPERTY][0] 設為 [VAL][2]
+        text: 角色 {SPRITE} {PROPERTY} 設為 {VAL}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -1096,7 +1096,7 @@ zh-TW:
             '"y"': y 座標
             '"direction"': 移動方向
       Mikelab_setTint:
-        text: 角色 [SPRITE][0] 顏色設為 [COLOR][1]
+        text: 角色 {SPRITE} 顏色設為 {COLOR}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1116,9 +1116,9 @@ zh-TW:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 隨機
       Mikelab_whenClickedOn:
-        text: 當角色 [SPRITE][0] 被點擊
+        text: 當角色 {SPRITE} 被點擊
       Mikelab_whenKeyPressed:
-        text: 當 [KEY][0] 鍵被按下時
+        text: 當 {KEY} 鍵被按下時
         options:
           KEY:
             '"up"': 向上鍵被按下
@@ -1145,11 +1145,11 @@ zh-TW:
       Mikelab_whenMouseClicked:
         text: 當滑鼠按鍵被點擊
       Mikelab_whenTouchesAny:
-        text: 當角色 [SPRITE][0] 碰到其它角色時
+        text: 當角色 {SPRITE} 碰到其它角色時
       Mikelab_whileClicked:
-        text: 當 [SPRITE][0] 被點著
+        text: 當 {SPRITE} 被點著
       Mikelab_whileKeyPressed:
-        text: 當 [KEY][0] 鍵被按住時
+        text: 當 {KEY} 鍵被按住時
         options:
           KEY:
             '"up"': 向上鍵被按下
@@ -1158,9 +1158,9 @@ zh-TW:
             '"right"': 當向右鍵被按下
             '"space"': 空白
       Mikelab_xLocationOf:
-        text: x 座標 [SPRITE][0]
+        text: x 座標 {SPRITE}
       Mikelab_yLocationOf:
-        text: y 座標 [SPRITE][0]
+        text: y 座標 {SPRITE}
       RyanLab_moveForward:
         text: 移動-向前
       RyanLab_turnLeft:
@@ -1168,31 +1168,31 @@ zh-TW:
       RyanLab_turnRight:
         text: 轉向-右方
       Vector_log:
-        text: 紀錄訊息 [MESSAGE][0]
+        text: 紀錄訊息 {MESSAGE}
       Vector_positionCenter:
         text: 中間
       Vector_push:
-        text: 速度設為 [VECTOR][0]
+        text: 速度設為 {VECTOR}
       Vector_randomLocation:
         text: 隨機座標
       Vector_setColor:
-        text: 顏色設為 [COLOR][0]
+        text: 顏色設為 {COLOR}
       Vector_setSize:
-        text: 寬度設為 [WIDTH][0] 高度設為 [HEIGHT][1]
+        text: 寬度設為 {WIDTH} 高度設為 {HEIGHT}
       Vector_teleportTo:
-        text: 位置設為 [POSITION][0]
+        text: 位置設為 {POSITION}
       Vector_vectorNorth:
         text: 南
       aalab_addBehaviorForDuration:
-        text: aalab 角色 [SPRITE][0] 開始 [BEHAVIOR][1] 持續 [SECONDS][2] 秒
+        text: aalab 角色 {SPRITE} 開始 {BEHAVIOR} 持續 {SECONDS} 秒
       aalab_addBehaviorSimpleFlexible:
-        text: aalab 角色 [SPRITE][0] 開始 [BEHAVIOR][1]
+        text: aalab 角色 {SPRITE} 開始 {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
-        text: 角色 [SPRITE][0] 開始 [BEHAVIOR][1] 直到 [CONDITION][2]
+        text: 角色 {SPRITE} 開始 {BEHAVIOR} 直到 {CONDITION}
       aalab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       aalab_changePropByFlexible:
-        text: 角色 [SPRITE][0] [PROPERTY][1] 改變 [VAL][2]
+        text: 角色 {SPRITE} {PROPERTY} 改變 {VAL}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -1206,26 +1206,26 @@ zh-TW:
             '"when"': 當
             '"while"': 當
       aalab_clickedOn:
-        text: "{CONDITION} 角色 [SPRITE][1] 被點擊？"
+        text: "{CONDITION} 角色 {SPRITE} 被點擊？"
         options:
           CONDITION:
             '"when"': 當
             '"while"': 當
       aalab_createNewSpriteAdvanced:
         text: |-
-          角色 創建一個新的 [COSTUME][1]
-          名稱 [NAME][0] 位置 [LOCATION][2]
+          角色 創建一個新的 {COSTUME}
+          名稱 {NAME} 位置 {LOCATION}
       aalab_createSpriteGroup:
-        text: 角色 創建一個新的 名稱 [VAR][0]
+        text: 角色 創建一個新的 名稱 {VAR}
       aalab_getThisSprite:
         options:
           CHOICE:
             '"this"': this
             '"other"': 其它
       aalab_jumpTo:
-        text: aalab 角色 [SPRITE][0] 定位到 [LOCATION][1]
+        text: aalab 角色 {SPRITE} 定位到 {LOCATION}
       aalab_keyPressed:
-        text: "{CONDITION} [KEY][1] 鍵被按下？"
+        text: "{CONDITION} {KEY} 鍵被按下？"
         options:
           CONDITION:
             '"when"': 當
@@ -1237,11 +1237,11 @@ zh-TW:
             '"right"': 向右
             '"space"': 空白
       aalab_locationOf:
-        text: aalab 座標 [SPRITE][0]
+        text: aalab 座標 {SPRITE}
       aalab_location_picker:
         text: "{LOCATION}"
       aalab_moveInDirection:
-        text: 角色 aalab [SPRITE][0] 移動 [DISTANCE][1] 像素 面向 [DIRECTION][2]
+        text: 角色 aalab {SPRITE} 移動 {DISTANCE} 像素 面向 {DIRECTION}
         options:
           DIRECTION:
             '"North"': 北
@@ -1251,9 +1251,9 @@ zh-TW:
       aalab_randomLocation:
         text: 隨機座標
       aalab_removeOneAndAll:
-        text: 角色 移除 [THIS][0]
+        text: 角色 移除 {THIS}
       aalab_setBG:
-        text: 背景設為 [BG][0]
+        text: 背景設為 {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
@@ -1283,7 +1283,7 @@ zh-TW:
             '"above"': 上方
             '"below"': 下方
       aalab_speakerSaysConsole:
-        text: 角色 [SPRITE][0] 說出 [MESSAGE][1]
+        text: 角色 {SPRITE} 說出 {MESSAGE}
       aalab_toggleHideCustomText:
         options:
           OPTION:
@@ -1295,7 +1295,7 @@ zh-TW:
             '0': 'off'
             '1': 'on'
       binary_gridSize:
-        text: 格狀尺寸設為 [SIZE][0]
+        text: 格狀尺寸設為 {SIZE}
       binary_move:
         options:
           DIR:
@@ -1304,7 +1304,7 @@ zh-TW:
             '"left"': " 向左"
             '"right"': 向右
       binary_whenKey:
-        text: 當 [KEY][0] 鍵被按下時
+        text: 當 {KEY} 鍵被按下時
         options:
           KEY:
             '"up"': 向上
@@ -1318,8 +1318,8 @@ zh-TW:
             '"d"': d
       craft_ifPath:
         text: |-
-          如果路徑[DIR][0]
-          [STATEMENT][1]
+          如果路徑{DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": 在前面
@@ -1327,8 +1327,8 @@ zh-TW:
             "'left'": 往左
       craft_ifStandingOn:
         text: |-
-          如果站在[TYPE][0]
-          [STATEMENT][1]
+          如果站在{TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": 藍色珊瑚
@@ -1339,19 +1339,19 @@ zh-TW:
             "'seaLantern'": 海燈籠
       craft_ifStandingOnLimit:
         text: |-
-          如果站在[TYPE][0]
-          [STATEMENT][1]
+          如果站在{TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": 沙
             "'darkPrismarine'": 暗海磷石
             "'seaLantern'": 海燈籠
       craft_log:
-        text: 紀錄訊息 [MESSAGE][0]
+        text: 紀錄訊息 {MESSAGE}
       craft_moveForward:
         text: 移動-向前
       craft_placeBlock:
-        text: 放置[blockType][0]
+        text: 放置{blockType}
         options:
           blockType:
             '"strippedOak"': 去皮的橡樹原木
@@ -1384,13 +1384,13 @@ zh-TW:
       craft_repeatUntilConduit:
         text: |-
           重複直到導管完成
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           重複直到抵達目的地
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: 增生[ENTITY][0]
+        text: 增生{ENTITY}
         options:
           ENTITY:
             '"cod"': cod
@@ -1398,7 +1398,7 @@ zh-TW:
             '"salmon"': 鮭魚
             '"squid"': 烏賊
       craft_turn:
-        text: 轉向[DIR][0]
+        text: 轉向{DIR}
         options:
           DIR:
             right: 右 ↻

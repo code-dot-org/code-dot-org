@@ -418,8 +418,8 @@ mi:
             '"space"': tuarangi
       craft_ifPath:
         text: |-
-          mena he ara  [DIR][0]
-          [STATEMENT][1]
+          mena he ara  {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": ki mua
@@ -427,8 +427,8 @@ mi:
             "'left'": ki te taha maui
       craft_ifStandingOn:
         text: |-
-          mena e tu ana ki runga [TYPE][0]
-          [STATEMENT][1]
+          mena e tu ana ki runga {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": punga moana kikorangi
@@ -439,19 +439,19 @@ mi:
             "'seaLantern'": rama moana
       craft_ifStandingOnLimit:
         text: |-
-          mena e tu ana ki runga [TYPE][0]
-          [STATEMENT][1]
+          mena e tu ana ki runga {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": oneone
             "'darkPrismarine'": poromoana uriuri
             "'seaLantern'": rama moana
       craft_log:
-        text: kārere takiputa [KĀRERE][0]
+        text: kārere takiputa {MESSAGE}
       craft_moveForward:
         text: neke ki mua
       craft_placeBlock:
-        text: waiho [blockType][0]
+        text: waiho {blockType}
         options:
           blockType:
             '"strippedOak"': ōki horea
@@ -484,13 +484,13 @@ mi:
       craft_placeTorch:
         text: hoatu rama
       craft_repeatUntilConduit:
-        text: "mahia tonu kia mutu ai te roma \n[STATEMENT][0]"
+        text: "mahia tonu kia mutu ai te roma \n{STATEMENT}"
       craft_repeatUntilGoal:
         text: |-
           mahia tonu kia whiwhi whāinga
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: whakawhānau [ENTITY][0]
+        text: whakawhānau {ENTITY}
         options:
           ENTITY:
             '"cod"': pātutuki
@@ -500,7 +500,7 @@ mi:
             '"squid"': wheke
             '"tropicalFish"': ika pārūrū
       craft_turn:
-        text: hurihia [DIR][0]
+        text: hurihia {DIR}
         options:
           DIR:
             right: matau ↻

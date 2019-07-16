@@ -3,20 +3,20 @@ nl:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: na [TIMESTAMP][0] [UNIT][1]
+        text: na {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
       Dancelab_changeColorBy:
-        text: verander [COLOR][0] [METHOD][1] met [AMOUNT][2]
+        text: verander {COLOR} {METHOD} met {AMOUNT}
         options:
           METHOD:
             '"hue"': tint
             '"saturation"': verzadiging
             '"brightness"': helderheid
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} doe [MOVE][1] [DIR][2] voor altijd"
+        text: "{GROUP} doe {MOVE} {DIR} voor altijd"
         options:
           GROUP:
             sprites: alles
@@ -47,7 +47,7 @@ nl:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} doe [MOVE][1] [DIR][2] voor altijd"
+        text: "{SPRITE} doe {MOVE} {DIR} voor altijd"
         options:
           MOVE:
             '"next"': "(Volgende)"
@@ -65,7 +65,7 @@ nl:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: wijzig [SPRITE][0] [PROPERTY][1] met [VAL][2]
+        text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
           PROPERTY:
             '"scale"': grootte
@@ -75,7 +75,7 @@ nl:
             '"x"': horizontale positie
             '"y"': verticale positie
       Dancelab_doMoveEachLR:
-        text: "{GROUP} doe [MOVE][1] [DIR][2] een keer"
+        text: "{GROUP} doe {MOVE} {DIR} een keer"
         options:
           GROUP:
             sprites: alles
@@ -104,7 +104,7 @@ nl:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} doe [MOVE][1] [DIR][2] een keer"
+        text: "{SPRITE} doe {MOVE} {DIR} een keer"
         options:
           MOVE:
             '"rand"': "(Willekeurig)"
@@ -120,19 +120,19 @@ nl:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'elke [N][0] [UNIT][1] '
+        text: 'elke {N} {UNIT} '
         options:
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
       Dancelab_everySecondsRange:
-        text: 'elke [N][0] [UNIT][1] van [START][2] tot [STOP][3] '
+        text: 'elke {N} {UNIT} van {START} tot {STOP} '
         options:
           UNIT:
             measures: Maten
             seconds: Seconden
       Dancelab_everyVerseChorus:
-        text: 'elke [UNIT][0] '
+        text: 'elke {UNIT} '
         options:
           UNIT:
             '"verse"': couplet
@@ -156,8 +156,8 @@ nl:
             '"seconds"': seconden
       Dancelab_ifDanceIs:
         text: |-
-          als [SPRITE][0] [DANCE][1] doet
-          [DO1][2] [DO2][3]
+          als {SPRITE} {DANCE} doet
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
@@ -177,7 +177,7 @@ nl:
             '">"': ">"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} ga naar [LOCATION][1]"
+        text: "{SPRITE} ga naar {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": boven
@@ -191,7 +191,7 @@ nl:
             "{x: 300, y: 300}": rechtsonder
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
       Dancelab_layoutSprites:
-        text: "{GROUP} indelen als een [FORMAT][1]"
+        text: "{GROUP} indelen als een {FORMAT}"
         options:
           GROUP:
             sprites: alles
@@ -217,8 +217,8 @@ nl:
             '"random"': willekeurig
       Dancelab_makeNewDanceSprite:
         text: |-
-          maak een nieuw [COSTUME][0]
-          genaamd [NAME][1] op [LOCATION][2]
+          maak een nieuw {COSTUME}
+          genaamd {NAME} op {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': Buitenaards wezen
@@ -244,8 +244,8 @@ nl:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          Maak [N][0] nieuw [COSTUME][1]
-          in een [LAYOUT][2]
+          Maak {N} nieuw {COSTUME}
+          in een {LAYOUT}
         options:
           N:
             '2': '2'
@@ -288,7 +288,7 @@ nl:
             '"x"': kriskras
             '"random"': willekeurig
       Dancelab_mixColors:
-        text: Meng [COLOR1][0] en [COLOR2][1]
+        text: Meng {COLOR1} en {COLOR2}
       Dancelab_nMeasures:
         text: "{N} maten"
       Dancelab_onPointerDown:
@@ -300,9 +300,9 @@ nl:
       Dancelab_randomColor:
         text: willekeurige kleur
       Dancelab_setBackground:
-        text: stel [COLOR][0] in als achtergrondkleur
+        text: stel {COLOR} in als achtergrondkleur
       Dancelab_setBackgroundEffect:
-        text: stel [EFFECT][0] [PALETTE][1] in als achtergrondeffect
+        text: stel {EFFECT} {PALETTE} in als achtergrondeffect
         options:
           EFFECT:
             '"none"': Geen
@@ -329,7 +329,7 @@ nl:
             '"tropical"': Tropisch
             '"warm"': Warm
       Dancelab_setBackgroundEffectWithPalette:
-        text: stel [EFFECT][0] [PALETTE][1] in als achtergrondeffect
+        text: stel {EFFECT} {PALETTE} in als achtergrondeffect
         options:
           EFFECT:
             '"none"': Geen
@@ -357,7 +357,7 @@ nl:
             '"tropical"': Tropisch
             '"warm"': Warm
       Dancelab_setDanceSpeed:
-        text: verander de danssnelheid van [SPRITE][0] naar [SPEED][1]
+        text: verander de danssnelheid van {SPRITE} naar {SPEED}
         options:
           SPEED:
             '1': normaal
@@ -387,7 +387,7 @@ nl:
             '0.5': langzaam
             '0.25': heel langzaam
       Dancelab_setForegroundEffect:
-        text: stel [EFFECT][0] in als voorgrondeffect
+        text: stel {EFFECT} in als voorgrondeffect
         options:
           EFFECT:
             '"none"': Geen
@@ -401,7 +401,7 @@ nl:
             '"smile_face"': Smiley
             '"raining_tacos"': Taco‘s
       Dancelab_setForegroundEffectExtended:
-        text: stel [EFFECT][0] in als voorgrondeffect
+        text: stel {EFFECT} in als voorgrondeffect
         options:
           EFFECT:
             '"none"': Geen
@@ -416,7 +416,7 @@ nl:
             '"smile_face"': Smiley
             '"raining_tacos"': Taco‘s
       Dancelab_setProp:
-        text: 'stel [SPRITE][0] [PROPERTY][1] in op [VAL][2] '
+        text: 'stel {SPRITE} {PROPERTY} in op {VAL} '
         options:
           PROPERTY:
             '"scale"': grootte
@@ -426,7 +426,7 @@ nl:
             '"x"': horizontale positie
             '"y"': verticale positie
       Dancelab_setPropEach:
-        text: stel [GROUP][0] [PROPERTY][1] in op [VAL][2]
+        text: stel {GROUP} {PROPERTY} in op {VAL}
         options:
           GROUP:
             sprites: alles
@@ -449,7 +449,7 @@ nl:
             '"x"': horizontale positie
             '"y"': verticale positie
       Dancelab_setPropRandom:
-        text: maak [SPRITE][0] [PROPERTY][1] willekeurig
+        text: maak {SPRITE} {PROPERTY} willekeurig
         options:
           PROPERTY:
             '"scale"': grootte
@@ -459,7 +459,7 @@ nl:
             '"x"': horizontale positie
             '"y"': verticale positie
       Dancelab_setTint:
-        text: stel de tint van [SPRITE][0] in op [VAL][1]
+        text: stel de tint van {SPRITE} in op {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
@@ -475,15 +475,15 @@ nl:
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
       Dancelab_setTintInline:
-        text: stel de tint van [SPRITE][0] in op [VAL][1]
+        text: stel de tint van {SPRITE} in op {VAL}
       Dancelab_setVisible:
-        text: stel [SPRITE][0] zichtbaarheid in op [VISIBILITY][1]
+        text: stel {SPRITE} zichtbaarheid in op {VISIBILITY}
         options:
           VISIBILITY:
             'true': zichtbaar
             'false': onzichtbaar
       Dancelab_setVisibleEach:
-        text: stel [THIS][0] zichtbaarheid in op [VISIBILITY][1]
+        text: stel {THIS} zichtbaarheid in op {VISIBILITY}
         options:
           THIS:
             sprites: alles
@@ -502,7 +502,7 @@ nl:
             'true': zichtbaar
             'false': onzichtbaar
       Dancelab_startMapping:
-        text: "{SPRITE} begint [PROPERTY][1] volgens [RANGE][2]"
+        text: "{SPRITE} begint {PROPERTY} volgens {RANGE}"
         options:
           PROPERTY:
             '"scale"': grootte
@@ -512,7 +512,7 @@ nl:
             '"x"': horizontale positie
             '"y"': verticale positie
       Dancelab_stopMapping:
-        text: "{SPRITE} stopt [PROPERTY][1] volgens [RANGE][2]"
+        text: "{SPRITE} stopt {PROPERTY} volgens {RANGE}"
         options:
           PROPERTY:
             '"scale"': grootte
@@ -523,7 +523,7 @@ nl:
             '"y"': verticale positie
             '"direction"': bewegingsrichting
       Dancelab_whenKey:
-        text: als [KEY][0] ingedrukt
+        text: als {KEY} ingedrukt
         options:
           KEY:
             '"up"': omhoog
@@ -553,9 +553,9 @@ nl:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: als [RANGE][0] piek
+        text: als {RANGE} piek
       gamelab_changePropBy:
-        text: wijzig [SPRITE][0] [PROPERTY][1] met [VAL][2]
+        text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
           PROPERTY:
             '"scale"': grootte
@@ -582,7 +582,7 @@ nl:
             '"y"': y positie
             '"direction"': bewegingsrichting
       gamelab_jumpTo:
-        text: "{SPRITE} ga naar [LOCATION][1]"
+        text: "{SPRITE} ga naar {LOCATION}"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -615,7 +615,7 @@ nl:
       gamelab_randomColor:
         text: willekeurige kleur
       gamelab_setBackground:
-        text: stel [COLOR][0] in als achtergrondkleur
+        text: stel {COLOR} in als achtergrondkleur
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -653,7 +653,7 @@ nl:
             '"right"': rechts
             '"left"': links
       gamelab_whenKey:
-        text: als [KEY][0] ingedrukt
+        text: als {KEY} ingedrukt
         options:
           KEY:
             '"up"': omhoog
@@ -778,8 +778,8 @@ nl:
             '"all"': alles
       Mikelab_ifDanceIs:
         text: |-
-          als [SPRITE][0] [DANCE][1] doet
-          [DO1][2] [DO2][3]
+          als {SPRITE} {DANCE} doet
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
@@ -822,7 +822,7 @@ nl:
             "{x: 100, y: 300}": linksonder
             "{x: 300, y: 300}": rechtsonder
       Mikelab_whenKeyPressed:
-        text: als [KEY][0] ingedrukt
+        text: als {KEY} ingedrukt
         options:
           KEY:
             '"up"': pijltje naar boven
@@ -860,7 +860,7 @@ nl:
       Vector_positionCenter:
         text: midden
       aalab_changePropByFlexible:
-        text: wijzig [SPRITE][0] [PROPERTY][1] met [VAL][2]
+        text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
           PROPERTY:
             '"scale"': grootte
@@ -879,7 +879,7 @@ nl:
             '"when"': wanneer
             '"while"': terwijl
       aalab_jumpTo:
-        text: "{SPRITE} ga naar [LOCATION][1]"
+        text: "{SPRITE} ga naar {LOCATION}"
       aalab_keyPressed:
         options:
           CONDITION:
@@ -925,7 +925,7 @@ nl:
             '"left"': links
             '"right"': rechts
       binary_whenKey:
-        text: als [KEY][0] ingedrukt
+        text: als {KEY} ingedrukt
         options:
           KEY:
             '"up"': omhoog
@@ -939,8 +939,8 @@ nl:
             '"d"': d
       craft_ifPath:
         text: |-
-          als pad [DIR][0]
-          [STATEMENT][1]
+          als pad {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": voor
@@ -948,8 +948,8 @@ nl:
             "'left'": naar links
       craft_ifStandingOn:
         text: |-
-          als staande op [TYPE][0]
-          [STATEMENT][1]
+          als staande op {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": blauw koraal
@@ -960,8 +960,8 @@ nl:
             "'seaLantern'": zeelantaarn
       craft_ifStandingOnLimit:
         text: |-
-          als staande op [TYPE][0]
-          [STATEMENT][1]
+          als staande op {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": zand
@@ -970,7 +970,7 @@ nl:
       craft_moveForward:
         text: beweeg vooruit
       craft_placeBlock:
-        text: plaats [blockType][0]
+        text: plaats {blockType}
         options:
           blockType:
             '"strippedOak"': geschaafd eikenhout
@@ -1005,11 +1005,11 @@ nl:
       craft_repeatUntilConduit:
         text: |-
           herhaal totdat kracht van de zee voltooid is
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           herhalen tot doel
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
         options:
           ENTITY:
@@ -1020,7 +1020,7 @@ nl:
             '"squid"': inktvis
             '"tropicalFish"': tropische vis
       craft_turn:
-        text: draai [DIR][0]
+        text: draai {DIR}
         options:
           DIR:
             right: rechtsom ↻

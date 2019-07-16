@@ -450,8 +450,8 @@ pt:
             '"space"': espaço
       craft_ifPath:
         text: |-
-          se o caminho seguir para [DIR][0]
-          [STATEMENT][1]
+          se o caminho seguir para {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": à frente
@@ -459,8 +459,8 @@ pt:
             "'left'": a esquerda
       craft_ifStandingOn:
         text: |-
-          se em cima de [TYPE][0]
-          [STATEMENT][1]
+          se em cima de {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": coral azul
@@ -471,8 +471,8 @@ pt:
             "'seaLantern'": lanterna aquática
       craft_ifStandingOnLimit:
         text: |-
-          se em cima de [TYPE][0]
-          [STATEMENT][1]
+          se em cima de {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": areia
@@ -481,7 +481,7 @@ pt:
       craft_moveForward:
         text: segue em frente
       craft_placeBlock:
-        text: colocar [blockType][0]
+        text: colocar {blockType}
         options:
           blockType:
             '"strippedOak"': carvalho despojado
@@ -513,15 +513,15 @@ pt:
       craft_repeatUntilConduit:
         text: |-
           repetir até conclusão do canal
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           repetir até ao objetivo
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: gerar [ENTITY][0]
+        text: gerar {ENTITY}
       craft_turn:
-        text: virar [DIR][0]
+        text: virar {DIR}
         options:
           DIR:
             right: direita ↻

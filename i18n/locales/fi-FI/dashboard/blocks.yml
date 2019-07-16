@@ -3,20 +3,20 @@ fi:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: jälkeen [TIMESTAMP][0] [UNIT][1]
+        text: jälkeen {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': tahdit
             '"seconds"': sekuntia
       Dancelab_changeColorBy:
-        text: muuta [COLOR][0] [METHOD][1] [AMOUNT][2]
+        text: muuta {COLOR} {METHOD} {AMOUNT}
         options:
           METHOD:
             '"hue"': vivahde
             '"saturation"': kylläisyys
             '"brightness"': kirkkaus
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} tee liikettä [MOVE][1] [DIR][2] ikuisesti"
+        text: "{GROUP} tee liikettä {MOVE} {DIR} ikuisesti"
         options:
           GROUP:
             sprites: kaikki
@@ -48,7 +48,7 @@ fi:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} tee liikettä [MOVE][1] [DIR][2] ikuisesti"
+        text: "{SPRITE} tee liikettä {MOVE} {DIR} ikuisesti"
         options:
           MOVE:
             '"next"': "(Seuraava)"
@@ -67,7 +67,7 @@ fi:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: muuta [SPRITE][0] [PROPERTY][1] [VAL][2]
+        text: muuta {SPRITE} {PROPERTY} {VAL}
         options:
           PROPERTY:
             '"scale"': koko
@@ -77,7 +77,7 @@ fi:
             '"x"': vaaka-asento
             '"y"': pystyasento
       Dancelab_doMoveEachLR:
-        text: "{GROUP} tee liike [MOVE][1] [DIR][2] kerran"
+        text: "{GROUP} tee liike {MOVE} {DIR} kerran"
         options:
           GROUP:
             sprites: kaikki
@@ -118,7 +118,7 @@ fi:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} tee liike [MOVE][1] [DIR][2] kerran"
+        text: "{SPRITE} tee liike {MOVE} {DIR} kerran"
         options:
           MOVE:
             '"rand"': "(Satunnainen)"
@@ -146,25 +146,25 @@ fi:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'joka [N][0] [UNIT][1] '
+        text: 'joka {N} {UNIT} '
         options:
           UNIT:
             '"measures"': tahdit
             '"seconds"': sekuntia
       Dancelab_everySecondsRange:
-        text: 'joka [N][0] [UNIT][1] alusta [START][2] loppuun [STOP][3] '
+        text: 'joka {N} {UNIT} alusta {START} loppuun {STOP} '
         options:
           UNIT:
             measures: Tahdit
             seconds: Sekunnit
       Dancelab_everyVerseChorus:
-        text: 'Joka [UNIT][0] '
+        text: 'Joka {UNIT} '
         options:
           UNIT:
             '"verse"': säkeistö
             '"chorus"': kertaussäkeistö
       Dancelab_getEnergy:
-        text: hanki [RANGE][0]
+        text: hanki {RANGE}
         options:
           RANGE:
             '"low"': basso
@@ -188,8 +188,8 @@ fi:
             '"seconds"': sekuntia
       Dancelab_ifDanceIs:
         text: |-
-          jos [SPRITE][0] tekee [DANCE][1]
-          [DO1][2] [DO2][3]
+          jos {SPRITE} tekee {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Taputa korkealle
@@ -208,10 +208,10 @@ fi:
             '"seconds"': sekuntia
           OP:
             '">"': ">"
-            '"<"': "<"
+            '"<"': "\\<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} siirry paikkaan [LOCATION][1]"
+        text: "{SPRITE} siirry paikkaan {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": ylös
@@ -225,7 +225,7 @@ fi:
             "{x: 300, y: 300}": alaoikea
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": satunnainen
       Dancelab_layoutSprites:
-        text: asettelu [GROUP][0] kuin [FORMAT][1]
+        text: asettelu {GROUP} kuin {FORMAT}
         options:
           GROUP:
             sprites: kaikki
@@ -252,8 +252,8 @@ fi:
             '"random"': satunnainen
       Dancelab_makeNewDanceSprite:
         text: |-
-          tee uusi [COSTUME][0]
-          kutsui [NAME][1] paikkaan [LOCATION][2]
+          tee uusi {COSTUME}
+          kutsui {NAME} paikkaan {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': Avaruusolento
@@ -280,8 +280,8 @@ fi:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": satunnainen
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          tee [N][0] uusi [COSTUME][1]
-          [LAYOUT][2]
+          tee {N} uusi {COSTUME}
+          {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -326,7 +326,7 @@ fi:
             '"plus"': risti
             '"random"': satunnainen
       Dancelab_mixColors:
-        text: sekoita [COLOR1][0] ja [COLOR2][1]
+        text: sekoita {COLOR1} ja {COLOR2}
       Dancelab_nMeasures:
         text: "{N} tahdit"
       Dancelab_onPointerDown:
@@ -338,9 +338,9 @@ fi:
       Dancelab_randomColor:
         text: satunnainen väri
       Dancelab_setBackground:
-        text: aseta taustaväri [COLOR][0]
+        text: aseta taustaväri {COLOR}
       Dancelab_setBackgroundEffect:
-        text: aseta taustaefekti [EFFECT][0] [PALETTE][1]
+        text: aseta taustaefekti {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ei mitään
@@ -355,7 +355,7 @@ fi:
             '"spiral"': Kierre
             '"disco"': Neliöt
       Dancelab_setBackgroundEffectWithPalette:
-        text: aseta taustaefekti [EFFECT][0] [PALETTE][1]
+        text: aseta taustaefekti {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ei mitään
@@ -371,7 +371,7 @@ fi:
             '"spiral"': Kierre
             '"disco"': Neliöt
       Dancelab_setDanceSpeed:
-        text: muuta [SPRITE][0] tanssin nopeutta [SPEED][1]
+        text: muuta {SPRITE} tanssin nopeutta {SPEED}
         options:
           SPEED:
             '1': normaali
@@ -401,7 +401,7 @@ fi:
             '0.5': hidas
             '0.25': erittäin hidas
       Dancelab_setForegroundEffect:
-        text: aseta etuefekti [EFFECT][0]
+        text: aseta etuefekti {EFFECT}
         options:
           EFFECT:
             '"none"': Ei mitään
@@ -410,7 +410,7 @@ fi:
             '"rain"': Sade
             '"raining_tacos"': Tacot
       Dancelab_setForegroundEffectExtended:
-        text: aseta etuefekti [EFFECT][0]
+        text: aseta etuefekti {EFFECT}
         options:
           EFFECT:
             '"none"': Ei mitään
@@ -420,7 +420,7 @@ fi:
             '"rain"': Sade
             '"raining_tacos"': Tacot
       Dancelab_setProp:
-        text: 'aseta [SPRITE][0] [PROPERTY][1] arvoksi [VAL][2] '
+        text: 'aseta {SPRITE} {PROPERTY} arvoksi {VAL} '
         options:
           PROPERTY:
             '"scale"': koko
@@ -431,7 +431,7 @@ fi:
             '"y"': pystyasento
             '"tint"': sävy
       Dancelab_setPropEach:
-        text: aseta [GROUP][0] [PROPERTY][1] arvoksi [VAL][2]
+        text: aseta {GROUP} {PROPERTY} arvoksi {VAL}
         options:
           GROUP:
             sprites: kaikki
@@ -455,7 +455,7 @@ fi:
             '"y"': pystyasento
             '"tint"': sävy
       Dancelab_setPropRandom:
-        text: satunnaista [SPRITE][0] [PROPERTY][1]
+        text: satunnaista {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': koko
@@ -466,7 +466,7 @@ fi:
             '"y"': pystyasento
             '"tint"': sävy
       Dancelab_setTint:
-        text: Aseta [SPRITE][0] sävy [VAL][1]
+        text: Aseta {SPRITE} sävy {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
@@ -482,15 +482,15 @@ fi:
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
       Dancelab_setTintInline:
-        text: Aseta [SPRITE][0] sävy [VAL][1]
+        text: Aseta {SPRITE} sävy {VAL}
       Dancelab_setVisible:
-        text: aseta [SPRITE][0] näkyvyys [VISIBILITY][1]
+        text: aseta {SPRITE} näkyvyys {VISIBILITY}
         options:
           VISIBILITY:
             'true': näkyvissä
             'false': näkymätön
       Dancelab_setVisibleEach:
-        text: muuta [THIS][0] näkyvyyttä [VISIBILITY][1]
+        text: muuta {THIS} näkyvyyttä {VISIBILITY}
         options:
           THIS:
             sprites: kaikki
@@ -509,7 +509,7 @@ fi:
             'true': näkyvissä
             'false': näkymätön
       Dancelab_startMapping:
-        text: "{SPRITE} alkaa [PROPERTY][1] jälkeen [RANGE][2]"
+        text: "{SPRITE} alkaa {PROPERTY} jälkeen {RANGE}"
         options:
           PROPERTY:
             '"scale"': koko
@@ -524,7 +524,7 @@ fi:
             '"mid"': midi
             '"treble"': diskantti
       Dancelab_stopMapping:
-        text: "{SPRITE} pysähtyy [PROPERTY][1] jälkeen [RANGE][2]"
+        text: "{SPRITE} pysähtyy {PROPERTY} jälkeen {RANGE}"
         options:
           PROPERTY:
             '"scale"': koko
@@ -540,7 +540,7 @@ fi:
             '"mid"': midi
             '"treble"': diskantti
       Dancelab_whenKey:
-        text: kun [KEY][0] painettuna
+        text: kun {KEY} painettuna
         options:
           KEY:
             '"up"': ylös
@@ -568,7 +568,7 @@ fi:
             '"x"': x
             '"z"': z
       Dancelab_whenPeak:
-        text: Kun [RANGE][0] piikkaa
+        text: Kun {RANGE} piikkaa
         options:
           RANGE:
             '0': basso
@@ -577,7 +577,7 @@ fi:
       Dancelab_whenSetup:
         text: asetukset
       gamelab_changePropBy:
-        text: muuta [SPRITE][0] [PROPERTY][1] [VAL][2]
+        text: muuta {SPRITE} {PROPERTY} {VAL}
         options:
           PROPERTY:
             '"scale"': koko
@@ -591,16 +591,16 @@ fi:
             '"when"': kun
             '"while"': niin kauan kuin
       gamelab_clickedOn:
-        text: kun [SPRITE][0] klikataan
+        text: kun {SPRITE} klikataan
       gamelab_comment:
-        text: 'kommentti: [COMMENT][0]'
+        text: 'kommentti: {COMMENT}'
       gamelab_debugSprite:
         options:
           VAL:
             'true': tosi
             'false': epätosi
       gamelab_destroy:
-        text: poista [THIS][0]
+        text: poista {THIS}
       gamelab_getProp:
         options:
           PROPERTY:
@@ -611,7 +611,7 @@ fi:
             '"direction"': liikkeen suunta
             '"tint"': sävy
       gamelab_jumpTo:
-        text: "{SPRITE} siirry paikkaan [LOCATION][1]"
+        text: "{SPRITE} siirry paikkaan {LOCATION}"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -668,7 +668,7 @@ fi:
       gamelab_randomLocation:
         text: satunnainen paikka
       gamelab_setBackground:
-        text: aseta taustaväri [COLOR][0]
+        text: aseta taustaväri {COLOR}
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -706,7 +706,7 @@ fi:
             '"right"': oikealle
             '"left"': vasemmalle
       gamelab_whenKey:
-        text: kun [KEY][0] painettuna
+        text: kun {KEY} painettuna
         options:
           KEY:
             '"up"': ylös
@@ -831,8 +831,8 @@ fi:
             '"all"': kaikki
       Mikelab_ifDanceIs:
         text: |-
-          jos [SPRITE][0] tekee [DANCE][1]
-          [DO1][2] [DO2][3]
+          jos {SPRITE} tekee {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Taputa korkealle
@@ -876,9 +876,9 @@ fi:
             "{x: 100, y: 300}": alavasen
             "{x: 300, y: 300}": alaoikea
       Mikelab_whenClickedOn:
-        text: kun [SPRITE][0] klikataan
+        text: kun {SPRITE} klikataan
       Mikelab_whenKeyPressed:
-        text: kun [KEY][0] painettuna
+        text: kun {KEY} painettuna
         options:
           KEY:
             '"up"': nuoli ylös
@@ -924,7 +924,7 @@ fi:
           PROPERTY:
             "'shapeColor'": väri
       aalab_changePropByFlexible:
-        text: muuta [SPRITE][0] [PROPERTY][1] [VAL][2]
+        text: muuta {SPRITE} {PROPERTY} {VAL}
         options:
           PROPERTY:
             '"scale"': koko
@@ -943,7 +943,7 @@ fi:
             '"when"': kun
             '"while"': niin kauan kuin
       aalab_jumpTo:
-        text: "{SPRITE} siirry paikkaan [LOCATION][1]"
+        text: "{SPRITE} siirry paikkaan {LOCATION}"
       aalab_keyPressed:
         options:
           CONDITION:
@@ -965,7 +965,7 @@ fi:
       aalab_randomLocation:
         text: satunnainen paikka
       aalab_removeOneAndAll:
-        text: poista [THIS][0]
+        text: poista {THIS}
       aalab_setBG:
         options:
           BG:
@@ -1001,7 +1001,7 @@ fi:
             '"left"': vasemmalle
             '"right"': oikealle
       binary_whenKey:
-        text: kun [KEY][0] painettuna
+        text: kun {KEY} painettuna
         options:
           KEY:
             '"up"': ylös
@@ -1015,8 +1015,8 @@ fi:
             '"d"': d
       craft_ifPath:
         text: |-
-          jos polku [DIR][0]
-          [STATEMENT][1]
+          jos polku {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": eteen
@@ -1024,8 +1024,8 @@ fi:
             "'left'": vasemmalle
       craft_ifStandingOn:
         text: |-
-          jos seisot [TYPE][0]
-          [STATEMENT][1]
+          jos seisot {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": sininen koralli
@@ -1036,8 +1036,8 @@ fi:
             "'seaLantern'": merilyhty
       craft_ifStandingOnLimit:
         text: |-
-          jos seisot [TYPE][0]
-          [STATEMENT][1]
+          jos seisot {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": hiekka
@@ -1046,7 +1046,7 @@ fi:
       craft_moveForward:
         text: siirry eteenpäin
       craft_placeBlock:
-        text: sijoita [blockType][0]
+        text: sijoita {blockType}
         options:
           blockType:
             '"strippedOak"': riisuttu tammi
@@ -1081,13 +1081,13 @@ fi:
       craft_repeatUntilConduit:
         text: |-
           toista kunnes väylä on valmis
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           toista kunnes tavoite saavutettu
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: kutea [ENTITY][0]
+        text: kutea {ENTITY}
         options:
           ENTITY:
             '"cod"': turska
@@ -1097,7 +1097,7 @@ fi:
             '"squid"': kalmari
             '"tropicalFish"': trooppinen kala
       craft_turn:
-        text: käänny [DIR][0]
+        text: käänny {DIR}
         options:
           DIR:
             right: oikea ↻

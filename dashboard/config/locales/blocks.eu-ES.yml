@@ -3,20 +3,20 @@ eu:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: "{TIMESTAMP} ondoren [UNIT][1]"
+        text: "{TIMESTAMP} ondoren {UNIT}"
         options:
           UNIT:
             '"measures"': neurriak
             '"seconds"': segundu
       Dancelab_changeColorBy:
-        text: aldatu [COLOR][0] [METHOD][1] [AMOUNT][2] erabiliaz
+        text: aldatu {COLOR} {METHOD} {AMOUNT} erabiliaz
         options:
           METHOD:
             '"hue"': tonua
             '"saturation"': saturazioa
             '"brightness"': distira
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} egin [MOVE][1] [DIR][2] betirako"
+        text: "{GROUP} egin {MOVE} {DIR} betirako"
         options:
           GROUP:
             '"ALIEN"': estralurtar guztiak
@@ -45,7 +45,7 @@ eu:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} egin [MOVE][1] [DIR][2] betirako"
+        text: "{SPRITE} egin {MOVE} {DIR} betirako"
         options:
           MOVE:
             '"rand"': Ausazkoa
@@ -63,7 +63,7 @@ eu:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: aldatu [SPRITE][0] [PROPERTY][1] honekin [VAL][2]
+        text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -72,7 +72,7 @@ eu:
             '"x"': posizio horizontala
             '"y"': posizio bertikala
       Dancelab_doMoveEachLR:
-        text: "{GROUP} egin [MOVE][1] [DIR][2] behin"
+        text: "{GROUP} egin {MOVE} {DIR} behin"
         options:
           GROUP:
             '"ALIEN"': estralurtar guztiak
@@ -101,7 +101,7 @@ eu:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} egin [MOVE][1] [DIR][2] behin"
+        text: "{SPRITE} egin {MOVE} {DIR} behin"
         options:
           MOVE:
             '"rand"': Ausazkoa
@@ -119,15 +119,15 @@ eu:
             '1': "→"
             "-1": "←"
       Dancelab_eval:
-        text: ebal [CODE][0]
+        text: ebal {CODE}
       Dancelab_everySeconds:
-        text: "{N} [UNIT][1] aldiro "
+        text: "{N} {UNIT} aldiro "
         options:
           UNIT:
             '"measures"': neurriak
             '"seconds"': segundu
       Dancelab_everySecondsRange:
-        text: "{N} [UNIT][1] aldiro, [START][2] tik [STOP][3] ra "
+        text: "{N} {UNIT} aldiro, {START} tik {STOP} ra "
         options:
           UNIT:
             measures: Neurriak
@@ -139,12 +139,12 @@ eu:
             '"verse"': versus
             '"chorus"': koruak
       Dancelab_getEnergy:
-        text: hartu [RANGE][0]
+        text: hartu {RANGE}
         options:
           RANGE:
             '"mid"': erdi
       Dancelab_getProp:
-        text: "{SPRITE} [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -335,7 +335,7 @@ eu:
           VISIBILITY:
             'false': ikusezin
       Dancelab_startMapping:
-        text: "{SPRITE} hasi [PROPERTY][1] jarraituz [RANGE][2]"
+        text: "{SPRITE} hasi {PROPERTY} jarraituz {RANGE}"
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -347,7 +347,7 @@ eu:
           RANGE:
             '"mid"': erdi
       Dancelab_stopMapping:
-        text: "{SPRITE} gelditu [PROPERTY][1] jarraituz [RANGE][2]"
+        text: "{SPRITE} gelditu {PROPERTY} jarraituz {RANGE}"
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -386,9 +386,9 @@ eu:
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
-        text: sprite [SPRITE][0] hasi [BEHAVIOR][1]
+        text: sprite {SPRITE} hasi {BEHAVIOR}
       gamelab_changePropBy:
-        text: aldatu [SPRITE][0] [PROPERTY][1] honekin [VAL][2]
+        text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -399,21 +399,21 @@ eu:
       gamelab_checkTouching:
         options:
           CONDITION:
-            '"when"': "-enean"
+            '"when"': "\\-enean"
             '"while"': bitartean
       gamelab_clickedOn:
         text: "{SPRITE} klik egitean"
       gamelab_comment:
-        text: 'iruzkina: [COMMENT][0]'
+        text: 'iruzkina: {COMMENT}'
       gamelab_debugSprite:
         options:
           VAL:
             'true': egia
             'false': gezurra
       gamelab_destroy:
-        text: ezabatu [THIS][0]
+        text: ezabatu {THIS}
       gamelab_getProp:
-        text: "{SPRITE} [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -425,7 +425,7 @@ eu:
       gamelab_keyPressed:
         options:
           CONDITION:
-            '"when"': "-enean"
+            '"when"': "\\-enean"
             '"while"': bitartean
           KEY:
             '"up"': gora
@@ -474,7 +474,7 @@ eu:
       gamelab_spriteClicked:
         options:
           CONDITION:
-            '"when"': "-enean"
+            '"when"': "\\-enean"
             '"while"': bitartean
       gamelab_turn:
         options:
@@ -514,7 +514,7 @@ eu:
             '"s"': s
             '"d"': d
       Mikelab_addBehaviorSimple:
-        text: sprite [SPRITE][0] hasi [BEHAVIOR][1]
+        text: sprite {SPRITE} hasi {BEHAVIOR}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -530,7 +530,7 @@ eu:
             "{x: 300, y: 200}": eskuinera
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Ausazkoa
       Mikelab_eval:
-        text: ebal [CODE][0]
+        text: ebal {CODE}
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -646,7 +646,7 @@ eu:
       RyanLab_turnRight:
         text: eskuinera biratu
       aalab_changePropByFlexible:
-        text: aldatu [SPRITE][0] [PROPERTY][1] honekin [VAL][2]
+        text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -657,17 +657,17 @@ eu:
       aalab_checkTouching:
         options:
           CONDITION:
-            '"when"': "-enean"
+            '"when"': "\\-enean"
             '"while"': bitartean
       aalab_clickedOn:
         options:
           CONDITION:
-            '"when"': "-enean"
+            '"when"': "\\-enean"
             '"while"': bitartean
       aalab_keyPressed:
         options:
           CONDITION:
-            '"when"': "-enean"
+            '"when"': "\\-enean"
             '"while"': bitartean
           KEY:
             '"up"': gora
@@ -676,7 +676,7 @@ eu:
             '"right"': eskuinera
             '"space"': espazioa
       aalab_removeOneAndAll:
-        text: ezabatu [THIS][0]
+        text: ezabatu {THIS}
       aalab_setBG:
         options:
           BG:

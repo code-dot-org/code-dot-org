@@ -3,20 +3,20 @@ ko:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: "{TIMESTAMP} [UNIT][1] 이후"
+        text: "{TIMESTAMP} {UNIT} 이후"
         options:
           UNIT:
             '"measures"': 마디
             '"seconds"': "~초 기다리기"
       Dancelab_changeColorBy:
-        text: "{COLOR} [METHOD][1]을(를) [AMOUNT][2]만큼 변경하기"
+        text: "{COLOR} {METHOD}을(를) {AMOUNT}만큼 변경하기"
         options:
           METHOD:
             '"hue"': 색조
             '"saturation"': 채도
             '"brightness"': 명도
       Dancelab_changeMoveEachLR:
-        text: "{GROUP}이(가) [MOVE][1] [DIR][2]을(를) 영원히 실행"
+        text: "{GROUP}이(가) {MOVE} {DIR}을(를) 영원히 실행"
         options:
           GROUP:
             sprites: 모두
@@ -50,7 +50,7 @@ ko:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE}이(가) [MOVE][1][DIR][2]을(를) 영원히 실행"
+        text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 영원히 실행"
         options:
           MOVE:
             '"next"': "(다음)"
@@ -71,7 +71,7 @@ ko:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: "{SPRITE}{PROPERTY}을(를) [VAL][2]만큼 변경"
+        text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
         options:
           PROPERTY:
             '"scale"': 크기
@@ -81,7 +81,7 @@ ko:
             '"x"': 수평 위치
             '"y"': 수직 위치
       Dancelab_doMoveEachLR:
-        text: "{GROUP}이(가) [MOVE][1][DIR][2]을(를) 한 번 실행"
+        text: "{GROUP}이(가) {MOVE}{DIR}을(를) 한 번 실행"
         options:
           GROUP:
             sprites: 모두
@@ -113,7 +113,7 @@ ko:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE}이(가) [MOVE][1][DIR][2]을(를) 한 번 실행"
+        text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 한 번 실행"
         options:
           MOVE:
             '"rand"': "(임의)"
@@ -132,19 +132,19 @@ ko:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: '매 [N][0] [UNIT][1] '
+        text: '매 {N} {UNIT} '
         options:
           UNIT:
             '"measures"': 마디
             '"seconds"': "~초 기다리기"
       Dancelab_everySecondsRange:
-        text: '매 [N][0] [UNIT][1]마다 [START][2]에서 [STOP][3]까지 '
+        text: '매 {N} {UNIT}마다 {START}에서 {STOP}까지 '
         options:
           UNIT:
             measures: 마디
             seconds: 초
       Dancelab_everyVerseChorus:
-        text: '매 [UNIT][0] '
+        text: '매 {UNIT} '
         options:
           UNIT:
             '"verse"': 절
@@ -174,8 +174,8 @@ ko:
             '"seconds"': "~초 기다리기"
       Dancelab_ifDanceIs:
         text: |-
-          만약 [SPRITE][0]이(가) [DANCE][1]을(를) 하고 있을 경우
-          [DO1][2] [DO2][3]
+          만약 {SPRITE}이(가) {DANCE}을(를) 하고 있을 경우
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: 높이 손뼉치기
@@ -195,7 +195,7 @@ ko:
             '"measures"': 마디
             '"seconds"': "~초 기다리기"
       Dancelab_jumpTo:
-        text: "{SPRITE}이(가) [LOCATION][1](으)로 점프"
+        text: "{SPRITE}이(가) {LOCATION}(으)로 점프"
         options:
           LOCATION:
             "{x: 200, y: 100}": 맨 위로
@@ -209,7 +209,7 @@ ko:
             "{x: 300, y: 300}": 오른쪽 아래
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random(랜덤)
       Dancelab_layoutSprites:
-        text: "{GROUP}(을)를 [FORMAT][1](으)로 레이아웃"
+        text: "{GROUP}(을)를 {FORMAT}(으)로 레이아웃"
         options:
           GROUP:
             sprites: 모두
@@ -236,8 +236,8 @@ ko:
             '"random"': random(랜덤)
       Dancelab_makeNewDanceSprite:
         text: |-
-          새로운 [COSTUME][0] 만들기
-          [NAME][1](이)라는 이름으로 [LOCATION][2]에서
+          새로운 {COSTUME} 만들기
+          {NAME}(이)라는 이름으로 {LOCATION}에서
         options:
           COSTUME:
             '"ALIEN"': 외계인
@@ -264,8 +264,8 @@ ko:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random(랜덤)
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          {N}을(를) 새로운 [COSTUME][1](으)로 만들기
-          [LAYOUT][2]에서
+          {N}을(를) 새로운 {COSTUME}(으)로 만들기
+          {LAYOUT}에서
         options:
           N:
             '2': '2'
@@ -310,7 +310,7 @@ ko:
             '"plus"': 더하기
             '"random"': random(랜덤)
       Dancelab_mixColors:
-        text: "{COLOR1} 및 [COLOR2][1] 혼합"
+        text: "{COLOR1} 및 {COLOR2} 혼합"
       Dancelab_nMeasures:
         text: "{N} 마디"
       Dancelab_onPointerDown:
@@ -322,9 +322,9 @@ ko:
       Dancelab_randomColor:
         text: 랜덤 색
       Dancelab_setBackground:
-        text: 배경색 [COLOR][0] 설정
+        text: 배경색 {COLOR} 설정
       Dancelab_setBackgroundEffect:
-        text: 배경 효과 [EFFECT][0] [PALETTE][1] 설정
+        text: 배경 효과 {EFFECT} {PALETTE} 설정
         options:
           EFFECT:
             '"none"': 없음
@@ -353,7 +353,7 @@ ko:
             '"vintage"': 빈티지
             '"warm"': 빨간색
       Dancelab_setBackgroundEffectWithPalette:
-        text: 배경 효과 [EFFECT][0] [PALETTE][1] 설정
+        text: 배경 효과 {EFFECT} {PALETTE} 설정
         options:
           EFFECT:
             '"none"': 없음
@@ -383,7 +383,7 @@ ko:
             '"vintage"': 빈티지
             '"warm"': 빨간색
       Dancelab_setDanceSpeed:
-        text: "{SPRITE} 댄스 속도를 [SPEED][1](으)로 변경하기"
+        text: "{SPRITE} 댄스 속도를 {SPEED}(으)로 변경하기"
         options:
           SPEED:
             '1': 보통
@@ -413,7 +413,7 @@ ko:
             '0.5': 느리게
             '0.25': 매우 느리게
       Dancelab_setForegroundEffect:
-        text: 전경 효과 [EFFECT][0] 설정
+        text: 전경 효과 {EFFECT} 설정
         options:
           EFFECT:
             '"none"': 없음
@@ -428,7 +428,7 @@ ko:
             '"smile_face"': 웃는 얼굴
             '"raining_tacos"': 타코
       Dancelab_setForegroundEffectExtended:
-        text: 전경 효과 [EFFECT][0] 설정
+        text: 전경 효과 {EFFECT} 설정
         options:
           EFFECT:
             '"none"': 없음
@@ -444,7 +444,7 @@ ko:
             '"smile_face"': 웃는 얼굴
             '"raining_tacos"': 타코
       Dancelab_setProp:
-        text: "{SPRITE} [PROPERTY][1]을(를) [VAL][2](으)로 설정 "
+        text: "{SPRITE} {PROPERTY}을(를) {VAL}(으)로 설정 "
         options:
           PROPERTY:
             '"scale"': 크기
@@ -455,7 +455,7 @@ ko:
             '"y"': 수직 위치
             '"tint"': 색조
       Dancelab_setPropEach:
-        text: "{GROUP} [PROPERTY][1]을(를) [VAL][2](으)로 설정"
+        text: "{GROUP} {PROPERTY}을(를) {VAL}(으)로 설정"
         options:
           GROUP:
             sprites: 모두
@@ -479,7 +479,7 @@ ko:
             '"y"': 수직 위치
             '"tint"': 색조
       Dancelab_setPropRandom:
-        text: "{SPRITE} [PROPERTY][1] 무작위로 하기"
+        text: "{SPRITE} {PROPERTY} 무작위로 하기"
         options:
           PROPERTY:
             '"scale"': 크기
@@ -490,7 +490,7 @@ ko:
             '"y"': 수직 위치
             '"tint"': 색조
       Dancelab_setTint:
-        text: "{SPRITE} 색조를 [VAL][1](으)로 설정하기"
+        text: "{SPRITE} 색조를 {VAL}(으)로 설정하기"
       Dancelab_setTintEach:
         options:
           THIS:
@@ -506,15 +506,15 @@ ko:
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
       Dancelab_setTintInline:
-        text: "{SPRITE} 색조를 [VAL][1](으)로 설정하기"
+        text: "{SPRITE} 색조를 {VAL}(으)로 설정하기"
       Dancelab_setVisible:
-        text: "{VISIBILITY}에서 보이도록 [SPRITE][0] 설정"
+        text: "{VISIBILITY}에서 보이도록 {SPRITE} 설정"
         options:
           VISIBILITY:
             'true': 보이기
             'false': 보이지 않기
       Dancelab_setVisibleEach:
-        text: "{THIS} 가시도를 [VISIBILITY][1](으)로 설정하기"
+        text: "{THIS} 가시도를 {VISIBILITY}(으)로 설정하기"
         options:
           THIS:
             sprites: 모두
@@ -533,7 +533,7 @@ ko:
             'true': 보이기
             'false': 보이지 않기
       Dancelab_startMapping:
-        text: "{SPRITE}이(가)[RANGE][2]을(를) 따르는 [PROPERTY][1]을(를) 시작하기"
+        text: "{SPRITE}이(가){RANGE}을(를) 따르는 {PROPERTY}을(를) 시작하기"
         options:
           PROPERTY:
             '"scale"': 크기
@@ -548,7 +548,7 @@ ko:
             '"mid"': 중간음
             '"treble"': 고음
       Dancelab_stopMapping:
-        text: "{SPRITE}이(가) [RANGE][2]을(를) 따르는 [PROPERTY][1]을(를) 중지하기"
+        text: "{SPRITE}이(가) {RANGE}을(를) 따르는 {PROPERTY}을(를) 중지하기"
         options:
           PROPERTY:
             '"scale"': 크기
@@ -584,7 +584,7 @@ ko:
       Dancelab_whenSetup:
         text: 설정
       gamelab_changePropBy:
-        text: "{SPRITE}{PROPERTY}을(를) [VAL][2]만큼 변경"
+        text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
         options:
           PROPERTY:
             '"scale"': 크기
@@ -612,7 +612,7 @@ ko:
             '"direction"': 움직임 방향
             '"tint"': 색조
       gamelab_jumpTo:
-        text: "{SPRITE}이(가) [LOCATION][1](으)로 점프"
+        text: "{SPRITE}이(가) {LOCATION}(으)로 점프"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -636,7 +636,7 @@ ko:
       gamelab_randomColor:
         text: 랜덤 색
       gamelab_setBackground:
-        text: 배경색 [COLOR][0] 설정
+        text: 배경색 {COLOR} 설정
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -791,8 +791,8 @@ ko:
             '"all"': 모두
       Mikelab_ifDanceIs:
         text: |-
-          만약 [SPRITE][0]이(가) [DANCE][1]을(를) 하고 있을 경우
-          [DO1][2] [DO2][3]
+          만약 {SPRITE}이(가) {DANCE}을(를) 하고 있을 경우
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: 높이 손뼉치기
@@ -876,7 +876,7 @@ ko:
       Vector_positionCenter:
         text: 중간
       aalab_changePropByFlexible:
-        text: "{SPRITE}{PROPERTY}을(를) [VAL][2]만큼 변경"
+        text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
         options:
           PROPERTY:
             '"scale"': 크기
@@ -895,7 +895,7 @@ ko:
             '"when"': "~할 때"
             '"while"': '반복(~인 동안):'
       aalab_jumpTo:
-        text: "{SPRITE}이(가) [LOCATION][1](으)로 점프"
+        text: "{SPRITE}이(가) {LOCATION}(으)로 점프"
       aalab_keyPressed:
         options:
           CONDITION:
@@ -953,7 +953,7 @@ ko:
       craft_ifPath:
         text: |-
           {DIR}에 길이 있을 경우
-          [STATEMENT][1]
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": 정면
@@ -962,7 +962,7 @@ ko:
       craft_ifStandingOn:
         text: |-
           {TYPE} 위에 서 있을 경우
-          [STATEMENT][1]
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": 파란색 산호
@@ -974,7 +974,7 @@ ko:
       craft_ifStandingOnLimit:
         text: |-
           {TYPE} 위에 서 있을 경우
-          [STATEMENT][1]
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": 모래
@@ -990,4 +990,4 @@ ko:
       craft_repeatUntilGoal:
         text: |-
           목표까지 반복하기
-          [STATEMENT][0]
+          {STATEMENT}
