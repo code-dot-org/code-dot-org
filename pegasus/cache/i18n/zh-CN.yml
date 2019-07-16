@@ -985,41 +985,6 @@ zh-CN:
   express-2018_name: 快速课程
   pre-express-2018_name: 学前儿童的速学课程（2018）
   express-2019_name: 速学课程 (2019)
-  cspunit2_name: "（旧）单元 2︰ 互联网"
-  cspunit3_name: "（旧版）第3单元︰ 编程"
-  cspunit4_name: "（旧版）第4单元︰ 数据"
-  cspunit5_name: "（旧版）第5单元︰ 探索和创建 PT"
-  cspunit6_name: Post-AP：应用程序中的数据库
-  csd5_name: 单元 5︰ 数据和社会
-  csd6_name: 单元 6︰ 物理计算
-  csd5-2017_name: 单元 5︰ 数据和社会
-  csd6-2017_name: 单元 6︰ 物理计算
-  csd5-2018_name: 单元 5︰ 数据和社会
-  csd6-2018_name: 单元 6︰ 物理计算
-  csp1-2017_name: 第1单元：互联网
-  csp2-2017_name: 第2单元︰ 数字信息
-  csp-explore-2017_name: AP：探索表演任务的准备工作
-  csp-create-2017_name: AP：创建表演任务
-  csppostap-2017_name: 'Post AP: App中的数据库'
-  csp1-2018_name: 第1单元：互联网
-  csp2-2018_name: 第2单元︰ 数字信息
-  csp-explore-2018_name: AP：探索表演任务的准备工作
-  csp-create-2018_name: AP：创建表演任务
-  csppostap-2018_name: 'Post AP: App中的数据库'
-  csp1_name: 第1单元：互联网
-  csp2_name: 第2单元︰ 数字信息
-  csp3-a_name: '单元 3: 编程介绍 (版本 A)'
-  csp3-research-mxghyt_name: '单元 3: 编程介绍 (子目标)'
-  csp-ap_name: AP 性能任务
-  csppostap_name: 'Post AP: App中的数据库'
-  csp-post-survey_name: 学生课程后调查
-  cspassessment_name: 完整测试 - 共50题
-  csp-explore_name: AP：探索表演任务的准备工作
-  csp-create_name: AP：创建表演任务
-  cspexam1-mWU7ilDYM9_name: 测试部分 1 - 25 个问题
-  cspexam2-AKwgAh1ac5_name: 测试部分 2 - 25 个问题
-  cspunit3_gradelevel: 9-12年级
-  cspunit3_shortdescription_congrats: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
   accelerated_name: 加速课程
   express_name: 快速课程
   20-hour_name: 加速课程
@@ -1033,18 +998,6 @@ zh-CN:
   starwarsblocks_name: 星球大战(块)
   hoc-encryption_name: 简单加密
   text-compression_name: 文本压缩
-  math_category_name: 数学
-  hoc_category_name: 编程一小时
-  csf_category_name: 计算机科学基本原理
-  csf_2017_category_name: 计算机科学基础课程（2017）
-  csf_2018_category_name: 计算机科学基础课程（2018）
-  csf_international_category_name: 计算机基础国际版
-  csf2_draft_category_name: 开发中：课程A - F
-  csd_2018_category_name: 计算机科学发现 (' 18-' 19)
-  csp_category_name: 15-16 计算机原理
-  csp17_category_name: 计算机原理('17-'18)
-  csp_2018_category_name: 计算机科学原理 ('18-'19)
-  cspexams_category_name: 计算机原理练习测试
   applab_name: 应用实验室
   gamelab_name: 游戏实验室
   basketball_name: 进行一场篮球赛
@@ -1545,10 +1498,6 @@ zh-CN:
   game_lab_documentation: 游戏实验室文档
   game_lab_tutorials: 游戏实验室说明
   header_documentation: 使用文档
-  csp_name: 计算机科学原理
-  csd_name: 计算机科学发现
-  csd_2018_name: 计算机科学发现
-  full_course_category_name: 完整课程
   user_header_label: 你好%{username}
   user_header_team: 团队
   user_header_my_projects: 我的项目
