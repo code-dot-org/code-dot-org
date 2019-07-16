@@ -171,7 +171,8 @@ class Census::StateCsOffering < ApplicationRecord
       end
 
       # At this point we have nothing left.
-      raise ArgumentError.new("Entry for #{state_code} requires either nces_id or state_school_id.")
+      CDO.log.warn "Entry for #{state_code} requires either state_school_id or nces_id that matches a School in the db with state_school_id column populated.  (nces_id: #{nces_id}, state_school_id: #{state_school_id})"
+      return nil
     end
 
     # Special casing for V1 format.
