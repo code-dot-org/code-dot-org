@@ -2128,6 +2128,21 @@ class UserTest < ActiveSupport::TestCase
     refute user.clever_student?
   end
 
+  test 'oauth_student? is true if the user belongs to any oauth section as a student' do
+    clever_section = create(:section, login_type: Section::LOGIN_TYPE_CLEVER)
+    clever_user = create(:follower, section: clever_section).student_user
+    assert clever_user.oauth_student?
+
+    google_section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
+    google_user = create(:follower, section: google_section).student_user
+    assert google_user.oauth_student?
+  end
+
+  test 'oauth_student? is false if the user does not belong to any oauth section as a student' do
+    user = create(:user)
+    refute user.oauth_student?
+  end
+
   test 'track_proficiency adds proficiency if necessary and no hint used' do
     level_concept_difficulty = create :level_concept_difficulty
     # Defaults with repeat_loops_{d1,d2,d3,d4,d5}_count = {0,2,0,3,0}.
