@@ -4,7 +4,8 @@
 import _, {orderBy} from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';

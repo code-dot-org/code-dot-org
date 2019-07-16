@@ -3,7 +3,8 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 import {ImageWithStatus} from '../ImageWithStatus';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
