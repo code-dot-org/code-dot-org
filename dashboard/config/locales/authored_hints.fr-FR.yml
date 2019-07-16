@@ -37,7 +37,7 @@ fr-FR:
       2-3 Artist 8:
         2-3_Artist_8_a: Si tu coupes 200 en deux, combien de pixels de large devra
           faire chaque carré ?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Ce losange n’est vraiment qu’un carré sur le côté
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: "**On peut procéder par essai et erreur ici !**
@@ -7122,10 +7122,8 @@ fr-FR:
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Il y a deux façons de résoudre ce casse-tête
           !
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Il y a deux façons de résoudre ce casse-tête !
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Il y a deux façons de résoudre ce casse-tête
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Il y a deux façons de résoudre ce casse-tête
           !
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Le demi-hexagone a une **longueur de
@@ -7170,13 +7168,10 @@ fr-FR:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseE_artist_ramp8_2:
+      courseE_artist_ramp9:
         courseD_artist_ramp12_b: Tu peux utiliser le menu déroulant des blocs ˋtourner\`
           pour voir de quel angle tu as besoin !
-      courseE_artist_ramp9:
-        courseF_farmer_ramp11_b: Comment peux-tu utiliser une boucle <xml><block type="controls_repeat"><title
-          name="TIMES">???</title></block></xml> pour ramasser la salade, au lieu
-          de faire glisser 5 blocs <xml><block type="harvester_lettuce"/></xml> ?
+      courseE_artist_ramp9_2:
         courseD_artist_ramp12_b: Tu peux utiliser le menu déroulant des blocs ˋtourner\`
           pour voir de quel angle tu as besoin !
       courseE_bee_functions6:
@@ -7202,9 +7197,6 @@ fr-FR:
         courseE_bee_functions_challenge1_a: Si le casse-tête semble difficile, essaie
           de construire ta fonction peu à peu. Ajoute quelques blocs, puis essaie.
           Ajoutes-en d’autres, puis réessaie. Bientôt, tu y arriveras !
-      courseE_farmer_ramp12f:
-        courseE_farmer_ramp15_c: Les pousses cachent différentes quantités soit de
-          maïs soit de salade à récupérer en allant vers la citrouille.
       courseF_artist_for4:
         courseF_artist_for4_a: |-
           **Quel est le plus petit nombre dont tu auras besoin ?\

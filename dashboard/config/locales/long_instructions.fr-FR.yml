@@ -6,7 +6,7 @@ fr-FR:
         me faire dessiner presque tout. Utilisez des blocs pour me faire dessiner
         sur les lignes grises de la figure. (chaque ligne a une longueur de 100 pixels)
       2-3 Artist 4: Aide-moi à terminer la maison pour ce chat.
-      2-3 Artist 9: Termine ce cerf-volant
+      2-3 Artist 9 NEW: Termine ce cerf-volant
       2-3 Artist Assessment 1: "**Évaluation :** Termine de dessiner la dernière dent.
         Elle fait 25 pixels de large et 25 pixels de haut."
       2-3 Artist Free Play: Jeu libre ! Dessine tout ce que tu veux.
@@ -5677,23 +5677,6 @@ fr-FR:
         lorsque Flappy rencontre un obstacle, essaie de remettre le score à 0.
       courseC_flappy_events9_2019: Pour varier un peu, au lieu de terminer le jeu
         lorsque Flappy rencontre un obstacle, essaie de remettre le score à 0.
-      courseC_maze_debugging1: "_\"Oh no! I see a problem.\"_\\\r\n\\\r\nFix\nthe
-        error(s) to collect all of the treasure."
-      courseC_maze_debugging2: "_\"You can do this!\"_\\\r\n\\\r\nFix\nthe error(s)
-        to collect all of the treasure."
-      courseC_maze_debugging3: "_\"Be persistent and you\nwill figure this out.\"_\\\r\n\\\r\nFix
-        the error(s) to collect all of the treasure."
-      courseC_maze_debugging4: "_\"Don't get frustrated.\nYou can do it!\"_\\\r\n\\\r\nFix
-        the error(s) to collect all of the treasure."
-      courseC_maze_debugging5: "_\"This puzzle is making\nme loopy!\"_\\\r\n\\\r\nAll
-        of the commands that you need are already here...now\nuse your debugging skills
-        to figure out how to solve this puzzle."
-      courseC_maze_debugging7: "_\"So much treasure!\"_\\\r\n\\\r\nHelp\nLaurel fix
-        the code to get all the treasure."
-      courseC_maze_debugging8_predict1: "_\"It's treasure island!\"_\\\r\n\\\r\nHelp\nLaurel
-        fix the code to get all the treasure."
-      courseC_maze_debugging9: "_\"It's treasure island!\"_\\\r\n\\\r\nHelp\nLaurel
-        fix the code to get all the treasure."
       courseC_maze_programming4: "_\"Trace the path and lead me to\nthe silly pig.\"_
         \\\r\n\\\r\nAvoid TNT or feathers will fly!"
       courseC_maze_programming4_2018: "_\"Trace the path and lead me to\nthe silly
@@ -5784,11 +5767,6 @@ fr-FR:
         going!\"_\\\r\n\\\r\nUse what you have learned to pick up all of the scrap\nmetal!"
       courseC_starWars_loops9_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
         going!\"_\\\r\n\\\r\nUse what you have learned to pick up all of the scrap\nmetal!"
-      courseC_video_angles2: "Did you know you can put loops\ninside of other loops
-        to make them more powerful?  That's called making a\n\"nested loop\".\\\r\n\\\r\n\\_\\_\\_\\\r\n\\\r\nDrag
-        the code for the last triangle into\na new loop to spin it around and make
-        a snowflake!\\\r\n\\\r\n_(You will need\nto spin it 6 times at 60 degrees
-        to get this pattern.)_"
       courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s
         try something new. This time, skate in a zig-zag.\"_\\\r\n\\\r\n\\\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\"
         style=\"float: left; margin: 0 15px 15px 0;\" />\\\r\nDraw a\nstair-step pattern
@@ -6234,33 +6212,15 @@ fr-FR:
         zone\" too long!  \\\r\n\\\r\nAdd code to the `if` statement\nbelow so that
         if the pirate is in the safe zone, the program will wait one\nsecond, then
         deduct a point as long as he stays beneath the octopus line."
-      courseD_scrat_predict1: "_\"Keep calm and help me find the\nbad pig. Otherwise
-        I might get angry!\"_\\\r\n\\\r\nWhen you have several blocks\nin a row, try
-        moving them inside of a <xml><block type=\"controls_repeat\"><title\nname=\"TIMES\">???</title></block></xml>
-        loop.  This will do the same thing\nwith less code!"
       courseD_scrat_ramp3: "_\"This pig is ruffling my feathers.\"_\\\r\n\\\r\nThere\nis
         one extra block that is going to cause the bird to crash.  \\\r\nThrow it\naway
         by dragging it back to the toolbox."
-      courseD_scrat_ramp4: "_\"Trace the path and lead me to\nthe silly pig.\"_ \\\r\n\\\r\nAvoid
-        TNT or feathers will fly!"
       courseD_scrat_ramp5: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
         the TNT."
       courseD_scrat_ramp6: "_\"Keep calm and help me find the\nbad pig. Otherwise
         I might get angry!\"_\\\r\n\\\r\nWhen you have several blocks\nin a row, try
         moving them inside of a `repeat` loop.  This will do the same\nthing with
         less code!"
-      courseD_scrat_ramp7: "_\"It's time to get angry!\"_\\\r\n\\\r\n**Challenge:**\nUse
-        what you've learned to get the bird to the pig!"
-      courseD_scrat_ramp8: "Great!  Now let's use that `repeat`\nloop to make a square
-        using Artist!  The blocks for artist are a little different\nthan other puzzles,
-        but the idea is the same.\\\r\n\\_\\_\\_\\\r\n\n##### Each side of\n\nthe
-        square has a length of 200 pixels, and you will need to turn 90 degrees\nto
-        make each angle."
-      courseD_video_repeatUntil: "Help the farmer walk the path\nto find all of the
-        lettuce\\\r\n\\\r\nIn this puzzle, lettuce is growing at the\nend of every
-        path.  If there is a path in front of her, the farmer can keep\nmoving forward.
-        \ Otherwise, she needs to pick all of the lettuce, then turn\nto stay on the
-        path. \\\r\n\\\r\n\\\r\n\\\r"
       courseE_artist_concept_challenge1: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\\r\n\\\r\nNow
         for a challenge!  \\\r\n\\\r\nHere is a design that\nuses only blocks that
         you have already been shown.  Can you figure out how\nto recreate it?  Feel
@@ -6294,10 +6254,15 @@ fr-FR:
         but the idea is the same.\\\r\n\\_\\_\\_\\\r\n\n##### Each side of\n\nthe
         square has a length of 200 pixels, and you will need to turn 90 degrees\nto
         make each angle."
-      courseE_artist_ramp8_2: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
+      courseE_artist_ramp8_2: "Great!  Now let's use that `repeat`\nloop to make a
+        square using Artist!  The blocks for artist are a little different\nthan other
+        puzzles, but the idea is the same.\\\r\n\\_\\_\\_\\\r\n\n##### Each side of\n\nthe
+        square has a length of 200 pixels, and you will need to turn 90 degrees\nto
+        make each angle."
+      courseE_artist_ramp9: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
         The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at
         each corner."
-      courseE_artist_ramp9: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
+      courseE_artist_ramp9_2: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
         The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at
         each corner."
       courseE_bee_concept2: "Help the bee make all of the honey.  \\\r\n\\\r\nYou\ncan
@@ -6345,10 +6310,6 @@ fr-FR:
         guess how much dirt is in it.  \\\r\n\\\r\n\\_\\_\\_\\\r\n\\\r\nWe've added\na
         new block to the toolbox called the `while there is a pile` block.  Use\nthis
         to remove dirt only while there is still some to scoop! "
-      courseE_farmer_ramp12b: "Help the farmer walk the path\nto find all of the lettuce\\\r\n\\\r\nIn
-        this puzzle, lettuce is growing at the\nend of every path.  If there is a
-        path in front of her, the farmer can keep\nmoving forward.  Otherwise, she
-        needs to pick all of the lettuce, then turn\nto stay on the path. \\\r\n\\\r\n\\\r\n\\\r"
       courseE_farmer_ramp12c: "Goodness!  Look at all of these\nsprouts. Some of them
         will turn into corn, and others into lettuce.  \\\r\n\\\r\nTravel\nto the
         ends of the path to pick lettuce while there is lettuce, and pick corn\nwhile
@@ -6356,28 +6317,31 @@ fr-FR:
       courseE_farmer_ramp12c_2018: "The lettuce is now only at the\nend of the path.
         \ \\\r\nTravel down the path **until** you reach a head of lettuce,\nthen
         continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12c_2019: "The lettuce is now only at the\nend of the path.
-        \ \\\r\nTravel down the path **until** you reach a head of lettuce,\nthen
-        continue to pick it **while** there is still some left.  "
+      courseE_farmer_ramp12c_2019: "Goodness!  Look at all of these\nsprouts. Some
+        of them will turn into corn, and others into lettuce.  \\\r\n\\\r\nTravel\nto
+        the ends of the path to pick lettuce while there is lettuce, and pick corn\nwhile
+        there is corn. \\\r\n\\\r"
       courseE_farmer_ramp12d: "The same technique works with nectar\nand honey!  \\\r\n\\\r\nLook
         at all of these clouds. Some of them will turn into\nhoney, and others into
         nectar.   \\\r\nHelp the bee follow the path and solve\nthis puzzle.\\\r\n\\\r\n\\\r\n\\\r"
       courseE_farmer_ramp12d_2018: "The lettuce is scattered all\nover the garden.
         \ \\\r\nTravel down each path **until** you reach a head of\nlettuce, then
         continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12d_2019: "The lettuce is scattered all\nover the garden.
-        \ \\\r\nTravel down each path **until** you reach a head of\nlettuce, then
-        continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12e_2018: "The lettuce is scattered all\nover the garden.
-        \ \\\r\nTravel down each path **until** you reach a head of\nlettuce, then
-        continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12e_2019: "The lettuce is scattered all\nover the garden.
-        \ \\\r\nTravel down each path **until** you reach a head of\nlettuce, then
-        continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12f: "Solve this puzzle using only the\nblocks available.\\\r\n\\\r\nThis
-        level will help give you practice with the `repeat\nuntil` block.  Collect
-        all of the corn and lettuce until you get to the pumpkin.\n(Don't forget to
-        collect the pumpkin, too!)"
+      courseE_farmer_ramp12d_2019: "The same technique works with nectar\nand honey!
+        \ \\\r\n\\\r\nLook at all of these clouds. Some of them will turn into\nhoney,
+        and others into nectar.   \\\r\nHelp the bee follow the path and solve\nthis
+        puzzle.\\\r\n\\\r\n\\\r\n\\\r"
+      courseE_farmer_ramp12e: "The same technique works with nectar\nand honey!  \\\r\n\\\r\nLook
+        at all of these clouds. Some of them will turn into\nhoney, and others into
+        nectar.   \\\r\nHelp the bee follow the path and solve\nthis puzzle.\\\r\n\\\r\n\\\r\n\\\r"
+      courseE_farmer_ramp12e_2018: "The same technique works with nectar\nand honey!
+        \ \\\r\n\\\r\nLook at all of these clouds. Some of them will turn into\nhoney,
+        and others into nectar.   \\\r\nHelp the bee follow the path and solve\nthis
+        puzzle.\\\r\n\\\r\n\\\r\n\\\r"
+      courseE_farmer_ramp12e_2019: "The same technique works with nectar\nand honey!
+        \ \\\r\n\\\r\nLook at all of these clouds. Some of them will turn into\nhoney,
+        and others into nectar.   \\\r\nHelp the bee follow the path and solve\nthis
+        puzzle.\\\r\n\\\r\n\\\r\n\\\r"
       courseE_playLab_challenge1: "\\*The **squirrels** are terrified\nto see that
         a **dinosaur** has come to town! Can the brave **knight** keep\nthem all from
         panicking?\\*\\\r\n\\\r\nRules:\\\r\n\n1.  _Touching the squirrels scores\n
