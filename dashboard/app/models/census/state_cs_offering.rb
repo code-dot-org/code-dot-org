@@ -171,7 +171,8 @@ class Census::StateCsOffering < ApplicationRecord
       end
 
       # At this point we have nothing left.
-      raise ArgumentError.new("Entry for #{state_code} requires either nces_id or state_school_id.")
+      CDO.log.warn "Entry for #{state_code} requires either nces_id or state_school_id."
+      return nil
     end
 
     # Special casing for V1 format.
