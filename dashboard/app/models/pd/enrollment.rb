@@ -123,7 +123,8 @@ class Pd::Enrollment < ActiveRecord::Base
   scope :with_surveys, (lambda do
     for_ended_workshops.
       attended.
-      where('pd_workshops.subject != ? or pd_workshops.subject is null', SUBJECT_FIT)
+      where.not(pd_workshops: {course: COURSE_FACILITATOR}).
+      where('pd_workshops.subject != ? or pd_workshops.subject is null', [SUBJECT_FIT])
   end)
 
   def has_user?
