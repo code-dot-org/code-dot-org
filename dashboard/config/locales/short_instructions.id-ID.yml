@@ -14,7 +14,7 @@ id-ID:
       2-3 Artist 4: Bantu saya menyelesaikan rumah untuk kucing ini.
       2-3 Artist 6: 'Rumah ini membutuhkan atap! Gambarlah segitiga.  Petunjuk: semua
         tiga sisi memiliki panjang yang sama.'
-      2-3 Artist 9: Selesaikan layang-layang ini
+      2-3 Artist 9 NEW: Selesaikan layang-layang ini
       2-3 Artist Free Play: Permainan bebas! Gambarlah apa pun yang Anda suka.
       2-3 Artist Loops New 15: Gambar sesuatu yang menyenangkan.
       2-3 Artist Nested Loops 10: Ulangi kode ini sebanyak 12 kali untuk menyelesaikan
@@ -525,10 +525,21 @@ id-ID:
       Underground Mining Coal_2019: Kamu akan menemukan sumber daya paling berharga
         di bawah tanah, tapi di sana bisa jadi gelap. Tempatkan setidaknya 2 obor
         dan tambang setidaknya 2 batu bara.
+      Virtual Pet 8_2019: "**Permainan bebas**Apalagi yang anda bisa lakukan pada
+        binatang peliharaan anda? Coba sesuatu yang anda suka!"
       'Widget: Text Compression': Perhatikan pola (pengulangan kata atau frase) dalam
         teks.Masukkan pola yang anda lihat ke dalam kamus dengan benar. Ketika anda
         mengetik entri kedalam kamus,simbol untuk entri dimasukkan kedalam teks di
         tempat pola tersebut.
+      behaviors 1: Buat sebuah prediksi!
+      behaviors 2: Terbangkan roket menuju bintang!
+      behaviors 3: Bantu bajak berlari lebih cepat melampaui robot!
+      behaviors 3a: 'Debug: Buat semua bintang berputar dengan cara sama!'
+      behaviors 4: Buat sebuah prediksi!
+      behaviors 5: Pindahkan astronot secara diagonal.
+      behaviors 6: Buat bola menggelinding.
+      behaviors 7: Pergi ke horizon!
+      behaviors free play: 'Permainan bebas: Ciptakan layar ruang angaksamu!'
       bounce_1: Tempatkan satu blok ke blok "Jika anak panah kiri" dan tekan "Jalankan
         Program". Gerakkan menggunakan tombol panah kiri untuk mencapai target.
       bounce_10: Ada sebuah target di atas. Tempelkan blok "Skor poin" dan blok "Skor
