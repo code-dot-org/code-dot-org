@@ -2,6 +2,8 @@
 gl-ES:
   data:
     display_name:
+      AB_Debug_Artist1: 'Depuración do Artista #1 (AB)'
+      CSD Problem Solving Process Video: 'Vídeo: Proceso de resolución de problemas'
       CSD U2 Pair Programming Video: Programación por parellas
       CSD U2 Pair Programming Video_2018: Programación por parellas
       CSD U2 Pair Programming Video_2019: Programación por parellas
@@ -56,4 +58,10 @@ gl-ES:
       CSD U6 functions paramters video: Funcións con parámetros
       CSD U6 functions paramters video_2018: Funcións con parámetros
       CSD U6 functions paramters video_2019: Funcións con parámetros
+      CSD What Makes a Computer a Computer Video: 'Vídeo: Que fai dun ordenador, un
+        ordenador?'
+      CSD What Makes a Computer a Computer Video_2018: 'Vídeo: Que fai dun ordenador,
+        un ordenador?'
+      CSD What Makes a Computer a Computer Video_2019: 'Vídeo: Que fai dun ordenador,
+        un ordenador?'
       'CSD: For Loop_2018': Bucles "Para" (For)

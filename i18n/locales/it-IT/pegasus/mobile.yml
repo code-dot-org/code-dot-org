@@ -923,6 +923,7 @@
   coursef-2018_name: Corso F (2018)
   express-2018_name: Corso Rapido
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
+  pre-express-2019_name: Corso Rapido pre-scolare (2019)
   cspunit2_name: "Princìpi dell'Informatica - Unità 2"
   cspunit3_name: "Princìpi dell'Informatica - Unità 3"
   cspunit4_name: "Princìpi dell'Informatica - Unità 4"
@@ -950,6 +951,8 @@
   cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
   cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
   cspunit3_gradelevel: "Da 14 a 17 anni"
+  accelerated_name: "Corso rapido"
+  express_name: "Corso Rapido"
   20-hour_name: Corso rapido
   algebra_name: "L'informatica in algebra"
   AlgebraA_name: "Informatica nell'algebra Corso A"

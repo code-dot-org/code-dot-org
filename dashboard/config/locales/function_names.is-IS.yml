@@ -182,6 +182,8 @@ is-IS:
       Course 4 SCF 1:
         draw a hexagon: teikna sexkant
         draw a line of hexagons: teikna röð sexhyrninga
+        shift down/forward: hliðra niður/áfram
+        shift down/backward: hliðra niður/aftur á bak
         draw a square 20: teikna ferning 20
       Course 4 SCF 1a:
         get nectar: sækja blómasafa
@@ -191,6 +193,7 @@ is-IS:
         draw a square 20: teikna ferning 20
         draw octagons: teikna átthyrninga
         draw an octagon: teikna átthyrning
+        shift down: hliðra niður
       Course 4 SCF 3:
         draw a square 20: teikna ferning 20
         do something: gera eitthvað
@@ -355,6 +358,8 @@ is-IS:
         draw a shape: teikna form
       Standalone_Artist_9:
         my function: fallið mitt
+      course1_artist_loops_challenge1:
+        '"simple" solution': '"einföld" lausn'
       course3_artist_functions_challenge1:
         do something: gera eitthvað
       course3_artist_functions_challenge2:
@@ -375,6 +380,8 @@ is-IS:
         draw a polygon: teikna marghyrning
         draw a square 20: teikna ferning 20
         do something: gera eitthvað
+      courseA_artist_loops_challenge1:
+        '"simple" solution': '"einföld" lausn'
       courseC_data wizard:
         do something: gera eitthvað
       courseD_artist_binary1:

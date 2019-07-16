@@ -105,14 +105,13 @@ def recursively_find_malformed_links_images(hash, key_str, file_name)
 end
 
 def plugins_to_arg(plugins)
-  plugins.map {|name| "bin/i18n/plugins/#{name}.js" if name}.join(',')
+  plugins.map {|name| "bin/i18n/node_modules/@code-dot-org/remark-plugins/src/#{name}.js" if name}.join(',')
 end
 
-def redact(source, dest, *plugins)
+def redact(source, dest, plugins=[], format='md')
   return unless File.exist? source
   FileUtils.mkdir_p File.dirname(dest)
 
-  plugins = plugins_to_arg(plugins)
   data =
     if File.extname(source) == '.json'
       f = File.open(source, 'r')
@@ -122,7 +121,8 @@ def redact(source, dest, *plugins)
     end
 
   args = ['bin/i18n/node_modules/.bin/redact']
-  args.push('-p ' + plugins) unless plugins.empty?
+  args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
+  args.push("-f #{format}")
 
   stdout, _status = Open3.capture2(
     args.join(" "),
@@ -150,7 +150,7 @@ def contains_malformed_link_or_image(translation)
   return !(non_malformed_redaction && non_malformed_translation)
 end
 
-def restore(source, redacted, dest, *plugins)
+def restore(source, redacted, dest, plugins=[], format='md')
   return unless File.exist?(source)
   return unless File.exist?(redacted)
   is_json = File.extname(source) == '.json'
@@ -187,11 +187,11 @@ def restore(source, redacted, dest, *plugins)
   redacted_json.flush
 
   args = ['bin/i18n/node_modules/.bin/restore']
-  plugins = plugins_to_arg(plugins)
-  args.push('-p ' + plugins) unless plugins.empty?
-
+  args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
+  args.push("-f #{format}")
   args.push("-s #{source_json.path}")
   args.push("-r #{redacted_json.path}")
+
   stdout, _status = Open3.capture2(
     args.join(" ")
   )
@@ -257,6 +257,6 @@ def get_level_from_url(url)
     stage = script.stages.find_by_relative_position(matches[:stage_pos])
     level_info_regex = %r{puzzle/(?<level_pos>[0-9]+)}
     level_pos = matches[:level_info].match(level_info_regex)[:level_pos]
-    stage.script_levels.find_by_position(level_pos.to_i).level
+    stage.script_levels.find_by_position(level_pos.to_i).oldest_active_level
   end
 end

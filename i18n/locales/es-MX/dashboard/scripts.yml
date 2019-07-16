@@ -3273,7 +3273,7 @@ es-MX:
             'Lessons 1 - 3: Algorithms':
               name: 'Lecciones 1 - 3: Algoritmos'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design':
-              name: 'Lecciones 4 - 6 : Abstracción procedimental y diseño general'
+              name: 'Lecciones 4 - 6 : Abstracción procedimental y diseño de lo general a lo particular'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers':
               name: 'Lecciones 7 - 9: Documentación, bucles simples y números aleatorios'
             Event Driven Programming:
@@ -3910,7 +3910,7 @@ es-MX:
             'Lessons 1 - 3: Algorithms':
               name: 'Lecciones 1 - 3: Algoritmos'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design':
-              name: 'Lecciones 4 - 6 : Abstracción procedimental y diseño general'
+              name: 'Lecciones 4 - 6 : Abstracción procedimental y diseño de lo general a lo particular'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers':
               name: 'Lecciones 7 - 9: Documentación, bucles simples y números aleatorios'
             Group Work and Peer Learning:
@@ -4186,7 +4186,7 @@ es-MX:
             Automating Data Decisions:
               name: Automatizar las decisiones basadas en datos
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
             Project - Solve a Data Problem:
               name: Proyecto - Solucionar un problema de datos
             Representing Numbers:
@@ -4550,7 +4550,7 @@ es-MX:
               description_student: En esta lección, los estudiantes observan un ejemplo simple de cómo se podría usar una computadora para completar el paso de toma de decisiones en el proceso de resolución de problemas de datos. Los estudiantes tienen la tarea de crear un algoritmo que podría sugerir un lugar de vacaciones. Luego, crean reglas, o un algoritmo, que una computadora podría usar para tomar esta decisión automáticamente. Los estudiantes comparten sus reglas y las elecciones que harían con los datos de la clase. Luego, usan sus reglas sobre los datos de sus compañeros de clase para comprobar si sus reglas tomarían la misma decisión que una persona. La lección concluye con un debate sobre los beneficios y desventajas de usar computadoras para automatizar el proceso de resolución de problemas de datos.
               description_teacher: En esta lección, los estudiantes observan un ejemplo simple de cómo se podría usar una computadora para completar el paso de toma de decisiones en el proceso de resolución de problemas de datos. Los estudiantes tienen la tarea de crear un algoritmo que podría sugerir un lugar de vacaciones. Luego, crean reglas, o un algoritmo, que una computadora podría usar para tomar esta decisión automáticamente. Los estudiantes comparten sus reglas y las elecciones que harían con los datos de la clase. Luego, usan sus reglas sobre los datos de sus compañeros de clase para comprobar si sus reglas tomarían la misma decisión que una persona. La lección concluye con un debate sobre los beneficios y desventajas de usar computadoras para automatizar el proceso de resolución de problemas de datos.
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
               description_student: Esta lección cubre cómo las organizaciones recopilan y usan los datos para resolver problemas del mundo real. La clase analiza tres escenarios que podrían resolverse a través de los datos y aporta ideas sobre los tipos de datos que querrían usar para resolverlos y cómo podrían recopilarlos. Cada escenario también incluye un video sobre un servicio del mundo real que ha resuelto un problema similar mediante los datos.
               description_teacher: En esta lección, los estudiantes observan cómo las organizaciones recopilan y utilizan los datos para resolver problemas en el mundo real. La lección comienza con una revisión rápida del proceso de resolución de problemas de datos que exploraron en la última lección. A continuación, los estudiantes presentan tres escenarios que podrían resolverse mediante los datos y aportan ideas sobre los tipos de datos que querrían usar para resolverlos y cómo podrían recopilarlos. Cada problema está diseñado para reflejar un servicio que existe en el mundo real. Después de aportar ideas, los estudiantes ven un video sobre un servicio del mundo real y toman notas sobre qué datos recopila ese servicio y cómo se usan. Al final de la lección, los estudiantes indicarán si los datos fueron provistos activamente por un usuario, si se registraron de forma pasiva o si fueron recopilados por sensores.
             Project - Solve a Data Problem:
@@ -6155,7 +6155,7 @@ es-MX:
             Automating Data Decisions:
               name: Automatizar las decisiones basadas en datos
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
             Project - Solve a Data Problem:
               name: Proyecto - Solucionar un problema de datos
           title: CSD Unidad 5 - Los datos y la sociedad
@@ -6272,13 +6272,13 @@ es-MX:
             'Technology Foundations: What is a Computer?':
               name: 'Fundamentos tecnológicos: ¿qué es una computadora?'
             'Data Science: Problem Solving with Big Data':
-              name: 'Ciencia de datos: resolución de problemas con los grandes datos'
+              name: 'Ciencia de datos: resolución de problemas con Big Data'
             Personal Innovations:
               name: Innovaciones personales
             What is a Computer?:
               name: '¿Qué es una computadora?'
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
             Programming - Hour of Code:
               name: Programación - Hora del Código
             Simple Encryption:
@@ -7783,7 +7783,7 @@ es-MX:
               description_student: Esta lección cubre cómo se puede adaptar el proceso de resolución de problemas a los problemas de datos, en particular. La clase tiene la tarea de decidir en qué debe gastar recursos una ciudad. Deben encontrar y utilizar datos de Internet para respaldar su decisión.
               description_teacher: 'En esta lección, los estudiantes utilizan el proceso de resolución de problemas de una parte anterior del curso para resolver un problema de datos. Después de revisar el proceso, la clase debe tomar una decisión: si una ciudad debe construir una biblioteca, un refugio para mascotas o el departamento de bomberos. Los estudiantes trabajan en equipos para recopilar información en Internet que los ayude a decidir qué se debe construir, y luego usan esta información para desarrollar un argumento que convenza al ayuntamiento de la ciudad elegida. Luego, revisan lo que han hecho en el proceso de resolución de problemas utilizado a lo largo del curso y comparan el proceso general de resolución de problemas con su aplicación específica a los problemas de datos.'
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
               description_student: Esta lección cubre cómo las organizaciones recopilan y usan los datos para resolver problemas del mundo real. La clase analiza tres escenarios que podrían resolverse a través de los datos y aporta ideas sobre los tipos de datos que querrían usar para resolverlos y cómo podrían recopilarlos. Cada escenario también incluye un video sobre un servicio del mundo real que ha resuelto un problema similar mediante los datos.
               description_teacher: En esta lección, los estudiantes observan cómo las organizaciones recopilan y utilizan los datos para resolver problemas en el mundo real. La lección comienza con una revisión rápida del proceso de resolución de problemas de datos que exploraron en la última lección. A continuación, los estudiantes presentan tres escenarios que podrían resolverse mediante los datos y aportan ideas sobre los tipos de datos que querrían usar para resolverlos y cómo podrían recopilarlos. Cada problema está diseñado para reflejar un servicio que existe en el mundo real. Después de aportar ideas, los estudiantes ven un video sobre un servicio del mundo real y toman notas sobre qué datos recopila ese servicio y cómo se usan. Al final de la lección, los estudiantes indicarán si los datos fueron provistos activamente por un usuario, si se registraron de forma pasiva o si fueron recopilados por sensores.
             Structuring Data:
@@ -9705,7 +9705,7 @@ es-MX:
               description_student: Esta lección cubre cómo se puede adaptar el proceso de resolución de problemas a los problemas de datos, en particular. La clase tiene la tarea de decidir en qué debe gastar recursos una ciudad. Deben encontrar y utilizar datos de Internet para respaldar su decisión.
               description_teacher: 'En esta lección, los estudiantes utilizan el proceso de resolución de problemas de una parte anterior del curso para resolver un problema de datos. Después de revisar el proceso, la clase debe tomar una decisión: si una ciudad debe construir una biblioteca, un refugio para mascotas o el departamento de bomberos. Los estudiantes trabajan en equipos para recopilar información en Internet que los ayude a decidir qué se debe construir, y luego usan esta información para desarrollar un argumento que convenza al ayuntamiento de la ciudad elegida. Luego, revisan lo que han hecho en el proceso de resolución de problemas utilizado a lo largo del curso y comparan el proceso general de resolución de problemas con su aplicación específica a los problemas de datos.'
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
               description_student: Esta lección cubre cómo las organizaciones recopilan y usan los datos para resolver problemas del mundo real. La clase analiza tres escenarios que podrían resolverse a través de los datos y aporta ideas sobre los tipos de datos que querrían usar para resolverlos y cómo podrían recopilarlos. Cada escenario también incluye un video sobre un servicio del mundo real que ha resuelto un problema similar mediante los datos.
               description_teacher: En esta lección, los estudiantes observan cómo las organizaciones recopilan y utilizan los datos para resolver problemas en el mundo real. La lección comienza con una revisión rápida del proceso de resolución de problemas de datos que exploraron en la última lección. A continuación, los estudiantes presentan tres escenarios que podrían resolverse mediante los datos y aportan ideas sobre los tipos de datos que querrían usar para resolverlos y cómo podrían recopilarlos. Cada problema está diseñado para reflejar un servicio que existe en el mundo real. Después de aportar ideas, los estudiantes ven un video sobre un servicio del mundo real y toman notas sobre qué datos recopila ese servicio y cómo se usan. Al final de la lección, los estudiantes indicarán si los datos fueron provistos activamente por un usuario, si se registraron de forma pasiva o si fueron recopilados por sensores.
             Structuring Data:
@@ -10074,6 +10074,8 @@ es-MX:
           stages:
             new stage:
               name: nueva etapa
+            Number Systems:
+              name: Sistemas numéricos
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:

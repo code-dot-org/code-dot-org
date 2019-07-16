@@ -2,6 +2,8 @@
 it-IT:
   data:
     display_name:
+      CSD Problem Solving Process Video: 'Video: il processo di risoluzione dei problemi
+        (problem solving)'
       CSD U2 Pair Programming Video: Programmazione in coppia
       CSD U2 Pair Programming Video_2018: Programmazione in coppia
       CSD U2 Pair Programming Video_2019: Programmazione in coppia
@@ -62,11 +64,16 @@ it-IT:
       CSD U6 functions paramters video_2018: Funzioni con parametri
       CSD U6 functions paramters video_2019: Funzioni con parametri
       'CSD: For Loop_2018': Cicli con contatore
+      'Course E: Artist Project': 'Corso E: Progetto con l''Artista'
+      'Course E: Artist Project_2018': 'Corso E: Progetto con l''Artista'
+      'Course E: Artist Project_2019': 'Corso E: Progetto con l''Artista'
       'Course F: Artist Project - Revise_2018': 'Riesamina il tuo progetto con l''Artista '
       'Course F: Artist Project_2018': 'Corso F: Progetto con l''Artista'
       'Course F: Artist Project_2019': 'Corso F: Progetto con l''Artista'
       CourseEF_video_IntroSpriteLab: Questo è il Laboratorio dei personaggi
       CourseEF_video_IntroSpriteLab_2019: Questo è il Laboratorio dei personaggi
+      CourseE_Project_SpriteLab: 'Corso E: Progetto nel Laboratorio dei personaggi'
+      CourseE_Project_SpriteLab_2019: 'Corso E: Progetto nel Laboratorio dei personaggi'
       CourseE_hoops: Flipper
       CourseF_Project_Revise_SpriteLab: Riesamina il tuo progetto nel Laboratorio
         dei personaggi

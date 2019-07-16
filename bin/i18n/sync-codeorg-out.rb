@@ -66,14 +66,12 @@ def restore_redacted_files
       print "#{CLEAR}Restoring #{locale} (#{locale_index}/#{total_locales}) file #{file_index}/#{original_files.count}"
       $stdout.flush
 
-      plugin = nil
-      if original_path == 'i18n/locales/original/dashboard/blocks.yml'
-        plugin = 'blockfield'
-      end
       if original_path.include? "course_content"
-        restore_course_content(original_path, translated_path, translated_path, plugin)
+        restore_course_content(original_path, translated_path, translated_path)
+      elsif original_path == 'i18n/locales/original/dashboard/blocks.yml'
+        restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
       else
-        restore(original_path, translated_path, translated_path, plugin)
+        restore(original_path, translated_path, translated_path)
       end
       find_malformed_links_images(locale, translated_path)
     end

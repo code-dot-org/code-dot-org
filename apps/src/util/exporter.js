@@ -12,7 +12,7 @@ import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
 import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
 import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
 
-export const EXPO_SDK_VERSION = '31.0.0';
+export const EXPO_SDK_VERSION = '33.0.0';
 
 export function createPackageFilesFromZip(zip, appName) {
   const moduleList = [];

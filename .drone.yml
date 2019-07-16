@@ -20,7 +20,7 @@ steps:
   - git merge origin/$DRONE_TARGET_BRANCH
 
 - name: verify-pr
-  image: wintercdo/code-dot-org:0.7
+  image: joshlory/code-dot-org:0.10
   pull: always
   commands:
     - |
@@ -44,7 +44,7 @@ steps:
     restore: true
 
 - name: unit-tests
-  image: wintercdo/code-dot-org:0.7
+  image: joshlory/code-dot-org:0.10
   pull: always
   volumes:
   - name: rbenv
@@ -58,7 +58,7 @@ steps:
       from_secret: CLOUDFRONT_PRIVATE_KEY
   commands:
     # If running on EC2, get hostname from ec2 metadata
-    - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/local-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
+    - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
     - sudo chown -R circleci:circleci .
     # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -117,7 +117,7 @@ steps:
   - git merge origin/$DRONE_TARGET_BRANCH
 
 - name: verify-pr
-  image: wintercdo/code-dot-org:0.7
+  image: joshlory/code-dot-org:0.10
   pull: always
   commands:
     - |
@@ -141,7 +141,7 @@ steps:
     restore: true
 
 - name: ui-tests
-  image: wintercdo/code-dot-org:0.7
+  image: joshlory/code-dot-org:0.10
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
@@ -164,7 +164,7 @@ steps:
       from_secret: SAUCE_ACCESS_KEY
   commands:
     # If running on EC2, get hostname from ec2 metadata
-    - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/local-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
+    - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
     - sudo chown -R circleci:circleci .
     # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -196,6 +196,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 9975920fee51286f7f774adcbfea7b8f5b4a539e13c4152a432093be3f8cb001
+hmac: 268b4c8338918bc7f7e71313badeba5e8267cf568f8dd9ca8ef934a412e4b3b3
 
 ...

@@ -637,6 +637,7 @@ is:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       Dancelab_whenPeak:
         text: þegar {RANGE} hæst
@@ -741,6 +742,7 @@ is:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_locationAt:
         text: 'staður x: {X} y: {Y}'

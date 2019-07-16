@@ -190,32 +190,36 @@ def select_redactable(i18n_strings)
   redactable.delete_if {|_k, v| v.blank?}
 end
 
+def redact_level_file(source_path)
+  return unless File.exist? source_path
+  source_data = JSON.load(File.open(source_path))
+  return if source_data.blank?
+
+  redactable_data = source_data.map do |level_url, i18n_strings|
+    [level_url, select_redactable(i18n_strings)]
+  end.to_h
+
+  backup_path = source_path.sub("source", "original")
+  FileUtils.mkdir_p File.dirname(backup_path)
+  File.open(backup_path, "w") do |file|
+    file.write(JSON.pretty_generate(redactable_data))
+  end
+
+  stdout, _status = Open3.capture2(
+    'bin/i18n/node_modules/.bin/redact',
+    stdin_data: JSON.generate(redactable_data)
+  )
+  redacted_data = JSON.parse(stdout)
+  File.open(source_path, 'w') do |source_file|
+    source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
+  end
+end
+
 def redact_level_content
   puts "Redacting level content"
 
   Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
-    next unless File.exist? source_path
-    source_data = JSON.load(File.open(source_path))
-    next if source_data.blank?
-
-    redactable_data = source_data.map do |level_url, i18n_strings|
-      [level_url, select_redactable(i18n_strings)]
-    end.to_h
-
-    backup_path = source_path.sub("source", "original")
-    FileUtils.mkdir_p File.dirname(backup_path)
-    File.open(backup_path, "w") do |file|
-      file.write(JSON.pretty_generate(redactable_data))
-    end
-
-    stdout, _status = Open3.capture2(
-      'bin/i18n/node_modules/.bin/redact',
-      stdin_data: JSON.generate(redactable_data)
-    )
-    redacted_data = JSON.parse(stdout)
-    File.open(source_path, 'w') do |source_file|
-      source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
-    end
+    redact_level_file(source_path)
   end
 end
 
@@ -226,7 +230,7 @@ def redact_block_content
   backup = source.sub("source", "original")
   FileUtils.mkdir_p(File.dirname(backup))
   FileUtils.cp(source, backup)
-  redact(source, source, 'blockfield')
+  redact(source, source, ['blockfield'], 'txt')
 end
 
 sync_in if __FILE__ == $0
