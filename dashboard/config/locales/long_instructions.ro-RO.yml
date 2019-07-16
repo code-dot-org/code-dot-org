@@ -6,7 +6,7 @@ ro-RO:
         desenez orice. Foloseste câteva blocuri pentru a mă face să desenez peste
         liniile de gri din imaginea. (Fiecare linie este lungă de 100 de pixeli)
       2-3 Artist 4: Ajută-mă să termin casa pentru această pisică.
-      2-3 Artist 9: Finalizează acest zmeu
+      2-3 Artist 9 NEW: Finalizează acest zmeu
       2-3 Artist Free Play: Joc liber! Desenează orice ți-ar plăcea.
       2-3 Artist Loops New 12: 'Desenaţi un diamant cu latura de 100 pixeli. '
       2-3 Artist Nested Loops 10: Foloseste un bloc 'repeta de 12 ori' pentru a completa
@@ -256,6 +256,7 @@ ro-RO:
         pentru a folosi mai putine blocuri.
       courseD_maze_nestedLoops4_2019: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
         pentru a folosi mai putine blocuri.
+      courseD_scrat_ramp4: Evită dinamita (TNT) sau penele vor zbura!
       courseE_bee_functions3: "Funcţiile sunt blocuri de cod care efectuează \no activitate.
         Utilizează funcţia \"obţine 5\" pentru a colecta 5 nectare dintr-o data. De
         asemenea, asigură-te că\nfolosești și o buclă pentru a obține o numarătoare
