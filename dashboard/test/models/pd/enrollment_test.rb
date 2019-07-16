@@ -417,6 +417,20 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [expected_enrollment], Pd::Enrollment.with_surveys
   end
 
+  test 'with_surveys scope includes workshops with no subject' do
+    # Cover a regression introduced in https://github.com/code-dot-org/code-dot-org/pull/29511
+    # where pending exit surveys for a workshop with no subject would not show up on the
+    # professional learning landing page.
+    # Root cause: WHERE subject != 'xyz' implicitly excludes rows where subject IS NULL too.
+
+    # Ended Admin workshop with attendance; Admin workshops have no subject.
+    admin_workshop = create :pd_ended_workshop, num_sessions: 1, course: COURSE_ADMIN, subject: nil
+    expected_enrollment = create :pd_enrollment, workshop: admin_workshop
+    create :pd_attendance, session: admin_workshop.sessions.first, enrollment: expected_enrollment
+
+    assert_equal [expected_enrollment], Pd::Enrollment.with_surveys
+  end
+
   test 'name fields are auto-stripped' do
     enrollment = build :pd_enrollment, first_name: ' First  ', last_name: '  Last '
     enrollment.validate
