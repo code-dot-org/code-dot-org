@@ -347,7 +347,6 @@
   "extraTopBlocks": "لديك مربعات برمجية غير متصلة.",
   "extraTopBlocksWhenRun": "لديك مربعات برمجية غير متصلة. هل كنت تقصد إرفاقها إلى المربع البرمجي \"عند التشغيل\"؟",
   "fallbackVideoClosedCaptioningDialogClose": "إغلاق",
-  "feedbackNotificationLastUpdated": "آخر تحديث:",
   "filterByStage": "الفلترة حسب المرحلة:",
   "finalStage": "تهانينا! لقد أكملت حل اللغز الأخير.",
   "finalStageTrophies": "تهانينا! لقد أكملت حل اللغز الأخير و فزت بـ {numTrophies, plural, one {جائزة} other {# جوائز}}.",

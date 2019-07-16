@@ -627,7 +627,6 @@
   "feedbackFrom": "Sugerencias de {teacher}",
   "feedbackLoadError": "Ha habido un error al establecer una conexión a nuestros servidores. Por favor refresca la página y vuelve a intentarlo.",
   "feedbackNotSavedWarning": "¿Estás seguro? Tus comentarios no serán guardados.",
-  "feedbackNotificationLastUpdated": "Última actualización:",
   "feedbackPlaceholder": "Introduza las sugerencias para su alumno aquí. Se harán visibles para su alumno al hacer clic en \"Guardar y compartir\".",
   "feedbackSaveError": "Hubo un error en salvar su retroalimentación. Por favor intenta salvarlo de nuevo.",
   "fewerNumberOfBlocks": "Menos de {numBlocks, plural, one {1 bloque} other {# bloques}}",

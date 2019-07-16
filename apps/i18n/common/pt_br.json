@@ -625,7 +625,6 @@
   "feedbackNotification": "Seu professor deixou um feedback!",
   "feedbackNotificationButton": "Ver feedback",
   "feedbackNotificationDetails": "Você tem {numFeedbackLevels} níveis com feedback ainda não lido.",
-  "feedbackNotificationLastUpdated": "Última atualização:",
   "feedbackPlaceholder": "Por favor, digite o feedback para o seu aluno aqui. Isto se tornará visível para o estudante quando você clicar em 'Salvar e compartilhar'.",
   "feedbackSaveError": "Houve um erro ao salvar o seu feedback. Por favor tente salvar novamente.",
   "fewerNumberOfBlocks": "Menos do que {numBlocks, plural, one {1 bloco} other {# blocos}} utilizados!",
