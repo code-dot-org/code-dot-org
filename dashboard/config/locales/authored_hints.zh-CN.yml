@@ -23,7 +23,7 @@ zh-CN:
         2-3_Artist_7_a: 解决这个迷题最简单的方法是绘制完第一个正方形后，让小艺术家指向下方，再开始画第二个正方形。
       2-3 Artist 8:
         2-3_Artist_8_a: 如果你把 200 分成两份，每个方块需要多少像素宽？
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: 这个菱形真的只是和边上的正方形一样。
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -184,12 +184,20 @@ zh-CN:
         4-5_Artist_3_b: 如果你不能很快找到那里是重复循环，试着把整个代码写出来，并寻找其中的模式。
       4-5 Artist 4:
         4-5_Artist_4_a: "一个圆有360度！ \n\n你需要重复多少次（每次转1度），才能画好整个圆？"
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          试错是一个非常棒的方法，但是你也能通过将90度分成3份来解决这个问题。
+
+          **90 / 3 = \_\_\_\_\_**
       4-5 Artist 7:
         4-5_Artist_7_a: '哪个角度是最小的？小艺术家站的角度是多少？ '
       4-5 Artist 8:
         4-5_Artist_8_a: "每条长边是240像素。这意味着两条短边的和必须为：\n\n**800 - 240 - 240 = 320**\n\n**320/2**
           是多少? "
+        4-5_Artist_8_b: "这个图可以用两种方法来完成！  \n\n-   画两个 **120** 长和 **160** 高的长方形，有一条边重叠。\n-
+          \  画一个 **240** 长和 **160** 高的长方形，然后在正中间画一条线。"
       4-5 Artist 9:
+        4-5_Artist_9_a: '当一个三角形是等边三角形时，三条边的长和三个角的角度都是一样的。  '
         4-5_Artist_9_b: 你需要画三个同样大小的三角形。别忘了画完每个后跳到新的位置。
       4-5 Artist Assessment 1:
         4-5_Artist_Assessment_1_a: 你只需要画外面的三角形就能完成这一关。
@@ -1626,6 +1634,10 @@ zh-CN:
       course3_maze_debugging_challenge2:
         courseC_maze_debugging_challenge2_a: 解决这一问题的一个方法是在转角之间增加更多的步骤。
         courseC_maze_debugging_challenge2_b: 如果你被卡住了, 你可以随时重新开始, 或删除所有的代码, 找到自己的方法!
+        courseC_maze_debugging_challenge2_c: |-
+          有两条不同的路线只需要使用“向前移动”指令块和四个“转向”指令。如果你想出办法来使用“重复”指令块，你甚至只需要更少的指令。
+
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course3_playLab_challenge1:
         courseE_playLab_challenge1_a: |-
           当玩家赢得比赛时, 你可以做一些事情：
@@ -6196,14 +6208,6 @@ zh-CN:
           -   在第二步之后它还工作吗？
           -   哪里出错了？
         courseC_maze_debugging1_b: 只需要添加1个模块来完成这个关卡。
-        courseD_collector_debugging1_a: |-
-          使用"步进"按钮来查看在第一步是否一切都正确。
-
-          那第二步呢？
-
-          哪里出问题了？
-        courseD_collector_debugging1_b: 是否看到了可以使用`重复`循环来简化事情的规律？
-        courseD_collector_debugging1_c: '记住, 一旦你到了那里, 就用`收集`模块去捡宝藏。  '
       courseC_maze_debugging1_2018:
         courseC_maze_debugging1_a: |-
           -   在第一步之后一切运行正常吗？
@@ -6223,14 +6227,6 @@ zh-CN:
           -   在第二步之后它还工作吗？
           -   哪里出错了？
         courseC_maze_debugging2_c: 搞不清楚那里有错？尝试运行代码多次，看看会发生什么。
-        courseD_collector_debugging2_a: |-
-          使用"步进"按钮来查看在第一步是否一切都正确。
-
-          那第二步呢？
-
-          哪里出问题了？
-        courseD_collector_debugging2_b: 是否看到了可以使用`重复`循环来简化事情的规律？
-        courseD_collector_debugging2_c: 尝试为这一模式的一面收集宝藏。你能重复这个在两边都收集宝藏吗？
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_a: 工作区内有许多有价值的代码。请不要把它们全部删除来重新开始!
         courseC_maze_debugging2_b: |-
@@ -6255,8 +6251,6 @@ zh-CN:
 
           ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: 搞不清楚那里有错？尝试运行代码多次，看看会发生什么。
-        courseD_collector_debugging3_a: 劳雷尔有在那个地方做了什么不对的事吗？当您更改这些块时会发生什么情况？
-        courseD_collector_debugging3_b: 尝试使用嵌套循环简化代码。
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_a: |-
           如果要从你的代码中删除一个模块，请把所有的模块拖到工作区的其他地方。
@@ -6280,17 +6274,6 @@ zh-CN:
       courseC_maze_debugging4:
         courseC_maze_debugging4_a: 使用 "步进" 按钮一次运行一个指令。这能帮你找到出错的行了吗？
         courseC_maze_debugging4_b: 其中一个转折让斯奎特走错了方向。你能找出是哪一个吗？
-        courseD_collector_debugging4_a: |-
-          尝试在一行中多次使用调试过程。
-
-          是什么导致了第一个问题？
-
-          一旦问题解决了，是什么地方错了？
-        courseD_collector_debugging4_b: |-
-          如果很难弄清楚如何制作楼梯的步进模式, 请尝试用手指跟踪它并大声说出指令。
-
-          别忘了指出转弯的方向!
-        courseD_collector_debugging4_c: 此循环只缺少一个模块。你能找出是哪一个吗？
       courseC_maze_debugging4_2018:
         courseC_maze_debugging4_a: 使用 "步进" 按钮一次运行一个指令。这能帮你找到出错的行了吗？
         courseC_maze_debugging4_b: 其中一个转折让斯奎特走错了方向。你能找出是哪一个吗？
@@ -6300,15 +6283,6 @@ zh-CN:
       courseC_maze_debugging5:
         courseC_maze_debugging5_a: "工作区中已经有很多有用的模块。请不要全部删除!  \n\n使用 \"步进\" 按钮来仔细查看并找出代码出错的地方。"
         courseC_maze_debugging5_b: 试着大声说出斯奎特应该做什么。它是否和工作区的代码一样？哪里出错了？
-        courseD_collector_debugging5_a: |-
-          开始只看第一个循环。
-
-          它是做什么的？
-
-          它应该做什么？
-
-          那告诉您什么？
-        courseD_collector_debugging5_b: 当第一个循环按照所希望的方式进行时，代码中还剩下什么？
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_a: "工作区中已经有很多有用的模块。请不要全部删除!  \n\n使用 \"步进\" 按钮来仔细查看并找出代码出错的地方。"
         courseC_maze_debugging5_c: 您可以在转向模块的下拉菜单中更改其方向。
@@ -6323,9 +6297,6 @@ zh-CN:
           -   斯奎特做了什么？
           -   那告诉了你什么？
         courseC_maze_debugging6_b: 等你发现并修复了第一个错误, 请再次进行调试过程来找到另一个错误。 重复这个过程, 直到程序可以正常工作!
-        courseD_collector_debugging6_a: "尝试使用\"步进\"按钮运行代码。是否一切在第一步的时候都是好？ \n\n那么第二步呢？
-          \n\n哪里错了？"
-        courseD_collector_debugging6_b: 看起来所有正确的步骤都在这里, 你只是需要更多。 你如何多次重复`收集`？
       courseC_maze_debugging6_2018:
         courseC_maze_debugging6_a: |-
           -   斯奎特应该做什么？
@@ -6348,8 +6319,6 @@ zh-CN:
           在发现并修复第一个缺陷后，请确保再次使用调试流程直到找到下一个。
 
           重复这个调试过程，直到程序正常工作！
-        courseD_collector_debugging8_a: 您是否看到可以使用循环来简化的规律？
-        courseD_collector_debugging8_b: 尝试使用嵌套循环使得代码更短。
       courseC_maze_debugging7_2018:
         courseC_maze_debugging7_a: |-
           -   在第一步的时候运行正常吗？
@@ -6370,12 +6339,6 @@ zh-CN:
           在发现并修复第一个缺陷后，请确保再次使用调试流程直到找到下一个。
 
           重复这个调试过程，直到程序正常工作！
-      courseC_maze_debugging8_predict1:
-        courseD_collector_debugging9_a: 有几种方法可以解决这个问题...但它们都需要转弯！
-        courseD_collector_debugging9_b: 弄清楚将如何通过这个关卡, 然后逐步移动, 尝试使代码与你头脑所想相匹配。
-      courseC_maze_debugging9:
-        courseD_collector_debugging9_a: 有几种方法可以解决这个问题...但它们都需要转弯！
-        courseD_collector_debugging9_b: 弄清楚将如何通过这个关卡, 然后逐步移动, 尝试使代码与你头脑所想相匹配。
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: 向左还是向右？由你决定!
         courseC_maze_debugging_challenge1_b: 斯奎特的路径是一个矩形！他每次都要以同样的方式转动！
@@ -6673,14 +6636,6 @@ zh-CN:
           你不需要向左转来解决这个关卡。你所有的转向都可以向右。
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
-      courseC_video_angles2:
-        courseF_artist_ramp10_a: 别忘了在每个三角形后转向60度。 您需要将该指令放在哪个循环中？
-        courseF_artist_ramp10_b: 如果您的三角形代码位于<xml><block type="controls_repeat"><title
-          name="TIMES">6</title></block></xml> 循环中, 则此任务将会简单得多。
-        courseF_artist_ramp10_c: |-
-          这个设计中您将绘制六个三角形:
-
-          ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
       courseD_artist_1_2018:
         courseD_artist_project1_a: 使用`转向`块上的下拉菜单选择您需要的角度!
         courseD_artist_project1_b: 请记住, `向前移动`会画一条线, 而`向前跳`则不会。
@@ -8739,32 +8694,12 @@ zh-CN:
         courseD_playLab_cond6_c: 将`等待1秒`模块添加到`一直重复`循环的顶部, 它检查海盗位置 (但不在`如果`语句内) 防止分数被减得太快。
       courseD_playLab_cond6a_2018:
         courseD_playLab_cond6_c: 将`等待1秒`模块添加到`一直重复`循环的顶部, 它检查海盗位置 (但不在`如果`语句内) 防止分数被减得太快。
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: 有两种方法来解决这个难题 ！
-        courseF_maze_ramp6_b: 开始时鸟儿对着一堵墙, 所以请记住在移动前要先转向!
-        courseF_maze_ramp6_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_scrat_ramp1:
-        courseF_maze_ramp1_a: 如果小鸟没有到达猪那里。 确保所有模块已完全连在一起, 然后再次单击 "运行" 。
-        courseF_maze_ramp1_b: 你不需要这个工具箱里的任何额外的模块！
-        courseC_maze_programming1_0: 如果小鸟没有到达猪那里。 确保所有三个模块已完全连在一起，然后再次单击 "运行" 。
-        courseC_maze_programming1_b: 这道关卡您不需要工具箱里任何额外的方块!
+        courseC_maze_programming1_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_scrat_ramp2:
-        courseF_maze_ramp2_a: 若要使用新的块, 请将其从工具箱里拖出到工作区中, 并将其连接到附加到 <xml> <block type="when_run"/>
-          </xml> 模块下。
-        courseF_maze_ramp2_b: 确保 <xml> <block type="maze_moveForward"/> </xml> 块位于循环内,
-          以便重复。
         courseC_maze_programming2_a: 要使用`向前移动`模块，请将其从工具箱拖到工作区中，并将其连接到`当运行时`模块下面。
         courseC_maze_programming2_b: 确保所有三个`向前移动`模块都附加到`当运行时`模块上。
       courseD_scrat_ramp3:
-        courseF_maze_ramp3_a: |-
-          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
-
-          若要从代码中间删除模块, 请将所有模块拖到工作区的右边，并先暂时放在那里。
-
-          点击要删除的块，并将它拖回工具箱。
-
-          最后，把其它模块放回它们应该在的地方。
-        courseF_maze_ramp3_b: 使用 "步骤" 按钮可逐行执行程序。看哪里出了差错？
         courseC_maze_programming3_a: |-
           ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
 
@@ -8775,51 +8710,20 @@ zh-CN:
           最后，把其它模块放回它们应该在的地方。
         courseC_maze_programming3_b: 请记住，向右和向左转是从小鸟的视角来看的。
       courseD_scrat_ramp4:
-        courseF_maze_ramp4_a: 你可以从鸟的视角向右或向左转。如果你面向右，向右转将让你朝下。
-        courseF_maze_ramp4_b: 要沿着这条路前进, 向前走，然后在转向相反方向之前移动三次。再往前走一次就可以到达猪。
-        courseF_maze_ramp4_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
-        courseC_maze_programming4_a: 你可以从鸟的视角向右或向左转。如果你面向右，向右转将让你朝下。
-        courseC_maze_programming4_b: 要沿着这条路，向前移动并转弯，然后再移动并转向对面的路。再往前走一步到达猪。
+        courseC_maze_programming4_a: 您可以从斯奎特的角度向右或向左转。如果你面向右，向右拐会使你朝下。
+        courseC_maze_programming4_b: 要沿着这条路前进, 向前移动，然后转向一条路, 然后再移动, 转向相反的方向。再往前走一次就能到达橡子。
         courseC_maze_programming4_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_scrat_ramp5:
-        courseF_maze_ramp5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
-        courseF_maze_ramp5_b: 有不止一种方法可以找到猪。
-        courseF_maze_ramp5_c: 尝试使用<xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml>循环来缩短代码!
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 你要走多远才能到拐角处？
         courseC_maze_programming5_c: 你需要在拐角处向左拐才能找到猪。
-      courseD_scrat_ramp6:
-        courseF_artist_ramp8_a: 若要绘制侧面, 请使用<xml><block type="draw_move_by_constant"><title
-          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>块,
-          并将100更改为200。
-        courseF_artist_ramp8_b: |-
-          若要绘制4条边, 请将<xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">200</title></block></xml>模块放入重复循环中, 并确保将该循环设置为绘制4次。
-
-          别忘了转向!
-        courseF_artist_ramp8_c: 您的转向也将放入<xml><block type="controls_repeat"><title
-          name="TIMES">3</title></block></xml>循环的内部。
-        courseC_maze_programming6_a: 有两种方法来解决这个难题 ！
-        courseC_maze_programming6_b: 在移动前记得先转弯, 因为鸟儿开始面对墙。
-        courseC_maze_programming6_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_scrat_ramp7:
-        courseD_maze_ramp7_b: 别忘了用"步进"按钮来一个模块一个模块的寻找错误。
-        courseD_maze_ramp7_a: 使用重复模块可以一次又一次地运行单个模块或一堆代码。
-        courseD_maze_ramp7_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
+        courseD_scrat_programming6_a: 有两种方法来解决这个难题 ！
+        courseD_scrat_programming6_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_scrat_ramp8:
-        courseF_artist_ramp9_a: 这和正方形有什么相似之处？ 又有什么不同？
-        courseF_artist_ramp9_b: 您可以使用转向模块中的下拉菜单来查看所需的角度!
-        courseF_artist_ramp9_c: 您将需要每边向前移动100像素, 然后向右转120度。你能使用<xml><block type="controls_repeat"><title
-          name="TIMES">3</title></block></xml>循环使代码更短吗？
         courseD_maze_ramp7_b: 别忘了用"步进"按钮来一个模块一个模块的寻找错误。
         courseD_maze_ramp7_a: 使用重复模块可以一次又一次地运行单个模块或一堆代码。
         courseD_maze_ramp7_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
-        courseE_artist_ramp8_a: 若要绘制一条边，使用`向前移动100像素`模块, 并将100更改为200。
-        courseE_artist_ramp8_b: 若要绘制4条边, 请将`向前移动100像素`模块放在重复循环里面, 并确保该循环设置为4次。然后别忘了转向！
-        courseE_artist_ramp8_c: 你的循环应该有两个模块在里面：`向前移动`和`向右转90度`。
-      courseD_video_repeatUntil:
-        courseE_farmer_ramp12b: 您将需要检查21次`如果`语句, 来解决这个关卡。
-        courseE_farmer_ramp12c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
-        courseE_farmer_ramp12d: 这里只会有生菜, 所以你不需要担心空的空格，玉米，或南瓜。
       courseE_artist_concept1:
         courseE_artist_concept1_a: 六边形有50像素长的边，并向右转60度。
         courseE_artist_concept1_b: 试着在这里使用一个函数, 这样就不必一次又一次地写画六边形的代码了。
@@ -9169,16 +9073,14 @@ zh-CN:
         courseE_artist_ramp8_b: 若要绘制4条边, 请将`向前移动100像素`模块放在重复循环里面, 并确保该循环设置为4次。然后别忘了转向！
         courseE_artist_ramp8_c: 你的循环应该有两个模块在里面：`向前移动`和`向右转90度`。
       courseE_artist_ramp8_2:
+        courseE_artist_ramp8_a: 若要绘制一条边，使用`向前移动100像素`模块, 并将100更改为200。
+        courseE_artist_ramp8_b: 若要绘制4条边, 请将`向前移动100像素`模块放在重复循环里面, 并确保该循环设置为4次。然后别忘了转向！
+        courseE_artist_ramp8_c: 你的循环应该有两个模块在里面：`向前移动`和`向右转90度`。
+      courseE_artist_ramp9:
         courseD_artist_ramp12_a: 这和正方形有什么相似之处？ 又有什么不同？
         courseD_artist_ramp12_b: 您可以使用`转向`模块的下拉菜单来查看所需的角度!
         courseD_artist_ramp12_c: 若要绘制每条边，需要向前移动100像素, 然后向右转120度。你需要几条边？
-      courseE_artist_ramp9:
-        courseF_farmer_ramp11_a: 如果你很难看到循环应该去哪里, 试着把它全部编码出来, 然后寻找一个模式。
-        courseF_farmer_ramp11_b: 如何使用 <xml> <block type="controls_repeat"> <title
-          name="TIMES">？？？ </title> </block> </xml> 循环来捡起生菜，而不是拖出 5 个<xml> <block
-          type="harvester_lettuce"/> </xml>模块？
-        courseF_farmer_ramp11_c: 你不需要使用5个重复循环得到所有的生菜。 相反, 将您的生菜采摘循环拖到另一个循环内 (挨着一个
-          <xml> <block type="maze_moveForward"/> </xml> 模块, 就可以成功了！）
+      courseE_artist_ramp9_2:
         courseD_artist_ramp12_a: 这和正方形有什么相似之处？ 又有什么不同？
         courseD_artist_ramp12_b: 您可以使用`转向`模块的下拉菜单来查看所需的角度!
         courseD_artist_ramp12_c: 若要绘制每条边，需要向前移动100像素, 然后向右转120度。你需要几条边？
@@ -9409,41 +9311,37 @@ zh-CN:
         courseE_farmer_ramp12_a: '不需要`重复`循环告诉农民铲多少次土, 现在你可以使用`当有土堆时`模块。  '
         courseE_farmer_ramp12_b: 你只需要向前移动一次就能找到土。
       courseE_farmer_ramp11b:
-        courseE_farmer_ramp12_b: 你仍然需要在它的外面使用一个 `重复`循环告诉农夫要向前走多少次得到莴苣。
+        courseE_farmer_ramp11b_a: 您可以在`重复`循环内嵌套`当`循环, 来使代码更短。
       courseE_farmer_ramp11b_2018:
         courseE_farmer_ramp11b_a: 您可以在`重复`循环内嵌套`当`循环, 来使代码更短。
       courseE_farmer_ramp11b_2019:
         courseE_farmer_ramp11b_a: 您可以在`重复`循环内嵌套`当`循环, 来使代码更短。
+      courseE_farmer_ramp12_forswap:
+        courseE_farmer_ramp12_b: 你仍然需要在它的外面使用一个 `重复`循环告诉农夫要向前走多少次得到莴苣。
       courseE_farmer_ramp12_forswap_2018:
         courseE_farmer_ramp12_b: 你仍然需要在它的外面使用一个 `重复`循环告诉农夫要向前走多少次得到莴苣。
       courseE_farmer_ramp12_forswap_2019:
         courseE_farmer_ramp12_b: 你仍然需要在它的外面使用一个 `重复`循环告诉农夫要向前走多少次得到莴苣。
-      courseE_farmer_ramp12b:
-        courseE_farmer_ramp12a: 如果需要提示的话，可以回到上一关看看。看看如何只**当**有物品时，才捡起物品。
       courseE_farmer_ramp12c:
-        courseE_farmer_ramp13_a: 在一个空格中可以有多个作物, 所以一定要使用 `当`循环来把它们全部捡起来!
-        courseE_farmer_ramp13_b: 使用`重复`循环, 这样就不必为每个正方形编写单独的如果语句。
-        courseE_farmer_ramp13_c: 如果无法确定将循环放在何处，请尝试逐步编写代码并查找规律。
+        courseE_farmer_ramp12b_b: 你仍需要先使用一个`直到` 循环，当你到了莴苣那里，然后使用一个`当`循环。
       courseE_farmer_ramp12c_2018:
         courseE_farmer_ramp12b_b: 你仍需要先使用一个`直到` 循环，当你到了莴苣那里，然后使用一个`当`循环。
       courseE_farmer_ramp12c_2019:
         courseE_farmer_ramp12b_b: 你仍需要先使用一个`直到` 循环，当你到了莴苣那里，然后使用一个`当`循环。
       courseE_farmer_ramp12d:
-        courseE_bee_ramp14_a: 蜜蜂就像以前关卡里的农夫一样工作。沿着小路嗡嗡叫，在有花蜜（当花蜜多于0个）的地方采花蜜, 并酿蜂蜜。
-        courseE_bee_ramp14_b: 每个空格都可以有一个以上的花或蜂窝, 所以请务必使用`当`循环来获得所有的。
-        courseE_bee_ramp14_c: 这个关卡几乎和前一个一样, 只是用蜂蜜和花蜜来代替蔬菜。
+        courseE_farmer_ramp12d_b: 你仍然需要把你的`直到`和`当`循环放到`重复`循环中来通过这个关卡!
       courseE_farmer_ramp12d_2018:
         courseE_farmer_ramp12d_b: 你仍然需要把你的`直到`和`当`循环放到`重复`循环中来通过这个关卡!
       courseE_farmer_ramp12d_2019:
         courseE_farmer_ramp12d_b: 你仍然需要把你的`直到`和`当`循环放到`重复`循环中来通过这个关卡!
+      courseE_farmer_ramp12e:
+        courseE_farmer_ramp12e_b: 这个关卡的解决方案看起来很像最后一个关卡的解决方案, 除了转向了另一个方向。
       courseE_farmer_ramp12e_2018:
         courseE_farmer_ramp12e_b: 这个关卡的解决方案看起来很像最后一个关卡的解决方案, 除了转向了另一个方向。
       courseE_farmer_ramp12e_2019:
         courseE_farmer_ramp12e_b: 这个关卡的解决方案看起来很像最后一个关卡的解决方案, 除了转向了另一个方向。
       courseE_farmer_ramp12f:
-        courseE_farmer_ramp15_a: 使用`重复直到到达南瓜`模块，让它到路径的尾端。
-        courseE_farmer_ramp15_b: 沿路径移动到南瓜，还有什么需要做的？
-        courseE_farmer_ramp15_c: 豆芽在你去南瓜的路上藏了各种各样的玉米或莴苣让你来收割。
+        courseE_farmer_ramp12f_b: 使用`如果/否则`模块，帮助农民决定，她是要向右还是向左转。
       courseE_farmer_ramp12f_2018:
         courseE_farmer_ramp12f_b: 使用`如果/否则`模块，帮助农民决定，她是要向右还是向左转。
       courseE_farmer_ramp12f_2019:
@@ -10662,6 +10560,10 @@ zh-CN:
         courseF_artist_fwp_challenge1_c: '每个八角形是从里面的一个`计数循环`, 从200到2，每次递减 2。 '
         courseF_artist_fwp_challenge1_d: '在每次迭代结束时, 不要忘记转22.5 度的角度。 '
         courseF_artist_fwp_challenge1_e: 每个八角形的颜色和钢笔的宽度都由 "计数器" 变量控制。
+        courseF_artist_fwp_challenge1_f: |-
+          **解答:**
+
+          ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_variables10:
         courseF_artist_variables10_a: 祝你在这个关卡玩得开心! 查看对代码可以做什么小更改。
         courseF_artist_variables10_b: 您可以多次尝试, 并多次运行您的代码。

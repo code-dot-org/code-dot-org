@@ -5,10 +5,25 @@ zh-CN:
       2-3 Artist 1 new: 您好，我是一个艺术家。你写的代码可以让我画任何的东西。 用几个程序模块来让我画一些灰色线条吧。 (每一行是100个像素长)
       2-3 Artist 12: "画一个圆圈来完成这个眼球！\\\r\n\\\r\n如果每次都是转1度，你需要重复次才能完成这个圈？180 、360 、还是500次呢？"
       2-3 Artist 2 new: 这所房子的墙已经完成了一半。每边都是 100，但是完成了一半的墙是只有 50。把剩下的墙补充完整。
+      2-3 Artist 3.4: |-
+        “跳”模块会移动艺术家但不画线。通过使用“向前跳”模块和“向前移动”模块来画出虚线。
+        每行是50像素长。
       2-3 Artist 4: 帮我为小猫盖好房子
       2-3 Artist 6: 这所房子需要一个屋顶 ！绘制三角形。提示： 所有三个方面都具有相同的长度。
-      2-3 Artist 9: 完成这只风筝
+      2-3 Artist 9 NEW: 完成这只风筝
       2-3 Artist Free Play: 自己玩吧！想画什么就画什么。
+      2-3 Artist Functions 1: "“我，僵尸艺术家，爱画画 ！” \n\n请帮助僵尸画出方形眼镜。 \n\n正方形的宽度是100像素，镜框之间的连接正方形边长短25像素。"
+      2-3 Artist Functions 2: |-
+        函数能让你定义新的指令块。
+
+        我们将画正方形的模块挪到了一个叫做“画一个正方形”的函数里。这次，用“画一个正方形”函数来画个眼镜吗。
+
+        正方形间隔75像素。
+      2-3 Artist Functions 3: |-
+        编辑这个函数来画一个边长115像素的正方形，从而能够画出一个更大的眼镜。
+
+        正方形的间隔为45个像素。
+      2-3 Artist Functions 4: 现在，将函数放到循环里来画这三个正方形。
       2-3 Artist Loops New 15: 现在，随便画你喜欢的东西吧！
       2-3 Artist Nested Loops 10: 让这段代码循环12次来完成这个图案。
       2-3 Artist Nested Loops 12: 让这段代码循环12次就可完成这个弯曲的图案。
@@ -28,11 +43,25 @@ zh-CN:
       2-3 Maze Loops 17: 用你学会的知识让我到达太阳花那里！
       2-3 Maze Loops 20: 你能用最少的模块来让我达到向日葵吗？
       2-3 Maze Loops Assessment 1: '评估：只用5个模块帮我到达太阳花！ '
+      4-5 Artist 1: '帮我完成画箱子。(每一行是300像素长) '
+      4-5 Artist 11: 完成这些绿线。它们有300像素长，相隔15像素。
+      4-5 Artist 2: 使用“重复”指令块来画出这个正方形。
+      4-5 Artist 3: 这个长方形的花床周长是600。长边是200。用最少的指令块来画出这个长方形。
       4-5 Artist 3.5: 试着了解这段代码会发生什么（或者点击"运行"来试试）。然后，重复它来完成这幅图！
       4-5 Artist 4: 一个圆有多少度？循环这些模块来创造一个彩色的圆圈。
+      4-5 Artist 5: 在“???”里应该放什么，才能让僵尸用循环来完成这幅画呢？
+      4-5 Artist 6: 等边三角形每个角的度数都是60。每条边是200像素。完成这幅画。
+      4-5 Artist 7: 直角三角形的各个角分别是30、60、90度。斜边（弦）的长度是200像素。完成这幅画。
+      4-5 Artist 8: |-
+        足球场中线与边线是垂直的。
+        这个场地的周长是800像素，长是240像素。它有多高？
+
+        画出球场的边线和中线。
+      4-5 Artist 9: 画出这幅图的另一半，使得这个图变得对称。这是个等边三角形，边长为50像素。
       4-5 Artist Assessment 1: 评估：用循环来画等边三角形。每条边是300像素。
       4-5 Artist Free Draw 1: 自由发挥！想画什么就画什么。
       4-5 Artist Patterns 7: 让我们来修改上一关的代码来适应更复杂的这一关。注意这些菱形的重叠方式，尝试将第一个“向后跳跃”的距离从100变到50(一半的距离)-那么现在小艺术家在第二个“向后跳跃”的时候应该跳多远。
+      4-5 Artist Patterns Free Play: 自由发挥 - 试着亲手画一个自己的图案！
       4-5 Bee Debugging 10: 找到错误，并修好它们。
       4-5 Bee Debugging 11: 这里的计数对吗？
       4-5 Bee Debugging 2: 帮助蜜蜂得到花蜜，并酿造蜂蜜。
@@ -53,8 +82,24 @@ zh-CN:
       4-5 Maze 4: 使用"重复"的块来迅速解决这一关......
       4-5 Maze 5: 你能用最少的模块来通过这关吗？
       4-5 Maze 6: 你能用最少的模块来让我达到向日葵吗？
+      4-5 Maze 7: 让僵尸快速的到达向日葵的位置！你能使用11个以下的指令块来解决这道题吗？
+      4-5 Maze 8: |-
+        用尽可能少的指令块让僵尸到达向日葵的位置。
+        （躲开食人花！）
+      4-5 Maze 9: |-
+        现在，我们用一个新的，叫做`重复直到`的指令块。
+        这个指令会循环执行，直到僵尸到达向日葵的位置。
+
+        使用新的`重复直到`指令块和最少的指令来解决这道题。
+      4-5 Maze Assessment 1: 评估：用尽可能少的指令块到达向日葵的位置。
+      4-5 Nested Loops 12: 你能用嵌套循环画出36个三角形吗？
       4-5 Nested Loops 5: 循环下面的代码来创建一个风车。
       4-5 Nested Loops 9: 画出鳄鱼嘴里的牙齿！
+      4-5 While Loops 1: 将我移到坑旁边，使用“填满”指令块，铲两铲土填满它。
+      4-5 While Loops 2: 将我移到土堆那里，然后用“移除”模块来移除五铲土。
+      4-5 While Loops 5: 哇，这里有三堆土！你能写一个程序，将它们一铲铲移除，直到地面平整吗？
+      4-5 While Loops 6: 哇，这里有三堆土！你能写一个程序，将它们一铲铲移除，直到地面平整吗？
+      4-5 While Loops 7: 哇，这里有三堆土！你能写一个程序，将它们一铲铲移除，直到地面平整吗？
       Alien Defender: 项目创意：在游戏实验室里制作一个塔防游戏！
       CSD U3 Boolean Modify: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Boolean Modify_2018: 修改代码，以便使所有的console.log命令打印“真”。
@@ -235,7 +280,7 @@ zh-CN:
       HOC 2018 Level_1: 从箱子中拿出一艘船。
       HOC 2018 Level_10: 前往海底遗迹的入口。
       HOC 2018 Level_11: '在海底遗迹内使用海晶石制作一个潮涌核心。  '
-      HOC 2018 Level_12: '设计自己的水下世界，由你决定！  '
+      HOC 2018 Level_12: 设计自己的水下世界，自己做主！
       HOC 2018 Level_2: 前往船坞的尽头。
       HOC 2018 Level_3: 穿过开阔水域寻找鳕鱼。
       HOC 2018 Level_4: 用循环到达海豚。
@@ -457,6 +502,8 @@ zh-CN:
       course3_bee_functions_challenge4: 用你所学的来解决这个关卡。
       course3_farmer_condLoops_challenge2: 收集一切作物来通过这关。
       course3_farmer_until_challenge2: 使用如果/否则模块来跟随这条曲线的路。在每个转角处，用循环里的`移除一个`来清理土堆。
+      course3_maze_debugging_challenge1: _"我一直在绕圈子吗？"_
+      course3_maze_debugging_challenge2: _"如果转向得太多可能会把我搞头晕! 请帮助我使用四个`转向`指令块来拿到坚果。"_
       course3_maze_until_challenge1: 没有提示，只有挑战。把僵尸带到向日葵那里。
       course3_playLab_challenge1: "当你有足够的分数，或者分数不够时，应该有一些后果。添加一些代码到`游戏胜利`和`游戏失败`函数中来确保游戏按照它y应该的方式进行。\n\\\r\n点击提示来获得一些主意！"
       course4_artist_binary_challenge1: 在这个谜题中，您只能使用每个二进制值 (0或1) 一次。请尝试使用嵌套循环来画这幅图。
@@ -1106,22 +1153,22 @@ zh-CN:
       courseC_harvester_loops_challenge2: 收集所有的莴苣。避开树木和田野!
       courseC_harvester_loops_challenge2_2018: 收集所有的莴苣。避开树木和田野!
       courseC_harvester_loops_challenge2_2019: 收集所有的莴苣。避开树木和田野!
-      courseC_maze_debugging1: 修复错误来收集所有的宝藏。
+      courseC_maze_debugging1: 修好代码，来帮助斯奎特到达橡子。
       courseC_maze_debugging1_2018: 修好代码，来帮助斯奎特到达橡子。
       courseC_maze_debugging1_2019: 修好代码，来帮助斯奎特到达橡子。
-      courseC_maze_debugging2: 修复错误来收集所有的宝藏。
+      courseC_maze_debugging2: 用你的调试技能来帮助斯奎特到达橡子。
       courseC_maze_debugging2_2018: 用你的调试技能来帮助斯奎特到达橡子。
       courseC_maze_debugging2_2019: 用你的调试技能来帮助斯奎特到达橡子。
-      courseC_maze_debugging3: 修复错误来收集所有的宝藏。
+      courseC_maze_debugging3: 移除模块来帮助斯奎特到达橡子！
       courseC_maze_debugging3_2018: 移除模块来帮助斯奎特到达橡子！
       courseC_maze_debugging3_2019: 移除模块来帮助斯奎特到达橡子！
-      courseC_maze_debugging4: 修复错误来收集所有的宝藏。
+      courseC_maze_debugging4: 某些人的方向搞混了！你能帮忙吗？
       courseC_maze_debugging4_2018: 某些人的方向搞混了！你能帮忙吗？
       courseC_maze_debugging4_2019: 某些人的方向搞混了！你能帮忙吗？
-      courseC_maze_debugging5: 所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
+      courseC_maze_debugging5: 通过重新排列和改动模块来调试这一关。
       courseC_maze_debugging5_2018: 通过重新排列和改动模块来调试这一关。
       courseC_maze_debugging5_2019: 通过重新排列和改动模块来调试这一关。
-      courseC_maze_debugging6: '挑战: 使用调试技巧来修复错误并收集所有的宝藏。'
+      courseC_maze_debugging6: 找出什么地方错了，并让斯奎特到达橡子。
       courseC_maze_debugging6_2018: 找出什么地方错了，并让斯奎特到达橡子。
       courseC_maze_debugging6_2019: 找出什么地方错了，并让斯奎特到达橡子。
       courseC_maze_debugging7: "\\*\\* 挑战: \\*\\* 通过重新排列，添加和删除模块来调试这关。"
@@ -1210,7 +1257,6 @@ zh-CN:
       courseC_starWars_loops9: 用你所学的东西来捡起所有的废铁!
       courseC_starWars_loops9_2018: 用你所学的东西来捡起所有的废铁!
       courseC_starWars_loops9_2019: 用你所学的东西来捡起所有的废铁!
-      courseC_video_angles2: 现在, 将最后一个三角形的代码拖动到一个新的循环中, 将其旋转并制作一个雪花!
       courseD_artist_1_2018: "画一个**50**像素边长的六边形。\\\r"
       courseD_artist_1_2018_2019: "画一个**50**像素边长的六边形。\\\r"
       courseD_artist_2_2018: "现在，向右转**60**度，然后画一条**150**像素长的直线，并跳回到区域中心。\\\r"
@@ -1645,16 +1691,14 @@ zh-CN:
       courseD_playLab_cond6a_2018: 如果海盗在安全区, 等一秒钟，如果他还停留在章鱼线之下，就扣除一分。
       courseD_playLab_condFP: 现在，创建你自己的游戏，给朋友们看看吧！
       courseD_playLab_condFP_2018: 现在，创建你自己的游戏，给朋友们看看吧！
-      courseD_scrat_predict1: 此代码包含一个新模块。如果你按下 "运行" 块, 你认为会发生什么？
-      courseD_scrat_ramp1: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
+      courseD_scrat_ramp1: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
       courseD_scrat_ramp2: 将额外的`向前移动`块拖出工具箱, 然后将所有块附加到`当运行时`以完成代码。
       courseD_scrat_ramp3: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
       courseD_scrat_ramp4: 躲开TNT炸药，否则羽毛会被炸飞！
       courseD_scrat_ramp5: 躲开TNT炸药！
-      courseD_scrat_ramp6: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
-      courseD_scrat_ramp7: 使用你学会的，让小鸟飞到猪那里！
-      courseD_scrat_ramp8: 现在用艺术家做一个正方形!
-      courseD_video_repeatUntil: 帮助农民正确地行走在道路上, 收集所有的莴苣。
+      courseD_scrat_ramp6: "_\"保持冷静，帮我找到那只坏猪。否则，我会生气的！\"_\\\r\n\\\r\n当你将几个同样的模块排成一列时，试试将它们挪到`重复`循环里。这能更少的代码做到相同的事情！"
+      courseD_scrat_ramp7: 帮助斯奎特得到橡子！
+      courseD_scrat_ramp8: 用你学到的东西让斯奎特得到橡子!
       courseE_artist_concept1: '重新创建这幅图。 '
       courseE_artist_concept1_2018: '重新创建这幅图。 '
       courseE_artist_concept4: 重新创建这幅图。
@@ -1707,8 +1751,9 @@ zh-CN:
       courseE_artist_functions_challenge2_2018: 试试此代码, 看看它是如何工作的, 然后试着自己编程!
       courseE_artist_functions_challenge2_2019: 试试此代码, 看看它是如何工作的, 然后试着自己编程!
       courseE_artist_ramp8: 现在用艺术家做一个正方形!
-      courseE_artist_ramp8_2: 用你学过的画这个三角形。
+      courseE_artist_ramp8_2: 现在用艺术家做一个正方形!
       courseE_artist_ramp9: 用你学过的画这个三角形。
+      courseE_artist_ramp9_2: 用你学过的画这个三角形。
       courseE_bee_concept1: 收集每朵花的花蜜。
       courseE_bee_concept1_2018: 收集每朵花的花蜜。
       courseE_bee_concept2: 帮助蜜蜂酿制所有的蜂蜜。
@@ -1774,23 +1819,25 @@ zh-CN:
       courseE_farmer_ramp11a: 当有一堆土，移走它。
       courseE_farmer_ramp11a_2018: 当有一堆土，移走它。
       courseE_farmer_ramp11a_2019: 当有一堆土，移走它。
-      courseE_farmer_ramp11b: 现在，使用嵌套循环来通过这关。
+      courseE_farmer_ramp11b: 当有一堆土，移走它。
       courseE_farmer_ramp11b_2018: 当有一堆土，移走它。
       courseE_farmer_ramp11b_2019: 当有一堆土，移走它。
+      courseE_farmer_ramp12_forswap: 现在，使用嵌套循环来通过这关。
       courseE_farmer_ramp12_forswap_2018: 现在，使用嵌套循环来通过这关。
       courseE_farmer_ramp12_forswap_2019: 现在，使用嵌套循环来通过这关。
-      courseE_farmer_ramp12b: 摘下所有的莴苣(只在有莴苣的时候)。
+      courseE_farmer_ramp12b: 当有莴苣的时候,，捡起莴苣！
       courseE_farmer_ramp12b_2018: 当有莴苣的时候,，捡起莴苣！
       courseE_farmer_ramp12b_2019: 当有莴苣的时候,，捡起莴苣！
-      courseE_farmer_ramp12c: 如果有玉米, 摘玉米, 在有莴苣的时候摘莴苣。
+      courseE_farmer_ramp12c: 向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。
       courseE_farmer_ramp12c_2018: 向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。
       courseE_farmer_ramp12c_2019: 向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。
-      courseE_farmer_ramp12d: 帮助蜜蜂沿着小路, 收集所有的蜂蜜和所有的花蜜。
+      courseE_farmer_ramp12d: 向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。
       courseE_farmer_ramp12d_2018: 向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。
       courseE_farmer_ramp12d_2019: 向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。
+      courseE_farmer_ramp12e: 向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。
       courseE_farmer_ramp12e_2018: 向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。
       courseE_farmer_ramp12e_2019: 向前移动直到到达莴苣，然后用一个`当`循环来捡起所有的莴苣。
-      courseE_farmer_ramp12f: 仅使用可用的模块来解决此关卡。
+      courseE_farmer_ramp12f: 向前走, 直到你到达莴苣，然后**如果** 有一条路径向左，就左转。否则就右拐。
       courseE_farmer_ramp12f_2018: 向前走, 直到你到达莴苣，然后**如果** 有一条路径向左，就左转。否则就右拐。
       courseE_farmer_ramp12f_2019: 向前走, 直到你到达莴苣，然后**如果** 有一条路径向左，就左转。否则就右拐。
       courseE_farmer_ramp12g: 向前走, 直到你到达莴苣，然后**如果** 有一条路径向左，就左转。否则就右拐。
