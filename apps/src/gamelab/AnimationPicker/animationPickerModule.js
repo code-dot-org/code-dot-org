@@ -8,8 +8,8 @@ import {
   appendCustomFrames,
   appendLibraryFrames
 } from '../animationListModule';
-import {makeEnum} from '../../utils';
-import {animations as animationsApi} from '../../clientApi';
+import {makeEnum} from '@cdo/apps/utils';
+import {animations as animationsApi} from '@cdo/apps/clientApi';
 import gamelabMsg from '@cdo/gamelab/locale';
 import {changeInterfaceMode} from '../actions';
 import {GameLabInterfaceMode} from '../constants';
