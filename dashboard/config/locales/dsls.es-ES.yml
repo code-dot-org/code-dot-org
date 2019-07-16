@@ -859,6 +859,11 @@ es-ES:
         - {}
         - {}
         - {}
+      GraphPaperProgramming-Unplugged:
+        markdown: |
+          #Programación de papel cuadriculado
+
+          Escribe algoritmos que tus compañeros puedan usar para dibujar imágenes.
       Internet Simulator Setup:
         content1: descripción aquí
       Internet Simulator Setup 2:
@@ -1534,11 +1539,13 @@ es-ES:
         - text: No lo se.
       courseD_multi_scrat_predict1:
         questions:
-        - {}
+        - text: Este código utiliza un bloque nuevo. Qué crees que pasará cuando pulses
+            "Ejecutar"?
         answers:
-        - text: Nada. El pájaro no se moverá.
-        - {}
-        - {}
+        - text: Nada. Scrat no se moverá.
+        - text: Scrat se moverá hacia adelante tres veces, girará, después se moverá
+            hacia adelante tres veces más, consiguiendo la bellota!
+        - text: Scrat se moverá hacia adelante, después girará y se estrellará.
         - text: No lo se.
       courseE_multi_bee_functions_predict1:
         questions:

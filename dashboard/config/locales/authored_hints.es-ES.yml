@@ -36,7 +36,7 @@ es-ES:
       2-3 Artist 8:
         2-3_Artist_8_a: Si cortar 200 por la mitad, ¿de cuántos píxeles de ancho necesita
           ser cada cuadrado?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Este diamante es realmente sólo un cuadrado de lado
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: "\\*\\* ¡Está bien usar ensayo y error aquí! \\*\\*\n\nComienza
@@ -1836,6 +1836,20 @@ es-ES:
         courseC_harvester_loops_challenge1_b: Puedes repetir `mueve hacia adelante`
           y `elige maíz` todas las veces que necesites hacerlo, luego haz `gira a
           la derecha` en cada esquina.
+      course2_harvester_loops_challenge2:
+        courseC_harvester_loops_challenge2_a: Una forma de resolver estos puzles parece
+          un zig-zag. ¡Otra tiene forma de espiral! Hay muchos modos de solucionar
+          un puzle como este. ¡Insiste!
+        courseC_harvester_loops_challenge2_b: Puedes repetir `avanzar` y `recolecta
+          lechuga` tantas veces como te haga falta, después, gira en cada esquina.
+        courseC_harvester_loops_challenge2_c: |-
+          El patrón en zig-zag puede repetirse dos veces para acabar el puzle ¡sólo con 20 bloques!
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          El patrón en espiral puede ser programado ¡sólo con 18 bloques!
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_b: "¡La solución más corta usa solo 5
           bloques, pero usa el bloque de \\`repetir!"
@@ -2445,9 +2459,13 @@ es-ES:
         courseA_harvester_loops5b_c: Muévete en un sentido, y luego en el otro con
           este camino.
       courseA_harvester_loops6:
+        courseA_harvester_loops6_a: Si te atascas, prueba a escribir los pasos en
+          un papel y a buscar patrones que se repitan.
         courseA_harvester_loops6_b: Éste es el camino que debes tomar para recoger
           todo el maíz.
       courseA_harvester_loops6_2019:
+        courseA_harvester_loops6_a: Si te atascas, prueba a escribir los pasos en
+          un papel y a buscar patrones que se repitan.
         courseA_harvester_loops6_b: Éste es el camino que debes tomar para recoger
           todo el maíz.
       courseA_harvester_loops7:
@@ -4524,12 +4542,60 @@ es-ES:
       courseC_artist_loop1:
         courseC_artist_loop1_a: No tienes que hacer ningún cambio en el bucle, sólo
           poner un bloque encima de él.
+        courseC_artist_loop1_b: |-
+          Este es el bloque que necesitas para establecer un patrón:
+
+          <xml> <block type="draw_line_style_pattern">     <title name="VALUE">DEFAULT</title>   </block> </xml>
+
+          ¡Elige el patrón que quieras!
       courseC_artist_loop1_2018:
         courseC_artist_loop1_a: No tienes que hacer ningún cambio en el bucle, sólo
           poner un bloque encima de él.
+        courseC_artist_loop1_b: |-
+          Este es el bloque que necesitas para establecer un patrón:
+
+          <xml> <block type="draw_line_style_pattern">     <title name="VALUE">DEFAULT</title>   </block> </xml>
+
+          ¡Elige el patrón que quieras!
       courseC_artist_loop1_2019:
         courseC_artist_loop1_a: No tienes que hacer ningún cambio en el bucle, sólo
           poner un bloque encima de él.
+        courseC_artist_loop1_b: |-
+          Este es el bloque que necesitas para establecer un patrón:
+
+          <xml> <block type="draw_line_style_pattern">     <title name="VALUE">DEFAULT</title>   </block> </xml>
+
+          ¡Elige el patrón que quieras!
+      courseC_artist_loops5a:
+        courseC_artist_loops5a_a: Usa el menú desplegable del bloque `dibujar calcomanía`
+          para cambiar las imágenes.
+      courseC_artist_loops5a_2018:
+        courseC_artist_loops5a_a: Usa el menú desplegable del bloque `dibujar calcomanía`
+          para cambiar las imágenes.
+      courseC_artist_loops5a_2019:
+        courseC_artist_loops5a_a: Usa el menú desplegable del bloque `dibujar calcomanía`
+          para cambiar las imágenes.
+      courseC_artist_loops6a:
+        courseC_artist_loops6a_a: Para hacer un diseño como el mostrado arriba, mueve
+          hacia adelante menos de 75 píxeles entre cada calcomanía.
+      courseC_artist_loops6a_2018:
+        courseC_artist_loops6a_a: Para hacer un diseño como el mostrado arriba, mueve
+          hacia adelante menos de 75 píxeles entre cada calcomanía.
+      courseC_artist_loops6a_2019:
+        courseC_artist_loops6a_a: Para hacer un diseño como el mostrado arriba, mueve
+          hacia adelante menos de 75 píxeles entre cada calcomanía.
+      courseC_artist_loops7a:
+        courseC_artist_loops7a_a: |-
+          Un círculo tiene 360 grados. Multiplica los grados que giras por el número de veces que repites. ¿Es igual a 360?
+          ¡Prueba con los giros que se sugieren para ver cómo funciona esto!
+      courseC_artist_loops7a_2018:
+        courseC_artist_loops7a_a: |-
+          Un círculo tiene 360 grados. Multiplica los grados que giras por el número de veces que repites. ¿Es igual a 360?
+          ¡Prueba con los giros que se sugieren para ver cómo funciona esto!
+      courseC_artist_loops7a_2019:
+        courseC_artist_loops7a_a: |-
+          Un círculo tiene 360 grados. Multiplica los grados que giras por el número de veces que repites. ¿Es igual a 360?
+          ¡Prueba con los giros que se sugieren para ver cómo funciona esto!
       courseC_artist_loopsPre1a:
         courseC_artist_loopsPre1a_a: Recuerda poner el bloque `girar` dentro de un
           bucle.
@@ -4753,6 +4819,252 @@ es-ES:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events2:
+        courseC_flappy_events2_a: 'El bloque que tienes que añadir se llama `establecer
+          velocidad`. '
+        courseC_flappy_events2_b: Conecta el bloque `establecer velocidad` al bloque
+          `al ejecutar` para resolver este puzle.
+      courseC_flappy_events2_2018:
+        courseC_flappy_events2_a: 'El bloque que tienes que añadir se llama `establecer
+          velocidad`. '
+        courseC_flappy_events2_b: Conecta el bloque `establecer velocidad` al bloque
+          `al ejecutar` para resolver este puzle.
+      courseC_flappy_events2_2019:
+        courseC_flappy_events2_a: 'El bloque que tienes que añadir se llama `establecer
+          velocidad`. '
+        courseC_flappy_events2_b: Conecta el bloque `establecer velocidad` al bloque
+          `al ejecutar` para resolver este puzle.
+      courseC_flappy_events3:
+        courseC_flappy_events3_a: Si algo no funciona bien, asegúrate de que tus bloques
+          están conectados a los eventos correctos.
+      courseC_flappy_events3_2018:
+        courseC_flappy_events3_a: Si algo no funciona bien, asegúrate de que tus bloques
+          están conectados a los eventos correctos.
+      courseC_flappy_events3_2019:
+        courseC_flappy_events3_a: Si algo no funciona bien, asegúrate de que tus bloques
+          están conectados a los eventos correctos.
+      courseC_flappy_events4:
+        courseC_flappy_events4_a: Junta el bloque `terminar el juego` con `cuando
+          choca con un obstáculo` para solucionar este puzle.
+      courseC_flappy_events4_2018:
+        courseC_flappy_events4_a: Junta el bloque `terminar el juego` con `cuando
+          choca con un obstáculo` para solucionar este puzle.
+      courseC_flappy_events4_2019:
+        courseC_flappy_events4_a: Junta el bloque `terminar el juego` con `cuando
+          choca con un obstáculo` para solucionar este puzle.
+      courseC_flappy_events5:
+        courseC_flappy_events5_a: Necesitas usar el bloque `anotar un punto` para
+          pasar este nivel.
+      courseC_flappy_events5_2018:
+        courseC_flappy_events5_a: Necesitas usar el bloque `anotar un punto` para
+          pasar este nivel.
+      courseC_flappy_events5_2019:
+        courseC_flappy_events5_a: Necesitas usar el bloque `anotar un punto` para
+          pasar este nivel.
+      courseC_harvester_loops1:
+        courseC_harvester_loops1_a: Cuanto te hayas movido hasta una calabaza, usa
+          <xml><block type="harvester_pumpkin"/></xml> para recogerla.
+        courseC_harvester_loops1_b: Puedes usar un bucle con el bloque <xml><block
+          type="harvester_pumpkin"/></xml> para recoger más de una calabaza de un
+          cuadrado.
+      courseC_harvester_loops1_2018:
+        courseC_harvester_loops1_a: Cuanto te hayas movido hasta una calabaza, usa
+          <xml><block type="harvester_pumpkin"/></xml> para recogerla.
+        courseC_harvester_loops1_b: Puedes usar un bucle con el bloque <xml><block
+          type="harvester_pumpkin"/></xml> para recoger más de una calabaza de un
+          cuadrado.
+      courseC_harvester_loops1_2019:
+        courseC_harvester_loops1_a: Cuanto te hayas movido hasta una calabaza, usa
+          <xml><block type="harvester_pumpkin"/></xml> para recogerla.
+        courseC_harvester_loops1_b: Puedes usar un bucle con el bloque <xml><block
+          type="harvester_pumpkin"/></xml> para recoger más de una calabaza de un
+          cuadrado.
+      courseC_harvester_loops2:
+        courseC_harvester_loops2_a: Si te atascas, prueba a escribir los pasos en
+          un papel y a buscar patrones que se repitan.
+        courseC_harvester_loops2_b: Vas a necesitar un bucle `repetir` detrás de otro.
+        courseC_harvester_loops2_c: Un bucle repetirá el comando `avanzar` y el otro
+          repetirá el comando `recolecta calabazas`.
+      courseC_harvester_loops2_2018:
+        courseC_harvester_loops2_a: Si te atascas, prueba a escribir los pasos en
+          un papel y a buscar patrones que se repitan.
+        courseC_harvester_loops2_b: Vas a necesitar un bucle `repetir` detrás de otro.
+        courseC_harvester_loops2_c: Un bucle repetirá el comando `avanzar` y el otro
+          repetirá el comando `recolecta calabazas`.
+      courseC_harvester_loops2_2019:
+        courseC_harvester_loops2_a: Si te atascas, prueba a escribir los pasos en
+          un papel y a buscar patrones que se repitan.
+        courseC_harvester_loops2_b: Vas a necesitar un bucle `repetir` detrás de otro.
+        courseC_harvester_loops2_c: Un bucle repetirá el comando `avanzar` y el otro
+          repetirá el comando `recolecta calabazas`.
+      courseC_harvester_loops3:
+        courseC_harvester_loops3_b: Para las primeras calabazas, puedes usar un código
+          muy parecido al del último puzle. ¿Hacia qué lado necesitas girar luego?
+        courseC_harvester_loops3_c: Si quieres hacer que tu código sea más sencillo,
+          puedes poner un bucle dentro de otro. Esto se llama **bucles anidados**.
+      courseC_harvester_loops3_2018:
+        courseC_harvester_loops3_b: Para las primeras calabazas, puedes usar un código
+          muy parecido al del último puzle. ¿Hacia qué lado necesitas girar luego?
+        courseC_harvester_loops3_c: Si quieres hacer que tu código sea más sencillo,
+          puedes poner un bucle dentro de otro. Esto se llama **bucles anidados**.
+      courseC_harvester_loops3_2019:
+        courseC_harvester_loops3_b: Para las primeras calabazas, puedes usar un código
+          muy parecido al del último puzle. ¿Hacia qué lado necesitas girar luego?
+        courseC_harvester_loops3_c: Si quieres hacer que tu código sea más sencillo,
+          puedes poner un bucle dentro de otro. Esto se llama **bucles anidados**.
+      courseC_harvester_loops4:
+        courseC_harvester_loops4_a: Usa el nuevo bloque `recolecta maíz` para recoger
+          el maíz.
+        courseC_harvester_loops4_b: Puedes usar muchos bucles repetir en tu código,
+          algunos para recoger maíz y otros para recoger calabazas.
+        courseC_harvester_loops4_c: Si quieres hacer que tu código sea más sencillo,
+          puedes poner un bucle dentro de otro. Esto se llama **bucles anidados**.
+      courseC_harvester_loops4_2018:
+        courseC_harvester_loops4_a: Usa el nuevo bloque `recolecta maíz` para recoger
+          el maíz.
+        courseC_harvester_loops4_b: Puedes usar muchos bucles repetir en tu código,
+          algunos para recoger maíz y otros para recoger calabazas.
+        courseC_harvester_loops4_c: Si quieres hacer que tu código sea más sencillo,
+          puedes poner un bucle dentro de otro. Esto se llama **bucles anidados**.
+      courseC_harvester_loops4_2019:
+        courseC_harvester_loops4_a: Usa el nuevo bloque `recolecta maíz` para recoger
+          el maíz.
+        courseC_harvester_loops4_b: Puedes usar muchos bucles repetir en tu código,
+          algunos para recoger maíz y otros para recoger calabazas.
+        courseC_harvester_loops4_c: Si quieres hacer que tu código sea más sencillo,
+          puedes poner un bucle dentro de otro. Esto se llama **bucles anidados**.
+      courseC_harvester_loops5:
+        courseC_harvester_loops5_a: Si te atascas, prueba a dibujar el programa completo
+          y busca patrones que se repitan.
+        courseC_harvester_loops5_b: "¿Esta escalera se parece a otros puzles? Los
+          movimientos deberían ser similares, solo recuerda recoger las plantas por
+          el camino."
+      courseC_harvester_loops5_2018:
+        courseC_harvester_loops5_a: Si te atascas, prueba a dibujar el programa completo
+          y busca patrones que se repitan.
+        courseC_harvester_loops5_b: "¿Esta escalera se parece a otros puzles? Los
+          movimientos deberían ser similares, solo recuerda recoger las plantas por
+          el camino."
+      courseC_harvester_loops5_2019:
+        courseC_harvester_loops5_a: Si te atascas, prueba a dibujar el programa completo
+          y busca patrones que se repitan.
+        courseC_harvester_loops5_b: "¿Esta escalera se parece a otros puzles? Los
+          movimientos deberían ser similares, solo recuerda recoger las plantas por
+          el camino."
+      courseC_harvester_loops6:
+        courseC_harvester_loops6_a: Recuerda que puedes poner varios bloques dentro
+          de un bucle repetir.
+        courseC_harvester_loops6_b: No olvides girar al final de la fila de maíz.
+      courseC_harvester_loops6_2018:
+        courseC_harvester_loops6_a: Recuerda que puedes poner varios bloques dentro
+          de un bucle repetir.
+        courseC_harvester_loops6_b: No olvides girar al final de la fila de maíz.
+      courseC_harvester_loops6_2019:
+        courseC_harvester_loops6_a: Recuerda que puedes poner varios bloques dentro
+          de un bucle repetir.
+        courseC_harvester_loops6_b: No olvides girar al final de la fila de maíz.
+      courseC_harvester_loops7:
+        courseC_harvester_loops7_a: Puedes resolver este puzle de dos formas, o recogiendo
+          primero el maíz o las calabazas.
+        courseC_harvester_loops7_b: Vas a necesitar varios bucles `repetir` para resolver
+          este puzle.
+      courseC_harvester_loops7_2018:
+        courseC_harvester_loops7_a: Puedes resolver este puzle de dos formas, o recogiendo
+          primero el maíz o las calabazas.
+        courseC_harvester_loops7_b: Vas a necesitar varios bucles `repetir` para resolver
+          este puzle.
+      courseC_harvester_loops7_2019:
+        courseC_harvester_loops7_a: Puedes resolver este puzle de dos formas, o recogiendo
+          primero el maíz o las calabazas.
+        courseC_harvester_loops7_b: Vas a necesitar varios bucles `repetir` para resolver
+          este puzle.
+      courseC_harvester_loops8:
+        courseC_harvester_loops8_a: "¿Esta escalera se parece a otros puzles? Los
+          movimientos deberían ser similares, solo recuerda recoger las plantas por
+          el camino."
+        courseC_harvester_loops8_b: Si quieres que tu código sea más sencillo, ¡puedes
+          poner un bucle `repetir` dentro de otro! A esto se le llama **bucle anidado**.
+      courseC_harvester_loops8_2018:
+        courseC_harvester_loops8_a: "¿Esta escalera se parece a otros puzles? Los
+          movimientos deberían ser similares, solo recuerda recoger las plantas por
+          el camino."
+        courseC_harvester_loops8_b: Si quieres que tu código sea más sencillo, ¡puedes
+          poner un bucle `repetir` dentro de otro! A esto se le llama **bucle anidado**.
+      courseC_harvester_loops8_2019:
+        courseC_harvester_loops8_a: "¿Esta escalera se parece a otros puzles? Los
+          movimientos deberían ser similares, solo recuerda recoger las plantas por
+          el camino."
+        courseC_harvester_loops8_b: Si quieres que tu código sea más sencillo, ¡puedes
+          poner un bucle `repetir` dentro de otro! A esto se le llama **bucle anidado**.
+      courseC_harvester_loops_challenge1a:
+        courseC_harvester_loops_challenge1_a: "¡Esto es muy difícil sin bucles!"
+        courseC_harvester_loops_challenge1_b: Puedes repetir `avanzar` y `recolecta
+          maíz` tantas veces como necesites, después, `girar a la derecha` en cada
+          esquina.
+        courseC_harvester_loops_challenge1_c: |-
+          La mejor forma de coger el maíz del medio usa un bloque `repetir` dentro de otro bloque `repetir`.
+
+          <xml><block type="controls_repeat">         <title name="TIMES">2</title>         <statement name="DO">           <block type="controls_repeat">             <title name="TIMES">4</title>             <statement name="DO">               <block type="maze_move">                 <title name="DIR">moveForward</title>                 <next>                   <block type="harvester_corn"/>                 </next>               </block>             </statement>             <next>               <block type="maze_turn">                 <title name="DIR">turnRight</title>               </block>             </next>           </block>         </statement>         </block></xml>
+      courseC_harvester_loops_challenge1a_2018:
+        courseC_harvester_loops_challenge1_a: "¡Esto es muy difícil sin bucles!"
+        courseC_harvester_loops_challenge1_b: Puedes repetir `avanzar` y `recolecta
+          maíz` tantas veces como necesites, después, `girar a la derecha` en cada
+          esquina.
+        courseC_harvester_loops_challenge1_c: |-
+          La mejor forma de coger el maíz del medio usa un bloque `repetir` dentro de otro bloque `repetir`.
+
+          <xml><block type="controls_repeat">         <title name="TIMES">2</title>         <statement name="DO">           <block type="controls_repeat">             <title name="TIMES">4</title>             <statement name="DO">               <block type="maze_move">                 <title name="DIR">moveForward</title>                 <next>                   <block type="harvester_corn"/>                 </next>               </block>             </statement>             <next>               <block type="maze_turn">                 <title name="DIR">turnRight</title>               </block>             </next>           </block>         </statement>         </block></xml>
+      courseC_harvester_loops_challenge1a_2019:
+        courseC_harvester_loops_challenge1_a: "¡Esto es muy difícil sin bucles!"
+        courseC_harvester_loops_challenge1_b: Puedes repetir `avanzar` y `recolecta
+          maíz` tantas veces como necesites, después, `girar a la derecha` en cada
+          esquina.
+        courseC_harvester_loops_challenge1_c: |-
+          La mejor forma de coger el maíz del medio usa un bloque `repetir` dentro de otro bloque `repetir`.
+
+          <xml><block type="controls_repeat">         <title name="TIMES">2</title>         <statement name="DO">           <block type="controls_repeat">             <title name="TIMES">4</title>             <statement name="DO">               <block type="maze_move">                 <title name="DIR">moveForward</title>                 <next>                   <block type="harvester_corn"/>                 </next>               </block>             </statement>             <next>               <block type="maze_turn">                 <title name="DIR">turnRight</title>               </block>             </next>           </block>         </statement>         </block></xml>
+      courseC_harvester_loops_challenge2:
+        courseC_harvester_loops_challenge2_a: Una forma de resolver estos puzles parece
+          un zig-zag. ¡Otra tiene forma de espiral! Hay muchos modos de solucionar
+          un puzle como este. ¡Insiste!
+        courseC_harvester_loops_challenge2_b: Puedes repetir `avanzar` y `recolecta
+          lechuga` tantas veces como te haga falta, después, gira en cada esquina.
+        courseC_harvester_loops_challenge2_c: |-
+          El patrón en zig-zag puede repetirse dos veces para acabar el puzle ¡sólo con 20 bloques!
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          El patrón en espiral puede ser programado ¡sólo con 18 bloques!
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      courseC_harvester_loops_challenge2_2018:
+        courseC_harvester_loops_challenge2_a: Una forma de resolver estos puzles parece
+          un zig-zag. ¡Otra tiene forma de espiral! Hay muchos modos de solucionar
+          un puzle como este. ¡Insiste!
+        courseC_harvester_loops_challenge2_b: Puedes repetir `avanzar` y `recolecta
+          lechuga` tantas veces como te haga falta, después, gira en cada esquina.
+        courseC_harvester_loops_challenge2_c: |-
+          El patrón en zig-zag puede repetirse dos veces para acabar el puzle ¡sólo con 20 bloques!
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          El patrón en espiral puede ser programado ¡sólo con 18 bloques!
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      courseC_harvester_loops_challenge2_2019:
+        courseC_harvester_loops_challenge2_a: Una forma de resolver estos puzles parece
+          un zig-zag. ¡Otra tiene forma de espiral! Hay muchos modos de solucionar
+          un puzle como este. ¡Insiste!
+        courseC_harvester_loops_challenge2_b: Puedes repetir `avanzar` y `recolecta
+          lechuga` tantas veces como te haga falta, después, gira en cada esquina.
+        courseC_harvester_loops_challenge2_c: |-
+          El patrón en zig-zag puede repetirse dos veces para acabar el puzle ¡sólo con 20 bloques!
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          El patrón en espiral puede ser programado ¡sólo con 18 bloques!
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_maze_debugging2:
         courseC_maze_debugging2_c: "¿No puedes averiguar lo que está mal? Intenta
           ejecutar el código un par de veces para ver lo que sucede."
@@ -4916,12 +5228,18 @@ es-ES:
           empieza mirando a una pared.
         courseC_maze_programming6_d: "¿Atascado? ¡Mira este camino!"
       courseC_maze_programming7:
+        courseC_maze_programming7_a: No olvides usar el botón "Paso" para avanzar
+          de bloque en bloque y buscar errores.
         courseC_maze_programming7_b: Si tienes problemas resolviendo este puzle, prueba
           escribiendo los movimientos en un trozo de papel.
       courseC_maze_programming7_2018:
+        courseC_maze_programming7_a: No olvides usar el botón "Paso" para avanzar
+          de bloque en bloque y buscar errores.
         courseC_maze_programming7_b: Si tienes problemas resolviendo este puzle, prueba
           escribiendo los movimientos en un trozo de papel.
       courseC_maze_programming7_2019:
+        courseC_maze_programming7_a: No olvides usar el botón "Paso" para avanzar
+          de bloque en bloque y buscar errores.
         courseC_maze_programming7_b: Si tienes problemas resolviendo este puzle, prueba
           escribiendo los movimientos en un trozo de papel.
       courseC_maze_programming8:
@@ -5143,6 +5461,9 @@ es-ES:
           \*\* Recuerda: \*\* Este puzzle cambia cada vez que se ejecuta.
 
           Querras usar un bloque condicional (`Si` o`Si /si no`) para resolver el desafío.
+      courseD_collector_ramp8:
+        courseD_collector_ramp8_b: Si quieres que tu código sea más sencillo, ¡puedes
+          poner un bucle `repetir` dentro de otro! A esto se le llama **bucle anidado**.
       courseD_iceage_loops1:
         courseD_iceage_loops1_a: "¡Cuidado con el hielo roto! ¡Scrat podría atravesarlo!"
       courseD_iceage_loops10:
@@ -5171,19 +5492,14 @@ es-ES:
         courseD_iceage_loops2_c: Sigue esta ruta para llevar a Scrat a la bellota.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
-        courseF_maze_ramp6_b: El pájaro comienza a mirar hacia la pared, ¡así que
-          recuerda girar antes de moverte!
-      courseD_scrat_ramp3:
-        courseF_maze_ramp3_b: Use el botón de paso para recorrer el programa línea
-          por línea. ¿Dónde está algo mal?
-      courseD_scrat_ramp4:
-        courseF_maze_ramp4_b: Para seguir el camino, avanza y gira en un sentido,
-          luego muévete tres veces antes de girar en el sentido opuesto. Avanza una
-          vez más para alcanzar al cerdo.
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+      courseD_maze_ramp7:
+        courseD_maze_ramp7_b: No olvides usar el botón "Paso" para avanzar de bloque
+          en bloque y buscar errores.
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_b: No olvides usar el botón "Paso" para avanzar de bloque
+          en bloque y buscar errores.
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'El semi-hexágono tiene una \*\* longitud
           de 30 \*\* y gira a la derecha por \*\* 60 grados \*\*.  '
