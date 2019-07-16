@@ -13,6 +13,7 @@ import {
   setActiveVariant,
   setField
 } from './editorRedux';
+import {levelShape} from './shapes';
 
 const styles = {
   checkbox: {
@@ -69,7 +70,7 @@ export class UnconnectedLevelTokenDetails extends Component {
     addVariant: PropTypes.func.isRequired,
     setActiveVariant: PropTypes.func.isRequired,
     setField: PropTypes.func.isRequired,
-    level: PropTypes.object.isRequired,
+    level: levelShape.isRequired,
     stagePosition: PropTypes.number.isRequired
   };
 
