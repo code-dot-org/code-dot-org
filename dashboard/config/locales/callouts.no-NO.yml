@@ -602,13 +602,10 @@ no-NO:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
           deg hvor mange av disse blokkene du har igjen å bruke.
-      courseD_scrat_ramp6:
-        courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
-          koden.
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
-          koden.
       courseE_artist_ramp8:
+        courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
+          koden.
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
           koden.
       courseE_farmer_functions1:
