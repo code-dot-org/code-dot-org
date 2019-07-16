@@ -8,7 +8,7 @@ hu-HU:
       2-3 Artist 2 new: 'Ennek a háznak csak félig van kész az egyik fala. Minden
         oldal 100 hosszúságú, de a félkész csak 50-es. Fejezd be a falat! '
       2-3 Artist 4: Segíts befejezni a cica házát!
-      2-3 Artist 9: Fejezd be a sárkányt
+      2-3 Artist 9 NEW: Fejezd be a sárkányt
       2-3 Artist Free Play: Szabad játék! Rajzolj, amit akarsz.
       2-3 Artist Loops New 15: Rajzolj valami érdekeset.
       2-3 Artist Nested Loops 10: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát!
@@ -538,12 +538,22 @@ hu-HU:
       bounce_12_basketball: Készítsd el a saját kosárlabda játékod! Változtathatsz
         a szabályokon. Ha elkészültél, nyomj a Kész-re, hogy a barátaid is kipróbálhassák
         a telefonjaikon.
+      bounce_12_sports: 'Hozza létre saját játékát! Itt van a felelősség: megváltoztathatja
+        az összes szabályt, összekeverheti és illesztheti a sportokat, legyen kreatív!
+        Ha elkészült, kattintson a Befejezés gombra, hogy a barátai kipróbálhassák
+        a játékokat a telefonjukon.'
       bounce_1_basketball: Adj egy blokkon a "ha van balra nyíl" blokkhoz, és kattints
         a "futtatás"-ra. Mozgasd a kezet a bal nyíllal, hogy elérd a célt.
+      bounce_1_sports: Szerezd meg a zászlót! Csatlakoztass egy blokkot a "amikor
+        balra nyíl" blokkhoz, és nyomd meg a "Futtatás" gombot, hogy a játékost a
+        zászlóhoz mozgassa.
       bounce_2: Csatolj egy blokkot  a "jobbra nyíl esetén" és a "balra nyíl esetén"
         blokkokhoz. Mozgasd az ütőt, hogy mindkét célt elérd.
       bounce_2_basketball: Húzz egy-egy blokkot a "ha van balra nyíl" és a "ha van
         jobbra nyíl" blokkokhoz. Mozgasd a kezet, hogy mind a két célt elérd.
+      bounce_2_sports: Most már két zászló van! Csatlakoztasson egy blokkot a "amikor
+        balra nyíl" és az "amikor jobb nyíl" blokkokhoz, hogy a játékos két irányban
+        mozogjon.
       bounce_3: Most próbálj meg valami hasonlót  a "felfelé nyílnál" blokkal.  Mozgasd
         az ütőt, hogy elérd a fenti célt.
       bounce_4: Itt az idő, hogy bevezessünk négy új blokkot. Mozgasd az ütőt mind
@@ -552,6 +562,8 @@ hu-HU:
         a labda eltalálja az ütőt" blokkhoz, hogy a labda biztosan elérje a célját.
       bounce_5_basketball: A labda most repülni fog a kéz felé. Adj egy blokkot az
         "amikor a labda a kézhez ér" blokkhoz, hogy a labda végül elérje a zászlót.
+      bounce_5_sports: A jégkorong korongja repülni fog a játékos felé! Csatlakoztasson
+        egy blokkot a "amikor a labda eléri a játékos" blokkot, hogy elérje a zászlót.
       bounce_6: A cél most fönt van. Csatolj egy-egy blokkot mindkét "ha a labda..."
         blokkhoz, hogy megoldd a rejtvényt.
       bounce_6_basketball: Most a zászló fönt van. Mind a két "amikor a labda..."
@@ -567,6 +579,8 @@ hu-HU:
       course4_artist_fwp_challenge1: Próbálja meg futtatni ezt a programot, és változtassa
         meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár
         törölheti az egészet, és írhat helyette valami teljesen mást)
+      courseA_collector_loops2_2019: Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
+        minden egyes kincses darabhoz, majd használd a gyűjtőblokkot.
       courseA_maze_seq2: Változtasd meg a kódot, hogy elkapjam a malacot!
       courseC_artist_loops1a_2019: 'Hozd a művészet a játéktér közepére, majd rajzolj
         egy matricát. '

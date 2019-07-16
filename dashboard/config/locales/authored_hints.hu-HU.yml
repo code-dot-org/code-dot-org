@@ -34,7 +34,7 @@ hu-HU:
       2-3 Artist 8:
         2-3_Artist_8_a: Ha a 200 felét veszed, hány pixel szélesek lesznek a szükséges
           a négyzetek?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Ez a gyémánt valóban csak egy négyzet ezen az oldalán
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -494,6 +494,20 @@ hu-HU:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
           Steve túl tudjanak jutni a térkép szélein.
+      courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: |-
+          Próbáld ezt használni
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> ciklus!
+      courseB_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Használd ezt az új blokkot!
+           <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
+        courseB_iceage_loops3_b: |-
+          A kód ismétléséhez, fogd az ismétlés <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>ciklust, és tedd bele a blokkot amit szeretnél.
       courseC_artist_prog2:
         courseC_artist_prog2_a: Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan
           rajzolok egy vonalat.

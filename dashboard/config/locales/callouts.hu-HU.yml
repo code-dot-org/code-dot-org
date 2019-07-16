@@ -87,6 +87,11 @@ hu-HU:
         Infinity_move_right_runbutton: Itt adj hozzá mozgasd blokkot
       Infinity_repeat:
         Infinity_repeat_callout: Ide húzz be Mozgasd blokkokat
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: Ha készen áll, nyomja meg a "Futtatás" gombot a
+          program kipróbálásához.
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Nyomja meg a "Futtatás" gombot a mozgás megkezdéséhez.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: Ez egy "ismétlés" ciklus.  Vidd a munkaterületre, és
           add meg azt a kódot, amelyet újra és újra futtatni szeretnél.
