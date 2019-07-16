@@ -15,9 +15,11 @@ ja-JP:
         draw_rect: 四角形を かく
       2-3 Artist Debugging 10:
         draw square: 正方形を かく
+        jump to controller top left: コントローラーの左上にジャンプ
         jump to middle: ちゅうおうに とぶ
         draw a circle: 円 を かく
         draw a button: ボタンを かく
+        draw cord: うねをかく
       2-3 Artist Debugging 5:
         draw left leg: 左足を かく
         draw right leg: 右足を かく
@@ -25,6 +27,7 @@ ja-JP:
         draw a head: あたまを かく
       2-3 Artist Debugging 6:
         draw right leg: 右足を かく
+        draw sitting stick figure: イスの絵をかいて！
         draw head: あたまを かく
         draw arms: うでを かく
         jump to neck: くびに とぶ
@@ -143,6 +146,12 @@ ja-JP:
       Geometric Sun_2018:
         diamond: ダイヤモンド
         draw a house: 家 を かく
+      K-1 Artist2 3:
+        draw roof: やねをかく
+      K-1 Artist2 4:
+        draw rectangle: 長方形をかく
+      K-1 Artist2 5:
+        draw rectangle: 長方形をかく
       MC_HOC_2017_10_RETRY:
         fix long path: 長い道を直す
         fix short path: 短い道を直す
