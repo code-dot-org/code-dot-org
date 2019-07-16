@@ -55,15 +55,18 @@ export default class LevelFeedbackEntry extends Component {
 
   render() {
     const {
-      seenByStudent,
+      seen_on_feedback_page_at,
+      student_first_visited_at,
       lessonName,
       levelNum,
       linkToLevel,
       unitName,
       linkToUnit,
-      lastUpdated,
+      updated_at,
       comment
     } = this.props.feedback;
+
+    const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
 
     const style = {
       backgroundColor: seenByStudent ? color.lightest_teal : color.white,
@@ -94,7 +97,7 @@ export default class LevelFeedbackEntry extends Component {
             </div>
           </a>
         </div>
-        <TimeAgo style={styles.time} dateString={lastUpdated} />
+        <TimeAgo style={styles.time} dateString={updated_at} />
         <div style={styles.comment}>{comment}</div>
       </div>
     );
