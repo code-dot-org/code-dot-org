@@ -447,6 +447,16 @@ class ScriptLevel < ActiveRecord::Base
     teacher_panel_summary
   end
 
+  def summary_for_feedback
+    {
+      lessonName: stage.name,
+      levelNum: position,
+      linkToLevel: path,
+      unitName: stage.script.localized_title,
+      linkToUnit: stage.script.link
+    }
+  end
+
   def self.cache_find(id)
     Script.cache_find_script_level(id)
   end
