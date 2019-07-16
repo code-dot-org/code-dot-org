@@ -76,9 +76,6 @@ steps:
     rebuild: true
     mount:
       - /home/circleci/.rbenv
-      # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
-      - dashboard/db/ui_test_data.commit
-      - dashboard/db/ui_test_data.sql
 
 volumes:
 - name: rbenv
@@ -185,6 +182,9 @@ steps:
     rebuild: true
     mount:
       - /home/circleci/.rbenv
+      # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
+      - dashboard/db/ui_test_data.commit
+      - dashboard/db/ui_test_data.sql
 
 volumes:
 - name: rbenv
@@ -199,6 +199,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 2219cd8b91b8fdeceb2e19a97f9d77097727ee1bd9320b13605b1d8b0cacb1a3
+hmac: e2991b1aaed96f8a8da777c87531b0e662014fccee21384167e4c611745295e8
 
 ...
