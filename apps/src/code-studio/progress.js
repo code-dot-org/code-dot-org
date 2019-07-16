@@ -34,7 +34,6 @@ import {
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
-import experiments from '../util/experiments';
 
 var progress = module.exports;
 
@@ -51,9 +50,7 @@ function showDisabledBubblesModal() {
 progress.showDisabledBubblesAlert = function() {
   const store = getStore();
   const {postMilestoneDisabled} = store.getState().progress;
-  const showAlert =
-    postMilestoneDisabled || experiments.isEnabled('postMilestoneDisabledUI');
-  if (!showAlert) {
+  if (!postMilestoneDisabled) {
     return;
   }
 
@@ -247,9 +244,8 @@ function queryUserProgress(store, scriptData, currentLevelId) {
   }).done(data => {
     data = data || {};
 
-    const postMilestoneDisabled =
-      store.getState().progress.postMilestoneDisabled ||
-      experiments.isEnabled('postMilestoneDisabledUI');
+    const postMilestoneDisabled = store.getState().progress
+      .postMilestoneDisabled;
     // Depend on the fact that even if we have no levelProgress, our progress
     // data will have other keys
     const signedInUser = Object.keys(data).length > 0;
@@ -356,10 +352,7 @@ function initializeStoreWithProgress(
     })
   );
 
-  const postMilestoneDisabled =
-    scriptData.disablePostMilestone ||
-    experiments.isEnabled('postMilestoneDisabledUI');
-  if (postMilestoneDisabled) {
+  if (scriptData.disablePostMilestone) {
     store.dispatch(disablePostMilestone());
   }
 
