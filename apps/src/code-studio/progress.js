@@ -227,30 +227,29 @@ function initViewAs(store, scriptData) {
  * as appropriate
  */
 function queryUserProgress(store, scriptData, currentLevelId) {
-  const onOverviewPage = !currentLevelId;
-  const pageType = currentLevelId ? 'level' : 'script_overview';
   const userId = clientState.queryParams('user_id');
-  const postMilestoneDisabled = store.getState().progress.postMilestoneDisabled;
-
   const onComplete = data => {
+    const onOverviewPage = !currentLevelId;
+    if (!onOverviewPage) {
+      return;
+    }
+
     // Depend on the fact that even if we have no levelProgress, our progress
     // data will have other keys
     const signedInUser = Object.keys(data).length > 0;
-    if (
-      onOverviewPage &&
-      signedInUser &&
-      postMilestoneDisabled &&
-      !scriptData.isHocScript
-    ) {
+    const postMilestoneDisabled = store.getState().progress
+      .postMilestoneDisabled;
+    if (signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
       showDisabledBubblesModal();
     }
 
     if (
       (data.isTeacher || data.teacherViewingStudent) &&
-      !data.professionalLearningCourse &&
-      onOverviewPage
+      !data.professionalLearningCourse
     ) {
       queryLockStatus(store, scriptData.id);
+
+      const pageType = currentLevelId ? 'level' : 'script_overview';
       renderTeacherPanel(
         store,
         scriptData.id,

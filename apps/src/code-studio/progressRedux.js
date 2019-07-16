@@ -666,8 +666,6 @@ export const queryUserProgress = (userId, onComplete = data => {}) => (
   getState
 ) => {
   const state = getState().progress;
-  // We are on an overview page if currentLevelId is undefined.
-  const onOverviewPage = !state.currentLevelId;
 
   if (!state.scriptName) {
     return;
@@ -677,12 +675,13 @@ export const queryUserProgress = (userId, onComplete = data => {}) => (
     data: {user_id: userId}
   }).done(data => {
     data = data || {};
-    console.log(data); // TODO: REMOVE THIS
 
     if (data.isVerifiedTeacher) {
       dispatch(setVerified());
     }
 
+    // We are on an overview page if currentLevelId is undefined.
+    const onOverviewPage = !state.currentLevelId;
     // Show lesson plan links and other teacher info if teacher and on unit overview page.
     if (
       (data.isTeacher || data.teacherViewingStudent) &&
