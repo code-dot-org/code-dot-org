@@ -124,23 +124,15 @@ km-KH:
         the TNT."
       courseD_maze_ramp5_2019: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
         the TNT."
-      courseD_scrat_predict1: "_\"Keep calm and help me find the\nbad pig. Otherwise
-        I might get angry!\"_\\\r\n\\\r\nWhen you have several blocks\nin a row, try
-        moving them inside of a <xml><block type=\"controls_repeat\"><title\nname=\"TIMES\">???</title></block></xml>
-        loop.  This will do the same thing\nwith less code!"
       courseD_scrat_ramp3: "_\"This\npig is ruffling my feathers.\"_\\\r\n\\\r\nThere
         is one extra block that is going\nto cause the bird to crash.  \\\r\nThrow
         it away by dragging it back to the\ntoolbox."
-      courseD_scrat_ramp4: "_\"Trace the path and lead me to\nthe silly pig.\"_ \\\r\n\\\r\nAvoid
-        TNT or feathers will fly!"
       courseD_scrat_ramp5: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
         the TNT."
-      courseD_scrat_ramp7: "_\"It's time to get angry!\"_\\\r\n\\\r\n**Challenge:**\nUse
-        what you've learned to get the bird to the pig!"
-      courseE_artist_ramp8_2: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
+      courseE_artist_ramp9: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
         The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at
         each corner."
-      courseE_artist_ramp9: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
+      courseE_artist_ramp9_2: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
         The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at
         each corner."
       courseF_artist_variables10: "Here's your code from the\nlast puzzle.  Try editing
