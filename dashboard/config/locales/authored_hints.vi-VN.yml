@@ -36,7 +36,7 @@ vi-VN:
       2-3 Artist 8:
         2-3_Artist_8_a: Nếu bạn giảm một nửa của 200, mỗi hình vuông cần bao nhiêu
           pixels chiều rộng?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Kim cương này thật ra chỉ là một hình vuông nằm ở góc 45 độ
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: "**Thử và phạm lỗi là hoàn toàn bình thường ở đây!**
@@ -595,10 +595,8 @@ vi-VN:
           xa?"
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Có hai cách để giải câu đố này!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Có hai cách để giải câu đố này!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Có hai cách để giải câu đố này!
       courseE_artist_functions1:
         courseE_artist_functions1_a: Mỗi hình vuông có cạnh dài 100 điểm ảnh, điều
           đó có nghĩa là bạn cần đi về phía trước 175 điểm ảnh trước khi vẽ hình vuông
