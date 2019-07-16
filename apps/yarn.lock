@@ -841,9 +841,6 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@cdo/apps@file:src":
-  version "0.0.1"
-
 "@cdo/interpreted@link:../dashboard/config/libraries":
   version "0.0.0"
   uid ""
