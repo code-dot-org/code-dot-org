@@ -289,7 +289,11 @@ class User < ActiveRecord::Base
   # old school info object doesn't have a NCES school ID associated with it
   # @param new_school_info a school_info object to compare to the user current school information.
   def update_school_info(new_school_info)
-    if (school_info.try(&:school).nil? || new_school_info.try(&:school)) && new_school_info.complete?
+    puts "complete ---> #{new_school_info.complete?}"
+    puts "old school ---> #{school_info.try(&:school).nil?}"
+    puts "new school ---> #{new_school_info.try(&:school).inspect}"
+    if new_school_info.complete? && (school_info.try(&:school).nil? || new_school_info.try(&:school))
+      puts "are you getting here"
       self.school_info_id = new_school_info.id
       save(validate: false)
     end
