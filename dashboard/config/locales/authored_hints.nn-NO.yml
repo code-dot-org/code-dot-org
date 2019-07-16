@@ -35,7 +35,7 @@ nn-NO:
       2-3 Artist 8:
         2-3_Artist_8_a: Om du deler 200 i to, kor mange pikslar breitt må kvart kvadrat
           vere?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Denne diamanten er eigentleg berre eit kvadrat som er snudd
           45 grader
       2-3 Artist Debugging 10:
@@ -1612,16 +1612,8 @@ nn-NO:
           til å løyse utfordringa."
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Det er to måtar å løyse denne oppgåva!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Det er to måtar å løyse denne oppgåva!
-      courseD_scrat_ramp6:
-        courseF_artist_ramp8_a: For å tegne en side, bruk blokka <xml><block type="draw_move_by_constant"><title
-          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
-          og endre fra 100 til 200.
-        courseC_maze_programming6_a: Det er to måtar å løyse denne oppgåva!
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_a: For å tegne en side må du bruke `flytt fremover med
-          100 piksler`-blokken og endre 100 til 200.
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Det er to måtar å løyse denne oppgåva!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Halv-sekskanten har ein **lengde på
           30** og snur seg **60 gradar** til høgre.  '
@@ -1667,6 +1659,9 @@ nn-NO:
       courseE_artist_ramp8:
         courseE_artist_ramp8_a: For å tegne en side må du bruke `flytt fremover med
           100 piksler`-blokken og endre 100 til 200.
+      courseE_artist_ramp8_2:
+        courseE_artist_ramp8_a: For å tegne en side må du bruke `flytt fremover med
+          100 piksler`-blokken og endre 100 til 200.
       courseE_bee_functions6:
         courseE_bee_functions6_a: "Om oppgåva verkar utfordrande, kan du prøve å bygge
           funksjonen din litt om gangen.  \n\nLegg til nokre blokker og test dei.
@@ -1699,18 +1694,6 @@ nn-NO:
         courseE_farmer_functions1_a: Verktøykassa er organisert litt annerledes denne
           gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du
           har tilgjengelig.
-      courseE_farmer_ramp12b:
-        courseE_farmer_ramp12a: Gå gjerne tilbake til den forrige oppgave hvis du
-          trenger en påminnelse om hvordan man skal plukke vekster bare hvis det finnes
-          noe å plukke.
-      courseE_farmer_ramp12d:
-        courseE_bee_ramp14_a: Bien fungerer akkurat som bonden i forrige oppgave.
-          Fly langs veien og saml inn nektar hvis det finnes nektar, ellers lag honning!
-      courseE_farmer_ramp12f:
-        courseE_farmer_ramp15_a: Bruk `gjenta til det er gresskar`-blokken for å nå
-          fram til enden av veien.
-        courseE_farmer_ramp15_b: Hva annet trengs å gjøres mens man går langs veien
-          mot gresskaret?
       courseF_artist_for4:
         courseF_artist_for4_a: |-
           \*\* Kva er det minste tallet du vil trenge?

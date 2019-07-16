@@ -677,9 +677,6 @@ nn-NO:
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Den koden du putter inn her vil bli repetert så monge
           gongar du seier den skal, og fortsetter deretter med å køyre programmet.
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Den koden du putter inn her vil bli repetert så monge
-          gongar du seier den skal, og fortsetter deretter med å køyre programmet.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
           på "Kjør" for å starte programmet.
@@ -693,15 +690,11 @@ nn-NO:
         courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
           deg hvor mange av disse blokkene du har igjen å bruke.
       courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: Du kan endre dette nummeret.
-        courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal
-          bli gjenteke.
         courseD_maze_ramp6_1: Den koden du putter inn her vil bli repetert så monge
           gongar du seier den skal, og fortsetter deretter med å køyre programmet.
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_1: Du kan endre dette nummeret.
-        courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal
-          bli gjenteke.
+      courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: Den koden du putter inn her vil bli repetert så monge
+          gongar du seier den skal, og fortsetter deretter med å køyre programmet.
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: La programmet halde fram ved
           å leggje til meir kode nedst.
@@ -733,6 +726,10 @@ nn-NO:
         courseE_artist_functions_challenge2_callout2: Om du ikkje liker dette designet,
           endre det til det du har lyst til!
       courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Du kan endre dette nummeret.
+        courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal
+          bli gjenteke.
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Du kan endre dette nummeret.
         courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal
           bli gjenteke.
