@@ -23,7 +23,7 @@ zh-TW:
         2-3_Artist_7_a: 要解決這個關卡最簡單的方法就是，在畫完第一個正方形時，讓小畫家在面朝下方，接著再畫出第二個正方形。
       2-3 Artist 8:
         2-3_Artist_8_a: 如果把 200 分成兩半，每個正方形是多少像素？
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: 這個菱形的邊實際上和正方形的邊一樣。
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: "**錯誤嘗試在這裡完全沒關係！**  \n\n可以從一次改變一個數字開始。\n\n每個數字會有什麼效果？\n\n如果你有點混淆了，只要按下「重新開始」，然後你的程式碼就會被重置。"
@@ -2238,10 +2238,6 @@ zh-TW:
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
       courseC_harvester_loops_challenge2_2019:
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
-      courseC_maze_debugging3:
-        courseD_collector_debugging3_b: 試著用巢狀迴圈簡化程式。
-      courseC_maze_debugging7:
-        courseD_collector_debugging8_b: 試試用巢狀迴圈來讓程式更精簡。
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: 左邊還是右邊？你決定就好！
         courseC_maze_debugging_challenge1_b: 鼠奎特走的路徑是個四邊形！所以每次都轉向同要是同一邊！
@@ -2296,8 +2292,6 @@ zh-TW:
         course_starWars_loops9_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
       courseC_starWars_loops9_2019:
         course_starWars_loops9_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
-      courseC_video_angles2:
-        courseF_artist_ramp10_a: 別忘了在每個三角形畫完後轉向 60 度，你要在迴圈裡放置哪些程式積木呢？
       courseD_artist_binary1:
         courseD_artist_binary1_c: |-
           這是輸入二進制代碼的方式：
@@ -2517,22 +2511,12 @@ zh-TW:
         courseD_maze_until1_b: 試著用巢狀迴圈來完成這個關卡。
       courseD_maze_until1_2019:
         courseD_maze_until1_b: 試著用巢狀迴圈來完成這個關卡。
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: 有 2 個方法可以完成這個關卡！
       courseD_scrat_ramp5:
-        courseF_maze_ramp5_b: 有一個以上的方法可以抓到豬。
         courseC_maze_programming5_b: 要走多遠才能到達轉角處？
-      courseD_scrat_ramp6:
-        courseF_artist_ramp8_a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
-        courseF_artist_ramp8_b: 若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。
-        courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
       courseD_scrat_ramp7:
-        courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
+        courseD_scrat_programming6_a: 有 2 個方法可以完成這個關卡！
       courseD_scrat_ramp8:
-        courseF_artist_ramp9_a: 這和正方形有什麼類似的地方？又有哪些不同呢？
         courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
-        courseE_artist_ramp8_a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
-        courseE_artist_ramp8_b: 若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。
       courseE_artist_concept1:
         courseE_artist_concept1_a: 這個六邊形的邊長為 50 像素，每個角的角度為 60 度。
       courseE_artist_concept1_2018:
@@ -2594,11 +2578,11 @@ zh-TW:
         courseE_artist_ramp8_a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
         courseE_artist_ramp8_b: 若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。
       courseE_artist_ramp8_2:
-        courseD_artist_ramp12_a: 這和正方形有什麼類似的地方？又有哪些不同呢？
+        courseE_artist_ramp8_a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
+        courseE_artist_ramp8_b: 若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。
       courseE_artist_ramp9:
-        courseF_farmer_ramp11_a: 如果你在編寫迴圈程式時有困難，可以試試先把所有的程式寫出來，然後找找裡面有哪些地方是重複執行的，找到模式（Pattern）把它放到迴圈裡。
-        courseF_farmer_ramp11_b: 除了用 5 個`收集生菜`積木之外，要怎麼使用`重複`迴圈來收成生菜呢？
-        courseF_farmer_ramp11_c: 你不必用 5 個重複迴圈來收集所有的生菜。我們可以把收集生菜的迴圈（連同`移動-向前`積木一起）放到另一個迴圈裡頭。
+        courseD_artist_ramp12_a: 這和正方形有什麼類似的地方？又有哪些不同呢？
+      courseE_artist_ramp9_2:
         courseD_artist_ramp12_a: 這和正方形有什麼類似的地方？又有哪些不同呢？
       courseE_bee_concept1:
         courseE_bee_concept1_b: 有沒有_重複_的積木規律的執行著？
@@ -2652,14 +2636,12 @@ zh-TW:
         courseE_farmer_ramp12_a: 除了用`重複`迴圈來告訴農夫要收集生菜多少次，現在我們還可以用`當有生菜時`積木來讓關卡順利完成。
       courseE_farmer_ramp11a_2019:
         courseE_farmer_ramp12_a: 除了用`重複`迴圈來告訴農夫要收集生菜多少次，現在我們還可以用`當有生菜時`積木來讓關卡順利完成。
-      courseE_farmer_ramp11b:
+      courseE_farmer_ramp12_forswap:
         courseE_farmer_ramp12_b: 你還是需要用一個`重複`迴圈包在外面，這樣一來農夫才知道要執行向前走並收集生菜的指令多少次。
       courseE_farmer_ramp12_forswap_2018:
         courseE_farmer_ramp12_b: 你還是需要用一個`重複`迴圈包在外面，這樣一來農夫才知道要執行向前走並收集生菜的指令多少次。
       courseE_farmer_ramp12_forswap_2019:
         courseE_farmer_ramp12_b: 你還是需要用一個`重複`迴圈包在外面，這樣一來農夫才知道要執行向前走並收集生菜的指令多少次。
-      courseE_farmer_ramp12f:
-        courseE_farmer_ramp15_b: 要沿著路徑移動到南瓜那兒，還需要怎麼做？
       courseF_artist_for10:
         courseF_artist_for10_b: 這個圖形用了一次 61 度轉彎。
       courseF_artist_for10_2018:
