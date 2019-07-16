@@ -14,6 +14,7 @@ end
 def update_script_level_ids
   puts "backfilling script_level_ids..."
   feedbacks_without_script_level_id.find_each do |feedback|
+    puts "*"
     associated_script_levels = feedback.level.script_levels
     if associated_script_levels.length > 1
       associated_user_levels = UserLevel.where(
