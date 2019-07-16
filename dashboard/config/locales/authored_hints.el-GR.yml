@@ -38,7 +38,7 @@ el-GR:
       2-3 Artist 8:
         2-3_Artist_8_a: Αν κόψετε το 200 στη μέση, πόσα pixels πρέπει να έχει το πλάτος
           κάθε τετραγώνου;
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Το διαμάντι αυτό είναι πραγματικά ακριβώς ένα τετράγωνο σε
           κάθε πλευρά
       2-3 Artist Debugging 10:
@@ -734,10 +734,8 @@ el-GR:
           (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
       courseE_artist_functions1:
         courseE_artist_functions1_a: Τα τετράγωνα έχουν 100 pixels πλευρές το καθένα,
           που σημαίνει ότι θα πρέπει να μετακινηθείτε προς τα εμπρός 175 pixels πριν
