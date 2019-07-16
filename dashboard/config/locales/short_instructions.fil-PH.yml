@@ -10,7 +10,7 @@ fil-PH:
         gilid nito ay 100 pixels, ngunit ang hindi pa tapos na pader ay 50 pixels
         lamang.  Tapusin ang pader . '
       2-3 Artist 4: Tulungan mo akong tapusin ang bahay para sa pusang ito.
-      2-3 Artist 9: Tapusin ang saranggola na ito
+      2-3 Artist 9 NEW: Tapusin ang saranggola na ito
       2-3 Artist Free Play: Libreng laro! Gumuhit ng anumang gusto mo.
       2-3 Artist Loops New 15: Ngayon, gumuhit ng kahit anung gusto mo!
       2-3 Artist Nested Loops Free Play: Libreng maglaro, gumuhit ng isang bagay na
@@ -1706,39 +1706,38 @@ fil-PH:
         Iwasan ang mga kahoy ay mga kabukiran!
       courseC_harvester_loops_challenge2_2019: Kolektahin ang lahat ng mga letsugas.
         Iwasan ang mga kahoy ay mga kabukiran!
-      courseC_maze_debugging1: Ayusin ang (mga) problema para makolekta ang lahat
-        ng mga yaman.
+      courseC_maze_debugging1: Ayusin ang code para matulunga si Scrat na kumuha sa
+        bunga ng oak.
       courseC_maze_debugging1_2018: Ayusin ang code para matulunga si Scrat na kumuha
         sa bunga ng oak.
       courseC_maze_debugging1_2019: Ayusin ang code para matulunga si Scrat na kumuha
         sa bunga ng oak.
-      courseC_maze_debugging2: Ayusin ang (mga) problema para makolekta ang lahat
-        ng mga yaman.
+      courseC_maze_debugging2: Gamitin ang iyong pang-debug na mga kakayahan para
+        mapapunta si Scrat sa acorn.
       courseC_maze_debugging2_2018: Gamitin ang iyong pang-debug na mga kakayahan
         para mapapunta si Scrat sa acorn.
       courseC_maze_debugging2_2019: Gamitin ang iyong pang-debug na mga kakayahan
         para mapapunta si Scrat sa acorn.
-      courseC_maze_debugging3: Ayusin ang (mga) problema para makolekta ang lahat
-        ng mga yaman.
+      courseC_maze_debugging3: Tanggalin ang mga bloke para mapapunta si Scrat sa
+        bunga ng oak!
       courseC_maze_debugging3_2018: Tanggalin ang mga bloke para mapapunta si Scrat
         sa bunga ng oak!
       courseC_maze_debugging3_2019: Tanggalin ang mga bloke para mapapunta si Scrat
         sa bunga ng oak!
-      courseC_maze_debugging4: Ayusin ang (mga) problema para makolekta ang lahat
-        ng mga yaman.
+      courseC_maze_debugging4: May isang tao na pinaghalo ang kanilang mga direksyon!
+        Maaari ka bang tumulong?
       courseC_maze_debugging4_2018: May isang tao na pinaghalo ang kanilang mga direksyon!
         Maaari ka bang tumulong?
       courseC_maze_debugging4_2019: May isang tao na pinaghalo ang kanilang mga direksyon!
         Maaari ka bang tumulong?
-      courseC_maze_debugging5: Lahat ng mga utos na kailangan mo ay nandito na...
-        ngayon ay gamitin ang iyong pang-debug na kakayahan para matukoy kung paano
-        lutasin ang palaisipang ito.
+      courseC_maze_debugging5: I-debug ang antas na ito sa pamamagitan ng pagbago
+        ng ayos at pagpalit ng mga bloke.
       courseC_maze_debugging5_2018: I-debug ang antas na ito sa pamamagitan ng pagbago
         ng ayos at pagpalit ng mga bloke.
       courseC_maze_debugging5_2019: I-debug ang antas na ito sa pamamagitan ng pagbago
         ng ayos at pagpalit ng mga bloke.
-      courseC_maze_debugging6: 'Hamon: Gamitin ang iyong pang-debug na mga kakayahan
-        para ayusin ang mga problema at kolektahin ang lahat ng mga kayamanan.'
+      courseC_maze_debugging6: Alamin kung ano ang problema at dalhin si Scrat sa
+        bunga ng oak.
       courseC_maze_debugging6_2018: Alamin kung ano ang problema at dalhin si Scrat
         sa bunga ng oak.
       courseC_maze_debugging6_2019: Alamin kung ano ang problema at dalhin si Scrat
@@ -1922,8 +1921,6 @@ fil-PH:
         ang lahat ng mga tira-tirang bakal!
       courseC_starWars_loops9_2019: Gamitin ang lahat ng natutunan mo para mapulot
         ang lahat ng mga tira-tirang bakal!
-      courseC_video_angles2: Ngayon, i-drag ang code para sa huling tatsulong sa isang
-        bagong loop para paikotin ito at gumawa ng isang niyebe!
       courseD_artist_5_2018: Paglaruan ang mga niyebe!
       courseD_artist_5_2018_2019: Paglaruan ang mga niyebe!
       courseD_artist_binary1: Gamitin ang mga bloke sa baba para mapaguhit ng artista
@@ -2735,10 +2732,8 @@ fil-PH:
         iyong mga kaibigan!
       courseD_playLab_condFP_2018: Ngayon, bumuo ng iyong sariling laro para ipakita
         sa iyong mga kaibigan!
-      courseD_scrat_predict1: Ang code na ito ay naglalakip ng bagong bloke. Ano sa
-        palagay mo ang mangyayari kapag pinindot mo ang "Run" na bloke?
-      courseD_scrat_ramp1: Para sa palaisipang ito, kaladkarin ang lahat ng mga bloke
-        na sama-sama at pindutin ang "Run" para tingnan itong mawala!
+      courseD_scrat_ramp1: Para sa palaisipang ito, i-snap ang lahat ng mga bloke
+        nang sama-sama at i-click ang "Run" para tingnan itong umalis!
       courseD_scrat_ramp2: Mag-kaladkad ng ekstrang `move forward` na bloke palabas
         sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para
         matapos ang iyong code.
@@ -2747,13 +2742,9 @@ fil-PH:
         toolbox.
       courseD_scrat_ramp4: Iwasan ang TNT para hindi lilipad ang mga balahibo!
       courseD_scrat_ramp5: Iwasan ang mga TNT.
-      courseD_scrat_ramp6: '"Maging kalmado at tulungan akong hanapin ang masamang
-        baboy. Kung hindi, baka magalit ako!"'
-      courseD_scrat_ramp7: Gamitin ang iyong natutunan para mapapunta ang ibon sa
-        baboy!
-      courseD_scrat_ramp8: Ngayon ay gumawa ng isang parisukat gamit ang Artist!
-      courseD_video_repeatUntil: Tulungan ang magsasaka na tamang maglakbay sa daanan
-        para matipun ang lahat ng mga letsugas.
+      courseD_scrat_ramp7: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseD_scrat_ramp8: Gamitin ang natutunan mo para makakuha si Scrat ng bunga
+        ng oak!
       courseE_artist_concept1: 'Muling ilikha ang larawang ito. '
       courseE_artist_concept1_2018: 'Muling ilikha ang larawang ito. '
       courseE_artist_concept4: Muling ilikha ang drowing na ito.
@@ -2840,9 +2831,10 @@ fil-PH:
       courseE_artist_functions_challenge2_2019: Subukan ang code na ito para makita
         kung paano ito gumagana, pagkatapos ay gawin ang programa bilang sarili mo!
       courseE_artist_ramp8: Ngayon ay gumawa ng isang parisukat gamit ang Artist!
-      courseE_artist_ramp8_2: Gamitin ang natutunan mo para iguhit ang tatsulok na
-        ito.
+      courseE_artist_ramp8_2: Ngayon ay gumawa ng isang parisukat gamit ang Artist!
       courseE_artist_ramp9: Gamitin ang natutunan mo para iguhit ang tatsulok na ito.
+      courseE_artist_ramp9_2: Gamitin ang natutunan mo para iguhit ang tatsulok na
+        ito.
       courseE_bee_concept1: Kolektahin ang lahat ng nektar mula sa bawat bulaklak.
       courseE_bee_concept1_2018: Kolektahin ang lahat ng nektar mula sa bawat bulaklak.
       courseE_bee_concept2: Tulungan ang bubuyog na gawin ang lahat ng mga pulot.
@@ -2944,36 +2936,39 @@ fil-PH:
       courseE_farmer_ramp11a: Habang may tumpok pa, tanggalin ang dumi.
       courseE_farmer_ramp11a_2018: Habang may tumpok pa, tanggalin ang dumi.
       courseE_farmer_ramp11a_2019: Habang may tumpok pa, tanggalin ang dumi.
-      courseE_farmer_ramp11b: Ngayon ay gamitin ang naka-nest na mga loop para malutas
-        ang palaisipang ito.
+      courseE_farmer_ramp11b: Habang may tumpok pa, tanggalin ang dumi.
       courseE_farmer_ramp11b_2018: Habang may tumpok pa, tanggalin ang dumi.
       courseE_farmer_ramp11b_2019: Habang may tumpok pa, tanggalin ang dumi.
+      courseE_farmer_ramp12_forswap: Ngayon ay gamitin ang naka-nest na mga loop para
+        malutas ang palaisipang ito.
       courseE_farmer_ramp12_forswap_2018: Ngayon ay gamitin ang naka-nest na mga loop
         para malutas ang palaisipang ito.
       courseE_farmer_ramp12_forswap_2019: Ngayon ay gamitin ang naka-nest na mga loop
         para malutas ang palaisipang ito.
-      courseE_farmer_ramp12b: Pulutin ang lahat ng mga letsugas (kapay maayrong ilang
-        lang na mapupulot.)
+      courseE_farmer_ramp12b: Habang may letsugas pa, kumuha ng letsugas!
       courseE_farmer_ramp12b_2018: Habang may letsugas pa, kumuha ng letsugas!
       courseE_farmer_ramp12b_2019: Habang may letsugas pa, kumuha ng letsugas!
-      courseE_farmer_ramp12c: Mamitas ng mais kung may mais, at mamitas ng letsugas
-        habang mayroon pang letsugas.
+      courseE_farmer_ramp12c: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
+        pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
       courseE_farmer_ramp12c_2018: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
         pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
       courseE_farmer_ramp12c_2019: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
         pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
-      courseE_farmer_ramp12d: Tulungan ang bubuyog na sundan ang lahat para matipon
-        ang lahat ng mga pulot at lahat ng mga nektar.
+      courseE_farmer_ramp12d: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
+        pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
       courseE_farmer_ramp12d_2018: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
         pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
       courseE_farmer_ramp12d_2019: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
+        pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
+      courseE_farmer_ramp12e: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
         pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
       courseE_farmer_ramp12e_2018: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
         pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
       courseE_farmer_ramp12e_2019: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
         pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
-      courseE_farmer_ramp12f: Lutasin ang palaisipang ito gamit ang mga magagamit
-        na mga bloke lang.
+      courseE_farmer_ramp12f: Lumakad pasulong hanggang sa maaabot mo ang mga letsugas,
+        pagkatapos ay lumiko **kung** mayroong landas pakaliwa. Kung hindi, lumiko
+        pakanan.
       courseE_farmer_ramp12f_2018: Lumakad pasulong hanggang sa maaabot mo ang mga
         letsugas, pagkatapos ay lumiko **kung** mayroong landas pakaliwa. Kung hindi,
         lumiko pakanan.

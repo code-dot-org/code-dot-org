@@ -38,7 +38,7 @@ fil-PH:
       2-3 Artist 8:
         2-3_Artist_8_a: Kung hahatiin mo ito sa dalawa, ilang pixels ba kailangan
           dapat ang bawat parisukat?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Ang dyamanteng ito ay isa lang parisukat na nasa gilid nito
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: "**Pagsubok at kamalian ay perpekto lang dito!**
@@ -3046,11 +3046,8 @@ fil-PH:
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Mayroong dalawang mga pamamaraan para malutas
           ang palaisipang ito!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Mayroong dalawang mga pamamaraan para malutas ang palaisipang
-          ito!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Mayroong dalawang mga pamamaraan para malutas
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Mayroong dalawang mga pamamaraan para malutas
           ang palaisipang ito!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Ang kalahating hexagon ay mayroong **haba
