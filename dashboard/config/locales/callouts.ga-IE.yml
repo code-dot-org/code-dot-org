@@ -797,10 +797,6 @@ ga-IE:
         courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí
           chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
           bhfuil na blocanna go léir anois.
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
-          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
-          an gcuid eile den chlár.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
           "Rith" chun an clár a thosú.
@@ -814,21 +810,16 @@ ga-IE:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
           mhéad bloc den chineál seo atá fágtha agat.
       courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
-        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
-          an cód a athdhéanamh a chur isteach.
         courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
           líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
           an gcuid eile den chlár.
       courseD_scrat_ramp7:
-        courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
-          deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
           deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
-        courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
-        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
-          an cód a athdhéanamh a chur isteach.
       courseE_artist_functions1:
         courseD_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat
           an chéad chearnóg a chruthú.
@@ -884,6 +875,10 @@ ga-IE:
         courseE_artist_functions_challenge2_callout2: Mura dtaitníonn an dearadh seo
           leat, athraigh é ar do rogha bealach!
       courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
+          an cód a athdhéanamh a chur isteach.
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
         courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
           an cód a athdhéanamh a chur isteach.

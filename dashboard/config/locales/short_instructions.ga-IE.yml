@@ -11,7 +11,7 @@ ga-IE:
         ar an scáileán. Tarraing an líne bhriste leis na blocanna `léim ar aghaidh`
         agus `téigh ar aghaidh`. Tá gach líne 50 picteilín ar fad.
       2-3 Artist 4: Cabhraigh liom teach a chríochnú don chat seo.
-      2-3 Artist 9: Cuir an eitleog seo i gcrích
+      2-3 Artist 9 NEW: Cuir an eitleog seo i gcrích
       2-3 Artist Free Play: Saorimirt! Tarraing cibé is rogha leat.
       2-3 Artist Functions 11: Táimid tar éis ainm nua `draw a hexagon` a chur ar
         an bhfeidhm `draw a square`, ach tá sí ag tabhairt cearnóg dúinn fós! An féidir
@@ -1306,28 +1306,28 @@ ga-IE:
         na crainn agus na páirceanna!
       courseC_harvester_loops_challenge2_2019: Bailigh an leitís go léir. Seachain
         na crainn agus na páirceanna!
-      courseC_maze_debugging1: Réitigh na fadhbanna chun na seoda go léir a bhailiú.
+      courseC_maze_debugging1: Deisigh an cód chun cabhrú le Scrat an dearcán a fháil.
       courseC_maze_debugging1_2018: Deisigh an cód chun cabhrú le Scrat an dearcán
         a fháil.
       courseC_maze_debugging1_2019: Deisigh an cód chun cabhrú le Scrat an dearcán
         a fháil.
-      courseC_maze_debugging2: Réitigh na fadhbanna chun na seoda go léir a bhailiú.
+      courseC_maze_debugging2: Bain úsáid as do chuid scileanna dífhabhtaithe chun
+        cabhrú le Scrat an dearcán a fháil.
       courseC_maze_debugging2_2018: Bain úsáid as do chuid scileanna dífhabhtaithe
         chun cabhrú le Scrat an dearcán a fháil.
       courseC_maze_debugging2_2019: Bain úsáid as do chuid scileanna dífhabhtaithe
         chun cabhrú le Scrat an dearcán a fháil.
-      courseC_maze_debugging3: Réitigh na fadhbanna chun na seoda go léir a bhailiú.
+      courseC_maze_debugging3: Bain blocanna chun Scrat a threorú go dtí an dearcán!
       courseC_maze_debugging3_2018: Bain blocanna chun Scrat a threorú go dtí an dearcán!
       courseC_maze_debugging3_2019: Bain blocanna chun Scrat a threorú go dtí an dearcán!
-      courseC_maze_debugging4: Réitigh na fadhbanna chun na seoda go léir a bhailiú.
-      courseC_maze_debugging5: Tá gach ordú a theastaíonn uait anseo cheana féin...
-        anois úsáid na scileanna dífhabhtaithe atá agat chun an dúshlán seo a réiteach.
+      courseC_maze_debugging5: Dífhabhtaigh an leibhéal seo trí bhlocanna a athordú
+        agus a athrú.
       courseC_maze_debugging5_2018: Dífhabhtaigh an leibhéal seo trí bhlocanna a athordú
         agus a athrú.
       courseC_maze_debugging5_2019: Dífhabhtaigh an leibhéal seo trí bhlocanna a athordú
         agus a athrú.
-      courseC_maze_debugging6: 'Dúshlán: Úsáid do chuid scileanna dífhabhtaithe chun
-        na fadhbanna a réiteach agus na seoda go léir a bhailiú.'
+      courseC_maze_debugging6: Aimsigh an fhadhb agus cabhraigh le Scrat an dearcán
+        a fháil.
       courseC_maze_debugging6_2018: Aimsigh an fhadhb agus cabhraigh le Scrat an dearcán
         a fháil.
       courseC_maze_debugging6_2019: Aimsigh an fhadhb agus cabhraigh le Scrat an dearcán
@@ -1978,15 +1978,13 @@ ga-IE:
         sé an dragan. '
       courseD_playLab_cond2_2018: 'Tabhair pointe amháin do Chos Mhaide gach uair
         a sroicheann sé an dragan. '
-      courseD_scrat_ramp1: Sa dúshlán seo, tarraing na blocanna go léir le chéile
+      courseD_scrat_ramp1: Sa dúshlán seo, ceangail na blocanna go léir le chéile
         agus cliceáil "Rith" lena chur ar siúl!
       courseD_scrat_ramp4: Seachain TNT nó pléascfaidh na cleití!
       courseD_scrat_ramp5: Seachain an TNT.
-      courseD_scrat_ramp6: '"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú.
-        Nó b''fhéidir go dtiocfaidh fearg orm!"'
-      courseD_scrat_ramp7: Úsáid ar fhoghlaim tú go dtí seo chun cabhrú leis an éan
-        an mhuc a bhaint amach!
-      courseD_scrat_ramp8: Anois déan cearnóg leis an Ealaíontóir!
+      courseD_scrat_ramp7: Cabhraigh le Scrat an dearcán a fháil!
+      courseD_scrat_ramp8: Úsáid ar fhoghlaim tú go dtí seo chun cabhrú le Scrat an
+        dearcán a fháil!
       courseE_artist_concept1: 'Athdhéan an pictiúr seo. '
       courseE_artist_concept1_2018: 'Athdhéan an pictiúr seo. '
       courseE_artist_concept4: Athdhéan an líníocht seo.
@@ -2017,9 +2015,10 @@ ga-IE:
       courseE_artist_functions5_2019: Tarraing na trí réalta sin amháin chun an dúshlán
         seo a réiteach.
       courseE_artist_ramp8: Anois déan cearnóg leis an Ealaíontóir!
-      courseE_artist_ramp8_2: Úsáid ar fhoghlaim tú go dtí seo chun an triantán seo
-        a dhéanamh.
+      courseE_artist_ramp8_2: Anois déan cearnóg leis an Ealaíontóir!
       courseE_artist_ramp9: Úsáid ar fhoghlaim tú go dtí seo chun an triantán seo
+        a dhéanamh.
+      courseE_artist_ramp9_2: Úsáid ar fhoghlaim tú go dtí seo chun an triantán seo
         a dhéanamh.
       courseE_bee_concept1: 'Bailigh an neachtar go léir ó gach bláth. Úsáid lúb neadaithe. '
       courseE_bee_concept1_2018: 'Bailigh an neachtar go léir ó gach bláth. Úsáid
@@ -2053,30 +2052,38 @@ ga-IE:
       courseE_farmer_ramp11a: Má tá carn ann, bain an ithir.
       courseE_farmer_ramp11a_2018: Má tá carn ann, bain an ithir.
       courseE_farmer_ramp11a_2019: Má tá carn ann, bain an ithir.
-      courseE_farmer_ramp11b: Anois úsáid lúba neadaithe chun an dúshlán seo a réiteach.
+      courseE_farmer_ramp11b: Má tá carn ann, bain an ithir.
       courseE_farmer_ramp11b_2018: Má tá carn ann, bain an ithir.
       courseE_farmer_ramp11b_2019: Má tá carn ann, bain an ithir.
+      courseE_farmer_ramp12_forswap: Anois úsáid lúba neadaithe chun an dúshlán seo
+        a réiteach.
       courseE_farmer_ramp12_forswap_2018: Anois úsáid lúba neadaithe chun an dúshlán
         seo a réiteach.
       courseE_farmer_ramp12_forswap_2019: Anois úsáid lúba neadaithe chun an dúshlán
         seo a réiteach.
-      courseE_farmer_ramp12b: Bailigh an leitís go léir (má tá leitís le bailiú ann.)
+      courseE_farmer_ramp12b: Chomh fada is atá leitís ann, bain leitís!
       courseE_farmer_ramp12b_2018: Chomh fada is atá leitís ann, bain leitís!
       courseE_farmer_ramp12b_2019: Chomh fada is atá leitís ann, bain leitís!
-      courseE_farmer_ramp12c: Bain arbhar má tá arbhar ann, agus bain leitís chomh
-        fada is atá leitís ann.
+      courseE_farmer_ramp12c: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
+        ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
       courseE_farmer_ramp12c_2018: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
         ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
       courseE_farmer_ramp12c_2019: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
+        ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
+      courseE_farmer_ramp12d: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
         ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
       courseE_farmer_ramp12d_2018: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
         ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
       courseE_farmer_ramp12d_2019: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
         ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
+      courseE_farmer_ramp12e: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
+        ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
       courseE_farmer_ramp12e_2018: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
         ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
       courseE_farmer_ramp12e_2019: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
         ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
+      courseE_farmer_ramp12f: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
+        ansin cas ar chlé **má** tá cosán ann ar chlé. Mura bhfuil, cas ar dheis.
       courseE_farmer_ramp12f_2018: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,
         ansin cas ar chlé **má** tá cosán ann ar chlé. Mura bhfuil, cas ar dheis.
       courseE_farmer_ramp12f_2019: Téigh ar aghaidh go dtí go sroichfidh tú an leitís,

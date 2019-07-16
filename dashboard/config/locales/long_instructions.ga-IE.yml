@@ -6,7 +6,7 @@ ga-IE:
         ar an scáileán. Tarraing an líne bhriste leis na blocanna `léim ar aghaidh`
         agus `téigh ar aghaidh`. Tá gach líne 50 picteilín ar fad.
       2-3 Artist 4: Cabhraigh liom teach a chríochnú don chat seo.
-      2-3 Artist 9: Cuir an eitleog seo i gcrích
+      2-3 Artist 9 NEW: Cuir an eitleog seo i gcrích
       2-3 Artist Free Play: Saorimirt! Tarraing cibé is rogha leat.
       2-3 Artist Functions 11.5: Seo é an fheidhm chéanna `draw a hexagon`. Cad a
         tharlóidh má athdhéanann tú an clár iomlán sé huaire, ag casadh 60 céim gach
@@ -302,8 +302,10 @@ ga-IE:
         an zombaí an lus gréine a fháil."
       courseD_maze_until_challenge1: Gan leideanna, dúshlán amháin. Treoraigh an zombaí
         go dtí an lus gréine.
-      courseD_scrat_ramp1: Sa dúshlán seo, tarraing na blocanna go léir le chéile
+      courseD_scrat_ramp1: Sa dúshlán seo, ceangail na blocanna go léir le chéile
         agus cliceáil "Rith" lena chur ar siúl!
+      courseD_scrat_ramp4: Seachain TNT nó pléascfaidh na cleití!
+      courseD_scrat_ramp7: Cabhraigh le Scrat an dearcán a fháil!
       courseE_bee_functions3: Is éard is feidhm ann ná bailiúchán blocanna a dhéanann
         tasc ar leith. Úsáid an fheidhm "get 5" le cúig neachtar a bhailiú sa turas.
       courseE_farmer_functions4b: Bain úsáid as an bhfeidhm nua seo chun an dúshlán
