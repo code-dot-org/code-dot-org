@@ -35,7 +35,7 @@ ru-RU:
       2-3 Artist 8:
         2-3_Artist_8_a: Если ты поделишь 200 пополам, то сколько пикселей в ширину
           нужно каждому квадрату?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Этот бриллиант всего лишь квадрат на его стороне
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: "**Проба и ошибка здесь находятся просто!**\nНачни
@@ -1012,10 +1012,8 @@ ru-RU:
           или «если / иначе»)."
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Существует два способа для решения этой головоломки!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Существует два способа для решения этой головоломки!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Существует два способа для решения этой головоломки!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Существует два способа для решения этой головоломки!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Половина шестиугольника имеет **длину
           в 30 п.** и поворачивает направо на **60 градусов**.  '
