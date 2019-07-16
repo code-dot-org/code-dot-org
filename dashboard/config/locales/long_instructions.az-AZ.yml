@@ -3,7 +3,7 @@ az-AZ:
   data:
     long_instructions:
       2-3 Artist 4: Bu pişik üçün evi tamamlamağa mənə kömək edin.
-      2-3 Artist 9: Bu çərpələngi bitirin
+      2-3 Artist 9 NEW: Bu çərpələngi bitirin
       2-3 Artist Free Play: Sərbəst oyun! Nə istəyirsinizə çəkin.
       2-3 Artist Nested Loops Free Play: Sərbəst oyun, içiçə dövrlərlə fısqırıq bir
         şey çək.
