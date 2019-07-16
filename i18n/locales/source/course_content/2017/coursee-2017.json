@@ -554,11 +554,11 @@
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/11/puzzle/2": {
-    "short_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
-    "long_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
+    "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
+    "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
     "authored_hints": {
-      "courseC_maze_programming1_0": "If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click \"Run\" again.",
-      "courseC_maze_programming1_b": "You don't need any extra blocks from the toolbox for this puzzle!"
+      "courseC_maze_programming1_a": "If Scrat isn't getting to the acorn, make sure all three of the blocks have been fully snapped together, then click \"Run\" again.",
+      "courseC_maze_programming1_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
     "callouts": {
       "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
@@ -576,22 +576,22 @@
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/11/puzzle/4": {
-    "short_instructions": "There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.",
-    "long_instructions": "_\"This pig is ruffling my feathers.\"_\n\nThere is one extra block that is going to cause the bird to crash.\\\nThrow it away by dragging it back to the toolbox.",
+    "short_instructions": "There is one extra block that is going to cause Scrat to crash. Throw it away by dragging it back to the toolbox.",
+    "long_instructions": "There is one extra block that is going to cause Scrat to crash.\\\nThrow it away by disconnecting it from the other blocks and dragging it back to the toolbox.",
     "authored_hints": {
       "courseC_maze_programming3_a": "[][0]\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.",
-      "courseC_maze_programming3_b": "Remember that turns to the right and left are from the bird's perspective."
+      "courseC_maze_programming3_b": "Remember that turns to the right and left are from Scrat's perspective."
     },
     "callouts": {
       "courseC_maze_programming3_2": "You can drag extra blocks to the toolbox to throw them away."
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/11/puzzle/5": {
-    "short_instructions": "Avoid TNT or feathers will fly!",
-    "long_instructions": "_\"Trace the path and lead me to the silly pig.\"_ \n\nAvoid TNT or feathers will fly!",
+    "short_instructions": "Avoid the cracked ice to keep Scrat safe!",
+    "long_instructions": "Avoid the cracked ice to keep Scrat safe!",
     "authored_hints": {
-      "courseC_maze_programming4_a": "You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.",
-      "courseC_maze_programming4_b": "To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.",
+      "courseC_maze_programming4_a": "You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.",
+      "courseC_maze_programming4_b": "To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.",
       "courseC_maze_programming4_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
     "callouts": {
@@ -599,47 +599,46 @@
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/11/puzzle/6": {
-    "short_instructions": "Avoid the TNT.",
-    "long_instructions": "_\"Follow this path to get me to the pig!\"_\n\nAvoid the TNT.",
+    "short_instructions": "Avoid the cracked ice.",
+    "long_instructions": "Avoid the cracked ice!",
     "authored_hints": {
       "courseC_maze_programming5_a": "Try using the \"Step\" button to run your code line by line. Can you figure out what you need to do next?",
       "courseC_maze_programming5_b": "How far do you need to move to get to the corner?",
-      "courseC_maze_programming5_c": "You will need to turn left at the corner to get to the pig."
+      "courseC_maze_programming5_c": "You will need to turn left at the corner to get to the acorn."
     },
     "callouts": {
       "": "These blocks don't have numbers on them. You can use as many as you want!"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/11/puzzle/7": {
-    "short_instructions": "This code includes a new block. What do you think would happen if you press the \"Run\" block?",
     "contained levels": [
       {
         "dsls": {
           "questions": [
             {
-              "text": "This code uses a new block. What do you think would happen if you pressed 'Run'?"
+              "text": "This code uses a new block. What do you think will happen when you press \"Run\"?"
             }
           ],
           "answers": [
             {
-              "text": "Nothing. The bird will not move at all.",
+              "text": "Nothing. Scrat will not move at all.",
               "correct": false,
-              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times."
+              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times."
             },
             {
-              "text": "The bird will move forward three times, turn, then move forward three more times, making it to the pig!",
+              "text": "Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!",
               "correct": true,
               "feedback": "Correct!"
             },
             {
-              "text": "The bird will move forward, then turn and crash into a wall.",
+              "text": "Scrat will move forward, then turn and crash.",
               "correct": false,
-              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times."
+              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times."
             },
             {
               "text": "I don't know.",
               "correct": false,
-              "feedback": "Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!"
+              "feedback": "Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!"
             }
           ]
         }
@@ -647,27 +646,25 @@
     ]
   },
   "https://studio.code.org/s/coursee-2017/stage/11/puzzle/9": {
-    "short_instructions": "\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"",
-    "long_instructions": "_\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"_\n\nWhen you have several blocks in a row, try moving them inside of a `repeat` loop.  This will do the same thing with less code!",
+    "short_instructions": "Help Scrat get to the acorn using a loop!",
+    "long_instructions": "Help Scrat get to the acorn using a loop!",
     "authored_hints": {
-      "courseC_maze_programming6_a": "There are two ways to solve this puzzle!",
-      "courseC_maze_programming6_b": "Remember to turn first before moving, since the bird starts facing a wall.",
-      "courseC_maze_programming6_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+      "courseC_maze_programming6a_a": "Use a `repeat` loop to get Scrat moving!"
     },
     "callouts": {
       "courseD_maze_ramp6_1": "Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program."
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/11/puzzle/10": {
-    "short_instructions": "Use what you've learned to get the bird to the pig!",
-    "long_instructions": "_\"It's time to get angry!\"_\n\n**Challenge:** Use what you've learned to get the bird to the pig!",
+    "short_instructions": "Help Scrat get to the acorn!",
+    "long_instructions": "Help Scrat get to the acorn!",
     "authored_hints": {
-      "courseD_maze_ramp7_b": "Don't forget to use the \"Step\" button to go through block by block and look for errors.",
-      "courseD_maze_ramp7_a": "Use repeat blocks to run either a single block or a chunk of code over and over.",
-      "courseD_maze_ramp7_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+      "courseD_scrat_programming6_a": "There are two ways to solve this puzzle!",
+      "courseD_scrat_programming6_b": "Remember to turn first before moving, since Scrat is facing the wrong direction.",
+      "courseD_scrat_programming6_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
     "callouts": {
-      "courseD_maze_ramp7_1": "This is your first challenge puzzle! These are meant to be hard and may take several tries."
+      "courseD_maze_ramp6_1": "Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program."
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/11/puzzle/11": {
@@ -713,121 +710,49 @@
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/12/puzzle/3": {
+    "short_instructions": "While there is a pile, remove dirt.",
+    "long_instructions": "Let's try that again, but with more piles!",
+    "authored_hints": {
+      "courseE_farmer_ramp11b_a": "You can nest your `while` loop inside of a `repeat` loop to make your code shorter."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/4": {
+    "short_instructions": "While there is lettuce, pick lettuce!",
+    "long_instructions": "Now the harvester needs to pick all of the lettuce.  Use `while there is lettuce` inside of a `repeat` loop to get it all!"
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/5": {
     "short_instructions": "Now use nested loops to solve this puzzle.",
     "long_instructions": "Pick all of the lettuce.",
     "authored_hints": {
       "courseE_farmer_ramp12_b": "You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce."
     }
   },
-  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/4": {
-    "short_instructions": "Pick all of the lettuce (only while there is some to pick.)",
-    "long_instructions": "Help the farmer walk the path to find all of the lettuce\n\nIn this puzzle, lettuce is growing at the end of every path.  If there is a path in front of her, the farmer can keep moving forward.  Otherwise, she needs to pick all of the lettuce, then turn to stay on the path. ",
-    "authored_hints": {
-      "courseE_farmer_ramp12a": "Feel free to go back to the last puzzle if you need a reminder of how to pick produce only **while** there is produce to pick."
-    },
-    "contained levels": [
-      {
-        "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What do you think will happen when you click \"Run\"? "
-            }
-          ],
-          "answers": [
-            {
-              "text": "Nothing. The farmer will remain standing still",
-              "correct": false,
-              "feedback": "Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left."
-            },
-            {
-              "text": "The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.",
-              "correct": false,
-              "feedback": "Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left."
-            },
-            {
-              "text": "The farmer will correctly travel the path, picking all of the lettuce along the way.",
-              "correct": true,
-              "feedback": "Correct!"
-            },
-            {
-              "text": "I don't know",
-              "correct": false,
-              "feedback": "The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/6": {
-    "short_instructions": "Help the farmer correctly travel the path to gather all of the lettuce.",
-    "long_instructions": "Help the farmer walk the path to find all of the lettuce\n\nIn this puzzle, lettuce is growing at the end of every path.  If there is a path in front of her, the farmer can keep moving forward.  Otherwise, she needs to pick all of the lettuce, then turn to stay on the path. ",
-    "authored_hints": {
-      "courseE_farmer_ramp12b": "You will need to check your `if` statement 21 times to solve this puzzle.",
-      "courseE_farmer_ramp12c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.",
-      "courseE_farmer_ramp12d": "There will only be lettuce, so you don't need to worry about empty spaces, corn, or pumpkins."
-    }
-  },
   "https://studio.code.org/s/coursee-2017/stage/12/puzzle/7": {
-    "short_instructions": "Pick corn if there is corn, and pick lettuce while there is lettuce.",
-    "long_instructions": "Goodness!  Look at all of these sprouts. Some of them will turn into corn, and others into lettuce.  \n\nTravel to the ends of the path to pick lettuce while there is lettuce, and pick corn while there is corn. ",
+    "short_instructions": "Move forward until you reach the lettuce, then pick it all using a `while` loop.",
+    "long_instructions": "The lettuce is now only at the end of the path.\\\nTravel down the path **until** you reach a head of lettuce, then continue to pick it **while** there is still some left.  ",
     "authored_hints": {
-      "courseE_farmer_ramp13_a": "There can be more than one of either crop in a space, so make sure to use `while` loops to pick them all!",
-      "courseE_farmer_ramp13_b": "Use a `repeat` loop so that you don't have to write a separate if statement for each square.",
-      "courseE_farmer_ramp13_c": "If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns."
+      "courseE_farmer_ramp12b_b": "You will still need to use an `until` loop first, then use a `while` loop once you get to the lettuce."
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/12/puzzle/8": {
-    "short_instructions": "Help the bee follow the path to gather all of the honey and all of the nectar.",
-    "long_instructions": "The same technique works with nectar and honey!  \n\nLook at all of these clouds. Some of them will turn into honey, and others into nectar.\\\nHelp the bee follow the path and solve this puzzle.",
+    "short_instructions": "Move forward until you reach the lettuce, then pick it all using a `while` loop.",
+    "long_instructions": "The lettuce is scattered all over the garden.\\\nTravel down each path **until** you reach a head of lettuce, then continue to pick it **while** there is still some left.  ",
     "authored_hints": {
-      "courseE_bee_ramp14_a": "The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar while there is nectar (while nectar > 0) and make all of the honey.",
-      "courseE_bee_ramp14_b": "There can be more than one flower or honeycomb at each space, so make sure to use `while` loops to get them all!",
-      "courseE_bee_ramp14_c": "This puzzle is nearly identical to the previous one, just with honey and nectar instead of vegetables."
+      "courseE_farmer_ramp12d_b": "You will still need to put your `until` and `while` loops inside of a `repeat` loop to solve this puzzle!"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/12/puzzle/9": {
-    "contained levels": [
-      {
-        "dsls": {
-          "questions": [
-            {
-              "text": "What do you think will happen in this puzzle when you press 'Run'?"
-            }
-          ],
-          "answers": [
-            {
-              "text": "The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.",
-              "correct": false,
-              "feedback": "Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin."
-            },
-            {
-              "text": "The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.",
-              "correct": true,
-              "feedback": "Correct!"
-            },
-            {
-              "text": "The farmer will not walk anywhere because there's no pumpkin in the first place.",
-              "correct": false,
-              "feedback": "Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin."
-            },
-            {
-              "text": "I don't know.",
-              "correct": false,
-              "feedback": "The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin."
-            }
-          ]
-        }
-      }
-    ]
+    "short_instructions": "Move forward until you reach the lettuce, then pick it all using a `while` loop.",
+    "long_instructions": "The lettuce is scattered all over the garden.\\\nTravel down each path **until** you reach a head of lettuce, then continue to pick it **while** there is still some left.  ",
+    "authored_hints": {
+      "courseE_farmer_ramp12e_b": "The solution to this puzzle will look a lot like the solution to the last puzzle, but turning in the other direction."
+    }
   },
   "https://studio.code.org/s/coursee-2017/stage/12/puzzle/11": {
-    "short_instructions": "Solve this puzzle using only the blocks available.",
-    "long_instructions": "Solve this puzzle using only the blocks available.\n\nThis level will help give you practice with the `repeat until` block.  Collect all of the corn and lettuce until you get to the pumpkin. (Don't forget to collect the pumpkin, too!)",
+    "short_instructions": "Move forward until you reach the lettuce, then turn left **if** there is a path to the left.  Otherwise, turn right.",
+    "long_instructions": "**Challenge**: The only way to get all of the crops is to move forward until you get to the lettuce, then turn left **if** there is a path to the left.  Otherwise, turn right.",
     "authored_hints": {
-      "courseE_farmer_ramp15_a": "Use the `repeat until at pumpkin` block to make it to the end of the path.",
-      "courseE_farmer_ramp15_b": "What else needs to be done while moving along the path to the pumpkin?",
-      "courseE_farmer_ramp15_c": "The sprouts hide various amounts of either corn or lettuce to harvest on your way to the pumpkin."
+      "courseE_farmer_ramp12f_b": "Use an `if/else` block to help the farmer decide if she needs to turn right or left."
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/12/puzzle/12": {
