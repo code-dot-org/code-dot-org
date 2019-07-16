@@ -111,7 +111,6 @@ class Census::StateCsOffering < ApplicationRecord
   ).freeze
 
   # Note: Remaining entries for STATES_USING_FORMAT_V2_IN_2018_19:
-  # NV   # will have second set for 2018-2019 added (perhaps by hand)
   # WA   # needs its gsheet to be updated to V2 format
 
   # For a few states, we already placed a 2018-2019 CSV on S3 using their V1 format,
