@@ -36,7 +36,7 @@ it-IT:
           lati restanti.
       2-3 Artist 8:
         2-3_Artist_8_a: Se dividi 200 a metà ottieni il lato dei quadrati.
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Questo rombo è semplicemente un quadrato ruotato.
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -3891,14 +3891,14 @@ it-IT:
           questa linea.
       courseB_artist_loops3_2018:
         courseB_artist_loops3_a: |-
-          Ricordati che devi usare il ciclo `ripeti` <xml><block type="controls_repeat_simplified">
+          Ricordati che devi usare il ciclo <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
             </block></xml> per riuscire a risolvere l'esercizio!
         courseB_artist_loops3_b: L'artista dovrà muoversi verso Sud `S ↓` per disegnare
           questa linea.
       courseB_artist_loops3_2019:
         courseB_artist_loops3_a: |-
-          Ricordati che devi usare il ciclo `ripeti` <xml><block type="controls_repeat_simplified">
+          Ricordati che devi usare il ciclo <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
             </block></xml> per riuscire a risolvere l'esercizio!
         courseB_artist_loops3_b: L'artista dovrà muoversi verso Sud `S ↓` per disegnare
@@ -3927,12 +3927,12 @@ it-IT:
           essere ripetuto questo ciclo?
       courseB_artist_loops5_2018:
         courseB_artist_loops5_a: |-
-          Trascina nell'area di lavoro un blocco `ripeti` <xml><block type="controls_repeat_simplified">
+          Trascina nell'area di lavoro un blocco <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
             </block></xml> e mettici dentro i blocchi grigi che trovi già pronti. Quante volte dovrà essere ripetuto questo ciclo?
       courseB_artist_loops5_2019:
         courseB_artist_loops5_a: |-
-          Trascina nell'area di lavoro un blocco `ripeti` <xml><block type="controls_repeat_simplified">
+          Trascina nell'area di lavoro un blocco <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
             </block></xml> e mettici dentro i blocchi grigi che trovi già pronti. Quante volte dovrà essere ripetuto questo ciclo?
       courseB_artist_loops6:
@@ -4164,7 +4164,7 @@ it-IT:
         courseB_collector_loops4_b: Per modificare di quante caselle deve spostarsi
           Laura, cambia il numero di volte che il ciclo viene eseguito.
         courseB_collector_loops4_c: |-
-          Alla fine del ciclo `ripeti` <xml><block type="controls_repeat_simplified">
+          Alla fine del ciclo <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
             </block></xml> Laura deve muoversi verso il basso e finire di raccogliere i diamanti!
       courseB_collector_loops4_2019:
@@ -4173,7 +4173,7 @@ it-IT:
         courseB_collector_loops4_b: Per modificare di quante caselle deve spostarsi
           Laura, cambia il numero di volte che il ciclo viene eseguito.
         courseB_collector_loops4_c: |-
-          Alla fine del ciclo `ripeti` <xml><block type="controls_repeat_simplified">
+          Alla fine del ciclo <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
             </block></xml> Laura deve muoversi verso il basso e finire di raccogliere i diamanti!
       courseB_collector_loops5:
@@ -4207,7 +4207,7 @@ it-IT:
         courseB_collector_loops6_b: Puoi modificare il numero di volte che il ciclo
           viene ripetuto cliccando sul numero "3" e scegliendo un altro numero.
         courseB_collector_loops6_c: |-
-          Dovrai usare 3 cicli `ripeti` <xml><block type="controls_repeat_simplified">
+          Dovrai usare 3 cicli <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
             </block></xml> per risolvere l'esercizio.
         courseB_collector_loops6_d: Se sei confuso, prova a suddividere questo percorso
@@ -4219,7 +4219,7 @@ it-IT:
         courseB_collector_loops6_b: Puoi modificare il numero di volte che il ciclo
           viene ripetuto cliccando sul numero "3" e scegliendo un altro numero.
         courseB_collector_loops6_c: |-
-          Dovrai usare 3 cicli `ripeti` <xml><block type="controls_repeat_simplified">
+          Dovrai usare 3 cicli <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
             </block></xml> per risolvere l'esercizio.
         courseB_collector_loops6_d: Se sei confuso, prova a suddividere questo percorso
@@ -4561,7 +4561,7 @@ it-IT:
               <title name="TIMES" config="3-10">5</title>
               </block></xml>
         courseB_iceage_loops3_b: |-
-          Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti`
+          Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco
 
           <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
@@ -4814,7 +4814,7 @@ it-IT:
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
       courseB_playlab_events2_2018:
@@ -4824,7 +4824,7 @@ it-IT:
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
       courseB_playlab_events2_2019:
@@ -4834,7 +4834,7 @@ it-IT:
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
       courseB_playlab_events3:
@@ -6981,16 +6981,6 @@ it-IT:
           -   Va ancora tutto bene al secondo?
           -   Dov'è che qualcosa comincia a non funzionare?
         courseC_maze_debugging1_b: Devi aggiungere 1 blocco per completare l'esercizio.
-        courseD_collector_debugging1_a: |-
-          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
-
-          E al secondo?
-
-          Dov'è che qualcosa comincia a non funzionare?
-        courseD_collector_debugging1_b: Riesci a vedere degli schemi che si ripetono
-          e che si possano semplificare con un ciclo `ripeti ... volte`?
-        courseD_collector_debugging1_c: Ricorda di usare il blocco `raccogli` per
-          collezionare tutti i diamanti ogni volta che sei arrivato su di essi.
       courseC_maze_debugging1_2018:
         courseC_maze_debugging1_a: |-
           -   Al primo passo tutto procede bene?
@@ -7012,17 +7002,6 @@ it-IT:
           -   Dov'è che qualcosa comincia a non funzionare?
         courseC_maze_debugging2_c: Non riesci a capire cosa non va? Prova ad eseguire
           il codice un paio di volte per vedere cosa succede.
-        courseD_collector_debugging2_a: |-
-          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
-
-          E al secondo?
-
-          Dov'è che qualcosa comincia a non funzionare?
-        courseD_collector_debugging2_b: Riesci a vedere degli schemi che si ripetono
-          e che si possano semplificare con un ciclo `ripeti ... volte`?
-        courseD_collector_debugging2_c: Prova a raccogliere i diamanti sul primo tratto
-          di questo percorso. Puoi ripetere questo schema per raccoglierli anche sugli
-          altri due lati?
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_a: C'è un sacco di ottimo codice nell'area di lavoro.
           Non cancellarlo per ricominciare tutto da capo!
@@ -7052,10 +7031,6 @@ it-IT:
           ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Non riesci a capire cosa non va? Prova ad eseguire
           il codice un paio di volte per vedere cosa succede.
-        courseD_collector_debugging3_a: C'è un punto del programma in cui Laura fa
-          qualcosa di sbagliato? Cosa succede quando correggi questi blocchi?
-        courseD_collector_debugging3_b: Cerca di semplificare il programma usando
-          dei cicli annidati.
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_a: |-
           Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
@@ -7083,17 +7058,6 @@ it-IT:
           alla volta. Questo potrebbe aiutarti a trovare il blocco sbagliato?
         courseC_maze_debugging4_b: Una delle curve che sta facendo Scrat va nella
           direzione sbagliata. Riesci a capire qual'è?
-        courseD_collector_debugging4_a: |-
-          Prova ad usare il processo di correzione degli errori (debugging) un paio di volte di seguito.
-
-          Cos'è che causa il primo problema?
-
-          Una volta risolto questo problema, cos'altro c'è di sbagliato?
-        courseD_collector_debugging4_b: "Se hai difficoltà a capire come realizzare
-          lo schema a scalinata, prova a tracciarlo con un dito e pronuncia le istruzioni
-          ad alta voce. \n\nNon dimenticare di indicare la direzione delle curve!"
-        courseD_collector_debugging4_c: In questo ciclo manca solo un blocco. Riesci
-          a capire quale?
       courseC_maze_debugging4_2018:
         courseC_maze_debugging4_a: Usa il pulsante "Fai un passo" per eseguire un'istruzione
           alla volta. Questo potrebbe aiutarti a trovare il blocco sbagliato?
@@ -7111,16 +7075,6 @@ it-IT:
           Usa il pulsante "Fai un passo" per indagare e capire dove il codice è sbagliato.
         courseC_maze_debugging5_b: Prova a dire ad alta voce cosa dovrebbe fare Scrat.  Corrisponde
           al codice presente nell'area di lavoro?  Che differenza c'è?
-        courseD_collector_debugging5_a: |-
-          Inizia guardando solo il primo ciclo.
-
-          Che cosa fa?
-
-          Che cosa dovrebbe fare?
-
-          Che cosa ti suggerisce questo?
-        courseD_collector_debugging5_b: Una volta verificato il funzionamento del
-          primo ciclo, cosa rimane da controllare?
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_a: |-
           Ci sono un sacco di blocchi utili nell'area di lavoro! Non cancellarli tutti!
@@ -7148,12 +7102,6 @@ it-IT:
           Dopo aver trovato e risolto il primo errore, procedi con il debugging (correzione degli errori) per trovare il secondo.
 
           Ripeti questo processo fino a quando il programma funziona!
-        courseD_collector_debugging6_a: |-
-          Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
-
-          E al secondo?
-
-          Dov'è che qualcosa comincia a non funzionare?
       courseC_maze_debugging6_2018:
         courseC_maze_debugging6_a: |-
           -   Cosa dovrebbe fare Scrat?
@@ -7183,10 +7131,6 @@ it-IT:
           Dopo aver trovato e risolto il primo errore, fai attenzione a continuare ad usare il processo di debugging (correzione degli errori) per trovare il secondo.
 
           Ripeti il processo di debugging fino a quando il programma funziona!
-        courseD_collector_debugging8_a: Vedi uno schema che si ripete e che puoi semplificare
-          con un ciclo?
-        courseD_collector_debugging8_b: Prova ad usare un ciclo annidato per rendere
-          più breve questo programma.
       courseC_maze_debugging7_2018:
         courseC_maze_debugging7_a: |-
           -   Al primo passo tutto procede bene?
@@ -7209,14 +7153,6 @@ it-IT:
           Dopo aver trovato e risolto il primo errore, fai attenzione a continuare ad usare il processo di debugging (correzione degli errori) per trovare il secondo.
 
           Ripeti il processo di debugging fino a quando il programma funziona!
-      courseC_maze_debugging8_predict1:
-        courseD_collector_debugging9_b: Cerca di capire come dovresti risolvere questo
-          esercizio, quindi vai avanti un passo per volta, facendo corrispondere le
-          istruzioni a ciò che hai in mente.
-      courseC_maze_debugging9:
-        courseD_collector_debugging9_b: Cerca di capire come dovresti risolvere questo
-          esercizio, quindi vai avanti un passo per volta, facendo corrispondere le
-          istruzioni a ciò che hai in mente.
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Destra o sinistra? A te la scelta!
         courseC_maze_debugging_challenge1_b: Il percorso che deve seguire Scrat ha
@@ -10438,15 +10374,10 @@ it-IT:
           aggiungi un blocco `aspetta per 1 secondo` in cima al ciclo `ripeti per
           sempre` che controlla la posizione del pirata (ma, attenzione, non all'interno
           dell'istruzione `se`).
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Ci sono due modi per risolvere questo esercizio!
-        courseF_maze_ramp6_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
-          ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto
-          l'esercizio.
       courseD_scrat_ramp1:
-        courseC_maze_programming1_0: Se l'uccellino non riesce a prendere il maialino,
-          controlla che tutti e tre i blocchi siano collegati insieme, quindi clicca
-          nuovamente su "Esegui".
+        courseC_maze_programming1_b: Non aver paura di sbagliare! Prova ad aggiungere
+          blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
+          ancora risolto l'esercizio.
       courseD_scrat_ramp2:
         courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo
           dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco
@@ -10454,14 +10385,6 @@ it-IT:
         courseC_maze_programming2_b: Controlla che tutti e tre i blocchi `vai avanti`
           siano agganciati al blocco `quando si clicca su "Esegui"`.
       courseD_scrat_ramp3:
-        courseF_maze_ramp3_a: |-
-          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
-
-          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
-
-          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
-
-          Infine, rimetti al loro posto gli altri blocchi.
         courseC_maze_programming3_a: |-
           ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
 
@@ -10473,65 +10396,33 @@ it-IT:
         courseC_maze_programming3_b: Ricorda che le curve a destra e a sinistra devi
           immaginarle dal punto di vista dell'uccellino.
       courseD_scrat_ramp4:
-        courseF_maze_ramp4_a: Puoi girare a destra o a sinistra dal punto di vista
-          dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra significa
-          dirigersi verso il basso.
-        courseF_maze_ramp4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
-          ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto
-          l'esercizio.
         courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di
-          vista dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra
-          significa dirigersi verso il basso.
+          vista di Scrat. Se Scrat è rivolto verso destra, girare a destra significa
+          dirigersi verso la parte bassa dello schermo.
         courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da
           una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere
-          il maialino, vai ancora una volta avanti.
+          la ghianda, vai ancora una volta avanti.
         courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
       courseD_scrat_ramp5:
-        courseF_maze_ramp5_a: Prova ad usare il pulsante "Fai un passo" per eseguire
-          il codice un'istruzione alla volta. Riesci a capire cosa devi fare dopo?
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci a capire cosa devi fare
           dopo?
         courseC_maze_programming5_b: Di quante caselle devi andare avanti per raggiungere
           l'angolo?
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Ci sono due modi per risolvere questo esercizio!
-        courseC_maze_programming6_c: Non aver paura di sbagliare! Prova ad aggiungere
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Ci sono due modi per risolvere questo esercizio!
+        courseD_scrat_programming6_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
-      courseD_scrat_ramp7:
-        courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo"
-          che esegue un blocco per volta permettendoti di notare più facilmente gli
-          errori.
-        courseD_maze_ramp7_a: Usa i blocchi di ripetizione per eseguire ripetutamente
-          un blocco o una sequenza di blocchi.
-        courseD_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
-          ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto
-          l'esercizio.
       courseD_scrat_ramp8:
-        courseF_artist_ramp9_a: In cosa è simile a un quadrato? e in cosa differisce?
-        courseF_artist_ramp9_b: Puoi usare il menù a discesa (▼) del blocco `gira
-          a ...` per vedere gli angoli tra cui scegliere!
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo"
           che esegue un blocco per volta permettendoti di notare più facilmente gli
           errori.
         courseD_maze_ramp7_a: Usa i blocchi di ripetizione per eseguire ripetutamente
           un blocco o una sequenza di blocchi.
         courseD_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
-          ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto
-          l'esercizio.
-        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di
-          100 pixel` e cambia il 100 in 200.
-        courseE_artist_ramp8_b: |-
-          Per disegnare 4 lati, inserisci il blocco `vai avanti di 100 pixel` all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.
-
-          Non dimenticarti di girare!
-        courseE_artist_ramp8_c: 'Il ciclo deve contenere due blocchi: `vai avanti`
-          e `gira a destra di 90 gradi`.'
-      courseD_video_repeatUntil:
-        courseE_farmer_ramp12c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
           ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto
           l'esercizio.
       courseE_artist_concept1:
@@ -11002,12 +10893,21 @@ it-IT:
         courseE_artist_ramp8_c: 'Il ciclo deve contenere due blocchi: `vai avanti`
           e `gira a destra di 90 gradi`.'
       courseE_artist_ramp8_2:
+        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di
+          100 pixel` e cambia il 100 in 200.
+        courseE_artist_ramp8_b: |-
+          Per disegnare 4 lati, inserisci il blocco `vai avanti di 100 pixel` all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.
+
+          Non dimenticarti di girare!
+        courseE_artist_ramp8_c: 'Il ciclo deve contenere due blocchi: `vai avanti`
+          e `gira a destra di 90 gradi`.'
+      courseE_artist_ramp9:
         courseD_artist_ramp12_a: In cosa è simile a un quadrato? e in cosa differisce?
         courseD_artist_ramp12_b: Puoi usare il menù a discesa (▼) del blocco `gira
           a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: Per disegnare ogni lato, è necessario andare avanti
           di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?
-      courseE_artist_ramp9:
+      courseE_artist_ramp9_2:
         courseD_artist_ramp12_a: In cosa è simile a un quadrato? e in cosa differisce?
         courseD_artist_ramp12_b: Puoi usare il menù a discesa (▼) del blocco `gira
           a ...` per vedere gli angoli tra cui scegliere!
@@ -11421,15 +11321,18 @@ it-IT:
         courseE_farmer_ramp12_b: Devi solo andare avanti una volta per raggiungere
           il mucchio.
       courseE_farmer_ramp11b:
-        courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare
-          un ciclo `ripeti ... volte` per dire alla contadina quante volte andare
-          avanti e prendere le lattughe.
+        courseE_farmer_ramp11b_a: Per rendere il programma più corto, puoi annidare
+          il ciclo `mentre` all'interno di un ciclo `ripeti ... volte`.
       courseE_farmer_ramp11b_2018:
         courseE_farmer_ramp11b_a: Per rendere il programma più corto, puoi annidare
           il ciclo `mentre` all'interno di un ciclo `ripeti ... volte`.
       courseE_farmer_ramp11b_2019:
         courseE_farmer_ramp11b_a: Per rendere il programma più corto, puoi annidare
           il ciclo `mentre` all'interno di un ciclo `ripeti ... volte`.
+      courseE_farmer_ramp12_forswap:
+        courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare
+          un ciclo `ripeti ... volte` per dire alla contadina quante volte andare
+          avanti e prendere le lattughe.
       courseE_farmer_ramp12_forswap_2018:
         courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare
           un ciclo `ripeti ... volte` per dire alla contadina quante volte andare
@@ -11438,6 +11341,10 @@ it-IT:
         courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare
           un ciclo `ripeti ... volte` per dire alla contadina quante volte andare
           avanti e prendere le lattughe.
+      courseE_farmer_ramp12c:
+        courseE_farmer_ramp12b_b: |-
+          Sarà necessario usare prima un ciclo `ripeti fino a che` e poi un ciclo `mentre`, una volta che si arriva sulla lattuga.
+          Attento: il ciclo `ripeti fino a che sei su una lattuga` ripete tutti i blocchi che contiene per tutto il tempo in cui NON sei su una lattuga e si interrompe quando finalmente arrivi ad una lattuga.
       courseE_farmer_ramp12c_2018:
         courseE_farmer_ramp12b_b: |-
           Sarà necessario usare prima un ciclo `ripeti fino a che` e poi un ciclo `mentre`, una volta che si arriva sulla lattuga.
@@ -11446,6 +11353,10 @@ it-IT:
         courseE_farmer_ramp12b_b: |-
           Sarà necessario usare prima un ciclo `ripeti fino a che` e poi un ciclo `mentre`, una volta che si arriva sulla lattuga.
           Attento: il ciclo `ripeti fino a che sei su una lattuga` ripete tutti i blocchi che contiene per tutto il tempo in cui NON sei su una lattuga e si interrompe quando finalmente arrivi ad una lattuga.
+      courseE_farmer_ramp12d:
+        courseE_farmer_ramp12d_b: |-
+          Per risolvere questo esercizio, dovrai anche mettere i cicli `ripeti fino a che` e `mentre` all'interno di un ciclo `ripeti ... volte`!
+          Ricorda: il ciclo `ripeti fino a che sei su una lattuga` ripete tutti i blocchi che contiene per tutto il tempo in cui NON sei su una lattuga e si interrompe quando finalmente arrivi ad una lattuga.
       courseE_farmer_ramp12d_2018:
         courseE_farmer_ramp12d_b: |-
           Per risolvere questo esercizio, dovrai anche mettere i cicli `ripeti fino a che` e `mentre` all'interno di un ciclo `ripeti ... volte`!
@@ -11454,12 +11365,18 @@ it-IT:
         courseE_farmer_ramp12d_b: |-
           Per risolvere questo esercizio, dovrai anche mettere i cicli `ripeti fino a che` e `mentre` all'interno di un ciclo `ripeti ... volte`!
           Ricorda: il ciclo `ripeti fino a che sei su una lattuga` ripete tutti i blocchi che contiene per tutto il tempo in cui NON sei su una lattuga e si interrompe quando finalmente arrivi ad una lattuga.
+      courseE_farmer_ramp12e:
+        courseE_farmer_ramp12e_b: La soluzione di questo esercizio è molto simile
+          a quella del precedente, ma girando nella direzione opposta.
       courseE_farmer_ramp12e_2018:
         courseE_farmer_ramp12e_b: La soluzione di questo esercizio è molto simile
           a quella del precedente, ma girando nella direzione opposta.
       courseE_farmer_ramp12e_2019:
         courseE_farmer_ramp12e_b: La soluzione di questo esercizio è molto simile
           a quella del precedente, ma girando nella direzione opposta.
+      courseE_farmer_ramp12f:
+        courseE_farmer_ramp12f_b: Usa un blocco `se/altrimenti` per aiutare la contadina
+          a decidere se deve girare a destra o a sinistra.
       courseE_farmer_ramp12f_2018:
         courseE_farmer_ramp12f_b: Usa un blocco `se/altrimenti` per aiutare la contadina
           a decidere se deve girare a destra o a sinistra.

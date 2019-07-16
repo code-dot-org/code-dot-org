@@ -9,7 +9,7 @@ it-IT:
         Disegna la linea tratteggiata usando sia i blocchi `salta` che quelli `vai
         avanti`. Ogni linea è lunga 50 pixel.
       2-3 Artist 4: Aiutami a completare la casa per questo gatto.
-      2-3 Artist 9: Finisci di disegnare questo aquilone
+      2-3 Artist 9 NEW: Finisci di disegnare questo aquilone
       2-3 Artist Free Play: 'Tempo di giocare: disegna qualcosa che ti piace.'
       2-3 Artist Loops New 12: Disegna un rombo con lati lunghi 100 pixel.
       2-3 Artist Nested Loops 1: |-
@@ -1507,15 +1507,15 @@ it-IT:
         a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\".)
         \ "
       courseB_collector_loops2: |-
-        Muovi Laura lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per racccoglierlo.
+        Muovi Laura lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per raccoglierli.
 
         Raccogli tutti e quattro i diamanti per completare l'esercizio.
       courseB_collector_loops2_2018: |-
-        Muovi Laura lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per racccoglierlo.
+        Muovi Laura lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per raccoglierli.
 
         Raccogli tutti e quattro i diamanti per completare l'esercizio.
       courseB_collector_loops2_2019: |-
-        Muovi Laura lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per racccoglierlo.
+        Muovi Laura lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per raccoglierli.
 
         Raccogli tutti e quattro i diamanti per completare l'esercizio.
       courseB_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti
@@ -1548,12 +1548,12 @@ it-IT:
       courseB_iceage_loops12_2019: Prendi quella ghianda in qualunque modo!
       courseB_iceage_loops1_2019: Aiuta Scrat a raggiungere la ghianda attraversando
         queste lastre di ghiaccio!
-      courseB_iceage_loops2: Use sia il blocco <xml><block type="maze_moveWest"/></xml>
+      courseB_iceage_loops2: Usa sia il blocco <xml><block type="maze_moveWest"/></xml>
         sia quello <xml><block type="maze_moveSouth"/></xml> per raggiungere la ghianda!
-      courseB_iceage_loops2_2019: Use sia il blocco <xml><block type="maze_moveWest"/></xml>
+      courseB_iceage_loops2_2019: Usa sia il blocco <xml><block type="maze_moveWest"/></xml>
         sia quello <xml><block type="maze_moveSouth"/></xml> per raggiungere la ghianda!
-      courseB_iceage_loops3: Riesci a raggiungere la ghianda con un solo blocco <xml><block
-        type="maze_moveWest"/></xml>? Prova con un ciclo!
+      courseB_iceage_loops3: Riesci a raggiungere la ghianda con un solo blocco `O
+        ←` <xml><block type="maze_moveWest"/></xml>? Prova con un ciclo!
       courseB_iceage_loops3_2019: Riesci a raggiungere la ghianda con un solo blocco
         <xml><block type="maze_moveWest"/></xml>? Prova con un ciclo!
       courseB_iceage_loops4: Aggiungi un blocco per far percorrere a Scrat tutto il
@@ -1600,13 +1600,13 @@ it-IT:
         Cerca di capire cosa fa ogni blocco.
       courseB_playlab_events3: Usa un evento per fare in modo che il drago cambi umore
         in modo casuale ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        quando clicchi su di lei.
+        quando clicchi su di lui.
       courseB_playlab_events3_2018: Usa un evento per fare in modo che il drago cambi
         umore in modo casuale ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        quando clicchi su di lei.
+        quando clicchi su di lui.
       courseB_playlab_events3_2019: Usa un evento per fare in modo che il drago cambi
         umore in modo casuale ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        quando clicchi su di lei.
+        quando clicchi su di lui.
       courseB_playlab_events4: |-
         È il momento del cavaliere!
 
@@ -1630,41 +1630,29 @@ it-IT:
       courseB_playlab_events6: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
 
-        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
+        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere anche in su e in giù, oltre che a sinistra e a destra.
       courseB_playlab_events6_2018: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
 
-        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
+        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere anche in su e in giù, oltre che a sinistra e a destra.
       courseB_playlab_events6_2019: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
 
-        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
+        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere anche in su e in giù, oltre che a sinistra e a destra.
       courseB_playlab_events7: |-
         Rendi questo gioco divertente facendo svanire il cavaliere quando si scontra con il drago mentre cerca di raggiungere le bandierine!
 
         Riproduci anche un suono quando lo colpisce, così sembra più reale.
 
         Tocca tutte le bandierine, quindi vai contro il drago per completare l'esercizio.
-      courseB_playlab_events7_2018: |-
-        Rendi questo gioco divertente con qualche aggiunta!
-
-        1.  Fai svanire il cavaliere quando si scontra con il drago.
-        2.  Riproduci anche un suono quando si colpiscono, così sembra più reale.
-            Tocca tutte le bandierine, quindi vai contro il drago per completare l'esercizio.
-
-        * * *
-
-        Tocca tutte le bandierine, quindi vai contro il drago per completare l'esercizio.
-      courseB_playlab_events7_2019: |-
-        Rendi questo gioco divertente con qualche aggiunta!
-
-        1.  Fai svanire il cavaliere quando si scontra con il drago.
-        2.  Riproduci anche un suono quando si colpiscono, così sembra più reale.
-            Tocca tutte le bandierine, quindi vai contro il drago per completare l'esercizio.
-
-        * * *
-
-        Tocca tutte le bandierine, quindi vai contro il drago per completare l'esercizio.
+      courseB_playlab_events7_2018: "Rendi questo gioco divertente con qualche aggiunta!\n\n1.
+        \ Fai svanire il cavaliere quando si scontra con il drago.   \n2.  Riproduci
+        anche un suono quando si colpiscono, così sembra più reale.   \n\n* * *\n\nTocca
+        tutte le bandierine, quindi vai contro il drago per completare l'esercizio."
+      courseB_playlab_events7_2019: "Rendi questo gioco divertente con qualche aggiunta!\n\n1.
+        \ Fai svanire il cavaliere quando si scontra con il drago.   \n2.  Riproduci
+        anche un suono quando si colpiscono, così sembra più reale.   \n\n* * *\n\nTocca
+        tutte le bandierine, quindi vai contro il drago per completare l'esercizio."
       courseB_playlab_events_challenge1: |-
         È il momento della Grande Gara degli Animali! Fai in modo che gli animali si muovano verso il basso quando premi la freccia verso il basso (▼).
 
@@ -1753,15 +1741,15 @@ it-IT:
       courseB_starWars_prog7_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Vai a prenderli!"_'
       courseB_starWars_prog8: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Contina così, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
 
         **Sfida:** Recupera tutti i rottami metallici.
       courseB_starWars_prog8_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Contina così, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
 
         **Sfida:** Recupera tutti i rottami metallici.
       courseB_starWars_prog8_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Contina così, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
 
         **Sfida:** Recupera tutti i rottami metallici.
       courseB_starWars_prog9: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -2447,9 +2435,9 @@ it-IT:
       courseC_harvester_loops_challenge2_2019: Raccogli tutte le lattughe evitando
         gli alberi e i campi!
       courseC_maze_debugging1: |-
-        _"Oh no! C'è un problema."_
+        Questo programma è sbagliato!
 
-        Correggi gli errori per raccogliere tutti i diamanti.
+        Correggilo per aiutare Scrat a raggiungere la ghianda.
       courseC_maze_debugging1_2018: |-
         Questo programma è sbagliato!
 
@@ -2458,14 +2446,10 @@ it-IT:
         Questo programma è sbagliato!
 
         Correggilo per aiutare Scrat a raggiungere la ghianda.
-      courseC_maze_debugging2: |-
-        _"Puoi farcela!"_
-
-        Correggi gli errori per raccogliere tutti i diamanti.
       courseC_maze_debugging3: |-
-        _"Insisti e vedrai che ce la farai."_
+        C'è ancora qualcosa di sbagliato.
 
-        Correggi gli errori per raccogliere tutti i diamanti.
+        Rimuovi dei blocchi per far arrivare Scrat fino alla ghianda!
       courseC_maze_debugging3_2018: |-
         C'è ancora qualcosa di sbagliato.
 
@@ -2474,29 +2458,6 @@ it-IT:
         C'è ancora qualcosa di sbagliato.
 
         Rimuovi dei blocchi per far arrivare Scrat fino alla ghianda!
-      courseC_maze_debugging4: |-
-        _"Non ti scoraggiare. Puoi farcela!"_
-
-        Correggi gli errori per raccogliere tutti i diamanti.
-      courseC_maze_debugging5: |-
-        _"Questo esercizio mi sta facendo girare la testa!"_
-
-        Tutti i blocchi che ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere questo esercizio.
-      courseC_maze_debugging6: "**Sfida:** Tutti i blocchi di cui hai bisogno sono
-        già pronti... Sfrutta tutte le tue abilità di debugging per correggere gli
-        errori e raccogliere tutti i diamanti."
-      courseC_maze_debugging7: |-
-        _"Quanti diamanti!"_
-
-        Aiuta Laura a correggere il codice per raccogliere tutti i diamanti.
-      courseC_maze_debugging8_predict1: |-
-        _"È l'isola dei diamanti!"_
-
-        Aiuta Laura a correggere il codice per raccogliere tutti i diamanti.
-      courseC_maze_debugging9: |-
-        _"È l'isola dei diamanti!"_
-
-        Aiuta Laura a correggere il codice per raccogliere tutti i diamanti.
       courseC_maze_debugging_challenge2: Se fai fare troppe curve a Scrat, potrebbe
         giragli la testa! Aiutalo a raggiungere la ghianda usando al massimo quattro
         blocchi `gira a ...`.
@@ -4111,20 +4072,14 @@ it-IT:
       courseD_scrat_ramp2: Trascina ancora un blocco `vai avanti` fuori dalla cassetta
         degli attrezzi e, per completare il programma, attacca tutti i blocchi al
         blocco arancione `quando si clicca su "Esegui"`.
-      courseD_scrat_ramp4: |-
-        _"Fammi fare il percorso per arrivare a quello sciocco maialino."_
-
-        Evita la dinamite (TNT) o ci lascio le penne!
+      courseD_scrat_ramp4: Evita la dinamite (TNT) o ci lascio le penne!
       courseD_scrat_ramp5: |-
         _"Segui questo percorso per farmi arrivare fino al maialino!"_
 
         Evita la dinamite (TNT).
-      courseD_scrat_ramp8: |-
-        Grande! Ora usiamo un blocco `ripeti ... volte` per far fare un quadrato all'Artista! I blocchi dell'artista sono leggermente diversi, ma l'idea è la stessa.
-
-        * * *
-
-        ##### Ogni lato del quadrato ha una lunghezza di 200 pixel e sarà necessario ruotare di 90 gradi ad ogni angolo.
+      courseD_scrat_ramp7: Aiuta Scrat a raggiungere la ghianda!
+      courseD_scrat_ramp8: "**Sfida:** Usa ciò che hai imparato per fare in modo che
+        Scrat raggiunga la ghianda!"
       courseE_artist_concept1: |-
         Disegna questa immagine.
 
@@ -4367,12 +4322,18 @@ it-IT:
 
         ##### Ogni lato del quadrato ha una lunghezza di 200 pixel e sarà necessario ruotare di 90 gradi ad ogni angolo.
       courseE_artist_ramp8_2: |-
+        Grande! Ora usiamo un blocco `ripeti ... volte` per far fare un quadrato all'Artista! I blocchi dell'artista sono leggermente diversi, ma l'idea è la stessa.
+
+        * * *
+
+        ##### Ogni lato del quadrato ha una lunghezza di 200 pixel e sarà necessario ruotare di 90 gradi ad ogni angolo.
+      courseE_artist_ramp9: |-
         Usa ciò che hai imparato per disegnare questo triangolo.
 
         * * *
 
         ##### Ogni lato è lungo 100 pixel. Dovrai girare di 120 gradi ad ogni angolo.
-      courseE_artist_ramp9: |-
+      courseE_artist_ramp9_2: |-
         Usa ciò che hai imparato per disegnare questo triangolo.
 
         * * *
@@ -4591,11 +4552,15 @@ it-IT:
         è difficile immaginare quante palate di terra contenga.\n\n* * *\n\nAbbiamo
         aggiunto un nuovo blocco alla cassetta degli attrezzi chiamato `mentre c'è
         un mucchio`. Usalo per rimuovere la terra solo mentre ce n'è da raccogliere! "
-      courseE_farmer_ramp11b: Raccogli tutte le lattughe.
+      courseE_farmer_ramp11b: Proviamoci ancora, ma con più mucchi!
       courseE_farmer_ramp11b_2018: Proviamoci ancora, ma con più mucchi!
       courseE_farmer_ramp11b_2019: Proviamoci ancora, ma con più mucchi!
+      courseE_farmer_ramp12_forswap: Raccogli tutte le lattughe.
       courseE_farmer_ramp12_forswap_2018: Raccogli tutte le lattughe.
       courseE_farmer_ramp12_forswap_2019: Raccogli tutte le lattughe.
+      courseE_farmer_ramp12b: Ora la contadina ha bisogno di raccogliere tutte le
+        lattughe. Usa il ciclo `mentre sei su una lattuga` all'interno di un ciclo
+        `ripeti ... volte` per raccogliere tutto!
       courseE_farmer_ramp12b_2018: Ora la contadina ha bisogno di raccogliere tutte
         le lattughe. Usa il ciclo `mentre sei su una lattuga` all'interno di un ciclo
         `ripeti ... volte` per raccogliere tutto!
@@ -4605,21 +4570,12 @@ it-IT:
       courseE_farmer_ramp12c_2018: "Ora la lattuga è solo alla fine del percorso.
         \\\nPercorri il sentiero **fino a che** la raggiungi, quindi raccogli di continuo
         **mentre** c'è lattuga.  "
-      courseE_farmer_ramp12c_2019: "Ora la lattuga è solo alla fine del percorso.
-        \\\nPercorri il sentiero **fino a che** la raggiungi, quindi raccogli di continuo
-        **mentre** c'è lattuga.  "
       courseE_farmer_ramp12d_2018: "Le lattughe sono sparpagliate per tutto il giardino.
         \\\nPercorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
         raccogli di continuo **mentre** c'è lattuga.  "
-      courseE_farmer_ramp12d_2019: "Le lattughe sono sparpagliate per tutto il giardino.
-        \\\nPercorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
-        raccogli di continuo **mentre** c'è lattuga.  "
-      courseE_farmer_ramp12e_2018: "Le lattughe sono sparpagliate per tutto il giardino.
-        \\\nPercorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
-        raccogli di continuo **mentre** c'è lattuga.  "
-      courseE_farmer_ramp12e_2019: "Le lattughe sono sparpagliate per tutto il giardino.
-        \\\nPercorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
-        raccogli di continuo **mentre** c'è lattuga.  "
+      courseE_farmer_ramp12f: "**Sfida:** L'unico modo di raccogliere tutti gli ortaggi,
+        è di andare avanti fino a che raggiungi la lattuga, poi **se** c'è strada
+        a sinistra, gira a sinistra. In caso contrario, gira a destra."
       courseE_farmer_ramp12f_2018: "**Sfida:** L'unico modo di raccogliere tutti gli
         ortaggi, è di andare avanti fino a che raggiungi la lattuga, poi **se** c'è
         strada a sinistra, gira a sinistra. In caso contrario, gira a destra."
