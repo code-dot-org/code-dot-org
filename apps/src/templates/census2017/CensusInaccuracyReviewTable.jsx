@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {Table} from 'reactabular';
+import * as Table from 'reactabular-table';
 import Button from '../Button';
 
 export default class CensusInaccuracyReviewTable extends Component {
