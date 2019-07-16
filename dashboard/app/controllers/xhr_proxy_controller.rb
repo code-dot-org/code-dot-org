@@ -63,6 +63,8 @@ class XhrProxyController < ApplicationController
     images-api.nasa.gov
     isenseproject.org
     lakeside-cs.org
+    opentdb.com
+    pokeapi.co
     qrng.anu.edu.au
     quandl.com
     quizlet.com
