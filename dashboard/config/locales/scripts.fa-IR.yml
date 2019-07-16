@@ -572,6 +572,10 @@ fa:
               name: شبیه ساز اینترنت
             Welcome!:
               name: خوش آمدی!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: مقدمات علم کامپیوتر
         ECSPD2:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
