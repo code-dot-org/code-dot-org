@@ -118,14 +118,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
   end
 
-  test 'update_school_info with custom school does nothing when the user already has a specific school' do
+  test 'update_school_info with custom school updates user that has a specific school' do
     original_school_info = create :school_info
     user = create :teacher, school_info: original_school_info
-    new_school_info = create :school_info_us_other
+    new_school_info = create :school_info_us_other, validation_type:  SchoolInfo::VALIDATION_COMPLETE
 
     user.update_school_info(new_school_info)
-    assert_equal original_school_info, user.school_info
-    assert_equal user.user_school_infos.count, 1
+    assert_equal new_school_info, user.school_info
+    assert_equal user.user_school_infos.count, 2
   end
 
   test 'update_school_info with custom school updates user info when user does not have a specific school' do
@@ -142,17 +142,16 @@ class UserTest < ActiveSupport::TestCase
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
   end
 
-  test 'update_school_info with custom school does not update user info when user school info does not include a school_id' do
+  test 'update_school_info with custom school updates user info when user school info does not include a school_id' do
     original_school_info = create :school_info
     user = create :teacher, school_info: original_school_info
     new_school_info = create :school_info_us_other
 
     user.update_school_info(new_school_info)
-    assert_equal original_school_info, user.school_info
-    refute_equal new_school_info, user.school_info
+    assert_equal new_school_info, user.school_info
     assert_not_nil user.school_info_id
 
-    assert_equal user.user_school_infos.count, 1
+    assert_equal user.user_school_infos.count, 2
   end
 
   # Tests for replacing the old school info with the new school info if and only if the new school info is complete.
@@ -226,7 +225,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'old has NCES id, new has NCES id, new is complete, update' do
     user = create :teacher, :with_school_info
-    new_school_info = create :school_info, validation_type: SchoolInfo::VALIDATION_COMPLETE
+    new_school_info = create :school_info
 
     user.update_school_info(new_school_info)
     assert_equal new_school_info, user.school_info
