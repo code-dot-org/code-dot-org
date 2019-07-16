@@ -7,6 +7,7 @@ import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
 import {animationSourceUrl} from './animationListModule';
 import {changeInterfaceMode} from './actions';
 import {Goal, show} from './AnimationPicker/animationPickerModule';
+import i18n from '@cdo/locale';
 
 function sprites() {
   const animationList = getStore().getState().animationList;
@@ -118,12 +119,9 @@ const customInputTypes = {
         .appendTitle(inputConfig.label)
         .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
         .appendTitle(
-          new Blockly.FieldVariable(
-            Blockly.Msg.VARIABLES_SET_ITEM,
-            null,
-            null,
-            Blockly.BlockValueType.LOCATION
-          ),
+          new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM, {
+            category: Blockly.BlockValueType.LOCATION
+          }),
           inputConfig.name
         )
         .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
@@ -233,17 +231,13 @@ const customInputTypes = {
         block.superSetTitleValue(newValue, name);
       };
 
-      currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(
-          new Blockly.FieldVariable(
-            null,
-            null,
-            null,
-            Blockly.BlockValueType.SPRITE
-          ),
-          inputConfig.name
-        );
+      currentInputRow.appendTitle(inputConfig.label).appendTitle(
+        new Blockly.FieldVariable(null, {
+          category: Blockly.BlockValueType.SPRITE,
+          categoryName: i18n.sprite()
+        }),
+        inputConfig.name
+      );
     },
     generateCode(block, arg) {
       return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
@@ -308,12 +302,10 @@ export default {
           .appendTitle(
             Blockly.disableVariableEditing
               ? fieldLabel
-              : new Blockly.FieldVariable(
-                  Blockly.Msg.VARIABLES_SET_ITEM,
-                  null,
-                  null,
-                  Blockly.BlockValueType.SPRITE
-                ),
+              : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM, {
+                  category: Blockly.BlockValueType.SPRITE,
+                  categoryName: i18n.sprite()
+                }),
             'VAR'
           )
           .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
