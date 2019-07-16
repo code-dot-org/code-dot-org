@@ -38,7 +38,7 @@ de-DE:
       2-3 Artist 8:
         2-3_Artist_8_a: Wenn man 200 halbiert, wie viele Pixel breit muss jedes Quadrat
           dann sein?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Diese Raute ist einfach nur ein gedrehter Quader
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -456,8 +456,6 @@ de-DE:
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
           lösen!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
-          lösen!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle
+          zu lösen!
