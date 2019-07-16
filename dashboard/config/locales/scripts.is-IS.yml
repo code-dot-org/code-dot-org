@@ -5113,6 +5113,8 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+            Libraries:
+              name: Söfn
         express-2018-vn:
           stages:
             Graph Paper Programming:

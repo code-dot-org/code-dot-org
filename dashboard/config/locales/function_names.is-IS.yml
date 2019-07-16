@@ -15,10 +15,12 @@ is-IS:
         draw_rect: teikna_rétth
       2-3 Artist Debugging 10:
         draw square: teikna ferning
+        jump to controller top left: hoppa efst til vinstri á stjórnborði
         jump to middle: hoppa að miðju
         draw a circle: teikna hring
         draw a button: teikna hnapp
         draw cord: teikna streng
+        draw R pad: teikna R borð
       2-3 Artist Debugging 5:
         draw left leg: teikna vinstri fót
         draw right leg: teikna hægri fót
@@ -35,6 +37,8 @@ is-IS:
         draw O: teikna O
         draw D: teikna D
         draw E: teikna E
+      2-3 Artist Functions 1:
+        draw ear stems: teikna spangir
       2-3 Artist Functions 10:
         big gear: stórt tannhjól
         small gear: lítið tannhjól
@@ -46,8 +50,10 @@ is-IS:
         draw a flower: teikna blóm
       2-3 Artist Functions 2:
         draw a square: teikna ferning
+        draw ear stems: teikna spangir
       2-3 Artist Functions 3:
         draw a square: teikna ferning
+        draw ear stems: teikna spangir
       2-3 Artist Functions 4:
         draw a square: teikna ferning
       2-3 Artist Functions 9:
@@ -98,6 +104,7 @@ is-IS:
       Alien Defender:
         game has been won: leikurinn hefur unnist
       Choose Your Own Adventure:
+        witch ending: nornarendir
         story: saga
         starting path: upphafsslóð
       Course 4 Artist Binary 1:
@@ -157,6 +164,7 @@ is-IS:
       Course 4 Play Lab Params 1:
         jump: hoppa
       Course 4 Play Lab Params 10:
+        level_up: borð_upp
         score_points: skora_stig
       Course 4 Play Lab Params 2:
         jump: hoppa
@@ -204,6 +212,7 @@ is-IS:
         check guess: athuga ágiskun
         do something: gera eitthvað
       FoodFight:
+        level_up: borð_upp
         score_points: skora_stig
       Function intro Ryan:
         build bridge: byggja brú
@@ -349,9 +358,11 @@ is-IS:
       Robot Doodle:
         25 pixel square: 25 díla ferningur
         draw head: teikna höfuð
+        draw eye: teikna auga
       Robot Doodle_2018:
         25 pixel square: 25 díla ferningur
         draw head: teikna höfuð
+        draw eye: teikna auga
       Standalone_Artist_7:
         draw a flower: teikna blóm
       Standalone_Artist_8:
@@ -360,28 +371,78 @@ is-IS:
         my function: fallið mitt
       course1_artist_loops_challenge1:
         '"simple" solution': '"einföld" lausn'
+      course1_artist_loops_challenge2:
+        potential solution: möguleg lausn
       course3_artist_functions_challenge1:
+        my design: hönnun mín
         do something: gera eitthvað
       course3_artist_functions_challenge2:
+        my design: hönnun mín
         do something: gera eitthvað
       course3_bee_functions_challenge1:
         do something: gera eitthvað
+        get 3 nectar or honey: sækja 3 af safa eða hunangi
       course3_bee_functions_challenge2:
         do something: gera eitthvað
+        move and collect: færa og safna
+      course3_bee_functions_challenge3:
+        check nectar or honey: athuga safa og hunang
+        row of nectar: röð með blómasafa
+        rowOfNectar: rowOfNectar
+      course3_bee_functions_challenge4:
+        check nectar or honey: athuga safa og hunang
+        row of nectar: röð með blómasafa
+        rowOfNectar: rowOfNectar
+        move and check: færa og athuga
+      course3_playLab_challenge1:
+        win game: vinna leik
+        lose game: tapa leik
+        keep playing: spila áfram
       course4_artist_binary_challenge1:
         draw: teikna
         draw bit: teikna bita
       course4_artist_binary_challenge2:
         draw: teikna
         draw bit: teikna bita
+      course4_artist_concept_challenge2:
+        draw pinwheel: teikna rellu
       course4_artist_functions_challenge2:
+        my design: hönnun mín
         do something: gera eitthvað
       course4_artist_fwp_challenge1:
+        draw background: teikna bakgrunn
         draw a polygon: teikna marghyrning
         draw a square 20: teikna ferning 20
         do something: gera eitthvað
+      course4_bee_for_challenge1:
+        move and get nectar with counter: færa og ná blómasafa með teljara
+      course4_bee_fwp_challenge1:
+        pick row: tína beð
+      course4_bee_fwp_challenge2:
+        pick row: tína beð
       courseA_artist_loops_challenge1:
         '"simple" solution': '"einföld" lausn'
+      courseB_artist_loops_challenge2:
+        potential solution: möguleg lausn
+      courseB_artist_loops_challenge2_2018:
+        potential solution: möguleg lausn
+      courseB_artist_loops_challenge2_2019:
+        potential solution: möguleg lausn
+      courseC_artist_prog3:
+        draw flame: teikna loga
+        draw fire: teikna eld
+      courseC_artist_prog3_2018:
+        draw flame: teikna loga
+        draw fire: teikna eld
+      courseC_artist_prog3_2019:
+        draw flame: teikna loga
+        draw fire: teikna eld
+      courseC_artist_prog4:
+        booster: magnari
+      courseC_artist_prog4_2018:
+        booster: magnari
+      courseC_artist_prog4_2019:
+        booster: magnari
       courseC_data wizard:
         do something: gera eitthvað
       courseD_artist_binary1:
@@ -527,6 +588,12 @@ is-IS:
         do something: gera eitthvað
       courseE_artist_concept_challenge1_2018:
         do something: gera eitthvað
+      courseE_artist_concept_challenge2:
+        draw pinwheel: teikna rellu
+      courseE_artist_concept_challenge2_2018:
+        draw pinwheel: teikna rellu
+      courseE_artist_functions1:
+        draw ear stems: teikna spangir
       courseE_artist_functions10:
         do something: gera eitthvað
         draw hexagon: teikna sexhyrning
@@ -541,10 +608,13 @@ is-IS:
         draw line of hexagons: teikna röð sexhyrninga
       courseE_artist_functions2:
         draw a square: teikna ferning
+        draw ear stems: teikna spangir
       courseE_artist_functions2_2018:
         draw a square: teikna ferning
+        draw ear stems: teikna spangir
       courseE_artist_functions2_2019:
         draw a square: teikna ferning
+        draw ear stems: teikna spangir
       courseE_artist_functions3_2018:
         draw a star: teikna stjörnu
       courseE_artist_functions3_2019:
@@ -629,23 +699,32 @@ is-IS:
         draw a line of squares: teikna röð ferninga
         draw square: teikna ferning
       courseE_artist_functions_challenge1:
+        my design: hönnun mín
         do something: gera eitthvað
       courseE_artist_functions_challenge1_2018:
+        my design: hönnun mín
         do something: gera eitthvað
       courseE_artist_functions_challenge1_2019:
+        my design: hönnun mín
         do something: gera eitthvað
       courseE_artist_functions_challenge2:
+        my design: hönnun mín
         do something: gera eitthvað
       courseE_artist_functions_challenge2_2018:
+        my design: hönnun mín
         do something: gera eitthvað
       courseE_artist_functions_challenge2_2019:
+        my design: hönnun mín
         do something: gera eitthvað
       courseE_artist_functions_predict1:
         draw a square: teikna ferning
+        draw ear stems: teikna spangir
       courseE_artist_functions_predict1_2018:
         draw a square: teikna ferning
+        draw ear stems: teikna spangir
       courseE_artist_functions_predict1_2019:
         draw a square: teikna ferning
+        draw ear stems: teikna spangir
       courseE_artist_functions_predict2:
         draw line of polygons: teikna röð marghyrninga
         draw polygon: teikna marghyrning
@@ -684,8 +763,10 @@ is-IS:
         get all nectar: sækja allan blómasafa
       courseE_bee_functions_challenge1:
         do something: gera eitthvað
+        get 3 nectar or honey: sækja 3 af safa eða hunangi
       courseE_bee_functions_challenge2:
         do something: gera eitthvað
+        move and collect: færa og safna
       courseE_farmer_concept1:
         do something: gera eitthvað
       courseE_farmer_concept2:
@@ -771,10 +852,26 @@ is-IS:
         corn and pumpkin: maís og grasker
       courseE_farmer_functions6c:
         corn and pumpkin: maís og grasker
+      courseE_farmer_functions7a1_2018:
+        garden square: garðferningur
+      courseE_farmer_functions7a1_2019:
+        garden square: garðferningur
+      courseE_farmer_functions8a1_2018:
+        garden square: garðferningur
+      courseE_farmer_functions8a1_2019:
+        garden square: garðferningur
       courseE_farmer_functions8b:
         navigate: ferðast
+      courseE_farmer_functions9a1_2018:
+        garden square: garðferningur
+      courseE_farmer_functions9a1_2019:
+        garden square: garðferningur
       courseE_farmer_functions9b:
         navigate: ferðast
+      courseE_playLab_challenge1:
+        win game: vinna leik
+        lose game: tapa leik
+        keep playing: spila áfram
       courseE_playLab_scaffold1:
         do something: gera eitthvað
       courseE_playLab_scaffold2:
@@ -785,14 +882,23 @@ is-IS:
         do something: gera eitthvað
       courseF_artist_fwp1:
         draw a square: teikna ferning
+        checker: athugari
         do something: gera eitthvað
+        Make gingham: Búa til reiti
+        black outline: svört útlína
       courseF_artist_fwp2:
         draw a square: teikna ferning
+        checker: athugari
         do something: gera eitthvað
+        Make gingham: Búa til reiti
+        black outline: svört útlína
       courseF_artist_fwp2_predict1:
         draw a square: teikna ferning
       courseF_artist_fwp3:
         draw a square: teikna ferning
+        draw a square2: teikna ferning2
+        filled square: fylltur ferningur
+        black outline: svört útlína
       courseF_artist_fwp4:
         draw a polygon: teikna marghyrning
       courseF_artist_fwp5:
@@ -813,6 +919,7 @@ is-IS:
         draw a square: teikna ferning
         draw a spiral edge: teikna útlínu spírals
       courseF_artist_fwp_challenge1:
+        draw background: teikna bakgrunn
         draw a polygon: teikna marghyrning
         draw a square 20: teikna ferning 20
         do something: gera eitthvað
@@ -820,6 +927,27 @@ is-IS:
         draw a square 20: teikna ferning 20
         do something: gera eitthvað
         draw an octagon: teikna átthyrning
+      courseF_bee_conditionals2:
+        move and check: færa og athuga
+        check nectar or honey: athuga safa og hunang
+      courseF_bee_for_challenge1:
+        move and get nectar with counter: færa og ná blómasafa með teljara
+      courseF_bee_for_challenge1_2018:
+        move and get nectar with counter: færa og ná blómasafa með teljara
+      courseF_bee_for_challenge1_2019:
+        move and get nectar with counter: færa og ná blómasafa með teljara
+      courseF_bee_functions2:
+        get only nectar: sækja bara blómasafa
+      courseF_bee_functions3:
+        only make honey: aðeins gera hunang
+      courseF_bee_functions3a:
+        check nectar or honey: athuga safa og hunang
+      courseF_bee_functions4:
+        move and check: færa og athuga
+        check nectar or honey: athuga safa og hunang
+      courseF_bee_functions5a:
+        move and check: færa og athuga
+        check nectar or honey: athuga safa og hunang
       courseF_bee_functions6:
         get nectar make honey: safna blómasafa búa til hunang
       courseF_bee_functions7:
@@ -829,13 +957,67 @@ is-IS:
         get nectar make honey: safna blómasafa búa til hunang
       courseF_bee_functionsPre7:
         get nectar make honey: safna blómasafa búa til hunang
+      courseF_bee_functions_challenge1:
+        row of nectar: röð með blómasafa
+        rowOfNectar: rowOfNectar
+        check nectar or honey: athuga safa og hunang
+      courseF_bee_functions_challenge2:
+        rowOfNectar: rowOfNectar
+        move and check: færa og athuga
+        check nectar or honey: athuga safa og hunang
+      courseF_bee_fwp2:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp3:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp4:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp5:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp6:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
+      courseF_bee_fwp_challenge1:
+        pick row: tína beð
+      courseF_bee_fwp_challenge2:
+        pick row: tína beð
+      courseF_bee_variables_1_2018:
+        collect row: safna röð
+      courseF_bee_variables_1_2019:
+        collect row: safna röð
+      courseF_bee_variables_2_2018:
+        collect row: safna röð
+      courseF_bee_variables_2_2019:
+        collect row: safna röð
+      courseF_bee_variables_3_2018:
+        collect row: safna röð
+      courseF_bee_variables_3_2019:
+        collect row: safna röð
+      courseF_bee_variables_4_2018:
+        collect row: safna röð
+      courseF_bee_variables_4_2019:
+        collect row: safna röð
+      courseF_bee_variables_5_2018:
+        collect row: safna röð
+      courseF_bee_variables_5_2019:
+        collect row: safna röð
+      courseF_bee_variables_6_2018:
+        collect stairs: tröppuslóð
+      courseF_bee_variables_6_2019:
+        collect stairs: tröppuslóð
       courseF_bee_variables_7_2018:
         collect: safna
       courseF_bee_variables_7_2019:
         collect: safna
       courseF_bee_variables_8_2018:
+        move and increment: færa og auka
         collect: safna
       courseF_bee_variables_8_2019:
+        move and increment: færa og auka
         collect: safna
       grade5_artist_binary11:
         draw: teikna
