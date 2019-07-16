@@ -1491,8 +1491,7 @@ class Census::StateCsOffering < ApplicationRecord
 
   def self.seed
     if CDO.stub_school_data
-      #STATES_USING_FORMAT_V2_IN_2018_19.each do |state_code|
-      ["CO"].each do |state_code|
+      STATES_USING_FORMAT_V2_IN_2018_19.each do |state_code|
         school_year = 2018
         update = 1
         filename = construct_object_key(state_code, school_year, update)
