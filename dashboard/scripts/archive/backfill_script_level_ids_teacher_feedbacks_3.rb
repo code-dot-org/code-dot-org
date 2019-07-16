@@ -12,9 +12,9 @@ def puts_count
 end
 
 def update_script_level_ids_based_on_assignment
-  puts_count
   puts "backfilling script_level_ids based on assignment"
   feedbacks_without_script_level_id.find_each do |feedback|
+    puts "*"
     associated_script_levels = feedback.level.script_levels
     if associated_script_levels.length > 1
       associated_user_levels = UserLevel.where(
@@ -22,30 +22,30 @@ def update_script_level_ids_based_on_assignment
         level_id: feedback.level_id
       )
       if associated_user_levels != 1
-        student_sections = feedback.student.sections_as_student
-        if student_sections.length = 1 && student_sections[0].script_id
-          script_level_id = ScriptLevel.where(
-            level_id: feedback.level_id,
-            script_id: student_sections[0].script_id
-          ).id
-          feedback.update_attributes(script_level_id: script_level_id)
-        elsif student_sections.length > 1
-          student_sections_taught_by_feedback_giver = student_sections.select {|section| section.user_id == feedback.teacher_id}
-          if student_sections_taught_by_feedback_giver.length = 1 && student_sections_taught_by_feedback_giver[0].script_id
-            script_level_id = ScriptLevel.where(
-              level_id: feedback.level_id,
-              script_id: student_sections_taught_by_feedback_giver[0].script_id
-            ).id
-            feedback.update_attributes(script_level_id: script_level_id)
-          end
+        student_sections_taught_by_feedback_giver =
+          student_sections.select {|section| section.teacher == feedback.teacher}
+
+        # All scripts assigned by the teacher that gave the feedback
+        scripts_assigned_by_feedback_giver =
+          student_sections_taught_by_feedback_giver.map(&:script).compact
+
+        # The associated script levels in any of the scripts assigned by the feedback giver
+        candidate_script_levels = associated_script_levels.where(
+          script: scripts_assigned_by_feedback_giver
+        )
+
+        # If there's only one of those, use it!
+        if candidate_script_levels.length == 1
+          feedback.update_attributes(script_level: candidate_script_levels.first)
         end
       end
     end
   end
   puts "finished backfilling script_level_ids based on assignment!"
-  puts_count
 end
 
 TeacherFeedback.transaction do
+  puts_count
   update_script_level_ids_based_on_assignment
+  puts_count
 end
