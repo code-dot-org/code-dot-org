@@ -541,17 +541,12 @@ pl-PL:
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
           tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
-          tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.
       courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: Możesz zmienić ten numer.
-        courseE_artist_ramp8_2: Kliknij tutaj, aby wpisać liczby powtórzeń kodu.
         courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
           tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_1: Możesz zmienić ten numer.
-        courseE_artist_ramp8_2: Kliknij tutaj, aby wpisać liczby powtórzeń kodu.
+      courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
+          tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: Przedłuż działanie programu
           dodając więcej kodu na dole.
@@ -583,6 +578,9 @@ pl-PL:
         courseE_artist_functions_challenge2_callout2: Jeśli nie podoba ci się ten
           projekt, zmień go tak, jak chcesz!
       courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Możesz zmienić ten numer.
+        courseE_artist_ramp8_2: Kliknij tutaj, aby wpisać liczby powtórzeń kodu.
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Możesz zmienić ten numer.
         courseE_artist_ramp8_2: Kliknij tutaj, aby wpisać liczby powtórzeń kodu.
       courseE_playLab_challenge1:
