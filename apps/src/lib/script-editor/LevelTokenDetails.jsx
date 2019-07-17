@@ -151,27 +151,21 @@ export class UnconnectedLevelTokenDetails extends Component {
   };
 
   render() {
+    const scriptLevelOptions = ['assessment', 'named', 'challenge'];
     return (
       <div style={styles.levelTokenActive}>
         <span>
-          <label style={styles.checkboxLabel}>
-            <input
-              type="checkbox"
-              style={styles.checkboxInput}
-              checked={!!this.props.level.named}
-              onChange={this.handleCheckboxChange.bind(this, 'named')}
-            />
-            &nbsp;<span style={styles.checkboxText}>named</span>
-          </label>
-          <label style={styles.checkboxLabel}>
-            <input
-              type="checkbox"
-              style={styles.checkboxInput}
-              checked={!!this.props.level.assessment}
-              onChange={this.handleCheckboxChange.bind(this, 'assessment')}
-            />
-            &nbsp;<span style={styles.checkboxText}>assessment</span>
-          </label>
+          {scriptLevelOptions.map(option => (
+            <label key={option} style={styles.checkboxLabel}>
+              <input
+                type="checkbox"
+                style={styles.checkboxInput}
+                checked={!!this.props.level[option]}
+                onChange={this.handleCheckboxChange.bind(this, option)}
+              />
+              &nbsp;<span style={styles.checkboxText}>{option}</span>
+            </label>
+          ))}
         </span>
         <hr style={styles.divider} />
         <div style={{clear: 'both'}} />
