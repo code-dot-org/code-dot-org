@@ -2,12 +2,8 @@ Feature: BubbleChoice
   Scenario: Viewing BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
 
-    # Go to BubbleChoice activity page
-    Given I am on "http://studio.code.org/s/allthethings/stage/40/puzzle/1"
-
-    # Go to the first BubbleChoice sublevel
-    And I wait until element ".uitest-bubble-choice:eq(0) a" is visible
-    And I click selector ".uitest-bubble-choice:eq(0) a"
+    # Go to BubbleChoice sublevel
+    Given I am on "http://studio.code.org/s/allthethings/stage/40/puzzle/1/sublevel/1"
 
     # Complete the level
     And I wait until element ".submitButton" is visible
