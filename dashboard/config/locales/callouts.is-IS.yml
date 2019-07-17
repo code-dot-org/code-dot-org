@@ -104,6 +104,8 @@ is-IS:
         CSD_U6_checkWin: Athugaðu hvort spilarinn hafi unnið
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: Athugaðu hvort spilarinn hafi unnið
+      CSDU4 - Design Mode - 3:
+        '': Notaðu setText kubbinn til að breyta textanum í titleLabel
       Course 4 Artist 4:
         repeat_full_circle: Skrifaðu töluna fyrir hversu oft uppvakningurinn á að
           hreyfast til að búa til heilan hring
@@ -187,6 +189,9 @@ is-IS:
         dance_callout_11_b: Nýr kubbur!
       Dance_Party_11_5:
         dance_party_11_5_groups: Hérna eru "allt endur" kubbar
+      Fish Tank 3-validated_2019:
+        spritelab_comment: Notaðu þennan kubb til að skilja eftir athugasemdir fyrir
+          þig eða kennarann um það hvernig kóðinn virkar.
       Function intro Ryan:
         Function_intro_Ryan_1: Þessi litlu fyrirmæli hér segja tölvunni að keyra STÓRA
           bunkann af kóða með þvi heiti sem er á vinnusvæðinu.
@@ -299,6 +304,8 @@ is-IS:
         craft_what_is_iron: Grafðu út þetta járn!
       Underground Iron_2019:
         craft_what_is_iron: Grafðu út þetta járn!
+      Virtual Pet 2_2019:
+        '': Smelltu hér!
       behaviors 1:
         behaviors_edit: Smelltu hér til að sjá þessa hegðun.
       behaviors 3a:
@@ -600,6 +607,10 @@ is-IS:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú
           átt marga svona kubba eftir til að nota.
+      courseC_maze_programming5:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
+      courseC_maze_programming5_2019:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
       courseC_maze_programming7:
         courseC_maze_programming7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar
           erfiðar og geta þurft nokkrar tilraunir.
@@ -709,6 +720,8 @@ is-IS:
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú
           átt marga svona kubba eftir til að nota.
+      courseD_maze_ramp5_2019:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft
           og þú segir til um, áður en afgangurinn af forritinu er keyrður.
@@ -734,15 +747,22 @@ is-IS:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú
           átt marga svona kubba eftir til að nota.
       courseD_scrat_ramp6:
+        courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
+        courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að
+          endurtaka kóðann.
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft
           og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseD_scrat_ramp7:
         courseD_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar
           og geta þurft nokkrar tilraunir.
       courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar
+          og geta þurft nokkrar tilraunir.
         courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
         courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að
           endurtaka kóðann.
+      courseE_aboutme_2:
+        '': Smelltu hér!
       courseE_artist_functions1:
         courseD_artist_functions1_1: Við skulum nota þennan kubb til að byrja að búa
           til fyrsta ferninginn.
@@ -798,10 +818,6 @@ is-IS:
         courseE_artist_functions_challenge2_callout2: Ef þér líkar ekki þessi hönnun,
           getur þú breytt henni í hvað sem þú vilt!
       courseE_artist_ramp8:
-        courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
-        courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að
-          endurtaka kóðann.
-      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
         courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að
           endurtaka kóðann.

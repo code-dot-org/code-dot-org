@@ -949,6 +949,8 @@
   cspexam1-mWU7ilDYM9_name: 測驗第一部分：25 題
   cspexam2-AKwgAh1ac5_name: 測驗第二部分：25 題
   cspunit3_gradelevel: "年級 9-12"
+  accelerated_name: "速成課程"
+  express_name: "速學課程"
   20-hour_name: 速成課程
   algebra_name: "代數裡的 CS"
   AlgebraA_name: "代數裡的 CS 課程 A"

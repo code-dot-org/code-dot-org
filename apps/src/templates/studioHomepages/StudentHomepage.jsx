@@ -37,10 +37,7 @@ export default class StudentHomepage extends Component {
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && (
-          <StudentFeedbackNotification
-            studentId={studentId}
-            linkToFeedbackOverview="/"
-          />
+          <StudentFeedbackNotification studentId={studentId} />
         )}
         <RecentCourses
           courses={courses}

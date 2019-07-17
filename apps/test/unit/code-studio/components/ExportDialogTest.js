@@ -1,28 +1,9 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedExportDialog as ExportDialog} from '@cdo/apps/code-studio/components/ExportDialog';
 import {SignInState} from '@cdo/apps/code-studio/progressRedux';
-
-/*
-    i18n: PropTypes.shape({
-      t: PropTypes.func.isRequired
-    }).isRequired,
-    exportApp: PropTypes.func,
-    projectUpdatedAt: PropTypes.string,
-    isAbusive: PropTypes.bool.isRequired,
-    isOpen: PropTypes.bool.isRequired,
-    channelId: PropTypes.string.isRequired,
-    appType: PropTypes.string.isRequired,
-    onClose: PropTypes.func.isRequired,
-    hideBackdrop: BaseDialog.propTypes.hideBackdrop,
-    canShareSocial: PropTypes.bool.isRequired,
-    userSharingDisabled: PropTypes.bool,
-    signInState: PropTypes.oneOf(Object.values(SignInState)),
-    isProjectLevel: PropTypes.bool.isRequired
-
-*/
 
 describe('ExportDialog', () => {
   it('renders our signed in version when signed in', () => {
@@ -30,9 +11,13 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -48,9 +33,13 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -66,9 +55,13 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -87,9 +80,13 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -107,9 +104,13 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
         isAbusive={true}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -125,9 +126,13 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={async () => ({})}
-        isAbusive={true}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={false}
@@ -148,9 +153,13 @@ describe('ExportDialog', () => {
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={exportApp}
-        isAbusive={true}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -164,21 +173,30 @@ describe('ExportDialog', () => {
     });
   });
 
-  it('publishAndGenerateApk() method calls exportApp() twice with modes expoPublish and expoGenerateApk', async () => {
+  it('generateApkAsNeeded() method calls exportApp(), expoGenerateApk(), and expoCheckApkBuild()', async () => {
+    const exportApp = sinon.stub();
     const publishResult = Promise.resolve({
       expoUri: 'uri',
       expoSnackId: 'id',
       iconUri: 'iconUri',
       splashImageUri: 'splashUri'
     });
-    const exportApp = sinon.stub().returns(publishResult);
+    exportApp.withArgs({mode: 'expoPublish'}).returns(publishResult);
+    const expoGenerateApk = sinon.stub();
+    expoGenerateApk.returns(Promise.resolve('fakeBuildId'));
+    const expoCheckApkBuild = sinon.stub();
+
     const wrapper = shallow(
       <ExportDialog
         i18n={{t: id => id}}
         exportApp={exportApp}
-        isAbusive={true}
+        expoGenerateApk={expoGenerateApk}
+        expoCheckApkBuild={expoCheckApkBuild}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{}}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
         isOpen={true}
-        channelId="fakeChannelId"
         appType="applab"
         onClose={() => {}}
         canShareSocial={true}
@@ -186,14 +204,223 @@ describe('ExportDialog', () => {
         isProjectLevel={false}
       />
     );
-    await wrapper.instance().publishAndGenerateApk();
-    expect(exportApp)
-      .to.have.been.calledTwice.and.calledWith({mode: 'expoPublish'})
-      .and.calledWith({
-        mode: 'expoGenerateApk',
-        expoSnackId: 'id',
-        iconUri: 'iconUri',
-        splashImageUri: 'splashUri'
-      });
+    await wrapper.instance().generateApkAsNeeded();
+    expect(exportApp).to.have.been.calledOnce.and.calledWith({
+      mode: 'expoPublish'
+    });
+    expect(expoGenerateApk).to.have.been.calledOnce.and.calledWith({
+      md5SavedSources: 'fakeHash',
+      expoSnackId: 'id',
+      iconUri: 'iconUri',
+      splashImageUri: 'splashUri'
+    });
+    expect(expoCheckApkBuild).to.have.been.calledOnce.and.calledWith({
+      md5SavedSources: 'fakeHash',
+      expoSnackId: 'id',
+      apkBuildId: 'fakeBuildId'
+    });
+  });
+
+  it('exportApp() not called by generateApkAsNeeded() if the sources have not changed since the last build', () => {
+    const exportApp = sinon.spy();
+    const wrapper = shallow(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={exportApp}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'fakeHash',
+            snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId',
+            apkUri: 'fakeApkUri'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={true}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.instance().generateApkAsNeeded();
+    expect(exportApp).to.not.have.been.called;
+  });
+
+  it('exportApp() will be called by generateApkAsNeeded() if the sources have changed since the last build', async () => {
+    const exportApp = sinon.stub();
+    exportApp.returns(Promise.resolve('fakeBuildId'));
+    const publishResult = Promise.resolve({
+      expoUri: 'uri',
+      expoSnackId: 'id',
+      iconUri: 'iconUri',
+      splashImageUri: 'splashUri'
+    });
+    exportApp.withArgs({mode: 'expoPublish'}).returns(publishResult);
+    const wrapper = shallow(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={exportApp}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'differentHash',
+            snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId',
+            apkUri: 'fakeApkUri'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={true}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    await wrapper.instance().generateApkAsNeeded();
+    expect(exportApp).to.have.been.called;
+  });
+
+  it('An incomplete preexisting build will not be canceled when the dialog is opened if the sources are unchanged', () => {
+    const expoCancelApkBuild = sinon.stub();
+    const wrapper = mount(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={expoCancelApkBuild}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'fakeHash',
+            snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={false}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.setProps({isOpen: true});
+
+    expect(expoCancelApkBuild).to.not.have.been.called;
+  });
+
+  it('An incomplete preexisting build will be resumed within generateApkAsNeeded when the sources are unchanged', () => {
+    const expoCheckApkBuild = sinon.stub();
+    const wrapper = shallow(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={expoCheckApkBuild}
+        expoCancelApkBuild={async () => ({})}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'fakeHash',
+            snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={true}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.instance().generateApkAsNeeded();
+
+    expect(expoCheckApkBuild).to.have.been.calledWith({
+      md5SavedSources: 'fakeHash',
+      expoSnackId: 'fakeSnackId',
+      apkBuildId: 'fakeBuildId'
+    });
+  });
+
+  it('An incomplete preexisting build will be canceled when the dialog is opened if the sources hash has changed', () => {
+    const expoCancelApkBuild = sinon.stub();
+    const wrapper = mount(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={expoCancelApkBuild}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'differentHash',
+            snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={false}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.setProps({isOpen: true});
+
+    expect(expoCancelApkBuild).to.have.been.calledWith({
+      md5SavedSources: 'differentHash',
+      expoSnackId: 'fakeSnackId',
+      apkBuildId: 'fakeBuildId'
+    });
+  });
+
+  it('A complete preexisting build will not be canceled when the dialog is opened if the sources hash has changed', () => {
+    const expoCancelApkBuild = sinon.stub();
+    const wrapper = mount(
+      <ExportDialog
+        i18n={{t: id => id}}
+        exportApp={async () => ({})}
+        expoGenerateApk={async () => ({})}
+        expoCheckApkBuild={async () => ({})}
+        expoCancelApkBuild={expoCancelApkBuild}
+        exportGeneratedProperties={{
+          android: {
+            md5ApkSavedSources: 'differentHash',
+            snackId: 'fakeSnackId',
+            apkBuildId: 'fakeBuildId',
+            apkUri: 'fakeApkUri'
+          }
+        }}
+        md5SavedSources="fakeHash"
+        isAbusive={false}
+        isOpen={false}
+        appType="applab"
+        onClose={() => {}}
+        canShareSocial={true}
+        signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+      />
+    );
+    wrapper.setProps({isOpen: true});
+
+    expect(expoCancelApkBuild).to.not.have.been.called;
   });
 });

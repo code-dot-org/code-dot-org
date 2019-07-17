@@ -137,8 +137,7 @@ export default connect(
       // passed from above
       debugButtons: PropTypes.bool,
       debugWatch: PropTypes.bool,
-      style: PropTypes.object,
-      showReactInspector: PropTypes.bool
+      style: PropTypes.object
     };
 
     onInputKeyDown = e => {
@@ -147,9 +146,7 @@ export default connect(
         e.preventDefault();
         this.props.commandHistory.push(input);
         e.target.value = '';
-        this.props.showReactInspector
-          ? this.appendLog({input: input})
-          : this.appendLog('> ' + input);
+        this.appendLog({input: input});
         if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
           this.props.addWatchExpression(
             input.substring(WATCH_COMMAND_PREFIX.length)
@@ -160,33 +157,24 @@ export default connect(
           );
         } else if (this.props.isAttached) {
           try {
-            if (this.props.showReactInspector) {
-              // parentheses prevent the object from being interpreted as a block rather than as an object
-              let result = this.props.evalInCurrentScope(
-                input[0] === '{' && input[input.length - 1] === '}'
-                  ? `(${input})`
-                  : input
-              );
-              result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
-                result
-              );
-              this.appendLog({
-                output: result,
-                undefinedInput: input === 'undefined' ? true : false
-              });
-            } else {
-              const result = this.props.evalInCurrentScope(input);
-              this.appendLog('< ' + String(result));
-            }
+            // parentheses prevent the object from being interpreted as a block rather than as an object
+            let result = this.props.evalInCurrentScope(
+              input[0] === '{' && input[input.length - 1] === '}'
+                ? `(${input})`
+                : input
+            );
+            result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
+              result
+            );
+            this.appendLog({
+              output: result,
+              undefinedInput: input === 'undefined' ? true : false
+            });
           } catch (err) {
-            this.props.showReactInspector
-              ? this.appendLog({output: String(err)})
-              : this.appendLog('< ' + String(err));
+            this.appendLog({output: String(err)});
           }
         } else {
-          this.props.showReactInspector
-            ? this.appendLog({output: '(not running)'})
-            : this.appendLog('< (not running)');
+          this.appendLog({output: '(not running)'});
         }
       } else if (e.keyCode === KeyCodes.UP) {
         e.target.value = this.props.commandHistory.goBack(input);
@@ -262,6 +250,8 @@ export default connect(
           }
           if (rowValue.input) {
             return <div key={i}>&gt; {rowValue.input}</div>;
+          } else if (rowValue.skipInspector) {
+            return rowValue.output;
           } else if (this.isValidOutput(rowValue)) {
             if (rowValue.fromConsoleLog) {
               return <Inspector key={i} data={rowValue.output} />;
@@ -317,9 +307,7 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
-            {this.props.showReactInspector
-              ? this.displayOutputToConsole()
-              : this.props.logOutput}
+            {this.displayOutputToConsole()}
           </div>
           <div style={style.debugInputWrapper}>
             <span style={style.debugInputPrompt} onClick={this.focus}>

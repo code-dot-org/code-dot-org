@@ -2,12 +2,6 @@
 fil-PH:
   data:
     short_instructions:
-      2-3 Artist 1 new: "Hi, ako ay isang artista. Maaari kang magsulat ng code para
-        paguhitin ako ng halos kahit na ano. Gumamit ng iilang mga bloke para mapagawa
-        akong magguhit sa taas ng mga abong linya na nasa larawan. (Bawat linya ay
-        100 pixels ang haba)\\\r\n\\\r"
-      2-3 Artist 11: 'Bigyang ang paghinto na sinyales nang hangganan sa pamamagitan
-        ng paggawa ng isang octagon na may 100 pixel na mga gilid. '
       2-3 Artist 12: Itakda ang blokeng "ulitin ng ilang beses" upang gumawa ng bilog
         para tapusin ang mata. Kung sa bawat galaw ay liliko sa kanan ng isang antas,
         ilang beses mo itoo uulitin para mabuo ang bilog? 180 beses? 360 beses? 500
@@ -15,466 +9,45 @@ fil-PH:
       2-3 Artist 2 new: 'Ang bahay na ito ay may isang pader na hindi pa kumpeto.  Bawat
         gilid nito ay 100 pixels, ngunit ang hindi pa tapos na pader ay 50 pixels
         lamang.  Tapusin ang pader . '
-      2-3 Artist 3.4: "Sa pamamagitan ng blokeng tumalon, gagalaw  ang artista nang
-        hindi gumuguhit. \nIguhit ang mga linya gamit pareho ang mga blokeng gumuhit
-        at tumalon."
-      2-3 Artist 3new: Ang pulang sombrero ay may tass na 100 pixels.  Gumuhit ka
-        ng itim na sombrerong mas maigsi nang 70 pixels.  ang lapad nang itim na sobrero
-        ay 50 pixels.
       2-3 Artist 4: Tulungan mo akong tapusin ang bahay para sa pusang ito.
-      2-3 Artist 6: '"Ang bahay na ito ay nangangailangan ng isang bubong! Iguhit
-        ang tatsulok. Hint: lahat ng tatlong panig ay parehong haba".'
-      2-3 Artist 7: 'Tapusin ang pagguhit sa huling hanay ng mga bintana sa paaralan
-        para ang lahat sa klase ay makakakita sa labas. Ang gilid ng bawat parisukat
-        ng salamin ng bintana ay 25 pixels ang haba. '
-      2-3 Artist 8: Kumpletohin ang mga silid para sa bawat hayop sa pamamagitan ng
-        paghati sa isang parihaba sa 2 parisukat na magkapareho ang laki. Ang parihaba
-        ay 200 pixels ang lapad at 100 pixels ang taas. Mayroong maraming iba't ibang
-        pamamaraan para malutas ang palaisipang ito, kaya magsaya!
       2-3 Artist 9: Tapusin ang saranggola na ito
-      2-3 Artist Assessment 1: 'Pagtatasa: Tapusin ang pagguhit sa huling ngipin.
-        Ito ay 25 pixels ang haba at 25 pixels ang taas.'
-      2-3 Artist Debugging 1: Ang sombrero ay dapat 50 pixels lang ang haba. Maaari
-        mo bang ayusin ito?
-      2-3 Artist Debugging 10: "Ang direksyon na pad na nasa aking kontroller ng laro
-        ay masyadong makitid.\\\r\n\\\r\nSubukang patakbuhin muna ang code para makita
-        kung ano ang mali."
-      2-3 Artist Debugging 11: "Ang aking niyebe ay nagkawatak-watak!\\\r\n\\\r\nMaaari
-        mo bang malaman kung ano ang problema?"
-      2-3 Artist Debugging 2: "Ang code na ito para sa bigote ng pusa ay mali. \\\r\n\\\r\nAyusin
-        ang code na ito para iguhit ang mga bigote na lahat ay magkapareho ang haba."
-      2-3 Artist Debugging 3: "Ang aking barko ay may butas! \\\r\n\\\r\nAno ang kailangan
-        mong gawin para maayos ito?"
-      2-3 Artist Debugging 5: "Ang code na mayroon tayo para sa binti at paa ay mali.
-        \\\r\n\\\r\nMaaari mo ba itong maayos?"
-      2-3 Artist Debugging 6: "Parang ako ay nakaupo sa isang upuan na kulang ang
-        binti!\\\r\n\\\r\nBaguhin ang code para iguhit ang huling paa."
-      2-3 Artist Debugging 7: "Parang ang C na code ay naguhit nang paurong!\\\r\n\\\r\nMaaari
-        mo bang magawa ito na parang C ulit?"
-      2-3 Artist Debugging 8: "Ang guro ay nagsasabi na dapat kung tapusin kung ano
-        ang nasimulan ko!\\\r\n\\\r\nTulungan akong tapusin ang aking pinwheel. Maaari
-        mo bang matukoy kung ano ang problema?"
-      2-3 Artist Debugging 9: "May bagay na kakaiba!\\\r\n\\\r\nAng code para sa sangang
-        ito ay mali. Maaari mo bang matukoy kung paano magawa ang artista na bakasin
-        ang sanga sa maayos na paraan?"
-      2-3 Artist Debugging Assessment 1: "Pagtatasa: Bakit ang parisukat na ito ay
-        naging 75 pixel na masmayadong mababa sa bawat panig? \\\r\n\\\r\nSaan nagkakamali
-        ang code?"
-      2-3 Artist Free Play: Libreng-laro! Gumuhit ng kahit anumang gusto mo.
-      2-3 Artist Functions 1: "\"Ako zombie na artista. Ako gusto magguhit!\" \\\r\n\\\r\nTulungan
-        ang mga zombie na makaguhit ng parisukat na mga baso. \\\r\n\\\r\nAng tulay
-        sa pagitan ng mga baso ay 25 pixel na mas maikli kaysa sa lapad ng mga parisukat,
-        kung saan ay 100 pixel."
-      2-3 Artist Functions 10: 'Libreng Laro: Narito ang dalawang mga function, isa
-        ay para gumuhit ng malaking gear at isa para gumuhit ng maikling gear. Gamitin
-        ang mga ito para maiguhit ang loob ng makina!'
-      2-3 Artist Functions 11: "Aming binago ang pangalan ng `gumuhit ng parisukat`
-        na function sa `gumuhit ng hexagon`, Maaari mo bang baguhin `gumuhit ng hexagon`
-        na function para gumuhit ng hexagon na may 50 pixel ang mga gilid?\\\r\n\\\r\nIguhit
-        ang larawan gamit ang bagong function!"
-      2-3 Artist Functions 11.5: "Narito ang parehong `draw a hexagon` na function.
-        \\\r\n\\\r\nAno ang mangyayari kapag ini-loop mo ang pangunahing programa
-        nang 6 na mga beses, na umikot nang 60 degrees sa bawat beses na mag-loop
-        ka?"
-      2-3 Artist Functions 12: "Ang mga function ay talagang mahusay para sa pagguhit
-        ng mga kumplikadong mga bagay nang ilang beses. \\\r\n\\\r\nMaaari mo bang
-        gamitin ang `draw a flower` na function sa punan ang natitirang mga kahon
-        ng pananim?\\\r\nAng mga pananamim ay parehong 100 pixels ang pagitan."
-      2-3 Artist Functions 2: "Ang mga function ay nagbibigay-daan na makagawa ka
-        ng mga bagong bloke!\\\r\n\\\r\nAming inilipat ang mga kinakailangang bloke
-        para sa pagguhit ng parisukat sa isang function na tinatawag na `draw a square`.
-        Sa oras na ito, gamitin ang `draw a square` na function para malikha ang mga
-        baso. \\\r\n\\\r\nAng mga parisukat ay 75 pixels ang pagitan."
-      2-3 Artist Functions 3: "Baguhin ang function para maiguhit ang parisukat na
-        may haba ng gilid na 115 para maiguhit ang malalaking mga baso. \\\r\n\\\r\nAng
-        mga parisukat ay 45 pixels na ang pagitan ngayon."
-      2-3 Artist Functions 4: Ngayon, ilagay ang function sa loob ng isang loop para
-        maiguhit ang tatlong mga parisukat na ito.
-      2-3 Artist Functions 9: |-
-        Libreng laro: Eto ang niyebe na function.
-        Paglaruan ang mga ito para maglikha ng taglamig na eksena! Ito ay isang libreng laro na antas, kaya walang palaisipan na ilutas. Magsaya!
-      2-3 Artist Loops New 1: Ating iguguhit ang ulo ng robot! Maaari ka bang gumawa
-        ng parisukat na may mga gilid na 100 pixels?
-      2-3 Artist Loops New 10: Ngayon ay ating ikonekta ang isang bungkos ng mga V
-        nang sama-sama sa isang loop.
-      2-3 Artist Loops New 11: |-
-        Muling buoin ang code mula sa nakaraang palaisipan,
-        ngunit sa oras na ito, magdagdag ng kaliwang pagliko mga 30 degrees sa loob ng loop. Ngayon, ulitin
-        ito ng 24 na beses sa halip na 8.
-      2-3 Artist Loops New 12: 'Gumuhit ng dyamante na may mga gilid na 100 pixels. '
-      2-3 Artist Loops New 13: "Kami magpapasimula sa iyo sa iilang code (nasa abo)
-        para gagawa ng isang dyamante. \\\r\n\\\r\nI-loop ang abong code para maglikha
-        ng isang masayang pattern!"
-      2-3 Artist Loops New 14: |-
-        Paglaruan ang code para sa dyamante
-        at tingnan kung ano pang mga pattern ang magagawa mo. Subukang baguhin kung ilang mga degrees ang iyong
-        pag-ikot at kung ilang beses ka nag-loop.
+      2-3 Artist Free Play: Libreng laro! Gumuhit ng anumang gusto mo.
       2-3 Artist Loops New 15: Ngayon, gumuhit ng kahit anung gusto mo!
-      2-3 Artist Loops New 2: "Narito ang parehong palaisipan na kakalutas lang natin,
-        pero sa oras na ito, maaari lang tayong gumamit ng isang `move forward` na
-        bloke at isang `turn` na bloke.\\\r\n\\\r\nMaaari ka bang gumamit ng `repeat`
-        para malutas ang palaisipang ito?"
-      2-3 Artist Loops New 9: Gumuhit ng isang simpleng V (kung saan ang parehong
-        gilid ay 50 pixels) para makumpleto ang arrow.
-      2-3 Artist Nested Loops 1: "Maglagay ng isang `repeat` na bloke sa paligid ng
-        buong \nsalansan ng code na ito para maguhit ang pattern."
-      2-3 Artist Nested Loops 10: I-loop ang code na ito nang 12 beses para makumpleto
-        ang pattern.
-      2-3 Artist Nested Loops 11: I-loop ang code na ito nang 4 beses para makumpleto
-        ang pattern, lumiko nang 90 degrees pagkatapos nang bawat bilog.
-      2-3 Artist Nested Loops 12: I-loop ang code na ito nang 12 beses para makumpleto
-        ang mga kulot.
-      2-3 Artist Nested Loops 2: "Ngayon ay i-loop ang tatsulok nang 6 na beses.\n\\\r\n\\\r\nPagkatapos
-        ng bawat tatsulok, kakailanganin mong lumiko nang 60 degrees bago iguhit ang
-        kasunod."
-      2-3 Artist Nested Loops 3: "Kakailanganin mong i-loop ang tatsulok nang 12\nbeses
-        para maiguhit ang pattern na ito. \\\r\n\\\r\nHatiin ang bilang ng degrees
-        sa isang bilog\n(360) sa pamamagitan ng bilang ng mga hugis na iguguhit mo
-        (12) para matukoy kung gaano kalayo ang\niikotin mo pagkatapos ng bawat hugis."
-      2-3 Artist Nested Loops 4: "I-loop ang dyamanteng ito nang 12 beses para maiguhit
-        ang bulaklak!\\\r\n\\\r\nTandaan: Tayo ay gagamit ng parehong anggulo para
-        i-loop ang 12 mga dyamante gaya ng ginawa natin sa 12 mga tatsulok. \\\r\nIlan
-        ba ang kailangan nating iikot pagkatapos ng bawat hugis?"
-      2-3 Artist Nested Loops 5: "Punan ang mga bitana ng gusaling ito gamit ang naka-nest
-        na loop. \\\r\n\\\r\nAng mga bintana ay 20 pixels ang haba at 20 pixels ang
-        pagitan."
-      2-3 Artist Nested Loops 6: "Ang dinosaur na ito mayroong 8 mga pako na tumatakbo\nsa
-        taas ng buntot nito.\\\r\nBawat pako ay 30 pixels ang haba. I-loop ang tatsulok
-        nang 8 beses, ngunit\nsiguraduhing tumalon pasulong sa bawat isa!"
-      2-3 Artist Nested Loops 7: "I-loop ang tatsulok na ito nang 10 beses para maiguhit
-        ang araw. \\\r\n\\\r\nKakailanganin mong igalaw at liliko pagkatapos ng bawat
-        tatsulok.\n\\\r\n\\\r\nMaaari mong malaman kung ilan dapat ang ililiko mo
-        sa pamamagitan ng paghati sa bilang ng degrees sa isang bilo sa bilang ng
-        mga tatsulok na bumubuo nito."
-      2-3 Artist Nested Loops 8: "Ngayon ay magdadagdag tayo ng damo sa ating larawan.
-        \\\r\n\\\r\nBawat kumpol ng damo ay 50 pixels ang pagitan."
-      2-3 Artist Nested Loops 9: "Ating tatapusin ang larawang ito sa pamamagitan
-        ng pagdagdag sa ating bulaklak. \\\r\n\\\r\nI-loop ang dyamante nang 12 beses
-        para maguhit ang bulaklak."
-      2-3 Artist Nested Loops Free Play: Libreng laro, gumuhit ng isang bagay na kamangha-mangha
-        gamit ang mga naka-nest na mga loop.
-      2-3 Bee Conditionals 11: "Ako ay nagtaka kung ano ang nandoon!\\\r\n\\\r\nTulungan
-        akong lumipad palibot sa bakuran at magkolekta lang sa mga bulaklak na may
-        mga nektar. "
-      2-3 Bee Conditionals 12: Tulungan akong maghanap sa lahat ng mga nektar gamit
-        ang iilang bloke lang hangga't maaari!
-      2-3 Bee Conditionals 13: "Mayroong maraming nangyari dito!\\\r\n\\\r\nGamitin
-        kung ano ang natutunan mo para makolekta ang lahat ng nektar at pagkatapos
-        ay makagawa ng pulot."
-      2-3 Bee Conditionals 14: "Ating ipagsama ang lahat!\\\r\n\\\r\nGamitin ang iyong
-        natutunan para matulungan akong magkolekta sa mga bulaklak lang na mayroong
-        mga nektar, gamit ang iilang mga bloke lang hangga't maaari. Huwag kalimutang
-        gumawa ng mga pulot sa dulo."
-      2-3 Bee Conditionals 15: "Ang hagdanan na hakbang na patter ay dapat magmukhang
-        pamilyar. \\\r\n\\\r\nMaaari ka bang magkolekta ng nektar lang mula sa mga
-        bulaklak na mayroon nito, gamit ang kaunting mga bloke lang na posible?"
-      2-3 Bee Conditionals 2: "Ako ay isang gutom na bubuyog! \\\r\nTulungan akong
-        kolektahin ang lahat ng mga nektar mula sa mga bulaklak gamit ang pinakamaliit
-        na bilang ng mga bloke."
-      2-3 Bee Conditionals 3: "Tingnan ang lahat ng mga nektar na iyan!\\\r\n\\\r\nTulungan
-        akong kolektahin ang nektar at gumawa ng pulot gamit ang iilang mga bloke
-        lang hangga't maaari.  "
-      2-3 Bee Conditionals 5: "Maging maingat na hindi makolekta ang nektar mula sa
-        lilang na bulaklak kung wala itong laman. \\\r\nDapat mo munang suriin kung
-        ang nektar ay katumbas sa 1 gamit ang `if nectar` na bloke."
-      2-3 Bee Conditionals 6: Suriin kung bulaklak na ito gamit ang "if" na bloke
-        para masuri kung mayroon pang kahit anong nektar na makukuha.
-      2-3 Bee Conditionals 7: Magkolekta ng nektar mula sa bawat bulaklak kung mayroon
-        lang itong laman.
-      2-3 Bee Conditionals 8: |-
-        Ang bukiring ito ay mayroon mga pula at lilang mga bulaklak.
-        Ang mga pulang bulaklak ay mayroong kilalahang halaga ng nektar, ngunit ang lilang bulaklak ay hindi nalalaman.
-        Kolektahin ang lahat ng mga nektar.
+      2-3 Artist Nested Loops Free Play: Libreng maglaro, gumuhit ng isang bagay na
+        kamangha-mangha gamit ang mga naka-nest na mga loop.
       2-3 Bee Conditionals 9: Kolektahin ang lahat ng nektar mula sa bawat bulaklak.
-      2-3 Bee Conditionals Assessment 1: 'Pagtatasa: Kolektahin ang lahat ng mga nektar.
-        Mag-ingat na hindi mo masubukang magkolekta ng nektar sa lilang bulaklak kung
-        wala itong laman.'
-      2-3 Bee Debugging 1: Ang mga blokeng ito ay nakaka-inis sa akin. Ayusin ang
-        (mga) kamalian para makolekta ang lahat ng mga nektar.
-      2-3 Bee Debugging 10: "Ang palaisipang ito ay naggawa sa akin na loopy!\\\r\nAyusin
-        ang (mga) kamalian para makolekta ang lahat ng mga nektar at magawa ang lahat
-        ng mga pulot."
-      2-3 Bee Debugging 2: "Mahahanap mo ba ang problema dito?\\\r\nAyusin ang (mga)
-        kamalian para makolekta ang lahat ng mga nektar."
-      2-3 Bee Debugging 3: "Ohh, ang isang ito ay nangangagat!\\\r\n\\\r\nAyusin ang
-        (mga) kamalian para makolekta ang lahat ng nektar."
-      2-3 Bee Debugging 4: Ang mga blokeng ito ay talagang nakaka-inis sa akin. Ayusin
-        ang (mga) kamalian para makolekta ang lahat ng mga nektar at magawa ang lahat
-        ng mga pulot.
-      2-3 Bee Debugging 5: "Ang bulaklak na iyan ay mukhang masarap!\\\r\n\\\r\nAyusin
-        ang (mga) kamalian para makolekta ang lahat ng mga nektar. Maaari mo na ngayong
-        gamit ang parehong run at step."
-      2-3 Bee Debugging 6: "Isang napakatamis na hamon!\\\r\n\\\r\nAyusin ang (mga)
-        kamalian para makolekta ang lahat ng mga nektar."
-      2-3 Bee Debugging 7: Ayusin ang (mga) problema para kolektahin ang lahat ng
-        mga nektar at gawing pulot ang lahat.
-      2-3 Bee Debugging 8: "Napakaraming magagandang bulaklak!\\\r\n\\\r\nAyusin ang
-        (mga) problema para makolekta ang lahat ng mga nektar."
-      2-3 Bee Debugging 9: "\"Maging\" matiyaga sa isang ito!\\\r\n\\\r\nKailangan
-        mong ayusin ang iilang mga bagay sa programang ito para makolekta ang lahat
-        ng nektar at magawa ang lahat ng mga pulot."
-      2-3 Bee Debugging Assessment 1: "Pagtatasa: Ngayon na ang oras para ipakita
-        ang iyong nalalaman!\\\r\n\\\r\nAyusin ang (mga) kamaliaan para makolekta
-        ang lahat ng mga nektar at magawa ang lahat ng mga pulot."
-      2-3 Bee Functions 1: Ang mga function ay mga bloke na code na nagsasagawa ng
-        isang gawain. Gamitin ang "get 2 nectar" na function para makolekta ang nektar
-        mula sa bawat bulaklak.
-      2-3 Bee Functions 10: "Ang lilang mga bulaklak ay maaaring magbago sa pagitan
-        ng 1 o 9 na nektar sa bawat beses na patatakbuhin mo ang palaisipan.  \\\r\n\\\r\nMaglikha
-        ng function na kumokolekta ng nektar sa mga llang bulaklak lang na mayroong
-        nektar."
-      2-3 Bee Functions 2: "Ang mga function ay mga bloke ng code na gumagawa ng isang
-        gawain  \\\r\n\\\r\nGamitin ang `get 5` na function para makakuha ng 5 mga
-        nektar sa bawat beses."
       2-3 Bee Functions 3: Kolektahin ang lahat ng nektar mula sa bawat bulaklak.
-      2-3 Bee Functions 4: "Ang `move and get nectar` na function ay nag-iikot sa
-        bubuyog, nagkokolekta ng nektar, at pagkatapos ay nagbabali sa bubuyog kung
-        saan ito nagsimula. \\\r\n\\\r\nGamitin ang function para kolektahin ang lahat
-        ng nektar."
-      2-3 Bee Functions 5: Ngayon ay mayroon nang maraming mga nektar sa mga bulaklak.
-        Baguhin ang binigay na function para makakolekta ito ng 4 na mga nektar at
-        gamitin ito para makolekta ang lahat ng mga nektar mula sa mga bulaklak.
-      2-3 Bee Functions 6: Ngayon ay gamitin ang parehong function para mangolekta
-        ng nektar mula sa tatlong mga bulaklak.
-      2-3 Bee Functions 8: Lumikha ng iyong sariling function na kukuha ng 7 na nektar,
-        gumalaw pasulong, at gumawa ng 7 na pulot. Gamitin ang function para magkolekta
-        ng nektar sa bawat bulaklak at gumawa ng pulot sa bawat pulot-pukyutan.
-      2-3 Bee Functions 9: Lumikha ng iyong sariling function na lulusong sa landas,
-        kukuha ng nektar, gagawa ng pulot, at pagkatapos ay magbabalik sa bubuyog
-        sa taas ng landas.
-      2-3 Bee Functions Assessment 1: 'Pagtatasa: Gamitin ang binigay na function
-        para kumolekta ng nektar sa bawat bulaklak.'
-      2-3 Bee Functions Assessment 2: 'Pagtatasa: Lumikha ng function para bumaling,
-        gumalaw pasulok at gumawa ng 3 pulot, pagkatapos ay ibalik ang bubuyog sa
-        kung saan ito nagsimula at bumalik.'
-      2-3 Bee Loops 1: "Ang mga bulaklak na iyon ay parang masarap!\\\r\n\\\r\nMagkolekta
-        ng nektar mula sa bawat bulaklak gamit ang pinakakaunting mga bloke hangga't
-        maaari."
-      2-3 Bee Loops 10: Maaari mo bang gamitin ang while loop sa loob ng dalawa pang
-        mga loop para magkolekta sa lahat ng mga nektar?
-      2-3 Bee Loops 13: 'Pagtatasa: Kolektahin ang lahat ng mga nektar gamit ang pinakakaunting
-        bilang ng mga bloke hangga''t maaari.'
-      2-3 Bee Loops 1A: 'Hi, ako ay isang bubuyog. Maaari mo ba akong tulungan na
-        magkolekta ng nektar mula sa mga bulaklak na ito? '
-      2-3 Bee Loops 2: Kolektahin ang lahat ng nektar at gawin ang lahat ng mga pulot
-        gamit ang pinakakaunting posibleng mga bloke.
       2-3 Bee Loops 2A: Sa oras na ito, gumamit ng loop para tipunin ang lahat ng
         mga nektar.
-      2-3 Bee Loops 3: Magkolekta ng nektar mula sa bawat bulaklak at gumawa ng pulot
-        sa bawat pulot-pukyutan gamit ang pinakakaunting mga bloke hangga't maaari.
       2-3 Bee Loops 3A: Gamitin ang `repeat` na loop para kolektahin ang lahat ng
-        nektar.
-      2-3 Bee Loops 3B: Ngayon ay gamitin ang `repeat` na bloke para kolektahin ang
-        lahat ng nektar at gawin ang lahat ng pulot.
-      2-3 Bee Loops 4: "Sadyang abala na bubuyog!\\\r\n\\\r\nTulungan ang bubuyog
-        na magkolekta sa lahat ng nektar at gawin ang lahat ng mga pulot gamit ang
-        pinakakaunting mga bloke hangga't maaari."
-      2-3 Bee Loops 4A: "Ilan beses ba maaaring makakatulong ang mga loop sa palaisipang
-        ito? \\\r\n\\\r\nAng mga loop ay iyong kaibigan! Gummat ng iilan sa kanila
-        para makompleto ang palaisipang ito gamit ang pinakakaunting mga bloke na
-        posible."
-      2-3 Bee Loops 5: "Ang hugis ng landas na ito ay kakaiba sa iba.\\\r\n\\\r\nMaaari
-        mo bang kolektahin ang lahat ng mga nektar gamit ang pinakakaunting mga bloke
-        hangga't maaari?"
-      2-3 Bee Loops 6: Mahahanap mo ba ang pinakamadaling daan para makolekta ang
-        lahat ng nektar at magawa ang lahat ng mga pulot ng bubuyog?
-      2-3 Bee Loops 7: Isang napakagandang bukirin ng mga bulaklak!  Tulungan ang
-        bubuyog na bisitahin ang bawat isa.  Mahahanap mo ba ang daan para magawa
-        ito gamit ang mas kaunti kaysa sa 7 na mga bloke?
-      2-3 Bee Loops 8: "Ang lilang mga bulaklak na ito ay mayroong iba't ibang bilang
-        ng nektar sa bawat beses na papatakbuhin mo ang palaisipan. \\\r\n\\\r\nGamitin
-        ang `while nectar` na loop para kolektahin ang lahat ng nektar. \\\r\n\\\r\nAng
-        loop na ito ay tatakbo hanggang ang kondisyon ay true, sa kasong ito `nectar
-        > 0`."
-      2-3 Bee Loops Assessment 1: 'Pagtatasa: Gamitin ang `while` loop para kolektahin
-        ang lahat ng nektar mula sa mga bulaklak na ito.'
-      2-3 Maze 1: 'Matutulungan mo ba ako na hulihin ang malaikot na baboy? Magsalansan
-        ng iilang `move forward` na mga bloke sa baba ng `when run` na bloke at pindutin
-        ang "Run". '
+        mga nektar.
       2-3 Maze 10: Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)
-      2-3 Maze 12: Makapunta ka ba sa baboy sa pamamagitan ng paglikha ng loop na
-        gumagamit lang ng isang `move forward` na bloke sa loob ng isang `repeat`?
-      2-3 Maze 13: Dalhin mo ako sa baboy! Maaari ka lang gumamit ng isang move forward
-        na bloke sa pagkakataong ito
-      2-3 Maze 15: Sa palaisipang ito, ang dalawang `repeat` na mga loop ay makakatulong
-        sa iyo na makapunta sa baboy gamit ang pinakakaunting bilang ng mga bloke!
-      2-3 Maze 16: Ang mga loops ay gagana rin kapag may higit sa isang bloke sa loob!
-        Maaari mo bang i-loop ang pagkasunod-sunod na ito para mapapunta ang zombie
-        sa mirasol?
-      2-3 Maze 16 before: Maaari mo bang malaman ang pinakamabilis na paraan para
-        madala mo ako sa baboy?
       2-3 Maze 2: Ang baboy na ito ay dumadampi sa aking mga balahibo. Tulungan akong
         makuha siya!
-      2-3 Maze 3: Sundan ang landas at gabayan ako papunta sa pasaway na baboy. Iwasan
-        ang TNT para hindi lilipad ang mga balahibo!
       2-3 Maze 4: Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)
-      2-3 Maze 6: Maging kalmado at tulungan akong hanapin ang masamang baboy. Kung
-        hindi baka magalit ako!
       2-3 Maze 7: Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)
       2-3 Maze 8: Dalhin ako sa baboy!
       2-3 Maze 9: Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)
-      2-3 Maze Loops 1: Madadala mo ba ako sa baboy gamit ang 5 na magkaparehong uri
-        ng mga bloke?
       2-3 Maze Loops 17: Gamitin ang natutunan mo para madala ako sa mirasol!
-      2-3 Maze Loops 18: "Dahil ako sa mirasol gamit ang pinakakaunting mga bloke
-        lang na maaari! \\\r\n\\\r\nSubukang gumamit ng isang `repeat`na loop sa loob
-        ng isa pa para mabawasan ang bilang ng code na kakailanganin mo."
-      2-3 Maze Loops 19: "Pahusayin pa natin ito! \\\r\nGamitin ang mga loop para
-        mapapunta ako sa mirasol gamit ang napakaliit na mga loop lang hangga't maaari."
       2-3 Maze Loops 20: Dalhin ako sa mirasol gamit ang pinakakaunting bilang ng
         mga bloke hangga't maaari!
-      2-3 Maze Loops 21: Dalhin ako sa mirasol gamit ang iilang mga bloke hangga't
-        maaari!
-      2-3 Maze Loops Assessment 1: 'Pagtatasa: Dalhin ako sa mirasol gamit ang 5 mga
-        bloke lang! '
-      4-5 Artist 1: "Tulungan akong tapusin ang pagguhit sa aking kahot. (Bawat linya
-        ay 300 pixels ang haba) \\\r\n\\\r"
-      4-5 Artist 11: Kompletohin ang mga berdeng linya. Ang mga linya ay 300 pixels
-        ang haba at 15 pixels ang pagitan.
-      4-5 Artist 2: I-loop ang code na ito gamit ang `repeat` na bloke para makumpleto
-        ang parisukat.
-      4-5 Artist 3: |-
-        Ang parihaba na taniman ng mga bulaklak na ito ay 600 ang palibot nito.
-        Ang mahabang panig ay 200 ang haba. Gumuhit ng parihaba gamit ang iilang mga bloke lang hangga't maaari.
       4-5 Artist 3.5: Subukang alamin kung ano ang mangyayari kung ipapatakbo mo ang
         code na ito (o pindutin lang ang "Run" at subukan ito). Sa sunod, ulit ang
         code ng ilang ulit para makumpleto ang drowing!
       4-5 Artist 4: Ilang degrees ba mayroon ang isang bilog? I-loop ang mga bloke
         para makalikha ng isang bilog ng mga kulay.
-      4-5 Artist 5: Ano ang maaari nating ipalit sa "???" para masiguro na ang mga
-        zombie ay makakumpleto sa drowing gamit ang mga loop na ibinigay?
-      4-5 Artist 6: Ang parigilid na tatsulok na ito ay mayroong mga anggulo na 60,
-        60, at 60 degrees. Bawat gilid ay 200 pixels. Kumpletohin ang drowing.
-      4-5 Artist 7: Ang kanang tatsulok na ito ay mayroong mga anggulo na 30, 60,
-        at 90 degrees. Ang haba ng nakahilis na gilid (haba ng hypotenuse) ay 200
-        pixels. Kompletohin ang drowing.
-      4-5 Artist 8: "Ang panggitnang linya sa soccer na field ay tadlong sa mga gilid
-        na linya.  \\\r\nAng parihabang ito ay mayroong kabuuan na 800 pixels ang
-        paligid, at ito ay 240 pixels ang haba. Gaano kataas ito?  \\\r\n\\\r\nGumuhit
-        ng mga hangganan at ang kalagitnaang linya."
-      4-5 Artist 9: Iguhit ang kanang bahagi ng larawang ito para ang disenyo ay magkapantay.
-        Ang mga tatsulok ay paragilid at mayroong mga gilid na 50 pixels ang haba.
       4-5 Artist Assessment 1: 'Pagtatasa: Gumamit ng loop para maiguhit ang parigilid
         na tatsulok. Bawat panig ay 300 pixels.'
-      4-5 Artist Free Draw 1: Libreng Pagguhit! Magguhit ng anumang nagbigay-inspirasyon
-        sa iyo na maglikha.
-      4-5 Artist Patterns 1: "Iguhit ang parisukat na ito gamit ang loop.\\\r\n\\\r\nBawat
-        gilid ay 20 pixels ang haba."
-      4-5 Artist Patterns 10: "Ang code na ito ay nagguguhit ng dalawang hanay ng
-        mga hexagon - i-loop ang buong bagay nang 4 na beses para maiguhit ang buong
-        pulot-pukyutan. \\\r\n\\\r\nKakailanganin mong tumalon pabalik nang 120 pixels
-        sa iyong pinakapanglabas na loop para masiguro na ang artista ay hindi makakaguhit
-        sa labas ng screen."
-      4-5 Artist Patterns 11: 'Ilang beses ba kailangan itong i-loop para maiguhit
-        ang kalahating bilog? '
-      4-5 Artist Patterns 12: "Kung ikaw ay maglilikha ng isa pang loop gaya ng isang
-        ito, ngunit liliko pakaliwa sa halip na pakanan, ano ang mangyayari? \\\r\n\\\r\nMaaari
-        mo bang ulitin ang lahat ng mga ito para maiguhit ang alon na ito?"
-      4-5 Artist Patterns 13: "Ngayon ay ating i-loop ang buong bagay nang apat na
-        beses para malikha ang kuwadro ng larawang ito. Mag-ingat sa mga sulok - hindi
-        ka makakaikot nang basta-basta nang 90 degrees! \\\r\n\\\r\nKung ang pag-loop
-        ng 3 degree na pag-ikot nang 60 na beses ay nakakagawa ng isang kalahating
-        bilog, alin sa mga bloke ng code na ito ang makakagawa ng karagdagang pang-apat
-        na bilog para sa mga sulok?"
-      4-5 Artist Patterns 2: Kung ilagay mo ang iyong parisukat na loop sa loob ng
-        isa pang loop, tinatawag natin itong isang naka-nest na loop. Ano ang kailangan
-        mong idagdag bilang panlabas na loop para masiguro na lahat ng 15 na mga parisukat
-        ay nakalinya katabi ng isa't isa?
-      4-5 Artist Patterns 3: |-
-        Ngayon ay pupunta pa tayo ng isang antas na mas malalim!
-        Ating na-nest ang buong bloke ng code sa isa pang loop, ngunit kakailanganin mog mapabalik ang artista sa lugr para maiguhit ang susunod na linya. Alin sa mga code na mga blokeng ito ang maaari mong ilagay sa dulo ng pinakalabas na loop para maiguhit ang buong grid?
-      4-5 Artist Patterns 4: Ang dyamanteng iyo ay mayroong 50 pixel na mga gilid
-        at anggulo na 120 at 60 degrees. Gumamit ng loop para maiguhit ito.
-      4-5 Artist Patterns 5: "Ulitin ang code na ito para makagawa ng isang hanay
-        ng 6 na mga dyamante. \\\r\n\\\r\nBigyang pansin na ating binago ang ating
-        dyamanteng code para mag-ulit nang 3 beses sa halip na 2 - bakit kaya?"
-      4-5 Artist Patterns 6: "Ilang ulit ba dapat kailangang ulitin ang blokeng ito
-        para makaguhit ng buong grid ng mga dyamante?\\\r\n\\\r"
-      4-5 Artist Patterns 7: "Ating baguhin ang code mula sa huling palaisipan para
-        magawa ang mas kumplikadong pattern na ito. Bigyang pansin kung paano ang
-        mga dyamante nagkapatung-patong ngayon, subukang palitan ang unang \"jump
-        backwards\" mula sa 100 papuntang 50 (kalahati ang layo) - ngayon ay gaano
-        kalayo ba dapat ang pupuntahan ng artista sa pangalawang \"jump backwards\"?\\\r\n\\\r"
-      4-5 Artist Patterns 8: Gumamit ng loop para maiguhit ang hexagon na ito na may
-        mga gilid na 40 pixel at mga anggulo na 60 degree.
-      4-5 Artist Patterns 9: "Ngayon ay ulitin ang code na ito nang 3 beses at iguhit
-        ang buong hanay. \\\r\n\\\r\nBawat hexagon ay 80 pixels ang lapad mula sa
-        pinakamalayong punto mula sa kaliwa papuntang kanan."
-      4-5 Artist Patterns 9.5: Ating i-loop ang code na ito para maiguhit ang dalawang
-        mga hanay ng mga hexagon. Bigyang pansin na ang ating pangalawang hanay ay
-        inilipat pakanan.
-      4-5 Artist Patterns Free Play: Libreng laro - subukan ang iyong kamay sa paggawa
-        ng mga sarili mong pattern!
-      4-5 Bee Conditionals 1: Ang ulap na ito ay nakaharang sa aking paningin. Suriin
-        kung makita kung mayroong isang bulaklak sa ilalim ng ulap, at kumuha lang
-        ng nektar kung mayroong bulaklak. Maging maingat, maaari itong magbago!
-      4-5 Bee Conditionals 2: "Mas marami pang mga ulap! \\\r\n\\\r\nTingnan sa baba
-        ng bawat ulap para makita kung ito ba ay nagtatago ng bulaklak bago ikaw makakakuha
-        ng nektar.  \\\r\n\\\r\nTandaan:\nHindi lahat ng mga ulap ay magkapareha!"
-      4-5 Bee Conditionals 3: Ngayon ay gusto ko lang makagawa ng pulot. Ang ilan
-        sa mga ulap na ito ay maaaring magkaroon ng pulot-pukyutan sa ilalim ng mga
-        ito. Siguraduhin na masuri mo ang bawat ulap!
-      4-5 Bee Conditionals 4: Minsan ang ulap na ito ay nagtatakip sa bulaklak, at
-        minsan tinatakpan nito ang pulot-pukyutan! Gamitin ang if/else na bloke para
-        magkolekta ng nektar kung ito ay isang bulaklak, kung hindi gumawa ng pulot
-        (dahil ito ay isang pulot-pukyutan).
-      4-5 Bee Conditionals 5: "Mayroon lang isang bulaklak o pulot-pukyutan sa ilalim
-        ng bawat isa sa mga ulap na iyon!\\\r\n\\\r\nGamitin ang `if/else` na bloke
-        para magkolekta ng nektar kung mayroong isang bulaklak.\\\r\nKung hindi, gumawa
-        ng pulot (dahil mayroong pulot-pukyutan)."
-      4-5 Bee Conditionals 6: "Hindi ako sigurado kung ilang nektar mayroon ang bulaklak
-        na ito, ngunit alam ko na ito ay alinman sa 1, 2, o 3 na nektar. \\\r\n\\\r\nIpagsama
-        ang mga kondisyonal na mga bloke (`if` at/o `if/else`) para kumuha lang ng
-        nektar kung ano lang ang laman ng bulaklak. \\\r\n\\\r\nTandaan, ang halaga
-        ng nektar ay maaaring magbago bawat beses na patatakbuhin mo ang palaisipan!"
-      4-5 Bee Conditionals 7: "Ang mga bulaklak na mga ito ay maaaring magkaroon ng
-        3, 2, o 11 na nektar. \\\r\n\\\r\nKumpletohin ang `check purple flower` na
-        function at gamitin ito para kolektahin ang lahat ng mga nektar na nasa mga
-        bulaklak."
-      4-5 Bee Conditionals 8: "Isulat ang function para sa `check flower make honey`.
-        \\\r\n\\\r\nAng iyong function ay dapat magsusuri kung ang lilang bulaklak
-        ay mayroong 3, 2, o 1 nektar at kunin ang lahat ng nektar. \\\r\nPagkatapos,
-        lumakad pasulong at gumawa ng pulot."
-      4-5 Bee Conditionals Assessment 1: "**Pagtatasa:** Ang mga ulap na ito ay marahil
-        nagtatago ng bulaklak na may isang nektar o isang pulot-puktutan na nangangailangan
-        ng isang pulot. \\\r\n\\\r\nKumpletohin ang `get nectar or make honey` na
-        function, pagkatapos ay tawagin ito para magkolekta ng nektar o pulot. \\\r"
-      4-5 Bee Debugging 1: "Ang mga blokeng ito ay talagang nakakainis sa aking. \\\r\n\\\r\nMaaari
-        mo bang ayusin ang mga ito?"
       4-5 Bee Debugging 10: Hanapin ang mga mali at ayusin ang mga ito.
       4-5 Bee Debugging 11: Tama ba ang pagbilang nito?
       4-5 Bee Debugging 2: Tulungan ang bubuyog na kukuha ng nektar at gumawa ng pulot.
       4-5 Bee Debugging 3: Hanapin ang mga mali at ayusin ang mga ito.
       4-5 Bee Debugging 4: Ang mga blokeng ito ay hindi gumagana. Ano ang pattern?
       4-5 Bee Debugging 5: May ilang bagay na hindi tama dito...
-      4-5 Bee Debugging 6: "Ang lilang bulaklak ay mayroong iba't ibang bilang ng
-        nektar bawat beses na papatakbuhin mo ang palaisipan. \\\r\n\\\r\nAyusin ang
-        mga bloke para makuha ang lahat ng nektar mula sa bulaklak sa bawat beses."
       4-5 Bee Debugging 7: Ang function ay may kulang na bagay...
-      4-5 Bee Debugging 8: Ang function na ito ay walang problema, ngunit hindi wasto
-        ang pagkagamit nito.
       4-5 Bee Debugging 9: Bakit ang bubuyog hindi nakagawa ng sapat na pulot?
       4-5 Bee Debugging Assessment 1: 'Pagtatasa: Ayusin ang code.'
       4-5 Bee Nested Loops 1: Maggamit ng loop para ikolekta ang lahat ng nektar.
-      4-5 Bee Nested Loops 2: "Kolektahin ang lahat ng nektar mula sa bawat bulaklak.\nGumamit
-        ng naka-nest na loop. "
-      4-5 Bee Nested Loops 3: Kolektahin ang lahat ng nektar sa pamamagitan ng paglagay
-        sa panimulang code sa loob ng iba pang loop.
-      4-5 Bee Nested Loops 4: "Kolektahin ang lahat ng nektar mula sa bawat bulaklak
-        at gumawa ng pulot sa pulot-pukyutan. \\\r\n\\\r\nGumamit ng naka-nest na
-        loop. "
-      4-5 Bee Nested Loops 5: Kolektahin ang lahat ng nektar sa pamamagitan ng paglikha
-        ng naka-nest na loop.
-      4-5 Bee Nested Loops 7: Ilagay ang loop na ito sa loob ng isa pang loop para
-        makalikha ng isang naka-nest na loop at kolektahin ang lahat ng mga nektar
-        mula sa mga bulaklak.
-      4-5 Bee Nested Loops 9: Kolektahin ang lahat ng mga nektar mula sa mga bulaklak
-        na ito sa pamamagitan ng pag-nest ng while loop sa loob ng isang repeat.
-      4-5 Bee Nested Loops Assessment 1: "**Pagtatasa:** Kolektahin ang lahat ng nektar
-        at gawin ang lahat ng pulot gamit ang mga loop."
-      4-5 Bee Nested Loops Rows: |-
-        Tipunin ang nektar mula sa mga hanay ng mga bulaklak!
-        Gumamit ng naka-nest na loop.
       4-5 Maze 1: Mahal na tao. Ako zombie. Dapat... punta... sa mirasol.
       4-5 Maze 10: Maaari ka bang makapunta sa mirasol gamit ang apat na mga bloke
         lang?
@@ -489,95 +62,8 @@ fil-PH:
         ng mga bloke hangga't maaari?
       4-5 Maze 6: Dalhin ako sa mirasol gamit ang pinakakaunting bilang ng mga bloke
         hangga't maaari!
-      4-5 Maze 7: Mabilis na dalhin ang zombie sa mirasol! Maaari mo bang lutasin
-        ang palaisipan gamit ang hindi tataas sa 11 na mga bloke?
-      4-5 Maze 8: "Dalhin ang zombie sa mirasol gamit ang iilang mga bloke lang hangga't
-        maaari.  \\\r\n(Iwasan ang mga chompers!)"
-      4-5 Maze 9: "Ngayon ay mayroon na tayong bagong bloke na tinatawag na `repeat
-        until`.  \\\r\nIto ay nagbibigay-daan sa atin na manatiling mag-loop hanggang
-        maabot ng zombie ang mirasol.  \\\r\n\\\r\nGamitin ang bagong `repeat until`
-        na bloke para malutas ang palaisipang ito gamit ang kaunting mga utos hangga't
-        maaari."
-      4-5 Maze Assessment 1: 'Pagtatasa: Pumunta sa mirasol gamit ang kaunting mga
-        bloke hangga''t maaari.'
-      4-5 Maze Conditionals 1: Gamitin ang `repeat until` na bloke para mapapunta
-        ang zombie sa mirasol.
-      4-5 Maze Conditionals 10: "Maaari kang magdagdag ng 3 mga bloke lang para matulungan
-        ang zombie na maglutas ng mas kumplikadong maze?\\\r\n\\\r\nKung gawin mo
-        ito nang tama, maaari siyang maglakad sa kahit anumang haba!"
-      4-5 Maze Conditionals 2: Gamitin ang `repeat until` na bloke para mapapunta
-        ang zombie sa mirasol.
-      4-5 Maze Conditionals 3: "Gamitin ang `if` na bloke para matulungan akong mag-desisyon
-        kung kailan liliko. \\\r"
-      4-5 Maze Conditionals 4: Ok, lutasin ang isang ito gaya lang ng huling palaisipan,
-        ngunit dapat mong tandaan kung paano mo ginamit ang `if` at `repeat until`
-        na mga bloke nang sama-sama.
-      4-5 Maze Conditionals 5: "\"Ako gusto mirasol!\" \\\r\n\\\r\nGamitin ang `if`
-        na pahayag para mapapunta ang zombie sa mirasol gamin ang pinakakaunting bilang
-        ng mga bloke."
-      4-5 Maze Conditionals 6: "\"Kain mirasol!\"\\\r\n\\\r\nGumamit ng `if` na pahayag
-        para mapapunta ang zombie sa mirasol gamit ang pinakakaunting bilang ng mga
-        bloke."
-      4-5 Maze Conditionals 7: Ang solusyon sa palaisipang ito ay masyadong hindi
-        kakaiba, ngunit mag-ingat sa mga chompers!
-      4-5 Maze Conditionals 8: "Ang `if/else` an bloke ay nagsusuri sa isang kondisyon,
-        at pagkatapos ay gumawa ng isang bagay O isa pa. \\\r\n\\\r\nGamitin ang bagong
-        blokeng ito para mapapunta ako sa mirasol."
-      4-5 Maze Conditionals 9: "Isa pang pagsasanay na palaisipan gamit ang `if/else`
-        na bloke!\\\r\n\\\r\nSundan ito gamit ang iyong mga dalira para makita kung
-        mapagwari mo ito sa iyong unang paggsubok."
-      4-5 Maze Conditionals Assessment 1: "**Pagtatasa:** Gamitin ang `repeat until`
-        at isang `if/else` na bloke para mapapunta ako sa mirasol gamit ang kaunting
-        mga bloke lang hangga't maaari."
-      4-5 Nested Loops 1: "Kumpletohin ang code para maiguhit ang mga tatsulok na
-        ito. Ang una ay ginawa para sa iyo. Higing: 3 mga tatsulok sa isang 360 degree
-        na rotasyon.\\\r\n\\\r"
-      4-5 Nested Loops 11: Maaaril mo bang iguhit ang 10 na mga parisukat ng bangketang
-        ito gamit ang naka-nest na loop? Bawat parisukat ay 30 pixels.
-      4-5 Nested Loops 12: Maaari mo bang iguhit ang 36 na mga tatsulok na ito gamit
-        ang naka-nest na loop?
-      4-5 Nested Loops 2: 'Ngayon ay i-nest ang loop na ito sa loob ng isa pang loop
-        para maiguhit ang 10 mga tatsulok na ito. Ito ang tinatawag na "naka-nest"
-        na loop.  '
-      4-5 Nested Loops 3: "Maglikha ng araw sa pamamagitan ng pag-nest sa panimulang
-        code sa isa pang loop.\\\r\n\\\r\nPara makuha ang magandang disenyong ito
-        na walang laman sa gitna, kakailanganin mong tumalon pasulong ayon sa haba
-        ng tatsulok bago liliko."
       4-5 Nested Loops 5: I-loop ang binigay na code mara makalikha ng windmill.
-      4-5 Nested Loops 6: Maaari mo bang maiguhit ang hexagon sa pamamagitan ng pag-loop
-        sa tatsulok na code?
-      4-5 Nested Loops 7: "I-loop ang disenyong ito nang 10 beses. \\\r\n\\\r\nIlang
-        beses ka ba dapat liliko bawat beses na ikaw ay mag-loop?"
-      4-5 Nested Loops 8: "I-loop ang hugis na ito nang 6 na beses. \\\r\n\\\r\nIlang
-        ikot ba dapat ang kailangang gawin mo sa bawat beses na mag-loop ka? "
       4-5 Nested Loops 9: Iguhit ang ngipin sa loob ng bibig ng buwaya!
-      4-5 Nested Loops Assessment 1: 'Pagtatasa: Gumamit ng naka-nest na loop para
-        makumpleto ang disenyo.'
-      4-5 While Loops 1: Pagalawin ako papunta sa butas at punan ito nang dalawang
-        pala ng lupa, gamit ang `fill` na bloke.
-      4-5 While Loops 2: Ilipat ako sa tumpok na lupa at tanggalin ito gamit ang 5
-        pala, sa pamamagitan ng `remove 1` na bloke.
-      4-5 While Loops 3: "Gumamit ng maikling mga bloke hangga't maaari para makumpleto
-        ang palaisipang ito!  \\\r\n\\\r\nIlipat ako sa tumpok at alisin ang lahat
-        ng lupa, pagkatapos ay ilipat ako sa butas at punan ito nang lubusan."
-      4-5 While Loops 4: "Wow, tingnan mo iyan! \\\r\n\\\r\nHindi ko alam kung ilang
-        pala ng lupa ang kailangan ng butas na ito.  \\\r\nMaaari ka bang magsulat
-        ng programa na panatiling gumagamit ng `fill` na bloke hanggang sa ang lupa
-        ay patag?  "
-      4-5 While Loops 5: Wow, ngayon ay mayroon nang dalawang malalim na butas! Maaari
-        ka bang magsulat ng programa na pupuno sa dalawang ito hanggang sa mapatag
-        na ang lupa?
-      4-5 While Loops 6: Wow, ngayon ay mayroong malaking tumpok ng dumi! Maaari ka
-        bang magsulat ng programa na nagtatangal sa lahat ng mga ito para mapatag
-        ang lupa?
-      4-5 While Loops 7: Wow, ngayon ay mayroong tatlong malaking mga tumpok ng dumi!
-        Maaari ka bang magsulat ng programa na magtatanggal sa bawat isa nito hanggang
-        sa mapatag ang lupa?
-      4-5 While Loops 8: " Mayroong isang lubhang malalim na butas at isang malaking
-        tumpok ng lupa. Ilang pala ng lupa ang kailangang ilipat para mapatag ang
-        lupain?"
-      4-5 While Loops Assessment 1: Mayroong napakaraming mga butas at tambak. Tulungan
-        akong punan at magtanggal sa mga ito para mapatag ang lupain.
       Alien Defender: 'Ideya ng Proyekto: Gumawa ng isang tagapagtanggol na laro sa
         Play Lab!'
       CSD U3 L5 Freeplay: |-
@@ -713,54 +199,6 @@ fil-PH:
       Choose Your Own Adventure: Magagawa mo ang kahit anong gusto mo sa play lab!
         Narito ang isang halimbawa ng pumili ng sarili mong pakikipagsapalaran na
         kuwento sa play lab.
-      Course 4 Artist 1: 'Tulungan mo akong makaguhit ng kahon. (Bawat linya ay 200
-        pixels ang haba) '
-      Course 4 Artist 10: "Mag-click ulit dito para makita ang buong instruksyon!\\\r\n\\\r\nNarito
-        ang code para sa isang kawili-wiling hugis. Ano ang mangyayari kapag uulitin
-        mo ito nang ilang beses, nag-iikot sa bawat iterasyon?  Bigyang pansin na
-        ang pag-ikot sa hugis na ito ay nagdadagdag hanggang 420 degrees, ibig sabihin
-        na kapag ang iyong artista ay tapos na sa pagguhit, ito ay nakaharap na sa
-        ibang direksyon sa kung saan ka nagsimula. Ang bagong direksyon na iyan ay
-        eksaktong 60 degrees sa kanan kung saan ka nagsimula."
-      Course 4 Artist 11: Ngayon para sa isang hamon!  Huwag mag-atubiling gumamit
-        ng trial and error. Ikaw ay hindi inaasahang makakuha sa perpektong larawan
-        sa unang beses.  Gusto mong makakita nang mas marami pang mga hint?  Mag-click
-        dito!
-      Course 4 Artist 12: "Gusto ng pangalawang pagtingin sa mga inspirasyon na disenyo
-        o sa mga higing? Mag-click dito!\\\r\n\\\r\nKung hindi, gumawa ng disenyo
-        nang ikaw lang!"
-      Course 4 Artist 13: Naglalaro pa rin? Narito ang isang blangkong canvas kung
-        saan maaari kang magdisenyo ng anumang bagay na gusto mo!
-      Course 4 Artist 2: Maaari ka bang gumamit ng loop para iguhit ang naka-kulay
-        abo na parisukat? (Bawat gilid ay 300px ang haba)
-      Course 4 Artist 20: Naglalaro pa rin? Narito ang isang blangkong canvas kung
-        saan maaari mong ilikha ang anumang gusto mo!
-      Course 4 Artist 3: Subukang alamin kung ano ang mangyayari kapag ipatakbo mo
-        ang code na ito (o pindutin ang "Run" para masubukan ito). Pagkatapos, ulitin
-        ito nang ilang beses para makumpleto ang drowing.
-      Course 4 Artist 4: Ilang degrees ba mayroon ang isang bilog? Punan ang repeat
-        na bloke sa numerong ito para ilikha ang isang bilog ng mga kulay.
-      Course 4 Artist 5: 'Iguhit ang pangalawang kalahati ng disenyong ito para ito
-        ay magkatulad. Ang mga tatsulok ay parigilid at ang gild ay may haba na 50
-        pixels. Hint: Maaaring kailangan mong patakbuhin ang code nang ilang ulit
-        para matukoy ang lahat ng mga bloke na kailangang idagdag.'
-      Course 4 Artist 6: Kumpletohin ang code para maguhit ang tatlong, parigilid
-        na mga tatsulok na ito.
-      Course 4 Artist 7: 'Ngayon ay i-nest ang loop na ito sa loob ng isa pang loop
-        para makaguhit ng 10 tatsulok. Ito ang tinatawag na naka-nest na loop. Hint:
-        Lahat ng 10 mga tatsulok ay nagkumpleto ng isang 360 degree na pag-ikot.  '
-      Course 4 Artist 8: Iguhit ang araw sa pamamagitan ng pag-loop sa buong bloke
-        ng code na ito nang maraming beses.
-      Course 4 Artist 8a: Natandaan ang hugis na ito? Ngayon ay hahayaan ka naming
-        bumuo nito nang hindi nagbibigay sa iyo ng kahit anong mga bloke sa simula!
-      Course 4 Artist Binary 1: "Ito ang isang function na kukuha ng binary string
-        ng mga 1 at mga 0 at nagturo sa artista na sundin ang mga ito mula sa kaliwa
-        hanggang sa kanan, sa taas hanggang sa baba. Pupunan ng artista ang mga parisukat
-        kapag nakakita ito ng 1 at isawalang-bahala kapag nakakita ito ng 0. \\\r\n\\\r\nPatakbuhin
-        ang code na ito para makita kung paano ang artista gumagamit ng binary para
-        maiguhit ang pattern na ito."
-      Course 4 Artist Binary 2: Alin sa mga binary na string na ito ang maaari mong
-        i-loop nang 8 beses para maguhit ang larawang ito?
       Course 4 Artist Binary 3: Maaari mo bang iguhit ang pattern na ito sa pamamagitan
         ng pagloop ng tatlong binary na digits (mga 0 at mga 1) lang?
       Course 4 Artist Binary 4: Bawat binary string ay kumakatawan sa isang hanay
@@ -780,147 +218,10 @@ fil-PH:
       Course 4 Artist Binary Free Play 2b: Mag-click dito para makita ang mga pahiwatig.
       Course 4 Artist Binary pre1: Gamitin ang mga bloke sa baba para mapaguhit ng
         artista ang "01010101" sa binary sa unang hanay.
-      Course 4 Artist For Loops 11: 'Natandaan mo ba sa nakaraang yugto kung saan
-        tayo ay gumamit ng isang variable para i-kontrol ang bilang ng gilid sa isang
-        hugis? Tayo ay gagawa ng parehong bagay ngayon gamit ang `counter` na variable.
-        Ang pattern na ito ay nagsisimula sa isang tatsulok at nagdadagdag ng isang
-        gilid sa isang beses hanggang sa maiguhit nito ang isang decagon (10 ang gilid).
-        Bawat gilid ay dapat 100 pixels ang haba. '
-      Course 4 Artist For Loops 11a: "Pagsamahin natin ang lahat ng ito!  Gamitin
-        ang iyong kaalaman sa `for` na mga loop at sa `counter` na variable, ilikha
-        ang drowing na ito kung saan ang bawat hugis ay mayroong higit na 2 panig
-        kung ihambing sa huli. Siguraduhin na ang bawat gilid ay 10 beses na mas mahaba
-        sa bilang ng gilid na nasa polygon.\\\r\n\\\r\nMayroong napakaliit ng code
-        ang inihanda para sa iyo."
-      Course 4 Artist For Loops 14: Kung ikaw ay umikot nang kaunti pa o mas mababa
-        kaysa sa karaniwan mong pag-ikot para sa isang hugis, ito ay naglilikha ng
-        isang malinis na epekto. Subukang gamitin ang ilan sa mga code mula sa huling
-        antas, pero iikot nang 89 degrees para malikha ang baluktot na parisukat na
-        pilipit na ito.
-      Course 4 Artist For Loops 15: 'Libreng Laro: Subukang gumawa ng iilang sarili
-        mong mga drowing gamit ang "for loops". Nagdadagdag rin kami ng iilang nakakatulong
-        na mga variable para sa iyo.'
-      Course 4 Artist For Loops 2: 'Aking inilagay ang code para sa pagguhit ng tatsulok
-        sa loob ng isang for loop na nagbibilang mula 50 hanggang 100 ng 10. Paalala:
-        Siguraduhin na tiningnan mo ang code bago pindutin ang "Run".'
-      Course 4 Artist For Loops 3: Gamitin ang huling palaisipan bilang isang reperensya
-        para makumpleto ang isang ito. Ang pinakamaliit na tatsulok ay mayroong 20
-        pixel na gilid, ang pinakamali ay may 200 pixel na gilid, at bawat tatsulok
-        ay mas malaki nang 20 pixels kaysa sa dati.
-      Course 4 Artist For Loops 4: 'Paano mo babaguhin ang iyong natutunan dati para
-        maiguhit ang mga parisukat na ito? Sila ay nagsisimula sa haba na 15 pixels,
-        ang pinakamalaki ay 300 pixels ang haba, at bawat parisukat ay mas malaki
-        ng 15 pixels kaysa sa dati. '
       Course 4 Artist For Loops 6a: Gumawa ng tatlong maliliit na pagbabago sa code
         mula sa huling antas para makuha ito!
-      Course 4 Artist For Loops 8: "Isa nalang maliit na pagbabago sa code mula sa
-        huling larawan para malikha ang drowing na ito. Maaari mo bang matukoy kung
-        ano ang pagbabago?\\\r\n\\\r\nHiging: Kailangan mong magtanggal ng isang bagay!"
-      Course 4 Artist For Loops Challenge: "**Hamon:** Maaari mo bang malaman kung
-        paano gamitin ang lahat ng mga bagay na natutunan mo para malikha ang larawan
-        na ito ng mga polygon, lahat ay mayroong 40 pixel na mga gilid?"
-      Course 4 Artist For Loops inspire: "Libreng-Laro na Inspirasyon: Natutunan mo
-        na ngayon ang lahat ng kailangan mong malaman para makagawa ng pattern gaya
-        nito! Kung ang larawan na ito ay nagbibigay-inspirasyon sa iyo, subukang gumawa
-        ng katulad nito. Kung hindi, gumawa ng isang bagay na gawa-gawa mo lang.\\\r\n\\\r\nNangangailangan
-        ng higing? Mag-click dito."
-      Course 4 Artist Functions Inspiration: I-click ulit ito para makita ang mga
-        higing.
-      Course 4 Artist Functions challenge: I-click ulit ito para makita ang mga higing.
-      Course 4 Artist Inspire: "Gusto ng pangalawang pagtingin sa mga inspirasyon
-        na disenyo o sa mga higing? Mag-click dito!\\\r\n\\\r\nKung hindi, gumawa
-        ng disenyo nang ikaw lang!"
-      Course 4 Artist Vars 1: "Guguhit tayo ng paragilid na tatsulok. \\\r\n\\\r\nDapat
-        itong eksaktong 100 pixels ang haba sa bawat gilid."
-      Course 4 Artist Vars 11: Narito ang mas kumplikadong code gamit ang parehong
-        mga konsepto mula sa nakaraang palaisipan - ano dapat ang itakda mo sa "sides"
-        na variable para maguhit ang larawang ito na binubuo ng mga parisukat?
-      Course 4 Artist Vars 12: Ating itakda ang "sides" na variable sa 5. Kung mas
-        maraming gilid ang idagdag natin, mas malaki ang buong pattern na magagawa
-        nito. Bigyang pansin na mayroong ibang variable na tinatawag na "length".
-        Maaari na natin itong gamitin kapag mayroon tayong "move forward". Itakda
-        ang "length" na variable sa 75 para sa hugis na ito.
-      Course 4 Artist Vars 13: "Kapag ang hugis ay may maraming mga gilid, bawat gilid
-        ay kailangang mas maikli kung gusto mo na ang buong pattern ay kakasya sa
-        screen.\n\\\r\nMuli nating likhain ang algoritmo para sa kahanga-hangang pattern
-        na ito, ngunit sa halip ay manu-mano nating itakda ang `length` na variable,
-        gagamit tayo ng math na bloke na may `sides` na variable sa loob para masiguro
-        na bawat hugis ay tama ang akma. Ang paligid ng bawat polygon ay 300 pixels.\\\r\nNangangailangan
-        ng ilang mga pahiwatig? Mag-click dito."
-      Course 4 Artist Vars 14: "Libreng Laro: Tingnan ito! Ngayon ang iyong algoritmo
-        ay naka-nest na sa loob ng isa pang loop. Mag-eksperimento sa pamamagitan
-        ng pagbago sa mga halaga ng iyong dalawang variable para makaguhit ng magagandang
-        mga pattern.\\\r\n\\\r\nPara sa karagdagan pang mga epekto, subukang paglaruan
-        ang kulay! Gumamit ng mga random na kulay sa loob ng mga loop at tingnan kung
-        paano nito nabago ang iyong disenyo."
-      Course 4 Artist Vars 2: Sa halip na gumamit ng "move forward by 150," ang "move"
-        na bloke ay nagtukoy na ngayon sa isang variable na tinatawag na "length".
-        Maaari mo bang itakda ang "length" sa 150 para maguhit ang bagong tatsulok
-        na ito?
-      Course 4 Artist Vars 4: Ngayon ay gusto kong gumawa ng isang parihaba na doble
-        ang tangkad kaysa sa lawak nito. Mayroon tayong isang variable na tinatawag
-        na "width" na nangangailangan nating itakda sa 100. Maaari mo bang gamitin
-        ang math na mga bloke para makumpleto ang code?
-      Course 4 Artist Vars 6: "Narito ang ilang mga code na maaaring makaguhit ng
-        kahit anong regular na polygon. Mayroong bagong variable na tinatawag na sides
-        na itinakda sa 4. Maaari mo bang gamitin ang sides na variable (kasabay ng
-        math na bloke) para ibaling ang tamang halaga kahit na ilan ang bilang ng
-        gilid na nandoon sa isang polygon?\\\r\n\\\r\nMag-click dito para makabalik
-        sa higing!"
-      Course 4 Artist Vars 7: "Gamitin ang natutunan mo sa huling palaisipan para
-        malikha ang hexagon na ito gamit ang \"sides\" na variable.\\\r\n\\\r\nTingnan
-        kung paano mo maaaring mabago ang isa lang na halaga para maiguhit ang tatsulok,
-        parisukat, pentagon, o octagon?"
-      Course 4 Artist Vars 8: 'Libreng Laro: Mag-eksperimento sa bilang ng mga panig
-        na mayroon ang hugis na ito. Maaari mo bang baguhin ang algoritmo para ang
-        kabuuang laki ng hugis ay manatiling pareho, kahit na ilan ang panig na mayroon
-        ito? Higing: Kung hahatiin mo ang iyong panimulang haba sa bilang ng mga panig,
-        ang haba sa bawat panig ay magiging maikli habang ang bilang ng mga panig
-        ay pataas ng pataas.'
-      Course 4 Bee 1: "Hindi masasabi ng bubuyog kung ano ang nasa ilalim ng ulap!
-        \\\r\n\\\r\nGamitin ang `if` na bloke para suriin kung mayroon bang bulaklak
-        sa ilalim ng ulap. \\\r\n\\\r\nKumuha ng nektar nang isang beses, kung mayroong
-        isa lang na bulaklak."
-      Course 4 Bee 2: Gamitin ang "if/else" na bloke para suriin ang bawat object
-        para makita kung ito ba ay bulaklak o isang pulot-pukyutan. Kung ito ay isang
-        bulaklak, magkolekta ng isang nektar ... kung hindi, gumawa ng isang pulot!
-      Course 4 Bee 3: Ang hindi kilalang bagay ay maaaring isang bulaklak o isang
-        pulot-pukyutan. Sa oras na ito, gamitin ang if/else na bloke para magkolekta
-        ng isang nektar kung ito ay isang bulaklak, kung hindi ay gumawa ng isang
-        pulot (dahil kapag ganito, ito ay isang pulot-pukyutan).
-      Course 4 Bee Loops 5 NEW: Narito ang tatlong mga bulaklak. Maaari mo bang mahanap
-        ang pattern ng mga instruksyon na kailangan mong ulitin nang 3 beses para
-        makakolekta ng nektar gamit ang pinakakaunting bilang ng mga bloke?
-      Course 4 Bee Loops 5a NEW: Ngayon, gamitin ang mga loop para matulungan ang
-        bubuyog na magkolekta sa lahat ng nektar habang papunta sa pulot-pukyutan
-        gamit ang pinakakaunting mga bloke hangga't maaari. Kapag nakarating ka na
-        doon, huwag kalimutang gumawa ng pulot!
-      Course 4 Bee Params 1: Magsulat ng pagkakasunod-sunod para makolekta ang lahat
-        ng nektar gamit ang `get 3 nectar` na nagpapaikot, nagpapagalaw para magkolekta
-        ng nektar, at pagkatapos ay nagpapabalik sa orihinal na lokasyon.
-      Course 4 Bee Params 2: Baguhin ang "get 3 nectar" na function para mapaliko
-        ako pakanan sa halip na pakaliwa sa mga bulaklak.
-      Course 4 Bee Params 3: 'Ngayon ay mayroon nang mga bulaklak sa magkabilang panig!
-        Nagdagdag kami ng mga variable na tinatawag na "left" at "right" para magamit
-        mo, at nagdagdag ng parameter na tinatawag na "direction" sa "get 3 nectar".
-        Baguhin ang "get 3 nectar" para ang bubuyog ay liliko sa tamang direskyon
-        kapag ang mga variable na "left" o "right" ay ipinasa sa function.  '
-      Course 4 Bee Params 4: Subukang gamitin ang iyong bagong function para magkolekta
-        ng nektar mula sa lahat ng mga bulaklak. Tandaang gamitin ang left at right
-        na mga variable.
       Course 4 Bee Params 5: Magsisimula tayo sa wala - maaari ka bang maglikha ng
         bagong function na tinatawag na "get 5 nectar" na may direksyon na parameter?
-      Course 4 Bee Params 6: Hindi ba mas maganda kung maaari nating ikolekta ang
-        lahat ng mga nektar na ito gamit ang isang function lang? Subukang magdagdag
-        ng bagong parameter sa iyong function na tinatawag na "nectar units" para
-        ikontrol ang halaga ng nektar na ikokolekta. Malamang gusto mo ring baguhin
-        ang pangalan ng function!
-      Course 4 Bee Params 7: Subukang gamitin ang iyong bagong function para makolekta
-        ang lahat ng mga nektar na ito.
-      Course 4 Bee Params 8: 'Hamon: Ngayon na mayroon nang ding pulot para bigyang-pansin!
-        Isulat ulit ang iyong function para gamitin ang parehong bilang ng pulot na
-        mga yunit at ang bilang ng nektar na mga yunit. Paano mo ba gagamit ang mga
-        numerong iyon para makapagdesisyon kung ano ang dapat mong gawin?'
       Course 4 EC 1a: Walang mga patakaran. Walang mga pahiwatig. Ang hamon lang!
       Course 4 EC 1b: Walang mga patakaran. Walang mga pahiwatig. Ang hamon lang!
       Course 4 EC 2a: Walang mga patakaran. Walang mga pahiwatig. Ang hamon lang!
@@ -928,134 +229,10 @@ fil-PH:
       Course 4 EC 2c: Walang mga patakaran. Walang mga pahiwatig. Ang hamon lang!
       Course 4 Maze 2: Iwasan ang mga TNT!
       Course 4 Maze 3: 'I-program ang galit na ibon para makapunta sa baboy. '
-      Course 4 Maze 4: Subukan ang "repeat" na bloke para makagamit ng kaunting mga
-        bloke kapag naglulutas sa palaisipang ito...
       Course 4 Maze 5: Malutas mo ba ang palaisipang ito gamit ang pinakakaunting
         bilang ng mga bloke hangga't maaari?
-      Course 4 Play Lab Params 1: Narito ang isang function na tinatawag na `jump`
-        na nagpapatalon ng 100 pixels sa iyong pangunahing karakter. Patakbuhin ang
-        programa at gamitin ang jump na function para ikolekta ang lahat ng mga bandila
-        sa pamamagitan ng pagpapagalaw sa aso gamit ang mga arrow key.
-      Course 4 Play Lab Params 10: "Aming idinagdag ang isang huling function para
-        sa iyo.\\\r\n\\\r\nGumamit ng \"if\" na pahayag para ma-program ang iyong
-        laro na tatawag lang sa \"level_up\" na function kapag ang \"player_score\"
-        ay naging mas malaki sa isang tiyak na numero.\\\r\n\\\r\nBilang halimbawa:
-        \"player\\_score\" > 6\\\r\n\\\r\nLaruin ang laro, at abutin ang antas na
-        3 para makapunta sa sunod na palaisipan. "
-      Course 4 Play Lab Params 2: "Ngayon ay mayroon tayong mga bandila na mataas
-        pa kaysa sa ating kasalukuyang pagtalon! Gagamit tayo ng parehong \"up\" at
-        \"down\" na mga arrow para makagawa tayo ng maraming talon. \\\r\n\\\r\nKakailanganin
-        nating magdagdag ng parameter sa ating jump na function na tinatawag na \"height\".
-        Ang up na arrow ay dapat makakapagawa sa aso na tatalon ng 200 pixels at ang
-        down arrow ay dapat makapagpatalon lang nito nang 100 pixels."
-      Course 4 Play Lab Params 3: 'Nagdadagdag tayo na ibang parameter sa jump na
-        function para magagamit natin ito sa ibang mga aktor. Bawat aktor ay kinakatawan
-        ng isang numero, na nagsisimula sa isa. Baguhin ang "jump" na function para
-        gagamit ito sa "aktor" na parameter para magawa ang tamang pagtalon ng karakter. '
-      Course 4 Play Lab Params 4: "Narito ang isang function na tinatawag na `patrol`.\n\\\r\n\\\r\nBaguhin
-        ang `patrol` para pagalawain ang Pusa pataas ng 400 pixels at pagkatapos ay
-        pababa ng 400 pixels."
-      Course 4 Play Lab Params 5: Baguhin ang "patrol" na function para madagdag ang
-        "aktor" na parameter, para maaari na nating matawag ito para sa bawat aktor
-        na nasa screen. Tandaan, ang mga aktor ay tumutugon sa mga numerong 1, 2,
-        at 3.
-      Course 4 Play Lab Params 6: Magdagdag ng isa pang parameter na tinatawag na
-        "speed" sa "patrol" na function. Subukang gumamit ng "set speed" na bloke
-        kasama ang bagong "speed" na parameter para tulungan ang Pingguwino na makuha
-        ang parehong mga bandila bago makakuha ng isa ang ibang mga sprite.
-      Course 4 Play Lab Params 7: "Tayo ay magsaya! Tingnan ang code na ibinigay para
-        makita kung malalaman mo ba kung ano ang ginagawa ng bawat bloke. \\\r\nKapag
-        tapos ka na, gamitin ang mga arrow key para kontrolin ang Aso at makolekta
-        ang lahat ng mga bandila.\\\r\nTANDAAN:\nHindi mo kailangang gumawa ng anumang
-        pagbabago sa programa"
-      Course 4 Play Lab Params 8: Gamitin ang `when actor touches` na bloke para mapadala
-        ang Aso pabalik sa kaliwang-itaas LANG kapag ang Aso ay nakakahawak sa kahit
-        na sino sa ibang mga aktor.
-      Course 4 Play Lab Params 9: "Narito ang ating laro mula sa mas naunang yugto,
-        ngunit karamihan sa mga code ay nakatago. Mayroong bagong function na `score_points.`\\\r\n\\\r\nBaguhin
-        ang function para maaaring madagdag ang bagong parameter na tinatawag na `points`
-        sa `player_score`.\n\\\r\n\\\r\nAng variable na `player_score` ay dapat tataas
-        sa bawat beses na ang Aso ay nag-tag sa Pusa na may pie, at bababa sa bawat
-        beses na ang Pusa ay naka-tag sa Aso na may sandwich.\\\r\n\\\r\nTandaan:\nKapag
-        tapos ka na, i-click ang \"Run\" para maglaro. Kapag ang Aso ay nakakuha na
-        ng 6 na puntos, iikaw ay lilipat sa sunod na palaisipan. "
-      Course 4 Play Lab Vars 1: Sa oras na ito, hindi mo na kailangang magsulat ng
-        kahit anong code, pindutin lang ang "Run" para maglaro! Sa larong ito, ikaw
-        ang aso na nagsusubok na magkolekta ng mas maraming mga bandila kaysa sa pusa.
-        Gamitin ang pababa na arrow para ikontrol ang aso. Pindutin ang "Finish" kapag
-        tapos ka nang maglaro.
-      Course 4 Play Lab Vars 2: Ang habulan sa huling palaisipan ay hindi talaga patas!
-        Palitan ang `dog_speed` na variable para masiguro na makakolekta ka ng mas
-        maraming mga bandila kaysa sa Pusa. Ang unang makakakolekta ng 10 mga bandila
-        ang mananalo!
-      Course 4 Play Lab Vars 3: Gamitin ang kaliwa at kanang mga arrow para makagalaw,
-        at ang pataas na arrow para makatalon. Tingnan kung makokolekta mo ang lahat
-        ng mga bandila.
-      Course 4 Play Lab Vars 4: Ngayon ay gumagamit tayo ng variable na tinatawag
-        na "height" para makontrol kung gaano kataas ang maaaring matalon ng aso.
-        I-update ang "height" na variable para makatalon ang aso ng sapat na taas
-        para maabot ang lahat ng mga bandila.
-      Course 4 Play Lab Vars 5: 'Tayo ay bubuo ng isang laro! Una ay kakailanganin
-        natin ng iskor. Muling ibuo ang code na nakita mo sa huling antas para itakda
-        ang puntos sa 10. '
-      Course 4 Play Lab Vars 6: "Gamitin ang kanang arrow para itapon ang pie.\\\r\n\\\r\nSa
-        ating laro, paano dapat tayo makaiskor ng puntos? Magdagdag ng 1 sa iyong
-        \"points\" na variable sa bawat beses na matamaan ng Aso ang Pusa sa piraso
-        ng pie. Gamitin ang \"when actor 2 touches anything\" na pangyayari para mag-trigger
-        ng update sa iyong puntos. Maaari kang magdagdag sa iyong variable sa pamamagitan
-        ng pagtakda ng \"points = points + 1.\" Paabutin ang iyong iskor sa 10 para
-        (tataas ng isa sa bawat beses!) mapasa ang antas."
-      Course 4 Play Lab Vars 7: Mahusay, ngayon ay ating sisiguradohin na ang laro
-        ay hindi masyadong madaling laruin. Anumang oras na ang Aso (aktor 1) ay matatamaan
-        ng sandwich mula sa Pusa (aktor 2), dapat ay mawawalan ka ng puntos. Magsimula
-        sa 10 na puntos para ito ay hindi masyadong mahirap. Hayaan ang iyong iskor
-        na bababa mula 10 hanggang sa 0 para maipasa ang antas.
-      Course 4 Play Lab Vars 9: "Oras para sa Libreng Laro! Narito ang lahat ng mga
-        variable na napaglaruan natin sa yugtong ito pati na rin ang karagdagang mga
-        kaso na gusto mo ang mga ito.\\\r\n\\\r\nPansinin na mayroon na ngayong napakaraming
-        mga bloke sa ating toolbox na kailangan nilang ayusin! Dito, naglagay kami
-        sa bawat piraso sa isang angkop na kategorya. Maglaan ng ilang oras para tuklasin
-        ang lahat na maaaring magamit. Kapag tapos ka nang mag-browse, gumawa ng isang
-        laro o kuwento gamit ang mga repeat, mga variable, at mga pangyayari. \\\r\n\\\r\nHiging:
-        mag-scroll sa baba para makita ang lahat ng mga utos sa loob ng workspace."
-      Course 4 Play Labs For Loops 1: Gawin natin ang aso na makapagsalita sa bawat
-        numero mula 1 hanggang sa 100. Gumamit ng `for` loop at nang counter na bloke
-        para isalita ang counter na variable sa bawat beses na tumatakbo ang loop.
-      Course 4 Play Labs For Loops 2: Sa oras na ito, tulungan si Olive ang Pusa na
-        magbilang sa mga numerong gansal lang mula 1 hanggang sa 101.
-      Course 4 Play Labs For Loops 3: Kung tayo ay bibilang sa pamamagitan ng mas
-        malaking mga numero, tayo ay bibilang ng mas mataas pa sa parehong halaga
-        ng oras. Subukang pabilangin ang Piratang Pegleg mula 10 hanggang sa 1000,
-        magdagdag ng 10 sa bawat beses.
-      Course 4 Playlab For Loop Freeplay: 'Libreng Laro: Gamitin ang lahat ng natutunan
-        mo para gumawa ng laro na naglalakip ng isang `for` loop!'
-      Course 4 Playlab For Loops 4b: Maaari mo bang baguhin ang **increment** sa isa
-        sa mga loop para ang habulan ay maging isang tie?
-      Course 4 Playlab For Loops 5b: Isaayos ang pagitan sa mga `for` loop na ito
-        para ang dalawang karakter ay makarating sa parehong eksaktong lugar.
-      Course 4 Playlab For Loops 6b: "Baguhin ang `for` loop na ito para makalikha
-        ng isang laro na masaya para paglaruan mo!\\\r\nPindutin ang \"Run\" at i-click
-        ang Madame Unicorn nang ilang beses hangga't kaya mo. Matatalo mo ba ang aming
-        iskor na 24? "
-      Course 4 SCF 1: Gamit ang iminungkahing mga function para magguhit ng apat na
-        hanay ng mga hexagon. Napansin kung paano ang ating hanay na may bilang na
-        tukol ay inilipat pakanan?
-      Course 4 SCF 1a: Maaari mo bang malaman kung paano kolektahin ang lahat ng mga
-        nektar na ito gamit ang pinakakaunting mga bloke hangga't maaari?
-      Course 4 SCF 1b: Maaari mo bang malaman kung paano kolektahin ang lahat ng mga
-        pulot na ito gamit ang pinakakaunting mga bloke hangga't maaari?
-      Course 4 SCF 2: 'Gamitin ang natutunan mo sa mga nakaraang antas para makaguhit
-        ng larawan gaya nito. Tandaan: Ang code ay mas magiging simple kapag isinama
-        mo ang mga parameter. '
-      Course 4 SCF 3: 'Gamitin ang natutunan mo sa mga nakaraang antas para makaguhit
-        ng larawan gaya nito. Tandaan: Ang code ay mas magiging simple kapag isinama
-        mo ang mga parameter. '
       Course 4 SCFL 1: Lutasin ang palaisipang ito gamit ang pinakakaunting bilang
         ng mga bloke na posible.
-      Course 4 SCFL 1a: Maaari mo bang ipakuha kay Scrat ang kanyang ensina gamit
-        ang kaunting mga bloke hangga't maaari?
-      Course 4 SCFL 1b: Maaari mo bang ipakuha kay Scrat ang kanyang ensina gamit
-        ang kaunting mga bloke hangga't maaari?
       Course 4 SCFL 2: Lutasin ang palaisipang ito gamit ang pinakakaunting bilang
         ng mga bloke na posible.
       Course 4 SCFL 3: Maaari mo bang matukoy kung paano malikha ulit ang drowing
@@ -1064,18 +241,8 @@ fil-PH:
         na ito?
       Course 4 SCFL 6: Maaari mo bang matukoy kung paano ilikha ulit ang mga drowing
         na ito gamit ang isang loop?
-      Course 4 SCFL 7: Ang arista ay gustong makaranas ng ilang mga alon! Maaari mo
-        bang malaman kung paano iguhit muli ang drowing na ito?
       Course 4 SCV 1: Mag-click dito para matingnan ulit ang mga instruksyon.
       Course 4 SCV 2: Mag-click dito para matingnan ulit ang mga instruksyon.
-      Course 4 SCV 3: "Ngayon para sa isang laro ng tag! Mag-tag sa Pusa para makakuha
-        ng 2 puntos. Mag-tag sa Pingguwino para makakuha ng 3 puntos. Kumuha ng esksaktong
-        10 points para manalo!\\\r\nNgunit mag-ingat, kapag ang Pusa at ang Pingguwino
-        ay mag-tag sa bawat isa, sila ay kukuha ng puntos.\\\r\n\\\r\nMagdagdag ng
-        mga blokeng kinakailangan para gagana ang larong ito sa paraaan na ipinapaliwanag.
-        Paano mo pagalawin ang Aso sa lahat ng mga direksyon gamit ang mga arrow keys?
-        Paaano mo idadag ang mga puntos kapag ang Aso ay naka-tag sa Pusa o Pingguwino?
-        Paano mo tatanggalin ang puntos kapag ang Pusa at Pingguwino ay nagkahawakan?"
       Course 4 SCV 4: Lutasin ang palaisipang ito gamit ang pinakakaunting bilang
         ng mga bloke hangga't maaari.
       Course 4 SCV 5: Lutasin ang palaisipang ito gamit ang pinakakaunting bilang
@@ -1132,8 +299,6 @@ fil-PH:
         ng kastilyong ito?
       K-1 Artist Loops 5: Ano ang maaari mong i-loop nang 4 na beses para maguhit
         ang hagdanang ito?
-      K-1 Artist Loops 6: 'Ang isang ito ay nangangailangan ng dalawang loop: isa
-        para aakyat sa mga hagdanan at isa para makababa.'
       K-1 Artist Loops 7: Ang mga loop ay maaaring makatulong sa iyo para tapusin
         ang pattern na ito.
       K-1 Artist Loops 8: Ang hagdanang ito ay may mataas na mga hakbang.
@@ -1141,11 +306,7 @@ fil-PH:
         ito?
       K-1 Artist Loops Free Play: Libreng laro, gumuhit ng isang bagay na masaya!
       K-1 Artist1 1: Iguhit ang paa ng tao gamit ang isang linya
-      K-1 Artist1 10: Gumuhit at Magtalon para magawa ang naka-dash na landas papunta
-        sa kayamanang X
       K-1 Artist1 2: Iguhit ang bigote sa pusa gamit ang dalawang linya!
-      K-1 Artist1 3: Iguhit ang dalawang linya papuntang silangan at dalawang linya
-        papunta sa hilaga para matapos ang bahay!
       K-1 Artist1 4: Gumuhit ng mga linya pataas, paibabaw, at pababa para makumpleto
         ang kastilyo!
       K-1 Artist1 5: Iguhit ang tangkay ng bulaklak na ito gamit ang dalawang linya!
@@ -1163,17 +324,9 @@ fil-PH:
       K-1 Artist2 Free Draw: Gumuhit ng kahit ano!
       K-1 Artist2_7: Gumuhit ng isang parihaba para mabigyan ang tokador ng pangtaas
         na kalsunsilyo!
-      K-1 Bee 1: Ilipat ako sa bulaklak, kunin ang nektar, pagkatapos ilipat ako sa
-        pulot-pukyutan, at gumawa ng pulot
       K-1 Bee 11: Kumuha ng tatlong nektar at pagkatapos ay gumawa ng isang pulot
       K-1 Bee 13: Kumuha ng tatlong nektar at pagkatapos ay gumawa ng isang pulot!
-      K-1 Bee 14: Dalhin ako sa nektar, dampotin ito, dalhin ako sa pulot-pukyutan,
-        at gumawa ng pulot!
       K-1 Bee 15: Kumuha ng dalawang nektar para makagawa ng dalawang pulot!
-      K-1 Bee 2: Ilipat ako sa bulaklak, kunin ang nektar, pagkatapos ilipat ako sa
-        pulot-pukyutan, at gumawa ng pulot
-      K-1 Bee 3: Ilipat ako sa bulaklak, kunin ang nektar, pagkatapos ilipat ako sa
-        pulot-pukyutan, at gumawa ng pulot
       K-1 Bee 4: Kumuha ng dalawang nektar at pagkatapos ay gumawa ng dalawang pulot!
       K-1 Bee 5: Kumuha ng tatlong nektar at pagkatapos ay gumawa ng tatlong pulot!
       K-1 Bee 6: Kumuha ng dalawang nektar at pagkatapos ay gumawa ng dalawang pulot!
@@ -1183,27 +336,14 @@ fil-PH:
       K-1 Bee Loops 10: Kunin ang lahat ng nektar at gawing pulot ang lahat.
       K-1 Bee Loops 11: Kunin ang lahat ng nektar at pulot!
       K-1 Bee Loops 12: Kunin ang lahat ng nektar at ang lahat ng pulot.
-      K-1 Bee Loops 2: Gumamit ng `repeat` na loop para makagalaw at pagkatapos ay
-        kumuha ng nektar at gumawa ng pulot!
-      K-1 Bee Loops 3: Gumamit ng tatlong `repeat` na mga loop para makakuha ng nektar
-        at makagawa ng pulot!
-      K-1 Bee Loops 4: Gumamit ng `repeat` na mga loop para makakuha ng nektar, gumawa
-        ng pulot, at para makagalaw!
       K-1 Bee Loops 5: Gumamit ng `repeat` na mga loop para makakuha ng nektar at
         pulot!
-      K-1 Bee Loops 6: Gumamit ng `repeat` na loop para makakuha ng nektar, makakuha
-        ng pulot, at para makagalaw!
       K-1 Bee Loops 7: Kumuha ng nektar at gumawa ng pulot!
       K-1 Bee Loops 8: Kumuha ng nektar at gumawa ng pulot!
       K-1 Bee Loops 9: Kunin ang lahat ng nektar at gawing pulot ang lahat.
       K-1 Bee Puzzle 12: Kumuha ng tatlong mga nektar at pagkatapos ay gumawa ng dalawang
         pulot
-      K-1 Building a Foundation Assessment: Bumuo ng tatlong palapag na piramid, walang
-        ibang mga direksyon, kaya paglaruan lang ang mga piraso hanggang makuha mo
-        ito!
       K-1 Maze 10: 'Lumibot sa TNT para makapunta sa baboy! '
-      K-1 Maze 11: 'Sundin ang daan at gabayan ako sa pasaway na baboy. Iwasan ang
-        TNT para hindi lilipad ang mga balahibo! Higing: Siya ay nasa Timog ko.'
       K-1 Maze 2: Dalhin ako sa Kanluran para marating ko ang baboy!
       K-1 Maze 3: Dalhin ako sa Timog para marating ko ang baboy!
       K-1 Maze 4: Dalhin ako sa Hilaga para marating ko ang baboy!
@@ -1217,12 +357,6 @@ fil-PH:
       K-1 Maze 9: Dumaan sa isang daan, pagkatapos ay sa isa pa para maabot ko ang
         babay!
       K-1 Maze Loops 1: Dalhin ako sa baboy!
-      K-1 Maze Loops 10: Dalhin ako sa baboy! Ang paggamit ng `repeat` na loop ay
-        mas magpapadali nito.
-      K-1 Maze Loops 11: "Dalhin ako sa baboy! \\\r\nAng `repeat` na loop ay magpapadali
-        nito."
-      K-1 Maze Loops 12: Dalhin ako sa baboy! Ang `repeat` na loop ay magpapadali
-        nito.
       K-1 Maze Loops 2: Gamitin ang `repeat` na bloke para mapapunta ako sa baboy!
       K-1 Maze Loops 3: Dalhin ako sa baboy! Siguraduhing gumamit ng mga `repeat`
         na mga loop.
@@ -1233,39 +367,8 @@ fil-PH:
       K-1 Maze Loops 7: Dalhin ako sa baboy! Siguraduhing gumamit ng mga `repeat`
         na mga loop.
       K-1 Maze Loops 8: Gamitin ang `repeat` na mga loop para mapapunta ako sa baboy.
-      K-1 Maze Loops Assessment 1: Tingnan ang lahat nang ating natutunan! Gumamit
-        ng `repeat` na loop para mapapunta ako sa baboy!
-      K-1 Maze Loops Assessment 2: Gumamit ng `repeat` na mga loop para mapapunta
-        ako sa baboy!
-      K-1 Maze Sequence Assessment 1: "Tingnan kung ano ang natutunan mo!\\\r\nDumaan
-        sa isang daan, pagkatapos ay sa isa pa para makapunta ako sa baboy."
-      K-1 Maze Sequence Assessment 2: Dumaan sa isang daan, pagkatapos ay sa isa pa
-        para makapunta ako sa baboy.
-      K-1 artist 1 level 10: Gumuhit ng dashed na linya gamit ang parehong jump at
-        draw na mga bloke
       K-1 artist 1 level 9: Iguhit ito gamit ang tatlong linya
       K-1 maze debug 1: Palitan ang code para makapunta ako sa baboy!
-      K-1 maze debug 10: I-debug ang antas na ito sa pamamagitan ng pag-iba sa ayos
-        at pagbago sa mga bloke para makapunta ako sa baboy!
-      K-1 maze debug 11: "Ito ay isang pagtatasa!\\\r\nI-debug ang antas na ito sa
-        pamamagitan ng pag-iba ng ayos at pagbago sa mga bloke para makapunta ako
-        sa baboy"
-      K-1 maze debug 2: Alamin kung ano ang nawawala at pagkatapos magdagdag ng mga
-        bloke para makapunta ako sa baboy!
-      K-1 maze debug 3: May isang bagay na hindi tama. TANGGALIN ang mga bloke para
-        makapunta ako sa baboy!
-      K-1 maze debug 4: Daanan ang mga blokeng ito at ayusin ang mga ito! Sa palagay
-        ko, ako ay parang papunta sa maling direksyon.
-      K-1 maze debug 5: I-debug ang antas na ito sa pamamagitan ng pag-iba sa ayos
-        at pagbago sa mga bloke para makapunta ako sa baboy!
-      K-1 maze debug 6: I-debug ang antas na ito sa pamamagitan ng pag-iba sa ayos
-        at pagbago sa mga bloke para makapunta ako sa baboy!
-      K-1 maze debug 7: I-debug ang antas na ito sa pamamagitan ng pag-iba sa ayos
-        at pagbago sa mga bloke para makapunta ako sa baboy!
-      K-1 maze debug 8: I-debug ang antas na ito sa pamamagitan ng pag-iba sa ayos
-        at pagdagdag ng mga bloke para makapunta ako sa baboy!
-      K-1 maze debug 9: I-debug ang antas na ito sa pamamagitan ng pag-iba sa ayos
-        at pagbago sa mga bloke para makapunta ako sa baboy!
       MC HOC 2016 Level 10: Oras na para gumawa ng iyong sariling Minecraft! Mag-spawn
         ng mga nilalang at pagkatapos ay ipagawa sa kanila ang anumang gusto mo. Magsaya!
       MC HOC 2016 Level 2-2: Ang manoy ay hindi makagalaw. Maglagay ng `move` at `turn`
@@ -1338,138 +441,11 @@ fil-PH:
       MC_HOC_2017_FP20x20: "**Libreng Laro:** Oras na para magtuklas nang ikaw lang!"
       MC_HOC_2017_FP20x20_2019: "**Libreng Laro:** Oras na para magtuklas nang ikaw
         lang!"
-      NEW Course 4 Artist Functions 11: Ngayon ay gusto nating maglikha ng bagong
-        function na tinatawag na `draw a line of squares` na nagguguhit sa lahat ng
-        anim na parisukat sa isang hanay lang. Maaari mo bang gawin ang function gamit
-        ang `draw a square 20` na function na nilikha namin para sa iyo?
-      NEW Course 4 Artist Functions 12: Gamitin ang `draw a line of squares` na function
-        mula sa huling palaisipan para iguhit ang pattern na ito.
-      NEW Course 4 Artist Functions 13: 'Maaari mo bang iguhit ang isang bituin na
-        hugis gamit ang `draw a line of squares` na function?  '
       NEW Course 4 Artist Functions 14: 'Oras sa Libreng-laro! '
-      NEW Course 4 Artist Functions 2: Maaari ka bang magguhit ng 3 parisukat na 20
-        pixels ang pagitan sa bawat isa? Bawat parisukat ay 100 pixels ang laki.
-      NEW Course 4 Artist Functions 3: "Narito ang isang bagong tipo ng Bloke. Ito
-        ay tinatawag na `function` na bloke. I-click ang \"edit\", pagkatapos ay punan
-        ito ng code para sa pagguhit ng parisukat na may 100 pixels ang gilid. \\\r\n\\\r\nKapag
-        tapos ka nang mag-edit sa function, i-click ang \"Close\" para makabalik sa
-        iyong programa."
-      NEW Course 4 Artist Functions 4: Gumamit ng `draw a square` na function para
-        iguhit ang pattern na ito.
-      NEW Course 4 Artist Functions 7: 'Nakuha mo na ba kung paano gamitin ang function
-        na mga bloke? Ating baguhin ang parisukat na ito para ito ay 200 pixels na
-        ang laki. I-click ang "edit" para makapasok sa `draw a square` na function
-        editor. Tandaang i-click ang "Close" para makalabas sa editor ng function. '
-      NEW Course 4 Artist Functions 8: Kami ay naglikha ng bagong function na tinatawag
-        na "draw a triangle". Maaari mo bang baguhin ang paglalarawan ng function
-        para maiguhit ang tatsulok na may 100 pixels ang gilid?
-      NEW Course 4 Artist Functions 9: Maaari mo bang lutasin ito sa pamamagitan ng
-        pagdagdag lang ng isang bloke?
-      NEW Course 4 Artist Params 10: 'Lumikha ng `draw a hexagon` na function na bloke
-        na may length na parameter. Ang hexagon na ito ay mayroong mga gilid na 100
-        pixels ang haba. '
-      NEW Course 4 Artist Params 11: Maaari mo bang malaman kung paano iguguhit ang
-        hugis na ito? Baguhin ang function para magamit ang "sides" na parameter.
-      NEW Course 4 Artist Params 12: Maaari mo bang kumpletohin ang drowing na ito?
-        Ang gilid ng lahat ng mga hugis ay 100 pixel ang haba.
-      NEW Course 4 Artist Params 12a: Ang larawang ito ay katulad lang sa huli. Maaari
-        mo bang gamitin ang `for` na loop kasabay ng iyong function para magawa ang
-        disenyong ito?
-      NEW Course 4 Artist Params 13: "Ating baguhin ang \"draw a polygon\" na function
-        na ito. Ito ay mayroon nang \"length\" na parameter. \\\r\nAng perimeter sa
-        bawat hugis ay 200 pixels ang haba. Naaalala mo pa ba ang ekwasyon para gagawa
-        sa mga hugis na pareho ang laki kahit na sila ay mayroong iba't ibang bilang
-        ng gilid?"
-      NEW Course 4 Artist Params 14: Baguhin ang "draw a spiral edge" para makagamit
-        ng "length" at "sides" na mga parameter, pagkatapos ay ilikha ulit ang mga
-        hugis na ito.
-      NEW Course 4 Artist Params 15: 'Libreng Laro: Narito ang mga function na naisulat
-        mo, at ilang higit pa para iyong mapaglaruan. Gumuhit ng isang bahay na kamangha-mangha!
-        Paglaruan ang mga lapad ng pen para makita kung paano nagkaiba ang iyong mga
-        drowing!'
       NEW Course 4 Artist Params 2: Lumikha ng `draw a triangle` na function mula
         sa wala na gumagawa ng tatsulok na may 50 pixel ang mga gilid.
-      NEW Course 4 Artist Params 3: "Ngayon ay ating gagamitin ang function para maiguhit
-        ang 5 tatsulok sa isang hanay. Bawat tatsulok ay 30 pixels ang pagitan.\\\r"
-      NEW Course 4 Artist Params 4: Napansin mo ba ang anumang bagay na kakaiba sa
-        function na mga blokeng ito? I-click ang "Run" para makita kung ano ang nangyari.
-      NEW Course 4 Artist Params 5: 'Palitan ang `???` sa loob ng `length` na input
-        na parameter na bloke. Ang pentagon ay mayroong 100 pixel na mga gilid. '
-      NEW Course 4 Artist Params 6: Punan ang "length" na parameter para maiguhit
-        ang mga hugis na ito sa pamamagitan ng pagpalit sa "???" ng tamang mga numero.
-        Ang parisukat at tatsulok ay mayroong gilid na 100 pixels habang ang bawat
-        gilid ng hexagon ay 75 pixels ang haba.
-      NEW Course 4 Artist Params 7: Maaari mo bang makumpleto ang drowing na ito?
-        Ang mga gilid ng bawat tatsulok ay 25 pixel na mas malaki kaysa sa huli. Ang
-        unang tatsulok ay mayroon gilid na 25 pixels.
-      NEW Course 4 Artist Params 8: Ang code para sa tatsulok na ito ay nasira. Maaari
-        mo bang baguhin ang function para maayos ito, at pagkatapos ay gumawa ng mga
-        tatsulok na may mga haba na 25, 50, at 75?
-      NEW Course 4 Artist Params 9: 'I-click ang "edit" para punan ang kahulugan ng
-        "draw a square" na function at magdagdag ng parameter. Dapat itong kukuha
-        ng length na parameter, gaya lang ng tatsulok. Pero ngayon, gumuhit ng 3 mga
-        parisukat: 25, 50, at 75 pixels ang haba, bawat isa ay 100 pixels ang pagitan.'
-      NEW Course 4 Artist Params inspire: "Libreng Laro na Inspirasyon: Natutunan
-        mo na ang lahat ng kailangan mong malaman para makagawa ng pattern na gaya
-        nito! Kung ang mga larawang ito ay nagbigay-inspirasyon sa iyo, subukang gumawa
-        ng isang bagay na kapareha. Kung hindi, lumikha ng isang bagay na lahat ay
-        ikaw lang.\\\r\n\\\r\nGustong malaman kung paano nagawa ang aming inspirasyon
-        na pattern? "
-      NEW Course 4 Artist Vars 12: Ngayon, muling ilikha ang algoritmo mula sa huling
-        antas at maglikha ng pentagon na may haba ng mga gilid na 150.
-      NEW Course 4 Artist Vars 2: I-drag ang number na bloke sa parehong `set length`
-        na bloke at sa `repeat_times` na bloke para maiguhit ang isang hanay ng 50
-        pixel na mga tatsulok.
-      NEW Course 4 Artist Vars 4: "Subukan natin ulit ito! \\\r\n\\\r\nMaaari mo bang
-        itakda ang `length` na variable sa 60 para magawa ang maganda disenyong may
-        mga hexagon na ito?"
-      NEW Course 4 Artist Vars 6: "Iguhit ang pattern ng mga pentagon na ito na may
-        gilid na 100 pixels sa pamamagitan ng pagtakda ng tamang halaga para sa `length`
-        at maghulog sa `length` na variable sa lahat ng tamang mga lugar. \\\r\n\\\r\nTingnan
-        kung paano mo lang itakda ang halaga ng `length` nang isang beses, at ang
-        code ay gagamit na sa tamang halaga kahit saan?"
-      NEW Course 4 Bee For Loops 1: Gumamit ng loop para makolekta ang nektar mula
-        sa bawat bulaklak.
-      NEW Course 4 Bee For Loops 10a: 'Handa ka ba sa isang hamon? Dalhin ang natutunan
-        mo tungkol sa mga loop at subukang lutasin ang problemang ito. Tandaan: Malamang
-        ay kakailanganin mong tingnan ang mga solusyon nang napakaraming beses bago
-        mo malaman ang lahat ng mga hakbang.'
-      NEW Course 4 Bee For Loops 2: Idagdag ang mga kinailangang code para masiguro
-        na ang bubuyog ay kokolekta sa lahat ng nektar. Tingnan kung ilang code ang
-        kakailanganin mo para sa palaisipang ito! (Matututo tayo ng simpleng pamamaraan
-        sa sunod na palaisipan.)
-      NEW Course 4 Bee For Loops 3: 'Ah, ang "for loop" ay mas lalong nagpapadali
-        nito! Lahat ng code na kailangan mo ay nandito na, tingnan kung paano ito
-        pinagsama-sama, pagkatapos ay i-click ang "Run" para makita kung paano ito
-        gumagana. '
-      NEW Course 4 Bee For Loops 4: 'Palitan ang ??? sa "for loop" sa pinakamalaking
-        halaga ng nektar na kailangang ikolekta ng bubuyog. '
-      NEW Course 4 Bee For Loops 4 4: Ngayon kailangan nating lumakad pasukong nang
-        "counter" na beses, pagkatapos kunin ang nektar nang "counter" na beses. Maaari
-        mo bang gamitin ang dalawang "repeat" na mga loop para lutasin ang hamon na
-        ito?
-      NEW Course 4 Bee For Loops 5: Maaari ka ring gumamit ng "for loop" para magbilang
-        pababa. Subukang magtipon ng mga nektar na ito sa pamamagitan ng pagbilang
-        pababa ng 1 mula sa 5 papuntang 1.
-      NEW Course 4 Bee For Loops 6: Ang huling bilang sa iyong for loop ay tinatawag
-        na "increment". Bawat beses na ang loop ay papatakbuhin, ang counter na variable
-        ay nagbabago ayon sa halaga ng increment. Subukang magkolekta sa mga bulaklak
-        na mga ito gamit ang increment na 2.
-      NEW Course 4 Bee For Loops 7: "Ngayon, ating ipagsama ang \"counter\" na variable
-        sa math na bloke! Paano mo maaari magamit ang \"counter\" na variable para
-        mag-navigate sa garden na ito gamit ang pinakakaunting bilang ng mga bloke
-        hangga't maaari? Ano ang kailangan mong gawin para makakolekta ng 3, 6, 9,
-        12, 15 na nektar sa pagkakataong ito? Ang sekreto ay nasa \"counter na variable!\\\r\n\\\r\nTandaan:
-        Kung ang iyong loop ay nagbibilang pataas. Ang increment ay idinagdag sa iyong
-        \"counter\" na variable bawat beses na mag-loop."
       NEW Course 4 Bee For Loops 8: Kaya mo ito! Ano dapat ang iyong pagtaas para
         makakolekta ng 3, 6, 9, 12, 15 na nektar?
-      NEW Course 4 Bee For Loops 9: Kung ang iyong loop ay nagbibilang pababa, ang
-        increment ay tinanggal mula sa iyong counter na variable sa bawat loop. Ano
-        dapat ang iyong increment para makakolekta ng 14, pagkatapos ay 12, tapos
-        ay 9, 6, 3 na nektar?
-      NEW Course 4 Play Lab Params 11: 'Ito ay oras para sa libreng laro! Magsaya
-        gamit ang lahat ng mga bloke sa iyong tool box. '
       Overworld Avoid Monsters: Ang pagbangga sa isang Creeper ay isang masamang ideya.
         Mag-ingat na maglakad hanggang malampasan ang mga Creeper at maka-abot sa
         iyong tahanan nag ligtas.
@@ -1522,16 +498,6 @@ fil-PH:
         na utos para matipon ang mga balahibo mula sa parehong mga tupa.
       Overworld Shear Sheep_2019: Oras na para gupitan ang mga tupa! Gamitin ang "shear"
         na utos para matipon ang mga balahibo mula sa parehong mga tupa.
-      Pixelation - Lesson 15 - Color Shades 4x4: 'Pinasimula ka namin sa isang 4x4
-        na larawan na nilikha ni Maddie sa video. Ang iyong unang gawain ay punan
-        ang 4x4 na grid ng mga kulay gamit ang 12-bits kada pixel. Narito ang mga
-        kahilingan: Hanay 1 - punan ng iba''t-ibang kulay na pula. Hanay 2 - iba''t
-        ibang kulay na berde. Hanay 3 - iba''t ibang kulay na bughaw. Hanay 4 - iba''t
-        ibang kulay na abo.'
-      Pixelation - Lesson 15 - Complete 3-bit color: Pinagsisimula ka namin sa isang
-        4x2 na larawan na nalikha ni Maddie, ngunit iniwan namin ang huling dalawang
-        mga parisukat. Tapusin ang larawan sa pamamagitan ng pagtukoy kung alin sa
-        dalawang mga kulay ang wala at i-encode ang mga ito.
       Robot Doodle: 'Ideya ng Proyekto: Maglikha ng larawan ng isang bagay na pamilay
         mula sa tunay na buhay. Ito ay nangangailangan ng pagtitiyaga at pagpaplano!'
       Robot Doodle_2018: 'Ideya ng Proyekto: Maglikha ng larawan ng isang bagay na
@@ -1657,65 +623,31 @@ fil-PH:
         ang bola hanggang matatamaan nito ang bandila.
       bounce_7_sports: Maglakip ng mga bloke sa bawat "kailan" na mga bloke. Patalbugin
         ang bola hanggang matatamaan nito ang bandila.
-      course1_artist_loops_challenge1: "Maaari kang gumamit ng loop para makaguhit
-        ng maraming mga linya sa isang hanay.\\\r\n\\\r\nMaaari ka bang gumuhit ng
-        isang bahay? Gawin ang hitsura nito ayon sa kagustuhan mo! Subukang maghanap
-        ng mga pattern na paulit-ulit!"
-      course1_artist_loops_challenge2: Tayo ay maglaro ng isang laro! Magguhit nang
-        maraming mga X hangga't kaya mo! Maaari ka bang makakuha ng 3 sa isang hanay?
       course1_artist_loops_challenge3: '"Makakatulong ka ba sa paggawa ng dalawang
         bahay ng ibon?"'
       course1_artist_loops_challenge4: '"Oras na para ihagis ang dice! Maaari mo ba
         akong tulungan na iguhit ang mga ito?"'
-      course1_collector_loops_challenge1: '"Matulungan mo ba akong hanapin ang ilang
-        mga bug? Alam ko kung saang daan ang gusto kung daanan, pero hindi ako sigurado
-        kung ilang hakbang ang aking gagawin."'
-      course1_collector_loops_challenge2: 'Sa oras na ito, maaari ka lang gumamit
-        ng isa sa bawat arrow na bloke. Kunin ang lahat ng mga yaman! '
-      course1_collector_loops_challenge3: 'Sa oras na ito, maaari ka lang gumamit
-        ng isa sa bawat arrow na bloke. Kunin ang lahat ng mga yaman! '
       course1_collector_loops_challenge4: Ating kunin ang mga kayamanan! Tulungan
         akong makatawid sa bawat isang hanay, at pagkatapos ay babalik para simulan
         ang sunod na hanay. Maaari ka bang makahanap ng pattern?
-      course1_maze_debugging_challenge1: I-debug ang antas na ito, Tanggalin ang mga
-        ekstrang mga bloke at magdagdag ng nawawalang mga bloke. Dalhin ang ibon sa
-        baboy!
       course1_maze_debugging_challenge2: I-debug ang antas na ito. Ito ang tamang
         mga bloke, ngunit sila ay nasa maling pagkasunod-sunod!
       course1_maze_seq_challenge1: '"Sundan ang landas at gabayan mo ako papunta sa
         pasaway na baboy. Iwasan ang TNT para hindi lilipad ang mga balahibo!"'
-      course1_maze_seq_challenge2: Maaari ka lang makagalaw hanggang sa apat na beses
-        sa bawat direksyon. Makakahanap ka ba ng daan bago ka maubusan ng mga bloke?
-      course1_playlab_events_challenge1: '"Saan nagtatago ang aking mga kaibigan?
-        Maaari ka bang magsulat ng code para ipakita ang ilan sa aking mga kaibigan?"'
-      course1_playlab_events_challenge2: '"Mag-party tayo! Bigyan ang aking mga kaibigan
-        ng isang bagay na gagawin kapag sila ay na-click o na-tap."'
       course2_artist_nestedLoops_challenge1: Maaari mo bang malaman kung paano gumawa
         ng larawan gaya nito?
       course2_artist_nestedLoops_challenge2: Maaari mo bang malaman kung paano gumawa
         ng larawan gaya nito?
-      course2_artist_prog_challenge1: Gumuhit ng mga silid para sa bawat hayop. Mayroong
-        napakaraming iba't ibang pamamaraan para malutas ang palaisipan na ito, kaya
-        magsaya. Ang pinakamaikling posibleng solusyon ay 6 na bloke, but gumamit
-        ng marami kung gusto mo!
-      course2_artist_prog_challenge2: _Tulungan akong magpinta ng dilaw na mga linya
-        sa kalsadang ito!_
       course2_bee_conditionals_challenge1: Kolektahin ang lahat ng nektar o gawing
         pulot ang lahat.
       course2_bee_conditionals_challenge2: Kolektahin ang lahat ng nektar o gawing
         pulot ang lahat.
       course2_collector_loops_challenge2: Kunin ang lahat ng mga kayamanan!
-      course2_collector_prog_challenge1: Tingnang mabuti! Maaari mo bang kolektahin
-        ang lahat ng _10_ mga piraso ng kayamanan?
-      course2_collector_prog_challenge2: Mayroong mga 20 piraso ng kayamanan na matatagpuan.
-        Magkolekta ng hindi baba sa kalahati para matapos ang hamon na ito!
       course2_harvester_loops_challenge1: Kolektahin ang lahat ng mga mais.
       course2_harvester_loops_challenge2: Kolektahin ang lahat ng mga letsugas. Iwasan
         ang mga kahoy ay mga kabukiran!
       course2_maze_loops_challenge1: 'Ngayon ay gusto ni Scrat na subukang gumamit
         ng mga loop para mahanap ang kanyang bunga ng oak! '
-      course2_maze_programming_challenge1: _"Ang baboy ay nagtatago! Maaari mo ba
-        ang akong tulungan na makahanap ng ibang daan?"_
       course2_maze_programming_challenge2: Minsan ay mayroong higit sa isang pamamaraan
         para malutas ang parehang problema. Minsan ay mas mabilis ang maglakad pabalik
         kaysa sa pumunta pasulong!
@@ -1726,31 +658,18 @@ fil-PH:
         mga disenyo!
       course3_artist_functions_challenge2: Subukan ang code na ito para makita kung
         paano ito gumagana, pagkatapos ay gawin ang programa bilang sarili mo!
-      course3_bee_debugging_challenge1: Panoorin kung paano ang bubuyog kukuha ng
-        nektar. Maaari mo bang gamitin ang parehong uri na pattern para matulongan
-        ang bubuyog na gawin ang lahat ng mga pulot?
       course3_bee_functions_challenge1: Ikaw ay mag-isa nalang para sa hamon na ito.
         Maaaring ito ay mas mahirap kaysa sa hitsura nito!
-      course3_bee_functions_challenge2: Ikaw ay mag-isa nalang para sa hamong ito!
       course3_bee_functions_challenge3: Maglikha ng bagong function para makolekta
         ang lahat ng nektar at pulot habang mayroon pang landas sa unahan. Gamitin
         ito para makompleto ang palaisipan!
       course3_bee_functions_challenge4: Gamitin ang lahat ng iyong natutunan para
         ikompleto ang palaisipang ito!
-      course3_collector_debugging_challenge2: Ikaw ba ay bihasa na sa naka-nest na
-        mga loop? Gamitin ang natutunan mo para kolektahin ang lahat ng mga yaman!
-      course3_farmer_condLoops_challenge1: Lumiko pakanan sa mga kalabasa. Kolektahin
-        ang lahat para makompleto ang antas. Bawat nakatagong pananim ay mayroon lang
-        isang mais o litsugas.
       course3_farmer_condLoops_challenge2: Kolektahin ang lahat para makumpleto ang
         antas.
       course3_farmer_until_challenge2: Gamitin ang If/Else na mga bloke para sundan
         ang balikong landas. Sa bawat sulok, gamitin ang `remove 1` na utos sa isang
         loop para malinaw ang mga tumpok.
-      course3_maze_debugging_challenge1: _"Nagpabalik-balik lang ba ako?"_
-      course3_maze_debugging_challenge2: _"Kung ako ay parating iikot, maaari akong
-        mahilo! Tulungan akong maabot ang ensina gamit ang apat lang na mga `turn`
-        na utos."_
       course3_maze_until_challenge1: Walang pahiwatig, hamon lang. Dalhin ang zombie
         sa mirasol.
       course3_playLab_challenge1: "May isang bagay na dapat mangyari kapag mayroon
@@ -1770,32 +689,16 @@ fil-PH:
       course4_artist_fwp_challenge1: Subukang ipatakbo ang programang ito, at gumawa
         ng mga pagbabago para makita kung ano ang mangyayari. Maaari mo bang alamin
         kung paano ito gumagana? (O burahin ito at palitan ito ng isang talagang kakaiba)
-      course4_artist_variables_challenge1: Ngayon ay natutunan mo na ang lahat ng
-        kailangan mong malaman para makagawa ng isang pattern kagaya nito! Ang palaisipang
-        ito ay ginawang mas mahirap. Maaari mo bang manatili dito hanggang sa malaman
-        mo na ang solusyon?
-      course4_bee_for_challenge1: Gamitin ang for loop na ito para kolektahin ang
-        lahat ng nektar. Mayroong iilang mga aksyon na gugustohin mong makita sa pag-ulit
-        na 'tagabilang' na beses.
       course4_bee_fwp_challenge1: Gumamit ng isang `for loop` sa isang function para
         kolektahin ang lahat ng mga mais. Ang parehong `for loop` ay maaaring magbilang
         sa iba't ibang pinakamataas na mga halaga sa pamamagitan ng paggamit ng `length`
         na parameter.
-      course4_bee_fwp_challenge2: Gumamit ng isang `for loop` sa isang function para
-        kolektahin ang lahat ng mga gulay sa isang hanay. Gawin ang `for loop` na
-        magbilang ng iba't ibang pinakamalaking mga halaga sa pamamagitan ng paggamit
-        ng `length` na parameter. Gawin ang iyong program na maikla lang hangga't
-        makakaya sa pamamagitan ng paggamit ng pangalawang `for loop` sa labas ng
-        function.
       course4_collector_nested_loops_challenge2: Tulungan ang kolektor na makaabot
         ng hindi bababa sa dalawang tumpok ng mga yaman gamit lang ang mga bloke na
         nasa iyong toolbox. Ito ay posible na makolekta ang lahat ng 4.
       course4_harvester_nested_loops_challenge1: '"Kailangan ko ng iilang tulong sa
         bukirin! Tulungan akong anihin ang mga mais gamit lang ang mga bloke na nasa
         iyong toolbox."'
-      course4_playlab_variables_challenge1: Gamitin ang mga blokeng ito para mapagawa
-        ng mga aktor na magbahagi ng isang knock-knock joke. Baguhin ang setup at
-        ang punchline para isabi ang iyong sariling joke!
       courseA_artist_loops1: Ito ay isang bagong tipo ng palaisipan na tinatawag na
         "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
       courseA_artist_loops10: Tulungan akong ilagay ang mga bato para hindi ako mahulog!
@@ -1894,8 +797,6 @@ fil-PH:
         ang antas na ito.
       courseA_collector_loops2_2018: Kunin ang lahat ng tatlong mga bunton para malampasan
         ang antas na ito.
-      courseA_collector_loops2_2019: Kunin ang lahat ng tatlong mga bunton para malampasan
-        ang antas na ito.
       courseA_collector_loops4: Ayusin ang daanan ni Laurel para makuha ang lahat
         ng mga kayamanang ito.
       courseA_collector_loops4_2018: Ayusin ang daanan ni Laurel para makuha ang lahat
@@ -1941,27 +842,12 @@ fil-PH:
         ang ilang mga bug?"_
       courseA_collector_loops_challenge1_2019: _"Maaari mo ba akong tulungan na makita
         ang ilang mga bug?"_
-      courseA_collector_loops_challenge2: 'Kunin ang lahat ng mga kayamanan! '
       courseA_collector_loops_challenge2kp: Magkolekta nang hindi bababa sa **3**
         mga piraso ng kayamanan para maipasa ang antas na ito.
       courseA_collector_loops_challenge2kp_2018: Magkolekta nang hindi bababa sa **3**
         mga piraso ng kayamanan para maipasa ang antas na ito.
       courseA_collector_loops_challenge2kp_2019: Magkolekta nang hindi bababa sa **3**
         mga piraso ng kayamanan para maipasa ang antas na ito.
-      courseA_collector_preLoops1: "Ito si Laurel ang Manggagalugad! \\\r\n\\\r\nPindutin
-        ang \"Run\" para makita siyang maglakad sa mga kayaman para kunin ito."
-      courseA_collector_preLoops2: "Magaling! Ngayon ay magdadag ka ng code nang ikaw
-        lang! \\\r\n\\\r\nMag-snap ng `get a treasure` na bloke sa ilalim ng programa
-        at pindutin ang \"Run\"."
-      courseA_collector_preLoops3: Mag-snap ng dalawang `E-->` na mga bloke at kumuha
-        ng `get treasure` na bloke sa ilalim ng programa, pagkatapos ay pindutin ang
-        "Run".
-      courseA_collector_preLoops4: Maaari mo bang malaman kung paano lutasin ang palaisipang
-        ito?
-      courseA_collector_preLoops5: Kumuha ng 1 sa 2 mga hiyas para malutas ang palaisipang
-        ito.
-      courseA_collector_preLoops6: Kunin ang parehong mga piraso ng kayamanan para
-        malutas ang palaisipan.
       courseA_collector_preLoops7: Kunin ang lahat ng tatlong mga bunton para malampasan
         ang antas na ito.
       courseA_maze_ramp5a_2018: Dalhin ang ibon sa baboy!
@@ -3957,8 +2843,6 @@ fil-PH:
       courseE_artist_ramp8_2: Gamitin ang natutunan mo para iguhit ang tatsulok na
         ito.
       courseE_artist_ramp9: Gamitin ang natutunan mo para iguhit ang tatsulok na ito.
-      courseE_artist_ramp9_2: Gamitin ang natutunan mo para iguhit ang tatsulok na
-        ito.
       courseE_bee_concept1: Kolektahin ang lahat ng nektar mula sa bawat bulaklak.
       courseE_bee_concept1_2018: Kolektahin ang lahat ng nektar mula sa bawat bulaklak.
       courseE_bee_concept2: Tulungan ang bubuyog na gawin ang lahat ng mga pulot.
@@ -4064,8 +2948,6 @@ fil-PH:
         ang palaisipang ito.
       courseE_farmer_ramp11b_2018: Habang may tumpok pa, tanggalin ang dumi.
       courseE_farmer_ramp11b_2019: Habang may tumpok pa, tanggalin ang dumi.
-      courseE_farmer_ramp12_forswap: Ngayon ay gamitin ang naka-nest na mga loop para
-        malutas ang palaisipang ito.
       courseE_farmer_ramp12_forswap_2018: Ngayon ay gamitin ang naka-nest na mga loop
         para malutas ang palaisipang ito.
       courseE_farmer_ramp12_forswap_2019: Ngayon ay gamitin ang naka-nest na mga loop
@@ -4085,8 +2967,6 @@ fil-PH:
       courseE_farmer_ramp12d_2018: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
         pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
       courseE_farmer_ramp12d_2019: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
-        pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
-      courseE_farmer_ramp12e: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
         pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
       courseE_farmer_ramp12e_2018: Lumakad pasulong hanggang sa maabotan mo ang letsugas,
         pagkatapos ay pulutin ang lahat gamit ang `while` na loop.
@@ -4602,8 +3482,6 @@ fil-PH:
       grade5_artist_binary9: "Narito ang isang canvas na may mas mataas pa na resolusyon
         para maguhitan - 16 pixel sa 16 pixels!\\\r\n\\\r\nTingnan kung ano ang mangyayari
         kapag tayo ay nagsimulang maging malikhain gamit ang mga bits?"
-      grade5_pixelation: I-encode ang larawan na kahit anong gusto mo gamit ang binary.
-        Ang binary na linggwahe ay maaaring irerepresenta gamit ang '0' at '1' lang.
       iceage_click_hello: 'Maaari mo bang matulungan si Sid na tumawag sa kanyang
         mga kaibigan kapag nag-click ka sa kanya? '
       iceage_free_play: 'Oras na para maglikha ng iyong sariling laro o kuwento! '

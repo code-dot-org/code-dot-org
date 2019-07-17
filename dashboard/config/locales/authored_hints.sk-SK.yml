@@ -24,8 +24,6 @@ sk-SK:
       2-3 Artist 4:
         2-3_Artist_4_a: Pre dokončenie domu stačí, aby ste nakreslili štvorec!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Ak chceš vytvoriť anjelikov, musíš sa zakaždým otočiť o niečo
-          _viac_, než pri štvorci.   '
         2-3_Artist_6_b: Keďže už som natočený doprava, najjednoduchšie bude začať
           posunutím sa dopredu. Pre nakreslenie trojuholníka sa potom potrebuješ otáčať
           vľavo.
@@ -45,11 +43,15 @@ sk-SK:
       2-3 Artist Functions 3:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Potrebujete pomôcť s uhlami?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potrebujete pomôcť s uhlami?\
+          **360/12 = 30**
         2-3_Artist_Nested_Loops_3_b: Nezabudni vložiť všetok šedý kód, spolu s blokom
           na otočenie do vnútra cyklu.
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Potrebujete pomôcť s uhlami?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potrebujete pomôcť s uhlami?\
+          **360/12 = 30**
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: "Skoč z vrchného štvorca na začiatok ďalšieho
           pomocou bloku `skoč dopredu`. \n\nAk má každý štvorec 20 pixelov a štvorce
@@ -475,15 +477,6 @@ sk-SK:
         courseB_artist_loops_challenge1_c: 'Budeš sa potrebovať `pohnúť` alebo `skočíť`
           cez niektoré čiary dva krát. '
       course1_collector_loops_challenge3:
-        courseB_collector_loops_challenge1_c: |-
-          Posuň sa dvakrát na Východ medzi každými cestami.
-
-          <xml>
-            <block type="maze_moveEast"/><next>
-            <block type="maze_moveEast"/></next>next>
-            </xml>
-
-          Dá sa to spraviť s iba 14 blokmi. Klikni na jednu ďalšiu nápovedu, aby si uvidel riešenie.
         courseB_collector_loops_challenge1_d: |-
           Vyskúšaj toto!
 
@@ -587,33 +580,6 @@ sk-SK:
         courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
           `zober kukuricu` koľkokoľvek krát potrebuješ, potom v každom rohu použi
           blok `otoč sa vpravo`.
-        courseC_harvester_loops_challenge1_c: |-
-          Najlepsší spôsob na zozbieranie prvých štyroch kukuríc je použiť blok `opakuj` vo vnútri ďalšieho bloku `opakuj`. Tento vzor môžeš použiť aj pre zvyšok úlohy!
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></next></block></xml>
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: Jedno z riešení je ísť cik-cakovo. Ďalší
           spôsob je ísť do špirály! Úloha ako táto má veľa možných riešení. Buď vytrvalý!
@@ -644,14 +610,6 @@ sk-SK:
         courseC_maze_programming_challenge2_b: Najkratšie riešenie používa len 5 blokov,
           avšak obsahuje aj blok `opakuj`!
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_a: "Začni pozbieraním 2 drahokamov
-          z každej z prvých 2 hromád.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
-          AM copy.png>)\nPouži tieto bloky:\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
-          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
-          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
-          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
-          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Potom pozbieraj zvyšné drahokamy v tomto rade.
 
@@ -730,10 +688,6 @@ sk-SK:
           viac krokov dopredu.
         courseC_maze_debugging_challenge2_b: Ak sa niekde zasekneš, vždy môžeš začať
           odznova alebo odstrániť všetky bloky a skúsiť to sám!
-        courseC_maze_debugging_challenge2_c: |-
-          Existujú dve rôzne cesty, ktorými sa môžeš vybrať, len pomocou bloku "dopredu", a štyroch otočení. Ak nájdeš spôsob, ako použiť blok "opakovať", môže ich byť ešte viac!
-
-          ! \[] (<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05> PM.png)
       course4_collector_nested_loops_challenge2:
         courseD_bee_nested_loops_challenge2_a: Pamätaj, že pomocou bloku `opakuj`
           môžeš opakovať jeden príkaz ale aj viac príkazov za sebou. Vieš dokonca
@@ -4025,6 +3979,11 @@ sk-SK:
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_maze_debugging1:
+        courseC_maze_debugging1_a: |-
+          -   Funguje všetko po prvom kroku?
+          -   Stále všetko funguje aj po druhom kroku?
+          -   Kde sa stala chyba?
+        courseC_maze_debugging1_b: Na dokončenie tejto úlohy musíš pridať 1 blok.
         courseD_collector_debugging1_c: 'Nezabudni po tom, ako sa ku drahokamu dostaneš
           použiť blok "zbieraj".  '
       courseC_maze_debugging1_2018:
@@ -4040,6 +3999,14 @@ sk-SK:
           -   Kde sa stala chyba?
         courseC_maze_debugging1_b: Na dokončenie tejto úlohy musíš pridať 1 blok.
       courseC_maze_debugging2:
+        courseC_maze_debugging2_a: Na pracovnej ploche už máš veľa užitočného kódu.  Nezmaž
+          ho všetok a nezačínaj odznova!
+        courseC_maze_debugging2_b: |-
+          -   Funguje všetko po prvom kroku?
+          -   Stále všetko funguje aj po druhom kroku?
+          -   Kde sa stala chyba?
+        courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
         courseD_collector_debugging2_c: Skús pozbierať drahokamy z jednej strany tohoto
           vzoru. Vieš to zopakovať na ďalších dvoch stranách?
       courseC_maze_debugging2_2018:
@@ -4061,6 +4028,16 @@ sk-SK:
         courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
           spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging3:
+        courseC_maze_debugging3_a: |-
+          Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
+
+          Potom presuň blok, ktorý chceš vymazať späť do panela s nástrojmi.
+
+          Nakoniec daj svoje ďalšie bloky späť tam, kam patria.
+
+          ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
+        courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
         courseD_collector_debugging3_a: Našiel si miesto, kde Laurel robí niečo, čo
           nedáva zmysel? Čo sa stane, ak tieto bloky zmeníš?
       courseC_maze_debugging3_2018:
@@ -4086,6 +4063,10 @@ sk-SK:
         courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
           spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging4:
+        courseC_maze_debugging4_a: Pomocou tlačidla "Krok" posunieš program vždy len
+          o jeden blok. Pomohlo ti to nájsť riadok, kde sa stala chyba?
+        courseC_maze_debugging4_b: Jedno z otočení posiela Scrata nesprávnym smerom.
+          Dokážeš zistiť, ktoré z nich to je?
         courseD_collector_debugging4_b: |-
           Ak sa ti nedarí prísť na to, aké kroky sa pri schodoch opakujú, skús po nich prejsť prstom a príkazy si hovor nahlas.
 
@@ -4101,6 +4082,12 @@ sk-SK:
           o jeden blok. Pomohlo ti to nájsť riadok, kde sa stala chyba?
         courseC_maze_debugging4_b: Jedno z otočení posiela Scrata nesprávnym smerom.
           Dokážeš zistiť, ktoré z nich to je?
+      courseC_maze_debugging5:
+        courseC_maze_debugging5_a: "V pracovnom priestore už máš veľa užitočných blokov.
+          \ Neodstraňuj ich všetky! \n\nPoužitím tlačidla \"Krok\" ich prejdeš a zistíš,
+          kde v kóde nastala chyba."
+        courseC_maze_debugging5_b: Skús si nahlas povedať, čo by mal Scrat urobiť.
+          Je to rovnaké ako tvoj kód? Nastane niekde chyba?
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_a: "V pracovnom priestore už máš veľa užitočných blokov.
           \ Neodstraňuj ich všetky! \n\nPoužitím tlačidla \"Krok\" ich prejdeš a zistíš,
@@ -4118,6 +4105,14 @@ sk-SK:
         courseC_maze_debugging5_b: Skús si nahlas povedať, čo by mal Scrat urobiť.
           Je to rovnaké ako tvoj kód? Nastane niekde chyba?
       courseC_maze_debugging6:
+        courseC_maze_debugging6_a: |-
+          -   Čo by mal Scrat robiť?
+          -   Čo Scrat robí?
+          -   Čo ti to prezrádza?
+        courseC_maze_debugging6_b: |-
+          Keď nájdeš a opravíš prvú chybu v programe, začni s týmto procesom odznovu, aby si našiel aj druhú chybu.
+
+          Opakuj to, až kým program nebude fungovať!
         courseD_collector_debugging6_b: Zdá sa, že máš správne kroky, ale potreboval
           by si ich viac. Ako vieš viackrát zopakovať akciu "zbieraj"?
       courseC_maze_debugging6_2018:
@@ -4139,6 +4134,16 @@ sk-SK:
 
           Opakuj to, až kým program nebude fungovať!
       courseC_maze_debugging7:
+        courseC_maze_debugging7_a: |-
+          -   Funguje všetko po prvom kroku?
+          -   Stále všetko funguje aj po druhom kroku?
+          -   Kde sa stala chyba?
+        courseC_maze_debugging7_b: Nezabudni na používanie tlačidla "Krok", keď chceš
+          program spustiť riadok po riadku!
+        courseC_maze_debugging7_c: |-
+          Keď nájdeš a opravíš prvú chybu v programe, začni s týmto procesom odznovu, aby si našiel aj druhú chybu.
+
+          Opakuj to, až kým program nebude fungovať!
         courseD_collector_debugging8_a: Vidíš nejaký vzor, ktorý by sa dal zjednodušiť
           pomocou opakovacieho cyklu?
       courseC_maze_debugging7_2018:
@@ -5448,12 +5453,6 @@ sk-SK:
         courseB_iceage_loops3_b: Na opakovanie kódu vytiahni cyklus `opakuj` a potom
           do jeho vnútra vlož blok, ktorý chceš opakovať.
       courseD_iceage_loops3_2019:
-        courseB_iceage_loops3_a: |-
-          Použi tento nový blok!
-          <xml><block type="controls_repeat_dropdown">
-
-          <title name="TIMES" config="2-10">5</title>
-          </block></xml>
         courseB_iceage_loops3_b: Na opakovanie kódu vytiahni cyklus `opakuj` a potom
           do jeho vnútra vlož blok, ktorý chceš opakovať.
       courseD_iceage_loops4:
@@ -5511,16 +5510,12 @@ sk-SK:
         courseD_iceage_loops9_c: Scrat by mal ísť po tejto ceste, aby sa dostal k
           žaluďu.
       courseD_maze_intro4_2019:
-        courseC_maze_programming4_a: Z Redovho pohľadu sa môžeš otočiť aj vľavo aj
-          vpravo. Ak si natočený vpravo, otočenie sa vpravo ťa otočí smerom dole.
         courseC_maze_programming4_b: Ak chceš ísť po ceste, posuň sa dopredu a otoč
           sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
           ešte jeden krát, aby si sa dostal až k žaluďu.
       courseD_maze_intro5a_2019:
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
           kód riadok po riadku. Zistíš, čo spraviť ďalej?
-        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
-          Red.
         courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
@@ -5825,6 +5820,8 @@ sk-SK:
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
           celú úlohu.
       courseD_scrat_ramp1:
+        courseF_maze_ramp1_a: Ak sa vták neposúva ku prasiatku, presvedč sa, či si
+          dobre spojil všetky bloky a stlač "Spustiť".
         courseC_maze_programming1_0: Ak sa vták neposúva ku prasaťu, presvedč sa,
           či si dobre spojil všetky bloky a stlač "Spustiť".
         courseC_maze_programming1_b: Na vyriešenie tejto úlohy nepotrebuješ žiadne
@@ -5833,6 +5830,10 @@ sk-SK:
         courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu`
           sú spojené s blokom `pri spustení`.
       courseD_scrat_ramp3:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
           chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
           pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
@@ -5840,10 +5841,14 @@ sk-SK:
         courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
           z vtáčikovej perspektívy.
       courseD_scrat_ramp4:
+        courseF_maze_ramp4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
         courseC_maze_programming4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
       courseD_scrat_ramp5:
+        courseF_maze_ramp5_a: Použi tlačidlo "Krok", aby si si prezrel svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
           kód riadok po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Ako ďaleko musíš zájsť, aby si sa dostal až do
@@ -5865,6 +5870,14 @@ sk-SK:
         courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
           celú úlohu.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť
+          bludiskom krok po kroku a nájsť chyby.
+        courseD_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
+          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+        courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
       courseD_video_repeatUntil:
         courseE_farmer_ramp12c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
@@ -5876,9 +5889,6 @@ sk-SK:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
       courseE_artist_ramp9:
-        courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
-          blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
-      courseE_artist_ramp9_2:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
       courseE_farmer_functions4b:

@@ -7,317 +7,30 @@ gl-ES:
         un "círculo" para terminar o globo ocular. Se cada movemento virase un grao para a dereita, cantas veces precisas repetir para completar o círculo? 180? 360? 500?
       2-3 Artist 2 new: "Esta casa ten unha parede inacabada. Cada lado\nten 100 pixels
         de lonxitude, pero a parede inacabada ten só 50. Completa a parede. "
-      2-3 Artist 3.4: |-
-        O bloque "salta" move o artista sen debuxar.
-        Debuxa a liña trazada usando os bloques "salta" e "debuxa".
-      2-3 Artist 3new: "O pucho vermello ten 100 píxeles de altura. Termina o debuxo\ndun
-        pucho negro que sexa 70 píxeles menor. \\\r\n(Nota: O longo de cada pucho
-        é de 50 píxeles.)"
       2-3 Artist 4: Axúdame a completar a casa para o gato.
-      2-3 Artist 6: 'Esta casa precisa dun tellado! Debuxa o triángulo. Pista: todos
-        os 3 lados teñen a mesma lonxitude.'
-      2-3 Artist 7: "Termina de debuxar a metade dereita da última xanela.\nCada cadrado
-        da xanela ten 25 pixels. "
-      2-3 Artist 8: |-
-        Completa os cuartos para cada un dos animais dividindo
-         o rectángulo en 2 cadrados de mesmo tamaño. O rectángulo ten 200 pixels de longo
-        e 100 pixels de altura.
       2-3 Artist 9: Termina este papaventos
-      2-3 Artist Assessment 1: 'Avaliación: termina de debuxar o último dente, 25
-        pixels de longo e 25 pixels de altura.'
-      2-3 Artist Debugging 1: Consegues facer este pucho con 100 pixels de altura?
-      2-3 Artist Debugging 10: |-
-        O controlador de dirección do control do meu xogo
-        é moito estreito. Pista: faino 10 pixels máis ancho
-      2-3 Artist Debugging 11: Axúdame a terminar a miña linda folerpa. Cantas veces
-        preciso "repetir" para terminalo?
-      2-3 Artist Debugging 2: 'O código para os tres bigodes que ves está errado.
-        Pista: cada bigode ten a lonxitude de 75 pixels. Corrixe este código para
-        debuxar os bigodes.'
-      2-3 Artist Debugging 3: |-
-        O meu barco ten un buraco! Consegues corrixilo
-        alterando o ángulo da liña? Pista: o último ángulo está 15 graos fóra de lugar.
-      2-3 Artist Debugging 5: |-
-        O código para a perna e para o pé que ves
-        é erróneo. Pista: o pé está moi longo, pode ser necesario excluír un paso (pé... paso... trocadiño)
-      2-3 Artist Debugging 6: |-
-        Parece que estou sentado nunha cadeira
-        sen unha perna. Edita os bloques para debuxar a perna.
-      2-3 Artist Debugging 7: |-
-        Parece que o C no código está debuxado ao contrario.
-        Podes facelo parecer a un C?
-      2-3 Artist Debugging 8: |-
-        O meu cataventos non está preparado. Cantas
-        veces preciso repetir para terminalo?
-      2-3 Artist Debugging 9: |-
-        O código para este talo está incorreto. Pista:
-        o ángulo está 60 graos fóra de lugar
-      2-3 Artist Debugging Assessment 1: 'Esta figura é moi pequena. Podes facela
-        maior? Indicación: debe ter 75 pixels de máis de cada lado.'
       2-3 Artist Free Play: Actividade libre! Debuxa o que queiras.
-      2-3 Artist Functions 1: |-
-        Olá. Min artista zumbi. Min ama debuxar!
-        Axúdame a debuxar os lentes cadrados. Pista: a tira entre as lentes é
-        25 pixels menor que a lonxitude do cadrado.
-      2-3 Artist Functions 10: |-
-        Aquí temos dúas funcións, unha para debuxar unha
-        engrenaxe grande e outra para debuxar unha engrenaxe pequena. Úsaas para debuxar o interior dunha máquina!
-      2-3 Artist Functions 11: |-
-        Renomeamos a función "debuxa un cadrado"
-        como "debuxa un hexágono", pero aínda debuxa só cadrados! Podes
-        modificar a función "debuxa un hexágono" para debuxar un hexágono con lados de 50 pixels, e debuxar a imaxe usando a función?
-      2-3 Artist Functions 11.5: |-
-        Aquí está a mesma función "Debuxa un hexágono".
-        O que acontece se viras só 60 graos en cada repetición?
-      2-3 Artist Functions 12: "As funcións son óptimas para debuxar\ncousas complexas
-        varias veces. Podes usar a función \"debuxa unha flor\"\npara cubrir o resto
-        de plantas? (Pista: as plantas están todas separadas\npor unha lonxitude de
-        100 pixels)  "
-      2-3 Artist Functions 2: |-
-        As funcións permiten que definas novos bloques! Movemos
-        os bloques para debuxar un cadrado para dentro dunha función chamada "debuxa un cadrado".
-        Podes usar a función "debuxa un cadrado" para crear os lentes? Os cadrados están separados por 75 pixels.
-      2-3 Artist Functions 3: |-
-        Edita a función para debuxar un cadrado con
-        lados de 115 pixels de lonxitude e debuxa os óculos maiores. Agora, os cadrados están separados por 45 pixels.
-      2-3 Artist Functions 4: |-
-        Usa o bloque "repita" para debuxar estes
-        3 cadrados.
-      2-3 Artist Functions 9: "Esta é unha función para folerpas de neve. Proba a
-        \nusala para crear unha escena de inverno! Este nivel é libre, entón non hai\ndesafíos
-        para resolver. Divírtete!"
-      2-3 Artist Loops New 1: |-
-        Imos debuxar a cabeza do robot! Podes
-        facer un cadrado con lados de 100 pixels?
-      2-3 Artist Loops New 10: |-
-        Agora imos conectar unha chea de V's,
-        debuxándoos nun bucle.
-      2-3 Artist Loops New 11: |-
-        Desta vez, imos debuxar 24 veces. Agregua
-        unha acción de virar á esquerda en 30 graos ao código e coloca todo nun bloque "repita".
-      2-3 Artist Loops New 12: Debuxa un diamante con lados de 100 pixels.
-      2-3 Artist Loops New 13: Agora, debuxa o diamante 3 veces en un bucle.
-      2-3 Artist Loops New 14: |-
-        Agora, imos debuxar o diamante 10 veces,
-        pero imos rotar 90 graos entre cada diamante.
       2-3 Artist Loops New 15: Debuxa algo divertido.
-      2-3 Artist Loops New 2: |-
-        Aquí temos algúns dos códigos que usaches para debuxar
-        aquel cadrado. O que acontece se usases o bloque "repita" para executar este código 4 veces?
-      2-3 Artist Loops New 9: |-
-        Debuxa un V simple con ambos os lados con 50
-        pixels para completar a frecha.
-      2-3 Artist Nested Loops 1: "Antes usaches bucles para debuxar figuras,\npero
-        sabías que podes colocar un bucle dentro doutro bucle?\\\r\nRepite este bloque\nde
-        código enteiro 3 veces para debuxar o padrón."
       2-3 Artist Nested Loops 10: |-
         Repite este código 12 veces para completar
         o padrón.
-      2-3 Artist Nested Loops 11: |-
-        Repite este código 4 veces para completar
-        o padrón, vira 90 graos despois de cada círculo.
       2-3 Artist Nested Loops 12: |-
         Repite este código 12 veces para completar
         as espirais.
-      2-3 Artist Nested Loops 2: |-
-        Agora, repite o triángulo 6 veces. Despois
-        de cada triángulo, necesitas virar 60 graos antes de debuxar o próximo.
-      2-3 Artist Nested Loops 3: |-
-        Vas precisar repetir o triángulo 12
-        veces para debuxar este padrón. Divide o número de graos nun círculo (360)
-        polo número de figuras que estás a debuxar (12) para descobrir canto virar
-        despois de cada figura.
-      2-3 Artist Nested Loops 4: |-
-        Repite este diamante 12 veces para debuxar
-        unha flor. Pista: 12 diamantes son como os 12 triángulos que fixeches - canto
-        necesitas virar depois de cada forma?
-      2-3 Artist Nested Loops 5: |-
-        Cubre as xanelas deste edifício con
-        un bucle aniñado. As xanelas teñen 20 pixels de lonxitude e están separadas por 20 pixels.
-      2-3 Artist Nested Loops 6: |-
-        Este dinosauro ten 8 espiños ao longo
-        da súa cauda. Cada espiño ten 30 pixels de lonxitude. Repite o triángulo 8 veces, pero
-        lémbrate de avanzar despois de cada un.
-      2-3 Artist Nested Loops 7: |-
-        Repite este triángulo 10 veces para debuxar
-        o sol. Vas precisar mover e virar despois de cada triángulo. Podes descobrir
-        canto virar dividindo o número de graos nun círculo polo
-        número de formas que o compoñen.
-      2-3 Artist Nested Loops 8: |-
-        Agora imos agregar un pouco de herba á imaxe.
-        Cada mechón de herba está separado por 50 pixels.
-      2-3 Artist Nested Loops 9: |-
-        Imos terminar esta imaxe agregando
-        unha flor. Repite o diamante 12 veces para debuxar a túa flor.
       2-3 Artist Nested Loops Free Play: |-
         Actividade libre. Debuxa algo divertido
         con bucles aniñados.
-      2-3 Bee Conditionals 11: Recolle néctar onde as flores teñen néctar.
-      2-3 Bee Conditionals 12: |-
-        Usa un bucle para verificar e recoller o néctar
-        de todas estas flores.
-      2-3 Bee Conditionals 13: |-
-        Recolle néctar e produce mel. Pista:
-        o que acontece se usases a condición "se houbese néctar" nunha flor vermella? Podes completar isto cun bucle?
-      2-3 Bee Conditionals 14: |-
-        Recolle néctar e produce mel. Ten coidado
-        para non recoller néctar dunha flor morada se non tivese néctar.
-      2-3 Bee Conditionals 15: Recolle néctar das catro flores.
-      2-3 Bee Conditionals 2: |-
-        Olá, son unha abella! Axúdame a recoller todo
-        o néctar das flores. Usa un bucle.
-      2-3 Bee Conditionals 3: |-
-        Axúdame a recoller todo o néctar das
-        flores e a producir mel. Usa un bucle.
-      2-3 Bee Conditionals 5: |-
-        As flores moradas poden ter 1 ou 0
-        néctar, pero non sabes canto! Ten coidado de non recoller néctar de
-        unha flor morada se ela non tivese néctar. Verifica se o néctar é igual a 1
-        usando o bloque "se".
-      2-3 Bee Conditionals 6: |-
-        Verifica esta flor cun bloque "se"
-        para ver se hai algún néctar dispoñíbel.
-      2-3 Bee Conditionals 7: |-
-        Recolle o néctar de cada flor que
-        teña néctar dispoñíbel.
-      2-3 Bee Conditionals 8: |-
-        Este campo ten flores vermellas e moradas.
-        As flores vermellas teñen unha cantidade de néctar coñecida, pero o néctar das flores moradas é descoñecido.
-        Recolle todo o néctar.
       2-3 Bee Conditionals 9: Recolle todo o néctar de cada flor.
-      2-3 Bee Conditionals Assessment 1: |-
-        Avaliación: Recolle todo o
-        néctar. Ten coidado para non recoller néctar dunha flor morada se non
-        ten néctar.
-      2-3 Bee Debugging 1: |-
-        Estes bloques estanme incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar e producir todo o mel.
-      2-3 Bee Debugging 10: |-
-        Estes bloques estanme incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar e producir todo o mel.
-      2-3 Bee Debugging 2: |-
-        Estes bloques estanme incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar e producir todo o mel.
-      2-3 Bee Debugging 3: |-
-        Estes bloques estanme incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar e producir todo o mel.
-      2-3 Bee Debugging 4: |-
-        Estes bloques estanme incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar e producir todo o mel.
-      2-3 Bee Debugging 5: |-
-        Estes bloques estanme incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar e producir todo o mel. Agora podes
-        usar os botóns Executar e Paso.
-      2-3 Bee Debugging 6: |-
-        Estes bloques están me incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar.
-      2-3 Bee Debugging 7: |-
-        Estes bloques estanme incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar e producir todo o mel.
-      2-3 Bee Debugging 8: |-
-        Estes bloques estanme incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar e producir todo o mel.
-      2-3 Bee Debugging 9: |-
-        Estes bloques estanme incomodando. Corrixe o(s)
-        erro(s) para recoller todo o néctar e producir todo o mel.
-      2-3 Bee Debugging Assessment 1: |-
-        Avaliación:  Estes bloques están
-        me incomodando. Corrixe os erros para recoller todo o néctar e producir
-        todo o mel.
-      2-3 Bee Functions 1: |-
-        As funcións son bloques de código que realizan
-        unha tarefa. Usa a función "obteña 2 néctares" para recoller o néctar de cada
-        flor.
-      2-3 Bee Functions 10: |-
-        As flores moradas poden ter 1 ou 0 néctar.  Crea
-        unha función que recolle néctar só das flores que teñen néctar.
-      2-3 Bee Functions 2: |-
-        As funcións son bloques de código que realizan
-        unha tarefa. Usa a función "obteña 5" para recoller 5 néctares dunha vez. Lémbrate tamén de usar un bucle para obter un contador ideal de bloque.
       2-3 Bee Functions 3: Recolle todo o néctar de cada flor.
-      2-3 Bee Functions 4: |-
-        A función "mova e obteña néctar" vira
-        a abella, recolle néctar, e entón retorna a abella para onde ela comezou. Usa
-        a función para recoller todo o néctar.
-      2-3 Bee Functions 5: |-
-        Agora hai máis néctar nas flores.
-        Edita a función dada para que recolla 4 néctares e úsaa para recoller
-        todo o néctar das flores.
       2-3 Bee Functions 6: |-
         Agora, usa a mesma función para recoller néctar
         das tres flores.
-      2-3 Bee Functions 8: |-
-        Crea a túa propia función que recolle 7 néctares,
-        avanza e produce 7 unidades de mel. Usa a función para recoller néctar en todas as
-        flores e producir mel en todas as colmeas.
-      2-3 Bee Functions 9: |-
-        Crea a túa propia función que vai por un
-        camiño, obtén néctar, produce mel, e entón retorna a abella para o início do
-        camiño.
-      2-3 Bee Functions Assessment 1: |-
-        Avaliación: Usa a función dada
-        para recoller o néctar de cada flor.
-      2-3 Bee Functions Assessment 2: |-
-        Avaliación: Crea unha función
-        para producir 3 unidades de mel de unha vez.
-      2-3 Bee Loops 1: "Cada flor contén unha unidade de néctar. Recolle\no néctar
-        de cada unha das flores. "
-      2-3 Bee Loops 10: |-
-        Podes usar un bucle "mentres" dentro de outros dous
-        bucles para recoller todo o néctar?
-      2-3 Bee Loops 13: |-
-        Avaliación: usa o bloque "repita" para recoller
-        todo o néctar.
-      2-3 Bee Loops 1A: "Olá, son unha abella. Podes me axudar a recoller\no néctar
-        destas flores? "
-      2-3 Bee Loops 2: |-
-        Usa un bucle "mentres" para recoller o néctar e producir o
-        mel.
       2-3 Bee Loops 2A: |-
-        Podes realizar a mesma tarefa máis facilmente
+        Vostede consegue realizar a mesma tarefa máis facilmente
         cun bucle?
-      2-3 Bee Loops 3: |-
-        Recolle o néctar de cada flor e produce mel
-        en cada colmea.
-      2-3 Bee Loops 3A: Podes usar un bucle para recoller todo o néctar?
-      2-3 Bee Loops 3B: Agora, usa o novo bloque "repita" para recoller todo o néctar
-        e producir todo o mel.
-      2-3 Bee Loops 4: |-
-        Usa un bucle parecido ao do último desafío, pero realiza
-        unha acción de virar dentro del.
-      2-3 Bee Loops 4A: O que acontece se repetes esta secuencia 3 veces? Non te esquezas
-        de facer o mel ao final!
-      2-3 Bee Loops 5: |-
-        Usa un bucle para descender as escadas e recoller o
-        néctar.
-      2-3 Bee Loops 6: |-
-        Usa un bucle para recoller o néctar de cada flor
-        e producir mel en cada colmea.
-      2-3 Bee Loops 7: |-
-        Coloca estes bloques nun bucle para recoller o néctar
-        de cada flor.
-      2-3 Bee Loops 8: |-
-        Estas flores moradas teñen unha cantidade descoñecida de
-        néctar. Usa o bucle "mentres houbese néctar" para recoller todo o néctar. Este bucle
-        será executado mentres a condición sexa verdadeira, neste caso, mentres néctar > 0.
-      2-3 Bee Loops Assessment 1: |-
-        Avaliación- Usa un bucle para recoller
-        todo o néctar desta flor.
-      2-3 Maze 1: "Podes me axudar a apañar o porco malvado? Xunta algúns\nbloques
-        \"avance\" e clica en \"Executar\". "
+      2-3 Bee Loops 3A: Vostede consegue usar un bucle para recoller todo o néctar?
       2-3 Maze 10: Léveme até a maldade verde! (Coidado coa dinamita)
-      2-3 Maze 12: |-
-        Podes substituír estes cinco bloques por só dous bloques?
-        (Pista: crea un bucle usando un bloque "repita veces")
-      2-3 Maze 13: "Lévame até o porco usando só dous bloques.\\\r\n(Indicación: debes
-        usar o bloque \"repita\" para pasar este nivel)"
-      2-3 Maze 15: Usa dous bucles para chegar até o porco usando menos bloques.
-      2-3 Maze 16: Lévame até o xirasol. Repite a secuencia!
-      2-3 Maze 16 before: Lévame até o porco.
       2-3 Maze 2: Este porco está me irritando. Axúdame a chegar até el!
-      2-3 Maze 3: |-
-        Traza o camiño e lévame até o porco pasmón. Desvíate
-        do TNT ou as plumas van voar!
       2-3 Maze 4: Léveme até a maldade verde! (Coidado coa dinamita)
       2-3 Maze 6: |-
         Fica calmo e axúdame a chegar até o porco malvado. Se nón
@@ -325,23 +38,12 @@ gl-ES:
       2-3 Maze 7: Léveme até a maldade verde! (Coidado coa dinamita)
       2-3 Maze 8: Lévame até o porco!
       2-3 Maze 9: Léveme até a maldade verde! (Coidado coa dinamita)
-      2-3 Maze Loops 1: Podes me levar até o porco usando 5 bloques?
-      2-3 Maze Loops 17: Lévame até o xirasol!
-      2-3 Maze Loops 18: Lévame até o xirasol!
-      2-3 Maze Loops 19: Lévame até o xirasol!
+      2-3 Maze Loops 17: Léveme até o xirasol!
       2-3 Maze Loops 20: |-
         Podes resolver este desafío usando o menor número
         posíbel de bloques?
-      2-3 Maze Loops 21: Lévame até o xirasol!
-      2-3 Maze Loops Assessment 1: "Avaliación: Lévame até o xirasol\nusando só 5
+      2-3 Maze Loops Assessment 1: "Avaliación: Léveme até o xirasol\nusando só 5
         bloques! "
-      4-5 Artist 11: |-
-        Completa as rectas verdes. As rectas teñen 300 pixels
-        de lonxitude e están separadas por 15 pixels.
-      4-5 Artist 2: Podes repetir este código para completar o cadrado?
-      4-5 Artist 3: |-
-        Esta maceta de flores rectangular ten un perímetro de 600.
-        O lado longo ten 200 de lonxitude. Debuxa o rectángulo.
       4-5 Artist 3.5: |-
         Ok, tenta descobrir o que acontece se executases
         este código (ou presiona "Executar" para probar o código). Daquela repite o código o número suficiente de veces para completar
@@ -349,303 +51,47 @@ gl-ES:
       4-5 Artist 4: |-
         Cantos graos hai nun círculo? Repita os bloques
         para crear un círculo de cores.
-      4-5 Artist 5: Que ángulo usas?
-      4-5 Artist 6: |-
-        Este triángulo equilátero ten ángulos de 60, 60
-        e 60 graos. Cada lado ten 200 pixels. Completa o debuxo.
-      4-5 Artist 7: |-
-        O triángulo recto ten ángulos de 30, 60 e 90
-        graos. A lonxitude do lado inclinado é o duplo da altura de 100 pixels. Completa
-        o debuxo.
-      4-5 Artist 8: |-
-        A liña do medio-campo nun campo de fútbol é perpendicular
-        ás liñas laterais. O campo ten un perímetro de 800 pixels e ten 240 pixels
-        de lonxitude. Cal é o seu longo? Debuxa as beiras e a liña do medio-campo.
-      4-5 Artist 9: |-
-        Debuxa a outra metade de forma que o debuxo sexa simétrico.
-        Os triángulos son equiláteros e teñen 50 pixels de lonxitude.
       4-5 Artist Assessment 1: |-
         Avaliación: Usa un bucle para debuxar o triángulo
         equilátero. Cada lado ten 300 pixels.
       4-5 Artist Free Draw 1: |-
         Debuxo libre! Debuxa o que esteas inspirado
         a crear.
-      4-5 Artist Patterns 1: |-
-        Podes debuxar este cadrado usando un bucle?
-        Cada lado ten 20 pixels de lonxitude.
-      4-5 Artist Patterns 11: |-
-        Cantas veces necesitas repetir isto
-        para debuxar un semicírculo? Pista: se hai 360 graos nun círculo e cada
-        repetición move 3 graos, cantas veces necesitarías repetir para debuxar un círculo completo?
-      4-5 Artist Patterns 12: |-
-        Se copiases este bucle e virases para a esquerda en vez de
-        á dereita, o que acontece? Podes repetir isto para debuxar esta onda?
-      4-5 Artist Patterns 13: |-
-        Agora imos repetir todo catro
-        veces para crear a moldura desta imaxe. Presta atención aos recantos - non podes simplemente virar 90 graos! Se repetises unha acción de virar 3 graos 60 veces fas un semicírculo, cal destes bloques de código vai facer un cuarto de círculo para os recantos?
-      4-5 Artist Patterns 2: |-
-        Se colocases o teu bucle do cadrado dentro
-        de outro bucle, chamámoslle bucle aniñado. O que necesitas agregar ao teu bucle externo para garantir que todos os 15 cadrados fiquen aliñados?
-      4-5 Artist Patterns 3: |-
-        Agora, imos nos profundizar máis un nivel!
-        Aniñamos todo o bloque de código dentro de outro bucle, pero necesitas posicionar o artista no lugar para debuxar a próxima recta. Cal destes bloques de código podes colocar no final do bucle máis externo para debuxar toda a grade?
-      4-5 Artist Patterns 4: |-
-        Este diamante ten lados de 50 pixels e ángulos
-        de 120 e 60 graos. Usa un bucle para debuxalo.
-      4-5 Artist Patterns 8: |-
-        Usa un bucle para debuxar este hexágono con
-        lados de 40 pixels e ángulos de 60 graos.
-      4-5 Artist Patterns 9: |-
-        Agora, repite o código 3 veces para debuxar a
-        a liña enteira. Pista: cada hexágono ten 80 pixels de longo do extremo esquerdo
-        ao extremo dereito.
-      4-5 Artist Patterns 9.5: |-
-        Imos repetir este código para debuxar dúas fileiras
-        de hexágonos. Percibe como a nosa segunda fileira está descolocada para a dereita.
-      4-5 Artist Patterns Free Play: |-
-        Actividade libre - proba a crear
-        o teu propio padrón!
-      4-5 Bee Conditionals 1: |-
-        A abella non sabe se iso é unha flor ou
-        unha colmea. Recolla néctar só das flores, pero primeiro verifique se o obxecto é
-        unha flor ou unha colmea.
-      4-5 Bee Conditionals 2: |-
-        Agora a abella só quere néctar. Lémbrate,
-        non todos os obxectos son flores, entón mira se o obxecto debaixo da nube é
-        unha flor. Se é, entón podes recoller o néctar.
-      4-5 Bee Conditionals 3: |-
-        Agora a abella só quere producir mel.
-        Fai a verificación para producir mel só nas colmeas.
-      4-5 Bee Conditionals 4: |-
-        O obxecto descoñecido pode ser unha flor
-        ou unha colmea. Usa o bloque "se-senón" para recoller néctar se fose unha flor,
-        e se non para producir mel (porque é, entón, unha colmea).
-      4-5 Bee Conditionals 5: |-
-        Debe haber unha flor ou unha colmea
-        baixo esas nubes. Usa o bloque se-senón para recoller néctar se houbese
-        unha flor, se non para producir mel (porque hai, entón, unha colmea).
-      4-5 Bee Conditionals 6: |-
-        Esa flor morada pode ter 1,
-        2 ou 3 néctares. Aquí un bloque "se-senón" está combinado con outro bloque "se-senón" para crear un bloque "se, senón"-"se, senón". Completa a solución para recoller a cantidade descoñecida de néctar.
-      4-5 Bee Conditionals 7: |-
-        Lémbrate de que as flores moradas poden ter
-        1, 2 ou 3 néctares. Completa a función "verifique a flor morada" e úsaa
-        para recoller todo o néctar das flores.
-      4-5 Bee Conditionals 8: |-
-        Escribe dentro da función "verifique flor e
-        produza mel". A túa función debe verificar se a flor morada ten 3, 2 ou
-        1 néctar e recoller todo o néctar. Daquela, sigue adiante e produce mel.
-      4-5 Bee Conditionals Assessment 1: |-
-        Avaliación: este código é erróneo.
-        Completa a función "recolla néctar ou produza mel" e daquela chámea para recoller todo o néctar e producir o mel. Lémbrate, as flores moradas poden ter 1, 2 ou 3 néctares.
-      4-5 Bee Debugging 1: |-
-        Estes bloques están me incomodando. Podes
-        correxilos?
+      4-5 Artist Patterns 7: |-
+        Imos modificar o código do último desafío
+        para facer este padrón máis complexo. Percibe como os diamantes se sobrepoñen agora. Tenta alterar o primeiro "salte para trás" de 100 para 50 (metade da distancia) - agora, canto de lonxe o artista debe ir no segundo "salte para trás"?
       4-5 Bee Debugging 10: Atopa os erros e corríxeos.
       4-5 Bee Debugging 11: Isto conta correctamente?
       4-5 Bee Debugging 2: Axuda a abella a recoller o néctar e fabricar o mel.
       4-5 Bee Debugging 3: Atopa os erros e corríxeos.
       4-5 Bee Debugging 4: Estes bloques non funcionan. Cal é o padrón?
       4-5 Bee Debugging 5: Algo non está ben aquí...
-      4-5 Bee Debugging 6: |-
-        A flor morada ten unha cantidade descoñecida de
-        néctar. Corrixe os bloques para recoller todo o néctar da flor.
       4-5 Bee Debugging 7: Está faltando algunha cousa na función...
-      4-5 Bee Debugging 8: |-
-        Esta función está ben, pero non se usa
-        correctamente.
       4-5 Bee Debugging 9: Por que a abella non está produzindo mel suficiente?
       4-5 Bee Debugging Assessment 1: 'Avaliación: corrixe o código.'
       4-5 Bee Nested Loops 1: Usa un bucle para recoller todo o néctar.
-      4-5 Bee Nested Loops 2: "Recolle todo o néctar de cada flor.\nUsa un bucle aniñado. "
-      4-5 Bee Nested Loops 3: |-
-        Recolle todo o néctar colocando o
-        código inicial dentro dun bucle aniñado.
-      4-5 Bee Nested Loops 4: "Recolle todo o néctar de cada flor\ne produce mel en
-        cada colmea. Usa un bucle aniñado. "
       4-5 Bee Nested Loops 5: |-
         Recolle todo o néctar creando
         un bucle aniñado.
-      4-5 Bee Nested Loops 7: |-
-        Coloca este bucle dentro de outro bucle para crear
-        un bucle aniñado e recoller todo o néctar das flores.
-      4-5 Bee Nested Loops 9: |-
-        Recolle todo o néctar destas flores
-        aniñando un bucle "mentres" dentro dun bloque "repita".
-      4-5 Bee Nested Loops Assessment 1: |-
-        Avaliación- recolle todo o
-        néctar e produce todo o mel usando bucles.
-      4-5 Bee Nested Loops Rows: |-
-        Recolle o néctar das fileiras de flores!
-        Usa un bucle aniñado.
-      4-5 Maze 1: |-
-        Querida persoa. Min zumbi. Precisa... chegar...
-        xirasol.
-      4-5 Maze 10: Podes chegar até o xirasol usando só catro bloques?
-      4-5 Maze 11: Podes chegar até o xirasol usando só seis bloques?
+      4-5 Maze 1: Querida persoa. Min zumbi. Debe... chegar... xirasol.
+      4-5 Maze 10: Vostede pode chegar até o xirasol usando só catro bloques?
+      4-5 Maze 11: Vostede pode chegar até o xirasol usando só seis bloques?
       4-5 Maze 12: |-
         Ok, isto é un pouco diferente. Podes facer isto en
         só seis bloques?
       4-5 Maze 2: Leva o zumbi até o xirasol, pero evita a carnívora!
       4-5 Maze 3: Precisa... chegar... xirasol.
-      4-5 Maze 4: Proba o bloque "repita" para usar menos bloques...
       4-5 Maze 5: |-
         Podes resolver este desafío usando o menor número
         posíbel de bloques?
       4-5 Maze 6: |-
         Podes resolver este desafío usando o menor número
         posíbel de bloques?
-      4-5 Maze 7: Querida persoa. Min zumbi. Debe... chegar... xirasol.
-      4-5 Maze 8: |-
-        Usa o bloque "repita" para levar o zumbi até o
-        xirasol. (Evite as carnívoras!)
-      4-5 Maze 9: Crea un bucle co bloque "repita até".
-      4-5 Maze Assessment 1: 'Avaliación: chega até o xirasol.'
-      4-5 Maze Conditionals 1: |-
-        Usa o bloque "repita até" para levar o
-        zumbi até o xirasol.
-      4-5 Maze Conditionals 10: "Podes engadir só 3 bloques para axudar ao zombie
-        a completar un labirinto máis complexo? \\\r\n\\\r\nSe o fas ben, poderá andar
-        por calquera camiño curvo independentemente da súa lonxitude!"
-      4-5 Maze Conditionals 2: |-
-        Usa o bloque "repita até" para levar o
-        zumbi até o xirasol.
-      4-5 Maze Conditionals 3: |-
-        Usa o bloque "se" para me deixar decidir
-        cando virar. Pista: só necesitas máis un bloque pero aprende como o configuramos
-        para que poidas facelo soíño na próxima vez.
-      4-5 Maze Conditionals 4: |-
-        Ok, este desafío é como o último,
-        pero necesitas te lembrar de como usaches o bloque "se" e o bloque "repita"
-        xuntos.
-      4-5 Maze Conditionals 5: |-
-        Min querer xirasol! Usa un bloque "se"
-        para que eu chegue alá co menor número de bloques posíbel.
-      4-5 Maze Conditionals 6: |-
-        Min querer xirasol! Usa un bloque "se"
-        para que eu chegue alá co menor número de bloques posíbel.
-      4-5 Maze Conditionals 7: |-
-        Ok, imos practicar unha vez máis
-
-        -   esta parte non é moito diferente, pero non perda de vista ás carnívoras!
-      4-5 Maze Conditionals 8: |-
-        O bloque "se-senón" verifica unha condición
-        e entón fai unha cousa OU outra. Para me levar ao xirasol tenta
-        usar este novo bloque.
-      4-5 Maze Conditionals 9: |-
-        Imos praticar o uso do bloque "se-senón" máis unha
-        vez, podes facelo correctamente na primeira tentativa?
-      4-5 Maze Conditionals Assessment 1: |-
-        Usa un bloque "repita até" e
-        un bloque "se-senón" para me levar até o xirasol no menor número de bloques posíbel.
-      4-5 Nested Loops 11: |-
-        Podes debuxar estes 10 cadrados desta
-        calzada usando un bucle aniñado? Cada cadrado ten 30 pixels.
-      4-5 Nested Loops 12: |-
-        Podes debuxar estes 36 triángulos usando
-        un bucle aniñado?
-      4-5 Nested Loops 2: "Agora, aniña este bucle dentro de outro bucle para debuxar\n10
-        triángulos. Isto se chama bucle aniñado. Pista: todos os 10 triángulos completan\nunha
-        rotación de 360 graos.  "
-      4-5 Nested Loops 3: "Crea un sol aniñando o código inicial\ndentro de outro
-        bucle. Chamamos a isto bucle aniñado.\\\r"
       4-5 Nested Loops 5: Repite o código dado para crear un muiño de vento.
-      4-5 Nested Loops 6: |-
-        Podes debuxar un hexágono repetindo o
-        código do triángulo?
-      4-5 Nested Loops 7: |-
-        Repite este debuxo 10 veces. Canto
-        necesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)
-      4-5 Nested Loops 8: |-
-        Repita este debuxo 6 veces. Canto
-        precisas virar a cada repetición? (Pista: canto é 360 dividido por 6?)
       4-5 Nested Loops 9: Debuxa o dente na boca do crocodilo!
-      4-5 Nested Loops Assessment 1: |-
-        Usa un bucle aniñado para completar
-        o debuxo.
-      4-5 While Loops 1: |-
-        Móveme para o buraco e cúbreo con
-        dúas pás de terra, usando o bloque "cubra".
-      4-5 While Loops 2: |-
-        Móveme para o monte de terra e remóveo
-        con 5 pás de terra, usando o bloque "remova".
-      4-5 While Loops 3: |-
-        Móveme para o monte e remove toda a
-        terra, entón móveme para o buraco e cúbreo completamente. Pista: usa o menor número de bloques posíbel.
-      4-5 While Loops 4: |-
-        Uau, atopei un buraco realmente fondo! Non
-        sei cantas pás de terra son necesarias. Podes escribir un programa que o cubra até que o solo fique nivelado? Pista: desta vez tenta usar o bucle "mentres".
-      4-5 While Loops 5: "Uau, agora hai dous buracos profundos! \nPodes escribir
-        un programa que os cubra até que o solo fique nivelado?"
-      4-5 While Loops 6: |-
-        Uau, agora hai unha morea de terra!
-        Podes escribir un programa que remova a terra até que o solo fique nivelado?
-      4-5 While Loops 7: |-
-        Uau, agora hai tres grandes montes de terra!
-        Podes escribir un programa que remova cada un deles até que o solo fique nivelado?
-      4-5 While Loops 8: |2-
-         Hai un buraco realmente fondo e un monte de terra
-        realmente grande. Cantas pás de terra son necesarias para
-        facer o solo plano? Pista: usa o bucle mentres para ambos.
-      4-5 While Loops Assessment 1: |-
-        Há unha chea de buracos e
-        montes. Axúdame a cubrilos e removelos para tornar o solo plano.
-      Course 4 Artist 1: "Axúdame a debuxar unha caixa. (Cada liña ten\n200 pixels
-        de lonxitude) "
-      Course 4 Artist 10: "Clica aquí para ver as indicacións novamente!\\\r\n\\\r\nPresentamos\naquí
-        un código para facer unha figura interesante. O que acontece cando o repetes
-        varias veces virando en cada iteracción? Observa que as xiros nesta figura
-        suman 420 graos, o que significa que cando o teu artista termine de debuxar
-        estará apuntando para unha dirección diferente a cando comezou. Esa nova direción
-        é exactamente 60 graos á dereita de onde ti principiaches."
-      Course 4 Artist 11: |-
-        Agora un desafío!  Temos aquí un debuxo que
-        usa só bloques que xa foron mostrados. Podes descobrir como
-        recrealo? Fica libre para usar tentativa e erro. Non esperamos que
-        sexa perfecto na primeira vez. Queres ver máis indicacións? Clica aquí!
-      Course 4 Artist 12: "Queres botar unha segunda ollada ao debuxo de exemplo ou
-        ás\nIndicacións? Clica aquí!\\\r\n\\\r\nNo caso contrario, crea un debuxo
-        ti mesmo!"
-      Course 4 Artist 13: |-
-        Aínda xogando?  Temos aquí unha pantalla en branco
-        na cal podes debuxar o que queiras!
-      Course 4 Artist 2: |-
-        Podes meter este código nun bucle para debuxar
-        en gris o cadrado?
-      Course 4 Artist 20: |-
-        Aínda a xogar?  Temos aquí unha pantalla en branco na cal
-        podes crear o que queiras!
-      Course 4 Artist 3: |-
-        Tenta descobrir o que acontece se executas
-        este código (ou clica en "Executar" para ver). Execútao varias veces para completar o debuxo.
-      Course 4 Artist 4: Cantos graos ten un círculo? Cubre o bloque de repetición
-        con ese número para crear un círculo de cores.
-      Course 4 Artist 5: |-
-        Debuxa a outra metade deste debuxo para que
-        fique simétrico. Os triángulos son equiláteros e teñen 50 pixels de lonxitude. Pista:
-        talvez precises executar o código varias veces para descobrir que bloques
-        deben ser engadidos.
-      Course 4 Artist 6: |-
-        Completa o código para debuxar estes triángulos.
-        Pista: hai 3 triángulos nunha rotación de 360 graos... cantas veces o número
-        3 cabe en 360?
-      Course 4 Artist 7: "Agora aniña este bucle dentro de outro bucle para debuxar\n10
-        triángulos. Isto se chama \"bucle aniñado\". Pista: todos os 10 triángulos
-        completan unha rotación de 360 graos.  "
-      Course 4 Artist 8: |-
-        Debuxa este sol repetindo todo este bloque de código
-        varias veces.
-      Course 4 Artist 8a: "Lémbraste desta figura? Agora ímoste deixar\nconstruíla
-        sen dar ningún bloque inicial!\\\r\nPista: hai 3 triángulos dentro da rotación
-        de 360 graos... cantas veces cabe 3 en\n360?"
-      Course 4 Artist Binary 1: "Temos aquí unha función que recibe unha tira\nbinaria
-        de 1's e 0's que indica o artista a moverse da esquerda para\na dereita, de
-        enriba para baixo. O artista vai cubrir os cadrados nos que vexa un 1 e ignorar
-        os que tivesen un 0.\\\r\n\\\r\nExecuta este código para ver como\no artista
-        usa números binarios para debuxar este padrón."
-      Course 4 Artist Binary 2: |-
-        Cal destas tiras binarias poderías
-        repetir 8 veces para debuxar esta imaxe?
+      AB_Debug_PlayLab3: Move o cabaleiro a cada unha das bandeiras. Se algo sae mal,
+        busca os erros!
+      CDEF_debugging_flappy2: Por que non funciona este xogo?
       Course 4 Artist Binary 3: |-
         Podes debuxar este padrón usando
         a repetición dunha tira binaria de 3 díxitos?
@@ -673,271 +119,25 @@ gl-ES:
         grade de \"pixels\" pola cal podes andar e crear\ndebuxos virando en certos
         cadrados. Podes facer que o artista debuxe\n\"01010101\" en binario na primeira
         fileira?"
-      Course 4 Artist For Loops 11: |-
-        Lémbraste de cando usamos
-        unha variábel para controlar o número de lados dunha figura nunha fase anterior? Faremos o mesmo agora coa variábel "contador". Este padrón
-        comeza cun triángulo e engade un lado de cada vez até que se debuxe un decágono (10 lados). Cada lado debe ter 100 pixels de lonxitude. Pista: 360 dividido polo número de lados que posúe unha figura é o número de graos que necesitarás xirar.
-      Course 4 Artist For Loops 11a: "Imos xuntar todo!  Usando\no teu coñecimento
-        en \"bucles para\" e o \"contador\", crea este debuxo no cal\ncada figura
-        ten dous lados máis que a anterior. Lémbrate de que cada lado é\n10 veces
-        maior que o número de lados do polígono.\\\r\n\\\r\nUnha pequena parte do
-        código foi fornecida para ti."
-      Course 4 Artist For Loops 14: |-
-        Se virases un pouco máis ou
-        un pouco menos do que normalmente farías para unha figura, conseguirás un efecto estupendo. Tenta usar algún código do último nivel pero virando 89 graos para crear esta espiral cadrada retorcida.
-      Course 4 Artist For Loops 15: "Actividade libre: tenta facer algúns debuxos\nusando
-        bucles \"para\". Engadimos algunhas variábeis xenéricas para que \nas uses
-        tamén."
-      Course 4 Artist For Loops 2: |-
-        Coloquei o código para debuxar
-        un triángulo dentro dun bucle que conta de 50 até 100, de 10 en 10. NOTA: Non deixs de ver o código antes de clicar en "Executar".
-      Course 4 Artist For Loops 3: |-
-        Usa o desafío anterior como referencia
-        para facer este desafío. O triángulo menor ten lados de 20 pixels,
-        o maior ten lados de 200 pixels, e cada triángulo é 20 pixels maior que o anterior.
-      Course 4 Artist For Loops 4: "Como podes modificar o que aprendiches para debuxar
-        estes cadrados?\nComezan con 15 pixels de lonxitude, o maior ten 300 pixels
-        de lonxitude, e cada cadrado é 15 pixels maior que o anterior. "
       Course 4 Artist For Loops 6a: |-
         Fai tres pequenas alteracións no
         código do último nivel para conseguilo!
-      Course 4 Artist For Loops 8: "Unha pequena alteración no código\nda última imaxe
-        pode crear este debuxo. Podes descobrir cal é\nesta alteración?\\\r\n\\\r\nPista:
-        algo precisa ser removido!"
-      Course 4 Artist For Loops Challenge: "Podes descobrir como\nusar todas as cousas
-        que aprendiches para crear esta imaxe?\\\r\n\\\r\nPrecisas de unha indicación?
-        Clica aquí."
-      Course 4 Artist For Loops inspire: "Actividade libre - Inspiracción: agora \naprendiches
-        todo o que necesitas saber para crear un padrón como este! Se esta\nimaxe
-        te motiva, tenta facer algo similar. En caso contrario, crea algo\nti mesmo.\\\r\n\\\r\nNecesitas
-        unha indicación? Clica aquí."
-      Course 4 Artist Functions Inspiration: |-
-        Clica aquí para ver as indicacións
-        novamente.
-      Course 4 Artist Functions challenge: |-
-        Clica aquí para ver as indicacións
-        novamente.
-      Course 4 Artist Inspire: "Queres botar unha segunda ollada ao debuxo de exemplo
-        ou ás\nIndicacións? Clica aquí!\\\r\n\\\r\nNo caso contrario, crea un debuxo
-        ti mesmo!"
-      Course 4 Artist Vars 1: |-
-        Podes me axudar a debuxar un triángulo equilátero?
-        Debe ter exactamente 100 pixels de lonxitude en cada lado.
-      Course 4 Artist Vars 11: |-
-        Este é un código máis complicado cos mesmos conceptos que usamos
-        no último desafío - cal debe ser o valor atribuído á variábel "lados"
-        para debuxar esa imaxe de cadrados?
-      Course 4 Artist Vars 12: |-
-        Imos definir a variábel "lados" como
-
-        5.  Cantos máis lados agregarmos a este algoritmo, maior será o
-            padrón! Observa que existe unha nova variábel chamada "lonxitude". Agora podemos usala onde hai un bloque "avance". Para esta forma define a variábel "lonxitude" como 75.
-      Course 4 Artist Vars 13: "Cando unha figura ten moitos lados, cada\nlado debe
-        ser menor se queres que todo o padrón caiba na pantalla.\n\\\r\nImos recrear
-        o algoritmo para este padrón sorprendente, pero en vez de\ndefinir manualmente
-        a variábel \"lonxitude\", imos usar un bloque de matemáticas coa variábel
-        \"lados\" dentro para nos certificar que cada figura encaixe correctamente.
-        O perímetro de cada polígono é de 300 pixels.\\\r\nNecesitas indicacións?
-        Clica aquí."
-      Course 4 Artist Vars 14: "Actividade libre: Vexa só! Agora o teu algoritmo\nestá
-        aniñado dentro dun bucle  máis. Proba a  alterar os valores das\ntúas dúas
-        variábeis para debuxar padróns interesantes.\\\r\n\\\r\nPara conseguir máis
-        efecto, proba a xogar coas\n cores! Use cores aleatorias dentro dos bucles
-        para ver como isto muda o teu debuxo."
-      Course 4 Artist Vars 2: |-
-        Ao revés de usar "avance por 150,"
-        o bloque "mova" está referenciando agora unha variábel chamada "lonxitude." Podes definir "lonxitude" como 150 para debuxar este novo triángulo?
-      Course 4 Artist Vars 4: |-
-        Agora quero facer un rectángulo que teña
-        a altura dúas veces maior que o longo. Temos unha variábel chamada "longo" que
-        debe ser definida como 100. Podes usar os bloques matemáticos para completar o código?
-      Course 4 Artist Vars 6: "Temos aquí un código que pode debuxar calquera polígono\nregular.
-        Hai unha nova variábel chamada lados que está definida como 4. Podes usar
-        a variábel lados (xunto co bloque matemático) para virar a cantidade certa
-        independentemente de cantos lados ten o polígono?\\\r\n\\\r\nClica aquí para
-        voltar para á indicación!"
-      Course 4 Artist Vars 7: "Usa o que aprendiches no último desafío\npara crear
-        este hexágono usando a variábel \"lados\".\\\r\n\\\r\nPercibes como podes\nalterar
-        só un valor para debuxar un triángulo, un cadrado, un pentágono ou un octógono?"
-      Course 4 Artist Vars 8: |-
-        Actividade libre: Xoga co número
-        de lados desta figura. Podes alterar o algoritmo para que o tamaño xeral
-        da figura permaneza igual, independentemente do número de lados? Pista: Se
-        dividises a súa lonxitude inicial polo número de lados, a lonxitude de cada
-        lado ficará menor á medida que o número de lados medre.
-      Course 4 Bee 1: "A abella non sabe o que hai atrás da nube! Primeiro,\nusa o
-        bloque \"se\" para verificar se hai unha flor atrás da nube, de seguida,\nrecolla
-        néctar só se fose unha flor. "
-      Course 4 Bee 2: |-
-        Usa o bloque "se/senón" para verificar cada obxecto
-        e ver se é unha flor ou unha colmea. Se fose unha flor, recolle néctar... en caso contrario, produce mel!
-      Course 4 Bee 3: |-
-        O obxecto descoñecido pode ser unha flor ou unha colmea.
-        Desta vez, usa o bloque "se/senón" para recoller néctar se fose unha flor, se non, produce mel (porque entón sería unha colmea).
-      Course 4 Bee Loops 5 NEW: |-
-        Temos aquí tres flores. Consegues atopar
-        o padrón das instrucións que precisas repetir 3 veces para recoller o
-        néctar co menor número de bloques?
-      Course 4 Bee Loops 5a NEW: |-
-        Agora, usa bucles para axudar á abella a recoller
-        todo o néctar no seu camiño até a colmea co menor número de bloques posíbel. Cando chegues alá, non te esquezas de producir mel!
-      Course 4 Bee Params 1: |-
-        Usa a función "obteña 3 néctares" que
-        vira, se move para recoller o néctar e entón retorna á posición orixinal.
-        Escribe unha secuencia para recoller todo o néctar usando "obteña 3 néctares"
-      Course 4 Bee Params 2: |-
-        Modifica a función "obteña 2 néctares" para
-        que me faga virar para a dereita en vez da esquerda para chegar ás flores.
-      Course 4 Bee Params 3: "Agora, hai flores en ambos os lados! Engadimos\nvariábeis
-        chamadas \"esquerda\" e \"dereita\" para que uses, e engadimos un\nparámetro
-        chamado \"dirección\" para \"obteña 3 néctares\". Edita \"obteña 3 néctares\"
-        para que a abella vire na dirección correcta cando as variábeis \"esquerda\"
-        ou \"dereita\" sexan pasadas á función.  "
-      Course 4 Bee Params 4: |-
-        Tenta usar a túa nova función para recoller
-        néctar de todas as flores. Lémbrate de usar as variábeis esquerda e dereita.
       Course 4 Bee Params 5: |-
         Imos comezar desde o princípio - podes crear
         unha nova función chamada "obteña 5 néctares" cun parámetro de dirección?
-      Course 4 Bee Params 6: |-
-        Non sería estupendo se puidésemos recoller
-        todo o néctar cunha única función? Tenta agregar un novo parámetro
-        á función chamado "unidades de néctar" para controlar a cantidade de néctar
-        a recoller. Probabelmente vas querer tamén renomear a función!
-      Course 4 Bee Params 7: |-
-        Tenta usar a túa nova función para
-        recoller todo o néctar.
-      Course 4 Bee Params 8: |-
-        Desafio: Agora tamén precisas traballar con
-        mel! Reescribe a túa función para recibir tanto o número de unidades de mel como o número de unidades de néctar. Como usarías estes números para decidir o que facer?
-      Course 4 EC 1a: |-
-        **Desafio Extremo:** Sen regras. Sen pistas. Só
-        o desafío!
-      Course 4 EC 1b: |-
-        **Desafio Extremo:** Sen regras. Sen pistas. Só
-        o desafío!
-      Course 4 EC 2a: |-
-        **Desafio Extremo:** Sen regras. Sen pistas. Só
-        o desafío!
-      Course 4 EC 2b: |-
-        **Desafio Extremo:** Sen regras. Sen pistas. Só
-        o desafío!
-      Course 4 EC 2c: |-
-        **Desafio Extremo:** Sen regras. Sen pistas. Só
-        o desafío!
+      Course 4 EC 1a: Sen regras. Sen pistas. Só o desafío!
+      Course 4 EC 1b: Sen regras. Sen pistas. Só o desafío!
+      Course 4 EC 2a: Sen regras. Sen pistas. Só o desafío!
+      Course 4 EC 2b: Sen regras. Sen pistas. Só o desafío!
+      Course 4 EC 2c: Sen regras. Sen pistas. Só o desafío!
       Course 4 Maze 2: Evita o TNT!
       Course 4 Maze 3: 'Programa o Angry Bird para chegar até o porco. '
-      Course 4 Maze 4: |-
-        Proba o bloque "repita" para usar menos bloques
-        na resolución deste desafío...
       Course 4 Maze 5: |-
         Podes resolver este desafío usando o menor número
         posíbel de bloques?
-      Course 4 Play Lab Params 1: |-
-        Aquí temos unha función chamada "salte"
-        que fai que o teu personaxe principal salte 100 pixels. Usa a función "salte"
-        para recoller todas as bandeiras.
-      Course 4 Play Lab Params 10: "Engadimos unha última función para\nti.\\\r\n\\\r\nUsa
-        unha instrución \"se\" para que o teu xogo chame á función \"suba de nível\"\nsomente
-        cando \"puntos_xogador\" sexa maior que un determinado número. \\\r\n\\\r\nPor
-        exemplo: \"puntos_xogador\" > 6\\\r\n\\\r\nXoga o xogo e chega até o nivel\n4
-        para ir para o próximo desafío. "
-      Course 4 Play Lab Params 2: "Agora temos bandeiras que están altas\ndemais para
-        o noso salto actual! Imos usar as frechas \"para enriba\" e \"para abaixo\"\npara
-        termos diversas alturas de chimpos. \\\r\n\\\r\nNecesitamos agregar un parámetro\ná
-        función \"salte\" chamado \"altura\". A frecha para enriba debe facer chimpar
-        o can 200 pixels, e a frecha para baixo debe facelo chimpar somente 100 pixels.\n\\\r\n\\\r\nPista:
-        clica en \"editar\" na función \"salte\" e actualízaa para que\nuse o parámetro
-        \"altura\"."
-      Course 4 Play Lab Params 3: "Engadimos outro parámetro á\nfunción \"salte\"
-        para que poidamos usala con outros personaxes. Cada personaxe se representa
-        por un número, comezando en un. Edite a función \"salte\" para que\nuse o
-        parámetro \"personaxe\" para facer chimpar o personaxe adecuado. "
-      Course 4 Play Lab Params 4: |-
-        Aquí temos unha función chamada "patrulle".
-        Edítaa para mover o gato 400 pixels para enriba, e entón 400 pixels para baixo.
-      Course 4 Play Lab Params 5: |-
-        Edita a función chamada "patrulle" para
-        agregar un parámetro "personaxe", así podemos chamala para todos os personaxes
-        da pantalla. Lémbrate, os personaxes corresponden aos números 1, 2 e 3.
-      Course 4 Play Lab Params 6: |-
-        Agrega outro parámetro chamado "velocidade"
-        á función "patrulle". Tenta usar un bloque "defina velocidade" co novo parámetro "velocidade" para axudar o Pinguín a apañar as dúas bandeiras antes de que os outros personaxes apañen unha.
-      Course 4 Play Lab Params 7: "Imos nos divertir! Analiza o\ncódigo dado para
-        ver se consegues descobrir o que fai cada bloque.  \\\r\n\\\r\nCando termines,
-        usa as\nfrechas do teclado para controlar o Can e recoller todas as bandeiras."
-      Course 4 Play Lab Params 8: |-
-        Usa un bloque "cando o personaxe toque" para enviar
-        o Can de volta para a parte superior esquerda SOMENTE se toca en calquera outro personaxe.
-      Course 4 Play Lab Params 9: "Temos aquí o noso xogo dunha fase anterior, pero\na
-        maior parte do código está oculta. Hai unha nova función chamada \"marcar_puntos\".\\\r\n\\\r\nEdita
-        a función para que un parámetro \"puntos\" sexa engadido á variábel \"puntos_do_xogador\".\n\\\r\n\\\r\nA
-        variábel \"puntos_do\\_xogador\" debe aumentar toda vez\nque o Can marque
-        o Gato con corazóns e diminuír toda vez que o Gato marque o Can con corazóns.\\\r\n\\\r\nObservación:\nCando
-        esteas preparado, clica en \"Executar\" para xogar. Cando o Can marque 6 puntos,
-        vas para o próximo desafío. "
-      Course 4 Play Lab Vars 1: |-
-        Desta vez non precisas escribir código ningún, só
-        clica en "Executar" para xogar! Neste xogo ti es o can que está tentando
-        recoller máis bandeiras que o gato. Usa a frecha para baixo para controlar o can.
-        Presiona "Terminar" cando termines de xogar.
-      Course 4 Play Lab Vars 2: |-
-        A carreira do último desafío non foi moi xusta! Altera
-        a variábel "velocidade\_can" para garantir que poidas recoller máis bandeiras que o gato. O primeiro en recoller 10 bandeiras vence!
-      Course 4 Play Lab Vars 3: |-
-        Temos aquí un novo tipo de xogo! Usa as
-        frechas para a esquerda e para a dereita para te mover e a frecha para enriba para chimpar. Mira se consegues recoller todas as bandeiras.
-      Course 4 Play Lab Vars 4: |-
-        Agora estamos a usar unha variábel chamada "altura"
-        para controlar a altura que o can pode chimpar. Actualiza a variábel "altura" para que o can poida chimpar abondo alto para alcanzar todas as bandeiras.
-      Course 4 Play Lab Vars 5: "Imos crear un xogo! Primeiro necesitaremos\nunha
-        puntuación. Reconstrúe o código que viches no último nivel para definir a
-        puntuación con valor 10. "
-      Course 4 Play Lab Vars 6: "Usa a frecha para a dereita para arrebolar corazóns.\\\r\n\\\r\nNo
-        noso xogo, como podemos marcar puntos? Agrega 1 a túa variábel \"puntos\"
-        toda vez que o can atinxa o gato cun corazón. Usa o evento \"cando o personaxe
-        2 toque en algo\" para disparar unha actualización na túa puntuación. Podes
-        incrementar a túa variábel definindo \"puntos = puntos + 1.\" Aumenta a túa
-        puntuación até 10 (un punto de cada vez!) para pasar de nivel."
-      Course 4 Play Lab Vars 7: |-
-        Estupendo, agora imos garantir que este xogo
-        non sexa moi fácil - sempre que o can (personaxe 1) sexa atinxido por unha bola de fogo do gato (personaxe 2), debes perder un punto. Comeza con 10 puntos para que o xogo non sexa moito difícil. Fai caer a túa puntuación de 10 para 0 para pasar de nivel.
-      Course 4 Play Lab Vars 9: "Hora da actividade libre! Temos aquí todas as\nvariábeis
-        que usamos até agora nesta etapa e algunhas máis no caso de\nque queira usalas.
-        \\\r\n\\\r\nObserva que agora hai moitos bloques na nosa\ncaixa de ferramentas
-        e precisan ser organizados! Aquí, colocamos cada peza nunha categoría apropiada.
-        Reserva un tempo para explorar todo o que está dispoñíbel. Cando termines
-        de explorar, crea un xogo ou unha historia usando repeticións, variábeis e
-        eventos.  \\\r\n\\\r\nPista: desliza a pantalla para abaixo para ver todos
-        os comandos na área de traballo."
-      Course 4 Play Labs For Loops 1: |-
-        Imos facer falar o can todos
-        os números de 1 a 100. Usa un bucle "para" e o bloque contador para que fale o valor da variábel contador cada vez que o bucle sexa executado.
-      Course 4 Play Labs For Loops 3: |-
-        Se contarmos usando números maiores,
-        podemos contar até números aínda maiores no mesmo intervalo de tempo. Tenta facer contar o can de 10 até 1000, contando de 10 en 10.
-      Course 4 SCF 1: |-
-        Usa as funcións suxeridas para debuxar catro
-        liñas de hexágonos. Percibiches como as nosas liñas numeradas son descolocadas para a dereita?
-      Course 4 SCF 1a: |-
-        Consegues descobrir como recoller todo este
-        néctar co menor número posíbel de bloques?
-      Course 4 SCF 1b: |-
-        Consegues descobrir como recoller todo este
-        néctar co menor número posíbel de bloques?
-      Course 4 SCF 2: "Usa o que aprendiches no nivel anterior para debuxar\nunha
-        imaxe como esta. Nota: O código vólvese máis simple se incorporas\nparámetros. "
-      Course 4 SCF 3: "Usa o que aprendiches no nivel anterior para debuxar\nunha
-        imaxe como esta. Nota: O código vólvese máis simple se incorporas\nparámetros. "
       Course 4 SCFL 1: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
-      Course 4 SCFL 1a: |-
-        Consegues levar a Skrat até a súa landra usando
-        o mínimo posíbel de bloques?
-      Course 4 SCFL 1b: |-
-        Consegues levar a Skrat até a súa landra usando
-        o mínimo posíbel de bloques?
       Course 4 SCFL 2: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
@@ -946,27 +146,18 @@ gl-ES:
       Course 4 SCFL 6: |-
         Consegues descobrir como recrear este debuxo
         cun único bucle?
-      Course 4 SCFL 7: |-
-        O artista quere apañar unhas ondas! Consegues
-        descobrir como recrear este debuxo?
-      Course 4 SCV 1: Clica aquí para ver as instrucións novamente.
-      Course 4 SCV 2: Clica aquí para ver as instrucións novamente.
-      Course 4 SCV 3: "Agora un xogo de pilla-pilla! Colle o gato para gañar 2 puntos.\nColle
-        o pinguín para gañar 3 puntos. Chega a 10 puntos para gañar!\\\r\nPero atención,
-        cando o gato e o pingüín se encontran sacan os teus puntos.\\\r\n\\\r\nAgrega
-        os bloques necesarios para facer funcionar este xogo como se explicou. Como
-        vas facer moverse o can  en todas as direccións usando as frechas do teclado?
-        Como vas agregar puntos cando o can colle o gato ou o pingüín? Como vas restar
-        puntos cando o gato e o pingüín se tocan?"
+      Course 4 SCV 1: Clique aquí para ver as instrucións novamente.
+      Course 4 SCV 2: Clique aquí para ver as instrucións novamente.
       Course 4 SCV 4: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
       Course 4 SCV 5: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
-      Course 4 SCV 6: Clica aquí para ver as instrucións novamente.
+      Course 4 SCV 6: Clique aquí para ver as instrucións novamente.
       Crack Random Substitution: Instrucións
       Crack a Caesar Cipher: Instrucións
+      HOC 2018 Level_12: Deseña o teu propio entorno subacuático, ti decides!
       Infinity_catch: |-
         Podes facer que a Elsa ("personaxe 2") alcance
         á Anna usando as frechas do teclado?
@@ -1001,21 +192,12 @@ gl-ES:
         Un bucle podería nos axudar a debuxar a parte superior deste
         castelo?
       K-1 Artist Loops 5: O que podes repetir 4 veces para debuxar esas escadas?
-      K-1 Artist Loops 6: |-
-        Son necesarios dous bucles: un para subir as
-        escadas e outro para descender.
       K-1 Artist Loops 7: Podes terminar este padrón con dous bucles?
       K-1 Artist Loops 8: Esta escada ten chanzos máis longos.
       K-1 Artist Loops 9: 'Avaliación: usa un bucle para debuxar as escadas'
       K-1 Artist Loops Free Play: Actividade libre, debuxa algo divertido!
       K-1 Artist1 1: Debuxa o pé do home cunha recta
-      K-1 Artist1 10: |-
-        Debuxa e salta para facer o camiño trazado até o tesouro
-        X
       K-1 Artist1 2: Debuxa o bigode no gato con dúas rectas!
-      K-1 Artist1 3: |-
-        Debuxa dúas rectas para o leste e dúas rectas para o norte para terminar
-        a casa!
       K-1 Artist1 4: Debuxa rectas para enriba, sobre e para baixo para completar
         o castelo!
       K-1 Artist1 5: Debuxa o talo desta flor con dúas rectas!
@@ -1032,21 +214,9 @@ gl-ES:
         outro cadrado.
       K-1 Artist2 Free Draw: Debuxa calquera cousa!
       K-1 Artist2_7: Debuxa un rectángulo para dar un caixón á cómoda!
-      K-1 Bee 1: |-
-        Móveme até a flor, recolle o néctar e entón móveme
-        até a colmea e produce mel
       K-1 Bee 11: Recolle tres néctares e entón fabrica unha unidade de mel
       K-1 Bee 13: Recolle tres néctares e entón fabrica unha unidade de mel!
-      K-1 Bee 14: |-
-        Lévame até o néctar e recólleo, lévame até o mel
-        e produce mel
       K-1 Bee 15: Recolle dous néctares para fabricar dúas unidades de mel!
-      K-1 Bee 2: |-
-        Móveme até a flor, recolle o néctar e entón móveme
-        até a colmea e produce mel
-      K-1 Bee 3: |-
-        Móveme até a flor, recolle o néctar e entón móveme
-        até a colmea e produce mel
       K-1 Bee 4: Recolle dous néctares e entón fabrica dúas unidades de mel!
       K-1 Bee 5: Recolle tres néctares e entón fabrica tres unidades de mel!
       K-1 Bee 6: Recolle dous néctares e entón fabrica dúas unidades de mel!
@@ -1058,28 +228,11 @@ gl-ES:
         Avaliación: usa bucles e obten o néctar e o
         mel!
       K-1 Bee Loops 12: Obtén todo o néctar e o mel.
-      K-1 Bee Loops 2: |-
-        Usa un bucle "repita" para te mover e entón recolle o néctar e
-        produce mel!
-      K-1 Bee Loops 3: Usa tres bucles "repita" para recoller o néctar e fabricar
-        o mel!
-      K-1 Bee Loops 4: |-
-        Usa bucles "repita" para obter néctar, producir mel e
-        para te mover!
       K-1 Bee Loops 5: Usa bucles "repita" para obter néctar e mel!
-      K-1 Bee Loops 6: Usa un bucle "repita" para recoller néctar, fabricar mel e
-        para moverse!
       K-1 Bee Loops 7: Recolle o néctar e fabrica o mel!
       K-1 Bee Loops 8: Recolle o néctar e fabrica o mel!
       K-1 Bee Loops 9: Recoller todo o néctar e fabrica todo o mel.
-      K-1 Building a Foundation Assessment: |-
-        Constrúe unha piramide de tres niveis.
-        Non hai outras instrucións, só simplesmente xoga coas pezas até
-        conseguilo!
       K-1 Maze 10: 'Desvíate do TNT para me levar até o porco! '
-      K-1 Maze 11: |-
-        Traza o camiño e lévame até o porco pasmón. Desvíate
-        do TNT ou as plumas van voar! Pista: está ao sul de onde estou.
       K-1 Maze 2: Móveme para o leste para chegar até o porco!
       K-1 Maze 3: Móveme para o sur para chegar até o porco!
       K-1 Maze 4: Móveme para o norte para chegar até o porco!
@@ -1089,195 +242,25 @@ gl-ES:
       K-1 Maze 8: Móveme por un camiño e entón por outro para me levar até o porco!
       K-1 Maze 9: Móveme por un camiño e entón por outro para me levar até o porco!
       K-1 Maze Loops 1: Lévame até o porco!
-      K-1 Maze Loops 10: Lévame até o porco! Usa o bucle "repita".
-      K-1 Maze Loops 11: "Lévame até o porco! \\\r\nO bucle \"repita\" facilítao."
-      K-1 Maze Loops 12: Lévame até o porco! O bucle "repita" facilítao.
       K-1 Maze Loops 2: Usa o bloque "repita" para me levar até o porco!
       K-1 Maze Loops 3: Lévame até o porco! Usa o bucle repita.
       K-1 Maze Loops 5: Lévame até o porco! Usa o bucle repita.
       K-1 Maze Loops 6: Lévame até o porco! Usa o bucle repita.
       K-1 Maze Loops 7: Lévame até o porco! Usa o bucle repita.
       K-1 Maze Loops 8: Usa o bucle "repita" para me levar até o porco.
-      K-1 Maze Loops Assessment 1: |-
-        Mira todo o que aprendemos-- usa bucles "repita" para me levar
-        até o porco!
-      K-1 Maze Loops Assessment 2: Usa bucles "repita" para me levar até o porco!
-      K-1 Maze Sequence Assessment 1: "Vexamos o que aprendiches!\\\r\nMóveme por
-        un camiño e entón por outro para me levar até o porco."
-      K-1 Maze Sequence Assessment 2: |-
-        Móveme por um camiño e entón
-        por outro para me levar até o porco.
-      K-1 artist 1 level 10: Debuxa liñas trazadas usando os bloques "salte" e "debuxe"
       K-1 artist 1 level 9: Fai o debuxo usando tres rectas
       K-1 maze debug 1: Altera o código para me levar até o porco!
-      K-1 maze debug 10: |-
-        Depura este nivel reorganizando e agregando
-        bloques para me levar até o porco!
-      K-1 maze debug 11: "Isto é unha proba!\\\r\nDepura este nivel reorganizando\ne
-        agregando bloques para me levar até o porco"
-      K-1 maze debug 2: |-
-        Descubre o que falta e entón agrega bloques
-        para me levar até o porco!
-      K-1 maze debug 3: |-
-        Descubre o que falta e entón REMOVE bloques
-        para me levar até o porco!
-      K-1 maze debug 4: |-
-        Pasa por estes bloques e arránxaos! Eu acho
-        que estou indo na dirección errónea.
-      K-1 maze debug 5: |-
-        Depura este nivel reorganizando e agregando
-        bloques para me levar até o porco!
-      K-1 maze debug 6: |-
-        Depura este nivel reorganizando e agregando
-        bloques para me levar até o porco!
-      K-1 maze debug 7: |-
-        Depura este nivel reorganizando e agregando
-        bloques para me levar até o porco!
-      K-1 maze debug 8: |-
-        Depura este nivel reorganizando e agregando bloques
-        para me levar até o porco!
-      K-1 maze debug 9: |-
-        Depura este nivel reorganizando e agregando
-        bloques para me levar até o porco!
-      NEW Course 4 Artist Functions 11: "Agora, queremos crear unha nova\nfunción
-        chamada \"debuxe unha liña de cadrados\" que debuxa seis cadrados en secuencia.
-        Consegues crear esa función usando a función \"debuxe un cadrado 20\" que
-        xa creamos? Observación: alteramos o lapis para que fique moito máis fino.
-        Clica en \"editar\" na función \"debuxe un cadrado 20\" para ver como!\\\r"
-      NEW Course 4 Artist Functions 12: |-
-        Usa a función "debuxe unha liña de cadrados"
-        do último desafío para debuxar este padrón."
-      NEW Course 4 Artist Functions 13: |-
-        Consegues debuxar unha forma de estrela usando
-        a función "debuxe unha liña de cadrados"? Pista: Edita a función "debuxe unha liña de cadrados" para que non precises chamala dúas veces.  Observa que terás que avanzar un certo número de pixels e virar 144 graos.
       NEW Course 4 Artist Functions 14: 'Actividade libre! '
-      NEW Course 4 Artist Functions 2: |-
-        Podes debuxar 3 cadrados con 20 pixels de distancia
-        entre cada un? Pista: cada cadrado ten 100 pixels de tamaño
-      NEW Course 4 Artist Functions 3: |-
-        Temos aquí un novo tipo de bloque.
-        Chámase "bloque de función". Clica en "editar" e entón cúbreo co código
-        para debuxar un cadrado con lados de 100 pixels. Cando termines de editar a función clica en "Pechar" para volver ao programa.
-      NEW Course 4 Artist Functions 4: |-
-        Usa a función "debuxe un cadrado"
-        para debuxar este padrón. Pista: vas precisar usar un bloque "vire 120 graos á dereita" despois de cada cadrado.
-      NEW Course 4 Artist Functions 7: "Estás conseguindo o xeito de como\nusar os
-        bloques de función? Imos modificar este cadrado para que teña 200 pixels\nde
-        tamaño. Pista: clica en \"editar\" para acceder ao editor da función \"debuxe
-        un cadrado\". Lémbrate de clicar en \"Pechar\" para saír do editor da función. "
-      NEW Course 4 Artist Functions 8: |-
-        Creamos unha nova función
-        para ti chamada "debuxe un triángulo". Podes editar a definición da función
-        para debuxar un triángulo con lados de 100 pixels?
-      NEW Course 4 Artist Functions 9: |-
-        Consegues resolver isto agregando
-        só un bloque?
-      NEW Course 4 Artist Params 10: "Crea un bloque de función \"debuxe un hexágono\"\ncun
-        parámetra lonxitude. Pista: este hexágono ten lados de 100 pixels\nde tamaño. "
-      NEW Course 4 Artist Params 11: |-
-        Consegues descobrir como debuxar
-        esta forma? Edita a función para usar o parámetro "lados".
-      NEW Course 4 Artist Params 12: |-
-        Consegues completar este debuxo?
-        Os lados de todas as figuras teñen 100 pixels de lonxitude.
-      NEW Course 4 Artist Params 12a: |-
-        Esta imaxe é semellante á anterior.
-        Podes usar un "bucle para" coa súa función para crear este debuxo?
-      NEW Course 4 Artist Params 13: "Imos editar a función \"debuxe un polígono\".\nXa
-        ten un parámetro \"lados\". Agora imos agregar un parámetro\n\"lonxitude\".
-        \\\r \nPista: O perímetro de cada figura ten 200 pixels de lonxitude. Lémbrate\n
-        da ecuación para facer ficar as figuras do mesmo tamaño cando teñen\nun número
-        diferente de lados?"
-      NEW Course 4 Artist Params 14: |-
-        Edita "debuxe un bordo espiral" para
-        usar os parámetros "lonxitude" e "lados" e entón recrea esas figuras.
-      NEW Course 4 Artist Params 15: |-
-        Actividade libre: aquí están para usar as funcións
-        que escribiches e máis algunhas. Debuxa algo incríbel!
-        Xoga co longo do lapis para ver como fican diferentes os teus debuxos!
-      NEW Course 4 Artist Params 3: "Agora, imos usar a función para debuxar\n5 triángulos
-        nunha liña. Pista: cada triángulo está separado por 30 pixels.\\\r"
-      NEW Course 4 Artist Params 4: |-
-        Percibes algo diferente
-        sobre estes bloques de función? Clica en "Executar" para ver o que acontece.
-      NEW Course 4 Artist Params 5: "Cubre o ??? no bloque de entrada\ndo parámetra
-        lonxitude. Pista: o tamaño do pentágono é de 100 pixels. "
-      NEW Course 4 Artist Params 6: |-
-        Cubre o parámetro "lonxitude"
-        para debuxar estas figuras substituíndo o "???" polos números correctos. O
-        cadrado e o triángulo teñen lados de 100 pixels, mentres o hexágono ten lados de
-        75 pixels.
-      NEW Course 4 Artist Params 7: |-
-        Podes completar este debuxo? Pista:
-        cada triángulo é 25 pixels maior que o anterior. O primeiro triángulo
-        ten lados de 25 pixels de lonxitude.
-      NEW Course 4 Artist Params 8: |-
-        O código da función deste triángulo
-        está corrompido. Consegues editar a función para correxilo e crear triángulos
-        de 25, 50 e 75 pixels de lonxitude?
       NEW Course 4 Artist Params 9: |-
         Clica en "editar" para cubrir a definición
         da función "debuxe un cadrado" e agregar un parámetro. Debe recibir un parámetro lonxitude, como no triángulo. Desta vez, debuxa 3 cadrados: 25, 50 e 75
         pixels de lonxitude e separados cada un por 100 pixels.
-      NEW Course 4 Artist Params inspire: "Actividade libre - Inspiración: agora\naprendiches
-        todo o que necesitas saber para crear un padrón como este! Se esta\nimaxe
-        te inspira tenta facer algo similar. Caso contrario, crea algo\nti mesmo.\\\r\n
-        \\\r\nQueres saber como se fixo o noso padrón de inspiración? "
-      NEW Course 4 Artist Vars 12: |-
-        Agora, recrea o algoritmo do último
-        nivel para crear un pentágono de lados de 150.
-      NEW Course 4 Artist Vars 2: "Arrastra un bloque numérico para o bloque \"defina
-        a lonxitude\"\npara debuxar un conxunto de triángulos de 50 pixels. "
-      NEW Course 4 Artist Vars 4: |-
-        Imos tentar novamente. Consegues definir
-        a variábel "lonxitude" para facer este fantástico debuxo con hexágonos? Pista: é un múltiplo de 10.
-      NEW Course 4 Artist Vars 6: "Debuxa este padrón colocando a\nvariábel lonxitude
-        nos lugares correctos e definindo o valor correcto para\nlonxitude. (Pista:
-        é un múltiplo de 10).  \\\r\n\\\r\nPercibes como defines o valor de\nlonxitude
-        só unha vez e o código usa o valor correcto en todos os lugares?\\\r\n\\\r\n\\\r"
       NEW Course 4 Bee For Loops 1: |-
-        Usa un bucle para recoller o néctar
-        de cada flor.
-      NEW Course 4 Bee For Loops 10a: |-
-        Listo para un desafío? Colle o que
-        aprendiches sobre bucles e tenta resolver este problema. Lémbrate: podes
-        ter que executar a túa solución varias veces antes de descobrir todos os
-        pasos.
-      NEW Course 4 Bee For Loops 2: |-
-        Agrega o código necesario para garantir que
-        a abella recolla todo o néctar. Mira canto código precisas para este desafío!
-        (Imos aprender unha maneira máis simple no próximo desafío.)
-      NEW Course 4 Bee For Loops 3: "Ah, o \"bucle para\" volve isto moito máis\nfácil!
-        Todo o código que necesitas está alá, bota unha ollada a como está feito\ne
-        entón clica en \"Executar\" para ver como funciona. "
-      NEW Course 4 Bee For Loops 4: "Substitúe o ??? no \"bucle para\"\npola maior
-        cantidade de néctar que a abella ten que recoller. "
-      NEW Course 4 Bee For Loops 4 4: |-
-        Agora, precisamos mover para diante "contador"
-        veces, e entón obter o néctar "contador" veces. Consegues usar dous bucles "repita" para resolver este desafío?
-      NEW Course 4 Bee For Loops 5: |-
-        Tamén podes usar un bucle "para" para facer conta
-        regresiva. Tenta recoller este néctar facendo unha conta regresiva de 5 até 1, de 1 en 1.
-      NEW Course 4 Bee For Loops 6: |-
-        O último número no teu bucle "para" é
-        chamado "incremento". A cada execución do bucle, a variábel contador
-        é alterada de acordo co incremento. Tenta recoller estas flores usando
-        un incremento de 2.
-      NEW Course 4 Bee For Loops 7: "Agora, imos combinar a variábel \"contador\"\ncun
-        bloque matemático! Como podes usar a variábel \"contador\" para navegar\npor
-        este xardín co menor número de bloques posíbel? O que necesitas facer para
-        recoller 3, 6, 9, 12 ou 15 néctares desta vez? O segredo está na variábel\n\"contador\"!\\\r\n\\\r\nLémbrate:
-        se o teu bucle estivese contando de forma crecente, o incremento é engadido
-        á variábel \"contador\" a cada repetición."
+        Usa un bucle para recoller o néctar de
+        todas as flores.
       NEW Course 4 Bee For Loops 8: "Conseguido! Cal debe ser o teu incremento\npara
         recoller 3, 6, 9, 12, 15 néctares?\\\r\nPista: canto precisas\nagregar a cada
         número para obter o número seguinte?"
-      NEW Course 4 Bee For Loops 9: |-
-        Se o teu bucle está facendo conta regresiva, o
-        incremento réstase da túa variábel contador a cada repetición. Cal debe ser
-        o teu incremento para recoller 9, entón 6, e entón 3 néctares?
-      NEW Course 4 Play Lab Params 11: "É hora da actividade libre! Divírtete\ncon
-        todos os bloques da túa caixa de ferramentas. "
       Overworld Avoid Monsters: Non é unha boa idea topar cun Creeper. Pasa con coidado
         polos Creepers e chega a túa casa con seguranza.
       Overworld Avoid Monsters_2019: Non é unha boa idea topar cun Creeper. Pasa con
@@ -1358,6 +341,10 @@ gl-ES:
       Underground Mining Coal_2019: Atoparás os recursos máis valiosos no subterráneo,
         pero pode estar escuro alá dentro. Coloca polo menos 2 fachos e extrae polo
         menos 2 carbóns.
+      'Widget: Text Compression': Busca patróns (frases ou palabras repetidas) no
+        texto. Introduce os patróns que vexas no dicionario da dereita. A medida que
+        introduces entradas no dicionario, introdúcese o símbolo da entrada no texto
+        no lugar do patrón.
       bounce_1: Conecte un bloque ao bloque "cando premer na frecha para a esquerda"
         e clic en "Executar". Mova a raqueta usando a frecha para a esquerda para
         alcanzar o obxectivo final.
@@ -1389,6 +376,12 @@ gl-ES:
         para ver o que acontece. Podes descubrir como funciona? (Ou eliminalo e substituílo
         por algo totalmente distinto)
       courseA_maze_seq2: Altera o código para me levar até o porco!
+      courseB_collector_loops_challenge2a: Axuda a Laurel a conseguir alomenos **5**
+        pezas do tesouro para rematar este quebracabezas.
+      courseB_collector_loops_challenge2a_2018: Axuda a Laurel a conseguir alomenos
+        **5** pezas do tesouro para rematar este quebracabezas.
+      courseB_collector_loops_challenge2a_2019: Axuda a Laurel a conseguir alomenos
+        **5** pezas do tesouro para rematar este quebracabezas.
       courseC_artist_prog5: 'Esta casa precisa dun tellado! Debuxa o triángulo. Pista:
         todos os 3 lados teñen a mesma lonxitude.'
       courseC_artist_prog5_2018: 'Esta casa precisa dun tellado! Debuxa o triángulo.

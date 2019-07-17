@@ -392,11 +392,14 @@ is:
       iceage: Ice Age
       infinity: Óendanleiki
       minecraft_adventurer: Minecraft Könnuður
+      minecraft_aquatic: Minecraft Vatnaveröld
       minecraft_designer: Minecraft
+      minecraft_hero: Minecraft Hetja
       playlab: Leikjasmiðjan
+      playlab_k1: Leikjasmiðja (forlæsir)
       scratch: Scratch
       sports: Íþróttir
-      spritelab: Kvikasmiðjan
+      spritelab: Verusmiðjan
       starwars: Star Wars
       starwarsblocks: Star Wars (Kubbar)
       starwarsblocks_hour: Star Wars (Kubbar)
@@ -1165,6 +1168,7 @@ is:
     csf_binary: Tvíundir
     csf_data: Gögn
     csf_conditionals: Skilyrði
+    csf_sprites: Kvikar
     csf_spritelab: Kvikasmiðjan
     csf_nested_loops: Innri lykkjur
     csf_functions: Föll

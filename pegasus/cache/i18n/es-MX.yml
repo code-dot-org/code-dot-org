@@ -189,7 +189,7 @@ es-MX:
     obtener la ayuda necesaria durante el curso en la red de tutores.
   third_party_codehs_btn_try: Introducción a CS Aprende Más para escuelas
   third_party_codecademy_desc: Estamos redefiniendo la educación de principio a fin.
-    La web ha transformado ocasi todo, desde el comercio y las redes sociales, hasta
+    La web ha transformado casi todo, desde el comercio y las redes sociales, hasta
     la salud y más. Estamos construyendo la educación que el mundo necesita, la primera
     educación verdaderamente nativa de la red.
   third_party_codecademy_btn_curriculum: Descarga el plan de estudios de Codecademy
@@ -206,7 +206,7 @@ es-MX:
   third_party_desc_5_4to8: 5 lecciones, aproximadamente, dirigidas a estudiantes de
     cuarto a octavo grado
   third_party_desc_10to12_kto3: 10 a 12 lecciones, aproximadamente, dirigidas a estudiantes
-    de preescolar a tercer grado*
+    de preescolar a tercer grado
   third_party_desc_11_kto5: 11 lecciones, aproximadamente, dirigidas a estudiantes
     de preescolar a quinto grado*
   third_party_desc_10to12_kto5: 10 a 12 lecciones, aproximadamente, dirigidas a estudiantes
@@ -1354,6 +1354,8 @@ es-MX:
     aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\r\n\r\nEsta
     unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información
     sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
+  accelerated_name: Curso acelerado
+  express_name: Curso Express
   20-hour_name: Curso acelerado
   algebra_name: Curso completo de Ciencias de la Comunicación en el álgebra
   AlgebraA_name: Curso A de Ciencias de la Comunicación en el álgebra
@@ -2466,7 +2468,7 @@ es-MX:
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
     Engineer* es un programa que abarca desde la niñez hasta la carrera profesional,
     diseñado para inspirar, educar y formar a niños y jóvenes de bajos recursos y
-    con otras necesitados, y ayudarlos a seguir una carrera en ciencias de la computación.
+    con otras necesidades, y ayudarlos a seguir una carrera en ciencias de la computación.
     <a href='%{amazon_future_engineer_link}' target='_blank'>Conoce más</a>
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Aprende más acerca
     de Amazon Future Engineer

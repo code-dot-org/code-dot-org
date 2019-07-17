@@ -5,7 +5,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
-import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  WorkshopTypes,
+  SubjectNames
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {PermissionPropType, Organizer, ProgramManager} from '../permission';
 
@@ -62,7 +65,7 @@ export class WorkshopManagement extends React.Component {
     let new_facilitator_weekend =
       workshop_date >= new Date('2018-08-01') &&
       ['CS Discoveries', 'CS Principles'].includes(this.props.course) &&
-      this.props.subject !== 'Code.org Facilitator Weekend';
+      this.props.subject !== SubjectNames.SUBJECT_FIT;
 
     let new_csf_201 =
       workshop_date >= new Date('2019-05-20') &&

@@ -1640,6 +1640,10 @@ lt:
           stages:
             While Loops:
               name: '„Kol“ kartojimas'
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Skaičių sistemos
         time4csdemo:
           stages:
             Crowdsourcing:

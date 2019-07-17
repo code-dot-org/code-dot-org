@@ -960,6 +960,8 @@
   cspexam1-mWU7ilDYM9_name: Test časť 1 - 25 otázok
   cspexam2-AKwgAh1ac5_name: Test časť 2 - 25 otázok
   cspunit3_gradelevel: "Ročníky 9-12"
+  accelerated_name: "Zrýchlený kurz"
+  express_name: "Zrýchlený kurz"
   20-hour_name: Zrýchlený kurz
   algebra_name: "Informatika v algebre - celý kurz"
   AlgebraA_name: "Informatika v algebre - Kurz A"

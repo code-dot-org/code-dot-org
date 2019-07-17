@@ -367,8 +367,6 @@ pl-PL:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Ta liczba mówi ci, ile takich bloków możesz użyć
           w tej łamigłówce.
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: Kliknij tutaj, aby zobaczyć, jak kod działa!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie
           martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
@@ -547,6 +545,8 @@ pl-PL:
         courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
           tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.
       courseD_scrat_ramp6:
+        courseE_artist_ramp8_1: Możesz zmienić ten numer.
+        courseE_artist_ramp8_2: Kliknij tutaj, aby wpisać liczby powtórzeń kodu.
         courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
           tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.
       courseD_scrat_ramp8:
@@ -583,9 +583,6 @@ pl-PL:
         courseE_artist_functions_challenge2_callout2: Jeśli nie podoba ci się ten
           projekt, zmień go tak, jak chcesz!
       courseE_artist_ramp8:
-        courseE_artist_ramp8_1: Możesz zmienić ten numer.
-        courseE_artist_ramp8_2: Kliknij tutaj, aby wpisać liczby powtórzeń kodu.
-      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Możesz zmienić ten numer.
         courseE_artist_ramp8_2: Kliknij tutaj, aby wpisać liczby powtórzeń kodu.
       courseE_playLab_challenge1:

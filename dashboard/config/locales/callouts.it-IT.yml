@@ -3,9 +3,9 @@ it-IT:
   data:
     callouts:
       2-3 Artist Debugging 1:
-        2-3_Artist_Debugging_1_a: Negli esercizi dell'artista non c'è il pulsante
-          "Fai un passo", ma puoi spostare questo cursore per scegliere la velocità
-          di esecuzione del programma.
+        2-3_Artist_Debugging_1_a: Negli esercizi dell'Artista non c'è il bottone "Fai
+          un passo", ma puoi spostare questo cursore per scegliere la velocità di
+          esecuzione del programma.
       2-3 Bee Conditionals 5:
         Bee_Cond_5_1a: I fiori viola possono avere 1 o 0 dosi di nettare... ma non
           puoi saperlo fino a quando non esegui il codice!
@@ -121,9 +121,10 @@ it-IT:
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Usa le frecce per muovere il personaggio
       Course 4 Play Lab Vars 9:
-        Course_4_Play_Lab_Vars_9_1: I blocchi della cassetta degli attrezzi ora sono
-          stati organizzati in categorie. Clicca su queste parole per scoprire dove
-          sono finiti!
+        Course_4_Play_Lab_Vars_9_1: |-
+          https://studio.code.org/s/course4/stage/7/puzzle/8
+
+          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       Course 4 Playlab For Loops 4b:
         Course_4_Playlab_For_Loops_4b_1: Hai notato che la variabile `counter` ha
           nomi diversi per ogni personaggio? In questo modo ogni ciclo può lavorare
@@ -215,8 +216,10 @@ it-IT:
         MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, mentre Steve e Alex
           non possono!  '
       NEW Course 4 Artist Functions 3:
-        NEW_Course_4_Artist_Functions_3_1: Clicca qui per creare un nuova funzione
-          che costruisca un quadrato.
+        NEW_Course_4_Artist_Functions_3_1: |-
+          https://studio.code.org/s/course4/stage/12/puzzle/3
+
+          Clicca qui per creare un nuova funzione che costruisca un quadrato.
       NEW Course 4 Artist Functions 7:
         edit_function: Clicca qui per modificare la tua funzione.
       NEW Course 4 Artist Functions 8:
@@ -353,8 +356,6 @@ it-IT:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi
           puoi usare in questo esercizio.
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: Clicca qui per eseguire il codice!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
@@ -389,10 +390,10 @@ it-IT:
         courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseA_maze_seq2:
         courseA_maze_seqA_callout1: Usa il bottone passo per andare passo dopo passo
-          nel programma. Ti aiuterà a trovare il bug!
+          nel programma. Ti aiuterà a trovare l'errore!
       courseA_maze_seq4:
-        made_of_stone: Questi blocchi sono fatti di pietra. Puoi muoverli, ma non
-          puoi cancellarli!
+        made_of_stone: Questi blocchi sono pietrificati. Puoi muoverli, ma non puoi
+          cancellarli!
       courseA_playLab_events4:
         courseA_playlab_events4_callout1: Questa è una nota
       courseA_playLab_events4_2018:
@@ -458,9 +459,9 @@ it-IT:
         courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: Usa il bottone passo per andare passo dopo passo
-          nel programma. Ti aiuterà a trovare il bug!
+          nel programma. Ti aiuterà a trovare l'errore!
       courseB_maze_seq3:
-        courseB_maze_seq3_1: I blocchi grigi sono fatti di pietra e non possono essere
+        courseB_maze_seq3_1: I blocchi grigi sono pietrificati e non possono essere
           gettati via.
       courseB_playlab_events6:
         courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
@@ -579,14 +580,23 @@ it-IT:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
       courseC_maze_programming7:
-        courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono
+        courseC_maze_programming7_2: Questi blocchi sono pietrificati e non possono
           essere gettati via.
       courseC_maze_programming7_2018:
-        courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono
+        courseC_maze_programming7_2: Questi blocchi sono pietrificati e non possono
           essere gettati via.
       courseC_maze_programming7_2019:
-        courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono
+        courseC_maze_programming7_2: Questi blocchi sono pietrificati e non possono
           essere gettati via.
+      courseC_starWars_loops2:
+        courseC_starWars_loops2: In questo esercizio, puoi usare solo uno di questi
+          blocchi.
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2: In questo esercizio, puoi usare solo uno di questi
+          blocchi.
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: In questo esercizio, puoi usare solo uno di questi
+          blocchi.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: 'Non devi impostare i singoli colori per svolgere
           correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto
@@ -700,6 +710,9 @@ it-IT:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
       courseD_scrat_ramp6:
+        courseE_artist_ramp8_1: Puoi cambiare questo numero.
+        courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
+          il tuo codice.
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
           gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseD_scrat_ramp8:
@@ -761,10 +774,6 @@ it-IT:
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       courseE_artist_ramp8:
-        courseE_artist_ramp8_1: Puoi cambiare questo numero.
-        courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
-          il tuo codice.
-      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Puoi cambiare questo numero.
         courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
           il tuo codice.
@@ -832,6 +841,12 @@ it-IT:
         courseF_bee_for4_1: I cicli li trovi qui dentro!
       courseF_bee_for4_2019:
         courseF_bee_for4_1: I cicli li trovi qui dentro!
+      courseF_bee_for9:
+        courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
+      courseF_bee_for9_2018:
+        courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
+      courseF_bee_for9_2019:
+        courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
       courseF_bee_functions2:
         courseF_bee_functions2_1: Questo blocco chiama una funzione. Clicca questo
           bottono "modifica" per vedere cosa c'è all'interno!

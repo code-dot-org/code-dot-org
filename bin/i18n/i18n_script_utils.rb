@@ -1,10 +1,11 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 
+require 'cdo/google_drive'
+require 'cgi'
 require 'fileutils'
 require 'open3'
 require 'psych'
 require 'tempfile'
-require 'cgi'
 
 CODEORG_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_crowdin.yml")
 CODEORG_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_credentials.yml")
@@ -12,8 +13,6 @@ HOUROFCODE_CONFIG_FILE = File.join(File.dirname(__FILE__), "hourofcode_crowdin.y
 HOUROFCODE_IDENTITY_FILE = File.join(File.dirname(__FILE__), "hourofcode_credentials.yml")
 CODEORG_MARKDOWN_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml")
 CODEORG_MARKDOWN_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_markdown_credentials.yml")
-
-KEYS_TO_REDACT = ['authored_hints', 'long_instructions', 'short_instructions']
 
 # Output the given data to YAML that will be consumed by Crowdin. Includes a
 # couple changes to the default `data.to_yaml` serialization:
@@ -84,45 +83,35 @@ def run_bash_script(location)
   run_standalone_script("bash #{location}")
 end
 
+def report_malformed_restoration(key, translation, file_name)
+  @malformed_restorations ||= [["Key", "File Name", "Translation"]]
+  @malformed_restorations << [key, file_name, translation]
+end
+
+def upload_malformed_restorations(locale)
+  return if @malformed_restorations.blank?
+  Google::Drive.new.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
+  @malformed_restorations = nil
+end
+
+def recursively_find_malformed_links_images(hash, key_str, file_name)
+  hash.each do |key, val|
+    if val.is_a?(Hash)
+      recursively_find_malformed_links_images(val, "#{key_str}.#{key}", file_name)
+    else
+      report_malformed_restoration("#{key_str}.#{+key}", val, file_name) if contains_malformed_link_or_image(val)
+    end
+  end
+end
+
 def plugins_to_arg(plugins)
-  plugins.map {|name| "bin/i18n/plugins/#{name}.js" if name}.join(',')
+  plugins.map {|name| "bin/i18n/node_modules/@code-dot-org/remark-plugins/src/#{name}.js" if name}.join(',')
 end
 
-def redact_course_content(source, dest, original, *plugins)
-  return unless File.exist? source
-  FileUtils.mkdir_p File.dirname(dest)
-  FileUtils.mkdir_p File.dirname(original)
-  plugins = plugins_to_arg(plugins)
-  source_file = File.open(source, 'r')
-  source_data = JSON.load(source_file)
-  data = source_data.select {|key, _value| KEYS_TO_REDACT.include? key}
-
-  File.open(original, "w+") do |file|
-    file.write(JSON.pretty_generate(data))
-  end
-
-  args = ['bin/i18n/node_modules/.bin/redact']
-  args.push('-p ' + plugins) unless plugins.empty?
-
-  stdout, _status = Open3.capture2(
-    args.join(" "),
-    stdin_data: JSON.generate(data)
-  )
-  redacted_data = JSON.parse(stdout)
-  KEYS_TO_REDACT.each do |k|
-    source_data[k] = redacted_data[k] unless redacted_data[k].blank?
-  end
-
-  File.open(dest, "w+") do |file|
-    file.write(JSON.pretty_generate(source_data))
-  end
-end
-
-def redact(source, dest, *plugins)
+def redact(source, dest, plugins=[], format='md')
   return unless File.exist? source
   FileUtils.mkdir_p File.dirname(dest)
 
-  plugins = plugins_to_arg(plugins)
   data =
     if File.extname(source) == '.json'
       f = File.open(source, 'r')
@@ -132,7 +121,8 @@ def redact(source, dest, *plugins)
     end
 
   args = ['bin/i18n/node_modules/.bin/redact']
-  args.push('-p ' + plugins) unless plugins.empty?
+  args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
+  args.push("-f #{format}")
 
   stdout, _status = Open3.capture2(
     args.join(" "),
@@ -148,7 +138,19 @@ def redact(source, dest, *plugins)
   end
 end
 
-def restore(source, redacted, dest, *plugins)
+# This function currently looks for
+# 1. Translations with malformed redaction syntax, i.e. [] [0] (note the space)
+# 2. Translations with similarly malformed markdown, i.e. [link] (example.com)
+# If this function finds either of these cases in the string, it return true.
+def contains_malformed_link_or_image(translation)
+  malformed_redaction_regex = /\[.*\]\s+\[[0-9]+\]/
+  malformed_markdown_regex = /\[.*\]\s+\(.+\)/
+  non_malformed_redaction = (translation =~ malformed_redaction_regex).nil?
+  non_malformed_translation = (translation =~ malformed_markdown_regex).nil?
+  return !(non_malformed_redaction && non_malformed_translation)
+end
+
+def restore(source, redacted, dest, plugins=[], format='md')
   return unless File.exist?(source)
   return unless File.exist?(redacted)
   is_json = File.extname(source) == '.json'
@@ -185,11 +187,11 @@ def restore(source, redacted, dest, *plugins)
   redacted_json.flush
 
   args = ['bin/i18n/node_modules/.bin/restore']
-  plugins = plugins_to_arg(plugins)
-  args.push('-p ' + plugins) unless plugins.empty?
-
+  args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
+  args.push("-f #{format}")
   args.push("-s #{source_json.path}")
   args.push("-r #{redacted_json.path}")
+
   stdout, _status = Open3.capture2(
     args.join(" ")
   )
@@ -212,44 +214,24 @@ end
 def restore_course_content(source, redacted, dest, *plugins)
   return unless File.exist?(source)
   return unless File.exist?(redacted)
-  source_file = File.open(source, 'r')
-  redacted_file = File.open(redacted, 'r')
-  source_data = JSON.load(source_file)
-  translated_data = JSON.load(redacted_file)
-  redacted_data = translated_data.select {|key, _value| KEYS_TO_REDACT.include? key}
-
-  return unless source_data&.values&.first&.length
-  return unless redacted_data&.values&.first&.length
-
-  source_json = Tempfile.new(['source', '.json'])
-  redacted_json = Tempfile.new(['redacted', '.json'])
-
-  source_json.write(JSON.generate(source_data))
-  redacted_json.write(JSON.generate(redacted_data))
-
-  source_json.flush
-  redacted_json.flush
 
   args = ['bin/i18n/node_modules/.bin/restore']
   plugins = plugins_to_arg(plugins)
   args.push('-p ' + plugins) unless plugins.empty?
 
-  args.push("-s #{source_json.path}")
-  args.push("-r #{redacted_json.path}")
+  args.push("-s #{source.inspect}")
+  args.push("-r #{redacted.inspect}")
   stdout, _status = Open3.capture2(
     args.join(" ")
   )
-  restored_data = {}
-  restored_data = JSON.parse(stdout)
-  KEYS_TO_REDACT.each do |k|
-    translated_data[k] = restored_data[k] unless restored_data[k].blank?
-  end
-  File.open(dest, "w+") do |file|
-    file.write(JSON.pretty_generate(translated_data))
-  end
 
-  source_json.close
-  redacted_json.close
+  return if stdout.empty?
+
+  restored_data = JSON.parse(stdout)
+  translated_data = JSON.parse(File.read(redacted))
+  File.open(dest, "w") do |file|
+    file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
+  end
 end
 
 def get_level_url_key(script, level)
@@ -275,6 +257,6 @@ def get_level_from_url(url)
     stage = script.stages.find_by_relative_position(matches[:stage_pos])
     level_info_regex = %r{puzzle/(?<level_pos>[0-9]+)}
     level_pos = matches[:level_info].match(level_info_regex)[:level_pos]
-    stage.script_levels.find_by_position(level_pos.to_i).level
+    stage.script_levels.find_by_position(level_pos.to_i).oldest_active_level
   end
 end

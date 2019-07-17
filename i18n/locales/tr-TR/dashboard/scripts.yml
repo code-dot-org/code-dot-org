@@ -8129,6 +8129,8 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+            Number Systems:
+              name: Sayı Sistemleri
         csd-videos:
           stages:
             new stage:

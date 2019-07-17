@@ -1,16 +1,22 @@
 ---
-fi-FI:
+fi:
   data:
     block_categories:
       Actions: Toiminnot
-      Color: Väri
-      Conditionals: Ehtolausekkeet
-      Dancers: Tanssijat
-      Events: Tapahtumat
-      Functions: Funktiot
-      Groups: Ryhmät
-      Logic: Logiikka
       Loops: Silmukat
+      Functions: Funktiot
+      Color: Väri
       Math: Matematiikka
-      Text: teksti
+      Logic: Logiikka
       Variables: Muuttujat
+      Conditionals: Ehtolausekkeet
+      Events: Tapahtumat
+      Text: teksti
+      Location: Sijainti
+      Dancers: Tanssijat
+      Groups: Ryhmät
+      Start: Aloita
+      Booleans: Totuusarvot
+      test: ehto
+      Name: Nimi
+      Function: Funktio

@@ -40,7 +40,7 @@ class School < ActiveRecord::Base
   has_many :census_overrides, class_name: 'Census::CensusOverride'
   has_many :census_summaries, class_name: 'Census::CensusSummary'
 
-  has_one :ap_school_code, class_name: 'Census::ApSchoolCode'
+  has_many :ap_school_code, class_name: 'Census::ApSchoolCode'
   has_one :ib_school_code, class_name: 'Census::IbSchoolCode'
 
   validates :state_school_id, allow_blank: true, format: {with: /\A[A-Z]{2}-.+-.+\z/, message: "must be {State Code}-{State District Id}-{State School Id}"}

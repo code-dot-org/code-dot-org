@@ -1,71 +1,763 @@
 ---
-de:
+de-DE:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Wähle einen Algorithmus für das gezeigte Bild.
+        answers:
+        - text: Beginne mit einem Quadrat<br/>Setze ein Dreieck auf das Quadrat<br/>Setze
+            ein Dreieck unter das Quadrat
+        - correct: true
+        - text: Beginne mit einem Quadrat.<br/> Setze ein Parallelogramm über das
+            Quadrat.<br/> Setze nun noch ein Dreieck rechts neben das Parallelogramm.
+        - text: Beginne mit einem Quadrat.<br/> Setze ein Dreieck unter das Quadrat.
+            <br/>Setze nun noch ein Parallelogramm rechts neben das Dreieck.
+      2-3 Algorithms Multi 2:
+        title: Multiple-Choice
+        content1: Beginne mit einem Dreieck<br/>Setze ein Quadrat unter das Dreieck<br/>Setze
+          ein weiteres Dreieck unter das Quadrat
+        questions:
+        - text: Welches Bild folgt <em>nicht</em> diesem Algorithmus?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Passend
+        content2: Weise die Tastenkombination den richtigen Tanzbewegungen zu.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Passend
+        content2: Nutze den Schlüssel, um jedem Code einen Buchstaben zuzuweisen
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welcher Kartensatz ist nach den Regeln des Spiels richtig ausgewertet?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Wie kann man diese Sequenz mit Schleifen vereinfachen?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Passend
+        content1: Passe das Raster dem Programm an.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welches Programm erzeugt dieses Bild?
+        answers:
+        - {}
+        - correct: true
+        - {}
+      2-3 Maze Match 2:
+        title: Labyrinth Übereinstimmung
+        content1: Weise die Puzzle den Blöcken zu.
+        pre_title: Anweisungen
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: Labyrinth Multiple-Choice
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: Multiple-Choice
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+      2-3 Relay Programming Multi 2:
+        title: Multiple-Choice
+        questions:
+        - text: Welche Bild-Programm-Kombination enthält keine Fehler?
+        answers:
+        - {}
+        - {}
+        - correct: true
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: 'Der Künstler: Funktionen Multiple-Choice Eins'
+        questions:
+        - text: Wähle die richtigen Bausteine, um dieses Bild mit den vorhandenen
+            Funktionen zu zeichnen
+        answers:
+        - correct: true
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Weise die Schleife der Form zu.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: Künstler Schleifen Multiple-Choice
+        questions:
+        - text: Welche Form wird durch diese Schleife erzeugt?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      2-3 artist loops multi 2:
+        title: Künstler Schleifen Multiple-Choice
+        questions:
+        - text: Welche Form wird durch dieses Programm erzeugt?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      2-3 artist match 1:
+        title: Künstler Übereinstimmung
+        content1: Weise die Form den Bausteinen zu, die sie fertig zeichnen.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: Welcher Vergleich unten ist wahr?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: Wähle die besten Bausteine.
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: Biene Schleifen Multiple-Choice Eins
+        questions:
+        - text: Welche Bausteine sammeln den gesamten Nektar?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Labyrinth Übereinstimmung Eins
+        content1: Weise die Puzzle den Blöcken zu.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: Multiple-Choice Labyrinth Eins
+        questions:
+        - text: Welche Gruppe von Bausteinen ist richtig?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Passend
+        content1: Weise die Schritte des Würfel-Rennspiels der Ordnung zu, in der
+          sie im Algorithmus erscheinen sollte.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Setze das Ergebnis von Spieler 1 auf 0</h4>"
+        - text: "<h4>Spieler 1 würfelt</h4>"
+        - text: "<h4>Füge den Wurf von Spieler 1 zum Gesamtergebnis hinzu</h4>"
+        - text: "<h4>Vergleiche die Punktstände der Mitspieler, um zu sehen, wer gewinnt</h4>"
+      4-5 Algorithms Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welches dieser Elemente ist am schwersten mit einem Algorithmus zu
+            beschreiben?
+        answers:
+        - text: Zähneputzen
+        - text: Kekse backen
+        - text: Einkaufen nach einer Einkaufsliste
+        - text: Banane
+          correct: true
+      4-5 Computational Thinking Match 1:
+        title: Passend
+        content1: Jedes dieser Fahrzeuge wurde in kleinere Einzelteile zerlegt. Weise
+          die Fahrzeuge der Einzelteilliste zu.
+        questions:
+        - text: "<h3>Räder/Seite: 2<br/>Fenster/Seite: 0</h3>"
+        - text: "<h3>Räder/Seite: 2<br/>Fenster/Seite: 1</h3>"
+        - text: "<h3>Räder/Seite: 2<br/>Fenster/Seite: 6</h3>"
+        - text: "<h3>Räder/Seite: 3<br/>Fenster/Seite: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Berlin ist eine große Stadt. <br/> Bielefeld ist eine mittelgroße
+            Stadt. <br/> Werl ist eine kleine Stadt.
+        answers:
+        - text: Berlin _____ eine _____ _____.
+        - text: _____ ist eine _____ Stadt.
+          correct: true
+        - text: _____ ist _____ eine _____.
+        - text: Bielefeld ist eine _____ Stadt.
+      4-5 Crowdsourcing Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welches dieser Bilder repräsentiert Crowdsourcing am besten?
+        answers:
+        - {}
+        - correct: true
+      4-5 Crowdsourcing Multi 2:
+        title: Multiple-Choice
+        questions:
+        - text: Welche dieser Aktivitäten ist am besten für Crowdsourcing?
+        answers:
+        - text: Dein Zimmer putzen
+          correct: true
+        - text: Dein Dessert essen
+        - text: Deine Haare bürsten
+        - text: Dein Gesicht waschen
+      4-5 Digital Footprint Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welche der unten genannten Informationen kannst du gefahrlos im Internet
+            teilen?
+        answers:
+        - text: Deinen Geburtstag
+        - text: Dein Lieblingsessen
+          correct: true
+        - text: Deine Adresse
+        - text: Die Kreditkartennummer deiner Eltern
+      4-5 Internet Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Wenn du versuchst, dich bei code.org anzumelden, zu welcher IP-Adresse
+            bringt der DNS dich am wahrscheinlichsten?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      4-5 Internet Multi 2:
+        title: Multiple-Choice
+        questions:
+        - text: Wenn der DNS sie zu der Seite mit der IP-Adresse 100.42.50.110 geleitet
+            hat, auf welcher Seite sind sie?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: Multiple-Choice
+        questions:
+        - {}
+        answers:
+        - text: Lou, Lou, spring zu my Lou,
+        - text: Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu my Lou <br/>
+            Lou, Lou, sspring zu Lou <br/> spring zu my Lou, mein Liebling.
+          correct: true
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Passend
+        content1: Weise jedem Programm die Wörter zu, die es bildet, mithilfe der
+          vorhandenen Fähigkeitsgruppen.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welches der unteren Programme <em>erstellt nicht</em> genau dieselbe
+            Sequenz wie das Programm 1?
+        answers:
+        - {}
+        - correct: true
+        - {}
+      4-5 artist loops multi 1:
+        title: Künstler Schleifen Multiple-Choice
+        questions:
+        - text: Welche Bausteine erstellen das Design?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: Künstler Multiple-Choice
+        questions:
+        - text: Welche Bausteine zeichnen ein Rechteck mit einen Umfang von 100?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: Künstler Multiple-Choice
+        questions:
+        - text: Welche Zeichnung ist symmetrisch?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      4-5 bee conditionals multi 1:
+        title: Biene Bedingungen Multiple-Choice
+        questions:
+        - text: Wähle die besten Bausteine.
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      4-5 bee debug multi 1:
+        title: Biene Debug Multiple-Choice
+        questions:
+        - text: Welche Version der Funktion funktioniert?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: Biene Schleifen Multiple-Choice
+        questions:
+        - text: Welche Bausteine werden die Aufgabe lösen?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: Labyrinth Bedingungen Multiple-Choice
+        questions:
+        - text: Welche Bausteine lösen die Aufgabe?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Labyrinth Übereinstimmung
+        content1: Weise die Puzzle den Blöcken zu.
+        pre_title: Anweisungen
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: Labyrinth Multiple-Choice
+        questions:
+        - text: Welche Bausteine lösen die Aufgabe?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
       Begin planning your project:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       Begin planning your project_2018:
         content1: hier die Beschreibung
       Begin planning your project_2018_2019:
         content1: hier die Beschreibung
+      CSD Header Size MC:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       CSD U2 Design Project:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U2 Design Project_2018:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U2 Design Project_2018_2019:
-        content1: hier die Beschreibung
         title: Titel
-      CSD U2 L1 Overview:
         content1: hier die Beschreibung
-        title: Titel
       CSD U2 L2 Overview:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U2 L3 Overview:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U2 L4 Overview:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U2 L5 Overview:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U2 L6 Overview:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U2 Lesson 6 Overview:
         content1: hier die Beschreibung
       CSD U2 expand project:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U2 expand project_2018:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U2 expand project_2018_2019:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 project guide:
         content1: hier die Beschreibung
       CSD U2 project guide_2018:
         content1: hier die Beschreibung
       CSD U2 project guide_2018_2019:
         content1: hier die Beschreibung
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: Titel
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: Titel
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: Titel
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
       CSD U3 Card Examples_2018:
         content1: hier die Beschreibung
       CSD U3 Card Examples_2018_2019:
         content1: hier die Beschreibung
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       CSD U3 combining rep:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U3 combining rep_2018:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U3 combining rep_2018_2019:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: hier die Beschreibung
       CSD U3 game intro_2018:
@@ -79,14 +771,14 @@ de:
       CSD U3 platform intro_2018_2019:
         content1: hier die Beschreibung
       CSD U5 Encryption 1:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U5 Encryption 1_2018:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U5 Encryption 1_2018_2019:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U5 Encryption 2:
         content1: hier die Beschreibung
       CSD U5 Encryption 2_2018:
@@ -94,8 +786,8 @@ de:
       CSD U5 Encryption 2_2018_2019:
         content1: hier die Beschreibung
       CSD U5 L13 SFLP Interpreting Data:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U5 crosstab warmup:
         content1: hier die Beschreibung
       CSD U5 crosstab warmup_2018:
@@ -103,1306 +795,983 @@ de:
       CSD U5 crosstab warmup_2018_2019:
         content1: hier die Beschreibung
       CSD U5 data visualization:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U5 data visualization_2018:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U5 data visualization_2018_2019:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U5 student record:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U5 student record_2018:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U5 student record_2018_2019:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       CSD U6 LED create intro:
         content1: hier die Beschreibung
       CSD U6 LED create intro_2018:
         content1: hier die Beschreibung
       CSD U6 LED create intro_2018_2019:
         content1: hier die Beschreibung
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
       CSD U6 final intro:
         content1: hier die Beschreibung
       CSD U6 final intro_2018:
         content1: hier die Beschreibung
       CSD U6 final intro_2018_2019:
         content1: hier die Beschreibung
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       Internet Simulator Setup:
         content1: hier die Beschreibung
       Internet Simulator Setup 2:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       Internet Simulator Setup 3:
         content1: hier die Beschreibung
+      K-1 Artist 1 Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welche Bausteine lösen dieses Rätsel?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: Multiple-Choice
+        questions:
+        - text: Welcher Baustein zeichnet das Quadrat?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Passend
+        content2: Weise die Formen je nach Typ zu.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Wie viele Portionen Nektar sind das?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: Multiple-Choice
+        questions:
+        - text: Wie viele Portionen Nektar sind das?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      K-1 Bee Loops Match 1:
+        title: Passend
+        content2: Ordne die Blöcke zu
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Passend
+        content2: Weise die Tastenkombination den richtigen Tanzbewegungen zu.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welches Tier hat den <strong>unsichersten</strong> digitalen Fußabdruck?
+        answers:
+        - {}
+        - {}
+        - correct: true
+      K-1 Getting Loopy Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Wie kann man diese Sequenz mit Schleifen vereinfachen?
+        answers:
+        - correct: true
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welcher Pfeil bringt den Flurb zum Schatz?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welche Informationen sollte man <strong>nicht</strong> online teilen?
+        answers:
+        - correct: true
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welche Wahl sollte der letzte Baustein sein?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welcher Wiederhole-Baustein ist derselbe?
+        answers:
+        - correct: true
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: Multiple-Choice
+        questions:
+        - text: Wähle den richtigen Wiederhole-Baustein.
+        answers:
+        - {}
+        - {}
+        - correct: true
+      K-1 Maze Match 1:
+        title: Passend
+        content2: Ordne die Puzzle den Blöcken zu
+        pre_title: Anweisungen
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: Labyrinth
+        questions:
+        - text: Welche Antwort löst das Problem?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      K-1 Move It Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welcher Algorithmus bringt den Flurb zu den Blumen?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welcher Schritt gehört an den Anfang dieses Algorithmus?
+        answers:
+        - {}
+        - {}
+        - correct: true
+      K-1 Plant a Seed Multi 2:
+        title: Multiple-Choice
+        questions:
+        - text: Welcher Schritt sollte die Lücke in diesem Algorithmus füllen?
+        answers:
+        - {}
+        - correct: true
+        - {}
+      K-1 Word Search Multi 1:
+        title: Multiple-Choice
+        questions:
+        - text: Welche Bausteine schreiben "MOVE" (bewegen)?
+        answers:
+        - {}
+        - correct: true
+        - {}
+      K-1 Word Search Multi 3:
+        title: Multiple-Choice
+        questions:
+        - text: Welches Wort wird geschrieben?
+        answers:
+        - text: SET (SATZ)
+        - text: SQUARE (QUADRAT)
+          correct: true
+        - text: SOUTH (SÜD)
       Multi-Screen Apps:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       New Challenge Introduction:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       OPD-K5 Stage3aGo:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       Prepare for your presentation:
-        content1: hier die Beschreibung
         title: Titel
+        content1: hier die Beschreibung
       'Technique: Frequency Analysis':
         content1: hier die Beschreibung
       Terminology Recap:
         content1: hier die Beschreibung
-    match:
-      2-3 Big Event Match 1:
-        content2: Weise die Tastenkombination den richtigen Tanzbewegungen zu.
-        title: Passend
-      2-3 Binary Match 1:
-        content2: Nutze den Schlüssel, um jedem Code einen Buchstaben zuzuweisen
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: Passend
-      2-3 Graph Paper Match 1:
-        content1: Passe das Raster dem Programm an.
-        title: Passend
-      2-3 Maze Match 2:
-        content1: Weise die Puzzle den Blöcken zu.
-        pre_title: Anweisungen
-        title: Labyrinth Übereinstimmung
-      2-3 artist loops match 1:
-        content2: Weise die Schleife der Form zu.
-      2-3 artist match 1:
-        content1: Weise die Form den Bausteinen zu, die sie fertig zeichnen.
-        title: Künstler Übereinstimmung
-      2-3 maze match 1:
-        content1: Weise die Puzzle den Blöcken zu.
-        title: Labyrinth Übereinstimmung Eins
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>Setze das Ergebnis von Spieler 1 auf 0</h4>"
-        - text: "<h4>Spieler 1 würfelt</h4>"
-        - text: "<h4>Füge den Wurf von Spieler 1 zum Gesamtergebnis hinzu</h4>"
-        - text: "<h4>Vergleiche die Punktstände der Mitspieler, um zu sehen, wer gewinnt</h4>"
-        content1: Weise die Schritte des Würfel-Rennspiels der Ordnung zu, in der
-          sie im Algorithmus erscheinen sollte.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: Passend
-      4-5 Computational Thinking Match 1:
-        content1: Jedes dieser Fahrzeuge wurde in kleinere Einzelteile zerlegt. Weise
-          die Fahrzeuge der Einzelteilliste zu.
-        questions:
-        - text: "<h3>Räder/Seite: 2<br/>Fenster/Seite: 0</h3>"
-        - text: "<h3>Räder/Seite: 2<br/>Fenster/Seite: 1</h3>"
-        - text: "<h3>Räder/Seite: 2<br/>Fenster/Seite: 6</h3>"
-        - text: "<h3>Räder/Seite: 3<br/>Fenster/Seite: 2</h3>"
-        title: Passend
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: Weise jedem Programm die Wörter zu, die es bildet, mithilfe der
-          vorhandenen Fähigkeitsgruppen.
-        title: Passend
-      4-5 maze match 1:
-        content1: Weise die Puzzle den Blöcken zu.
-        pre_title: Anweisungen
-        title: Labyrinth Übereinstimmung
-      K-1 Artist 2 Match 2:
-        content2: Weise die Formen je nach Typ zu.
-        title: Passend
-      K-1 Bee Loops Match 1:
-        content2: Ordne die Blöcke zu
-        title: Passend
-      K-1 Big Event Match 1:
-        content2: Weise die Tastenkombination den richtigen Tanzbewegungen zu.
-        title: Passend
-      K-1 Maze Match 1:
-        content2: Ordne die Puzzle den Blöcken zu
-        pre_title: Anweisungen
-        title: Passend
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: Beginne mit einem Quadrat<br/>Setze ein Dreieck auf das Quadrat<br/>Setze
-            ein Dreieck unter das Quadrat
-          correct: false
-        - correct: true
-        - text: Beginne mit einem Quadrat.<br/> Setze ein Parallelogramm über das
-            Quadrat.<br/> Setze nun noch ein Dreieck rechts neben das Parallelogramm.
-          correct: false
-        - text: Beginne mit einem Quadrat.<br/> Setze ein Dreieck unter das Quadrat.
-            <br/>Setze nun noch ein Parallelogramm rechts neben das Dreieck.
-          correct: false
-        questions:
-        - text: Wähle einen Algorithmus für das gezeigte Bild.
-        title: Multiple-Choice
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: Beginne mit einem Dreieck<br/>Setze ein Quadrat unter das Dreieck<br/>Setze
-          ein weiteres Dreieck unter das Quadrat
-        questions:
-        - text: Welches Bild folgt <em>nicht</em> diesem Algorithmus?
-        title: Multiple-Choice
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Welcher Kartensatz ist nach den Regeln des Spiels richtig ausgewertet?
-        title: Multiple-Choice
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Wie kann man diese Sequenz mit Schleifen vereinfachen?
-        title: Multiple-Choice
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Welches Programm erzeugt dieses Bild?
-        title: Multiple-Choice
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: Labyrinth Multiple-Choice
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: Multiple-Choice
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Welche Bild-Programm-Kombination enthält keine Fehler?
-        title: Multiple-Choice
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Wähle die richtigen Bausteine, um dieses Bild mit den vorhandenen
-            Funktionen zu zeichnen
-        title: 'Der Künstler: Funktionen Multiple-Choice Eins'
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Welche Form wird durch diese Schleife erzeugt?
-        title: Künstler Schleifen Multiple-Choice
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Welche Form wird durch dieses Programm erzeugt?
-        title: Künstler Schleifen Multiple-Choice
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Welcher Vergleich unten ist wahr?
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Wähle die besten Bausteine.
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Welche Bausteine sammeln den gesamten Nektar?
-        title: Biene Schleifen Multiple-Choice Eins
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Welche Gruppe von Bausteinen ist richtig?
-        title: Multiple-Choice Labyrinth Eins
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: Zähneputzen
-          correct: false
-        - text: Kekse backen
-          correct: false
-        - text: Einkaufen nach einer Einkaufsliste
-          correct: false
-        - text: Banane
-          correct: true
-        questions:
-        - text: Welches dieser Elemente ist am schwersten mit einem Algorithmus zu
-            beschreiben?
-        title: Multiple-Choice
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: Berlin _____ eine _____ _____.
-          correct: false
-        - text: _____ ist eine _____ Stadt.
-          correct: true
-        - text: _____ ist _____ eine _____.
-          correct: false
-        - text: Bielefeld ist eine _____ Stadt.
-          correct: false
-        questions:
-        - text: Berlin ist eine große Stadt. <br/> Bielefeld ist eine mittelgroße
-            Stadt. <br/> Werl ist eine kleine Stadt.
-        title: Multiple-Choice
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: Welches dieser Bilder repräsentiert Crowdsourcing am besten?
-        title: Multiple-Choice
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: Dein Zimmer putzen
-          correct: true
-        - text: Dein Dessert essen
-          correct: false
-        - text: Deine Haare bürsten
-          correct: false
-        - text: Dein Gesicht waschen
-          correct: false
-        questions:
-        - text: Welche dieser Aktivitäten ist am besten für Crowdsourcing?
-        title: Multiple-Choice
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: Deinen Geburtstag
-          correct: false
-        - text: Dein Lieblingsessen
-          correct: true
-        - text: Deine Adresse
-          correct: false
-        - text: Die Kreditkartennummer deiner Eltern
-          correct: false
-        questions:
-        - text: Welche der unten genannten Informationen kannst du gefahrlos im Internet
-            teilen?
-        title: Multiple-Choice
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Wenn du versuchst, dich bei code.org anzumelden, zu welcher IP-Adresse
-            bringt der DNS dich am wahrscheinlichsten?
-        title: Multiple-Choice
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Wenn der DNS sie zu der Seite mit der IP-Adresse 100.42.50.110 geleitet
-            hat, auf welcher Seite sind sie?
-        title: Multiple-Choice
-      4-5 Songwriting Multi 1:
-        answers:
-        - text: Lou, Lou, spring zu my Lou,
-          correct: false
-        - text: Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu my Lou <br/>
-            Lou, Lou, sspring zu Lou <br/> spring zu my Lou, mein Liebling.
-          correct: true
-        - 
-        - 
-        title: Multiple-Choice
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Welches der unteren Programme <em>erstellt nicht</em> genau dieselbe
-            Sequenz wie das Programm 1?
-        title: Multiple-Choice
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Welche Bausteine erstellen das Design?
-        title: Künstler Schleifen Multiple-Choice
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Welche Bausteine zeichnen ein Rechteck mit einen Umfang von 100?
-        title: Künstler Multiple-Choice
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Welche Zeichnung ist symmetrisch?
-        title: Künstler Multiple-Choice
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Wähle die besten Bausteine.
-        title: Biene Bedingungen Multiple-Choice
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Welche Version der Funktion funktioniert?
-        title: Biene Debug Multiple-Choice
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Welche Bausteine werden die Aufgabe lösen?
-        title: Biene Schleifen Multiple-Choice
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Welche Bausteine lösen die Aufgabe?
-        title: Labyrinth Bedingungen Multiple-Choice
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Welche Bausteine lösen die Aufgabe?
-        title: Labyrinth Multiple-Choice
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: Titel
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: Titel
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: Titel
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Welche Bausteine lösen dieses Rätsel?
-        title: Multiple-Choice
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Welcher Baustein zeichnet das Quadrat?
-        title: Multiple-Choice
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Wie viele Portionen Nektar sind das?
-        title: Multiple-Choice
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Wie viele Portionen Nektar sind das?
-        title: Multiple-Choice
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Welches Tier hat den <strong>unsichersten</strong> digitalen Fußabdruck?
-        title: Multiple-Choice
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Wie kann man diese Sequenz mit Schleifen vereinfachen?
-        title: Multiple-Choice
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Welcher Pfeil bringt den Flurb zum Schatz?
-        title: Multiple-Choice
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Welche Informationen sollte man <strong>nicht</strong> online teilen?
-        title: Multiple-Choice
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Welche Wahl sollte der letzte Baustein sein?
-        title: Multiple-Choice
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Welcher Wiederhole-Baustein ist derselbe?
-        title: Multiple-Choice
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Wähle den richtigen Wiederhole-Baustein.
-        title: Multiple-Choice
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Welche Antwort löst das Problem?
-        title: Labyrinth
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Welcher Algorithmus bringt den Flurb zu den Blumen?
-        title: Multiple-Choice
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Welcher Schritt gehört an den Anfang dieses Algorithmus?
-        title: Multiple-Choice
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Welcher Schritt sollte die Lücke in diesem Algorithmus füllen?
-        title: Multiple-Choice
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Welche Bausteine schreiben "MOVE" (bewegen)?
-        title: Multiple-Choice
-      K-1 Word Search Multi 3:
-        answers:
-        - text: SET (SATZ)
-          correct: false
-        - text: SQUARE (QUADRAT)
-          correct: true
-        - text: SOUTH (SÜD)
-          correct: false
-        questions:
-        - text: Welches Wort wird geschrieben?
-        title: Multiple-Choice
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - correct: false
-          feedback: Falsch
+        - {}
+        - feedback: Falsch
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - correct: false
-          feedback: Falsch
+        - {}
+        - feedback: Falsch
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
         answers:
         - text: '4'
-          correct: false
         - text: '12'
           correct: true
         - text: '15'
-          correct: false
-        - 
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: '4'
-          correct: false
         - text: '12'
           correct: true
         - text: '15'
-          correct: false
-        - 
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: '4'
-          correct: false
         - text: '12'
           correct: true
         - text: '15'
-          correct: false
-        - 
+        - {}
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
         - text: Ich weiß nicht
-          correct: false
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
         - text: Ich weiß nicht
-          correct: false
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
         - text: Ich weiß nicht
-          correct: false
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
           correct: true
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
           correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
           correct: true
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
         - text: A
           correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
           correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
           correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
         answers:
         - text: '4'
-          correct: false
         - text: '8'
           correct: true
         - text: '12'
-          correct: false
-        - 
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
         answers:
         - text: '4'
-          correct: false
         - text: '8'
           correct: true
         - text: '12'
-          correct: false
-        - 
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
         answers:
         - text: '4'
-          correct: false
         - text: '8'
           correct: true
         - text: '12'
-          correct: false
-        - 
+        - {}
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseD_multi_scrat_predict1:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - correct: true
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: Ich weiß nicht
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - correct: true
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - correct: true
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - correct: true
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
+        - {}
+        - {}
         - correct: true
-        - 
+        - {}
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
-        - 
-        - 
+        - {}
+        - {}

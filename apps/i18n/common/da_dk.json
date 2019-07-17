@@ -365,6 +365,7 @@
   "extraTopBlocks": "Du har separate blokke.",
   "extraTopBlocksWhenRun": "Du har separate blokke. Var det din mening at hæfte disse til \"ved kørsel\"-blokken?",
   "fallbackVideoClosedCaptioningDialogClose": "Luk",
+  "feedbackNotificationLastUpdated": "Senest opdateret:",
   "filterByStudent": "Filtrer efter student:",
   "finalStage": "Tillykke! Du har fuldført det sidste trin.",
   "finalStageTrophies": "Tillykke! Du har afsluttet det sidste trin og vundet {numTrophies, plural, one {et trofæ} other {# trofæer}}.",

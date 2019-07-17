@@ -215,8 +215,8 @@ tr-TR:
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Karakteri hareket ettirmek için okları kullan
       Course 4 Play Lab Vars 9:
-        Course_4_Play_Lab_Vars_9_1: Senin tüm blokların kategoriler altında düzenlenir!
-          İçindeki parçaları görmek için başlıkları tıkla.
+        Course_4_Play_Lab_Vars_9_1: Tüm senin blokların Kategoriler altında düzenlenir!
+          Parçaları içinde görmek için etiketi tıklatın.
       Course 4 Playlab For Loops 4b:
         Course_4_Playlab_For_Loops_4b_1: Dikkat ettiysen sayaç değişkenin her karakter
           için farklı isme sahip. Bu sayede her döngü kendi  sayacını kullanır.
@@ -301,8 +301,8 @@ tr-TR:
       MC_HOC_2017_Ali_2019:
         MC_HOC_2017_08_RY_1: 'Agent lavın üzerinde durabilir ama oyuncu duramaz!  '
       NEW Course 4 Artist Functions 3:
-        NEW_Course_4_Artist_Functions_3_1: Buraya basarak yeni fonksiyonu kare oluşturması
-          için güncelle.
+        NEW_Course_4_Artist_Functions_3_1: Buraya basarak yeni fonksiyonu güncelle
+          ve kare oluşturma fonksiyonu yarat.
       NEW Course 4 Artist Functions 7:
         edit_function: Fonksiyonunu düzenlemek için buraya tıkla.
       NEW Course 4 Artist Functions 8:
@@ -429,8 +429,6 @@ tr-TR:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
           söylüyor.
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: Kodun çalışmasını izlemek için buraya tıklayın!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
@@ -758,12 +756,17 @@ tr-TR:
         courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
           kaç tane blokun kaldığını söyler.
       courseD_scrat_ramp6:
+        courseE_artist_ramp8_1: Bu numarayı değiştirebilrisin.
+        courseE_artist_ramp8_2: Buraya kodu kaç kere tekrar etmek istediğin sayıyı
+          gir.
         courseD_maze_ramp6_1: Buraya koyduğun kod kaç kere tekrarlamasını istediysen
           o kadar çalışır sonra devam eden bloklara geçer.
       courseD_scrat_ramp7:
         courseD_maze_ramp7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor oolduğu
           anlamına gelir ve bir kaç deneme yapman gerekir.
       courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor oolduğu
+          anlamına gelir ve bir kaç deneme yapman gerekir.
         courseE_artist_ramp8_1: Bu numarayı değiştirebilrisin.
         courseE_artist_ramp8_2: Buraya kodu kaç kere tekrar etmek istediğin sayıyı
           gir.
@@ -822,10 +825,6 @@ tr-TR:
         courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
           istediğin değişikliği yap!
       courseE_artist_ramp8:
-        courseE_artist_ramp8_1: Bu numarayı değiştirebilrisin.
-        courseE_artist_ramp8_2: Buraya kodu kaç kere tekrar etmek istediğin sayıyı
-          gir.
-      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Bu numarayı değiştirebilrisin.
         courseE_artist_ramp8_2: Buraya kodu kaç kere tekrar etmek istediğin sayıyı
           gir.

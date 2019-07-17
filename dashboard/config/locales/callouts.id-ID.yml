@@ -361,8 +361,6 @@ id-ID:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Angka ini memberitahu anda seberapa banyak blok
           yang dapat anda gunakan dalam teka-teki ini.
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: Klik disini untuk melihat kodenya bekerja!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
@@ -719,6 +717,9 @@ id-ID:
         courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
           kepada kamu masih ada berapa blok yang bisa kamu gunakan.
       courseD_scrat_ramp6:
+        courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
+        courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
+          pembuatan kode kamu.
         courseD_maze_ramp6_1: Apapun kode yang anda masukkan ke sini akan mengulangi
           sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan
           program itu.
@@ -726,6 +727,8 @@ id-ID:
         courseD_maze_ramp7_1: Ini merupakan tantangan teka-teki kamu yang pertama!
           Akan sulit dan perlu dilakukan beberapa kali untuk menyusunnya.
       courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: Ini merupakan tantangan teka-teki kamu yang pertama!
+          Akan sulit dan perlu dilakukan beberapa kali untuk menyusunnya.
         courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
         courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
           pembuatan kode kamu.
@@ -784,10 +787,6 @@ id-ID:
         courseE_artist_functions_challenge2_callout2: Jika anda tidak menyukai desain
           ini, ubah desain ini menjadi apapun yang anda inginkan!
       courseE_artist_ramp8:
-        courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
-        courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
-          pembuatan kode kamu.
-      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
         courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
           pembuatan kode kamu.

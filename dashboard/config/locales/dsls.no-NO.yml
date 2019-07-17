@@ -1,71 +1,757 @@
 ---
-'no':
+no-NO:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: Flervalg
+        questions:
+        - text: Velg en algoritme for dette bildet.
+        answers:
+        - text: Start med et kvadrat<br/>Putt en trekant over firkanten<br/>Putt en
+            trekant under kvadratet
+        - {}
+        - text: Start med et kvadrat <br/> Sett et parallellogram over firkanten.
+            <br/> Sett en trekant til høyre for parallellogrammet
+        - text: Start med et kvadrat <br/> Sett en trekant under kvadratet <br/> Sett
+            et parallellogram til høyre for trekanten
+      2-3 Algorithms Multi 2:
+        title: Flervalg
+        content1: Start med en trekant <br/> Sett et kvadrat under trekanten <br/>
+          Sett en til trekant under kvadratet
+        questions:
+        - text: Hvilket bilde følger <em>ikke</em> denne algoritmen?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Matchende
+        content2: Tilpass knappekombinasjonen til dansetrinnene.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Matchende
+        content2: Bruk nøkkelen til å sette sammen hver kode med sin tilhørende bokstav
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: Flervalg
+        questions:
+        - text: Ifølge spillets regler, hvilket sett med kort er sortert riktig?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvordan vil du forenkle dette ved hjelp av løkker?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Matchende
+        content1: Få rutenettet til å passe med programmet.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilket av programmene lager dette bildet?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: Labyrintkamp
+        content1: Sett gåtene sammen med de tilhørende blokkene
+        pre_title: Instruksjoner
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: Labyrint Flervalg
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: Flervalg
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: Flervalg
+        questions:
+        - text: Hvilken kombinasjon av bildeprogram inneholder ikke feil?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: Kunstner Funksjoner Flervalg En
+        questions:
+        - text: Velg de rette blokkene for å tegne dette bildet ved hjelp av de gitte
+            funksjonene
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Sett løkka slik at den passer til figuren
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: Kunstner Løkker Flervalg
+        questions:
+        - text: Hvilken figur er laget av denne løkken?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: Kunstner Løkker Flervalg
+        questions:
+        - text: Hvilken figur er laget av dette programmet?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: Kunstnermatching
+        content1: Sett figuren til de blokkene som fullfører formen.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: Hvilken sammenligning nedenfor er sann?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: Velg de beste blokkene.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: Bie Løkker Flervalg En
+        questions:
+        - text: Hvilke blokker samler all nektaren?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Labyrintkamp 1
+        content1: Sett gåtene sammen med de tilhørende blokkene
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: Labyrint Flervalg En
+        questions:
+        - text: Hvilket sett av blokker er det riktige svaret?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Matchende
+        content1: Tilpass stegene i Terningkappløpet til rekkefølgen de skal ha i
+          algoritmen.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Sett Spiller 1 sin poengsum til 0</h4>"
+        - text: "<h4>Spiller 1 ruller terning</h4>"
+        - text: "<h4>Legg til Spiller 1 til totalscore</h4>"
+        - text: "<h4>Sammenlign spilleres poengsummer for å se hvem som vinner</h4>"
+      4-5 Algorithms Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilken av disse elementene er det vanskeligst å lage en algoritme
+            for?
+        answers:
+        - text: Pusse tennene
+        - text: Bake kaker
+        - text: Gjøre innkjøp fra en handleliste
+        - text: Banan
+      4-5 Computational Thinking Match 1:
+        title: Matchende
+        content1: Hver av disse kjøretøyene har blitt brutt ned inn i mindre biter.
+          Velg hvilke nedbrutt-liste som passer til hvert kjøretøy.
+        questions:
+        - text: "<h3>Hjul/side: 2<br/>Vinduer/side: 0</h3>"
+        - text: "<h3>Hjul/side: 2<br/>Vinduer/side: 1</h3>"
+        - text: "<h3>Hjul/side: 2<br/>Vinduer/side: 6</h3>"
+        - text: "<h3>Hjul/side: 3<br/>Vinduer/side: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: Flervalg
+        questions:
+        - text: Seattle er en stor by. <br/>Eugene er en mellomstor by<br/>Hillview
+            er en liten by.
+        answers:
+        - text: Seattle _____ en _____ _____.
+        - text: _____ er en _____ by.
+        - text: _____ er _____ en _____.
+        - text: Eugene er en _____ by.
+      4-5 Crowdsourcing Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilke av disse bildene representerer crowdsourcing?
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: Flervalg
+        questions:
+        - text: Hvilken av disse aktivitetende vil være best for å praktisere crowdsourcing?
+        answers:
+        - text: Rydde på rommet ditt
+        - text: Spise dessert
+        - text: Børste håret
+        - text: Vaske ansiktet
+      4-5 Digital Footprint Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilket stykke informasjon nedenfor er det greit å dele på internett?
+        answers:
+        - text: Bursdagen din
+        - text: Favorittmaten din
+        - text: Adressen din
+        - text: Kredittkortnummeret til foreldrene dine
+      4-5 Internet Multi 1:
+        title: Flervalg
+        questions:
+        - text: Når du prøver å logge deg på code.org, hvilken IP-adresse vil DNS-en
+            sannsynligvis ta deg til?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Internet Multi 2:
+        title: Flervalg
+        questions:
+        - text: Hvis DNS-en har sendt deg til siden på IP-adressen 100.42.50.110,
+            hvilken nettside er du på?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: Flervalg
+        questions:
+        - {}
+        answers:
+        - text: Lou, Lou, gå til min Lou,
+        - text: Lou, Lou, gå til min Lou, <br/>Lou, Lou, gå til min Lou, <br/>Lou,
+            Lou, gå til min Lou,  <br/>Gå til min Lou, min kjære.
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Matchende
+        content1: Velg hvilke program som passer til ordet den lager, bruk de ferdighetene
+          du har fått.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilket av programmene nedenfor <em>vil ikke</em> lage nøyaktig samme
+            sekvens som program 1?
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: Kunstner Løkker Flervalg
+        questions:
+        - text: Hvilke bloker vil lage designet?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: Artist Flervalgstest
+        questions:
+        - text: Hvilke blokker tegner et rektangel med en omkrets på 100?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: Artist Flervalgstest
+        questions:
+        - text: Hvilken tegning er symmetrisk?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: Bie Betingelser Flervalgstest
+        questions:
+        - text: Velg de beste blokkene.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: Bie Feilsøk Flervalgstest
+        questions:
+        - text: Hvilken versjon av funksjonen vil fungere?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: Bie Løkker Flervalgstest
+        questions:
+        - text: Hvilke blokker vil løse gåten?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: Labyrint Betingelser Flervalgstest
+        questions:
+        - text: Hvilke blokker vil løse gåten?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Labyrintkamp
+        content1: Sett gåtene sammen med de tilhørende blokkene
+        pre_title: Instruksjoner
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: Labyrint Flervalg
+        questions:
+        - text: Hvilke blokker vil løse gåten?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       Begin planning your project_2018:
         content1: beskrivelse her
       Begin planning your project_2018_2019:
         content1: beskrivelse her
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U2 Design Project_2018:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U2 Design Project_2018_2019:
-        content1: beskrivelse her
         title: tittel
-      CSD U2 L1 Overview:
         content1: beskrivelse her
-        title: tittel
       CSD U2 L2 Overview:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U2 L3 Overview:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U2 L4 Overview:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U2 L5 Overview:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U2 L6 Overview:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U2 Lesson 6 Overview:
         content1: beskrivelse her
       CSD U2 expand project:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U2 expand project_2018:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U2 expand project_2018_2019:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 project guide:
         content1: beskrivelse her
       CSD U2 project guide_2018:
         content1: beskrivelse her
       CSD U2 project guide_2018_2019:
         content1: beskrivelse her
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: tittel
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: tittel
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: tittel
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Card Examples_2018:
         content1: beskrivelse her
       CSD U3 Card Examples_2018_2019:
         content1: beskrivelse her
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U3 combining rep_2018:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U3 combining rep_2018_2019:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: beskrivelse her
       CSD U3 game intro_2018:
@@ -79,14 +765,14 @@
       CSD U3 platform intro_2018_2019:
         content1: beskrivelse her
       CSD U5 Encryption 1:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U5 Encryption 1_2018:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U5 Encryption 1_2018_2019:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U5 Encryption 2:
         content1: beskrivelse her
       CSD U5 Encryption 2_2018:
@@ -94,8 +780,8 @@
       CSD U5 Encryption 2_2018_2019:
         content1: beskrivelse her
       CSD U5 L13 SFLP Interpreting Data:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U5 crosstab warmup:
         content1: beskrivelse her
       CSD U5 crosstab warmup_2018:
@@ -103,1286 +789,971 @@
       CSD U5 crosstab warmup_2018_2019:
         content1: beskrivelse her
       CSD U5 data visualization:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U5 data visualization_2018:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U5 data visualization_2018_2019:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U5 student record:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U5 student record_2018:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U5 student record_2018_2019:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       CSD U6 LED create intro:
         content1: beskrivelse her
       CSD U6 LED create intro_2018:
         content1: beskrivelse her
       CSD U6 LED create intro_2018_2019:
         content1: beskrivelse her
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 final intro:
         content1: beskrivelse her
       CSD U6 final intro_2018:
         content1: beskrivelse her
       CSD U6 final intro_2018_2019:
         content1: beskrivelse her
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Internet Simulator Setup:
         content1: beskrivelse her
       Internet Simulator Setup 2:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       Internet Simulator Setup 3:
         content1: beskrivelse her
+      K-1 Artist 1 Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilke blokker løser oppgaven?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: Flervalg
+        questions:
+        - text: Hvilken blokk tegner kvadraten?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Matchende
+        content2: Velg figurer basert på typer.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvor mange nektar er dette?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: Flervalg
+        questions:
+        - text: Hvor mange nektar er dette?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: Matchende
+        content2: Velg blokkene som passer sammen
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Matchende
+        content2: Tilpass knappekombinasjonen til dansetrinnene.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilket dyr har det digitale fotavtrykket som setter han eller henne
+            mest <strong>usikker</strong>?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvordan vil du forenkle dette ved hjelp av løkker?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilken pil får Flurb til skatten?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilken informasjon burde du <strong>ikke</strong> dele på nettet?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilket valg burde være den siste blokken?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilken gjentakelsesblokk er den samme?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: Flervalg
+        questions:
+        - text: Velg riktig gjentakelsesblokk.
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: Matchende
+        content2: Velg puslespillene og blokkene som passer sammen
+        pre_title: Instruksjoner
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: Labyrint
+        questions:
+        - text: Hvilket svar løser dette nivået?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilken algoritme får Flurb til blomstene?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilke steg burde gå i begynnelsen av denne algoritmen?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: Flervalg
+        questions:
+        - text: Hvilket skritt burde fylle tomrommet i denne algoritmen?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: Flervalg
+        questions:
+        - text: Hvilke blokker staver "MOVE"?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: Flervalg
+        questions:
+        - text: Hvilket ord er stavet?
+        answers:
+        - {}
+        - {}
+        - text: SØR
       Multi-Screen Apps:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       New Challenge Introduction:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       OPD-K5 Stage3aGo:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       Prepare for your presentation:
-        content1: beskrivelse her
         title: tittel
+        content1: beskrivelse her
       'Technique: Frequency Analysis':
         content1: beskrivelse her
       Terminology Recap:
         content1: beskrivelse her
-    match:
-      2-3 Big Event Match 1:
-        content2: Tilpass knappekombinasjonen til dansetrinnene.
-        title: Matchende
-      2-3 Binary Match 1:
-        content2: Bruk nøkkelen til å sette sammen hver kode med sin tilhørende bokstav
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: Matchende
-      2-3 Graph Paper Match 1:
-        content1: Få rutenettet til å passe med programmet.
-        title: Matchende
-      2-3 Maze Match 2:
-        content1: Sett gåtene sammen med de tilhørende blokkene
-        pre_title: Instruksjoner
-        title: Labyrintkamp
-      2-3 artist loops match 1:
-        content2: Sett løkka slik at den passer til figuren
-      2-3 artist match 1:
-        content1: Sett figuren til de blokkene som fullfører formen.
-        title: Kunstnermatching
-      2-3 maze match 1:
-        content1: Sett gåtene sammen med de tilhørende blokkene
-        title: Labyrintkamp 1
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>Sett Spiller 1 sin poengsum til 0</h4>"
-        - text: "<h4>Spiller 1 ruller terning</h4>"
-        - text: "<h4>Legg til Spiller 1 til totalscore</h4>"
-        - text: "<h4>Sammenlign spilleres poengsummer for å se hvem som vinner</h4>"
-        content1: Tilpass stegene i Terningkappløpet til rekkefølgen de skal ha i
-          algoritmen.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: Matchende
-      4-5 Computational Thinking Match 1:
-        content1: Hver av disse kjøretøyene har blitt brutt ned inn i mindre biter.
-          Velg hvilke nedbrutt-liste som passer til hvert kjøretøy.
-        questions:
-        - text: "<h3>Hjul/side: 2<br/>Vinduer/side: 0</h3>"
-        - text: "<h3>Hjul/side: 2<br/>Vinduer/side: 1</h3>"
-        - text: "<h3>Hjul/side: 2<br/>Vinduer/side: 6</h3>"
-        - text: "<h3>Hjul/side: 3<br/>Vinduer/side: 2</h3>"
-        title: Matchende
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: Velg hvilke program som passer til ordet den lager, bruk de ferdighetene
-          du har fått.
-        title: Matchende
-      4-5 maze match 1:
-        content1: Sett gåtene sammen med de tilhørende blokkene
-        pre_title: Instruksjoner
-        title: Labyrintkamp
-      K-1 Artist 2 Match 2:
-        content2: Velg figurer basert på typer.
-        title: Matchende
-      K-1 Bee Loops Match 1:
-        content2: Velg blokkene som passer sammen
-        title: Matchende
-      K-1 Big Event Match 1:
-        content2: Tilpass knappekombinasjonen til dansetrinnene.
-        title: Matchende
-      K-1 Maze Match 1:
-        content2: Velg puslespillene og blokkene som passer sammen
-        pre_title: Instruksjoner
-        title: Matchende
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: Start med et kvadrat<br/>Putt en trekant over firkanten<br/>Putt en
-            trekant under kvadratet
-          correct: false
-        - correct: true
-        - text: Start med et kvadrat <br/> Sett et parallellogram over firkanten.
-            <br/> Sett en trekant til høyre for parallellogrammet
-          correct: false
-        - text: Start med et kvadrat <br/> Sett en trekant under kvadratet <br/> Sett
-            et parallellogram til høyre for trekanten
-          correct: false
-        questions:
-        - text: Velg en algoritme for dette bildet.
-        title: Flervalg
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: Start med en trekant <br/> Sett et kvadrat under trekanten <br/>
-          Sett en til trekant under kvadratet
-        questions:
-        - text: Hvilket bilde følger <em>ikke</em> denne algoritmen?
-        title: Flervalg
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Ifølge spillets regler, hvilket sett med kort er sortert riktig?
-        title: Flervalg
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hvordan vil du forenkle dette ved hjelp av løkker?
-        title: Flervalg
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hvilket av programmene lager dette bildet?
-        title: Flervalg
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: Labyrint Flervalg
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: Flervalg
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Hvilken kombinasjon av bildeprogram inneholder ikke feil?
-        title: Flervalg
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Velg de rette blokkene for å tegne dette bildet ved hjelp av de gitte
-            funksjonene
-        title: Kunstner Funksjoner Flervalg En
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hvilken figur er laget av denne løkken?
-        title: Kunstner Løkker Flervalg
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Hvilken figur er laget av dette programmet?
-        title: Kunstner Løkker Flervalg
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hvilken sammenligning nedenfor er sann?
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Velg de beste blokkene.
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hvilke blokker samler all nektaren?
-        title: Bie Løkker Flervalg En
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvilket sett av blokker er det riktige svaret?
-        title: Labyrint Flervalg En
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: Pusse tennene
-          correct: false
-        - text: Bake kaker
-          correct: false
-        - text: Gjøre innkjøp fra en handleliste
-          correct: false
-        - text: Banan
-          correct: true
-        questions:
-        - text: Hvilken av disse elementene er det vanskeligst å lage en algoritme
-            for?
-        title: Flervalg
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: Seattle _____ en _____ _____.
-          correct: false
-        - text: _____ er en _____ by.
-          correct: true
-        - text: _____ er _____ en _____.
-          correct: false
-        - text: Eugene er en _____ by.
-          correct: false
-        questions:
-        - text: Seattle er en stor by. <br/>Eugene er en mellomstor by<br/>Hillview
-            er en liten by.
-        title: Flervalg
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: Hvilke av disse bildene representerer crowdsourcing?
-        title: Flervalg
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: Rydde på rommet ditt
-          correct: true
-        - text: Spise dessert
-          correct: false
-        - text: Børste håret
-          correct: false
-        - text: Vaske ansiktet
-          correct: false
-        questions:
-        - text: Hvilken av disse aktivitetende vil være best for å praktisere crowdsourcing?
-        title: Flervalg
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: Bursdagen din
-          correct: false
-        - text: Favorittmaten din
-          correct: true
-        - text: Adressen din
-          correct: false
-        - text: Kredittkortnummeret til foreldrene dine
-          correct: false
-        questions:
-        - text: Hvilket stykke informasjon nedenfor er det greit å dele på internett?
-        title: Flervalg
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Når du prøver å logge deg på code.org, hvilken IP-adresse vil DNS-en
-            sannsynligvis ta deg til?
-        title: Flervalg
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvis DNS-en har sendt deg til siden på IP-adressen 100.42.50.110,
-            hvilken nettside er du på?
-        title: Flervalg
-      4-5 Songwriting Multi 1:
-        answers:
-        - text: Lou, Lou, gå til min Lou,
-          correct: false
-        - text: Lou, Lou, gå til min Lou, <br/>Lou, Lou, gå til min Lou, <br/>Lou,
-            Lou, gå til min Lou,  <br/>Gå til min Lou, min kjære.
-          correct: true
-        - 
-        - 
-        title: Flervalg
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hvilket av programmene nedenfor <em>vil ikke</em> lage nøyaktig samme
-            sekvens som program 1?
-        title: Flervalg
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvilke bloker vil lage designet?
-        title: Kunstner Løkker Flervalg
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvilke blokker tegner et rektangel med en omkrets på 100?
-        title: Artist Flervalgstest
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hvilken tegning er symmetrisk?
-        title: Artist Flervalgstest
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Velg de beste blokkene.
-        title: Bie Betingelser Flervalgstest
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvilken versjon av funksjonen vil fungere?
-        title: Bie Feilsøk Flervalgstest
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hvilke blokker vil løse gåten?
-        title: Bie Løkker Flervalgstest
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hvilke blokker vil løse gåten?
-        title: Labyrint Betingelser Flervalgstest
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hvilke blokker vil løse gåten?
-        title: Labyrint Flervalg
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: tittel
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: tittel
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: tittel
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvilke blokker løser oppgaven?
-        title: Flervalg
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hvilken blokk tegner kvadraten?
-        title: Flervalg
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvor mange nektar er dette?
-        title: Flervalg
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Hvor mange nektar er dette?
-        title: Flervalg
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Hvilket dyr har det digitale fotavtrykket som setter han eller henne
-            mest <strong>usikker</strong>?
-        title: Flervalg
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvordan vil du forenkle dette ved hjelp av løkker?
-        title: Flervalg
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvilken pil får Flurb til skatten?
-        title: Flervalg
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvilken informasjon burde du <strong>ikke</strong> dele på nettet?
-        title: Flervalg
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Hvilket valg burde være den siste blokken?
-        title: Flervalg
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvilken gjentakelsesblokk er den samme?
-        title: Flervalg
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Velg riktig gjentakelsesblokk.
-        title: Flervalg
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hvilket svar løser dette nivået?
-        title: Labyrint
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Hvilken algoritme får Flurb til blomstene?
-        title: Flervalg
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Hvilke steg burde gå i begynnelsen av denne algoritmen?
-        title: Flervalg
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hvilket skritt burde fylle tomrommet i denne algoritmen?
-        title: Flervalg
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Hvilke blokker staver "MOVE"?
-        title: Flervalg
-      K-1 Word Search Multi 3:
-        answers:
-        - 
-        - correct: true
-        - text: SØR
-          correct: false
-        questions:
-        - text: Hvilket ord er stavet?
-        title: Flervalg
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Feil
+        - {}
+        - {}
+        - {}
+        - feedback: Feil
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Feil
+        - {}
+        - {}
+        - {}
+        - feedback: Feil
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Jeg vet ikke
-          correct: false
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Jeg vet ikke
-          correct: false
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Jeg vet ikke
-          correct: false
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_scrat_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: Jeg vet ikke
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}

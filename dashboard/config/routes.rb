@@ -401,6 +401,7 @@ Dashboard::Application.routes.draw do
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
         get :generic_survey_report, action: :generic_survey_report, controller: 'workshop_survey_report'
+        get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
@@ -643,6 +644,8 @@ Dashboard::Application.routes.draw do
       end
     end
   end
+
+  resources :feedback, controller: 'teacher_feedbacks'
 
   get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'

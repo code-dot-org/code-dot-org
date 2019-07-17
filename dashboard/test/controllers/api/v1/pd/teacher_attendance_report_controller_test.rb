@@ -131,6 +131,8 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
   end
 
   test 'Returns only workshops that have ended and have teachers' do
+    skip 'Investigate flaky test failures'
+
     # New workshop, not ended, with teachers that should not be returned.
     workshop_in_progress = create :pd_workshop, num_sessions: 1
     workshop_in_progress.start!
