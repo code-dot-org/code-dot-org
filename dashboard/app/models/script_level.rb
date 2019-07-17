@@ -49,7 +49,6 @@ class ScriptLevel < ActiveRecord::Base
   serialized_attrs %w(
     variants
     progression
-    target
     challenge
   )
 

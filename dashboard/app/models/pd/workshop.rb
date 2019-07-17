@@ -433,7 +433,7 @@ class Pd::Workshop < ActiveRecord::Base
   # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
     # FiT workshops should not send exit surveys
-    return if SUBJECT_FIT == subject
+    return if SUBJECT_FIT == subject || COURSE_FACILITATOR == course
 
     resolve_enrolled_users
 
