@@ -633,6 +633,7 @@
   "feedbackDownloadRecommendation": "We recommend checking student progress and giving feedback on levels marked as assessment opportunities.",
   "feedbackFrom": "Feedback from {teacher}",
   "feedbackLoadError": "There's been an error establishing a connection to our servers. Please refresh the page and try again.",
+  "feedbackNoneYet": "You do not have any feedback on any lessons from your teacher(s) yet.",
   "feedbackNotSavedWarning": "Are you sure? Your feedback may not be saved.",
   "feedbackNotification": "Your teacher has left you feedback!",
   "feedbackNotificationButton": "View feedback",
