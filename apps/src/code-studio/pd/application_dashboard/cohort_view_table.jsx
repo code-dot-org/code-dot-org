@@ -108,7 +108,7 @@ export class CohortViewTable extends React.Component {
           label: 'View Application'
         },
         cell: {
-          format: this.formatViewButton
+          formatters: [this.formatViewButton]
         }
       },
       {
@@ -118,7 +118,7 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatDate
+          formatters: [this.formatDate]
         }
       },
       {
@@ -156,9 +156,11 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: status =>
-            ApplicationStatuses[this.props.viewType][status] ||
-            _.upperFirst(status),
+          formatters: [
+            status =>
+              ApplicationStatuses[this.props.viewType][status] ||
+              _.upperFirst(status)
+          ],
           transforms: [
             status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
@@ -185,7 +187,7 @@ export class CohortViewTable extends React.Component {
           label: 'Locked'
         },
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         }
       });
     }
@@ -245,7 +247,7 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatNotesTooltip,
+          formatters: [this.formatNotesTooltip],
           transforms: [
             () => ({
               style: {...styles.notesCell}

@@ -216,7 +216,7 @@ class FeaturedProjectsTable extends React.Component {
           }
         },
         cell: {
-          format: thumbnailFormatter,
+          formatters: [thumbnailFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -238,7 +238,7 @@ class FeaturedProjectsTable extends React.Component {
           }
         },
         cell: {
-          format: nameFormatter,
+          formatters: [nameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -255,7 +255,7 @@ class FeaturedProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: typeFormatter,
+          formatters: [typeFormatter],
           props: {
             style: {
               ...styles.cellType,
@@ -272,7 +272,7 @@ class FeaturedProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: dateFormatter,
+          formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       },
@@ -284,7 +284,7 @@ class FeaturedProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: dateFormatter,
+          formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       }
@@ -298,7 +298,7 @@ class FeaturedProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: dateFormatter,
+          formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       },
@@ -314,7 +314,7 @@ class FeaturedProjectsTable extends React.Component {
           }
         },
         cell: {
-          format: actionsFormatterUnfeatured,
+          formatters: [actionsFormatterUnfeatured],
           props: {style: tableLayoutStyles.cell}
         }
       }
@@ -332,7 +332,7 @@ class FeaturedProjectsTable extends React.Component {
           }
         },
         cell: {
-          format: actionsFormatterFeatured,
+          formatters: [actionsFormatterFeatured],
           props: {style: tableLayoutStyles.cell}
         }
       }

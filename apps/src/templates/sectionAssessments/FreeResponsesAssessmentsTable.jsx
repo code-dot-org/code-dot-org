@@ -115,7 +115,7 @@ class FreeResponsesAssessmentsTable extends Component {
           }
         },
         cell: {
-          format: this.responseCellFormatter,
+          formatters: [this.responseCellFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       }

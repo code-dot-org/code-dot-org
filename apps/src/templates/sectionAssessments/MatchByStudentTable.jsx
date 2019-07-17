@@ -99,7 +99,7 @@ class MatchByStudentTable extends Component {
           props: {style: tableLayoutStyles.headerCell}
         },
         cell: {
-          format: this.optionCellFormatter,
+          formatters: [this.optionCellFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -120,7 +120,7 @@ class MatchByStudentTable extends Component {
           }
         },
         cell: {
-          format: this.studentAnswerColumnFormatter,
+          formatters: [this.studentAnswerColumnFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -141,7 +141,7 @@ class MatchByStudentTable extends Component {
           }
         },
         cell: {
-          format: this.correctAnswerColumnFormatter,
+          formatters: [this.correctAnswerColumnFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,

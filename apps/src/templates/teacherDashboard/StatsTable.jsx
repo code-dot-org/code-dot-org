@@ -80,7 +80,7 @@ class StatsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.nameFormatter,
+          formatters: [this.nameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell

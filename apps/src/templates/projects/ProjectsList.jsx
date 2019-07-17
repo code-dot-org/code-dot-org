@@ -144,7 +144,7 @@ class ProjectsList extends React.Component {
         props: {style: tableLayoutStyles.headerCell}
       },
       cell: {
-        format: thumbnailFormatter,
+        formatters: [thumbnailFormatter],
         props: {style: tableLayoutStyles.cell}
       }
     };
@@ -157,7 +157,7 @@ class ProjectsList extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.nameFormatter,
+          formatters: [this.nameFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       },
@@ -180,7 +180,7 @@ class ProjectsList extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: typeFormatter,
+          formatters: [typeFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       },
@@ -192,7 +192,7 @@ class ProjectsList extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: dateFormatter,
+          formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       }

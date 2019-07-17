@@ -95,7 +95,7 @@ export default class NetSimLogBrowserTable extends React.Component {
         props: {style: style.nowrap}
       },
       cell: {
-        format: timeFormatter,
+        formatters: [timeFormatter],
         props: {style: style.nowrapTd}
       }
     });

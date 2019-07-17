@@ -101,7 +101,7 @@ export class QuickViewTable extends React.Component {
           label: 'Actions'
         },
         cell: {
-          format: this.formatActionsCell
+          formatters: [this.formatActionsCell]
         }
       },
       {
@@ -111,12 +111,14 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: created_at => {
-            return new Date(created_at).toLocaleDateString('en-us', {
-              month: 'long',
-              day: 'numeric'
-            });
-          }
+          formatters: [
+            created_at => {
+              return new Date(created_at).toLocaleDateString('en-us', {
+                month: 'long',
+                day: 'numeric'
+              });
+            }
+          ]
         }
       },
       {
@@ -147,9 +149,11 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: status =>
-            ApplicationStatuses[this.props.viewType][status] ||
-            _.upperFirst(status),
+          formatters: [
+            status =>
+              ApplicationStatuses[this.props.viewType][status] ||
+              _.upperFirst(status)
+          ],
           transforms: [
             status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
@@ -163,7 +167,7 @@ export class QuickViewTable extends React.Component {
       columns.push({
         property: 'locked',
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         },
         header: {
           label: 'Locked?',
@@ -181,7 +185,7 @@ export class QuickViewTable extends React.Component {
             transforms: [sortable]
           },
           cell: {
-            format: this.formatPrincipalApprovalCell
+            formatters: [this.formatPrincipalApprovalCell]
           }
         },
         {
@@ -246,7 +250,7 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatNotesTooltip,
+          formatters: [this.formatNotesTooltip],
           transforms: [
             () => ({
               style: {...styles.notesCell}

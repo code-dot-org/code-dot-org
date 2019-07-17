@@ -122,7 +122,7 @@ class MatchAssessmentsOverviewTable extends Component {
       }
     },
     cell: {
-      format: answerColumnsFormatter,
+      formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
@@ -156,7 +156,7 @@ class MatchAssessmentsOverviewTable extends Component {
       }
     },
     cell: {
-      format: answerColumnsFormatter,
+      formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
@@ -173,7 +173,7 @@ class MatchAssessmentsOverviewTable extends Component {
       props: {style: tableLayoutStyles.headerCell}
     },
     cell: {
-      format: this.optionFormatter,
+      formatters: [this.optionFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
