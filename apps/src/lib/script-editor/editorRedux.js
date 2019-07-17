@@ -5,7 +5,6 @@ const ADD_GROUP = 'scriptEditor/ADD_GROUP';
 const ADD_STAGE = 'scriptEditor/ADD_STAGE';
 const TOGGLE_EXPAND = 'scriptEditor/TOGGLE_EXPAND';
 const REMOVE_LEVEL = 'scriptEditor/REMOVE_LEVEL';
-const CHOOSE_LEVEL_TYPE = 'scriptEditor/CHOOSE_LEVEL_TYPE';
 const CHOOSE_LEVEL = 'scriptEditor/CHOOSE_LEVEL';
 const ADD_VARIANT = 'scriptEditor/ADD_VARIANT';
 const SET_ACTIVE_VARIANT = 'scriptEditor/SET_ACTIVE_VARIANT';
@@ -46,13 +45,6 @@ export const removeLevel = (stage, level) => ({
   type: REMOVE_LEVEL,
   stage,
   level
-});
-
-export const chooseLevelType = (stage, level, value) => ({
-  type: CHOOSE_LEVEL_TYPE,
-  stage,
-  level,
-  value
 });
 
 export const chooseLevel = (stage, level, variant, value) => ({
@@ -213,10 +205,6 @@ function stages(state = [], action) {
         level.activeId = action.value;
       }
       level.ids[action.variant] = action.value;
-      break;
-    }
-    case CHOOSE_LEVEL_TYPE: {
-      newState[action.stage - 1].levels[action.level - 1].kind = action.value;
       break;
     }
     case TOGGLE_EXPAND: {

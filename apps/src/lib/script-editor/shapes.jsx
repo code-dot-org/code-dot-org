@@ -21,8 +21,5 @@ export const levelShape = PropTypes.shape({
   // other script level options
   named: PropTypes.bool,
   assessment: PropTypes.bool,
-  challenge: PropTypes.bool,
-
-  // to be removed
-  kind: PropTypes.string
+  challenge: PropTypes.bool
 });
