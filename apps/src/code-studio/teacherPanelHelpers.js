@@ -1,4 +1,3 @@
-import clientState from './clientState';
 import queryString from 'query-string';
 import {setSectionLockStatus} from './stageLockRedux';
 import {
@@ -61,14 +60,9 @@ export function renderTeacherPanel(
  * Query the server for lock status of this teacher's students
  * @returns {Promise} when finished
  */
-export function queryLockStatus(store, scriptId) {
+export function queryLockStatus(store) {
   return new Promise((resolve, reject) => {
-    $.ajax('/api/lock_status', {
-      data: {
-        user_id: clientState.queryParams('user_id'),
-        script_id: scriptId
-      }
-    }).done(data => {
+    $.ajax('/api/lock_status').done(data => {
       // Extract the state that teacherSectionsRedux cares about
       const teacherSections = Object.values(data).map(section => ({
         id: section.section_id,

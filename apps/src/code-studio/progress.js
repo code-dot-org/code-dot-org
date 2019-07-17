@@ -247,7 +247,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       (data.isTeacher || data.teacherViewingStudent) &&
       !data.professionalLearningCourse
     ) {
-      queryLockStatus(store, scriptData.id);
+      queryLockStatus(store);
 
       const pageType = currentLevelId ? 'level' : 'script_overview';
       renderTeacherPanel(
