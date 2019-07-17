@@ -10,7 +10,7 @@ import AbuseError from './AbuseError';
 import SendToPhone from './SendToPhone';
 import color from '../../util/color';
 import * as applabConstants from '../../applab/constants';
-import * as gamelabConstants from '@cdo/apps/gamelab/constants';
+import * as gamelabConstants from '@cdo/apps/p5lab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
 import {hideShareDialog, unpublishProject} from './shareDialogRedux';
 import DownloadReplayVideoButton from './DownloadReplayVideoButton';
