@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../../util/configuredChai';
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {UnconnectedAssignToSection as AssignToSection} from '@cdo/apps/templates/courseOverview/AssignToSection';

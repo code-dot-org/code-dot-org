@@ -91,7 +91,7 @@ module.exports = {
         appendItem(list, "f");
         removeItem(list, 0);
       `,
-      expect: 'message'
+      expect: '"message"'
     }),
 
     // These exercise all of the blocks in canvas category

@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import i18n from '@cdo/locale';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 import Button from '@cdo/apps/templates/Button';

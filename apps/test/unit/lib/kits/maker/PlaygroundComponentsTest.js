@@ -2,7 +2,7 @@
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import {
   createCircuitPlaygroundComponents,
@@ -515,7 +515,7 @@ describe('Circuit Playground Components', () => {
       // No pin?  Doesn't report one.
 
       it('with a start() method', () => {
-        accelerometer.io.sysexCommand.reset(); // Reset spy
+        accelerometer.io.sysexCommand.resetHistory(); // Reset spy
         expect(accelerometer).to.haveOwnProperty('start');
         expect(accelerometer.io.sysexCommand).not.to.have.been.called;
 

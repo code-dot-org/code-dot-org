@@ -60,7 +60,8 @@ class ScriptOverview extends React.Component {
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     hiddenStageState: PropTypes.object,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    userId: PropTypes.number
   };
 
   constructor(props) {
@@ -105,7 +106,8 @@ class ScriptOverview extends React.Component {
       selectedSectionId,
       courseName,
       locale,
-      showAssignButton
+      showAssignButton,
+      userId
     } = this.props;
 
     const displayRedirectDialog =
@@ -144,6 +146,7 @@ class ScriptOverview extends React.Component {
               versions={versions}
               courseName={courseName}
               locale={locale}
+              userId={userId}
             />
             {!professionalLearningCourse &&
               viewAs === ViewType.Teacher &&

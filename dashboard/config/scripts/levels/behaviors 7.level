@@ -9,10 +9,10 @@
     "show_debug_watch": "true",
     "block_pools": [
       "GamelabJr",
-      "SpriteLab2Beta"
+      "NativeSpriteLab"
     ],
     "helper_libraries": [
-      "SpriteLab2Beta"
+      "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "false",

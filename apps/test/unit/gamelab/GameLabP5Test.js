@@ -1,6 +1,6 @@
 /** @file Test of our p5.play wrapper object */
 import {spy} from 'sinon';
-import {assert, expect} from 'chai';
+import {assert, expect} from '../../util/configuredChai';
 import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 import {sandboxDocumentBody} from '../../util/testUtils';
 

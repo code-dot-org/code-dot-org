@@ -1,5 +1,5 @@
 import Parser from '@code-dot-org/redactable-markdown';
-import {assert} from 'chai';
+import {assert} from '../../../util/configuredChai';
 
 import details from '@cdo/apps/templates/plugins/details';
 

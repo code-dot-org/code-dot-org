@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
 import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import sinon from 'sinon';
@@ -20,9 +20,17 @@ describe('CodeWorkspace', () => {
     showMakerToggle: false
   };
 
-  const studioApp = studioAppSingleton();
-  sinon.stub(studioApp, 'showGeneratedCode');
-  let workspace = mount(<CodeWorkspace {...MINIMUM_PROPS} />);
+  let studioApp, workspace;
+
+  beforeEach(() => {
+    studioApp = studioAppSingleton();
+    sinon.stub(studioApp, 'showGeneratedCode');
+    workspace = mount(<CodeWorkspace {...MINIMUM_PROPS} />);
+  });
+
+  afterEach(() => {
+    studioApp.showGeneratedCode.restore();
+  });
 
   it('onToggleShowCode displays blocks for levels with enableShowBlockCount=true', () => {
     studioApp.enableShowBlockCount = true;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import Notification from '@cdo/apps/templates/Notification';
 import Button from '@cdo/apps/templates//Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';

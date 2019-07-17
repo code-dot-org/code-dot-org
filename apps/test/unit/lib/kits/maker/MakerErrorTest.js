@@ -1,5 +1,5 @@
 /** @file Tests for our MakerError classes */
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import MakerError, {
   ConnectionFailedError,
   wrapKnownMakerErrors

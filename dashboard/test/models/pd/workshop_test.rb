@@ -347,6 +347,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
+  test 'send_exit_surveys sends no surveys for FiT workshops' do
+    # Make a FiT workshop that's ended and has attendance;
+    # these are the conditions under which we'd normally send a survey.
+    workshop = create :pd_ended_workshop, subject: SUBJECT_FIT
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+
+    # Ensure no exit surveys are sent
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys sends no surveys for Facilitator workshops' do
+    # Make a Facilitator workshop that's ended and has attendance;
+    # these are the conditions under which we'd normally send a survey.
+    workshop = create :pd_ended_workshop, course: COURSE_FACILITATOR
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+
+    # Ensure no exit surveys are sent
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    workshop.send_exit_surveys
+  end
+
   test 'send_follow_up only teachers attended workshop get follow up emails' do
     workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days

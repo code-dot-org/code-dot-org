@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 
 var errorMapper = require('@cdo/apps/acemode/errorMapper');
 

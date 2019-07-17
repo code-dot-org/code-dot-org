@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 
 var setPropertyDropdown = require('@cdo/apps/applab/setPropertyDropdown');

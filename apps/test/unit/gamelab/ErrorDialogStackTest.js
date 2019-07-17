@@ -1,5 +1,5 @@
 var errorDialogStackModule = require('@cdo/apps/gamelab/errorDialogStackModule');
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/gamelab/ErrorDialogStack';
 import {mount} from 'enzyme';
 import React from 'react';

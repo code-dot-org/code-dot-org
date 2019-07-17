@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import {parseElement} from '@cdo/apps/xml';
 import {convertBlocksXml} from '@cdo/apps/craft/code-connection/utils';
 

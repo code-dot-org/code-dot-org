@@ -1,7 +1,7 @@
 import Immutable from 'immutable';
 import reducer, * as watchedExpressions from '@cdo/apps/redux/watchedExpressions';
 import {createUuid} from '@cdo/apps/utils';
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 
 describe('watchedExpressions', function() {
   describe('reducer', function() {

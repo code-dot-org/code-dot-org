@@ -1,7 +1,11 @@
 var actions = require('@cdo/apps/gamelab/actions');
+var {
+  clearConsole,
+  addConsoleMessage
+} = require('@cdo/apps/gamelab/textConsoleModule');
 var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 var _ = require('lodash');
 var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants')
   .GameLabInterfaceMode;
@@ -32,6 +36,32 @@ describe('gamelabReducer', function() {
     expect(initialState.pageConstants.assetUrl).to.be.a.function;
     expect(initialState.pageConstants.isEmbedView).to.be.undefined;
     expect(initialState.pageConstants.isShareView).to.be.undefined;
+    expect(initialState.textConsole).to.be.empty;
+  });
+
+  describe('action: addConsoleMessage', () => {
+    let initialMessage = {name: 'hello', text: 'world'};
+    beforeEach(() => {
+      store.dispatch(addConsoleMessage(initialMessage));
+    });
+
+    it('adds a message to the list of messages', () => {
+      expect(store.getState().textConsole).to.deep.equal([initialMessage]);
+    });
+
+    it('appends a new message to the end of the list', () => {
+      let secondMessage = {name: 'foo', text: 'bar'};
+      store.dispatch(addConsoleMessage(secondMessage));
+      expect(store.getState().textConsole).to.deep.equal([
+        initialMessage,
+        secondMessage
+      ]);
+    });
+
+    it('is cleared by action: clearConsole', () => {
+      store.dispatch(clearConsole());
+      expect(store.getState().textConsole).to.be.empty;
+    });
   });
 
   describe('action: changeInterfaceMode', function() {

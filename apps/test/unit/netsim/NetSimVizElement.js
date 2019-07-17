@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 
 describe('NetSimVizElement', function() {

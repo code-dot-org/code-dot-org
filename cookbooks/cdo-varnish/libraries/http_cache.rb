@@ -162,7 +162,6 @@ class HttpCache
               /v3/assets/*
               /v3/animations/*
               /v3/files/*
-              /v3/librarypilot/*
             ),
             headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
@@ -195,16 +194,6 @@ class HttpCache
           },
           {
             path: '/api/v1/projects/gallery/public/*',
-            headers: [],
-            cookies: 'none'
-          },
-          {
-            path: '/api/v1/animation-library/*',
-            headers: [],
-            cookies: 'none'
-          },
-          {
-            path: '/api/v1/dataset-library/*',
             headers: [],
             cookies: 'none'
           },

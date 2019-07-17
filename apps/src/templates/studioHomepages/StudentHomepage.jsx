@@ -5,6 +5,8 @@ import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
 import StudentSections from './StudentSections';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
+import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import experiments from '@cdo/apps/util/experiments';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
@@ -15,7 +17,8 @@ export default class StudentHomepage extends Component {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     sections: shapes.sections,
-    canViewAdvancedTools: PropTypes.bool
+    canViewAdvancedTools: PropTypes.bool,
+    studentId: PropTypes.number.isRequired
   };
 
   componentDidMount() {
@@ -27,12 +30,15 @@ export default class StudentHomepage extends Component {
 
   render() {
     const {courses, sections, topCourse} = this.props;
-    const {canViewAdvancedTools} = this.props;
+    const {canViewAdvancedTools, studentId} = this.props;
 
     return (
       <div>
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
+        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && (
+          <StudentFeedbackNotification studentId={studentId} />
+        )}
         <RecentCourses
           courses={courses}
           topCourse={topCourse}

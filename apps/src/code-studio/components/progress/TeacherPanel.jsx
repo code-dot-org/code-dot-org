@@ -13,6 +13,7 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import {SelectedStudentInfo} from './SelectedStudentInfo';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   scrollable: {
@@ -57,6 +58,8 @@ class TeacherPanel extends React.Component {
     getSelectedUserId: PropTypes.func,
     sectionData: PropTypes.object,
     scriptName: PropTypes.string,
+    // pageType describes the current route the user is on. Used only for logging.
+    pageType: PropTypes.oneOf(['level', 'script_overview', 'stage_extras']),
 
     // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -69,6 +72,27 @@ class TeacherPanel extends React.Component {
     scriptHasLockableStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape)
+  };
+
+  logToFirehose = (eventName, overrideData = {}) => {
+    const sectionId =
+      this.props.selectedSection && this.props.selectedSection.id;
+    let data = {
+      section_id: sectionId,
+      page_type: this.props.pageType,
+      ...overrideData
+    };
+
+    firehoseClient.putRecord({
+      study: 'teacher_panel',
+      event: eventName,
+      data_json: JSON.stringify(data)
+    });
+  };
+
+  onSelectUser = (id, selectType) => {
+    this.logToFirehose('select_student', {select_type: selectType});
+    this.props.onSelectUser(id);
   };
 
   render() {
@@ -114,10 +138,10 @@ class TeacherPanel extends React.Component {
     const sectionId = selectedSection && selectedSection.id;
 
     return (
-      <TeacherPanelContainer>
+      <TeacherPanelContainer logToFirehose={this.logToFirehose}>
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
-          <ViewAsToggle />
+          <ViewAsToggle logToFirehose={this.logToFirehose} />
           {viewAs === ViewType.Teacher &&
             currentStudent &&
             (students || []).length > 0 && (
@@ -125,7 +149,7 @@ class TeacherPanel extends React.Component {
                 students={students}
                 selectedStudent={currentStudent}
                 level={currentStudentScriptLevel}
-                onSelectUser={this.props.onSelectUser}
+                onSelectUser={id => this.onSelectUser(id, 'iterator')}
                 getSelectedUserId={this.props.getSelectedUserId}
               />
             )}
@@ -153,12 +177,14 @@ class TeacherPanel extends React.Component {
               <SectionSelector
                 style={{margin: '0px 10px'}}
                 reloadOnChange={true}
+                logToFirehose={() => this.logToFirehose('select_section')}
               />
               {selectedSection && (
                 <a
                   href={teacherDashboardUrl(selectedSection.id)}
                   target="_blank"
                   style={styles.teacherDashboardLink}
+                  onClick={() => this.logToFirehose('select_teacher_dashboard')}
                 >
                   {i18n.teacherDashboard()}
                 </a>
@@ -197,7 +223,7 @@ class TeacherPanel extends React.Component {
             <StudentTable
               levels={currentSectionScriptLevels}
               students={students}
-              onSelectUser={this.props.onSelectUser}
+              onSelectUser={id => this.onSelectUser(id, 'select_specific')}
               getSelectedUserId={this.props.getSelectedUserId}
               sectionId={sectionId}
               scriptName={scriptName}

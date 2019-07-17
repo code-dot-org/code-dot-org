@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
 var NetSim = require('@cdo/apps/netsim/netsim');

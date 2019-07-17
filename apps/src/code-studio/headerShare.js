@@ -7,43 +7,10 @@ import ShareDialog from './components/ShareDialog';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {showShareDialog} from './components/shareDialogRedux';
-import {
-  setLibraryFunctions,
-  setLibraryName,
-  setLibrarySource,
-  setContainsError
-} from './components/libraryShareDialogRedux';
 import {AllPublishableProjectTypes} from '../util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 
 export function shareProject(shareUrl) {
   dashboard.project.saveIfSourcesChanged().then(() => {
-    const appType = dashboard.project.getStandaloneApp();
-    if (appType === 'applab' && experiments.isEnabled('student-libraries')) {
-      getStore().dispatch(
-        setLibraryFunctions(dashboard.project.getLibraryFromApp())
-      );
-      var containsError = dashboard.project.containsError();
-      getStore().dispatch(setContainsError(containsError));
-
-      // strip whitespace and non alphanumeric characters (underscores are preserved)
-      var projectName = dashboard.project
-        .getCurrentName()
-        .replace(/\s+/g, '')
-        .replace(/\W/g, '');
-      if (projectName.length === 0 || !isNaN(projectName.charAt(0))) {
-        // if all characters are now gone or the library starts with a number, prepend 'Lib'.
-        projectName = 'Lib' + projectName;
-      }
-
-      // Make the first character uppercase
-      var libraryName =
-        projectName.charAt(0).toUpperCase() + projectName.slice(1);
-      getStore().dispatch(setLibraryName(libraryName));
-      dashboard.project.getUpdatedSourceAndHtml_(response =>
-        getStore().dispatch(setLibrarySource(response.source))
-      );
-    }
     var i18n = window.dashboard.i18n;
 
     var dialogDom = document.getElementById('project-share-dialog');
@@ -53,6 +20,7 @@ export function shareProject(shareUrl) {
       document.body.appendChild(dialogDom);
     }
 
+    const appType = dashboard.project.getStandaloneApp();
     const selectedSong = dashboard.project.getSelectedSong();
 
     // The AgeDialog used by Dance Party stores an 'ad_anon_over13' cookie for signed out users,

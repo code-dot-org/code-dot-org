@@ -53,7 +53,7 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
   private
 
   def track_progress_for_level(level, result)
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: @user.id,
       level_id: level.id,
       script_id: @course_unit.script.id,

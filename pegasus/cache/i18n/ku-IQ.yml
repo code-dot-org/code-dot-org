@@ -199,7 +199,7 @@ ku-TR:
   homepage_action_text_codevideo: ڤیدیۆکە ببینە
   homepage_action_text_teachervideo: ڤیدیۆکە ببینە
   homepage_action_text_watchvideo: ڤیدیۆکە ببینە
-  homepage_action_text_learn: فێربوون دەستپێبکە
+  homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: داواکە واژووبکە
   homepage_signpetition_dropdown: داواکەمان واژوو بکە &#x25BE;
   homepage_banner_text_link: زیاتر فێرببە
@@ -339,6 +339,7 @@ ku-TR:
   teachingtree_beyond_shortdescription: 'زانیاری سەر ئینتەرنێت: خێرایە و بێ سنوورە'
   kodu_beyond_shortdescription: جیهانی سێ ڕەهەندی بۆ یاری دابڕێژە
   flappy_shortcode: بازدان
+  header_course_catalog: پێرستی کۆرس
   header_educate_hoc: كاژێری كۆدنووسی
   user_header_settings: هەژمارەکەم
   user_header_logout: دەرچوون

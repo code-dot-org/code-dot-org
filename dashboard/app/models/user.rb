@@ -289,7 +289,7 @@ class User < ActiveRecord::Base
   # old school info object doesn't have a NCES school ID associated with it
   # @param new_school_info a school_info object to compare to the user current school information.
   def update_school_info(new_school_info)
-    if school_info.try(&:school).nil? || new_school_info.try(&:school)
+    if new_school_info.complete?
       self.school_info_id = new_school_info.id
       save(validate: false)
     end
@@ -821,7 +821,17 @@ class User < ActiveRecord::Base
   end
 
   def managing_own_credentials?
-    provider.blank? || (provider == User::PROVIDER_MANUAL)
+    if provider.blank?
+      true
+    elsif manual?
+      true
+    elsif migrated?
+      authentication_options.any? do |ao|
+        ao.credential_type == AuthenticationOption::EMAIL
+      end
+    else
+      false
+    end
   end
 
   def password_required?
@@ -838,7 +848,7 @@ class User < ActiveRecord::Base
 
   def email_required?
     return true if teacher?
-    return false if provider == User::PROVIDER_MANUAL
+    return false if manual?
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
@@ -846,7 +856,7 @@ class User < ActiveRecord::Base
   end
 
   def username_required?
-    provider == User::PROVIDER_MANUAL || username_changed?
+    manual? || username_changed?
   end
 
   def update_without_password(params, *options)
@@ -1005,6 +1015,11 @@ class User < ActiveRecord::Base
   # True if user is a student in a section that has Clever login type
   def clever_student?
     sections_as_student.find_by_login_type(Section::LOGIN_TYPE_CLEVER).present?
+  end
+
+  # True if user is a student in a section that uses any oauth login type
+  def oauth_student?
+    sections_as_student.find_by_login_type(Section::LOGIN_TYPES_OAUTH).present?
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
@@ -1745,41 +1760,9 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Asynchronously enqueues an operation to update the level progress.
-  # @return [Boolean] whether a new level has been completed.
-  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairing_user_ids:)
-    level_id = level.id
-    script_id = script_level.script_id
-    old_user_level = UserLevel.where(
-      user_id: id,
-      level_id: level_id,
-      script_id: script_id
-    ).first
-
-    async_op = {
-      'model' => 'User',
-      'action' => 'track_level_progress',
-      'user_id' => id,
-      'level_id' => level_id,
-      'script_id' => script_id,
-      'new_result' => new_result,
-      'level_source_id' => level_source_id,
-      'submitted' => submitted,
-      'pairing_user_ids' => pairing_user_ids
-    }
-    if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
-      User.progress_queue.enqueue(async_op.to_json)
-    else
-      User.handle_async_op(async_op)
-    end
-
-    old_result = old_user_level.try(:best_result)
-    !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(new_result)
-  end
-
   # The synchronous handler for the track_level_progress helper.
   # @return [UserLevel]
-  def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
+  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
     new_csf_level_perfected = false
 
@@ -1818,7 +1801,7 @@ class User < ActiveRecord::Base
 
     if pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
-        navigator_user_level = User.track_level_progress_sync(
+        navigator_user_level, _ = User.track_level_progress(
           user_id: navigator_user_id,
           level_id: level_id,
           script_id: script_id,
@@ -1844,25 +1827,7 @@ class User < ActiveRecord::Base
     if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
       User.track_proficiency(user_id, script_id, level_id)
     end
-    user_level
-  end
-
-  def self.handle_async_op(op)
-    raise 'Model must be User' if op['model'] != 'User'
-    case op['action']
-      when 'track_level_progress'
-        User.track_level_progress_sync(
-          user_id: op['user_id'],
-          level_id: op['level_id'],
-          script_id: op['script_id'],
-          new_result: op['new_result'],
-          submitted: op['submitted'],
-          level_source_id: op['level_source_id'],
-          pairing_user_ids: op['pairing_user_ids']
-        )
-      else
-        raise "Unknown action in #{op}"
-    end
+    [user_level, new_level_completed]
   end
 
   # This method is called when a section the user belongs to is assigned to
@@ -1921,12 +1886,12 @@ class User < ActiveRecord::Base
     current_sign_in_at.present?
   end
 
-  def self.progress_queue
-    AsyncProgressHandler.progress_queue
-  end
-
   def migrated?
     provider == PROVIDER_MIGRATED
+  end
+
+  def manual?
+    provider == PROVIDER_MANUAL
   end
 
   def sponsored?
@@ -2214,7 +2179,7 @@ class User < ActiveRecord::Base
           # attached to the template level, thus we look to see if we have a channel
           # for the host_level
           next unless channel_level_ids.include?(level.host_level.id)
-          User.track_level_progress_sync(
+          User.track_level_progress(
             user_id: id,
             level_id: level.id,
             script_id: script_level.script_id,

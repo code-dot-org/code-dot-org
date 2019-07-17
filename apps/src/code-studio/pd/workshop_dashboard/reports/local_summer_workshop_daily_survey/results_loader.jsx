@@ -4,10 +4,12 @@ import $ from 'jquery';
 import Spinner from '../../../components/spinner';
 import Results from './results';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
-  errorBox: {
-    margin: 15
+  errorContainer: {
+    marginTop: 15,
+    marginLeft: 15
   },
   errorDetailsBox: {
     backgroundColor: color.lightest_gray,
@@ -31,9 +33,13 @@ export class ResultsLoader extends React.Component {
   }
 
   load() {
-    const url = `/api/v1/pd/workshops/${
-      this.props.params['workshopId']
-    }/generic_survey_report`;
+    const url = experiments.isEnabled(experiments.ROLLUP_SURVEY_REPORT)
+      ? `/api/v1/pd/workshops/${
+          this.props.params['workshopId']
+        }/experiment_survey_report`
+      : `/api/v1/pd/workshops/${
+          this.props.params['workshopId']
+        }/generic_survey_report`;
 
     this.loadRequest = $.ajax({
       method: 'GET',
@@ -62,7 +68,7 @@ export class ResultsLoader extends React.Component {
 
   renderErrors() {
     return (
-      <div id="error_list" style={styles.errorBox}>
+      <div id="error_list" style={styles.errorContainer}>
         <h1>An error occurred</h1>
         <p>
           Unfortunately this request could not be processed. Our team has been

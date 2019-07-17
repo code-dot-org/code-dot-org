@@ -160,7 +160,6 @@ class ScriptDSL < BaseDSL
   def level(name, properties = {})
     active = properties.delete(:active)
     progression = properties.delete(:progression)
-    target = properties.delete(:target)
     challenge = properties.delete(:challenge)
     experiments = properties.delete(:experiments)
     named = properties.delete(:named)
@@ -220,10 +219,9 @@ class ScriptDSL < BaseDSL
         levels: [level]
       }
 
-      if progression || target || challenge
+      if progression || challenge
         script_level[:properties] = {}
         script_level[:properties][:progression] = progression if progression
-        script_level[:properties][:target] = true if target
         script_level[:properties][:challenge] = true if challenge
       end
 
@@ -250,7 +248,7 @@ class ScriptDSL < BaseDSL
       i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
-    {'name' => {@name => {'stages' => i18n_strings}}}
+    {@name => {'stages' => i18n_strings}}
   end
 
   def self.parse_file(filename, name = nil)
@@ -326,7 +324,6 @@ class ScriptDSL < BaseDSL
                 sl.active?(level),
                 sl.progression,
                 sl.named_level?,
-                sl.target,
                 sl.challenge,
                 sl.assessment,
                 sl.experiments(level)
@@ -335,7 +332,7 @@ class ScriptDSL < BaseDSL
           end
           s << 'endvariants'
         else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.target, sl.challenge, sl.assessment))
+          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
         end
       end
       s << 'no_extras' if stage.stage_extras_disabled
@@ -350,7 +347,6 @@ class ScriptDSL < BaseDSL
     active = nil,
     progression = nil,
     named = nil,
-    target = nil,
     challenge = nil,
     assessment = nil,
     experiments = []
@@ -373,7 +369,6 @@ class ScriptDSL < BaseDSL
     l += ", progression: '#{progression}'" if progression
     l += ', named: true' if named
     l += ', assessment: true' if assessment
-    l += ', target: true' if target
     l += ', challenge: true' if challenge
     s << l
     s

@@ -8,7 +8,7 @@
     "encrypted": "false",
     "title": "hold page",
     "instructions_important": "false",
-    "long_instructions": "##this is a temporary page as a placeholder",
+    "long_instructions": "#this is a temporary page as a placeholder",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -17,6 +17,9 @@
     "skip_sound": true
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-06-27 17:21:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

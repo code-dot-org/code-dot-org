@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 
 var ExpressionNode = require('@cdo/apps/calc/expressionNode');
 var EquationSet = require('@cdo/apps/calc/equationSet');
