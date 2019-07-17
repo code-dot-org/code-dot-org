@@ -15,18 +15,17 @@ def update_script_level_ids
   puts "backfilling script_level_ids..."
   feedbacks_without_script_level_id.find_each do |feedback|
     puts "*"
-    associated_script_levels = feedback.level.script_levels
-    if associated_script_levels.length > 1
+    feedback_script_levels = feedback.level.script_levels
+    if feedback_script_levels.length > 1
       associated_user_levels = UserLevel.where(
         user_id: feedback.student_id,
         level_id: feedback.level_id
       )
       if associated_user_levels.length == 1
-        script_levels = ScriptLevel.where(
-          script_id: associated_user_levels.first.script_id
-        )
-        if script_levels.length == 1
-          script_level_id = script_levels[0].id
+        progress_script_levels = associated_user_levels.first.script_levels
+        candidate_script_levels = feedback_script_levels & progress_script_levels
+        if candidate_script_levels.length == 1
+          script_level_id = candidate_script_levels.first.id
           feedback.update_attributes(script_level_id: script_level_id)
         end
       end
