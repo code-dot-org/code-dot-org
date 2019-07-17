@@ -1,5 +1,8 @@
+login_required true
+hideable_stages true
+has_verified_resources true
 family_name ''
-project_sharing true
+pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
 stage 'Introduction to Apps'
