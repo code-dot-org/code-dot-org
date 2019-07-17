@@ -1,5 +1,5 @@
-var utils = require('../utils');
-var blockUtils = require('../block_utils');
+var utils = require('@cdo/apps/utils');
+var blockUtils = require('@cdo/apps/block_utils');
 var tb = blockUtils.createToolbox;
 import {GamelabBlocks} from '@cdo/apps/gamelab/sharedGamelabBlocks';
 
