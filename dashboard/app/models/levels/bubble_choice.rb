@@ -33,6 +33,15 @@ class BubbleChoice < DSLDefined
     description
   )
 
+  def get_properties_for_localization
+    super.merge(
+      {
+        "display_name" => display_name,
+        "description" => description
+      }
+    )
+  end
+
   def dsl_default
     <<ruby
 name 'unique level name here'

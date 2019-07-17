@@ -34,6 +34,14 @@ answer 'Contract Name|Number|Domain1:Number|Domain2:String'
 ruby
   end
 
+  def get_properties_for_localization
+    super.merge(
+      {
+        "answers" => answers
+      }
+    )
+  end
+
   def supports_markdown?
     true
   end

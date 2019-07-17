@@ -55,6 +55,10 @@ class DSLDefined < Level
     self.class.resolve_partially_localized(localized, source)
   end
 
+  def get_properties_for_localization
+    {}
+  end
+
   # Localized content for DSL-Defined levels can be any combination of strings,
   # arrays, or hashes. In every case, when we do not yet have a translation for
   # a piece of content it comes back as nil. When that happens, we want to

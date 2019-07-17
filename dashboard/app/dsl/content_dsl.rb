@@ -41,18 +41,4 @@ class ContentDSL < BaseDSL
     @hash[:options] ||= {}
     @hash[:options][key.to_sym] = args.first
   end
-
-  def i18n_strings
-    strings = {}
-    %i(
-      title
-      content1
-      content2
-      content3
-      pre_title
-    ).each do |property|
-      strings[property] = @hash[property] unless @hash[property].blank?
-    end
-    strings.stringify_keys
-  end
 end

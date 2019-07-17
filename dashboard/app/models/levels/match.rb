@@ -24,6 +24,15 @@
 #
 
 class Match < DSLDefined
+  def get_properties_for_localization
+    super.merge(
+      {
+        "questions" => questions,
+        "answers" => answers,
+      }.deep_stringify_keys
+    )
+  end
+
   def dsl_default
     <<ruby
 name 'unique level name here'

@@ -36,6 +36,10 @@ class External < DSLDefined
     true
   end
 
+  def get_properties_for_localization
+    super.merge(properties.slice("markdown"))
+  end
+
   def dsl_default
     <<-TEXT.strip_heredoc.chomp
     name '#{name || 'unique level name here'}'

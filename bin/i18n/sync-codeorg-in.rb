@@ -26,8 +26,8 @@ def get_i18n_strings(level)
   i18n_strings = {}
 
   if level.is_a?(DSLDefined)
-    text = level.dsl_text
-    i18n_strings["dsls"] = level.class.dsl_class.parse(text, '')[1] if text
+    i18n_properties = level.get_properties_for_localization
+    i18n_strings["dsls"] = i18n_properties unless i18n_properties.empty?
   elsif level.is_a?(Level)
     %w(
       display_name

@@ -24,6 +24,10 @@
 #
 
 class LevelGroup < DSLDefined
+  def get_properties_for_localization
+    super.merge(properties.slice("description", "description_short", "title"))
+  end
+
   def dsl_default
     <<ruby
 name 'unique level name here'

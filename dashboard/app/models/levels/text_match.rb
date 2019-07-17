@@ -25,6 +25,15 @@
 
 # Text Match type.
 class TextMatch < DSLDefined
+  def get_properties_for_localization
+    super.merge(
+      {
+        "answers" => answers,
+        "placeholder" => placeholder,
+      }.deep_stringify_keys
+    )
+  end
+
   def dsl_default
     <<ruby
 name 'Enter name here'
