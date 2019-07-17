@@ -1501,7 +1501,7 @@ class Census::StateCsOffering < ApplicationRecord
       UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2018_19.each do |state_code, update|
         school_year = 2018
         filename = construct_object_key(state_code, school_year, update)
-        seed_from_csv(state_code, school_year, update, "test/fixtures/census/actual_2018_2019/" + filename)
+        seed_from_csv(state_code.to_s, school_year, update, "test/fixtures/census/actual_2018_2019/" + filename)
       end
     else
       seed_from_s3
