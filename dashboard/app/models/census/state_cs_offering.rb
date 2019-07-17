@@ -129,7 +129,7 @@ class Census::StateCsOffering < ApplicationRecord
   def self.state_uses_format_v2(state_code, school_year, update)
     state_uses_format_v2_in_2018 =
       STATES_USING_FORMAT_V2_IN_2018_19.include?(state_code) ||
-      update >= UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2018_19[state_code]
+      update >= UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2018_19[state_code.to_sym]
     (school_year == 2018 && state_uses_format_v2_in_2018) || school_year >= 2019
   end
 
@@ -1501,7 +1501,7 @@ class Census::StateCsOffering < ApplicationRecord
       UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2018_19.each do |state_code, update|
         school_year = 2018
         filename = construct_object_key(state_code, school_year, update)
-        seed_from_csv(state_code, school_year, update, "test/fixtures/census/actual_2018_2019/" + filename)
+        seed_from_csv(state_code.to_s, school_year, update, "test/fixtures/census/actual_2018_2019/" + filename)
       end
     else
       seed_from_s3
