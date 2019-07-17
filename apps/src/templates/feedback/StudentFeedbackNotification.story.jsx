@@ -11,12 +11,7 @@ export default storybook => {
         name: 'StudentFeedbackNotification',
         story: () => {
           withFakeServer();
-          return (
-            <StudentFeedbackNotification
-              linkToFeedbackOverview="/"
-              studentId={123}
-            />
-          );
+          return <StudentFeedbackNotification studentId={123} />;
         }
       }
     ]);
