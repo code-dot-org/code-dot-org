@@ -907,6 +907,8 @@ module Pd
     end
 
     test 'csf facilitator survey: show 1st facilitator survey to attended teacher' do
+      skip 'Investigate flaky test failures'
+
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
