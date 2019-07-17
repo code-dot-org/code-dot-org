@@ -118,6 +118,9 @@ class FlexGroup extends Component {
     if (active === false) {
       l += ', active: false';
     }
+    if (level.progression) {
+      l += `, progression: '${level.progression}'`;
+    }
     if (level.named) {
       l += `, named: true`;
     }
@@ -126,9 +129,6 @@ class FlexGroup extends Component {
     }
     if (level.challenge) {
       l += `, challenge: true`;
-    }
-    if (level.progression) {
-      l += `, progression: '${level.progression}'`;
     }
     s.push(l);
     return s;
