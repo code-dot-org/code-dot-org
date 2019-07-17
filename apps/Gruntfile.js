@@ -208,6 +208,11 @@ describe('entry tests', () => {
             return path.join(dest, outputPath);
           }
         },
+        // minifying ace code requires some advanced configuration:
+        // https://github.com/ajaxorg/ace/blob/b808ac14ec6d6afa74b36ff5c03452a2832b32a4/Makefile.dryice.js#L620-L638
+        // instead of replicating that configuration here, we keep minified
+        // and unminified js in our repo and provide the correct one
+        // based on whether we are in development or production mode.
         {
           expand: true,
           cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
@@ -226,12 +231,6 @@ describe('entry tests', () => {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
-          dest: 'build/package/js/p5play/'
-        },
-        {
-          expand: true,
-          cwd: 'lib',
-          src: ['p5.sound.min.js'],
           dest: 'build/package/js/p5play/'
         },
         {
