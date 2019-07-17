@@ -556,7 +556,7 @@ export class WorkshopForm extends React.Component {
             id="subject"
             name="subject"
             onChange={this.handleFieldChange}
-            style={this.props.readOnly && styles.readOnlyInput}
+            style={this.getInputStyle()}
             disabled={this.props.readOnly}
           >
             {placeHolder}
@@ -972,6 +972,7 @@ export class WorkshopForm extends React.Component {
               organizers={this.props.workshop.organizers}
               organizer_id={this.state.organizer_id}
               onChange={this.handleOrganizerChange}
+              readOnly={this.props.readOnly}
             />
           )}
           {this.renderFormButtons()}

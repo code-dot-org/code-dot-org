@@ -2,11 +2,20 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 
+const styles = {
+  readOnlyInput: {
+    backgroundColor: 'inherit',
+    cursor: 'default',
+    border: 'none'
+  }
+};
+
 export default class OrganizerFormPart extends React.Component {
   static propTypes = {
     organizers: PropTypes.array,
     organizer_id: PropTypes.number,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    readOnly: PropTypes.bool
   };
 
   renderOrganizerOption(organizer) {
@@ -30,6 +39,8 @@ export default class OrganizerFormPart extends React.Component {
               className="form-control"
               value={this.props.organizer_id}
               onChange={this.props.onChange}
+              disabled={this.props.readOnly}
+              style={this.props.readOnly && styles.readOnlyInput}
             >
               {organizerOptions}
             </select>
