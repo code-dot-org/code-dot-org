@@ -7,7 +7,6 @@ import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
 import {
-  chooseLevelType,
   chooseLevel,
   addVariant,
   setActiveVariant,
@@ -29,10 +28,6 @@ const styles = {
     display: 'inline-block',
     lineHeight: '36px',
     margin: '0 7px 0 5px'
-  },
-  levelTypeSelect: {
-    width: 'calc(100% - 80px)',
-    margin: '0 0 5px 80px'
   },
   textInput: {
     height: 34,
@@ -77,7 +72,6 @@ ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 export class UnconnectedLevelTokenDetails extends Component {
   static propTypes = {
     levelKeyList: PropTypes.object.isRequired,
-    chooseLevelType: PropTypes.func.isRequired,
     chooseLevel: PropTypes.func.isRequired,
     addVariant: PropTypes.func.isRequired,
     setActiveVariant: PropTypes.func.isRequired,
@@ -85,13 +79,6 @@ export class UnconnectedLevelTokenDetails extends Component {
     level: levelShape.isRequired,
     stagePosition: PropTypes.number.isRequired
   };
-
-  levelKindOptions = [
-    {label: 'Puzzle', value: 'puzzle'},
-    {label: 'Assessment', value: 'assessment'},
-    {label: 'Named Level', value: 'named_level'},
-    {label: 'Unplugged', value: 'unplugged'}
-  ];
 
   componentWillMount() {
     this.levelKeyOptions = _.map(this.props.levelKeyList, (label, value) => ({
@@ -105,14 +92,6 @@ export class UnconnectedLevelTokenDetails extends Component {
       /^blockly:/.test(this.props.levelKeyList[id])
     );
   }
-
-  handleLevelTypeSelected = ({value}) => {
-    this.props.chooseLevelType(
-      this.props.stagePosition,
-      this.props.level.position,
-      value
-    );
-  };
 
   handleLevelSelected = (index, {value}) => {
     this.props.chooseLevel(
@@ -169,17 +148,6 @@ export class UnconnectedLevelTokenDetails extends Component {
         </span>
         <hr style={styles.divider} />
         <div style={{clear: 'both'}} />
-        <span style={Object.assign({float: 'left'}, styles.levelFieldLabel)}>
-          Level type
-        </span>
-        <VirtualizedSelect
-          value={this.props.level.kind}
-          options={this.levelKindOptions}
-          onChange={this.handleLevelTypeSelected}
-          clearable={false}
-          arrowRenderer={ArrowRenderer}
-          style={styles.levelTypeSelect}
-        />
         {this.containsLegacyLevel() && (
           <div>
             <span style={styles.levelFieldLabel}>Skin</span>
@@ -276,9 +244,6 @@ export default connect(
     levelKeyList: state.levelKeyList
   }),
   dispatch => ({
-    chooseLevelType(stage, level, value) {
-      dispatch(chooseLevelType(stage, level, value));
-    },
     chooseLevel(stage, level, variant, value) {
       dispatch(chooseLevel(stage, level, variant, value));
     },
