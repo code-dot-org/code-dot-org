@@ -91,7 +91,7 @@ class TextResponsesTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.studentNameFormatter,
+          formatters: [this.studentNameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell
@@ -171,7 +171,7 @@ class TextResponsesTable extends Component {
           }
         },
         cell: {
-          format: this.responseFormatter,
+          formatters: [this.responseFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell

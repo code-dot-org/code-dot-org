@@ -89,7 +89,7 @@ class MultipleChoiceByQuestionTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.answerCellFormatter,
+          formatters: [this.answerCellFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       }

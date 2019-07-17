@@ -143,7 +143,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       }
     },
     cell: {
-      format: answerColumnsFormatter,
+      formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
@@ -165,7 +165,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       }
     },
     cell: {
-      format: answerColumnsFormatter,
+      formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
@@ -182,7 +182,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       props: {style: tableLayoutStyles.headerCell}
     },
     cell: {
-      format: this.questionFormatter,
+      formatters: [this.questionFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,

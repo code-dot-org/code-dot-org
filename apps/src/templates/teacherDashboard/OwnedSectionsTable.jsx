@@ -217,7 +217,7 @@ class OwnedSectionsTable extends Component {
           props: {style: styles.hiddenCol}
         },
         cell: {
-          format: hiddenFormatter,
+          formatters: [hiddenFormatter],
           props: {style: styles.hiddenCol}
         }
       },
@@ -230,7 +230,7 @@ class OwnedSectionsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: sectionLinkFormatter,
+          formatters: [sectionLinkFormatter],
           props: {style: {...colStyle, ...styles.leftHiddenCol}}
         }
       },
@@ -242,7 +242,7 @@ class OwnedSectionsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: gradeFormatter,
+          formatters: [gradeFormatter],
           props: {style: colStyle}
         }
       },
@@ -255,7 +255,7 @@ class OwnedSectionsTable extends Component {
           }
         },
         cell: {
-          format: courseLinkFormatter,
+          formatters: [courseLinkFormatter],
           props: {style: colStyle}
         }
       },
@@ -267,7 +267,7 @@ class OwnedSectionsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: studentsFormatter,
+          formatters: [studentsFormatter],
           props: {style: colStyle}
         }
       },
@@ -280,7 +280,7 @@ class OwnedSectionsTable extends Component {
           }
         },
         cell: {
-          format: loginInfoFormatter,
+          formatters: [loginInfoFormatter],
           props: {style: colStyle}
         }
       },
@@ -290,7 +290,7 @@ class OwnedSectionsTable extends Component {
           props: {style: tableLayoutStyles.headerCell}
         },
         cell: {
-          format: this.actionCellFormatter,
+          formatters: [this.actionCellFormatter],
           props: {style: {...tableLayoutStyles.cell, ...styles.colButton}}
         }
       }

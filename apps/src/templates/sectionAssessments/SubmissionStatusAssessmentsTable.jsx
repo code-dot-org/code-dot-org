@@ -149,7 +149,7 @@ class SubmissionStatusAssessmentsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.nameCellFormatter,
+          formatters: [this.nameCellFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -232,7 +232,7 @@ class SubmissionStatusAssessmentsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.submissionTimestampColumnFormatter,
+          formatters: [this.submissionTimestampColumnFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       }

@@ -72,7 +72,7 @@ class FreeResponsesSurveyTable extends Component {
           props: {style: tableLayoutStyles.headerCell}
         },
         cell: {
-          format: this.studentResponseColumnFormatter,
+          formatters: [this.studentResponseColumnFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       }

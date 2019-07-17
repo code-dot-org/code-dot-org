@@ -197,7 +197,7 @@ class MoveStudents extends Component {
         property: 'selected',
         header: {
           label: '',
-          format: this.selectedStudentHeaderFormatter,
+          formatters: [this.selectedStudentHeaderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -206,7 +206,7 @@ class MoveStudents extends Component {
           }
         },
         cell: {
-          format: this.selectedStudentFormatter,
+          formatters: [this.selectedStudentFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,

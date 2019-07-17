@@ -77,7 +77,7 @@ export default class AdminCohortViewTable extends React.Component {
           label: 'View Application'
         },
         cell: {
-          format: this.formatViewButton
+          formatters: [this.formatViewButton]
         }
       },
       {
@@ -87,7 +87,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatDate
+          formatters: [this.formatDate]
         }
       },
       {
@@ -118,7 +118,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         }
       },
       {
@@ -163,7 +163,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         }
       },
       {
@@ -203,7 +203,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatNotesTooltip,
+          formatters: [this.formatNotesTooltip],
           transforms: [
             () => ({
               style: {...styles.notesCell}

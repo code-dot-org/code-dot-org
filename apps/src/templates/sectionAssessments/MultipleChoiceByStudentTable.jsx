@@ -104,7 +104,7 @@ class MultipleChoiceByStudentTable extends Component {
           props: {style: tableLayoutStyles.headerCell}
         },
         cell: {
-          format: this.questionCellFormatter,
+          formatters: [this.questionCellFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -125,7 +125,7 @@ class MultipleChoiceByStudentTable extends Component {
           }
         },
         cell: {
-          format: this.studentAnswerColumnFormatter,
+          formatters: [this.studentAnswerColumnFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -146,7 +146,7 @@ class MultipleChoiceByStudentTable extends Component {
           }
         },
         cell: {
-          format: this.correctAnswerColumnFormatter,
+          formatters: [this.correctAnswerColumnFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
