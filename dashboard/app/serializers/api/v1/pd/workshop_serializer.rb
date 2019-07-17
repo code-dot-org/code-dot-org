@@ -29,7 +29,7 @@
 #
 
 class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
-  attributes :id, :organizer_id, :location_name, :location_address, :course,
+  attributes :id, :organizer, :location_name, :location_address, :course,
     :subject, :capacity, :notes, :state, :facilitators,
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
     :enrollment_code, :on_map, :funded, :funding_type, :ready_to_close?,
@@ -40,6 +40,10 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
     object.sessions.map do |session|
       Api::V1::Pd::SessionSerializer.new(session).attributes
     end
+  end
+
+  def organizer
+    {id: object.organizer.id, name: object.organizer.name, email: object.organizer.email}
   end
 
   def facilitators
