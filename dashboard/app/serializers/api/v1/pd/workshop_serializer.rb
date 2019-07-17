@@ -65,30 +65,31 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   end
 
   def organizers
-    organizers = UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id).map do |user_id|
-      admin = User.find(user_id)
-      {label: admin.name, value: admin.id}
-    end
+    organizers = []
 
     if object.regional_partner
       object.regional_partner.program_managers.each do |pm|
         organizers << {label: pm.name, value: pm.id}
       end
     else
-      UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id).map do |user_id|
+      UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id)&.map do |user_id|
         pm = User.find(user_id)
         organizers << {label: pm.name, value: pm.id}
       end
     end
 
-    organizers
-    # should the current organizer be separately added to the list?
-    # probably not - either they are in one of these caegories or they shouldn't be the organizer in future
-    # admins << {label: object.organizer.name, value: object.organizer.id}
+    if object.course == Pd::Workshop::COURSE_CSF
+      Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
+        facilitator = User.find(user_id)
+        organizers << {label: facilitator.name, value: facilitator.id}
+      end
+    end
 
-    # csd and csp
-    # workshopAdmins and program managers for that regional partner (if there is one)
-    # csf
-    # workshopAdmins, program managers for that regional partner, and other csf facilitators?
+    UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
+      admin = User.find(user_id)
+      organizers << {label: admin.name, value: admin.id}
+    end
+
+    organizers
   end
 end
