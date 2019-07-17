@@ -131,24 +131,32 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
   end
 
   test 'Returns only workshops that have ended and have teachers' do
-    skip 'Investigate flaky test failures'
-
-    # New workshop, not ended, with teachers that should not be returned.
+    # Workshop, not ended, with teachers
+    # This workshop should not be returned
     workshop_in_progress = create :pd_workshop, num_sessions: 1
     workshop_in_progress.start!
     5.times do
       create :pd_workshop_participant, workshop: workshop_in_progress, enrolled: true, attended: true
     end
 
-    # Workshop, ended, with no teachers.
-    create :pd_ended_workshop
+    # Workshop, ended, with no teachers
+    # This workshop should not be returned
+    teacherless_workshop = create :pd_ended_workshop
 
     sign_in @workshop_admin
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal 21, response.count
-    assert_equal [@pm_workshop.id, @workshop.id, @other_workshop.id].sort, response.map {|r| r['workshop_id']}.uniq.sort
+    workshops_returned = response.map {|r| r['workshop_id']}.uniq
+
+    # Ensure we see responses for the eligible workshops (see setup_all)
+    assert_includes workshops_returned, @pm_workshop.id
+    assert_includes workshops_returned, @workshop.id
+    assert_includes workshops_returned, @other_workshop.id
+
+    # Ensure we do not see responses for the ineligible workshops
+    refute_includes workshops_returned, workshop_in_progress.id
+    refute_includes workshops_returned, teacherless_workshop.id
   end
 
   test 'filter by schedule' do
