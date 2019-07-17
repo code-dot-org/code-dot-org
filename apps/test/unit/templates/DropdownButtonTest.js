@@ -14,7 +14,7 @@ const defaultProps = {
 };
 
 describe('DropdownButton', () => {
-  beforeEach(() => clickSpy.reset());
+  beforeEach(() => clickSpy.resetHistory());
 
   it('is initially just a button', () => {
     const wrapper = shallow(<DropdownButton {...defaultProps} />);

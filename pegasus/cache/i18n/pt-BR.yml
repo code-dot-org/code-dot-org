@@ -1176,6 +1176,7 @@ pt-BR:
   carousel_heading_beyond_languages: Tutoriais sobre outras linguagens de programação
   carousel_heading_apps_games: Crie seus próprios aplicativos e jogos
   carousel_heading_university: Cursos universitários on-line
+  carousel_heading_online_university: Cursos Universitários Disponíveis Online
   carousel_heading_webpages: Aprenda a fazer páginas da Web
   carousel_heading_robots: Aprenda a programar com robôs e dispositivos
   carousel_heading_ide: Plataformas populares entre professores
@@ -1291,6 +1292,7 @@ pt-BR:
   coursee-2019_name: Curso E (2019)
   pre-express-2018_name: Curso Expresso de Pré-Leitor (2018)
   express-2019_name: Curso Expresso (2019)
+  pre-express-2019_name: Curso Pre-reader Express (2019)
   cspunit2_name: "(antigo) Unidade 2: A Internet"
   cspunit3_name: "(antigo) Unidade 3: Programação"
   cspunit4_name: "(antigo) Unidade 4: Dados"
@@ -1331,6 +1333,8 @@ pt-BR:
     de Aplicativo App Lab é o ambiente de programação para construir aplicativos,
     mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens
     de programação.
+  accelerated_name: Curso acelerado
+  express_name: Curso Expresso
   20-hour_name: Curso acelerado
   algebra_name: CC na Álgebra Curso Completo
   AlgebraA_name: CC no Curso A de Álgebra
@@ -2188,6 +2192,10 @@ pt-BR:
   header_help_support: 'Ajuda e suporte '
   header_report_bug: Reportar um erro
   header_tutorials: Tutoriais
+  app_lab_documentation: Documentação App Lab
+  app_lab_tutorials: Tutoriais App Lab
+  game_lab_documentation: Documentação Game Lab
+  game_lab_tutorials: Tutoriais Game Lab
   header_documentation: Documentação
   csp_name: Princípios da CC
   csd_name: Descobertas da Ciência da Computação
@@ -2195,6 +2203,7 @@ pt-BR:
   full_course_category_name: Cursos Completos
   user_header_label: Oi, %{username}
   user_header_team: Equipe
+  user_header_my_projects: Meus projetos
   user_header_settings: Configurações da conta
   user_header_logout: Sair
   user_header_signin: Entrar
@@ -2469,3 +2478,6 @@ pt-BR:
     página inicial.
   page_not_found_button: Volte para a página inicial
   hoc2018_mc_with_microsoft: Em parceria com
+  hoc2018_mc_thank_microsoft: Nós agradecemos à Microsoft por apoiar nossa visão e
+    missão para que toda criança tenha a oportunidade de aprender ciência da computação
+    e as habilidades necessárias para ter sucesso no século XXI.

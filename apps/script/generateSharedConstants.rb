@@ -88,7 +88,15 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(COURSES SUBJECTS STATES WORKSHOP_APPLICATION_STATES WORKSHOP_SEARCH_ERRORS WORKSHOP_TYPES),
+      %w(
+        COURSES
+        SUBJECT_NAMES
+        SUBJECTS
+        STATES
+        WORKSHOP_APPLICATION_STATES
+        WORKSHOP_SEARCH_ERRORS
+        WORKSHOP_TYPES
+      ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false
     ),

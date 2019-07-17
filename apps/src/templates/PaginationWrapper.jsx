@@ -6,6 +6,11 @@ import Radium, {Style} from 'radium';
 import color from '../util/color';
 import Pagination from 'react-bootstrap/lib/Pagination';
 
+const styles = {
+  label: {
+    float: 'left'
+  }
+};
 /**
  * Pagination control for navigating between pages of a list.
  */
@@ -13,7 +18,8 @@ class PaginationWrapper extends Component {
   static propTypes = {
     totalPages: PropTypes.number.isRequired,
     currentPage: PropTypes.number.isRequired,
-    onChangePage: PropTypes.func.isRequired
+    onChangePage: PropTypes.func.isRequired,
+    label: PropTypes.string
   };
 
   render() {
@@ -43,6 +49,9 @@ class PaginationWrapper extends Component {
             }
           }}
         />
+        {this.props.label && (
+          <span style={styles.label}>{this.props.label}</span>
+        )}
         <Pagination
           bsSize={'small'}
           items={this.props.totalPages}

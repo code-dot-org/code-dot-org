@@ -9,7 +9,7 @@ import {showExportDialog} from './components/exportDialogRedux';
 import project from './initApp/project';
 import i18n from './i18n';
 
-export function exportProject(shareUrl) {
+export function exportProject() {
   project.saveIfSourcesChanged().then(() => {
     let dialogDom = document.getElementById('project-export-dialog');
     if (!dialogDom) {
@@ -27,8 +27,7 @@ export function exportProject(shareUrl) {
         <ExportDialog
           isProjectLevel={!!project.isProjectLevel()}
           i18n={i18n}
-          shareUrl={shareUrl}
-          thumbnailUrl={project.getThumbnailUrl()}
+          md5SavedSources={project.md5CurrentSources()}
           isAbusive={project.exceedsAbuseThreshold()}
           channelId={project.getCurrentId()}
           appType={appType}

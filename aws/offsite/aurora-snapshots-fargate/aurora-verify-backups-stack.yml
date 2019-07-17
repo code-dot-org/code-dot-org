@@ -11,9 +11,23 @@
 #         Security Groups: default security group for VPC
 #         Auto-assign Public IP: DISABLED
 # - Enable Cloudwatch Event Rule
+#
+# Requires specifying the "CAPABILITY_NAMED_IAM" cloudformation capability, and specifying parameters via environment variables
+# or locals.yml
 
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation template to create an Fargate cluster and task definition for running Aurora backup verification.
+
+Parameters:
+  HoneybadgerApiKey:
+    Type: String
+    Default: ""
+    Description: Honeybadger API key used for reporting errors during execution of the ECS task
+    NoEcho: True
+  HoneybadgerSnsTopicArn:
+    Type: String
+    Description: SNS topic ARN created by alerting CloudFormation stack
+    NoEcho: True
 
 Resources:
   TaskRole:
@@ -32,6 +46,23 @@ Resources:
                 - "ecs-tasks.amazonaws.com"
             Action: 
               - "sts:AssumeRole"
+
+  TaskExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AuroraVerifyBackupsEcsTaskExecutionRole
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        -
+          Effect: "Allow"
+          Principal:
+            Service:
+            - "ecs-tasks.amazonaws.com"
+          Action:
+          - "sts:AssumeRole"
 
   CWEInvokeECSRole:
     Type: AWS::IAM::Role
@@ -56,14 +87,17 @@ Resources:
               - Effect: Allow
                 Action:
                   - ecs:RunTask
-                Resource: !Ref TaskDefinition
+                # Manually construct the Task Definition Family ARN, since !Ref returns the Task Definition Revision ARN
+                Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/${AWS::StackName}-aurora-verify-backups"
                 Condition:
                   ArnLike:
                     ecs:cluster: !GetAtt ECSCluster.Arn
               - Effect: Allow
                 Action:
                   - iam:PassRole
-                Resource: !GetAtt TaskRole.Arn
+                Resource:
+                  - !GetAtt TaskRole.Arn
+                  - !GetAtt TaskExecutionRole.Arn
                 Condition:
                   StringLike:
                     iam:PassedToService: ecs-tasks.amazonaws.com
@@ -78,7 +112,7 @@ Resources:
       RequiresCompatibilities:
         - FARGATE
       NetworkMode: awsvpc
-      ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/ecsTaskExecutionRole"
+      ExecutionRoleArn: !GetAtt TaskExecutionRole.Arn
       Cpu: 256
       Memory: 0.5GB
       TaskRoleArn: !GetAtt TaskRole.Arn
@@ -109,7 +143,9 @@ Resources:
           -
             Name: REGION
             Value: !Ref AWS::Region
-
+          -
+            Name: HONEYBADGER_API_KEY
+            Value: !Ref HoneybadgerApiKey
 
   CloudwatchLogsGroup:
     Type: AWS::Logs::LogGroup
@@ -135,3 +171,41 @@ Resources:
           EcsParameters:
             TaskCount: 1
             TaskDefinitionArn: !Ref TaskDefinition
+
+  FailedInvocationsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub "${AWS::StackName}-FailedInvocations"
+      AlarmDescription: Alarms when the "once per day" cloudwatch rule fails to start a Verify Backups fargate task.
+      AlarmActions:
+        - !Ref HoneybadgerSnsTopicArn
+      Dimensions:
+        - Name: RuleName
+          Value: !Ref OncePerDayRule
+      MetricName: FailedInvocations
+      Namespace: AWS/Events
+      Statistic: Sum
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 0.0
+      Period: 300 # 5 minutes
+      EvaluationPeriods: 1
+      TreatMissingData: notBreaching
+
+  NoInvocationsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub "${AWS::StackName}-NoInvocations"
+      AlarmDescription: Alarms when the "once per day" cloudwatch rule doesn't attempt to start a Verify Backups fargate task at least once per day.
+      AlarmActions:
+      - !Ref HoneybadgerSnsTopicArn
+      Dimensions:
+      - Name: RuleName
+        Value: !Ref OncePerDayRule
+      MetricName: Invocations
+      Namespace: AWS/Events
+      Statistic: Sum
+      ComparisonOperator: LessThanThreshold
+      Threshold: 1.0
+      Period: 86400 # One day
+      EvaluationPeriods: 1
+      TreatMissingData: breaching

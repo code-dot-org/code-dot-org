@@ -70,10 +70,10 @@ class DslTest < ActiveSupport::TestCase
       }
     )
 
-    i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {'stages' => {
+    i18n_expected = {'test' => {'stages' => {
       'Stage1' => {'name' => 'Stage1'},
       'Stage2' => {'name' => 'Stage2'}
-    }}}}}}}
+    }}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
@@ -227,23 +227,15 @@ wrong 'w3'
       }
     }
     i18n_expected = {
-      'en' => {
-        'data' => {
-          'multi' => {
-            'name1' => {
-              'title' => 'title1',
-              'content1' => 'desc1',
-              'questions' => [{'text' => 'q1'}],
-              'answers' => [
-                {'text' => 'w1', 'correct' => false},
-                {'text' => 'w2', 'correct' => false},
-                {'text' => 'r1', 'correct' => true},
-                {'text' => 'w3', 'correct' => false}
-              ],
-            }
-          }
-        }
-      }
+      'title' => 'title1',
+      'content1' => 'desc1',
+      'questions' => [{'text' => 'q1'}],
+      'answers' => [
+        {'text' => 'w1', 'correct' => false},
+        {'text' => 'w2', 'correct' => false},
+        {'text' => 'r1', 'correct' => true},
+        {'text' => 'w3', 'correct' => false}
+      ],
     }
     assert_equal expected, output
     assert_equal i18n_expected.to_yaml, i18n.to_yaml
@@ -256,7 +248,7 @@ name 'name1'
 title nil
 DSL
     _, i18n = MultiDSL.parse(input_dsl, 'test')
-    i18n_expected = {'en' => {'data' => {'multi' => {'name1' => {}}}}}
+    i18n_expected = {}
     assert_equal i18n_expected, i18n
   end
 
