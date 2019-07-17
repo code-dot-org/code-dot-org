@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '../../../../templates/SafeMarkdown';
 import color from '../../../../util/color';
 
 const styles = {
@@ -57,7 +57,7 @@ export default class DiscountCodeInstructions extends Component {
             <div style={styles.expired}>(Expired {expirationString})</div>
           </h2>
           <div>
-            <UnsafeRenderedMarkdown markdown={expiredMd(expirationString)} />
+            <SafeMarkdown markdown={expiredMd(expirationString)} />
           </div>
         </div>
       );
@@ -74,7 +74,7 @@ export default class DiscountCodeInstructions extends Component {
           <div>(Expires {expirationString})</div>
         </h2>
         <div>
-          <UnsafeRenderedMarkdown markdown={overviewMd(expirationString)} />
+          <SafeMarkdown markdown={overviewMd(expirationString)} />
         </div>
 
         <div style={styles.step}>
@@ -118,7 +118,7 @@ export default class DiscountCodeInstructions extends Component {
           4) Proceed to checkout. Your total cost should be $0.
         </div>
         <div style={{marginTop: 20}}>
-          <UnsafeRenderedMarkdown markdown={endnoteMd} />
+          <SafeMarkdown markdown={endnoteMd} />
         </div>
       </div>
     );

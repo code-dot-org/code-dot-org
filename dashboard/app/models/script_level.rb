@@ -49,7 +49,6 @@ class ScriptLevel < ActiveRecord::Base
   serialized_attrs %w(
     variants
     progression
-    target
     challenge
   )
 
@@ -237,7 +236,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def bubble_choice?
-    level.is_a? BubbleChoice
+    oldest_active_level.is_a? BubbleChoice
   end
 
   def name
@@ -445,6 +444,16 @@ class ScriptLevel < ActiveRecord::Base
     end
 
     teacher_panel_summary
+  end
+
+  def summary_for_feedback
+    {
+      lessonName: stage.name,
+      levelNum: position,
+      linkToLevel: path,
+      unitName: stage.script.localized_title,
+      linkToUnit: stage.script.link
+    }
   end
 
   def self.cache_find(id)

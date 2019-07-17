@@ -2469,7 +2469,8 @@
   "https://studio.code.org/s/express-2018/stage/29/puzzle/3": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **In this lesson...**\n\n### *Variables* are placeholders for information that can change.  Having a placeholder makes it possible to write a program, even when you won't know all of your values until later!\n\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n\n\n"
     }
   },
   "https://studio.code.org/s/express-2018/stage/29/puzzle/5": {
@@ -2558,6 +2559,11 @@
     },
     "callouts": {
       "courseF_artist_variables6a_1": "Variables can be helpful when you have to change a lot of copies of the same number."
+    }
+  },
+  "https://studio.code.org/s/express-2018/stage/29/puzzle/11": {
+    "dsls": {
+      "markdown": "<h2>More on Variables</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\" style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>You've just learned one great way to use a variable...as a constant!  \nWhen you use a variable as a constant, you are setting a value one time, then using that *same* value multiple times in your program without changing it after you click \"Run\".  </h3>\n<br/><hr/>\n<h3>In the next part of the series, you will write code with variables that *do* change inside the program.</h3>\n\n"
     }
   },
   "https://studio.code.org/s/express-2018/stage/30/puzzle/1": {
@@ -2695,7 +2701,8 @@
   "https://studio.code.org/s/express-2018/stage/31/puzzle/6": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **You just learned \"variables\"!**\n\n### In order to use a variable, it needs a name and a value. The name doesn't change, but the value can. This way you can use the name of the variable as a placeholder wherever you want in your program! \n\n---\n\n## **Vocab to Know**\n\n### **Variable** - A placeholder for a piece of information that can change\n\n"
     }
   },
   "https://studio.code.org/s/express-2018/stage/31/extras?level_name=courseF_artist_variables_challenge1_2018": {
@@ -2736,7 +2743,8 @@
   "https://studio.code.org/s/express-2018/stage/33/puzzle/3": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **In this lesson...**\n\n### Today you'll be learning about a new kind of `repeat` loop. Here is a preview of the block you'll be using:\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n### *For*tunately, this new loop will make solving puzzles like this really easy!\n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n\n"
     }
   },
   "https://studio.code.org/s/express-2018/stage/33/puzzle/5": {
@@ -2852,7 +2860,8 @@
   "https://studio.code.org/s/express-2018/stage/33/puzzle/14": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **You just learned \"for loops\"!**\n\n### **For loops are loops where you set the start, stop, and step values.**\n\n### This new kind of `repeat` loop gives you more control over when you loop starts, when it ends, and what your loop should increase by every time it runs.\n\n### More control means you can solve puzzles a lot faster! \n\n---\n\n## **Vocab to Know**\n\n### **For loop** - For loops are loops that have a predetermined beginning, end, and increment (step interval)\n\n"
     }
   },
   "https://studio.code.org/s/express-2018/stage/33/extras?level_name=courseF_bee_for_challenge1_2018": {
@@ -3146,7 +3155,8 @@
   "https://studio.code.org/s/express-2018/stage/39/puzzle/1": {
     "dsls": {
       "title": "Begin planning your project",
-      "content1": "description here"
+      "content1": "description here",
+      "markdown": "# The Design Process\n\n<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true\" style=\"width: 800px; height: 600px\"></iframe>\n"
     }
   },
   "https://studio.code.org/s/express-2018/stage/40/puzzle/1": {
@@ -3163,12 +3173,14 @@
   },
   "https://studio.code.org/s/express-2018/stage/42/puzzle/1": {
     "dsls": {
-      "title": "Prepare for yur presentation"
+      "title": "Prepare for yur presentation",
+      "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/1": {
     "dsls": {
-      "title": "Binary Drawing"
+      "title": "Binary Drawing",
+      "markdown": "<h1>Draw with Binary</h1>\n \n<h3>Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\" width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\" width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\" float=\"left\"/><h3>In this stage, we've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on certain squares!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/2": {

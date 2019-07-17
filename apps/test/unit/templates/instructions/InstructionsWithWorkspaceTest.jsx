@@ -101,7 +101,7 @@ describe('InstructionsWithWorkspace', () => {
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(139);
 
-      setInstructionsMaxHeightAvailable.reset();
+      setInstructionsMaxHeightAvailable.resetHistory();
 
       wrapper = setupComponent({
         instructionsHeight: 19,
@@ -110,7 +110,7 @@ describe('InstructionsWithWorkspace', () => {
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(140);
 
-      setInstructionsMaxHeightAvailable.reset();
+      setInstructionsMaxHeightAvailable.resetHistory();
 
       wrapper = setupComponent({
         instructionsHeight: 20,
@@ -119,7 +119,7 @@ describe('InstructionsWithWorkspace', () => {
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(150);
 
-      setInstructionsMaxHeightAvailable.reset();
+      setInstructionsMaxHeightAvailable.resetHistory();
 
       wrapper = setupComponent({
         instructionsHeight: 21,

@@ -6,18 +6,26 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 export default class TeacherPanelContainer extends React.Component {
   static propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    logToFirehose: PropTypes.func
   };
 
   state = {open: tryGetLocalStorage('teacher-panel', 'open') !== 'closed'};
 
+  logToFirehose = () => {
+    if (this.props.logToFirehose) {
+      const eventName = this.state.open ? 'open' : 'close';
+      this.props.logToFirehose(eventName);
+    }
+  };
+
   hide = () => {
-    this.setState({open: false});
+    this.setState({open: false}, this.logToFirehose);
     trySetLocalStorage('teacher-panel', 'closed');
   };
 
   show = () => {
-    this.setState({open: true});
+    this.setState({open: true}, this.logToFirehose);
     trySetLocalStorage('teacher-panel', 'open');
   };
 

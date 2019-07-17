@@ -1,4 +1,9 @@
 {
+  "https://studio.code.org/s/coursed-2019/stage/1/puzzle/1": {
+    "dsls": {
+      "markdown": "# Graph Paper Programming\n\nWrite algorithms that your classmates can use to draw pictures.\n"
+    }
+  },
   "https://studio.code.org/s/coursed-2019/stage/2/puzzle/2": {
     "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
@@ -83,6 +88,11 @@
   "https://studio.code.org/s/coursed-2019/stage/2/puzzle/10": {
     "short_instructions": "Get the bird to the pig.",
     "long_instructions": "Get the bird to the pig."
+  },
+  "https://studio.code.org/s/coursed-2019/stage/3/puzzle/1": {
+    "dsls": {
+      "markdown": "# Relay Programming\n\nBreak into teams and work together to write programs that draw pictures.\n"
+    }
   },
   "https://studio.code.org/s/coursed-2019/stage/4/puzzle/2": {
     "short_instructions": "Fix the error(s) to collect all of the treasure.",
@@ -489,6 +499,11 @@
       "courseD_bee_nested_loops_challenge2_b": "To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the _entire_ cave!",
       "courseD_bee_nested_loops_challenge2_c": "The shortest program that reaches all the treasure uses only one `collect` block and two turns.",
       "courseD_bee_nested_loops_challenge2_d": "**Solution:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+    }
+  },
+  "https://studio.code.org/s/coursed-2019/stage/10/puzzle/1": {
+    "dsls": {
+      "markdown": "# Conditionals With Cards\n\nPlay a card game and create rules like \"If I draw a red card, I get a point\" and \"If I draw a black card, you get a point.\"\n"
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/11/puzzle/2": {
@@ -1060,9 +1075,15 @@
       "courseD_farmer_condLoops_challenge2_a": "The amount of each vegetable in each space can change. A `while` loop can help!"
     }
   },
+  "https://studio.code.org/s/coursed-2019/stage/15/puzzle/1": {
+    "dsls": {
+      "markdown": "# Binary Images\n\nCommunicate how to recreate an image using just two simple values.\n"
+    }
+  },
   "https://studio.code.org/s/coursed-2019/stage/16/puzzle/1": {
     "dsls": {
-      "title": "Binary Drawing"
+      "title": "Binary Drawing",
+      "markdown": "<h1>Draw with Binary</h1>\n \n<h3>Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\" width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\" width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\" float=\"left\"/><h3>In this stage, we've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on certain squares!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/16/puzzle/2": {
@@ -1221,6 +1242,11 @@
     "function_names": {
       "draw": "draw",
       "draw bit": "draw bit"
+    }
+  },
+  "https://studio.code.org/s/coursed-2019/stage/17/puzzle/1": {
+    "dsls": {
+      "markdown": "# Digital Citizenship\n\nSome information is not safe to share online. This lesson will help you learn the difference between safe and private information.\n"
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/18/puzzle/1": {

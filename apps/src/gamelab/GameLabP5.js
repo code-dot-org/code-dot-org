@@ -1,9 +1,10 @@
-import {getStore} from '../redux';
+import {getStore} from '@cdo/apps/redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var Spritelab = require('./spritelab/Spritelab');
-import * as assetPrefix from '../assetManagement/assetPrefix';
+import {backgrounds} from './spritelab/backgrounds.json';
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
 
@@ -579,6 +580,32 @@ GameLabP5.prototype.afterSetupStarted = function() {
 GameLabP5.prototype.afterSetupComplete = function() {
   this.p5._setupEpiloguePhase1();
   this.p5._setupEpiloguePhase2();
+};
+
+GameLabP5.prototype.preloadBackgrounds = function() {
+  if (!this.preloadBackgrounds_) {
+    this.preloadedBackgrounds = {};
+    this.preloadBackgrounds_ = Promise.all(
+      backgrounds.map(background => {
+        return new Promise(resolve => {
+          this.p5.loadImage(
+            background.sourceUrl,
+            image => {
+              this.preloadedBackgrounds[background.legacyParam] = image;
+              resolve();
+            },
+            err => {
+              console.log(err);
+              resolve();
+            }
+          );
+        });
+      })
+    );
+  }
+  return this.preloadBackgrounds_.then(
+    () => (this.p5._preloadedBackgrounds = this.preloadedBackgrounds)
+  );
 };
 
 /**

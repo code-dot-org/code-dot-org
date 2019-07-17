@@ -78,6 +78,22 @@ module Google
       file.title = target_name
     end
 
+    def add_sheet_to_spreadsheet(data, spreadsheet_path, sheet_name)
+      target_name = ::File.basename(spreadsheet_path)
+      target_folder = ::File.dirname(spreadsheet_path)
+      folder = self.folder(target_folder)
+      spreadsheet = @session.spreadsheet_by_title(spreadsheet_path)
+      unless spreadsheet
+        spreadsheet = @session.create_spreadsheet(target_name)
+        folder.add(spreadsheet)
+      end
+      worksheet = spreadsheet.worksheet_by_title(sheet_name)
+      worksheet ||= spreadsheet.add_worksheet(sheet_name, 500)
+      worksheet.delete_rows(1, worksheet.num_rows)
+      worksheet.update_cells(1, 1, data)
+      worksheet.save
+    end
+
     private
 
     def path_to_title_array(path)

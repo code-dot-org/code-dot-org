@@ -1,4 +1,19 @@
 {
+  "https://studio.code.org/s/coursec-2019/stage/1/puzzle/1": {
+    "dsls": {
+      "markdown": "# Screen Out the Mean\n\nToday you will learn about what to do if someone is being mean online.\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2019/stage/2/puzzle/1": {
+    "dsls": {
+      "markdown": "# Powerful Passwords\n\nExplore why people use passwords, learn the benefits of using passwords, and discover strategies for creating and keeping strong, secure passwords.\n\n![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2019/stage/3/puzzle/1": {
+    "dsls": {
+      "markdown": "# My Robotic Friends\n\nLearn to program by writing code for your friends!\n"
+    }
+  },
   "https://studio.code.org/s/coursec-2019/stage/4/puzzle/2": {
     "short_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
@@ -507,6 +522,16 @@
       "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
     }
   },
+  "https://studio.code.org/s/coursec-2019/stage/8/puzzle/1": {
+    "dsls": {
+      "markdown": "# Binary Bracelets\n\nCreate a bracelet that represents your name in a system that computers understand!\n\n![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2019/stage/9/puzzle/1": {
+    "dsls": {
+      "markdown": "# My Loopy Robotic Friends\n\nMake your programs more shorter using loops!\n"
+    }
+  },
   "https://studio.code.org/s/coursec-2019/stage/10/puzzle/2": {
     "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
     "long_instructions": "[][0] _\"Go get the scrap metal, BB-8!\"_ \n\nUse five of the same blocks to get the scrap metal. Scrap metal glows like this: [][1]",
@@ -1010,6 +1035,11 @@
     "short_instructions": "Now try something on your own!",
     "long_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\n\n* * *\n\nNeed an idea? Try making a design like this one.\n\n[expandable][0]"
   },
+  "https://studio.code.org/s/coursec-2019/stage/14/puzzle/1": {
+    "dsls": {
+      "markdown": "# The Big Event\n\nIn computer science, events are actions that a computer monitors. In this lesson react differently depending on which button is pressed.\n"
+    }
+  },
   "https://studio.code.org/s/coursec-2019/stage/15/puzzle/2": {
     "short_instructions": "Attach the `flap normal amount` block to the `when click` event, then press \"Run\".    Click or tap on the play space to move Flappy to the target.",
     "long_instructions": "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \n\n* * *\n\nClick or tap on the play space to move Flappy to the target.",
@@ -1184,6 +1214,11 @@
       "courseC_PlayLab_events_challenge1_1": "This block lets you move actors to different parts of the game space."
     }
   },
+  "https://studio.code.org/s/coursec-2019/stage/17/puzzle/1": {
+    "dsls": {
+      "markdown": "# Picturing Data\n\nUse a Play Lab project to collect data and make predictions.\n\n![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)\n"
+    }
+  },
   "https://studio.code.org/s/coursec-2019/stage/17/puzzle/2": {
     "short_instructions": "Press Run. \nThe wizard will make animals appear. \n\nCount them. \nWhat do you notice?",
     "long_instructions": "Press Run. The wizard will make animals appear. Count them. What do you notice?",
@@ -1197,7 +1232,8 @@
   "https://studio.code.org/s/coursec-2019/stage/18/puzzle/1": {
     "dsls": {
       "title": "Begin planning your project",
-      "content1": "description here"
+      "content1": "description here",
+      "markdown": "# The Design Process\n\n<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true\" style=\"width: 800px; height: 600px\"></iframe>\n"
     }
   },
   "https://studio.code.org/s/coursec-2019/stage/18/puzzle/2": {

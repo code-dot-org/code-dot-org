@@ -1,5 +1,5 @@
 /** @file Shared styles for the animation picker dialog. */
-var color = require('../../util/color');
+var color = require('@cdo/apps/util/color');
 
 module.exports = {
   title: {
