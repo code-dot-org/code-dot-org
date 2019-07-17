@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 const gamelabMsg = require('@cdo/gamelab/locale');
 import {
   WarningLabel,

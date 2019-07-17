@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from 'chai';
+import {assert, expect} from '../../../util/configuredChai';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
@@ -488,7 +488,7 @@ describe('AssignmentSelector', () => {
         .find('select')
         .at(0)
         .simulate('change', {target: {value: 'csd'}});
-      spy.reset();
+      spy.resetHistory();
       wrapper
         .find('select')
         .at(1)

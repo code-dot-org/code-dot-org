@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 import {getConfigRef, getDatabase} from '@cdo/apps/storage/firebaseUtils';
 import Firebase from 'firebase';
 import MockFirebase from '../../util/MockFirebase';

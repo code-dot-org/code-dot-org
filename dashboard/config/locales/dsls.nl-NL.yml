@@ -1,600 +1,1778 @@
 ---
-nl:
+nl-NL:
   data:
-    external:
-      Begin planning your project:
-        description here: beschrijving hier
-        title: titel
-      Begin planning your project_2018:
-        description here: beschrijving hier
-      Begin planning your project_2018_2019:
-        description here: beschrijving hier
-      CSD U2 Design Project:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 Design Project_2018:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 Design Project_2018_2019:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 L1 Overview:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 L2 Overview:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 L3 Overview:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 L4 Overview:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 L5 Overview:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 L6 Overview:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 Lesson 6 Overview:
-        description here: beschrijving hier
-      CSD U2 expand project:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 expand project_2018:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 expand project_2018_2019:
-        description here: beschrijving hier
-        title: titel
-      CSD U2 project guide:
-        description here: beschrijving hier
-      CSD U2 project guide_2018:
-        description here: beschrijving hier
-      CSD U2 project guide_2018_2019:
-        description here: beschrijving hier
-      CSD U3 Card Examples_2018:
-        description here: beschrijving hier
-      CSD U3 Card Examples_2018_2019:
-        description here: beschrijving hier
-      CSD U3 combining rep:
-        description here: beschrijving hier
-        title: titel
-      CSD U3 combining rep_2018:
-        description here: beschrijving hier
-        title: titel
-      CSD U3 combining rep_2018_2019:
-        description here: beschrijving hier
-        title: titel
-      CSD U3 game intro:
-        description here: beschrijving hier
-      CSD U3 game intro_2018:
-        description here: beschrijving hier
-      CSD U3 game intro_2018_2019:
-        description here: beschrijving hier
-      CSD U3 platform intro:
-        description here: beschrijving hier
-      CSD U3 platform intro_2018:
-        description here: beschrijving hier
-      CSD U3 platform intro_2018_2019:
-        description here: beschrijving hier
-      CSD U5 Encryption 1:
-        description here: beschrijving hier
-        title: titel
-      CSD U5 Encryption 1_2018:
-        description here: beschrijving hier
-        title: titel
-      CSD U5 Encryption 1_2018_2019:
-        description here: beschrijving hier
-        title: titel
-      CSD U5 Encryption 2:
-        description here: beschrijving hier
-      CSD U5 Encryption 2_2018:
-        description here: beschrijving hier
-      CSD U5 Encryption 2_2018_2019:
-        description here: beschrijving hier
-      CSD U5 L13 SFLP Interpreting Data:
-        description here: beschrijving hier
-        title: titel
-      CSD U5 crosstab warmup:
-        description here: beschrijving hier
-      CSD U5 crosstab warmup_2018:
-        description here: beschrijving hier
-      CSD U5 crosstab warmup_2018_2019:
-        description here: beschrijving hier
-      CSD U5 data visualization:
-        description here: beschrijving hier
-        title: titel
-      CSD U5 data visualization_2018:
-        description here: beschrijving hier
-        title: titel
-      CSD U5 data visualization_2018_2019:
-        description here: beschrijving hier
-        title: titel
-      CSD U5 student record:
-        description here: beschrijving hier
-        title: titel
-      CSD U5 student record_2018:
-        description here: beschrijving hier
-        title: titel
-      CSD U5 student record_2018_2019:
-        description here: beschrijving hier
-        title: titel
-      CSD U6 LED create intro:
-        description here: beschrijving hier
-      CSD U6 LED create intro_2018:
-        description here: beschrijving hier
-      CSD U6 LED create intro_2018_2019:
-        description here: beschrijving hier
-      CSD U6 final intro:
-        description here: beschrijving hier
-      CSD U6 final intro_2018:
-        description here: beschrijving hier
-      CSD U6 final intro_2018_2019:
-        description here: beschrijving hier
-      Internet Simulator Setup:
-        description here: beschrijving hier
-      Internet Simulator Setup 2:
-        description here: beschrijving hier
-        title: titel
-      Internet Simulator Setup 3:
-        description here: beschrijving hier
-      Multi-Screen Apps:
-        description here: beschrijving hier
-        title: titel
-      New Challenge Introduction:
-        description here: beschrijving hier
-        title: titel
-      OPD-K5 Stage3aGo:
-        description here: beschrijving hier
-        title: titel
-      Prepare for your presentation:
-        description here: beschrijving hier
-        title: titel
-      'Technique: Frequency Analysis':
-        description here: beschrijving hier
-      Terminology Recap:
-        description here: beschrijving hier
-    match:
-      2-3 Big Event Match 1:
-        Match the button combination to the dance moves.: Verbind de knoppencombinatie
-          aan de dansbewegingen.
-        Matching: Koppelen
-      2-3 Binary Match 1:
-        "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>O</strong>"
-        "<strong>P</strong>": "<strong>P</strong>"
-        "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: Koppelen
-        Use the key to match each code to its letter: Gebruik de sleutel om elke code
-          met zijn letter te combineren
-      2-3 Graph Paper Match 1:
-        Match the grid to the program.: Combineer het raster met het programma.
-        Matching: Koppelen
-      2-3 Maze Match 2:
-        Instructions: Instructies
-        Match the puzzles to the blocks: Koppel de juiste puzzels aan de juiste blokken
-        Maze Match: Doolhof Combinatie
-      2-3 artist loops match 1:
-        Match the loop to the shape: Koppel de juiste lus op de juiste vorm
-      2-3 artist match 1:
-        Artist Matching: Kunstenaar koppelen
-        Match the shape with the blocks that complete it.: Combineer de vorm met het
-          blok dat het afmaakt.
-      2-3 maze match 1:
-        Match the puzzles to the blocks: Koppel de juiste puzzels aan de juiste blokken
-        Maze Match One: Doolhof koppelen één
-      4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>2)</h4>"
-        "<h4>3)</h4>": "<h4>3)</h4>"
-        "<h4>4)</h4>": "<h4>4)</h4>"
-        "<h4>Add Player 1 roll to total score</h4>": "<h4>Voeg het ogenaantal van
-          speler 1 toe aan de totale score</h4>"
-        "<h4>Compare player scores to see who wins</h4>": "<h4>Vergelijk de spelersscores
-          om te kijken wie er wint</h4>"
-        "<h4>Player 1 rolls die</h4>": "<h4>Speler een gooit de dobbelsteen</h4>"
-        "<h4>Set Player 1 score to 0</h4>": "<h4>Zet de score van speler 1 naar 0</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Combineer
-          de stappen in de dobbelstenen race spel in de volgorde dat ze moeten verschijnen
-          in de algoritme.
-        Matching: Koppelen
-      4-5 Computational Thinking Match 1:
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Wielen/kant: 2 <br/>Ramen/kant:
-          0</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Wielen/kant: 2 <br/>Ramen/kant:
-          1</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Wielen/kant: 2 <br/>Ramen/kant:
-          6</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Wielen/kant: 3 <br/>Ramen/kant:
-          2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Elk
-          van de voertuigen zijn verdeeld in kleinere onderdelen. Combineer elk voertuig
-          met de lijst met onderdelen.
-        Matching: Koppelen
-      4-5 Suncatchers Match 1:
-        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
-        "<h4>STACK</h4>": "<h4>STACK</h4>"
-        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
-        "<h4>STAR</h4>": "<h4>STAR</h4>"
-        Match each program to the word it makes, using the provided group of skills.: Combineer
-          elk programma met het woord dat hij maakt, gebruik de gegeven groep van
-          vaardigheden.
-        Matching: Koppelen
-      4-5 maze match 1:
-        Instructions: Instructies
-        Match the puzzles to the blocks: Koppel de juiste puzzels aan de juiste blokken
-        Maze Match: Doolhof Combinatie
-      K-1 Artist 2 Match 2:
-        Match the shapes based on type.: Koppel de vormen met elkaar gebaseerd op
-          type.
-        Matching: Koppelen
-      K-1 Bee Loops Match 1:
-        Match the blocks: Koppel de blokken
-        Matching: Koppelen
-      K-1 Big Event Match 1:
-        Match the button combination to the dance moves.: Verbind de knoppencombinatie
-          aan de dansbewegingen.
-        Matching: Koppelen
-      K-1 Maze Match 1:
-        Instructions: Instructies
-        Match the puzzles and blocks: Koppel de juiste puzzels aan de juiste blokken
-        Matching: Koppelen
-    multi:
+    dsls:
       2-3 Algorithms Multi 1:
-        Choose an algorithm for the image provided.: Kies een algoritme voor de gegeven
-          afbeelding.
-        Multiple Choice: Meerkeuze
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Begin
-          met een vierkant <br/>zet een parallellogram boven het vierkant <br/> zet
-          een driehoek rechts van de parallellogram
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
-          met een vierkant <br />Plaats een driehoek boven de vierkant<br/>Plaats
-          een driehoek onder de vierkant
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Begin
-          met een vierkant <br/> zet een driehoek onder het vierkant <br/> zet een
-          parallellogram rechts van de driehoek
-        0: "? Begin met een vierkant <br/> zet een driehoek rechts van het vierkant
-          <br/> zet een parallellogram onder het vierkant <br/> zet een driehoek rechts
-          van de parallellogram"
-        1: ":Begin met een vierkant <br/> zet een driehoek rechts van het vierkant
-          <br/> zet een parallellogram onder het vierkant <br/> zet een driehoek rechts
-          van de parallellogram"
+        title: Meerkeuze
+        questions:
+        - text: Kies een algoritme voor de gegeven afbeelding.
+        answers:
+        - text: Start met een vierkant <br />Plaats een driehoek boven de vierkant<br/>Plaats
+            een driehoek onder de vierkant
+        - correct: true
+        - text: Begin met een vierkant <br/>zet een parallellogram boven het vierkant
+            <br/> zet een driehoek rechts van de parallellogram
+        - text: Begin met een vierkant <br/> zet een driehoek onder het vierkant <br/>
+            zet een parallellogram rechts van de driehoek
       2-3 Algorithms Multi 2:
-        Multiple Choice: Meerkeuze
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
-          met een driehoek<br />Plaats een vierkant onder de driehoek<br/>Plaats nog
-          een driehoek onder het vierkant
-        Which image does <em>not</em> follow this algorithm?: Welke afbeelding volgt
-          dit algoritme <em>niet</em>?
+        title: Meerkeuze
+        content1: Start met een driehoek<br />Plaats een vierkant onder de driehoek<br/>Plaats
+          nog een driehoek onder het vierkant
+        questions:
+        - text: Welke afbeelding volgt dit algoritme <em>niet</em>?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Koppelen
+        content2: Verbind de knoppencombinatie aan de dansbewegingen.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Koppelen
+        content2: Gebruik de sleutel om elke code met zijn letter te combineren
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 Conditionals Multi 1:
-        According to the rules of the game, which set of cards is scored correctly?: Welke
-          set van kaarten is volgens de spelregels goed geturfd?
-        Multiple Choice: Meerkeuze
+        title: Meerkeuze
+        questions:
+        - text: Welke set van kaarten is volgens de spelregels goed geturfd?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       2-3 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Hoe zou je deze reeks vereenvoudigen
-          met lussen?
-        Multiple Choice: Meerkeuze
+        title: Meerkeuze
+        questions:
+        - text: Hoe zou je deze reeks vereenvoudigen met lussen?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Koppelen
+        content1: Combineer het raster met het programma.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       2-3 Graph Paper Multi 1:
-        Multiple Choice: Meerkeuze
-        Which program makes this image?: Welk programma maakt het plaatje?
+        title: Meerkeuze
+        questions:
+        - text: Welk programma maakt het plaatje?
+        answers:
+        - {}
+        - correct: true
+        - {}
+      2-3 Maze Match 2:
+        title: Doolhof Combinatie
+        content1: Koppel de juiste puzzels aan de juiste blokken
+        pre_title: Instructies
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Doolhof Meerkeuze
+        title: Doolhof Meerkeuze
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       2-3 Relay Programming Multi 1:
-        Multiple Choice: Meerkeuze
+        title: Meerkeuze
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
-        Multiple Choice: Meerkeuze
-        Which image-program combo does not contain mistakes?: In welke combinatie
-          van afbeeldingsprogramma's zitten geen vergissingen?
+        title: Meerkeuze
+        questions:
+        - text: In welke combinatie van afbeeldingsprogramma's zitten geen vergissingen?
+        answers:
+        - {}
+        - {}
+        - correct: true
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: Kunstenaar Functies Meerkeuze Eén
-        Pick the correct blocks to draw this image using the given functions: Kies
-          de juiste blokken uit om deze afbeelding met de gegeven functies te maken
+        title: Kunstenaar Functies Meerkeuze Eén
+        questions:
+        - text: Kies de juiste blokken uit om deze afbeelding met de gegeven functies
+            te maken
+        answers:
+        - correct: true
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Koppel de juiste lus op de juiste vorm
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: Kunstenaar lussen meerkeuze
-        Which shape is made by this loop?: Welke vorm wordt door deze lus gemaakt?
+        title: Kunstenaar lussen meerkeuze
+        questions:
+        - text: Welke vorm wordt door deze lus gemaakt?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: Kunstenaar lussen meerkeuze
-        Which shape is made by this program?: Welke vorm is door dit programma gemaakt?
+        title: Kunstenaar lussen meerkeuze
+        questions:
+        - text: Welke vorm is door dit programma gemaakt?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      2-3 artist match 1:
+        title: Kunstenaar koppelen
+        content1: Combineer de vorm met het blok dat het afmaakt.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 bee conditionals multi 1:
-        Which comparison below is true?: Welke van de volgende vergelijkingen is waar?
+        questions:
+        - text: Welke van de volgende vergelijkingen is waar?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       2-3 bee conditionals multi 3:
-        Choose the best blocks.: Kies de beste blokken.
+        questions:
+        - text: Kies de beste blokken.
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: Bij Lussen Meerkeuze Eén
-        Which blocks collect all of the nectar?: Welke blokken verzamelen alle nectar?
+        title: Bij Lussen Meerkeuze Eén
+        questions:
+        - text: Welke blokken verzamelen alle nectar?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Doolhof koppelen één
+        content1: Koppel de juiste puzzels aan de juiste blokken
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       2-3 maze multi 1:
-        Maze Multiple Choice One: Meerkeuze doolhof één
-        Which set of blocks is the correct answer?: Welke blokken zijn het goede antwoord?
+        title: Meerkeuze doolhof één
+        questions:
+        - text: Welke blokken zijn het goede antwoord?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Koppelen
+        content1: Combineer de stappen in de dobbelstenen race spel in de volgorde
+          dat ze moeten verschijnen in de algoritme.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Zet de score van speler 1 naar 0</h4>"
+        - text: "<h4>Speler een gooit de dobbelsteen</h4>"
+        - text: "<h4>Voeg het ogenaantal van speler 1 toe aan de totale score</h4>"
+        - text: "<h4>Vergelijk de spelersscores om te kijken wie er wint</h4>"
       4-5 Algorithms Multi 1:
-        Baking cookies: Koekjes bakken
-        Banana: Banaan
-        Brushing your teeth: Tandenpoetsen
-        Multiple Choice: Meerkeuze
-        Shopping from a grocery list: Winkelen met een boodschappenlijst
-        Which one of these items is hardest to describe an algorithm for?: Welk van
-          deze items is het moeilijkst in een algoritme te schrijven?
+        title: Meerkeuze
+        questions:
+        - text: Welk van deze items is het moeilijkst in een algoritme te schrijven?
+        answers:
+        - text: Tandenpoetsen
+        - text: Koekjes bakken
+        - text: Winkelen met een boodschappenlijst
+        - text: Banaan
+          correct: true
+      4-5 Computational Thinking Match 1:
+        title: Koppelen
+        content1: Elk van de voertuigen zijn verdeeld in kleinere onderdelen. Combineer
+          elk voertuig met de lijst met onderdelen.
+        questions:
+        - text: "<h3>Wielen/kant: 2 <br/>Ramen/kant: 0</h3>"
+        - text: "<h3>Wielen/kant: 2 <br/>Ramen/kant: 1</h3>"
+        - text: "<h3>Wielen/kant: 2 <br/>Ramen/kant: 6</h3>"
+        - text: "<h3>Wielen/kant: 3 <br/>Ramen/kant: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is een _____ stad.
-        0: "? Hier zijn drie zinnen. Welk van onderstaande sjablonen abstraheert op
-          de juiste manier zodat ze alle drie hetzelfde patroon hebben als het sjabloon?"
-        1: ": hier zijn drie zinnen. Welk van onderstaande sjablonen abstraheert op
-          de juiste manier zodat ze alle drie hetzelfde patroon hebben als het sjabloon?"
-        Multiple Choice: Meerkeuze
-        Seattle _____ a _____ _____.: Seattle _____ een _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          is een grootstad. <br/> Eugene is een middelgrote stad <br/> Hillview is
-          een kleine stad.
-        _____ is _____ a _____.: _____ is _____ een _____.
-        _____ is a _____ city.: _____ is een _____ stad.
+        title: Meerkeuze
+        questions:
+        - text: Seattle is een grootstad. <br/> Eugene is een middelgrote stad <br/>
+            Hillview is een kleine stad.
+        answers:
+        - text: Seattle _____ een _____ _____.
+        - text: _____ is een _____ stad.
+          correct: true
+        - text: _____ is _____ een _____.
+        - text: Eugene is een _____ stad.
       4-5 Crowdsourcing Multi 1:
-        Multiple Choice: Meerkeuze
-        Which of these pictures best represents crowdsourcing?: Welk plaatje geeft
-          crowdsourcing het best weer?
+        title: Meerkeuze
+        questions:
+        - text: Welk plaatje geeft crowdsourcing het best weer?
+        answers:
+        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Je haar borstelen
-        Cleaning your room: Je kamer opruimen
-        Eating your dessert: Toetjes eten
-        Multiple Choice: Meerkeuze
-        Washing your face: Je gezicht wassen
-        Which one of these activities would be best for practicing crowdsourcing?: Welke
-          activiteit is de beste oefening voor crowdsourcing?
+        title: Meerkeuze
+        questions:
+        - text: Welke activiteit is de beste oefening voor crowdsourcing?
+        answers:
+        - text: Je kamer opruimen
+          correct: true
+        - text: Toetjes eten
+        - text: Je haar borstelen
+        - text: Je gezicht wassen
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Meerkeuze
-        Which piece of information listed below is okay to share on the internet?: Welk
-          van de hieronder genoemde stukjes informatie zijn geschikt om de delen op
-          internet?
-        Your address: Je adres
-        Your birthday: Je verjaardag
-        Your favorite food: Je favoriete eten
-        Your parent's credit card number: Het creditcardnummer van je ouders
+        title: Meerkeuze
+        questions:
+        - text: Welk van de hieronder genoemde stukjes informatie zijn geschikt om
+            de delen op internet?
+        answers:
+        - text: Je verjaardag
+        - text: Je favoriete eten
+          correct: true
+        - text: Je adres
+        - text: Het creditcardnummer van je ouders
       4-5 Internet Multi 1:
-        Multiple Choice: Meerkeuze
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Als
-          je probeert in te loggen op code.org, naar welk IP-adres zal de DNS je dan
-          waarschijnlijk doorsturen?
+        title: Meerkeuze
+        questions:
+        - text: Als je probeert in te loggen op code.org, naar welk IP-adres zal de
+            DNS je dan waarschijnlijk doorsturen?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
       4-5 Internet Multi 2:
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Als
-          de DNS je naar de pagina met IP-adres 100.42.50.110 heeft gestuurd, op welke
-          website ben je dan?
-        Multiple Choice: Meerkeuze
+        title: Meerkeuze
+        questions:
+        - text: Als de DNS je naar de pagina met IP-adres 100.42.50.110 heeft gestuurd,
+            op welke website ben je dan?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       4-5 Songwriting Multi 1:
-        0: "? De vlieg is in de karnemelk, <br/>Weg vlieg, weg, <br/>De vlieg is in
-          de karnemelk, <br/>Weg vlieg, weg, <br/>De vlieg is in de karnemelk, <br/>Weg
-          vlieg, weg, <br/>Ga naar Lou, mijn schat."
-        1: ": De vlieg is in de karnemelk, <br/>Weg vlieg, weg, <br/>De vlieg is in
-          de karnemelk, <br/>Weg vlieg, weg, <br/>De vlieg is in de karnemelk, <br/>Weg
-          vlieg, weg, <br/>Ga naar mijn Lou, mijn schat."
-        Lou, Lou, skip to my Lou,: Lou, Lou, ga naar mijn Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, ga naar mijn Lou, <br/>Lou, Lou, ga naar mijn Lou, <br/>Lou, Lou, ga
-          naar mijn Lou, <br/>ga naar mijn Lou, mijn schat.
-        2: "? Lou, Lou, ga naar mijn Lou, <br/>Lou, Lou, ga naar mijn Lou, <br/>Lou,
-          Lou, ga naar mijn Lou, <br/>ga naar mijn Lou, mijn schat.<br/><br/><p>De
-          vlieg is in de karnemelk, <br/>Weg vlieg, weg,"
-        3: ": Lou, Lou, ga naar mijn Lou, <br/>Lou, Lou, ga naar mijn Lou, <br/>Lou,
-          Lou, ga naar mijn Lou, <br/>Ga naar mijn Lou, mijn schat.<br/><br/><p>De
-          vlieg is in de karnemelk, <br/>weg vlieg, weg,"
-        Multiple Choice: Meerkeuze
-        4: "? Wat is het grootste stuk van dit lied dat je kunt definiëren als het
-          refrein, zodat het refrein iedere keer exact herhaald wordt wanneer het
-          aangeroepen wordt?"
-        5: ": Wat is de grootste stuk van dit lied dat je kunt definiëren als het
-          refrein, zodat het refrein, elke keer dat het wordt aangeroepen, precies
-          herhaald wordt?"
+        title: Meerkeuze
+        questions:
+        - {}
+        answers:
+        - text: Lou, Lou, ga naar mijn Lou,
+        - text: Lou, Lou, ga naar mijn Lou, <br/>Lou, Lou, ga naar mijn Lou, <br/>Lou,
+            Lou, ga naar mijn Lou, <br/>ga naar mijn Lou, mijn schat.
+          correct: true
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Koppelen
+        content1: Combineer elk programma met het woord dat hij maakt, gebruik de
+          gegeven groep van vaardigheden.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
       4-5 Suncatchers Multi 1:
-        Multiple Choice: Meerkeuze
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Welke
-          van de programma's hieronder <em>maakt</em> niet exact hetzelfde vervolg
-          als programma 1?
+        title: Meerkeuze
+        questions:
+        - text: Welke van de programma's hieronder <em>maakt</em> niet exact hetzelfde
+            vervolg als programma 1?
+        answers:
+        - {}
+        - correct: true
+        - {}
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: Kunstenaar lussen meerkeuze
-        Which blocks will create the design?: Welke van de blokken maken het ontwerp?
+        title: Kunstenaar lussen meerkeuze
+        questions:
+        - text: Welke van de blokken maken het ontwerp?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       4-5 artist multi 1:
-        Artist Multiple Choice: Kunstenaar Meerkeuze
-        Which blocks draw a rectangle with a perimeter of 100?: Welk blokken tekenen
-          een rechthoek met een omtrek van 100?
+        title: Kunstenaar Meerkeuze
+        questions:
+        - text: Welk blokken tekenen een rechthoek met een omtrek van 100?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       4-5 artist multi 2:
-        Artist Multiple Choice: Kunstenaar Meerkeuze
-        Which drawing is symmetric?: Welke tekening is symmetrisch?
+        title: Kunstenaar Meerkeuze
+        questions:
+        - text: Welke tekening is symmetrisch?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       4-5 bee conditionals multi 1:
-        0: "? Een paarse bloem heeft 3, 2 of 1 nectar, maar je weet niet hoeveel.
-          Welke blokken controleren dit op de juiste manier en verzamelen alle nectar
-          van een paarse bloem?"
-        1: ": Een paarse bloem heeft 3, 2 of 1 nectar, maar je weet niet hoeveel.
-          Welk blokken controleren dit op de juiste manier en verzamelen alle nectar
-          van een paarse bloem?"
-        Bee Conditionals Multiple Choice: Bij Condities Meerkeuze
-        Choose the best blocks.: Kies de beste blokken.
+        title: Bij Condities Meerkeuze
+        questions:
+        - text: Kies de beste blokken.
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: Bij Debug Meerkeuze
-        Which version of the function will work?: Welke versie van de functie werkt?
+        title: Bij Debug Meerkeuze
+        questions:
+        - text: Welke versie van de functie werkt?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: Bij Lussen Meerkeuzevraag
-        Which blocks will solve the puzzle?: Welke blokken lossen de puzzel op?
+        title: Bij Lussen Meerkeuzevraag
+        questions:
+        - text: Welke blokken lossen de puzzel op?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Doolhof Condities Meerkeuzevraag
-        Which blocks solve the puzzle?: Welke blokken lossen de puzzel op?
+        title: Doolhof Condities Meerkeuzevraag
+        questions:
+        - text: Welke blokken lossen de puzzel op?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Doolhof Combinatie
+        content1: Koppel de juiste puzzels aan de juiste blokken
+        pre_title: Instructies
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       4-5 maze multi 1:
-        Maze Multiple Choice: Doolhof Meerkeuze
-        Which blocks solve the puzzle?: Welke blokken lossen de puzzel op?
+        title: Doolhof Meerkeuze
+        questions:
+        - text: Welke blokken lossen de puzzel op?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      Begin planning your project:
+        title: titel
+        content1: beschrijving hier
+      Begin planning your project_2018:
+        content1: beschrijving hier
+      Begin planning your project_2018_2019:
+        content1: beschrijving hier
+      CSD Header Size MC:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 Design Project:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 Design Project_2018:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 Design Project_2018_2019:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 L2 Overview:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 L3 Overview:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 L4 Overview:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 L5 Overview:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 L6 Overview:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 Lesson 6 Overview:
+        content1: beschrijving hier
+      CSD U2 expand project:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 expand project_2018:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 expand project_2018_2019:
+        title: titel
+        content1: beschrijving hier
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide:
+        content1: beschrijving hier
+      CSD U2 project guide_2018:
+        content1: beschrijving hier
+      CSD U2 project guide_2018_2019:
+        content1: beschrijving hier
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC:
         title: titel
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC_2018:
         title: titel
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC_2018_2019:
         title: titel
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U3 Card Examples_2018:
+        content1: beschrijving hier
+      CSD U3 Card Examples_2018_2019:
+        content1: beschrijving hier
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U3 combining rep:
+        title: titel
+        content1: beschrijving hier
+      CSD U3 combining rep_2018:
+        title: titel
+        content1: beschrijving hier
+      CSD U3 combining rep_2018_2019:
+        title: titel
+        content1: beschrijving hier
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro:
+        content1: beschrijving hier
+      CSD U3 game intro_2018:
+        content1: beschrijving hier
+      CSD U3 game intro_2018_2019:
+        content1: beschrijving hier
+      CSD U3 platform intro:
+        content1: beschrijving hier
+      CSD U3 platform intro_2018:
+        content1: beschrijving hier
+      CSD U3 platform intro_2018_2019:
+        content1: beschrijving hier
+      CSD U5 Encryption 1:
+        title: titel
+        content1: beschrijving hier
+      CSD U5 Encryption 1_2018:
+        title: titel
+        content1: beschrijving hier
+      CSD U5 Encryption 1_2018_2019:
+        title: titel
+        content1: beschrijving hier
+      CSD U5 Encryption 2:
+        content1: beschrijving hier
+      CSD U5 Encryption 2_2018:
+        content1: beschrijving hier
+      CSD U5 Encryption 2_2018_2019:
+        content1: beschrijving hier
+      CSD U5 L13 SFLP Interpreting Data:
+        title: titel
+        content1: beschrijving hier
+      CSD U5 crosstab warmup:
+        content1: beschrijving hier
+      CSD U5 crosstab warmup_2018:
+        content1: beschrijving hier
+      CSD U5 crosstab warmup_2018_2019:
+        content1: beschrijving hier
+      CSD U5 data visualization:
+        title: titel
+        content1: beschrijving hier
+      CSD U5 data visualization_2018:
+        title: titel
+        content1: beschrijving hier
+      CSD U5 data visualization_2018_2019:
+        title: titel
+        content1: beschrijving hier
+      CSD U5 student record:
+        title: titel
+        content1: beschrijving hier
+      CSD U5 student record_2018:
+        title: titel
+        content1: beschrijving hier
+      CSD U5 student record_2018_2019:
+        title: titel
+        content1: beschrijving hier
+      CSD U6 LED create intro:
+        content1: beschrijving hier
+      CSD U6 LED create intro_2018:
+        content1: beschrijving hier
+      CSD U6 LED create intro_2018_2019:
+        content1: beschrijving hier
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      CSD U6 final intro:
+        content1: beschrijving hier
+      CSD U6 final intro_2018:
+        content1: beschrijving hier
+      CSD U6 final intro_2018_2019:
+        content1: beschrijving hier
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      Internet Simulator Setup:
+        content1: beschrijving hier
+      Internet Simulator Setup 2:
+        title: titel
+        content1: beschrijving hier
+      Internet Simulator Setup 3:
+        content1: beschrijving hier
       K-1 Artist 1 Multi 1:
-        Multiple Choice: Meerkeuze
-        Which blocks solve this puzzle?: Welke blokken lossen deze puzzel op?
+        title: Meerkeuze
+        questions:
+        - text: Welke blokken lossen deze puzzel op?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       K-1 Artist 1 Multi 2:
-        Multiple Choice: Meerkeuze
-        Which blocks draw the square?: Welke blokken tekenen het vierkant?
+        title: Meerkeuze
+        questions:
+        - text: Welke blokken tekenen het vierkant?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Koppelen
+        content2: Koppel de vormen met elkaar gebaseerd op type.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       K-1 Bee 1 Multi 1:
-        How many nectars is this?: Hoeveel nectar is dit?
-        Multiple Choice: Meerkeuze
+        title: Meerkeuze
+        questions:
+        - text: Hoeveel nectar is dit?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       K-1 Bee 1 Multi 2:
-        How many nectars is this?: Hoeveel nectar is dit?
-        Multiple Choice: Meerkeuze
+        title: Meerkeuze
+        questions:
+        - text: Hoeveel nectar is dit?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      K-1 Bee Loops Match 1:
+        title: Koppelen
+        content2: Koppel de blokken
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Koppelen
+        content2: Verbind de knoppencombinatie aan de dansbewegingen.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       K-1 Digital Footprint Multi 1:
-        Multiple Choice: Meerkeuze
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Welk
-          dier heeft de grootste digitale voetafdruk wat hem of haar de <strong>meest
-          onveilige</strong> maakt?
+        title: Meerkeuze
+        questions:
+        - text: Welk dier heeft de grootste digitale voetafdruk wat hem of haar de
+            <strong>meest onveilige</strong> maakt?
+        answers:
+        - {}
+        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Hoe zou je deze reeks vereenvoudigen
-          met lussen?
-        Multiple Choice: Meerkeuze
+        title: Meerkeuze
+        questions:
+        - text: Hoe zou je deze reeks vereenvoudigen met lussen?
+        answers:
+        - correct: true
+        - {}
+        - {}
       K-1 Happy Maps Multi 1:
-        Multiple Choice: Meerkeuze
-        Which arrow gets the Flurb to the treasure?: Welke pijl brengt de Flurb bij
-          de schat?
+        title: Meerkeuze
+        questions:
+        - text: Welke pijl brengt de Flurb bij de schat?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       K-1 Keep it Private Multi 1:
-        Multiple Choice: Meerkeuze
-        Which information should you <strong>not</strong> share online?: Welke informatie
-          kun je beter <strong>niet</strong> on-line delen ?
+        title: Meerkeuze
+        questions:
+        - text: Welke informatie kun je beter <strong>niet</strong> on-line delen
+            ?
+        answers:
+        - correct: true
+        - {}
+        - {}
       K-1 Maze Debugging Multi 1:
-        Multiple Choice: Meerkeuze
-        Which choice should be the final block?: Welke keuze zou het laatste blok
-          moeten zijn?
+        title: Meerkeuze
+        questions:
+        - text: Welke keuze zou het laatste blok moeten zijn?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
       K-1 Maze Loops Multi 1:
-        Multiple Choice: Meerkeuze
-        Which repeat block is the same?: Welk herhaal blok is hetzelfde?
+        title: Meerkeuze
+        questions:
+        - text: Welk herhaal blok is hetzelfde?
+        answers:
+        - correct: true
+        - {}
+        - {}
       K-1 Maze Loops Multi 2:
-        Multiple Choice: Meerkeuze
-        Pick the correct repeat block.: Kies het juiste herhaal blok.
+        title: Meerkeuze
+        questions:
+        - text: Kies het juiste herhaal blok.
+        answers:
+        - {}
+        - {}
+        - correct: true
+      K-1 Maze Match 1:
+        title: Koppelen
+        content2: Koppel de juiste puzzels aan de juiste blokken
+        pre_title: Instructies
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       K-1 Maze Multiple Choice 2:
-        Maze: Doolhof
-        Which answer solves this level?: Welk antwoord is de oplossing voor dit level?
+        title: Doolhof
+        questions:
+        - text: Welk antwoord is de oplossing voor dit level?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       K-1 Move It Multi 1:
-        Multiple Choice: Meerkeuze
-        Which algorithm gets the Flurb to the flowers?: Welke algoritme leidt de Flurb
-          naar de bloemen?
+        title: Meerkeuze
+        questions:
+        - text: Welke algoritme leidt de Flurb naar de bloemen?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       K-1 Plant a Seed Multi 1:
-        Multiple Choice: Meerkeuze
-        Which step should go at the beginning of this algorithm?: Welke stap moet
-          aan het begin van dit algoritme staan?
+        title: Meerkeuze
+        questions:
+        - text: Welke stap moet aan het begin van dit algoritme staan?
+        answers:
+        - {}
+        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
-        Multiple Choice: Meerkeuze
-        Which step should fill in the blank for this algorithm?: Welke stap moet op
-          de lege plaats in dit algoritme?
+        title: Meerkeuze
+        questions:
+        - text: Welke stap moet op de lege plaats in dit algoritme?
+        answers:
+        - {}
+        - correct: true
+        - {}
       K-1 Word Search Multi 1:
-        Multiple Choice: Meerkeuze
-        Which blocks spell "MOVE"?: Welke blokken spellen "MOVE" (bewegen)?
+        title: Meerkeuze
+        questions:
+        - text: Welke blokken spellen "MOVE" (bewegen)?
+        answers:
+        - {}
+        - correct: true
+        - {}
       K-1 Word Search Multi 3:
-        Multiple Choice: Meerkeuze
-        SET: ZET
-        SOUTH: ZUID
-        SQUARE: VIERKANT
-        Which word is spelled?: Welk woord wordt gespeld?
+        title: Meerkeuze
+        questions:
+        - text: Welk woord wordt gespeld?
+        answers:
+        - text: ZET
+        - text: VIERKANT
+          correct: true
+        - text: ZUID
+      Multi-Screen Apps:
+        title: titel
+        content1: beschrijving hier
+      New Challenge Introduction:
+        title: titel
+        content1: beschrijving hier
+      OPD-K5 Stage3aGo:
+        title: titel
+        content1: beschrijving hier
+      Prepare for your presentation:
+        title: titel
+        content1: beschrijving hier
+      'Technique: Frequency Analysis':
+        content1: beschrijving hier
+      Terminology Recap:
+        content1: beschrijving hier
       behaviors 1 predict:
-        Incorrect: Incorrect
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Incorrect
       behaviors 4 predict:
-        Incorrect: Incorrect
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Incorrect
+      courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       courseC_multi_harvester_loops11_predict1:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        questions:
+        - {}
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        questions:
+        - {}
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        questions:
+        - {}
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
+      courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       courseC_multi_starWars_predict1:
-        I don't know: Ik weet het niet
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Ik weet het niet
       courseC_multi_starWars_predict1_2018:
-        I don't know: Ik weet het niet
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Ik weet het niet
       courseC_multi_starWars_predict1_2018_2019:
-        I don't know: Ik weet het niet
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Ik weet het niet
+      courseC_multi_starWars_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1:
-        A: A
-        B: B
-        C: C
-        D: D
+        questions:
+        - {}
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
-        A: A
-        B: B
-        C: C
-        D: D
+        questions:
+        - {}
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
-        A: A
-        B: B
-        C: C
-        D: D
+        questions:
+        - {}
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
-        A: A
-        B: B
-        C: C
+        questions:
+        - {}
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        A: A
-        B: B
-        C: C
+        questions:
+        - {}
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        A: A
-        B: B
-        C: C
+        questions:
+        - {}
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        questions:
+        - {}
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        questions:
+        - {}
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-      courseE_multi_farmer_predict1:
-        I don't know: Ik weet het niet
-        0: "? Incorrect. The `if` statement will help the farmer check if there is
-          a path ahead.  If there is, she will move forward.  Else, if there is no
-          path, she will pick as much lettuce as there is and then turn left."
-        1: ": Incorrect. The `if` statement will help the farmer check if there is
-          a path ahead.  If there is, she will move forward.  Else, if there is no
-          path, she will pick as much lettuce as there is and then turn left."
-        2: "? The `if` statement will help the farmer check if there is a path ahead.
-          \ If there is, she will move forward.  Else, if there is no path, she will
-          pick as much lettuce as there is and then turn left."
-        3: ": The `if` statement will help the farmer check if there is a path ahead.
-          \ If there is, she will move forward.  Else, if there is no path, she will
-          pick as much lettuce as there is and then turn left."
+        questions:
+        - {}
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
+      courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseD_multi_farmer_ramp13:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseD_multi_scrat_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseE_prediction_artistFunction1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      courseF_bee_variables_8a_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      coursee_prediction_artistfunction2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}

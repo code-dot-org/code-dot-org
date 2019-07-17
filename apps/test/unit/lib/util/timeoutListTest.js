@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/configuredChai';
 import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
 
 describe('timeoutList', () => {

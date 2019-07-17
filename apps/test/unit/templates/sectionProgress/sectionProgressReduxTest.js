@@ -1,4 +1,4 @@
-import {assert, expect} from 'chai';
+import {assert, expect} from '../../../util/configuredChai';
 import sectionProgress, {
   setCurrentView,
   ViewType,

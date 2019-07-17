@@ -26,6 +26,7 @@
   twentyhours_heading: "Testen Sie unseren Kurs \"Einführung in die Informatik\""
   twentyhours_text: "Sie haben Ihre erste „Hour of Code“ beendet? Lernen Sie in diesem Folgekurs weitere Informatik- und Programmierkonzepte."
   og_title: 'Jedes Kind verdient eine Gelegenheit'
+  og_title_soon: "Die Hour of Code kommt"
   og_title_here: "Die Stunde des Codes ist gekommen!"
   og_description: "In jeder Schule sollten Schüler die Gelegenheit erhalten, Informatik zu lernen."
   og_description_celeb: "Probiere die neuen Tutorials aus und gewinne einen Videochat mit einem Promi für dich oder deine Klasse!"
@@ -220,6 +221,9 @@
   studiobar_shop_body: "Brich mit dem Klischee. Trage unser Logo mit Stolz."
   homepage_stats_students: "der amerikanischen Studenten haben ein Konto bei code.org"
   homepage_stats_female: "unserer Studenten sind weiblich"
+  homepage_stats_teachers: "Lehrer benutzten Code.org"
+  homepage_stats_hourofcodde: "Schüler der Welt haben Hour of Code ausprobiert"
+  homepage_stats_title: "Wir machen den Unterschied"
   homepage_hero_text_malala: "„Ich fordere Mädchen in jedem Land auf, an einer Hour of Code teilzunehmen“\nMalala, Friedensnobelpreisträgerin"
   homepage_hero_text_susan: |-
     „Wenn man Technologien verändern kann, kann man auch die Welt verändern.“ Susan, CEO von YouTube
@@ -229,6 +233,10 @@
     „Unsere Kinder – einschließlich unserer Mädchen – brauchen die Möglichkeit, Informatik zu lernen.“ Sheryl, COO von Facebook
   homepage_hero_text_satya: |-
     „Informatik eröffnet die besten Chancen auf der Welt.“ Satya, CEO von Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Informatik ermutigt
+    Schüler die Welt von morgen zu erschaffen.&rdquo;
+    Satya, CEO von Microsoft
   homepage_hero_text_bosh: |-
     „Wenn du programmieren kannst, kannst du deinen Lebensweg selbst bestimmen.“ Chris Bosh
   homepage_hero_text_student1: |-
@@ -245,6 +253,7 @@
   homepage_hero_text_stat_loc: "2.5 Millionen Mädchen lernen mit Code Studio"
   homepage_hero_text_stat_students: "#student_count Schüler-Accounts bei Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served mal genutzt'
+  homepage_hero_hoc_is_coming: "Die Hour of Code kommt"
   homepage_hero_hoc_is_here: "Die Hour of Code ist hier"
   homepage_slot_text_hoc: "Die \"Hour of Code\""
   homepage_slot_text_frozen: "Die Eiskönigin mit Anna und Elsa"
@@ -265,6 +274,7 @@
   homepage_action_text_girlvideo: "Inspiriere ein Mädchen"
   homepage_action_text_learn: "Jetzt lernen"
   homepage_action_text_signpetition: "Petition unterzeichnen"
+  homepage_action_text_wincelebritychat: "Gewinne einen Chat mit einer Berühmtheit"
   homepage_signpetition_dropdown: "Ich stimme zu ▾"
   homepage_diversity_pledge: "Unterstützen"
   homepage_banner_text_prizes: 'Die Hour of Code findet wieder statt, vom 7. bis 13. Dezember. '
@@ -275,11 +285,13 @@
   homepage_banner_20k_teachers: "20.000 Lehrer wurden ausgebildet und lehren nun Informatik in Klassenzimmern."
   homepage_banner_20k_teachers_link: "Mehr erfahren"
   homepage_banner_congress_link: "Unterstützen sie uns"
+  homepage_banner_emailprivacy: "Wir machen eine wichtige Änderung um die Privatsphäre der Schüler zu schützen."
   homepage_banner_emailprivacy_link: "Erfahre mehr"
   homepage_banner_40k_teachers_link: "Mehr erfahren"
   homepage_slot_text_title_hoc: "Stunde der Code"
   homepage_slot_text_blurb_hoc: "Jeder kann es lernen. Jetzt beginnen"
   homepage_slot_text_link_hoc: "Probiere \"The Hour of Code\" aus"
+  homepage_slot_text_link_about_hoc: "Über die Hour of Code"
   homepage_slot_text_link_host: "Hour of Code organisieren"
   homepage_slot_text_link_hocserved: "# mal genutzt"
   homepage_solot_text_link_volunteer: "Bei der Hour of Code mithelfen"
@@ -303,6 +315,7 @@
   homepage_slot_text_link_buy: "Mitmachen"
   homepage_slot_text_link_donate: "Spende"
   homepage_slot_text_link_shop: "T-shirts, Hüte & mehr"
+  homepage_slot_text_link_administrators: "Bringem Sie Informatik in Ihre Schule"
   homepage_gallery_header: "Über %{project_count} Millionen erstellte Code.org Projekte"
   homepage_header_donors: "Code.org dankt seinen Unterstützern"
   homepage_donors_seall: "Alle anzeigen"
@@ -786,6 +799,7 @@
   cspexam1-mWU7ilDYM9_name: Test Teil 1 - 25 Fragen
   cspexam2-AKwgAh1ac5_name: Test Teil 2 - 25 Fragen
   cspunit3_gradelevel: "9. - 12. Klasse"
+  accelerated_name: "Beschleunigter Kurs"
   20-hour_name: Beschleunigter Kurs
   gumball_name: "Gumball"
   classicmaze_name: "Klassisches Labyrinth"
@@ -793,6 +807,7 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Bausteine)"
   hoc-encryption_name: Einfache Verschlüsselung
+  text-compression_name: Text-Kompression
   math_category_name: "Mathematik"
   hoc_category_name: "Hour of Code"
   csf_category_name: "Einführung in Informatik und Programmieren"
@@ -1234,10 +1249,14 @@
   sign_in_instruct_button: "Klicken Sie auf \"Anmelden\"."
   reset_student_password: "Zurücksetzen von Schüler-Kennwörtern"
   google_sign_in_instruct: 'Von dort sollten sie die Option "Anmelden mit Google-Konto" auswählen:'
+  applab_tile_title: "Einführung ins App-Labor (ab 13 Jahren)"
+  applab_tile_subtitle: "Erstelle deine eigene App in JavaScript mit Blöcken. Oder nimm die Herausforderung an und erlerne textbasierte Programmation. (Nur Englisch)"
   applab_tile_start_tutorial: "Start"
   applab_tile_teacher_guide: "Lehrer-Leitfaden anzeigen"
   account_sign_up_email_opt_in: "Dürfen wir dich per E-Mail über Neuigkeiten zu unseren Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?"
   hoc_overview_dance_title: "Tanzparty"
+  hoc_overview_title: "Hour of Code Aktivitäten von Code.org"
+  hoc_overview_subtitle: "Die <a href=\"https://hourofcode.com\">Hour of Code</a> ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Länder erreicht. Jeder kann, egal wo, ein Hour of Code Veranstaltung organisieren oder eines der über 200 einstündigen Tutorials versuchen, verfügbar in über 45 Sprachen."
   hoc_overview_partner_activities_title: "Weitere Aktivitäten von Partnern"
   hoc_overview_partner_activities_body: "Die Hour of Code-Website hat mehr als 100 Informatik-Aktivitäten für alle Altersgruppen- und Erfahrungsstufen, die von Code.org und Partnern entwickelt wurden."
   hoc_overview_partner_activities_link: "Aktivitäten anzeigen"
@@ -1276,10 +1295,13 @@
   hoc2018_mc_video_title_my_name_is_aracely: "Mein Name ist Aracely"
   hoc2018_mc_homepage_hoc_coming: "Die Hour of Code rückt näher ..."
   hoc2018_mc_homepage_what_create: "Was wirst du erschaffen?"
+  hoc2018_mc_homepage_give_flight: "Lasse deiner Phantasie freien Lauf und kreiere Innovationen. Starte mit einer Hour of Code und lasse deine Kreativität fließen, was immer dabei raus kommt."
+  hoc2018_mc_homepage_watch_video: "Video ansehen"
   hoc2018_mc_homepage_join_us: "Mitmachen"
   hoc2018_mc_homepage_try_it: "Ausprobieren"
   hoc2018_mc_back_journey: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
   hoc2018_mc_teacher_guide: "Lehrer-Leitfaden anzeigen"
+  hoc2018_mc_go_to_mc_education: "Gehe zu Minecraft Education"
   hoc2018_dance_party_main_heading: "Tanzparty"
   hoc2018_dance_create_your_own_dance_title: "Erstelle deine eigene Tanzparty"
   hoc2018_dance_party_box_title: "Tanzparty"
@@ -1299,5 +1321,7 @@
   hoc2018_dance_video_title_what_is_creativity: "Was ist Kreativität?"
   hoc2018_dance_amazon_about_future_engineer_button: "Mehr erfahren"
   hoc2018_dance_amazon_scholarship_programs_button: "Jetzt bewerben!"
+  hoc2018_dance_amazon_future_engineer_footer: "* Die Künstler deren Musik in diesem Tutorial vorkommt, sponsern oder unterstützen Amazon nicht durch die Lizensierung ihrer Musik auf Code.org.\n\n"
   hoc2018_dance_measure: "Takt"
   hoc2018_dance_measure_colon: 'Takt:'
+  page_not_found_description: "Die Seite die Sie suchen gibt es nicht unter dieser Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen Sie zurück zu unserer Webseite."

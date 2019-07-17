@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import {
   getStore,
   registerReducers,
@@ -87,7 +87,7 @@ describe('The JSDebugger redux duck', () => {
     });
 
     it('and no log output', () => {
-      expect(selectors.getLogOutput(state)).to.equal('');
+      expect(selectors.getLogOutput(state)).to.deep.equal([]);
     });
 
     it('and is closed', () => {
@@ -108,29 +108,52 @@ describe('The JSDebugger redux duck', () => {
 
   describe('the appendLog action', () => {
     it('will append strings to the log output', () => {
-      store.dispatch(actions.appendLog('foo'));
-      expect(selectors.getLogOutput(store.getState())).to.equal('foo');
+      store.dispatch(
+        actions.appendLog({
+          output: 'foo'
+        })
+      );
+      var outputs = selectors.getLogOutput(store.getState());
+      expect(outputs.toJS()[0].output).to.equal('foo');
     });
 
     it('will append rich objects to the log output', () => {
-      store.dispatch(actions.appendLog({foo: 'bar'}));
-      expect(selectors.getLogOutput(store.getState())).to.equal(
-        '{"foo":"bar"}'
-      );
+      store.dispatch(actions.appendLog({output: {foo: 'bar'}}));
+      expect(
+        selectors.getLogOutput(store.getState()).toJS()[0].output
+      ).to.deep.equal({foo: 'bar'});
     });
 
-    it('will append multiple things to the log output, joined by newlines', () => {
-      store.dispatch(actions.appendLog({foo: 'bar'}));
-      store.dispatch(actions.appendLog('hello'));
-      expect(selectors.getLogOutput(store.getState())).to.equal(
-        '{"foo":"bar"}\nhello'
-      );
+    it('will append multiple both input and output to the log output', () => {
+      store.dispatch(actions.appendLog({input: '1 + 1'}));
+      store.dispatch(actions.appendLog({output: 2}));
+      expect(
+        selectors.getLogOutput(store.getState()).toJS()[0].input
+      ).to.deep.equal('1 + 1');
+      expect(
+        selectors.getLogOutput(store.getState()).toJS()[1].output
+      ).to.deep.equal(2);
     });
 
     it('will also trigger the open action if the debugger is not already open', () => {
       expect(selectors.isOpen(store.getState())).to.be.false;
-      store.dispatch(actions.appendLog('open sesame'));
+      store.dispatch(actions.appendLog({output: 'open sesame'}));
       expect(selectors.isOpen(store.getState())).to.be.true;
+    });
+
+    it('will append errors and warnings with note to skip react-inspector', () => {
+      store.dispatch(actions.appendLog({output: 'Text'}, 'ERROR'));
+      store.dispatch(actions.appendLog({input: 'More text'}, 'WARNING'));
+      store.dispatch(actions.appendLog({output: 'Even more text'}));
+      expect(
+        selectors.getLogOutput(store.getState()).toJS()[0].skipInspector
+      ).to.equal(true);
+      expect(
+        selectors.getLogOutput(store.getState()).toJS()[1].skipInspector
+      ).to.equal(true);
+      expect(
+        selectors.getLogOutput(store.getState()).toJS()[2].skipInspector
+      ).to.equal(false);
     });
   });
 
@@ -243,9 +266,11 @@ describe('The JSDebugger redux duck', () => {
       });
 
       it('the interpreter will log execution warnings', () => {
-        expect(selectors.getLogOutput(state)).to.equal('');
+        expect(selectors.getLogOutput(state).toJS()).to.deep.equal([]);
         interpreter.onExecutionWarning.notifyObservers('ouch!', 10);
-        expect(selectors.getLogOutput(store.getState())).to.equal('ouch!');
+        expect(
+          selectors.getLogOutput(store.getState()).toJS()[0].output
+        ).to.equal('ouch!');
       });
 
       it("changes to the interpreter's next step will be mirrored", () => {
@@ -302,9 +327,11 @@ describe('The JSDebugger redux duck', () => {
         });
 
         it('will no longer log execution warnings', () => {
-          expect(selectors.getLogOutput(state)).to.equal('');
+          expect(selectors.getLogOutput(state).toJS()).to.deep.equal([]);
           interpreter.onExecutionWarning.notifyObservers('ouch!', 10);
-          expect(selectors.getLogOutput(store.getState())).to.equal('');
+          expect(selectors.getLogOutput(store.getState()).toJS()).to.deep.equal(
+            []
+          );
         });
 
         it('will no longer mirror changes to the interpreter state', () => {

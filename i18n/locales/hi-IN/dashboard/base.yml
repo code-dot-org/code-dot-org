@@ -204,7 +204,7 @@ hi:
       course_catalog: "कोर्स कैटलॉग"
       project_gallery: "प्रोजेक्ट्स"
       help_support: "सहायता और समर्थन"
-      report_bug: "“समस्या की रिपोर्ट करें”"
+      report_bug: "समस्या की रिपोर्ट करें"
       about: "के बारे में"
     user:
       signin: 'दाखिल करना'

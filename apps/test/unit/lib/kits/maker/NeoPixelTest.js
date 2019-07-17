@@ -1,5 +1,5 @@
 /** @file Tests for our johnny-five Led.RGB wrapper */
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
 import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
@@ -39,13 +39,13 @@ describe('NeoPixel', function() {
     });
 
     it(`calls the parent on() implementation`, () => {
-      five.Led.RGB.prototype.on.reset();
+      five.Led.RGB.prototype.on.resetHistory();
       led.on();
       expect(five.Led.RGB.prototype.on).to.have.been.calledOnce;
     });
 
     it(`calls stop() on the led to end any animations`, () => {
-      five.Led.RGB.prototype.stop.reset();
+      five.Led.RGB.prototype.stop.resetHistory();
       led.on();
       expect(five.Led.RGB.prototype.stop).to.have.been.calledOnce;
     });
@@ -68,13 +68,13 @@ describe('NeoPixel', function() {
     });
 
     it(`calls the parent off() implementation`, () => {
-      five.Led.RGB.prototype.off.reset();
+      five.Led.RGB.prototype.off.resetHistory();
       led.off();
       expect(five.Led.RGB.prototype.off).to.have.been.called;
     });
 
     it(`calls stop() on the led to end any animations`, () => {
-      five.Led.RGB.prototype.stop.reset();
+      five.Led.RGB.prototype.stop.resetHistory();
       led.off();
       expect(five.Led.RGB.prototype.stop).to.have.been.calledOnce;
     });
@@ -99,12 +99,12 @@ describe('NeoPixel', function() {
     });
 
     it(`calls stop() only once when blink starts`, () => {
-      led.stop.reset();
+      led.stop.resetHistory();
       led.blink(100);
       expect(led.stop).to.have.been.calledOnce;
 
       // Pass some time and make sure it doesn't happen again
-      led.stop.reset();
+      led.stop.resetHistory();
       clock.tick(100);
       expect(led.toggle).to.have.been.calledOnce;
       expect(led.stop).not.to.have.been.called;

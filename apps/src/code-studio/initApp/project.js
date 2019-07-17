@@ -1,5 +1,6 @@
 /* global appOptions */
 import $ from 'jquery';
+import MD5 from 'crypto-js/md5';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
@@ -127,8 +128,8 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
-    selectedSong: data.selectedSong,
-    libraries: data.libraries
+    generatedProperties: data.generatedProperties,
+    selectedSong: data.selectedSong
   };
 }
 
@@ -264,6 +265,19 @@ var projects = (module.exports = {
    */
   useMakerAPIs() {
     return currentSources.makerAPIsEnabled;
+  },
+
+  /**
+   * Calculates a md5 hash for everything within sources except the
+   * generatedProperties.
+   * @return {string} md5 hash string.
+   */
+  md5CurrentSources() {
+    const {
+      generatedProperties, // eslint-disable-line no-unused-vars
+      ...sourcesWithoutProperties
+    } = currentSources;
+    return MD5(JSON.stringify(sourcesWithoutProperties)).toString();
   },
 
   getCurrentSourceVersionId() {
@@ -505,7 +519,7 @@ var projects = (module.exports = {
     const {hideShareAndRemix} = level;
     return (
       !hideShareAndRemix &&
-      app === 'applab' &&
+      (app === 'applab' || app === 'gamelab') &&
       experiments.isEnabled('exportExpo')
     );
   },
@@ -544,6 +558,8 @@ var projects = (module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
+   * @param {function(Object)} sourceHandler.setInitialGeneratedProperties
+   * @param {function(): Object} sourceHandler.getGeneratedProperties
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
@@ -573,8 +589,10 @@ var projects = (module.exports = {
         sourceHandler.setInitialAnimationList(currentSources.animations);
       }
 
-      if (currentSources.libraries) {
-        sourceHandler.setInitialLevelLibraries(currentSources.libraries);
+      if (currentSources.generatedProperties) {
+        sourceHandler.setInitialGeneratedProperties(
+          currentSources.generatedProperties
+        );
       }
 
       if (isEditing) {
@@ -1069,20 +1087,6 @@ var projects = (module.exports = {
   },
 
   /**
-   * Asks the sourceHandler for the list of functions in an app
-   */
-  getLibraryFromApp() {
-    return this.sourceHandler.getLibrary();
-  },
-
-  /**
-   * Asks the sourceHandler whether the code contains an error (red gutter warning)
-   */
-  containsError() {
-    return this.sourceHandler.codeContainsError();
-  },
-
-  /**
    * Ask the configured sourceHandler for the latest project save data and
    * pass it to the provided callback.
    * @param {function} callback
@@ -1090,31 +1094,29 @@ var projects = (module.exports = {
    */
   getUpdatedSourceAndHtml_(callback) {
     this.sourceHandler.getAnimationList(animations =>
-      this.sourceHandler.getLevelSource().then(response => {
-        const source = response;
+      this.sourceHandler.getLevelSource().then(source => {
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
-        const libraries =
-          this.sourceHandler.getLevelLibraries &&
-          this.sourceHandler.getLevelLibraries();
-        var sourceAndHtml = {
+        const generatedProperties = this.sourceHandler.getGeneratedProperties();
+        callback({
           source,
           html,
           animations,
           makerAPIsEnabled,
-          selectedSong
-        };
-        if (libraries) {
-          sourceAndHtml['libraries'] = libraries;
-        }
-        callback(sourceAndHtml);
+          selectedSong,
+          generatedProperties
+        });
       })
     );
   },
 
   getSelectedSong() {
     return currentSources.selectedSong;
+  },
+
+  getGeneratedProperties() {
+    return currentSources.generatedProperties;
   },
 
   /**
@@ -1129,23 +1131,6 @@ var projects = (module.exports = {
           {
             ...sourceAndHtml,
             makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled
-          },
-          () => {
-            resolve();
-            utils.reload();
-          }
-        );
-      });
-    });
-  },
-
-  addLibrary(data) {
-    return new Promise(resolve => {
-      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-        this.saveSourceAndHtml_(
-          {
-            ...sourceAndHtml,
-            libraries: [data]
           },
           () => {
             resolve();

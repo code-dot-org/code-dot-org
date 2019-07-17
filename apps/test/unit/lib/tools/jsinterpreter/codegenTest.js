@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../../../util/configuredChai';
 import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 
 describe('codegen', function() {

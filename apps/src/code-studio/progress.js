@@ -33,7 +33,7 @@ import {
   getLevelResult
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import {renderTeacherPanel} from './teacherPanelHelpers';
+import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 import experiments from '../util/experiments';
 
 var progress = module.exports;
@@ -182,6 +182,7 @@ progress.renderCourseProgress = function(scriptData) {
         courseName={scriptData.course_name}
         locale={scriptData.locale}
         showAssignButton={scriptData.show_assign_button}
+        userId={scriptData.user_id}
       />
     </Provider>,
     mountPoint
@@ -237,6 +238,7 @@ function initViewAs(store, scriptData) {
  */
 function queryUserProgress(store, scriptData, currentLevelId) {
   const onOverviewPage = !currentLevelId;
+  const pageType = currentLevelId ? 'level' : 'script_overview';
 
   $.ajax('/api/user_progress/' + scriptData.name, {
     data: {
@@ -276,12 +278,15 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       }
 
       store.dispatch(showTeacherInfo());
+      queryLockStatus(store, scriptData.id);
 
       renderTeacherPanel(
         store,
         scriptData.id,
         scriptData.section,
-        scriptData.name
+        scriptData.name,
+        null,
+        pageType
       );
     }
 

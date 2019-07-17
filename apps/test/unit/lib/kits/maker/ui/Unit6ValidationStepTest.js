@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from 'chai';
+import {assert} from '../../../../../util/configuredChai';
 import Unit6ValidationStep from '@cdo/apps/lib/kits/maker/ui/Unit6ValidationStep';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import {Unit6Intention} from '@cdo/apps/lib/kits/maker/util/discountLogic';

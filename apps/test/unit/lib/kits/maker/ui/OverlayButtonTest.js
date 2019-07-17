@@ -1,6 +1,6 @@
 /** @file Test maker overlay button */
 import React from 'react';
-import {expect} from 'chai';
+import {expect} from '../../../../../util/configuredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import OverlayButton from '@cdo/apps/lib/kits/maker/ui/OverlayButton';

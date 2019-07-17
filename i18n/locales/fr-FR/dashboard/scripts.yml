@@ -2931,6 +2931,10 @@ fr:
               name: Boucles et simulations
             Introduction to Arrays:
               name: Introduction sur les Arrays
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Systèmes de numération
         time4csdemo:
           stages:
             Crowdsourcing:

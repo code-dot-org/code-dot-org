@@ -1,6 +1,7 @@
 -# inhibit brakeman warning about unescaped model attribute - comes from static data in database, level.properties does not contain XSS attacks
 - data = brakeman_no_warn(level.properties)
 - data['answers'] ||= []
+- localized_answers = level.localized_property(:answers)
 - contained_mode = local_assigns.fetch :contained_mode, false
 - app = 'multi'
 - use_tight_layout = data['layout'] == "tight" || tight_layout
@@ -20,9 +21,9 @@
 
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
 
-  - if data['questions']
-    - question_text = render_multi_or_match_content(data['questions'][0]['text'], level)
-    .multi-question!= question_text
+  - localized_questions = level.localized_property(:questions)
+  - if localized_questions.any?
+    .multi-question!= render_multi_or_match_content(localized_questions[0]["text"])
 
   - answers_class = 'answers ' + (question_content_blank ? 'question-content-blank' : '')
 
@@ -78,7 +79,7 @@
                 ="#{multi_answer_characters[i]}. "
                 &nbsp;
             %label.item-label{style: "height: #{height}"}
-              != render_multi_or_match_content(answer['text'], level)
+              != render_multi_or_match_content(localized_answers[i]['text'])
           - if use_tight_layout && !force_wrap_layout
             %br/
 
@@ -106,9 +107,9 @@
   - else
     -# When LevelGroup-hosted, with students (or teachers doing PD), dont include answers
     - if contained_mode || include_multi_answers?(standalone)
-      - answers = data['answers'].map {|answer| answer['correct'] || false}
+      - answers = localized_answers.map {|answer| answer['correct'] || false}
 
-    - answers_feedback = data['answers'].map {|answer| answer['feedback']}
+    - answers_feedback = localized_answers.map {|answer| answer['feedback']}
 
   :javascript
     window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new Multi(

@@ -1,5 +1,5 @@
 /** @file Test applab droplet config behavior */
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import {blocks} from '@cdo/apps/applab/dropletConfig';
 
 describe(`Applab droplet configuration`, () => {

@@ -7,127 +7,14 @@ hr-HR:
         mora ponoviti da krug bude dovršen? 180? 360? 500?
       2-3 Artist 2 new: 'Zid ove kuće nije u potpunosti dovršen. Svaka strana je 100,
         a ona nedovršena je samo 50. Dovrši zid. '
-      2-3 Artist 3.4: "Blok Skoči pomiče umjetnika bez crtanja. \nNacrtaj isprekidanu
-        liniju koristeći i blokove za skakanje i blokove za crtanje."
-      2-3 Artist 3new: Crveni šešir je visok 100 piksela. Dovrši crtež crnog šešira
-        koji je 70 piksela niži. Širina crnog šešira je 50 piksela.
       2-3 Artist 4: Pomozi mi dovršiti kuću za ovu mačku.
-      2-3 Artist 6: 'Ova kuća treba krov! Nacrtaj trokut.  Savjet: sve tri strane
-        su iste dužine.'
-      2-3 Artist 7: 'Završi crtanje desne polovice zadnjeg prozora. Svaki kvadratni
-        dio prozora širok je 25 piksela. '
-      2-3 Artist 8: Dovrši crtanje prostorija za svaku životinju tako da podijeliš
-        pravokutnik na dva jednako velika kvadrata. Pravokutnik je širok 200 piksela
-        i visok 100 piksela.
       2-3 Artist 9: Dovrši ovog zmaja
-      2-3 Artist Assessment 1: 'Zadatak: Dovrši crtanje zadnjeg zuba. Širok je 25
-        piksela i visok 25 piksela.'
-      2-3 Artist Debugging 1: Možeš li napraviti da ovaj šešir ima gornji dio dugačak
-        100?
-      2-3 Artist Debugging 10: 'Tipke smjera na mojoj igraćoj konzoli su preuske.
-        Savjet: Napravi da budu 10 piksela šire'
-      2-3 Artist Debugging 11: Pomozi mi dovršiti moju prekrasnu pahuljicu. Koliko
-        puta moram "ponoviti" da je završim?
-      2-3 Artist Debugging 2: 'Kod tri brka koja vidiš je pogrešan. Savjet: svaki
-        brk je dugačak 75 piksela. Popravi ovaj kod da nacrtaš brkove.'
-      2-3 Artist Debugging 3: "Moj čamac ima rupu. \\\r \n\\\r\nŠto treba ispraviti
-        da bi se crte spojile?"
-      2-3 Artist Debugging 5: 'Kod za nogu i stopalo koji vidiš je pogrešan. Savjet:
-        Noga je predugačka, trebaš izbrisati jedan korak (namjerna igra riječima)'
-      2-3 Artist Debugging 6: Izgleda da sjedim na stolici kojoj nedostaje noga. Popravi
-        blokove da nacrtaš drugu nogu.
-      2-3 Artist Debugging 7: Izgleda da se C u riječi Code crta naopačke. Možeš li
-        napraviti da izgleda kao C?
-      2-3 Artist Debugging 8: Moja zvjezdica nije dovršena. Koliko puta trebam ponoviti
-        da je dovršim?
-      2-3 Artist Debugging 9: 'Kod za crtanje stabljike ne neispravan. Savjet: Kut
-        je premalen za 60 stupnjeva'
-      2-3 Artist Debugging Assessment 1: 'Ovaj oblik je premalen. Možeš li ga povećati?
-        Savjet: svaka stranica bi trebala biti 75 piksela duža.'
       2-3 Artist Free Play: Besplatna igra! Nacrtaj što god želiš.
-      2-3 Artist Functions 1: 'Pozdrav. Ja zombi umjetnik. Ja voljeti crtati! Pomozi
-        mi nacrtati kvadratne naočale.  Savjet: most između čaše je kraći od kvadrata
-        duljine 25 piksela.'
-      2-3 Artist Functions 10: Evo dvije funkcije, jedna za crtanje velikog zupčanika
-        i jedna za crtanje malog zupčanika. Koristite ih za crtanje unutar stroja!
-      2-3 Artist Functions 11: Promijenili smo naziv funkcije "nacrtaj kvadrat" u
-        funkciju "nacrtaj šesterokut", ali još uvijek crta samo kvadrate! Možete li
-        izmijeniti "nacrtaj šesterokut" funkciju da crta šesterokute sa stranicom
-        od 50 pixela i zatim je nacrtati pomoću funkcije?
-      2-3 Artist Functions 11.5: Ovdje je ta ista "Nacrtati šesterokut" funkcija.
-        Što ako samo okrenete za 60 stupnjeva kod svakog ponavljanja?
-      2-3 Artist Functions 12: 'Funkcije su odlične za crtanje složenih stvari više
-        puta. Možeš li koristeći naredbu "nacrtaj cvijet" ispuniti ostatak cvjetnjaka?
-        (Pomoć: biljke su udaljene 100 piksela)  '
-      2-3 Artist Functions 2: Funkcije nam omogućuju definiranje novih blokova! Premjestili
-        smo blokove za crtanje kvadrata u funkciju pod nazivom "Crtanje kvadrata".
-        Možeš li nacrtati naočale koristeći funkciju "Crtanje kvadrata"? Kvadrati
-        su udaljeni 75 piksela.
-      2-3 Artist Functions 3: Uredi funkciju tako da duljine stranica kvadrata iznose
-        115 piksela i nacrtaj veće naočale. Kvadrati su sada udaljeni 45 piksela.
-      2-3 Artist Functions 4: Koristi blok "Ponovi" za crtanje ova 3 kvadrata.
-      2-3 Artist Functions 9: Ovdje je funkcija "Pahuljica". Igraj se s njom i stvori
-        zimski prizor! Ovo je slobodan nivo, tako da ne možeš pogriješiti. Uživaj!
-      2-3 Artist Loops New 1: Nacrtaj robotu glavu! Možeš li napraviti kvadrat sa
-        stranicama dužine 100 piksela?
-      2-3 Artist Loops New 10: Sada povežimo nekoliko V-ova zajedno u petlju.
-      2-3 Artist Loops New 11: Ponovo napiši kȏd kao u prethodnom zadatku, ali ovaj
-        put dodaj okret ulijevo za 30 stupnjeva, unutar petlje. Zatim ponovi to 24
-        puta, umjesto 7.
-      2-3 Artist Loops New 12: Nacrtaj dijamant sa stranicama od 100 piksela.
-      2-3 Artist Loops New 14: Igraj se s kodom za dijamant i vidi koje još uzorke
-        možeš napraviti. Pokušaj promijeniti za koliko ćeš se stupnjeva okrenuti i
-        koliko ćeš petlji imati.
       2-3 Artist Loops New 15: Nacrtaj nešto zabavno.
-      2-3 Artist Loops New 2: Evo istog pitanja koje si već riješio/la, no ovaj put
-        trebamo upotrijebiti petlje. Možeš li staviti 'Ponovi' oko početnog koda kako
-        bi dovršio/la robotu glavu?
-      2-3 Artist Loops New 9: Nacrtaj jednostavan V (obje strane duge 50 piksela)
-        da dovršiš strelicu.
-      2-3 Artist Nested Loops 1: Stavi blok 'Ponovi' oko čitavog koda kako bi nacrtao
-        ovaj uzorak.
       2-3 Artist Nested Loops 10: Ponovi ovak kod 12 puta kako bi dovršio uzorak.
-      2-3 Artist Nested Loops 11: Ponovi ovaj kod 4 puta kako bi dovršio uzorak; okreni
-        90 stupnjeva nakon svakog kruga.
       2-3 Artist Nested Loops 12: Ponovi ovaj kod 12 puta kako bi dovršio kovrče.
-      2-3 Artist Nested Loops 2: "Sada ponovi ovaj trokut 6 puta. \\\r \n\\\r\nNakon
-        svakog trokuta morat ćeš zaokrenuti 60 stupnjeva, prije nego kreneš crtati
-        sljedeći."
-      2-3 Artist Nested Loops 4: "Ponovi ovaj dijamant 12 puta da nacrtaš cvijet!\\\r\n\\\r\nPazi:
-        Upotrijebit ćemo isti kut da ponovimo 12 dijamanata kao što smo učinili za
-        12 trokuta. \\\r \nKoliko okret trebaš načiniti nakon svakog oblika?"
-      2-3 Artist Nested Loops 5: "Popuni prozore zgrade koristeći ugniježđene petlje.
-        \\\r\n\\\r \nProzori su dugi 20 piksela te udaljeni jedan od drugoga 20 piksela."
-      2-3 Artist Nested Loops 6: "Ovaj dinosaur ima 8 šiljaka na repu.\\\r \nSvaki
-        šiljak dug je 30 piksela. Ponovi trokut 8 puta, no pripazi da skučiš naprijed
-        nakon svakoga!"
-      2-3 Artist Nested Loops 7: Ponovi trokut u petlji 10 puta da bi nacrtao sunce.
-        Trebat ćeš se pomaknuti i okrenuti nakon svakog trokuta. Koliko se trebaš
-        okrenuti izračunaj tako da podijeliš broj stupnjeva za puni krug s brojem
-        likova koji ti trebaju.
-      2-3 Bee Conditionals 11: "Pitam se što se ondje nalazi!\\\r\n\\\r\nPomozi\nmi
-        letjeti po dvorištu i prikupiti nektar samo iz onih cvjetova koji ga\nimaju. "
-      2-3 Bee Conditionals 12: |-
-        Pomozi mi pronaći sav nektar koristeći
-        čim je moguće manje blokova!
-      2-3 Bee Conditionals 2: "Ja sam gladna pčela! \\\r Pomozi mi prikupiti sav nektar
-        iz cvijeća koristeći najmanji mogući broj blokova."
-      2-3 Bee Conditionals 3: "Pogledaj sav taj nektar! \\\r \\\r Pomozi mi skupiti
-        nektar i proizvesti med koristeći čim manje blokova.  "
-      2-3 Bee Loops 13: 'Procjena: Pokupi sav nektar koristeći što je moguće manje
-        blokova.'
-      2-3 Bee Loops 1A: 'Bok, ja sam pčelica. Možeš li mi pomoći pokupiti nektar s
-        ovog cvijeća? '
-      2-3 Bee Loops 2: Pokupi sav nektar i napravi sav med koristeći što je moguće
-        manje blokova.
       2-3 Bee Loops 2A: Ovaj put upotrijebi petlju da pokupiš sav nektar.
-      2-3 Bee Loops 4A: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \\\r\n\\\r
-        Petlje su ti prijatelji! Upotrijebi nekoliko njih da dovršiš ovaj zadatak
-        koristeći što manje blokova."
       2-3 Maze 10: Vodi me do zelene zloće! (Pazi se TNT-a)
-      2-3 Maze 16 before: Odvedi me do svinje.
-      2-3 Maze 3: Prati stazu i odvedi me do šašave svinje. Zaobiđi TNT ili će perje
-        letjeti na sve strane!
       2-3 Maze 4: Vodi me do zelene zloće! (Pazi se TNT-a)
       2-3 Maze 6: Ostani smiren i pomozi mi pronaći zločestu svinju. U suprotnom mogao
         bih se naljutiti!
@@ -135,17 +22,8 @@ hr-HR:
       2-3 Maze 8: Odvedi me do svinje!
       2-3 Maze 9: Vodi me do zelene zloće! (Pazi se TNT-a)
       2-3 Maze Loops 17: Odvedi me do suncokreta!
-      2-3 Maze Loops 18: Odvedi me do suncokreta!
-      2-3 Maze Loops 19: Odvedi me do suncokreta!
       2-3 Maze Loops 20: Odvedi me do suncokreta!
-      2-3 Maze Loops 21: Odvedi me do suncokreta!
       4-5 Maze 6: Odvedi me do suncokreta!
-      4-5 Maze Conditionals 9: Još jedna vježba s "ako-inače" blokom, možeš li je
-        riješiti iz prvog pokušaja?
-      Course 4 SCFL 1a: Možeš li dovesti Scrata do žira koristeći što je manje blokova
-        moguće?
-      Course 4 SCFL 1b: Možeš li dovesti Scrata do žira koristeći što je manje blokova
-        moguće?
       Crack Random Substitution: Upute
       Crack a Caesar Cipher: Upute
       K-1 Artist Loops 1: Nacrtaj ovu crtu krećući se 4 puta na Istok.
@@ -163,8 +41,6 @@ hr-HR:
       K-1 Maze 3: Pokreni me prema Jugu da dođem do svinje!
       K-1 Maze 4: Pokreni me prema Sjeveru da dođem do svinje!
       K-1 Maze Loops 1: Odvedi me do svinje!
-      K-1 artist 1 level 10: Nacrtaj isprekidanu crtu koristeći blokove za skakanje
-        i za crtanje
       K-1 artist 1 level 9: Nacrtaj ovo koristeći tri crte
       MC HOC 2016 Level 3: "Odlično, pile se pomaklo! Ali tada je stalo. \nU igrama,
         pilići hodaju zauvijek. Koristi 'zauvijek radi' petlju da bi se pilići nastavili

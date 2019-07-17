@@ -5,10 +5,10 @@
     .content
       .column
         %ul.match_questions
-          - level.questions.each do |question|
-            %li{style: "height: #{level.height}px"}!= render_multi_or_match_content(question['text'], level)
+          - level.localized_property(:questions).each do |question|
+            %li{style: "height: #{level.height}px"}!= render_multi_or_match_content(question['text'])
       .column.match_answerdest
         %ul.match_answers
-          - level.answers.each do |answer|
-            %li.answer.answerlist{style: "height: #{level.height}px"}!= render_multi_or_match_content(answer['text'], level)
+          - level.localized_property(:answers).each do |answer|
+            %li.answer.answerlist{style: "height: #{level.height}px"}!= render_multi_or_match_content(answer['text'])
       .clear

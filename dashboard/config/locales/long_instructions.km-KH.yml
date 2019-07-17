@@ -2,176 +2,12 @@
 km-KH:
   data:
     long_instructions:
-      2-3 Artist Debugging 10: "The direction pad on my game controller\nis too narrow.
-        \\\r\n\\\r\nCan you make it wider by 10 pixels?\\\r\n\\\r\nTry running\nthe
-        code first to see what's wrong."
-      2-3 Artist Debugging 11: "My snowflake is falling apart!\\\r\n\\\r\nCan\nyou
-        figure out what's going wrong?"
-      2-3 Artist Debugging 2: "This code for the cat's whiskers is wrong.\n\\\r\n\\\r\nFix
-        this code to draw whiskers that are all the same length."
-      2-3 Artist Debugging 3: "My boat has a hole! \\\r\n\\\r\nWhat do you\nneed to
-        fix to make the ends meet?"
-      2-3 Artist Debugging 5: "The code that we have for the leg and\nfoot is wrong.
-        \\\r\n\\\r\nCan you fix it?"
-      2-3 Artist Debugging 6: "Looks like I'm sitting on a chair that’s\nmissing a
-        leg!\\\r\n\\\r\nEdit the code to draw the last leg."
-      2-3 Artist Debugging 7: "Looks like the C in code is drawn backwards!\\\r\n\\\r\nCan\nyou
-        make it look like a C again?"
-      2-3 Artist Debugging 8: "My teacher says that I should finish what\nI start!\\\r\n\\\r\nHelp
-        me finish my pinwheel. Can you figure out what's wrong?"
-      2-3 Artist Debugging 9: "Something is off!\\\r\n\\\r\nThe code for\nthis stem
-        is wrong. Can you figure out how to get the artist to trace the\nstem the
-        right way?"
-      2-3 Artist Functions 11.5: "Here's that same `draw a hexagon`\nfunction. \\\r\n\\\r\nWhat
-        happens if you loop the main program 6 times, turning\n60 degrees each time
-        you loop?"
-      2-3 Artist Functions 12: "Functions are really great for drawing\ncomplex things
-        multiple times. \\\r\n\\\r\nCan you use the `draw a flower` function\nto fill
-        the rest of the planter box?\\\r\nThe plants are all 100 pixels apart."
-      2-3 Artist Functions 2: "Functions let you define new blocks! \\\r\n\\\r\nWe've\nmoved
-        the blocks needed for drawing a square into a function called `draw\na square`.
-        This time, use the `draw a square` function to create the glasses.\n\\\r\n\\\r\nThe
-        squares are 75 pixels apart."
-      2-3 Artist Functions 3: "Edit the function to draw a square with\na side length
-        of 115 to draw the bigger glasses. \\\r\n\\\r\nThe squares are now\n45 pixels
-        apart."
-      2-3 Artist Loops New 13: "We are going to start you with some code\n(in grey)
-        to make one diamond. \\\r\n\\\r\nLoop the grey code to create a fun\npattern!"
-      2-3 Artist Loops New 2: "Here is the same puzzle that we just solved,\nbut this
-        time, we can only use one `move forward` block and one `turn` block\nthis
-        time.\\\r\n\\\r\nCan you use a `repeat` to solve this puzzle?"
-      2-3 Artist Nested Loops 2: "Now loop the triangle 6 times. \\\r\n\\\r\nAfter\neach
-        triangle, you'll need to turn 60 degrees before drawing the next."
-      2-3 Artist Nested Loops 4: "Loop this diamond 12 times to draw\na flower!\\\r\n\\\r\nNote:
-        We'll use the same angle to loop 12 diamonds as we\ndid for 12 triangles.
-        \ \\\r\nHow much do you need to turn after each shape?"
-      2-3 Artist Nested Loops 5: "Fill in this building's windows using\na nested
-        loop. \\\r\n\\\r\nThe windows are 20 pixels long and 20 pixels apart."
-      2-3 Artist Nested Loops 7: "Loop this triangle 10 times to draw\nthe sun. \\\r\n\\\r\nYou'll
-        need to move and turn after each triangle. \\\r\n\\\r\nYou\ncan figure out
-        how much to turn by dividing the number of degrees in a circle\nby the number
-        of triangles that make it up."
-      2-3 Artist Nested Loops 8: "Now let's add some grass to our picture.\n\\\r\n\\\r\nEach
-        tuft of grass is 50 pixels apart."
-      2-3 Artist Nested Loops 9: "We'll finish this picture by adding\nour flower.
-        \\\r\n\\\r\nLoop the diamond 12 times to draw the flower."
-      2-3 Bee Conditionals 11: "I wonder what's out there!\\\r\n\\\r\nHelp\nme fly
-        around the yard and collect nectar only from the flowers that have\nsome. "
-      2-3 Bee Conditionals 13: "There's a lot happening here!\\\r\n\\\r\nUse\nwhat
-        you've learned to collect all of the nectar and then make the honey."
-      2-3 Bee Conditionals 15: "This stair step pattern should look familiar.  \\\r\n\\\r\nCan\nyou
-        collect nectar only from the flowers that have some, using as few blocks\nas
-        possible?"
-      2-3 Bee Conditionals 3: "Look at all of that nectar!\\\r\n\\\r\nHelp\nme collect
-        the nectar and make the honey using as few blocks as you can.  "
-      2-3 Bee Debugging 3: "Ooh, this one stings!\\\r\n\\\r\nFix the error(s)\nto
-        collect all of the nectar."
-      2-3 Bee Debugging 6: "What a sweet challenge!\\\r\n\\\r\nFix the error(s)\nto
-        collect all of the nectar."
-      2-3 Bee Debugging 9: "\"Bee\" patient with this one!\\\r\n\\\r\nYou\nwill need
-        to fix a couple of things in this program to collect all of the\nnectar and
-        make all of the honey."
-      2-3 Bee Functions 10: "Purple flowers change between either 1 or\n0 nectar each
-        time you run the puzzle.   \\\r\n\\\r\nCreate a function that collects\nnectar
-        only from purple flowers that have nectar."
-      2-3 Bee Functions 2: "Functions are blocks of code that perform\na task.  \\\r\n\\\r\nUse
-        the `get 5` function to get 5 nectars at a time."
-      2-3 Bee Functions 4: "The `move and get nectar` function turns\nthe bee, collects
-        nectar, and then returns the bee to where it started.  \\\r\n\\\r\nUse\nthe
-        function to collect all of the nectar."
-      2-3 Bee Loops 1: "Those flowers look tasty!\\\r\n\\\r\nCollect nectar\nfrom
-        each of the flowers using the fewest blocks possible."
-      2-3 Bee Loops 4A: "How many times can loops help you in this puzzle?  \\\r\n\\\r\nLoops\nare
-        your friend! Use a few of them to complete this puzzle with the fewest\nblocks
-        possible."
-      2-3 Bee Loops 8: "These purple flowers have different amount of\nnectar each
-        time you run the puzzle. \\\r\n\\\r\nUse the `while nectar` loop to\ncollect
-        all of the nectar. \\\r\n\\\r\nThis loop will run as long as the condition\nis
-        true, in this case `nectar > 0`."
-      2-3 Maze Loops 18: "Get me to the sunflower using the fewest blocks\npossible!
-        \ \\\r\n\\\r\nTry using one `repeat` loop inside of another to cut down\non
-        the amount of code you need."
-      4-5 Artist Patterns 1: "Draw this square using a loop.\\\r\n\\\r\nEach\nside
-        is 20 pixels long."
-      4-5 Artist Patterns 12: "If you create another loop like this one,\nbut turn
-        left instead of right, what happens? \\\r\n\\\r\nCan you repeat all of\nthat
-        to draw this wave?"
-      4-5 Artist Patterns 13: "Now let's loop that whole thing four\ntimes to create
-        this picture frame. Watch out for the corners - you can't\njust turn 90 degrees!
-        \\\r\n\\\r\nIf looping a 3 degree turn 60 times makes a\nhalf circle, which
-        of these blocks of code will make an additional quarter\ncircle for the corners?"
-      4-5 Artist Patterns 9: "Now repeat this code 3 times and draw the\nwhole row.
-        \\\r\n\\\r\nEach hexagon is 80 pixels wide from the furthest points\nleft
-        to right."
-      4-5 Bee Conditionals 2: "More clouds! \\\r\n\\\r\nCheck underneath\nevery cloud
-        to see if it is hiding a flower before you get nectar.  \\\r\n\\\r\nRemember:\nNot
-        all clouds hide the same thing!"
-      4-5 Bee Conditionals 5: "There will be either a flower or a honeycomb\nunder
-        each of those clouds!\\\r\n\\\r\nUse the `if/else` block to collect nectar\nif
-        there is a flower.\\\r\nOtherwise, make honey (because there is a honeycomb)."
-      4-5 Bee Conditionals 6: "I am not sure how much nectar this flower\nhas, but
-        I know it has either 1, 2, or 3 nectar. \\\r\n\\\r\nCombine the conditional\nblocks
-        (`if` and/or `if/else`) to only get as much nectar as the flower has.\n\\\r\n\\\r\nRemember,
-        the amount of nectar can change each time you run the puzzle!"
-      4-5 Bee Conditionals 7: "These flowers can have 3, 2, or 1 nectar.\n\\\r\n\\\r\nComplete
-        the `check purple flower` function and use it to collect\nall of the nectar
-        at the flowers."
-      4-5 Bee Conditionals 8: "Write the function for `check flower make\nhoney`.
-        \\\r\n\\\r\nYour function should check if the purple flower has 3, 2,\nor
-        1 nectar and get all of the nectar. \\\r\nThen, move forward and make honey."
-      4-5 Bee Conditionals Assessment 1: "**Assessment:** This cloud\nis either hiding
-        a flower with one nectar or a honeycomb that needs one honey.  \\\r\n\\\r\nComplete\nthe
-        `get nectar or make honey` function, then call it to collect the nectar\nor
-        honey. \\\r"
-      4-5 Bee Debugging 1: "These blocks are really bugging me. \\\r\n\\\r\nCan\nyou
-        fix them?"
-      4-5 Bee Debugging 6: "The purple flower has a different amount\nof nectar each
-        time you run the puzzle. \\\r\n\\\r\nFix the blocks to get all\nof the nectar
-        from the flower each time."
-      4-5 Bee Nested Loops 4: "Collect all of the nectar from each flower\nand make
-        honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. "
-      4-5 Maze 9: "Now we have a new block called `repeat until`.  \\\r\nThis\nwill
-        let us keep looping commands until the zombie gets the sunflower.  \\\r\n\\\r\nUse\nthe
-        new `repeat until` block to solve this puzzle in as few commands as possible."
-      4-5 Maze Conditionals 10: "Can you add just 3 blocks to help the\nzombie solve
-        a more complex maze? \\\r\n\\\r\nIf you do it right, he can walk\nany curvy
-        path no matter the length!"
-      4-5 Maze Conditionals 3: "Use the `if` block to help me decide\nwhen to turn.
-        \\\r"
-      4-5 Maze Conditionals 5: "\"Me want sunflower!\"  \\\r\n\\\r\nUse an\n`if` statement
-        to get the zombie to the sunflower with the fewest number of\nblocks."
-      4-5 Maze Conditionals 6: "\"Eat sunflower!\"\\\r\n\\\r\nUse an `if`\nstatement
-        to get the zombie to the sunflower with the fewest number of blocks."
-      4-5 Maze Conditionals 8: "The `if/else` block checks a condition,\nand then
-        does one thing OR another. \\\r\n\\\r\nUse this new block to get me to\nthe
-        sunflower."
-      4-5 Maze Conditionals 9: "One more practice puzzle with the `if/else`\nblock!\\\r\n\\\r\nTrace
-        it with your finger to see if you can figure it out on\nyour first try."
-      4-5 Nested Loops 3: "Create a sun by nesting the starter code in\nanother loop.\\\r\n\\\r\nTo
-        get this cool design with a hollow center, you'll\nneed to jump forward by
-        the length of the triangle before turning."
-      4-5 Nested Loops 7: "Loop this design 10 times. \\\r\n\\\r\nHow much\ndo you
-        have to turn each time you loop?"
-      4-5 Nested Loops 8: "Loop this shape 6 times. \\\r\n\\\r\nHow much\ndo you have
-        to turn each time you loop? "
-      4-5 While Loops 3: "Use as few blocks as possible to complete this\npuzzle!
-        \ \\\r\n\\\r\nMove me to the pile and remove all the dirt, then move to\nthe
-        hole and fill it completely."
-      4-5 While Loops 4: "Wow, look at that! \\\r\n\\\r\nI don't know how\nmany shovelfuls
-        of dirt this hole needs.  \\\r\nCan you write a program that\nkeeps using
-        the `fill` block until the ground is even?  "
-      Course 4 Play Lab Params 4: "Here's a function called `patrol`.\n\\\r\n\\\r\nEdit
-        `patrol` to move Cat up 400 pixels and then down 400 pixels."
       Function intro Ryan: "**មុខងារ**ឈ្មោះ`build bridge`\nដែលនៅក្នុងកន្លែលសរសេរកូដ។
         កូដទាំងអស់របស់អ្នកដែលត្រូវប្រើសំរាប់ឆ្លងទន្លេត្រូវបានរៀបចំ!\\\r\n\\\r\nចុចលើប្លុកតូចពណ៌បៃតងពីរដងនៅក្នុងកន្លែងសរសេរកូដរបស់អ្នកដើម្បីកែតម្រូវនូវផ្លូវនិងអោយ
         {currentPlayerName} ទៅកាន់គប់ភ្លើងថ្មក្រហម [redstone_torch]។"
       Function intro Ryan_2019: "**មុខងារ**ឈ្មោះ`build bridge`\nដែលនៅក្នុងកន្លែលសរសេរកូដ។
         កូដទាំងអស់របស់អ្នកដែលត្រូវប្រើសំរាប់ឆ្លងទន្លេត្រូវបានរៀបចំ!\\\r\n\\\r\nចុចលើប្លុកតូចពណ៌បៃតងពីរដងនៅក្នុងកន្លែងសរសេរកូដរបស់អ្នកដើម្បីកែតម្រូវនូវផ្លូវនិងអោយ
         {currentPlayerName} ទៅកាន់គប់ភ្លើងថ្មក្រហម [redstone_torch]។"
-      K-1 Maze Loops 11: "Get me to the pig!  \\\r\nThe `repeat` loop will\nmake this
-        easier."
-      K-1 Maze Loops 12: "Get me to the pig!  \\\r\nThe `repeat` loop will\nmake this
-        easier."
       MC_HOC_2017_01_RETRY: "ទ្វានេះត្រូបានបិទ តែជំនួយការនៅទីនេះដើម្បីជួយ!\\\r\n\\\r\nទាញប្លុក`move
         forward`មួយដែលនៅក្រោមប្លុក`when\nrun` នៅក្នុងនៅក្នុងកន្លែងសរសេរកូដ ដើម្បីឲជំនួយការសង្កត់បន្ទះក្តារ
         [PressurePlate_Up] រួចចុចប៊ូតុង \"Run\" ហើយប្រើប្រាស់គ្រាប់ចុចមានសញ្ញាព្រួញដើម្បីចាកចេញពីផ្ទះហើយប្រមូល**ប្រអប់**
@@ -231,18 +67,6 @@ km-KH:
       MC_HOC_2017_FP20x20_2019: |-
         **លេងដោយសេរី**អ្នកអាចធ្វើអ្វីក៏បាន!
         ប្រើកូដរបស់ជំនួយការក្នុងការជួយអ្នកក្នុងការស្វែងយល់ពីពិភពលោកនេះ។
-      NEW Course 4 Artist Functions 3: "Here is a new type of Block.\nIt is called
-        a `function` block. Click \"edit\" then fill it with the code\nfor drawing
-        a square with 100 pixel sides. \\\r\n\\\r\nWhen you're done editing\nthe function,
-        click \"Close\" to go back to your program."
-      NEW Course 4 Artist Vars 4: "Let's try it again! \\\r\n\\\r\nCan you\nset the
-        `length` variable to 60 to make this cool design with hexagons?"
-      NEW Course 4 Artist Vars 6: "Draw this pattern of pentagons with\n100 pixel
-        sides by setting the right value for `length` and dropping the `length`\nvariable
-        into all of the the correct places. \\\r\n\\\r\nSee how you only have\nto
-        set the value for `length` once, and the code uses the right value everywhere?"
-      courseA_collector_preLoops1: "This is Laurel the Adventurer! \\\r\n\\\r\nPress\n\"Run\"
-        to see her walk up to the treasure and grab it."
       courseB_playlab_events6: "Help your knight get all of the flags!\\\r\n\\\r\nTo\ndo
         this, you'll need to add events to help the knight move up, down, left,\nand
         right."
@@ -304,10 +128,6 @@ km-KH:
         I might get angry!\"_\\\r\n\\\r\nWhen you have several blocks\nin a row, try
         moving them inside of a <xml><block type=\"controls_repeat\"><title\nname=\"TIMES\">???</title></block></xml>
         loop.  This will do the same thing\nwith less code!"
-      courseD_scrat_ramp2: "Drag a <xml><block type=\"controls_repeat\"><title\nname=\"TIMES\">7</title></block></xml>
-        block out of the toolbox and attach\nit to the <xml><block type=\"when_run\"/></xml>
-        event.\\\r\n\\\r\nPlace the <xml><block\ntype=\"maze_moveForward\"/></xml>
-        block inside the loop to finish your code."
       courseD_scrat_ramp3: "_\"This\npig is ruffling my feathers.\"_\\\r\n\\\r\nThere
         is one extra block that is going\nto cause the bird to crash.  \\\r\nThrow
         it away by dragging it back to the\ntoolbox."
@@ -315,22 +135,12 @@ km-KH:
         TNT or feathers will fly!"
       courseD_scrat_ramp5: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
         the TNT."
-      courseD_scrat_ramp6: "Great!  Now let's make a square\nusing Artist!  The blocks
-        for artist are a little different than other puzzles,\nbut the idea is the
-        same.\\\r\n\\_\\_\\_\\\r\nEach side of the square has a length of\n200 pixels,
-        and you will need to turn 90 degrees to make each angle."
       courseD_scrat_ramp7: "_\"It's time to get angry!\"_\\\r\n\\\r\n**Challenge:**\nUse
         what you've learned to get the bird to the pig!"
-      courseD_scrat_ramp8: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
-        The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at
-        each corner."
       courseE_artist_ramp8_2: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
         The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at
         each corner."
       courseE_artist_ramp9: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
-        The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at
-        each corner."
-      courseE_artist_ramp9_2: "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n#####
         The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at
         each corner."
       courseF_artist_variables10: "Here's your code from the\nlast puzzle.  Try editing

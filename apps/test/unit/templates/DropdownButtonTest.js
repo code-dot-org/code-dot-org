@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from '../../util/configuredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
@@ -14,7 +14,7 @@ const defaultProps = {
 };
 
 describe('DropdownButton', () => {
-  beforeEach(() => clickSpy.reset());
+  beforeEach(() => clickSpy.resetHistory());
 
   it('is initially just a button', () => {
     const wrapper = shallow(<DropdownButton {...defaultProps} />);

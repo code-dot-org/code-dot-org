@@ -1,546 +1,1760 @@
 ---
-sq:
+sq-AL:
   data:
-    external:
-      Begin planning your project:
-        description here: përshkrimi këtu
-        title: titull
-      Begin planning your project_2018:
-        description here: përshkrimi këtu
-      Begin planning your project_2018_2019:
-        description here: përshkrimi këtu
-      CSD U2 Design Project:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 Design Project_2018:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 Design Project_2018_2019:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 L1 Overview:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 L2 Overview:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 L3 Overview:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 L4 Overview:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 L5 Overview:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 L6 Overview:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 Lesson 6 Overview:
-        description here: përshkrimi këtu
-      CSD U2 expand project:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 expand project_2018:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 expand project_2018_2019:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U2 project guide:
-        description here: përshkrimi këtu
-      CSD U2 project guide_2018:
-        description here: përshkrimi këtu
-      CSD U2 project guide_2018_2019:
-        description here: përshkrimi këtu
-      CSD U3 Card Examples_2018:
-        description here: përshkrimi këtu
-      CSD U3 Card Examples_2018_2019:
-        description here: përshkrimi këtu
-      CSD U3 combining rep:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U3 combining rep_2018:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U3 combining rep_2018_2019:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U3 game intro:
-        description here: përshkrimi këtu
-      CSD U3 game intro_2018:
-        description here: përshkrimi këtu
-      CSD U3 game intro_2018_2019:
-        description here: përshkrimi këtu
-      CSD U3 platform intro:
-        description here: përshkrimi këtu
-      CSD U3 platform intro_2018:
-        description here: përshkrimi këtu
-      CSD U3 platform intro_2018_2019:
-        description here: përshkrimi këtu
-      CSD U5 Encryption 1:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U5 Encryption 1_2018:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U5 Encryption 1_2018_2019:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U5 Encryption 2:
-        description here: përshkrimi këtu
-      CSD U5 Encryption 2_2018:
-        description here: përshkrimi këtu
-      CSD U5 Encryption 2_2018_2019:
-        description here: përshkrimi këtu
-      CSD U5 L13 SFLP Interpreting Data:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U5 crosstab warmup:
-        description here: përshkrimi këtu
-      CSD U5 crosstab warmup_2018:
-        description here: përshkrimi këtu
-      CSD U5 crosstab warmup_2018_2019:
-        description here: përshkrimi këtu
-      CSD U5 data visualization:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U5 data visualization_2018:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U5 data visualization_2018_2019:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U5 student record:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U5 student record_2018:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U5 student record_2018_2019:
-        description here: përshkrimi këtu
-        title: titull
-      CSD U6 LED create intro:
-        description here: përshkrimi këtu
-      CSD U6 LED create intro_2018:
-        description here: përshkrimi këtu
-      CSD U6 LED create intro_2018_2019:
-        description here: përshkrimi këtu
-      CSD U6 final intro:
-        description here: përshkrimi këtu
-      CSD U6 final intro_2018:
-        description here: përshkrimi këtu
-      CSD U6 final intro_2018_2019:
-        description here: përshkrimi këtu
-      Internet Simulator Setup:
-        description here: përshkrimi këtu
-      Internet Simulator Setup 2:
-        description here: përshkrimi këtu
-        title: titull
-      Internet Simulator Setup 3:
-        description here: përshkrimi këtu
-      Multi-Screen Apps:
-        description here: përshkrimi këtu
-        title: titull
-      New Challenge Introduction:
-        description here: përshkrimi këtu
-        title: titull
-      OPD-K5 Stage3aGo:
-        description here: përshkrimi këtu
-        title: titull
-      Prepare for your presentation:
-        description here: përshkrimi këtu
-        title: titull
-      'Technique: Frequency Analysis':
-        description here: përshkrimi këtu
-      Terminology Recap:
-        description here: përshkrimi këtu
-    match:
-      2-3 Big Event Match 1:
-        Match the button combination to the dance moves.: Lidh kombinimin e figurave
-          me lëvizjet e kërcimit.
-        Matching: Lidhje
-      2-3 Binary Match 1:
-        "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>O</strong>"
-        "<strong>P</strong>": "<strong>P</strong>"
-        "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: Lidhje
-        Use the key to match each code to its letter: Përdor çelsin të koordinosh
-          çdo kod me shkronjat e tij
-      2-3 Graph Paper Match 1:
-        Match the grid to the program.: Lidhni rrjetin me programin.
-        Matching: Lidhje
-      2-3 Maze Match 2:
-        Instructions: Udhëzimet
-        Match the puzzles to the blocks: Koordino puzzle-at tek blloqet
-        Maze Match: Koordinimi i Labirintit
-      2-3 artist loops match 1:
-        Match the loop to the shape: Lidh ciklin me formën
-      2-3 artist match 1:
-        Artist Matching: Koordinimi i Artistit
-        Match the shape with the blocks that complete it.: Koordino format me blloqet
-          që e përfundojnë atë.
-      2-3 maze match 1:
-        Match the puzzles to the blocks: Koordino puzzle-at tek blloqet
-        Maze Match One: Koordinimi i labirintit me një
-      4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>2)</h4>"
-        "<h4>3)</h4>": "<h4>3)</h4>"
-        "<h4>4)</h4>": "<h4>4)</h4>"
-        "<h4>Add Player 1 roll to total score</h4>": "<h4>Shto rrotullimin e Lojtarit
-          1 në pikët totale</h4>"
-        "<h4>Compare player scores to see who wins</h4>": "<h4>Krahaso pikët e lojtarit
-          për të parë kush fiton</h4>"
-        "<h4>Player 1 rolls die</h4>": "<h4>Lojtari 1 rrotullohet vdes</h4>"
-        "<h4>Set Player 1 score to 0</h4>": "<h4>Vendos Lojtarin 1 të shënojë te 0</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Koordino
-          hapat në lojën Dice Race në rendin që duhen shfaqur në algoritëm.
-        Matching: Lidhje
-      4-5 Computational Thinking Match 1:
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Rrotat/anët: 2<br/>Dritaret/anët:
-          0</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Rrotat/anët: 2<br/>Dritaret/anët:
-          1</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Rrotat/anët: 2<br/>Dritaret/anët:
-          6</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Rrotat/anët: 2<br/>Dritaret/anët:
-          2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Secila
-          nga këto automjete ka qënë ndarë në pjesë më të vogla. Bashko çdo mjet me
-          atë të listës së ndarë.
-        Matching: Lidhje
-      4-5 Suncatchers Match 1:
-        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
-        "<h4>STACK</h4>": "<h4>STACK</h4>"
-        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
-        "<h4>STAR</h4>": "<h4>STAR</h4>"
-        Match each program to the word it makes, using the provided group of skills.: Koordino
-          çdo program me funksionin që kryen, duke përdorur grupin e njohurive.
-        Matching: Lidhje
-      4-5 maze match 1:
-        Instructions: Udhëzimet
-        Match the puzzles to the blocks: Koordino puzzle-at tek blloqet
-        Maze Match: Koordinimi i Labirintit
-      K-1 Artist 2 Match 2:
-        Match the shapes based on type.: Koordino format bazuar në llojë.
-        Matching: Lidhje
-      K-1 Bee Loops Match 1:
-        Match the blocks: Lidh blloqet
-        Matching: Lidhje
-      K-1 Big Event Match 1:
-        Match the button combination to the dance moves.: Lidh kombinimin e figurave
-          me lëvizjet e kërcimit.
-        Matching: Lidhje
-      K-1 Maze Match 1:
-        Instructions: Udhëzimet
-        Match the puzzles and blocks: Koordino puzzle-at dhe blloqet
-        Matching: Lidhje
-    multi:
+    dsls:
       2-3 Algorithms Multi 1:
-        Choose an algorithm for the image provided.: Zgjidh një algoritëm për figurën
-          që jepet.
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Fillo
-          me një katror<br/>Vendos një paralelogram mbi katrorin<br/>Vendos një trekëndësh
-          djathtas paralelogramit
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Fillo
-          me një katror<br/>Vendos një trekëndësh mbi katrorin<br/>Vendos një trekëndësh
-          poshtë katrorit
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Fillo
-          me një katror<br/>Vendos një trekendësh poshtë katrorit<br/>Vendos një paralelogram
-          djathtas trekëndesh
-        0: "? Fillo me një katror<br/>Vendos një trekëndësh djathtas katrorit<br/>Vendos
-          një paralelogram poshtë katrorit<br/>Vendos trekëndorin djathtas paralelogramit"
-        1: ": Fillo me një katror<br/>Vendos një trekëndor djathtas katrorit<br/>Vendos
-          një paralelogram poshtë katrorit<br/>Vendos trekëndor djathtas paralelogramit"
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Zgjidh një algoritëm për figurën që jepet.
+        answers:
+        - text: Fillo me një katror<br/>Vendos një trekëndësh mbi katrorin<br/>Vendos
+            një trekëndësh poshtë katrorit
+        - {}
+        - text: Fillo me një katror<br/>Vendos një paralelogram mbi katrorin<br/>Vendos
+            një trekëndësh djathtas paralelogramit
+        - text: Fillo me një katror<br/>Vendos një trekendësh poshtë katrorit<br/>Vendos
+            një paralelogram djathtas trekëndesh
       2-3 Algorithms Multi 2:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Fillo
-          me një trekëndësh<br/>Vendos një katror poshtë trekëndëshit<br/>Vendos një
-          trekëndësh tjetër poshtë katrorit
-        Which image does <em>not</em> follow this algorithm?: Cila figurë <em>nuk</em>
-          e ndjek këtë algoritëm?
+        title: Zgjedhje e Shumëfishtë
+        content1: Fillo me një trekëndësh<br/>Vendos një katror poshtë trekëndëshit<br/>Vendos
+          një trekëndësh tjetër poshtë katrorit
+        questions:
+        - text: Cila figurë <em>nuk</em> e ndjek këtë algoritëm?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Lidhje
+        content2: Lidh kombinimin e figurave me lëvizjet e kërcimit.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Lidhje
+        content2: Përdor çelsin të koordinosh çdo kod me shkronjat e tij
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 Conditionals Multi 1:
-        According to the rules of the game, which set of cards is scored correctly?: Duke
-          u bazuar në rregullat e lojës, cili grup kartash është shënuar në mënyrë
-          të saktë?
-        Multiple Choice: Zgjedhje e Shumëfishtë
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Duke u bazuar në rregullat e lojës, cili grup kartash është shënuar
+            në mënyrë të saktë?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Si do ta thjeshtësoje këtë
-          sekuencë me cikle?
-        Multiple Choice: Zgjedhje e Shumëfishtë
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Si do ta thjeshtësoje këtë sekuencë me cikle?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Lidhje
+        content1: Lidhni rrjetin me programin.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       2-3 Graph Paper Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which program makes this image?: Cili program e bën këtë figurë?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cili program e bën këtë figurë?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: Koordinimi i Labirintit
+        content1: Koordino puzzle-at tek blloqet
+        pre_title: Udhëzimet
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Zgjedhja e Shumëfishtë e Labirintit
+        title: Zgjedhja e Shumëfishtë e Labirintit
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 Relay Programming Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       2-3 Relay Programming Multi 2:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which image-program combo does not contain mistakes?: Cili kombinim figurë-program
-          nuk ka gabime?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cili kombinim figurë-program nuk ka gabime?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: Funksionet e Artistit Një Zgjedhje me
-          Shumë Mundësi
-        Pick the correct blocks to draw this image using the given functions: Zgjidh
-          blloqet e sakta për të vizatuar këtë imazh duke përdorur funksionet e dhënë
+        title: Funksionet e Artistit Një Zgjedhje me Shumë Mundësi
+        questions:
+        - text: Zgjidh blloqet e sakta për të vizatuar këtë imazh duke përdorur funksionet
+            e dhënë
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Lidh ciklin me formën
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: Ciklet e Artistit Zgjedhje me Shumë Mundësi
-        Which shape is made by this loop?: Cila formë bëhet nga ky cikël?
+        title: Ciklet e Artistit Zgjedhje me Shumë Mundësi
+        questions:
+        - text: Cila formë bëhet nga ky cikël?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: Ciklet e Artistit Zgjedhje me Shumë Mundësi
-        Which shape is made by this program?: Cila formë bëhet nga ky program?
+        title: Ciklet e Artistit Zgjedhje me Shumë Mundësi
+        questions:
+        - text: Cila formë bëhet nga ky program?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: Koordinimi i Artistit
+        content1: Koordino format me blloqet që e përfundojnë atë.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 bee conditionals multi 1:
-        Which comparison below is true?: Cili nga krahasimet e mëposhtme është i vërtetë?
+        questions:
+        - text: Cili nga krahasimet e mëposhtme është i vërtetë?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 bee conditionals multi 3:
-        Choose the best blocks.: Zgjidh blloqet më të mira.
+        questions:
+        - text: Zgjidh blloqet më të mira.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: Ciklet e Bletëve Një Zgjedhje me Shumë Mundësi
-        Which blocks collect all of the nectar?: Cilat bllloqe e mbledhin të gjithë
-          nektarin?
+        title: Ciklet e Bletëve Një Zgjedhje me Shumë Mundësi
+        questions:
+        - text: Cilat bllloqe e mbledhin të gjithë nektarin?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Koordinimi i labirintit me një
+        content1: Koordino puzzle-at tek blloqet
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       2-3 maze multi 1:
-        Maze Multiple Choice One: Maze me Zgjedhje Të Shumëfishtë Një
-        Which set of blocks is the correct answer?: Cili grup blloqesh është i saktë?
+        title: Maze me Zgjedhje Të Shumëfishtë Një
+        questions:
+        - text: Cili grup blloqesh është i saktë?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Lidhje
+        content1: Koordino hapat në lojën Dice Race në rendin që duhen shfaqur në
+          algoritëm.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Vendos Lojtarin 1 të shënojë te 0</h4>"
+        - text: "<h4>Lojtari 1 rrotullohet vdes</h4>"
+        - text: "<h4>Shto rrotullimin e Lojtarit 1 në pikët totale</h4>"
+        - text: "<h4>Krahaso pikët e lojtarit për të parë kush fiton</h4>"
       4-5 Algorithms Multi 1:
-        Baking cookies: Biskota të pjekura
-        Banana: Banane
-        Brushing your teeth: Larja e dhëmbëve
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Shopping from a grocery list: Pazar nga një listë ushqimesh
-        Which one of these items is hardest to describe an algorithm for?: Cili nga
-          këto produkte është më i vështiri për shprehur në një algoritëm?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cili nga këto produkte është më i vështiri për shprehur në një algoritëm?
+        answers:
+        - text: Larja e dhëmbëve
+        - text: Biskota të pjekura
+        - text: Pazar nga një listë ushqimesh
+        - text: Banane
+      4-5 Computational Thinking Match 1:
+        title: Lidhje
+        content1: Secila nga këto automjete ka qënë ndarë në pjesë më të vogla. Bashko
+          çdo mjet me atë të listës së ndarë.
+        questions:
+        - text: "<h3>Rrotat/anët: 2<br/>Dritaret/anët: 0</h3>"
+        - text: "<h3>Rrotat/anët: 2<br/>Dritaret/anët: 1</h3>"
+        - text: "<h3>Rrotat/anët: 2<br/>Dritaret/anët: 6</h3>"
+        - text: "<h3>Rrotat/anët: 2<br/>Dritaret/anët: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene është një qytet ______.
-        0: "? Këtu jepen 3 fjali. Cila nga templatet më poshtë përmbledh saktë në
-          mënyrë që të treja fjalitë të përshtatin të njëjtin model si template?"
-        1: ": Këtu jepen tre fjali. Cila nga template-t e mëposhtme përmbledh saktë,
-          në mënyrë që të treja fjalitë të përshtatin të njëjtin model si template?"
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Seattle _____ a _____ _____.: Seattle____ një ___ ____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          është një qytet i madh. <br/> Eugene është një qytet mesatar <br/> Hillview
-          është qytet i vogël.
-        _____ is _____ a _____.: ____ është ____ një ____.
-        _____ is a _____ city.: ____është një _____qytet.
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Seattle është një qytet i madh. <br/> Eugene është një qytet mesatar
+            <br/> Hillview është qytet i vogël.
+        answers:
+        - text: Seattle____ një ___ ____.
+        - text: ____është një _____qytet.
+        - text: ____ është ____ një ____.
+        - text: Eugene është një qytet ______.
       4-5 Crowdsourcing Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which of these pictures best represents crowdsourcing?: Cila nga këto figura
-          paraqet më mirë crowdsourcing?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cila nga këto figura paraqet më mirë crowdsourcing?
+        answers:
+        - {}
+        - {}
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Krehja e flokëve
-        Cleaning your room: Pastrimi i dhomës
-        Eating your dessert: Ngrënja e embëlsirës
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Washing your face: Larja e fytyrës
-        Which one of these activities would be best for practicing crowdsourcing?: Cila
-          nga këto aktivitete do të ishte më mirë për të praktikuar crowdsourcing?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cila nga këto aktivitete do të ishte më mirë për të praktikuar crowdsourcing?
+        answers:
+        - text: Pastrimi i dhomës
+        - text: Ngrënja e embëlsirës
+        - text: Krehja e flokëve
+        - text: Larja e fytyrës
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which piece of information listed below is okay to share on the internet?: Cili
-          nga informacionet e listuara më poshtë nuk ka problem për ta shpërndarë
-          në internet?
-        Your address: Adresa juaj
-        Your birthday: Ditëlindja juaj
-        Your favorite food: Ushqimi juaj i preferuar
-        Your parent's credit card number: Numri i kartës së kreditit të prindërve
-          tuaj
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cili nga informacionet e listuara më poshtë nuk ka problem për ta
+            shpërndarë në internet?
+        answers:
+        - text: Ditëlindja juaj
+        - text: Ushqimi juaj i preferuar
+        - text: Adresa juaj
+        - text: Numri i kartës së kreditit të prindërve tuaj
       4-5 Internet Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Kur
-          përpiqesh te rregjistrohesh në code.org, cila adresë IP të çon në DNS-në
-          më të preferuar?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Kur përpiqesh te rregjistrohesh në code.org, cila adresë IP të çon
+            në DNS-në më të preferuar?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       4-5 Internet Multi 2:
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Nëse
-          DNS të ka dërguar ty tek faqja me adresë IP 100.42.50.110, në cilin website
-          je?
-        Multiple Choice: Zgjedhje e Shumëfishtë
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Nëse DNS të ka dërguar ty tek faqja me adresë IP 100.42.50.110, në
+            cilin website je?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       4-5 Songwriting Multi 1:
-        0: "? Miza është në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë,<br/>Shoo,
-          fluturo, shoo, <br/>Miza është në dhallë, <br/>Shoo. fluturo, shoo, <br/>Kalo
-          te Lou im, i dashur."
-        1: ": Miza është brenda në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është
-          brenda në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë, <br/>Shoo,
-          fluturo, shoo, <br/>Kalo te Lou im, i dashuri im."
-        Lou, Lou, skip to my Lou,: Lou, lou, kalo te Lou im,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo
-          te Lou im, <br/>Kalo te Lou im, i dashur.
-        2: "? Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou,
-          kalo te Lou im, <br/>Kalo te Lou im, i dashur.<br/><br/><p> Miza është në
-          dhallë, <br/> Shoo. fluturo, shoo,"
-        3: ": Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou,
-          kalo te Lou im, <br/>Kalo te Lou im, i dashur.<br/><br/><p> Miza është në
-          dhallë, <br/> Shoo. fluturo, shoo,"
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        4: ë? Cila është pjesa më e madhe e kësaj kënge që ta përcaktosh si refren,
-          në mënyrë që refreni të përsëritet ekzaktësisht çdo herë që thërritet?
-        5: ": Cila është pjesa më e madhe e kësaj kënge që ta përcaktosh si refren,
-          në mënyrë që refreni të përsëritet ekzaktësisht çdo herë që thërritet?"
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - {}
+        answers:
+        - text: Lou, lou, kalo te Lou im,
+        - text: Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou,
+            Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Lidhje
+        content1: Koordino çdo program me funksionin që kryen, duke përdorur grupin
+          e njohurive.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
       4-5 Suncatchers Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Cili
-          nga programet e mëposhtme <em>nuk</em> bën sekuencën e saktë si Programi
-          1?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cili nga programet e mëposhtme <em>nuk</em> bën sekuencën e saktë
+            si Programi 1?
+        answers:
+        - {}
+        - {}
+        - {}
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: Ciklet e Artistit Zgjedhje me Shumë Mundësi
-        Which blocks will create the design?: Cilat blloqe do të krijonin këtë dizajn?
+        title: Ciklet e Artistit Zgjedhje me Shumë Mundësi
+        questions:
+        - text: Cilat blloqe do të krijonin këtë dizajn?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       4-5 artist multi 1:
-        Artist Multiple Choice: Zgjedhjet e Shumëfishta të Artistit
-        Which blocks draw a rectangle with a perimeter of 100?: Cili bllok vizaton
-          një drejtkëndësh me perimetër 100?
+        title: Zgjedhjet e Shumëfishta të Artistit
+        questions:
+        - text: Cili bllok vizaton një drejtkëndësh me perimetër 100?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       4-5 artist multi 2:
-        Artist Multiple Choice: Zgjedhjet e Shumëfishta të Artistit
-        Which drawing is symmetric?: Cili vizatim është simetrik?
+        title: Zgjedhjet e Shumëfishta të Artistit
+        questions:
+        - text: Cili vizatim është simetrik?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       4-5 bee conditionals multi 1:
-        0: "? Një lule lejla mund të ketë 3, 2 ose 1 nektarë, por ti nuk e di se sa.
-          Cili bllok kontrollon në mënyrë të saktë dhe mbledh gjithë nektarin nga
-          lulja lejla?"
-        1: ": Një lule lejla mund të ketë 3, 2 ose 1 nektarë, por ti nuk e di se sa.
-          Cili bllok kontrollon në mënyrë të saktë dhe mbledh gjithë nektarin nga
-          lulja lejla?"
-        Bee Conditionals Multiple Choice: Kushtet Bletë me Zgjedhje të Shumëfishtë
-        Choose the best blocks.: Zgjidh blloqet më të mira.
+        title: Kushtet Bletë me Zgjedhje të Shumëfishtë
+        questions:
+        - text: Zgjidh blloqet më të mira.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: Bletë Rregullim Gabimesh Zgjedhje të Shumëfishtë
-        Which version of the function will work?: Cili version i funksionit do funksionojë?
+        title: Bletë Rregullim Gabimesh Zgjedhje të Shumëfishtë
+        questions:
+        - text: Cili version i funksionit do funksionojë?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: Ciklet Bletë me Mundësi të Shumëfishtë Zgjedhjeje
-        Which blocks will solve the puzzle?: Cili nga blloqet do zgjidhë formuesin?
+        title: Ciklet Bletë me Mundësi të Shumëfishtë Zgjedhjeje
+        questions:
+        - text: Cili nga blloqet do zgjidhë formuesin?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Kushtet Maze me Zgjedhje të Shumëfishtë
-        Which blocks solve the puzzle?: Cili bllok zgjidh puzzle-in?
+        title: Kushtet Maze me Zgjedhje të Shumëfishtë
+        questions:
+        - text: Cili bllok zgjidh puzzle-in?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Koordinimi i Labirintit
+        content1: Koordino puzzle-at tek blloqet
+        pre_title: Udhëzimet
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       4-5 maze multi 1:
-        Maze Multiple Choice: Zgjedhja e Shumëfishtë e Labirintit
-        Which blocks solve the puzzle?: Cili bllok zgjidh puzzle-in?
+        title: Zgjedhja e Shumëfishtë e Labirintit
+        questions:
+        - text: Cili bllok zgjidh puzzle-in?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      Begin planning your project:
+        title: titull
+        content1: përshkrimi këtu
+      Begin planning your project_2018:
+        content1: përshkrimi këtu
+      Begin planning your project_2018_2019:
+        content1: përshkrimi këtu
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 Design Project:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 Design Project_2018:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 Design Project_2018_2019:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 L2 Overview:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 L3 Overview:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 L4 Overview:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 L5 Overview:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 L6 Overview:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 Lesson 6 Overview:
+        content1: përshkrimi këtu
+      CSD U2 expand project:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 expand project_2018:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 expand project_2018_2019:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide:
+        content1: përshkrimi këtu
+      CSD U2 project guide_2018:
+        content1: përshkrimi këtu
+      CSD U2 project guide_2018_2019:
+        content1: përshkrimi këtu
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC:
         title: titull
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC_2018:
         title: titull
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC_2018_2019:
         title: titull
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Card Examples_2018:
+        content1: përshkrimi këtu
+      CSD U3 Card Examples_2018_2019:
+        content1: përshkrimi këtu
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 combining rep:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U3 combining rep_2018:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U3 combining rep_2018_2019:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro:
+        content1: përshkrimi këtu
+      CSD U3 game intro_2018:
+        content1: përshkrimi këtu
+      CSD U3 game intro_2018_2019:
+        content1: përshkrimi këtu
+      CSD U3 platform intro:
+        content1: përshkrimi këtu
+      CSD U3 platform intro_2018:
+        content1: përshkrimi këtu
+      CSD U3 platform intro_2018_2019:
+        content1: përshkrimi këtu
+      CSD U5 Encryption 1:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U5 Encryption 1_2018:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U5 Encryption 1_2018_2019:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U5 Encryption 2:
+        content1: përshkrimi këtu
+      CSD U5 Encryption 2_2018:
+        content1: përshkrimi këtu
+      CSD U5 Encryption 2_2018_2019:
+        content1: përshkrimi këtu
+      CSD U5 L13 SFLP Interpreting Data:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U5 crosstab warmup:
+        content1: përshkrimi këtu
+      CSD U5 crosstab warmup_2018:
+        content1: përshkrimi këtu
+      CSD U5 crosstab warmup_2018_2019:
+        content1: përshkrimi këtu
+      CSD U5 data visualization:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U5 data visualization_2018:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U5 data visualization_2018_2019:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U5 student record:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U5 student record_2018:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U5 student record_2018_2019:
+        title: titull
+        content1: përshkrimi këtu
+      CSD U6 LED create intro:
+        content1: përshkrimi këtu
+      CSD U6 LED create intro_2018:
+        content1: përshkrimi këtu
+      CSD U6 LED create intro_2018_2019:
+        content1: përshkrimi këtu
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 final intro:
+        content1: përshkrimi këtu
+      CSD U6 final intro_2018:
+        content1: përshkrimi këtu
+      CSD U6 final intro_2018_2019:
+        content1: përshkrimi këtu
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      Internet Simulator Setup:
+        content1: përshkrimi këtu
+      Internet Simulator Setup 2:
+        title: titull
+        content1: përshkrimi këtu
+      Internet Simulator Setup 3:
+        content1: përshkrimi këtu
       K-1 Artist 1 Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which blocks solve this puzzle?: Cili bllok zgjidh këtë puzzle?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cili bllok zgjidh këtë puzzle?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       K-1 Artist 1 Multi 2:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which blocks draw the square?: Cili nga blloqet vizatoi katrorin?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cili nga blloqet vizatoi katrorin?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Lidhje
+        content2: Koordino format bazuar në llojë.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       K-1 Bee 1 Multi 1:
-        How many nectars is this?: Sa nektarë ka këtu?
-        Multiple Choice: Zgjedhje e Shumëfishtë
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Sa nektarë ka këtu?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       K-1 Bee 1 Multi 2:
-        How many nectars is this?: Sa nektarë ka këtu?
-        Multiple Choice: Zgjedhje e Shumëfishtë
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Sa nektarë ka këtu?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: Lidhje
+        content2: Lidh blloqet
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Lidhje
+        content2: Lidh kombinimin e figurave me lëvizjet e kërcimit.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
       K-1 Digital Footprint Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Cila
-          kafshë ka gjurmët dixhitale, që e bëjnë atë <të fortë>më të pasigurtë</të
-          fortë>?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cila kafshë ka gjurmët dixhitale, që e bëjnë atë <të fortë>më të pasigurtë</të
+            fortë>?
+        answers:
+        - {}
+        - {}
+        - {}
       K-1 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Si do ta thjeshtësoje këtë
-          sekuencë me cikle?
-        Multiple Choice: Zgjedhje e Shumëfishtë
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Si do ta thjeshtësoje këtë sekuencë me cikle?
+        answers:
+        - {}
+        - {}
+        - {}
       K-1 Happy Maps Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which arrow gets the Flurb to the treasure?: Cila shigjetë çon Flurb-in tek
-          thesari?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cila shigjetë çon Flurb-in tek thesari?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       K-1 Keep it Private Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which information should you <strong>not</strong> share online?: Cilin informacion
-          <strong>nuk</strong> duhet shpërndarë online?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cilin informacion <strong>nuk</strong> duhet shpërndarë online?
+        answers:
+        - {}
+        - {}
+        - {}
       K-1 Maze Debugging Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which choice should be the final block?: Cila zgjedhje duhet të jetë blloku
-          përfundimtar?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cila zgjedhje duhet të jetë blloku përfundimtar?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       K-1 Maze Loops Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which repeat block is the same?: Cili bllok "repeat" është i njëjtë?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cili bllok "repeat" është i njëjtë?
+        answers:
+        - {}
+        - {}
+        - {}
       K-1 Maze Loops Multi 2:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Pick the correct repeat block.: Zgjidh bllokun e duhur repeat.
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Zgjidh bllokun e duhur repeat.
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: Lidhje
+        content2: Koordino puzzle-at dhe blloqet
+        pre_title: Udhëzimet
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       K-1 Maze Multiple Choice 2:
-        Maze: Labirint
-        Which answer solves this level?: Cila përgjijge zgjidh këtë nivel?
+        title: Labirint
+        questions:
+        - text: Cila përgjijge zgjidh këtë nivel?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       K-1 Move It Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which algorithm gets the Flurb to the flowers?: Cili algoritëm çon Flurb-in
-          tek lulet?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cili algoritëm çon Flurb-in tek lulet?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       K-1 Plant a Seed Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which step should go at the beginning of this algorithm?: Çfarë hapi duhet
-          të bëhet në fillim të këtij algoritmi?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Çfarë hapi duhet të bëhet në fillim të këtij algoritmi?
+        answers:
+        - {}
+        - {}
+        - {}
       K-1 Plant a Seed Multi 2:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which step should fill in the blank for this algorithm?: Cilin hap duhet të
-          mbushi vendin bosh për këtë algoritëm?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cilin hap duhet të mbushi vendin bosh për këtë algoritëm?
+        answers:
+        - {}
+        - {}
+        - {}
       K-1 Word Search Multi 1:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        Which blocks spell "MOVE"?: Cili bllok gërmëzon "LËVIZ"?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cili bllok gërmëzon "LËVIZ"?
+        answers:
+        - {}
+        - {}
+        - {}
       K-1 Word Search Multi 3:
-        Multiple Choice: Zgjedhje e Shumëfishtë
-        SET: VENDOS
-        SOUTH: JUG
-        SQUARE: KATROR
-        Which word is spelled?: Cila fjalë është gërmëzuar?
+        title: Zgjedhje e Shumëfishtë
+        questions:
+        - text: Cila fjalë është gërmëzuar?
+        answers:
+        - text: VENDOS
+        - text: KATROR
+        - text: JUG
+      Multi-Screen Apps:
+        title: titull
+        content1: përshkrimi këtu
+      New Challenge Introduction:
+        title: titull
+        content1: përshkrimi këtu
+      OPD-K5 Stage3aGo:
+        title: titull
+        content1: përshkrimi këtu
+      Prepare for your presentation:
+        title: titull
+        content1: përshkrimi këtu
+      'Technique: Frequency Analysis':
+        content1: përshkrimi këtu
+      Terminology Recap:
+        content1: përshkrimi këtu
+      behaviors 1 predict:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      behaviors 4 predict:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_ramp13:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseD_multi_scrat_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_prediction_artistFunction1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_bee_variables_8a_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      coursee_prediction_artistfunction2:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}

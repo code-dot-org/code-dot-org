@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import {spy, stub} from 'sinon';
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import color from '@cdo/apps/util/color';

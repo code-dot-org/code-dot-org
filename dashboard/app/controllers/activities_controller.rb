@@ -109,11 +109,6 @@ class ActivitiesController < ApplicationController
                     client_state.lines
                   end
 
-    milestone_response_user_level = nil
-    if @new_level_completed.is_a? UserLevel
-      milestone_response_user_level = @new_level_completed
-    end
-
     render json: milestone_response(
       script_level: @script_level,
       level: @level,
@@ -124,7 +119,7 @@ class ActivitiesController < ApplicationController
       activity: @activity,
       new_level_completed: @new_level_completed,
       share_failure: share_failure,
-      user_level: milestone_response_user_level
+      user_level: @user_level
     )
 
     if solved
@@ -168,45 +163,33 @@ class ActivitiesController < ApplicationController
       level_source_id: @level_source.try(:id)
     }
 
-    # Save the activity and user_level synchronously if the level might be saved
-    # to the gallery (for which the activity.id and user_level.id is required).
-    # This is true for levels auto-saved to the gallery, free play levels, and
-    # "impressive" levels.
-    synchronous_save = solved &&
-        (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
-            @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
-
     allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
     if allow_activity_writes
-      @activity =
-        if synchronous_save
-          Activity.new(attributes).tap(&:atomic_save!)
-        else
-          Activity.create_async!(attributes)
-        end
+      @activity = Activity.new(attributes).tap(&:atomic_save!)
     end
     if @script_level
-      @new_level_completed =
-        if synchronous_save
-          User.track_level_progress_sync(
-            user_id: current_user.id,
-            level_id: @level.id,
-            script_id: @script_level.script_id,
-            new_result: test_result,
-            submitted: params[:submitted] == 'true',
-            level_source_id: @level_source.try(:id),
-            pairing_user_ids: pairing_user_ids,
-          )
-        else
-          current_user.track_level_progress_async(
-            script_level: @script_level,
-            new_result: test_result,
-            submitted: params[:submitted] == "true",
-            level_source_id: @level_source.try(:id),
-            level: @level,
-            pairing_user_ids: pairing_user_ids
-          )
-        end
+      @user_level, @new_level_completed = User.track_level_progress(
+        user_id: current_user.id,
+        level_id: @level.id,
+        script_id: @script_level.script_id,
+        new_result: test_result,
+        submitted: params[:submitted] == 'true',
+        level_source_id: @level_source.try(:id),
+        pairing_user_ids: pairing_user_ids,
+      )
+      # Make sure we don't log when @script_level is a multi-page assessment
+      # and @level is a multi level.
+      is_sublevel = !@script_level.levels.include?(@level)
+      if @script_level.assessment && @level.is_a?(Multi) && !is_sublevel
+        AssessmentActivity.create(
+          user_id: current_user.id,
+          level_id: @level.id,
+          script_id: @script_level.script.id,
+          level_source_id: @level_source&.id,
+          test_result: test_result,
+          attempt: params[:attempt]
+        )
+      end
     end
 
     passed = ActivityConstants.passing?(test_result)
@@ -221,7 +204,7 @@ class ActivitiesController < ApplicationController
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(
         user: current_user,
-        user_level_id: @new_level_completed.try(:id),
+        user_level_id: @user_level.try(:id),
         level_source_id: @level_source_image.level_source_id,
         autosaved: true
       )

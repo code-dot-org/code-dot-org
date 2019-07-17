@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import {allowConsoleErrors} from '../../../util/testUtils';
 import sinon from 'sinon';
 

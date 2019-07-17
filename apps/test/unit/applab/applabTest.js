@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {assert, expect} from 'chai';
+import {assert, expect} from '../../util/configuredChai';
 import project from '@cdo/apps/code-studio/initApp/project';
 import i18n from '@cdo/apps/code-studio/i18n';
 import commonMsg from '@cdo/locale';

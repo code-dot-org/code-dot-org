@@ -24,8 +24,6 @@ is-IS:
       2-3 Artist 4:
         2-3_Artist_4_a: Til að ljúka húsinu þurfum við bara að teikna ferning!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Til að búa til þessi litlu horn þarft þú að snúa _meira_
-          í hvert sinn en þú gerðir með ferninginn.   '
         2-3_Artist_6_b: Þar sem ég sný nú þegar til hægri, er auðveldast að byrja
           með því að fara áfram og nota svo vinstri snúninga til að búa til þríhyrninginn.
         2-3_Artist_6_c: Hver hlið þríhyrningsins hefur sömu lengd og hlið á ferningnum...
@@ -39,8 +37,6 @@ is-IS:
       2-3 Artist 9:
         2-3_Artist_9_a: Þessi tígull er í raun bara ferningur á hliðinni
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_a: Mundu að þú vilt _breikka_ stjórnborðið um 10 díla,
-          svo þú verður að gæta þess að láta 10 **bætast við** þá tölu sem þú breytir.
         2-3_Artist_Debugging_10_b: "**Hér er hið besta mál að prófa sig áfram!**  \n\nByrjaðu
           á að breyta einni tölu í einu.   \n\nHvaða tölur gera hvað?  \n\nEf þú þú
           ruglast á þessu, skaltu bara smella á \"Byrja aftur\" og kóðinn verður endurstilltur."
@@ -53,13 +49,6 @@ is-IS:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Hvað gerist ef þú lætur listamanninn færa sig eða
           hoppa aftur á bak eftir að hann hefur teiknað fyrstu línuna?
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: |-
-          Hve oft var formið mitt endurtekið?
-
-          Hve oft _ætti_ formið að vera endurtekið?
-
-          Hvar getur þú breytt því í forritinu?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Listamaðurinn þarf að snúa 60 gráðum lengra til
           vinstri áður en hann byrjar að teikna!
@@ -90,49 +79,6 @@ is-IS:
         2-3_Artist_Functions_4_a: Listamaðurinn þarf að snúa um 120 gráður á milli
           ferninga til að teikna þetta mynstur.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_a: |-
-          Mundu að kóðinn úr síðustu þraut var:
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">8</title>
-          <statement name="DO">
-          <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">45</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
         2-3_Artist_Loops_New_11_b: Nýi snúningurinn ætti að bætast við **enda** kóðans
           innan lykkjunnar.
       2-3 Artist Loops New 12:
@@ -146,9 +92,6 @@ is-IS:
         2-3_Artist_Loops_New_13_a: "Í lok hvers tíguls snýr listamaðurinn þegar í
           rétta átt til að byrja á þeim næsta. \n\nÞess vegna þurfum við ekki að bæta
           við öðrum `snúa til vinstri` kubbi áður en við teiknum næsta."
-        2-3_Artist_Loops_New_13_b: "Til að teikna hvern tígul þarf listamaðurinn að:
-          \n\n-   færa sig\n-   snúa til hægri 120 gráður\n-   færa sig\n-   snúa
-          til hægri 60 gráður \n\nOg gera þetta allt aftur!"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Listamaðurinn þarf að snúa 45 gráður til hægri áður
           en hann byrjar að teikna.
@@ -179,11 +122,6 @@ is-IS:
           að vera? Prófaðu að nota sömu aðferð á rauða blómið og fjólubláa blómið!
         2-3_Bee_Conditionals_14_b: Ef rauða blómið væri fjólublátt, gætir þú þá fundið
           út hvernig má nota aðra `endurtaka` lykkju til að stytta kóðann?
-        2-3_Bee_Conditionals_14_c: "Prófaðu að skipta verkefninu upp í tvo aðskilda
-          hluta:  \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.
-          \ Safna blómasafa 3 sinnum\n\n2.  Fara áfram 5 sinnum\n\n3.  Athuga hvort
-          það er blómasafi, og safna honum ef svo er\n\n4.  Snúa til vinstri\n\n5.
-          \ Búa til hunang \n\n6.  Fara áfram einu sinni\n\n7.  Búa til tvo hunang"
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Mundu: Bara fjólublá blóm hafa annað hvort 0 eða
           1 af blómasafa og það getur breyst í hvert skipti sem þú keyrir forritið.'
@@ -299,11 +237,6 @@ is-IS:
       4-5 Artist 4:
         4-5_Artist_4_a: "Það eru 360 gráður í hring! \n\nÞú þarft að endurtaka þennan
           kóða svona oft (og snúa um 1 gráðu í einu) áður en hringurinn er heill!"
-      4-5 Artist 5:
-        4-5_Artist_5_a: |-
-          Það er góð aðferð að prófa sig áfram, en þú getur líka leyst þrautina með því að deila 90 gráðu horninu í þriðjunga.
-
-          **90 / 3 = **\_****
       4-5 Artist 7:
         4-5_Artist_7_a: 'Hvert er minnsta hornið? Í Hvað er hornið sem listamaðurinn
           snýr í? '
@@ -311,13 +244,7 @@ is-IS:
         4-5_Artist_8_a: "Löngu hliðarnar eru 240 dílar hvor. Það þýðir að stuttu hliðarnar
           2 hljóta að vera samtals:\n\n**800 - 240 - 240 = 320**\n\nHvað er **320/2**
           ? "
-        4-5_Artist_8_b: "Hér eru tvær leiðir til að gera þessa mynd!: \n\n-   Teikna
-          tvo rétthyrninga sem eru **120** langir og **160** háir, með eina sameiginlega
-          hlið\n\n-   Teikna einn rétthyrning sem er **240** langur og **160** hár,
-          og bæta við línu í miðjunni."
       4-5 Artist 9:
-        4-5_Artist_9_a: 'Þegar sagt er að þríhyrningur sé jafnhliða, þýðir það að
-          allar hliðar og horn eru eins. '
         4-5_Artist_9_b: Þú þarft að teikna þrjá jafnstóra þríhyrninga. Ekki gleyma
           að hoppa á nýjan stað eftir hvern.
       4-5 Artist Assessment 1:
@@ -409,63 +336,8 @@ is-IS:
         Course_4_Artist_12_b: 'Formið er næstum það sama og í síðustu þraut nema hvað
           hálfi sexhyrningurinn er aðeins stærri. '
         Course_4_Artist_12_c: "1.  Fyrstu þrjár línurnar eru 60 díla langar og þú
-          þarft að snúa um 60 gráður. \n2.  Næstu tvær línur eru 80 díla langar og
-          þú þarft að snúa um 120 gráður "
-        Course_4_Artist_12_d: |-
-          **Lausn:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#843179</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">6</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">60</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">60</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">80</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">120</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
+          þarft að snúa um 60 gráður. \n\n2.  Næstu tvær línur eru 80 díla langar
+          og þú þarft að snúa um 120 gráður"
       Course 4 Artist 6:
         Course_4_Artist_6_a: Það eru 3 þríhyrningar innan 360 gráðu snúningsins...hve
           oft gengur 3 upp í 360?
@@ -492,7 +364,7 @@ is-IS:
         Course_4_Artist_Binary_Free_Play_2b_d: |-
           **Lausn:**
 
-          ![solution](https://images.code.org/b282dd6324910b7d604e24182cbbccbb-image-1469641477135.png)
+          <xml><block type="when_run" deletable="false" movable="false"><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">1</title></block></value><value name="TO"><block type="math_number"><title name="NUM">8</title></block></value><value name="BY"><block type="math_number"><title name="NUM">1</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_arithmetic" inline="true"><title name="OP">MINUS</title><value name="A"><block type="math_number"><title name="NUM">16</title></block></value><value name="B"><block type="math_arithmetic" inline="true"><title name="OP">MULTIPLY</title><value name="A"><block type="variables_get"><title name="VAR">counter</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">0</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement></block></next></block></next></block></statement><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">8</title></block></value><value name="TO"><block type="math_number"><title name="NUM">1</title></block></value><value name="BY"><block type="math_number"><title name="NUM">1</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_arithmetic" inline="true"><title name="OP">MINUS</title><value name="A"><block type="math_number"><title name="NUM">16</title></block></value><value name="B"><block type="math_arithmetic" inline="true"><title name="OP">MULTIPLY</title><value name="A"><block type="variables_get"><title name="VAR">counter</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">0</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></xml>
       Course 4 Artist For Loops 11:
         Course_4_Artist_For_Loops_11_a: "Snúningshornið breytist fyrir hvert form!
           \n\nNotaðu reikningskubbinn og settu í hann 360 deilt með fjölda hliða á
@@ -555,72 +427,6 @@ is-IS:
           en bættu við auka `snúa hægri` um 3 gráður innan í `endurtaka` lykkjunni.
         Course_4_Artist_Functions_Inspiration_b: Prófaðu að snúa um meira en 90 gráður
           utan við `endurtaka` lykkjuna, en samt innan í `frá` lykkjunni.
-        Course_4_Artist_Functions_Inspiration_c: |-
-          **Lausn:**
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">14</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a square 20"></mutation>
-          <next>
-          <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">20</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">3</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">100</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 Artist Functions challenge:
         Course_4_Artist_Functions_challenge_a: Eitt af því sem hjálpar að skilja notkun
           falla er að greina hverjar þarf að nota og hverjar ekki.
@@ -641,174 +447,174 @@ is-IS:
           **Lausn:**
 
           <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#843179</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">length</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">length</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">length</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">length</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#843179</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false">
+                      <title name="VAR">sides</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">4</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="variables_set" inline="false">
+                          <title name="VAR">length</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number">
+                                  <title name="NUM">200</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get">
+                                  <title name="VAR">sides</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="variables_get">
+                                  <title name="VAR">sides</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="controls_repeat_ext" inline="true">
+                                  <value name="TIMES">
+                                    <block type="variables_get">
+                                      <title name="VAR">sides</title>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="controls_repeat_ext" inline="true">
+                                      <value name="TIMES">
+                                        <block type="variables_get">
+                                          <title name="VAR">sides</title>
+                                        </block>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="draw_move" inline="true">
+                                          <title name="DIR">moveForward</title>
+                                          <value name="VALUE">
+                                            <block type="variables_get">
+                                              <title name="VAR">length</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="draw_turn" inline="true">
+                                              <title name="DIR">turnRight</title>
+                                              <value name="VALUE">
+                                                <block type="math_arithmetic" inline="true">
+                                                  <title name="OP">DIVIDE</title>
+                                                  <value name="A">
+                                                    <block type="math_number">
+                                                      <title name="NUM">360</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">sides</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="jump" inline="true">
+                                          <title name="DIR">jumpForward</title>
+                                          <value name="VALUE">
+                                            <block type="math_arithmetic" inline="true">
+                                              <title name="OP">DIVIDE</title>
+                                              <value name="A">
+                                                <block type="variables_get">
+                                                  <title name="VAR">length</title>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="math_number">
+                                                  <title name="NUM">2</title>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="draw_turn" inline="true">
+                                              <title name="DIR">turnLeft</title>
+                                              <value name="VALUE">
+                                                <block type="math_arithmetic" inline="true">
+                                                  <title name="OP">DIVIDE</title>
+                                                  <value name="A">
+                                                    <block type="math_number">
+                                                      <title name="NUM">360</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">sides</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="jump" inline="true">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn" inline="true">
+                                          <title name="DIR">turnRight</title>
+                                          <value name="VALUE">
+                                            <block type="math_arithmetic" inline="true">
+                                              <title name="OP">DIVIDE</title>
+                                              <value name="A">
+                                                <block type="math_number">
+                                                  <title name="NUM">360</title>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="variables_get">
+                                                  <title name="VAR">sides</title>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
           </xml>
       Course 4 Artist Vars 13:
         Course_4_Artist_Vars_13_a: Þú þarft tvær `endurtaka` lykkjur (aðra innan í
@@ -867,27 +673,311 @@ is-IS:
         Course_4_SCF_1_e: |-
           **Lausn:**
 
-          ![Solution Blocks](https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn">
+                    <mutation name="draw a line of hexagons"></mutation>
+                      <next>
+                        <block type="procedures_callnoreturn">
+                        <mutation name="shift down/forward"></mutation>
+                          <next>
+                            <block type="procedures_callnoreturn">
+                            <mutation name="draw a line of hexagons"></mutation>
+                              <next>
+                                <block type="procedures_callnoreturn">
+                                <mutation name="shift down/backward"></mutation>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+            <block type="procedures_defnoreturn">
+            <mutation></mutation>
+              <title name="NAME">draw a hexagon</title>
+              <statement name="STACK">
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">6</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">40</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">60</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+            <block type="procedures_defnoreturn">
+            <mutation></mutation>
+              <title name="NAME">shift down/backward</title>
+              <statement name="STACK">
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">60</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="jump" inline="true">
+                      <title name="DIR">jumpForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">40</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">60</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="jump" inline="true">
+                              <title name="DIR">jumpBackward</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">440</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+            <block type="procedures_defnoreturn">
+            <mutation></mutation>
+              <title name="NAME">draw a line of hexagons</title>
+              <statement name="STACK">
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn">
+                    <mutation name="draw a hexagon"></mutation>
+                      <next>
+                        <block type="jump" inline="true">
+                          <title name="DIR">jumpForward</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">120</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+            <block type="procedures_defnoreturn">
+            <mutation></mutation>
+              <title name="NAME">shift down/forward</title>
+              <statement name="STACK">
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">60</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="jump" inline="true">
+                      <title name="DIR">jumpForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">40</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">60</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="jump" inline="true">
+                              <title name="DIR">jumpBackward</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">320</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </xml>
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: Mundu eftir föllunum frá 16. stigi.
-        Course_4_SCF_1a_b: "Líttu á þessa slóð sem aðalleiðina:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
         Course_4_SCF_1a_c: Þú ættir að íhuga að nota `frá` lykkju. Ekki fyrir þrepin
           heldur sem stika fyrir fallið.
-        Course_4_SCF_1a_d: |-
-          **Lausn:**
-
-          ![Solution Blocks](https://images.code.org/aa5a636a1d072e1449b481973ff27337-image-1469727008929.png)
       Course 4 SCF 1b:
         Course_4_SCF_1b_a: "Taktu eftir að þar sem fengist er við hunang er lögunin
           svipuð. \n\nHér gæti hentað að nota fall!"
-        Course_4_SCF_1b_b: "Sjáðu þessa hugmynd um hvaða leið býflugan gæti farið:
+        Course_4_SCF_1b_b: "Kíktu á þessu hugmynd að því hvernig býflugan gæti hreyfst:
           \ \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
         Course_4_SCF_1b_c: Þú ættir að íhuga að nota `frá` lykkju fyrir vegalengdina
           sem býflugan ferðast.
         Course_4_SCF_1b_d: |-
           **Lausn:**
 
-          ![Solution Blocks](https://images.code.org/15ef56cd19a1efd510527345f077d6eb-image-1469726894398.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_for" inline="true">
+                  <title name="VAR">counter</title>
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">4</title>
+                    </block>
+                  </value>
+                  <value name="BY">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn">
+                    <mutation name="make honey up and over"></mutation>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="maze_move">
+                                  <title name="DIR">moveForward</title>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <next>
+                                    <block type="controls_repeat_ext" inline="true">
+                                      <value name="TIMES">
+                                        <block type="variables_get">
+                                          <title name="VAR">counter</title>
+                                        </block>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="maze_move">
+                                          <title name="DIR">moveForward</title>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+            <block type="procedures_defnoreturn" editable="false" usercreated="true">
+            <mutation></mutation>
+              <title name="NAME">make honey up and over</title>
+              <statement name="STACK">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="maze_honey">
+                              <next>
+                                <block type="maze_honey">
+                                  <next>
+                                    <block type="maze_move">
+                                      <title name="DIR">moveBackward</title>
+                                      <next>
+                                        <block type="maze_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <next>
+                                            <block type="maze_move">
+                                              <title name="DIR">moveBackward</title>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </xml>
       Course 4 SCF 2:
         Course_4_SCF_2_a: Hver átthyrningur er með 40 díla hliðar.
         Course_4_SCF_2_b: Það er 136 díla hopp á milli átthyrninganna á sömu láréttu
@@ -903,7 +993,172 @@ is-IS:
         Course_4_SCF_2_e: |-
           **Lausn:**
 
-          ![Solution Blocks](https://images.code.org/de5a99b0fb4c079504ff7cca9a249f02-image-1469727175091.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn" inline="false">
+                      <mutation name="draw octagons">
+                      <arg name="numOctagons"></arg>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="math_number">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="procedures_callnoreturn">
+                        <mutation name="shift down"></mutation>
+                          <next>
+                            <block type="procedures_callnoreturn" inline="false">
+                              <mutation name="draw octagons">
+                              <arg name="numOctagons"></arg>
+                              </mutation>
+                              <value name="ARG0">
+                                <block type="math_number">
+                                  <title name="NUM">3</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="procedures_callnoreturn">
+                                <mutation name="shift down"></mutation>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="procedures_callnoreturn" inline="false">
+                      <mutation name="draw octagons">
+                      <arg name="numOctagons"></arg>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="math_number">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+            <block type="procedures_defnoreturn" editable="false">
+              <mutation>
+              <arg name="numOctagons"></arg>
+              </mutation>
+              <title name="NAME">draw octagons</title>
+              <statement name="STACK">
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="parameters_get">
+                      <title name="VAR">numOctagons</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn">
+                    <mutation name="draw an octagon"></mutation>
+                      <next>
+                        <block type="jump" inline="true">
+                          <title name="DIR">jumpForward</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">136</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+            <block type="procedures_defnoreturn" editable="false">
+            <mutation></mutation>
+              <title name="NAME">draw an octagon</title>
+              <statement name="STACK">
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">8</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">40</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">45</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+            <block type="procedures_defnoreturn" editable="false">
+            <mutation></mutation>
+              <title name="NAME">shift down</title>
+              <statement name="STACK">
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">45</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="jump" inline="true">
+                      <title name="DIR">jumpForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">96</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">45</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="jump" inline="true">
+                              <title name="DIR">jumpBackward</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">408</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </xml>
       Course 4 SCF 3:
         Course_4_SCF_3_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         Course_4_SCF_3_b: 'Þetta er röð af átthyrningum með hliðar sem eru `teljari`
@@ -913,10 +1168,6 @@ is-IS:
         Course_4_SCF_3_d: 'Ekki gleyma að snúa um 22,5 gráður í lok hverrar umferðar. '
         Course_4_SCF_3_e: Lit hvers átthyrnings og breidd pennans er stjórnað af breytunni
           `teljari`.
-        Course_4_SCF_3_f: |-
-          **Lausn:**
-
-          ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       Course 4 SCFL 1:
         Course_4_SCFL_1_a: "Skoðaðu þennan valkost varðandi hreyfingu:   \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         Course_4_SCFL_1_b: 'Prófaðu að nota tvær `frá` lykkjur: Aðra til að klifra
@@ -1068,14 +1319,145 @@ is-IS:
         Course_4_SCFL_1a_d: |-
           **Lausn:**
 
-          ![Solution Blocks\\t](https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_for" inline="true">
+                  <title name="VAR">counter</title>
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">7</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                  <value name="BY">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="controls_repeat_ext" inline="true">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="maze_moveForward"/>
+                              </statement>
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <next>
+                                    <block type="controls_repeat_ext" inline="true">
+                                      <value name="TIMES">
+                                        <block type="math_number">
+                                          <title name="NUM">2</title>
+                                        </block>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="maze_moveForward"/>
+                                      </statement>
+                                      <next>
+                                        <block type="maze_turn">
+                                          <title name="DIR">turnLeft</title>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 SCFL 1b:
         Course_4_SCFL_1b_a: Prófaðu að nota `frá` lykkju.
         Course_4_SCFL_1b_b: "Skoðaðu þennan valkost varðandi hreyfingu:   \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         Course_4_SCFL_1b_c: |-
           **Lausn:**
 
-          ![](https://images.code.org/349a0baf93e00a679cf7ed348f8309b4-image-1469642354856.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_for" inline="true">
+                  <title name="VAR">counter</title>
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="BY">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="controls_repeat_ext" inline="true">
+                      <value name="TIMES">
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="maze_moveForward"/>
+                              </statement>
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnRight</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 SCFL 2:
         Course_4_SCFL_2_a: "Skoðaðu þennan valkost varðandi hreyfingu:   \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         Course_4_SCFL_2_b: Taktu eftir að það eru þrír staðir í hverri umferð þessarar
@@ -1085,7 +1467,121 @@ is-IS:
         Course_4_SCFL_2_d: |-
           **Lausn:**
 
-          ![Solution Blocks](https://images.code.org/df47aa475c36d0c1664c2fdb16b5613c-image-1469726516185.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_for" inline="true">
+                  <title name="VAR">counter</title>
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">4</title>
+                    </block>
+                  </value>
+                  <value name="BY">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="controls_repeat_ext" inline="true">
+                          <value name="TIMES">
+                            <block type="variables_get">
+                              <title name="VAR">counter</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="maze_nectar"/>
+                          </statement>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
+                              <next>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_moveForward">
+                                      <next>
+                                        <block type="controls_repeat_ext" inline="true">
+                                          <value name="TIMES">
+                                            <block type="math_arithmetic" inline="true">
+                                              <title name="OP">MULTIPLY</title>
+                                              <value name="A">
+                                                <block type="variables_get">
+                                                  <title name="VAR">counter</title>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="math_number">
+                                                  <title name="NUM">3</title>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO">
+                                            <block type="maze_honey"/>
+                                          </statement>
+                                          <next>
+                                            <block type="maze_turn">
+                                              <title name="DIR">turnLeft</title>
+                                              <next>
+                                                <block type="maze_moveForward">
+                                                  <next>
+                                                    <block type="maze_moveForward">
+                                                      <next>
+                                                        <block type="maze_turn">
+                                                          <title name="DIR">turnRight</title>
+                                                          <next>
+                                                            <block type="controls_repeat_ext" inline="true">
+                                                              <value name="TIMES">
+                                                                <block type="math_arithmetic" inline="true">
+                                                                  <title name="OP">POWER</title>
+                                                                  <value name="A">
+                                                                    <block type="math_number">
+                                                                      <title name="NUM">2</title>
+                                                                    </block>
+                                                                  </value>
+                                                                  <value name="B">
+                                                                    <block type="variables_get">
+                                                                      <title name="VAR">counter</title>
+                                                                    </block>
+                                                                  </value>
+                                                                </block>
+                                                              </value>
+                                                              <statement name="DO">
+                                                                <block type="maze_nectar"/>
+                                                              </statement>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 SCFL 3:
         Course_4_SCFL_3_a: Breidd pennans er 1. Fyrsti ferningurinn hefur 50 díla
           hliðar og hver ferningur eftir það er 50 dílum breiðari en sá á undan.
@@ -1235,7 +1731,107 @@ is-IS:
         Course_4_SCFL_4_d: |-
           **Lausn:**
 
-          ![Solution Blocks](https://images.code.org/b85604648076fa7adfc7a30be41d13fa-image-1469726651617.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_width" inline="false">
+                  <value name="WIDTH">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_for_counter" inline="true">
+                    <mutation counter="counter"></mutation>
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">200</title>
+                        </block>
+                      </value>
+                      <value name="BY">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_colour" inline="true" id="draw-color">
+                          <value name="COLOUR">
+                            <block type="colour_rgb" inline="false">
+                              <value name="RED">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <value name="GREEN">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">MINUS</title>
+                                  <value name="A">
+                                    <block type="math_number">
+                                      <title name="NUM">255</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="variables_get">
+                                      <title name="VAR">counter</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="BLUE">
+                                <block type="math_number">
+                                  <title name="NUM">255</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="math_number">
+                                  <title name="NUM">4</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="draw_move" inline="true">
+                                  <title name="DIR">moveForward</title>
+                                  <value name="VALUE">
+                                    <block type="variables_get">
+                                      <title name="VAR">counter</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnRight</title>
+                                      <title name="VALUE">90</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="draw_turn" inline="true">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">15</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 SCFL 6:
         Course_4_SCFL_6_a: Litabreytingunni er stjórnað með `stilla lit með rauðu,
           grænu, bláu` kubbnum. Rautt hefur alltaf gildið 255, grænt er alltaf `teljari`
@@ -1262,7 +1858,213 @@ is-IS:
         Course_4_SCFL_7_e: |-
           **Lausn:**
 
-          ![Solution Blocks](https://images.code.org/96adbffef5520417927b6129875e6125-image-1469726787490.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="alpha" inline="true" id="alpha">
+                  <value name="VALUE">
+                    <block type="math_number_dropdown">
+                      <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">20</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_for_counter" inline="true">
+                    <mutation counter="counter"></mutation>
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">200</title>
+                        </block>
+                      </value>
+                      <value name="BY">
+                        <block type="math_number">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_width" inline="false">
+                          <value name="WIDTH">
+                            <block type="variables_get">
+                              <title name="VAR">counter</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_colour" inline="true" id="draw-color">
+                              <value name="COLOUR">
+                                <block type="colour_rgb" inline="false">
+                                  <value name="RED">
+                                    <block type="variables_get">
+                                      <title name="VAR">counter</title>
+                                    </block>
+                                  </value>
+                                  <value name="GREEN">
+                                    <block type="math_arithmetic" inline="true">
+                                      <title name="OP">MINUS</title>
+                                      <value name="A">
+                                        <block type="math_number">
+                                          <title name="NUM">255</title>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="variables_get">
+                                          <title name="VAR">counter</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="BLUE">
+                                    <block type="math_number">
+                                      <title name="NUM">255</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_move" inline="true">
+                                  <title name="DIR">moveForward</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">5</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_turn" inline="true">
+                                      <title name="DIR">turnLeft</title>
+                                      <value name="VALUE">
+                                        <block type="math_arithmetic" inline="true">
+                                          <title name="OP">DIVIDE</title>
+                                          <value name="A">
+                                            <block type="math_number">
+                                              <title name="NUM">360</title>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="variables_get">
+                                              <title name="VAR">counter</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">225</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_for_counter" inline="true">
+                            <mutation counter="counter"></mutation>
+                              <value name="FROM">
+                                <block type="math_number">
+                                  <title name="NUM">200</title>
+                                </block>
+                              </value>
+                              <value name="TO">
+                                <block type="math_number">
+                                  <title name="NUM">5</title>
+                                </block>
+                              </value>
+                              <value name="BY">
+                                <block type="math_number">
+                                  <title name="NUM">2</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="draw_width" inline="false">
+                                  <value name="WIDTH">
+                                    <block type="variables_get">
+                                      <title name="VAR">counter</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_colour" inline="true" id="draw-color">
+                                      <value name="COLOUR">
+                                        <block type="colour_rgb" inline="false">
+                                          <value name="RED">
+                                            <block type="variables_get">
+                                              <title name="VAR">counter</title>
+                                            </block>
+                                          </value>
+                                          <value name="GREEN">
+                                            <block type="math_arithmetic" inline="true">
+                                              <title name="OP">MINUS</title>
+                                              <value name="A">
+                                                <block type="math_number">
+                                                  <title name="NUM">255</title>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="variables_get">
+                                                  <title name="VAR">counter</title>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <value name="BLUE">
+                                            <block type="math_number">
+                                              <title name="NUM">255</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_move" inline="true">
+                                          <title name="DIR">moveForward</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">5</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="draw_turn" inline="true">
+                                              <title name="DIR">turnRight</title>
+                                              <value name="VALUE">
+                                                <block type="math_arithmetic" inline="true">
+                                                  <title name="OP">DIVIDE</title>
+                                                  <value name="A">
+                                                    <block type="math_number">
+                                                      <title name="NUM">360</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">counter</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 SCV 1:
         Course_4_SCV_1_a: 'Breytur eru hjálplegar því þú getur bætt við þær í hverri
           umferð lykkjunnar. '
@@ -1272,13 +2074,7 @@ is-IS:
         Course_4_SCV_1_c: Með því að nota breytur fyrir `hliðar` og `lengd` verður
           kóðinn einfaldari því þá má endurtaka sama kóðann margsinnis í stað þess
           að búa til nýjan kóða fyrir hverja hliðar- og lengdartölu.
-        Course_4_SCV_1_d: |-
-          **Lausn:**
-
-          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       Course 4 SCV 2:
-        Course_4_SCV_2_a: "Fullgerð myndin er mynduð úr 10 svona \"blómum\":  \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n...sem
-          aftur eru mynduð úr 10 svona tíhliðungum:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
         Course_4_SCV_2_b: 'Þessi hönnun notar faldaðar lykkjur (þrjár á dýpt). Allar
           lykkjur keyra `hliðar` sinnum. '
         Course_4_SCV_2_c: Listamaðurinn snýr til vinstri við gerð hvers tíhliðungs,
@@ -1289,7 +2085,175 @@ is-IS:
         Course_4_SCV_2_e: |-
           **Lausn:**
 
-          ![Solution](https://images.code.org/889fda43ab85f9972fdabe5bb968ff95-image-1469642093490.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_width" inline="false">
+                  <value name="WIDTH">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false">
+                      <title name="VAR">length</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">400</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="variables_set" inline="false">
+                          <title name="VAR">sides</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">10</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="variables_get">
+                                  <title name="VAR">sides</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="draw_colour" inline="true" id="draw-color">
+                                  <value name="COLOUR">
+                                    <block type="colour_picker">
+                                      <title name="COLOUR">#ff0000</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="controls_repeat_ext" inline="true">
+                                      <value name="TIMES">
+                                        <block type="variables_get">
+                                          <title name="VAR">sides</title>
+                                        </block>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="controls_repeat_ext" inline="true">
+                                          <value name="TIMES">
+                                            <block type="variables_get">
+                                              <title name="VAR">sides</title>
+                                            </block>
+                                          </value>
+                                          <statement name="DO">
+                                            <block type="draw_move" inline="true">
+                                              <title name="DIR">moveForward</title>
+                                              <value name="VALUE">
+                                                <block type="math_arithmetic" inline="true">
+                                                  <title name="OP">DIVIDE</title>
+                                                  <value name="A">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">length</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">sides</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="draw_turn" inline="true">
+                                                  <title name="DIR">turnLeft</title>
+                                                  <value name="VALUE">
+                                                    <block type="math_arithmetic" inline="true">
+                                                      <title name="OP">DIVIDE</title>
+                                                      <value name="A">
+                                                        <block type="math_number">
+                                                          <title name="NUM">360</title>
+                                                        </block>
+                                                      </value>
+                                                      <value name="B">
+                                                        <block type="variables_get">
+                                                          <title name="VAR">sides</title>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                          <next>
+                                            <block type="draw_turn" inline="true">
+                                              <title name="DIR">turnRight</title>
+                                              <value name="VALUE">
+                                                <block type="math_arithmetic" inline="true">
+                                                  <title name="OP">DIVIDE</title>
+                                                  <value name="A">
+                                                    <block type="math_number">
+                                                      <title name="NUM">360</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">sides</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="jump" inline="true">
+                                          <title name="DIR">jumpForward</title>
+                                          <value name="VALUE">
+                                            <block type="math_arithmetic" inline="true">
+                                              <title name="OP">DIVIDE</title>
+                                              <value name="A">
+                                                <block type="variables_get">
+                                                  <title name="VAR">length</title>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="variables_get">
+                                                  <title name="VAR">sides</title>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="draw_turn" inline="true">
+                                              <title name="DIR">turnRight</title>
+                                              <value name="VALUE">
+                                                <block type="math_arithmetic" inline="true">
+                                                  <title name="OP">DIVIDE</title>
+                                                  <value name="A">
+                                                    <block type="math_number">
+                                                      <title name="NUM">360</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">sides</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 SCV 3:
         Course_4_SCV_3_a: 'Notaðu reikningskubbinn til að bæta við og draga frá `stig`
           breytunni þegar kvikar rekast á. '
@@ -1298,7 +2262,32 @@ is-IS:
         Course_4_SCV_3_c: |-
           **Lausn:**
 
-          ![solution](https://images.code.org/8d4bcfb29308eabff39500ad9db813fd-image-1469641570287.png)
+          <xml><block type="when_run"><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_number"><title name="NUM">0</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">up</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">1</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">down</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">4</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">left</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">8</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">right</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">2</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenSpriteCollided"><title name="SPRITE1">0</title><title name="SPRITE2">1</title><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">ADD</title><value name="A"><block type="variables_get"><title name="VAR">points</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></next></block><block type="studio_whenSpriteCollided"><title name="SPRITE1">0</title><title name="SPRITE2">2</title><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">ADD</title><value name="A"><block type="variables_get"><title name="VAR">points</title></block></value><value name="B"><block type="math_number"><title name="NUM">3</title></block></value></block></value></block></next></block>
+          <block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">2</title>
+              <next>
+                <block type="variables_set" inline="false">
+                  <title name="VAR">points</title>
+                  <value name="VALUE">
+                    <block type="math_arithmetic" inline="true">
+                      <title name="OP">MINUS</title>
+                      <value name="A">
+                        <block type="variables_get">
+                          <title name="VAR">points</title>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 SCV 4:
         Course_4_SCV_4_a: Þrjár breytur munu hjálpa þér hér. Ein er fyrir magn af
           blómasafa, ein fyrir magn af hunangi og ein fyrir hve langt býflugan á að
@@ -1310,12 +2299,139 @@ is-IS:
         Course_4_SCV_4_d: |-
           **Lausn:**
 
-          ![Solution](https://images.code.org/c57fc9df2e24b1f8497b7e4ca9e1f568-image-1469641818826.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set" inline="false">
+                  <title name="VAR">honey</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">4</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false">
+                      <title name="VAR">nectar</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">6</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_repeat_ext" inline="true">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">5</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">MINUS</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">nectar</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number">
+                                      <title name="NUM">1</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="maze_moveForward"/>
+                              </statement>
+                              <next>
+                                <block type="controls_repeat_ext" inline="true">
+                                  <value name="TIMES">
+                                    <block type="variables_get">
+                                      <title name="VAR">nectar</title>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="maze_nectar"/>
+                                  </statement>
+                                  <next>
+                                    <block type="maze_moveForward">
+                                      <next>
+                                        <block type="controls_repeat_ext" inline="true">
+                                          <value name="TIMES">
+                                            <block type="variables_get">
+                                              <title name="VAR">honey</title>
+                                            </block>
+                                          </value>
+                                          <statement name="DO">
+                                            <block type="maze_honey"/>
+                                          </statement>
+                                          <next>
+                                            <block type="maze_moveForward">
+                                              <next>
+                                                <block type="maze_turn">
+                                                  <title name="DIR">turnRight</title>
+                                                  <next>
+                                                    <block type="variables_set" inline="false">
+                                                      <title name="VAR">honey</title>
+                                                      <value name="VALUE">
+                                                        <block type="math_arithmetic" inline="true">
+                                                          <title name="OP">ADD</title>
+                                                          <value name="A">
+                                                            <block type="variables_get">
+                                                              <title name="VAR">honey</title>
+                                                            </block>
+                                                          </value>
+                                                          <value name="B">
+                                                            <block type="math_number">
+                                                              <title name="NUM">1</title>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="variables_set" inline="false">
+                                                          <title name="VAR">nectar</title>
+                                                          <value name="VALUE">
+                                                            <block type="math_arithmetic" inline="true">
+                                                              <title name="OP">MINUS</title>
+                                                              <value name="A">
+                                                                <block type="variables_get">
+                                                                  <title name="VAR">nectar</title>
+                                                                </block>
+                                                              </value>
+                                                              <value name="B">
+                                                                <block type="math_number">
+                                                                  <title name="NUM">1</title>
+                                                                </block>
+                                                              </value>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 SCV 5:
-        Course_4_SCV_5_a: |-
-          Skoðaðu þennan valkost hvað varðar hreyfingu:
-
-          ![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
         Course_4_SCV_5_b: Í hverri umferð lykkjunnar hafa blómin tveimur minna af
           blómasafa og býflugan þarf að búa til einum meira af hunangi.
         Course_4_SCV_5_c: Taktu eftir að við upphaf ytri lykkjunnar hreyfir býflugan
@@ -1323,12 +2439,128 @@ is-IS:
         Course_4_SCV_5_d: |-
           **Lausn:**
 
-          ![Image of Solution](https://images.code.org/831d8675f6551d79b212da594a9a73f0-image-1469641703833.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set" inline="false">
+                  <title name="VAR">honey</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false">
+                      <title name="VAR">nectar</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_repeat_ext" inline="true">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="variables_get">
+                                  <title name="VAR">nectar</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="maze_move">
+                                  <title name="DIR">moveForward</title>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <next>
+                                    <block type="controls_repeat_ext" inline="true">
+                                      <value name="TIMES">
+                                        <block type="variables_get">
+                                          <title name="VAR">nectar</title>
+                                        </block>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="maze_nectar"/>
+                                      </statement>
+                                      <next>
+                                        <block type="maze_move">
+                                          <title name="DIR">moveForward</title>
+                                          <next>
+                                            <block type="controls_repeat_ext" inline="true">
+                                              <value name="TIMES">
+                                                <block type="variables_get">
+                                                  <title name="VAR">honey</title>
+                                                </block>
+                                              </value>
+                                              <statement name="DO">
+                                                <block type="maze_honey"/>
+                                              </statement>
+                                              <next>
+                                                <block type="variables_set" inline="false">
+                                                  <title name="VAR">honey</title>
+                                                  <value name="VALUE">
+                                                    <block type="math_arithmetic" inline="true">
+                      <title name="OP">ADD</title>
+                      <value name="A">
+                        <block type="variables_get">
+                          <title name="VAR">honey</title>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="variables_set" inline="false">
+                                                      <title name="VAR">nectar</title>
+                                                      <value name="VALUE">
+                                                        <block type="math_arithmetic" inline="true">
+                      <title name="OP">MINUS</title>
+                      <value name="A">
+                        <block type="variables_get">
+                          <title name="VAR">nectar</title>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                    </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 SCV 6:
-        Course_4_SCV_6_a: |-
-          Sjáðu hér hvernig eitt fullbúið form lítur út
-
-          ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
         Course_4_SCV_6_b: 'Það er hjálplegt að búa til 8 breytur: rautt1, grænt1,
           blátt1, rautt2, grænt2, blátt2, lengd og hliðar.'
         Course_4_SCV_6_c: Hver af fimm sikk-sakk hliðum formsins skiptist í búta með
@@ -1343,7 +2575,302 @@ is-IS:
         Course_4_SCV_6_f: |-
           **Lausn:**
 
-          ![Solution](https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_width" inline="false">
+                  <value name="WIDTH">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false">
+                      <title name="VAR">red1</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="variables_set" inline="false">
+                          <title name="VAR">green1</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">175</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="variables_set" inline="false">
+                              <title name="VAR">blue1</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">200</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="variables_set" inline="false">
+                                  <title name="VAR">red2</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">100</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" inline="false">
+                                      <title name="VAR">green2</title>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <title name="NUM">50</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="variables_set" inline="false">
+                                          <title name="VAR">blue2</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">150</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set" inline="false">
+                                              <title name="VAR">length</title>
+                                              <value name="VALUE">
+                                                <block type="math_number">
+                                                  <title name="NUM">70</title>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="variables_set" inline="false">
+                                                  <title name="VAR">sides</title>
+                                                  <value name="VALUE">
+                                                    <block type="math_number">
+                                                      <title name="NUM">5</title>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="controls_repeat_ext" inline="true">
+                                                      <value name="TIMES">
+                                                        <block type="math_arithmetic" inline="true">
+                                                          <title name="OP">MULTIPLY</title>
+                                                          <value name="A">
+                                                            <block type="math_number">
+                                                              <title name="NUM">2</title>
+                                                            </block>
+                                                          </value>
+                                                          <value name="B">
+                                                            <block type="variables_get">
+                                                              <title name="VAR">sides</title>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                      <statement name="DO">
+                                                        <block type="controls_repeat_ext" inline="true">
+                                                          <value name="TIMES">
+                                                            <block type="variables_get">
+                                                              <title name="VAR">sides</title>
+                                                            </block>
+                                                          </value>
+                                                          <statement name="DO">
+                                                            <block type="controls_repeat_ext" inline="true">
+                                                              <value name="TIMES">
+                                                                <block type="variables_get">
+                                                                  <title name="VAR">sides</title>
+                                                                </block>
+                                                              </value>
+                                                              <statement name="DO">
+                                                                <block type="draw_colour" inline="true" id="draw-color">
+                                                                  <value name="COLOUR">
+                                                                    <block type="colour_rgb" inline="false">
+                                                                      <value name="RED">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">red1</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      <value name="GREEN">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">green1</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      <value name="BLUE">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">blue1</title>
+                                                                      </block>
+                                                                      </value>
+                                                                    </block>
+                                                                  </value>
+                                                                  <next>
+                                                                    <block type="draw_move" inline="true">
+                                                                      <title name="DIR">moveForward</title>
+                                                                      <value name="VALUE">
+                                                                      <block type="math_arithmetic" inline="true">
+                                                                      <title name="OP">DIVIDE</title>
+                                                                      <value name="A">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">length</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      <value name="B">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">sides</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      </block>
+                                                                      </value>
+                                                                      <next>
+                                                                      <block type="draw_turn" inline="true">
+                                                                      <title name="DIR">turnLeft</title>
+                                                                      <value name="VALUE">
+                                                                      <block type="math_arithmetic" inline="true">
+                                                                      <title name="OP">DIVIDE</title>
+                                                                      <value name="A">
+                                                                      <block type="math_number">
+                                                                      <title name="NUM">360</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      <value name="B">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">sides</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      </block>
+                                                                      </value>
+                                                                      <next>
+                                                                      <block type="draw_colour" inline="true" id="draw-color">
+                                                                      <value name="COLOUR">
+                                                                      <block type="colour_rgb" inline="false">
+                                                                      <value name="RED">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">red2</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      <value name="GREEN">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">green2</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      <value name="BLUE">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">blue2</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      </block>
+                                                                      </value>
+                                                                      <next>
+                                                                      <block type="draw_move" inline="true">
+                                                                      <title name="DIR">moveForward</title>
+                                                                      <value name="VALUE">
+                                                                      <block type="math_arithmetic" inline="true">
+                                                                      <title name="OP">DIVIDE</title>
+                                                                      <value name="A">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">length</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      <value name="B">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">sides</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      </block>
+                                                                      </value>
+                                                                      <next>
+                                                                      <block type="draw_turn" inline="true">
+                                                                      <title name="DIR">turnRight</title>
+                                                                      <value name="VALUE">
+                                                                      <block type="math_arithmetic" inline="true">
+                                                                      <title name="OP">DIVIDE</title>
+                                                                      <value name="A">
+                                                                      <block type="math_number">
+                                                                      <title name="NUM">360</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      <value name="B">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">sides</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      </block>
+                                                                      </value>
+                                                                      </block>
+                                                                      </next>
+                                                                      </block>
+                                                                      </next>
+                                                                      </block>
+                                                                      </next>
+                                                                      </block>
+                                                                      </next>
+                                                                    </block>
+                                                                  </next>
+                                                                </block>
+                                                              </statement>
+                                                              <next>
+                                                                <block type="draw_turn" inline="true">
+                                                                  <title name="DIR">turnRight</title>
+                                                                  <value name="VALUE">
+                                                                    <block type="math_arithmetic" inline="true">
+                                                                      <title name="OP">DIVIDE</title>
+                                                                      <value name="A">
+                                                                      <block type="math_number">
+                                                                      <title name="NUM">360</title>
+                                                                      </block>
+                                                                      </value>
+                                                                      <value name="B">
+                                                                      <block type="variables_get">
+                                                                      <title name="VAR">sides</title>
+                                                                      </block>
+                                                                      </value>
+                                                                    </block>
+                                                                  </value>
+                                                                </block>
+                                                              </next>
+                                                            </block>
+                                                          </statement>
+                                                          <next>
+                                                            <block type="draw_turn" inline="true">
+                                                              <title name="DIR">turnRight</title>
+                                                              <value name="VALUE">
+                                                                <block type="math_arithmetic" inline="true">
+                                                                  <title name="OP">DIVIDE</title>
+                                                                  <value name="A">
+                                                                    <block type="math_number">
+                                                                      <title name="NUM">180</title>
+                                                                    </block>
+                                                                  </value>
+                                                                  <value name="B">
+                                                                    <block type="variables_get">
+                                                                      <title name="VAR">sides</title>
+                                                                    </block>
+                                                                  </value>
+                                                                </block>
+                                                              </value>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </statement>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       CourseD_Dance_Party_01:
         validation: |-
           **Hvernig klára ég þetta borð?**
@@ -1711,9 +3238,6 @@ is-IS:
       NEW Course 4 Artist Params 11:
         NEW_Course_4_Artist_Params_11_a: Það þarf að skipta út fleiri en einni tölu
           fyrir breytur innan í fallinu.
-      NEW Course 4 Artist Params 13:
-        NEW_Course_4_Artist_Params_13_a: 'Þú þarft að deila _ummálinu_ með fjölda
-          hliða til að formin haldist jafnstór. '
       NEW Course 4 Artist Params 14:
         NEW_Course_4_Artist_Params_14_a: Það er besta mál að keyra forritið nokkrum
           sinnum til að sjá hvernig fallið virkar með mismunandi gildum.
@@ -1721,16 +3245,8 @@ is-IS:
         brush_width: Við stilltum þykkt pensils á 1 og litinn á blátt áður en við
           gerðum nokkuð annað.
         double_loop: Prófaðu að nota `frá` lykkju innan í `endurtaka` lykkju.
-        specifics: |-
-          `Frá` lykkjan keyrir frá 3 til 17 fyrir hvert "krónublað" og gerir það sama fyrir öll 6. Hún teiknar aðeins form þar sem fjöldi hliða er oddatala.
-
-          Kubburinn `stilla alfa` notar deilingu til að deyfa litinn þegar teljarinn hækkar.
         after: Eftir hvert "krónublað" þarf að `fara áfram` um 20 díla og snúa svo
           um 60 gráður.
-        solution: |-
-          **Lausn**
-
-          ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       NEW Course 4 Bee For Loops 10a:
         NEW_Course_4_Bee_For_Loops_10a_a: Sérðu einhverja samsvörun milli fjölda reita
           sem þarf að fara yfir og magns blómasafa sem þarf að safna?
@@ -1894,12 +3410,6 @@ is-IS:
         courseC_maze_programming4_b: Bættu við athugasemd þegar þú breytir um stefnu-
           hvað hefði gerst ef þú hefðir snúið í hina áttina?
       course1_artist_loops_challenge1:
-        courseA_artist_loops_challenge1_a: |-
-          Þú getur notað svona lykkjur til að búa til veggina og þakið. Prófaðu að endurtaka mismunandi kubba.
-
-          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
-
-          Hannaðu þitt eigið eða smelltu á ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) til að fá hugmyndir!
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -1926,26 +3436,7 @@ is-IS:
           að gera eitthvað bara einu sinni.
         courseA_collector_loops_challenge1_c: Þar eru 6 eðalsteinar hægra megin í
           hellinum, en þú þarft bara að færa og safna 5 sinnum. Veistu af hverju?
-      course1_collector_loops_challenge2:
-        courseA_collector_loops_challenge2_b: Þú þarft bara að nota einn ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
-          PM.png>) kubb til að leysa þetta.
-        courseA_collector_loops_challenge2_a: |-
-          Þú getur farið til baka eftir slóðinni áður en þú færir þig suður.
-
-          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       course1_collector_loops_challenge3:
-        courseB_collector_loops_challenge1_b: |-
-          Byrjaðu á að setja skipanirnar `fara suður` og `taka fjársjóð` í lykkju.
-          <xml>
-          <block type="maze_moveSouth"/><next>
-          <block type="collector_collect"/></next>
-          </xml>
-        courseB_collector_loops_challenge1_a: Mynstrið fyrir fyrir norður er aðeins
-          öðruvísi en mynstrið fyrir suður.
-        courseB_collector_loops_challenge1_c: "Farðu í Austur tvisvar á milli slóða.\n\n<xml>\n
-          \ <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n
-          \ </xml>\n\nÞú getur gert þetta með 14 kubbum. Smelltu á næstu vísbendingu
-          ef þú vilt sjá lausnina. "
         courseB_collector_loops_challenge1_d: |-
           Prófaðu þetta!
 
@@ -2187,24 +3678,9 @@ is-IS:
                         </block>
                         </statement></block></xml>
       course2_bee_conditionals_challenge1:
-        courseD_bee_conditionals_challenge1_a: Í þessari þraut gæti hver reitur haft
-          blóm, býkúpu eða ekkert. Það þýðir að þú getur endurtekið `ef/annars` skilyrðið
-          í hverjum reit.
         courseD_bee_conditionals_challenge1_b: Í þessari þraut gæti hver reitur haft
           blóm, býkúpu eða ekkert. Það þýðir að þú getur endurtekið `ef/annars` skilyrðið
           í hverjum reit.
-      course2_bee_conditionals_challenge2:
-        courseD_bee_conditionals_challenge1_b: |-
-          Kubbarnir `ef við blóm` keyra bara ef býflugan er á blómi. Það sama gildir um kóðann innan í `meðan blómasafi > 0`, en munurinn er sá að þessi kóði mun keyra endurtekið þar til enginn blómasafi er eftir.  Prófaðu þetta mynstur:
-
-          <xml>  <block type="bee_whileNectarAmount">
-
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>                    <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block></xml>
       course2_collector_loops_challenge2:
         courseC_maze_loops_challenge2_a: Upphaflegi kóðinn mundi virka vel - ef það
           væri aðeins einn fjársjóður í hverri hrúgu!
@@ -2222,33 +3698,6 @@ is-IS:
         courseC_harvester_loops_challenge1_b: Þú getur endurtekið `færa áfram` og
           `tína maís` eins oft og þú þarft, síðan notað `snúa til hægri` á hverju
           horni.
-        courseC_harvester_loops_challenge1_c: |-
-          Besta leiðin til að safna fyrstu fjórum af maís er að nota `endurtaka` kubb innan í öðrum `endurtaka` kubbi. Þú getur líka notað þetta fyrir afganginn af þrautinni!
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></next></block></xml>
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: Ein lausn á þessu lítur út eins og sikksakk
           mynstur. Önnur eins og spírall! Það er fullt af mismunandi lausnum á svona
@@ -2269,13 +3718,7 @@ is-IS:
         courseC_maze_loops_challenge1_b: Inn á milli `endurtaka` kubbanna þarft þú
           að `snúa til vinstri` eða `snúa til hægri` svo Scrat sé tilbúinn fyrir næsta
           mynstur.
-        courseC_maze_loops_challenge1_c: |-
-          Ef þú kemst svona langt, vantar bara að `snúa til vinstri` og svo `færa áfram` nokkrum sinnum. Ekki gefast upp!
-
-          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
-        courseC_maze_programming_challenge2_a: _Ef þú sendir mig aftur á bak, þarftu
-          að passa sérstaklega að ég snúi í rétta átt!_
         courseC_maze_programming_challenge2_b: Stysta lausnin notar aðeins 5 kubba,
           en hún notar `endurtaka` kubbinn!
       course3_artist_functions_challenge1:
@@ -2329,121 +3772,7 @@ is-IS:
           Ef þú endurtekur þetta tvisvar, ertu aftur komin á aðalslóðina eins og áður.
 
           **Ekki smella á aðra vísbendingu nema þú viljir sjá alla lausnina!**
-        courseF_bee_functions_challenge2_b: |-
-          **Lausn:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_untilBlocked">
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="maze_if">
-          <title name="DIR">isPathRight</title>
-          <statement name="DO">
-          <block type="procedures_callnoreturn" id="function">
-          <mutation name="move and check"/>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <title name="NAME">check nectar or honey</title>
-          <statement name="STACK">
-          <block type="bee_ifElseFlower">
-          <title name="LOC">atFlower</title>
-          <statement name="DO">
-          <block type="bee_whileNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block>
-          </statement>
-          <statement name="ELSE">
-          <block type="bee_whileNectarAmount">
-          <title name="ARG1">honeyAvailable</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
-          <mutation/>
-          <title name="NAME">move and check</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="check nectar or honey"/>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_untilBlocked">
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          </xml>
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_a: "Einbeittu þér fyrst að því að safna
-          TVEIMUR eðalsteinum úr tveimur fyrstu hrúgunum.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
-          AM copy.png>)\nNotaðu þessa kubba.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
-          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
-          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
-          name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n\n
-          \  <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Safnaðu svo öllum steinunum sem eru eftir í þessari röð.
 
@@ -2531,10 +3860,6 @@ is-IS:
         courseC_maze_debugging_challenge2_b: Ef þú ert að lenda í festum, getur þú
           alltaf byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin
           lausn!
-        courseC_maze_debugging_challenge2_c: |-
-          Þú getur farið tvær mismunandi slóðir með því að nota bara `færa áfram` og 4 snúninga. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!
-
-          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course3_playLab_challenge1:
         courseE_playLab_challenge1_a: |-
           Hér eru nokkrar hugmyndir um hvað þú gætir gert þegar spilarinn vinnur leikinn:
@@ -2931,10 +4256,9 @@ is-IS:
           Byrjaðu á að ganga úr skugga um að þú skiljir hvernig þetta fall _á að_ virka. Þegar bóndinn fer eftir hverri slóð mun hún aðeins reyna að tína maís. En hvernig gætir þú látið hana athuga ekki bara maís heldur allar þrjár jurtirnar og tína aðeins þá sem hún finnur?
 
           Bættu skilyrðingum við fallið til að athuga með maís, grasker og kál.
-        courseF_bee_fwp_challenge2_b: |-
-          Eru `færa áfram` kubbarnir að klárast? Prófaðu að nota _aðra_ `frá` lykkju í aðalforritinu þínu.
-
-          **Athugaðu:** Gættu þess að rugla ekki saman `teljari` og `teljari2` í kóðanum.
+        courseF_bee_fwp_challenge2_b: "Eru `færa áfram` kubbarnir að klárast? \nPrófaðu
+          að nota _aðra_ `frá` lykkju í aðalforritinu þínu.\n\n**Athugaðu:** Gættu
+          þess að rugla ekki saman `teljari` og `teljari2` í kóðanum."
         courseF_bee_fwp_challenge2_c: |-
           **Svona ætti fallið þitt að líta út:**
 
@@ -3587,12 +4911,10 @@ is-IS:
           </next>
           </block></xml>
       courseA_collector_loops_challenge2:
-        courseA_collector_loops_challenge2_b: Þú þarft bara að nota einn ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
-          PM.png>) kubb til að leysa þetta.
-        courseA_collector_loops_challenge2_a: |-
-          Þú getur farið til baka eftir slóðinni áður en þú færir þig suður.
-
-          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
+        courseA_collector_loops_challenge2_b: Þú þarft bara að nota einn kubb til
+          að leysa þetta.
+        courseA_collector_loops_challenge2_a: Þú getur farið til baka eftir slóðinni
+          áður en þú færir þig suður.
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: Prófaðu þessa slóð til að finna lausn.
         courseA_collector_loops_challenge2kp_a: Getur þú notað lykkjur til að leysa
@@ -3606,14 +4928,15 @@ is-IS:
         courseA_collector_loops_challenge2kp_a: Getur þú notað lykkjur til að leysa
           þessa þraut?
       courseA_collector_preLoops4:
-        courseA_collector_preLoops4_a: Náðu fjársjóðnum með því að festa tvo ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
-          blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
-          kubba neðst í forritið og smella á "Keyra"!
+        courseA_collector_preLoops4_a: Náðu fjársjóðnum með því að smella tveimur
+          ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
+          kubbum og einum ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          kubbi neðst í forritið og smella á "Keyra"!
       courseA_collector_preLoops5:
         courseA_collector_preLoops5_a: Þú þarf að fara í tvær ólíkar áttir til að
           ná bara einum gimsteini!
       courseA_collector_preLoops6:
-        courseA_collector_preLoops6_a: Þú verður að nota tvo ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        courseA_collector_preLoops6_a: Þú þarft að nota tvo ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
           kubba til að leysa þessa þraut.
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
@@ -6211,7 +7534,7 @@ is-IS:
         courseB_playlab_events_challenge2_a: Hvert dýr í leiknum ætti að hverfa ef
           slegið er á það. Það ætti líka að birtast aftur eftir 1-2 sekúndur!
         courseB_playlab_events_challenge2_b: |-
-          Notaðu aðra atburðarkubba til að láta hin dýrin hverfa!
+          Notaðu aðra atvikskubba til að láta hin dýrin hverfa!
 
           <xml>
           <block type="studio_whenSpriteClicked">
@@ -6236,7 +7559,7 @@ is-IS:
         courseB_playlab_events_challenge2_a: Hvert dýr í leiknum ætti að hverfa ef
           slegið er á það. Það ætti líka að birtast aftur eftir 1-2 sekúndur!
         courseB_playlab_events_challenge2_b: |-
-          Notaðu aðra atburðarkubba til að láta hin dýrin hverfa!
+          Notaðu aðra atvikskubba til að láta hin dýrin hverfa!
 
           <xml>
           <block type="studio_whenSpriteClicked">
@@ -6261,7 +7584,7 @@ is-IS:
         courseB_playlab_events_challenge2_a: Hvert dýr í leiknum ætti að hverfa ef
           slegið er á það. Það ætti líka að birtast aftur eftir 1-2 sekúndur!
         courseB_playlab_events_challenge2_b: |-
-          Notaðu aðra atburðarkubba til að láta hin dýrin hverfa!
+          Notaðu aðra atvikskubba til að láta hin dýrin hverfa!
 
           <xml>
           <block type="studio_whenSpriteClicked">
@@ -6949,6 +8272,18 @@ is-IS:
           <title name="VALUE">Fugl</title>
           </block>
           </xml>
+      courseC_artist_loops1b_2019:
+        courseC_artist_loops1b_a: |-
+          Þetta er fyrsti kubburinn sem þú þarft að nota:
+
+          <xml>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">???</title>
+              <title name="VALUE" config="45,60,90,120,180">???</title>
+            </block>
+          </xml>
+
+          Þú getur valið vinstri eða hægri og einhvern gráðufjölda.
       courseC_artist_loops2a:
         courseC_artist_loops2a_a: Í lykkjunni þarf að hoppa 200 til hliðar og 200
           niður, teikna límmiðann með fuglinum og snúa svo 30 gráður.
@@ -7015,6 +8350,45 @@ is-IS:
           </xml>
 
           Ekki gleyma að segja hve langt!
+        courseC_artist_loops4a_b: |-
+          Forritið þitt ætti að líta svona út!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpForward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="sticker">
+                                      <title name="VALUE">Dog</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseC_artist_loops5a:
         courseC_artist_loops5a_a: Notaðu fellilistann á `teikna límmiða` kubbi til
           að breyta myndinni á kubbnum.
@@ -7057,6 +8431,62 @@ is-IS:
           </xml>
         courseC_artist_loops5b_b: Til að teikna þetta þarft þú að fara aftur á bak
           jafnlangt og þú ferð áfram.
+        courseC_artist_loops5b_c: |-
+          Forritið þitt ætti að líta svona út!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_line_style_pattern">
+                  <title name="VALUE">rainbowLine</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="jump_to">
+                          <title name="VALUE">13</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">???</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveBackward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant_dropdown">
+                                      <title name="DIR">???</title>
+                                      <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                                      <next>
+                                        <block type="sticker">
+                                          <title name="VALUE">Cat</title>
+                                          <next>
+                                            <block type="jump_by_constant">
+                                              <title name="DIR">jumpForward</title>
+                                              <title name="VALUE">???</title>
+                                              <next>
+                                                <block type="sticker">
+                                                  <title name="VALUE">Dog</title>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseC_artist_loops6a:
         courseC_artist_loops6a_a: Til að teikna myndina hér að ofan þarftu að hoppa
           áfram minna en 75 díla á milli límmiða.
@@ -7885,6 +9315,11 @@ is-IS:
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_maze_debugging1:
+        courseC_maze_debugging1_a: |-
+          -   Virkar allt eftir fyrsta þrepið?
+          -   Virkar það enn eftir annað?
+          -   Hvar er vandamálið?
+        courseC_maze_debugging1_b: Þig vantar 1 kubb til að leysa þrautina.
         courseD_collector_debugging1_a: |-
           Notaðu "Þrep" hnappinn til að athuga hvort allt sé í lagi á fyrsta þrepi.
 
@@ -7908,6 +9343,14 @@ is-IS:
           -   Hvar er vandamálið?
         courseC_maze_debugging1_b: Þig vantar 1 kubb til að leysa þrautina.
       courseC_maze_debugging2:
+        courseC_maze_debugging2_a: Það er mikið af gagnlegum kóða á vinnusvæðinu.  Ekki
+          bara eyða honum og byrja upp á nýtt!
+        courseC_maze_debugging2_b: |-
+          -   Virkar allt eftir fyrsta þrepið?
+          -   Virkar það enn eftir annað?
+          -   Hvar er vandamálið?
+        courseC_maze_debugging2_c: Sérðu ekki hvað er að? Prófaðu að keyra kóðann
+          nokkrum sinnum til að sjá hvað gerist.
         courseD_collector_debugging2_a: |-
           Notaðu "Þrep" hnappinn til að athuga hvort allt sé í lagi á fyrsta þrepi.
 
@@ -7938,6 +9381,16 @@ is-IS:
         courseC_maze_debugging2_c: Sérðu ekki hvað er að? Prófaðu að keyra kóðann
           nokkrum sinnum til að sjá hvað gerist.
       courseC_maze_debugging3:
+        courseC_maze_debugging3_a: |-
+          Ef þú þarft að eyða kubbi sem er í miðjum kóðanum skaltu fyrst draga alla kubbana á annan stað á vinnusvæðinu.
+
+          Dragðu svo kubbinn sem þú vilt eyða aftur í verkfærakassann.
+
+          Settu svo hina kubbana aftur á sinn stað.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
+        courseC_maze_debugging3_b: Sérðu ekki hvað er að? Prófaðu að keyra kóðann
+          nokkrum sinnum til að sjá hvað gerist.
         courseD_collector_debugging3_a: Er einhver staður í forritinu þar sem Lára
           gerir eitthvað sem passar ekki? Hvað gerist ef þú skiptir um þá kubba?
         courseD_collector_debugging3_b: Reyndu að einfalda kóðann með földuðum lykkjum.
@@ -7964,6 +9417,10 @@ is-IS:
         courseC_maze_debugging3_b: Sérðu ekki hvað er að? Prófaðu að keyra kóðann
           nokkrum sinnum til að sjá hvað gerist.
       courseC_maze_debugging4:
+        courseC_maze_debugging4_a: Notaðu "Þrep" hnappinn til að fara í gegnum eina
+          skipun í einu. Hjálpar það að finna línuna þar sem vandamálið byrjar?
+        courseC_maze_debugging4_b: Einn snúningurinn er að snúa Scrat í ranga átt.
+          Geturðu séð hver það er?
         courseD_collector_debugging4_a: "Reyndu að nota villuleitarferlið nokkrum
           sinum í röð. \n\nHvað orsakaði fyrsta vandamálið?\n\nÞegar það var leyst
           var eitthvað fleira að?"
@@ -7983,6 +9440,12 @@ is-IS:
         courseC_maze_debugging4_b: Einn snúningurinn er að snúa Scrat í ranga átt.
           Geturðu séð hver það er?
       courseC_maze_debugging5:
+        courseC_maze_debugging5_a: |-
+          Það eru nú þegar margir gagnlegir kubbar á vinnusvæðinu. Ekki eyða þeim öllum!
+
+          Notaðu "Þrep" hnappinn til að fara í gegnum kóðann og finna hvar vandamálið liggur.
+        courseC_maze_debugging5_b: Prófaðu að segja upphátt það sem Scrat á að gera.
+          Passar það við kóðann á vinnusvæðinu?  Hvar er villan?
         courseD_collector_debugging5_a: |-
           Byrjaðu á að skoða bara fyrstu lykkjuna.
 
@@ -8012,6 +9475,14 @@ is-IS:
         courseC_maze_debugging5_b: Prófaðu að segja upphátt það sem Scrat á að gera.
           Passar það við kóðann á vinnusvæðinu?  Hvar er villan?
       courseC_maze_debugging6:
+        courseC_maze_debugging6_a: |-
+          -   Hvað er það sem Scrat á að gera?
+          -   Hvað gerir Scrat?
+          -   Hvað segir það þér?
+        courseC_maze_debugging6_b: |-
+          Eftir að þú hefur fundið og lagað fyrstu villuna, er ráð að nota sama villuleitarferlið til að finna þá næstu.
+
+          Endurtaktu þetta ferli þar til forritið virkar!
         courseD_collector_debugging6_a: |-
           Prófaðu að fara í gegnum kóðann með "Þrep" hnappnum. Virkar allt á fyrsta þrepi?
 
@@ -8040,6 +9511,16 @@ is-IS:
 
           Endurtaktu þetta ferli þar til forritið virkar!
       courseC_maze_debugging7:
+        courseC_maze_debugging7_a: |-
+          -   Virkar allt í fyrsta þrepi?
+          -   Hvað með annað þrepið?
+          -   Hvar liggur vandamálið?
+        courseC_maze_debugging7_b: Ekki gleyma að nota "Þrep" hnappinn til að keyra
+          forritið eina línu í einu!
+        courseC_maze_debugging7_c: |-
+          Eftir að þú finnur og lagar fyrstu villuna, skaltu gæta þess að nota villuleitina aftur til að finna næstu villu.
+
+          Endurtaktu villuleitarferlið þar til forritið virkar!
         courseD_collector_debugging8_a: Sérðu mynstur sem þú getur endurtekið með
           lykkju?
         courseD_collector_debugging8_b: Prófaðu að nota faldaða lykkju til að stytta
@@ -8335,22 +9816,25 @@ is-IS:
       courseC_starWars_loops10:
         courseC_starWars_loops10_a: Minnir þetta mynstur ekki á stórar tröppur? Gáðu
           hvort þú getir notað það sem þú lærðir í fyrri þrautum til að ná öllum snúningunum.
-        courseC_starWars_loops10_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops10_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
         courseC_starWars_loops10_c: Ekki óttast að gera mistök! Keyrðu kóðann til
           að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
       courseC_starWars_loops10_2018:
         courseC_starWars_loops10_a: Minnir þetta mynstur ekki á stórar tröppur? Gáðu
           hvort þú getir notað það sem þú lærðir í fyrri þrautum til að ná öllum snúningunum.
-        courseC_starWars_loops10_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops10_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
         courseC_starWars_loops10_c: Ekki óttast að gera mistök! Keyrðu kóðann til
           að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
       courseC_starWars_loops10_2019:
         courseC_starWars_loops10_a: Minnir þetta mynstur ekki á stórar tröppur? Gáðu
           hvort þú getir notað það sem þú lærðir í fyrri þrautum til að ná öllum snúningunum.
-        courseC_starWars_loops10_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops10_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
         courseC_starWars_loops10_c: Ekki óttast að gera mistök! Keyrðu kóðann til
           að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
       courseC_starWars_loops1_2018:
@@ -8412,18 +9896,21 @@ is-IS:
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Prófaðu að skrifa hreyfingarnar á blað og leita
           svo að endurtekningum.
-        courseC_starWars_loops6_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops6_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
       courseC_starWars_loops6_2018:
         courseC_starWars_loops6_a: Prófaðu að skrifa hreyfingarnar á blað og leita
           svo að endurtekningum.
-        courseC_starWars_loops6_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops6_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
       courseC_starWars_loops6_2019:
         courseC_starWars_loops6_a: Prófaðu að skrifa hreyfingarnar á blað og leita
           svo að endurtekningum.
-        courseC_starWars_loops6_b: "Viljir þú nota færri kubba getur þú sett eina
-          `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
+        courseC_starWars_loops6_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
       courseC_starWars_loops7:
         courseC_starWars_loops7_a: Þetta mynstur virðist flóknara en það er í raun!
           Prófaðu fyrst einfalt tröppumynstur. Nær það öllum málminum?
@@ -9410,6 +10897,13 @@ is-IS:
           gerir þú ef þar er blóm?
         courseD_bee_conditionals5_hintVid2: Þetta myndband getur hjálpað að leysa
           þessa þraut.
+      courseD_bee_conditionals5_2019:
+        courseD_bee_conditionals5_a: Ef þú notar `ef við blóm` kubb, getur þú leyst
+          þetta með því að nota faldaða lykkju. Skrifaðu forrit fyrir vinstri og neðri
+          hlið slóðarinnar og endurtaktu það!
+        courseD_bee_conditionals5_c: Til að færa býfluguna niður slóðina þarf að nota
+          `færa áfram`. Þegar hún færist þarf hún að athuga hvort þar sé blóm. `Ef
+          við blóm` á býflugan að `sækja blómasafa`.
       courseD_bee_conditionals6:
         courseD_bee_conditionals6_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
@@ -10444,6 +11938,9 @@ is-IS:
           maís.
         courseD_farmer_condLoops6_b: Gættu þess að athuga hvort það er slóð framundan
           áður en þú færir áfram!
+      courseD_farmer_condLoops6_2019:
+        courseD_farmer_condLoops6_a: Notaðu `meðan slóð framundan` lykkju eða `ef
+          slóð framundan / annars` kubb til að færa bóndann eftir hverjum legg spíralsins.
       courseD_farmer_condLoops7:
         courseD_farmer_condLoops7_a: |-
           Auðveldasta slóðin til að safna öllu er spírall.
@@ -10771,6 +12268,7 @@ is-IS:
       courseD_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           Notaðu þennan nýja kubb!
+
           <xml><block type="controls_repeat_dropdown">
 
           <title name="TIMES" config="2-10">5</title>
@@ -10838,7 +12336,7 @@ is-IS:
       courseD_maze_intro5a_2019:
         courseC_maze_programming5_a: Prófaðu að nota "Þrep" hnappin til að keyra kóðann
           línu fyrir línu. Geturðu fundið út hvað þú þarft að gera næst?
-        courseC_maze_programming5_b: Mundu að snúningar eru frá sjónarhorni Reds.
+        courseC_maze_programming5_b: Mundu að snúningar eru frá sjónarhorni Red.
         courseC_maze_programming5_c: Ekki hræðast að gera mistök! Prófaðu að bæta
           við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
@@ -10948,6 +12446,8 @@ is-IS:
         courseC_maze_programming2_b: Gættu þess að allir 3 kubbarnir séu tengdir innbyrðis
           og tengdir við `þegar keyrt` kubbinn.
       courseD_maze_ramp2_2019:
+        courseC_maze_programming2_a: "`Færa áfram` kubbur er notaður með því að draga
+          hann úr verkfærunum út á vinnusvæðið og tengja hann við `þegar keyrt` kubbinn."
         courseC_maze_programming2_b: Gættu þess að allir 3 kubbarnir séu tengdir innbyrðis
           og tengdir við `þegar keyrt` kubbinn.
       courseD_maze_ramp3:
@@ -11266,12 +12766,29 @@ is-IS:
           og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
           hafa klárað lausnina.
       courseD_scrat_ramp1:
+        courseF_maze_ramp1_a: Ef fuglinn er ekki að komast til svínsins, þarftu að
+          ganga úr skugga um að allir kubbarnir hafi verið tengdir saman og smella
+          svo aftur á "Keyra".
+        courseF_maze_ramp1_b: Þú þarft ekki neina fleiri kubba úr verkfærakassanum
+          hér!
         courseC_maze_programming1_b: Þú þarft ekki neina fleiri kubba úr verkfærakassanum
           fyrir þessa þraut!
       courseD_scrat_ramp2:
+        courseF_maze_ramp2_a: Þú notar þennan nýja kubb með því að draga hann út á
+          vinnusvæðið og tengja hann við forritið sem er tengt við <xml><block type="when_run"/></xml>
+          kubbinn.
+        courseF_maze_ramp2_b: Gættu þess að <xml><block type="maze_moveForward"/></xml>
+          kubburinn sé innan í lykkjunni svo hann verði endurtekinn.
         courseC_maze_programming2_b: Gættu þess að allir þrír `færa áfram` kubbarnir
           séu áfastir við `þegar keyrt` kubbinn.
       courseD_scrat_ramp3:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nEf
+          þú vilt eyða kubb sem er á milli annarra kubba er aðferðin þessi: Dragðu
+          alla kubbana fyrir neðan kubbinn út úr kóðanum og á vinnusvæðið til að geyma
+          þá þar.  \n\nSmelltu á kubbinn sem vilt eyða og dragðu hann aftur í verkfærakassann.\n\nDragðu
+          hina kubbana aftur á sinn stað í kóðanum."
+        courseF_maze_ramp3_b: Notaðu hnappinn `þrep` til að keyra forritið línu fyrir
+          línu. Hvar fer það út af sporinu?
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nEf
           þú vilt eyða kubb sem er á milli annarra kubba er aðferðin þessi: Dragðu
           alla kubbana fyrir neðan kubbinn út úr kóðanum og á vinnusvæðið til að geyma
@@ -11280,10 +12797,21 @@ is-IS:
         courseC_maze_programming3_b: Mundu að snúningar til hægri og vinstri eru frá
           sjónarhorni fuglsins.
       courseD_scrat_ramp4:
+        courseF_maze_ramp4_b: Fylgdu slóðinni með því að fara áfram og snúa í eina
+          átt, síðan fara áfram þrisvar sinnum áður en þú snýrð í öfuga átt. Farðu
+          áfram einu sinni enn til að ná svíninu.
+        courseF_maze_ramp4_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
+          og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
+          hafa klárað lausnina.
         courseC_maze_programming4_c: Ekki hræðast að gera mistök! Prófaðu að bæta
           við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
       courseD_scrat_ramp5:
+        courseF_maze_ramp5_a: Prófaðu að nota "Þrep" hnappin til að keyra kóðann línu
+          fyrir línu. Geturðu fundið út hvað þú þarft að gera næst?
+        courseF_maze_ramp5_b: Það er fleiri en leið til að komast til svínsins.
+        courseF_maze_ramp5_c: Prófaðu að nota <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> lykkju til að stytta kóðann!
         courseC_maze_programming5_a: Prófaðu að nota "Þrep" hnappin til að keyra kóðann
           línu fyrir línu. Geturðu fundið út hvað þú þarft að gera næst?
         courseC_maze_programming5_b: Hversu langt þarftu að hreyfast til að komast
@@ -11291,6 +12819,14 @@ is-IS:
         courseC_maze_programming5_c: Þú þarft að snúa til vinstri við hornið til að
           ná svíninu.
       courseD_scrat_ramp6:
+        courseF_artist_ramp8_a: Teiknaðu hlið með því að nota `færa áfram 100 díla`
+          kubbinn og breyta 100 í 200.
+        courseF_artist_ramp8_b: |-
+          Teiknaðu 4 hliðar með því að setja `færa áfram um 100 díla` kubb innan í `endurtaka` lykkju og gæta þess að lykkjan teikni 4 sinnum.
+
+          Ekki gleyma að snúa á eftir!
+        courseF_artist_ramp8_c: Snúningurinn fer líka inn í <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> lykkjuna.
         courseC_maze_programming6_a: Það eru tvær leiðir til að leysa þessa þraut!
         courseC_maze_programming6_b: Mundu að snúa áður en þú færir vegna þess að
           fuglinn snýr að vegg í byrjun.
@@ -11306,6 +12842,19 @@ is-IS:
           og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
           hafa klárað lausnina.
       courseD_scrat_ramp8:
+        courseF_artist_ramp9_a: Hvernig líkist þetta ferningi? Hvernig er þetta ólíkt?
+        courseF_artist_ramp9_b: Þú getur notað fellilistann á `snúa` kubbunum til
+          að sjá hvaða horn þú þarft að nota!
+        courseF_artist_ramp9_c: Þú munt vilja fara áfram um 100 díla, og snúa svo
+          til hægri um 120 gráður fyrir hverja hlið. Getur þú notað <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> lykkju til að stytta kóðann?
+        courseD_maze_ramp7_b: Ekki gleyma að nota "Þrep" hnappinn til að keyra einn
+          kubb í einu og leita að villum.
+        courseD_maze_ramp7_a: Notaðu `endurtaka` lykkjur til að keyra stakan kubb
+          eða stæðu af kubbum aftur og aftur.
+        courseD_maze_ramp7_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
+          og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
+          hafa klárað lausnina.
         courseE_artist_ramp8_a: Teiknaðu hlið með því að nota `færa áfram 100 díla`
           kubbinn og breyta 100 í 200.
         courseE_artist_ramp8_b: |-
@@ -11773,13 +13322,13 @@ is-IS:
           100 díla og snúa svo til hægri um 120 gráður. Hve margar eiga hliðarnar
           að vera?
       courseE_artist_ramp9:
-        courseD_artist_ramp12_a: Hvernig líkist þetta ferningi? Hvernig er þetta ólíkt?
-        courseD_artist_ramp12_b: Þú getur notað fellilistann á `snúa` kubbunum til
-          að sjá hvaða horn þú þarft að nota!
-        courseD_artist_ramp12_c: Til að teikna eina hlið þarft þú að fara áfram um
-          100 díla og snúa svo til hægri um 120 gráður. Hve margar eiga hliðarnar
-          að vera?
-      courseE_artist_ramp9_2:
+        courseF_farmer_ramp11_a: Ef þú átt erfitt með að sjá hvar lykkjur ættu að
+          vera, er ráð að forrita öll skrefin í röð og leita svo að endurtekningum.
+        courseF_farmer_ramp11_b: Hvernig getur þú notað `endurtaka` lykkju til að
+          tína kál í stað þess að nota 5 `tína kál` kubba?
+        courseF_farmer_ramp11_c: Þú þarft ekki að nota 5 `endurtaka` lykkjur til að
+          ná öllu kálinu. Dragðu heldur lykkjuna sem tínir kálið inn í aðra endurtekningarlykkju
+          (ásamt `færa áfram` kubbi) og málið er leyst!
         courseD_artist_ramp12_a: Hvernig líkist þetta ferningi? Hvernig er þetta ólíkt?
         courseD_artist_ramp12_b: Þú getur notað fellilistann á `snúa` kubbunum til
           að sjá hvaða horn þú þarft að nota!
@@ -12163,9 +13712,6 @@ is-IS:
       courseE_farmer_ramp11b_2019:
         courseE_farmer_ramp11b_a: Þú getur faldað `meðan` lykkjuna þína innan í `endurtaka`
           lykkju til að stytta kóðann.
-      courseE_farmer_ramp12_forswap:
-        courseE_farmer_ramp12_b: Þú þarft samt enn að nota `endurtaka` lykkju utan
-          um allt til að segja bóndanum hve oft á að fara áfram og ná í kál.
       courseE_farmer_ramp12_forswap_2018:
         courseE_farmer_ramp12_b: Þú þarft samt enn að nota `endurtaka` lykkju utan
           um allt til að segja bóndanum hve oft á að fara áfram og ná í kál.
@@ -12181,6 +13727,8 @@ is-IS:
           að þú verður að nota `meðan` lykkju til að safna henni allri!
         courseE_farmer_ramp13_b: Notaðu `endurtaka` lykkju svo að þú þurfir ekki að
           skrifa `ef` yrðingu fyrir hvern reit.
+        courseE_farmer_ramp13_c: Ef þú sérð ekki hvar á hafa lykkjurnar, er ráð að
+          skrifa kóðann þrep fyrir þrep og leita svo að endurtekningum.
       courseE_farmer_ramp12c_2018:
         courseE_farmer_ramp12b_b: Þú munt samt þurfa að nota `þar til` lykkju fyrst
           og síðan nota `meðan` lykkju við kálið.
@@ -12201,9 +13749,6 @@ is-IS:
       courseE_farmer_ramp12d_2019:
         courseE_farmer_ramp12d_b: Þú munt samt þurfa að setja `þar til` og `meðan`
           lykkjurnar inn í `endurtaka` lykkju til að leysa þessa þraut!
-      courseE_farmer_ramp12e:
-        courseE_farmer_ramp12e_b: Lausnin fyrir þessa þraut er mjög lík lausninni
-          fyrir síðustu þraut, nema hvað snúningurinn er í hina áttina.
       courseE_farmer_ramp12e_2018:
         courseE_farmer_ramp12e_b: Lausnin fyrir þessa þraut er mjög lík lausninni
           fyrir síðustu þraut, nema hvað snúningurinn er í hina áttina.
@@ -15499,6 +17044,9 @@ is-IS:
           </block>
           </next>
           </block></xml>
+      courseF_bee_variables_4_2019:
+        courseF_bee_variables_4_2019_1: Í stað þess að draga 1 frá `safna` (gather)
+          ætti að bæta 1 við. Hvaða gildi ætti breytan að hafa í upphafi?
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_a: Þú ættir að setja orðið "Mark!" í stað "Hvað
           á ég að hrópa?" í græna kubbnum.

@@ -1,5 +1,5 @@
 /** @file Tests for our johnny-five Piezo wrapper */
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
@@ -89,12 +89,12 @@ describe('Piezo', function() {
       expect(controller.frequency.value).to.have.been.calledWith(440);
 
       // C4 = 262Hz
-      controller.frequency.value.reset();
+      controller.frequency.value.resetHistory();
       piezo.note('C4');
       expect(controller.frequency.value).to.have.been.calledWith(262);
 
       // C2 = 65Hz
-      controller.frequency.value.reset();
+      controller.frequency.value.resetHistory();
       piezo.note('C2');
       expect(controller.frequency.value).to.have.been.calledWith(65);
     });

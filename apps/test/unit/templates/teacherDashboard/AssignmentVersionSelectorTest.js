@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import {setRecommendedAndSelectedVersions} from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 
 const fakeVersions = [

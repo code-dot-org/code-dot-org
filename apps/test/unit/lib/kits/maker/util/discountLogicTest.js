@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../../../../util/configuredChai';
 import {
   isUnit6IntentionEligible,
   Unit6Intention

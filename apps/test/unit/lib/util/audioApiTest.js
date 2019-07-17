@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/configuredChai';
 import {
   commands,
   executors,

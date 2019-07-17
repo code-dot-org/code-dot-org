@@ -1,5 +1,5 @@
 /** @file Tests for toolkit.js - Maker's main export */
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import {
   stubRedux,
   restoreRedux,

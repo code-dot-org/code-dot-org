@@ -19,6 +19,7 @@
 # Otherwise, if run with one of the "command" flags, will run a single step of
 # the full sync
 
+require_relative '../../deployment'
 require_relative '../../lib/cdo/only_one'
 require_relative '../../lib/cdo/github'
 

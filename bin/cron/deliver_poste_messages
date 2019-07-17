@@ -4,10 +4,15 @@ require 'retryable'
 require 'cdo/only_one'
 require 'cdo/parse_email_address_string'
 require 'cdo/poste'
+require 'honeybadger/ruby'
 require 'base64'
 require 'nokogiri'
 require src_dir 'forms'
 require src_dir 'abort_email_error'
+
+if CDO.newrelic_logging
+  require 'newrelic_rpm'
+end
 
 BATCH_SIZE = 500_000
 MAX_THREAD_COUNT = 50
@@ -341,15 +346,18 @@ def main
   end
   workers.each(&:join)
 
-  remaining_count = POSTE_DB[:poste_deliveries].where(sent_at: nil).count
+  if CDO.newrelic_logging
+    # How many emails we sent on _this run_ of the cronjob
+    sent_count = POSTE_DB[:poste_deliveries].where(Sequel.lit('sent_at >= ?', started_at)).count
+    NewRelic::Agent.record_metric("Custom/Poste/Sent", sent_count)
 
-  elapsed_seconds = ((Time.now - started_at) * 100.0).to_i / 100.0
+    # How many total abandoned emails we have
+    abandon_count = POSTE_DB[:poste_deliveries].where(sent_at: 0).count
+    NewRelic::Agent.record_metric("Custom/Poste/Abandoned", abandon_count)
 
-  unless queue_count == 0 && remaining_count == 0
-    message = "#{queue_count} email(s) sent in #{elapsed_seconds} seconds using #{worker_count} threads, #{remaining_count} still queued."
-    if rack_env?(:development)
-      puts message
-    end
+    # How many emails are still queued for send on subsequent runs
+    remaining_count = POSTE_DB[:poste_deliveries].where(sent_at: nil).count
+    NewRelic::Agent.record_metric("Custom/Poste/Queued", remaining_count)
   end
 end
 

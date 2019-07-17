@@ -17,6 +17,7 @@ de:
         name: 'Name anzeigen'
         name_example: 'Angezeigter Name<br/>(z.B. Cooler Codierer oder Jana B.)'
         email: 'E-Mail'
+        parent_email: 'Eltern / Erziehungsberechtigten E-Mail-Adresse'
         personal_email: "Persönliche E-Mail-Adresse"
         username: 'Benutzername'
         password: 'Passwort'
@@ -26,6 +27,9 @@ de:
         age: 'Alter'
         gender: 'Geschlecht'
         edit_header: 'Kontodaten bearbeiten'
+        finish_sign_up_header: 'Kontoerstellung abschließen'
+        finish_sign_up_subheader: 'Gib folgende Informationen ein um dein Code.org-Konto für <strong>%{email}</strong> fertigzustellen.'
+        finish_sign_up_subheader_provider: 'Gib folgende Informationen ein um dein Code.org-Konto mit <strong>%{provider}</strong> für <strong>%{email}</strong> fertigzustellen.'
         error:
           future: darf nicht in der Zukunft liegen
   hello: "Hallo Welt"
@@ -46,6 +50,7 @@ de:
       label: 'Lehrer hinzufügen:'
       placeholder: "Code für diesen Abschnitt (ABCDEF)"
       instructions: "Bitte gib den Code ein, den du von deinem Lehrer erhalten hast. Es ist ein Code mit 6 Buchstaben, z.\_B. wie \"ABCDEF\""
+      instructions_short: "Geb die 6 Buchstaben deines Sektionscodes ein"
     submit: 'Lehrer hinzufügen'
   add_hint_form:
     placeholder: 'Gebe hier deinen Hinweis ein'
@@ -72,6 +77,7 @@ de:
   prize: 'Preis'
   more_info: 'Mehr Informationen'
   auth:
+    continue_with: 'Fahre fort mit %{provider}'
     sign_in_with: 'Anmelden mit %{provider}'
     signed_in: 'Angemeldet!'
     signed_out: 'Du hast dich abgemeldet. <a href="%{url}">Code.org</a>.'
@@ -84,10 +90,15 @@ de:
     windowslive: 'Microsoft-Konto'
     microsoft_v2_auth: 'Microsoft-Konto'
     clever: 'Schlau'
+    powerschool: 'Powerschool'
     forgot_password: 'Passwort vergessen?'
+    migration_success: 'Geschafft! Du hast die Aktualisierung für das neue Konto Erlebnis gemacht.'
+    demigration_success: 'Das neue Konto Erlebnis ist nun auf deinem Konto deaktiviert.'
     need_confirmation: "Keine Anmeldebestätigung erhalten?"
     need_unlock: "Keine Anweisungen zum Entsperren erhalten?"
-    not_linked: "Sorry, dein Code.org Konto ist nicht mit %{provider} verbunden. Bitte logge dich unten mit deinem Passwort ein."
+    not_linked: "Sorry, dein Code.org-Konto ist nicht mit %{provider} verbunden. Bitte logge dich unten mit deinem Passwort ein."
+    use_clever: "Es tut uns leid, dein Code.org-Konto ist nicht mit %{provider} verknüpft. Bitte melde dich über dein Clever-Konto an."
+    unable_to_connect_provider: "Nicht möglich dein Code.org-Konto mit deinem %{provider}-Konto zu verbinden. Bitte versuche es noch einmal."
   signup_form:
     student_count: '%{count} Schüler haben sich bereits angemeldet.'
     teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
@@ -239,6 +250,10 @@ de:
     updated: '%{model} wurde erfolgreich aktualisiert.'
     destroyed: '%{model} wurde erfolgreich gelöscht.'
     access_denied: 'Du hast keinen Zugriff auf dieses %{model}.'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "Die E-Mail-Adresse die du angegeben hast ist nicht die passende Adresse für dieses Konto"
   nav:
     header:
       finished_hoc: "Ich habe meine Programmierstunde beendet."
@@ -311,6 +326,7 @@ de:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Spielelabor'
       playlab_k1: 'Spielelabor (Leseanfänger)'
+      sports: 'Sport'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Bausteine)'
       starwarsblocks_hour: 'Star Wars (Bausteine)'
@@ -369,7 +385,8 @@ de:
     no_password_because_oauth: 'Kein Passwort, da du dich als Drittanbieter einloggst.'
     no_password_because_sponsored: 'Wende dich an deinen Lehrer um dich um dein Passwort zu kümmern.'
     create_personal_login: 'Erstelle ein persönliches Login'
-    create_personal_login_info: 'Wenn du dein Code.org Konto auch nach dem Ende des laufenden Schuljahres weiterverwenden möchtest, kannst du unten dein eigenes Login-Konto erstellen.'
+    create_personal_login_info: 'Wenn du dein Code.org-Konto auch nach dem Ende des laufenden Schuljahres weiterverwenden möchtest, kannst du unten dein eigenes Login-Konto erstellen.'
+    enter_new_login_info: 'Gib deine neuen Login-Informationen ein'
     update: "Konto aktualisieren"
     account_successfully_updated: "Konto erfolgreich aktualisiert."
   user_level:
@@ -570,6 +587,7 @@ de:
       cta: "Lerne wie"
     hoc-encryption:
       title: "Einfache Verschlüsselung"
+      body: "Schüler lernen Techniken um verschlüsselte Nachrichten zu erstellen und zu knacken."
     weblab:
       title: "Weblabor (Beta)"
       body: "Web Lab ist eine Programmierumgebung, in der Sie einfache Webseiten mit HTML und CSS erstellen können. Entwerfen Sie Ihre Webseiten und teilen Sie die in Sekunden."
@@ -593,6 +611,12 @@ de:
     hero:
       title: "Minecraft"
       body: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
+    sports:
+      title: "Sport"
+      body: "Erstelle ein Basketballspiel oder kombiniere mehrere Sportarten."
+    text-compression:
+      title: "Text-Kompression"
+      body: "Schüler lernen hier den Text-Kompressions Widget zu benutzen um Texte zu komprimieren indem Muster durch Symbole ersetzt werden."
     unplugged:
       title: "Offline Lektionen"
       audience: "Alter 4+"
@@ -600,6 +624,7 @@ de:
       body_short: "Wenn Sie keine Computer zur Verfügung haben, probieren Sie diese Offline Lektionen in Ihrem Klassenzimmer."
     unplugged_conditionals:
       title: "Bedingungen"
+      body: "Lerne was Algorithmen und Bedingungen sind in dieser offline Aktivität mit einem Kartenspiel."
     widgets:
       title: "Widgets"
       audience: "Ab 14 Jahren"
@@ -811,8 +836,10 @@ de:
     csp_variables: 'Variablen'
     csp_conditionals: 'Bedingungen'
     csp_functions: 'Funktionen'
+    csp_project: 'Projekt'
     csp_lists: 'Listen'
     csp_loops: 'Schleifen'
+    csp_libraries: 'Bibliotheken'
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: "Sie verlassen jetzt die Code.org Website. Bitte beachten Sie, dass dieser\nLink eine Website öffnet, für deren Inhalt wir nicht verantwortlich sind."
@@ -873,10 +900,14 @@ de:
     mac: 'Mac OS X'
   locked_stage: 'Der Inhalt dieser Stufe ist gegenwärtig nicht sichtbar, weil sie noch gesperrt ist. Dein Lehrer wird diese Stufe entsperren, sobald es Zeit ist daran zu arbeiten oder um deine Antworten zu überprüfen.'
   hidden_stage: "Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei welcher Lektion Du sein solltest!"
+  return_unit_overview: 'Gehe zur Übersicht der Einheit'
   return_course_overview: 'Gehe zur Übersicht'
+  view_all_units: 'Alle Einheiten anzeigen'
   view_teacher_guide: 'Lehrer-Leitfaden anzeigen'
   pd:
     form_labels:
+      first_name: 'Vorname'
+      last_name: 'Nachname'
       email: 'E-Mail'
       school_name: 'Schulname'
       school_city: 'Stadt der Schule'
@@ -886,11 +917,20 @@ de:
         male: 'Männlich'
         female: 'Weiblich'
         none: 'Möchte ich nicht beantworten'
+      school_country:
+        canada: 'Kanada'
+        chile: 'Chile'
+        israel: 'Israel'
+        malaysia: 'Malaysien'
+        mexico: 'Mexiko'
+        thailand: 'Thailand'
       subjects:
         cs: 'Informatik'
         math: 'Mathematik'
         science: 'Wissenschaft'
         la: 'Sprachkunst'
+        music: 'Musik'
+        art: 'Kunst'
       resources:
         kodable: 'Kodable'
       robotics:

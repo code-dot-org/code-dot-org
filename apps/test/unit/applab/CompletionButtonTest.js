@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import {mount} from 'enzyme';
 import {UnconnectedCompletionButton as CompletionButton} from '@cdo/apps/templates/CompletionButton';
 

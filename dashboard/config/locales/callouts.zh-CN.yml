@@ -316,8 +316,6 @@ zh-CN:
         gradek_adventurer_loops2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: 点击这里来观看代码运行!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_preLoops3:
@@ -566,10 +564,13 @@ zh-CN:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseD_scrat_ramp6:
+        courseE_artist_ramp8_1: 您可以更改此数字。
+        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
         courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_scrat_ramp7:
         courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
       courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
         courseE_artist_ramp8_1: 您可以更改此数字。
         courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseE_artist_functions1:
@@ -605,9 +606,6 @@ zh-CN:
         courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序运行。
         courseE_artist_functions_challenge2_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       courseE_artist_ramp8:
-        courseE_artist_ramp8_1: 您可以更改此数字。
-        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
-      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: 您可以更改此数字。
         courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseE_farmer_functions1:

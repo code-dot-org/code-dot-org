@@ -248,6 +248,10 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
+    if @script_level && @level.can_have_feedback?
+      @app_options[:serverScriptLevelId] = @script_level.id
+    end
+
     # Blockly caches level properties, whereas this field depends on the user
     @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if I18n.en? && can_view_teacher_markdown?
 
@@ -656,7 +660,7 @@ module LevelsHelper
     )
   end
 
-  def render_multi_or_match_content(text, level = @level)
+  def render_multi_or_match_content(text)
     return unless text
 
     path, width = text.split(',')
@@ -664,7 +668,7 @@ module LevelsHelper
     return match_answer_as_embedded_blockly(path) if File.extname(path).ends_with? '_blocks'
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
-    level.localized_text(text)
+    text
   end
 
   def level_title

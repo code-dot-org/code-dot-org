@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import * as callouts from '@cdo/apps/code-studio/callouts';

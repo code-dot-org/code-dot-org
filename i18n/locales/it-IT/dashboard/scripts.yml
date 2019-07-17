@@ -286,7 +286,7 @@ it:
           description_short: Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity.
           stages:
             Infinity:
-              name: Infiniti
+              name: Infinito
         algebrademo:
           title: Demo per l'Algebra
           description: Un po' di esercizi per dimostrare l'ambiente ed il linguaggio di programmazione usati nel corso "Informatica in Algebra"
@@ -2048,6 +2048,7 @@ it:
             Spelling Bee:
               name: Ape Sapiente
           title: Corso rapido pre-scolare
+          assignment_family_title: Corso rapido pre-scolare
           description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
         subgoal-labels-opt-in:
@@ -3050,7 +3051,10 @@ it:
             Alien Dance Party - Input:
               name: La festa degli alieni - Ingressi
         pre-express-2018:
+          title: Corso Rapido pre-scolare (2018)
+          assignment_family_title: Corso rapido pre-scolare
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
+          description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           stages:
             'Debugging: Unspotted Bugs':
               name: Quei fastidiosi insetti nascosti
@@ -3665,7 +3669,9 @@ it:
               name: Sequenze di istruzioni con Angry Birds
               description_teacher: Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.
         pre-express-2019:
+          title: Corso Rapido pre-scolare (2019)
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
+          description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Correzione Errori (Debugging)'
@@ -3790,6 +3796,10 @@ it:
           stages:
             Mid-Year Survey:
               name: Sondaggio di metà anno
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sistema di numerazione
         time4csdemo:
           stages:
             Crowdsourcing:

@@ -3,6 +3,16 @@ id:
   data:
     script:
       category:
+        csd_2018_category_name: Penemuan CS('18-19')
+        csf_category_name: Dasar dasar CS
+        csf_2018_category_name: Dasar dasar CS (2018)
+        csf_international_category_name: Dasar dasar internasional CS
+        csf2_draft_category_name: 'Dalam pengembangan: Kursus A-F'
+        csp_category_name: "'15-16'Aturan CS"
+        csp_2018_category_name: Aturan CS('18-'19)
+        cspexams_category_name: Aturan Tes Praktik CS
+        csp17_category_name: Aturab CS('17-'18)
+        full_course_category_name: Seluruh kursus
         hoc_category_name: Jam kode
         math_category_name: Matematika
       name:
@@ -1994,6 +2004,8 @@ id:
               name: Kunci umum Kripto
             Rapid Research - Data Innovations:
               name: Penelitian cepat - Data inovasi
+            Simple Encryption:
+              name: Enkripsi sederhana
             The Cost of Free:
               name: Biayanya gratis
             What is Big Data?:
@@ -2008,6 +2020,8 @@ id:
               name: CSP Mahasiswa pasca survei pementasan
             Post-Course Survey:
               name: Survei Pasca Kursus
+            Student Post-Course Survey:
+              name: Pos siswa-survei kursus
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -2986,6 +3000,10 @@ id:
           stages:
             Controlling Memory with Variables:
               name: Mengontrol Memori dengan Variabel
+        hoc-encryption:
+          stages:
+            Simple Encryption:
+              name: Enkripsi sederhana
         fesbinary:
           title: Biner
           stages:
@@ -3659,12 +3677,15 @@ id:
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
           title: Kursus A
           assignment_family_title: Kursus A
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
           title: Kursus B
           assignment_family_title: Kursus B
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.(Sama dengan
+            kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -3679,6 +3700,8 @@ id:
               name: Perulangan bercabang
           title: Kursus D
           assignment_family_title: Kursus D
+          description_short: Segera beralih konsep dari kursus C, kemudian algoritma,
+            nested loops, kondisional, dan banyak lagi.
         coursee-2017:
           stages:
             Introduction:
@@ -3726,6 +3749,8 @@ id:
               name: Perulangan bercabang
           title: Kursus E
           assignment_family_title: Kursus E
+          description_short: Segera berpindah konsep di kursus C&D kemudian lanjutkan
+            dengan fungsi.
         coursef-2017:
           stages:
             Introduction:
@@ -3750,6 +3775,8 @@ id:
               name: Membangun dasar
           title: Kursus F
           assignment_family_title: Kursus F
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
+            dan buat seni, cerita atau permainan anda sendiri.
         csdnovice:
           stages:
             Wrap Up:
@@ -4020,6 +4047,8 @@ id:
               name: Apa itu komputer?
             Problem Solving with Big Data:
               name: Pemecahan masalah dengan Data Besar
+            Simple Encryption:
+              name: Enkripsi sederhana
             Smart Clothing Design:
               name: Pintar Desain Pakaian
         hero:
@@ -4295,6 +4324,7 @@ id:
               name: Proyek - Situs web Portfolio Pribadi
         coursea-2018:
           assignment_family_title: Kursus A
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
           stages:
             'Programming: Happy Maps':
               name: Pemetaan bahagia
@@ -4454,6 +4484,8 @@ id:
               name: Minecraft Hour of Code
         coursef-2018:
           assignment_family_title: Kursus F
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
+            dan buat seni, cerita atau permainan anda sendiri.
           stages:
             'Programming: My Robotic Friends':
               name: Teman-teman robot saya
@@ -4689,6 +4721,8 @@ id:
               name: Mengenali orang dengan data
             The Cost of Free:
               name: Biayanya gratis
+            Simple Encryption:
+              name: Enkripsi sederhana
             Encryption with Keys and Passwords:
               name: Enkripsi dengan kunci dan kata sandi
             Public Key Crypto:
@@ -4821,7 +4855,12 @@ id:
           stages:
             Artist:
               name: Artis
+        dance-extras:
+          title: Tetaplah berdansa
+          description: Lewatilah jam pertama dengan ide ide proyek yang luas.
         coursef-2019:
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
+            dan buat seni, cerita atau permainan anda sendiri.
           stages:
             Building a Foundation:
               name: Membangun dasar
@@ -4979,6 +5018,9 @@ id:
           stages:
             'null':
               name: 'null'
+        dance-extras-gallery:
+          title: Tetaplah berdansa
+          description: Lewatilah jam pertama dengan ide ide proyek yang luas.
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -4997,6 +5039,7 @@ id:
         gamelab:
           title: Laboratorium Game
         coursea-2019:
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
           stages:
             'Programming: Happy Maps':
               name: Pemetaan bahagia
@@ -5311,6 +5354,8 @@ id:
               name: Mengenali orang dengan data
             The Cost of Free:
               name: Biayanya gratis
+            Simple Encryption:
+              name: Enkripsi sederhana
             Encryption with Keys and Passwords:
               name: Enkripsi dengan kunci dan kata sandi
             Public Key Crypto:
@@ -5407,6 +5452,10 @@ id:
               name: Contoh aplikasi
             Final Project:
               name: Tugas Akhir
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sistem nomor
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -5415,6 +5464,10 @@ id:
               name: Bersyarat dengan kartu
             Building a Foundation:
               name: Membangun dasar
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Perpustakaan
         express-2018-vn:
           stages:
             Graph Paper Programming:

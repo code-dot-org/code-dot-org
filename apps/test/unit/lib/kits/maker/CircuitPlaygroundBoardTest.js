@@ -1,10 +1,12 @@
 import _ from 'lodash';
 import sinon from 'sinon';
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import five from '@code-dot-org/johnny-five';
-import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
+import CircuitPlaygroundBoard, {
+  BOARD_TYPE
+} from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 import {
   SONG_CHARGE,
   EXTERNAL_PINS
@@ -12,6 +14,12 @@ import {
 import Led from '@cdo/apps/lib/kits/maker/Led';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 import experiments from '@cdo/apps/util/experiments';
+import ChromeSerialPort from 'chrome-serialport';
+import {
+  CIRCUIT_PLAYGROUND_EXPRESS_PORTS,
+  CIRCUIT_PLAYGROUND_PORTS,
+  FLORA_PORTS
+} from './sampleSerialPorts';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -60,6 +68,7 @@ describe('CircuitPlaygroundBoard', () => {
 
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
+    ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
   });
 
   afterEach(() => {
@@ -67,6 +76,7 @@ describe('CircuitPlaygroundBoard', () => {
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
     EventEmitter.prototype.once.restore();
+    ChromeSerialPort.stub.reset();
   });
 
   itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
@@ -485,6 +495,26 @@ describe('CircuitPlaygroundBoard', () => {
       for (let i = 0; i < xPins.length; i++) {
         expect(board.mappedPin(xPins[i])).to.equal(classicPins[i]);
       }
+    });
+  });
+
+  describe(`detectBoardType()`, () => {
+    it('sets the type of board detected for Classic boards', () => {
+      board = new CircuitPlaygroundBoard(CIRCUIT_PLAYGROUND_PORTS[0]);
+      board.detectBoardType();
+      expect(board.boardType_).to.equal(BOARD_TYPE.CLASSIC);
+    });
+
+    it('sets the type of board detected for Express boards', () => {
+      board = new CircuitPlaygroundBoard(CIRCUIT_PLAYGROUND_EXPRESS_PORTS[0]);
+      board.detectBoardType();
+      expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
+    });
+
+    it('sets the type of board detected for other boards', () => {
+      board = new CircuitPlaygroundBoard(FLORA_PORTS[0]);
+      board.detectBoardType();
+      expect(board.boardType_).to.equal(BOARD_TYPE.OTHER);
     });
   });
 });

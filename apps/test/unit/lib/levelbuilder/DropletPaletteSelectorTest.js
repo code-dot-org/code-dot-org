@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import CodeMirror from 'codemirror';
-import {expect} from 'chai';
+import {expect} from '../../../util/configuredChai';
 import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/DropletPaletteSelector';
 
 describe('DropletPaletteSelector', () => {
