@@ -27,7 +27,13 @@ const styles = {
   levelFieldLabel: {
     display: 'inline-block',
     lineHeight: '36px',
-    margin: '0 7px 0 5px'
+    margin: '0 7px 0 5px',
+    verticalAlign: 'middle'
+  },
+  levelSelect: {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    width: 600
   },
   textInput: {
     height: 34,
@@ -208,13 +214,16 @@ export class UnconnectedLevelTokenDetails extends Component {
                 />
               </div>
             )}
-            <VirtualizedSelect
-              options={this.levelKeyOptions}
-              value={id}
-              onChange={this.handleLevelSelected.bind(null, index)}
-              clearable={false}
-              arrowRenderer={ArrowRenderer}
-            />
+            <span style={{...styles.levelFieldLabel}}>Level name:</span>
+            <span style={styles.levelSelect}>
+              <VirtualizedSelect
+                options={this.levelKeyOptions}
+                value={id}
+                onChange={this.handleLevelSelected.bind(null, index)}
+                clearable={false}
+                arrowRenderer={ArrowRenderer}
+              />
+            </span>
           </div>
         ))}
         {/* We don't currently support editing progression names here, but do
