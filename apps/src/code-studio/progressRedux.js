@@ -682,7 +682,7 @@ export const userProgressFromServer = (
   $.ajax({
     url: `/api/user_progress/${state.scriptName}`,
     method: 'GET',
-    data: JSON.stringify({user_id: userId})
+    data: {user_id: userId}
   }).done(data => {
     data = data || {};
 
