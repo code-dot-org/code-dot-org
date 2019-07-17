@@ -12,7 +12,8 @@ const defaultLevel = {
   position: 1,
   kind: 'puzzle',
   ids: [2],
-  activeId: 2
+  activeId: 2,
+  named: true
 };
 
 export default storybook => {

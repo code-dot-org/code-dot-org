@@ -41,6 +41,18 @@ const styles = {
     verticalAlign: 'baseline',
     margin: '7px 0 10px 0'
   },
+  checkboxLabel: {
+    display: 'inline-block',
+    marginRight: 10,
+    marginBottom: 0
+  },
+  checkboxInput: {
+    marginTop: 0,
+    verticalAlign: 'middle'
+  },
+  checkboxText: {
+    verticalAlign: 'middle'
+  },
   divider: {
     borderColor: '#ddd',
     margin: '7px 0'
@@ -132,9 +144,37 @@ export class UnconnectedLevelTokenDetails extends Component {
     }
   };
 
+  handleCheckboxChange = field => {
+    this.props.setField(this.props.stagePosition, this.props.level.position, {
+      [field]: !this.props.level[field]
+    });
+  };
+
   render() {
     return (
       <div style={styles.levelTokenActive}>
+        <span>
+          <label style={styles.checkboxLabel}>
+            <input
+              type="checkbox"
+              style={styles.checkboxInput}
+              checked={!!this.props.level.named}
+              onChange={this.handleCheckboxChange.bind(this, 'named')}
+            />
+            &nbsp;<span style={styles.checkboxText}>named</span>
+          </label>
+          <label style={styles.checkboxLabel}>
+            <input
+              type="checkbox"
+              style={styles.checkboxInput}
+              checked={!!this.props.level.assessment}
+              onChange={this.handleCheckboxChange.bind(this, 'assessment')}
+            />
+            &nbsp;<span style={styles.checkboxText}>assessment</span>
+          </label>
+        </span>
+        <hr style={styles.divider} />
+        <div style={{clear: 'both'}} />
         <span style={Object.assign({float: 'left'}, styles.levelFieldLabel)}>
           Level type
         </span>
