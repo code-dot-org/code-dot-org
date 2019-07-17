@@ -229,9 +229,17 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     assert_response :success
     response = CSV.parse(@response.body)
 
-    # 22 rows (header + 21 teacher rows)
-    assert_equal 22, response.count
+    # Check that we have the expected number of columns in the header row
     assert_equal EXPECTED_COMMON_FIELDS.count + EXPECTED_PAYMENT_FIELDS.count, response.first.count
+
+    # Check that column 11 in the header row is workshop id
+    assert_equal 'Workshop Id', response.first[11]
+
+    # Check expected row counts for our test workshops
+    # (We don't count all rows to insulate this test against existing state)
+    assert_equal 10, response.select {|row| row[11] == @pm_workshop.id.to_s}.count
+    assert_equal 10, response.select {|row| row[11] == @workshop.id.to_s}.count
+    assert_equal 1, response.select {|row| row[11] == @other_workshop.id.to_s}.count
   end
 
   private
