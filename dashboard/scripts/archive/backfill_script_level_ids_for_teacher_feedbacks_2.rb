@@ -23,8 +23,7 @@ def update_script_level_ids
       )
       if associated_user_levels.length == 1
         script_levels = ScriptLevel.where(
-          level_id: associated_user_levels[0].level_id,
-          script_id: associated_user_levels[0].script_id
+          script_id: associated_user_levels.first.script_id
         )
         if script_levels.length == 1
           script_level_id = script_levels[0].id
