@@ -65,11 +65,23 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   end
 
   def organizers
-    UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id).map do |user_id|
+    organizers = UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id).map do |user_id|
       admin = User.find(user_id)
       {label: admin.name, value: admin.id}
     end
 
+    if object.regional_partner
+      object.regional_partner.program_managers.each do |pm|
+        organizers << {label: pm.name, value: pm.id}
+      end
+    else
+      UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id).map do |user_id|
+        pm = User.find(user_id)
+        organizers << {label: pm.name, value: pm.id}
+      end
+    end
+
+    organizers
     # should the current organizer be separately added to the list?
     # probably not - either they are in one of these caegories or they shouldn't be the organizer in future
     # admins << {label: object.organizer.name, value: object.organizer.id}
