@@ -6,8 +6,7 @@ import $ from 'jquery';
 
 export default class StudentFeedbackNotification extends Component {
   static propTypes = {
-    studentId: PropTypes.number.isRequired,
-    linkToFeedbackOverview: PropTypes.string.isRequired
+    studentId: PropTypes.number.isRequired
   };
 
   constructor(props) {
@@ -44,7 +43,7 @@ export default class StudentFeedbackNotification extends Component {
             notice={i18n.feedbackNotification()}
             details={notificationDetails}
             buttonText={i18n.feedbackNotificationButton()}
-            buttonLink={this.props.linkToFeedbackOverview}
+            buttonLink="/feedback"
             dismissible={false}
           />
         )}
