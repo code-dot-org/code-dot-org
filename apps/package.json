@@ -182,6 +182,7 @@
     "react-virtualized": "^9.18.5",
     "react-virtualized-select": "^3.0.1",
     "react-with-context": "^2.0.0",
+    "reactabular-table": "^8.14",
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
     "redux-mock-store": "^1.2.3",
@@ -203,6 +204,7 @@
     "seedrandom": "2.4.2",
     "sinon": "^5.0.0",
     "sinon-chai": "^3.1.0",
+    "sortabular": "^1.6",
     "sprintf-js": "^1.0.3",
     "style-loader": "^0.13.1",
     "uglifyjs-webpack-plugin": "^2.1.1",
@@ -235,9 +237,7 @@
     "react-portal": "^3.2.0",
     "react-router-dom": "^4.3.1",
     "react-transition-group": "2.9.0",
-    "reactabular-table": "^8.14",
     "selectize": "^0.12.4",
-    "sortabular": "^1.6",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
   }
