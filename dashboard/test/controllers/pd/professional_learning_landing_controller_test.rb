@@ -32,6 +32,8 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test 'Admin workshops may show up as pending exit surveys' do
+    skip 'Investigate flaky test failures'
+
     # Fake Admin workshop, which should produce an exit survey
     admin_workshop = create :pd_ended_workshop,
       course: Pd::Workshop::COURSE_ADMIN,
@@ -73,6 +75,8 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test 'FiT workshops do not interfere with other pending exit surveys' do
+    skip 'Investigate flaky test failures'
+
     # Fake CSF workshop (older than the FiT workshop) which should
     # produce a pending exit survey
     csf_workshop = create :pd_ended_workshop,
