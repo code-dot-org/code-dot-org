@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedExportDialog as ExportDialog} from '@cdo/apps/code-studio/components/ExportDialog';
+import {UnconnectedExportDialog as ExportDialog} from '@cdo/apps/code-studio/components/ExportDialog/Dialog';
 import {SignInState} from '@cdo/apps/code-studio/progressRedux';
 
 describe('ExportDialog', () => {
