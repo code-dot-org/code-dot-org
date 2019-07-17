@@ -23,6 +23,7 @@ class Census::StateCsOffering < ApplicationRecord
   UNSPECIFIED_VALUE = 'unspecified'.freeze
 
   SUPPORTED_STATES = %w(
+    AK
     AL
     AR
     CA
@@ -35,6 +36,7 @@ class Census::StateCsOffering < ApplicationRecord
     HI
     IA
     ID
+    IL
     IN
     KS
     KY
@@ -43,6 +45,7 @@ class Census::StateCsOffering < ApplicationRecord
     ME
     MD
     MI
+    MN
     MO
     MS
     MT
@@ -50,6 +53,7 @@ class Census::StateCsOffering < ApplicationRecord
     ND
     NH
     NJ
+    NM
     NV
     NY
     OH
@@ -58,6 +62,7 @@ class Census::StateCsOffering < ApplicationRecord
     PA
     RI
     SC
+    SD
     TN
     TX
     UT
