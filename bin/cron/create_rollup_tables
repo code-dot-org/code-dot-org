@@ -83,6 +83,7 @@ def main
         level_id: level.id,
         contained_level_id: sublevel.id,
         contained_level_type: sublevel.type,
+        contained_level_page: 1,
         contained_level_position: sublevel_index
       }
     end

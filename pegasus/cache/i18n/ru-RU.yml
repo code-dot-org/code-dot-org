@@ -1228,6 +1228,8 @@ ru-RU:
   cspexam1-mWU7ilDYM9_name: 'Тест: часть 1 (25 вопросов)'
   cspexam2-AKwgAh1ac5_name: 'Тест: часть 2 (25 вопросов)'
   cspunit3_gradelevel: 9-12 классы
+  accelerated_name: Ускоренный курс
+  express_name: Экспресс-курс
   20-hour_name: Ускоренный курс
   algebra_name: Информатика в алгебре
   AlgebraA_name: 'Информатика в алгебре: курс A'

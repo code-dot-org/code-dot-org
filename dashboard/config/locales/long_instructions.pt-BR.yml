@@ -5789,6 +5789,99 @@ pt-BR:
         -   Encontre a propriedade "text-align" na tag parágrafo.
         -   Altere o alinhamento do parágrafo.
         -   Escolha entre "left", "right" e "center" (esquerda, direita e centro)
+      CSD U2 un_ordered lists: |-
+        # Combinando Listas
+
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Existem dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma lista não ordenada?</strong>
+        </summary>
+
+        Uma lista não ordenada é somente um conjunto de itens pontuados.
+        <br /><br />Um elemento de uma lista não ordenada possui a tag \<ul>. Isto é uma abreviação para <strong>U</strong>nordered <strong>L</strong>ist ("lista não ordenada", em inglês). Cada item na lista é demarcado por elemento de item de lista \<li>. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem ("item de lista", em inglês). O elemento de item de lista é um elemento filho, o que significa que ele deve ser colocado no interior do elemento pai, que é a lista não ordenada (\<ul>).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista não ordenada?</strong>
+        </summary>
+
+        Uma lista não ordenada é criada em dois passos: cria-se a lista e adicionam-se os itens da lista. Para criar uma lista não ordenada, use as tags de lista não ordenada `<ul></ul>`. A seguir, adicione seus itens de lista **dentro** das tags da lista não ordenada. Para criar cada item, use as tags de itens de lista `<li></li>`, e especifique o item no interior das tags.
+        <br /><br />
+        Indentar as tags \<li> pode ajudar, para que fique claro que elas estão contidas na tag \<ul>.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>O que é uma lista ordenada?</strong>
+        </summary>
+
+        Uma lista ordenada é um conjunto de itens que são numerados.
+        <br /><br />
+        Uma lista ordenada possui a tag `<ol>`. Isto é uma abreviação para <strong>O</strong>rdered <strong>L</strong>ist ("lista ordenada", em inglês). Cada item na lista é indicado por um elemento de item de lista `<li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem ("item de lista", em inglês). O item elemento de item de lista é um elemento filho, o que significa que deve ser colocado no interior de seu elemento pai, que é a lista ordenada (`<ol>`).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista ordenada?</strong>
+        </summary>
+
+        Uma lista ordenada é criada em dois passos: cria-se a lista e adicionam-se os itens. Para criar uma lista ordenada, digite as tags `<ol></ol>`. A seguir, adicione seus itens de lista **dentro** das tags de lista ordenada. Para criar cada item, use as tags de itens de lista `<li></li>` e digite o item no interior das tags.
+        <br /><br />
+        A indentação das tags `<li>` pode ajudar, para que fique claro que estão contidas dentro da tag `<ol>`.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Mostre-me código que funciona.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre>&lt;ul&gt; <br>  &lt;li&gt;Vermelho &lt;/li&gt;<br> &lt;li&gt;Verde &lt;/li&gt;<br> &lt;li&gt; Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ol&gt; <br> &lt;li&gt;Passo 1 &lt;/li&gt; <br> &lt;li&gt;Passo 2&lt;/li&gt; <br> &lt;li&gt;Passo 3&lt;/li&gt; <br> &lt;/ol&gt; </pre></td>
+        <td><img src="https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria conter tanto uma lista não ordenada quanto uma lista ordenada.
+
+        # Faça Isto
+
+        -   Use as tags de lista para estruturar este conteúdo em duas listas que se parecem com as listas abaixo.
+
+        _Dica: Não deve haver NÚMEROS no seu código._
+
+        ![](https://images.code.org/c9c002b39893ab09e8bc6be4b20ad7c2-image-1553714125509.png)
       CSD U2 unordered list: |-
         # Listas não ordenadas
 
@@ -5871,6 +5964,65 @@ pt-BR:
         Faça você mesmo\n\n-   Use as tags `<ul>` e `<li>` para estruturar o conteúdo
         em uma lista não ordenada como na figura abaixo.\n\n![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04
         PM.png>)"
+      CSD U2 unordered list_2019: |-
+        # Listas Não Ordenadas
+
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Existem dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma lista não ordenada?</strong>
+        </summary>
+
+        Uma lista não ordenada é somente um conjunto de itens pontuados.
+        <br /><br />Um elemento de uma lista não ordenada possui a tag \<ul>. Isto é uma abreviação para <strong>U</strong>nordered <strong>L</strong>ist ("lista não ordenada", em inglês). Cada item na lista é demarcado por elemento de item de lista \<li>. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem ("item de lista", em inglês). O elemento de item de lista é um elemento filho, o que significa que ele deve ser colocado no interior do elemento pai, que é a lista não ordenada (\<ul>).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista não ordenada?</strong>
+        </summary>
+
+        Uma lista não ordenada é criada em dois passos: criando a lista e adicionando os itens da lista. Para criar uma lista não ordenada, use as tags de lista não ordenada `<ul></ul>`. A seguir, adicione seus itens de lista **dentro** das tags da lista não ordenada. Para criar cada item, use as tags de itens de lista `<li></li>`, e especifique o item no interior das tags.
+        <br /><br />
+        Indentar as tags \<li> pode ajudar, para que fique claro que elas estão contidas na tag \<ul>.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Mostre-me código que funciona.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre>&lt;ul&gt;<br> &lt;li&gt;Vermelho &lt;/li&gt;<br> &lt;li&gt;Verde &lt;/li&gt;<br> &lt;li&gt;Azul&lt;/li&gt; <br>&lt;/ul&gt;</pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria conter uma lista não ordenada, mas algumas tags de lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ul>` e `<li>` para estruturar o conteúdo em uma lista não ordenada, da forma como é mostrado na figura abaixo.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
       CSD U2 upload images: |-
         # Carregue Imagens
 
@@ -6891,6 +7043,16 @@ pt-BR:
 
         -   Adicione uma instrução `console.log`.
         -   Adicione uma expressão booleana dentro do `console.log` que verifica se o`apple.scale` é maior que 2.
+      CSD U3 Conditionals Apple 2: |-
+        # Tornando vermelho
+
+        Agora que sabemos como usar instruções _if_, você pode fazer mais do que apenas verificar se a maçã atingiu uma escala de 2, você a transforma em vermelha assim que acontece.
+
+        # Faça isso
+
+        Use um condicional no laço de desenho para verificar se o `maça.escala` é maior que 2 - se estiver, defina a nova animação do apple para" maça \\ \_vermelha ".
+
+        \_Desafio: Você também pode fazer a maçã parar de crescer quando ficar vermelha? \_
       CSD U3 Conditionals Apple 2_2018: |-
         # Mudando as frutas
 
@@ -7144,6 +7306,33 @@ pt-BR:
 
         -   Execute o código e veja como ele funciona.
         -   Discuta com seu colega se isso se para com o folioscópio que você viu no vídeo. Sim? Não? Por quê?
+      CSD U3 Draw Loop Plugged predict 2 embed: |-
+        # Prever
+
+        Este programa tem uma pequena diferença que fará com que seja executado de forma um pouco diferente. Novamente, lembre-se:
+
+        -   Todo o seu código fora do loop de desenho é executado primeiro, uma vez
+        -   Todo o seu código dentro do loop de desenho é executado indefinidamente
+
+        O que esse programa fará? Escreva sua previsão abaixo.
+      CSD U3 Draw Loop Plugged predict 2 embed_2018: |-
+        # Prever
+
+        Este programa tem uma pequena diferença que fará com que seja executado de forma um pouco diferente. Novamente, lembre-se:
+
+        -   Todo o seu código fora do loop de desenho é executado primeiro, uma vez
+        -   Todo o seu código dentro do loop de desenho é executado indefinidamente
+
+        O que esse programa fará? Escreva sua previsão abaixo.
+      CSD U3 Draw Loop Plugged predict 2 embed_2019: |-
+        # Prever
+
+        Este programa tem uma pequena diferença que fará com que seja executado de forma um pouco diferente. Novamente, lembre-se:
+
+        -   Todo o seu código fora do loop de desenho é executado primeiro, uma vez
+        -   Todo o seu código dentro do loop de desenho é executado indefinidamente
+
+        O que esse programa fará? Escreva sua previsão abaixo.
       CSD U3 Draw Loop Plugged update your scene: |-
         # Estenda Sua Cena
 
@@ -7733,6 +7922,13 @@ pt-BR:
         -   Acrescente uma declaração `if else` depois que você atualizar a posição das abelhas.
         -   Na entrada do if use um booleano para verificar se a posição x do mouse está no lado da tela junto à flor.
         -   Defina o propriedade ´visible\` para cada abelha entre as declarações if e else, de forma apropriada para fazer com que as abelhas apareçam somente quando estiverem próximas à flor.
+      CSD U3 If Else predict question: |-
+        # Predição de If/Else
+
+        Leia atentamente o código do programa a seguir, prestando atenção especial ao bloco "if/else" da linha 10. Depois de discutir as perguntas abaixo com seu parceiro, escreva suas predições e rode o código para verificar o que ele faz.
+
+        -   O que acontece quendo você pressiona a barra de espaço?
+        -   O que acontece quando você **não** pressiona a barra de espaço?
       CSD U3 If Else_2018: |-
         # Quando Prover uma Rota Alternativa
 
@@ -8333,6 +8529,107 @@ pt-BR:
         # Animação dos Peixes
 
         Usando o padrão do contador, faça com que todos os três peixes se movam para a direita. O peixe azul deve ser o mais rápido e o peixe verde deve ser o mais devagar.
+      CSD U3 Movement Gears: |-
+        <img src="https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif" style="width:200px; float:right; margin-left: 20px;">
+
+        # Direção de rotação
+
+        Quando você usa o padrão de contador para a propriedade `rotação` com adição, o objeto sempre girará no sentido horário. Às vezes, porém, você vai querer que seu sprite gire na outra direção. Para fazer isso você pode simplesmente usar subtração!
+
+        # Faça isso
+
+        Existem três marchas configuradas para você. Você precisa fazer com que todas as engrenagens pareçam estar girando em sincronia umas com as outras.
+
+        -   Faça as engrenagens girarem para que pareçam estar funcionando como um único sistema.
+        -   **Dica: Eles não vão todos girar na mesma direção**.
+      CSD U3 Movement Gears_2018: |-
+        <img src="https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif" style="width:200px; float:right; margin-left: 20px;">
+
+        # Direção de rotação
+
+        Quando você usa o padrão de contador para a propriedade `rotação` com adição, o objeto sempre girará no sentido horário. Às vezes, porém, você vai querer que seu sprite gire na outra direção. Para fazer isso você pode simplesmente usar subtração!
+
+        # Faça isso
+
+        Existem três marchas configuradas para você. Você precisa fazer com que todas as engrenagens pareçam estar girando em sincronia umas com as outras.
+
+        -   Faça as engrenagens girarem para que pareçam estar funcionando como um único sistema.
+        -   **Dica: Eles não vão todos girar na mesma direção**.
+      CSD U3 Movement Gears_2019: |-
+        <img src="https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif" style="width:200px; float:right; margin-left: 20px;">
+
+        # Direção de rotação
+
+        Quando você usa o padrão de contador para a propriedade `rotação` com adição, o objeto sempre girará no sentido horário. Às vezes, porém, você vai querer que seu sprite gire na outra direção. Para fazer isso você pode simplesmente usar subtração!
+
+        # Faça isso
+
+        Existem três marchas configuradas para você. Você precisa fazer com que todas as engrenagens pareçam estar girando em sincronia umas com as outras.
+
+        -   Faça as engrenagens girarem para que pareçam estar funcionando como um único sistema.
+        -   **Dica: Eles não vão todos girar na mesma direção**.
+      CSD U3 Movement Your Own 1: |-
+        # Faça uma animação de sua preferência
+
+        Usando o padrão de contador e as propriedades do sprite, crie uma animação toda sua. Você pode considerar a construção de imagens estáticas feitas no passado ou criar uma nova imagem para criar ou uma história para contar.
+
+        # Faça isso
+
+        Para começar, vamos apenas configurar uma cena estática.
+
+        -   Adicione imagens na aba Animação.
+        -   Crie sprites e atribua imagens.
+        -   Configure o loop de desenho para desenhar um plano de fundo e seus sprites.
+      CSD U3 Movement Your Own 1_2018: |-
+        # Faça uma animação de sua preferência
+
+        Usando o padrão de contador e as propriedades do sprite, crie uma animação toda sua. Você pode considerar a construção de imagens estáticas feitas no passado ou criar uma nova imagem para criar ou uma história para contar.
+
+        # Faça isso
+
+        Para começar, vamos apenas configurar uma cena estática.
+
+        -   Adicione imagens na aba Animação.
+        -   Crie sprites e atribua imagens.
+        -   Configure o loop de desenho para desenhar um plano de fundo e seus sprites.
+      CSD U3 Movement Your Own 1_2019: |-
+        # Faça uma animação de sua preferência
+
+        Usando o padrão de contador e as propriedades do sprite, crie uma animação toda sua. Você pode considerar a construção de imagens estáticas feitas no passado ou criar uma nova imagem para criar ou uma história para contar.
+
+        # Faça isso
+
+        Para começar, vamos apenas configurar uma cena estática.
+
+        -   Adicione imagens na aba Animação.
+        -   Crie sprites e atribua imagens.
+        -   Configure o loop de desenho para desenhar um plano de fundo e seus sprites.
+      CSD U3 Movement Your Own 2: |-
+        # Adicione movimento à sua animação
+
+        Com a sua cena estática configurada, agora você pode adicionar algum movimento. Quando estiver satisfeito com seu programa, clique no botão "Enviar" para ativá-lo. Você pode sempre cancelar a inscrição e continuar trabalhando se quiser adicionar recursos.
+
+        # Faça isso
+
+        No laço de desenho
+
+        -   Identifique quais propriedades do sprite serão alteradas.
+        -   Atualize essas propriedades usando o padrão de contador.
+
+        _Dica: se o seu padrão de contador não estiver funcionando como esperado, adicione observadores para ajudar a depurar seu programa._
+      CSD U3 Movement Your Own 2_2019: |-
+        # Adicione movimento à sua animação
+
+        Com a sua cena estática configurada, agora você pode adicionar algum movimento. Quando estiver satisfeito com seu programa, clique no botão "Enviar" para ativá-lo. Você pode sempre cancelar a inscrição e continuar trabalhando se quiser adicionar recursos.
+
+        # Faça isso
+
+        No laço de desenho
+
+        -   Identifique quais propriedades do sprite serão alteradas.
+        -   Atualize essas propriedades usando o padrão de contador.
+
+        _Dica: se o seu padrão de contador não estiver funcionando como esperado, adicione observadores para ajudar a depurar seu programa._
       CSD U3 Plotting Shapes Shape Lab: |-
         # Desenhando Formas
 
@@ -8490,6 +8787,15 @@ pt-BR:
         -   Use `numeroAleatório()` para fazer o resto do corpo da cobra se mover para cima e para baixo como os três primeiros.
 
         _Desafio: Você pode tornar o tamanho de alguns círculos aleatórios também?_
+      CSD U3 Random rainbow snake_2018_2019: "<img src=\"https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58
+        PM.png\" style=\"float:right;height:150px\">\n\n# Cobra Coral\n\nEste programa
+        desenha uma espécie muito rara de cobra coral. Para fazer com que esta cobra
+        seja desenhada de forma diferente a cada vez, você terá que usar números aleatórios.
+        \n\n# Faça Isto\n\n-   Execute o problema várias vezes para ver como o código
+        inicial funciona.\n-   Acrescente ao menos três novos círculos de cores diferentes
+        à sua cobra coral.\n-   Use `randomNumber()` para fazer o restante do corpo
+        da cobra se mover para cima e para baixo, da mesma forma como os três primeiros.\n\n_Desafio:
+        Você consegue fazer o tamanho de alguns dos círculos serem aleatórios, também?_"
       CSD U3 Random random ellipse: |-
         # Números aleatórios
 
@@ -8552,6 +8858,72 @@ pt-BR:
         ## Esboce-o
 
         Antes de prosseguir, tire um segundo para esboçar uma cena que você gostaria de fazer no final desta lição. Considere as formas simples que você usou no passado, sprites para seus personagens e qualquer texto que você gostaria na tela. Depois de esboçar uma ideia, você aprenderá sobre `texto` e como compor uma cena.
+      CSD U3 Sprite Movement Left: |-
+        <img src="https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif" style="float: right; margin-left: 20px">
+
+        # Mover para a esquerda
+
+        Se adicionar à coordenada x de um sprite faz com que ele se mova para a direita, como você pode fazer isso se mover para a esquerda?
+
+        # Faça isso
+
+        Faça seu programa se animar como a imagem à direita. Atualize o `fly.x` dentro do laço de desenho para que em cada quadro a mosca seja desenhada um pouco mais para a esquerda.
+
+        _Dica: Você pode fazer seus sprites se moverem mais rapidamente adicionando ou subtraindo números maiores. A mosca em nosso exemplo se move duas vezes mais rápido que o avião no último nível._
+      CSD U3 Sprite Movement Left_2018: |-
+        <img src="https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif" style="float: right; margin-left: 20px">
+
+        # Mover para a esquerda
+
+        Se adicionar à coordenada x de um sprite faz com que ele se mova para a direita, como você pode fazer isso se mover para a esquerda?
+
+        # Faça isso
+
+        Faça seu programa se animar como a imagem à direita. Atualize o `fly.x` dentro do laço de desenho para que em cada quadro a mosca seja desenhada um pouco mais para a esquerda.
+
+        _Dica: Você pode fazer seus sprites se moverem mais rapidamente adicionando ou subtraindo números maiores. A mosca em nosso exemplo se move duas vezes mais rápido que o avião no último nível._
+      CSD U3 Sprite Movement Left_2019: |-
+        <img src="https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif" style="float: right; margin-left: 20px">
+
+        # Mover para a esquerda
+
+        Se adicionar à coordenada x de um sprite faz com que ele se mova para a direita, como você pode fazer isso se mover para a esquerda?
+
+        # Faça isso
+
+        Faça seu programa se animar como a imagem à direita. Atualize o `fly.x` dentro do laço de desenho para que em cada quadro a mosca seja desenhada um pouco mais para a esquerda.
+
+        _Dica: Você pode fazer seus sprites se moverem mais rapidamente adicionando ou subtraindo números maiores. A mosca em nosso exemplo se move duas vezes mais rápido que o avião no último nível._
+      CSD U3 Sprite Movement Right: |-
+        <img src="https://images.code.org/629bc615a879f0f3dc9f290bea2358c8-image-1491861334164.gif" style="float: right; margin-left: 20px">
+
+        # Movimento da Sprite
+
+        Usando o padrão de contador, você pode escrever programas que animam sprites sem problemas. Adicionar ou remover da propriedade `x` ou`y` de um sprite no laço de desenho faz seu sprite se mover um pouco a cada vez que ele é redesenhado.
+
+        # Faça isso
+
+        Faça seu programa se animar como a imagem à direita. Nós já adicionamos uma linha para atualizar `plane.x` no loop de desenho, mas ele precisa ser finalizado.
+      CSD U3 Sprite Movement Right_2018: |-
+        <img src="https://images.code.org/629bc615a879f0f3dc9f290bea2358c8-image-1491861334164.gif" style="float: right; margin-left: 20px">
+
+        # Movimento da Sprite
+
+        Usando o padrão de contador, você pode escrever programas que animam sprites sem problemas. Adicionar ou remover da propriedade `x` ou`y` de um sprite no laço de desenho faz seu sprite se mover um pouco a cada vez que ele é redesenhado.
+
+        # Faça isso
+
+        Faça seu programa se animar como a imagem à direita. Nós já adicionamos uma linha para atualizar `plane.x` no loop de desenho, mas ele precisa ser finalizado.
+      CSD U3 Sprite Movement Right_2019: |-
+        <img src="https://images.code.org/629bc615a879f0f3dc9f290bea2358c8-image-1491861334164.gif" style="float: right; margin-left: 20px">
+
+        # Movimento da Sprite
+
+        Usando o padrão de contador, você pode escrever programas que animam sprites sem problemas. Adicionar ou remover da propriedade `x` ou`y` de um sprite no laço de desenho faz seu sprite se mover um pouco a cada vez que ele é redesenhado.
+
+        # Faça isso
+
+        Faça seu programa se animar como a imagem à direita. Nós já adicionamos uma linha para atualizar `plane.x` no loop de desenho, mas ele precisa ser finalizado.
       CSD U3 Sprites anitab 1: |-
         # Imagens
 
@@ -8603,6 +8975,87 @@ pt-BR:
         -   Execute o código para ver como funciona.
         -   Mude a entrada para o comando `setAnimation` para mudar a aparência do sprite.
         -   Experimente todas as imagens diferentes.
+      CSD U3 Sprites anitab 2: |-
+        # Envie sua própria imagem
+
+        Você também pode usar a aba Animação para fazer upload ou desenhar sua própria imagem.
+
+        # Faça isso
+
+        Você vai fazer uma pipa voadora. Você pode pesquisar na web por uma imagem ou criar uma nova animação a partir do zero desenhando sua própria pipa.
+
+        -   Faça o download da sua imagem de pipa. Imagens com fundos transparentes funcionam melhor.
+        -   Abra a aba animações.
+        -   Clique em <img src="https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05 PM.png" style="width:50px"> e, em seguida, em <img src="https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16 PM.png" style="width:50px"> para carregar uma imagem.
+        -   Selecione o arquivo do seu computador.
+        -   Renomeie sua imagem para que seja fácil de lembrar. Para renomeá-lo, clique no texto abaixo da imagem.
+        -   De volta ao modo de código, use `sprite.setAnimation()` para fazer seu sprite `pipa` mostrar sua nova animação.
+
+        Não se preocupe se a imagem da sua pipa é muito grande! Você aprenderá como consertar isso no próximo nível.
+      CSD U3 Sprites anitab 2_2018: |-
+        # Envie sua própria imagem
+
+        Você também pode usar a aba Animação para fazer upload ou desenhar sua própria imagem.
+
+        # Faça isso
+
+        Você vai fazer uma pipa voadora. Você pode pesquisar na web por uma imagem ou criar uma nova animação a partir do zero desenhando sua própria pipa.
+
+        -   Faça o download da sua imagem de pipa. Imagens com fundos transparentes funcionam melhor.
+        -   Abra a aba animações.
+        -   Clique em <img src="https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05 PM.png" style="width:50px"> e, em seguida, em <img src="https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16 PM.png" style="width:50px"> para carregar uma imagem.
+        -   Selecione o arquivo do seu computador.
+        -   Renomeie sua imagem para que seja fácil de lembrar. Para renomeá-lo, clique no texto abaixo da imagem.
+        -   De volta ao modo de código, use `sprite.setAnimation()` para fazer seu sprite `pipa` mostrar sua nova animação.
+
+        Não se preocupe se a imagem da sua pipa é muito grande! Você aprenderá como consertar isso no próximo nível.
+      CSD U3 Sprites anitab 2_2019: |-
+        # Envie sua própria imagem
+
+        Você também pode usar a aba Animação para fazer upload ou desenhar sua própria imagem.
+
+        # Faça isso
+
+        Você vai fazer uma pipa voadora. Você pode pesquisar na web por uma imagem ou criar uma nova animação a partir do zero desenhando sua própria pipa.
+
+        -   Faça o download da sua imagem de pipa. Imagens com fundos transparentes funcionam melhor.
+        -   Abra a aba animações.
+        -   Clique em <img src="https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05 PM.png" style="width:50px"> e, em seguida, em <img src="https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16 PM.png" style="width:50px"> para carregar uma imagem.
+        -   Selecione o arquivo do seu computador.
+        -   Renomeie sua imagem para que seja fácil de lembrar. Para renomeá-lo, clique no texto abaixo da imagem.
+        -   De volta ao modo de código, use `sprite.setAnimation()` para fazer seu sprite `pipa` mostrar sua nova animação.
+
+        Não se preocupe se a imagem da sua pipa é muito grande! Você aprenderá como consertar isso no próximo nível.
+      CSD U3 Sprites anitab 3: |-
+        # Redimensionando com Escala
+
+        Na gaveta _Sprites_ da caixa de ferramentas, você verá um novo bloco chamado `sprite.scale`. Ele permite que você altere o tamanho de um sprite em relação ao seu tamanho original. `sprite.scale = 1` é o tamanho normal. `sprite.scale = 0.5` torna o sprite metade do tamanho, enquanto`sprite.scale = 2` faz com que seja duas vezes maior.
+
+        # Faça isso
+
+        O programa já deve incluir sua imagem recém-carregada, mas provavelmente não é o _perfeito_ tamanho. Use `sprite.scale` para mudar o tamanho do seu sprite`kite`.
+
+        _Dica: a ordem do seu código é importante! Você precisa adicionar `sprite.scale` **depois** de criar o sprite, mas **antes** você desenha o sprite com`drawSprites()`. Para maior clareza, tente manter todo o seu código de sprite no topo do seu programa._
+      CSD U3 Sprites anitab 3_2018: |-
+        # Redimensionando com Escala
+
+        Na gaveta _Sprites_ da caixa de ferramentas, você verá um novo bloco chamado `sprite.scale`. Ele permite que você altere o tamanho de um sprite em relação ao seu tamanho original. `sprite.scale = 1` é o tamanho normal. `sprite.scale = 0.5` torna o sprite metade do tamanho, enquanto`sprite.scale = 2` faz com que seja duas vezes maior.
+
+        # Faça isso
+
+        O programa já deve incluir sua imagem recém-carregada, mas provavelmente não é o _perfeito_ tamanho. Use `sprite.scale` para mudar o tamanho do seu sprite`kite`.
+
+        _Dica: a ordem do seu código é importante! Você precisa adicionar `sprite.scale` **depois** de criar o sprite, mas **antes** você desenha o sprite com`drawSprites()`. Para maior clareza, tente manter todo o seu código de sprite no topo do seu programa._
+      CSD U3 Sprites anitab 3_2019: |-
+        # Redimensionando com Escala
+
+        Na gaveta _Sprites_ da caixa de ferramentas, você verá um novo bloco chamado `sprite.scale`. Ele permite que você altere o tamanho de um sprite em relação ao seu tamanho original. `sprite.scale = 1` é o tamanho normal. `sprite.scale = 0.5` torna o sprite metade do tamanho, enquanto`sprite.scale = 2` faz com que seja duas vezes maior.
+
+        # Faça isso
+
+        O programa já deve incluir sua imagem recém-carregada, mas provavelmente não é o _perfeito_ tamanho. Use `sprite.scale` para mudar o tamanho do seu sprite`kite`.
+
+        _Dica: a ordem do seu código é importante! Você precisa adicionar `sprite.scale` **depois** de criar o sprite, mas **antes** você desenha o sprite com`drawSprites()`. Para maior clareza, tente manter todo o seu código de sprite no topo do seu programa._
       CSD U3 Sprites intro debug: |-
         <img src="https://images.code.org/63207a624d751aacb376db18cdf09eec-image-1491255841823.png" style="width: 150px; float: right; margin-left: 20px; border: 1px solid #f2f2f2;">
 
@@ -8723,6 +9176,42 @@ pt-BR:
 
         -   Use um comando `planoDeFundo()` para preencher a tela com uma cor.
         -   Adicione quaisquer comandos de forma necessários para desenhar os elementos não-sprite de sua cena.
+      CSD U3 Sprites scene sprites: |-
+        # Crie sua cena - Sprites
+
+        Com o seu fundo no lugar, é hora de adicionar seus sprites.
+
+        # Faça isso
+
+        -   Adicione ou crie todas as suas imagens de sprite na aba Animação.
+        -   Crie uma variável para cada sprite no topo do seu programa e use `setAnimation()` para designar as imagens que você criou na guia Animation.
+        -   Chame `drawSprites()` uma vez no final do seu programa.
+
+        _Dica: Você provavelmente vai querer chamar `drawSprites()` no final do programa para que os sprites estejam no topo do seu background, mas para alguns designs você pode chamar `drawSprites()` antes para que seus sprites estejam ligados topo de algumas formas, mas abaixo dos outros._
+      CSD U3 Sprites scene sprites_2018: |-
+        # Crie sua cena - Sprites
+
+        Com o seu fundo no lugar, é hora de adicionar seus sprites.
+
+        # Faça isso
+
+        -   Adicione ou crie todas as suas imagens de sprite na aba Animação.
+        -   Crie uma variável para cada sprite no topo do seu programa e use `setAnimation()` para designar as imagens que você criou na guia Animation.
+        -   Chame `drawSprites()` uma vez no final do seu programa.
+
+        _Dica: Você provavelmente vai querer chamar `drawSprites()` no final do programa para que os sprites estejam no topo do seu background, mas para alguns designs você pode chamar `drawSprites()` antes para que seus sprites estejam ligados topo de algumas formas, mas abaixo dos outros._
+      CSD U3 Sprites scene sprites_2019: |-
+        # Crie sua cena - Sprites
+
+        Com o seu fundo no lugar, é hora de adicionar seus sprites.
+
+        # Faça isso
+
+        -   Adicione ou crie todas as suas imagens de sprite na aba Animação.
+        -   Crie uma variável para cada sprite no topo do seu programa e use `setAnimation()` para designar as imagens que você criou na guia Animation.
+        -   Chame `drawSprites()` uma vez no final do seu programa.
+
+        _Dica: Você provavelmente vai querer chamar `drawSprites()` no final do programa para que os sprites estejam no topo do seu background, mas para alguns designs você pode chamar `drawSprites()` antes para que seus sprites estejam ligados topo de algumas formas, mas abaixo dos outros._
       CSD U3 Sprites scene text: |-
         # Crie sua cena - texto
 
@@ -8762,6 +9251,39 @@ pt-BR:
         Você pode colocar o texto em qualquer lugar que quiser na tela usando `texto`. Altere o texto exibido no código fornecido e adicione um segundo `texto` para escrever em uma parte diferente da tela.
 
         _Dica: O tamanho do texto padrão é bem pequeno, mas você pode usar o bloco `tamanhoDoTexto` para mudar isso. Você também pode usar `preencher` para mudar a cor do seu texto._
+      CSD U3 Sprites text debug: |-
+        <img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png" style="float: right; width: 200px; margin-left: 20px;">
+
+        # Depurando
+
+        Esta cena tem todo o código certo, mas não está na ordem correta. A cena deve se parecer com a imagem à direita. Você pode reordenar os blocos para que cada parte da cena seja desenhada na ordem correta?
+      CSD U3 Sprites text debug_2018: |-
+        <img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png" style="float: right; width: 200px; margin-left: 20px;">
+
+        # Depurando
+
+        Esta cena tem todo o código certo, mas não está na ordem correta. A cena deve se parecer com a imagem à direita. Você pode reordenar os blocos para que cada parte da cena seja desenhada na ordem correta?
+      CSD U3 Sprites text debug_2018_2019: |-
+        <img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png" style="float: right; width: 200px; margin-left: 20px;">
+
+        # Depurando
+
+        Esta cena tem todo o código certo, mas não está na ordem correta. A cena deve se parecer com a imagem à direita. Você pode reordenar os blocos para que cada parte da cena seja desenhada na ordem correta?
+      CSD U3 UP_ARROW: |-
+        # Movendo Sprites
+
+        Você pode mudar a posição do seu sprite com base nas teclas pressionadas da mesma maneira que você mudou suas animações.
+
+        # Faça isso
+
+        Você recebeu o início de um sprite de bug. Você precisa escolher a foto do bug que deseja usar na aba animação.
+
+        -   Defina a animação do sprite para o seu erro favorito.
+        -   Adicione uma instrução if dentro do seu laço de desenho.
+        -   Adicione uma chamada a keyDown como a entrada para a instrução if para verificar se a seta para cima foi pressionada.
+        -   Adicione código dentro do condicional para mover o sprite para cima se a seta para cima estiver abaixada.
+
+        \_Você precisa mudar a propriedade x ou y do sprite para movê-la? \_
       CSD U3 Variables Challenge: |-
         # Desafio: Atualizando Variáveis
 
@@ -9005,6 +9527,54 @@ pt-BR:
 
         -   \*\* Execute o programa \*\* para ver como funciona.
         -   \*\* Mude o programa \*\* para que ambos os olhos tenham sempre o mesmo tamanho aleatório. Dica: você só precisará fazer alterações em uma linha de código.
+      CSD U3 Watcher Debug: |-
+        <img src="https://images.code.org/20cc981b4b4f99b2ff96415e19af7600-image-1492034149715.gif" style="float: right; margin-left: 20px;">
+
+        # Debug: observando o padrão do contador
+
+        Vamos praticar o uso de observadores para depurar seu código. Este programa deve mover a motocicleta da parte inferior esquerda para a parte superior direita, como a imagem à direita. Infelizmente a motocicleta sai da tela muito rapidamente para ver o que está errado.
+
+        Usando os observadores fornecidos para `cycle.x` e`cycle.y`, descubra qual deles está se movendo na direção errada e corrija o programa.
+      CSD U3 Watcher Debug_2018: |-
+        <img src="https://images.code.org/20cc981b4b4f99b2ff96415e19af7600-image-1492034149715.gif" style="float: right; margin-left: 20px;">
+
+        # Debug: observando o padrão do contador
+
+        Vamos praticar o uso de observadores para depurar seu código. Este programa deve mover a motocicleta da parte inferior esquerda para a parte superior direita, como a imagem à direita. Infelizmente a motocicleta sai da tela muito rapidamente para ver o que está errado.
+
+        Usando os observadores fornecidos para `cycle.x` e`cycle.y`, descubra qual deles está se movendo na direção errada e corrija o programa.
+      CSD U3 Watcher Debug_2019: |-
+        <img src="https://images.code.org/20cc981b4b4f99b2ff96415e19af7600-image-1492034149715.gif" style="float: right; margin-left: 20px;">
+
+        # Debug: observando o padrão do contador
+
+        Vamos praticar o uso de observadores para depurar seu código. Este programa deve mover a motocicleta da parte inferior esquerda para a parte superior direita, como a imagem à direita. Infelizmente a motocicleta sai da tela muito rapidamente para ver o que está errado.
+
+        Usando os observadores fornecidos para `cycle.x` e`cycle.y`, descubra qual deles está se movendo na direção errada e corrija o programa.
+      CSD U3 Watcher Predict response: |-
+        # Observando o padrão do contador
+
+        Os observadores são uma ferramenta realmente útil para depurar programas que usam o padrão de contador.
+
+        -   **Leia o programa** e preveja o que o programa fará.
+        -   **Execute o programa** para verificar sua previsão.
+        -   **Olhe para os observadores** e explique a um vizinho o que você está vendo.
+      CSD U3 Watcher Predict response_2018: |-
+        # Observando o padrão do contador
+
+        Os observadores são uma ferramenta realmente útil para depurar programas que usam o padrão de contador.
+
+        -   **Leia o programa** e preveja o que o programa fará.
+        -   **Execute o programa** para verificar sua previsão.
+        -   **Olhe para os observadores** e explique a um vizinho o que você está vendo.
+      CSD U3 Watcher Predict response_2019: |-
+        # Observando o padrão do contador
+
+        Os observadores são uma ferramenta realmente útil para depurar programas que usam o padrão de contador.
+
+        -   **Leia o programa** e preveja o que o programa fará.
+        -   **Execute o programa** para verificar sua previsão.
+        -   **Olhe para os observadores** e explique a um vizinho o que você está vendo.
       CSD U3 abstraction make it your own: |-
         # Faça o seu próprio
 
@@ -9029,6 +9599,57 @@ pt-BR:
         # Faça isso
 
         Faça pelo menos uma melhoria no jogo que o torne seu. Esteja preparado para compartilhar suas alterações e melhorias com seu colega de classe.
+      CSD U3 abstraction velocityY: |-
+        # Movendo para baixo
+
+        Aqui está um sprite de penas que deveria estar flutuando na tela. Se `velocidadeX` faz um sprite se mover para a direita, você pode encontrar o bloco que fará a pena descer?
+
+        # Faça isso
+
+        Encontre o bloco que fará o sprite de penas descer a tela e use-o fora do laço de desenho.   ( [Mostre-me onde](#triggercallout=code_triggered) )
+      CSD U3 abstraction velocityY control: |-
+        # Velocidade de controle
+
+        Seu código antes do laço de desenhar configura o início do seu jogo. Seu código dentro do laço de desenhar controla como o jogo vai mudar enquanto está sendo jogado. Neste jogo, o robô de helicóptero começa na parte inferior da tela, mas quando a tecla de espaço é pressionada, ela voa para cima.
+
+        # Faça isso
+
+        -   Use uma instrução `if` dentro do laço de desenho para verificar quando a barra de espaço é pressionada.
+        -   Use o bloco `velocidadeY` para fazer o sprite voar quando o usuário pressionar a barra de espaço. O sprite deve continuar subindo mesmo depois que você soltar a barra de espaço.
+      CSD U3 abstraction velocityY control_2018: |-
+        # Velocidade de controle
+
+        Seu código antes do laço de desenhar configura o início do seu jogo. Seu código dentro do laço de desenhar controla como o jogo vai mudar enquanto está sendo jogado. Neste jogo, o robô de helicóptero começa na parte inferior da tela, mas quando a tecla de espaço é pressionada, ela voa para cima.
+
+        # Faça isso
+
+        -   Use uma instrução `if` dentro do laço de desenho para verificar quando a barra de espaço é pressionada.
+        -   Use o bloco `velocidadeY` para fazer o sprite voar quando o usuário pressionar a barra de espaço. O sprite deve continuar subindo mesmo depois que você soltar a barra de espaço.
+      CSD U3 abstraction velocityY control_2019: |-
+        # Velocidade de controle
+
+        Seu código antes do laço de desenhar configura o início do seu jogo. Seu código dentro do laço de desenhar controla como o jogo vai mudar enquanto está sendo jogado. Neste jogo, o robô de helicóptero começa na parte inferior da tela, mas quando a tecla de espaço é pressionada, ela voa para cima.
+
+        # Faça isso
+
+        -   Use uma instrução `if` dentro do laço de desenho para verificar quando a barra de espaço é pressionada.
+        -   Use o bloco `velocidadeY` para fazer o sprite voar quando o usuário pressionar a barra de espaço. O sprite deve continuar subindo mesmo depois que você soltar a barra de espaço.
+      CSD U3 abstraction velocityY_2018: |-
+        # Movendo para baixo
+
+        Aqui está um sprite de penas que deveria estar flutuando na tela. Se `velocidadeX` faz um sprite se mover para a direita, você pode encontrar o bloco que fará a pena descer?
+
+        # Faça isso
+
+        Encontre o bloco que fará o sprite de penas descer a tela e use-o fora do laço de desenho.   ( [Mostre-me onde](#triggercallout=code_triggered) )
+      CSD U3 abstraction velocityY_2019: |-
+        # Movendo para baixo
+
+        Aqui está um sprite de penas que deveria estar flutuando na tela. Se `velocidadeX` faz um sprite se mover para a direita, você pode encontrar o bloco que fará a pena descer?
+
+        # Faça isso
+
+        Encontre o bloco que fará o sprite de penas descer a tela e use-o fora do laço de desenho.   ( [Mostre-me onde](#triggercallout=code_triggered) )
       CSD U3 challenge face: |-
         <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png" style="float: right; max-width: 200px; border: 1px solid grey">
 
@@ -9115,6 +9736,42 @@ pt-BR:
         \*Dica: Você pode experimentar com diferentes blocos, ou ler mais sobre eles na aba "Ajuda e Dicas". [//]\: # (<https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png>)
 
         [//]: # "https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png"
+      CSD U3 dancing alien: |-
+        # Sprites no laço de desenho
+
+        Alterando as propriedades do sprite no laço de desenho, você pode animar seus personagens.
+
+        Esta animação também foi retardada. No início do programa, o bloco `World.frameRate` foi usado para definir a taxa de quadros para 10. Geralmente, a taxa de quadros é 30. Sinta-se à vontade para explorar taxas de quadros diferentes.
+
+        # Faça isso
+
+        -   Execute o código para ver como funciona.
+        -   Discuta com seu parceiro porque algum código está dentro do laço de desenho e algum código está fora.
+        -   Tente alterar a taxa de quadros e executar o código novamente.
+      CSD U3 dancing alien_2018: |-
+        # Sprites no laço de desenho
+
+        Alterando as propriedades do sprite no laço de desenho, você pode animar seus personagens.
+
+        Esta animação também foi retardada. No início do programa, o bloco `World.frameRate` foi usado para definir a taxa de quadros para 10. Geralmente, a taxa de quadros é 30. Sinta-se à vontade para explorar taxas de quadros diferentes.
+
+        # Faça isso
+
+        -   Execute o código para ver como funciona.
+        -   Discuta com seu parceiro porque algum código está dentro do laço de desenho e algum código está fora.
+        -   Tente alterar a taxa de quadros e executar o código novamente.
+      CSD U3 dancing alien_2019: |-
+        # Sprites no laço de desenho
+
+        Alterando as propriedades do sprite no laço de desenho, você pode animar seus personagens.
+
+        Esta animação também foi retardada. No início do programa, o bloco `World.frameRate` foi usado para definir a taxa de quadros para 10. Geralmente, a taxa de quadros é 30. Sinta-se à vontade para explorar taxas de quadros diferentes.
+
+        # Faça isso
+
+        -   Execute o código para ver como funciona.
+        -   Discuta com seu parceiro porque algum código está dentro do laço de desenho e algum código está fora.
+        -   Tente alterar a taxa de quadros e executar o código novamente.
       CSD U3 debug: |-
         <img src="https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50 AM.png" style="float:right;width:150px;">
 
@@ -9228,6 +9885,20 @@ pt-BR:
             -   Quando você teria **chamado** a função?
             -   Que nome você teria dado a ela?
       CSD U3 if else predict: Nível de Predição, veja o nível incluso para instruções.
+      CSD U3 keydown conditional: |-
+        # Mudando Sprites
+
+        Você viu no último nível que `keyDown` retorna`verdadeiro` enquanto você está mantendo uma tecla pressionada e `falso` quando a tecla não está pressionada. A entrada para o comando `keyDown` é o nome da chave que você deseja verificar entre aspas. Alguns exemplos são "x", "pra cima" e "espaço".
+
+        Nós podemos usar o `keyDown` como uma entrada para uma declaração `if` para mudar nossas animações com base nas teclas pressionadas!
+
+        # Faça isso
+
+        -   Execute o código e tente pressionar as setas para cima e para baixo.
+        -   Olhe dentro da declaração `if` para ver como o código funciona.
+        -   Adicione um bloco dentro da terceira declaração `if` para mudar a animação para um animal diferente.
+
+        _Dica: você pode usar o coelho que já está na aba Animações ou adicionar uma nova animação._
       CSD U3 picture: |-
         # Desafio: desenhar uma imagem
 
@@ -9706,6 +10377,11 @@ pt-BR:
 
         -   Use o widget binário para decodificar a string que usa números de oito bits.
         -   Verifique sua resposta com um parceiro para ver se obteve a mesma resposta.
+      CSD U5 binary video_2019: |-
+        ## Perguntas para Consideração
+
+        -   Por que todos os tipos de dados em um computador são armazenados como números?
+        -   Se tudo é armazenado como números, como você acha que o computador sabe a diferença entre números, letras, imagens e sons?
       CSD U5 black white images pixelation: |-
         # Faça isso
 
@@ -9931,6 +10607,30 @@ pt-BR:
         Usando o bloco `definirPropriedade`, mova "vermelho\\ \_botao"para que corresponda à imagem à direita. (Clique na imagem para ver o tamanho total)
 
         _Nota: removemos a guia "Modo de design" por enquanto para que você possa praticar o trabalho com setProperty, mas ela voltará mais tarde assim que criar aplicativos próprios._
+      CSD U6 setProperty xy click: |-
+        # Mudando com um clique
+
+        Não é realmente útil definir apenas uma propriedade quando o programa é executado pela primeira vez. Afinal, você poderia fazer tudo isso no Modo Design. Quando você usa um bloco `onEvent` com`setProperty`, é possível fazer coisas que você não poderia fazer com o Modo Design sozinho.
+
+        # Faça isso
+
+        Nós fornecemos um bloco `onEvent` vazio que está assistindo a imagem de "sorriso". Dentro do bloco `onEvent`, use dois blocos`setProperty` para mover o sorriso para algum outro lugar (não importa onde esteja por enquanto). Teste seu programa executando-o e clicando no sorriso.
+      CSD U6 setProperty xy click_2018: |-
+        # Mudando com um clique
+
+        Não é realmente útil definir apenas uma propriedade quando o programa é executado pela primeira vez. Afinal, você poderia fazer tudo isso no Modo Design. Quando você usa um bloco `onEvent` com`setProperty`, é possível fazer coisas que você não poderia fazer com o Modo Design sozinho.
+
+        # Faça isso
+
+        Nós fornecemos um bloco `onEvent` vazio que está assistindo a imagem de "sorriso". Dentro do bloco `onEvent`, use dois blocos`setProperty` para mover o sorriso para algum outro lugar (não importa onde esteja por enquanto). Teste seu programa executando-o e clicando no sorriso.
+      CSD U6 setProperty xy click_2019: |-
+        # Mudando com um clique
+
+        Não é realmente útil definir apenas uma propriedade quando o programa é executado pela primeira vez. Afinal, você poderia fazer tudo isso no Modo Design. Quando você usa um bloco `onEvent` com`setProperty`, é possível fazer coisas que você não poderia fazer com o Modo Design sozinho.
+
+        # Faça isso
+
+        Nós fornecemos um bloco `onEvent` vazio que está assistindo a imagem de "sorriso". Dentro do bloco `onEvent`, use dois blocos`setProperty` para mover o sorriso para algum outro lugar (não importa onde esteja por enquanto). Teste seu programa executando-o e clicando no sorriso.
       CSD U6 setProperty xy_2018: |-
         # Alterando a posição
 
@@ -10079,6 +10779,42 @@ pt-BR:
 
         -   Tente digitar algo na área de trabalho.
         -   Pressione <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> para ver uma prévia!
+      CSDU4 Crowdsource App Demo: |-
+        # Contribuição colaborativa
+
+        Os aplicativos de contribuição colaborativa permitem que vários usuários enviem conteúdo para todos usarem (a _fonte_de conteúdo é o _crowd_). Este aplicativo é muito semelhante ao aplicativo de lista, com a principal diferença sendo que o aplicativo de lista assume um único usuário, enquanto este aplicativo permite que todos os usuários adicionem à mesma lista e enviem "como".
+
+        Este exemplo usa uma lista de informações de contribuição colaborativa para simplificar, mas você pode exibir qualquer tipo de informação em muitos formatos diferentes. Um aplicativo de contribuição colaborativa pode permitir que os usuários enviem locais para exibição em um mapa, imagens para entrar em uma galeria ou qualquer outro tipo de informação.
+
+        # Funcionalidade ausente deste protótipo
+
+        -   O usuário não pode criar contas ou perfis
+        -   Coisas enviadas não são adicionadas à lista
+        -   Clicar nos ícones "gostei" não muda seu estado
+      CSDU4 Crowdsource App Demo_2018: |-
+        # Contribuição colaborativa
+
+        Os aplicativos de contribuição colaborativa permitem que vários usuários enviem conteúdo para todos usarem (a _fonte_de conteúdo é o _crowd_). Este aplicativo é muito semelhante ao aplicativo de lista, com a principal diferença sendo que o aplicativo de lista assume um único usuário, enquanto este aplicativo permite que todos os usuários adicionem à mesma lista e enviem "como".
+
+        Este exemplo usa uma lista de informações de contribuição colaborativa para simplificar, mas você pode exibir qualquer tipo de informação em muitos formatos diferentes. Um aplicativo de contribuição colaborativa pode permitir que os usuários enviem locais para exibição em um mapa, imagens para entrar em uma galeria ou qualquer outro tipo de informação.
+
+        # Funcionalidade ausente deste protótipo
+
+        -   O usuário não pode criar contas ou perfis
+        -   Coisas enviadas não são adicionadas à lista
+        -   Clicar nos ícones "gostei" não muda seu estado
+      CSDU4 Crowdsource App Demo_2019: |-
+        # Contribuição colaborativa
+
+        Os aplicativos de contribuição colaborativa permitem que vários usuários enviem conteúdo para todos usarem (a _fonte_de conteúdo é o _crowd_). Este aplicativo é muito semelhante ao aplicativo de lista, com a principal diferença sendo que o aplicativo de lista assume um único usuário, enquanto este aplicativo permite que todos os usuários adicionem à mesma lista e enviem "como".
+
+        Este exemplo usa uma lista de informações de contribuição colaborativa para simplificar, mas você pode exibir qualquer tipo de informação em muitos formatos diferentes. Um aplicativo de contribuição colaborativa pode permitir que os usuários enviem locais para exibição em um mapa, imagens para entrar em uma galeria ou qualquer outro tipo de informação.
+
+        # Funcionalidade ausente deste protótipo
+
+        -   O usuário não pode criar contas ou perfis
+        -   Coisas enviadas não são adicionadas à lista
+        -   Clicar nos ícones "gostei" não muda seu estado
       CSDU4 Decision App Demo: |-
         # Criador de decisões
 
@@ -10129,6 +10865,89 @@ pt-BR:
 
         -   Onde no App Lab você pode desenhar a interface de usuário do seu aplicativo?
         -   Quais são alguns tipos de elementos que você pode adicionar ao seu aplicativo?
+      CSDU4 List App Demo: |-
+        # Gerenciador de Lista
+
+        O aplicativo gerenciador de listas permite que o usuário acompanhe o estado da informação e pode ser modificado para atender a diferentes finalidades, como checagem de entrada / saída de itens emprestados, rastreamento de itens pessoais ou controle de onde as coisas estão em várias etapas processo.
+
+        Embora este exemplo se concentre em uma única lista, os aplicativos de lista mais sofisticados podem permitir que o usuário crie várias listas ou até mesmo mova itens entre as listas. Este aplicativo também monitora apenas o nome de um item e se ele está ou não "Concluído", mas pode ser estendido para rastrear e organizar qualquer quantidade de informações sobre os itens da lista.
+
+        # Funcionalidade ausente deste protótipo
+
+        -   Excluir botões na verdade não excluem itens da lista
+        -   Adicionar tela na verdade não adiciona um item à lista
+      CSDU4 List App Demo_2018: |-
+        # Gerenciador de Lista
+
+        O aplicativo gerenciador de listas permite que o usuário acompanhe o estado da informação e pode ser modificado para atender a diferentes finalidades, como checagem de entrada / saída de itens emprestados, rastreamento de itens pessoais ou controle de onde as coisas estão em várias etapas processo.
+
+        Embora este exemplo se concentre em uma única lista, os aplicativos de lista mais sofisticados podem permitir que o usuário crie várias listas ou até mesmo mova itens entre as listas. Este aplicativo também monitora apenas o nome de um item e se ele está ou não "Concluído", mas pode ser estendido para rastrear e organizar qualquer quantidade de informações sobre os itens da lista.
+
+        # Funcionalidade ausente deste protótipo
+
+        -   Excluir botões na verdade não excluem itens da lista
+        -   Adicionar tela na verdade não adiciona um item à lista
+      CSDU4 List App Demo_2019: |-
+        # Gerenciador de Lista
+
+        O aplicativo gerenciador de listas permite que o usuário acompanhe o estado da informação e pode ser modificado para atender a diferentes finalidades, como checagem de entrada / saída de itens emprestados, rastreamento de itens pessoais ou controle de onde as coisas estão em várias etapas processo.
+
+        Embora este exemplo se concentre em uma única lista, os aplicativos de lista mais sofisticados podem permitir que o usuário crie várias listas ou até mesmo mova itens entre as listas. Este aplicativo também monitora apenas o nome de um item e se ele está ou não "Concluído", mas pode ser estendido para rastrear e organizar qualquer quantidade de informações sobre os itens da lista.
+
+        # Funcionalidade ausente deste protótipo
+
+        -   Excluir botões na verdade não excluem itens da lista
+        -   Adicionar tela na verdade não adiciona um item à lista
+      CSDU4 Project Events: |-
+        # Faça isso
+
+        Para cada tela do seu aplicativo:
+
+        -   Encontre todos os IDs dos botões
+        -   Para cada botão, adicione um manipulador de eventos que observe esse ID
+        -   Em cada manipulador de eventos, use `setScreen()` para mover a tela da direita
+        -   Teste tudo!
+
+        Dependendo do número de telas e botões que seu aplicativo possui, isso pode ser um processo bastante complicado. Certifique-se de testar seu trabalho frequentemente, usando blocos `console.log()` para depurar qualquer comportamento estranho com seu aplicativo. Quando você acha que tem tudo funcionando, compare seu aplicativo com outros membros do grupo para ver se eles funcionam da mesma maneira.
+      CSDU4 Project Events_2018: |-
+        # Faça isso
+
+        Para cada tela do seu aplicativo:
+
+        -   Encontre todos os IDs dos botões
+        -   Para cada botão, adicione um manipulador de eventos que observe esse ID
+        -   Em cada manipulador de eventos, use `setScreen()` para mover a tela da direita
+        -   Teste tudo!
+
+        Dependendo do número de telas e botões que seu aplicativo possui, isso pode ser um processo bastante complicado. Certifique-se de testar seu trabalho frequentemente, usando blocos `console.log()` para depurar qualquer comportamento estranho com seu aplicativo. Quando você acha que tem tudo funcionando, compare seu aplicativo com outros membros do grupo para ver se eles funcionam da mesma maneira.
+      CSDU4 Project Events_2019: |-
+        # Faça isso
+
+        Para cada tela do seu aplicativo:
+
+        -   Encontre todos os IDs dos botões
+        -   Para cada botão, adicione um manipulador de eventos que observe esse ID
+        -   Em cada manipulador de eventos, use `setScreen()` para mover a tela da direita
+        -   Teste tudo!
+
+        Dependendo do número de telas e botões que seu aplicativo possui, isso pode ser um processo bastante complicado. Certifique-se de testar seu trabalho frequentemente, usando blocos `console.log()` para depurar qualquer comportamento estranho com seu aplicativo. Quando você acha que tem tudo funcionando, compare seu aplicativo com outros membros do grupo para ver se eles funcionam da mesma maneira.
+      CSDU4 Project Import: |-
+        # Voltar ao seu aplicativo
+
+        Agora que você já praticou a importação de telas, é hora de começar a trabalhar no aplicativo da sua equipe.
+
+        # Faça isso
+
+        Cada membro da sua equipe criará sua própria cópia do aplicativo, com todas as telas dos membros da equipe importadas. Essa será sua cópia do aplicativo e a cópia na qual você começará a adicionar o código no próximo lição.
+
+        -   Colete todos os URLs de compartilhamento para as páginas da sua equipe
+                 \- Você pode encontrar o URL de compartilhamento voltando ao último nível da lição anterior ou encontrando a tela em seu [diretório de projetos](/projects)
+        -   Importar cada uma das telas, uma de cada vez
+                 \- Se você encontrar um erro de ID em uma das telas, discuta o problema com o criador da tela para que ele possa ser corrigido e importado
+        -   Excluir o padrão "tela1"
+        -   Defina a tela principal como o padrão
+
+        Não se preocupe em adicionar qualquer código neste momento; nós vamos chegar a isso no próximo nível.
       CSDU4 Project Import_2018: |-
         # De voltar ao seu aplicativo
 
@@ -10317,6 +11136,9 @@ pt-BR:
         de repetição para desenhar 10 triângulos.
       Course 4 Artist 8: Desenhe esse sol repetindo todo este bloco de código várias
         vezes.
+      Course 4 Artist 8a: |-
+        Lembra-se dessa forma? Agora vamos deixar
+        você construí-la sem dar nenhum bloco inicial!
       Course 4 Artist 9: Repita esse desenho 10 vezes e certifique-se de virar a cada
         forma desenhada.
       Course 4 Artist For Loops 1: Use um bloco de repetição para desenhar esse triângulo
@@ -10332,6 +11154,9 @@ pt-BR:
       Course 4 Artist For Loops 3: Use o último quebra-cabeças como uma referência
         para resolver este. O menor triângulo possui lados de 20 pixels, o maior tem
         lados de 200 pixels, e cada triângulo possui 20 pixels a mais do que o anterior.
+      Course 4 Artist For Loops 4: 'Como você modificaria o que aprendeu para desenhar
+        esses quadrados? Eles começam com 15 pixels de comprimento, o maior tem 300
+        pixels de comprimento e cada quadrado é 15 pixels maior que o anterior. '
       Course 4 Artist For Loops 6a: |-
         Faça três pequenas alterações no
         código do último nível para conseguir isso!
@@ -10348,6 +11173,11 @@ pt-BR:
         Ele deve ter exatamente 100 pixels de comprimento em cada lado.
 
         <br/>
+      Course 4 Artist Vars 11: "Aqui está um código mais complicado usando os mesmo
+        conceitos do desafio anterior - que valor você deve usar na variável `lados`
+        para desenhar essa figura feita de quadrados?\n\n<p style=\"font-size:small;
+        padding: 15px 15px 15px 40px; background-color:#dcf3f3; border-radius:10px;\">\n\tApenas
+        por diversão: tente usar outros números para ver o que acontece com o padrão.\n</p>"
       Course 4 Artist Vars 12: |-
         Vamos fazer a variável `lados` valer 5. À medida que adicionarmos lados ao algoritmo, o padrão fica maior.
 
@@ -10405,6 +11235,9 @@ pt-BR:
         Desta vez você não precisa escrever nenhum código, somente clicar em `Executar` para jogar!
 
         Neste jogo, você é o cão que está tentando coletar mais bandeiras que o gato. Use a seta para baixo para controlar o cão. Pressione `Terminar` quando você quiser parar de jogar.
+      Course 4 Play Lab Vars 2: A corrida do último desafio não foi muito justa! Altere
+        a variável "velocidade\_cao" para garantir que você possa coletar mais bandeiras
+        do que o gato. O primeiro a coletar 10 bandeiras vence!
       Course 4 Play Lab Vars 3: |-
         Aqui está um novo tipo de jogo!
 
@@ -10657,6 +11490,9 @@ pt-BR:
 
         -   Crie dois sprites de sino e faça os alienígenas realizarem um movimento de dança diferente para cada um deles.
         -   Faça os alienígenas realizarem um novo movimento de dança sempre que se tocarem.
+      Dance Party Predict_2019: "\\*\\* Faça uma previsão: \\*\\* Aqui está uma figura
+        que se parece com um alien azul!\n\nO que você acha que vai acontecer quando
+        você clicar nele?  "
       Dance_Party_01: |-
         “Vamos fazer uma festa dançante!”
 
@@ -10890,6 +11726,15 @@ pt-BR:
         o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png).
         Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
         do tesouro.
+      Intro to Web Lab - Part 1_2019: |-
+        ## Perguntas para consideração:
+
+        -   Quais são as partes do Web Lab, e para quê elas servem?
+      Intro to Web Lab - Part 2_2019: |-
+        ## Perguntas para consideração
+
+        -   Por que as tags HTML são úteis?
+        -   O que faz a tag de parágrafo?
       Introduction to Variables - Part 1_2019: |-
         ## Perguntas a Considerar
 
@@ -11020,9 +11865,18 @@ pt-BR:
         inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo.
         \n\nNota: Nós usamos o bloco `definir alpha` para fazer as \"pétalas\" desaparecerem
         para fora."
+      NEW Course 4 Artist Vars 12: Agora, recrie o algoritmo do último nível para
+        criar um pentágono de lados 150.
       NEW Course 4 Artist Vars 2: Arraste um bloco de número para o bloco `defina
         o comprimento` e para o bloco `repita _ vezes` para desenhar um conjunto de
         triângulos de 50 pixels.
+      NEW Course 4 Artist Vars 4: "Vamos tentar de novo! \n\nVocê consegue definir
+        a variável \"comprimento\" em 60 para fazer este design bacana com hexágonos?"
+      NEW Course 4 Artist Vars 6: "Desenhe esse padrão de pentágonos com lados de
+        100 pixels definindo o valor correto para \"comprimento\" e colocando a variável
+        \"comprimento\" em todos os lugares corretos. \n\nVocê percebeu que só precisa
+        definir o valor de \"comprimento\" uma vez, e o código usa o valor correto
+        em todos os lugares?"
       NEW Course 4 Bee For Loops 10a: |-
         Pronto para um desafio? Pegue o que você aprendeu sobre laços e tente resolver este problema.
 
@@ -11124,6 +11978,16 @@ pt-BR:
         que ela desenhe um padrão de quadrados, triângulos ou octógonos?
       Standalone_Artist_9: Agora vá em frente e faça a imagem que mais gostar! Você
         tem até uma função vazia para usar para fazer o que quiser!
+      U4 Model Program 1: |-
+        # Adicionando uma nova tela
+
+        Para completar seu aplicativo, você precisará de mais do que apenas uma tela inicial. Cada cartão que você criou em seu protótipo de papel é representado por uma "tela" no Laboratório de aplicativos. Para criar mais telas, basta clicar no menu suspenso na parte superior da tela do aplicativo e selecionar "Nova tela..."
+
+        <img src="https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png" style="width: 200px">
+
+        # Faça isso
+
+        -   \*\* Crie uma nova tela \*\* e forneça o Identificador "sobre".
       U4 Model Program 1_2018: |-
         # Adicionando uma nova tela
 
@@ -11144,6 +12008,66 @@ pt-BR:
         # Faça isso
 
         -   \*\* Crie uma nova tela \*\* e forneça o ID "sobre".
+      U4 Model Program 2.5: |-
+        # Importar tela de contato
+
+        No entanto, outro aluno criou uma tela de contato que você pode importar para o seu aplicativo. Seu link de compartilhamento é **<a href ="https://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/" target="_blank">https\://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/</a>**
+
+        # Faça isso
+
+        -   \*\* Selecione "Importar tela... \*\* na lista suspensa de telas.
+        -   \*\* Copie e cole o URL acima \*\* no diálogo de importação de telas.
+        -   \*\* Selecione a tela \*\* que você deseja importar.
+        -   \*\* Clique em Import \*\* para importar a tela.
+        -   \*\* Use as telas suspensas \*\* para garantir que seu aplicativo tenha as telas Início, Sobre, Contato e Pesquisa.
+      U4 Model Program 2.5_2018: |-
+        # Importar tela de contato
+
+        No entanto, outro aluno criou uma tela de contato que você pode importar para o seu aplicativo. Seu link de compartilhamento é **<a href ="https://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/" target="_blank">https\://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/</a>**
+
+        # Faça isso
+
+        -   \*\* Selecione "Importar tela... \*\* na lista suspensa de telas.
+        -   \*\* Copie e cole o URL acima \*\* no diálogo de importação de telas.
+        -   \*\* Selecione a tela \*\* que você deseja importar.
+        -   \*\* Clique em Import \*\* para importar a tela.
+        -   \*\* Use as telas suspensas \*\* para garantir que seu aplicativo tenha as telas Início, Sobre, Contato e Pesquisa.
+      U4 Model Program 2.5_2019: |-
+        # Importar tela de contato
+
+        No entanto, outro aluno criou uma tela de contato que você pode importar para o seu aplicativo. Seu link de compartilhamento é **<a href ="https://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/" target="_blank">https\://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/</a>**
+
+        # Faça isso
+
+        -   \*\* Selecione "Importar tela... \*\* na lista suspensa de telas.
+        -   \*\* Copie e cole o URL acima \*\* no diálogo de importação de telas.
+        -   \*\* Selecione a tela \*\* que você deseja importar.
+        -   \*\* Clique em Import \*\* para importar a tela.
+        -   \*\* Use as telas suspensas \*\* para garantir que seu aplicativo tenha as telas Início, Sobre, Contato e Pesquisa.
+      U4 Model Program 5: |-
+        # Conecte os outros botões
+
+        Agora que você fez um botão funcionar, basta seguir o mesmo padrão para todos os outros.
+
+        # Faça isso
+
+        -   \*\* Adicione um bloco `onEvent` \*\* para cada botão.
+        -   \*\* Selecione o botão ID \*\* no menu suspenso "id".
+        -   \*\* Adicione um bloco `setScreen` \*\* dentro de cada bloco`onEvent`.
+        -   \*\* Selecione a ID da tela \*\* em cada lista suspensa `setScreen`.
+        -   \*\* Execute seu aplicativo \*\* e teste se todos os botões funcionam.
+      U4 Model Program 5_2018: |-
+        # Conecte os outros botões
+
+        Agora que você fez um botão funcionar, basta seguir o mesmo padrão para todos os outros.
+
+        # Faça isso
+
+        -   \*\* Adicione um bloco `onEvent` \*\* para cada botão.
+        -   \*\* Selecione o botão ID \*\* no menu suspenso "id".
+        -   \*\* Adicione um bloco `setScreen` \*\* dentro de cada bloco`onEvent`.
+        -   \*\* Selecione a ID da tela \*\* em cada lista suspensa `setScreen`.
+        -   \*\* Execute seu aplicativo \*\* e teste se todos os botões funcionam.
       U4 Model Program 5_2019: |-
         # Conecte os Outros Botões
 
@@ -11153,6 +12077,15 @@ pt-BR:
 
         -   Para cada botâo, crie um evento que faz a ligação com a tela apropriada quando o botão é pressionado.
         -   Rode sua aplicação e teste o funcionamento de todos os botões.
+      'Video: Intro to CSS Part 2_2019': |-
+        ## Pergunta para Consideração
+
+        -   Como a página web sabe qual estilo ela deve usar?
+      'Video: Intro to CSS_2019': |-
+        ## Perguntas para Consideração
+
+        -   Como o estilo de uma página web é diferente de sua estrutura?
+        -   Por que você poderá querer que sua página web tenha um determinado estilo?
       Virtual Pet 1_2019: |-
         **Livre**: Uau! Olha esse animal da hora!
 
@@ -11519,6 +12452,9 @@ pt-BR:
         peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops2_2018: "Pegue todas as três pilhas! Mova Laurel para
         cada peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2019: 'Pegue todas as três pilhas! Mova Laured para
+        cada parte do tesouro, e depois use o bloco <xml><block type="collector_collect"
+        block-text="get treasure"/></xml>. '
       courseA_collector_loops3: Como Laurel pode obter todas as cinco pilhas de tesouro
         usando apenas um bloco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Como Laurel pode obter todas as cinco pilhas
@@ -12189,11 +13125,139 @@ pt-BR:
         [expandable] [0]
         [expandable] [1]
         [expandable] [2]
+      courseC_artist_loops6a_2019: |-
+        Adicione um terceiro adesivo em qualquer lugar do laço que você queira! Como se parece agora?
+
+        -   Altere o padrão do seu pincel para mais variações!
+
+        * * *
+
+        ![expandable](https://images.code.org/edc53f27379e018e61a6ab9dcc2717ea-image-1560984648573.png)
+        ![expandable](https://images.code.org/c41b00a743f245f98d2cfb66cb18e771-image-1560984690182.png)
+        ![expandable](https://images.code.org/4c8910f72a7f0cd81713ded7b866a883-image-1560984706203.png)
+      courseC_artist_loops7a_2019: |-
+        Experimente alterar o ciclo `repita` para executar um número diferente de vezes. Quanto você usar para que o giro descreva um círculo completo?
+
+        -   Tente alterar o número de voltas
+            -   Tente um giro de 60 graus por 6 vezes
+            -   Tente um giro de 20 graus por 18 vezes
+
+        * * *
+
+        A primeira imagem usa um pirata, um ninja, e uma girafa. Eles executam 18 vezes, com um giro de 20 graus.
+
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+        ![expandable](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)
+        ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
+        ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
       courseC_artist_loopsPrePre1a_2019: |-
         O artista está no lugar errado!
 
         Utilize o bloco <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para levar o artista para o centro da área.\
         Então, desenhe uma linha com 50 pixels de comprimento com o bloco <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">Avance</title><title name="VALUE">50</title></block></xml>.
+      courseC_artist_prog1: |-
+        \_ "Oi, eu sou um artista. Você pode escrever código para me fazer desenhar quase qualquer coisa." \_
+
+        Brinque com os blocos na caixa de ferramentas para ver o que eles fazem!
+      courseC_artist_prog1_2018: |-
+        \_ "Oi, eu sou um artista. Você pode escrever código para me fazer desenhar quase qualquer coisa." \_
+
+        Brinque com os blocos na caixa de ferramentas para ver o que eles fazem!
+      courseC_artist_prog1_2019: |-
+        \_ "Oi, eu sou um artista. Você pode escrever código para me fazer desenhar quase qualquer coisa." \_
+
+        Brinque com os blocos na caixa de ferramentas para ver o que eles fazem!
+      courseC_artist_prog2: |-
+        \_ "Vamos fazer uma gaiola para o meu monstro de estimação!" \_
+
+        Arraste blocos para a tela para que o artista desenhe sobre as linhas cinzas na foto.\
+        (Cada linha tem 100 pixels de comprimento)
+      courseC_artist_prog2_2018: |-
+        \_ "Vamos fazer uma gaiola para o meu monstro de estimação!" \_
+
+        Arraste blocos para a tela para que o artista desenhe sobre as linhas cinzas na foto.\
+        (Cada linha tem 100 pixels de comprimento)
+      courseC_artist_prog2_2019: |-
+        \_ "Vamos fazer uma gaiola para o meu monstro de estimação!" \_
+
+        Arraste blocos para a tela para que o artista desenhe sobre as linhas cinzas na foto.\
+        (Cada linha tem 100 pixels de comprimento)
+      courseC_artist_prog3: |-
+        \_ "Esta espaçonave precisa de uma janela!"
+
+        Cada lado do quadrado interno é de 100 pixels e todos os ângulos são de 90 graus.
+      courseC_artist_prog3_2018: |-
+        \_ "Esta espaçonave precisa de uma janela!"
+
+        Cada lado do quadrado interno é de 100 pixels e todos os ângulos são de 90 graus.
+      courseC_artist_prog3_2019: |-
+        \_ "Esta espaçonave precisa de uma janela!"
+
+        Cada lado do quadrado interno é de 100 pixels e todos os ângulos são de 90 graus.
+      courseC_artist_prog5: |-
+        \_ "Talvez devêssemos fazer uma plaquinha para cada um dos nossos animais de estimação, caso eles se percam!"
+
+        Termine esta plaquinha desenhando um retângulo ao redor do exterior.
+        (Os lados longos têm 200 pixels cada e os lados curtos são 100 pixels cada)
+      courseC_artist_prog5_2018: |-
+        \_ "Talvez devêssemos fazer uma plaquinha para cada um dos nossos animais de estimação, caso eles se percam!"
+
+        Termine esta plaquinha desenhando um retângulo ao redor do exterior.
+        (Os lados longos têm 200 pixels cada e os lados curtos são 100 pixels cada)
+      courseC_artist_prog5_2019: |-
+        \_ "Talvez devêssemos fazer uma plaquinha para cada um dos nossos animais de estimação, caso eles se percam!"
+
+        Termine esta plaquinha desenhando um retângulo ao redor do exterior.
+        (Os lados longos têm 200 pixels cada e os lados curtos são 100 pixels cada)
+      courseC_artist_prog6: |-
+        \_ "Agora uma plaquinha para Belle!" \_
+
+        Desenhe este diamante com 200 pixels de lado.
+      courseC_artist_prog7: |-
+        \*\* Desafio: \*\* Esta plaquinha é especial!
+
+        Você consegue descobrir como desenhar o contorno?\
+        (O lado longo é de 150 pixels e cada um dos lados curtos tem 75 pixels.)
+      courseC_artist_prog7_2018: |-
+        \*\* Desafio: \*\* Esta plaquinha é especial!
+
+        Você consegue descobrir como desenhar o contorno?\
+        (O lado longo é de 150 pixels e cada um dos lados curtos tem 75 pixels.)
+      courseC_artist_prog7_2019: |-
+        \*\* Desafio: \*\* Esta plaquinha é especial!
+
+        Você consegue descobrir como desenhar o contorno?\
+        (O lado longo é de 150 pixels e cada um dos lados curtos tem 75 pixels.)
+      courseC_artist_prog8: |-
+        Mais uma plaquinha. Este é um triângulo para Pi.\
+        (Cada lado tem 150 pixels)
+      courseC_artist_prog8_2018: |-
+        Mais uma plaquinha. Este é um triângulo para Pi.\
+        (Cada lado tem 150 pixels)
+      courseC_artist_prog8_2019: |-
+        Mais uma plaquinha. Este é um triângulo para Pi.\
+        (Cada lado tem 150 pixels)
+      courseC_artist_prog_challenge1: Desenhe quartos para cada um dos animais. Há
+        muitas maneiras diferentes de resolver esse quebra-cabeça, então divirta-se!
+        Cada quadrado tem um comprimento lateral de 100 pixels.
+      courseC_artist_prog_challenge1_2018: Desenhe quartos para cada um dos animais.
+        Há muitas maneiras diferentes de resolver esse quebra-cabeça, então divirta-se!
+        Cada quadrado tem um comprimento lateral de 100 pixels.
+      courseC_artist_prog_challenge1_2019: Desenhe quartos para cada um dos animais.
+        Há muitas maneiras diferentes de resolver esse quebra-cabeça, então divirta-se!
+        Cada quadrado tem um comprimento lateral de 100 pixels.
+      courseC_artist_prog_challenge2a: |-
+        \_ "Ajude-me a pintar as linhas amarelas nesta estrada!"
+
+        Os três segmentos de linha têm comprimentos de 150, 100 e 200 pixels!
+      courseC_artist_prog_challenge2a_2018: |-
+        \_ "Ajude-me a pintar as linhas amarelas nesta estrada!"
+
+        Os três segmentos de linha têm comprimentos de 150, 100 e 200 pixels!
+      courseC_artist_prog_challenge2a_2019: |-
+        \_ "Ajude-me a pintar as linhas amarelas nesta estrada!"
+
+        Os três segmentos de linha têm comprimentos de 150, 100 e 200 pixels!
       courseC_collector_prog2_2019: Mova Laurel para o tesouro, então use o bloco
         <xml><block type="collector_collect" block-text="collect"/></xml> para coletá-lo.
       courseC_collector_prog8: _"Continue fazendo um bom trabalho! Me ajude a coletar
@@ -12407,6 +13471,12 @@ pt-BR:
       courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops1_2019: Ajude Scrat a atravessar o gelo escorregadio e chegar
         na noz!
+      courseD_iceage_loops2_2019: |-
+        Use um bloco <xml><block type="maze_turn" block-text="turn left"><title name="DIR">virarEsquerda</title>
+        </block></xml> para chegar na noz!
+      courseD_iceage_loops3_2019: Você consegue chegar na noz com apenas um bloco
+        <xml><block type="maze_moveForward" block-text="avance"/></xml>? Tente usar
+        um laço de repetição!
       courseD_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops4_2019: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops6: Você consegue adicionar um laço para chegar até a noz?
@@ -12420,7 +13490,10 @@ pt-BR:
         o Scrat a chegar lá?
       courseD_iceage_loops9_2019: A noz está tão longe! Você pode usar laços para
         ajudar o Scrat a chegar lá?
+      courseD_maze_intro4_2019: '_"Trace o caminho e me leve até o porco."_ '
       courseD_maze_intro5a_2019: Conte os espaços na grade com cuidado!
+      courseD_maze_intro5c_2019: Cuidado com os explosivos! Ajude Red a chegar até
+        o porco.
       courseD_maze_nestedLoops4: "Leve-me até o girassol usando o menor número de
         blocos\npossível! \\\r\n\\\r\nUse um laço \"repita\" dentro de outro para
         diminuir\na quantidade de códigos que você precisa."
@@ -12552,9 +13625,9 @@ pt-BR:
         Resolva este desafio com o menor número de blocos
         possível.
       courseF_bee_variables_4_2019: |-
-        "Vamos continuar!"
+        "Vamos em frente!"
 
-        Edite o código para funcionar neste desafio.
+        Edite o código para que ele funcione neste desafio.
       coursea_maze_ramp1_2018: Para levar o pássaro até o porco, encaixe o <xml><block
         type="maze_moveEast"/></xml> bloco no final do <xml><block type="when_run"/></xml>
         bloco e aperte "▶ Executar"!
@@ -12668,3 +13741,17 @@ pt-BR:
         de 200 pixels.
       ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado com lados
         de 200 pixels.
+      simconfig: |-
+        # Mude e Preveja
+
+        Escolha uma das variáveis que controlam essa simulação para modificar e prever como isso irá mudar o resultado.
+
+        Depois de ter anotado sua previsão, execute a simulação 5 vezes e anote suas descobertas. Sua previsão foi parecida com o resultado?
+      simstarter: |-
+        # Coletando Dados
+
+        Execute a simulação 5 vezes. A cada vez, use o guia de atividade de coleta de dados para registrar:
+
+        -   Quantas maçãs o elefante pegou?
+        -   Quantas maçãs o hipopótamo pegou?
+        -   Quanto tempo levou para que todas as maçãs fossem pegas?

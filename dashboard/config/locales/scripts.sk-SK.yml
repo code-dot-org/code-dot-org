@@ -4817,6 +4817,10 @@ sk:
               name: Vymazanie záznamov
             Final Project:
               name: Záverečný projekt
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Číselné systémy
         time4csdemo:
           stages:
             Crowdsourcing:

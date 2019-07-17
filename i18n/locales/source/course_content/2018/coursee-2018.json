@@ -2,7 +2,8 @@
   "https://studio.code.org/s/coursee-2018/stage/2/puzzle/1": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **In this lesson...**\n\n### Have you ever wanted to tell someone exactly what to do? Do they always listen to you?\n\n### Today, you'll be telling a machine what to do, step by step- and it will listen!\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/2/puzzle/3": {
@@ -101,13 +102,15 @@
   "https://studio.code.org/s/coursee-2018/stage/2/puzzle/13": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **You just learned \"algorithms\"!**  \n\n\n\n### **An algorithm is just a list of steps to finish a task**. The fun thing about algorithms is that you get to decide what happens, step by step.  \n\n### When you write an algorithm for a machine, this is called a **program**.  \n\n---\n\n## **Vocab to Know**\n\n* ### **Algorithm** - A list of steps to finish a task\n\n* ### **Program** - An algorithm that has been coded into something that can be run by a machine\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/4/puzzle/1": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# In this lesson...\n\n### What do you think of when you think about bugs? \n\n### When most people think about bugs, they think about creepy crawly things. In computer science, bugs aren't alive, but they can still be tricky.\n\n### The puzzles in this lesson have already been solved for you! But not so fast- they don't seem to be working yet. Are bugs behind all this? \n\n---\n\n## Blocks to Know\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/4/puzzle/3": {
@@ -208,7 +211,8 @@
   "https://studio.code.org/s/coursee-2018/stage/4/puzzle/12": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **You just learned \"debugging\"!**\n\n### **A bug is something that goes wrong.** It is an error in a program. When you find and fix those errors, you are **debugging** a problem.\n\n### You have to practice **persistence**, another word for not giving up, in order to find and fix all the bugs.\n\n---\n\n## **Vocab to Know**\n\n* ### **Bug** - Part of a program that does not work correctly\n\n* ### **Debugging** - Finding and fixing problems in an algorithm or program\n\n* ### **Persistence** - Not giving up\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/5/puzzle/2": {
@@ -334,7 +338,8 @@
   "https://studio.code.org/s/coursee-2018/stage/7/puzzle/1": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# In this lesson...\n\n### Imagine you want your character to move forward **5** times. This would be pretty easy- just drag out **5** move forward blocks. Now, imagine you want your character to move forward **5,000** times! \n\n### How long would it take you to drag out **5,000** blocks? \n\n### Wish there was an easy way to do this? There is!\n\n---\n\n## Blocks to Know\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/7/puzzle/3": {
@@ -376,7 +381,8 @@
   "https://studio.code.org/s/coursee-2018/stage/7/puzzle/13": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **You just learned \"loops\"!**  \n\n### **A loop is the action of doing something over and over again.** Another word for doing something again is repeat.\n\n### Loops are really useful for repeating patterns. It might be helpful to write out your program without any loops first, then try to find a pattern. \n\n### When you see one, stick that pattern into a `repeat` block!\n\n---\n\n## **Vocab to Know**\n\n* ### **Loop** - The action of doing something over and over again\n\n* ### **Repeat** - Do something again\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/8/puzzle/1": {
@@ -399,7 +405,8 @@
   "https://studio.code.org/s/coursee-2018/stage/8/puzzle/3": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **In this lesson...**\n\n### Have you ever wondered what would happen if you put a loop *inside another loop*? \n\n### It might just make you go loopy!\n\n### If a normal loop is good at repeating patterns, what do you think a loop inside another loop would be good at? Let's find out!\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/8/puzzle/5": {
@@ -539,7 +546,8 @@
   "https://studio.code.org/s/coursee-2018/stage/8/puzzle/15": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **You just learned \"nested loops\"!**\n\n### **A nested loop is a loop within a loop.** Think of it like an outer loop, with another loop that got all comfy and cozy and nested inside the outer loop. \n\n### Nested loops are great for repeating patterns of patterns. They can be very powerful if used correctly!\n\n---\n\n## **Vocab to Know**\n\n### __Nested Loops__ - A loop within a loop\n\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/9/puzzle/1": {
@@ -613,7 +621,8 @@
   "https://studio.code.org/s/coursee-2018/stage/11/puzzle/1": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **In this lesson...**\n\n### **Conditions** are things that can be true or false. \n\n### You will learn how to use conditions in a program to make things happen `while`, `until`, or `if` something is true!\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/11/puzzle/3": {
@@ -717,7 +726,8 @@
   "https://studio.code.org/s/coursee-2018/stage/11/puzzle/15": {
     "dsls": {
       "title": "Test Markdown Textbook Page",
-      "content1": "Test Markdown Textbook Page"
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# **You just learned \"conditionals\"!**\n\n### Conditionals are super useful in computer science. Imagine logging in to your favorite website and typing in your password. The website has to use conditionals to check *if* the password you entered matches the password it has saved for your username. \n\n### `If` it matches, log in! \n\n### `Else`, give the user an error.  \n\n---\n\n## **Vocab to Know**\n\n* ### **Condition** - Something a program checks before allowing an action\n\n* ### **Conditionals** - Statements that only run under certain conditions\n\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/15/puzzle/1": {
@@ -1576,7 +1586,8 @@
   "https://studio.code.org/s/coursee-2018/stage/24/puzzle/1": {
     "dsls": {
       "title": "Begin planning your project",
-      "content1": "description here"
+      "content1": "description here",
+      "markdown": "# The Design Process\n\n<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true\" style=\"width: 800px; height: 600px\"></iframe>\n"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/25/puzzle/1": {
@@ -1587,7 +1598,8 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/26/puzzle/1": {
     "dsls": {
-      "title": "Prepare for yur presentation"
+      "title": "Prepare for yur presentation",
+      "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }
   }
 }

@@ -814,6 +814,7 @@ fi-FI:
   course2_name: Kurssi 2
   course3_name: Kurssi 3
   course4_name: Kurssi 4
+  accelerated_name: Nopeutettu kurssi
   20-hour_name: Nopeutettu kurssi
   classicmaze_name: Klassinen sokkelo
   iceage_name: Jääkausi

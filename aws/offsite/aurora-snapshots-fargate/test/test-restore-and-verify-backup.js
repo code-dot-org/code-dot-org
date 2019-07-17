@@ -18,25 +18,29 @@ const DESCRIBE_SNAPSHOT_RESULTS = {
       DBClusterSnapshotIdentifier: "production-eligible-snapshot-1",
       SnapshotCreateTime: new Date("2019-06-14T00:00:00.000Z"),
       Status: "available",
-      SnapshotType: "manual"
+      SnapshotType: "manual",
+      EngineVersion: "5.7.12"
     },
     {
       DBClusterSnapshotIdentifier: "production-automatic-snapshot",
       SnapshotCreateTime: new Date("2019-06-15T00:00:00.000Z"),
       Status: "available",
-      SnapshotType: "automated"
+      SnapshotType: "automated",
+      EngineVersion: "5.7.12"
     },
     {
       DBClusterSnapshotIdentifier: "production-eligible-snapshot-2",
       SnapshotCreateTime: new Date("2019-06-16T00:00:00.000Z"),
       Status: "available",
-      SnapshotType: "manual"
+      SnapshotType: "manual",
+      EngineVersion: "5.7.12"
     },
     {
       DBClusterSnapshotIdentifier: "production-incomplete-snapshot",
       SnapshotCreateTime: new Date("2019-06-17T00:00:00.000Z"),
       Status: "creating",
-      SnapshotType: "manual"
+      SnapshotType: "manual",
+      EngineVersion: "5.7.12"
     }
   ]
 };
@@ -68,6 +72,7 @@ describe("#restoreLatestSnapshot()", function() {
         DBClusterIdentifier: CLUSTER_ID,
         SnapshotIdentifier: expectedLatestSnapshotName,
         Engine: restoreAndVerify.DB_ENGINE,
+        EngineVersion: "5.7.12",
         DBSubnetGroupName: DB_SUBNET_GROUP_NAME
       })
       .returns({
@@ -82,7 +87,8 @@ describe("#restoreLatestSnapshot()", function() {
         DBInstanceClass: restoreAndVerify.DB_INSTANCE_CLASS,
         DBClusterIdentifier: CLUSTER_ID,
         DBInstanceIdentifier: INSTANCE_ID,
-        Engine: restoreAndVerify.DB_ENGINE
+        Engine: restoreAndVerify.DB_ENGINE,
+        EngineVersion: "5.7.12"
       })
       .returns({
         promise: () => {

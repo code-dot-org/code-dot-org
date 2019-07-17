@@ -568,12 +568,16 @@ hu-HU:
         meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár
         törölheti az egészet, és írhat helyette valami teljesen mást)
       courseA_maze_seq2: Változtasd meg a kódot, hogy elkapjam a malacot!
+      courseC_artist_loops1a_2019: 'Hozd a művészet a játéktér közepére, majd rajzolj
+        egy matricát. '
       courseC_artist_prog5: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
         Tipp: Mind a három oldal egyforma hosszú.'
       courseC_artist_prog5_2018: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
         Tipp: Mind a három oldal egyforma hosszú.'
       courseC_artist_prog5_2019: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
         Tipp: Mind a három oldal egyforma hosszú.'
+      courseC_maze_debugging9_2019: A program létrehozásához használja az eszköztár
+        blokkjait. Vidd a madarat a disznóhoz.
       courseD_artist_binary1: "A bináris az információ ábrázolása mindössze 2 állapot
         használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\" (ezt az
         1 számjegy jelöli) állapotokat használjuk.\\\r\n\\\r\nEgy \"képpontokból\"

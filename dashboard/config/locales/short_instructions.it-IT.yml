@@ -1231,10 +1231,10 @@ it-IT:
         blocchi e clicca su "▶ Esegui"!
       courseB_Scrat_ramp1_2019: Per risolvere questo esercizio, aggancia insieme i
         blocchi e clicca su "▶ Esegui"!
-      courseB_Scrat_ramp2_2018: Unisci tutti i blocchi per finire il tuo codice, poi
-        fai clic su "▶ Esegui".
-      courseB_Scrat_ramp2_2019: Unisci tutti i blocchi per finire il tuo codice, poi
-        fai clic su "▶ Esegui".
+      courseB_Scrat_ramp2_2018: Unisci tutti i blocchi per completare il programma,
+        poi fai clic su "▶ Esegui".
+      courseB_Scrat_ramp2_2019: Unisci tutti i blocchi per completare il programma,
+        poi fai clic su "▶ Esegui".
       courseB_Scrat_ramp3a_2018: Aggiungi un blocco verso Nord `N ↑` come ultimo blocco,
         poi clicca su "▶ Esegui".
       courseB_Scrat_ramp3a_2019: Aggiungi un blocco verso Nord `N ↑` come ultimo blocco,
@@ -2212,8 +2212,8 @@ it-IT:
         i rottami metallici!
       courseC_starWars_loops9_2019: Sfrutta ciò che hai imparato per recuperare tutti
         i rottami metallici!
-      courseD_artist_1_2018: Disegna un esagono con lati lunghi **50** pixel.
-      courseD_artist_1_2018_2019: Disegna un esagono con lati lunghi **50** pixel.
+      courseD_artist_1_2018: 'Disegna un esagono con lati lunghi **50** pixel.  '
+      courseD_artist_1_2018_2019: 'Disegna un esagono con lati lunghi **50** pixel.  '
       courseD_artist_2_2018: Adesso, gira a destra di **60** gradi, quindi disegna
         una linea retta lunga **150** pixel e salta indietro al centro dell'area di
         gioco.
@@ -2311,7 +2311,7 @@ it-IT:
       courseD_artist_binary_challenge2_2019: Sei abbastanza perseverante per risistemare
         questo logo?
       courseD_artist_nestedLoops1: |-
-        Inizia questa lezione disegnando un triangolo.
+        Inizia questa lezione disegnando un triangolo.\
         (Ogni lato è lungo 100 pixel e dovrai ruotare di 120 gradi ad ogni angolo: è la misura degli angoli esterni.)
       courseD_artist_nestedLoops10: Considera i quadrati dell'esercizio precedente,
         ma questa volta ne disegni solo 7 e li mettli in riga.
@@ -2320,10 +2320,10 @@ it-IT:
       courseD_artist_nestedLoops10_2019: Considera i quadrati dell'esercizio precedente,
         ma questa volta ne disegni solo 7 e li mettli in riga.
       courseD_artist_nestedLoops1_2018: |-
-        Inizia questa lezione disegnando un triangolo.
+        Inizia questa lezione disegnando un triangolo.\
         (Ogni lato è lungo 100 pixel e dovrai ruotare di 120 gradi ad ogni angolo: è la misura degli angoli esterni.)
       courseD_artist_nestedLoops1_2019: |-
-        Inizia questa lezione disegnando un triangolo.
+        Inizia questa lezione disegnando un triangolo.\
         (Ogni lato è lungo 100 pixel e dovrai ruotare di 120 gradi ad ogni angolo: è la misura degli angoli esterni.)
       courseD_artist_nestedLoops1a: 'Ora disegna il triangolo 6 volte. '
       courseD_artist_nestedLoops1a_2018: 'Ora disegna il triangolo 6 volte. '
@@ -2997,12 +2997,14 @@ it-IT:
       courseD_playLab_cond5_2018: 'Aggiungi un ciclo `ripeti per sempre` che controlli
         in continuazione il punteggio: se è maggiore di 5, allora termina il gioco
         con una vittoria.'
-      courseD_playLab_cond6: |-
-        1.  Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
-        2.  Se il pirata è più in basso di 225 pixel, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
-      courseD_playLab_cond6_2018: |-
-        1.  Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
-        2.  Se il pirata è più in basso di 225 pixel, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
+      courseD_playLab_cond6: "1.  Rallenta il ninja (personaggio 3) prima di fargli
+        inseguire il pirata.  \n2.  Se il pirata è più in basso di 225 pixel, imposta
+        il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché
+        **insegua** il pirata.  "
+      courseD_playLab_cond6_2018: "1.  Rallenta il ninja (personaggio 3) prima di
+        fargli inseguire il pirata.  \n2.  Se il pirata è più in basso di 225 pixel,
+        imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il
+        ninja affinché **insegua** il pirata.  "
       courseD_playLab_cond6a: Se il pirata (personaggio 1) è nella "zona di sicurezza",
         aspetta un secondo, poi togli un punto ogni secondo che il pirata trascorre
         al di sotto della linea dei polpi.
@@ -3039,17 +3041,17 @@ it-IT:
       courseE_artist_concept_challenge2_2018: Crea cinque girandole usando il codice
         riportato di seguito.
       courseE_artist_functions1: |-
-        Ciao. Io artista zombie. Mi piace disegnare!<br><br>
-        Aiutami a disegnare questi occhiali quadrati.<br><br>
-        <b>Suggerimento</b>: l'asta tra le lenti è di 25 pixel più corta della lunghezza di ciascuna lente.
+        Ciao. Io artista zombie. Mi piace disegnare!\
+        Aiutami a disegnare questi occhiali quadrati.\
+        **Suggerimento**: l'asta tra le lenti è di 25 pixel più corta della lunghezza di ciascuna lente.
       courseE_artist_functions10: Questa volta, usa file di 8 esagoni con lati da
         25 pixel.
       courseE_artist_functions10_2018: Questa volta, usa file di 8 esagoni con lati
         da 25 pixel.
       courseE_artist_functions10_2019: Questa volta, usa file di 8 esagoni con lati
         da 25 pixel.
-      courseE_artist_functions2: Questa volta, usa la funzione `disegna un quadrato`
-        per creare gli occhiali.
+      courseE_artist_functions2: 'Questa volta, usa la funzione `disegna un quadrato`
+        per creare gli occhiali. '
       courseE_artist_functions2_2018: 'Usa la funzione `disegna un quadrato` per creare
         gli occhiali. '
       courseE_artist_functions2_2019: 'Usa la funzione `disegna un quadrato` per creare
@@ -3680,7 +3682,7 @@ it-IT:
         Clicca su "Esegui" e guarda cosa succede quando cominciamo a essere creativi con i bit.
       iceage_click_hello: Puoi aiutare Sid a chiamare i suoi amici quando si clicca
         su di lui?
-      iceage_free_play: È il momento di creare un gioco o una storia per conto tuo.
+      iceage_free_play: 'È il momento di creare un gioco o una storia per conto tuo! '
       iceage_hello1: Aiuta Sid a dire "Ciao" trascinando il blocco `il personaggio
         1 dice ...` nell'area di lavoro e collegandolo sotto all'evento `quando si
         clicca su "Esegui"`

@@ -4446,6 +4446,9 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sisteme de numere
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'

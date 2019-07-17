@@ -997,6 +997,7 @@ id:
   return_unit_overview: 'Pergi ke ikhtisar unit'
   return_course_overview: 'Pergi ke ikhtisar kursus'
   view_all_units: 'Melihat semua satuan'
+  view_teacher_guide: 'Lihat petunjuk guru'
   pd:
     form_labels:
       first_name: 'Nama Depan'
@@ -1023,6 +1024,20 @@ id:
         non_binary: 'Non-biner'
         not_listed: 'Istilah yang disukai tidak terdaftar'
         none: 'Memilih untuk tidak menjawab'
+      school_country:
+        canada: 'Kanada'
+        chile: 'Cili'
+        israel: 'Israel'
+        malaysia: 'Malaysia'
+        mexico: 'Meksiko'
+        thailand: 'Tailand'
+      ages:
+        ages_under_6: '6 tahun'
+        ages_7_8: '7- 8 tahun'
+        ages_9_10: '9-10 tahun'
+        ages_11_12: '11-12 tahun'
+        ages_13_14: '13-14 tahun'
+        ages_15_16: '15-16 tahun'
       subjects:
         cs: 'Ilmu komputer'
         math: 'Matematika'

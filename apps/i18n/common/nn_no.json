@@ -575,6 +575,7 @@
   "feedback": "Tilbakemelding",
   "feedbackFrom": "Tilbakemelding frå {teacher}",
   "feedbackLoadError": "Det oppstod ein feil ved etablering kobling til serverane våre. Oppdater sida og prøv på nytt.",
+  "feedbackNotificationLastUpdated": "Sist oppdatert:",
   "feedbackPlaceholder": "Skriv tilbakemelding til eleven din her. Dette vil bli synleg for eleven når du klikkar på 'Lagre og del'.",
   "feedbackSaveError": "Det oppstod ein feil ved lagring av tilbakemeldinga di. Prøv å lagre på nytt.",
   "fewerNumberOfBlocks": "Færre enn {numBlocks, plural,one {ei blokk}other {# blokker}} brukt!",

@@ -29,14 +29,14 @@ class BubbleChoice < DSLDefined
   include SerializedProperties
 
   serialized_attrs %w(
-    title
+    display_name
     description
   )
 
   def dsl_default
     <<ruby
 name 'unique level name here'
-title 'level title here'
+display_name 'level display_name here'
 description 'level description here'
 
 sublevels
@@ -54,6 +54,15 @@ ruby
     sublevels[index]
   end
 
+  # Returns a sublevel's position in the parent level. Can be used for generating
+  # a sublevel URL (/s/:script_name/stage/:stage_pos/puzzle/:puzzle_pos/sublevel/:sublevel_pos).
+  # @param [Level] sublevel
+  # @return [Integer] The sublevel's position (i.e., its index + 1) under the parent level.
+  def sublevel_position(sublevel)
+    i = sublevels.index(sublevel)
+    i.present? ? i + 1 : nil
+  end
+
   # Summarizes the level.
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels,
   # previous/next levels, and script will be included in the summary.
@@ -62,7 +71,7 @@ ruby
   # @return [Hash]
   def summarize(script_level: nil, user_id: nil)
     summary = {
-      title: title,
+      display_name: display_name,
       description: description,
       sublevels: summarize_sublevels(script_level: script_level, user_id: user_id)
     }
@@ -93,7 +102,7 @@ ruby
     sublevels.each_with_index do |level, index|
       level_info = {
         id: level.id,
-        title: level.display_name || level.name,
+        display_name: level.display_name || level.name,
         description: level.try(:bubble_choice_description),
         thumbnail_url: level.try(:thumbnail_url)
       }
@@ -118,5 +127,12 @@ ruby
   def best_result_sublevel(user)
     ul = user.user_levels.where(level: sublevels).max_by(&:best_result)
     ul&.level
+  end
+
+  # Returns an array of BubbleChoice parent levels for any given sublevel name.
+  # @param [String] level_name. The name of the sublevel.
+  # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
+  def self.parent_levels(level_name)
+    where("properties -> '$.sublevels' LIKE ?", "%\"#{level_name}\"%")
   end
 end

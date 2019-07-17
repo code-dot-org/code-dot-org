@@ -346,9 +346,9 @@ es-MX:
       CSDU6 arrays select variable_2019: Escribe un programa que muestre un color
         elegido aleatoriamente desde el arreglo. (Haz clic para ver las instrucciones
         completas)
-      Choose Your Own Adventure: "¡Puedes hacer lo que quieras en el laboratorio de
-        juego! Aquí hay un ejemplo para escoger tu propia historia de aventura en
-        el laboratorio de juego."
+      Choose Your Own Adventure: "¡Puedes hacer lo que quieras en el Laboratorio de
+        juego! Este es un ejemplo de una historia de Elige tu propia aventura en el
+        Laboratorio de juegos."
       Course 4 Artist Binary 1: Aquí hay una función que toma una cadena binaria de
         0 y 1 e instruye al artista a que gire de izquierda a derecha, de arriba hacia
         abajo, llenando los cuadrados cuando ve 1 e ignorándolos cuando ve 0. Corre
@@ -520,8 +520,8 @@ es-MX:
         más detalles)
       Dance_Party_extras_visible: ¿Dónde habrán ido? (haz clic en "Más" para obtener
         más detalles)
-      Find the Wizard: Construye lo que quieras. ¡Este es un ejemplo de un juego de
-        adivinación de números!
+      Find the Wizard: Crea lo que quieras. ¡Este es un ejemplo de un juego de adivinar
+        números!
       Fish Tank 2-validated: Convierte a Dusty (la planta rodadora) en un pez.
       Fish Tank 2-validated_2019: Convierte a Dusty (la planta rodadora) en un pez.
       Fish Tank 3-validated: Cambia el comportamiento del pez para que se mueva alrededor
@@ -538,8 +538,8 @@ es-MX:
         para darle un toque especial a tu pecera!"
       Fish Tank 7-validated_2019: "¡Usa algunos bloques nuevos de la caja de herramientas
         para darle un toque especial a tu pecera!"
-      FoodFight: Este es un ejemplo de un juego que puedes hacer en el laboratorio
-        de juego.
+      FoodFight: Este es un ejemplo de un juego que puedes crear en el Laboratorio
+        de juegos.
       Frequency Analysis: Prueba
       Function intro Ryan: Usa la función "Construir puente" dos veces para crear
         un camino para la antorcha.
@@ -549,8 +549,8 @@ es-MX:
         crear un patrón. ¡Esto requiere persistencia y planificación!'
       Geometric Sun_2018: 'Idea para un proyecto: usa ideas geométricas como formas
         para crear un patrón. ¡Esto requiere persistencia y planificación!'
-      Guess The Number: Construye lo que quieras. ¡Este es un ejemplo de un juego
-        de adivinación de números!
+      Guess The Number: Crea lo que quieras. ¡Este es un ejemplo de un juego de adivinar
+        números!
       HOC 2018 Level_1: Obtén un bote en el cofre.
       HOC 2018 Level_10: Dirígete a la entrada de este monumento oceánico.
       HOC 2018 Level_11: Fabrica un conducto con prismarina dentro del monumento oceánico.
@@ -996,9 +996,9 @@ es-MX:
       course3_bee_functions_challenge1: De ti depende este desafío. ¡Puede ser más
         difícil de lo que parece!
       course3_bee_functions_challenge3: Crea una función para recoger todo el néctar
-        y la miel mientras hay un camino por delante. ¡Úsalo para completar el desafío!
-      course3_bee_functions_challenge4: "¡Usa todo lo que has aprendido para completar
-        este desafío!"
+        y la miel mientras haya un camino por delante. ¡Úsala para completar el desafío!
+      course3_bee_functions_challenge4: "¡Aprovecha todo lo que has aprendido para
+        completar este desafío!"
       course3_collector_debugging_challenge2: "¿Eres experto en loops anidados? ¡Usa
         lo que has aprendido hasta ahora para recolectar todo el tesoro!"
       course3_farmer_condLoops_challenge1: Gira a la derecha en las calabazas. Recoge
@@ -1033,9 +1033,9 @@ es-MX:
         ¿Puedes quedarte aquí hasta que descifres la solución?"
       course4_bee_for_challenge1: Usa este 'bucle para' para recoger todo el néctar.
         Hay unas pocas acciones que querrás repetir 'contador' veces.
-      course4_bee_fwp_challenge1: Usa un 'loop para' en una función para recoger todo
-        el maíz. El mismo 'loop para' puede contar a valores máximos diferentes usando
-        el parámetro 'longitud'.
+      course4_bee_fwp_challenge1: Usa un bucle `desde` en una función para recoger
+        todo el maíz. El mismo bucle `desde` puede contar valores máximos diferentes
+        mediante el parámetro `longitud`.
       course4_bee_fwp_challenge2: Usa un 'bucle para' en una función para recoger
         todos los vegetales en la fila. Haz que el 'bucle para' pueda contar hasta
         valores máximos diferentes usando el parámetro `longitud`. Haz tu programa
@@ -3708,8 +3708,8 @@ es-MX:
         laberinto. ¿Por qué es diferente al de la última vez?
       courseF_bee_functions_challenge1: Crea una nueva función para recoger todo el
         néctar y la miel mientras haya un camino por delante.
-      courseF_bee_functions_challenge2: "¡Usa todo lo que has aprendido para completar
-        este desafío!"
+      courseF_bee_functions_challenge2: "¡Aprovecha todo lo que has aprendido para
+        completar este desafío!"
       courseF_bee_fwp2: Transforma este código en una función, y luego llama a la
         función para revisar esta fila en busca de néctar.
       courseF_bee_fwp3: Veamos si esta función permite recoger estas tres filas de
@@ -3719,7 +3719,7 @@ es-MX:
       courseF_bee_fwp5: Usa esta función para recoger todo el néctar.
       courseF_bee_fwp6: Crea una solución breve y dulce para este desafío.
       courseF_bee_fwp7: "**Desafío:** Modifica tu función para que también haga miel."
-      courseF_bee_fwp8: Usa tu nueva función para resolver este espiral.
+      courseF_bee_fwp8: Usa tu nueva función para resolver esta espiral.
       courseF_bee_fwp9_predict1: Usa tu nueva función para resolver este desafío.
       courseF_bee_fwp_challenge1: Usa un bucle `desde` en una función con un parámetro
         de `longitud` para recoger todo el maíz.

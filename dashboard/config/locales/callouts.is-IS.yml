@@ -104,6 +104,8 @@ is-IS:
         CSD_U6_checkWin: Athugaðu hvort spilarinn hafi unnið
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: Athugaðu hvort spilarinn hafi unnið
+      CSDU4 - Design Mode - 3:
+        '': Notaðu setText kubbinn til að breyta textanum í titleLabel
       Course 4 Artist 4:
         repeat_full_circle: Skrifaðu töluna fyrir hversu oft uppvakningurinn á að
           hreyfast til að búa til heilan hring
@@ -389,6 +391,8 @@ is-IS:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Þessi tala segir þér hve marga af þessum kubbum
           þú mátt nota í þessari þraut.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Smelltu hér til að sjá kóðann keyra!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum?
           Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
@@ -603,6 +607,8 @@ is-IS:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú
           átt marga svona kubba eftir til að nota.
+      courseC_maze_programming5:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
       courseC_maze_programming5_2019:
         '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
       courseC_maze_programming7:

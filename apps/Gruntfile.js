@@ -3,18 +3,15 @@ var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
-var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+var sass = require('node-sass');
 
 module.exports = function(grunt) {
-  // Decorate grunt to record and report build durations.
-  var buildTimeLogger = logBuildTimes(grunt);
-
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
     if (
@@ -211,6 +208,11 @@ describe('entry tests', () => {
             return path.join(dest, outputPath);
           }
         },
+        // minifying ace code requires some advanced configuration:
+        // https://github.com/ajaxorg/ace/blob/b808ac14ec6d6afa74b36ff5c03452a2832b32a4/Makefile.dryice.js#L620-L638
+        // instead of replicating that configuration here, we keep minified
+        // and unminified js in our repo and provide the correct one
+        // based on whether we are in development or production mode.
         {
           expand: true,
           cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
@@ -229,12 +231,6 @@ describe('entry tests', () => {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
-          dest: 'build/package/js/p5play/'
-        },
-        {
-          expand: true,
-          cwd: 'lib',
-          src: ['p5.sound.min.js'],
           dest: 'build/package/js/p5play/'
         },
         {
@@ -303,7 +299,8 @@ describe('entry tests', () => {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
         outputStyle: 'nested',
-        includePaths: ['node_modules', '../shared/css/']
+        includePaths: ['node_modules', '../shared/css/'],
+        implementation: sass
       },
       files: _.fromPairs(
         [
@@ -1101,11 +1098,6 @@ describe('entry tests', () => {
 
   // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
   grunt.registerTask('scratchTest', ['preconcat', 'karma:scratch']);
-
-  grunt.registerTask('logBuildTimes', function() {
-    var done = this.async();
-    buildTimeLogger.upload(console.log, done);
-  });
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };

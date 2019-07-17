@@ -519,6 +519,9 @@ is:
         what_is_an_event: Hvað er atvik?
         csd_pair_programming: Félagaforritun
         csd_applab_parameters: Föll með stikum
+        csd_applab_loops: Lykkjur í Appsmiðjunni
+        CSF_SpriteLab_Intro_v2: Kynning á Kvikasmiðjunni
+        CSF_Spritelab_MakeSprite_v2: Hvernig á að búa til kvika
         CSF_SpriteLab_SpritesInAction_v2: Kvikar í verki
     callout:
       text:

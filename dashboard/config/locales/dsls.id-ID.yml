@@ -34,7 +34,7 @@ id-ID:
         - {}
         - {}
         answers:
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
         - {}
         - {}
         - {}
@@ -771,10 +771,13 @@ id-ID:
         title: Buat permainan anda sendiri
         content1: desekripsi di sini
       CSD U3 platform intro:
+        title: Membangun sebuah Platform Jumper
         content1: desekripsi di sini
       CSD U3 platform intro_2018:
+        title: Membangun sebuah Platform Jumper
         content1: desekripsi di sini
       CSD U3 platform intro_2018_2019:
+        title: Membangun sebuah Platform Jumper
         content1: desekripsi di sini
       CSD U5 Encryption 1:
         title: judul
@@ -786,19 +789,25 @@ id-ID:
         title: judul
         content1: desekripsi di sini
       CSD U5 Encryption 2:
+        title: Membaca sandi string binary
         content1: desekripsi di sini
       CSD U5 Encryption 2_2018:
+        title: Membaca sandi string binary
         content1: desekripsi di sini
       CSD U5 Encryption 2_2018_2019:
+        title: Membaca sandi string binary
         content1: desekripsi di sini
       CSD U5 L13 SFLP Interpreting Data:
         title: judul
         content1: desekripsi di sini
       CSD U5 crosstab warmup:
+        title: Survei pizza
         content1: desekripsi di sini
       CSD U5 crosstab warmup_2018:
+        title: Survei pizza
         content1: desekripsi di sini
       CSD U5 crosstab warmup_2018_2019:
+        title: Survei pizza
         content1: desekripsi di sini
       CSD U5 data visualization:
         title: judul
@@ -874,11 +883,13 @@ id-ID:
         - {}
         - {}
       Internet Simulator Setup:
+        title: Internet simulator setup
         content1: desekripsi di sini
       Internet Simulator Setup 2:
         title: judul
         content1: desekripsi di sini
       Internet Simulator Setup 3:
+        title: Internet simulator setup 3
         content1: desekripsi di sini
       K-1 Artist 1 Multi 1:
         title: Pilihan Berganda
@@ -950,7 +961,7 @@ id-ID:
         - {}
         - {}
         answers:
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
         - {}
         - {}
       K-1 Digital Footprint Multi 1:

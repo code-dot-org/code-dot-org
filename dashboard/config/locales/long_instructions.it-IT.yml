@@ -181,6 +181,11 @@ it-IT:
         **Come:** In Modalità Codice aggiungi un nuovo blocco `onEvent()` al tuo programma relativo al pulsante "Right!" (_destra_). Poi aggiungi al suo interno un blocco `setScreen()` che permetta di commutare alla schermata `"rightScreen"`.
 
         **Sei bloccato? Clicca qui:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      CSD Problem Solving Process Video: |-
+        ## Domande sulle quali riflettere
+
+        -   Nell'ultima lezione, sei riuscito a mettere a fuoco il processo di risoluzione dei problemi?
+        -   Come potresti sfruttare questo processo su un problema della tua vita quotidiana?
       CSD U6 iter predict bubbles: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
@@ -335,6 +340,10 @@ it-IT:
 
         -   crea due personaggi a campanella e fai fare agli alieni una danza differente per ognuna di esse
         -   fai fare agli alieni un nuovo passo di danza ogni volta che si toccano tra loro
+      Dance Party Predict: "**Fai una previsione:** Ecco un personaggio chiamato `alien1`!
+        \n\nCosa pensi che succeda quando ci clicchi sopra?  "
+      Dance Party Predict_2019: "**Fai una previsione:** Ecco ora un alieno blu! \n\nCosa
+        pensi accadrà quando ci cliccherai sopra?  "
       Dance_Party_01: |-
         _Organizziamo una festa e balliamo alla grande!_
 
@@ -486,12 +495,12 @@ it-IT:
         questo codice?"
       Fish Tank Predict_2019: "**Fai una previsione**: Che cosa pensi accadrà quando
         eseguirai questo codice?"
-      Function intro Ryan: |-
-        Usa due volte la funzione `costruisci un ponte` per creare un sentiero fino alla torcia di pietrarossa.
-
-        Nella tua area di lavoro c'è una **funzione** chiamata `costruisci un ponte`.  Tutto il codice che ti serve per attraversare il fiume è lì dentro!
-
-        Trascina due volte il piccolo blocco verde <xml> <block type="procedures_callnoreturn" id="callMe"><mutation name="costruisci un ponte"/></block></xml> nell'area di lavoro per preparare il percorso che conduce {currentPlayerName} alla torcia di pietrarossa [redstone_torch].
+      Function intro Ryan: "Nella tua area di lavoro c'è una **funzione** chiamata
+        `costruisci un ponte`.  Tutto il codice che ti serve per attraversare il fiume
+        è lì dentro! \n\nTrascina due volte il piccolo blocco verde <xml> <block type=\"procedures_callnoreturn\"
+        id=\"callMe\"><mutation name=\"costruisci un ponte\"/></block></xml> nell'area
+        di lavoro per preparare il percorso che conduce {currentPlayerName} alla torcia
+        di pietrarossa [redstone_torch]."
       Function intro Ryan_2019: |-
         Usa due volte la funzione `costruisci un ponte` per creare un sentiero fino alla torcia di pietrarossa.
 
@@ -564,21 +573,21 @@ it-IT:
         muovere l'Agente sulla pedana a pressione [PressurePlate_Up] in modo che {currentPlayerName}
         possa entrare. "
       MC_HOC_2017_03_Cole: "{currentPlayerName} prosegue la sua avventura e ha bisogno
-        della **bussola** [compass] per prepararsi per il viaggio.  \\\r\n   \\\r\nProgramma
-        l'Agente per far aprire il cancello."
+        della **bussola** [compass] per prepararsi per il viaggio.  \n\nProgramma
+        l'Agente per far aprire il cancello. "
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} prosegue la sua avventura e ha
-        bisogno della **bussola** [compass] per prepararsi per il viaggio.  \\\r\n
-        \  \\\r\nProgramma l'Agente per far aprire il cancello."
+        bisogno della **bussola** [compass] per prepararsi per il viaggio.  \n\nProgramma
+        l'Agente per far aprire il cancello. "
       MC_HOC_2017_04POINT5_RYAN: "Sei riuscito a passare! \\\r\n\\\r\nOra aiuta {currentPlayerName}
         a superare sano e salvo il labirinto e a raccogliere l'**ascia** [diamond_axe]"
       MC_HOC_2017_04POINT5_RYAN_2019: "Sei riuscito a passare! \\\r\n\\\r\nOra aiuta
         {currentPlayerName} a superare sano e salvo il labirinto e a raccogliere l'**ascia**
         [diamond_axe]"
-      MC_HOC_2017_04_Cole: "L'Agente può muoversi sull'acqua!  \\\r\n \\\r\nUsa un
-        ciclo `ripeti ... volte` per risolvere questo esercizio e aiuta {currentPlayerName}
-        a raggiungere il **secchio** [bucket_empty] oltre la porta. "
-      MC_HOC_2017_04_Cole_2019: "L'Agente può muoversi sull'acqua!  \\\r\n \\\r\nUsa
-        un ciclo `ripeti ... volte` per risolvere questo esercizio e aiuta {currentPlayerName}
+      MC_HOC_2017_04_Cole: "L'Agente può muoversi sull'acqua!  \n\nUsa un ciclo `ripeti
+        ... volte` per risolvere questo esercizio e aiuta {currentPlayerName} a raggiungere
+        il **secchio** [bucket_empty] oltre la porta. "
+      MC_HOC_2017_04_Cole_2019: "L'Agente può muoversi sull'acqua!  \n\nUsa un ciclo
+        `ripeti ... volte` per risolvere questo esercizio e aiuta {currentPlayerName}
         a raggiungere il **secchio** [bucket_empty] oltre la porta. "
       MC_HOC_2017_05_Cole: |-
         Oh no, non c'è più il ponte!
@@ -594,12 +603,12 @@ it-IT:
       MC_HOC_2017_06_Cole_2019: "Un altro fiume, ma questo è molto più largo! \n\nCorreggi
         questo codice per aiutare l'Agente a costruire un ponte in modo che {currentPlayerName}
         possa raggiungere la **piccozza** [diamond_pickaxe]. "
-      MC_HOC_2017_07_Cole: "C'è del ghiaccio che blocca il percorso!  \\\r\n \\\r\nLa
+      MC_HOC_2017_07_Cole: "C'è del ghiaccio che blocca il percorso!  \n\nLa funzione
+        `libera il passaggio` può aiutarti a rimuovere il ghiaccio e far arrivare
+        {currentPlayerName} fino al vagonetto [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "C'è del ghiaccio che blocca il percorso!  \n\nLa
         funzione `libera il passaggio` può aiutarti a rimuovere il ghiaccio e far
         arrivare {currentPlayerName} fino al vagonetto [minecart_normal]! "
-      MC_HOC_2017_07_Cole_2019: "C'è del ghiaccio che blocca il percorso!  \\\r\n
-        \\\r\nLa funzione `libera il passaggio` può aiutarti a rimuovere il ghiaccio
-        e far arrivare {currentPlayerName} fino al vagonetto [minecart_normal]! "
       MC_HOC_2017_10_RETRY: "Riesci a trovare la differenza tra le due funzioni nell'area
         di lavoro? \n\nUsa queste funzioni insieme ad altri blocchi presi dalla cassetta
         degli attrezzi per liberare il passaggio per il vagonetto, poi raccogli **Pietra
@@ -730,6 +739,10 @@ it-IT:
         `se` per posizionare dei ciottoli se scopri la lava.
       Virtual Pet 1: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa
         pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
+      Virtual Pet 1 Predict: |-
+        **Fai una previsione:** Questa è Geraldine, la tua nuova giraffa domestica.
+
+        Cosa pensi accadrà quando premerai "▶ Esegui" e cliccherai su di lei?
       Virtual Pet 2: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento**
         in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore
         diventi marrone."
@@ -764,7 +777,7 @@ it-IT:
         restringa di 5) ogni volta che si scontra con un altro personaggio.  "
       Virtual Pet 6: "Una dieta bilanciata è molto importante! Dobbiamo alimentare
         la giraffa per ridarle forza.  \n\nAggiungi una mela che riporti la giraffa
-        alla sua dimensione originale quando i due personaggi si toccano."
+        alla sua dimensione originale quando i due personaggi si toccano.  "
       Virtual Pet 6_2019: "Una dieta bilanciata è molto importante! Dobbiamo alimentare
         la giraffa per ridarle forza.  \n\nAggiungi una mela che riporti la giraffa
         alla sua dimensione originale quando i due personaggi si toccano."
@@ -813,40 +826,38 @@ it-IT:
         Puoi anche saltare in posizioni diverse dagli angoli della tela. Usando il blocco `salta a ... avanti ... in basso` puoi raggiungere assolutamente qualsiasi punto! Prova ad eseguire questo codice per vedere come funziona, poi personalizzalo e rendilo tuo!
 
         <xml>
-        <block type="jump_to_xy">
-        <title name="XPOS">???</title>
-        <title name="YPOS">???</title>
-        </block></xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
-      course3_playLab_challenge1: |-
-        \*Gli **scoiattoli** sono terrorizzati all'idea che un **dinosauro** sia capitato in città! Riuscirà il coraggioso **cavaliere** a tranquillizzarli?\*
-
-        Regole:
-
-        1.  _Toccare gli scoiattoli fa aumentare il punteggio._
-        2.  _Toccare il dinosauro riduce di molto il punteggio._
-
-        Ecco un gioco già impostato! Giocaci un po' per vedere come funziona.
-
-        Bisognerebbe far succedere qualcosa di particolare quando superi un certo punteggio e quando vai sotto zero. Aggiungi del codice alle funzioni `vittoria` e `sconfitta` per far funzionare il gioco come si deve. Fai clic sui suggerimenti per avere qualche idea!
+      course3_playLab_challenge1: "_Gli **scoiattoli** sono terrorizzati all'idea
+        che un **dinosauro** sia capitato in città! Riuscirà il coraggioso **cavaliere**
+        a tranquillizzarli?_\n\nRegole:\n\n1.  _Toccare gli scoiattoli fa aumentare
+        il punteggio._\n2.  _Toccare il dinosauro riduce di molto il punteggio._\n\nEcco
+        un gioco già impostato! Giocaci un po' per vedere come funziona.\n\nBisognerebbe
+        far succedere qualcosa di particolare quando superi un certo punteggio e quando
+        vai sotto zero. Aggiungi del codice alle funzioni `vittoria` e `sconfitta`
+        per far funzionare il gioco come si deve. \nFai clic sui suggerimenti per
+        avere qualche idea!"
       course4_artist_binary_challenge1: In questo esercizio, puoi usare solo una volta
         ogni valore binario (0 o 1). Prova ad usare dei cicli annidati per completare
         questo disegno.
       course4_artist_binary_challenge2: |-
         Questa griglia è costituita da 256 bit - questo significa che poche modifiche possono causare grandi problemi. Sei abbastanza perseverante per risistemare questo logo?
 
-        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       course4_artist_concept_challenge2: Crea cinque girandole usando il codice riportato
         di seguito.
       course4_artist_functions_challenge2: |-
         Puoi anche saltare in posizioni diverse dagli angoli della tela. Usando il blocco `salta a ... avanti ... in basso` puoi raggiungere assolutamente qualsiasi punto! Prova ad eseguire questo codice per vedere come funziona, poi personalizzalo e rendilo tuo!
 
         <xml>
-        <block type="jump_to_xy">
-        <title name="XPOS">???</title>
-        <title name="YPOS">???</title>
-        </block></xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
       course4_artist_fwp_challenge1: Prova ad eseguire questo programma e ad apportare
         modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure
         cancellalo e sostituiscilo con qualcosa di totalmente diverso)
@@ -1813,6 +1824,10 @@ it-IT:
         Quando hai finito, esegui il gioco e falli scontrare.
 
         ![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)
+      courseC_PlayLab_events_challenge1: |-
+        Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
+
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
       courseC_PlayLab_events_challenge1_2018: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
@@ -1940,34 +1955,40 @@ it-IT:
         Aggiungi un terzo adesivo dove preferisci all'interno del ciclo! Come ti sembra adesso?
 
         -   Per avere ancora più varietà, cambia anche lo schema del pennello!
-            * * *
 
-        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+        * * *
+
+         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops6a_2018: |-
         Aggiungi un terzo adesivo dove preferisci all'interno del ciclo! Come ti sembra adesso?
 
         -   Per avere ancora più varietà, cambia anche lo schema del pennello!
-            * * *
 
-        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+        * * *
+
+         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops7a: |-
         Prova a modificare il ciclo `ripeti ... volte` in modo che venga eseguito un differente numero di volte. Di quanto devi far girare l'artista per continuare a compiere un giro completo?
 
         -   Prova a cambiare il numero di rotazioni
-        -   Prova curve di 60 gradi per 6 volte
-        -   Prova curve di 20 gradi per 18 volte
-            * * *
-            Questa immagine usa un pirata, un ninja e una giraffa. Il ciclo si ripete 18 volte con curve di 20 gradi ciascuna.
+            -   Prova curve di 60 gradi per 6 volte
+            -   Prova curve di 20 gradi per 18 volte
+
+        * * *
+
+        Questa immagine usa un pirata, un ninja e una giraffa. Il ciclo si ripete 18 volte con curve di 20 gradi ciascuna.
 
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops7a_2018: |-
         Prova a modificare il ciclo `ripeti ... volte` in modo che venga eseguito un differente numero di volte. Di quanto devi far girare l'artista per continuare a compiere un giro completo?
 
         -   Prova a cambiare il numero di rotazioni
-        -   Prova curve di 60 gradi per 6 volte
-        -   Prova curve di 20 gradi per 18 volte
-            * * *
-            Questa immagine usa un pirata, un ninja e una giraffa. Il ciclo si ripete 18 volte con curve di 20 gradi ciascuna.
+            -   Prova curve di 60 gradi per 6 volte
+            -   Prova curve di 20 gradi per 18 volte
+
+        * * *
+
+        Questa immagine usa un pirata, un ninja e una giraffa. Il ciclo si ripete 18 volte con curve di 20 gradi ciascuna.
 
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a: |-
@@ -2007,8 +2028,8 @@ it-IT:
 
         -   Nota che abbiamo aggiunto una curva di 60 gradi alla fine del codice all'interno del ciclo per ottenere una rotazione completa.
       courseC_artist_loopsPrePre1a: |-
-        Usa il blocco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> per portare l'artista al centro dell'area di gioco.
-        Quindi disegna una linea lunga 50 pixel con il blocco  <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>
+        Usa il blocco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> per portare l'artista al centro dell'area di gioco.\
+        Quindi disegna una linea lunga 50 pixel con il blocco <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>
       courseC_artist_loopsPrePre1a_2018: |-
         ### L'artista si trova nella posizione sbagliata!
 
@@ -2032,15 +2053,18 @@ it-IT:
       courseC_artist_prog2: |-
         _"Fammi costruire una gabbia per il mio mostriciattolo domestico!"_
 
-        Trascina i blocchi dalla cassetta degli attrezzi per far in modo che l'artista disegni lungo le linee grigie della figura. (Ogni linea è lunga 100 pixel.)
+        Trascina i blocchi dalla cassetta degli attrezzi per far in modo che l'artista disegni lungo le linee grigie della figura.\
+        (Ogni linea è lunga 100 pixel.)
       courseC_artist_prog2_2018: |-
         _"Fammi costruire una gabbia per il mio mostriciattolo domestico!"_
 
-        Trascina i blocchi dalla cassetta degli attrezzi per far in modo che l'artista disegni lungo le linee grigie della figura. (Ogni linea è lunga 100 pixel.)
+        Trascina i blocchi dalla cassetta degli attrezzi per far in modo che l'artista disegni lungo le linee grigie della figura.\
+        (Ogni linea è lunga 100 pixel.)
       courseC_artist_prog2_2019: |-
         _"Fammi costruire una gabbia per il mio mostriciattolo domestico!"_
 
-        Trascina i blocchi dalla cassetta degli attrezzi per far in modo che l'artista disegni lungo le linee grigie della figura. (Ogni linea è lunga 100 pixel.)
+        Trascina i blocchi dalla cassetta degli attrezzi per far in modo che l'artista disegni lungo le linee grigie della figura.\
+        (Ogni linea è lunga 100 pixel.)
       courseC_artist_prog3: |-
         _"A questa astronave serve un finestrino!"_
 
@@ -2056,32 +2080,32 @@ it-IT:
       courseC_artist_prog4: |-
         _"Oh no! Il mio amico mostriciattolo è volato via! Aiutami a raggiungerlo!"_
 
-        Completa il razzo in modo che l'alieno possa seguire il suo amico mostriciattolo.
+        Completa il razzo in modo che l'alieno possa seguire il suo amico mostriciattolo.\
         (Ogni lato del triangolo è lungo 100 pixel ed ha angoli esterni di 120 gradi.)
       courseC_artist_prog4_2018: |-
         _"Oh no! Il mio amico mostriciattolo è volato via! Aiutami a raggiungerlo!"_
 
-        Completa il razzo in modo che l'alieno possa seguire il suo amico mostriciattolo.
+        Completa il razzo in modo che l'alieno possa seguire il suo amico mostriciattolo.\
         (Ogni lato del triangolo è lungo 100 pixel ed ha angoli esterni di 120 gradi.)
       courseC_artist_prog4_2019: |-
         _"Oh no! Il mio amico mostriciattolo è volato via! Aiutami a raggiungerlo!"_
 
-        Completa il razzo in modo che l'alieno possa seguire il suo amico mostriciattolo.
+        Completa il razzo in modo che l'alieno possa seguire il suo amico mostriciattolo.\
         (Ogni lato del triangolo è lungo 100 pixel ed ha angoli esterni di 120 gradi.)
       courseC_artist_prog5: |-
         _"Forse dovremmo costruire una targhetta per ciascuno dei nostri animali domestici nel caso in cui si perdano."_
 
-        Completa questa targhetta disegnando un rettangolo sul contorno.
+        Completa questa targhetta disegnando un rettangolo sul contorno.\
         (I lati lunghi sono di 200 pixel ognuno e quelli corti di 100 pixel)
       courseC_artist_prog5_2018: |-
         _"Forse dovremmo costruire una targhetta per ciascuno dei nostri animali domestici nel caso in cui si perdano."_
 
-        Completa questa targhetta disegnando un rettangolo sul contorno.
+        Completa questa targhetta disegnando un rettangolo sul contorno.\
         (I lati lunghi sono di 200 pixel ognuno e quelli corti di 100 pixel)
       courseC_artist_prog5_2019: |-
         _"Forse dovremmo costruire una targhetta per ciascuno dei nostri animali domestici nel caso in cui si perdano."_
 
-        Completa questa targhetta disegnando un rettangolo sul contorno.
+        Completa questa targhetta disegnando un rettangolo sul contorno.\
         (I lati lunghi sono di 200 pixel ognuno e quelli corti di 100 pixel)
       courseC_artist_prog6: |-
         _"Ora una targhetta per Belle!"_
@@ -2095,29 +2119,23 @@ it-IT:
         _"Ora una targhetta per Belle!"_
 
         Disegna questo rombo con i lati di 200 pixel.
-      courseC_artist_prog7: |-
-        **Sfida:** Questa è una targhetta speciale!
-
-        Riesci a capire come disegnare il contorno?
-        (I lati lunghi sono di 150 pixel e quelli corti di 75 pixel.)
-      courseC_artist_prog7_2018: |-
-        **Sfida:** Questa è una targhetta speciale!
-
-        Riesci a capire come disegnare il contorno?
-        (I lati lunghi sono di 150 pixel e quelli corti di 75 pixel.)
-      courseC_artist_prog7_2019: |-
-        **Sfida:** Questa è una targhetta speciale!
-
-        Riesci a capire come disegnare il contorno?
-        (I lati lunghi sono di 150 pixel e quelli corti di 75 pixel.)
+      courseC_artist_prog7: "**Sfida:** Questa è una targhetta speciale!  \n\nRiesci
+        a capire come disegnare il contorno?\\\n(I lati lunghi sono di 150 pixel e
+        quelli corti di 75 pixel.)"
+      courseC_artist_prog7_2018: "**Sfida:** Questa è una targhetta speciale!  \n\nRiesci
+        a capire come disegnare il contorno?\\\n(I lati lunghi sono di 150 pixel e
+        quelli corti di 75 pixel.)"
+      courseC_artist_prog7_2019: "**Sfida:** Questa è una targhetta speciale!  \n\nRiesci
+        a capire come disegnare il contorno?\\\n(I lati lunghi sono di 150 pixel e
+        quelli corti di 75 pixel.)"
       courseC_artist_prog8: |-
-        Ancora una targhetta. Questa volta triangolare.
+        Ancora una targhetta. Questa volta triangolare.\
         (Ogni lato è di 150 pixel)
       courseC_artist_prog8_2018: |-
-        Ancora una targhetta. Questa volta triangolare.
+        Ancora una targhetta. Questa volta triangolare.\
         (Ogni lato è di 150 pixel)
       courseC_artist_prog8_2019: |-
-        Ancora una targhetta. Questa volta triangolare.
+        Ancora una targhetta. Questa volta triangolare.\
         (Ogni lato è di 150 pixel)
       courseC_artist_prog_challenge1: Disegna una stanza per ogni animale. Ci sono
         molti modi per risolvere questo esercizio, quindi ti serve anche un po' di
@@ -2177,23 +2195,25 @@ it-IT:
       courseC_collector_prog2_2019: Fai muovere Laura fino al diamante, quindi usa
         il blocco <xml><block type="collector_collect"/></xml> per prenderlo.
       courseC_collector_prog3: "_\"L'ordine conta!\"_ \n\nTrovi già nell'area di lavoro
-        tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro. Riordina
+        tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro.\\\nRiordina
         questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
       courseC_collector_prog3_2018: "_\"L'ordine conta!\"_ \n\nTrovi già nell'area
-        di lavoro tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro.
-        Riordina questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
-      courseC_collector_prog3_2019: "_\"L'ordine conta!\"_ \n\nTrovi già nell'area
-        di lavoro tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro.
-        Riordina questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
-      courseC_collector_prog4: "_\"L'ordine conta!\"_ \n\nTrovi già nell'area di lavoro
-        tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro. Riordina
+        di lavoro tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro.\\\nRiordina
         questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
-      courseC_collector_prog4_2018: "_\"L'ordine conta!\"_ \n\nTrovi già nell'area
+      courseC_collector_prog3_2019: "_\"L'ordine conta!\"_ \n\nTrovi già nell'area
+        di lavoro tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro.\\\nRiordina
+        questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
+      courseC_collector_prog4: "_\"L'ordine conta!\"_\n\nTrovi già nell'area di lavoro
+        tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro.  \n\nRiordina
+        questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
+      courseC_collector_prog4_2018: "_\"L'ordine conta!\"_\n\nTrovi già nell'area
         di lavoro tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro.
-        Riordina questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
-      courseC_collector_prog4_2019: "_\"L'ordine conta!\"_ \n\nTrovi già nell'area
+        \ \n\nRiordina questi blocchi per raccogliere tutti i diamanti e risolvere
+        l'esercizio."
+      courseC_collector_prog4_2019: "_\"L'ordine conta!\"_\n\nTrovi già nell'area
         di lavoro tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro.
-        Riordina questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
+        \ \n\nRiordina questi blocchi per raccogliere tutti i diamanti e risolvere
+        l'esercizio."
       courseC_collector_prog5: |-
         _"Aiutami a raccogliere ogni diamante"!_
 
@@ -2221,17 +2241,17 @@ it-IT:
       courseC_collector_prog7: |-
         **Sfida:** _Cosa sta succedendo qui?_
 
-        Anche dopo che avrai messo i blocchi nell'ordine giusto, mancherà ancora qualcosa.
+        Anche dopo che avrai messo i blocchi nell'ordine giusto, mancherà ancora qualcosa.\
         Usa nuovi blocchi dalla cassetta degli attrezzi per raccogliere tutti i diamanti.
       courseC_collector_prog7_2018: |-
         **Sfida:** _Cosa sta succedendo qui?_
 
-        Anche dopo che avrai messo i blocchi nell'ordine giusto, mancherà ancora qualcosa.
+        Anche dopo che avrai messo i blocchi nell'ordine giusto, mancherà ancora qualcosa.\
         Usa nuovi blocchi dalla cassetta degli attrezzi per raccogliere tutti i diamanti.
       courseC_collector_prog7_2019: |-
         **Sfida:** _Cosa sta succedendo qui?_
 
-        Anche dopo che avrai messo i blocchi nell'ordine giusto, mancherà ancora qualcosa.
+        Anche dopo che avrai messo i blocchi nell'ordine giusto, mancherà ancora qualcosa.\
         Usa nuovi blocchi dalla cassetta degli attrezzi per raccogliere tutti i diamanti.
       courseC_collector_prog8: _"Continua alla grande! Aiutami a collezionare tutti
         i diamanti."_
@@ -2275,41 +2295,26 @@ it-IT:
         \n\n* * *\n\nClicca o tocca nello spazio di gioco per far volare Flappy verso
         la sua destinazione."
       courseC_flappy_events2: "L'evento `quando si clicca su \"Esegui\"` ti permette
-        di eseguire del codice all'inizio del gioco.\n\nProva ad aggiungere un blocco
+        di eseguire del codice all'inizio del gioco.  \n\nProva ad aggiungere un blocco
         che imposti la velocità quando viene premuto il pulsante \"Esegui\". \n\n*
         * *\n\nGioca volando fino a destinazione per continuare."
       courseC_flappy_events2_2018: "L'evento `quando si clicca su \"Esegui\"` ti permette
-        di eseguire del codice all'inizio del gioco.\n\nProva ad aggiungere un blocco
+        di eseguire del codice all'inizio del gioco.  \n\nProva ad aggiungere un blocco
         che imposti la velocità quando viene premuto il pulsante \"Esegui\". \n\n*
         * *\n\nGioca volando fino a destinazione per continuare."
       courseC_flappy_events2_2019: "L'evento `quando si clicca su \"Esegui\"` ti permette
-        di eseguire del codice all'inizio del gioco.\n\nProva ad aggiungere un blocco
+        di eseguire del codice all'inizio del gioco.  \n\nProva ad aggiungere un blocco
         che imposti la velocità quando viene premuto il pulsante \"Esegui\". \n\n*
         * *\n\nGioca volando fino a destinazione per continuare."
-      courseC_flappy_events3: |-
-        Ora abbiamo aggiunto il terreno.
-
-        Collega il blocco `fine del gioco` all'evento `quando precipita a terra`.
-
-        * * *
-
-        Gioca facendo precipitare a terra l'uccellino per continuare.
-      courseC_flappy_events3_2018: |-
-        Ora abbiamo aggiunto il terreno.
-
-        Collega il blocco `fine del gioco` all'evento `quando precipita a terra`.
-
-        * * *
-
-        Gioca facendo precipitare a terra l'uccellino per continuare.
-      courseC_flappy_events3_2019: |-
-        Ora abbiamo aggiunto il terreno.
-
-        Collega il blocco `fine del gioco` all'evento `quando precipita a terra`.
-
-        * * *
-
-        Gioca facendo precipitare a terra l'uccellino per continuare.
+      courseC_flappy_events3: "Ora abbiamo aggiunto il terreno. \n\nCollega il blocco
+        `fine del gioco` all'evento `quando precipita a terra`.\n\n* * *\n\nGioca
+        facendo precipitare a terra l'uccellino per continuare."
+      courseC_flappy_events3_2018: "Ora abbiamo aggiunto il terreno. \n\nCollega il
+        blocco `fine del gioco` all'evento `quando precipita a terra`.\n\n* * *\n\nGioca
+        facendo precipitare a terra l'uccellino per continuare."
+      courseC_flappy_events3_2019: "Ora abbiamo aggiunto il terreno. \n\nCollega il
+        blocco `fine del gioco` all'evento `quando precipita a terra`.\n\n* * *\n\nGioca
+        facendo precipitare a terra l'uccellino per continuare."
       courseC_flappy_events4: |-
         Flappy volerà attraverso gli ostacoli, a meno che tu scriva del codice che lo fa schiantare.
 
@@ -2518,17 +2523,17 @@ it-IT:
       courseC_maze_programming3: |-
         _"Questo maialino mi fa arricciare le penne."_
 
-        C'è un blocco di troppo che fa andare a sbattere l'uccellino.
+        C'è un blocco di troppo che fa andare a sbattere l'uccellino.\
         Buttalo via sganciandolo dai blocchi grigi e trascinandolo nella cassetta degli attrezzi.
       courseC_maze_programming3_2018: |-
         _"Questo maialino mi fa arricciare le penne."_
 
-        C'è un blocco di troppo che fa andare a sbattere l'uccellino.
+        C'è un blocco di troppo che fa andare a sbattere l'uccellino.\
         Buttalo via sganciandolo dai blocchi grigi e trascinandolo nella cassetta degli attrezzi.
       courseC_maze_programming3_2019: |-
         _"Questo maialino mi fa arricciare le penne."_
 
-        C'è un blocco di troppo che fa andare a sbattere l'uccellino.
+        C'è un blocco di troppo che fa andare a sbattere l'uccellino.\
         Buttalo via sganciandolo dai blocchi grigi e trascinandolo nella cassetta degli attrezzi.
       courseC_maze_programming4: |-
         _"Fammi fare il percorso per arrivare a quello sciocco maialino."_
@@ -2616,17 +2621,17 @@ it-IT:
         per recuperare i rottami metallici che brillano come questo: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops10: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Vai BB-8!"_
+         _"Vai BB-8!"_
 
         Stai andando alla grande! Continua così!
       courseC_starWars_loops10_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Vai BB-8!"_
+         _"Vai BB-8!"_
 
         Stai andando alla grande! Continua così!
       courseC_starWars_loops10_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Vai BB-8!"_
+         _"Vai BB-8!"_
 
         Stai andando alla grande! Continua così!
       courseC_starWars_loops11: |-
@@ -2737,9 +2742,9 @@ it-IT:
         gradi\n-   ripetere per un totale di **6** volte"
       courseD_artist_2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“Buon lavoro!\"_\n\nDopo l'esagono, gira a destra di **60** gradi, quindi
-        disegna una linea lunga **150** pixel.\n\nTermina riportando Elsa al centro
+        disegna una linea lunga **150** pixel.   \n\nTermina riportando Elsa al centro
         dell'area di gioco, usando il blocco <xml><block type=\"jump_to\"><title name=\"VALUE\">nel
-        mezzo al centro</title></block></xml>. "
+        mezzo al centro</title></block></xml>."
       courseD_artist_2_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“Buon lavoro!\"_\n\nDopo l'esagono, gira a destra di **60** gradi, quindi
         disegna una linea lunga **150** pixel.\n\nTermina riportando Elsa al centro
@@ -2784,8 +2789,6 @@ it-IT:
       courseD_artist_5_2018: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Prova a modificare le forme o le lunghezze delle linee per personalizzare il tuo fiocco di neve! "_
 
-        <br/>
-
         **Ispirazione:** Puoi modificare il disegno come preferisci, ma ecco qui una possibile idea:
 
         -   prova a invertire la forma nel mezzo del fiocco di neve con quella alla termine di ogni linea!
@@ -2797,26 +2800,22 @@ it-IT:
         **Ispirazione:** Puoi modificare il disegno come preferisci, ma ecco qui una possibile idea:
 
         -   prova a invertire la forma nel mezzo del fiocco di neve con quella alla termine di ogni linea!
-      courseD_artist_6_2018: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Proviamo qualcosa di nuovo. Questa volta, pattina a zig-zag."_
-
-        <br/>
-
-        **Ispirazione:** Prova a modificare la tua  linea lunga 150 pixel in 6 linee corte di **25** pixel
-
-        -   Gira di **45** gradi in direzioni alternate dopo ogni linea corta per ottenere un effetto a zig-zag
-        -   Dove devi mettere un nuovo blocco `ripeti ... volte` per realizzare questo nuovo effetto?
-        -   Quante volte devi ripetere lo schema di 2 linee brevi per ottenerne 6 in totale?
-      courseD_artist_6_2018_2019: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Proviamo qualcosa di nuovo. Questa volta, pattina a zig-zag."_
-
-        <br/>
-
-        **Ispirazione:** Prova a modificare la tua  linea lunga 150 pixel in 6 linee corte di **25** pixel
-
-        -   Gira di **45** gradi in direzioni alternate dopo ogni linea corta per ottenere un effetto a zig-zag
-        -   Dove devi mettere un nuovo blocco `ripeti ... volte` per realizzare questo nuovo effetto?
-        -   Quante volte devi ripetere lo schema di 2 linee brevi per ottenerne 6 in totale?
+      courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Proviamo qualcosa di nuovo. Questa volta, pattina a zig-zag.\"_\n\n<br/>
+        \ \n\n**Ispirazione:** Prova a modificare la tua  linea lunga 150 pixel in
+        6 linee corte di **25** pixel\n\n-   Gira di **45** gradi in direzioni alternate
+        dopo ogni linea corta per ottenere un effetto a zig-zag\n-   Dove devi mettere
+        un nuovo blocco `ripeti ... volte` per realizzare questo nuovo effetto?\n-
+        \  Quante volte devi ripetere lo schema di 2 linee brevi per ottenerne 6 in
+        totale?"
+      courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Proviamo qualcosa di nuovo. Questa volta, pattina a zig-zag.\"_\n\n<br/>
+        \ \n\n**Ispirazione:** Prova a modificare la tua  linea lunga 150 pixel in
+        6 linee corte di **25** pixel\n\n-   Gira di **45** gradi in direzioni alternate
+        dopo ogni linea corta per ottenere un effetto a zig-zag\n-   Dove devi mettere
+        un nuovo blocco `ripeti ... volte` per realizzare questo nuovo effetto?\n-
+        \  Quante volte devi ripetere lo schema di 2 linee brevi per ottenerne 6 in
+        totale?"
       courseD_artist_binary1: |-
         Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.
 
@@ -2868,11 +2867,11 @@ it-IT:
       courseD_artist_binary_challenge2_2018: |-
         Questa griglia è costituita da 256 bit - questo significa che poche modifiche possono causare grandi problemi. Sei abbastanza perseverante per risistemare questo logo?
 
-        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_artist_binary_challenge2_2019: |-
         Questa griglia è costituita da 256 bit - questo significa che poche modifiche possono causare grandi problemi. Sei abbastanza perseverante per risistemare questo logo?
 
-        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_artist_nestedLoops1a: |-
         Ora disegna il triangolo 6 volte.
 
@@ -3685,18 +3684,16 @@ it-IT:
         La contadina vuole raccogliere tutte le lattughe disponibili. In corrispondenza di ogni pianta, c'è più di una lattuga, quindi la contadina deve continuare a raccogliere mentre c'è ancora lattuga disponibile.
 
         ##### (Ricorda: in questo orto ci sono solo lattughe!)
-      courseD_farmer_condLoops4_2018: |-
-        _"Caspita! Ora crescono più lattughe da ogni pianta!"_
-
-        La contadina vuole raccogliere tutte le lattughe disponibili. In corrispondenza di ogni pianta, c'è più di una lattuga, quindi la contadina deve continuare a raccogliere mentre c'è ancora lattuga disponibile.
-
-        ##### (Ricorda: in questo orto ci sono solo lattughe!)
-      courseD_farmer_condLoops4_2019: |-
-        _"Caspita! Ora crescono più lattughe da ogni pianta!"_
-
-        La contadina vuole raccogliere tutte le lattughe disponibili. In corrispondenza di ogni pianta, c'è più di una lattuga, quindi la contadina deve continuare a raccogliere mentre c'è ancora lattuga disponibile.
-
-        ##### (Ricorda: in questo orto ci sono solo lattughe!)
+      courseD_farmer_condLoops4_2018: "_\"Caspita! Ora crescono più lattughe da ogni
+        pianta!\"_  \n\nLa contadina vuole raccogliere tutte le lattughe disponibili.
+        In corrispondenza di ogni pianta, c'è più di una lattuga, quindi la contadina
+        deve continuare a raccogliere mentre c'è ancora lattuga disponibile.  \n\n#####
+        (Ricorda: in questo orto ci sono solo lattughe!)"
+      courseD_farmer_condLoops4_2019: "_\"Caspita! Ora crescono più lattughe da ogni
+        pianta!\"_  \n\nLa contadina vuole raccogliere tutte le lattughe disponibili.
+        In corrispondenza di ogni pianta, c'è più di una lattuga, quindi la contadina
+        deve continuare a raccogliere mentre c'è ancora lattuga disponibile.  \n\n#####
+        (Ricorda: in questo orto ci sono solo lattughe!)"
       courseD_farmer_condLoops5: |-
         _"Che raccolto abbondante!"_
 
@@ -3933,12 +3930,12 @@ it-IT:
       courseD_maze_ramp3: |-
         _"Questo maialino mi fa arricciare le penne."_
 
-        C'è un blocco di troppo che fa andare a sbattere l'uccellino.
+        C'è un blocco di troppo che fa andare a sbattere l'uccellino.\
         Buttalo via sganciandolo dagli altri blocchi grigi e trascinandolo nella cassetta degli attrezzi.
       courseD_maze_ramp3_2018: |-
         _"Questo maialino mi fa arricciare le penne."_
 
-        C'è un blocco di troppo che fa andare a sbattere l'uccellino.
+        C'è un blocco di troppo che fa andare a sbattere l'uccellino.\
         Buttalo via sganciandolo dagli altri blocchi grigi e trascinandolo nella cassetta degli attrezzi.
       courseD_maze_ramp3_2019: |-
         _"Questo maialino mi fa arricciare le penne."_
@@ -3991,10 +3988,8 @@ it-IT:
         _"Mantieni la calma e aiutami a trovare quel cattivone di un maialino. Altrimenti potrei arrabbiarmi!"_
 
         Quando hai parecchi blocchi uguali di seguito, prova a sostituirli usando un blocco `ripeti ... volte`. Così potrai fare la stessa cosa usando meno blocchi!
-      courseD_maze_ramp7: |-
-        _"È il momento di arrabbiarsi!"_
-
-        Usa ciò che hai imparato per far arrivare l'uccellino fino al maialino!
+      courseD_maze_ramp7: "_\"È il momento di arrabbiarsi!\"\\*_  \n\nUsa ciò che
+        hai imparato per far arrivare l'uccellino fino al maialino!"
       courseD_maze_until10: Aiuta lo zombie ad arrivare fino al girasole.
       courseD_maze_until10_2018: Aiuta lo zombie ad arrivare fino al girasole.
       courseD_maze_until10_2019: Aiuta lo zombie ad arrivare fino al girasole.
@@ -4032,18 +4027,14 @@ it-IT:
         zombie ad arrivare fino al girasole."
       courseD_maze_until9_2019: "**Sfida:** Evita le piante carnivore e aiuta gli
         zombie ad arrivare fino al girasole."
-      courseD_playLab_cond1: |-
-        Per iniziare il gioco, il pirata (personaggio 1) deve essere in grado di muoversi in tutte le direzioni. Collega i blocchi agli eventi corretti per permettere di muovere il pirata.
-
-        * * *
-
-        Aiuta il pirata a raggiungere tutte le bandierine per risolvere questo esercizio.
-      courseD_playLab_cond1_2018: |-
-        Per iniziare il gioco, il pirata (personaggio 1) deve essere in grado di muoversi in tutte le direzioni. Collega i blocchi agli eventi corretti per permettere di muovere il pirata.
-
-        * * *
-
-        Aiuta il pirata a raggiungere tutte le bandierine per risolvere questo esercizio.
+      courseD_playLab_cond1: "Per iniziare il gioco, il pirata (personaggio 1) deve
+        essere in grado di muoversi in tutte le direzioni. Collega i blocchi agli
+        eventi corretti per permettere di muovere il pirata.  \n\n* * *\n\nAiuta il
+        pirata a raggiungere tutte le bandierine per risolvere questo esercizio."
+      courseD_playLab_cond1_2018: "Per iniziare il gioco, il pirata (personaggio 1)
+        deve essere in grado di muoversi in tutte le direzioni. Collega i blocchi
+        agli eventi corretti per permettere di muovere il pirata.  \n\n* * *\n\nAiuta
+        il pirata a raggiungere tutte le bandierine per risolvere questo esercizio."
       courseD_playLab_cond2: |-
         E adesso aggiungiamo il punteggio!
 
@@ -4083,17 +4074,19 @@ it-IT:
       courseD_playLab_cond6: "Wow, è proprio difficile vincere a questo gioco!\n\nProviamo
         a personalizzarlo in modo da renderlo più divertente. Questa sfida è composta
         da due parti:\n\n* * *\n\n1.  Rallenta il ninja (personaggio 3) prima di fargli
-        inseguire il pirata.\n2.  Usa un ciclo `ripeti per sempre` per controllare
-        se il pirata è nella \"zona di sicurezza\" al di sotto dei polpi (più in basso
-        di 225 pixel). \n    Se lo è, imposta il ninja per farlo **fuggire** dal pirata.
-        Altrimenti, imposta il ninja affinché **insegua** il pirata."
+        inseguire il pirata (personaggio 1).\n2.  Usa un ciclo `ripeti per sempre`
+        per controllare se il pirata è nella \"zona di sicurezza\" al di sotto dei
+        polpi (più in basso di 225 pixel). \n    Se lo è, imposta il ninja per farlo
+        **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua**
+        il pirata."
       courseD_playLab_cond6_2018: "Wow, è proprio difficile vincere a questo gioco!\n\nProviamo
         a personalizzarlo in modo da renderlo più divertente. Questa sfida è composta
         da due parti:\n\n* * *\n\n1.  Rallenta il ninja (personaggio 3) prima di fargli
-        inseguire il pirata.\n2.  Usa un ciclo `ripeti per sempre` per controllare
-        se il pirata è nella \"zona di sicurezza\" al di sotto dei polpi (più in basso
-        di 225 pixel). \n    Se lo è, imposta il ninja per farlo **fuggire** dal pirata.
-        Altrimenti, imposta il ninja affinché **insegua** il pirata."
+        inseguire il pirata (personaggio 1).  \n\n2.  Usa un ciclo `ripeti per sempre`
+        per controllare se il pirata è nella \"zona di sicurezza\" al di sotto dei
+        polpi (più in basso di 225 pixel). \n    Se lo è, imposta il ninja per farlo
+        **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua**
+        il pirata.  "
       courseD_playLab_cond6a: |-
         Non vogliamo che il pirata stia troppo a lungo nella "zona di sicurezza"!
 
@@ -4171,7 +4164,7 @@ it-IT:
       courseE_artist_functions1: |-
         _"Io zombie artista. Io amare disegnare!"_
 
-        Aiuta lo zombie a disegnare questi occhiali usando dei quadrati con i lati di 100 pixel.
+        Aiuta lo zombie a disegnare questi occhiali usando dei quadrati con i lati di 100 pixel.\
         L'asta tra le lenti è lunga 75 pixel.
       courseE_artist_functions10: |-
         Questa volta, usa file di 8 esagoni con lati da 25 pixel.
@@ -4191,14 +4184,11 @@ it-IT:
         -   Per fare ogni esagono, ripeti il lato 6 volte, girando di 60 gradi.
         -   Salta in avanti di 25 pixel tra un esagono e l'altro.
         -   Per disegnare il rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi.
-      courseE_artist_functions2: |-
-        Le funzioni ti permettono di definire nuovi blocchi!
-
-        Abbiamo spostato i blocchi per disegnare un quadrato all'interno di una funzione chiamata `disegna un quadrato`. Puoi usare la funzione `disegna un quadrato` per creare gli occhiali?
-
-        * * *
-
-        I quadrati sono distanti 75 pixel.
+      courseE_artist_functions2: "Le funzioni ti permettono di definire nuovi blocchi!
+        \n\nAbbiamo spostato i blocchi per disegnare un quadrato all'interno di una
+        funzione chiamata `disegna un quadrato`. Questa volta, usa la funzione `disegna
+        un quadrato` per creare gli occhiali. \n\n* * *\n\nI quadrati sono distanti
+        75 pixel."
       courseE_artist_functions2_2018: "Qui c'è una funzione chiamata `disegna un quadrato`.
         Usala per completare questo disegno. \n\n* * *\n\nI quadrati si trovano a
         75 pixel di distanza uno dall'altro."
@@ -4228,9 +4218,9 @@ it-IT:
       courseE_artist_functions4: |-
         Ora che sai disegnare una stella, prova a disegnarne quattro!
 
-        -   Ogni raggio della stella è lungo 25 pixel.
-        -   Gira di 45 gradi tra un raggio e l'altro.
-        -   Salta avanti di 100 pixel tra una stella e l'altra.
+        -   Ogni raggio della stella è lungo 25 pixel
+        -   Gira di 45 gradi tra un raggio e l'altro
+        -   Salta avanti di 100 pixel tra una stella e l'altra
       courseE_artist_functions5: |-
         In che caso è più difficile disegnare tre stelle invece di quattro? Quando devi anche saltare oltre la luna!
 
@@ -4316,7 +4306,7 @@ it-IT:
         Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
 
         -   Ogni triangolo ha i lati lunghi **50 pixel**.
-        -   Per disegnare un rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi.
+        -   Per disegnare un rombo, dovrai alternare svolte a **60 gradi con svolte a 120 gradi**.
       courseE_artist_functions9_2018: |-
         **Sfida:** Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
 
@@ -4350,26 +4340,26 @@ it-IT:
         Puoi anche saltare in posizioni diverse dagli angoli della tela. Usando il blocco `salta a ... avanti ... in basso` puoi raggiungere assolutamente qualsiasi punto! Prova ad eseguire questo codice per vedere come funziona, poi personalizzalo e rendilo tuo!
 
         <xml>
-        <block type="jump_to_xy">
-        <title name="XPOS">???</title>
-        <title name="YPOS">???</title>
-        </block></xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
       courseE_artist_functions_challenge2_2018: |-
         Puoi anche saltare in posizioni diverse dagli angoli della tela. Usando il blocco `salta a ... avanti ... in basso` puoi raggiungere assolutamente qualsiasi punto! Prova ad eseguire questo codice per vedere come funziona, poi personalizzalo e rendilo tuo!
 
         <xml>
-        <block type="jump_to_xy">
-        <title name="XPOS">???</title>
-        <title name="YPOS">???</title>
-        </block></xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
       courseE_artist_functions_challenge2_2019: |-
         Puoi anche saltare in posizioni diverse dagli angoli della tela. Usando il blocco `salta a ... avanti ... in basso` puoi raggiungere assolutamente qualsiasi punto! Prova ad eseguire questo codice per vedere come funziona, poi personalizzalo e rendilo tuo!
 
         <xml>
-        <block type="jump_to_xy">
-        <title name="XPOS">???</title>
-        <title name="YPOS">???</title>
-        </block></xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
       courseE_artist_ramp8: |-
         Grande! Ora usiamo un blocco `ripeti ... volte` per far fare un quadrato all'Artista! I blocchi dell'artista sono leggermente diversi, ma l'idea è la stessa.
 
@@ -4388,14 +4378,10 @@ it-IT:
         * * *
 
         ##### Ogni lato è lungo 100 pixel. Dovrai girare di 120 gradi ad ogni angolo.
-      courseE_bee_concept1: |-
-        _"Puoi passare su tutti questi fiori?"_
-
-        Raccogli tutto il nettare da questi fiori.
-      courseE_bee_concept1_2018: |-
-        _"Puoi passare su tutti questi fiori?"_
-
-        Raccogli tutto il nettare da questi fiori.
+      courseE_bee_concept1: "_\"Puoi passare su tutti questi fiori?\"_\n\nRaccogli
+        tutto il nettare da questi fiori. "
+      courseE_bee_concept1_2018: "_\"Puoi passare su tutti questi fiori?\"_\n\nRaccogli
+        tutto il nettare da questi fiori. "
       courseE_bee_concept2: |-
         Aiuta l'ape a produrre tutto il miele.
 
@@ -4593,24 +4579,18 @@ it-IT:
         La funzione che hai creato può essere utile anche per questo esercizio?
       courseE_farmer_functions9b: Dai un'occhiata a questo esercizio. Riesci a capire
         lo schema per risolverlo nel modo migliore?
-      courseE_farmer_ramp11a: |-
-        Accidenti! Questo mucchio è davvero grande ed è difficile immaginare quante palate di terra contenga.
-
-        * * *
-
-        Abbiamo aggiunto un nuovo blocco alla cassetta degli attrezzi chiamato `mentre c'è un mucchio`. Usalo per rimuovere la terra solo mentre ce n'è da raccogliere!
-      courseE_farmer_ramp11a_2018: |-
-        Accidenti! Questo mucchio è davvero grande ed è difficile immaginare quante palate di terra contenga.
-
-        * * *
-
-        Abbiamo aggiunto un nuovo blocco alla cassetta degli attrezzi chiamato `mentre c'è un mucchio`. Usalo per rimuovere la terra solo mentre ce n'è da raccogliere!
-      courseE_farmer_ramp11a_2019: |-
-        Accidenti! Questo mucchio è davvero grande ed è difficile immaginare quante palate di terra contenga.
-
-        * * *
-
-        Abbiamo aggiunto un nuovo blocco alla cassetta degli attrezzi chiamato `mentre c'è un mucchio`. Usalo per rimuovere la terra solo mentre ce n'è da raccogliere!
+      courseE_farmer_ramp11a: "Accidenti! Questo mucchio è davvero grande ed è difficile
+        immaginare quante palate di terra contenga.\n\n* * *\n\nAbbiamo aggiunto un
+        nuovo blocco alla cassetta degli attrezzi chiamato `mentre c'è un mucchio`.
+        Usalo per rimuovere la terra solo mentre ce n'è da raccogliere! "
+      courseE_farmer_ramp11a_2018: "Accidenti! Questo mucchio è davvero grande ed
+        è difficile immaginare quante palate di terra contenga.\n\n* * *\n\nAbbiamo
+        aggiunto un nuovo blocco alla cassetta degli attrezzi chiamato `mentre c'è
+        un mucchio`. Usalo per rimuovere la terra solo mentre ce n'è da raccogliere! "
+      courseE_farmer_ramp11a_2019: "Accidenti! Questo mucchio è davvero grande ed
+        è difficile immaginare quante palate di terra contenga.\n\n* * *\n\nAbbiamo
+        aggiunto un nuovo blocco alla cassetta degli attrezzi chiamato `mentre c'è
+        un mucchio`. Usalo per rimuovere la terra solo mentre ce n'è da raccogliere! "
       courseE_farmer_ramp11b: Raccogli tutte le lattughe.
       courseE_farmer_ramp11b_2018: Proviamoci ancora, ma con più mucchi!
       courseE_farmer_ramp11b_2019: Proviamoci ancora, ma con più mucchi!
@@ -4622,24 +4602,24 @@ it-IT:
       courseE_farmer_ramp12b_2019: Ora la contadina ha bisogno di raccogliere tutte
         le lattughe. Usa il ciclo `mentre sei su una lattuga` all'interno di un ciclo
         `ripeti ... volte` per raccogliere tutto!
-      courseE_farmer_ramp12c_2018: Ora la lattuga è solo alla fine del percorso. Percorri
-        il sentiero **fino a che** la raggiungi, quindi raccogli di continuo **mentre**
-        c'è lattuga.
-      courseE_farmer_ramp12c_2019: Ora la lattuga è solo alla fine del percorso. Percorri
-        il sentiero **fino a che** la raggiungi, quindi raccogli di continuo **mentre**
-        c'è lattuga.
-      courseE_farmer_ramp12d_2018: Le lattughe sono sparpagliate per tutto il giardino.
-        Percorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
-        raccogli di continuo **mentre** c'è lattuga.
-      courseE_farmer_ramp12d_2019: Le lattughe sono sparpagliate per tutto il giardino.
-        Percorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
-        raccogli di continuo **mentre** c'è lattuga.
-      courseE_farmer_ramp12e_2018: Le lattughe sono sparpagliate per tutto il giardino.
-        Percorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
-        raccogli di continuo **mentre** c'è lattuga.
-      courseE_farmer_ramp12e_2019: Le lattughe sono sparpagliate per tutto il giardino.
-        Percorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
-        raccogli di continuo **mentre** c'è lattuga.
+      courseE_farmer_ramp12c_2018: "Ora la lattuga è solo alla fine del percorso.
+        \\\nPercorri il sentiero **fino a che** la raggiungi, quindi raccogli di continuo
+        **mentre** c'è lattuga.  "
+      courseE_farmer_ramp12c_2019: "Ora la lattuga è solo alla fine del percorso.
+        \\\nPercorri il sentiero **fino a che** la raggiungi, quindi raccogli di continuo
+        **mentre** c'è lattuga.  "
+      courseE_farmer_ramp12d_2018: "Le lattughe sono sparpagliate per tutto il giardino.
+        \\\nPercorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
+        raccogli di continuo **mentre** c'è lattuga.  "
+      courseE_farmer_ramp12d_2019: "Le lattughe sono sparpagliate per tutto il giardino.
+        \\\nPercorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
+        raccogli di continuo **mentre** c'è lattuga.  "
+      courseE_farmer_ramp12e_2018: "Le lattughe sono sparpagliate per tutto il giardino.
+        \\\nPercorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
+        raccogli di continuo **mentre** c'è lattuga.  "
+      courseE_farmer_ramp12e_2019: "Le lattughe sono sparpagliate per tutto il giardino.
+        \\\nPercorri ogni tratto del sentiero **fino a che** ne raggiungi una, quindi
+        raccogli di continuo **mentre** c'è lattuga.  "
       courseE_farmer_ramp12f_2018: "**Sfida:** L'unico modo di raccogliere tutti gli
         ortaggi, è di andare avanti fino a che raggiungi la lattuga, poi **se** c'è
         strada a sinistra, gira a sinistra. In caso contrario, gira a destra."
@@ -4652,17 +4632,15 @@ it-IT:
         **se** c'è strada a sinistra, gira a sinistra. In caso contrario, gira a destra.
       courseE_farmer_ramp12g_2019: Vai avanti fino a che raggiungi la lattuga, poi
         **se** c'è strada a sinistra, gira a sinistra. In caso contrario, gira a destra.
-      courseE_playLab_challenge1: |-
-        \*Gli **scoiattoli** sono terrorizzati all'idea che un **dinosauro** sia capitato in città! Riuscirà il coraggioso **cavaliere** a tranquillizzarli?\*
-
-        Regole:
-
-        1.  _Toccare gli scoiattoli fa aumentare il punteggio._
-        2.  _Toccare il dinosauro riduce di molto il punteggio._
-
-        Ecco un gioco già impostato! Giocaci un po' per vedere come funziona.
-
-        Bisognerebbe far succedere qualcosa di particolare quando superi un certo punteggio e quando vai sotto zero. Aggiungi del codice alle funzioni `vittoria` e `sconfitta` per far funzionare il gioco come si deve. Fai clic sui suggerimenti per avere qualche idea!
+      courseE_playLab_challenge1: "_Gli **scoiattoli** sono terrorizzati all'idea
+        che un **dinosauro** sia capitato in città! Riuscirà il coraggioso **cavaliere**
+        a tranquillizzarli?_\n\nRegole:\n\n1.  _Toccare gli scoiattoli fa aumentare
+        il punteggio._\n2.  _Toccare il dinosauro riduce di molto il punteggio._\n\nEcco
+        un gioco già impostato! Giocaci un po' per vedere come funziona.\n\nBisognerebbe
+        far succedere qualcosa di particolare quando superi un certo punteggio e quando
+        vai sotto zero. Aggiungi del codice alle funzioni `vittoria` e `sconfitta`
+        per far funzionare il gioco come si deve. \nFai clic sui suggerimenti per
+        avere qualche idea!"
       courseE_playLab_scaffold1: |-
         È sorprendente quanto tu abbia imparato! Ora creiamo insieme un vero videogioco.
 
@@ -4686,7 +4664,7 @@ it-IT:
         o condividerlo con i tuoi amici e compagni di classe!
       courseF_artist_for1: "**Tempo di giocare:** Sperimenta con il _ciclo con contatore_
         e la variabile `countrer` (_contatore_).  \n\nTrascina qualche blocco e vedi
-        cosa succede.    "
+        cosa succede.  "
       courseF_artist_for10: |-
         **Tempo di giocare:** Prova ad usare la variabile `counter` (_contatore_) con altri elementi grafici per creare immagini magiche come questa.
 
@@ -4701,10 +4679,10 @@ it-IT:
         ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
       courseF_artist_for1_2018: "**Tempo di giocare:** Sperimenta con il _ciclo con
         contatore_ e la variabile `countrer` (_contatore_).  \n\nTrascina qualche
-        blocco e vedi cosa succede.    "
+        blocco e vedi cosa succede.  "
       courseF_artist_for1_2019: "**Tempo di giocare:** Sperimenta con il _ciclo con
         contatore_ e la variabile `countrer` (_contatore_).  \n\nTrascina qualche
-        blocco e vedi cosa succede.    "
+        blocco e vedi cosa succede.  "
       courseF_artist_for2: Usa un ciclo `ripeti ... volte` all'interno di un _ciclo
         con contatore_ per creare questa pila di triangoli, i cui lati misurano da
         50 a 100 pixel.
@@ -5036,15 +5014,15 @@ it-IT:
         alla rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da
         **5** a **1** a passi di **1**."
       courseF_bee_for7: |-
-        L'ultimo numero del  _ciclo con contatore_ viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
+        L'ultimo numero del _ciclo con contatore_ viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
 
         Prova a raccogliere questi fiori usando un  **"passo"** di 2.
       courseF_bee_for7_2018: |-
-        L'ultimo numero del  _ciclo con contatore_ viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
+        L'ultimo numero del _ciclo con contatore_ viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
 
         Prova a raccogliere questi fiori usando un  **"passo"** di 2.
       courseF_bee_for7_2019: |-
-        L'ultimo numero del  _ciclo con contatore_ viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
+        L'ultimo numero del _ciclo con contatore_ viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
 
         Prova a raccogliere questi fiori usando un  **"passo"** di 2.
       courseF_bee_for8: |-
@@ -5069,15 +5047,15 @@ it-IT:
         un blocco matematico! \n\nCome puoi utilizzare la variabile `counter` (contatore)
         per muoverti in questo giardino usando il minor numero possibile di blocchi?"
       courseF_bee_for_challenge1: |-
-        Usa questo ciclo _ciclo con contatore_ per raccogliere tutto il nettare.
+        Usa questo _ciclo con contatore_ per raccogliere tutto il nettare.
 
         Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
       courseF_bee_for_challenge1_2018: |-
-        Usa questo ciclo _ciclo con contatore_ per raccogliere tutto il nettare.
+        Usa questo _ciclo con contatore_ per raccogliere tutto il nettare.
 
         Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
       courseF_bee_for_challenge1_2019: |-
-        Usa questo ciclo _ciclo con contatore_ per raccogliere tutto il nettare.
+        Usa questo _ciclo con contatore_ per raccogliere tutto il nettare.
 
         Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
       courseF_bee_for_challenge2: Risolvi questo esercizio con il minore numero possibile
@@ -5184,24 +5162,25 @@ it-IT:
         Disegniamo un triangolo equilatero.
 
         Ogni lato deve essere lungo esattamente 50 pixel.
-      iceage_click_hello: Puoi aiutare Sid a chiamare i suoi amici quando si clicca
-        su di lui? Quando hai finito, premi "Esegui" e clicca su Sid per vedere il
-        tuo codice al lavoro!
-      iceage_free_play: È il momento di creare un gioco o una storia per conto tuo.
-        Quando hai finito, clicca su "Termina" e poi "Pubblica" per condividere e
-        far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!
-        Non sai cosa fare? Clicca sulla lampadina per avere qualche suggerimento.
-      iceage_hello1: |-
-        Sid (personaggio 1) vuole riunire tutti per una nuova avventura. Puoi aiutarlo a dire "Ciao" trascinando il blocco `il personaggio 1 dice ...` nell'area di lavoro e collegandolo sotto all'evento `Quando si clicca su "Esegui"`?<br>
-        <br>
-        Non dimenticare di digitare la parola "Ciao" al suo interno!
+      iceage_click_hello: "Puoi aiutare Sid a chiamare i suoi amici quando si clicca
+        su di lui? \nQuando hai finito, premi \"Esegui\" e clicca su Sid per vedere
+        il tuo codice al lavoro!"
+      iceage_free_play: "È il momento di creare un gioco o una storia per conto tuo!
+        \ \n\nQuando hai finito, clicca su \"Termina\" e poi \"Pubblica\" per condividere
+        e far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!\nNon
+        sai cosa fare? Clicca sulla lampadina per avere qualche suggerimento."
+      iceage_hello1: "Sid (personaggio 1) vuole riunire tutti per una nuova avventura.
+        Puoi aiutarlo a dire \"Ciao\" trascinando il blocco `il personaggio 1 dice
+        ...` nell'area di lavoro e collegandolo sotto all'evento `Quando si clicca
+        su \"Esegui\"`?   \n\nNon dimenticare di digitare la parola \"Ciao\" al suo
+        interno!"
       iceage_hello2: Manny (il personaggio 2) incontra Sid (il personaggio 1) e vuole
         invitarlo ad unirsi all'avventura. Aiutali a salutarsi a vicenda usando due
         volte il blocco `il personaggio ... dice`.
-      iceage_move_events: Scrat è ancora alla ricerca di ghiande! Aiutalo a scorrazzare
+      iceage_move_events: "Scrat è ancora alla ricerca di ghiande! \nAiutalo a scorrazzare
         in giro attaccando il blocco `sposta ...` a ciascuno degli eventi e cambiando
         la direzione di marcia in base al tasto freccia. Quando hai finito, clicca
-        su "Esegui" per raccogliere tutte le ghiande.
+        su \"Esegui\" per raccogliere tutte le ghiande."
       iceage_move_to_actor: Diego (il personaggio 1) è alla ricerca di Manny (il personaggio
         2). Puoi aiutarli ad incontrarsi? Collega un blocco all'evento `quando il
         personaggio tocca` per emettere un suono quando si incontrano.
@@ -5210,18 +5189,18 @@ it-IT:
       iceage_repeat: Il blocco `ripeti per sempre` permette di eseguire il codice
         senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare la Nonnina
         a fare un po' di esercizio muovendosi in continuazione a destra e a sinistra?
-      iceage_sound_and_points: Qui trovi il codice del precedente esercizio unito
-        a quello per muovere la Nonnina a destra e sinistra. Puoi completare questo
+      iceage_sound_and_points: "Qui trovi il codice del precedente esercizio unito
+        a quello per muovere la Nonnina a destra e sinistra. \nPuoi completare questo
         codice per fare in modo che si riproduca un suono e si guadagni un punto quando
-        Sid e la Nonnina si scontrano? Clicca su "Esegui" per lanciare il gioco.
-      iceage_throw_hearts: Sid vuol far sapere a sua nonna, la Nonnina, che la ama.
-        Usa l'istruzione `il personaggio lancia` per far lanciare a Sid (il personaggio
-        1) dei cuori alla Nonnina (il personaggio 2)! Imposta l'umore della Nonnina
-        a felice quando viene colpita dai cuori.
-      iceage_warn_ice_age: Tutti devono muoversi più velocemente perché l'era glaciale
-        sta arrivando! Cambia lo sfondo impostandone uno con ghiaccio e imposta la
-        velocità di Sid (personaggio 1) a veloce, quindi premi "Esegui" per farlo
-        correre da Diego ad avvertirlo.
+        Sid e la Nonnina si scontrano? \nClicca su \"Esegui\" per lanciare il gioco."
+      iceage_throw_hearts: "Sid vuol far sapere a sua nonna, la Nonnina, che la ama.
+        \  \n\nUsa l'istruzione `il personaggio lancia` per far lanciare a Sid (il
+        personaggio 1) dei cuori alla Nonnina (il personaggio 2)! \nImposta l'umore
+        della Nonnina a felice quando viene colpita dai cuori."
+      iceage_warn_ice_age: "Tutti devono muoversi più velocemente perché l'era glaciale
+        sta arrivando! \nCambia lo sfondo impostandone uno con ghiaccio e imposta
+        la velocità di Sid (personaggio 1) a veloce, quindi premi \"Esegui\" per farlo
+        correre da Diego ad avvertirlo."
       ramp_artist_loops1: |-
         Che bella giornata!
 

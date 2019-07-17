@@ -161,11 +161,9 @@ it-IT:
         2-3_Bee_Functions_6_a: Usa un ciclo per i primi due fiori, poi gestisci a
           parte il terzo fiore.
       2-3 Bee Functions 8:
-        2-3_Bee_Functions_8_a: |-
-          Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>
-          Aggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!
-
-          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        2-3_Bee_Functions_8_a: "Se ti sembra troppo difficile, prova a creare la funzione
+          poco per volta.  \n\nAggiungi qualche blocco e prova a vedere cosa fa. Poi
+          aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9:
         2-3_Bee_Functions_8_a: |-
           Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>
@@ -949,90 +947,90 @@ it-IT:
           **Soluzione:**
 
           <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">250</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">80</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_width" inline="false">
+                  <value name="WIDTH">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_for_counter" inline="true">
+                    <mutation counter="counter"></mutation>
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">250</title>
+                        </block>
+                      </value>
+                      <value name="BY">
+                        <block type="math_number">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_colour" inline="true" id="draw-color">
+                          <value name="COLOUR">
+                            <block type="colour_rgb" inline="false">
+                              <value name="RED">
+                                <block type="math_number">
+                                  <title name="NUM">255</title>
+                                </block>
+                              </value>
+                              <value name="GREEN">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <value name="BLUE">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">MINUS</title>
+                                  <value name="A">
+                                    <block type="math_number">
+                                      <title name="NUM">255</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="variables_get">
+                                      <title name="VAR">counter</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_move" inline="true">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn" inline="true">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">80</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
           </xml>
       Course 4 SCFL 7:
         Course_4_SCFL_7_a: |-
@@ -1862,7 +1860,7 @@ it-IT:
         courseC_harvester_loops_challenge2_d: |-
           Lo schema a spirale può essere ottenuto con solo 18 blocchi!
 
-          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_b: La soluzione più corta usa solo 5 blocchi,
           ma usa questo blocco `ripeti ... volte`!
@@ -1921,9 +1919,8 @@ it-IT:
           Grazie a questo blocco, puoi saltare direttamente in specifici punti della tela:
 
           <xml>  <block type="jump_to">
-
-          <title name="VALUE">???</title>
-          </block></xml>
+              <title name="VALUE">???</title>
+            </block></xml>
       course4_artist_functions_challenge2:
         courseE_artist_functions_challenge1_a: |-
           <xml>
@@ -4707,21 +4704,21 @@ it-IT:
         courseB_maze_seq5_b: Ci sono due modi per risolvere questo esercizio!
         courseB_maze_seq5_c: Non sai come arrivare alla ghianda? Prova questo percorso.
       courseB_maze_seq6:
-        courseB_maze_seq6_a: Alla fine, Il tuo programma dovrebbe avere tre blocchi
+        courseB_maze_seq6_a: Alla fine, il tuo programma dovrebbe avere tre blocchi
           di movimento.
         courseB_maze_seq6_b: 'Se ti blocchi, prova a risolvere l''esercizio in due
           parti: movimenti orizzontali e movimenti verticali.'
         courseB_maze_seq5_c: Ci sono due modi per risolvere questo esercizio.
         courseB_maze_seq5_d: Non sai come arrivare al maialino? Prova questo percorso!
       courseB_maze_seq6_2018:
-        courseB_maze_seq6_a: Alla fine, Il tuo programma dovrebbe avere tre blocchi
+        courseB_maze_seq6_a: Alla fine, il tuo programma dovrebbe avere tre blocchi
           di movimento.
         courseB_maze_seq6_b: 'Se ti blocchi, prova a risolvere l''esercizio in due
           parti: movimenti orizzontali e movimenti verticali.'
         courseB_maze_seq5_c: Ci sono due modi per risolvere questo esercizio.
         courseB_maze_seq5_d: Non sai come arrivare alla ghianda? Prova questo percorso!
       courseB_maze_seq6_2019:
-        courseB_maze_seq6_a: Alla fine, Il tuo programma dovrebbe avere tre blocchi
+        courseB_maze_seq6_a: Alla fine, il tuo programma dovrebbe avere tre blocchi
           di movimento.
         courseB_maze_seq6_b: 'Se ti blocchi, prova a risolvere l''esercizio in due
           parti: movimenti orizzontali e movimenti verticali.'
@@ -5545,40 +5542,40 @@ it-IT:
           Collega questo blocco al blocco `quando si clicca su "Esegui"`:
 
           <xml>
-          <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Ciao!</title>
-          </block>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
           </xml>
       courseC_PlayLab_events1_2018:
         courseC_PlayLab_events1_a: |-
           Collega questo blocco al blocco `quando si clicca su "Esegui"`:
 
           <xml>
-          <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Ciao!</title>
-          </block>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
           </xml>
       courseC_PlayLab_events1_2019:
         courseC_PlayLab_events1_a: |-
           Collega questo blocco al blocco `quando si clicca su "Esegui"`:
 
           <xml>
-          <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Ciao!</title>
-          </block>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
           </xml>
       courseC_PlayLab_events2:
         courseC_PlayLab_events2_a: |-
           Collega due di questi blocchi al blocco `quando si clicca su "Esegui"`:
 
           <xml>
-          <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Ciao!</title>
-          </block>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
           </xml>
         courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il
           personaggio ... dice` per specificare quale personaggio deve parlare.
@@ -5587,10 +5584,10 @@ it-IT:
           Collega due di questi blocchi al blocco `quando si clicca su "Esegui"`:
 
           <xml>
-          <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Ciao!</title>
-          </block>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
           </xml>
         courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il
           personaggio ... dice` per specificare quale personaggio deve parlare.
@@ -5599,10 +5596,10 @@ it-IT:
           Collega due di questi blocchi al blocco `quando si clicca su "Esegui"`:
 
           <xml>
-          <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Ciao!</title>
-          </block>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
           </xml>
         courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il
           personaggio ... dice` per specificare quale personaggio deve parlare.
@@ -5616,10 +5613,10 @@ it-IT:
 
           <xml>
           <block type="studio_moveDistance">
-          <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
-          </block>
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
           </xml>
       courseC_PlayLab_events3_2018:
         courseC_PlayLab_events3_a: Devi solo spostare il cane a destra di circa 25
@@ -5631,10 +5628,10 @@ it-IT:
 
           <xml>
           <block type="studio_moveDistance">
-          <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
-          </block>
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
           </xml>
       courseC_PlayLab_events3_2019:
         courseC_PlayLab_events3_a: Devi solo spostare il cane a destra di circa 25
@@ -5646,10 +5643,10 @@ it-IT:
 
           <xml>
           <block type="studio_moveDistance">
-          <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
-          </block>
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
           </xml>
       courseC_PlayLab_events4:
         courseC_PlayLab_events4_b: Quando si clicca sul pulsante "Esegui", il cane
@@ -5844,10 +5841,9 @@ it-IT:
           Puoi usare questo blocco per posizionare dove vuoi i personaggi nell'area di gioco.
 
           <xml> <block type="studio_setSpritePosition">
-
-          <title name="SPRITE">0</title>
-          <title name="VALUE">12</title>
-          </block></xml>
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
         courseC_PlayLab_events_challenge_b: Prova ad usare il blocco `imposta il personaggio
           ... alla posizione ...` quando il pinguino tocca qualsiasi altro personaggio.
           In questo modo il giocatore viene penalizzato, ma potrà continuare a provare!
@@ -5855,19 +5851,17 @@ it-IT:
           Potresti anche voler modificare la velocità dei vari personaggi per rendere il gioco più facile o più difficile!
 
           <xml>  <block type="studio_setSpriteSpeed">
-
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
-          </block></xml>
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
       courseC_PlayLab_events_challenge1_2018:
         courseC_PlayLab_events_challenge_a: |-
           Puoi usare questo blocco per posizionare dove vuoi i personaggi nell'area di gioco.
 
           <xml> <block type="studio_setSpritePosition">
-
-          <title name="SPRITE">0</title>
-          <title name="VALUE">12</title>
-          </block></xml>
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
         courseC_PlayLab_events_challenge_b: Prova ad usare il blocco `imposta il personaggio
           ... alla posizione ...` quando il pinguino tocca qualsiasi altro personaggio.
           In questo modo il giocatore viene penalizzato, ma potrà continuare a provare!
@@ -5875,19 +5869,17 @@ it-IT:
           Potresti anche voler modificare la velocità dei vari personaggi per rendere il gioco più facile o più difficile!
 
           <xml>  <block type="studio_setSpriteSpeed">
-
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
-          </block></xml>
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge_a: |-
           Puoi usare questo blocco per posizionare dove vuoi i personaggi nell'area di gioco.
 
           <xml> <block type="studio_setSpritePosition">
-
-          <title name="SPRITE">0</title>
-          <title name="VALUE">12</title>
-          </block></xml>
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
         courseC_PlayLab_events_challenge_b: Prova ad usare il blocco `imposta il personaggio
           ... alla posizione ...` quando il pinguino tocca qualsiasi altro personaggio.
           In questo modo il giocatore viene penalizzato, ma potrà continuare a provare!
@@ -5895,10 +5887,9 @@ it-IT:
           Potresti anche voler modificare la velocità dei vari personaggi per rendere il gioco più facile o più difficile!
 
           <xml>  <block type="studio_setSpriteSpeed">
-
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
-          </block></xml>
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
       courseC_artist_loop1:
         courseC_artist_loop1_a: Non è necessaria alcuna modifica al ciclo, basta aggiungere
           un blocco sopra di esso.
@@ -5907,8 +5898,8 @@ it-IT:
 
           <xml>
           <block type="draw_line_style_pattern">
-          <title name="VALUE">DEFAULT</title>
-          </block>
+              <title name="VALUE">DEFAULT</title>
+            </block>
           </xml>
 
           scegli lo schema che preferisci!
@@ -5920,8 +5911,8 @@ it-IT:
 
           <xml>
           <block type="draw_line_style_pattern">
-          <title name="VALUE">DEFAULT</title>
-          </block>
+              <title name="VALUE">DEFAULT</title>
+            </block>
           </xml>
 
           scegli lo schema che preferisci!
@@ -5933,8 +5924,8 @@ it-IT:
 
           <xml>
           <block type="draw_line_style_pattern">
-          <title name="VALUE">DEFAULT</title>
-          </block>
+              <title name="VALUE">DEFAULT</title>
+            </block>
           </xml>
 
           scegli lo schema che preferisci!
@@ -6331,9 +6322,9 @@ it-IT:
       courseC_artist_prog7:
         courseC_artist_prog7_a: Gli angoli sono di 45 o 90 gradi.
         courseC_artist_prog7_b: |-
-          -   Al primo passo tutto procede bene?
-          -   E al secondo?
-          -   Dov'è che qualcosa comincia a non funzionare?
+          Al primo passo tutto procede bene?\
+          E al secondo?\
+          Dov'è che qualcosa comincia a non funzionare?
         courseC_artist_prog7_c: Puoi usare il menù a discesa (▼) del blocco `gira
           a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog7_d: |-
@@ -6353,9 +6344,9 @@ it-IT:
       courseC_artist_prog7_2018:
         courseC_artist_prog7_a: Gli angoli sono di 45 o 90 gradi.
         courseC_artist_prog7_b: |-
-          -   Al primo passo tutto procede bene?
-          -   E al secondo?
-          -   Dov'è che qualcosa comincia a non funzionare?
+          Al primo passo tutto procede bene?\
+          E al secondo?\
+          Dov'è che qualcosa comincia a non funzionare?
         courseC_artist_prog7_c: Puoi usare il menù a discesa (▼) del blocco `gira
           a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog7_d: |-
@@ -6375,9 +6366,9 @@ it-IT:
       courseC_artist_prog7_2019:
         courseC_artist_prog7_a: Gli angoli sono di 45 o 90 gradi.
         courseC_artist_prog7_b: |-
-          -   Al primo passo tutto procede bene?
-          -   E al secondo?
-          -   Dov'è che qualcosa comincia a non funzionare?
+          Al primo passo tutto procede bene?\
+          E al secondo?\
+          Dov'è che qualcosa comincia a non funzionare?
         courseC_artist_prog7_c: Puoi usare il menù a discesa (▼) del blocco `gira
           a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog7_d: |-
@@ -6864,27 +6855,26 @@ it-IT:
           Il modo migliore per raccogliere le pannocchie del secondo e terzo lato del percorso è di usare un ciclo `ripeti ... volte` dentro a un altro blocco `ripeti ... volte`.
 
           <xml><block type="controls_repeat">
-
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></xml>
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2018:
         courseC_harvester_loops_challenge1_a: È troppo difficile senza usare i cicli!
         courseC_harvester_loops_challenge1_b: Puoi ripetere i blocchi `vai avanti`
@@ -6894,27 +6884,26 @@ it-IT:
           Il modo migliore per raccogliere le pannocchie del secondo e terzo lato del percorso è di usare un ciclo `ripeti ... volte` dentro a un altro blocco `ripeti ... volte`.
 
           <xml><block type="controls_repeat">
-
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></xml>
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: È troppo difficile senza usare i cicli!
         courseC_harvester_loops_challenge1_b: Puoi ripetere i blocchi `vai avanti`
@@ -6924,27 +6913,26 @@ it-IT:
           Il modo migliore per raccogliere le pannocchie del secondo e terzo lato del percorso è di usare un ciclo `ripeti ... volte` dentro a un altro blocco `ripeti ... volte`.
 
           <xml><block type="controls_repeat">
-
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></xml>
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: Un modo per risolvere questo esercizio
           assomiglia a uno zig-zag. Un altro modo ricorda una spirale! Ci sono tante
@@ -6958,7 +6946,7 @@ it-IT:
         courseC_harvester_loops_challenge2_d: |-
           Lo schema a spirale può essere ottenuto con solo 18 blocchi!
 
-          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_harvester_loops_challenge2_2018:
         courseC_harvester_loops_challenge2_a: Un modo per risolvere questo esercizio
           assomiglia a uno zig-zag. Un altro modo ricorda una spirale! Ci sono tante
@@ -6972,7 +6960,7 @@ it-IT:
         courseC_harvester_loops_challenge2_d: |-
           Lo schema a spirale può essere ottenuto con solo 18 blocchi!
 
-          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_harvester_loops_challenge2_2019:
         courseC_harvester_loops_challenge2_a: Un modo per risolvere questo esercizio
           assomiglia a uno zig-zag. Un altro modo ricorda una spirale! Ci sono tante
@@ -6986,7 +6974,7 @@ it-IT:
         courseC_harvester_loops_challenge2_d: |-
           Lo schema a spirale può essere ottenuto con solo 18 blocchi!
 
-          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_maze_debugging1:
         courseC_maze_debugging1_a: |-
           -   Al primo passo tutto procede bene?
@@ -7501,24 +7489,27 @@ it-IT:
         courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti?
           Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
           per fare le curve giuste.
-        courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
-          `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+        courseC_starWars_loops10_b: |-
+          Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\
+          Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice
           per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_2018:
         courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti?
           Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
           per fare le curve giuste.
-        courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
-          `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+        courseC_starWars_loops10_b: |-
+          Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\
+          Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice
           per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_2019:
         courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti?
           Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
           per fare le curve giuste.
-        courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
-          `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+        courseC_starWars_loops10_b: |-
+          Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\
+          Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice
           per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops1_2018:
@@ -7583,18 +7574,21 @@ it-IT:
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di
           carta e cerca una sequenza che si ripete.
-        courseC_starWars_loops6_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
-          `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+        courseC_starWars_loops6_b: |-
+          Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\
+          Si chiama **ciclo annidato**.
       courseC_starWars_loops6_2018:
         courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di
           carta e cerca una sequenza che si ripete.
-        courseC_starWars_loops6_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
-          `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+        courseC_starWars_loops6_b: |-
+          Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\
+          Si chiama **ciclo annidato**.
       courseC_starWars_loops6_2019:
         courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di
           carta e cerca una sequenza che si ripete.
-        courseC_starWars_loops6_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
-          `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+        courseC_starWars_loops6_b: |-
+          Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\
+          Si chiama **ciclo annidato**.
       courseC_starWars_loops7:
         courseC_starWars_loops7_a: Questo schema sembra più difficile di quello che
           è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami
@@ -7967,8 +7961,8 @@ it-IT:
           Per fare un cerchio:
 
           -   ripeti 360 volte
-          -   vai avanti di 1 pixel
-          -   gira a sinistra di 1 grado
+              -   vai avanti di 1 pixel
+              -   gira a sinistra di 1 grado
         courseD_artist_nestedLoops4_b: Non dimenticarti di saltare in avanti di 50
           pixel tra un cerchio e l'altro.
         courseD_artist_nestedLoops4_c: Usa un ciclo annidato per disegnare i cerchi
@@ -7981,8 +7975,8 @@ it-IT:
           Per fare un cerchio:
 
           -   ripeti 360 volte
-          -   vai avanti di 1 pixel
-          -   gira a sinistra di 1 grado
+              -   vai avanti di 1 pixel
+              -   gira a sinistra di 1 grado
         courseD_artist_nestedLoops4_b: Non dimenticarti di saltare in avanti di 50
           pixel tra un cerchio e l'altro.
         courseD_artist_nestedLoops4_c: Usa un ciclo annidato per disegnare i cerchi
@@ -7995,8 +7989,8 @@ it-IT:
           Per fare un cerchio:
 
           -   ripeti 360 volte
-          -   vai avanti di 1 pixel
-          -   gira a sinistra di 1 grado
+              -   vai avanti di 1 pixel
+              -   gira a sinistra di 1 grado
         courseD_artist_nestedLoops4_b: Non dimenticarti di saltare in avanti di 50
           pixel tra un cerchio e l'altro.
         courseD_artist_nestedLoops4_c: Usa un ciclo annidato per disegnare i cerchi
@@ -8006,9 +8000,9 @@ it-IT:
           Per farlo in modo semplice:
 
           -   ripeti 4 volte
-          -   fai un cerchio
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 90 gradi
+              -   fai un cerchio
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 90 gradi
         courseD_artist_nestedLoops5_b: Per fare un cerchio, devi impostare un ciclo
           `ripeti 360 volte`, all'interno del quale l'artista va avanti di 1 pixel
           e gira di 1 grado.
@@ -8017,9 +8011,9 @@ it-IT:
           Per farlo in modo semplice:
 
           -   ripeti 4 volte
-          -   fai un cerchio
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 90 gradi
+              -   fai un cerchio
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 90 gradi
         courseD_artist_nestedLoops5_b: Per fare un cerchio, devi impostare un ciclo
           `ripeti 360 volte`, all'interno del quale l'artista va avanti di 1 pixel
           e gira di 1 grado.
@@ -8028,9 +8022,9 @@ it-IT:
           Per farlo in modo semplice:
 
           -   ripeti 4 volte
-          -   fai un cerchio
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 90 gradi
+              -   fai un cerchio
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 90 gradi
         courseD_artist_nestedLoops5_b: Per fare un cerchio, devi impostare un ciclo
           `ripeti 360 volte`, all'interno del quale l'artista va avanti di 1 pixel
           e gira di 1 grado.
@@ -8042,9 +8036,9 @@ it-IT:
           Usa un ciclo annidato, nel quale il ciclo interno realizza un quadrato.
 
           -   Ripeti 6 volte
-          -   fai un quadrato
-          -   salta in avanti di **50 pixel**
-          -   gira di **60 gradi**
+              -   fai un quadrato
+              -   salta in avanti di **50 pixel**
+              -   gira di **60 gradi**
       courseD_artist_nestedLoops7_2018:
         courseD_artist_nestedLoops7_a: Qui dovrai usare dei cicli annidati. Innanzitutto,
           serve un ciclo per disegnare un quadrato. Cosa dovrà fare il ciclo esterno
@@ -8053,9 +8047,9 @@ it-IT:
           Usa un ciclo annidato, nel quale il ciclo interno realizza un quadrato.
 
           -   Ripeti 6 volte
-          -   fai un quadrato
-          -   salta in avanti di **50 pixel**
-          -   gira di **60 gradi**
+              -   fai un quadrato
+              -   salta in avanti di **50 pixel**
+              -   gira di **60 gradi**
       courseD_artist_nestedLoops7_2019:
         courseD_artist_nestedLoops7_a: Qui dovrai usare dei cicli annidati. Innanzitutto,
           serve un ciclo per disegnare un quadrato. Cosa dovrà fare il ciclo esterno
@@ -8064,9 +8058,9 @@ it-IT:
           Usa un ciclo annidato, nel quale il ciclo interno realizza un quadrato.
 
           -   Ripeti 6 volte
-          -   fai un quadrato
-          -   salta in avanti di **50 pixel**
-          -   gira di **60 gradi**
+              -   fai un quadrato
+              -   salta in avanti di **50 pixel**
+              -   gira di **60 gradi**
       courseD_artist_nestedLoops8:
         courseD_artist_nestedLoops8_a: Per ottenere otto esagoni nel tuo disegno,
           dovrai girare di **45 gradi** tra uno e l'altro. Perché? Perché per fare
@@ -8078,9 +8072,9 @@ it-IT:
           Usa un ciclo annidato:
 
           -   ripeti 8 volte
-          -   disegna un esagono
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 45 gradi
+              -   disegna un esagono
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 45 gradi
       courseD_artist_nestedLoops8_2018:
         courseD_artist_nestedLoops8_a: Per ottenere otto esagoni nel tuo disegno,
           dovrai girare di **45 gradi** tra uno e l'altro. Perché? Perché per fare
@@ -8092,9 +8086,9 @@ it-IT:
           Usa un ciclo annidato:
 
           -   ripeti 8 volte
-          -   disegna un esagono
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 45 gradi
+              -   disegna un esagono
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 45 gradi
       courseD_artist_nestedLoops8_2019:
         courseD_artist_nestedLoops8_a: Per ottenere otto esagoni nel tuo disegno,
           dovrai girare di **45 gradi** tra uno e l'altro. Perché? Perché per fare
@@ -8106,9 +8100,9 @@ it-IT:
           Usa un ciclo annidato:
 
           -   ripeti 8 volte
-          -   disegna un esagono
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 45 gradi
+              -   disegna un esagono
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 45 gradi
       courseD_artist_nestedLoops9:
         courseD_artist_nestedLoops9_a: Inizia utilizzando un ciclo annidato come quello
           usato in precedenza, ma questa volta fai disegnare dei quadrati.
@@ -8118,13 +8112,13 @@ it-IT:
           Utilizza due cicli annidati:
 
           -   ripeti 8 volte
-          -   disegna un quadrato
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 45 gradi
+              -   disegna un quadrato
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 45 gradi
           -   ripeti 8 volte
-          -   disegna un triangolo
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 45 gradi
+              -   disegna un triangolo
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 45 gradi
       courseD_artist_nestedLoops9_2018:
         courseD_artist_nestedLoops9_a: Inizia utilizzando un ciclo annidato come quello
           usato in precedenza, ma questa volta fai disegnare dei quadrati.
@@ -8134,13 +8128,13 @@ it-IT:
           Utilizza due cicli annidati:
 
           -   ripeti 8 volte
-          -   disegna un quadrato
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 45 gradi
+              -   disegna un quadrato
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 45 gradi
           -   ripeti 8 volte
-          -   disegna un triangolo
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 45 gradi
+              -   disegna un triangolo
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 45 gradi
       courseD_artist_nestedLoops9_2019:
         courseD_artist_nestedLoops9_a: Inizia utilizzando un ciclo annidato come quello
           usato in precedenza, ma questa volta fai disegnare dei quadrati.
@@ -8150,13 +8144,13 @@ it-IT:
           Utilizza due cicli annidati:
 
           -   ripeti 8 volte
-          -   disegna un quadrato
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 45 gradi
+              -   disegna un quadrato
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 45 gradi
           -   ripeti 8 volte
-          -   disegna un triangolo
-          -   salta in avanti di 50 pixel
-          -   gira a destra di 45 gradi
+              -   disegna un triangolo
+              -   salta in avanti di 50 pixel
+              -   gira a destra di 45 gradi
       courseD_artist_nestedLoopsFP:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
@@ -8710,37 +8704,34 @@ it-IT:
           Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Provare questa struttura:
 
           <xml>  <block type="bee_whileNectarAmount">
-
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>                    <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block></xml>
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">></title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       courseD_bee_conditionals_challenge2_2018:
         courseD_bee_conditionals_challenge1_b: |-
           Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Provare questa struttura:
 
           <xml>  <block type="bee_whileNectarAmount">
-
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>                    <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block></xml>
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">></title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       courseD_bee_conditionals_challenge2_2019:
         courseD_bee_conditionals_challenge1_b: |-
           Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Provare questa struttura:
 
           <xml>  <block type="bee_whileNectarAmount">
-
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>                    <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block></xml>
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">></title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       courseD_bee_nestedLoops1:
         courseD_bee_nestedLoops1_a: Non funziona? Prova ad usare il pulsante "Fai
           un passo" per vedere cosa succede eseguendo un blocco alla volta.
@@ -8905,32 +8896,32 @@ it-IT:
           Dovrai programmare due gestori di eventi di movimento per completare questo esercizio:
 
           <xml>
-          <block type="bounce_whenLeft" deletable="false" x="20" y="20">
-          <next>
-          <block type="bounce_moveLeft"/>
-          </next>
-          </block>
-          <block type="bounce_whenRight" deletable="false" x="180" y="20">
-          <next>
-          <block type="bounce_moveRight"/>
-          </next>
-          </block>
+            <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+            <block type="bounce_whenRight" deletable="false" x="180" y="20">
+              <next>
+                <block type="bounce_moveRight"/>
+              </next>
+            </block>
           </xml>
       courseD_bounce_events2s_2019:
         courseD_bounce_events2s_a: |-
           Dovrai programmare due gestori di eventi di movimento per completare questo esercizio:
 
           <xml>
-          <block type="bounce_whenLeft" deletable="false" x="20" y="20">
-          <next>
-          <block type="bounce_moveLeft"/>
-          </next>
-          </block>
-          <block type="bounce_whenRight" deletable="false" x="180" y="20">
-          <next>
-          <block type="bounce_moveRight"/>
-          </next>
-          </block>
+            <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+            <block type="bounce_whenRight" deletable="false" x="180" y="20">
+              <next>
+                <block type="bounce_moveRight"/>
+              </next>
+            </block>
           </xml>
       courseD_bounce_events5s_2018:
         courseD_bounce_events5s_a: Non avrai bisogno di far muovere la mano per risolvere
@@ -9347,12 +9338,11 @@ it-IT:
           Invece di usare quattro blocchi `vai avanti` per ogni lato, prova a mettere un unico blocco `vai avanti` all'interno di un ciclo `ripeti ... volte`, come qui:
 
           <xml><block type="controls_repeat">
-
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          </block></xml>
+                                                      <title name="TIMES">4</title>
+                                                      <statement name="DO">
+                                                        <block type="maze_moveForward"/>
+                                                      </statement>
+                                                    </block></xml>
         courseD_artist_ramp10_b: Dopo aver raccolto il diamante, non dimenticarti
           di girare per iniziare un nuovo lato della quadrato!
         courseD_artist_ramp10_c: Se vuoi semplificare il tuo programma, puoi mettere
@@ -9840,11 +9830,9 @@ it-IT:
           alla ghianda.
       courseD_iceage_loops3:
         courseB_iceage_loops3_a: |-
-          Usa questo nuovo blocco!
-          <xml><block type="controls_repeat_dropdown">
-
-          <title name="TIMES" config="2-10">5</title>
-          </block></xml>
+          Usa questo nuovo blocco! <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
         courseB_iceage_loops3_b: Per ripetere una sequenza di istruzioni, trascina
           nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
           i blocchi che vuoi ripetere.
@@ -10393,19 +10381,11 @@ it-IT:
           sempre`. Uno per scegliere un umore casuale del drago (personaggio 2) e
           l'altro per attendere 1 secondo prima di ricominciare il ciclo.
       courseD_playLab_cond3a:
-        courseD_playLab_cond3_c: |-
-          -   `Se` il drago è felice
-              -   `aggiungi un punto`
-              -   `aggiungi un punto`
-
-          -   `Altrimenti` `aggiungi un punto`
+        courseD_playLab_cond3_c: "-   `Se` il drago è felice \n    -   `aggiungi un
+          punto`\n    -   `aggiungi un punto`  \n\n-   `Altrimenti` `aggiungi un punto`"
       courseD_playLab_cond3a_2018:
-        courseD_playLab_cond3_c: |-
-          -   `Se` il drago è felice
-              -   `aggiungi un punto`
-              -   `aggiungi un punto`
-
-          -   `Altrimenti` `aggiungi un punto`
+        courseD_playLab_cond3_c: "-   `Se` il drago è felice \n    -   `aggiungi un
+          punto`\n    -   `aggiungi un punto`  \n\n-   `Altrimenti` `aggiungi un punto`"
       courseD_playLab_cond4:
         courseD_playLab_cond4_a: Avrai bisogno di usare l'evento `quando si clicca
           su "Esegui"` per fare in modo che il ninja insegua il pirata dall'inizio
@@ -10615,9 +10595,8 @@ it-IT:
           Grazie a questo blocco, puoi saltare direttamente in specifici punti della tela:
 
           <xml>  <block type="jump_to">
-
-          <title name="VALUE">???</title>
-          </block></xml>
+              <title name="VALUE">???</title>
+            </block></xml>
       courseE_artist_concept_challenge2_2018:
         courseE_artist_concept_challenge2_a: Dopo aver definito una funzione, la puoi
           richiamare più e più volte, ovunque tu voglia!
@@ -10625,9 +10604,8 @@ it-IT:
           Grazie a questo blocco, puoi saltare direttamente in specifici punti della tela:
 
           <xml>  <block type="jump_to">
-
-          <title name="VALUE">???</title>
-          </block></xml>
+              <title name="VALUE">???</title>
+            </block></xml>
       courseE_artist_functions1:
         courseE_artist_functions1_a: Le lenti quadrate hanno i lati da 100 pixel,
           questo significa che dovrai muoverti in avanti di 175 pixel prima di disegnare
@@ -10791,8 +10769,8 @@ it-IT:
           Per disegnare una fila di quadrati,
 
           -   ripeti 3 volte
-          -   disegna un quadrato con lati di **50 pixel**
-          -   salta in avanti di **100 pixel**
+              -   disegna un quadrato con lati di **50 pixel**
+              -   salta in avanti di **100 pixel**
         courseD_artist_functions8_b: |-
           Immagina ogni riga di questo disegno, come una fila di 3 quadrati. Quante file di quadrati ci sono? e dove inizi a disegnare ognuna di esse?
 
@@ -10812,8 +10790,8 @@ it-IT:
           Per disegnare una fila di quadrati,
 
           -   ripeti 3 volte
-          -   disegna un quadrato con lati di **50 pixel**
-          -   salta in avanti di **100 pixel**
+              -   disegna un quadrato con lati di **50 pixel**
+              -   salta in avanti di **100 pixel**
         courseD_artist_functions8_b: |-
           Immagina ogni riga di questo disegno, come una fila di 3 quadrati. Quante file di quadrati ci sono? e dove inizi a disegnare ognuna di esse?
 
@@ -10832,8 +10810,8 @@ it-IT:
           Per disegnare una fila di quadrati,
 
           -   ripeti 3 volte
-          -   disegna un quadrato con lati di **50 pixel**
-          -   salta in avanti di **100 pixel**
+              -   disegna un quadrato con lati di **50 pixel**
+              -   salta in avanti di **100 pixel**
         courseD_artist_functions8_b: |-
           Immagina ogni riga di questo disegno, come una fila di 3 quadrati. Quante file di quadrati ci sono? e dove inizi a disegnare ognuna di esse?
 
@@ -10850,8 +10828,8 @@ it-IT:
           Per disegnare una fila di quadrati,
 
           -   ripeti 3 volte
-          -   disegna un quadrato
-          -   salta in avanti di **100 pixel**
+              -   disegna un quadrato
+              -   salta in avanti di **100 pixel**
       courseE_artist_functions8b_2019:
         courseD_artist_functions8_f: Hai solo bisogno di un blocco `vai avanti` se
           stai procedendo nel modo corretto!
@@ -10861,8 +10839,8 @@ it-IT:
           Per disegnare una fila di quadrati,
 
           -   ripeti 3 volte
-          -   disegna un quadrato
-          -   salta in avanti di **100 pixel**
+              -   disegna un quadrato
+              -   salta in avanti di **100 pixel**
       courseE_artist_functions8c_2018:
         courseD_artist_functions8_f: È più facile di quanto sembri! Non dovresti aver
           bisogno di altri blocchi `vai avanti` o `salta`!
@@ -10881,7 +10859,7 @@ it-IT:
           tutto in un ciclo `ripeti ... volte` per prepararti al prossimo esercizio!
       courseE_artist_functions9:
         courseD_artist_functions9_e: |-
-          Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`.
+          Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`?
 
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
         courseD_artist_functions9_a: |-
@@ -10896,20 +10874,20 @@ it-IT:
         courseD_artist_functions9_c: |-
           Per disegnare una fila di triangoli:
 
-          -   ripeti 4 volte,
-          -   disegna un triangolo,
-          -   salta in avanti di 50 pixel.
+          -   ripeti 4 volte
+          -   disegna un triangolo
+          -   salta in avanti di 50 pixel
         courseD_artist_functions9_d: |-
           Per disegnare il rombo:
 
-          -   ripeti 2 volte,
-          -   disegna una fila di triangoli,
-          -   gira di 60 gradi,
-          -   disegna una fila di triangoli,
-          -   gira di 120 gradi.
+          -   ripeti 2 volte
+              -   disegna una fila di triangoli
+              -   gira di 60 gradi
+              -   disegna una fila di triangoli
+              -   gira di 120 gradi
       courseE_artist_functions9_2018:
         courseD_artist_functions9_e: |-
-          Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`.
+          Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`?
 
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
         courseD_artist_functions9_a: |-
@@ -10924,20 +10902,20 @@ it-IT:
         courseD_artist_functions9_c: |-
           Per disegnare una fila di triangoli:
 
-          -   ripeti 4 volte,
-          -   disegna un triangolo,
-          -   salta in avanti di 50 pixel.
+          -   ripeti 4 volte
+          -   disegna un triangolo
+          -   salta in avanti di 50 pixel
         courseD_artist_functions9_d: |-
           Per disegnare il rombo:
 
-          -   ripeti 2 volte,
-          -   disegna una fila di triangoli,
-          -   gira di 60 gradi,
-          -   disegna una fila di triangoli,
-          -   gira di 120 gradi.
+          -   ripeti 2 volte
+              -   disegna una fila di triangoli
+              -   gira di 60 gradi
+              -   disegna una fila di triangoli
+              -   gira di 120 gradi
       courseE_artist_functions9_2019:
         courseD_artist_functions9_e: |-
-          Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`.
+          Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`?
 
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
         courseD_artist_functions9_a: |-
@@ -10952,17 +10930,17 @@ it-IT:
         courseD_artist_functions9_c: |-
           Per disegnare una fila di triangoli:
 
-          -   ripeti 4 volte,
-          -   disegna un triangolo,
-          -   salta in avanti di 50 pixel.
+          -   ripeti 4 volte
+          -   disegna un triangolo
+          -   salta in avanti di 50 pixel
         courseD_artist_functions9_d: |-
           Per disegnare il rombo:
 
-          -   ripeti 2 volte,
-          -   disegna una fila di triangoli,
-          -   gira di 60 gradi,
-          -   disegna una fila di triangoli,
-          -   gira di 120 gradi.
+          -   ripeti 2 volte
+              -   disegna una fila di triangoli
+              -   gira di 60 gradi
+              -   disegna una fila di triangoli
+              -   gira di 120 gradi
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_a: Se richiami la funzione ancora una
           volta, puoi completare il disegno nell'angolo mancante.
@@ -11166,11 +11144,10 @@ it-IT:
           -   vai indietro,
           -   gira per far tornare l'ape nella posizione da cui era partita.
       courseE_bee_functions6:
-        courseE_bee_functions6_a: |-
-          Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>
-          Aggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!
-
-          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        courseE_bee_functions6_a: "Se ti sembra troppo difficile, prova a creare la
+          funzione poco per volta.  \n\nAggiungi qualche blocco e prova a vedere cosa
+          fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla
+          soluzione!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: In questo caso potrebbe essere utile spostarsi all'interno
           della funzione, ma i blocchi di movimento non devono essere tutti lì.
       courseE_bee_functions7:
@@ -11940,17 +11917,17 @@ it-IT:
           l'esercizio.
       courseF_artist_for5:
         courseF_artist_for5_a: Per creare la spirale, non hai bisogno di usare un
-          ciclo `ripeti ... volte` all'interno del ciclo con contatore!
+          ciclo `ripeti ... volte` all'interno del _ciclo con contatore_!
         courseF_artist_for5_b: Il _ciclo con contatore_ ed i blocchi `vai avanti`
           e `gira a` possono rimanere esattamente gli stessi.
       courseF_artist_for5_2018:
         courseF_artist_for5_a: Per creare la spirale, non hai bisogno di usare un
-          ciclo `ripeti ... volte` all'interno del ciclo con contatore!
+          ciclo `ripeti ... volte` all'interno del _ciclo con contatore_!
         courseF_artist_for5_b: Il _ciclo con contatore_ ed i blocchi `vai avanti`
           e `gira a` possono rimanere esattamente gli stessi.
       courseF_artist_for5_2019:
         courseF_artist_for5_a: Per creare la spirale, non hai bisogno di usare un
-          ciclo `ripeti ... volte` all'interno del ciclo con contatore!
+          ciclo `ripeti ... volte` all'interno del _ciclo con contatore_!
         courseF_artist_for5_b: Il _ciclo con contatore_ ed i blocchi `vai avanti`
           e `gira a` possono rimanere esattamente gli stessi.
       courseF_artist_for6:
@@ -11979,7 +11956,7 @@ it-IT:
           usare il blocco `imposta la larghezza 1` prima di iniziare.
         courseF_artist_for7_b: Nota che questa spirale gira a destra invece che a
           sinistra!
-        courseF_artist_for7_c: In questo esercizio, Il _ciclo con contatore_ conta
+        courseF_artist_for7_c: In questo esercizio, il _ciclo con contatore_ conta
           da 15 a 300 a passi di 2.
         courseF_artist_for7_d: Questa immagine è realizzata girando solo di 89 gradi.
       courseF_artist_for7_2018:
@@ -11987,7 +11964,7 @@ it-IT:
           usare il blocco `imposta la larghezza 1` prima di iniziare.
         courseF_artist_for7_b: Nota che questa spirale gira a destra invece che a
           sinistra!
-        courseF_artist_for7_c: In questo esercizio, Il _ciclo con contatore_ conta
+        courseF_artist_for7_c: In questo esercizio, il _ciclo con contatore_ conta
           da 15 a 300 a passi di 2.
         courseF_artist_for7_d: Questa immagine è realizzata girando solo di 89 gradi.
       courseF_artist_for7_2019:
@@ -11995,7 +11972,7 @@ it-IT:
           usare il blocco `imposta la larghezza 1` prima di iniziare.
         courseF_artist_for7_b: Nota che questa spirale gira a destra invece che a
           sinistra!
-        courseF_artist_for7_c: In questo esercizio, Il _ciclo con contatore_ conta
+        courseF_artist_for7_c: In questo esercizio, il _ciclo con contatore_ conta
           da 15 a 300 a passi di 2.
         courseF_artist_for7_d: Questa immagine è realizzata girando solo di 89 gradi.
       courseF_artist_for8:
@@ -12572,90 +12549,90 @@ it-IT:
           **Soluzione:**
 
           <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">250</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">80</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_width" inline="false">
+                  <value name="WIDTH">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_for_counter" inline="true">
+                    <mutation counter="counter"></mutation>
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">250</title>
+                        </block>
+                      </value>
+                      <value name="BY">
+                        <block type="math_number">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_colour" inline="true" id="draw-color">
+                          <value name="COLOUR">
+                            <block type="colour_rgb" inline="false">
+                              <value name="RED">
+                                <block type="math_number">
+                                  <title name="NUM">255</title>
+                                </block>
+                              </value>
+                              <value name="GREEN">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <value name="BLUE">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">MINUS</title>
+                                  <value name="A">
+                                    <block type="math_number">
+                                      <title name="NUM">255</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="variables_get">
+                                      <title name="VAR">counter</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_move" inline="true">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn" inline="true">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">80</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
           </xml>
       courseF_artist_for_challenge2_2019:
         courseF_artist_for_challenge2_c: Il cambiamento del colore si attua col blocco
@@ -13699,21 +13676,21 @@ it-IT:
       courseF_bee_for4:
         courseF_bee_for4_a: Usa un _ciclo con contatore_ (`per counter`) che va da
           1 a 7 con un passo di 1 per risolvere questo esercizio.
-        courseF_bee_for4_b: All'interno del  _ciclo con contatore_, dovrai avere un
+        courseF_bee_for4_b: All'interno del _ciclo con contatore_, dovrai avere un
           blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for4_c: Per raccogliere tutto il nettare, assicurati di usare
           la variabile `counter` (_contatore_) all'interno del ciclo annidato!
       courseF_bee_for4_2018:
         courseF_bee_for4_a: Usa un _ciclo con contatore_ (`per counter`) che va da
           1 a 7 con un passo di 1 per risolvere questo esercizio.
-        courseF_bee_for4_b: All'interno del  _ciclo con contatore_, dovrai avere un
+        courseF_bee_for4_b: All'interno del _ciclo con contatore_, dovrai avere un
           blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for4_c: Per raccogliere tutto il nettare, assicurati di usare
           la variabile `counter` (_contatore_) all'interno del ciclo annidato!
       courseF_bee_for4_2019:
         courseF_bee_for4_a: Usa un _ciclo con contatore_ (`per counter`) che va da
           1 a 7 con un passo di 1 per risolvere questo esercizio.
-        courseF_bee_for4_b: All'interno del  _ciclo con contatore_, dovrai avere un
+        courseF_bee_for4_b: All'interno del _ciclo con contatore_, dovrai avere un
           blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for4_c: Per raccogliere tutto il nettare, assicurati di usare
           la variabile `counter` (_contatore_) all'interno del ciclo annidato!
@@ -13747,39 +13724,39 @@ it-IT:
       courseF_bee_for6:
         courseF_bee_for6_a: Non dimenticarti di usare la variabile `counter` (_contatore_)
           all'interno del ciclo `ripeti ... volte`.
-        courseF_bee_for6_b: All'interno del  _ciclo con contatore_, dovrai avere un
+        courseF_bee_for6_b: All'interno del _ciclo con contatore_, dovrai avere un
           blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for6_c: Il ciclo dovrà contare **da 5 a 1**.
       courseF_bee_for6_2018:
         courseF_bee_for6_a: Non dimenticarti di usare la variabile `counter` (_contatore_)
           all'interno del ciclo `ripeti ... volte`.
-        courseF_bee_for6_b: All'interno del  _ciclo con contatore_, dovrai avere un
+        courseF_bee_for6_b: All'interno del _ciclo con contatore_, dovrai avere un
           blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for6_c: Il ciclo dovrà contare **da 5 a 1**.
       courseF_bee_for6_2019:
         courseF_bee_for6_a: Non dimenticarti di usare la variabile `counter` (_contatore_)
           all'interno del ciclo `ripeti ... volte`.
-        courseF_bee_for6_b: All'interno del  _ciclo con contatore_, dovrai avere un
+        courseF_bee_for6_b: All'interno del _ciclo con contatore_, dovrai avere un
           blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for6_c: Il ciclo dovrà contare **da 5 a 1**.
       courseF_bee_for7:
         courseF_bee_for7_a: Il _ciclo con contatore_ dovrà contare da 1 a 7 a passi
           di 2.
-        courseF_bee_for7_b: All'interno del  _ciclo con contatore_, dovrai avere un
+        courseF_bee_for7_b: All'interno del _ciclo con contatore_, dovrai avere un
           blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for7_c: Ricordati di usare la variabile `counter` (_contatore_)
           all'interno del ciclo `ripeti ... volte`.
       courseF_bee_for7_2018:
         courseF_bee_for7_a: Il _ciclo con contatore_ dovrà contare da 1 a 7 a passi
           di 2.
-        courseF_bee_for7_b: All'interno del  _ciclo con contatore_, dovrai avere un
+        courseF_bee_for7_b: All'interno del _ciclo con contatore_, dovrai avere un
           blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for7_c: Ricordati di usare la variabile `counter` (_contatore_)
           all'interno del ciclo `ripeti ... volte`.
       courseF_bee_for7_2019:
         courseF_bee_for7_a: Il _ciclo con contatore_ dovrà contare da 1 a 7 a passi
           di 2.
-        courseF_bee_for7_b: All'interno del  _ciclo con contatore_, dovrai avere un
+        courseF_bee_for7_b: All'interno del _ciclo con contatore_, dovrai avere un
           blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for7_c: Ricordati di usare la variabile `counter` (_contatore_)
           all'interno del ciclo `ripeti ... volte`.

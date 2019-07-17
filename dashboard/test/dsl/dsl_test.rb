@@ -529,13 +529,13 @@ level 'Level 3'
     end
   end
 
-  test 'Script DSL with level target and challenge' do
+  test 'Script DSL with level challenge' do
     input_dsl = <<DSL
 stage 'Stage1'
 level 'Level 1'
 level 'Level 2'
 level 'Level 3', challenge: true
-level 'Level 4', target: true
+level 'Level 4'
 variants
   level 'Level 5', challenge: true
   level 'Level 5.1', active: false
@@ -550,7 +550,7 @@ DSL
               {stage: "Stage1", levels: [{name: "Level 1"}]},
               {stage: "Stage1", levels: [{name: "Level 2"}]},
               {stage: "Stage1", levels: [{name: "Level 3"}], properties: {challenge: true}},
-              {stage: "Stage1", levels: [{name: "Level 4"}], properties: {target: true}},
+              {stage: "Stage1", levels: [{name: "Level 4"}]},
               {
                 stage: "Stage1",
                 levels: [

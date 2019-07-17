@@ -36,6 +36,8 @@ module Pd
         submitRedirect: url_for(action: 'submit', params: {key: key_params})
       )
 
+      return if experimental_redirect! @form_id, @form_params
+
       if CDO.newrelic_logging
         NewRelic::Agent.record_custom_event(
           "RenderJotFormView",

@@ -2,39 +2,274 @@
 ku:
   data:
     blocks:
-      Dancelab_changeMoveEachLR:
+      Dancelab_atTimestamp:
+        text: پاشان{TIMESTAMP}{UNIT}
         options:
+          UNIT:
+            '"measures"': پێوانەکان
+      Dancelab_changeColorBy:
+        text: بگۆڕە{COLOR}{METHOD} بە ئەندازەی {AMOUNT}
+        options:
+          METHOD:
+            '"hue"': تۆنی ڕەنگ
+            '"saturation"': تێری ڕەنگ
+            '"brightness"': ڕووناکی
+      Dancelab_changeMoveEachLR:
+        text: "{GROUP} بەردەوام {MOVE}{DIR} تاهەتایە"
+        options:
+          GROUP:
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
+            '"BEAR"': هەموو وورچەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
+            '"DUCK"': هەموو مراویەکان
+            '"FROG"': هەموو بۆقەکان
+            '"MOOSE"': هەموو ڕەنەکان
+            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"ROBOT"': هەموو ڕۆبۆتەکان
+            '"SHARK"': هەموو قرشەکان
+            '"UNICORN"': هەموو ئەسپە یەکشاخەکان
+          MOVE:
+            '"next"': "(دواتر)"
+            '"prev"': "(پێشتر)"
+            '"rand"': "(هەڕەمەکی)"
+            MOVES.Roll: خل بوونەوە
+            MOVES.ClapHigh: چەپڵەی بەهێز
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: دووانە سەما
+            MOVES.Drop: درۆپ
+            MOVES.Floss: فڵۆس
+            MOVES.Fresh: فرێش
+            MOVES.Clown: گانگنام
+            MOVES.Kick: ئەستێرە
+            MOVES.ThisOrThat: ئەمە یان ئەوە
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
+        text: "{SPRITE} بەردەوام {MOVE}{DIR} تاهەتایە"
         options:
+          MOVE:
+            '"next"': "(دواتر)"
+            '"prev"': "(پێشتر)"
+            '"rand"': "(هەڕەمەکی)"
+            MOVES.Roll: خل بوونەوە
+            MOVES.ClapHigh: چەپڵەی بەهێز
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: دووانە سەما
+            MOVES.Drop: درۆپ
+            MOVES.Floss: فڵۆس
+            MOVES.Fresh: فرێش
+            MOVES.Clown: گانگنام
+            MOVES.Kick: ئەستێرە
+            MOVES.ThisOrThat: ئەمە یان ئەوە
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveEachLR:
+      Dancelab_changePropBy:
+        text: بگۆڕە {SPRITE} {PROPERTY} بە بڕی {VAL}
         options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+            '"x"': پێگەی ئاسۆیی
+            '"y"': پێگەی ستوونی
+      Dancelab_doMoveEachLR:
+        text: "{GROUP} بەردەوام {MOVE} {DIR} جارێک"
+        options:
+          GROUP:
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
+            '"BEAR"': هەموو وورچەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
+            '"DUCK"': هەموو مراویەکان
+            '"FROG"': هەموو بۆقەکان
+            '"MOOSE"': هەموو ڕەنەکان
+            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"ROBOT"': هەموو ڕۆبۆتەکان
+            '"SHARK"': هەموو قرشەکان
+            '"UNICORN"': هەموو ئەسپە یەکشاخەکان
+          MOVE:
+            '"rand"': "(هەڕەمەکی)"
+            MOVES.XBend: چەمینەوە
+            MOVES.Roll: خل بوونەوە
+            MOVES.XClapSide: چەپڵە
+            MOVES.ClapHigh: چەپڵەی بەهێز
+            MOVES.Dab: Dab
+            MOVES.XFever: دیسکۆ
+            MOVES.DoubleJam: دووانە سەما
+            MOVES.Drop: درۆپ
+            MOVES.Floss: فڵۆس
+            MOVES.Fresh: فرێش
+            MOVES.Clown: گانگنام
+            MOVES.XHeadHips: سەر + کەمەر
+            MOVES.XHop: هۆپ
+            MOVES.XHighKick: شەق
+            MOVES.XKnee: ئەژنۆ
+            MOVES.XKneel: چۆک دادان
+            MOVES.XOle: ئۆلێ
+            MOVES.XArmsSide: ڕییچ
+            MOVES.XSlide: خزان
+            MOVES.Kick: ئەستێرە
+            MOVES.XArmsUp: كشان
+            MOVES.ThisOrThat: ئەمە یان ئەوە
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
+        text: "{SPRITE} بەردەوام {MOVE} {DIR} جارێک"
         options:
+          MOVE:
+            '"rand"': "(هەڕەمەکی)"
+            MOVES.XBend: چەمینەوە
+            MOVES.Roll: خل بوونەوە
+            MOVES.XClapSide: چەپڵە
+            MOVES.ClapHigh: چەپڵەی بەهێز
+            MOVES.Dab: Dab
+            MOVES.XFever: دیسکۆ
+            MOVES.DoubleJam: دووانە سەما
+            MOVES.Drop: درۆپ
+            MOVES.Floss: فڵۆس
+            MOVES.Fresh: فرێش
+            MOVES.Clown: گانگنام
+            MOVES.XHeadHips: سەر + کەمەر
+            MOVES.XHop: هۆپ
+            MOVES.XHighKick: شەق
+            MOVES.XKnee: ئەژنۆ
+            MOVES.XKneel: چۆک دادان
+            MOVES.XOle: ئۆلێ
+            MOVES.XArmsSide: ڕییچ
+            MOVES.XSlide: خزان
+            MOVES.Kick: ئەستێرە
+            MOVES.XArmsUp: كشان
+            MOVES.ThisOrThat: ئەمە یان ئەوە
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everySeconds:
+        text: 'هەموو {N} {UNIT} '
+        options:
+          UNIT:
+            '"measures"': پێوانەکان
+      Dancelab_everySecondsRange:
+        text: 'سەرجەم {N} {UNIT} لە {START} تا {STOP} '
+        options:
+          UNIT:
+            measures: پێوانەکان
+            seconds: چرکە
+      Dancelab_everyVerseChorus:
+        text: 'هەر {UNIT} '
+        options:
+          UNIT:
+            '"verse"': دێر
+            '"chorus"': كۆرس
+      Dancelab_getEnergy:
+        text: وەرگرە {RANGE}
+        options:
+          RANGE:
+            '"low"': دەنگی نزم
+            '"mid"': ناوەند
+            '"high"': سیانی
+      Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+            '"x"': پێگەی ئاسۆیی
+            '"y"': پێگەی ستوونی
+            '"tint"': سێبەری ڕەنگ
+      Dancelab_getTime:
+        text: کاتی بەسەرچوو {UNIT}
+        options:
+          UNIT:
+            '"measures"': پێوانەکان
+      Dancelab_ifDanceIs:
+        text: |-
+          ئەگەر {SPRITE} ئەنجام بدات {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: چەپڵەی بەهێز
+            MOVES.Clown: گانگنام
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: دووانە سەما
+            MOVES.Drop: درۆپ
+            MOVES.Floss: فڵۆس
+            MOVES.Fresh: فرێش
+            MOVES.Roll: خل بوونەوە
+            MOVES.Kick: ئەستێرە
+            MOVES.ThisOrThat: ئەمە یان ئەوە
+      Dancelab_ifTime:
+        text: |-
+          ئەگەر {UNIT} بریتی بێت لە {OP} {N}
+          {DO1} {DO2}
+        options:
+          UNIT:
+            '"measures"': پێوانەکان
+          OP:
+            '">"': ">"
+            '"<"': "\\<"
+            '"="': "="
       Dancelab_jumpTo:
+        text: "{SPRITE} بپەڕێتەوە بۆ {LOCATION}"
         options:
           LOCATION:
+            "{x: 200, y: 100}": سەرەوە
+            "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 100}": سەرەوە لای چەپ
+            "{x: 300, y: 100}": سەرەوە لای ڕاست
+            "{x: 100, y: 300}": خوارەوە لای چەپ
+            "{x: 300, y: 300}": خوارەوە لای ڕاست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
       Dancelab_layoutSprites:
+        text: "{GROUP} ڕێکبخە وەک {FORMAT}"
         options:
+          GROUP:
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
+            '"BEAR"': هەموو وورچەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
+            '"DUCK"': هەموو مراویەکان
+            '"FROG"': هەموو بۆقەکان
+            '"MOOSE"': هەموو ڕەنەکان
+            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"ROBOT"': هەموو ڕۆبۆتەکان
+            '"SHARK"': هەموو قرشەکان
+            '"UNICORN"': هەموو ئەسپە یەکشاخەکان
           FORMAT:
+            '"border"': چوارچێوە
+            '"inner"': چوارگۆشەی ناوەوە
+            '"circle"': بازنە
+            '"grid"': هێڵدار
+            '"row"': ڕیز
+            '"column"': ستوون
+            '"x"': بەیەکداچوو
+            '"plus"': کۆ
             '"random"': هەڕەمەکی
       Dancelab_makeNewDanceSprite:
+        text: دانەیەکی نوێ دروست بکە لە {COSTUME} بە ناوی {NAME} لە {LOCATION}
         options:
+          COSTUME:
+            '"ALIEN"': بوونەوەری ئاسمانی
+            '"BEAR"': وورچ
+            '"CAT"': پشیلە
+            '"DOG"': سەگ
+            '"DUCK"': مراوی
+            '"FROG"': بۆق
+            '"MOOSE"': ڕەنە
+            '"PINEAPPLE"': ئەناناس
+            '"ROBOT"': ڕۆبۆت
+            '"SHARK"': ماسی قرش
+            '"UNICORN"': ئەسپی یەکشاخە
           LOCATION:
+            "{x: 200, y: 100}": سەرەوە
+            "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 100}": سەرەوە لای چەپ
+            "{x: 300, y: 100}": سەرەوە لای ڕاست
+            "{x: 100, y: 300}": خوارەوە لای چەپ
+            "{x: 300, y: 300}": خوارەوە لای ڕاست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
       Dancelab_makeNewDanceSpriteGroup:
+        text: لە{N} دانەیەکی نوێ دروست بکە {COSTUME} لەناو {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -56,10 +291,47 @@ ku:
             '18': '18'
             '19': '19'
             '20': '20'
+          COSTUME:
+            '"ALIEN"': بوونەوەری ئاسمانی
+            '"BEAR"': وورچەکان
+            '"CAT"': پشیلەکان
+            '"DOG"': سەگەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
+            '"MOOSE"': ڕەنە
+            '"PINEAPPLE"': ئەناناس
+            '"ROBOT"': ڕۆبۆت
+            '"SHARK"': ماسی قرش
+            '"UNICORN"': ئەسپی یەکشاخە
           LAYOUT:
+            '"border"': چوارچێوە
+            '"inner"': چوارگۆشەی ناوەوە
+            '"circle"': بازنە
+            '"grid"': هێڵدار
+            '"row"': ڕیز
+            '"column"': ستوون
+            '"x"': بەیەکداچوو
+            '"plus"': کۆ
             '"random"': هەڕەمەکی
+      Dancelab_mixColors:
+        text: "{COLOR1} و {COLOR2} تێکەڵ بکە"
+      Dancelab_nMeasures:
+        text: پێوانە {N}
+      Dancelab_onPointerDown:
+        text: کاتێک نیشاندەرەکە بۆ خوارەوەیە
+      Dancelab_onPointerDrag:
+        text: لەکاتی ڕاکێشانی نیشاندەرەکە
+      Dancelab_onPointerUp:
+        text: کاتێک نیشاندەرەکە بۆ سەرەوەیە
       Dancelab_randomColor:
         text: رەنگێکی هەڕەمەکی
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT: {}
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': "(هەڕەمەکی)"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -70,17 +342,150 @@ ku:
             '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
+          GROUP:
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
+            '"BEAR"': هەموو وورچەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
+            '"DUCK"': هەموو مراویەکان
+            '"FROG"': هەموو بۆقەکان
+            '"MOOSE"': هەموو ڕەنەکان
+            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"ROBOT"': هەموو ڕۆبۆتەکان
+            '"SHARK"': هەموو قرشەکان
+            '"UNICORN"': هەموو ئەسپە یەکشاخەکان
           SPEED:
             '1': normal
             '2': fast
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"pineapples"': ئەناناس
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"rand"': "(هەڕەمەکی)"
+            '"pineapples"': ئەناناس
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+            '"x"': پێگەی ئاسۆیی
+            '"y"': پێگەی ستوونی
+            '"tint"': سێبەری ڕەنگ
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
+            '"BEAR"': هەموو وورچەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
+            '"DUCK"': هەموو مراویەکان
+            '"FROG"': هەموو بۆقەکان
+            '"MOOSE"': هەموو ڕەنەکان
+            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"ROBOT"': هەموو ڕۆبۆتەکان
+            '"SHARK"': هەموو قرشەکان
+            '"UNICORN"': هەموو ئەسپە یەکشاخەکان
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+            '"x"': پێگەی ئاسۆیی
+            '"y"': پێگەی ستوونی
+            '"tint"': سێبەری ڕەنگ
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+            '"x"': پێگەی ئاسۆیی
+            '"y"': پێگەی ستوونی
+            '"tint"': سێبەری ڕەنگ
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
+            '"BEAR"': هەموو وورچەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
+            '"DUCK"': هەموو مراویەکان
+            '"FROG"': هەموو بۆقەکان
+            '"MOOSE"': هەموو ڕەنەکان
+            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"ROBOT"': هەموو ڕۆبۆتەکان
+            '"SHARK"': هەموو قرشەکان
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
+            '"BEAR"': هەموو وورچەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
+            '"DUCK"': هەموو مراویەکان
+            '"FROG"': هەموو بۆقەکان
+            '"MOOSE"': هەموو ڕەنەکان
+            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"ROBOT"': هەموو ڕۆبۆتەکان
+            '"SHARK"': هەموو قرشەکان
+            '"UNICORN"': هەموو ئەسپە یەکشاخەکان
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+            '"x"': پێگەی ئاسۆیی
+            '"y"': پێگەی ستوونی
+            '"tint"': سێبەری ڕەنگ
+          RANGE:
+            '"bass"': دەنگی نزم
+            '"mid"': ناوەند
+            '"treble"': سیانی
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+            '"x"': پێگەی ئاسۆیی
+            '"y"': پێگەی ستوونی
+            '"tint"': سێبەری ڕەنگ
+          RANGE:
+            '"bass"': دەنگی نزم
+            '"mid"': ناوەند
+            '"treble"': سیانی
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenPeak:
+        options:
+          RANGE:
+            '0': دەنگی نزم
+            '1': ناوەند
+            '2': سیانی
+      gamelab_changePropBy:
+        text: بگۆڕە {SPRITE} {PROPERTY} بە بڕی {VAL}
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
       gamelab_debugSprite:
         options:
           VAL:
             'true': ڕاست
             'false': هەڵە
+      gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+            '"tint"': سێبەری ڕەنگ
+      gamelab_jumpTo:
+        text: "{SPRITE} بپەڕێتەوە بۆ {LOCATION}"
       gamelab_randColor:
         text: رەنگێکی هەڕەمەکی
       gamelab_randomColor:
@@ -91,14 +496,87 @@ ku:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ئەشكەوت
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': بیابان
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': هێڵدار
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': پەلكەزێرینە
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ژێرئاو
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+            '"tint"': سێبەری ڕەنگ
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": سەرەوە
+            "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 100}": سەرەوە لای چەپ
+            "{x: 300, y: 100}": سەرەوە لای ڕاست
+            "{x: 100, y: 300}": خوارەوە لای چەپ
+            "{x: 300, y: 300}": خوارەوە لای ڕاست
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": سەرەوە
+            "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 100}": سەرەوە لای چەپ
+            "{x: 300, y: 100}": سەرەوە لای ڕاست
+            "{x: 100, y: 300}": خوارەوە لای چەپ
+            "{x: 300, y: 300}": خوارەوە لای ڕاست
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+      Mikelab_ifDanceIs:
+        text: |-
+          ئەگەر {SPRITE} ئەنجام بدات {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: چەپڵەی بەهێز
+            MOVES.Clown: گانگنام
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: دووانە سەما
+            MOVES.Drop: درۆپ
+            MOVES.Floss: فڵۆس
+            MOVES.Fresh: فرێش
+            MOVES.Roll: خل بوونەوە
+            MOVES.Kick: ئەستێرە
+            MOVES.ThisOrThat: ئەمە یان ئەوە
       Mikelab_randomColor:
         text: رەنگێکی هەڕەمەکی
       Mikelab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": سەرەوە
+            "{x: 200, y: 300}": خوارەوە
+            "{x: 100, y: 100}": سەرەوە لای چەپ
+            "{x: 300, y: 100}": سەرەوە لای ڕاست
+            "{x: 100, y: 300}": خوارەوە لای چەپ
+            "{x: 300, y: 300}": خوارەوە لای ڕاست
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -109,6 +587,10 @@ ku:
           KEY:
             '"w"': ڕۆژئاوا
             '"s"': باشور
+      aalab_changePropByFlexible:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
       aalab_setBG:
         options:
           BG:
@@ -118,6 +600,11 @@ ku:
           VAL:
             '"true"': ڕاست
             '"false"': هەڵە
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"rotation"': سوڕانەوە
+            '"tint"': سێبەری ڕەنگ
       craft_ifPath:
         options:
           DIR:

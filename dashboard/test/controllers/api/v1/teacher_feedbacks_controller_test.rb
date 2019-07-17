@@ -131,7 +131,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
   test 'count is 0 when no feedback available' do
     sign_in @student
-    get "#{API}/count", params: {student_id: @student.id}
+    get "#{API}/count"
 
     assert_equal "0", formatted_response
   end
@@ -139,14 +139,39 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   test 'count is accurate when feedback is available' do
     sign_in @student
     teacher_sign_in_and_give_feedback(@teacher, @student, @level, COMMENT1, PERFORMANCE1)
-    get "#{API}/count", params: {student_id: @student.id}
+    sign_out @teacher
+
+    sign_in @student
+    get "#{API}/count"
 
     assert_equal "1", formatted_response
 
     teacher_sign_in_and_give_feedback(@teacher, @student, @level, COMMENT2, PERFORMANCE2)
-    get "#{API}/count", params: {student_id: @student.id}
+    sign_out @teacher
+
+    sign_in @student
+    get "#{API}/count"
 
     assert_equal "2", formatted_response
+  end
+
+  test 'count does not include already seen feedback' do
+    sign_in @student
+    teacher_sign_in_and_give_feedback(@teacher, @student, @level, COMMENT1, PERFORMANCE1)
+    sign_out @teacher
+
+    sign_in @student
+    get "#{API}/count"
+
+    assert_equal "1", formatted_response
+
+    TeacherFeedback.last.update_attribute(
+      :seen_on_feedback_page_at,
+      DateTime.now
+    )
+
+    get "#{API}/count"
+    assert_equal "0", formatted_response
   end
 
   test 'bad request when student_id not provided - get_feedbacks' do
