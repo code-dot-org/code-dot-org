@@ -18,6 +18,10 @@ export const levelShape = PropTypes.shape({
   skin: PropTypes.string,
   videoKey: PropTypes.string,
 
+  // other script level options
+  named: PropTypes.bool,
+  assessment: PropTypes.bool,
+
   // to be removed
   kind: PropTypes.string
 });
