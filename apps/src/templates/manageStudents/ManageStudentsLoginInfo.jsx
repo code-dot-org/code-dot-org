@@ -104,7 +104,7 @@ class ManageStudentsLoginInfo extends Component {
           onLoginTypeChanged={() => window.location.reload()}
         />
         <h2>{i18n.privacyHeading()}</h2>
-        <p>{i18n.privacyDocExplanation()}</p>
+        <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
         <Button
           color="white"
           id="uitest-privacy-link"
