@@ -7,7 +7,6 @@ import {borderRadius, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
 import {NEW_LEVEL_ID, addStage, addGroup} from './editorRedux';
-import {LevelKind} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   groupHeader: {
@@ -115,30 +114,21 @@ class FlexGroup extends Component {
         s.push(`level_concept_difficulty '${level.conceptDifficulty}'`);
       }
     }
-    let l = `${this.normalizeLevelKind(level.kind)} '${key.replace(
-      /'/,
-      "\\'"
-    )}'`;
+    let l = `level '${key.replace(/'/, "\\'")}'`;
     if (active === false) {
       l += ', active: false';
+    }
+    if (level.named) {
+      l += `, named: true`;
+    }
+    if (level.assessment) {
+      l += `, assessment: true`;
     }
     if (level.progression) {
       l += `, progression: '${level.progression}'`;
     }
     s.push(l);
     return s;
-  }
-
-  /**
-   * Levels with kind "puzzle" and "unplugged" are special cases of "level", for
-   * the purpose of the ScriptDSL.
-   * @param kind
-   * @return {string}
-   */
-  normalizeLevelKind(kind) {
-    return !kind || kind === LevelKind.puzzle || kind === LevelKind.unplugged
-      ? LevelKind.level
-      : kind;
   }
 
   render() {
