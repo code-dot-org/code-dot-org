@@ -8,4 +8,5 @@
  */
 
 // base locale
-module.exports = window.blockly.common_locale;
+const trackTranslation  = require('./locale-tracking');
+module.exports = window.blockly.common_locale(trackTranslation.trackTranslation);

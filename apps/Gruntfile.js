@@ -530,6 +530,7 @@ describe('entry tests', () => {
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
     'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
+    'locale-tracking': './src/sites/studio/pages/locale-tracking.js',
     'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
     'maker/home': './src/sites/studio/pages/maker/home.js',
     'maker/setup': './src/sites/studio/pages/maker/setup.js',

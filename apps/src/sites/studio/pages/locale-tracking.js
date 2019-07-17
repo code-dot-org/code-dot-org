@@ -1,9 +1,10 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const WAIT = 1000;
-var timeout;
 function debounce(func) {
+  var timeout;
 
+  return function executedFunction() {
     var context = this;
     var args = arguments;
 
@@ -19,15 +20,16 @@ function debounce(func) {
     timeout = setTimeout(later, WAIT);
 
     if (callNow) func.apply(context, args);
+  };
 }
 
-const keySet = new Set;
+const keySet = {};
 export function trackTranslation(key, locale) {
-  keySet.add(key);
+  keySet.put(key);
   debounce(function() {
-    console.log("debounced!");
-    keySet.forEach(key => { console.log(key); });
-    keySet.clear();
+    for (key in keySet) { 
+      console.log(key, "called in", locale);
+    }
   });
 
 }

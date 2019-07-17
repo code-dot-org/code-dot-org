@@ -46,7 +46,12 @@ module.exports = function (grunt) {
 
     return [
       'var ' + namespace + ' = ' + mf.functions() + ';',
-      '(window.blockly = window.blockly || {}).' + namespace + ' = ' + mf.precompileObject(json) + ';'
+      'translations = ' + mf.precompileObject(json),
+      'var trackTranslations_' + namespace + '; let msg2_' + namespace + ' = {};',
+      'for (let [key, value] of Object.entries(translations)) {',
+      'msg2_' + namespace + '[key] = (...args) => { trackTranslation_' + namespace + '(key, \'' + locale + '\');',
+      'return value.apply(null, args); } }',
+      '(window.blockly = window.blockly || {}).' + namespace + ' = function(fn){trackTranslation_' + namespace + '=fn; return msg2_' + namespace + ';}'
     ].join(EOL);
   }
 
