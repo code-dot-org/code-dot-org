@@ -119,9 +119,13 @@ const customInputTypes = {
         .appendTitle(inputConfig.label)
         .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
         .appendTitle(
-          new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM, {
-            category: Blockly.BlockValueType.LOCATION
-          }),
+          new Blockly.FieldVariable(
+            Blockly.Msg.VARIABLES_SET_ITEM,
+            null,
+            null,
+            Blockly.BlockValueType.LOCATION,
+            null
+          ),
           inputConfig.name
         )
         .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
@@ -231,13 +235,18 @@ const customInputTypes = {
         block.superSetTitleValue(newValue, name);
       };
 
-      currentInputRow.appendTitle(inputConfig.label).appendTitle(
-        new Blockly.FieldVariable(null, {
-          category: Blockly.BlockValueType.SPRITE,
-          categoryName: i18n.sprite()
-        }),
-        inputConfig.name
-      );
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(
+          new Blockly.FieldVariable(
+            null,
+            null,
+            null,
+            Blockly.BlockValueType.SPRITE,
+            i18n.sprite()
+          ),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
       return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
@@ -302,10 +311,13 @@ export default {
           .appendTitle(
             Blockly.disableVariableEditing
               ? fieldLabel
-              : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM, {
-                  category: Blockly.BlockValueType.SPRITE,
-                  categoryName: i18n.sprite()
-                }),
+              : new Blockly.FieldVariable(
+                  Blockly.Msg.VARIABLES_SET_ITEM,
+                  null,
+                  null,
+                  Blockly.BlockValueType.SPRITE,
+                  i18n.sprite()
+                ),
             'VAR'
           )
           .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
