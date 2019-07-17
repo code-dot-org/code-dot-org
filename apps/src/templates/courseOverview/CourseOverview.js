@@ -188,10 +188,7 @@ export default class CourseOverview extends Component {
           />
         )}
         {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && userId && (
-          <StudentFeedbackNotification
-            studentId={userId}
-            linkToFeedbackOverview="/"
-          />
+          <StudentFeedbackNotification studentId={userId} />
         )}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <Notification

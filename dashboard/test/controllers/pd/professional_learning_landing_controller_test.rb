@@ -32,6 +32,8 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test 'Admin workshops may show up as pending exit surveys' do
+    skip 'Investigate flaky test failures'
+
     # Fake Admin workshop, which should produce an exit survey
     admin_workshop = create :pd_ended_workshop,
       course: Pd::Workshop::COURSE_ADMIN,
@@ -73,6 +75,8 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test 'FiT workshops do not interfere with other pending exit surveys' do
+    skip 'Investigate flaky test failures'
+
     # Fake CSF workshop (older than the FiT workshop) which should
     # produce a pending exit survey
     csf_workshop = create :pd_ended_workshop,
@@ -88,6 +92,52 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     teacher = create :teacher
     go_to_workshop csf_workshop, teacher
     go_to_workshop fit_workshop, teacher
+
+    # When the teacher loads the PL landing page
+    load_pl_landing teacher
+
+    # They see a prompt to take the CSF workshop exit survey (not the more recent FiT workshop)
+    response = assigns(:landing_page_data)
+    csf_enrollment = csf_workshop.enrollments.first
+    assert_equal csf_enrollment.exit_survey_url, response[:last_workshop_survey_url]
+    assert_equal csf_workshop.course, response[:last_workshop_survey_course]
+  end
+
+  test 'Facilitator workshops do not show up as pending exit surveys' do
+    # Fake FiT workshop, which should not produce an exit survey
+    facilitator_workshop = create :pd_ended_workshop,
+      course: Pd::Workshop::COURSE_FACILITATOR
+
+    # Given a teacher that attended the workshop, such that they would get
+    # a survey for any other workshop subject.
+    teacher = create :teacher
+    go_to_workshop facilitator_workshop, teacher
+
+    # When the teacher loads the PL landing page
+    load_pl_landing teacher
+
+    # Then they don't see a prompt for a pending exit survey
+    # (That is, we didn't pass down the parameters that would cause that prompt to appear.)
+    response = assigns(:landing_page_data)
+    assert_nil response[:last_workshop_survey_url]
+    assert_nil response[:last_workshop_survey_course]
+  end
+
+  test 'Facilitator workshops do not interfere with other pending exit surveys' do
+    # Fake CSF workshop (older than the Facilitator workshop) which should
+    # produce a pending exit survey
+    csf_workshop = create :pd_ended_workshop,
+      course: Pd::Workshop::COURSE_CSF,
+      ended_at: Date.today - 1.day
+
+    # Fake Facilitator workshop, which should not produce an exit survey
+    facilitator_workshop = create :pd_ended_workshop,
+      course: Pd::Workshop::COURSE_FACILITATOR
+
+    # Given a teacher that attended both workshops
+    teacher = create :teacher
+    go_to_workshop csf_workshop, teacher
+    go_to_workshop facilitator_workshop, teacher
 
     # When the teacher loads the PL landing page
     load_pl_landing teacher

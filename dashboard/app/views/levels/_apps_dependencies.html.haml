@@ -27,6 +27,15 @@
 
 -# Droplet script dependencies (only when editor present)
 - if use_droplet && !hide_source
+
+  -# ace lazy-loads some of its files via relative url path, which doesn't play
+  -# nicely with asset paths containing digests. rather than having initial
+  -# assets use digests and lazy-loaded assets not use digests, just load all
+  -# ace assets without digests to avoid subtle bugs where failing to lazy-load.
+  -#
+  -# Although we do not use the .min.js filename, ace js contents is minified
+  -# whenever our js is built in production mode. See Gruntfile.js for details.
+
   %script{src: "#{static_asset_base_path}js/ace/ace.js"}
   %script{src: "#{static_asset_base_path}js/ace/mode-javascript.js"}
   %script{src: "#{static_asset_base_path}js/ace/ext-language_tools.js"}
