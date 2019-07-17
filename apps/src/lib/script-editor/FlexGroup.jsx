@@ -124,6 +124,9 @@ class FlexGroup extends Component {
     if (level.assessment) {
       l += `, assessment: true`;
     }
+    if (level.challenge) {
+      l += `, challenge: true`;
+    }
     if (level.progression) {
       l += `, progression: '${level.progression}'`;
     }
