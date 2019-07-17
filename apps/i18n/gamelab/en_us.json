@@ -1,13 +1,4 @@
 {
-  "animationPicker_drawYourOwn": "Draw your own",
-  "animationPicker_error": "Error: {message}",
-  "animationPicker_failedToParseImage": "The image could not be parsed",
-  "animationPicker_title": "Animation Library",
-  "animationPicker_unsupportedType": "Sorry, this file type is not supported.",
-  "animationPicker_unsupportedSize": "Please make sure the image you are trying to upload is smaller than 100 KB.",
-  "animationPicker_uploadImage": "Upload image",
-  "animationPicker_uploading": "Uploading...",
-  "animationPicker_warning": "Warning: Do not upload anything that contains personal information.",
   "dropletBlock_Game.width_description": "The width of the drawing canvas.",
   "dropletBlock_Game.height_description": "The height of the drawing canvas.",
   "dropletBlock_createSprite_description": "Creates a sprite at the initial specified position.",
@@ -70,8 +61,5 @@
   "dropletBlock_remove_description": "Removes the given sprite from group.",
   "dropletBlock_remove_param0_description": "The sprite to be removed.",
   "dropletBlock_x_description": "X coordinate of sprite.",
-  "dropletBlock_y_description": "Y coordinate of sprite.",
-  "errorLoadingAnimation": "It looks like we are having trouble loading your animation \"{animationName}\". Make sure you have a good internet connection and try reloading the page. If this problem persists, it is possible that this animation is broken. In this case, you may need to continue by removing the animation.",
-  "reinfFeedbackMsg": "You're finished! Click \"Continue\" to move on to the next level.",
-  "shareGame": "Share your game:"
+  "dropletBlock_y_description": "Y coordinate of sprite."
 }
