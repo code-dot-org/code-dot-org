@@ -5,7 +5,8 @@ import {Row, Col} from 'react-bootstrap';
 export default class OrganizerFormPart extends React.Component {
   static propTypes = {
     organizers: PropTypes.array,
-    organizer_id: PropTypes.number
+    organizer_id: PropTypes.number,
+    onChange: PropTypes.func
   };
 
   renderOrganizerOption(organizer) {
@@ -28,7 +29,7 @@ export default class OrganizerFormPart extends React.Component {
             <select
               className="form-control"
               value={this.props.organizer_id}
-              /*onChange={()=}*/
+              onChange={this.props.onChange}
             >
               {organizerOptions}
             </select>

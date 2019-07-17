@@ -29,7 +29,7 @@
 #
 
 class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
-  attributes :id, :organizer, :location_name, :location_address, :course,
+  attributes :id, :organizer_id, :location_name, :location_address, :course,
     :subject, :capacity, :notes, :state, :facilitators,
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
     :enrollment_code, :on_map, :funded, :funding_type, :ready_to_close?,
@@ -40,10 +40,6 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
     object.sessions.map do |session|
       Api::V1::Pd::SessionSerializer.new(session).attributes
     end
-  end
-
-  def organizer
-    {id: object.organizer.id, name: object.organizer.name, email: object.organizer.email}
   end
 
   def facilitators
@@ -67,6 +63,8 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   def organizers
     organizers = []
 
+    # if there is a regional partner, only that partner's PMs can become the organizer
+    # otherwise, any PM can become the organizer
     if object.regional_partner
       object.regional_partner.program_managers.each do |pm|
         organizers << {label: pm.name, value: pm.id}
@@ -78,6 +76,7 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
       end
     end
 
+    # any CSF facilitator can become the organizer of a CSF workshhop
     if object.course == Pd::Workshop::COURSE_CSF
       Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
         facilitator = User.find(user_id)
@@ -85,6 +84,7 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
       end
     end
 
+    # workshop admins can become the organizer of any workshop
     UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
       admin = User.find(user_id)
       organizers << {label: admin.name, value: admin.id}

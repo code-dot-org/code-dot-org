@@ -85,9 +85,7 @@ export class WorkshopForm extends React.Component {
       regional_partner_name: PropTypes.string,
       regional_partner_id: PropTypes.number,
       organizers: PropTypes.array,
-      organizer: PropTypes.shape({
-        id: PropTypes.number
-      })
+      organizer_id: PropTypes.number
     }),
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
@@ -136,7 +134,8 @@ export class WorkshopForm extends React.Component {
           'course',
           'subject',
           'notes',
-          'regional_partner_id'
+          'regional_partner_id',
+          'organizer_id'
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -298,8 +297,13 @@ export class WorkshopForm extends React.Component {
       destroyedSessions
     });
   };
+
   handleFacilitatorsChange = facilitators => {
     this.setState({facilitators: facilitators});
+  };
+
+  handleOrganizerChange = event => {
+    this.setState({organizer_id: parseInt(event.target.value)});
   };
 
   renderCourseSelect(validation) {
@@ -692,7 +696,8 @@ export class WorkshopForm extends React.Component {
         this.state.sessions,
         this.state.destroyedSessions
       ),
-      regional_partner_id: this.state.regional_partner_id
+      regional_partner_id: this.state.regional_partner_id,
+      organizer_id: this.state.organizer_id
     };
 
     let method, url;
@@ -965,7 +970,8 @@ export class WorkshopForm extends React.Component {
           {this.props.permission.has(WorkshopAdmin) && (
             <OrganizerFormPart
               organizers={this.props.workshop.organizers}
-              organizer_id={this.props.workshop.organizer.id}
+              organizer_id={this.state.organizer_id}
+              onChange={this.handleOrganizerChange}
             />
           )}
           {this.renderFormButtons()}
