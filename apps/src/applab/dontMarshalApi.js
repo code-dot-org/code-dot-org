@@ -5,6 +5,18 @@ import {OPTIONAL, outputWarning} from '../lib/util/javascriptMode';
 //
 // dropletConfig for each of these APIs should be marked with dontMarshal:true
 
+/*
+ * The interpreter functions are exported under a single 'default' object
+ *
+ * The same functions are exported individually with an extra final parameter
+ * named calledWithinInterpreter. When called outside of the interpreter without
+ * the final parameter, the functions will behave as expected in a "native" JS
+ * environment and will not use interpreter-specific data structures.
+ *
+ * This allows us to share a single implementation for both the "native" version
+ * used by exported apps and for the interpreter optimized versions.
+ */
+
 function dmapiValidateType(funcName, varName, varValue, expectedType, opt) {
   var properType;
   if (typeof varValue !== 'undefined') {
@@ -42,20 +54,31 @@ function dmapiValidateType(funcName, varName, varValue, expectedType, opt) {
 
 // Array functions
 
-var getInt = function(obj, def) {
+var getInt = function(obj, def, calledWithinInterpreter) {
   // Return an integer, or the default.
-  var n = obj ? Math.floor(obj.toNumber()) : def;
+  let n;
+  if (calledWithinInterpreter) {
+    n = obj ? Math.floor(obj.toNumber()) : def;
+  } else {
+    n = typeof obj === 'undefined' ? def : obj;
+  }
   if (isNaN(n)) {
     n = def;
   }
   return n;
 };
 
-export function insertItem(array, index, item) {
+function interpreterInsertItem(array, index, item) {
   dmapiValidateType('insertItem', 'list', array, 'array');
   dmapiValidateType('insertItem', 'index', index, 'number');
 
-  index = getInt(index, 0);
+  insertItem(array, index, item, true);
+}
+
+export function insertItem(array, index, item, calledWithinInterpreter) {
+  const arrayValues = calledWithinInterpreter ? array.properties : array;
+
+  index = getInt(index, 0, calledWithinInterpreter);
   if (index < 0) {
     index = Math.max(array.length + index, 0);
   } else {
@@ -63,26 +86,36 @@ export function insertItem(array, index, item) {
   }
   // Insert item.
   for (var i = array.length - 1; i >= index; i--) {
-    array.properties[i + 1] = array.properties[i];
+    arrayValues[i + 1] = arrayValues[i];
   }
-  array.length += 1;
-  array.properties[index] = item;
+  if (calledWithinInterpreter) {
+    array.length += 1;
+  }
+  arrayValues[index] = item;
 }
 
-export function removeItem(array, index) {
+function interpreterRemoveItem(array, index) {
   dmapiValidateType('removeItem', 'list', array, 'array');
   dmapiValidateType('removeItem', 'index', index, 'number');
 
-  index = getInt(index, 0);
+  removeItem(array, index, true);
+}
+
+export function removeItem(array, index, calledWithinInterpreter) {
+  const arrayValues = calledWithinInterpreter ? array.properties : array;
+
+  index = getInt(index, 0, calledWithinInterpreter);
   if (index < 0) {
     index = Math.max(array.length + index, 0);
   }
   // Remove by shifting items after index downward.
   for (var i = index; i < array.length - 1; i++) {
-    array.properties[i] = array.properties[i + 1];
+    arrayValues[i] = arrayValues[i + 1];
   }
   if (index < array.length) {
-    delete array.properties[array.length - 1];
+    if (calledWithinInterpreter) {
+      delete arrayValues[array.length - 1];
+    }
     array.length -= 1;
   } else {
     // index is out of bounds (too large):
@@ -96,83 +129,210 @@ export function removeItem(array, index) {
   }
 }
 
-export function appendItem(array, item) {
+function interpreterAppendItem(array, item) {
   dmapiValidateType('appendItem', 'list', array, 'array');
 
-  array.properties[array.length] = item;
-  array.length++;
-  return window.Applab.JSInterpreter.createPrimitive(array.length);
+  const arrayLength = appendItem(array, item, true);
+  return window.Applab.JSInterpreter.createPrimitive(arrayLength);
+}
+
+export function appendItem(array, item, calledWithinInterpreter) {
+  const arrayValues = calledWithinInterpreter ? array.properties : array;
+
+  arrayValues[array.length] = item;
+  if (calledWithinInterpreter) {
+    array.length++;
+  }
+  return array.length;
 }
 
 // ImageData RGB helper functions
 
 // TODO: more parameter validation (data array type, length), error output
 
-export function getRed(imageData, x, y) {
-  if (imageData.properties.data && imageData.properties.width) {
-    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
-    return imageData.properties.data.properties[pixelOffset].toNumber();
+function interpreterGetRed(imageData, x, y) {
+  return getRed(imageData, x, y, true);
+}
+
+export function getRed(imageData, x, y, calledWithinInterpreter) {
+  const imageDataProperties = calledWithinInterpreter
+    ? imageData.properties
+    : imageData;
+  if (imageDataProperties.data && imageDataProperties.width) {
+    const pixelOffset = y * imageDataProperties.width * 4 + x * 4;
+    const redOffset = pixelOffset;
+    return calledWithinInterpreter
+      ? imageDataProperties.data.properties[redOffset].toNumber()
+      : imageDataProperties.data[redOffset];
   }
 }
 
-export function getGreen(imageData, x, y) {
-  if (imageData.properties.data && imageData.properties.width) {
-    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
-    return imageData.properties.data.properties[pixelOffset + 1].toNumber();
+function interpreterGetGreen(imageData, x, y) {
+  return getGreen(imageData, x, y, true);
+}
+
+export function getGreen(imageData, x, y, calledWithinInterpreter) {
+  const imageDataProperties = calledWithinInterpreter
+    ? imageData.properties
+    : imageData;
+  if (imageDataProperties.data && imageDataProperties.width) {
+    const pixelOffset = y * imageDataProperties.width * 4 + x * 4;
+    const greenOffset = pixelOffset + 1;
+    return calledWithinInterpreter
+      ? imageDataProperties.data.properties[greenOffset].toNumber()
+      : imageDataProperties.data[greenOffset];
   }
 }
 
-export function getBlue(imageData, x, y) {
-  if (imageData.properties.data && imageData.properties.width) {
-    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
-    return imageData.properties.data.properties[pixelOffset + 2].toNumber();
+function interpreterGetBlue(imageData, x, y) {
+  return getBlue(imageData, x, y, true);
+}
+
+export function getBlue(imageData, x, y, calledWithinInterpreter) {
+  const imageDataProperties = calledWithinInterpreter
+    ? imageData.properties
+    : imageData;
+  if (imageDataProperties.data && imageDataProperties.width) {
+    const pixelOffset = y * imageDataProperties.width * 4 + x * 4;
+    const blueOffset = pixelOffset + 2;
+    return calledWithinInterpreter
+      ? imageDataProperties.data.properties[blueOffset].toNumber()
+      : imageDataProperties.data[blueOffset];
   }
 }
 
-export function getAlpha(imageData, x, y) {
-  if (imageData.properties.data && imageData.properties.width) {
-    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
-    return imageData.properties.data.properties[pixelOffset + 3].toNumber();
+function interpreterGetAlpha(imageData, x, y) {
+  return getAlpha(imageData, x, y, true);
+}
+
+export function getAlpha(imageData, x, y, calledWithinInterpreter) {
+  const imageDataProperties = calledWithinInterpreter
+    ? imageData.properties
+    : imageData;
+  if (imageDataProperties.data && imageDataProperties.width) {
+    const pixelOffset = y * imageDataProperties.width * 4 + x * 4;
+    const alphaOffset = pixelOffset + 3;
+    return calledWithinInterpreter
+      ? imageDataProperties.data.properties[alphaOffset].toNumber()
+      : imageDataProperties.data[alphaOffset];
   }
 }
 
-export function setRed(imageData, x, y, value) {
-  if (imageData.properties.data && imageData.properties.width) {
-    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
-    imageData.properties.data.properties[pixelOffset] = value;
+function interpreterSetRed(imageData, x, y, value) {
+  setRed(imageData, x, y, value, true);
+}
+
+export function setRed(imageData, x, y, value, calledWithinInterpreter) {
+  const imageDataProperties = calledWithinInterpreter
+    ? imageData.properties
+    : imageData;
+  if (imageDataProperties.data && imageDataProperties.width) {
+    const pixelOffset = y * imageDataProperties.width * 4 + x * 4;
+    const redOffset = pixelOffset;
+    if (calledWithinInterpreter) {
+      imageDataProperties.data.properties[redOffset] = value;
+    } else {
+      imageDataProperties.data[redOffset] = value;
+    }
   }
 }
 
-export function setGreen(imageData, x, y, value) {
-  if (imageData.properties.data && imageData.properties.width) {
-    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
-    imageData.properties.data.properties[pixelOffset + 1] = value;
+function interpreterSetGreen(imageData, x, y, value) {
+  setGreen(imageData, x, y, value, true);
+}
+
+export function setGreen(imageData, x, y, value, calledWithinInterpreter) {
+  const imageDataProperties = calledWithinInterpreter
+    ? imageData.properties
+    : imageData;
+  if (imageDataProperties.data && imageDataProperties.width) {
+    const pixelOffset = y * imageDataProperties.width * 4 + x * 4;
+    const greenOffset = pixelOffset + 1;
+    if (calledWithinInterpreter) {
+      imageDataProperties.data.properties[greenOffset] = value;
+    } else {
+      imageDataProperties.data[greenOffset] = value;
+    }
   }
 }
 
-export function setBlue(imageData, x, y, value) {
-  if (imageData.properties.data && imageData.properties.width) {
-    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
-    imageData.properties.data.properties[pixelOffset + 2] = value;
+function interpreterSetBlue(imageData, x, y, value) {
+  setBlue(imageData, x, y, value, true);
+}
+
+export function setBlue(imageData, x, y, value, calledWithinInterpreter) {
+  const imageDataProperties = calledWithinInterpreter
+    ? imageData.properties
+    : imageData;
+  if (imageDataProperties.data && imageDataProperties.width) {
+    const pixelOffset = y * imageDataProperties.width * 4 + x * 4;
+    const blueOffset = pixelOffset + 2;
+    if (calledWithinInterpreter) {
+      imageDataProperties.data.properties[blueOffset] = value;
+    } else {
+      imageDataProperties.data[blueOffset] = value;
+    }
   }
 }
 
-export function setAlpha(imageData, x, y, value) {
-  if (imageData.properties.data && imageData.properties.width) {
-    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
-    imageData.properties.data.properties[pixelOffset + 3] = value;
+function interpreterSetAlpha(imageData, x, y, value) {
+  setAlpha(imageData, x, y, value, true);
+}
+
+export function setAlpha(imageData, x, y, value, calledWithinInterpreter) {
+  const imageDataProperties = calledWithinInterpreter
+    ? imageData.properties
+    : imageData;
+  if (imageDataProperties.data && imageDataProperties.width) {
+    const pixelOffset = y * imageDataProperties.width * 4 + x * 4;
+    const alphaOffset = pixelOffset + 3;
+    if (calledWithinInterpreter) {
+      imageDataProperties.data.properties[alphaOffset] = value;
+    } else {
+      imageDataProperties.data[alphaOffset] = value;
+    }
   }
 }
 
-export function setRGB(imageData, x, y, r, g, b, a) {
-  if (imageData.properties.data && imageData.properties.width) {
-    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
-    imageData.properties.data.properties[pixelOffset] = r;
-    imageData.properties.data.properties[pixelOffset + 1] = g;
-    imageData.properties.data.properties[pixelOffset + 2] = b;
-    imageData.properties.data.properties[pixelOffset + 3] =
-      typeof a === 'undefined'
+function interpreterSetRGB(imageData, x, y, r, g, b, a) {
+  setRGB(imageData, x, y, r, g, b, a, true);
+}
+
+export function setRGB(imageData, x, y, r, g, b, a, calledWithinInterpreter) {
+  const imageDataProperties = calledWithinInterpreter
+    ? imageData.properties
+    : imageData;
+  const imageDataDataValues = calledWithinInterpreter
+    ? imageDataProperties.data.properties
+    : imageDataProperties.data;
+  if (imageDataProperties.data && imageDataProperties.width) {
+    var pixelOffset = y * imageDataProperties.width * 4 + x * 4;
+    imageDataDataValues[pixelOffset] = r;
+    imageDataDataValues[pixelOffset + 1] = g;
+    imageDataDataValues[pixelOffset + 2] = b;
+    if (typeof a === 'undefined') {
+      imageDataDataValues[pixelOffset + 3] = calledWithinInterpreter
         ? window.Applab.JSInterpreter.createPrimitive(255)
-        : a;
+        : 255;
+    } else {
+      imageDataDataValues[pixelOffset + 3] = a;
+    }
   }
 }
+
+const interpreterFunctions = {
+  insertItem: interpreterInsertItem,
+  removeItem: interpreterRemoveItem,
+  appendItem: interpreterAppendItem,
+  getRed: interpreterGetRed,
+  getGreen: interpreterGetGreen,
+  getBlue: interpreterGetBlue,
+  getAlpha: interpreterGetAlpha,
+  setRed: interpreterSetRed,
+  setGreen: interpreterSetGreen,
+  setBlue: interpreterSetBlue,
+  setAlpha: interpreterSetAlpha,
+  setRGB: interpreterSetRGB
+};
+
+export default interpreterFunctions;
