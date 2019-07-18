@@ -42,10 +42,6 @@ module Pd
       @regional_partner = create :regional_partner
       @facilitators = create_list :facilitator, 2
 
-      @csf201_ended_workshop = create :pd_ended_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, facilitators: (create_list :facilitator, 2)
-
       CDO.stubs(:jotform_forms).returns(FAKE_JOTFORM_FORMS)
 
       @csf_pre201_params = {
@@ -669,6 +665,7 @@ module Pd
     end
 
     test 'csf pre201 survey: enrolled teacher in ended workshop gets too-late msg' do
+      setup_csf201_ended_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_ended_workshop
 
@@ -1120,6 +1117,13 @@ module Pd
       @csf201_in_progress_workshop = create :pd_workshop,
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
         num_sessions: 1, num_facilitators: 2, started_at: DateTime.now
+    end
+
+    def setup_csf201_ended_workshop
+      @regional_partner = create :regional_partner
+      @csf201_ended_workshop = create :pd_ended_workshop,
+        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
+        num_sessions: 1, num_facilitators: 2
     end
 
     def unenrolled_teacher
