@@ -34,8 +34,6 @@ module Pd
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         user: @enrolled_two_day_academic_year_teacher, workshop: @two_day_academic_year_workshop
 
-      @csf201_in_progress_workshop = create :csf201_workshop, :in_progress
-
       CDO.stubs(:jotform_forms).returns(
         {
           local_summer: {
@@ -776,9 +774,10 @@ module Pd
     end
 
     test 'csf post201 survey: show 404 page if enrollment code is invalid' do
+      workshop = create :csf201_workshop, :in_progress
       teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
+      create :pd_enrollment, user: teacher, workshop: workshop
+      create :pd_attendance, session: workshop.sessions.first, teacher: teacher
 
       invalid_enrollment_code = "HAS1DIGIT"  # has a digit and length less than 10
       sign_in teacher
@@ -788,9 +787,10 @@ module Pd
     end
 
     test 'csf post201 survey: show survey if attended teacher has valid enrollment code' do
+      workshop = create :csf201_workshop, :in_progress
       teacher = create :teacher
-      session = @csf201_in_progress_workshop.sessions.first
-      enrollment = create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
+      session = workshop.sessions.first
+      enrollment = create :pd_enrollment, user: teacher, workshop: workshop
       create :pd_attendance, session: session, teacher: teacher
 
       actual_form_id = nil
@@ -808,16 +808,17 @@ module Pd
       assert_response :success
       assert_equal @csf_post201_params[:formId], actual_form_id
       assert_equal teacher.id, actual_form_params[:userId]
-      assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
+      assert_equal workshop.id, actual_form_params[:workshopId]
       assert_equal @csf_post201_params[:day], actual_form_params[:day]
       assert_equal session.id, actual_form_params[:sessionId]
       refute nil, actual_form_params[:submitRedirect]
     end
 
     test 'csf post201 survey: show survey if attended teacher does not have enrollment code' do
+      workshop = create :csf201_workshop, :in_progress
       teacher = create :teacher
-      session = @csf201_in_progress_workshop.sessions.first
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
+      session = workshop.sessions.first
+      create :pd_enrollment, user: teacher, workshop: workshop
       create :pd_attendance, session: session, teacher: teacher
 
       actual_form_id = nil
@@ -835,16 +836,17 @@ module Pd
       assert_response :success
       assert_equal @csf_post201_params[:formId], actual_form_id
       assert_equal teacher.id, actual_form_params[:userId]
-      assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
+      assert_equal workshop.id, actual_form_params[:workshopId]
       assert_equal @csf_post201_params[:day], actual_form_params[:day]
       assert_equal session.id, actual_form_params[:sessionId]
       refute nil, actual_form_params[:submitRedirect]
     end
 
     test 'csf post201 survey: report survey rendering to New Relic' do
+      workshop = create :csf201_workshop, :in_progress
       teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
+      create :pd_enrollment, user: teacher, workshop: workshop
+      create :pd_attendance, session: workshop.sessions.first, teacher: teacher
 
       CDO.stubs(:newrelic_logging).returns(true)
       NewRelic::Agent.expects(:record_custom_event).with(
@@ -854,7 +856,7 @@ module Pd
           form_id: @csf_post201_params[:formId],
           workshop_course: COURSE_CSF,
           workshop_subject: SUBJECT_CSF_201,
-          regional_partner_name: @csf201_in_progress_workshop.regional_partner.name
+          regional_partner_name: workshop.regional_partner.name
         }
       )
 
@@ -865,23 +867,24 @@ module Pd
     end
 
     test 'csf post201 survey: create placeholder and redirect to 1st facilitator survey on submission' do
+      workshop = create :csf201_workshop, :in_progress
       teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      session = @csf201_in_progress_workshop.sessions.first
+      create :pd_enrollment, user: teacher, workshop: workshop
+      session = workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
       first_facilitator_index = 0
 
       search_params = {
         user_id: teacher.id,
-        pd_workshop_id: @csf201_in_progress_workshop.id,
+        pd_workshop_id: workshop.id,
         day: @csf_post201_params[:day],
         form_id: @csf_post201_params[:formId]
       }
 
       key_params = @csf_post201_params.merge(
         userId: teacher.id,
-        workshopId: @csf201_in_progress_workshop.id,
+        workshopId: workshop.id,
         sessionId: session.id
         )
 
@@ -900,12 +903,13 @@ module Pd
     end
 
     test 'csf facilitator survey: show 1st facilitator survey to attended teacher' do
+      workshop = create :csf201_workshop, :in_progress
       teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      session = @csf201_in_progress_workshop.sessions.first
+      create :pd_enrollment, user: teacher, workshop: workshop
+      session = workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
-      first_facilitator = @csf201_in_progress_workshop.facilitators.first
+      first_facilitator = workshop.facilitators.first
       first_facilitator_index = 0
 
       actual_form_id = nil
@@ -923,7 +927,7 @@ module Pd
       assert_response :success
       assert_equal FAKE_FACILITATOR_FORM_ID, actual_form_id
       assert_equal teacher.id, actual_form_params[:userId]
-      assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
+      assert_equal workshop.id, actual_form_params[:workshopId]
       assert_equal @csf_post201_params[:day], actual_form_params[:day]
       assert_equal session.id, actual_form_params[:sessionId]
       assert_equal first_facilitator.id, actual_form_params[:facilitatorId] # Flakiness here?
@@ -932,12 +936,13 @@ module Pd
     end
 
     test 'csf facilitator survey: creates placeholder and redirects to 2nd facilitator survey on submission' do
+      workshop = create :csf201_workshop, :in_progress
       teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      session = @csf201_in_progress_workshop.sessions.first
+      create :pd_enrollment, user: teacher, workshop: workshop
+      session = workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
-      first_facilitator = @csf201_in_progress_workshop.facilitators.first
+      first_facilitator = workshop.facilitators.first
       first_facilitator_index = 0
 
       search_params = {
@@ -975,12 +980,13 @@ module Pd
     end
 
     test 'csf facilitator survey: redirect to 2nd facilitator survey if response exists for 1st one' do
+      workshop = create :csf201_workshop, :in_progress
       teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      session = @csf201_in_progress_workshop.sessions.first
+      create :pd_enrollment, user: teacher, workshop: workshop
+      session = workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
-      first_facilitator = @csf201_in_progress_workshop.facilitators.first
+      first_facilitator = workshop.facilitators.first
       first_facilitator_index = 0
 
       WorkshopFacilitatorDailySurvey.create_placeholder!(
@@ -1002,13 +1008,14 @@ module Pd
     end
 
     test 'csf facilitator survey: show thanks page if response exists for all facilitators' do
+      workshop = create :csf201_workshop, :in_progress
       teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      session = @csf201_in_progress_workshop.sessions.first
+      create :pd_enrollment, user: teacher, workshop: workshop
+      session = workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
       first_facilitator_index = 0
-      @csf201_in_progress_workshop.facilitators.each_with_index do |facilitator, index|
+      workshop.facilitators.each_with_index do |facilitator, index|
         WorkshopFacilitatorDailySurvey.create_placeholder!(
           user_id: teacher.id,
           day: @csf_post201_params[:day],
