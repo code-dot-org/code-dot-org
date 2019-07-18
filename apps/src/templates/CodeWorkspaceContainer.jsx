@@ -98,7 +98,8 @@ const styles = {
     borderLeftStyle: 'none',
     borderTopWidth: 1,
     borderTopStyle: 'solid',
-    borderTopColor: '#ddd'
+    borderTopColor: '#ddd',
+    overflow: 'hidden'
   },
   noVisualization: {
     // Overrides left set in css
