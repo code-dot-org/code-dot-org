@@ -15,15 +15,10 @@ module Pd
 
     self.use_transactional_test_case = true
     setup do
-      @enrolled_summer_teacher = create :teacher
       @enrolled_academic_year_teacher = create :teacher
       @enrolled_two_day_academic_year_teacher = create :teacher
       @regional_partner = create :regional_partner
       @facilitators = create_list :facilitator, 2
-
-      @summer_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_TEACHER_CON,
-        num_sessions: 5, regional_partner: @regional_partner, facilitators: @facilitators
-      @summer_enrollment = create :pd_enrollment, :from_user, user: @enrolled_summer_teacher, workshop: @summer_workshop
 
       @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
         num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators
@@ -507,7 +502,7 @@ module Pd
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
         post '/pd/workshop_survey/facilitators/submit',
-          params: facilitator_submit_redirect_params(day: 1, facilitator_index: 1).deep_merge(
+          params: facilitator_submit_redirect_params(day: 1, facilitator_index: 1, user: @enrolled_two_day_academic_year_teacher, workshop: @two_day_academic_year_workshop).deep_merge(
             submission_id: FAKE_SUBMISSION_ID,
             key: {
               userId: @enrolled_two_day_academic_year_teacher.id,
@@ -530,7 +525,7 @@ module Pd
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
         post '/pd/workshop_survey/facilitators/submit',
-          params: facilitator_submit_redirect_params(day: 2, facilitator_index: 1).deep_merge(
+          params: facilitator_submit_redirect_params(day: 2, facilitator_index: 1, user: @enrolled_two_day_academic_year_teacher, workshop: @two_day_academic_year_workshop).deep_merge(
             submission_id: FAKE_SUBMISSION_ID,
             key: {
               userId: @enrolled_two_day_academic_year_teacher.id,
@@ -553,7 +548,7 @@ module Pd
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
         post '/pd/workshop_survey/facilitators/submit',
-          params: facilitator_submit_redirect_params(day: 1, facilitator_index: 1).deep_merge(
+          params: facilitator_submit_redirect_params(day: 1, facilitator_index: 1, user: @enrolled_academic_year_teacher, workshop: @academic_year_workshop).deep_merge(
             submission_id: FAKE_SUBMISSION_ID,
             key: {
               userId: @enrolled_academic_year_teacher.id,
@@ -1097,13 +1092,13 @@ module Pd
       assert_match %r{users/sign_in.*redirected}, response.body
     end
 
-    def general_submit_redirect(day:, user: @enrolled_summer_teacher, workshop: @summer_workshop, enrollment_code: nil)
+    def general_submit_redirect(day:, user:, workshop:, enrollment_code: nil)
       url_for(controller: 'pd/workshop_daily_survey', action: 'submit_general',
         params: general_submit_redirect_params(day: day, user: user, workshop: workshop, enrollment_code: enrollment_code)
       )
     end
 
-    def general_submit_redirect_params(day:, user: @enrolled_summer_teacher, workshop: @summer_workshop, enrollment_code: nil)
+    def general_submit_redirect_params(day:, user:, workshop:, enrollment_code: nil)
       params = {
         key: {
           environment: 'test',
@@ -1120,13 +1115,13 @@ module Pd
       params
     end
 
-    def facilitator_submit_redirect(day:, facilitator_index:, user: @enrolled_summer_teacher, workshop: @summer_workshop)
+    def facilitator_submit_redirect(day:, facilitator_index:, user:, workshop:)
       url_for(controller: 'pd/workshop_daily_survey', action: 'submit_facilitator',
         params: facilitator_submit_redirect_params(day: day, facilitator_index: facilitator_index, user: user, workshop: workshop)
       )
     end
 
-    def facilitator_submit_redirect_params(day:, facilitator_index:, user: @enrolled_summer_teacher, workshop: @summer_workshop)
+    def facilitator_submit_redirect_params(day:, facilitator_index:, user:, workshop:)
       {
         key: {
           environment: 'test',
