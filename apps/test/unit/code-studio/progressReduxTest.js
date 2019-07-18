@@ -26,7 +26,6 @@ import reducer, {
   stageExtrasUrl,
   setStageExtrasEnabled,
   getLevelResult,
-  userProgressFromServer,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -1368,6 +1367,7 @@ describe('progressReduxTest', () => {
 
   describe('userProgressFromServer', () => {
     let server, state, dispatch;
+    const {userProgressFromServer} = __testonly__;
 
     beforeEach(() => {
       server = sinon.fakeServer.create();
