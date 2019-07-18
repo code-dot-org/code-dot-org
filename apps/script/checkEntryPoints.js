@@ -58,7 +58,6 @@ const SILENCED = [
   'turtle',
   'scratch',
   'weblab',
-  'spritelab',
 
   // referenced from exported projects
   'applab-api',
