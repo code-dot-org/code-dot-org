@@ -34,7 +34,7 @@ cs-CZ:
       2-3 Artist 8:
         2-3_Artist_8_a: Pokud rozdělíš 200 na polovinu, kolik pixelů na šířku musí
           mít každý čtverec?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Tvar diamantu je jen pootočený čtverec
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -761,10 +761,8 @@ cs-CZ:
           </block></xml>
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Tuto hádanku lze vyřešit dvěma způsoby!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku
           80 pixelů a otočka vpravo je o 120 stupňů. '
@@ -815,10 +813,6 @@ cs-CZ:
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
 
           Přidejte pár bloků a vyzkoušejte to. Přidejte další a zkuste to znovu. Brzy se vám to podaří!
-      courseE_farmer_ramp12d:
-        courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po
-          cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen
-          med.
       courseF_artist_fwp_challenge2:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4:

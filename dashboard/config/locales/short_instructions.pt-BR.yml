@@ -28,7 +28,7 @@ pt-BR:
         quadrados de mesmo tamanho. O retângulo tem 200 pixels de largura e 100 pixels
         de altura. Há várias maneiras diferentes de resolver este quebra-cabeça, então
         divirta-se!
-      2-3 Artist 9: Termine esta pipa
+      2-3 Artist 9 NEW: Termine esta pipa
       2-3 Artist Assessment 1: 'Avaliação: termine de desenhar o último dente. Ele
         tem 25 pixels de largura e 25 pixels de altura.'
       2-3 Artist Free Play: Atividade livre! Desenhe qualquer coisa que você quiser.
@@ -1284,6 +1284,10 @@ pt-BR:
       course2_maze_programming_challenge2: |-
         Algumas vezes existe mais de uma forma de solucionar um problema.
         Algumas vezes é mais fácil ir para trás do que ir para frente!
+      course3_artist_functions_challenge1: A partir do momento que você definir uma
+        função, você pode chama-la quantas vezes precisar - quando quiser! Rode esse
+        código para ver como funciona, então mude-o para fazer o seu próprio desenho
+        impresionante!
       course3_artist_functions_challenge2: Tente esse código para ver como funciona,
         então faça um programa do seu jeito!
       course3_bee_debugging_challenge1: Veja como a abelha pega o nectar. Você consegue
@@ -1303,6 +1307,8 @@ pt-BR:
         \nClique as dicas para ideias!"
       course4_artist_binary_challenge2: Você é persistente o suficiente para restaurar
         este logotipo de volta ao normal?
+      course4_artist_concept_challenge2: Crie cinco desenhos de cata-vento utilizando
+        o código abaixo.
       course4_artist_functions_challenge2: Tente esse código para ver como funciona,
         então faça um programa do seu jeito!
       course4_artist_fwp_challenge1: Execute este programa e faça alterações para
@@ -2014,6 +2020,8 @@ pt-BR:
       courseC19_playLab_EOC5: Ótimo trabalho! Você tem todos os componentes básicos
         de um jogo em funcionamento. Agora passe algum tempo certificando-se de que
         o jogo funciona do jeito que você deseja.
+      courseC19_playLab_EOC6: Você acabou! Agora você pode jogar o seu jogo ou compartilha-lo
+        com seus amigos e colegas de classe!
       courseC_PlayLab_events1: Faça Jorge o Cachorro (ator 1) dizer "Olá."
       courseC_PlayLab_events1_2018: Faça Jorge o Cachorro (ator 1) dizer "Olá."
       courseC_PlayLab_events1_2019: Faça Jorge o Cachorro (ator 1) dizer "Olá."
@@ -2068,6 +2076,15 @@ pt-BR:
       courseC_PlayLab_events7_2019: O bloco `repetir para sempre` permite você executar
         um código várias vezes para sempre. Use este bloco para mover Chomp o dinossauro
         (personagem  2) 400 pixels para cima e para baixo, para sempre.
+      courseC_PlayLab_events8: "Você consegue fazer Waddles (ator 1) tocar um som
+        \"batida\" e dizer \"Ai!\" se ele topar com Chomp? \nQuando terminar, jogue
+        o jogo para que isso aconteça."
+      courseC_PlayLab_events8_2018: "Você consegue fazer Waddles (ator 1) tocar um
+        som \"batida\" e dizer \"Ai!\" se ele topar com Chomp? \nQuando terminar,
+        jogue o jogo para que isso aconteça."
+      courseC_PlayLab_events8_2019: "Você consegue fazer Waddles (ator 1) tocar um
+        som \"batida\" e dizer \"Ai!\" se ele topar com Chomp? \nQuando terminar,
+        jogue o jogo para que isso aconteça."
       courseC_PlayLab_events9: |-
         Você pode adicionar um bloco para marcar um ponto quando Waddles, o Pinguim (ator 1), se deparar com Octavia, o Polvo (ator 3)?
         Jogue e mova o Waddles com as setas até você marcar ponto!
@@ -2396,26 +2413,29 @@ pt-BR:
         e os campos!
       courseC_harvester_loops_challenge2_2019: Colete todos os alfaces. Evite as árvores
         e os campos!
-      courseC_maze_debugging1: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseC_maze_debugging1: Corrija o código para levar Scrat até a noz.
       courseC_maze_debugging1_2018: Corrija o código para levar Scrat até a noz.
       courseC_maze_debugging1_2019: Corrija o código para levar Scrat até a noz.
-      courseC_maze_debugging2: Corrija o(s) erro(s) para coletar todo o tesouro.
-      courseC_maze_debugging3: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseC_maze_debugging2: Utilize as suas habilidades de analista para levar
+        Scrat até a nós.
+      courseC_maze_debugging2_2018: Utilize as suas habilidades de analista para levar
+        Scrat até a nós.
+      courseC_maze_debugging2_2019: Utilize as suas habilidades de analista para levar
+        Scrat até a nós.
+      courseC_maze_debugging3: Remova os blocos para levar Scrat até a noz!
       courseC_maze_debugging3_2018: Remova os blocos para levar Scrat até a noz!
       courseC_maze_debugging3_2019: Remova os blocos para levar Scrat até a noz!
-      courseC_maze_debugging4: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseC_maze_debugging4: Alguém tem suas instruções misturadas! Você pode ajudar?
       courseC_maze_debugging4_2018: Alguém tem suas instruções misturadas! Você pode
         ajudar?
       courseC_maze_debugging4_2019: Alguém tem suas instruções misturadas! Você pode
         ajudar?
-      courseC_maze_debugging5: Todos os comandos que você precisa já estão aqui...agora
-        use suas habilidades de depuração para descobrir como resolver esse quebra-cabeça.
+      courseC_maze_debugging5: Depure este nível reorganizando e alterando os blocos.
       courseC_maze_debugging5_2018: Depure este nível reorganizando e alterando os
         blocos.
       courseC_maze_debugging5_2019: Depure este nível reorganizando e alterando os
         blocos.
-      courseC_maze_debugging6: 'Desafio: Use suas habilidades de depuração para corrigir
-        os erros e coletar todo o tesouro.'
+      courseC_maze_debugging6: Descubra o que está errado e leve Scrat até a bolota.
       courseC_maze_debugging6_2018: Descubra o que está errado e leve Scrat até a
         bolota.
       courseC_maze_debugging6_2019: Descubra o que está errado e leve Scrat até a
@@ -2605,6 +2625,18 @@ pt-BR:
         grade de \"pixels\" pela qual você pode andar e criar\ndesigns virando em
         certos quadrados. Você consegue fazer o artista desenhar\n\"01010101\" em
         binário na primeira fileira?"
+      courseD_artist_binary2: Rode esse código para ver como o artista utiliza binários
+        para desenhar esse padrão.
+      courseD_artist_binary2_2018: Rode esse código para ver como o artista utiliza
+        binários para desenhar esse padrão.
+      courseD_artist_binary2_2019: Rode esse código para ver como o artista utiliza
+        binários para desenhar esse padrão.
+      courseD_artist_binary3: Quais dos textos binários abaixo você poderia repetir
+        8 vezes para desenhar essa imagem?
+      courseD_artist_binary3_2018: Quais dos textos binários abaixo você poderia repetir
+        8 vezes para desenhar essa imagem?
+      courseD_artist_binary3_2019: Quais dos textos binários abaixo você poderia repetir
+        8 vezes para desenhar essa imagem?
       courseD_artist_binary4: |-
         Você consegue desenhar este padrão repetindo
         apenas três dígitos binários? (0 e 1)?
@@ -2614,6 +2646,15 @@ pt-BR:
       courseD_artist_binary4_2019: |-
         Você consegue desenhar este padrão repetindo
         apenas três dígitos binários? (0 e 1)?
+      courseD_artist_binary5: "Cada texto binário abaixo representa uma linha da imagem.
+        \n\nVocê consegue reorganiza-los para formar uma cara sorridente ao invés
+        de uma triste?"
+      courseD_artist_binary5_2018: "Cada texto binário abaixo representa uma linha
+        da imagem. \n\nVocê consegue reorganiza-los para formar uma cara sorridente
+        ao invés de uma triste?"
+      courseD_artist_binary5_2019: "Cada texto binário abaixo representa uma linha
+        da imagem. \n\nVocê consegue reorganiza-los para formar uma cara sorridente
+        ao invés de uma triste?"
       courseD_artist_binary6: |-
         Que string binária de 6 dígitos, repetida
         11 vezes, vai desenhar essa imagem?
@@ -2710,6 +2751,24 @@ pt-BR:
         quebra-cabeças, construa essa imagem desde o começo.
       courseD_artist_nestedLoops8_2019: Usando o que você aprendeu no último par de
         quebra-cabeças, construa essa imagem desde o começo.
+      courseD_artist_nestedLoops9: "**Desafio:** Você consegue descobrir como fazer
+        uma figura como essa?"
+      courseD_artist_nestedLoops9_2018: "**Desafio:** Você consegue descobrir como
+        fazer uma figura como essa?"
+      courseD_artist_nestedLoops9_2019: "**Desafio:** Você consegue descobrir como
+        fazer uma figura como essa?"
+      courseD_artist_nestedLoops9_predict1: "**Desafio:** Você consegue descobrir
+        como fazer uma figura como essa?"
+      courseD_artist_nestedLoops9_predict1_2018: "**Desafio:** Você consegue descobrir
+        como fazer uma figura como essa?"
+      courseD_artist_nestedLoops9_predict1_2019: "**Desafio:** Você consegue descobrir
+        como fazer uma figura como essa?"
+      courseD_artist_nestedLoopsFP: Agora é sua vez. Use as habilidades que você desenvolveu
+        e faça algo que você ama!
+      courseD_artist_nestedLoopsFP_2018: Agora é sua vez. Use as habilidades que você
+        desenvolveu e faça algo que você ama!
+      courseD_artist_nestedLoopsFP_2019: Agora é sua vez. Use as habilidades que você
+        desenvolveu e faça algo que você ama!
       courseD_artist_nestedLoops_challenge1: Você consegue descobrir como fazer uma
         imagem como esta?
       courseD_artist_nestedLoops_challenge1_2018: Você consegue descobrir como fazer
@@ -2774,9 +2833,16 @@ pt-BR:
       courseD_artist_project5_2019: Brinque com os flocos de neve!
       courseD_artist_ramp12: Use o que você aprendeu para desenhar este triângulo
         dentro de um quadrado.
+      courseD_autorun_binary2_2019: Rode esse código para ver como o artista utiliza
+        binários para desenhar esse padrão.
+      courseD_autorun_binary3_2019: Quais dos textos binários abaixo você poderia
+        repetir 8 vezes para desenhar essa imagem?
       courseD_autorun_binary4_2019: |-
         Você consegue desenhar este padrão repetindo
         apenas três dígitos binários? (0 e 1)?
+      courseD_autorun_binary5_2019: "Cada texto binário abaixo representa uma linha
+        da imagem. \n\nVocê consegue reorganiza-los para formar uma cara sorridente
+        ao invés de uma triste?"
       courseD_autorun_binary6_2019: |-
         Que string binária de 6 dígitos, repetida
         11 vezes, vai desenhar essa imagem?
@@ -2866,6 +2932,8 @@ pt-BR:
         mel.
       courseD_bee_debugging_challenge1: Veja como as abelhas conseguem o néctar. Você
         pode usar o mesmo tipo de padrão para ajudar a abelha a fazer todo o mel?
+      courseD_bee_debugging_challenge1a: Observe como a abelha consegue o nectar.
+        Utilize o mesmo padrão para ajudar a abelha a fazer todo o mel.
       courseD_bee_nestedLoops1: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops1_2018: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops1_2019: Ajude a abelha a coletar todo o nectar.
@@ -3215,10 +3283,48 @@ pt-BR:
       courseD_maze_until7_2018: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until7_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
-      courseD_scrat_predict1: Este código inclui um novo bloco. O que você acha que
-        aconteceria se você pressionar o bloco "Executar"?
-      courseD_scrat_ramp1: Neste quebra-cabeça, arraste todos os blocos juntos e clique
-        em "Executar" para ver o que acontece!
+      courseD_playLab_cond1: Leve PegLeg às bandeiras para resolver o quebra-cabeça.
+      courseD_playLab_cond1_2018: Leve PegLeg às bandeiras para resolver o quebra-cabeça.
+      courseD_playLab_cond2: 'Dê ao PegLeg um ponto toda vez que ele chegar no dragão. '
+      courseD_playLab_cond2_2018: 'Dê ao PegLeg um ponto toda vez que ele chegar no
+        dragão. '
+      courseD_playLab_cond3: 'Faça o dragão trocar entre emoções aleatórias a cada
+        segundo.  '
+      courseD_playLab_cond3_2018: 'Faça o dragão trocar entre emoções aleatórias a
+        cada segundo.  '
+      courseD_playLab_cond3a: Faça com que PegLeg, ai chegar no dragão, ganhe 2 pontos
+        se o dragão estiver feliz, e 1 ponto caso não esteja.
+      courseD_playLab_cond3a_2018: Faça com que PegLeg, ai chegar no dragão, ganhe
+        2 pontos se o dragão estiver feliz, e 1 ponto caso não esteja.
+      courseD_playLab_cond4: Adicione um código para que o ninja (ator 3) comece a
+        seguir o PegLeg assim que o jogo comece.  Termine o jogo como uma derrota
+        caso o ninja o alcance.
+      courseD_playLab_cond4_2018: Adicione um código para que o ninja (ator 3) comece
+        a seguir o PegLeg assim que o jogo comece.  Termine o jogo como uma derrota
+        caso o ninja o alcance.
+      courseD_playLab_cond5: Adicione um laço `repetir para sempre` que sempre verifique
+        se o placar é maior do que 5, se for, termine o jogo com uma vitória.
+      courseD_playLab_cond5_2018: Adicione um laço `repetir para sempre` que sempre
+        verifique se o placar é maior do que 5, se for, termine o jogo com uma vitória.
+      courseD_playLab_cond6: "1.  Diminua a velocidade do ninja (ator 3) antes de
+        você coloca-lo para seguir o pirata. \n2.  Se o pirata for maior do que 225
+        pixels para baixo, coloque o ninja para **fugir** do pirata. Se não, coloque
+        o ninja para **seguir** o pirata.  "
+      courseD_playLab_cond6_2018: "1.  Diminua a velocidade do ninja (ator 3) antes
+        de você coloca-lo para seguir o pirata. \n2.  Se o pirata for maior do que
+        225 pixels para baixo, coloque o ninja para **fugir** do pirata. Se não, coloque
+        o ninja para **seguir** o pirata.  "
+      courseD_playLab_cond6a: Se o pirata (ator 1) está na zona segura, espere um
+        segundo, então reduza um ponto enquanto ele estiver abaixo da linha do polvo.
+      courseD_playLab_cond6a_2018: Se o pirata (ator 1) está na zona segura, espere
+        um segundo, então reduza um ponto enquanto ele estiver abaixo da linha do
+        polvo.
+      courseD_playLab_condFP: Agora, monte o seu próprio jogo para mostrar aos seus
+        amigos!
+      courseD_playLab_condFP_2018: Agora, monte o seu próprio jogo para mostrar aos
+        seus amigos!
+      courseD_scrat_ramp1: Para este quebra-cabeça, junte todos os blocos e clique
+        em "Executar" para assistir!
       courseD_scrat_ramp2: Arraste um bloco extra `avançar` para fora da caixa de
         ferramentas e, em seguida, anexe todos os blocos ao `quando executar` para
         concluir seu código.
@@ -3226,21 +3332,35 @@ pt-BR:
         Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseD_scrat_ramp4: Evite a(s) TNT(s) ou penas irão voar!
       courseD_scrat_ramp5: Desvie da TNT.
-      courseD_scrat_ramp6: '"Mantenha a calma e me ajude a encontrar o porco malvado.
-        Senão eu posso ficar zangado!"'
-      courseD_scrat_ramp7: Use o que você aprendeu para levar o pássaro para o porco!
-      courseD_video_repeatUntil: Ajude o fazendeiro a percorrer corretamente o caminho
-        para coletar toda a alface.
+      courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
+      courseD_scrat_ramp8: Utilize o que você aprendeu para levar Scrat até a nós!
       courseE_aboutme_6: Continue! Adicione mais elementos no seu cartaz para torna-lo
         ainda melhor.
       courseE_artist_concept1: 'Recrie esta imagem. '
       courseE_artist_concept1_2018: 'Recrie esta imagem. '
       courseE_artist_concept4: Recrie este desenho.
       courseE_artist_concept4_2018: Recrie este desenho.
+      courseE_artist_concept_challenge1: 'Ajude o artista a desenhar essa forma única. '
+      courseE_artist_concept_challenge1_2018: 'Ajude o artista a desenhar essa forma
+        única. '
+      courseE_artist_concept_challenge2: Crie cinco desenhos de cata-vento utilizando
+        o código abaixo.
+      courseE_artist_concept_challenge2_2018: Crie cinco desenhos de cata-vento utilizando
+        o código abaixo.
       courseE_artist_functions1: "\"Olá! Eu sou um artista zumbi. Eu amo desenhar!\"
         \ \\\r\n\\\r\nAjude\no zumbi a desenhar óculos usando quadrados com lados
         de 100 pixels de comprimento.  \\\r\n\\\r\nA\nhaste entre as lentes tem 75
         pixels de comprimento."
+      courseE_artist_functions10: Dessa vez, utilize linhas de 8 hexágonos com 25
+        pixels de lado.
+      courseE_artist_functions10_2018: Dessa vez, utilize linhas de 8 hexágonos com
+        25 pixels de lado.
+      courseE_artist_functions10_2019: Dessa vez, utilize linhas de 8 hexágonos com
+        25 pixels de lado.
+      courseE_artist_functions2: 'Dessa vez, utilize a função `desenhar um quadrado`
+        para criar os óculos. '
+      courseE_artist_functions3: Você pode fazer esse desenho adicionando um bloco
+        de repetição.
       courseE_artist_functions3_2018: Construa uma função que irá criar esta estrela.
       courseE_artist_functions3_2019: Construa uma função que irá criar esta estrela.
       courseE_artist_functions4: Agora que você consegue desenhar uma estrela, tente
@@ -3251,11 +3371,31 @@ pt-BR:
         este quebra-cabeça.
       courseE_artist_functions5_2019: Desenhe apenas estas três estrelas para terminar
         este quebra-cabeça.
+      courseE_artist_functions6: Faça essa janela desenhando um quadrado, então virar
+        90 graus antes de desenhar outro, e assim sucessivamente.
+      courseE_artist_functions7: Tente resolver esse quebra-cabeça criando uma função
+        `desenhar uma janela` e chamando-a cinco vezes. Cuidado com a porta!
+      courseE_artist_functions7_2018: Tente resolver esse quebra-cabeça criando uma
+        função `desenhar uma janela` e chamando-a cinco vezes. Cuidado com a porta!
+      courseE_artist_functions7_2019: Tente resolver esse quebra-cabeça criando uma
+        função `desenhar uma janela` e chamando-a cinco vezes. Cuidado com a porta!
       courseE_artist_functions8: 'Desafio: Crie quantas funções você achar necessárias
         para fazer este desenho de 50 quadrados de pixels.'
       courseE_artist_functions8a_2018: Crie uma função para um único quadrado.
       courseE_artist_functions8a_2019: Crie uma função para um único quadrado.
       courseE_artist_functions9: Crie esta imagem usando apenas os blocos fornecidos.
+      courseE_artist_functions_challenge1: A partir do momento que você definir uma
+        função, você pode chama-la quantas vezes precisar - quando quiser! Rode esse
+        código para ver como funciona, então mude-o para fazer o seu próprio desenho
+        impresionante!
+      courseE_artist_functions_challenge1_2018: A partir do momento que você definir
+        uma função, você pode chama-la quantas vezes precisar - quando quiser! Rode
+        esse código para ver como funciona, então mude-o para fazer o seu próprio
+        desenho impresionante!
+      courseE_artist_functions_challenge1_2019: A partir do momento que você definir
+        uma função, você pode chama-la quantas vezes precisar - quando quiser! Rode
+        esse código para ver como funciona, então mude-o para fazer o seu próprio
+        desenho impresionante!
       courseE_artist_functions_challenge2: Tente esse código para ver como funciona,
         então faça um programa do seu jeito!
       courseE_artist_functions_challenge2_2018: Tente esse código para ver como funciona,
@@ -3265,28 +3405,56 @@ pt-BR:
       courseE_bee_concept1: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseE_bee_concept1_2018: "Colete todo o néctar de cada flor.\nUse um laço
         aninhado. "
+      courseE_bee_concept2: 'Ajude a abelha a fazer todo o mel. '
+      courseE_bee_concept2_2018: 'Ajude a abelha a fazer todo o mel. '
       courseE_bee_concept3: Colete todo o néctar usando o menor número possível de
         blocos.
       courseE_bee_concept3_2018: Colete todo o néctar usando o menor número possível
         de blocos.
+      courseE_bee_concept4: Ah não! A abelha não sabe se deveria coletar nectar ou
+        fazer mel. Você consegue ajuda-la?
+      courseE_bee_concept4_2018: Ah não! A abelha não sabe se deveria coletar nectar
+        ou fazer mel. Você consegue ajuda-la?
       courseE_bee_concept5: Ajude a abelha a coletar todo o nectar das flores.
       courseE_bee_concept5_2018: Ajude a abelha a coletar todo o nectar das flores.
       courseE_bee_functions1: Colete todo o néctar de cada flor.
+      courseE_bee_functions10: Resolva esse quebra-cabeça criando uma função que ajude
+        a abelha a pegar todo o mel antes de retornar para o caminho principal.
+      courseE_bee_functions2: Utilize a função 'colete 2 nectars' para coletar nectar
+        de cada flor.
       courseE_bee_functions3: "As funções são blocos de código que realizam\numa tarefa.
         \\\r\n\\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       courseE_bee_functions4: "A função \"mova e obtenha néctar\" vira\na abelha,
         coleta néctar, e então retorna a abelha para onde ela começou. \\\r\n\\\r\nUse\na
         função para coletar todo o néctar."
+      courseE_bee_functions5: Agora escreva uma função para coletar nectar das flores.
+      courseE_bee_functions6: Crie uma função o chame-a para coletar o nectar de cada
+        flor e faça mel em cada colmeia.
+      courseE_bee_functions7: Criei sua própria função que vai por uma caminho, colete
+        nectar, faça mel, e então retorne a abelha para o caminho de cima. Colete
+        todo o nectar e faça todo o mel!
+      courseE_bee_functions8: Crie uma função que colete todo o nectar de cada flor.
+      courseE_bee_functions9: Crie uma função para coletar todo o nectar de cada flor.
       courseE_bee_functions_challenge1: Você está por conta própria nesse desafio.
         Isso pode ser mais difícil do que parece!
+      courseE_bee_functions_challenge2: Você está sozinho nesse desavio. Ótimo!
+      courseE_farmer_concept1: Você consegue escrever um programa que preenche esses
+        buracos enquanto o chão não estiver liso?
+      courseE_farmer_concept1_2018: Você consegue escrever um programa que preenche
+        esses buracos enquanto o chão não estiver liso?
       courseE_farmer_concept2: Colete todas as abóboras.
       courseE_farmer_concept2_2018: Colete todas as abóboras.
       courseE_farmer_concept3: Preencha o buraco no final de cada um desses caminhos.
       courseE_farmer_concept3_2018: Preencha o buraco no final de cada um desses caminhos.
+      courseE_farmer_functions1: Ajude o agricultor a chegar na abóbora e pega-la.
       courseE_farmer_functions10b: Use sua nova função duas vezes para resolver este
         desafio.
       courseE_farmer_functions13_2018: Solucione este desafio com 23 blocos ou menos.
       courseE_farmer_functions13_2019: Solucione este desafio com 23 blocos ou menos.
+      courseE_farmer_functions1_2018: Ajude o agricultor a chegar na abóbora e pega-la.
+      courseE_farmer_functions1_2019: Ajude o agricultor a chegar na abóbora e pega-la.
+      courseE_farmer_functions1a: Agora ajude o agricultor a pegar milho, alface,
+        **e** abóbora.
       courseE_farmer_functions2b: Ajude a colheitadeira a pegar os milhos e as abóboras.
       courseE_farmer_functions2b_2018: Ajude a colheitadeira a pegar os milhos e as
         abóboras.
@@ -3304,6 +3472,7 @@ pt-BR:
       courseE_farmer_functions3c1_2019: Esta função chama outras funções!
       courseE_farmer_functions3c_2018: Tente um caminho mais longo.
       courseE_farmer_functions3c_2019: Tente um caminho mais longo.
+      courseE_farmer_functions5c: Sua função será útil aqui.
       courseE_farmer_functions6c: O que você precisa para adicionar neste programa
         para verificar se um broto é de milho ou de alface?
       courseE_farmer_functions7a1_2018: Crie uma função que envie a colheitadeira
@@ -3326,32 +3495,39 @@ pt-BR:
       courseE_farmer_ramp11a: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11a_2018: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11a_2019: Enquanto houver uma pilha, remova a areia.
-      courseE_farmer_ramp11b: Agora use laços aninhados para resolver esse quebra-cabeça.
+      courseE_farmer_ramp11b: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11b_2018: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11b_2019: Enquanto houver uma pilha, remova a areia.
+      courseE_farmer_ramp12_forswap: Agora use laços aninhados para resolver esse
+        quebra-cabeça.
       courseE_farmer_ramp12_forswap_2018: Agora use laços aninhados para resolver
         esse quebra-cabeça.
       courseE_farmer_ramp12_forswap_2019: Agora use laços aninhados para resolver
         esse quebra-cabeça.
-      courseE_farmer_ramp12b: Colha toda a alface (somente enquanto houver alguma
-        para colher.)
+      courseE_farmer_ramp12b: Enquanto houver alface, colha alface!
       courseE_farmer_ramp12b_2018: Enquanto houver alface, colha alface!
       courseE_farmer_ramp12b_2019: Enquanto houver alface, colha alface!
-      courseE_farmer_ramp12c: Colha milho se houver milho e colha alface enquanto
-        houver alface.
+      courseE_farmer_ramp12c: Avance até chegar à alface e, em seguida, colha tudo
+        usando um laço `while`.
       courseE_farmer_ramp12c_2018: Avance até chegar à alface e, em seguida, colha
         tudo usando um laço `while`.
       courseE_farmer_ramp12c_2019: Avance até chegar à alface e, em seguida, colha
         tudo usando um laço `while`.
+      courseE_farmer_ramp12d: Avance até chegar à alface e, em seguida, colha tudo
+        usando um laço `while`.
       courseE_farmer_ramp12d_2018: Avance até chegar à alface e, em seguida, colha
         tudo usando um laço `while`.
       courseE_farmer_ramp12d_2019: Avance até chegar à alface e, em seguida, colha
         tudo usando um laço `while`.
+      courseE_farmer_ramp12e: Avance até chegar à alface e, em seguida, colha tudo
+        usando um laço `while`.
       courseE_farmer_ramp12e_2018: Avance até chegar à alface e, em seguida, colha
         tudo usando um laço `while`.
       courseE_farmer_ramp12e_2019: Avance até chegar à alface e, em seguida, colha
         tudo usando um laço `while`.
-      courseE_farmer_ramp12f: Resolva esse quebra-cabeça usando apenas os blocos disponíveis.
+      courseE_farmer_ramp12f: Siga em frente até chegar à alface e, em seguida, vire
+        à esquerda **se** houver um caminho para a esquerda. Caso contrário, vire
+        à direita.
       courseE_farmer_ramp12f_2018: Siga em frente até chegar à alface e, em seguida,
         vire à esquerda **se** houver um caminho para a esquerda. Caso contrário,
         vire à direita.
@@ -3383,6 +3559,8 @@ pt-BR:
       courseE_playLab_scaffold5: Agora gaste algum tempo certificando-se de que o
         jogo funciona do jeito que você quer. Inclua uma maneira de ganhar ou perder
         no seu jogo, daí jogue até suprir uma dessas condições.
+      courseE_playLab_scaffold6: Você acabou! Agora você pode jogar o seu jogo ou
+        compartilha-lo com seus amigos e colegas de classe!
       courseE_video_createFunctions: Ainda não temos um vídeo para criar funções.
         Este é um marcador de posição.
       courseE_video_createFunctions2: Ainda não temos um vídeo para criar funções.

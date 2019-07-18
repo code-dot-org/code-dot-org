@@ -1176,34 +1176,6 @@ is-IS:
   coursea-2018_name: Námskeið A (2018)
   coursea-2019_name: Námskeið A (2019)
   pre-express-2018_name: Hraðnámskeið fyrir forlæsa (2018)
-  cspunit2_name: 'Kafli 2: Internetið'
-  cspunit3_name: 'Kafli 3: Forritun'
-  cspunit4_name: 'Kafli 4: Gögn'
-  cspunit5_name: 'Kafli 5: Kanna og búa til fagnám'
-  cspunit6_name: 'Framhald: Gagnagrunnar í öppum'
-  csd5_name: 'Kafli 5: Upplýsingar og samfélagið'
-  csd6_name: 'Kafli 6: Tölvun'
-  csd5-2017_name: 'Kafli 5: Upplýsingar og samfélagið'
-  csd6-2017_name: 'Kafli 6: Tölvun'
-  csd5-2018_name: 'Kafli 5: Upplýsingar og samfélagið'
-  csd6-2018_name: 'Kafli 6: Tölvun'
-  csp1-2017_name: 'Kafli 1: Internetið'
-  csp2-2017_name: Kafli 2 - Stafrænar upplýsingar
-  csppostap-2017_name: 'Framhald: Gagnagrunnar í öppum'
-  csp1-2018_name: 'Kafli 1: Internetið'
-  csp2-2018_name: Kafli 2 - Stafrænar upplýsingar
-  csppostap-2018_name: 'Framhald: Gagnagrunnar í öppum'
-  csp1_name: 'Kafli 1: Internetið'
-  csp2_name: Kafli 2 - Stafrænar upplýsingar
-  csp3-a_name: 'Kafli 3: Kynning á forritun (útgáfa A)'
-  csp3-research-mxghyt_name: 'Kafli 3: Kynning á forritun (undirmarkmið)'
-  csp-ap_name: AP verkefni
-  csppostap_name: 'Framhald: Gagnagrunnar í öppum'
-  csp-post-survey_name: Nemendakönnun að loknu námskeiði
-  cspassessment_name: Fullt próf - 50 spurningar
-  cspexam1-mWU7ilDYM9_name: Prófhluti 1 - 25 spurningar
-  cspexam2-AKwgAh1ac5_name: Prófhluti 2 - 25 spurningar
-  cspunit3_gradelevel: Bekkir 9-12
   accelerated_name: Hraðnámskeiðið
   express_name: Hraðnámskeið
   20-hour_name: Hraðnámskeiðið
@@ -1217,18 +1189,6 @@ is-IS:
   starwarsblocks_name: Star Wars (Kubbar)
   hoc-encryption_name: Einföld dulkóðun
   text-compression_name: Þjöppun texta
-  math_category_name: Reikningur
-  hoc_category_name: Klukkustund kóðunar
-  csf_category_name: TF Grunnur
-  csf_2017_category_name: Grunnatriði tölvunarfræði (2017)
-  csf_2018_category_name: Grunnatriði tölvunarfræði (2018)
-  csf_international_category_name: Grunnatriði TF - alþjóðlegt
-  csf2_draft_category_name: 'Í þróun: Námskeið A-F'
-  csd_2018_category_name: Uppgötvanir tölvunarfræði ('18-'19)
-  csp_category_name: "'15-'16 TF Grundvöllur"
-  csp17_category_name: Grunnhugtök tölvunarfræði
-  csp_2018_category_name: Grunnhugtök tölvunarfræði ('18-'19)
-  cspexams_category_name: Æfingapróf fyrir Undirstöðuatriði TF
   applab_name: Appsmiðjan
   gamelab_name: Leikjasmiðjan
   basketball_name: Búa til körfuboltaleik
@@ -2006,10 +1966,6 @@ is-IS:
   header_report_bug: Tilkynna galla
   header_tutorials: Kennslutímar
   header_documentation: Skjölun
-  csp_name: Grunnhugtök tölvunarfræði
-  csd_name: Uppgötvanir tölvunarfræði
-  csd_2018_name: Uppgötvanir tölvunarfræði
-  full_course_category_name: Heil námskeið
   user_header_label: Hæ %{username}
   user_header_team: Félagar
   user_header_settings: Reikningurinn minn

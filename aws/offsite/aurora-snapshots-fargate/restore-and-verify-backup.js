@@ -78,7 +78,11 @@ const restoreLatestSnapshot = async (rds, clusterId, instanceId) => {
 
   await rds
     .waitFor("dBInstanceAvailable", {
-      DBInstanceIdentifier: instanceId
+      DBInstanceIdentifier: instanceId,
+      $waiter: {
+        maxAttempts: 120,
+        delay: 60 // seconds
+      }
     })
     .promise();
 };

@@ -13,7 +13,7 @@ nl-NL:
       2-3 Artist 4: Help mij het huis voor deze kat af te maken.
       2-3 Artist 6: 'Dit huis heeft een dak nodig! Teken de driehoek.  Tip: alle drie
         de zijden hebben dezelfde lengte.'
-      2-3 Artist 9: Maak de vlieger af
+      2-3 Artist 9 NEW: Maak de vlieger af
       2-3 Artist Free Play: Vrij spel! Je mag alles tekenen wat je wilt.
       2-3 Artist Loops New 15: Tekenen iets leuks.
       2-3 Artist Nested Loops 10: Laat deze code in een lus 12 keer uitvoeren om het
@@ -1435,17 +1435,15 @@ nl-NL:
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseD_maze_ramp2_2019: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist,
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
-      courseD_scrat_predict1: Deze code gebruikt een nieuwe blok. Wat denk je dat
-        er zal gebeuren wanneer je op de "Start" blok klikt?
-      courseD_scrat_ramp1: Versleep in deze puzzel alle blokken tezamen en klik op
-        "Start" om het te zien gaan!
+      courseD_scrat_ramp1: Plak alle blokken aaneen bij deze puzzel en klik op "Start"
+        om het te zien bewegen!
       courseD_scrat_ramp2: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist,
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
-      courseD_scrat_ramp8: Teken nu een vorm met de artiest!
       courseE_artist_functions1: |-
         Hallo. Ik zombie kunstenaar. Mij houd van tekenen!
         Help me de bril met vierkante glazen tekenen. Tip: De brug tussen de glazen is 25 pixels korter dan de lengte van een glas.
       courseE_artist_ramp8: Teken nu een vorm met de artiest!
+      courseE_artist_ramp8_2: Teken nu een vorm met de artiest!
       courseE_bee_concept1: 'Verzamel alle nectar van elke bloem. Gebruik een geneste
         lus. '
       courseE_bee_concept1_2018: 'Verzamel alle nectar van elke bloem. Gebruik een

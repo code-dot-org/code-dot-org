@@ -352,18 +352,16 @@ zh-TW:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: 你可以修改這個數字。
-        courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
-      courseD_scrat_ramp8:
+      courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
+      courseE_artist_ramp8:
         courseE_artist_ramp8_1: 你可以修改這個數字。
         courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
-      courseE_artist_ramp8:
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: 你可以修改這個數字。
         courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
       courseE_playLab_scaffold3:

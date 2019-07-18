@@ -693,16 +693,12 @@
   coursee_name: "Kurs E"
   coursef-draft_name: Kurs F
   coursef_name: "Kurs F"
-  cspexam1-mWU7ilDYM9_name: Test del 1 - 25 frågor
-  cspexam2-AKwgAh1ac5_name: Test del 2 - 25 frågor
   accelerated_name: "Snabbkurs"
   20-hour_name: Snabbkurs
   classicmaze_name: "Klassisk labyrint"
   iceage_name: "Ice Age"
   minecraft_name: "Minecraft"
   text-compression_name: Text komprimering
-  math_category_name: "Matte"
-  hoc_category_name: "Timmen med Kod"
   applab_name: "App Lab"
   basketball_name: "Göra en basketmatch"
   sports_name: "Sport"

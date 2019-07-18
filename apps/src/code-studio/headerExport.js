@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ExportDialog from './components/ExportDialog';
+import ExportDialog from './components/ExportDialog/Dialog';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {showExportDialog} from './components/exportDialogRedux';
