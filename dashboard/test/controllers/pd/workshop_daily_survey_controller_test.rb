@@ -39,15 +39,10 @@ module Pd
 
     self.use_transactional_test_case = true
     setup do
-      @enrolled_summer_teacher = create :teacher
       @enrolled_academic_year_teacher = create :teacher
       @enrolled_two_day_academic_year_teacher = create :teacher
       @regional_partner = create :regional_partner
       @facilitators = create_list :facilitator, 2
-
-      @summer_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_TEACHER_CON,
-        num_sessions: 5, regional_partner: @regional_partner, facilitators: @facilitators
-      @summer_enrollment = create :pd_enrollment, :from_user, user: @enrolled_summer_teacher, workshop: @summer_workshop
 
       @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
         num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators
@@ -86,6 +81,7 @@ module Pd
     end
 
     test 'daily summer workshop survey returns 404 for days outside of range 0-4' do
+      setup_summer_workshop
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/-1'
       assert_response :not_found
@@ -112,6 +108,7 @@ module Pd
     end
 
     test 'pre-workshop survey redirects to thanks when a response exists' do
+      setup_summer_workshop
       create :pd_workshop_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
         day: 0, form_id: FAKE_DAILY_FORM_IDS[0]
 
@@ -121,6 +118,7 @@ module Pd
     end
 
     test 'pre-workshop survey displays embedded JotForm when enrolled' do
+      setup_summer_workshop
       submit_redirect = general_submit_redirect(day: 0)
       assert_equal '/pd/workshop_survey/submit', URI.parse(submit_redirect).path
 
@@ -148,6 +146,7 @@ module Pd
     end
 
     test 'pre-workshop survey reports render to New Relic' do
+      setup_summer_workshop
       NewRelic::Agent.expects(:record_custom_event).with(
         'RenderJotFormView',
         {
@@ -166,6 +165,7 @@ module Pd
     end
 
     test 'pre-workshop submit redirect creates a placeholder and redirects to thanks' do
+      setup_summer_workshop
       sign_in @enrolled_summer_teacher
 
       assert_creates Pd::WorkshopDailySurvey do
@@ -191,6 +191,7 @@ module Pd
     end
 
     test 'daily workshop survey displays closed message when session attendance is closed' do
+      setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(false)
 
       sign_in @enrolled_summer_teacher
@@ -200,6 +201,7 @@ module Pd
     end
 
     test 'daily workshop survey displays no attendance message when session is open but not attended' do
+      setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
 
       sign_in @enrolled_summer_teacher
@@ -209,6 +211,7 @@ module Pd
     end
 
     test 'daily workshop survey redirects to first facilitator form when a response exists' do
+      setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       create :pd_workshop_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
@@ -220,6 +223,7 @@ module Pd
     end
 
     test 'daily summer workshop survey with open session attendance displays embedded JotForm' do
+      setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
 
@@ -314,6 +318,7 @@ module Pd
     end
 
     test 'daily workshop submit redirect creates placeholder and redirects to first facilitator form' do
+      setup_summer_workshop
       sign_in @enrolled_summer_teacher
 
       assert_creates Pd::WorkshopDailySurvey do
@@ -351,6 +356,7 @@ module Pd
     end
 
     test 'facilitator specific survey displays closed message when session attendance is closed' do
+      setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(false)
 
       sign_in @enrolled_summer_teacher
@@ -360,6 +366,7 @@ module Pd
     end
 
     test 'facilitator specific survey displays no attendance message when session is open but not attended' do
+      setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
 
       sign_in @enrolled_summer_teacher
@@ -370,6 +377,7 @@ module Pd
 
     test 'facilitator specific survey redirects to next facilitator when response exists' do
       skip 'Investigate flaky test failures'
+      setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
@@ -382,6 +390,7 @@ module Pd
 
     test 'last facilitator specific survey redirects to thanks when response exists' do
       skip 'Investigate flaky test failures'
+      setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
@@ -394,6 +403,7 @@ module Pd
 
     test 'facilitator specific survey with open session attendance displays embedded JotForm' do
       skip 'Investigate flaky test failures'
+      setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
 
@@ -429,6 +439,7 @@ module Pd
     end
 
     test 'facilitator specific survey reports render to New Relic' do
+      setup_summer_workshop
       NewRelic::Agent.expects(:record_custom_event).with(
         'RenderJotFormView',
         {
@@ -450,6 +461,7 @@ module Pd
     end
 
     test 'facilitator specific submit redirect creates placeholder and redirects to next facilitator form' do
+      setup_summer_workshop
       sign_in @enrolled_summer_teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
@@ -469,6 +481,7 @@ module Pd
     end
 
     test 'facilitator specific submit redirect creates placeholder and redirects to thanks for last facilitator' do
+      setup_summer_workshop
       sign_in @enrolled_summer_teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
@@ -492,7 +505,12 @@ module Pd
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
         post '/pd/workshop_survey/facilitators/submit',
-          params: facilitator_submit_redirect_params(day: 1, facilitator_index: 1).deep_merge(
+          params: facilitator_submit_redirect_params(
+            day: 1,
+            user: @enrolled_two_day_academic_year_teacher,
+            workshop: @two_day_academic_year_workshop,
+            facilitator_index: 1
+          ).deep_merge(
             submission_id: FAKE_SUBMISSION_ID,
             key: {
               userId: @enrolled_two_day_academic_year_teacher.id,
@@ -515,7 +533,12 @@ module Pd
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
         post '/pd/workshop_survey/facilitators/submit',
-          params: facilitator_submit_redirect_params(day: 2, facilitator_index: 1).deep_merge(
+          params: facilitator_submit_redirect_params(
+            day: 2,
+            user: @enrolled_two_day_academic_year_teacher,
+            workshop: @two_day_academic_year_workshop,
+            facilitator_index: 1
+          ).deep_merge(
             submission_id: FAKE_SUBMISSION_ID,
             key: {
               userId: @enrolled_two_day_academic_year_teacher.id,
@@ -538,7 +561,12 @@ module Pd
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
         post '/pd/workshop_survey/facilitators/submit',
-          params: facilitator_submit_redirect_params(day: 1, facilitator_index: 1).deep_merge(
+          params: facilitator_submit_redirect_params(
+            day: 1,
+            user: @enrolled_academic_year_teacher,
+            workshop: @academic_year_workshop,
+            facilitator_index: 1
+          ).deep_merge(
             submission_id: FAKE_SUBMISSION_ID,
             key: {
               userId: @enrolled_academic_year_teacher.id,
@@ -557,12 +585,14 @@ module Pd
     end
 
     test 'post workshop survey without a valid enrollment code renders 404' do
+      setup_summer_workshop
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/post/invalid_enrollment_code'
       assert_response :not_found
     end
 
     test 'post workshop survey renders embedded JotForm' do
+      setup_summer_workshop
       create :pd_attendance, session: @summer_workshop.sessions[4], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
 
       submit_redirect = general_submit_redirect(day: 5, enrollment_code: @summer_enrollment.code)
@@ -593,6 +623,7 @@ module Pd
     end
 
     test 'post workshop for summer submit redirect creates a placeholder and redirects to thanks' do
+      setup_summer_workshop
       sign_in @enrolled_summer_teacher
 
       assert_creates Pd::WorkshopDailySurvey do
@@ -1038,6 +1069,7 @@ module Pd
     end
 
     test 'thanks displays thanks message' do
+      setup_summer_workshop
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/thanks'
       assert_response :success
@@ -1045,6 +1077,15 @@ module Pd
     end
 
     private
+
+    def setup_summer_workshop
+      @regional_partner = create :regional_partner
+      @summer_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_TEACHER_CON,
+        num_sessions: 5, num_facilitators: 2, regional_partner: @regional_partner
+      @summer_enrollment = create :pd_enrollment, :from_user, workshop: @summer_workshop
+      @enrolled_summer_teacher = @summer_enrollment.user
+      @facilitators = @summer_workshop.facilitators
+    end
 
     def unenrolled_teacher
       create :teacher
@@ -1099,14 +1140,14 @@ module Pd
       )
     end
 
-    def facilitator_submit_redirect_params(day:, facilitator_index:)
+    def facilitator_submit_redirect_params(day:, user: @enrolled_summer_teacher, workshop: @summer_workshop, facilitator_index:)
       {
         key: {
           environment: 'test',
-          userId: @enrolled_summer_teacher.id,
-          sessionId: @summer_workshop.sessions[day - 1].id,
+          userId: user.id,
+          sessionId: workshop.sessions[day - 1].id,
           day: day,
-          facilitatorId: @facilitators[facilitator_index].id,
+          facilitatorId: workshop.facilitators[facilitator_index].id,
           facilitatorIndex: facilitator_index,
           formId: FAKE_FACILITATOR_FORM_ID,
         }
