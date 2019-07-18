@@ -3,9 +3,7 @@ require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'cdo/google_drive'
 require 'cgi'
 require 'fileutils'
-require 'open3'
 require 'psych'
-require 'tempfile'
 
 CODEORG_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_crowdin.yml")
 CODEORG_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_credentials.yml")
@@ -104,40 +102,6 @@ def recursively_find_malformed_links_images(hash, key_str, file_name)
   end
 end
 
-def plugins_to_arg(plugins)
-  plugins.map {|name| "bin/i18n/node_modules/@code-dot-org/remark-plugins/src/#{name}.js" if name}.join(',')
-end
-
-def redact(source, dest, plugins=[], format='md')
-  return unless File.exist? source
-  FileUtils.mkdir_p File.dirname(dest)
-
-  data =
-    if File.extname(source) == '.json'
-      f = File.open(source, 'r')
-      JSON.load(f)
-    else
-      YAML.load_file(source)
-    end
-
-  args = ['bin/i18n/node_modules/.bin/redact']
-  args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
-  args.push("-f #{format}")
-
-  stdout, _status = Open3.capture2(
-    args.join(" "),
-    stdin_data: JSON.generate(data)
-  )
-  data = JSON.parse(stdout)
-  File.open(dest, "w+") do |file|
-    if File.extname(dest) == '.json'
-      file.write(JSON.pretty_generate(data))
-    else
-      file.write(to_crowdin_yaml(data))
-    end
-  end
-end
-
 # This function currently looks for
 # 1. Translations with malformed redaction syntax, i.e. [] [0] (note the space)
 # 2. Translations with similarly malformed markdown, i.e. [link] (example.com)
@@ -148,90 +112,6 @@ def contains_malformed_link_or_image(translation)
   non_malformed_redaction = (translation =~ malformed_redaction_regex).nil?
   non_malformed_translation = (translation =~ malformed_markdown_regex).nil?
   return !(non_malformed_redaction && non_malformed_translation)
-end
-
-def restore(source, redacted, dest, plugins=[], format='md')
-  return unless File.exist?(source)
-  return unless File.exist?(redacted)
-  is_json = File.extname(source) == '.json'
-  source_data =
-    if is_json
-      f = File.open(source, 'r')
-      JSON.load(f)
-    else
-      YAML.load_file(source)
-    end
-  redacted_data =
-    if is_json
-      f = File.open(redacted, 'r')
-      JSON.load(f)
-    else
-      YAML.load_file(redacted)
-    end
-
-  return unless source_data&.values&.first&.length
-  return unless redacted_data&.values&.first&.length
-
-  source_json = Tempfile.new(['source', '.json'])
-  redacted_json = Tempfile.new(['redacted', '.json'])
-
-  if is_json
-    source_json.write(JSON.generate(source_data))
-    redacted_json.write(JSON.generate(redacted_data))
-  else
-    source_json.write(JSON.generate(source_data.values.first))
-    redacted_json.write(JSON.generate(redacted_data.values.first))
-  end
-
-  source_json.flush
-  redacted_json.flush
-
-  args = ['bin/i18n/node_modules/.bin/restore']
-  args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
-  args.push("-f #{format}")
-  args.push("-s #{source_json.path}")
-  args.push("-r #{redacted_json.path}")
-
-  stdout, _status = Open3.capture2(
-    args.join(" ")
-  )
-  redacted_key = redacted_data.keys.first
-  restored_data = {}
-  File.open(dest, "w+") do |file|
-    if File.extname(dest) == '.json'
-      restored_data = JSON.parse(stdout)
-      file.write(JSON.pretty_generate(restored_data))
-    else
-      restored_data[redacted_key] = JSON.parse(stdout)
-      file.write(to_crowdin_yaml(restored_data))
-    end
-  end
-
-  source_json.close
-  redacted_json.close
-end
-
-def restore_course_content(source, redacted, dest, *plugins)
-  return unless File.exist?(source)
-  return unless File.exist?(redacted)
-
-  args = ['bin/i18n/node_modules/.bin/restore']
-  plugins = plugins_to_arg(plugins)
-  args.push('-p ' + plugins) unless plugins.empty?
-
-  args.push("-s #{source.inspect}")
-  args.push("-r #{redacted.inspect}")
-  stdout, _status = Open3.capture2(
-    args.join(" ")
-  )
-
-  return if stdout.empty?
-
-  restored_data = JSON.parse(stdout)
-  translated_data = JSON.parse(File.read(redacted))
-  File.open(dest, "w") do |file|
-    file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
-  end
 end
 
 def get_level_url_key(script, level)

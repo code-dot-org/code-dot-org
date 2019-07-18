@@ -12,6 +12,7 @@ require 'tempfile'
 require 'yaml'
 
 require_relative 'i18n_script_utils'
+require_relative 'redact_restore_utils'
 
 CLEAR = "\r\033[K"
 
@@ -67,11 +68,15 @@ def restore_redacted_files
       $stdout.flush
 
       if original_path.include? "course_content"
-        restore_course_content(original_path, translated_path, translated_path)
+        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path)
+        translated_data = JSON.parse(File.read(translated_path))
+        File.open(translated_path, "w") do |file|
+          file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
+        end
       elsif original_path == 'i18n/locales/original/dashboard/blocks.yml'
-        restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
       else
-        restore(original_path, translated_path, translated_path)
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path)
       end
       find_malformed_links_images(locale, translated_path)
     end
