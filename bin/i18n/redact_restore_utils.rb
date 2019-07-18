@@ -3,6 +3,8 @@ require 'open3'
 require 'tempfile'
 require 'yaml'
 
+require_relative 'i18n_script_utils'
+
 class RedactRestoreUtils
   def self.redact_file(source_path, plugins=[], format='md')
     args = ['bin/i18n/node_modules/.bin/redact']
@@ -74,6 +76,8 @@ class RedactRestoreUtils
         YAML.load_file(redacted)
       end
 
+    return unless source_data
+    return unless redacted_data
     return unless source_data&.values&.first&.length
     return unless redacted_data&.values&.first&.length
 
@@ -90,7 +94,7 @@ class RedactRestoreUtils
       else
         redacted_key = redacted_data.keys.first
         file.write(
-          to_crowdin_yaml(
+          I18nScriptUtils.to_crowdin_yaml(
             {
               redacted_key => restored
             }
@@ -118,7 +122,7 @@ class RedactRestoreUtils
       if File.extname(dest) == '.json'
         file.write(JSON.pretty_generate(redacted))
       else
-        file.write(to_crowdin_yaml(redacted))
+        file.write(I18nScriptUtils.to_crowdin_yaml(redacted))
       end
     end
   end
