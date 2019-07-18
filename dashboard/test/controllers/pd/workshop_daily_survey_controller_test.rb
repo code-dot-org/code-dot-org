@@ -39,9 +39,6 @@ module Pd
 
     self.use_transactional_test_case = true
     setup do
-      @regional_partner = create :regional_partner
-      @facilitators = create_list :facilitator, 2
-
       CDO.stubs(:jotform_forms).returns(FAKE_JOTFORM_FORMS)
 
       @csf_pre201_params = {
