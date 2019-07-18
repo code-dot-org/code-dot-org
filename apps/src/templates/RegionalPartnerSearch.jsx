@@ -410,12 +410,12 @@ class RegionalPartnerSearch extends Component {
               )}
             </div>
 
-            {appState !== WorkshopApplicationStates.now_closed && (
-              <div
-                className="professional_learning_information"
-                id={`id-${partnerInfo.id}`}
-              >
-                {partnerInfo.cost_scholarship_information && (
+            <div
+              className="professional_learning_information"
+              id={`id-${partnerInfo.id}`}
+            >
+              {appState !== WorkshopApplicationStates.now_closed &&
+                partnerInfo.cost_scholarship_information && (
                   <div>
                     <h3>Scholarship, discounts, and cost information:</h3>
                     <div style={styles.scholarship}>
@@ -426,16 +426,15 @@ class RegionalPartnerSearch extends Component {
                   </div>
                 )}
 
-                {partnerInfo.additional_program_information && (
-                  <div>
-                    <h3>Additional program information:</h3>
-                    <SafeMarkdown
-                      markdown={partnerInfo.additional_program_information}
-                    />
-                  </div>
-                )}
-              </div>
-            )}
+              {partnerInfo.additional_program_information && (
+                <div>
+                  <h3>Additional program information:</h3>
+                  <SafeMarkdown
+                    markdown={partnerInfo.additional_program_information}
+                  />
+                </div>
+              )}
+            </div>
 
             <div style={styles.partnerContact}>
               <h3>Have more questions?</h3>
