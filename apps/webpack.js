@@ -52,12 +52,6 @@ var baseConfig = {
         'gamelab',
         'locale-do-not-import.js'
       ),
-      '@cdo/spritelab/locale': path.resolve(
-        __dirname,
-        'src',
-        'spritelab',
-        'locale-do-not-import.js'
-      ),
       '@cdo/weblab/locale': path.resolve(
         __dirname,
         'src',
