@@ -304,6 +304,72 @@ export function processedStages(stages, isPlc) {
   });
 }
 
+/**
+ * Requests user progress from the server and dispatches other redux actions
+ * based on the server's response data.
+ */
+export const userProgressFromServer = (state, dispatch, userId) => {
+  if (!state.scriptName) {
+    return;
+  }
+
+  return $.ajax({
+    url: `/api/user_progress/${state.scriptName}`,
+    method: 'GET',
+    data: {user_id: userId}
+  }).done(data => {
+    data = data || {};
+
+    if (data.isVerifiedTeacher) {
+      dispatch(setVerified());
+    }
+
+    // We are on an overview page if currentLevelId is undefined.
+    const onOverviewPage = !state.currentLevelId;
+    // Show lesson plan links and other teacher info if teacher and on unit overview page.
+    if (
+      (data.isTeacher || data.teacherViewingStudent) &&
+      !data.professionalLearningCourse &&
+      onOverviewPage
+    ) {
+      // Default to progress summary view if teacher is viewing their student's progress.
+      if (data.teacherViewingStudent) {
+        dispatch(setIsSummaryView(true));
+      }
+
+      dispatch(showTeacherInfo());
+    }
+
+    if (data.focusAreaStageIds) {
+      dispatch(
+        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
+      );
+    }
+
+    if (data.lockableAuthorized) {
+      dispatch(authorizeLockable());
+    }
+
+    if (data.completed) {
+      dispatch(setScriptCompleted());
+    }
+
+    // Merge progress from server
+    if (data.levels) {
+      const levelProgress = _.mapValues(data.levels, getLevelResult);
+      dispatch(mergeProgress(levelProgress));
+
+      if (data.peerReviewsPerformed) {
+        dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
+
+      if (data.current_stage) {
+        dispatch(setCurrentStageId(data.current_stage));
+      }
+    }
+  });
+};
+
 // Action creators
 export const initProgress = ({
   currentLevelId,
@@ -383,6 +449,11 @@ export const setStageExtrasEnabled = stageExtrasEnabled => ({
   type: SET_STAGE_EXTRAS_ENABLED,
   stageExtrasEnabled
 });
+
+export const queryUserProgress = userId => (dispatch, getState) => {
+  const state = getState().progress;
+  return userProgressFromServer(state, dispatch, userId);
+};
 
 // Selectors
 
@@ -659,73 +730,6 @@ export const progressionsFromLevels = levels => {
   });
   progressions.push(currentProgression);
   return progressions;
-};
-
-export const queryUserProgress = userId => (dispatch, getState) => {
-  const state = getState().progress;
-  return userProgressFromServer(state, dispatch, userId);
-};
-
-export const userProgressFromServer = (state, dispatch, userId) => {
-  if (!state.scriptName) {
-    return;
-  }
-
-  return $.ajax({
-    url: `/api/user_progress/${state.scriptName}`,
-    method: 'GET',
-    data: {user_id: userId}
-  }).done(data => {
-    data = data || {};
-
-    if (data.isVerifiedTeacher) {
-      dispatch(setVerified());
-    }
-
-    // We are on an overview page if currentLevelId is undefined.
-    const onOverviewPage = !state.currentLevelId;
-    // Show lesson plan links and other teacher info if teacher and on unit overview page.
-    if (
-      (data.isTeacher || data.teacherViewingStudent) &&
-      !data.professionalLearningCourse &&
-      onOverviewPage
-    ) {
-      // Default to progress summary view if teacher is viewing their student's progress.
-      if (data.teacherViewingStudent) {
-        dispatch(setIsSummaryView(true));
-      }
-
-      dispatch(showTeacherInfo());
-    }
-
-    if (data.focusAreaStageIds) {
-      dispatch(
-        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
-      );
-    }
-
-    if (data.lockableAuthorized) {
-      dispatch(authorizeLockable());
-    }
-
-    if (data.completed) {
-      dispatch(setScriptCompleted());
-    }
-
-    // Merge progress from server
-    if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, getLevelResult);
-      dispatch(mergeProgress(levelProgress));
-
-      if (data.peerReviewsPerformed) {
-        dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
-      }
-
-      if (data.current_stage) {
-        dispatch(setCurrentStageId(data.current_stage));
-      }
-    }
-  });
 };
 
 // export private function(s) to expose to unit testing
