@@ -40,18 +40,6 @@ module Pd
     self.use_transactional_test_case = true
     setup do
       CDO.stubs(:jotform_forms).returns(FAKE_JOTFORM_FORMS)
-
-      @csf_pre201_params = {
-        environment: Rails.env,
-        day: CSF_SURVEY_INDEXES[PRE_DEEPDIVE_SURVEY],
-        formId: CDO.jotform_forms[CSF_CATEGORY][PRE_DEEPDIVE_SURVEY]
-      }
-
-      @csf_post201_params = {
-        environment: Rails.env,
-        day: CSF_SURVEY_INDEXES[POST_DEEPDIVE_SURVEY],
-        formId: CDO.jotform_forms[CSF_CATEGORY][POST_DEEPDIVE_SURVEY]
-      }
     end
 
     test 'daily summer workshop survey returns 404 for days outside of range 0-4' do
@@ -691,10 +679,10 @@ module Pd
       get '/pd/workshop_survey/csf/pre201'
 
       assert_response :success
-      assert_equal @csf_pre201_params[:formId], actual_form_id
+      assert_equal csf_pre201_params[:formId], actual_form_id
       assert_equal teacher.id, actual_form_params[:userId]
       assert_equal @csf201_not_started_workshop.id, actual_form_params[:workshopId]
-      assert_equal @csf_pre201_params[:day], actual_form_params[:day]
+      assert_equal csf_pre201_params[:day], actual_form_params[:day]
     end
 
     test 'csf pre201 survey: reports survey render to New Relic' do
@@ -707,7 +695,7 @@ module Pd
         'RenderJotFormView',
         {
           route: 'GET /pd/workshop_survey/csf/pre201',
-          form_id: @csf_pre201_params[:formId],
+          form_id: csf_pre201_params[:formId],
           workshop_course: COURSE_CSF,
           workshop_subject: SUBJECT_CSF_201,
           regional_partner_name: @regional_partner.name
@@ -728,12 +716,12 @@ module Pd
       search_params = {
         user_id: teacher.id,
         pd_workshop_id: @csf201_not_started_workshop.id,
-        day: @csf_pre201_params[:day],
-        form_id: @csf_pre201_params[:formId],
+        day: csf_pre201_params[:day],
+        form_id: csf_pre201_params[:formId],
         submission_id: FAKE_SUBMISSION_ID
       }
 
-      key_params = @csf_pre201_params.merge(
+      key_params = csf_pre201_params.merge(
         userId: teacher.id,
         workshopId: @csf201_not_started_workshop.id
       )
@@ -758,8 +746,8 @@ module Pd
       WorkshopDailySurvey.create_placeholder!(
         user_id: teacher.id,
         pd_workshop_id: @csf201_not_started_workshop.id,
-        day: @csf_pre201_params[:day],
-        form_id: @csf_pre201_params[:formId],
+        day: csf_pre201_params[:day],
+        form_id: csf_pre201_params[:formId],
         submission_id: FAKE_SUBMISSION_ID
       )
 
@@ -830,10 +818,10 @@ module Pd
       get "/pd/workshop_survey/csf/post201/#{enrollment.code}"
 
       assert_response :success
-      assert_equal @csf_post201_params[:formId], actual_form_id
+      assert_equal csf_post201_params[:formId], actual_form_id
       assert_equal teacher.id, actual_form_params[:userId]
       assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
-      assert_equal @csf_post201_params[:day], actual_form_params[:day]
+      assert_equal csf_post201_params[:day], actual_form_params[:day]
       assert_equal session.id, actual_form_params[:sessionId]
       refute nil, actual_form_params[:submitRedirect]
     end
@@ -858,10 +846,10 @@ module Pd
       get '/pd/workshop_survey/csf/post201'
 
       assert_response :success
-      assert_equal @csf_post201_params[:formId], actual_form_id
+      assert_equal csf_post201_params[:formId], actual_form_id
       assert_equal teacher.id, actual_form_params[:userId]
       assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
-      assert_equal @csf_post201_params[:day], actual_form_params[:day]
+      assert_equal csf_post201_params[:day], actual_form_params[:day]
       assert_equal session.id, actual_form_params[:sessionId]
       refute nil, actual_form_params[:submitRedirect]
     end
@@ -877,7 +865,7 @@ module Pd
         'RenderJotFormView',
         {
           route: 'GET /pd/workshop_survey/csf/post201',
-          form_id: @csf_post201_params[:formId],
+          form_id: csf_post201_params[:formId],
           workshop_course: COURSE_CSF,
           workshop_subject: SUBJECT_CSF_201,
           regional_partner_name: @regional_partner.name
@@ -902,11 +890,11 @@ module Pd
       search_params = {
         user_id: teacher.id,
         pd_workshop_id: @csf201_in_progress_workshop.id,
-        day: @csf_post201_params[:day],
-        form_id: @csf_post201_params[:formId]
+        day: csf_post201_params[:day],
+        form_id: csf_post201_params[:formId]
       }
 
-      key_params = @csf_post201_params.merge(
+      key_params = csf_post201_params.merge(
         userId: teacher.id,
         workshopId: @csf201_in_progress_workshop.id,
         sessionId: session.id
@@ -954,7 +942,7 @@ module Pd
       assert_equal FAKE_FACILITATOR_FORM_ID, actual_form_id
       assert_equal teacher.id, actual_form_params[:userId]
       assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
-      assert_equal @csf_post201_params[:day], actual_form_params[:day]
+      assert_equal csf_post201_params[:day], actual_form_params[:day]
       assert_equal session.id, actual_form_params[:sessionId]
       assert_equal first_facilitator.id, actual_form_params[:facilitatorId]
       assert_equal first_facilitator_index, actual_form_params[:facilitatorIndex]
@@ -983,7 +971,7 @@ module Pd
       key_params = {
         environment: Rails.env,
         userId: teacher.id,
-        day: @csf_post201_params[:day],
+        day: csf_post201_params[:day],
         sessionId: session.id,
         facilitatorId: first_facilitator.id,
         facilitatorIndex: first_facilitator_index,
@@ -1019,7 +1007,7 @@ module Pd
 
       WorkshopFacilitatorDailySurvey.create_placeholder!(
         user_id: teacher.id,
-        day: @csf_post201_params[:day],
+        day: csf_post201_params[:day],
         pd_session_id: session.id,
         facilitator_id: first_facilitator.id,
         form_id: FAKE_FACILITATOR_FORM_ID,
@@ -1047,7 +1035,7 @@ module Pd
       @csf201_in_progress_workshop.facilitators.each_with_index do |facilitator, index|
         WorkshopFacilitatorDailySurvey.create_placeholder!(
           user_id: teacher.id,
-          day: @csf_post201_params[:day],
+          day: csf_post201_params[:day],
           pd_session_id: session.id,
           facilitator_id: facilitator.id,
           form_id: FAKE_FACILITATOR_FORM_ID,
@@ -1187,6 +1175,22 @@ module Pd
           facilitatorIndex: facilitator_index,
           formId: FAKE_FACILITATOR_FORM_ID,
         }
+      }
+    end
+
+    def csf_pre201_params
+      {
+        environment: Rails.env,
+        day: CSF_SURVEY_INDEXES[PRE_DEEPDIVE_SURVEY],
+        formId: CDO.jotform_forms[CSF_CATEGORY][PRE_DEEPDIVE_SURVEY]
+      }
+    end
+
+    def csf_post201_params
+      {
+        environment: Rails.env,
+        day: CSF_SURVEY_INDEXES[POST_DEEPDIVE_SURVEY],
+        formId: CDO.jotform_forms[CSF_CATEGORY][POST_DEEPDIVE_SURVEY]
       }
     end
   end
