@@ -14,6 +14,7 @@ import {authorizeLockable} from './stageLockRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
+const CLEAR_PROGRESS = 'progress/CLEAR_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
@@ -91,6 +92,13 @@ export default function reducer(state = initialState, action) {
       courseId: action.courseId,
       currentStageId,
       hasFullProgress: action.isFullProgress
+    };
+  }
+
+  if (action.type === CLEAR_PROGRESS) {
+    return {
+      ...state,
+      levelProgress: initialState.levelProgress
     };
   }
 
@@ -313,6 +321,9 @@ const userProgressFromServer = (state, dispatch, userId) => {
     const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
     throw new Error(message);
   }
+
+  // Clear any existing progress before getting new progress.
+  dispatch({type: CLEAR_PROGRESS});
 
   return $.ajax({
     url: `/api/user_progress/${state.scriptName}`,
