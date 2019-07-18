@@ -42,10 +42,6 @@ module Pd
       @regional_partner = create :regional_partner
       @facilitators = create_list :facilitator, 2
 
-      @csf201_not_started_workshop = create :pd_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, facilitators: (create_list :facilitator, 2)
-
       @csf201_in_progress_workshop = create :pd_workshop,
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
         num_sessions: 1, facilitators: (create_list :facilitator, 2), started_at: DateTime.now
@@ -688,6 +684,7 @@ module Pd
     end
 
     test 'csf pre201 survey: enrolled teacher in unended workshop gets survey' do
+      setup_csf201_not_started_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
 
@@ -711,6 +708,7 @@ module Pd
     end
 
     test 'csf pre201 survey: reports survey render to New Relic' do
+      setup_csf201_not_started_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
 
@@ -733,6 +731,7 @@ module Pd
     end
 
     test 'csf pre201 survey: submission creates a placeholder record and redirects teacher to thanks' do
+      setup_csf201_not_started_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
 
@@ -762,6 +761,7 @@ module Pd
     end
 
     test 'csf pre201 survey: teacher already submitted survey does not gets survey again' do
+      setup_csf201_not_started_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
 
@@ -796,6 +796,7 @@ module Pd
     end
 
     test 'csf post201 survey: show no-attendance page if teacher did not attend' do
+      setup_csf201_not_started_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
 
@@ -1101,6 +1102,13 @@ module Pd
         workshop: @two_day_academic_year_workshop
       @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
       @facilitators = @two_day_academic_year_workshop.facilitators
+    end
+
+    def setup_csf201_not_started_workshop
+      @regional_partner = create :regional_partner
+      @csf201_not_started_workshop = create :pd_workshop,
+        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
+        num_sessions: 1, num_facilitators: 2
     end
 
     def unenrolled_teacher
