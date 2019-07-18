@@ -70,6 +70,16 @@ FactoryGirl.define do
       end
     end
 
+    trait :not_started do
+      started_at nil
+      ended_at nil
+    end
+
+    trait :in_progress do
+      started_at {Time.zone.now}
+      ended_at nil
+    end
+
     trait :ended do
       num_sessions 1
       started_at {Time.zone.now}

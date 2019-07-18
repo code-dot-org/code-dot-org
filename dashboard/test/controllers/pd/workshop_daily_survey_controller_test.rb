@@ -34,9 +34,7 @@ module Pd
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         user: @enrolled_two_day_academic_year_teacher, workshop: @two_day_academic_year_workshop
 
-      @csf201_in_progress_workshop = create :pd_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, facilitators: (create_list :facilitator, 2), started_at: DateTime.now
+      @csf201_in_progress_workshop = create :csf201_workshop, :in_progress
 
       CDO.stubs(:jotform_forms).returns(
         {
@@ -653,7 +651,7 @@ module Pd
     end
 
     test 'csf pre201 survey: enrolled teacher in unended workshop gets survey' do
-      workshop = create :csf201_workshop
+      workshop = create :csf201_workshop, :not_started
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
 
@@ -677,7 +675,7 @@ module Pd
     end
 
     test 'csf pre201 survey: reports survey render to New Relic' do
-      workshop = create :csf201_workshop
+      workshop = create :csf201_workshop, :not_started
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
 
@@ -700,7 +698,7 @@ module Pd
     end
 
     test 'csf pre201 survey: submission creates a placeholder record and redirects teacher to thanks' do
-      workshop = create :csf201_workshop
+      workshop = create :csf201_workshop, :not_started
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
 
@@ -730,7 +728,7 @@ module Pd
     end
 
     test 'csf pre201 survey: teacher already submitted survey does not gets survey again' do
-      workshop = create :csf201_workshop
+      workshop = create :csf201_workshop, :not_started
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
 
@@ -766,7 +764,7 @@ module Pd
     end
 
     test 'csf post201 survey: show no-attendance page if teacher did not attend' do
-      workshop = create :csf201_workshop
+      workshop = create :csf201_workshop, :not_started
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
 
@@ -856,7 +854,7 @@ module Pd
           form_id: @csf_post201_params[:formId],
           workshop_course: COURSE_CSF,
           workshop_subject: SUBJECT_CSF_201,
-          regional_partner_name: @regional_partner.name
+          regional_partner_name: @csf201_in_progress_workshop.regional_partner.name
         }
       )
 
