@@ -14,6 +14,11 @@
   width: 100%;
 }
 
+#mapbox-map {
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
 @media only screen and (max-width: 760px) {
   #inmaplegend {
     display: none;
