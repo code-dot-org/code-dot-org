@@ -8,7 +8,7 @@ Designing software means solving lots of little problems, all the time. The main
 
 This process is useful for all kinds of things, but we are going to focus on using it for app design.
 
-<!-- Translate the terms "Define", "Prepare", "Try", "Reflect" and change font size as needed-->
+<!-- Translate the terms "Define", "Prepare", "Try", "Reflect" and change font size and positioning as needed-->
 <div style="position: relative; text-align: center; font-size: 1em">
   <img src="https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png" alt="Design Process" style="width: 50%;">
   <div style="position: absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;">Define</div> 
