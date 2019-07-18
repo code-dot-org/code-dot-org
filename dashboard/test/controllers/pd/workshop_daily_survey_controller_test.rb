@@ -39,14 +39,8 @@ module Pd
 
     self.use_transactional_test_case = true
     setup do
-      @enrolled_two_day_academic_year_teacher = create :teacher
       @regional_partner = create :regional_partner
       @facilitators = create_list :facilitator, 2
-
-      @two_day_academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5,
-        num_sessions: 2, regional_partner: @regional_partner, facilitators: @facilitators
-      @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
-        user: @enrolled_two_day_academic_year_teacher, workshop: @two_day_academic_year_workshop
 
       @csf201_not_started_workshop = create :pd_workshop,
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
@@ -500,6 +494,7 @@ module Pd
     end
 
     test 'facilitator specific submit for 2-day academic redirects to thanks for day 1' do
+      setup_two_day_academic_year_workshop
       sign_in @enrolled_two_day_academic_year_teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
@@ -528,6 +523,7 @@ module Pd
     end
 
     test 'facilitator specific submit for 2-day academic redirects to post for day 2' do
+      setup_two_day_academic_year_workshop
       sign_in @enrolled_two_day_academic_year_teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
@@ -1095,6 +1091,16 @@ module Pd
       @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
       @enrolled_academic_year_teacher = @academic_year_enrollment.user
       @facilitators = @academic_year_workshop.facilitators
+    end
+
+    def setup_two_day_academic_year_workshop
+      @regional_partner = create :regional_partner
+      @two_day_academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5,
+        num_sessions: 2, num_facilitators: 2, regional_partner: @regional_partner
+      @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
+        workshop: @two_day_academic_year_workshop
+      @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
+      @facilitators = @two_day_academic_year_workshop.facilitators
     end
 
     def unenrolled_teacher
