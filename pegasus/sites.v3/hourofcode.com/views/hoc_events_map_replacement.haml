@@ -1,0 +1,43 @@
+%link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
+
+#mapbox-map
+
+:javascript
+  $(document).ready(function() {
+    mapboxgl.accessToken =
+      '';
+    var map = new mapboxgl.Map({
+      container: 'mapbox-map',
+      style: 'mapbox://styles/bethanycodeorg/cjyev6qtp4ehn1bldzbk070mh',
+      zoom: 1,
+      minZoom: 1,
+      center: [-98, 39],
+    });
+
+    map.on('load', function() {
+      map.on('click', 'hoc-points', function(e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // // copies of the feature are visible, the popup appears
+        // // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+        new mapboxgl.Popup()
+          .setLngLat(coordinates)
+          .setHTML(description)
+          .addTo(map);
+      });
+
+      map.on('mouseenter', 'hoc-points', function () {
+        map.getCanvas().style.cursor = 'pointer';
+      });
+
+      // Change it back to a pointer when it leaves.
+      map.on('mouseleave', 'hoc-points', function () {
+        map.getCanvas().style.cursor = '';
+      });
+    });
+  });
