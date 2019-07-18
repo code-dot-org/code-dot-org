@@ -2,7 +2,7 @@
  * Copyright (c) 2019 Anthony Bau.
  * MIT License.
  *
- * Date: 2019-07-17
+ * Date: 2019-07-09
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -6259,7 +6259,6 @@ exports.Editor = Editor = (function() {
     this.dragCanvas.style.transform = 'translate(-9999px,-9999px)';
     this.draw = new draw.Draw(this.mainCanvas);
     this.dropletElement.style.left = this.paletteWrapper.clientWidth + 'px';
-    this.dropletElement.style.zIndex = 1;
     this.draw.refreshFontCapital();
     this.standardViewSettings = {
       padding: 5,
@@ -6283,6 +6282,7 @@ exports.Editor = Editor = (function() {
       this.wrapperElement = this.aceEditor;
       this.wrapperElement.style.position = 'absolute';
       this.wrapperElement.style.right = this.wrapperElement.style.left = this.wrapperElement.style.top = this.wrapperElement.style.bottom = '0px';
+      this.wrapperElement.style.overflow = 'hidden';
       this.aceElement = document.createElement('div');
       this.aceElement.className = 'droplet-ace';
       this.wrapperElement.appendChild(this.aceElement);
@@ -6299,12 +6299,12 @@ exports.Editor = Editor = (function() {
       this.wrapperElement = document.createElement('div');
       this.wrapperElement.style.position = 'absolute';
       this.wrapperElement.style.right = this.wrapperElement.style.left = this.wrapperElement.style.top = this.wrapperElement.style.bottom = '0px';
+      this.wrapperElement.style.overflow = 'hidden';
       this.aceElement = this.aceEditor.container;
       this.aceElement.className += ' droplet-ace';
       this.aceEditor.container.parentElement.appendChild(this.wrapperElement);
       this.wrapperElement.appendChild(this.aceEditor.container);
     }
-    this.aceElement.style.zIndex = 1;
     this.wrapperElement.appendChild(this.dropletElement);
     this.wrapperElement.appendChild(this.paletteWrapper);
     this.wrapperElement.style.backgroundColor = '#FFF';
@@ -6481,11 +6481,14 @@ exports.Editor = Editor = (function() {
   };
 
   Editor.prototype.resizePalette = function() {
-    var binding, j, len, ref1;
+    var binding, j, len, ref1, ref2, ref3, ref4;
     ref1 = editorBindings.resize_palette;
     for (j = 0, len = ref1.length; j < len; j++) {
       binding = ref1[j];
       binding.call(this);
+    }
+    if (!(((ref2 = this.session) != null ? ref2.currentlyUsingBlocks : void 0) || ((ref3 = this.session) != null ? ref3.showPaletteInTextMode : void 0) && ((ref4 = this.session) != null ? ref4.paletteEnabled : void 0))) {
+      this.paletteWrapper.style.left = (-this.paletteWrapper.clientWidth) + "px";
     }
     return this.rebuildPalette();
   };
@@ -9492,15 +9495,16 @@ Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
       this.paletteHeader.style.zIndex = 0;
       setTimeout(((function(_this) {
         return function() {
-          _this.dropletElement.style.transition = "left " + translateTime + "ms";
-          return _this.dropletElement.style.left = '0px';
+          _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = "left " + translateTime + "ms";
+          _this.dropletElement.style.left = '0px';
+          return _this.paletteWrapper.style.left = (-_this.paletteWrapper.clientWidth) + "px";
         };
       })(this)), fadeTime);
     }
     setTimeout(((function(_this) {
       return function() {
         var l, len1;
-        _this.dropletElement.style.transition = '';
+        _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
         _this.aceElement.style.top = '0px';
         if (_this.session.showPaletteInTextMode && _this.session.paletteEnabled) {
           _this.aceElement.style.left = _this.paletteWrapper.clientWidth + "px";
@@ -9585,6 +9589,7 @@ Editor.prototype.performFreezeAnimation = function(fadeTime, translateTime, cb) 
         paletteAppearingWithFreeze = _this.session.paletteEnabled && !_this.session.showPaletteInTextMode;
         if (paletteAppearingWithFreeze) {
           _this.paletteWrapper.style.top = '0px';
+          _this.paletteWrapper.style.left = (-_this.paletteWrapper.clientWidth) + "px";
           _this.paletteHeader.style.zIndex = 0;
         }
         _this.dropletElement.style.top = "0px";
@@ -9656,12 +9661,13 @@ Editor.prototype.performFreezeAnimation = function(fadeTime, translateTime, cb) 
         }), translateTime);
         _this.dropletElement.style.transition = "left " + fadeTime + "ms";
         if (paletteAppearingWithFreeze) {
+          _this.paletteWrapper.style.transition = _this.dropletElement.style.transition;
           _this.dropletElement.style.left = _this.paletteWrapper.clientWidth + "px";
           _this.paletteWrapper.style.left = '0px';
         }
         return setTimeout((function() {
           var l, len1;
-          _this.dropletElement.style.transition = '';
+          _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
           _this.showScrollbars();
           _this.currentlyAnimating = false;
           _this.lineNumberWrapper.style.display = 'block';
@@ -9696,13 +9702,14 @@ Editor.prototype.enablePalette = function(enabled) {
       activeElement = this.aceElement;
     }
     if (!this.session.paletteEnabled) {
-      activeElement.style.transition = "left 500ms";
+      activeElement.style.transition = this.paletteWrapper.style.transition = "left 500ms";
       activeElement.style.left = '0px';
+      this.paletteWrapper.style.left = (-this.paletteWrapper.clientWidth) + "px";
       this.paletteHeader.style.zIndex = 0;
       this.resize();
       return setTimeout(((function(_this) {
         return function() {
-          activeElement.style.transition = '';
+          activeElement.style.transition = _this.paletteWrapper.style.transition = '';
           _this.currentlyAnimating = false;
           _this.redrawMain();
           return _this.fireEvent('palettetoggledone', [_this.session.paletteEnabled]);
@@ -9710,14 +9717,15 @@ Editor.prototype.enablePalette = function(enabled) {
       })(this)), 500);
     } else {
       this.paletteWrapper.style.top = '0px';
+      this.paletteWrapper.style.left = (-this.paletteWrapper.clientWidth) + "px";
       this.paletteHeader.style.zIndex = 257;
       return setTimeout(((function(_this) {
         return function() {
-          activeElement.style.transition = "left 500ms";
+          activeElement.style.transition = _this.paletteWrapper.style.transition = "left 500ms";
           activeElement.style.left = _this.paletteWrapper.clientWidth + "px";
           _this.paletteWrapper.style.left = '0px';
           return setTimeout((function() {
-            activeElement.style.transition = '';
+            activeElement.style.transition = _this.paletteWrapper.style.transition = '';
             _this.resize();
             _this.currentlyAnimating = false;
             _this.redrawMain();
@@ -10071,7 +10079,7 @@ Editor.prototype.hasEvent = function(event) {
 
 Editor.prototype.setEditorState = function(useBlocks) {
   var oldScrollTop, paletteVisibleInNewState, ref1, ref2, ref3;
-  this.mainCanvas.style.transition = this.highlightCanvas.style.transition = '';
+  this.mainCanvas.style.transition = this.paletteWrapper.style.transition = this.highlightCanvas.style.transition = '';
   if (useBlocks) {
     if (this.session == null) {
       throw new ArgumentError('cannot switch to blocks if a session has not been set up.');
@@ -10085,6 +10093,7 @@ Editor.prototype.setEditorState = function(useBlocks) {
       this.dropletElement.style.left = this.paletteWrapper.clientWidth + "px";
     } else {
       this.paletteWrapper.style.top = '0px';
+      this.paletteWrapper.style.left = (-this.paletteWrapper.clientWidth) + "px";
       this.dropletElement.style.left = '0px';
     }
     this.aceElement.style.top = this.aceElement.style.left = '-9999px';
@@ -10107,7 +10116,12 @@ Editor.prototype.setEditorState = function(useBlocks) {
     this.aceEditor.resize(true);
     this.aceEditor.session.setScrollTop(oldScrollTop);
     this.dropletElement.style.top = this.dropletElement.style.left = '-9999px';
-    this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
+    if (paletteVisibleInNewState) {
+      this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
+    } else {
+      this.paletteWrapper.style.top = '0px';
+      this.paletteWrapper.style.left = (-this.paletteWrapper.clientWidth) + "px";
+    }
     this.aceElement.style.top = '0px';
     if (paletteVisibleInNewState) {
       this.aceElement.style.left = this.paletteWrapper.clientWidth + "px";
