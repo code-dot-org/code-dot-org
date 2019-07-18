@@ -310,7 +310,8 @@ export function processedStages(stages, isPlc) {
  */
 export const userProgressFromServer = (state, dispatch, userId) => {
   if (!state.scriptName) {
-    return;
+    const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
+    throw new Error(message);
   }
 
   return $.ajax({
