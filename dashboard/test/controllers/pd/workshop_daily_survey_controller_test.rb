@@ -39,14 +39,9 @@ module Pd
 
     self.use_transactional_test_case = true
     setup do
-      @enrolled_academic_year_teacher = create :teacher
       @enrolled_two_day_academic_year_teacher = create :teacher
       @regional_partner = create :regional_partner
       @facilitators = create_list :facilitator, 2
-
-      @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators
-      @academic_year_enrollment = create :pd_enrollment, :from_user, user: @enrolled_academic_year_teacher, workshop: @academic_year_workshop
 
       @two_day_academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5,
         num_sessions: 2, regional_partner: @regional_partner, facilitators: @facilitators
@@ -91,6 +86,7 @@ module Pd
     end
 
     test 'daily academic year workshop survey results 404 for days outside of 1' do
+      setup_academic_year_workshop
       sign_in @enrolled_academic_year_teacher
 
       get '/pd/workshop_survey/day/0'
@@ -254,6 +250,7 @@ module Pd
     end
 
     test 'academic year workshop with open session attendance displays embedded Jotform' do
+      setup_academic_year_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @academic_year_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: @academic_year_enrollment
 
@@ -284,6 +281,7 @@ module Pd
     end
 
     test 'enrollment code override is used when fetching the workshop for a user' do
+      setup_academic_year_workshop
       other_academic_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
         num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
       other_enrollment = create :pd_enrollment, :from_user, workshop: other_academic_workshop, user: @enrolled_academic_year_teacher
@@ -337,6 +335,7 @@ module Pd
     end
 
     test 'academic year workshop submit redirect creates placeholder and redirects to the first facilitator form' do
+      setup_academic_year_workshop
       sign_in @enrolled_academic_year_teacher
 
       assert_creates Pd::WorkshopDailySurvey do
@@ -557,6 +556,7 @@ module Pd
     end
 
     test 'facilitator specific submit for 1-day academic redirects to post for day 1' do
+      setup_academic_year_workshop
       sign_in @enrolled_academic_year_teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
@@ -642,6 +642,7 @@ module Pd
     end
 
     test 'post workshop submit redirects to thanks academic year workshops' do
+      setup_academic_year_workshop
       sign_in @enrolled_academic_year_teacher
 
       assert_creates Pd::WorkshopDailySurvey do
@@ -1085,6 +1086,15 @@ module Pd
       @summer_enrollment = create :pd_enrollment, :from_user, workshop: @summer_workshop
       @enrolled_summer_teacher = @summer_enrollment.user
       @facilitators = @summer_workshop.facilitators
+    end
+
+    def setup_academic_year_workshop
+      @regional_partner = create :regional_partner
+      @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
+        num_sessions: 1, num_facilitators: 2, regional_partner: @regional_partner
+      @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
+      @enrolled_academic_year_teacher = @academic_year_enrollment.user
+      @facilitators = @academic_year_workshop.facilitators
     end
 
     def unenrolled_teacher
