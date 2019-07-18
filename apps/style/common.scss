@@ -276,7 +276,7 @@ button.arrow:disabled {
   min-width: 204px;
 }
 
-/* Set z-index to zero here so that .droplet-dropdown (z-index 500) appears in front of
+/* Set z-index to zero here so that .droplet-dropdown (z-index 10000) appears in front of
  * other droplet elements, but behind anything with z-index > 1 outside of #codeTextbox,
  * such as dialogs. */
 #codeTextbox {
@@ -286,9 +286,10 @@ button.arrow:disabled {
   top: $workspace-headers-height;
   bottom: 0px;
   font-size: 14px;
+  overflow: hidden;
   min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
   direction: ltr;
-  z-index: 1;
+  z-index: 0;
 }
 
 #codeTextbox.pin_bottom {
