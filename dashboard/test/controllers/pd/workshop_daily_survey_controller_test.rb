@@ -63,7 +63,7 @@ module Pd
     end
 
     test 'daily summer workshop survey returns 404 for days outside of range 0-4' do
-      sign_in @enrolled_summer_teacher
+      sign_in enrolled_summer_teacher
       get '/pd/workshop_survey/day/-1'
       assert_response :not_found
 
@@ -90,65 +90,73 @@ module Pd
     end
 
     test 'pre-workshop survey redirects to thanks when a response exists' do
-      create :pd_workshop_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
+      workshop = create :csp_summer_workshop
+      teacher = enrolled_summer_teacher(workshop)
+      create :pd_workshop_daily_survey, pd_workshop: workshop, user: teacher,
         day: 0, form_id: FAKE_DAILY_FORM_IDS[0]
 
-      sign_in @enrolled_summer_teacher
+      sign_in teacher
       get '/pd/workshop_survey/day/0'
       assert_redirected_to action: 'thanks'
     end
 
     test 'pre-workshop survey displays embedded JotForm when enrolled' do
-      submit_redirect = general_submit_redirect(day: 0)
+      workshop = create :csp_summer_workshop
+      teacher = enrolled_summer_teacher(workshop)
+      submit_redirect = general_submit_redirect(day: 0, user: teacher, workshop: workshop)
       assert_equal '/pd/workshop_survey/submit', URI.parse(submit_redirect).path
 
       WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).with(
         FAKE_DAILY_FORM_IDS[0],
         {
           environment: 'test',
-          userId: @enrolled_summer_teacher.id,
-          workshopId: @summer_workshop.id,
+          userId: teacher.id,
+          workshopId: workshop.id,
           day: 0,
           formId: FAKE_DAILY_FORM_IDS[0],
           sessionId: nil,
-          userName: @enrolled_summer_teacher.name,
-          userEmail: @enrolled_summer_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_TEACHER_CON,
-          regionalPartnerName: @regional_partner.name,
+          userName: teacher.name,
+          userEmail: teacher.email,
+          workshopCourse: workshop.course,
+          workshopSubject: workshop.subject,
+          regionalPartnerName: workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
       )
 
-      sign_in @enrolled_summer_teacher
+      sign_in teacher
       get '/pd/workshop_survey/day/0'
       assert_response :success
     end
 
     test 'pre-workshop survey reports render to New Relic' do
+      workshop = create :csp_summer_workshop
+      teacher = enrolled_summer_teacher(workshop)
       NewRelic::Agent.expects(:record_custom_event).with(
         'RenderJotFormView',
         {
           route: 'GET /pd/workshop_survey/day/0',
           form_id: FAKE_DAILY_FORM_IDS[0],
-          workshop_course: COURSE_CSP,
-          workshop_subject: SUBJECT_TEACHER_CON,
-          regional_partner_name: @regional_partner.name
+          workshop_course: workshop.course,
+          workshop_subject: workshop.subject,
+          regional_partner_name: workshop.regional_partner.name
         }
       )
 
       CDO.stubs(:newrelic_logging).returns(true)
-      sign_in @enrolled_summer_teacher
+      sign_in teacher
       get '/pd/workshop_survey/day/0'
       assert_response :success
     end
 
     test 'pre-workshop submit redirect creates a placeholder and redirects to thanks' do
-      sign_in @enrolled_summer_teacher
+      workshop = create :csp_summer_workshop
+      teacher = enrolled_summer_teacher(workshop)
+      sign_in teacher
 
       assert_creates Pd::WorkshopDailySurvey do
         post '/pd/workshop_survey/submit',
-          params: general_submit_redirect_params(day: 0).merge(
+          params: general_submit_redirect_params(day: 0, user: teacher, workshop: workshop).merge(
             submission_id: FAKE_SUBMISSION_ID,
           )
 
@@ -157,7 +165,7 @@ module Pd
 
       new_record = Pd::WorkshopDailySurvey.last
       assert new_record.placeholder?
-      assert_equal @summer_workshop, new_record.pd_workshop
+      assert_equal workshop, new_record.pd_workshop
       assert_equal 0, new_record.day
     end
 
@@ -172,7 +180,7 @@ module Pd
     test 'daily workshop survey displays closed message when session attendance is closed' do
       Session.any_instance.expects(:open_for_attendance?).returns(false)
 
-      sign_in @enrolled_summer_teacher
+      sign_in enrolled_summer_teacher
       get '/pd/workshop_survey/day/1'
       assert_response :success
       assert_closed
@@ -181,7 +189,7 @@ module Pd
     test 'daily workshop survey displays no attendance message when session is open but not attended' do
       Session.any_instance.expects(:open_for_attendance?).returns(true)
 
-      sign_in @enrolled_summer_teacher
+      sign_in enrolled_summer_teacher
       get '/pd/workshop_survey/day/1'
       assert_response :success
       assert_no_attendance
@@ -1109,6 +1117,11 @@ module Pd
         day: CSF_SURVEY_INDEXES[POST_DEEPDIVE_SURVEY],
         formId: CDO.jotform_forms[CSF_CATEGORY][POST_DEEPDIVE_SURVEY]
       }
+    end
+
+    def enrolled_summer_teacher(workshop = create(:csp_summer_workshop))
+      enrollment = create :pd_enrollment, :from_user, workshop: workshop
+      enrollment.user
     end
   end
 end

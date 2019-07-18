@@ -107,6 +107,12 @@ FactoryGirl.define do
       num_facilitators 2
     end
 
+    factory :csp_summer_workshop do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+      num_sessions 5
+    end
+
     trait :teachercon do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
