@@ -34,9 +34,7 @@ module Pd
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         user: @enrolled_two_day_academic_year_teacher, workshop: @two_day_academic_year_workshop
 
-      @csf201_not_started_workshop = create :pd_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, facilitators: (create_list :facilitator, 2)
+      @csf201_not_started_workshop = create :csf201_workshop
 
       @csf201_in_progress_workshop = create :pd_workshop,
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
