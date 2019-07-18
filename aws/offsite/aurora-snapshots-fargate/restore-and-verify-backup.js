@@ -120,7 +120,7 @@ const verifyDb = async (rds, instanceId, password) => {
   });
 
   try {
-    const rows = mysqlConnection.query(
+    const rows = await mysqlConnection.query(
       "SELECT count(*) AS number_of_users, max(updated_at) AS last_updated_at FROM users"
     );
 
