@@ -15,6 +15,7 @@ FactoryGirl.define do
       assign_session_code false
     end
 
+    association :regional_partner
     association :organizer, factory: :workshop_organizer
     funded false
     on_map true
