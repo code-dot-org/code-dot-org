@@ -1,4 +1,8 @@
-import {OPTIONAL, outputWarning} from '../lib/util/javascriptMode';
+import {
+  OPTIONAL,
+  apiValidateType,
+  outputWarning
+} from '../lib/util/javascriptMode';
 
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
@@ -10,11 +14,17 @@ import {OPTIONAL, outputWarning} from '../lib/util/javascriptMode';
  *
  * The same functions are exported individually with an extra final parameter
  * named calledWithinInterpreter. When called outside of the interpreter without
- * the final parameter, the functions will behave as expected in a "native" JS
+ * the final parameter, the functions will behave as expected in a normal JS
  * environment and will not use interpreter-specific data structures.
  *
- * This allows us to share a single implementation for both the "native" version
+ * This allows us to share a single implementation for both the normal versions
  * used by exported apps and for the interpreter optimized versions.
+ *
+ * To import the interpreter versions:
+ * import dontMarshalApi from './dontMarshalApi'
+ *
+ * To import the normal JavaScript versions:
+ * import * as dontMarshalApi from './dontMarshalApi'
  */
 
 function dmapiValidateType(funcName, varName, varValue, expectedType, opt) {
@@ -60,7 +70,7 @@ var getInt = function(obj, def, calledWithinInterpreter) {
   if (calledWithinInterpreter) {
     n = obj ? Math.floor(obj.toNumber()) : def;
   } else {
-    n = typeof obj === 'undefined' ? def : obj;
+    n = typeof obj !== 'undefined' ? Math.floor(obj) : def;
   }
   if (isNaN(n)) {
     n = def;
@@ -69,13 +79,18 @@ var getInt = function(obj, def, calledWithinInterpreter) {
 };
 
 function interpreterInsertItem(array, index, item) {
-  dmapiValidateType('insertItem', 'list', array, 'array');
-  dmapiValidateType('insertItem', 'index', index, 'number');
-
   insertItem(array, index, item, true);
 }
 
 export function insertItem(array, index, item, calledWithinInterpreter) {
+  if (calledWithinInterpreter) {
+    dmapiValidateType('insertItem', 'list', array, 'array');
+    dmapiValidateType('insertItem', 'index', index, 'number');
+  } else {
+    apiValidateType({}, 'insertItem', 'list', array, 'array');
+    apiValidateType({}, 'insertItem', 'index', index, 'number');
+  }
+
   const arrayValues = calledWithinInterpreter ? array.properties : array;
 
   index = getInt(index, 0, calledWithinInterpreter);
@@ -89,19 +104,25 @@ export function insertItem(array, index, item, calledWithinInterpreter) {
     arrayValues[i + 1] = arrayValues[i];
   }
   if (calledWithinInterpreter) {
+    // In the interpreter, we must manually update the length property:
     array.length += 1;
   }
   arrayValues[index] = item;
 }
 
 function interpreterRemoveItem(array, index) {
-  dmapiValidateType('removeItem', 'list', array, 'array');
-  dmapiValidateType('removeItem', 'index', index, 'number');
-
   removeItem(array, index, true);
 }
 
 export function removeItem(array, index, calledWithinInterpreter) {
+  if (calledWithinInterpreter) {
+    dmapiValidateType('removeItem', 'list', array, 'array');
+    dmapiValidateType('removeItem', 'index', index, 'number');
+  } else {
+    apiValidateType({}, 'removeItem', 'list', array, 'array');
+    apiValidateType({}, 'removeItem', 'index', index, 'number');
+  }
+
   const arrayValues = calledWithinInterpreter ? array.properties : array;
 
   index = getInt(index, 0, calledWithinInterpreter);
@@ -114,6 +135,10 @@ export function removeItem(array, index, calledWithinInterpreter) {
   }
   if (index < array.length) {
     if (calledWithinInterpreter) {
+      // In the interpreter, the array is not a real array, so
+      // simply reducing the length of the array is not enough. We must
+      // delete the object stored as the last element before we
+      // modify the length:
       delete arrayValues[array.length - 1];
     }
     array.length -= 1;
@@ -130,20 +155,27 @@ export function removeItem(array, index, calledWithinInterpreter) {
 }
 
 function interpreterAppendItem(array, item) {
-  dmapiValidateType('appendItem', 'list', array, 'array');
-
-  const arrayLength = appendItem(array, item, true);
-  return window.Applab.JSInterpreter.createPrimitive(arrayLength);
+  return appendItem(array, item, true);
 }
 
 export function appendItem(array, item, calledWithinInterpreter) {
+  if (calledWithinInterpreter) {
+    dmapiValidateType('appendItem', 'list', array, 'array');
+  } else {
+    apiValidateType({}, 'appendItem', 'list', array, 'array');
+  }
+
   const arrayValues = calledWithinInterpreter ? array.properties : array;
 
   arrayValues[array.length] = item;
   if (calledWithinInterpreter) {
+    // In the interpreter, we must manually update the length property:
     array.length++;
+    // And we must create an interpreter primitive to wrap the return value:
+    return window.Applab.JSInterpreter.createPrimitive(array.length);
+  } else {
+    return array.length;
   }
-  return array.length;
 }
 
 // ImageData RGB helper functions
@@ -311,6 +343,8 @@ export function setRGB(imageData, x, y, r, g, b, a, calledWithinInterpreter) {
     imageDataDataValues[pixelOffset + 1] = g;
     imageDataDataValues[pixelOffset + 2] = b;
     if (typeof a === 'undefined') {
+      // In the interpreter, we must create an interpreter primitive
+      // to wrap the default value of 255:
       imageDataDataValues[pixelOffset + 3] = calledWithinInterpreter
         ? window.Applab.JSInterpreter.createPrimitive(255)
         : 255;
