@@ -42,10 +42,6 @@ module Pd
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
         num_sessions: 1, facilitators: (create_list :facilitator, 2), started_at: DateTime.now
 
-      @csf201_ended_workshop = create :pd_ended_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, facilitators: (create_list :facilitator, 2)
-
       CDO.stubs(:jotform_forms).returns(
         {
           local_summer: {
@@ -650,10 +646,10 @@ module Pd
     end
 
     test 'csf pre201 survey: enrolled teacher in ended workshop gets too-late msg' do
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_ended_workshop
+      csf201_ended_workshop = create :csf201_workshop, :ended
+      enrollment = create :pd_enrollment, :from_user, workshop: csf201_ended_workshop
 
-      sign_in teacher
+      sign_in enrollment.user
       get '/pd/workshop_survey/csf/pre201'
 
       assert_response :success

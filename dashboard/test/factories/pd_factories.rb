@@ -91,6 +91,23 @@ FactoryGirl.define do
         end
       end
     end
+
+    trait :ended do
+      num_sessions 1
+      started_at {Time.zone.now}
+      ended_at {Time.zone.now}
+    end
+
+    factory :pd_ended_workshop do
+      ended
+    end
+
+    factory :csf201_workshop do
+      course Pd::Workshop::COURSE_CSF
+      subject Pd::Workshop::SUBJECT_CSF_201
+      num_sessions 1
+      num_facilitators 2
+    end
   end
 
   # example zip: 35010
@@ -155,12 +172,6 @@ FactoryGirl.define do
   factory :regional_partner_beverly_hills, parent: :regional_partner_with_summer_workshops do
     contact_name "Beverly Hills Contact"
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
-  end
-
-  factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
-    num_sessions 1
-    started_at {Time.zone.now}
-    ended_at {Time.zone.now}
   end
 
   factory :pd_session, class: 'Pd::Session' do
