@@ -308,7 +308,7 @@ export function processedStages(stages, isPlc) {
  * Requests user progress from the server and dispatches other redux actions
  * based on the server's response data.
  */
-export const userProgressFromServer = (state, dispatch, userId) => {
+const userProgressFromServer = (state, dispatch, userId) => {
   if (!state.scriptName) {
     const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
     throw new Error(message);
@@ -739,6 +739,7 @@ export const __testonly__ = IN_UNIT_TEST
       bestResultLevelId,
       peerReviewLesson,
       peerReviewLevels,
-      PEER_REVIEW_ID
+      PEER_REVIEW_ID,
+      userProgressFromServer
     }
   : {};
