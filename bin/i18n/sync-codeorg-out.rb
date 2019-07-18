@@ -23,7 +23,7 @@ def sync_out
   copy_untranslated_apps
   rebuild_blockly_js_files
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
-  run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
+  I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
 end
 
 # Files downloaded from Crowdin are organized by language name,
@@ -48,8 +48,9 @@ def find_malformed_links_images(locale, file_path)
       YAML.load_file(file_path)
     end
 
+  return unless data
   return unless data&.values&.first&.length
-  recursively_find_malformed_links_images(data, locale, file_path)
+  I18nScriptUtils.recursively_find_malformed_links_images(data, locale, file_path)
 end
 
 def restore_redacted_files
@@ -80,7 +81,7 @@ def restore_redacted_files
       end
       find_malformed_links_images(locale, translated_path)
     end
-    upload_malformed_restorations(locale)
+    I18nScriptUtils.upload_malformed_restorations(locale)
   end
 end
 
@@ -166,7 +167,7 @@ def distribute_course_content(locale)
     next unless course_strings
 
     course_strings.each do |level_url, level_strings|
-      level = get_level_from_url(level_url)
+      level = I18nScriptUtils.get_level_from_url(level_url)
       locale_strings.deep_merge! serialize_i18n_strings(level, level_strings)
     end
   end
@@ -243,7 +244,7 @@ def copy_untranslated_apps
 end
 
 def rebuild_blockly_js_files
-  run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
+  I18nScriptUtils.run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
   Dir.chdir('apps') do
     puts `yarn build`
   end
