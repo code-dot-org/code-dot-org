@@ -344,11 +344,8 @@ const userProgressFromServer = (state, dispatch, userId) => {
       !data.professionalLearningCourse &&
       onOverviewPage
     ) {
-      // Default to progress summary view if teacher is viewing their student's progress.
-      if (data.teacherViewingStudent) {
-        dispatch(setIsSummaryView(true));
-      }
-
+      // Default to summary view if teacher is viewing their student, otherwise default to detail view.
+      dispatch(setIsSummaryView(data.teacherViewingStudent));
       dispatch(showTeacherInfo());
     }
 
