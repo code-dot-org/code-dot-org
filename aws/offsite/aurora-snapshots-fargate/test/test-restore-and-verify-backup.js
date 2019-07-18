@@ -181,7 +181,7 @@ describe("#verifyDb()", function() {
     sinon.replace(
       mysqlPromise,
       "createConnection",
-      sinon.fake.returns(connection)
+      sinon.fake.returns(Promise.resolve(connection))
     );
 
     await restoreAndVerify.verifyDb(rds, INSTANCE_ID, password);
