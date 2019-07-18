@@ -3,7 +3,7 @@ zh-TW:
   data:
     long_instructions:
       2-3 Artist 4: 幫助我完成這隻貓的房子。
-      2-3 Artist 9: 完成這個風箏
+      2-3 Artist 9 NEW: 完成這個風箏
       2-3 Artist Debugging 2: |-
         畫出貓鬍鬚的程式不正確。
 
@@ -915,17 +915,13 @@ zh-TW:
       courseD_maze_until9: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
       courseD_maze_until9_2018: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
       courseD_maze_until9_2019: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
-      courseD_scrat_predict1: "_「冷靜！幫我抓到這頭壞豬，不然我就真的要變成憤怒鳥啦！」_\\\r\n\\\r\n當你有很多相同指令的積木時，試著將它們放到`重複`迴圈裡，這樣子就盡量減少積木的使用數。"
       courseD_scrat_ramp1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_scrat_ramp2: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成程式。
       courseD_scrat_ramp3: "_「這隻豬真的把我惹毛了！」_\\\r\n\\\r\n有個積木會讓鳥崩潰，把它移除掉（拖曳回工具箱）。\\\r"
-      courseD_scrat_ramp4: |-
-        _「順著路徑讓我抓到那隻蠢豬。」_
-
-        當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！
+      courseD_scrat_ramp4: 小心 TNT 炸藥，不然羽毛會被炸飛！
       courseD_scrat_ramp5: "\\*「順著路徑，讓我抓到那頭豬！」\\\r\n\\\r\n注意別被 TNT 炸到。"
       courseD_scrat_ramp6: "_「冷靜！幫我抓到這頭壞豬，不然我就真的要變成憤怒鳥啦！」_\\\r\n\\\r\n當你有很多相同指令的積木時，試著將它們放到`重複`迴圈裡，這樣子就盡量減少積木的使用數。"
-      courseD_scrat_ramp7: "_「我真的要憤怒了！」_\\\r\n\\\r\n**挑戰：**\n使用你學到的方法來讓我抓到這頭豬！"
+      courseD_scrat_ramp7: 幫鼠奎特拿到橡樹果實！
       courseE_artist_concept_challenge1: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\\r\n\\\r\n挑戰時間到了！
         \ \\\r\n\\\r\n這裡有個圖案，只用了你見到的積木做出來的。想一想，要怎麼重建它？你可以邊做邊試，錯了也沒關係。我們不要求你一次就做對。\\\r\n\\\r\n這些重複的圖形和上個關卡的圖案幾乎相同，除了第一個迴圈裡用的長度比較小以外。 "
       courseE_artist_concept_challenge1_2018: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\\r\n\\\r\n挑戰時間到了！
@@ -936,9 +932,10 @@ zh-TW:
       courseE_farmer_functions10b: 使用你的新函式兩次以完成這個關卡。
       courseE_farmer_functions4b: 使用你的新函式以完成這個關卡。
       courseE_farmer_functions5c: 你的函式會在這裡派上用場。
-      courseE_farmer_ramp11b: 撿起所有的生菜。
+      courseE_farmer_ramp11b: 讓我們再試試這個方法，不過這次有更多的土堆！
       courseE_farmer_ramp11b_2018: 讓我們再試試這個方法，不過這次有更多的土堆！
       courseE_farmer_ramp11b_2019: 讓我們再試試這個方法，不過這次有更多的土堆！
+      courseE_farmer_ramp12_forswap: 撿起所有的生菜。
       courseE_farmer_ramp12_forswap_2018: 撿起所有的生菜。
       courseE_farmer_ramp12_forswap_2019: 撿起所有的生菜。
       courseF_artist_for1: "**自由發揮：** 用 `計數` 迴圈及 `counter` 變數來實驗看看。  \n\n拖曳出幾個積木，看看會發生什麼事。"

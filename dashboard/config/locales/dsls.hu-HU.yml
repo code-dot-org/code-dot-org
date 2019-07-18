@@ -447,6 +447,11 @@ hu-HU:
         content1: a leírás itt található
       Begin planning your project_2018_2019:
         content1: a leírás itt található
+      BigEvent-Unplugged:
+        markdown: |
+          # A nagy esemény
+
+          A számítástechnikában az események a akciók, amit a számítógép kijelez. Ebben a leckében a gép másképp reagál, attól függően, hogy melyik gombot nyomod meg.
       CSD Header Size MC:
         answers:
         - {}
@@ -858,6 +863,27 @@ hu-HU:
         - {}
         - {}
         - {}
+      DigitalFootprint-Unplugged:
+        markdown: |
+          # Digitális lábnyomod
+
+          Az önmagdról szóló információk online létrehozása digitális lábnyomot hoz létre.
+      GoingPlacesSafely-unplugged:
+        markdown: "# Helyek biztonságos felkeresése \n\nAz internet nagyon hasznos,
+          de néha veszélyes hely is tud lenni. Figyel a biztonságra az internet használata
+          közben!\n"
+      HappyLoops-Unplugged:
+        markdown: |
+          # Boldog ciklusok
+
+          Ebben a leckében a ciklusokról fogunk tanulni.
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |
+          # Boldog térképek
+
+          Készíts algoritmust, hogy a karaktert kivezesd az útvesztőből.
       Internet Simulator Setup:
         content1: a leírás itt található
       Internet Simulator Setup 2:

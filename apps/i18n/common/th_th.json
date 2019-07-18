@@ -183,7 +183,6 @@
   "extraTopBlocks": "คุณมีบล็อกที่ไม่ได้ต่อ",
   "extraTopBlocksWhenRun": "คุณมีบล็อกที่ไม่ได้ต่อ คุณต้องการเอามาต่อกับบล็อกเมื่อเรียกให้ทำงานหรือไม่",
   "fallbackVideoClosedCaptioningDialogClose": "ปิด",
-  "feedbackNotificationLastUpdated": "ปรับปรุงล่าสุด:",
   "finalStage": "ขอแสดงความยินดี คุณได้แก้ปริศนาสุดท้ายสำเร็จแล้ว",
   "finalStageTrophies": "ขอแสดงความยินดี คุณได้แก้ปริศนาสุดท้ายสำเร็จแล้ว และชนะรางวัล{numTrophies, plural, one {a trophy} other {# trophies}}.",
   "finish": "เสร็จ",

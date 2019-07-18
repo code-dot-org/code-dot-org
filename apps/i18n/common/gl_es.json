@@ -265,7 +265,6 @@
   "extraTopBlocks": "Tes bloques desligados.",
   "extraTopBlocksWhenRun": "Tes bloques desligados. Queres ligalos ó bloque \"ó executar\"?",
   "fallbackVideoClosedCaptioningDialogClose": "Pechar",
-  "feedbackNotificationLastUpdated": "Ultima actialización:",
   "finalStage": "Parabéns! Completaches a etapa final.",
   "finalStageTrophies": "Parabéns! Completaches a etapa final e gañaches {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "findCourse": "Atopar un curso",

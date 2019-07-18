@@ -609,6 +609,8 @@ is-IS:
           átt marga svona kubba eftir til að nota.
       courseC_maze_programming5:
         '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
+      courseC_maze_programming5_2018:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
       courseC_maze_programming5_2019:
         '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
       courseC_maze_programming7:
@@ -681,6 +683,8 @@ is-IS:
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú
           átt marga svona kubba eftir til að nota.
+      courseD_maze_intro5a_2019:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á
           "Keyra" til að ræsa forritið.
@@ -720,7 +724,17 @@ is-IS:
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú
           átt marga svona kubba eftir til að nota.
+      courseD_maze_ramp5:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
+      courseD_maze_ramp5_2018:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
       courseD_maze_ramp5_2019:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
+      courseD_maze_ramp5a:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
+      courseD_maze_ramp5a_2018:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
+      courseD_maze_ramp5a_2019:
         '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft
@@ -731,9 +745,6 @@ is-IS:
       courseD_playLab_condFP_2018:
         courseD_playLab_condFP_1: Við höfum raðað kubbunum í flokka svo þú fáir meiri
           kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft
-          og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á
           "Keyra" til að ræsa forritið.
@@ -746,21 +757,17 @@ is-IS:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú
           átt marga svona kubba eftir til að nota.
+      courseD_scrat_ramp5:
+        '': Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!
       courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
-        courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að
-          endurtaka kóðann.
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft
           og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseD_scrat_ramp7:
-        courseD_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar
-          og geta þurft nokkrar tilraunir.
+        courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft
+          og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar
           og geta þurft nokkrar tilraunir.
-        courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
-        courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að
-          endurtaka kóðann.
       courseE_aboutme_2:
         '': Smelltu hér!
       courseE_artist_functions1:
@@ -818,6 +825,10 @@ is-IS:
         courseE_artist_functions_challenge2_callout2: Ef þér líkar ekki þessi hönnun,
           getur þú breytt henni í hvað sem þú vilt!
       courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
+        courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að
+          endurtaka kóðann.
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
         courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að
           endurtaka kóðann.

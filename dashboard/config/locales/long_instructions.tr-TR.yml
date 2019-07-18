@@ -6,7 +6,7 @@ tr-TR:
         kodlar yazabilirsin. Birkaç blok kullanarak resimdeki gri çizgilerin üstünü
         çizmemi sağla.(Her çizgi 100 piksel uzunluğunda)
       2-3 Artist 4: Kedi için bu evi tamamlamama yardım et.
-      2-3 Artist 9: Uçurtmayı bitirin.
+      2-3 Artist 9 NEW: Uçurtmayı bitirin.
       2-3 Artist Free Play: Serbest çizim! İstediğiniz herhangi bir şey çizin.
       2-3 Artist Loops New 12: Kenarları 100 piksel olan bir elmas çizin.
       2-3 Artist Nested Loops 10: 'Kodu 12 kez döngüleyerek motifi tamamlayın. '
@@ -5385,26 +5385,6 @@ tr-TR:
         tarlalardan sakın!
       courseC_harvester_loops_challenge2_2019: Tüm marulları topla. Ağaçlardan ve
         tarlalardan sakın!
-      courseC_maze_debugging1: "_\"Oh hayır! Bir problem görüyorum.\"_\\\r\n\\\r\nTüm
-        hazineyi toplamak için hatayı/hataları düzeltin."
-      courseC_maze_debugging2: "_\"Bunu yapabilirsin!\"_\\\r\n\\\r\nTüm hazineyi toplamak
-        için hatayı/hataları düzeltin."
-      courseC_maze_debugging3: "_\"Israrcı ol, bunu çözeceksin\"_\\\r\n\\\r\nTüm hazineye
-        toplamak için hatayı/hataları düzeltin."
-      courseC_maze_debugging4: "_\"Hayal kırıklığına uğrama.\nBunu yapabilirsin!\"_\\\r\n\\\r\nTüm
-        hazineyi toplamak için hataları düzeltin."
-      courseC_maze_debugging5: "_\"Bu bulmaca beni deli ediyor!\"_\\\r\n\\\r\nİhtiyaç
-        duyduğun bütün komutlar zaten burada... Şimdi hata ayıklama yeteneğini bu
-        bulmacayı nasıl çözeceğini bulmak için kullan."
-      courseC_maze_debugging6: "**Meydan Okuma**:İhtiyaç duyduğun bütün bloklar zaten
-        burada... Şimdi hata ayıklama yeteneğini hataları düzeltip bütün hazineyi
-        toplamak için kullan."
-      courseC_maze_debugging7: "_\"Daha fazla hazine!\"_\\\r\n\\\r\nKodu düzeltip
-        bütün hazineyi alması için\nLaurel'e yardım et."
-      courseC_maze_debugging8_predict1: "_\"Burası Hazine Adası!\"_\\\r\n\\\r\nKodu
-        düzeltip bütün hazineyi alması için Laurel'e yardım et."
-      courseC_maze_debugging9: "_\"Burası Hazine Adası!\"_\\\r\n\\\r\nKodu düzeltip
-        bütün hazineyi alması için Laurel'e yardım et."
       courseC_maze_debugging_challenge2: '-   "Çok sık dönersem, başım dönebilir!
         Sadece dört dönüş komutu ile domuza ulaşmama yardım et." \*'
       courseC_maze_debugging_challenge2_2018: '-   "Çok sık dönersem, başım dönebilir!
@@ -5537,10 +5517,6 @@ tr-TR:
       courseC_starWars_loops9_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
         et!\"_\\\r\n\\\r\nTüm hurda metalleri toplamak için önceden öğrendiklerini
         kullan!"
-      courseC_video_angles2: "İçiçe döngüler yapılabileceğini biliyor muydun? \\\r
-        \\\r <hr/> \\\r \\\r son üçgen kodunu yeni bir föngü içine koy kendi etrafinda
-        döndür ve bir kar tanesi yap! \\\r \\\r \\*( 6 defa 60 derece dönerek bu deseni
-        yapabilirsin.) \\*"
       courseD_artist_6_2018: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\"
         style=\"float: left; margin: 0 15px 15px 0;\" />Bu bulmaca, yeni bir çizim
         projesine başlamak için sana bir şans verecek! \\\r\n\\\r\n75 ve 105 derece
@@ -6070,9 +6046,6 @@ tr-TR:
         istemeyiz!  \\\r\n\\\r\n`Eğer` deyiminin üzerine kod ekleyin böylece eğer
         korsan güvenli bölgedeyse, program bir saniye bekleyecek, sonra ahtapot hattının
         altında kaldığı sürece bir puan azalacak."
-      courseD_scrat_predict1: "-   \"Sakin ol ve kötü domuzu bulmama yardım et. Aksi
-        takdirde sinirleniyorum!\" \\* \\\r \\\r bir satırda birkaç blok varsa 'tekrarla'
-        döngüsü içine taşıyın.  Bu daha az kod ile aynı şeyi yapmayı sağlar!"
       courseD_scrat_ramp1: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek
         için "Çalıştır" ı tıklatın!
       courseD_scrat_ramp2: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı
@@ -6080,22 +6053,12 @@ tr-TR:
       courseD_scrat_ramp3: "-   \"Bu domuz benim tüylerini  diken d\n    iken ediyor.\"
         \\* \\\r \\\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\\r
         Onu geri araç kutusuna geri sürükle."
-      courseD_scrat_ramp4: Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin.
-        TNT'lerden kaçının yoksa tüylerim havaya uçar!
       courseD_scrat_ramp5: "-   Domuza ulaşmak için yolu takip edin!\" \\* \\\r \\\r
         TNT den kaçının."
       courseD_scrat_ramp6: "-   \"Sakin ol ve kötü domuzu bulmama yardım et. Aksi
         takdirde sinirleniyorum!\" \\* \\\r \\\r bir satırda birkaç blok varsa 'tekrarla'
         döngüsü içine taşıyın.  Bu daha az kod ile aynı şeyi yapmayı sağlar!"
-      courseD_scrat_ramp7: "-   \"Kızgın olma zamanı!\" \\* \\\r \\\r \\*\\* meydan
-        okuma: \\*\\* kuşu domuza iletmek için öğrendiklerini kullanın!"
-      courseD_scrat_ramp8: "Harika!  Şimdi sanatçıyı kullanarak bir kare yapalım!
-        \ Bloklar biraz farklıdır, ancak fikir aynıdır. \\\r <hr/> \\\r  200 piksel
-        uzunlukta kenarlar vardır ve her açıyı yapmak için 90 derece döndürmek gerekir."
-      courseD_video_repeatUntil: "Şimdi çiftçi maruldan daha fazla şey büyüyor!  \\\r
-        \\\r bu bulmacada, çiftçi marul veya \\*\\* değilse \\*\\* Mısır büyütüyor.
-        \ eğer marul / değilse' bloğu kullan ve marul topla \\*\\*değilse \\*\\*mısır
-        topla. \\\r \\\r \\\r \\\r"
+      courseD_scrat_ramp7: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseE_artist_concept_challenge1: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"
         width=\"200px\"/> \\\r \\\r şimdi bir meydan okuma!  \\\r \\\r burada sadece
         gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan
@@ -6143,11 +6106,14 @@ tr-TR:
       courseE_artist_ramp8: "Harika!  Şimdi sanatçıyı kullanarak bir kare yapalım!
         \ Bloklar biraz farklıdır, ancak fikir aynıdır. \\\r <hr/> \\\r  200 piksel
         uzunlukta kenarlar vardır ve her açıyı yapmak için 90 derece döndürmek gerekir."
-      courseE_artist_ramp8_2: "Bu üçgeni. \\\r çizmek için öğrendiklerini kullanın
-        <hr/> \\\r her kenar100 piksel uzunluktadır. Her köşede 120 derece dönmek
-        gerekir."
+      courseE_artist_ramp8_2: "Harika!  Şimdi sanatçıyı kullanarak bir kare yapalım!
+        \ Bloklar biraz farklıdır, ancak fikir aynıdır. \\\r <hr/> \\\r  200 piksel
+        uzunlukta kenarlar vardır ve her açıyı yapmak için 90 derece döndürmek gerekir."
       courseE_artist_ramp9: "Bu üçgeni. \\\r çizmek için öğrendiklerini kullanın <hr/>
         \\\r her kenar100 piksel uzunluktadır. Her köşede 120 derece dönmek gerekir."
+      courseE_artist_ramp9_2: "Bu üçgeni. \\\r çizmek için öğrendiklerini kullanın
+        <hr/> \\\r her kenar100 piksel uzunluktadır. Her köşede 120 derece dönmek
+        gerekir."
       courseE_bee_functions2: "Fonksiyonlar, bir görevi gerçekleştiren kod bloklarıdır.
         \ \\\r\n\\\r\n'2 nektar al' fonksiyonunu kullanarak tüm çiçeklerden nektarları
         topla."
@@ -6189,43 +6155,42 @@ tr-TR:
       courseE_farmer_ramp11a_2019: "Amanın!  Marul demetleri çok yakın ve çiftçi kaç
         tane olduklarını bilmiyor! \\\r \\\r <hr/> \\\r \\\rYeni bir blok ekledik
         'marul (olduğu) sürece'. Bu bloğu kullanın ve marul olduğu sürece toplayın"
-      courseE_farmer_ramp11b: "Şimdi iç içe döngüleri kullanın ('tekrarla' ve 'sürece')
-        ve bulmacayı çözün\\\r \\\r \\\r \\\r"
+      courseE_farmer_ramp12_forswap: "Şimdi iç içe döngüleri kullanın ('tekrarla'
+        ve 'sürece') ve bulmacayı çözün\\\r \\\r \\\r \\\r"
       courseE_farmer_ramp12_forswap_2018: "Şimdi iç içe döngüleri kullanın ('tekrarla'
         ve 'sürece') ve bulmacayı çözün\\\r \\\r \\\r \\\r"
       courseE_farmer_ramp12_forswap_2019: "Şimdi iç içe döngüleri kullanın ('tekrarla'
         ve 'sürece') ve bulmacayı çözün\\\r \\\r \\\r \\\r"
-      courseE_farmer_ramp12b: "Şimdi çiftçi maruldan daha fazla şey büyüyor!  \\\r
-        \\\r bu bulmacada, çiftçi marul veya \\*\\* değilse \\*\\* Mısır büyütüyor.
-        \ eğer marul / değilse' bloğu kullan ve marul topla \\*\\*değilse \\*\\*mısır
-        topla. \\\r \\\r \\\r \\\r"
       courseE_farmer_ramp12c: "Vay be!  Bu fidelere bak. Bazıları marul mazıları Mısıra
         dönecek.  'Eğer Mısır / değilse' bloğu ile  Mısır ise, Mısır al \\*\\* değilse
         \\*\\*maruldur ve marul al. \\\r \\\r \\\r \\\r"
       courseE_farmer_ramp12c_2018: "Marul şimdi sadece yolun sonundadır.\\\r\nBir
         marulun başına ulaşıncaya **kadar** yolun aşağısına inin,, ardından hala kalanlar
         **varken** onu toplamaya devam edin.  "
-      courseE_farmer_ramp12c_2019: "Marul şimdi sadece yolun sonundadır.\\\r\nBir
-        marulun başına ulaşıncaya **kadar** yolun aşağısına inin,, ardından hala kalanlar
-        **varken** onu toplamaya devam edin.  "
+      courseE_farmer_ramp12c_2019: "Vay be!  Bu fidelere bak. Bazıları marul mazıları
+        Mısıra dönecek.  'Eğer Mısır / değilse' bloğu ile  Mısır ise, Mısır al \\*\\*
+        değilse \\*\\*maruldur ve marul al. \\\r \\\r \\\r \\\r"
       courseE_farmer_ramp12d: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r \\\r
         Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
         ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
       courseE_farmer_ramp12d_2018: "Marul bahçenin her tarafına dağılmış durumda.\\\r\nBir
         marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından
         hala kalanlar **varken** onu toplamaya devam edin.  "
-      courseE_farmer_ramp12d_2019: "Marul bahçenin her tarafına dağılmış durumda.\\\r\nBir
-        marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından
-        hala kalanlar **varken** onu toplamaya devam edin.  "
-      courseE_farmer_ramp12e_2018: "Marul bahçenin her tarafına dağılmış durumda.\\\r\nBir
-        marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından
-        hala kalanlar **varken** onu toplamaya devam edin.  "
-      courseE_farmer_ramp12e_2019: "Marul bahçenin her tarafına dağılmış durumda.\\\r\nBir
-        marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından
-        hala kalanlar **varken** onu toplamaya devam edin.  "
-      courseE_farmer_ramp12f: "Yalnızca mevcut blokları kullanarak bu bulmacayı çöz.
-        \\\r \\\r bu seviye 'tekrarla' bloğu ile pratik yapmada yardımcı olacak  Balkabağına
-        \\\r ulaşana kadar kodunuzu tekrar edin (kabakları toplamayı unutmayın!)"
+      courseE_farmer_ramp12d_2019: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r
+        \\\r Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
+        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
+      courseE_farmer_ramp12e: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r \\\r
+        Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
+        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
+      courseE_farmer_ramp12e_2018: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r
+        \\\r Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
+        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
+      courseE_farmer_ramp12e_2019: "Aynı teknik nektar ve bal ile de çalışıyor!  \\\r
+        \\\r Bu bulutlara bak. Bazıları nektar bazıları balbulundurmakta.  'Eğer çiçek
+        ise nektarı al \\*\\* değilse \\*\\* balı. \\\r \\\r \\\r \\\r"
+      courseE_farmer_ramp12f: "\\*\\* Meydan Okuma **: Bütün bitkileri elde etmenin
+        tek yolu, marula ulaşıncaya kadar ileri gitmek, sonra  \\*\\*eğer** sola giden
+        bir yol varsa sola dönün. Aksi takdirde sağa dönün."
       courseE_farmer_ramp12f_2018: "\\*\\* Meydan Okuma **: Bütün bitkileri elde etmenin
         tek yolu, marula ulaşıncaya kadar ileri gitmek, sonra  \\*\\*eğer** sola giden
         bir yol varsa sola dönün. Aksi takdirde sağa dönün."
