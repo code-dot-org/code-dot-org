@@ -3,7 +3,7 @@ pl-PL:
   data:
     long_instructions:
       2-3 Artist 4: Pomóż mi dokończyć domek dla tego kota.
-      2-3 Artist 9: Dokończ ten latawiec
+      2-3 Artist 9 NEW: Dokończ ten latawiec
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
       2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten
         rysunek.
@@ -549,11 +549,6 @@ pl-PL:
         i pól!
       courseC_harvester_loops_challenge2_2019: Zbierz wszystkie sałaty. Unikaj drzew
         i pól!
-      courseC_maze_debugging1: "_\"O nie! Zauważyłem błąd.\"_\\\r\n\\\r\nNapraw błąd(błędy)
-        aby zebrać cały skarb."
-      courseC_maze_debugging6: "**Wyzwanie:** Wszystkie bloki których potrzebujesz
-        już tutaj są...Wykorzystaj swoje umiejętności debugowania aby naprawić błąd
-        i zebrać cały skarb."
       courseC_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       courseC_maze_programming_challenge2_2018: Czasami jest więcej sposobów na rozwiązanie

@@ -8,7 +8,7 @@ no-NO:
       2-3 Artist 2 new: 'Dette huset har en halvferdig vegg. Hver side er 100, men
         den halvferdige veggen er bare 50. Fullfør veggen. '
       2-3 Artist 4: Hjelp meg å fullføre juset til denne katten.
-      2-3 Artist 9: Fullfør denne dragen
+      2-3 Artist 9 NEW: Fullfør denne dragen
       2-3 Artist Debugging Assessment 1: "Oppgave: Hvorfor blir dette kvadratet 75
         piksler for lite på hver side? \n\nHvor i koden går det galt?"
       2-3 Artist Free Play: Åpent brett! Tegn det du vil.
@@ -665,7 +665,7 @@ no-NO:
       bounce_12: Opprett ditt eget Sprettespill. Du kan endre alle bilder og reglene.
         Når du er ferdig, klikk Fullfør for å la venner prøve spillet på sine telefoner.
       bounce_12_basketball: Lag ditt eget basketballspill. Du kan endre alle reglene.
-        Klikk ferdig når du er fornøyd og la vennene dine prøve spillet på telefonene
+        Klikk "Ferdig" når du er fornøyd og la vennene dine prøve spillet på telefonene
         sine.
       bounce_12_sports: 'Lag ditt eget spill! Du bestemmer: Du kan endre på alle regler,
         blande og sette sammen ulike sporter. Vær kreativ! Når du er ferdig, trykk
@@ -674,7 +674,7 @@ no-NO:
       bounce_1_basketball: Fest en blokk til "når venstre pil"-blokken og klikk "Kjør".
         Bruk venstre pil til å flytten hånden til målet.
       bounce_1_sports: Kom deg til flagget! Koble en blokk til "når venstre pil"-blokken
-        og trykk "Kjør" for å flytte spillfiguren til flagget.
+        og trykk "Kjør" for å flytte spilleren til flagget.
       bounce_2: Fest en blokk til «når pil høyre» og «når pil venstre» blokkene. Flytt
         åren for å nå begge målene.
       bounce_2_basketball: Fest en blokk til "når høyre pil"- og "når venstre pil"-blokkene.
@@ -699,9 +699,9 @@ no-NO:
         ballen treffer"-blokkene for å løse denne oppgaven.
       bounce_7: Fest blokker til alle «når» blokkene. Sprett ballen helt til den treffer
         sluttmålet.
-      bounce_7_basketball: Fest blokkene til begge "når"-blokkene. Sprett ballen til
+      bounce_7_basketball: Fest blokker til begge "når"-blokkene. Sprett ballen til
         den treffer flagget.
-      bounce_7_sports: Fest blokkene til begge "når"-blokkene. Sprett ballen til den
+      bounce_7_sports: Fest blokker til begge "når"-blokkene. Sprett ballen til den
         treffer flagget.
       course3_farmer_until_challenge2: Bruk blokken hvis/ellers til å følge den svingete
         banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne
@@ -800,6 +800,7 @@ no-NO:
       courseE_farmer_ramp11a: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11a_2018: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11a_2019: Så lenge det er en haug, fjern jord.
+      courseE_farmer_ramp11b: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11b_2018: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11b_2019: Så lenge det er en haug, fjern jord.
       courseF_artist_for7: Gjør tre små endringer i koden fra forrige nivå for å få
@@ -869,18 +870,18 @@ no-NO:
       frozen cross rotate dense: 'La oss gjenta det 90 ganger! Hvor mange ganger går
         90 opp i 360? Hint: Det er et ganske lite tall.'
       frozen diamond: Bruk en gjenta-brikke rundt disse brikkene for å lage et parallelogram.
-        Det er en firkant hvor hjørnene har forskjellige vinkler. Denne har vinkler
-        på 60 grader og 120 grader i stedet for at alle har 90 graders vinkler.
+        Det er som et rektangel hvor hjørnene har forskjellige vinkler. Denne har
+        vinkler på 60 grader og 120 grader i stedet for bare 90 graders vinkler.
       frozen diamond mini snowflake: Visste du at alle snøfnugg har forskjellige former?
         La oss lage et nytt snøfnugg ved å bruke enda en "Gjenta"-brikke for å repetere
-        mønsteret 4 ganger. Snu 90 grader mellom hvert mønster.
+        et parallellogram 4 ganger. Snu 90 grader mellom hvert parallellogram.
       frozen diamond snowflake: Nå skal vi lage et snøfnugg ved å bruke "Gjenta"-blokken
         til å lage et parallelogram 10 ganger ved å snu mot høyre 36 grader etter
         hvert parallelogram.
       frozen freeplay: "Du er nå offisielt blitt en mesterkunstner! \nLag et vinterparadis!"
       frozen line: Hei! Jeg heter Elsa av Arendelle. Hjelp meg å lage en enkelt linje.
       frozen perpendicular: Nå skal vi prøve å lage to linjer som står 90 grader i
-        forhold til hverandre. Du må bruke blokken "Snu" og en "Flytt"-blokk.
+        forhold til hverandre. Du må bruke "Snu"-brikken i tillegg til "Flytt"-brikken.
       frozen snowflake branch: Prøv å bruke "lag en snøflakgren"-blokken for å lage
         tre grener som begynner å se ut som et snefnugg.
       frozen snowflake full: Nå skal vi repetere det 8 ganger for å lage et nydelig

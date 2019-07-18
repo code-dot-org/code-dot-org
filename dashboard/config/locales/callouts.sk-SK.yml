@@ -712,9 +712,6 @@ sk-SK:
         courseD_playLab_condFP_1: Bloky sme usporiadali do kategórií, v ktorých nájdeš
           ešte viac možností! Klikni sem a pozri sa, čo všetko v jednotlivých kategóriach
           nájdeš.
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
-          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť",
           ktoré spustí tvoj program.
@@ -728,18 +725,14 @@ sk-SK:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
       courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: Toto číslo môžete zmeniť.
-        courseE_artist_ramp8_2: Kliknite sem pre zadanie počtu opakovaní vášho kódu.
         courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
           koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseD_scrat_ramp7:
-        courseD_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné
-          a možno ich vyriešite až na niekoľkatý pokus.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné
           a možno ich vyriešite až na niekoľkatý pokus.
-        courseE_artist_ramp8_1: Toto číslo môžete zmeniť.
-        courseE_artist_ramp8_2: Kliknite sem pre zadanie počtu opakovaní vášho kódu.
       courseE_artist_functions1:
         courseD_artist_functions1_1: Začnime použitím tohto bloku pre vytvorenie prvého
           štvorca.
@@ -792,6 +785,9 @@ sk-SK:
         courseE_artist_functions_challenge2_callout2: Ak sa vám nepáči tento dizajn,
           zmeňte ho na čo len chcete!
       courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Toto číslo môžete zmeniť.
+        courseE_artist_ramp8_2: Kliknite sem pre zadanie počtu opakovaní vášho kódu.
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Toto číslo môžete zmeniť.
         courseE_artist_ramp8_2: Kliknite sem pre zadanie počtu opakovaní vášho kódu.
       courseE_farmer_functions13_2018:

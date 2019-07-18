@@ -16,7 +16,7 @@ nn-NO:
       2-3 Artist 4: Hjelp meg å gjere huset til denne katten ferdig.
       2-3 Artist 7: 'Gjer ferdig det siste settet av vindauga på skulen slik at alle
         elevane kan sjå ut. Kvart kvadratiske glas er 25 pikslar breidt. '
-      2-3 Artist 9: Gjer ferdig denne dragen
+      2-3 Artist 9 NEW: Gjer ferdig denne dragen
       2-3 Artist Debugging Assessment 1: "Oppgave: Hvorfor blir dette kvadratet 75
         piksler for lite på hver side? \n\nHvor i koden går det galt?"
       2-3 Artist Free Play: Åpent brett! Teikn kva du vil.
@@ -1486,14 +1486,6 @@ nn-NO:
         åkrar!"
       courseC_harvester_loops_challenge2_2019: "Samle all salaten. \nUnngå tre og
         åkrar!"
-      courseC_maze_debugging1: Rett feilen(e) for å samle skatte.
-      courseC_maze_debugging2: Rett feilen(e) for å samle skatte.
-      courseC_maze_debugging3: Rett feilen(e) for å samle skatte.
-      courseC_maze_debugging4: Rett feilen(e) for å samle skatte.
-      courseC_maze_debugging5: Alle kommandoane du treng er her allereie... bruk det
-        du har lært til å finne ut korleis du kan løyse oppgåva.
-      courseC_maze_debugging6: 'Utfordring: Bruk det du har lært til å fikse feilene
-        og samle saman skatten.'
       courseC_maze_debugging_challenge1: _"Går eg berre rundt i sirklar?"_
       courseC_maze_debugging_challenge1_2018: _"Går eg berre rundt i sirklar?"_
       courseC_maze_debugging_challenge1_2019: _"Går eg berre rundt i sirklar?"_
@@ -1578,8 +1570,6 @@ nn-NO:
       courseC_starWars_loops9: Bruk kva du har lært til å plukke opp alt skrapmetallet!
       courseC_starWars_loops9_2018: Bruk kva du har lært til å plukke opp alt skrapmetallet!
       courseC_starWars_loops9_2019: Bruk kva du har lært til å plukke opp alt skrapmetallet!
-      courseC_video_angles2: Dra koden for den siste trekanten til ei ny løkke slik
-        at det spinn rundt og lagar eit snøfnugg!
       courseD_artist_5_2018: Leik med snøflak!
       courseD_artist_5_2018_2019: Leik med snøflak!
       courseD_artist_binary1: Bruk blokkene nedanfor til å få kunstnaren til å teikne
@@ -1792,8 +1782,8 @@ nn-NO:
         den fungerer. Deretter gjer du programmet om til ditt eige!
       courseE_artist_functions_challenge2_2019: Prøv denne koden for å sjå korleis
         den fungerer. Deretter gjer du programmet om til ditt eige!
-      courseE_artist_ramp8_2: Bruk det du har lært til å teikne denne trekanten.
       courseE_artist_ramp9: Bruk det du har lært til å teikne denne trekanten.
+      courseE_artist_ramp9_2: Bruk det du har lært til å teikne denne trekanten.
       courseE_bee_concept1: 'Samle inn all nektar frå alle blomane. Bruk ei løkke
         inni ei løkke. '
       courseE_bee_concept1_2018: 'Samle inn all nektar frå alle blomane. Bruk ei løkke
@@ -1818,16 +1808,15 @@ nn-NO:
       courseE_farmer_ramp11a: Så lenge det er en haug, fjern jorda.
       courseE_farmer_ramp11a_2018: Så lenge det er en haug, fjern jorda.
       courseE_farmer_ramp11a_2019: Så lenge det er en haug, fjern jorda.
-      courseE_farmer_ramp11b: Bruk løkker for å løyse denne oppgåva.
+      courseE_farmer_ramp11b: Så lenge det er en haug, fjern jorda.
       courseE_farmer_ramp11b_2018: Så lenge det er en haug, fjern jorda.
       courseE_farmer_ramp11b_2019: Så lenge det er en haug, fjern jorda.
+      courseE_farmer_ramp12_forswap: Bruk løkker for å løyse denne oppgåva.
       courseE_farmer_ramp12_forswap_2018: Bruk løkker for å løyse denne oppgåva.
       courseE_farmer_ramp12_forswap_2019: Bruk løkker for å løyse denne oppgåva.
-      courseE_farmer_ramp12b: Plukk all salaten (berre kor det er noko å plukke.)
+      courseE_farmer_ramp12b: Så lenge det er salat, plukk salaten!
       courseE_farmer_ramp12b_2018: Så lenge det er salat, plukk salaten!
       courseE_farmer_ramp12b_2019: Så lenge det er salat, plukk salaten!
-      courseE_farmer_ramp12d: Hjelp bia med å følge stien for å samle saman honningen
-        og all nektaren.
       courseF_artist_for7: Gjer tre små endringar i koden frå førre nivå for å få
         dette til!
       courseF_artist_for7_2018: Gjer tre små endringar i koden frå førre nivå for

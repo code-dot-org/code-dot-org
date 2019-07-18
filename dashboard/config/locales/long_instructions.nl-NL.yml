@@ -6,7 +6,7 @@ nl-NL:
         alles te laten tekenen. Gebruik een paar blokken om me over de grijze lijnen
         in de tekening te laten tekenen. (Elke lijn is 100 pixels lang)
       2-3 Artist 4: Help mij het huis voor deze kat af te maken.
-      2-3 Artist 9: Maak de vlieger af
+      2-3 Artist 9 NEW: Maak de vlieger af
       2-3 Artist Free Play: Vrij spel! Je mag alles tekenen wat je wilt.
       2-3 Artist Nested Loops 10: Laat deze code in een lus 12 keer uitvoeren om het
         patroon af te maken.
@@ -464,8 +464,8 @@ nl-NL:
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseD_maze_ramp2_2019: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist,
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
-      courseD_scrat_ramp1: Versleep in deze puzzel alle blokken tezamen en klik op
-        "Start" om het te zien gaan!
+      courseD_scrat_ramp1: Plak alle blokken aaneen bij deze puzzel en klik op "Start"
+        om het te zien bewegen!
       courseD_scrat_ramp2: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist,
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseE_bee_functions3: Functies zijn blokken code die een taak uitvoeren. Gebruik

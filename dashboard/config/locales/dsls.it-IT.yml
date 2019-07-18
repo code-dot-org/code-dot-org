@@ -2105,14 +2105,14 @@ it-IT:
         questions:
         - {}
         answers:
-        - text: Niente. L'uccellino non si muoverà.
+        - {}
         - correct: true
           feedback: Corretto!
         - {}
         - text: Non lo so.
           feedback: Visto che il blocco `vai avanti` è inserito in un blocco `ripeti
-            ... volte`, Scrat va avanti per tre volte. Poi si gira e va avanti altre
-            tre volte, arrivando quindi fino alla ghianda!
+            ... volte`, Scrat si muove avanti per tre volte. Poi si gira e va avanti
+            altre tre volte, arrivando quindi fino alla ghianda!
       courseE_multi_bee_functions_predict1:
         questions:
         - text: Qui trovi lo stesso programma del precedente esercizio, ma la quantità
@@ -2256,6 +2256,68 @@ it-IT:
           feedback: La variabile viene impostata nuovamente a 0 prima delle ultime
             due chiamate della funzione, in cui viene aggiunto 1 ogni volta. Quindi
             poi l'ape raccoglie 2 dosi di nettare.
+      courseF_markdown_algorithms_end:
+        markdown: "# **Hai appena imparato cosa sono gli \"algoritmi\"!**  \n\n\n\n###
+          **Un algoritmo è semplicemente una sequenza di passi necessari per svolgere
+          una certa attività**. La cosa divertente degli algoritmi, è che si può decidere
+          cosa far accadere, passo dopo passo.\n\n###Un algoritmo scritto per una
+          macchina si chiama **programma**.  \n\n---\n\n## **Termini da conoscere**\n\n*
+          ### **Algoritmo** - Una sequenza di passi per svolgere un'attività\n\n*
+          ### **Programma** - Un algoritmo tradotto in un linguaggio comprensibile
+          ed eseguibile da una macchina\n"
+      courseF_markdown_algorithms_intro:
+        markdown: |
+          # **In questa lezione...**
+
+          ### Hai mai cercato di dire a qualcuno esattamente cosa fare? Ti ha sempre ascoltato?
+
+          ### Oggi, dirai ad una macchina cosa fare - passo dopo passo - e questa ti ascolterà!
+
+          ---
+
+          ## **Blocchi da conoscere**
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+      courseF_markdown_debugging_end:
+        markdown: |
+          # **Hai appena imparato cos'è il "debugging"!**
+
+          ### **Un "bug" è qualcosa che non funziona.** È un errore in un programma. Quando cerchi e correggi questi errori, stai eseguendo il "debugging".
+
+          ### Devi allenare la **preseveranza**, un sinonimo di "non arrendersi", per trovare e correggere tutti gli errori.
+
+          ---
+
+          ## **Termini da conoscere**
+
+          * ### **Bug** - Un errore che non fa funzionare un programma come vorresti
+
+          * ### **Debugging** - Trovare e correggere gli errori in algoritmi o programmi
+
+          * ### **Perseveranza** - Non arrendersi!
+      courseF_markdown_debugging_intro:
+        markdown: |
+          # In questa lezione...
+
+          ### A cosa pensi quando pensi ai "bug"?
+
+          ### In inglese i "bug" sono gli "insetti" e a volte sono fastidiosi. In informatica i "bug" non sono vivi, ma sono sempre molto fastidiosi!
+
+          ### Gli esercizi di questa lezione sono già stati risoli per te! Ma non così bene, infatti non funzionano. C'entrano i "bug" in questa facenda?
+
+          ---
+
+          ## Blocchi da conoscere
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_multi_artist_for10_predict1:
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?

@@ -3,7 +3,7 @@ no-NO:
   data:
     long_instructions:
       2-3 Artist 4: Hjelp meg å fullføre juset til denne katten.
-      2-3 Artist 9: Fullfør denne dragen
+      2-3 Artist 9 NEW: Fullfør denne dragen
       2-3 Artist Free Play: Åpent brett! Tegn det du vil.
       2-3 Artist Nested Loops 10: Repeter dette mønsteret 12 ganger for å fullføre
         mønsteret.
@@ -390,17 +390,17 @@ no-NO:
       frozen cross rotate dense: 'La oss gjenta det 90 ganger! Hvor mange ganger går
         90 opp i 360? Hint: Det er et ganske lite tall.'
       frozen diamond: Bruk en gjenta-brikke rundt disse brikkene for å lage et parallelogram.
-        Det er en firkant hvor hjørnene har forskjellige vinkler. Denne har vinkler
-        på 60 grader og 120 grader i stedet for at alle har 90 graders vinkler.
+        Det er som et rektangel hvor hjørnene har forskjellige vinkler. Denne har
+        vinkler på 60 grader og 120 grader i stedet for bare 90 graders vinkler.
       frozen diamond mini snowflake: Visste du at alle snøfnugg har forskjellige former?
         La oss lage et nytt snøfnugg ved å bruke enda en "Gjenta"-brikke for å repetere
-        mønsteret 4 ganger. Snu 90 grader mellom hvert mønster.
+        et parallellogram 4 ganger. Snu 90 grader mellom hvert parallellogram.
       frozen diamond snowflake: Nå skal vi lage et snøfnugg ved å bruke "Gjenta"-blokken
         til å lage et parallelogram 10 ganger ved å snu mot høyre 36 grader etter
         hvert parallelogram.
       frozen freeplay: "Du er nå offisielt blitt en mesterkunstner! \nLag et vinterparadis!"
       frozen perpendicular: Nå skal vi prøve å lage to linjer som står 90 grader i
-        forhold til hverandre. Du må bruke blokken "Snu" og en "Flytt"-blokk.
+        forhold til hverandre. Du må bruke "Snu"-brikken i tillegg til "Flytt"-brikken.
       frozen snowflake branch: Prøv å bruke "lag en snøflakgren"-blokken for å lage
         tre grener som begynner å se ut som et snefnugg.
       frozen snowflake full: Nå skal vi repetere det 8 ganger for å lage et nydelig

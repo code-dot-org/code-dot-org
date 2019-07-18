@@ -62,7 +62,7 @@ export default class LevelFeedbackEntry extends Component {
       linkToLevel,
       unitName,
       linkToUnit,
-      updated_at,
+      created_at,
       comment
     } = this.props.feedback;
 
@@ -97,7 +97,7 @@ export default class LevelFeedbackEntry extends Component {
             </div>
           </a>
         </div>
-        <TimeAgo style={styles.time} dateString={updated_at} />
+        <TimeAgo style={styles.time} dateString={created_at} />
         <div style={styles.comment}>{comment}</div>
       </div>
     );

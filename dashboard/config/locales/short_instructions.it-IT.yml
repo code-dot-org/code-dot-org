@@ -16,7 +16,7 @@ it-IT:
       2-3 Artist 4: Aiutami a completare la casa per questo gatto.
       2-3 Artist 6: 'Questa casa ha bisogno di un tetto! Disegna un triangolo. Suggerimento:
         tutti e tre i lati hanno la stessa lunghezza.'
-      2-3 Artist 9: Finisci di disegnare questo aquilone
+      2-3 Artist 9 NEW: Finisci di disegnare questo aquilone
       2-3 Artist Free Play: 'Tempo di giocare: disegna qualcosa che ti piace.'
       2-3 Artist Loops New 1: Completiamo la testa del robot! Riesci a disegnare un
         quadrato con un lato di 100 pixel?
@@ -1533,15 +1533,15 @@ it-IT:
       courseB_playlab_events6: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
 
-        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
+        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere anche in su e in giù, oltre che a sinistra e a destra.
       courseB_playlab_events6_2018: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
 
-        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
+        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere anche in su e in giù, oltre che a sinistra e a destra.
       courseB_playlab_events6_2019: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
 
-        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
+        Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere anche in su e in giù, oltre che a sinistra e a destra.
       courseB_playlab_events7: Rendi questo gioco divertente facendo svanire il cavaliere
         quando si scontra con il drago mentre cerca di raggiungere le bandierine!
         Riproduci anche un suono quando lo colpisce, così sembra più reale.
@@ -2008,32 +2008,35 @@ it-IT:
         gli alberi e i campi!
       courseC_harvester_loops_challenge2_2019: Raccogli tutte le lattughe evitando
         gli alberi e i campi!
-      courseC_maze_debugging1: Correggi gli errori per raccogliere tutti i diamanti.
+      courseC_maze_debugging1: Correggi il codice per aiutare Scrat a raggiungere
+        la ghianda.
       courseC_maze_debugging1_2018: Correggi il codice per aiutare Scrat a raggiungere
         la ghianda.
       courseC_maze_debugging1_2019: Correggi il codice per aiutare Scrat a raggiungere
         la ghianda.
-      courseC_maze_debugging2: Correggi gli errori per raccogliere tutti i diamanti.
+      courseC_maze_debugging2: Usa le tue abilità di debugging (correzione degli errori)
+        per fare arrivare Scrat fino alla ghianda.
       courseC_maze_debugging2_2018: Usa le tue abilità di debugging (correzione degli
         errori) per fare arrivare Scrat fino alla ghianda.
       courseC_maze_debugging2_2019: Usa le tue abilità di debugging (correzione degli
         errori) per fare arrivare Scrat fino alla ghianda.
-      courseC_maze_debugging3: Correggi gli errori per raccogliere tutti i diamanti.
+      courseC_maze_debugging3: Rimuovi dei blocchi per far arrivare Scrat fino alla
+        ghianda!
       courseC_maze_debugging3_2018: Rimuovi dei blocchi per far arrivare Scrat fino
         alla ghianda!
       courseC_maze_debugging3_2019: Rimuovi dei blocchi per far arrivare Scrat fino
         alla ghianda!
-      courseC_maze_debugging4: Correggi gli errori per raccogliere tutti i diamanti.
+      courseC_maze_debugging4: Qualcuno ha cambiato qualche svolta! Puoi aiutarmi?
       courseC_maze_debugging4_2018: Qualcuno ha cambiato qualche svolta! Puoi aiutarmi?
       courseC_maze_debugging4_2019: Qualcuno ha cambiato qualche svolta! Puoi aiutarmi?
-      courseC_maze_debugging5: Tutti i blocchi che ti servono sono già qui... sfrutta
-        tutte le tue abilità di debugging per capire come risolvere questo esercizio.
+      courseC_maze_debugging5: Correggi questo esercizio spostando e modificando dei
+        blocchi.
       courseC_maze_debugging5_2018: Correggi questo esercizio spostando e modificando
         dei blocchi.
       courseC_maze_debugging5_2019: Correggi questo esercizio spostando e modificando
         dei blocchi.
-      courseC_maze_debugging6: 'Sfida: sfrutta tutte le tue abilità di debugging per
-        correggere gli errori e raccogliere tutti i diamanti.'
+      courseC_maze_debugging6: Cerca di capire cosa c'è di sbagliato e fai arrivare
+        Scrat fino alla ghianda.
       courseC_maze_debugging6_2018: Cerca di capire cosa c'è di sbagliato e fai arrivare
         Scrat fino alla ghianda.
       courseC_maze_debugging6_2019: Cerca di capire cosa c'è di sbagliato e fai arrivare
@@ -3025,9 +3028,9 @@ it-IT:
         Buttalo via trascinandolo nella cassetta degli attrezzi.
       courseD_scrat_ramp4: Evita la dinamite (TNT) o ci lascio le penne!
       courseD_scrat_ramp5: Evita la dinamite (TNT).
-      courseD_scrat_ramp6: '"Mantieni la calma e aiutami a trovare quel cattivone
-        di un maialino. Altrimenti potrei arrabbiarmi!"'
-      courseD_scrat_ramp8: Ora disegna un quadrato usando l'Artista!
+      courseD_scrat_ramp7: Aiuta Scrat a raggiungere la ghianda!
+      courseD_scrat_ramp8: Usa ciò che hai imparato per fare in modo che Scrat raggiunga
+        la ghianda!
       courseE_artist_concept1: Disegna questa immagine.
       courseE_artist_concept1_2018: Disegna questa immagine.
       courseE_artist_concept4: Riproduci questo disegno.
@@ -3128,8 +3131,9 @@ it-IT:
       courseE_artist_functions_challenge2_2019: Prova ad eseguire questo codice per
         vedere come funziona, poi personalizzalo e rendilo tuo!
       courseE_artist_ramp8: Ora disegna un quadrato usando l'Artista!
-      courseE_artist_ramp8_2: Usa ciò che hai imparato per disegnare questo triangolo.
+      courseE_artist_ramp8_2: Ora disegna un quadrato usando l'Artista!
       courseE_artist_ramp9: Usa ciò che hai imparato per disegnare questo triangolo.
+      courseE_artist_ramp9_2: Usa ciò che hai imparato per disegnare questo triangolo.
       courseE_bee_concept1: Raccogli tutto il nettare da ogni fiore.
       courseE_bee_concept1_2018: Raccogli tutto il nettare da ogni fiore.
       courseE_bee_concept2: Aiuta l'ape a produrre tutto il miele.
@@ -3239,25 +3243,35 @@ it-IT:
       courseE_farmer_ramp11a: Mentre c'è un mucchio, rimuovi la terra.
       courseE_farmer_ramp11a_2018: Mentre c'è un mucchio, rimuovi la terra.
       courseE_farmer_ramp11a_2019: Mentre c'è un mucchio, rimuovi la terra.
-      courseE_farmer_ramp11b: Ora usa i cicli annidati per risolvere l'esercizio.
+      courseE_farmer_ramp11b: Mentre c'è un mucchio, rimuovi la terra.
       courseE_farmer_ramp11b_2018: Mentre c'è un mucchio, rimuovi la terra.
       courseE_farmer_ramp11b_2019: Mentre c'è un mucchio, rimuovi la terra.
+      courseE_farmer_ramp12_forswap: Ora usa i cicli annidati per risolvere l'esercizio.
       courseE_farmer_ramp12_forswap_2018: Ora usa i cicli annidati per risolvere l'esercizio.
       courseE_farmer_ramp12_forswap_2019: Ora usa i cicli annidati per risolvere l'esercizio.
+      courseE_farmer_ramp12b: Mentre c'è lattuga, raccogli la lattuga!
       courseE_farmer_ramp12b_2018: Mentre c'è lattuga, raccogli la lattuga!
       courseE_farmer_ramp12b_2019: Mentre c'è lattuga, raccogli la lattuga!
+      courseE_farmer_ramp12c: Vai avanti fino a che raggiungi la lattuga, poi prendila
+        tutta usando un ciclo `mentre`.
       courseE_farmer_ramp12c_2018: Vai avanti fino a che raggiungi la lattuga, poi
         prendila tutta usando un ciclo `mentre`.
       courseE_farmer_ramp12c_2019: Vai avanti fino a che raggiungi la lattuga, poi
         prendila tutta usando un ciclo `mentre`.
+      courseE_farmer_ramp12d: Vai avanti fino a che raggiungi la lattuga, poi prendila
+        tutta usando un ciclo `mentre`.
       courseE_farmer_ramp12d_2018: Vai avanti fino a che raggiungi la lattuga, poi
         prendila tutta usando un ciclo `mentre`.
       courseE_farmer_ramp12d_2019: Vai avanti fino a che raggiungi la lattuga, poi
         prendila tutta usando un ciclo `mentre`.
+      courseE_farmer_ramp12e: Vai avanti fino a che raggiungi la lattuga, poi prendila
+        tutta usando un ciclo `mentre`.
       courseE_farmer_ramp12e_2018: Vai avanti fino a che raggiungi la lattuga, poi
         prendila tutta usando un ciclo `mentre`.
       courseE_farmer_ramp12e_2019: Vai avanti fino a che raggiungi la lattuga, poi
         prendila tutta usando un ciclo `mentre`.
+      courseE_farmer_ramp12f: Vai avanti fino a che raggiungi la lattuga, poi **se**
+        c'è strada a sinistra, gira a sinistra. In caso contrario, gira a destra.
       courseE_farmer_ramp12f_2018: Vai avanti fino a che raggiungi la lattuga, poi
         **se** c'è strada a sinistra, gira a sinistra. In caso contrario, gira a destra.
       courseE_farmer_ramp12f_2019: Vai avanti fino a che raggiungi la lattuga, poi
