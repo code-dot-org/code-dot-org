@@ -373,7 +373,6 @@ module Pd
     end
 
     test 'facilitator specific survey redirects to next facilitator when response exists' do
-      skip 'Investigate flaky test failures'
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
@@ -385,7 +384,6 @@ module Pd
     end
 
     test 'last facilitator specific survey redirects to thanks when response exists' do
-      skip 'Investigate flaky test failures'
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
@@ -397,7 +395,6 @@ module Pd
     end
 
     test 'facilitator specific survey with open session attendance displays embedded JotForm' do
-      skip 'Investigate flaky test failures'
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
 
@@ -907,8 +904,6 @@ module Pd
     end
 
     test 'csf facilitator survey: show 1st facilitator survey to attended teacher' do
-      skip 'Investigate flaky test failures'
-
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
@@ -984,8 +979,6 @@ module Pd
     end
 
     test 'csf facilitator survey: redirect to 2nd facilitator survey if response exists for 1st one' do
-      skip 'Investigate flaky test failures'
-
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
@@ -1013,8 +1006,6 @@ module Pd
     end
 
     test 'csf facilitator survey: show thanks page if response exists for all facilitators' do
-      skip 'Investigate flaky test failures'
-
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
