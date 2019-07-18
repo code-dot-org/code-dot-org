@@ -228,7 +228,7 @@ function initViewAs(store, scriptData) {
  */
 function queryUserProgress(store, scriptData, currentLevelId) {
   const userId = clientState.queryParams('user_id');
-  const onComplete = data => {
+  store.dispatch(reduxQueryUserProgress(userId)).then(data => {
     const onOverviewPage = !currentLevelId;
     if (!onOverviewPage) {
       return;
@@ -259,8 +259,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         pageType
       );
     }
-  };
-  store.dispatch(reduxQueryUserProgress(userId, onComplete));
+  });
 }
 
 /**

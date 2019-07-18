@@ -661,25 +661,17 @@ export const progressionsFromLevels = levels => {
   return progressions;
 };
 
-export const queryUserProgress = (userId, onComplete) => (
-  dispatch,
-  getState
-) => {
+export const queryUserProgress = userId => (dispatch, getState) => {
   const state = getState().progress;
-  userProgressFromServer(state, dispatch, userId, onComplete);
+  return userProgressFromServer(state, dispatch, userId);
 };
 
-export const userProgressFromServer = (
-  state,
-  dispatch,
-  userId,
-  onComplete = data => {}
-) => {
+export const userProgressFromServer = (state, dispatch, userId) => {
   if (!state.scriptName) {
     return;
   }
 
-  $.ajax({
+  return $.ajax({
     url: `/api/user_progress/${state.scriptName}`,
     method: 'GET',
     data: {user_id: userId}
@@ -733,8 +725,6 @@ export const userProgressFromServer = (
         dispatch(setCurrentStageId(data.current_stage));
       }
     }
-
-    onComplete(data);
   });
 };
 
