@@ -12,6 +12,30 @@ module Pd
     FAKE_SUBMISSION_ID = 987654
     FAKE_ACADEMIC_YEAR_IDS = (54321...54324).to_a.freeze
     FAKE_CSF_201_FORM_IDS = [201903, 201904].freeze
+    FAKE_JOTFORM_FORMS = {
+      local_summer: {
+        day_0: FAKE_DAILY_FORM_IDS[0],
+        day_1: FAKE_DAILY_FORM_IDS[1],
+        day_5: FAKE_DAILY_FORM_IDS[5],
+        facilitator: FAKE_FACILITATOR_FORM_ID
+      },
+      academic_year_1: {
+        day_1: FAKE_ACADEMIC_YEAR_IDS[0],
+        post_workshop: FAKE_ACADEMIC_YEAR_IDS[4],
+        facilitator: FAKE_FACILITATOR_FORM_ID
+      },
+      academic_year_5: {
+        day_1: FAKE_ACADEMIC_YEAR_IDS[0],
+        day_2: FAKE_ACADEMIC_YEAR_IDS[1],
+        post_workshop: FAKE_ACADEMIC_YEAR_IDS[4],
+        facilitator: FAKE_FACILITATOR_FORM_ID
+      },
+      csf: {
+        pre201: FAKE_CSF_201_FORM_IDS[0],
+        post201: FAKE_CSF_201_FORM_IDS[1],
+        facilitator: FAKE_FACILITATOR_FORM_ID
+      }
+    }.deep_stringify_keys
 
     self.use_transactional_test_case = true
     setup do
@@ -47,32 +71,7 @@ module Pd
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
         num_sessions: 1, facilitators: (create_list :facilitator, 2)
 
-      CDO.stubs(:jotform_forms).returns(
-        {
-          local_summer: {
-            day_0: FAKE_DAILY_FORM_IDS[0],
-            day_1: FAKE_DAILY_FORM_IDS[1],
-            day_5: FAKE_DAILY_FORM_IDS[5],
-            facilitator: FAKE_FACILITATOR_FORM_ID
-          },
-          academic_year_1: {
-            day_1: FAKE_ACADEMIC_YEAR_IDS[0],
-            post_workshop: FAKE_ACADEMIC_YEAR_IDS[4],
-            facilitator: FAKE_FACILITATOR_FORM_ID
-          },
-          academic_year_5: {
-            day_1: FAKE_ACADEMIC_YEAR_IDS[0],
-            day_2: FAKE_ACADEMIC_YEAR_IDS[1],
-            post_workshop: FAKE_ACADEMIC_YEAR_IDS[4],
-            facilitator: FAKE_FACILITATOR_FORM_ID
-          },
-          csf: {
-            pre201: FAKE_CSF_201_FORM_IDS[0],
-            post201: FAKE_CSF_201_FORM_IDS[1],
-            facilitator: FAKE_FACILITATOR_FORM_ID
-          }
-        }.deep_stringify_keys
-      )
+      CDO.stubs(:jotform_forms).returns(FAKE_JOTFORM_FORMS)
 
       @csf_pre201_params = {
         environment: Rails.env,
