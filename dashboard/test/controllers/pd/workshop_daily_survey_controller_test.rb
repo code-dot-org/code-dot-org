@@ -42,10 +42,6 @@ module Pd
       @regional_partner = create :regional_partner
       @facilitators = create_list :facilitator, 2
 
-      @csf201_in_progress_workshop = create :pd_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, facilitators: (create_list :facilitator, 2), started_at: DateTime.now
-
       @csf201_ended_workshop = create :pd_ended_workshop,
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
         num_sessions: 1, facilitators: (create_list :facilitator, 2)
@@ -808,6 +804,7 @@ module Pd
     end
 
     test 'csf post201 survey: show 404 page if enrollment code is invalid' do
+      setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
@@ -820,6 +817,7 @@ module Pd
     end
 
     test 'csf post201 survey: show survey if attended teacher has valid enrollment code' do
+      setup_csf201_in_progress_workshop
       teacher = create :teacher
       session = @csf201_in_progress_workshop.sessions.first
       enrollment = create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
@@ -847,6 +845,7 @@ module Pd
     end
 
     test 'csf post201 survey: show survey if attended teacher does not have enrollment code' do
+      setup_csf201_in_progress_workshop
       teacher = create :teacher
       session = @csf201_in_progress_workshop.sessions.first
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
@@ -874,6 +873,7 @@ module Pd
     end
 
     test 'csf post201 survey: report survey rendering to New Relic' do
+      setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
@@ -897,6 +897,7 @@ module Pd
     end
 
     test 'csf post201 survey: create placeholder and redirect to 1st facilitator survey on submission' do
+      setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
@@ -934,6 +935,7 @@ module Pd
     test 'csf facilitator survey: show 1st facilitator survey to attended teacher' do
       skip 'Investigate flaky test failures'
 
+      setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
@@ -966,6 +968,7 @@ module Pd
     end
 
     test 'csf facilitator survey: creates placeholder and redirects to 2nd facilitator survey on submission' do
+      setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
@@ -1011,6 +1014,7 @@ module Pd
     test 'csf facilitator survey: redirect to 2nd facilitator survey if response exists for 1st one' do
       skip 'Investigate flaky test failures'
 
+      setup_csf201_in_progress_workshop
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       session = @csf201_in_progress_workshop.sessions.first
@@ -1109,6 +1113,13 @@ module Pd
       @csf201_not_started_workshop = create :pd_workshop,
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
         num_sessions: 1, num_facilitators: 2
+    end
+
+    def setup_csf201_in_progress_workshop
+      @regional_partner = create :regional_partner
+      @csf201_in_progress_workshop = create :pd_workshop,
+        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
+        num_sessions: 1, num_facilitators: 2, started_at: DateTime.now
     end
 
     def unenrolled_teacher
