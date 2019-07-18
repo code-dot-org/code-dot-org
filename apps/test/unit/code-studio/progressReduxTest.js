@@ -26,7 +26,6 @@ import reducer, {
   stageExtrasUrl,
   setStageExtrasEnabled,
   getLevelResult,
-  userProgressFromServer,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -1367,13 +1366,13 @@ describe('progressReduxTest', () => {
   });
 
   describe('userProgressFromServer', () => {
-    let server, state, dispatch, onComplete;
+    let server, state, dispatch;
+    const {userProgressFromServer} = __testonly__;
 
     beforeEach(() => {
       server = sinon.fakeServer.create();
       state = {scriptName: 'my-script'};
       dispatch = sinon.spy();
-      onComplete = sinon.spy();
     });
 
     afterEach(() => server.restore());
@@ -1388,12 +1387,12 @@ describe('progressReduxTest', () => {
 
     it('requests user progress and does not dispatch actions with no data', () => {
       serverResponse({});
-      userProgressFromServer(state, dispatch, 1, onComplete);
+      const promise = userProgressFromServer(state, dispatch, 1);
       server.respond();
-
-      assert(dispatch.notCalled);
-      assert(onComplete.calledOnce);
-      assert.deepEqual({}, onComplete.getCall(0).args[0]);
+      return promise.then(responseData => {
+        assert(dispatch.notCalled);
+        assert.deepEqual({}, responseData);
+      });
     });
 
     it('requests user progress and dispatches appropriate actions', () => {
@@ -1409,7 +1408,7 @@ describe('progressReduxTest', () => {
         current_stage: 1
       };
       serverResponse(responseData);
-      userProgressFromServer(state, dispatch, 1, onComplete);
+      const promise = userProgressFromServer(state, dispatch, 1);
       server.respond();
 
       assert.equal(9, dispatch.callCount);
@@ -1427,9 +1426,10 @@ describe('progressReduxTest', () => {
         'progress/MERGE_PEER_REVIEW_PROGRESS',
         'progress/SET_CURRENT_STAGE_ID'
       ];
-      assert.deepEqual(expectedDispatchActions, dispatchActions);
-      assert(onComplete.calledOnce);
-      assert.deepEqual(responseData, onComplete.getCall(0).args[0]);
+      return promise.then(serverResponseData => {
+        assert.deepEqual(expectedDispatchActions, dispatchActions);
+        assert.deepEqual(responseData, serverResponseData);
+      });
     });
   });
 });
