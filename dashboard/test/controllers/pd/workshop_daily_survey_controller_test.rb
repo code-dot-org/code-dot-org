@@ -6,8 +6,15 @@ module Pd
     include WorkshopConstants
     include WorkshopSurveyConstants
 
+    # Array of ids for days 0 (pre) and 1 - 5
+    FAKE_DAILY_FORM_IDS = (123450..123455).to_a.freeze
+    FAKE_FACILITATOR_FORM_ID = 123459
+    FAKE_SUBMISSION_ID = 987654
+    FAKE_ACADEMIC_YEAR_IDS = (54321...54324).to_a.freeze
+    FAKE_CSF_201_FORM_IDS = [201903, 201904].freeze
+
     self.use_transactional_test_case = true
-    setup_all do
+    setup do
       @unenrolled_teacher = create :teacher
       @enrolled_summer_teacher = create :teacher
       @enrolled_academic_year_teacher = create :teacher
@@ -39,16 +46,7 @@ module Pd
       @csf201_ended_workshop = create :pd_ended_workshop,
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
         num_sessions: 1, facilitators: (create_list :facilitator, 2)
-    end
 
-    # Array of ids for days 0 (pre) and 1 - 5
-    FAKE_DAILY_FORM_IDS = (123450..123455).to_a.freeze
-    FAKE_FACILITATOR_FORM_ID = 123459
-    FAKE_SUBMISSION_ID = 987654
-    FAKE_ACADEMIC_YEAR_IDS = (54321...54324).to_a.freeze
-    FAKE_CSF_201_FORM_IDS = [201903, 201904].freeze
-
-    setup do
       CDO.stubs(:jotform_forms).returns(
         {
           local_summer: {
