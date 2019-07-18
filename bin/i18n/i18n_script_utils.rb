@@ -127,18 +127,24 @@ class I18nScriptUtils
   end
 
   def self.get_level_from_url(url)
-    url_regex = %r{https://studio.code.org/s/(?<script_name>[A-Za-z0-9\s\-_]+)/stage/(?<stage_pos>[0-9]+)/(?<level_info>.+)}
-    matches = url.match(url_regex)
-    if matches[:level_info].starts_with?("extras")
-      level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
-      level_name = matches[:level_info].match(level_info_regex)[:level_name]
-      Level.find_by_name(CGI.unescape(level_name))
-    else
-      script = Script.find_by_name(matches[:script_name])
-      stage = script.stages.find_by_relative_position(matches[:stage_pos])
-      level_info_regex = %r{puzzle/(?<level_pos>[0-9]+)}
-      level_pos = matches[:level_info].match(level_info_regex)[:level_pos]
-      stage.script_levels.find_by_position(level_pos.to_i).oldest_active_level
+    # memoize to reduce repeated database interactions
+    @levels_by_url ||= Hash.new do |hash, new_url|
+      url_regex = %r{https://studio.code.org/s/(?<script_name>[A-Za-z0-9\s\-_]+)/stage/(?<stage_pos>[0-9]+)/(?<level_info>.+)}
+      matches = new_url.match(url_regex)
+      hash[new_url] =
+        if matches[:level_info].starts_with?("extras")
+          level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
+          level_name = matches[:level_info].match(level_info_regex)[:level_name]
+          Level.find_by_name(CGI.unescape(level_name))
+        else
+          script = Script.find_by_name(matches[:script_name])
+          stage = script.stages.find_by_relative_position(matches[:stage_pos])
+          level_info_regex = %r{puzzle/(?<level_pos>[0-9]+)}
+          level_pos = matches[:level_info].match(level_info_regex)[:level_pos]
+          stage.script_levels.find_by_position(level_pos.to_i).oldest_active_level
+        end
     end
+
+    @levels_by_url[url]
   end
 end
