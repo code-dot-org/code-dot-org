@@ -442,7 +442,7 @@ module Pd
     end
 
     test 'facilitator specific submit redirect creates placeholder and redirects to next facilitator form' do
-      setup_summer_workshop
+      setup_summer_workshop num_facilitators: 2
       sign_in @enrolled_summer_teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
@@ -462,7 +462,7 @@ module Pd
     end
 
     test 'facilitator specific submit redirect creates placeholder and redirects to thanks for last facilitator' do
-      setup_summer_workshop
+      setup_summer_workshop num_facilitators: 2
       sign_in @enrolled_summer_teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
@@ -1077,10 +1077,11 @@ module Pd
 
     private
 
-    def setup_summer_workshop(*traits)
+    def setup_summer_workshop(*traits, **properties)
       create(
         :summer_workshop,
         *traits,
+        **properties
       ).tap do |workshop|
         @summer_workshop = workshop
         @summer_enrollment = create :pd_enrollment, :from_user, workshop: workshop
