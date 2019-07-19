@@ -961,7 +961,7 @@ module Pd
     end
 
     test 'csf post201 survey: create placeholder and redirect to 1st facilitator survey on submission' do
-      workshop = create :csf201_workshop, :in_progress
+      workshop = create :csf201_workshop, :in_progress, num_facilitators: 2
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
       session = workshop.sessions.first
@@ -999,7 +999,7 @@ module Pd
     test 'csf facilitator survey: show 1st facilitator survey to attended teacher' do
       skip 'Investigate flaky test failures'
 
-      workshop = create :csf201_workshop, :in_progress
+      workshop = create :csf201_workshop, :in_progress, num_facilitators: 2
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
       session = workshop.sessions.first
@@ -1032,7 +1032,7 @@ module Pd
     end
 
     test 'csf facilitator survey: creates placeholder and redirects to 2nd facilitator survey on submission' do
-      workshop = create :csf201_workshop, :in_progress
+      workshop = create :csf201_workshop, :in_progress, num_facilitators: 2
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
       session = workshop.sessions.first
@@ -1078,7 +1078,7 @@ module Pd
     test 'csf facilitator survey: redirect to 2nd facilitator survey if response exists for 1st one' do
       skip 'Investigate flaky test failures'
 
-      workshop = create :csf201_workshop, :in_progress
+      workshop = create :csf201_workshop, :in_progress, num_facilitators: 2
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
       session = workshop.sessions.first
@@ -1108,6 +1108,7 @@ module Pd
     test 'csf facilitator survey: show thanks page if response exists for all facilitators' do
       skip 'Investigate flaky test failures'
 
+      workshop = create :csf201_workshop, :in_progress, num_facilitators: 2
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
       session = workshop.sessions.first

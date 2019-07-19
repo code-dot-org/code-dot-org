@@ -103,7 +103,6 @@ FactoryGirl.define do
       course Pd::Workshop::COURSE_CSF
       subject Pd::Workshop::SUBJECT_CSF_201
       num_sessions 1
-      num_facilitators 2
     end
 
     factory :summer_workshop do
