@@ -96,8 +96,8 @@ module Pd
           sessionId: nil,
           userName: @enrolled_summer_teacher.name,
           userEmail: @enrolled_summer_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_TEACHER_CON,
+          workshopCourse: @summer_workshop.course,
+          workshopSubject: @summer_workshop.subject,
           regionalPartnerName: @summer_workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
@@ -115,8 +115,8 @@ module Pd
         {
           route: 'GET /pd/workshop_survey/day/0',
           form_id: FAKE_DAILY_FORM_IDS[0],
-          workshop_course: COURSE_CSP,
-          workshop_subject: SUBJECT_TEACHER_CON,
+          workshop_course: @summer_workshop.course,
+          workshop_subject: @summer_workshop.subject,
           regional_partner_name: @summer_workshop.regional_partner.name
         }
       )
@@ -204,8 +204,8 @@ module Pd
           sessionId: @summer_workshop.sessions[0].id,
           userName: @enrolled_summer_teacher.name,
           userEmail: @enrolled_summer_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_TEACHER_CON,
+          workshopCourse: @summer_workshop.course,
+          workshopSubject: @summer_workshop.subject,
           regionalPartnerName: @summer_workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
@@ -235,8 +235,8 @@ module Pd
           sessionId: @academic_year_workshop.sessions[0].id,
           userName: @enrolled_academic_year_teacher.name,
           userEmail: @enrolled_academic_year_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_CSP_WORKSHOP_1,
+          workshopCourse: @academic_year_workshop.course,
+          workshopSubject: @academic_year_workshop.subject,
           regionalPartnerName: @academic_year_workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
@@ -275,8 +275,8 @@ module Pd
           sessionId: other_academic_workshop.sessions[0].id,
           userName: @enrolled_academic_year_teacher.name,
           userEmail: @enrolled_academic_year_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_CSP_WORKSHOP_1,
+          workshopCourse: @academic_year_workshop.course,
+          workshopSubject: @academic_year_workshop.subject,
           regionalPartnerName: @academic_year_workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
@@ -403,8 +403,8 @@ module Pd
           workshopId: @summer_workshop.id,
           userName: @enrolled_summer_teacher.name,
           userEmail: @enrolled_summer_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_TEACHER_CON,
+          workshopCourse: @summer_workshop.course,
+          workshopSubject: @summer_workshop.subject,
           regionalPartnerName: @summer_workshop.regional_partner.name,
           day: 1,
           facilitatorPosition: 1,
@@ -426,8 +426,8 @@ module Pd
         {
           route: "GET /pd/workshop_survey/facilitators/#{@summer_workshop.sessions[0].id}/0",
           form_id: FAKE_FACILITATOR_FORM_ID,
-          workshop_course: COURSE_CSP,
-          workshop_subject: SUBJECT_TEACHER_CON,
+          workshop_course: @summer_workshop.course,
+          workshop_subject: @summer_workshop.subject,
           regional_partner_name: @summer_workshop.regional_partner.name
         }
       )
@@ -593,8 +593,8 @@ module Pd
           sessionId: @summer_workshop.sessions[4].id,
           userName: @enrolled_summer_teacher.name,
           userEmail: @enrolled_summer_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_TEACHER_CON,
+          workshopCourse: @summer_workshop.course,
+          workshopSubject: @summer_workshop.subject,
           regionalPartnerName: @summer_workshop.regional_partner.name,
           submitRedirect: submit_redirect,
           enrollmentCode: @summer_enrollment.code
@@ -711,8 +711,8 @@ module Pd
         {
           route: 'GET /pd/workshop_survey/csf/pre201',
           form_id: csf_pre201_params[:formId],
-          workshop_course: COURSE_CSF,
-          workshop_subject: SUBJECT_CSF_201,
+          workshop_course: workshop.course,
+          workshop_subject: workshop.subject,
           regional_partner_name: workshop.regional_partner.name
         }
       )
@@ -881,8 +881,8 @@ module Pd
         {
           route: 'GET /pd/workshop_survey/csf/post201',
           form_id: csf_post201_params[:formId],
-          workshop_course: COURSE_CSF,
-          workshop_subject: SUBJECT_CSF_201,
+          workshop_course: workshop.course,
+          workshop_subject: workshop.subject,
           regional_partner_name: workshop.regional_partner.name
         }
       )
@@ -1082,7 +1082,7 @@ module Pd
         :pd_workshop,
         *traits,
         course: COURSE_CSP,
-        subject: SUBJECT_TEACHER_CON,
+        subject: SUBJECT_CSP_SUMMER_WORKSHOP,
         num_sessions: 5,
         num_facilitators: 2
       ).tap do |workshop|
