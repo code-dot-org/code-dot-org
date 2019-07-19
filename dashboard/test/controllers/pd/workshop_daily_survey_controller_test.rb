@@ -98,7 +98,7 @@ module Pd
           userEmail: @enrolled_summer_teacher.email,
           workshopCourse: COURSE_CSP,
           workshopSubject: SUBJECT_TEACHER_CON,
-          regionalPartnerName: @regional_partner.name,
+          regionalPartnerName: @summer_workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
       )
@@ -117,7 +117,7 @@ module Pd
           form_id: FAKE_DAILY_FORM_IDS[0],
           workshop_course: COURSE_CSP,
           workshop_subject: SUBJECT_TEACHER_CON,
-          regional_partner_name: @regional_partner.name
+          regional_partner_name: @summer_workshop.regional_partner.name
         }
       )
 
@@ -206,7 +206,7 @@ module Pd
           userEmail: @enrolled_summer_teacher.email,
           workshopCourse: COURSE_CSP,
           workshopSubject: SUBJECT_TEACHER_CON,
-          regionalPartnerName: @regional_partner.name,
+          regionalPartnerName: @summer_workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
       )
@@ -237,7 +237,7 @@ module Pd
           userEmail: @enrolled_academic_year_teacher.email,
           workshopCourse: COURSE_CSP,
           workshopSubject: SUBJECT_CSP_WORKSHOP_1,
-          regionalPartnerName: @regional_partner.name,
+          regionalPartnerName: @academic_year_workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
       )
@@ -250,7 +250,7 @@ module Pd
     test 'enrollment code override is used when fetching the workshop for a user' do
       setup_academic_year_workshop
       other_academic_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
+        num_sessions: 1, regional_partner: @academic_year_workshop.regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
       other_enrollment = create :pd_enrollment, :from_user, workshop: other_academic_workshop, user: @enrolled_academic_year_teacher
       create :pd_attendance, session: other_academic_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: other_enrollment
 
@@ -272,7 +272,7 @@ module Pd
           userEmail: @enrolled_academic_year_teacher.email,
           workshopCourse: COURSE_CSP,
           workshopSubject: SUBJECT_CSP_WORKSHOP_1,
-          regionalPartnerName: @regional_partner.name,
+          regionalPartnerName: @academic_year_workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
       )
@@ -390,7 +390,7 @@ module Pd
           userEmail: @enrolled_summer_teacher.email,
           workshopCourse: COURSE_CSP,
           workshopSubject: SUBJECT_TEACHER_CON,
-          regionalPartnerName: @regional_partner.name,
+          regionalPartnerName: @summer_workshop.regional_partner.name,
           day: 1,
           facilitatorPosition: 1,
           facilitatorName: @facilitators[0].name,
@@ -413,7 +413,7 @@ module Pd
           form_id: FAKE_FACILITATOR_FORM_ID,
           workshop_course: COURSE_CSP,
           workshop_subject: SUBJECT_TEACHER_CON,
-          regional_partner_name: @regional_partner.name
+          regional_partner_name: @summer_workshop.regional_partner.name
         }
       )
 
@@ -580,7 +580,7 @@ module Pd
           userEmail: @enrolled_summer_teacher.email,
           workshopCourse: COURSE_CSP,
           workshopSubject: SUBJECT_TEACHER_CON,
-          regionalPartnerName: @regional_partner.name,
+          regionalPartnerName: @summer_workshop.regional_partner.name,
           submitRedirect: submit_redirect,
           enrollmentCode: @summer_enrollment.code
         }
@@ -1063,27 +1063,27 @@ module Pd
     private
 
     def setup_summer_workshop
-      @regional_partner = create :regional_partner
-      @summer_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_TEACHER_CON,
-        num_sessions: 5, num_facilitators: 2, regional_partner: @regional_partner
+      @summer_workshop = create :pd_workshop, :with_regional_partner,
+        course: COURSE_CSP, subject: SUBJECT_TEACHER_CON,
+        num_sessions: 5, num_facilitators: 2
       @summer_enrollment = create :pd_enrollment, :from_user, workshop: @summer_workshop
       @enrolled_summer_teacher = @summer_enrollment.user
       @facilitators = @summer_workshop.facilitators
     end
 
     def setup_academic_year_workshop
-      @regional_partner = create :regional_partner
-      @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, num_facilitators: 2, regional_partner: @regional_partner
+      @academic_year_workshop = create :pd_workshop, :with_regional_partner,
+        course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
+        num_sessions: 1, num_facilitators: 2
       @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
       @enrolled_academic_year_teacher = @academic_year_enrollment.user
       @facilitators = @academic_year_workshop.facilitators
     end
 
     def setup_two_day_academic_year_workshop
-      @regional_partner = create :regional_partner
-      @two_day_academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5,
-        num_sessions: 2, num_facilitators: 2, regional_partner: @regional_partner
+      @two_day_academic_year_workshop = create :pd_workshop, :with_regional_partner,
+        course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5,
+        num_sessions: 2, num_facilitators: 2
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         workshop: @two_day_academic_year_workshop
       @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
