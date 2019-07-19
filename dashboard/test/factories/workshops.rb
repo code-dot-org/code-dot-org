@@ -6,8 +6,8 @@
 FactoryGirl.define do
   factory :pd_workshop, class: 'Pd::Workshop' do
     transient do
-      num_sessions 0
-      num_facilitators 0
+      num_sessions 1
+      num_facilitators 1
       sessions_from {Date.current + 9.hours} # Start time of the first session, then one per day after that.
       each_session_hours 6
       num_enrollments 0
@@ -110,21 +110,18 @@ FactoryGirl.define do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
       num_sessions 5
-      num_facilitators 1
     end
 
     factory :academic_year_workshop do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
       num_sessions 1
-      num_facilitators 1
     end
 
     factory :two_day_academic_year_workshop do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_WORKSHOP_5
       num_sessions 2
-      num_facilitators 1
     end
 
     #
