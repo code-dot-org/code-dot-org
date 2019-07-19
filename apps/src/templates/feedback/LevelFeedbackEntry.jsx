@@ -62,8 +62,9 @@ export default class LevelFeedbackEntry extends Component {
       linkToLevel,
       unitName,
       linkToUnit,
-      updated_at,
-      comment
+      created_at,
+      comment,
+      performance
     } = this.props.feedback;
 
     const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
@@ -71,6 +72,13 @@ export default class LevelFeedbackEntry extends Component {
     const style = {
       backgroundColor: seenByStudent ? color.lightest_teal : color.white,
       ...styles.main
+    };
+
+    const rubricPerformance = {
+      performanceLevel1: i18n.rubricLevelOneHeader(),
+      performanceLevel2: i18n.rubricLevelTwoHeader(),
+      performanceLevel3: i18n.rubricLevelThreeHeader(),
+      performanceLevel4: i18n.rubricLevelFourHeader()
     };
 
     return (
@@ -97,7 +105,8 @@ export default class LevelFeedbackEntry extends Component {
             </div>
           </a>
         </div>
-        <TimeAgo style={styles.time} dateString={updated_at} />
+        <TimeAgo style={styles.time} dateString={created_at} />
+        <div style={styles.comment}>{rubricPerformance[performance]}</div>
         <div style={styles.comment}>{comment}</div>
       </div>
     );

@@ -579,6 +579,63 @@ es-MX:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección aprenderás sobre los diferentes tipos de dispositivos de entrada y salida utilizados por las computadoras y los tipos de información que envían y reciben.
+
+          ## Vocabulario
+
+          * **Entrada**: un dispositivo o componente que permite llevar información a una computadora
+          * **Salida**: un dispositivo o componente que recibe información de una computadora
+
+
+          ## Recursos
+
+          * [Input and Output - Activity Guide](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección aprenderás cómo las personas y las computadoras utilizan el procesamiento para convertir entradas en salidas.
+
+          ## Vocabulario
+
+          * **Algoritmo**: una secuencia precisa de instrucciones para procesos que puede ser ejecutada por una computadora
+
+          ## Recursos
+
+          * [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+      CSD U1 Lesson 7 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección aprenderás sobre los tipos de información que guardan las computadoras y por qué el almacenamiento es una parte fundamental del procesamiento de la información.
+
+          ## Recursos
+
+          * [Storage and Processing - Activity Guide](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+      CSD U1 Lesson 8 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección explorarás las maneras en que las aplicaciones procesan los diferentes tipos de información para resolver problemas.
+
+          ## Recursos
+
+          * [App Exploration - Activity Guide](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      CSD U1 Lesson 9 Overview:
+        markdown: |
+          # Resumen
+
+          Para este proyecto diseñarás tu propia aplicación que resolverá un problema definido por ti.
+
+          ## Recursos
+
+          * [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         title: Título
         content1: descripción aquí
@@ -588,23 +645,196 @@ es-MX:
       CSD U2 Design Project_2018_2019:
         title: Título
         content1: descripción aquí
+      CSD U2 L1 Overview:
+        markdown: |+
+          # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+
+          **¡Tus opiniones son muy importantes para nosotros!** Nos permitirán:
+
+          * Mejorar el curso
+          * Entender tu experiencia
+          * Saber sobre qué temas quieres aprender más en el futuro
+
+          ¡Gracias por tomarte el tiempo para ayudarnos a mejorar aún más el curso de Descubrimientos de Ciencias de la Computación!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/stage/1/puzzle/1/page/1" target="top">¡Haz clic aquí para completar la encuesta de fin de curso de Descubrimientos de Ciencias de la Computación!</a>
+
+          (se abre en una nueva pestaña)
+
+          <br>
+
+
+
+
+
+      CSD U2 L12 Overview:
+        markdown: |
+          # Resumen
+
+          Después de completar una búsqueda de tesoros en la búsqueda web, la clase aprende sobre el funcionamiento interno de los motores de búsqueda y tiene la oportunidad de mejorar sus habilidades analíticas con la búsqueda de animales extraños y poco comunes.
+
+          ## Vocabulario
+
+          * **Algoritmo**: una secuencia precisa de instrucciones para procesos que puede ser ejecutada por una computadora
+          * **Relevante**: estrechamente conectado o adecuado al asunto en cuestión.
+          * **Motor de búsqueda**: un programa que busca e identifica elementos en una base de datos que corresponden a palabras clave o caracteres especificados por el usuario, utilizados especialmente para encontrar sitios específicos en la web.
+          * **Confiable**: característica de ser honesto o veraz.
+
+
+          ## Recursos
+
+          * [Internet Scavenger Hunt - Activity Guide](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=pdf)
+          * [Strange Yet True Animals - Activity Guide](https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/export?format=pdf)
       CSD U2 L2 Overview:
         title: Título
         content1: descripción aquí
+        markdown: |
+          # Resumen
+
+          Esta lección presenta los sitios web como un medio de expresión personal. La clase primero debate sobre las diferentes maneras en que las personas expresan y comparten sus intereses e ideas, y luego observa algunos ejemplos de sitios web realizados por estudiantes de un curso anterior. Finalmente, todos aportan ideas y comparten una lista de temas e intereses a incluir, lo cual crea un recurso para desarrollar un sitio web personal en el resto de la unidad.
+
+          ## Vocabulario
+
+          * **Contenido de sitio web**: texto, imágenes y otros elementos incluidos en una página web
+
+
+          ## Recursos
+
+          * [Personal Website Sketch - Activity Guide](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
       CSD U2 L3 Overview:
         title: Título
         content1: descripción aquí
+        markdown: |
+          # Resumen
+
+          Esta lección presenta el HTML como una solución al problema de cómo comunicar el contenido y la estructura de un sitio web a una computadora. La lección comienza con una breve actividad sin conexión que muestra los desafíos de comunicar la estructura de una página web de forma efectiva. La clase mira una página HTML en el Laboratorio web, debate cómo las etiquetas HTML ayudan a resolver este problema, y luego usa el HTML para escribir las primeras páginas web de la unidad.
+
+          ## Vocabulario
+
+          * **HTML**: Hypertext Markup Language, un lenguaje usado para crear páginas web
+          * **Elemento HTML**: una parte de un sitio web, marcada por una etiqueta de inicio y que suele terminar con una etiqueta de cierre
+          * **Etiqueta HTML**: el conjunto especial de caracteres que indica el inicio y el final de un elemento HTML y el tipo de ese elemento
+          * **Contenido de sitio web**: texto, imágenes y otros elementos incluidos en una página web
+          * **Estructura de sitio web**: el propósito de diferentes partes del contenido en una página web, utilizado para ayudar a la computadora a determinar cómo se debe mostrar ese contenido
+
+          ## Código presentado
+
+          * **[HTML](//docs.code.org/weblab/html/)** - `<html></html>`
+          * **[Doctype](//docs.code.org/weblab/doctype/)** - `<!DOCTYPE>`
+          * **[Paragraph](//docs.code.org/weblab/P/)** - `<p></p>`
+          * **[Body](//docs.code.org/weblab/body/)** - `<body></body>`
+          * **[Head](//docs.code.org/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
         title: Título
         content1: descripción aquí
+        markdown: |+
+          # Resumen
+
+          Esta lección continúa con la introducción a las etiquetas HTML, esta vez con encabezados. La clase practica el uso de etiquetas de encabezados para crear títulos de página y sección, y aprende cómo se muestran los diferentes elementos del encabezado de forma predeterminada. A continuación, la clase planifica cómo organizar su contenido en las páginas web personales que se desarrollarán en toda la unidad y comienza la primera página del proyecto.
+
+          ## Vocabulario
+
+          * **Encabezado**: un título o resumen de un documento o sección de un documento.
+
+          ## Código presentado
+
+          *  **[Heading](//docs.code.org/weblab/h/)** - `<h1></h1>`
+
       CSD U2 L5 Overview:
         title: Título
         content1: descripción aquí
+        markdown: |
+          # Resumen
+
+          Esta lección da un paso atrás desde la creación del sitio web personal para hablar sobre la información personal que las personas eligen compartir de forma digital. La clase comienza con un debate sobre qué tipo de información se puede compartir con otras personas, y luego observa varios ejemplos de páginas de redes sociales para ver qué tipos de información personal se pueden compartir de manera intencional o no. Finalmente, la clase presenta un conjunto de pautas por seguir a la hora de publicar información en línea.
+
+          ## Vocabulario
+
+          * **Huella digital**: la información recopilada sobre una persona en varios sitios web de Internet.
+
+
+          ## Recursos
+
+          * [When Does Your Privacy Matter? - Activity Guide](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
+          * [Social Sleuth - Activity Guide](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
       CSD U2 L6 Overview:
         title: Título
         content1: descripción aquí
+        markdown: |+
+          # Resumen
+
+          Esta lección presenta listas ordenadas y desordenadas, y las etiquetas HTML &lt;ul&gt;, &lt;ol&gt; y &lt;li&gt; asociadas. La clase practica el uso de las etiquetas, y luego regresa al proyecto de la página web personal para agregar una nueva página HTML que incluya las nuevas etiquetas.
+
+          ## Código presentado
+
+
+          *  **[Unordered List](//docs.code.org/weblab/ul/)** - `<ul></ul>`
+          *  **[List Item](//docs.code.org/weblab/li/)** - `<li></li>`
+          *  **[Ordered List](//docs.code.org/weblab/ol/)** - `<ol></ol>`
+
+      CSD U2 L7 Overview:
+        markdown: |
+          # Resumen
+
+          Esta lección explica cómo usar en un sitio web el contenido creado por otros, respetando los derechos del creador de ese contenido. Después de estudiar las licencias de Creative Commons por primera vez, la clase aprende cómo agregar imágenes a las páginas web y otorgar las atribuciones adecuadas al hacerlo.
+
+          ## Vocabulario
+
+          * **Cita**: una cita de o referencia a un libro, artículo o autor, especialmente en un trabajo académico.
+          * **Derechos de autor**: el derecho legal exclusivo, otorgado a un originador o un cesionario, para imprimir, publicar, realizar, filmar o grabar material literario, artístico o musical, y autorizar a otros a hacer lo mismo.
+          * **Creative Commons**: una licencia pública de derechos de autor que permite la distribución gratuita de una obra con derechos de autor. Una licencia CC se usa cuando un autor quiere otorgar a las personas el derecho de compartir, usar y desarrollar una obra que ha creado.
+          * **Propiedad intelectual**: una obra o invención que es el resultado de la creatividad, como un manuscrito o un diseño, sobre el cual uno tiene derechos y por el cual puede solicitar una patente, derechos de autor, marca registrada, etcétera.
+
+          ## Código presentado
+
+          *  **[Image](//docs.code.org/weblab/img/)** - `<img />`
+
+          ## Recursos
+
+          * [Creative Commons Overview](https://www.youtube.com/watch?v=HKfqoPYJdVc) - Video
+          * [Licensing Your Work - Activity Guide](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
       CSD U2 Lesson 6 Overview:
         content1: descripción aquí
+        markdown: |
+          # Resumen
+
+          Esta lección cubre problemas comunes que surgen al diseñar páginas web en HTML. La clase corregirá los errores en una secuencia de páginas web cada vez más complejas que se encuentran en Code Studio y aprenderá la importancia de los comentarios, el espacio en blanco y la sangría como herramientas para facilitar la lectura de las páginas web.
+
+          ## Vocabulario
+
+          * **Bug**: parte de un programa que no funciona correctamente.
+          * **Comentario**: nota que puede leer el programador en el código fuente de un programa informático.
+          * **Depuración**: encontrar y corregir problemas en tu algoritmo o programa.
+          * **Sangría**: la ubicación del texto más hacia la derecha o hacia la izquierda para separarlo del texto circundante, lo que ayuda a transmitir la estructura del programa.
+          * **Espacio en blanco**: el espacio en blanco se refiere a cualquier carácter que aparece como un espacio en blanco en la pantalla, ya sea un espacio, una pestaña o una nueva línea. Los espacios en blanco ayudan a separar diferentes partes del documento para que sea más fácil de leer.
+
+          ## Código presentado
+
+          *  **[Comment](//curriculum.code.org/documentation/weblab/comment/)** - `<!-- -->`
+      CSD U2 Lesson 9 Overview:
+        markdown: "# Resumen\n\nEsta lección trata de los hipervínculos, a través
+          de los cuales los desarrolladores web pueden conectar páginas en un solo
+          sitio web. La clase enlazará todas las páginas anteriores en un solo proyecto
+          y creará barras de navegación para cada página antes de publicar todo el
+          sitio en la Web.\n \n## Vocabulario\n\n* **Hipervínculo**: un enlace de
+          un archivo HTML a otra ubicación o archivo, que generalmente se activa al
+          hacer clic en una palabra o imagen resaltada en la pantalla.\n\n## Código
+          presentado\n\n*  **[Hyperlink](//docs.code.org/weblab/A/)** - `<a></a>`\n\n##
+          Recursos\n\n* [Personal Website - Project Guide](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)\n*
+          [Personal Website - Peer Review](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)\n*
+          [Personal Web Site - Rubric](https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)\n"
+      CSD U2 Top Websites:
+        markdown: |
+          # Principales sitios web en EE. UU.
+
+          Los siguientes son los sitios web más visitados en los Estados Unidos. Cada uno incluye una breve descripción de su función principal.
+
+          1. Google.com: motor de búsqueda de sitios web, imágenes, videos y otros contenidos
+          2. YouTube.com: sitios de videos publicados por los usuarios con puntuaciones y comentarios
+          3. Facebook.com: comunidad de red social a través de la cual los usuarios pueden compartir información con sus amigos
+          4. Amazon.com: sitios de compra en línea de todo tipo de bienes
+          4. Yahoo.com: motor de búsqueda, proveedor de correo electrónico y fuente de noticias
+          5. Wikipedia.org: enciclopedia gratuita con contenido generado por los usuarios
       CSD U2 expand project:
         title: Título
         content1: descripción aquí
@@ -805,6 +1035,55 @@ es-MX:
       CSD U3 Card Examples_2018_2019:
         title: Crear una tarjeta interactiva
         content1: descripción aquí
+      CSD U3 Collision Detection:
+        markdown: |
+          # Resumen
+
+          La clase aprende sobre la detección de colisiones en la computadora. Las parejas exploran cómo una computadora podría usar las propiedades de tamaño y ubicación de los sprites y las matemáticas para detectar si dos sprites se tocan. Luego, la clase usa el bloque seTocan() para crear diferentes efectos cuando los sprites colisionan, incluida la reproducción de sonidos. Por último, usan sus nuevas habilidades para mejorar el juego de desplazamiento lateral que iniciaron en la última lección.
+
+          ## Vocabulario
+
+          * **Abstracción**: extraer diferencias específicas para poder aplicar una solución a distintos problemas.
+          * **Depuración**: encontrar y corregir problemas en tu algoritmo o programa.
+          * **Sentencia si**: la estructura de programación común que implementa "sentencias condicionales".
+
+          ## Código presentado
+
+          * [sprite.debug](//docs.code.org/gamelab/debug/)
+          * [sprite.isTouching()](//docs.code.org/gamelab/isTouching/)
+
+          ## Recursos
+
+          * [Collision Detection - Activity Guide](https://docs.google.com/document/d/16uOeOnjKEIQfWgHFjMyVkmurSVM1oDXjQPooSL7UlHs/export?format=pdf)
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Resumen
+
+          La clase programa sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque seTocan, la clase intercambia ideas sobre otras formas en que dos sprites podrían interactuar. Luego, usan seTocan para hacer que un sprite presione a otro en la pantalla antes de practicar con los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
+
+          ## Vocabulario
+
+          * **Abstracción**: extraer diferencias específicas para poder aplicar una solución a distintos problemas.
+
+          ## Código presentado
+
+          * [sprite.bounceOff()](//docs.code.org/gamelab/bounceOff/)
+          * [sprite.collide()](//docs.code.org/gamelab/collide/)
+          * [sprite.displace()](//docs.code.org/gamelab/displace/)
+          * [sprite.setCollider()](//docs.code.org/gamelab/setCollider/)
+          * [sprite.bounce()](//docs.code.org/gamelab/bounce/)
+          * [sprite.bounciness](//docs.code.org/gamelab/bounciness/)
+
+      CSD U3 Defender SFLP:
+        markdown: |
+          # Resumen
+
+          Esta lección presenta el proceso que la clase utilizará para diseñar juegos en el resto de la unidad. La clase recorre este proceso en una serie de niveles. Como parte de esta lección, la clase también aprende brevemente a usar animaciones de varios fotogramas en el Laboratorio de juegos. Al final de la lección, tendrán la oportunidad de realizar mejoras en el juego para personalizarlo.
+
+
+          ## Recursos
+
+          * [Project Guide - Defender Game - Project Guide](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
       CSD U3 Functions Prediction define first:
         answers:
         - text: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones
@@ -859,6 +1138,21 @@ es-MX:
         - text: No se dibujará ningún cuadrado. Hay un error en el código.
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Resumen
+
+          Esta lección trata las funciones como una forma de organizar el código, hacerlo más legible y eliminar bloques de código repetidos. La clase aprende que los pasos de nivel superior o más abstractos permiten entender y razonar sobre los pasos más fácilmente, y luego comienza a crear funciones en el Laboratorio de juegos. Al final de la lección, la clase utiliza estas habilidades para organizar y agregar funcionalidad a la versión final de su juego de desplazamiento lateral.
+
+          ## Vocabulario
+
+          * **Función**: una pieza de código a la que se puede llamar una y otra vez.
+
+          ## Código presentado
+
+          * [Define a function](//docs.code.org/gamelab/functionParams_none/)
+          * [Call a function](//docs.code.org/gamelab/callMyFunction/)
+
       CSD U3 Keypress Matching:
         title: 'Coincidencia: reacción a la pulsación de teclas'
         content1: Haz coincidir el bloque de pulsación de tecla con la descripción
@@ -901,6 +1195,253 @@ es-MX:
         - text: keyWentDown()
         - text: keyWentUp()
         - text: keyDown()
+      CSD U3 Lesson Overview 10:
+        markdown: |
+          # Resumen
+
+          Esta lección presenta los valores y la lógica booleanos, así como sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Luego, la clase agrupa los objetos en base a sentencias booleanas cada vez más complejas y observa cómo los condicionales pueden afectar el flujo de un programa.
+
+          ## Vocabulario
+
+          * **Booleano**: un valor que puede ser VERDADERO o FALSO
+          * **Condicionales**: sentencias que solo se ejecutan bajo ciertas condiciones.
+          * **Expresión**: cualquier unidad válida de código que resuelve un valor.
+
+
+          ## Recursos
+
+          * [Boolean Properties - Activity Guide](https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf)
+      CSD U3 Lesson Overview 11:
+        markdown: "# Resumen\n\nLa clase utiliza valores booleanos para comparar el
+          valor actual de la propiedad de un sprite con un valor objetivo, y emplea
+          esa comparación para determinar cuándo un sprite alcanzó un punto en la
+          pantalla, creció a un tamaño dado o alcanzó un valor con el patrón del contador.
+          Después de usar los valores booleanos directamente para investigar los valores
+          o las propiedades del sprite, la clase agrega sentencias condicionales 'si'
+          para escribir código que responda a esas comparaciones booleanas\n\n## Vocabulario\n\n*
+          **Expresión booleana**: en programación, una expresión que evalúa si es
+          Verdadero o Falso. \n* **Sentencia si**: la estructura de programación común
+          que implementa \"sentencias condicionales\".\n\n## Código presentado\n\n*
+          [If statement](//docs.code.org/gamelab/ifBlock/)\n* [Less than operator](//docs.code.org/gamelab/lessThanOperator/)\n*
+          [Inequality operator](//docs.code.org/gamelab/inequalityOperator/)\n* [Less
+          than or equal operator](//docs.code.org/gamelab/lessThanOrEqualOperator/)\n*
+          [Greater than operator](//docs.code.org/gamelab/greaterThanOperator/)\n*
+          [Equality operator](//docs.code.org/gamelab/equalityOperator/)\n* [Greater
+          than or equal operator](//docs.code.org/gamelab/greaterThanOrEqualOperator/)\n"
+      CSD U3 Lesson Overview 12:
+        markdown: |
+          # Resumen
+
+          Después de la introducción a los valores booleanos y las sentencias si de la lección anterior, se presenta a los estudiantes un nuevo bloque llamado teclaAbajo() que devuelve un valor booleano y se puede usar en sentencias de condicionales para mover sprites por la pantalla. Al final de esta lección, los estudiantes habrán escrito programas que utilizarán la entrada de teclado del usuario para controlar los sprites en la pantalla.
+
+          ## Código presentado
+
+          * [keyDown()](//docs.code.org/gamelab/keyDown/)
+
+          ## Recursos
+
+          * [Boolean Expressions](https://youtu.be/y3rCKJNOwpA) - Video ([download](https://videos.code.org/2015/csp/applab/conditionals_1.mp4))
+      CSD U3 Lesson Overview 13:
+        markdown: |+
+          # Resumen
+
+          La clase continúa explorando formas de usar sentencias condicionales para recibir información del usuario. Además del sencillo comando teclaAbajo() que aprendieron ayer, la clase aprende sobre otros comandos de entrada de teclado y formas de utilizar la entrada de ratón.
+
+          ## Vocabulario
+
+          * **Condicionales**: sentencias que solo se ejecutan en ciertas condiciones.
+
+          ## Código presentado
+
+          * [keyWentUp()](//docs.code.org/gamelab/keyWentUp/)
+          * [mouseWentDown()](//docs.code.org/gamelab/mouseWentDown/)
+          * [mouseWentUp()](//docs.code.org/gamelab/mouseWentUp/)
+          * [keyWentDown()](//docs.code.org/gamelab/keyWentDown/)
+          * [mouseDown()](//docs.code.org/gamelab/mouseDown/)
+          * [mouseDidMove()](//docs.code.org/gamelab/mouseDidMove/)
+          * [sprite.visible](//docs.code.org/gamelab/visible/)
+          * [If/else statement](//docs.code.org/gamelab/ifElseBlock/)
+
+      CSD U3 Lesson Overview 14:
+        markdown: |
+          # Resumen
+
+          En este proyecto integrado para el Capítulo 1, la clase planifica y desarrolla una tarjeta de felicitación interactiva mediante las técnicas de programación que ha aprendido hasta el momento.
+
+          ## Recursos
+
+          * [Interactive Card - Project Guide](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)
+          * [Interactive Card - Rubric](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
+          * [Interactive Card - Peer Review](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
+      CSD U3 Lesson Overview 2:
+        markdown: |+
+          # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+
+          **¡Tus opiniones son muy importantes para nosotros!** Nos permitirán:
+
+          * Mejorar el curso
+          * Entender tu experiencia
+          * Saber sobre qué temas quieres aprender más en el futuro
+
+          ¡Gracias por tomarte el tiempo para ayudarnos a mejorar aún más el curso de Descubrimientos de Ciencias de la Computación!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/stage/1/puzzle/1/page/1" target="top">¡Haz clic aquí para completar la encuesta de fin de curso de Descubrimientos de Ciencias de la Computación!</a>
+
+          (se abre en una nueva pestaña)
+
+          <br>
+
+
+
+
+
+      CSD U3 Lesson Overview 3:
+        markdown: |+
+          # Resumen
+
+          La clase conoce el Laboratorio de juegos, el entorno de programación para esta unidad, y comienza a usarlo para ubicar formas en la pantalla. La lección cubre los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, la clase crea una versión en línea de la imagen que diseñaron en la lección anterior.
+
+          ## Vocabulario
+
+          * **Bug**: parte de un programa que no funciona correctamente.
+          * **Depuración**: encontrar y corregir problemas en tu algoritmo o programa.
+          * **Programa**: un algoritmo que ha sido programado de tal forma que se puede ejecutar en una máquina.
+
+          ## Código presentado
+
+          * [ellipse()](//docs.code.org/gamelab/ellipse/)
+          * [rect()](//docs.code.org/gamelab/rect/)
+          * [fill()](//docs.code.org/gamelab/fill/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Resumen
+
+          Esta lección amplía las habilidades de dibujo para incluir el ancho y la altura e introduce el concepto de generación de números aleatorios. La clase aprende a dibujar con versiones de elipse() y rect() que incluyen parámetros de ancho y alto, y usar el bloque fondo() para llenar de color la pantalla. Hacia el final, la clase conoce el bloque númeroAleatorio() y usa los nuevos bloques para dibujar una serpiente arco iris aleatoria.
+
+          ## Vocabulario
+
+          * **Parámetro**: una pieza adicional de información que pasas a la función para personalizarla de acuerdo a una necesidad específica.
+
+          ## Código presentado
+
+          * [background()](//docs.code.org/gamelab/background/)
+          * [ellipse()](//docs.code.org/gamelab/ellipse/)
+          * [rect()](//docs.code.org/gamelab/rect/)
+          * [randomNumber()](//docs.code.org/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Resumen
+
+          Esta lección introduce variables como una forma de etiquetar un número en un programa o guardar un valor generado de forma aleatoria. La clase comienza la lección con una descripción muy básica del propósito de una variable y sigue con prácticas que emplean los nuevos bloques. Luego, la clase usa variables para guardar un número aleatorio y permite que los programas usen el mismo número aleatorio varias veces.
+
+          ## Vocabulario
+
+          * **Variable**: un marcador de posición para una pieza de información que puede cambiar.
+
+          ## Código presentado
+
+          * [Declare a variable](//docs.code.org/gamelab/declareNoAssign_x/)
+          * [Declare and assign a value to a variable](//docs.code.org/gamelab/declareAssign_x/)
+
+          ## Recursos
+
+          * [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD U3 Lesson Overview 6:
+        markdown: |
+          # Resumen
+
+          Para crear imágenes más interesantes y detalladas, se presenta el concepto de objeto de sprite a la clase. A cada sprite se le puede asignar una imagen para mostrar, y los sprites también mantienen un registro de varios valores sobre sí mismos, lo que resultará útil en el futuro cuando se realicen animaciones. Al final de la lección, todos usan los sprites para crear una escena.
+
+          ## Vocabulario
+
+          * **Propiedad**: atributos que describen las características de un objeto
+          * **Sprite**: un carácter gráfico en la pantalla con propiedades que describen su ubicación, movimiento y apariencia.
+
+          ## Código presentado
+
+          * [drawSprites()](//docs.code.org/gamelab/drawSprites/)
+          * [sprite.scale](//docs.code.org/gamelab/scale/)
+          * [var sprite = createSprite()](//docs.code.org/gamelab/createSprite/)
+
+          ## Recursos
+
+          * [Sprite Scene Planning - Activity Guide](https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)
+      CSD U3 Lesson Overview 7:
+        markdown: |+
+          # Resumen
+
+          Esta lección presenta el bucle dibujar, uno de los principales paradigmas de programación en el Laboratorio de juegos. La clase combina el bucle dibujar con números aleatorios para manipular algunas animaciones simples con puntos y, luego, con sprites. Después, todos usan lo que aprendieron para actualizar la escena del sprite de la lección anterior.
+
+          ## Vocabulario
+
+          * **Animación**: una serie de imágenes que, al mostrarse rápidamente una tras otra, crean la ilusión de movimiento
+          * **Fotograma**: una sola imagen dentro de una animación
+          * **Velocidad de fotograma**: la velocidad a la que se muestran los fotogramas de una animación, que suele medirse en fotogramas por segundo
+
+          ## Código presentado
+
+          * [World.frameRate](//docs.code.org/gamelab/World.frameRate/)
+          * [function draw() {}](//docs.code.org/gamelab/draw/)
+
+
+      CSD U3 Lesson Overview 8:
+        markdown: |
+          # Resumen
+
+          Esta lección sin conexión explora el comportamiento subyacente de las variables. La clase usa tarjetas de notas y cadenas para simular variables dentro de un programa y, así, implementar algunos programas cortos. Una vez que se sienten cómodos con esta sintaxis, los estudiantes utilizan el mismo proceso con las propiedades del sprite y realizan un seguimiento del progreso de un sprite en la pantalla.
+
+          ## Vocabulario
+
+          * **Expresión**: cualquier unidad válida de código que resuelve un valor.
+          * **Variable**: un marcador de posición para una pieza de información que puede cambiar.
+
+
+          ## Recursos
+
+          * [Variables Unplugged - Activity Guide](https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)
+          * [Variables Unplugged Board - Manipulative](https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)
+      CSD U3 Lesson Overview 9:
+        markdown: |+
+          # Resumen
+
+          Al combinar el bucle 'dibujar' y el patrón del contador, la clase escribe programas que mueven sprites por la pantalla y anima otras propiedades del sprite.
+
+
+      CSD U3 Movement Challenges:
+        markdown: |
+          # Desafíos
+
+          _Consulta con tu docente antes de abordar algunos de estos desafíos._
+
+          * Volver a [level 15](15) para seguir trabajando en tu propia animación. Deberás retirar primero tu proyecto y volver a enviarlo una vez que hayas terminado de trabajar.
+          * Volver a [level 12](12) para seguir trabajando en la animación del pez. Prueba cambiar la rotación de los peces de forma aleatoria para que parezca que nadan.
+          * Volver a [level 13](13) para seguir trabajando en la animación de los engranajes. Prueba agregar más engranajes de diferentes tamaños y ajustar la velocidad de cada rotación para asegurarte de que los engranajes encajan bien.
+          * Ir a [full Game Lab](/projects/gamelab/new) para crear una nueva animación desde cero.
+      CSD U3 Project Build a Game SFLP:
+        markdown: |
+          # Resumen
+
+          La clase planifica y desarrolla juegos originales mediante la guía de proyectos de las dos lecciones anteriores. Ya sea individualmente o en parejas, la clase planifica, desarrolla y da su opinión sobre los juegos. Después de incorporar los comentarios de los compañeros, la clase comparte los juegos finalizados.
+
+
+          ## Recursos
+
+          * [Make Your Own Game - Project Guide](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)
+          * [Make Your Own Game - Rubric](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)
+          * [Make Your Own Game - Peer Review](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)
+      CSD U3 SFLP Velocity:
+        markdown: |
+          # Resumen
+
+          Después de una breve revisión de cómo se usa el patrón del contador para mover los sprites, la clase conoce las propiedades que establecen la velocidad y la velocidad de rotación directamente. A medida que utilizan estas nuevas propiedades de diferentes maneras, desarrollarán las habilidades que necesitan para crear un juego básico de desplazamiento lateral
+
+          ## Código presentado
+
+          * [sprite.velocityY](//docs.code.org/gamelab/velocityY/)
+          * [sprite.velocityX](//docs.code.org/gamelab/velocityX/)
+          * [sprite.rotationSpeed](//docs.code.org/gamelab/rotationSpeed/)
       CSD U3 Sprite Movement Predict Multi:
         questions:
         - text: Lee este programa y predice cuál de las siguientes animaciones se
@@ -982,15 +1523,43 @@ es-MX:
             style="width: 150px; border: 1px solid">'
         - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
             style="width: 150px; border: 1px solid">'
+      CSD U3 Using the Game Design Process SLFP:
+        markdown: |
+          # Resumen
+
+          En esta lección de varios días, la clase usa el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataformas. Después de mirar un juego de muestra, la clase define cómo se verán sus juegos y utiliza un proceso estructurado para crearlos. Finalmente, la clase reflexiona sobre cómo se podrían mejorar los juegos e implementa esos cambios.
+
+
+          ## Recursos
+
+          * [Planning Your Platform Game - Project Guide](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
       CSD U3 combining rep:
         title: Título
         content1: descripción aquí
+        markdown: |+
+          ### ¿Puedes decodificar esta cadena binaria?
+
+
+
+          # 1000011
+
+
+
+          ### ¿Qué información puede ayudarte a decodificarla?
+
       CSD U3 combining rep_2018:
         title: Título
         content1: descripción aquí
       CSD U3 combining rep_2018_2019:
         title: Título
         content1: descripción aquí
+      CSD U3 complex sprite movement SFLP:
+        markdown: |+
+          # Resumen
+
+          La clase aprende a combinar las propiedades de velocidad de los sprites con el patrón del contador para crear un movimiento de sprite más complejo, como simular la gravedad, hacer que un sprite salte y permitir que un sprite flote hacia la izquierda o hacia la derecha. En los niveles finales, la clase combina estos movimientos para animar y controlar un solo sprite, y crear un juego simple en el que un personaje vuela y recoge monedas.
+
+
       CSD U3 drawSprites placement match:
         title: dibujarSprites
         content1: Haz coincidir el código con la imagen que genera.
@@ -1051,6 +1620,206 @@ es-MX:
       CSD U3 platform intro_2018_2019:
         title: Crea un salto de plataformas
         content1: descripción aquí
+      CSD U4L01 SFLP:
+        markdown: |+
+          # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+
+          **¡Tus opiniones son muy importantes para nosotros!** Nos permitirán:
+
+          * Mejorar el curso
+          * Entender tu experiencia
+          * Saber sobre qué temas quieres aprender más en el futuro
+
+          ¡Gracias por tomarte el tiempo para ayudarnos a mejorar aún más el curso de Descubrimientos de Ciencias de la Computación!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/stage/1/puzzle/1/page/1" target="top">¡Haz clic aquí para completar la encuesta de fin de curso de Descubrimientos de Ciencias de la Computación!</a>
+
+          (se abre en una nueva pestaña)
+
+          <br>
+
+
+
+
+
+      CSD U4L02 SFLP:
+        markdown: |
+          # Resumen
+
+          Los diseñadores necesitan entender las necesidades de sus usuarios. En esta lección, interpretarás un perfil de usuario y reaccionarás ante una serie de productos para pensar en cómo diseñar para otra persona.
+
+          ## Vocabulario
+
+          * **Usabilidad**: qué tan fácil, eficiente y satisfactorio es usar un objeto o dispositivo hecho por el hombre (incluido el software).
+
+          ## Recursos
+
+          * [Reacting as your User](https://docs.google.com/document/d/1cQXtr4zj3LEuOMoOYJf8KtBUl9ge3qmwBBzEBv8GixA/export?format=pdf) - Activity Guide
+
+
+          * [Profile 1](https://docs.google.com/document/d/1N6Ks8rp6YoLgsbA3FE0x9RatJY3znevnMkMyUN3yRE8/export?format=pdf) - User Profile
+          * [Profile 2](https://docs.google.com/document/d/14nHf-TzkKBUC0hvYlcviVe-S9wDdo1TqPUIcnTcHMzw/export?format=pdf) - User Profile
+          * [Profile 3](https://docs.google.com/document/d/1Nw_0v_uGCe4J_tcimhyJiWKYgw4jhNgg8qP1zo4GddE/export?format=pdf) - User Profile
+          * [Profile 4](https://docs.google.com/document/d/1kRKQYsomhS9UakiDazQ9dXNk8AIWHaq082Y4wBflK34/export?format=pdf) - User Profile
+      CSD U4L03 SFLP:
+        markdown: |
+          # Resumen
+
+          En esta lección, diseñarás un producto desde cero para satisfacer las necesidades de un usuario. A lo largo del camino, aprenderás cómo aportar y calificar ideas es una habilidad útil cuando hay muchas opciones posibles entre las que elegir.
+
+          ## Recursos
+
+          * [User Centered Design](https://docs.google.com/document/d/1HxcW76EFNVIJykCVELgjr4WRpFjPgrVvz9tURRR1gWY/export?format=pdf) - Activity Guide
+      CSD U4L04 SFLP:
+        markdown: |
+          # Resumen
+
+          En esta lección, aprenderás qué es una aplicación y cómo están diseñadas para ayudar a satisfacer las necesidades de un usuario. También aprenderás cómo se utilizan los prototipos para crear un borrador de una pieza de software.
+
+          ## Vocabulario
+
+          * **Prototipo**: un primer modelo de un producto que te permite probar suposiciones antes de desarrollar una versión final.
+          * **Interfaz de usuario**: los elementos visuales de un programa a través del cual un usuario controla o se comunica con la aplicación. A menudo se abrevia como IU.
+
+
+          ## Recursos
+
+          * [User Interface Screens](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Activity Guide
+          * [User Testing (Computer)](https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/export?format=pdf) - Activity Guide
+          * [User Testing (User)](https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/export?format=pdf) - Activity Guide
+      CSD U4L05 SFLP:
+        markdown: |
+          # Resumen
+
+          En esta lección, aprenderás a leer cuidadosamente los comentarios sobre un producto para identificar necesidades. Luego, actualizarás un prototipo de papel para abordar mejor esas necesidades.
+
+          ## Recursos
+
+          * [User Interface Screens](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Activity Guide
+          * [Prototype Feedback](https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/export?format=pdf) - Activity Guide
+          * [Improve a Screen](https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/export?format=pdf) - Activity Guide
+      CSD U4L06 SFLP:
+        markdown: |
+          # Resumen
+
+          Hasta este punto, nos hemos centrado en el diseño para usuarios que, en cierta medida, no nos resultan cercanos. La conexión con un usuario final nunca ha sido directa, si no a través de ideas, perfiles o comentarios de texto. En esta lección, entrevistarás directamente a uno de tus compañeros de clase mientras buscas diseñar una aplicación que satisfaga sus necesidades.
+
+          ## Recursos
+
+          * [User Interview](https://docs.google.com/document/d/1u3mOVcBHWJpsMJwrvjb4_B8532xg774hkiWPEH7fbqQ/export?format=pdf) - Activity Guide
+          * [Project - Paper Prototype](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Activity Guide
+      CSD U4L07 SFLP:
+        markdown: |
+          # Resumen
+
+          Sobre la base de la entrevista que realizaste en la última lección, diseña una aplicación que pueda ayudar a tu compañero a superar algunos obstáculos para aprender algo nuevo.
+
+          ## Recursos
+
+          * [Paper Prototype Rubric](https://docs.google.com/document/d/16llO0PF7rJhz_ImtNDAxG3MAt9vU6QVGpDSPGoi_-04/export?format=pdf) - Rubric
+          * [Project - Paper Prototype](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Activity Guide
+      CSD U4L08 SFLP:
+        markdown: |+
+          # Resumen
+
+          Para iniciar el proyecto de diseño de la aplicación, la clase se organiza en equipos y comienza a explorar los temas de la aplicación. Para este proyecto, los estudiantes se inspiran con varios ejemplos de aplicaciones que tienen un impacto social.
+
+          ## Recursos
+
+          * [App Design Kickoff](https://docs.google.com/document/d/1u5oTuQcEV0sweTA6bEER_wZT6FKoX7EqX8JdiY8YCAA/export?format=pdf) - Activity Guide
+
+      CSD U4L09 SFLP:
+        markdown: |
+          # Resumen
+
+          Explora aplicaciones existentes que puedan ser útiles para usuarios similares y sumérgete en el desarrollo de aplicaciones. Cada grupo identifica un puñado de aplicaciones que tratan el mismo tema en el que están trabajando y usa esas aplicaciones para perfeccionar la idea de la aplicación que seguirán.
+
+
+          ## Recursos
+
+          * [Market Research](https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/export?format=pdf) - Activity Guide
+      CSD U4L10 SFLP:
+        markdown: |
+          # Resumen
+
+          A partir de los prototipos en papel, los desarrolladores pueden probar ideas rápidamente antes de invertir mucho tiempo en escribir código. En esta lección, los equipos exploran algunos ejemplos de aplicaciones creadas en el Laboratorio de aplicaciones y usan esas aplicaciones para orientar los primeros prototipos en papel de sus aplicaciones.
+
+          ## Vocabulario
+
+          * **Prototipo**: un primer modelo de un producto que te permite probar suposiciones antes de desarrollar una versión final.
+
+
+          ## Recursos
+
+          * [Phone Paper Prototype](https://drive.google.com/open?id=0B2UNlnU_5Vg4c1VJZ1Zrd0NXUkE) - Template
+          * [What's for Lunch](https://docs.google.com/drawings/d/12qoCyr8ApVLVT9OlnHpDX7qM5mVopbw7w-0TcxlQd2k) - Prototype
+          * [Prototype Brainstorming](https://docs.google.com/document/d/1t6pRCn-oSUsuQ2rog24KzbbZ7iORothH_Gp1i3Hm8A4/export?format=pdf) - Activity Guide
+      CSD U4L11 SFLP:
+        markdown: |
+          # Resumen
+
+          En esta lección, los equipos prueban sus prototipos en papel con otros miembros de la clase. Un estudiante desempeña el rol de una computadora, otro el de la narración y el resto observa. Así, los equipos obtendrán comentarios inmediatos sobre los diseños de sus aplicaciones, que pueden aplicar a la próxima versión de sus prototipos de aplicaciones.
+
+          ## Recursos
+
+          * [Paper Prototype User Testing](https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/export?format=pdf) - Activity Guide
+          * [What's For Lunch Testing](https://drive.google.com/open?id=0BxKeX2-Lg_EYUTBNbnMyUENFcGs) - Video
+      CSD U4L12 SFLP:
+        markdown: |
+          # Resumen
+
+          Luego de desarrollar, probar y reunir comentarios sobre un prototipo de papel, los equipos ahora pasan al Laboratorio de aplicaciones para crear la próxima iteración de sus aplicaciones. Con el modo de diseño del tipo arrastrar y soltar, cada miembro del equipo crea al menos una página de la aplicación de su equipo en base a los comentarios recibidos en la ronda previa de pruebas.
+
+          ## Recursos
+
+          * [Screen Ownership](https://docs.google.com/document/d/1eAl3Gpi1iLLOMjaO44-w2dUuJvHEzGVPrIDxpP4rkW4/export?format=pdf) - Activity Guide
+          * [Screen Design](https://docs.google.com/document/d/1dtMInlgLRk_DUZwpqF6KF8TvGUJNp-vWFYYU4wG-ZLc/export?format=pdf) - Activity Guide
+      CSD U4L13 SFLP:
+        markdown: |+
+          # Resumen
+
+          En base a las pantallas que la clase diseñó en la lección anterior, los equipos combinan las pantallas en una sola aplicación. Luego, se puede agregar un código simple para que los clics en los botones cambien a la pantalla apropiada.
+
+          ## Código presentado
+
+          * [onEvent](//docs.code.org/applab/onEvent/)
+          * [setScreen](//docs.code.org/applab/setScreen/)
+
+      CSD U4L15 SFLP:
+        markdown: |
+          # Resumen
+
+          Los equipos ejecutan otra ronda de pruebas de usuarios, esta vez con su prototipo interactivo. La información obtenida de esta ronda de pruebas orientará la versión final de los prototipos de aplicaciones.
+
+          ## Recursos
+
+          * [App User Testing](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf) - Activity Guide
+      CSD U4L16 SFLP:
+        markdown: |
+          # Resumen
+
+          Con los comentarios de la última ronda de pruebas, los equipos implementan cambios que responden a las necesidades de sus usuarios. Cada equipo rastrea y prioriza las características que desean agregar y los errores que necesitan corregir.
+
+          ## Vocabulario
+
+          * **Bug**: parte de un programa que no funciona correctamente.
+          * **Característica**: un elemento funcional individual de un elemento de software. Podría ser la capacidad de hacer algo nuevo, trabajar en varias plataformas o tener un rendimiento más eficiente.
+
+
+          ## Recursos
+
+          * [App User Testing Analysis](https://docs.google.com/document/d/1Y7cri91LU_70n6CrIGnUSedPwA_TMfYCkyhCjfpfTns/export?format=pdf) - Activity Guide
+      CSD U4L17 SFLP:
+        markdown: |
+          # Resumen
+
+          Cada equipo prepara una presentación para "lanzar" la aplicación que ha desarrollado. Este es el momento de compartir conflictos, triunfos y planes para el futuro.
+
+          ## Recursos
+
+          * [App Presentation Template](https://docs.google.com/presentation/d/19KVEybGqu6pdFB3QwjvJNA_VTM5W5Kxy3fUlxf1xnc4/edit) - Slide Deck
+          * [App Presentation](https://docs.google.com/presentation/d/1qRbnSABMrfeZHUiQ_mGdhzW7UIGuiGiWyMcQK_pH-tY/edit) - Exemplar
+          * [App Presentation](https://docs.google.com/document/d/1RVmBL9jCfG2QJXyEiya4w9dSBluRxinEOKBZLicv4lg/export?format=pdf) - Rubric
       CSD U5 Encryption 1:
         title: Título
         content1: descripción aquí
@@ -1072,6 +1841,15 @@ es-MX:
       CSD U5 L13 SFLP Interpreting Data:
         title: Título
         content1: descripción aquí
+        markdown: |
+          # Resumen
+
+          Observa las relaciones entre dos tipos diferentes de datos para ir más allá en la interpretación de los datos. Mira de qué manera encontrar relaciones puede ayudarte a resolver problemas.
+
+          ## Recursos
+
+          * [Interpreting Data](https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Activity Guide
+          * [Interpreting Data](https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Resource
       CSD U5 crosstab warmup:
         title: Encuesta sobre pizza
         content1: descripción aquí
@@ -1187,6 +1965,203 @@ es-MX:
           correct: true
         - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
             style="max-width: 100px;">'
+      CSD U6L01 TFMD:
+        markdown: |+
+          # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+
+          **¡Tus opiniones son muy importantes para nosotros!** Nos permitirán:
+
+          * Mejorar el curso
+          * Entender tu experiencia
+          * Saber sobre qué temas quieres aprender más en el futuro
+
+          ¡Gracias por tomarte el tiempo para ayudarnos a mejorar aún más el curso de Descubrimientos de Ciencias de la Computación!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/stage/1/puzzle/1/page/1" target="top">¡Haz clic aquí para completar la encuesta de fin de curso de Descubrimientos de Ciencias de la Computación!</a>
+
+          (se abre en una nueva pestaña)
+
+          <br>
+
+
+
+
+
+      CSD-U5-SFLP ASCII and Binary Representation:
+        markdown: |
+          # Resumen
+
+          Aprende cómo el sistema ASCII usa patrones de encendido-apagado para representar el alfabeto, y luego utilízalo para crear tu propio sistema binario y representación.
+
+          ## Vocabulario
+
+          * **ASCII**: ASCII (American Standard Code for Information Interchange, Código Estándar Americano para el Intercambio de Información) es el tipo de texto sin formato reconocido universalmente que cualquier computadora puede entender.
+          * **Binario**: una forma de representar la información mediante solo dos opciones.
+          * **Bit**: contracción de "dígito binario". Un bit es la unidad de información en una computadora, que se suele representar como 0 o 1.
+
+
+          ## Recursos
+
+          * [ASCII - Activity Guide](https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)
+      CSD-U5-SFLP Automating Data Decisions:
+        markdown: |
+          # Resumen
+
+          Verás un ejemplo de cómo podría usarse una computadora para completar cada paso del proceso de resolución de problemas mediante datos. Crearás reglas, o un algoritmo, que una computadora podría usar para tomar una decisión automáticamente.
+
+          ## Recursos
+
+          * [Automating Data Decisions](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Resource (copy as [MS Word](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Google Doc](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))
+          * [Automating Data Decisions](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))
+      CSD-U5-SFLP Combining Representations:
+        markdown: |
+          # Resumen
+
+          Esta lección combina los tres tipos de sistemas de representación binarios (caracteres ASCII, número binario e imágenes) para permitir la codificación de tipos de información más complejos en un registro. Después de ver una serie de bits que debe descifrar, la clase aborda la idea de que comprender la información binaria requiere entender tanto el sistema que se está utilizando como el significado de la información codificada.
+
+
+          ## Recursos
+
+          * [Pet Records - Activity Guide](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
+          * [ASCII to Binary Table - Reference](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+      CSD-U5-SFLP Create a Representation:
+        markdown: |
+          # Resumen
+
+          Usa los sistemas de representación binarios que has aprendido en este capítulo para diseñar una estructura que represente tu día perfecto. Para diseñar un formato de tarjeta perforada deberás usar ASCII, números binarios e imágenes.
+
+          ## Recursos
+
+          * [Create a Representation - Project Guide](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+      CSD-U5-SFLP Interpreting Data:
+        markdown: |
+          # Resumen
+
+          Limpia y visualiza conjuntos de datos sin procesar para ir más allá en la estructuración de datos. Observa cómo las visualizaciones cambian la forma en que entiendes los datos y tomas decisiones al respecto.
+
+          ## Recursos
+
+          * [Structuring Data](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Activity Guide
+      CSD-U5-SFLP Making Decisions with Data:
+        markdown: |
+          # Resumen
+
+          En esta lección, podrás practicar la toma de decisiones a partir de datos para algunos problemas que pueden resultar familiares.
+
+          ## Recursos
+
+          * [Making Decisions with Data](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Activity Guide
+      CSD-U5-SFLP Patterns and Representation:
+        markdown: |
+          # Resumen
+
+          Esta lección analiza más de cerca lo que se necesita para crear un sistema de representación. Los grupos crean sistemas que pueden representar cualquier letra en el alfabeto mediante una pila de tarjetas; luego, crean mensajes con sus sistemas y los intercambian con otros grupos para garantizar que el sistema funcione como estaba previsto. La clase habla sobre los puntos en común entre los sistemas y reconoce que hay muchas soluciones posibles.
+
+          ## Vocabulario
+
+          * **Decodificar**: cambiar la forma en que se representa la información para que la pueda leer una persona
+          * **Codificar**: cambiar la forma en que se representa la información para que la pueda leer una computadora
+
+
+          ## Recursos
+
+          * [Representing Information](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
+      CSD-U5-SFLP Problem Solving and Data:
+        markdown: |
+          # Resumen
+
+          Utilizarás el proceso de resolución de problemas para resolver un problema con datos.
+
+          ## Recursos
+
+          * [Problem Solving with Data](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Activity Guide
+      CSD-U5-SFLP Problem Solving with Big Data:
+        markdown: |
+          # Resumen
+
+          Esta lección cubre la forma en que las organizaciones recopilan y usan los datos para resolver problemas del mundo real. La clase analiza tres escenarios que podrían resolverse a través de los datos y aporta ideas sobre los tipos de datos que querrían usar para resolverlos y cómo podrían recopilarlos. Cada escenario también incluye un video sobre un servicio del mundo real que ha resuelto un problema similar mediante los datos.
+
+
+          ## Recursos
+
+          * [Data in the Real World](https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) - Activity Guide
+      CSD-U5-SFLP Representation Matters:
+        markdown: |+
+          # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+
+          **¡Tus opiniones son muy importantes para nosotros!** Nos permitirán:
+
+          * Mejorar el curso
+          * Entender tu experiencia
+          * Saber sobre qué temas quieres aprender más en el futuro
+
+          ¡Gracias por tomarte el tiempo para ayudarnos a mejorar aún más el curso de Descubrimientos de Ciencias de la Computación!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/stage/1/puzzle/1/page/1" target="top">¡Haz clic aquí para completar la encuesta de fin de curso de Descubrimientos de Ciencias de la Computación!</a>
+
+          (se abre en una nueva pestaña)
+
+          <br>
+
+
+
+
+
+      CSD-U5-SFLP Representing Images:
+        markdown: |+
+          # Resumen
+
+          Aprende cómo puedes usar los patrones de encendido y apagado que aprendiste en la última lección para representar imágenes. En el camino, explorarás cómo algunas de las propiedades de los sistemas de representación que ya has visto también se aplican a las imágenes.
+
+          ## Vocabulario
+
+          * **pixel**: abreviatura de "elemento de imagen"; es la unidad fundamental de una imagen digital, que suele ser un cuadrado o un punto pequeño que contiene un único punto de color de una imagen más grande.
+
+
+      CSD-U5-SFLP Representing Numbers Part 1:
+        markdown: |
+          # Resumen
+
+          Esta lección presenta el sistema numérico binario. Con un conjunto de tarjetas que representan los valores de posición en un sistema numérico binario (de base 2), la clase gira las tarjetas hacia arriba y hacia abajo para "encender" o "apagar" los bits, y luego observa los números que resultan de estos diferentes patrones. Finalmente, el patrón se extiende a un sistema genérico de 4 bits.
+
+          ## Recursos
+          * [Representing Numbers - Activity Guide](https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
+          * [Number Cards - Manipulative](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+      CSD-U5-SFLP Representing Numbers Part 2:
+        markdown: |
+          # Resumen
+
+          Esta lección trata sobre cómo las personas pueden mantener los datos en secreto, incluso cuando otras personas pueden verlos. La clase buscará un método de codificación para emojis, y luego aprenderá una forma de cifrar sus mensajes con emojis mediante una palabra clave.
+
+
+          ## Recursos
+
+          * [Keeping Data Secret - Activity Guide](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+      CSD-U5-SFLP Solve a Data Problem:
+        markdown: |
+          # Resumen
+
+          Para concluir esta unidad, diseñarás una forma de utilizar los datos para hacer una recomendación o predicción que te ayude a resolver un problema de tu elección.
+
+          ## Recursos
+
+          * [Make a Recommendation](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Project Guide
+          * [Make a Recommendation](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Peer Review
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          # Ir a lugares con seguridad
+
+          El Internet is poderoso, pero algunas veces es un lugar peligroso. ¡Mantente seguro mientras navegas por el Internet!
+      GraphPaperProgramming-Unplugged:
+        markdown: |
+          #Programación de papel cuadriculado
+
+          Escribe algoritmos que tus compañeros puedan usar para dibujar imágenes.
+      HappyMaps-Unplugged:
+        markdown: |
+          # Mapas felices
+
+          Crea un algoritmo para mover al personaje a través de un laberinto.
       Internet Simulator Setup:
         title: Configuración del simulador de Internet
         content1: descripción aquí
@@ -1446,6 +2421,98 @@ es-MX:
       Terminology Recap:
         title: Eso fue sencillo. ¿Qué sigue?
         content1: descripción aquí
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección aprenderás un proceso formal de resolución de problemas que te ayudará a estructurar tu enfoque para una amplia variedad de problemas.
+
+
+          ## Recursos
+
+          * [The Problem Solving Process - Activity Guide](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección aplicarás el proceso de resolución de problemas a diversos problemas para explorar cómo cada paso te ayuda a desarrollar y mejorar las soluciones.
+
+          ## Recursos
+
+          * [Solving Problems - Activity Guide](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección comenzarás a pensar sobre cómo las computadoras ayudan a resolver ciertos tipos de problemas y aprenderás las principales características de las computadoras.
+
+          ## Recursos
+
+          * [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+      Unit 2 Lesson 10 Overview:
+        markdown: |
+          # Resumen
+
+          Esta lección cubre clases de CSS y colores personalizados. La clase primero aprende cómo especificar colores personalizados mediante valores RGB (rojo, verde, azul), y luego aplica estos colores a una nueva página web del Four Seasons, que usa clases de CSS. Mediante estas clases, los estudiantes agregan más estilos a la página web del Four Seasons, y luego los utilizan para dar estilo a sus sitios web personales.
+
+          ## Vocabulario
+
+          * **Clase de HTML**: permite definir estilos iguales para los elementos al asignar a todos el mismo nombre de clase.
+
+          ## Código presentado
+
+          * [RGB Color](//docs.code.org/weblab/rgb-color/)
+
+          ## Recursos
+
+          * [RGB Colors - Activity Guide](https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/export?format=pdf)
+      Unit 2 Lesson 16 Overview:
+        markdown: |
+          # Resumen
+
+          En los últimos días de la unidad, la clase finaliza sus sitios web personales. Para ello, trabaja con sus compañeros para obtener comentarios, revisar la rúbrica y dar los toques finales al sitio. Para cerrar la unidad, todos comparten sus proyectos y la forma en que se desarrollaron.
+
+          ## Recursos
+
+          * [Final Personal Website - Peer Review](https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/export?format=pdf)
+          * [Final Personal Website - Project Guide](https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/export?format=pdf)
+          * [Final Personal Website - Rubric](https://docs.google.com/document/d/1SmZaZymJbMQL04j3evH4O0PYkbtZ_l6W_6rvddB1alg/export?format=pdf)
+      Unit 2 Lesson 7 Overview:
+        markdown: |+
+          # Resumen
+
+          Esta lección presenta CSS como una forma de dar estilo a elementos en la página. La clase aprende la sintaxis básica de los conjuntos de reglas CSS y luego explora las propiedades que afectan los elementos de texto HTML. Finalmente, todos aplican estilos de texto a sus sitios web personales.
+
+          ## Vocabulario
+
+          * **CSS**: CSS significa Cascading Style Sheets (hojas de estilo en cascada) y permite que cada elemento HTML tenga un estilo de acuerdo con cierto conjunto de reglas.
+          * **Selector de CSS**: especifica la parte del código a la que debe aplicarse el estilo.
+
+          ## Código presentado
+
+          *  **[Color](//docs.code.org/weblab/color/)** - `color: value;`
+          *  **[Text Align](//docs.code.org/weblab/text-align/)** - `text-align: value;`
+          *  **[Text Decoration](//docs.code.org/weblab/Text-Dec/)** - `text-decoration: value;`
+          *  **[Font Family](//docs.code.org/weblab/font-family/)** - `font-family:value;`
+          *  **[Font Size](//docs.code.org/weblab/font-size/)** - `font-size:value;`
+
+      Unit 2 Lesson 8 Overview:
+        markdown: |+
+          # Resumen
+
+          Esta lección continúa con la introducción a las propiedades de estilo CSS, esta vez con foco en elementos que no pertenecen al texto. La clase investiga y modifica los nuevos estilos CSS en una página de Postres del Mundo. Después, todos aplican este nuevo conocimiento a sus sitios web personales.
+
+          ## Código presentado
+
+          *  **[Background Color](//docs.code.org/weblab/background-color/)** - `background-color: value;`
+          *  **[Float](//docs.code.org/weblab/float/)** - `float: value;`
+          *  **[Margin](//docs.code.org/weblab/margin/)** - `margin: value;`
+          *  **[Width](//docs.code.org/weblab/width/)** - `width: value;`
+          *  **[Height](//docs.code.org/weblab/height/)** - `height: value;`
+          *  **[Border Style](//docs.code.org/weblab/border-style/)** - `border-style: value;`
+          *  **[Border Width](//docs.code.org/weblab/border-width/)** - `border-width: value;`
+          *  **[Border Color](//docs.code.org/weblab/border-color/)** - `border-color: value;`
+
       behaviors 1 predict:
         questions:
         - text: Haz clic en el botón "editar" para ver cómo funciona el `comportamiento
@@ -2398,20 +3465,20 @@ es-MX:
         - text: Este código usa un bloque nuevo. ¿Qué crees que pasará cuando presiones
             "Ejecutar"?
         answers:
-        - text: Nada. El pájaro no se moverá.
+        - text: Nada. Scrat no se moverá en absoluto.
           feedback: Incorrecto. Colocar el bloque 'avanzar' dentro del bloque 'repetir'
-            hará que el pájaro avance tres veces.
-        - text: El pájaro avanzará tres veces, girará, luego avanzará tres veces más,
-            y llegará al cerdo.
+            hará que Scrat avance tres veces.
+        - text: Scrat avanzará tres veces, girará, y luego avanzará tres veces más.
+            ¡Así llegará hasta la bellota!
           correct: true
           feedback: "¡Correcto!"
-        - text: El pájaro avanzará, luego girará y chocará con una pared.
+        - text: Scrat avanzará, y luego girará y chocará.
           feedback: Incorrecto. Colocar el bloque 'avanzar' dentro del bloque 'repetir'
-            hará que el pájaro avance tres veces.
+            hará que Scrat avance tres veces.
         - text: No lo sé.
           feedback: Poner el bloque 'avanzar' dentro del bloque 'repetir' hará que
-            el pájaro avance tres veces. Luego, el pájaro gira y avanza otras tres
-            veces, y llega al cerdo.
+            Scrat avance tres veces. Luego, gira y avanza otras tres veces, ¡y llega
+            hasta la bellota!
       courseE_multi_bee_functions_predict1:
         questions:
         - text: Este es el mismo programa del último desafío, pero la cantidad de
@@ -2918,6 +3985,14 @@ es-MX:
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
           feedback: Incorrecto. El bucle gira 90 grados entre llamadas a "dibujar
             polígono".
+      csd-pre-survey-2017-levelgroup:
+        markdown: "# Resumen\n\nLa clase trabaja en grupos para diseñar barcos de
+          papel aluminio que puedan cargar tantas monedas como sea posible. Al final
+          de la clase, los grupos reflexionan sobre sus experiencias con la actividad
+          y establecen conexiones con los tipos de resoluciones de problemas que llevarán
+          adelante durante el resto del curso. \n\n\n## Recursos\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
       grade2_multi_collector_A_predict1:
         questions:
         - text: Mira el siguiente código con atención. Si el código se ejecutara hasta
@@ -2975,3 +4050,7 @@ es-MX:
             un error.
       gradek1_activity_beNice:
         title: La computadora es tu amiga
+        markdown: "# El comportamiento en el Laboratorio informático\n  \n<br/><br/>
+          \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nIr al plan de la lección\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>\n"

@@ -3,7 +3,9 @@ es-MX:
   data:
     script:
       category:
+        csd_category_name: Descubrimientos de Ciencias de la Computación ('17-'18)
         csd_2018_category_name: Descubrimientos de Ciencias de la Computación ('18-'19)
+        csd_2019_category_name: Descubrimientos de Ciencias de la Computación ('19-'20)
         csf_category_name: Fundamentos de Ciencias de la Computación
         csf_2018_category_name: Fundamentos de Ciencias de la Computación (2018)
         csf_international_category_name: Fundamentos de Ciencias de la Computación
@@ -11,12 +13,14 @@ es-MX:
         csf2_draft_category_name: 'En desarrollo: cursos A-F'
         csp_category_name: Principios de Ciencias de la Computación '15-'16
         csp_2018_category_name: Principios de Ciencias de la Computación ('18-'19)
+        csp_2019_category_name: Principios de Ciencias de la Computación ('19-'20)
         cspexams_category_name: Prueba de práctica de Principios de Ciencias de la
           Computación
         csp17_category_name: Principios de Ciencias de la Computación ('17-'18)
         full_course_category_name: Cursos completos
         hoc_category_name: Hora del código
         math_category_name: Matemáticas
+        research_studies_category_name: Estudios de investigación
       name:
         course1:
           title: Curso 1
@@ -2182,7 +2186,7 @@ es-MX:
             Rapid Research - Cybercrime:
               name: Investigación rápida - Delito cibernético
             Practice PT - Big Data and Security Dilemmas:
-              name: PT de práctica - Grandes datos y dilemas de seguridad
+              name: PT de práctica - Big Data y dilemas de seguridad
             Unit 4 Chapter 1 Assessment:
               name: Evaluación del Capítulo 1 de la Unidad 4
             CSP Student Post Survey Staging:
@@ -10027,7 +10031,7 @@ es-MX:
             Programming with Behaviors:
               name: Programación con comportamientos
             Programming with Forever:
-              name: Programación con la función Siempre
+              name: Programación con Siempre
             Using Behaviors:
               name: Uso de comportamientos
             Using Forever Loops:
@@ -11718,7 +11722,7 @@ es-MX:
             CS Principles Post-Course Survey:
               name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp4-2018:
-          title: CSP Unidad 4 - Grandes datos y privacidad ('18-'19)
+          title: CSP Unidad 4 - Big Data y privacidad ('18-'19)
           description: El mundo en el que vivimos, repleto de datos, introduce muchas
             preguntas complejas relacionadas con la política pública, la ley, la ética
             y el impacto social. Los objetivos de esta unidad son desarrollar una
@@ -11746,7 +11750,7 @@ es-MX:
             Rapid Research - Cybercrime:
               name: Investigación rápida - Delito cibernético
             Practice PT - Big Data and Security Dilemmas:
-              name: PT de práctica - Grandes datos y dilemas de seguridad
+              name: PT de práctica - Big Data y dilemas de seguridad
             Unit 4 Chapter 1 Assessment:
               name: Evaluación del Capítulo 1 de la Unidad 4
             Participate in a longitudinal study!:
@@ -13705,6 +13709,8 @@ es-MX:
               name: andrea-prueba-etapa3
             Deeper Learning Overview:
               name: Resumen del aprendizaje profundo
+            andrea-test-stage4:
+              name: andrea-prueba-etapa4
           title: andrea-prueba
           description_audience: Facilitadores 6-12 en período de formación
           description_short: esto es para poner a prueba mis habilidades para hacer
@@ -16145,6 +16151,30 @@ es-MX:
               name: 'Proyecto: diseñar una aplicación, pt. 1'
             'Project: Designing an App, pt. 2':
               name: 'Proyecto: diseñar una aplicación, pt. 2'
+            Programs Investigate:
+              name: Investigar programas
+            Programs Practice:
+              name: Práctica de programas
+            'Project: Designing an App, pt. 3':
+              name: 'Proyecto: diseñar una aplicación, pt. 3'
+            'Project: Designing an App, pt. 4':
+              name: 'Proyecto: diseñar una aplicación, pt. 4'
+            'Project: Share Your App':
+              name: 'Proyecto: comparte tu aplicación'
+            'Project: Designing an App pt. 1':
+              name: 'Proyecto: diseñar una aplicación pt. 1'
+            'Project: Designing an App pt. 2':
+              name: 'Proyecto: diseñar una aplicación pt. 2'
+            Project - Designing an App Part 1:
+              name: Proyecto - Diseñar una aplicación Parte 1
+            Project - Designing an App Part 2:
+              name: Proyecto - Diseñar una aplicación Parte 2
+            Project - Designing an App Part 3:
+              name: Proyecto - Diseñar una aplicación Parte 3
+            Project - Designing an App Part 4:
+              name: Proyecto - Diseñar una aplicación Parte 4
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
           title: 'Unidad 3: Introducción al desarrollo de aplicaciones'
         csp4-pilot-staging:
           stages:
@@ -16652,7 +16682,7 @@ es-MX:
               name: "¿Qué es una computadora?"
             Problem Solving Process:
               name: Proceso de resolución de problemas
-          title: Widgets de prueba que guardan el estado
+          title: Muestra de actividades en línea
         fit2019-apprentice:
           stages:
             Apprentice Reflection Overview:

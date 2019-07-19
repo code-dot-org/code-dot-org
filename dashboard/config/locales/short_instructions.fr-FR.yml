@@ -13,7 +13,7 @@ fr-FR:
       2-3 Artist 4: Aide-moi à terminer la maison pour ce chat.
       2-3 Artist 6: 'Cette maison a besoin d''un toit ! Dessine un triangle. Astuce
         : les trois côtés sont de même longueur.'
-      2-3 Artist 9: Termine ce cerf-volant
+      2-3 Artist 9 NEW: Termine ce cerf-volant
       2-3 Artist Free Play: Jeu libre ! Dessine tout ce que tu veux.
       2-3 Artist Loops New 15: Dessine quelque chose d'amusant.
       2-3 Artist Nested Loops 10: Fais boucler ce code 12 fois pour compléter le motif.
@@ -808,6 +808,10 @@ fr-FR:
       courseD_maze_nestedLoops6: Amène-moi jusqu'au tournesol !
       courseD_maze_nestedLoops6_2018: Amène-moi jusqu'au tournesol !
       courseD_maze_nestedLoops6_2019: Amène-moi jusqu'au tournesol !
+      courseD_scrat_ramp6: "_\"Keep calm and help me find the\nbad pig. Otherwise
+        I might get angry!\"_\\\r\n\\\r\nWhen you have several blocks\nin a row, try
+        moving them inside of a `repeat` loop.  This will do the same\nthing with
+        less code!"
       courseE_artist_functions1: 'Salut. Moi artiste zombie. Moi aime dessiner ! Toi
         aider moi à dessiner les verres carrés. Astuce : le pont entre les verres
         fait 25 pixels de moins que la longueur du carré.'

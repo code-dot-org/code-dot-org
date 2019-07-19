@@ -15,7 +15,7 @@ ja-JP:
         2-3_Artist_3new_a: 100 - 70 は、いくつですか？もんだい文では、それが帽子の高さです！
         2-3_Artist_3new_b: アーティストは、正しい方を向いていないです。せんを かく前に、かれの向きを かえてください。
       2-3 Artist 4:
-        2-3_Artist_4_a: 家を完成させるには、四角形をかいてください！
+        2-3_Artist_4_a: 家を完成（かんせい）させるには、四角形をかいてください！
       2-3 Artist 6:
         2-3_Artist_6_b: 私はすでに右に向いているので、前に進むことから始めるのが簡単です。そして三角形を作るには左に向きます。
         2-3_Artist_6_c: 三角形のどちら側も、その四角形の辺の長さと同じ、100ピクセルです！
@@ -23,7 +23,7 @@ ja-JP:
         2-3_Artist_7_a: このパズルを解くいちばん早い方法は、最初の四角形を描いたあと、次の四角形を描くために、キャラクターを下向きにしておくことです。
       2-3 Artist 8:
         2-3_Artist_8_a: 200の長さを半分にする場合、ひとつひとつの四角形の幅は、何ピクセルにすれば良いでしょう？
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: このダイヤモンドは、その側から見るとただの四角形に見えます。
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -77,12 +77,12 @@ ja-JP:
         2-3_Artist_Loops_New_9_a: 書き始める前にアーティストは右に45度曲がる必要があります。
         2-3_Artist_Loops_New_9_b: このVは実際単なる正方形の半分です。正方形の半分を描くコードは何でしょう？
       2-3 Artist Nested Loops 1:
-        2-3_Artist_Nested_Loops_1_a: ループの内側に灰色のブロックをすべて入れることを覚えておいてください。
+        2-3_Artist_Nested_Loops_1_a: ループの中に灰色（はいいろ）のブロックをすべて入れることを覚（おぼ）えておいてください。
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: 角度わかりますか？360/12=30
-        2-3_Artist_Nested_Loops_3_b: ループの内側に灰色のコードとまがるブロックをすべて入れることを覚えておいてください。
+        2-3_Artist_Nested_Loops_3_a: 角度がわかりますか？360/12=30
+        2-3_Artist_Nested_Loops_3_b: ループの中に灰色（はいいろ）のコードとまがるブロックをすべて入れることを覚（おぼ）えておいてください。
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: 角度わかりますか？360/12=30
+        2-3_Artist_Nested_Loops_3_a: 角度がわかりますか？360/12=30
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: |-
           「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
@@ -90,23 +90,23 @@ ja-JP:
           正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
       2-3 Artist Nested Loops 7:
         2-3_Artist_Nested_Loops_7_a: |-
-          各ループでどれだけ曲がればよいでしょう？
+          それぞれのループでどれだけ曲（ま）がればよいでしょう？
 
           360/10って何ですか？
       2-3 Artist Nested Loops 9:
         2-3_Artist_Nested_Loops_9_a: |-
-          正しい角度を知る手助けが必要ですか？
+          正しい角度を知る手助（てだす）けが必要（ひつよう）ですか？
 
           **360 / 12 = 30**
       2-3 Bee Conditionals 14:
-        2-3_Bee_Conditionals_14_a: ブロックの減らし方が難しいですか？赤い花を紫の花とまったく同じものとして扱ってみてください！
+        2-3_Bee_Conditionals_14_a: ブロックのへらし方がむずかしいかな？赤い花をムラサキの花とまったく同じものとして考えてみよう！
         2-3_Bee_Conditionals_14_b: 赤い花が紫色だったら、追加の「くりかえし」ループを使ってコードを減らす方法が分かったでしょうか？
       2-3 Bee Conditionals 15:
-        2-3_Bee_Conditionals_15_a: '注意: 紫の花だけ0か1個の花のミツがあって、プログラムを実行するたびにそれが変わります。'
+        2-3_Bee_Conditionals_15_a: 注意（ちゅうい）：ムラサキの花だけ0か1つの花のミツがあって、プログラムを実行（じっこう）するたびにそれが変（か）わります。
       2-3 Bee Conditionals 3:
         2-3_Bee_Conditionals_3_a: 前にすすむときに毎回ループを使い、他のループで花のミツをとり、そしてほかのループでハチミツをつくるとコードがもっとも短くなります。
       2-3 Bee Conditionals 6:
-        2-3_Bee_Conditionals_6_a: '注意: プログラムを実行するときに紫の花のミツが0と1の間で変化します！'
+        2-3_Bee_Conditionals_6_a: 注意（ちゅうい）：プログラムを実行（じっこう）するときに、ムラサキの花のミツは0から1つで変化（へんか）します！
       2-3 Bee Debugging 1:
         2-3_Bee_Debugging_1_a: 間違いのブロックを見つけて直すと、「くりかえし」ループを使ってよりシンプルにすることができるパターンが分かりますか？
       2-3 Bee Debugging 2:
@@ -522,6 +522,61 @@ ja-JP:
         NEW_Course_4_Artist_Functions_13_c: 星を書くには、144度で曲がってみて下さい。
       NEW Course 4 Artist Params 14:
         NEW_Course_4_Artist_Params_14_a: 何回やっても、だいじょうぶ。いろいろとパラメータをかえて ためしてね。
+      course1_artist_loops_challenge1:
+        courseA_artist_loops_challenge1_a: |-
+          「くりかえし」をつかうと、こうやって家が作れる。ほかのブロックをつかって「くりかえし」のしくみをかくにんしてみよう。
+
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+
+          じぶんの家を作ってみよう。![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) をおすと、いくつかのアイディアをあげます！
+      course1_artist_loops_challenge2:
+        harvey_tictactoe: "「ジャンプ」ブロックをつかうと、線をかかずにうごけるよ。"
+      course1_artist_loops_challenge3:
+        courseA_artist_loops_challenge2_a: <xml>  <block type="simple_move_up_left"/></xml>
+          をつかうと、北西に線が引けるよ！
+        courseA_artist_loops_challenge2_b: 1つめの家ができたら、ジャンプしてつぎの家を作ろう！
+        courseA_artist_loops_challenge2_c: このもんだいをとくには、ループ内にたくさんのブロックがいるよ。
+      course1_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_a: うまくうごかなかったところの「くりかえし」の数をかえてみよう！
+        courseA_collector_loops_challenge1_c: どうくつの右はしには6つのジェムがあるけど、5回うごいてあつめるだけでいいよね。
+          なんでかわかるかな？
+      course1_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: 1つの ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png>) ブロックだけでクリアできるよ。
+        courseA_collector_loops_challenge2_a: |-
+          ジェムを手に入れた後、道をもどってから南に行くといいよ。
+
+          \[] [0]
+      course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_b: |-
+          「南にうごく」「ジェムをとる」を「くりかえし」でループさせるところからはじめよう。
+
+          <xml>
+            <block type="maze_moveSouth"/><next>
+            <block type="collector_collect"/></next>
+            </xml>
+        courseB_collector_loops_challenge1_a: |-
+          北ブロックのパターンは、南ブロックのパターンと少し違うよ。
+
+          <xml>
+            <block type="collector_collect"/><next>
+            <block type="maze_moveNorth"/></next>next>
+            </xml>
+        courseB_collector_loops_challenge1_c: "たてほうこうのジェムをぜんぶひろったら、東ブロックで2歩すすむ、をくりかえそう。\n\n<xml>\n
+          \ <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n
+          \ </xml>\n\nたった14ブロックでこれができます。 ヒントをクリックすると答えが見れます。 "
+      course1_maze_debugging_challenge1:
+        courseA_maze_seq_challenge1_a: 遠くまで歩きすぎるとバクダンにぶつかっちゃうよ。
+      course1_maze_debugging_challenge2:
+        courseB_maze_seq_challenge2_b: ブロックをならべかえて、まん中の道をすすんでください。
+      course1_maze_seq_challenge2:
+        courseB_maze_seq_challenge1_b: まずは西へいこう。
+      course2_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: "「あつめる」コマンドをたくさん使うと、たくさんジェムをあつめることができます。"
+      course2_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: "「あつめる」コマンドをたくさん使うと、たくさんジェムをあつめることができます。"
+      course2_harvester_loops_challenge1:
+        courseC_harvester_loops_challenge1_b: 必要（ひつよう）なだけ「前にすすむ」と「ピック トウモロコシ」をくりかえしてから、それぞれのコーナーで「右に回転」しましょう。
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
@@ -572,10 +627,8 @@ ja-JP:
           正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
       courseD_maze_ramp6:
         courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: このパズルの解き方は二通りあるよ。
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: このパズルの解き方は二通りあるよ。
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
         courseE_artist_concept_challenge1_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '

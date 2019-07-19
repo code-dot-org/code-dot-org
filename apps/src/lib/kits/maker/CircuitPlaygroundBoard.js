@@ -91,7 +91,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise}
    */
   connectToFirmware() {
-    this.detectBoardType();
     return new Promise((resolve, reject) => {
       const name = this.port_ ? this.port_.comName : undefined;
       const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
@@ -103,6 +102,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
+        this.detectBoardType();
         if (experiments.isEnabled('detect-board')) {
           this.detectFirmwareVersion(playground);
         }
@@ -146,6 +146,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       productId === CIRCUIT_PLAYGROUND_EXPRESS_PID
     ) {
       this.boardType_ = BOARD_TYPE.EXPRESS;
+      if (this.fiveBoard_) {
+        this.fiveBoard_.isExpressBoard = true;
+      }
     } else {
       this.boardType_ = BOARD_TYPE.OTHER;
     }
@@ -164,7 +167,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         'Cannot initialize components: Not connected to board firmware.'
       );
     }
-
     return createCircuitPlaygroundComponents(this.fiveBoard_).then(
       components => {
         this.prewiredComponents_ = {
