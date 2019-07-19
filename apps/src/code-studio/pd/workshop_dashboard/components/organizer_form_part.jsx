@@ -12,7 +12,7 @@ const styles = {
 
 export default class OrganizerFormPart extends React.Component {
   static propTypes = {
-    organizers: PropTypes.array,
+    potential_organizers: PropTypes.array,
     organizer_id: PropTypes.number,
     onChange: PropTypes.func,
     readOnly: PropTypes.bool
@@ -27,7 +27,7 @@ export default class OrganizerFormPart extends React.Component {
   }
 
   render() {
-    const organizerOptions = this.props.organizers.map(o =>
+    const organizerOptions = this.props.potential_organizers.map(o =>
       this.renderOrganizerOption(o)
     );
     return (

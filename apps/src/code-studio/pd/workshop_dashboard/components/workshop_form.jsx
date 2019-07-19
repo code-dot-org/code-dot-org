@@ -84,7 +84,7 @@ export class WorkshopForm extends React.Component {
       enrolled_teacher_count: PropTypes.number.isRequired,
       regional_partner_name: PropTypes.string,
       regional_partner_id: PropTypes.number,
-      organizers: PropTypes.array,
+      potential_organizers: PropTypes.array,
       organizer: PropTypes.shape({
         id: PropTypes.number
       })
@@ -971,7 +971,7 @@ export class WorkshopForm extends React.Component {
           )}
           {this.props.permission.has(WorkshopAdmin) && (
             <OrganizerFormPart
-              organizers={this.props.workshop.organizers}
+              potential_organizers={this.props.workshop.potential_organizers}
               organizer_id={this.state.organizer.id}
               onChange={this.handleOrganizerChange}
               readOnly={this.props.readOnly}

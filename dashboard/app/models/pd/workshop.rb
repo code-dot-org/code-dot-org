@@ -676,7 +676,8 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
-  def organizers
+  # Users who could be re-assigned to be the organizer of this workshop
+  def potential_organizers
     potential_organizers = []
 
     # if there is a regional partner, only that partner's PMs can become the organizer
