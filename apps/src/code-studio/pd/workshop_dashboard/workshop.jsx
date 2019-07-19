@@ -117,7 +117,7 @@ export class Workshop extends React.Component {
             'regional_partner_name',
             'regional_partner_id',
             'scholarship_workshop?',
-            'organizers'
+            'potential_organizers'
           ])
         });
       })
