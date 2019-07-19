@@ -249,8 +249,13 @@ module Pd
 
     test 'enrollment code override is used when fetching the workshop for a user' do
       setup_academic_year_workshop
-      other_academic_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, regional_partner: @academic_year_workshop.regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
+      other_academic_workshop = create :pd_workshop,
+        course: COURSE_CSP,
+        subject: SUBJECT_CSP_WORKSHOP_1,
+        num_sessions: 1,
+        regional_partner: @academic_year_workshop.regional_partner,
+        facilitators: @academic_year_workshop.facilitators,
+        sessions_from: Date.today + 1.month
       other_enrollment = create :pd_enrollment, :from_user, workshop: other_academic_workshop, user: @enrolled_academic_year_teacher
       create :pd_attendance, session: other_academic_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: other_enrollment
 
@@ -346,8 +351,13 @@ module Pd
       setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
-      create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
-        day: 1, form_id: FAKE_FACILITATOR_FORM_ID, pd_session: @summer_workshop.sessions[0], facilitator: @facilitators[0]
+      create :pd_workshop_facilitator_daily_survey,
+        pd_workshop: @summer_workshop,
+        user: @enrolled_summer_teacher,
+        day: 1,
+        form_id: FAKE_FACILITATOR_FORM_ID,
+        pd_session: @summer_workshop.sessions[0],
+        facilitator: @summer_workshop.facilitators[0]
 
       sign_in @enrolled_summer_teacher
       get "/pd/workshop_survey/facilitators/#{@summer_workshop.sessions[0].id}/0"
@@ -359,8 +369,13 @@ module Pd
       setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
-      create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
-        day: 1, form_id: FAKE_FACILITATOR_FORM_ID, pd_session: @summer_workshop.sessions[0], facilitator: @facilitators[1]
+      create :pd_workshop_facilitator_daily_survey,
+        pd_workshop: @summer_workshop,
+        user: @enrolled_summer_teacher,
+        day: 1,
+        form_id: FAKE_FACILITATOR_FORM_ID,
+        pd_session: @summer_workshop.sessions[0],
+        facilitator: @summer_workshop.facilitators[1]
 
       sign_in @enrolled_summer_teacher
       get "/pd/workshop_survey/facilitators/#{@summer_workshop.sessions[0].id}/1"
@@ -382,7 +397,7 @@ module Pd
           environment: 'test',
           userId: @enrolled_summer_teacher.id,
           sessionId: @summer_workshop.sessions[0].id,
-          facilitatorId: @facilitators[0].id,
+          facilitatorId: @summer_workshop.facilitators[0].id,
           facilitatorIndex: 0,
           formId: FAKE_FACILITATOR_FORM_ID,
           workshopId: @summer_workshop.id,
@@ -393,7 +408,7 @@ module Pd
           regionalPartnerName: @summer_workshop.regional_partner.name,
           day: 1,
           facilitatorPosition: 1,
-          facilitatorName: @facilitators[0].name,
+          facilitatorName: @summer_workshop.facilitators[0].name,
           numFacilitators: 2,
           submitRedirect: submit_redirect
         }
@@ -443,7 +458,7 @@ module Pd
       assert new_record.placeholder?
       assert_equal @summer_workshop, new_record.pd_workshop
       assert_equal 1, new_record.day
-      assert_equal @facilitators[0], new_record.facilitator
+      assert_equal @summer_workshop.facilitators[0], new_record.facilitator
     end
 
     test 'facilitator specific submit redirect creates placeholder and redirects to thanks for last facilitator' do
@@ -463,7 +478,7 @@ module Pd
       assert new_record.placeholder?
       assert_equal @summer_workshop, new_record.pd_workshop
       assert_equal 1, new_record.day
-      assert_equal @facilitators[1], new_record.facilitator
+      assert_equal @summer_workshop.facilitators[1], new_record.facilitator
     end
 
     test 'facilitator specific submit for 2-day academic redirects to thanks for day 1' do
@@ -492,7 +507,7 @@ module Pd
       assert new_record.placeholder?
       assert_equal @two_day_academic_year_workshop, new_record.pd_workshop
       assert_equal 1, new_record.day
-      assert_equal @facilitators[1], new_record.facilitator
+      assert_equal @two_day_academic_year_workshop.facilitators[1], new_record.facilitator
     end
 
     test 'facilitator specific submit for 2-day academic redirects to post for day 2' do
@@ -521,7 +536,7 @@ module Pd
       assert new_record.placeholder?
       assert_equal @two_day_academic_year_workshop, new_record.pd_workshop
       assert_equal 2, new_record.day
-      assert_equal @facilitators[1], new_record.facilitator
+      assert_equal @two_day_academic_year_workshop.facilitators[1], new_record.facilitator
     end
 
     test 'facilitator specific submit for 1-day academic redirects to post for day 1' do
@@ -550,7 +565,7 @@ module Pd
       assert new_record.placeholder?
       assert_equal @academic_year_workshop, new_record.pd_workshop
       assert_equal 1, new_record.day
-      assert_equal @facilitators[1], new_record.facilitator
+      assert_equal @academic_year_workshop.facilitators[1], new_record.facilitator
     end
 
     test 'post workshop survey without a valid enrollment code renders 404' do
@@ -1068,7 +1083,6 @@ module Pd
         num_sessions: 5, num_facilitators: 2
       @summer_enrollment = create :pd_enrollment, :from_user, workshop: @summer_workshop
       @enrolled_summer_teacher = @summer_enrollment.user
-      @facilitators = @summer_workshop.facilitators
     end
 
     def setup_academic_year_workshop
@@ -1077,7 +1091,6 @@ module Pd
         num_sessions: 1, num_facilitators: 2
       @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
       @enrolled_academic_year_teacher = @academic_year_enrollment.user
-      @facilitators = @academic_year_workshop.facilitators
     end
 
     def setup_two_day_academic_year_workshop
@@ -1087,7 +1100,6 @@ module Pd
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         workshop: @two_day_academic_year_workshop
       @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
-      @facilitators = @two_day_academic_year_workshop.facilitators
     end
 
     def unenrolled_teacher
