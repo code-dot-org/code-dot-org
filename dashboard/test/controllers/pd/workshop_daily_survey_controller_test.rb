@@ -53,8 +53,8 @@ module Pd
     end
 
     test 'daily academic year workshop survey results 404 for days outside of 1' do
-      setup_academic_year_workshop
-      sign_in @enrolled_academic_year_teacher
+      teacher = create(:enrollment, :from_user, workshop: create(:academic_year_workshop)).user
+      sign_in teacher
 
       get '/pd/workshop_survey/day/0'
       assert_response :not_found
@@ -217,72 +217,74 @@ module Pd
     end
 
     test 'academic year workshop with open session attendance displays embedded Jotform' do
-      setup_academic_year_workshop :with_regional_partner
       Session.any_instance.expects(:open_for_attendance?).returns(true)
-      create :pd_attendance, session: @academic_year_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: @academic_year_enrollment
 
-      submit_redirect = general_submit_redirect(day: 1, user: @enrolled_academic_year_teacher, workshop: @academic_year_workshop)
+      workshop = create :academic_year_workshop, :with_regional_partner
+      enrollment = create :enrollment, :from_user, workshop: workshop
+      teacher = enrollment.user
+      create :pd_attendance, session: workshop.sessions[0], teacher: teacher, enrollment: enrollment
+
+      submit_redirect = general_submit_redirect(day: 1, user: teacher, workshop: workshop)
       assert_equal '/pd/workshop_survey/submit', URI.parse(submit_redirect).path
 
       WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).with(
         FAKE_ACADEMIC_YEAR_IDS[0],
         {
           environment: 'test',
-          userId: @enrolled_academic_year_teacher.id,
-          workshopId: @academic_year_workshop.id,
+          userId: teacher.id,
+          workshopId: workshop.id,
           day: 1,
           formId: FAKE_ACADEMIC_YEAR_IDS[0],
-          sessionId: @academic_year_workshop.sessions[0].id,
-          userName: @enrolled_academic_year_teacher.name,
-          userEmail: @enrolled_academic_year_teacher.email,
-          workshopCourse: @academic_year_workshop.course,
-          workshopSubject: @academic_year_workshop.subject,
-          regionalPartnerName: @academic_year_workshop.regional_partner.name,
+          sessionId: workshop.sessions[0].id,
+          userName: teacher.name,
+          userEmail: teacher.email,
+          workshopCourse: workshop.course,
+          workshopSubject: workshop.subject,
+          regionalPartnerName: workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
       )
 
-      sign_in @enrolled_academic_year_teacher
+      sign_in teacher
       get '/pd/workshop_survey/day/1'
       assert_response :success
     end
 
     test 'enrollment code override is used when fetching the workshop for a user' do
-      setup_academic_year_workshop :with_regional_partner
-      other_academic_workshop = create :pd_workshop,
-        course: COURSE_CSP,
-        subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1,
-        regional_partner: @academic_year_workshop.regional_partner,
-        facilitators: @academic_year_workshop.facilitators,
-        sessions_from: Date.today + 1.month
-      other_enrollment = create :pd_enrollment, :from_user, workshop: other_academic_workshop, user: @enrolled_academic_year_teacher
-      create :pd_attendance, session: other_academic_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: other_enrollment
+      teacher = create :teacher
 
-      # Same test as above but make sure we use the other workshop instead of @academic_year_workshop
+      workshop = create :academic_year_workshop, :with_regional_partner
+      other_workshop = create :academic_year_workshop, :with_regional_partner
+
+      create :enrollment, user: teacher, workshop: workshop
+      other_enrollment = create :pd_enrollment, user: teacher, workshop: other_workshop
+
+      create :pd_attendance, session: other_workshop.sessions[0], teacher: teacher, enrollment: other_enrollment
+
+      # Same test as above but make sure we use the other workshop instead of workshop
       # because we are using the enrollment code
-      submit_redirect = general_submit_redirect(day: 1, user: @enrolled_academic_year_teacher, workshop: other_academic_workshop)
+      submit_redirect = general_submit_redirect(day: 1, user: teacher, workshop: other_workshop)
       assert_equal '/pd/workshop_survey/submit', URI.parse(submit_redirect).path
 
       WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).with(
         FAKE_ACADEMIC_YEAR_IDS[0],
         {
           environment: 'test',
-          userId: @enrolled_academic_year_teacher.id,
-          workshopId: other_academic_workshop.id,
+          userId: teacher.id,
+          workshopId: other_workshop.id,
           day: 1,
           formId: FAKE_ACADEMIC_YEAR_IDS[0],
-          sessionId: other_academic_workshop.sessions[0].id,
-          userName: @enrolled_academic_year_teacher.name,
-          userEmail: @enrolled_academic_year_teacher.email,
-          workshopCourse: @academic_year_workshop.course,
-          workshopSubject: @academic_year_workshop.subject,
-          regionalPartnerName: @academic_year_workshop.regional_partner.name,
+          sessionId: other_workshop.sessions[0].id,
+          userName: teacher.name,
+          userEmail: teacher.email,
+          workshopCourse: other_workshop.course,
+          workshopSubject: other_workshop.subject,
+          regionalPartnerName: other_workshop.regional_partner.name,
           submitRedirect: submit_redirect
         }
       )
 
-      sign_in @enrolled_academic_year_teacher
+      sign_in teacher
       get "/pd/workshop_survey/day/1?enrollmentCode=#{other_enrollment.code}"
       assert_response :success
     end
@@ -307,22 +309,23 @@ module Pd
     end
 
     test 'academic year workshop submit redirect creates placeholder and redirects to the first facilitator form' do
-      setup_academic_year_workshop
-      sign_in @enrolled_academic_year_teacher
+      workshop = create :academic_year_workshop
+      teacher = create(:enrollment, :from_user, workshop: workshop).user
+      sign_in teacher
 
       assert_creates Pd::WorkshopDailySurvey do
-        params = general_submit_redirect_params(day: 1, user: @enrolled_academic_year_teacher, workshop: @academic_year_workshop).merge(
+        params = general_submit_redirect_params(day: 1, user: teacher, workshop: workshop).merge(
           submission_id: FAKE_SUBMISSION_ID,
         )
 
         post '/pd/workshop_survey/submit', params: params
 
-        assert_redirected_to action: :new_facilitator, session_id: @academic_year_workshop.sessions[0].id, facilitator_index: 0
+        assert_redirected_to action: :new_facilitator, session_id: workshop.sessions[0].id, facilitator_index: 0
       end
 
       new_record = Pd::WorkshopDailySurvey.last
       assert new_record.placeholder?
-      assert_equal @academic_year_workshop, new_record.pd_workshop
+      assert_equal workshop, new_record.pd_workshop
       assert_equal 1, new_record.day
     end
 
@@ -543,32 +546,34 @@ module Pd
     end
 
     test 'facilitator specific submit for 1-day academic redirects to post for day 1' do
-      setup_academic_year_workshop num_facilitators: 2
-      sign_in @enrolled_academic_year_teacher
+      workshop = create :academic_year_workshop, num_facilitators: 2
+      enrollment = create :enrollment, :from_user, workshop: workshop
+      teacher = enrollment.user
+      sign_in teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
         post '/pd/workshop_survey/facilitators/submit',
           params: facilitator_submit_redirect_params(
             day: 1,
-            user: @enrolled_academic_year_teacher,
-            workshop: @academic_year_workshop,
+            user: teacher,
+            workshop: workshop,
             facilitator_index: 1
           ).deep_merge(
             submission_id: FAKE_SUBMISSION_ID,
             key: {
-              userId: @enrolled_academic_year_teacher.id,
-              sessionId: @academic_year_workshop.sessions[0].id
+              userId: teacher.id,
+              sessionId: workshop.sessions[0].id
             }
           )
 
-        assert_redirected_to action: :new_post, enrollment_code: @academic_year_enrollment.code
+        assert_redirected_to action: :new_post, enrollment_code: enrollment.code
       end
 
       new_record = Pd::WorkshopFacilitatorDailySurvey.last
       assert new_record.placeholder?
-      assert_equal @academic_year_workshop, new_record.pd_workshop
+      assert_equal workshop, new_record.pd_workshop
       assert_equal 1, new_record.day
-      assert_equal @academic_year_workshop.facilitators[1], new_record.facilitator
+      assert_equal workshop.facilitators[1], new_record.facilitator
     end
 
     test 'post workshop survey without a valid enrollment code renders 404' do
@@ -629,15 +634,17 @@ module Pd
     end
 
     test 'post workshop submit redirects to thanks academic year workshops' do
-      setup_academic_year_workshop
-      sign_in @enrolled_academic_year_teacher
+      workshop = create :academic_year_workshop
+      enrollment = create :enrollment, :from_user, workshop: workshop
+      teacher = enrollment.user
+      sign_in teacher
 
       assert_creates Pd::WorkshopDailySurvey do
         params = general_submit_redirect_params(
           day: 1,
-          user: @enrolled_academic_year_teacher,
-          workshop: @academic_year_workshop,
-          enrollment_code: @academic_year_enrollment.code
+          user: teacher,
+          workshop: workshop,
+          enrollment_code: enrollment.code
         ).merge submission_id: FAKE_SUBMISSION_ID
 
         params[:key][:formId] = FAKE_ACADEMIC_YEAR_IDS[1]
@@ -648,7 +655,7 @@ module Pd
 
       new_record = Pd::WorkshopDailySurvey.last
       assert new_record.placeholder?
-      assert_equal @academic_year_workshop, new_record.pd_workshop
+      assert_equal workshop, new_record.pd_workshop
       assert_equal 1, new_record.day
       assert_equal FAKE_ACADEMIC_YEAR_IDS[1], new_record.form_id
     end
@@ -1089,18 +1096,6 @@ module Pd
         @summer_workshop = workshop
         @summer_enrollment = create :pd_enrollment, :from_user, workshop: workshop
         @enrolled_summer_teacher = @summer_enrollment.user
-      end
-    end
-
-    def setup_academic_year_workshop(*traits, **properties)
-      create(
-        :academic_year_workshop,
-        *traits,
-        **properties
-      ).tap do |workshop|
-        @academic_year_workshop = workshop
-        @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: workshop
-        @enrolled_academic_year_teacher = @academic_year_enrollment.user
       end
     end
 
