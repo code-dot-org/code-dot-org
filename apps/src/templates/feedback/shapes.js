@@ -13,7 +13,8 @@ const shapes = {
       PropTypes.string,
       PropTypes.instanceOf(Date)
     ]).isRequired,
-    comment: PropTypes.string
+    comment: PropTypes.string,
+    performance: PropTypes.string
   })
 };
 
