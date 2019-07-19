@@ -675,4 +675,37 @@ class Pd::Workshop < ActiveRecord::Base
       [unit_name, lesson_names]
     end
   end
+
+  def organizers
+    potential_organizers = []
+
+    # if there is a regional partner, only that partner's PMs can become the organizer
+    # otherwise, any PM can become the organizer
+    if regional_partner
+      regional_partner.program_managers.each do |pm|
+        potential_organizers << {label: pm.name, value: pm.id}
+      end
+    else
+      UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id)&.map do |user_id|
+        pm = User.find(user_id)
+        potential_organizers << {label: pm.name, value: pm.id}
+      end
+    end
+
+    # any CSF facilitator can become the organizer of a CSF workshhop
+    if course == Pd::Workshop::COURSE_CSF
+      Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
+        facilitator = User.find(user_id)
+        potential_organizers << {label: facilitator.name, value: facilitator.id}
+      end
+    end
+
+    # workshop admins can become the organizer of any workshop
+    UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
+      admin = User.find(user_id)
+      potential_organizers << {label: admin.name, value: admin.id}
+    end
+
+    potential_organizers
+  end
 end
