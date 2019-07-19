@@ -1,3 +1,11 @@
+# Util file for uploading tilesets to Mapbox
+# Tilesets should be generated using Tippecanoe.
+# Tilesets are uploaded to Mapbox's servers using the process documented at
+# https://docs.mapbox.com/api/maps/#uploads.
+#
+# Before using these functions, be sure to provide the following CDO attribute:
+#  CDO.mapbox_upload_token: (the auth token for uploading tiles to Mapbox's servers)
+
 require 'aws-sdk-s3'
 require 'rest-client'
 
