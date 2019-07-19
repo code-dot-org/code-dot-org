@@ -1,15 +1,14 @@
 #!/usr/bin/env ruby
 
-# The map on hourofcode.com is run off of a Google Fusion Table
-# (documentation: https://developers.google.com/maps/documentation/javascript/fusiontableslayer).
-# This script updates the fusion table using the REST API
-# (documentation: https://developers.google.com/fusiontables/docs/v2/using),
-# populating it with all rows from the pegasus forms table whose kind is the
-# most recent HocSignup (e.g., HocSignup2017 in Fall 2017).
+# The map on hourofcode.com is run off of Mapbox
+# This script updates the data on Mapbox by querying all rows from
+# the pegasus forms table whose kind is the
+# most recent HocSignup (e.g., HocSignup2017 in Fall 2017),
+# creating maptiles with Mapbox's command line tool, Tippecanoe,
+# and uploading them to Mapbox's server.
 
-# After setting up authentication, provide the following CDO.* attributes (example values below):
-#   CDO.hoc_map_account: JSON of a credential which can edit the FusionTables table
-#   CDO.hoc_map_table_id: ABCDEF123456 (the id of the fusion table)
+# After setting up authentication, provide the following CDO.* attributes:
+#   CDO.mapbox_upload_token: (the auth token for uploading tiles to Mapbox's servers)
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'

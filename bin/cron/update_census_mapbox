@@ -1,14 +1,13 @@
 #!/usr/bin/env ruby
 
-# The map on code.org/yourschool is run off of a Google Fusion Table
-# (documentation: https://developers.google.com/maps/documentation/javascript/fusiontableslayer).
-# This script updates the fusion table using the REST API
-# (documentation: https://developers.google.com/fusiontables/docs/v2/using),
-# populating it with all rows from the census_summaries table for the appropriate school year.
+# The map on code.org/yourschool is run off of Mapbox
+# This script updates the data on Mapbox by querying all rows from
+# census_summaries table for the appropriate school year,
+# creating maptiles with Mapbox's command line tool, Tippecanoe,
+# and uploading them to Mapbox's server.
 
 # After setting up authentication, provide the following CDO.* attributes:
-#   CDO.hoc_map_account: (JSON of a credential which can edit the FusionTables table)
-#   CDO.census_map_table_id: (the id of the fusion table)
+#   CDO.mapbox_upload_token: (the auth token for uploading tiles to Mapbox's servers)
 
 require_relative '../../dashboard/config/environment'
 require 'cdo/properties'
