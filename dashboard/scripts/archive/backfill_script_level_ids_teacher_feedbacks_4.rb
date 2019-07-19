@@ -22,7 +22,7 @@ def update_script_level_ids_based_on_script_stability
     if associated_script_levels.length > 1
       script_levels_with_stable_scripts = associated_script_levels.select {|sl| sl.script.is_stable}
       if script_levels_with_stable_scripts.length == 1
-        feedback.update_attributes(script_level: script_levels_with_stable_scripts.first)
+        feedback.update_attributes(script_level_id: script_levels_with_stable_scripts.first.id)
       end
     end
   end
