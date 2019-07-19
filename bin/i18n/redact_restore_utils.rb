@@ -62,15 +62,14 @@ class RedactRestoreUtils
   def self.restore(source, redacted, dest, plugins=[], format='md')
     return unless File.exist?(source)
     return unless File.exist?(redacted)
-    is_json = File.extname(source) == '.json'
     source_data =
-      if is_json
+      if File.extname(source) == '.json'
         JSON.load(File.open(source, 'r'))
       else
         YAML.load_file(source)
       end
     redacted_data =
-      if is_json
+      if File.extname(redacted) == '.json'
         JSON.load(File.open(redacted, 'r'))
       else
         YAML.load_file(redacted)
@@ -78,25 +77,32 @@ class RedactRestoreUtils
 
     return unless source_data
     return unless redacted_data
-    return unless source_data&.values&.first&.length
-    return unless redacted_data&.values&.first&.length
 
-    restored =
-      if is_json
-        RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)
-      else
-        RedactRestoreUtils.restore_data(source_data.values.first, redacted_data.values.first, plugins, format)
-      end
+    restored = RedactRestoreUtils.restore_data(
+      File.extname(source) == '.json' ? source_data : source_data&.values&.first&.values&.first&.values&.first || {},
+      File.extname(redacted) == '.json' ? redacted_data : redacted_data&.values&.first&.values&.first&.values&.first || {},
+      plugins,
+      format
+    )
 
     File.open(dest, "w+") do |file|
       if File.extname(dest) == '.json'
         file.write(JSON.pretty_generate(restored))
-      else
-        redacted_key = redacted_data.keys.first
+      elsif redacted_data &&
+        redacted_data.keys.length &&
+        redacted_data.values.first &&
+        redacted_data.values.first.keys.length &&
+        redacted_data.values.first.values.first &&
+        redacted_data.values.first.values.first.keys.length
+
         file.write(
           I18nScriptUtils.to_crowdin_yaml(
             {
-              redacted_key => restored
+              redacted_data.keys.first => {
+                redacted_data.values.first.keys.first => {
+                  redacted_data.values.first.values.first.keys.first => restored.sort.to_h
+                }
+              }
             }
           )
         )
@@ -110,8 +116,7 @@ class RedactRestoreUtils
 
     source_data =
       if File.extname(source) == '.json'
-        f = File.open(source, 'r')
-        JSON.load(f)
+        JSON.load(File.open(source, 'r'))
       else
         YAML.load_file(source)
       end

@@ -18,8 +18,8 @@ CLEAR = "\r\033[K"
 
 def sync_out
   rename_from_crowdin_name_to_locale
-  restore_redacted_files
   distribute_translations
+  restore_redacted_files
   copy_untranslated_apps
   rebuild_blockly_js_files
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
@@ -61,24 +61,20 @@ def restore_redacted_files
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
 
-    original_files.each_with_index do |original_path, file_index|
-      translated_path = original_path.sub("original", locale)
+    print "#{CLEAR}Restoring #{locale} (#{locale_index}/#{total_locales})"
+    $stdout.flush
+
+    original_files.each do |original_path|
+      type = File.basename(original_path, File.extname(original_path))
+      translated_path = "dashboard/config/locales/#{type}.#{locale}.yml"
       next unless File.file?(translated_path)
 
-      print "#{CLEAR}Restoring #{locale} (#{locale_index}/#{total_locales}) file #{file_index}/#{original_files.count}"
-      $stdout.flush
-
       if original_path.include? "course_content"
-        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path)
-        translated_data = JSON.parse(File.read(translated_path))
-        File.open(translated_path, "w") do |file|
-          file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
-        end
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path)
       elsif original_path == 'i18n/locales/original/dashboard/blocks.yml'
         RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
-      else
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path)
       end
+
       find_malformed_links_images(locale, translated_path)
     end
     I18nScriptUtils.upload_malformed_restorations(locale)
