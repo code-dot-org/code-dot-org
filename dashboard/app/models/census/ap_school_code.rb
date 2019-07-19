@@ -2,7 +2,7 @@
 #
 # Table name: ap_school_codes
 #
-#  school_year :integer
+#  school_year :integer          primary key
 #  school_code :string(6)        not null, primary key
 #  school_id   :string(12)       not null
 #  created_at  :datetime         not null
