@@ -482,7 +482,7 @@ module Pd
     end
 
     test 'facilitator specific submit for 2-day academic redirects to thanks for day 1' do
-      setup_two_day_academic_year_workshop
+      setup_two_day_academic_year_workshop num_facilitators: 2
       sign_in @enrolled_two_day_academic_year_teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
@@ -511,7 +511,7 @@ module Pd
     end
 
     test 'facilitator specific submit for 2-day academic redirects to post for day 2' do
-      setup_two_day_academic_year_workshop
+      setup_two_day_academic_year_workshop num_facilitators: 2
       sign_in @enrolled_two_day_academic_year_teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
@@ -1101,14 +1101,11 @@ module Pd
       end
     end
 
-    def setup_two_day_academic_year_workshop(*traits)
+    def setup_two_day_academic_year_workshop(*traits, **properties)
       create(
-        :pd_workshop,
+        :two_day_academic_year_workshop,
         *traits,
-        course: COURSE_CSP,
-        subject: SUBJECT_CSP_WORKSHOP_5,
-        num_sessions: 2,
-        num_facilitators: 2
+        **properties
       ).tap do |workshop|
         @two_day_academic_year_workshop = workshop
         @two_day_academic_year_enrollment = create :pd_enrollment, :from_user, workshop: workshop

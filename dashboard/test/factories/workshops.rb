@@ -120,6 +120,13 @@ FactoryGirl.define do
       num_facilitators 1
     end
 
+    factory :two_day_academic_year_workshop do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_WORKSHOP_5
+      num_sessions 2
+      num_facilitators 1
+    end
+
     #
     # Hooks
     #
