@@ -686,7 +686,7 @@ module Pd
     end
 
     test 'csf pre201 survey: reports survey render to New Relic' do
-      workshop = create :csf201_workshop, :upcoming
+      workshop = create :csf201_workshop, :upcoming, :with_regional_partner
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
 
@@ -855,7 +855,7 @@ module Pd
     end
 
     test 'csf post201 survey: report survey rendering to New Relic' do
-      workshop = create :csf201_workshop, :in_progress
+      workshop = create :csf201_workshop, :in_progress, :with_regional_partner
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
       create :pd_attendance, session: workshop.sessions.first, teacher: teacher

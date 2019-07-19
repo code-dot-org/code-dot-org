@@ -51,6 +51,10 @@ FactoryGirl.define do
       ended_at {Time.zone.now}
     end
 
+    trait :with_regional_partner do
+      association :regional_partner
+    end
+
     trait :funded do
       funded true
       funding_type {course == Pd::Workshop::COURSE_CSF ? Pd::Workshop::FUNDING_TYPE_FACILITATOR : nil}
