@@ -540,7 +540,7 @@ module Pd
     end
 
     test 'facilitator specific submit for 1-day academic redirects to post for day 1' do
-      setup_academic_year_workshop
+      setup_academic_year_workshop num_facilitators: 2
       sign_in @enrolled_academic_year_teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
@@ -1089,14 +1089,11 @@ module Pd
       end
     end
 
-    def setup_academic_year_workshop(*traits)
+    def setup_academic_year_workshop(*traits, **properties)
       create(
-        :pd_workshop,
+        :academic_year_workshop,
         *traits,
-        course: COURSE_CSP,
-        subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1,
-        num_facilitators: 2
+        **properties
       ).tap do |workshop|
         @academic_year_workshop = workshop
         @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: workshop
