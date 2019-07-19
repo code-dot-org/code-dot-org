@@ -7,12 +7,12 @@ import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
 import {
-  chooseLevelType,
   chooseLevel,
   addVariant,
   setActiveVariant,
   setField
 } from './editorRedux';
+import {levelShape} from './shapes';
 
 const styles = {
   checkbox: {
@@ -27,11 +27,13 @@ const styles = {
   levelFieldLabel: {
     display: 'inline-block',
     lineHeight: '36px',
-    margin: '0 7px 0 5px'
+    margin: '0 7px 0 5px',
+    verticalAlign: 'middle'
   },
-  levelTypeSelect: {
-    width: 'calc(100% - 80px)',
-    margin: '0 0 5px 80px'
+  levelSelect: {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    width: 600
   },
   textInput: {
     height: 34,
@@ -39,6 +41,18 @@ const styles = {
     boxSizing: 'border-box',
     verticalAlign: 'baseline',
     margin: '7px 0 10px 0'
+  },
+  checkboxLabel: {
+    display: 'inline-block',
+    marginRight: 10,
+    marginBottom: 0
+  },
+  checkboxInput: {
+    marginTop: 0,
+    verticalAlign: 'middle'
+  },
+  checkboxText: {
+    verticalAlign: 'middle'
   },
   divider: {
     borderColor: '#ddd',
@@ -61,24 +75,16 @@ const ArrowRenderer = ({onMouseDown}) => {
 };
 ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
-class LevelTokenDetails extends Component {
+export class UnconnectedLevelTokenDetails extends Component {
   static propTypes = {
     levelKeyList: PropTypes.object.isRequired,
-    chooseLevelType: PropTypes.func.isRequired,
     chooseLevel: PropTypes.func.isRequired,
     addVariant: PropTypes.func.isRequired,
     setActiveVariant: PropTypes.func.isRequired,
     setField: PropTypes.func.isRequired,
-    level: PropTypes.object.isRequired,
+    level: levelShape.isRequired,
     stagePosition: PropTypes.number.isRequired
   };
-
-  levelKindOptions = [
-    {label: 'Puzzle', value: 'puzzle'},
-    {label: 'Assessment', value: 'assessment'},
-    {label: 'Named Level', value: 'named_level'},
-    {label: 'Unplugged', value: 'unplugged'}
-  ];
 
   componentWillMount() {
     this.levelKeyOptions = _.map(this.props.levelKeyList, (label, value) => ({
@@ -92,14 +98,6 @@ class LevelTokenDetails extends Component {
       /^blockly:/.test(this.props.levelKeyList[id])
     );
   }
-
-  handleLevelTypeSelected = ({value}) => {
-    this.props.chooseLevelType(
-      this.props.stagePosition,
-      this.props.level.position,
-      value
-    );
-  };
 
   handleLevelSelected = (index, {value}) => {
     this.props.chooseLevel(
@@ -131,20 +129,31 @@ class LevelTokenDetails extends Component {
     }
   };
 
+  handleCheckboxChange = field => {
+    this.props.setField(this.props.stagePosition, this.props.level.position, {
+      [field]: !this.props.level[field]
+    });
+  };
+
   render() {
+    const scriptLevelOptions = ['assessment', 'named', 'challenge'];
     return (
       <div style={styles.levelTokenActive}>
-        <span style={Object.assign({float: 'left'}, styles.levelFieldLabel)}>
-          Level type
+        <span>
+          {scriptLevelOptions.map(option => (
+            <label key={option} style={styles.checkboxLabel}>
+              <input
+                type="checkbox"
+                style={styles.checkboxInput}
+                checked={!!this.props.level[option]}
+                onChange={this.handleCheckboxChange.bind(this, option)}
+              />
+              &nbsp;<span style={styles.checkboxText}>{option}</span>
+            </label>
+          ))}
         </span>
-        <VirtualizedSelect
-          value={this.props.level.kind}
-          options={this.levelKindOptions}
-          onChange={this.handleLevelTypeSelected}
-          clearable={false}
-          arrowRenderer={ArrowRenderer}
-          style={styles.levelTypeSelect}
-        />
+        <hr style={styles.divider} />
+        <div style={{clear: 'both'}} />
         {this.containsLegacyLevel() && (
           <div>
             <span style={styles.levelFieldLabel}>Skin</span>
@@ -205,13 +214,16 @@ class LevelTokenDetails extends Component {
                 />
               </div>
             )}
-            <VirtualizedSelect
-              options={this.levelKeyOptions}
-              value={id}
-              onChange={this.handleLevelSelected.bind(null, index)}
-              clearable={false}
-              arrowRenderer={ArrowRenderer}
-            />
+            <span style={{...styles.levelFieldLabel}}>Level name:</span>
+            <span style={styles.levelSelect}>
+              <VirtualizedSelect
+                options={this.levelKeyOptions}
+                value={id}
+                onChange={this.handleLevelSelected.bind(null, index)}
+                clearable={false}
+                arrowRenderer={ArrowRenderer}
+              />
+            </span>
           </div>
         ))}
         {/* We don't currently support editing progression names here, but do
@@ -241,9 +253,6 @@ export default connect(
     levelKeyList: state.levelKeyList
   }),
   dispatch => ({
-    chooseLevelType(stage, level, value) {
-      dispatch(chooseLevelType(stage, level, value));
-    },
     chooseLevel(stage, level, variant, value) {
       dispatch(chooseLevel(stage, level, variant, value));
     },
@@ -257,4 +266,4 @@ export default connect(
       dispatch(setField(stage, level, modifier));
     }
   })
-)(LevelTokenDetails);
+)(UnconnectedLevelTokenDetails);
