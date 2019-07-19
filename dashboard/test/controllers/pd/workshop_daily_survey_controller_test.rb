@@ -1091,24 +1091,15 @@ module Pd
     end
 
     def setup_csf201_not_started_workshop
-      @regional_partner = create :regional_partner
-      @csf201_not_started_workshop = create :pd_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, num_facilitators: 2
+      @csf201_not_started_workshop = create :csf201_workshop, :upcoming
     end
 
     def setup_csf201_in_progress_workshop
-      @regional_partner = create :regional_partner
-      @csf201_in_progress_workshop = create :pd_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, num_facilitators: 2, started_at: DateTime.now
+      @csf201_in_progress_workshop = create :csf201_workshop, :in_progress
     end
 
     def setup_csf201_ended_workshop
-      @regional_partner = create :regional_partner
-      @csf201_ended_workshop = create :pd_ended_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, num_facilitators: 2
+      @csf201_ended_workshop = create :csf201_workshop, :ended
     end
 
     def unenrolled_teacher

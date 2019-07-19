@@ -33,6 +33,24 @@ FactoryGirl.define do
     # Traits (mix-and-match)
     #
 
+    trait :upcoming do
+      sessions_from {Date.current + 3.months}
+      started_at nil
+      ended_at nil
+    end
+
+    trait :in_progress do
+      sessions_from {Date.current}
+      started_at {Time.zone.now}
+      ended_at nil
+    end
+
+    trait :ended do
+      sessions_from {Date.current - 3.months}
+      started_at {Time.zone.now}
+      ended_at {Time.zone.now}
+    end
+
     trait :funded do
       funded true
       funding_type {course == Pd::Workshop::COURSE_CSF ? Pd::Workshop::FUNDING_TYPE_FACILITATOR : nil}
@@ -77,6 +95,13 @@ FactoryGirl.define do
       num_sessions 1
       started_at {Time.zone.now}
       ended_at {Time.zone.now}
+    end
+
+    factory :csf201_workshop do
+      course Pd::Workshop::COURSE_CSF
+      subject Pd::Workshop::SUBJECT_CSF_201
+      num_sessions 1
+      num_facilitators 2
     end
 
     #
